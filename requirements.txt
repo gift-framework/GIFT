@@ -1,0 +1,32 @@
+# GIFT Framework v2 - Core Dependencies
+numpy>=1.21.0
+matplotlib>=3.5.0
+scipy>=1.7.0
+pandas>=1.3.0
+sympy>=1.9.0
+plotly>=5.0.0
+seaborn>=0.11.0
+mpmath>=1.2.0
+
+# Jupyter and interactive computing
+jupyter>=1.0.0
+ipykernel>=6.0.0
+notebook>=6.4.0
+ipywidgets>=7.6.0
+
+# Statistical analysis and machine learning
+scikit-learn>=1.0.0
+statsmodels>=0.13.0
+
+# Additional utilities
+tqdm>=4.62.0
+
+# Mathematical constants and special functions
+scipy>=1.7.0
+
+# Enhanced visualization
+plotly>=5.0.0
+seaborn>=0.11.0
+
+# High precision arithmetic
+mpmath>=1.2.0
