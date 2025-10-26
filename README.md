@@ -125,6 +125,9 @@ Detailed derivations organized by topic in [publications/supplements/](publicati
 - [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) - Current experimental status
 - [CHANGELOG.md](CHANGELOG.md) - Version history
 
+**Philosophical Perspectives**
+- [docs/PHILOSOPHY.md](docs/PHILOSOPHY.md) - On mathematical primacy and epistemic humility
+
 **Contributing**
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
 - [CITATION.md](CITATION.md) - How to cite this work
