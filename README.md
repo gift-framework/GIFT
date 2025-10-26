@@ -35,6 +35,8 @@ Version 2.0 represents a substantial advancement with modular structure, rigorou
 
 **Binder** (free, no account): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=publications/gift_v2_notebook.ipynb)
 
+**Google Colab**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/publications/gift_v2_notebook.ipynb)
+
 ### Local Installation
 
 ```bash
@@ -133,12 +135,31 @@ Detailed derivations organized by topic in [publications/supplements/](publicati
 - [CITATION.md](CITATION.md) - How to cite this work
 - [LICENSE](LICENSE) - MIT License
 
-### PDF Versions
+### Interactive Visualizations
 
-All documents available as PDFs in [publications/pdf/](publications/pdf/):
-- Main paper: `gift-main.pdf`
-- Extensions: `gift_extensions.pdf`
-- Supplements A-F: `Supp_A.pdf` through `Supp_F.pdf`
+Explore the framework through interactive Jupyter notebooks in [visualizations/](visualizations/):
+
+**[E₈ Root System 3D](visualizations/e8_root_system_3d.ipynb)**
+- Complete 240-root structure with interactive 3D rotation
+- PCA projection from 8D to 3D
+- Weyl group structure and connection to N_gen = 3
+
+**[Precision Dashboard](visualizations/precision_dashboard.ipynb)**
+- All 16 validated observables vs experimental data
+- Sector-wise performance gauges
+- Interactive heatmaps and statistical analysis
+- Mean deviation: 0.15% across all sectors
+
+**[Dimensional Reduction Flow](visualizations/dimensional_reduction_flow.ipynb)**
+- Animated visualization of E₈×E₈ (496D) → K₇ (99D) → SM (4D)
+- Sankey diagram showing information flow
+- Cohomology structure breakdown (H²=21, H³=77)
+
+**Run in browser**: 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=visualizations/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/visualizations/)
+
+See [visualizations/README.md](visualizations/README.md) for details.
 
 ## Repository Structure
 
@@ -160,18 +181,19 @@ gift/
 │   ├── gift_extensions.md             # Dimensional observables
 │   ├── gift_v2_notebook.ipynb         # Interactive notebook
 │   │
-│   ├── supplements/                   # Detailed supplements
-│   │   ├── A_math_foundations.md      # E₈, K₇, reduction
-│   │   ├── B_rigorous_proofs.md       # 9 proven theorems
-│   │   ├── C_complete_derivations.md  # All 34 predictions
-│   │   ├── D_phenomenology.md         # Experimental comparison
-│   │   ├── E_falsification.md         # Testing criteria
-│   │   └── F_K7_metric.md             # Explicit constructions
-│   │
-│   └── pdf/                           # PDF versions
-│       ├── gift-main.pdf
-│       ├── gift_extensions.pdf
-│       └── Supp_A.pdf through Supp_F.pdf
+│   └── supplements/                   # Detailed supplements
+│       ├── A_math_foundations.md      # E₈, K₇, reduction
+│       ├── B_rigorous_proofs.md       # 9 proven theorems
+│       ├── C_complete_derivations.md  # All 34 predictions
+│       ├── D_phenomenology.md         # Experimental comparison
+│       ├── E_falsification.md         # Testing criteria
+│       └── F_K7_metric.md             # Explicit constructions
+│
+├── visualizations/                    # Interactive visualizations
+│   ├── README.md                      # Visualization guide
+│   ├── e8_root_system_3d.ipynb        # E₈ 240 roots in 3D
+│   ├── precision_dashboard.ipynb      # All observables comparison
+│   └── dimensional_reduction_flow.ipynb # 496D → 99D → 4D animation
 │
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Common questions
@@ -179,7 +201,6 @@ gift/
 │   └── EXPERIMENTAL_VALIDATION.md     # Experimental status
 │
 └── legacy_v1/                         # Archived v1.0
-    └── README.md                      # Archive guide
 ```
 
 See [STRUCTURE.md](STRUCTURE.md) for detailed organization guide.
