@@ -345,7 +345,7 @@ For questions:
 This framework builds on established mathematical structures (E₈, G₂ holonomy, dimensional reduction) developed by the mathematical physics community. Experimental values from PDG, NuFIT, Planck, and other collaborations. See individual documents for detailed references.
 
 ---
-
-**From bit to GIFT**: Physical law as information geometry.
-
+>
+>**Gift from bit**
+>
 ---
