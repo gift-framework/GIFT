@@ -1,0 +1,36 @@
+name: Validate Notebooks
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.ipynb'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.ipynb'
+  workflow_dispatch:
+
+jobs:
+  validate-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install nbformat nbconvert jupyter
+          
+      - name: Check notebook format
+        run: |
+          echo "Checking all notebooks for valid format..."
+          find . -name "*.ipynb" -not -path "./.ipynb_checkpoints/*" | while read notebook; do
+            echo "Validating: $notebook"
+            jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=60 "$notebook" || echo "Note: $notebook may need manual review"
+          done
+

@@ -14,10 +14,10 @@ export GIFT_VERSION=v2.0.0
 export PYTHONPATH="${PYTHONPATH}:."
 
 # Create symbolic links for easy access
-ln -sf gift_main_v2.md README_main.md || echo "Could not create symlink"
-ln -sf gift_technical_v2.md README_technical.md || echo "Could not create symlink"
+ln -sf publications/gift_main.md README_main.md || echo "Could not create symlink"
+ln -sf publications/gift_v2_notebook.ipynb NOTEBOOK.ipynb || echo "Could not create symlink"
 
 echo "✅ GIFT Framework v2.0.0 Binder environment ready!"
-echo "📖 Main paper: gift_main_v2.md"
-echo "🔬 Technical supplement: gift_technical_v2.md"
-echo "💻 Interactive notebook: gift_v2_notebook.ipynb"
+echo "📖 Main paper: publications/gift_main.md"
+echo "🔬 Supplements: publications/supplements/"
+echo "💻 Interactive notebook: publications/gift_v2_notebook.ipynb"

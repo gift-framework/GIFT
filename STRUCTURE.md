@@ -47,6 +47,7 @@ gift/
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Frequently asked questions
 │   ├── GLOSSARY.md                    # Technical terms and notation
+│   ├── PHILOSOPHY.md                  # Philosophical perspectives
 │   └── EXPERIMENTAL_VALIDATION.md     # Current experimental status
 │
 └── legacy_v1/                         # Archived v1.0 version

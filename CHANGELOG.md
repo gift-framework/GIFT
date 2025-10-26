@@ -5,6 +5,17 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- `docs/PHILOSOPHY.md` - Philosophical essay "On What Comes First" exploring mathematical primacy and epistemic humility
+- `.gitignore` - Standard ignore patterns for Python, Jupyter, and IDE files
+- GitHub workflows for link validation
+
+### Changed
+- Updated `STRUCTURE.md` to include new philosophical perspectives documentation
+- Corrected `postBuild` Binder setup script with accurate file paths
+
 ## [2.0.0] - 2025-10-24
 
 ### Major Release - Complete Framework Reorganization
