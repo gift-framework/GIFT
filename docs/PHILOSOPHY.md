@@ -124,4 +124,3 @@ The practice of humility in science is ultimately the practice of seeing clearly
 And in that accurate location lies the beginning of genuine wisdom.
 
 ---
-
