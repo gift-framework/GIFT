@@ -353,6 +353,7 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed chang
 - **Repository**: https://github.com/gift-framework/GIFT
 - **Issues**: https://github.com/gift-framework/GIFT/issues
 - **Documentation**: All documents in this repository
+- **Author**: [Email](mailto:brieuc@bdelaf.com)
 
 For questions:
 1. Check [docs/FAQ.md](docs/FAQ.md)
