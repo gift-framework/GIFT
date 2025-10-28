@@ -11,7 +11,7 @@
 [![Issues](https://img.shields.io/github/issues/gift-framework/GIFT.svg)](https://github.com/gift-framework/GIFT/issues)
 [![Last commit](https://img.shields.io/github/last-commit/gift-framework/GIFT.svg)](https://github.com/gift-framework/GIFT/commits/main)
 
-## 🌟 Highlights
+## Highlights
 
 - **Revolutionary**: First complete topological derivation of Standard Model from E₈×E₈
 - **Precise**: 0.13% mean deviation across 34 dimensionless observables  
@@ -21,7 +21,7 @@
 - **Complete**: Full neutrino sector prediction including δ_CP = 197° (0.005% precision)
 - **Unified**: Cosmological dark energy Ω_DE = ln(2) from binary information architecture
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 | Metric | Value | Description |
 |--------|-------|-------------|
