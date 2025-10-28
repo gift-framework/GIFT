@@ -163,11 +163,11 @@ See [assets/visualizations/README.md](assets/visualizations/README.md) for detai
 
 **Automated scientific communication** via [@GIFTheory](https://twitter.com/GIFTheory):
 
-- **Daily posts**: 9:00 AM (random scientific content)
-- **Weekly summaries**: Monday 10:00 AM (framework progress)
+- **Weekly posts**: Monday 10:00 AM (scientific content)
 - **Monthly highlights**: 1st of month 11:00 AM (key discoveries)
 - **Content types**: 8 categories (precision, math, experimental, theoretical, etc.)
 - **Language**: English (international scientific audience)
+- **Frequency**: Conservative (1 tweet/week max) to avoid spam
 
 **Features**:
 - Automated content generation from GIFT framework
@@ -176,6 +176,8 @@ See [assets/visualizations/README.md](assets/visualizations/README.md) for detai
 - Educational threads explaining topological unification
 
 **Setup**: See [assets/twitter_bot/README.md](assets/twitter_bot/README.md) for complete installation and configuration instructions.
+
+**Quick Start**: Run `python assets/quick_start.py` for easy access to all interactive tools.
 
 ### Visualization Dashboard
 

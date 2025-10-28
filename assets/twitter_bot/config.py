@@ -14,8 +14,8 @@ TWITTER_CLIENT_SECRET = "eO2WFmgMjkt_WmUUyH3B00CXSQKO6hOqDhJWY3k2PhFuVUbS5q"
 
 # Configuration du bot
 BOT_USERNAME = "@GIFT_Framework"  # Changez selon votre nom d'utilisateur Twitter
-POSTING_SCHEDULE = "daily"  # daily, weekly, monthly
-MAX_TWEETS_PER_DAY = 2
+POSTING_SCHEDULE = "weekly"  # daily, weekly, monthly (RECOMMANDE: weekly)
+MAX_TWEETS_PER_DAY = 1  # Maximum 1 tweet par jour pour éviter le spam
 HASHTAGS = ["#GIFT", "#Physics", "#Topology", "#Mathematics"]
 
 # Paramètres de sécurité
