@@ -3,8 +3,20 @@ name: "CodeQL"
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'assets/visualizations/**/*.html'
+      - '**/outputs/**/*.html'
+      - 'docs/figures/**/*.html'
+      - 'publications/pdf/**'
+      - '**/*.pdf'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - 'assets/visualizations/**/*.html'
+      - '**/outputs/**/*.html'
+      - 'docs/figures/**/*.html'
+      - 'publications/pdf/**'
+      - '**/*.pdf'
   schedule:
     - cron: '0 0 * * 1'  # Run weekly on Mondays
 
