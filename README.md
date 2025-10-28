@@ -267,7 +267,7 @@ gift/
 │   ├── GLOSSARY.md                    # Technical definitions
 │   └── EXPERIMENTAL_VALIDATION.md     # Experimental status
 │
-└── legacy_v1/                         # Archived v1.0
+└── [legacy_v1/]                       # Archived v1.0 (git history)
 ```
 
 See [STRUCTURE.md](STRUCTURE.md) for detailed organization guide.
@@ -404,7 +404,7 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 ## Version History
 
 - **v2.0.0** (2025-10-24): Modular structure, rigorous proofs, 0.13% precision, 34 observables
-- **v1.0.0** (Archived): Initial framework (see [legacy_v1/](legacy_v1/))
+- **v1.0.0** (Archived): Initial framework (available in git history)
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed changes.
 
