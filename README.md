@@ -135,29 +135,64 @@ Detailed derivations organized by topic in [publications/supplements/](publicati
 
 ### Interactive Visualizations
 
-Explore the framework through interactive Jupyter notebooks in [visualizations/](visualizations/):
+Explore the framework through interactive Jupyter notebooks in [assets/visualizations/](assets/visualizations/):
 
-**[E₈ Root System 3D](visualizations/e8_root_system_3d.ipynb)**
+**[E₈ Root System 3D](assets/visualizations/e8_root_system_3d.ipynb)**
 - Complete 240-root structure with interactive 3D rotation
 - PCA projection from 8D to 3D
 - Weyl group structure and connection to N_gen = 3
 
-**[Precision Dashboard](visualizations/precision_dashboard.ipynb)**
+**[Precision Dashboard](assets/visualizations/precision_dashboard.ipynb)**
 - All 16 validated observables vs experimental data
 - Sector-wise performance gauges
 - Interactive heatmaps and statistical analysis
 - Mean deviation: 0.15% across all sectors
 
-**[Dimensional Reduction Flow](visualizations/dimensional_reduction_flow.ipynb)**
+**[Dimensional Reduction Flow](assets/visualizations/dimensional_reduction_flow.ipynb)**
 - Animated visualization of E₈×E₈ (496D) → K₇ (99D) → SM (4D)
 - Sankey diagram showing information flow
 - Cohomology structure breakdown (H²=21, H³=77)
 
 **Run in browser**: 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=visualizations/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/visualizations/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=assets/visualizations/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/)
 
-See [visualizations/README.md](visualizations/README.md) for details.
+See [assets/visualizations/README.md](assets/visualizations/README.md) for details.
+
+### Twitter Bot
+
+**Automated scientific communication** via [@GIFTheory](https://twitter.com/GIFTheory):
+
+- **Daily posts**: 9:00 AM (random scientific content)
+- **Weekly summaries**: Monday 10:00 AM (framework progress)
+- **Monthly highlights**: 1st of month 11:00 AM (key discoveries)
+- **Content types**: 8 categories (precision, math, experimental, theoretical, etc.)
+- **Language**: English (international scientific audience)
+
+**Features**:
+- Automated content generation from GIFT framework
+- 10-fact database with exact predictions
+- Experimental validation updates (DUNE, Euclid, LHC)
+- Educational threads explaining topological unification
+
+**Setup**: See [assets/twitter_bot/README.md](assets/twitter_bot/README.md) for complete installation and configuration instructions.
+
+### Visualization Dashboard
+
+**Terminal-style interactive dashboard** with Pip-Boy aesthetic: [docs/index.html](docs/index.html)
+
+Features:
+- Three-tab interface for all visualizations
+- Keyboard shortcuts (1, 2, 3) for quick navigation
+- Black/amber monochrome terminal theme
+- Scanline effects for retro CRT appearance
+
+**Generate all figures automatically**:
+```bash
+python generate_all_figures.py
+```
+
+This executes all visualization notebooks and exports figures in HTML, PNG, and SVG formats to `assets/visualizations/outputs/`.
 
 ## Repository Structure
 
@@ -187,11 +222,18 @@ gift/
 │       ├── E_falsification.md         # Testing criteria
 │       └── F_K7_metric.md             # Explicit constructions
 │
-├── visualizations/                    # Interactive visualizations
-│   ├── README.md                      # Visualization guide
-│   ├── e8_root_system_3d.ipynb        # E₈ 240 roots in 3D
-│   ├── precision_dashboard.ipynb      # All observables comparison
-│   └── dimensional_reduction_flow.ipynb # 496D → 99D → 4D animation
+├── assets/                            # Interactive assets and tools
+│   ├── README.md                      # Assets overview
+│   ├── twitter_bot/                    # Automated Twitter bot
+│   │   ├── content_generator_en.py     # English content generator
+│   │   ├── twitter_bot_v2.py           # Main bot script
+│   │   ├── scheduler.py                # Automated scheduler
+│   │   └── README.md                   # Bot documentation
+│   └── visualizations/                # Interactive visualizations
+│       ├── README.md                  # Visualization guide
+│       ├── e8_root_system_3d.ipynb    # E₈ 240 roots in 3D
+│       ├── precision_dashboard.ipynb  # All observables comparison
+│       └── dimensional_reduction_flow.ipynb # 496D → 99D → 4D animation
 │
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Common questions

@@ -1,0 +1,334 @@
+/* GIFT Framework v2.0 - Pip-Boy Terminal Theme */
+/* Inspired by Fallout Pip-Boy aesthetic: Black background, amber monochrome */
+
+/* CSS Variables */
+:root {
+    --color-primary: #FFB000;      /* Amber primary */
+    --color-secondary: #CC8800;    /* Darker amber */
+    --color-tertiary: #996600;     /* Muted amber */
+    --color-bg: #000000;           /* Pure black */
+    --color-bg-panel: #0a0a0a;     /* Slightly lighter black */
+    --color-border: #FFB000;       /* Amber border */
+    
+    --font-mono: 'Courier New', 'Consolas', 'Monaco', monospace;
+    
+    --border-width: 2px;
+    --glow-strength: 4px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-mono);
+    background: var(--color-bg);
+    color: var(--color-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Scanline Effect - Subtle CRT aesthetic */
+.scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanline-flicker 8s linear infinite;
+}
+
+@keyframes scanline-flicker {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 0.1; }
+}
+
+/* Container */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Terminal Header */
+.terminal-header {
+    border: var(--border-width) solid var(--color-border);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--color-bg-panel);
+    box-shadow: 0 0 var(--glow-strength) var(--color-secondary);
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 8px var(--color-primary);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+}
+
+.system-info {
+    font-size: 0.85rem;
+    color: var(--color-tertiary);
+    letter-spacing: 0.05rem;
+}
+
+.separator {
+    margin: 0 0.75rem;
+    color: var(--color-secondary);
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    border: var(--border-width) solid var(--color-border);
+    border-bottom: none;
+}
+
+.tab-button {
+    flex: 1;
+    background: var(--color-bg-panel);
+    border: none;
+    border-right: var(--border-width) solid var(--color-border);
+    padding: 1rem;
+    color: var(--color-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.1rem;
+}
+
+.tab-button:last-child {
+    border-right: none;
+}
+
+.tab-button:hover {
+    background: #151515;
+    color: var(--color-secondary);
+}
+
+.tab-button.active {
+    background: var(--color-bg);
+    color: var(--color-primary);
+    box-shadow: inset 0 0 var(--glow-strength) var(--color-secondary);
+    text-shadow: 0 0 6px var(--color-primary);
+}
+
+.tab-label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Content Area */
+.content-area {
+    border: var(--border-width) solid var(--color-border);
+    background: var(--color-bg-panel);
+    min-height: 600px;
+    box-shadow: 0 0 var(--glow-strength) var(--color-secondary);
+}
+
+.tab-content {
+    display: none;
+    padding: 1.5rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Content Header */
+.content-header {
+    border-bottom: 1px solid var(--color-secondary);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-header h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    text-shadow: 0 0 6px var(--color-secondary);
+}
+
+.content-stats {
+    font-size: 0.8rem;
+    color: var(--color-tertiary);
+    letter-spacing: 0.05rem;
+}
+
+/* Visualization Container */
+.visualization-container {
+    margin: 1.5rem 0;
+    border: 1px solid var(--color-tertiary);
+    background: var(--color-bg);
+    height: 700px;
+    position: relative;
+}
+
+.viz-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ffffff;
+}
+
+/* Content Footer */
+.content-footer {
+    border-top: 1px solid var(--color-secondary);
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.content-footer p {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    margin: 0.25rem 0;
+    letter-spacing: 0.05rem;
+}
+
+/* Terminal Footer */
+.terminal-footer {
+    border: var(--border-width) solid var(--color-border);
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    background: var(--color-bg-panel);
+    box-shadow: 0 0 var(--glow-strength) var(--color-secondary);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+.footer-left {
+    color: var(--color-tertiary);
+}
+
+.footer-right a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: var(--color-primary);
+    text-shadow: 0 0 6px var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terminal-header {
+        padding: 1rem;
+    }
+    
+    .header-content h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .system-info {
+        font-size: 0.75rem;
+        line-height: 1.8;
+    }
+    
+    .separator {
+        display: none;
+    }
+    
+    .tab-navigation {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        border-right: none;
+        border-bottom: var(--border-width) solid var(--color-border);
+    }
+    
+    .tab-button:last-child {
+        border-bottom: none;
+    }
+    
+    .visualization-container {
+        height: 500px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Accessibility - Focus states */
+.tab-button:focus,
+a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .scanline {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .terminal-header,
+    .content-area,
+    .terminal-footer {
+        border-color: black;
+        box-shadow: none;
+    }
+}
+
+/* Additional Terminal Effects */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.96; }
+}
+
+.terminal-header,
+.content-area,
+.terminal-footer {
+    animation: flicker 3s ease-in-out infinite;
+}
+
+/* Glow effect on hover for interactive elements */
+.tab-button:hover,
+.footer-right a:hover {
+    filter: brightness(1.2);
+}
+

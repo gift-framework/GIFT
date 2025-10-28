@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFT FRAMEWORK v2.0 - VISUALIZATION TERMINAL</title>
+    <link rel="stylesheet" href="assets/css/pipboy.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="terminal-header">
+            <div class="header-content">
+                <h1>GIFT FRAMEWORK v2.0</h1>
+                <p class="subtitle">VISUALIZATION TERMINAL</p>
+                <div class="system-info">
+                    <span>E8xE8 -> AdS4xK7 -> STANDARD MODEL</span>
+                    <span class="separator">|</span>
+                    <span>PRECISION: 0.13% MEAN DEVIATION</span>
+                    <span class="separator">|</span>
+                    <span>OBSERVABLES: 34</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-navigation">
+            <button class="tab-button active" data-tab="e8-roots">
+                <span class="tab-label">[1] E8 ROOT SYSTEM</span>
+            </button>
+            <button class="tab-button" data-tab="precision">
+                <span class="tab-label">[2] PRECISION ANALYSIS</span>
+            </button>
+            <button class="tab-button" data-tab="reduction">
+                <span class="tab-label">[3] DIMENSIONAL FLOW</span>
+            </button>
+        </nav>
+
+        <!-- Content Panels -->
+        <main class="content-area">
+            <!-- E8 Root System -->
+            <section class="tab-content active" id="e8-roots">
+                <div class="content-header">
+                    <h2>E8 ROOT SYSTEM - 3D PROJECTION</h2>
+                    <div class="content-stats">
+                        <span>ROOTS: 240</span>
+                        <span class="separator">|</span>
+                        <span>DIMENSION: 8 -> 3 (PCA)</span>
+                        <span class="separator">|</span>
+                        <span>WEYL GROUP: 696729600</span>
+                    </div>
+                </div>
+                <div class="visualization-container">
+                    <iframe src="figures/e8_roots.html" class="viz-frame"></iframe>
+                </div>
+                <div class="content-footer">
+                    <p>Complete root structure of exceptional Lie algebra E8.</p>
+                    <p>Foundation for 496-dimensional information architecture.</p>
+                </div>
+            </section>
+
+            <!-- Precision Dashboard -->
+            <section class="tab-content" id="precision">
+                <div class="content-header">
+                    <h2>PRECISION ANALYSIS DASHBOARD</h2>
+                    <div class="content-stats">
+                        <span>SECTORS: 6</span>
+                        <span class="separator">|</span>
+                        <span>VALIDATED: 16/34</span>
+                        <span class="separator">|</span>
+                        <span>MEAN DEV: 0.15%</span>
+                    </div>
+                </div>
+                <div class="visualization-container">
+                    <iframe src="figures/precision_dashboard.html" class="viz-frame"></iframe>
+                </div>
+                <div class="content-footer">
+                    <p>Sector-wise comparison: Gauge, Neutrino, Lepton, Quark, Higgs, Cosmology.</p>
+                    <p>All observables within experimental precision bounds.</p>
+                </div>
+            </section>
+
+            <!-- Dimensional Reduction -->
+            <section class="tab-content" id="reduction">
+                <div class="content-header">
+                    <h2>DIMENSIONAL REDUCTION FLOW</h2>
+                    <div class="content-stats">
+                        <span>E8xE8: 496D</span>
+                        <span class="separator">|</span>
+                        <span>K7: 99D (1+21+77)</span>
+                        <span class="separator">|</span>
+                        <span>SM: 4D</span>
+                    </div>
+                </div>
+                <div class="visualization-container">
+                    <iframe src="figures/dimensional_reduction.html" class="viz-frame"></iframe>
+                </div>
+                <div class="content-footer">
+                    <p>Information flow through cohomological structure.</p>
+                    <p>H2(K7)=21 gauge structure, H3(K7)=77 chiral matter.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="terminal-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span>GIFT FRAMEWORK v2.0.0</span>
+                    <span class="separator">|</span>
+                    <span>TOPOLOGICAL UNIFICATION</span>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/gift-framework/GIFT" target="_blank">GITHUB</a>
+                    <span class="separator">|</span>
+                    <a href="../publications/gift_main.md" target="_blank">DOCUMENTATION</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+
