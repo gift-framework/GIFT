@@ -1,0 +1,23 @@
+# CODEOWNERS file for GIFT framework
+# These owners will be automatically requested for review when someone opens a pull request
+
+# Default owners for everything in the repo
+* @gift-framework
+
+# Core theoretical framework
+/publications/ @gift-framework
+/publications/supplements/ @gift-framework
+
+# Documentation
+/docs/ @gift-framework
+/README.md @gift-framework
+/CITATION.md @gift-framework
+
+# Visualizations and notebooks
+/assets/visualizations/ @gift-framework
+/publications/gift_v2_notebook.ipynb @gift-framework
+
+# Configuration and infrastructure
+/.github/ @gift-framework
+/requirements.txt @gift-framework
+
