@@ -37,4 +37,4 @@ CONTENT_TYPES = [
 
 # Logs
 LOG_LEVEL = "INFO"
-LOG_FILE = "twitter_bot.log"
+LOG_FILE = "twitter_bot.log"  # Sera créé dans le dossier du bot
