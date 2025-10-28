@@ -10,13 +10,13 @@
 
 ## Highlights
 
-- **Revolutionary**: First complete topological derivation of Standard Model from E₈×E₈
-- **Precise**: 0.13% mean deviation across 34 dimensionless observables  
-- **Minimal**: Only 3 geometric parameters vs 19 in Standard Model (6.3× reduction)
-- **Testable**: Clear experimental predictions for DUNE, LHCb, Belle II
-- **Rigorous**: 9 mathematically proven exact relations with complete proofs
-- **Complete**: Full neutrino sector prediction including δ_CP = 197° (0.005% precision)
-- **Unified**: Cosmological dark energy Ω_DE = ln(2) from binary information architecture
+- **Scope**: Geometric information approach to Standard Model parameters from E₈×E₈
+- **Precision**: 0.13% mean deviation across 34 dimensionless observables
+- **Parsimony**: 3 geometric parameters vs 19 in Standard Model (6.3× reduction)
+- **Testability**: Concrete experimental comparisons (DUNE, LHCb, Belle II)
+- **Mathematical results**: 9 exact relations with complete proofs
+- **Neutrino sector**: Full prediction including δ_CP = 197° (0.005% deviation)
+- **Cosmology**: Ω_DE = ln(2) from binary information architecture
 
 ## Performance Metrics
 
@@ -32,9 +32,9 @@
 
 ## Abstract
 
-The Geometric Information Field Theory (GIFT) framework provides a complete **topological unification** of particle physics and cosmology through **E₈ Lie algebra** structure. This **mathematical physics** framework derives fundamental physics parameters from pure geometric principles using **dimensional reduction** **E₈×E₈ → AdS₄×K₇ → Standard Model**, achieving unprecedented precision across **34 dimensionless observables** (mean deviation 0.13%) using **three geometric parameters**.
+The Geometric Information Field Theory (GIFT) framework studies a **topological unification** perspective on particle physics and cosmology based on the **E₈ Lie algebra** structure. The approach derives dimensionless parameters from geometric principles via **dimensional reduction** **E₈×E₈ → AdS₄×K₇ → Standard Model**, with a mean deviation of 0.13% across **34 dimensionless observables** using **three geometric parameters**.
 
-Version 2.0 represents a substantial advancement in **theoretical physics** with modular structure, rigorous mathematical proofs, and complete predictions for **neutrino physics**, **CP violation**, **dark energy**, and **cosmological** observables from **binary information architecture** as fundamental to physical law.
+Version 2.0 provides a modular structure with complete derivations, rigorous proofs where available, and explicit predictions for **neutrino physics**, **CP violation**, **dark energy**, and other **cosmological** observables derived from a **binary information architecture**.
 
 ## Key Results
 
@@ -43,11 +43,11 @@ Version 2.0 represents a substantial advancement in **theoretical physics** with
 - **Parameter reduction**: 19 → 3 (6.3× improvement over Standard Model)
 - **Exact predictions**: N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20
 
-### Novel Predictions
-- **Fourth generation disfavored**: N_gen = 3 emerges from **E₈ Lie algebra** rank-Weyl structure
-- **Neutrino physics complete**: All mixing parameters without phenomenological input
-- **CP violation exact**: δ_CP = 197° from pure **topological physics** formula (0.005% deviation)
-- **Dark energy**: Ω_DE = ln(2) from **binary information architecture**
+### Predictions
+- **Fourth generation disfavored**: N_gen = 3 from **E₈ Lie algebra** rank–Weyl structure
+- **Neutrino sector**: Mixing parameters without phenomenological input
+- **CP violation**: δ_CP = 197° from a **topological** formula (0.005% deviation)
+- **Dark energy**: Ω_DE = ln(2) from a **binary information** model
 
 ### Mathematical Structure
 - **Exact relations**: 9 rigorously proven topological identities
