@@ -7,9 +7,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/gift-framework/GIFT.svg?style=social&label=Star)](https://github.com/gift-framework/GIFT)
 [![GitHub watchers](https://img.shields.io/github/watchers/gift-framework/GIFT.svg?style=social&label=Watch)](https://github.com/gift-framework/GIFT)
 [![GitHub forks](https://img.shields.io/github/forks/gift-framework/GIFT.svg?style=social&label=Fork)](https://github.com/gift-framework/GIFT)
-[![Documentation](https://img.shields.io/badge/Documentation-GitHub%20Pages-green.svg)](https://gift-framework.github.io/GIFT/)
-[![Issues](https://img.shields.io/github/issues/gift-framework/GIFT.svg)](https://github.com/gift-framework/GIFT/issues)
-[![Last commit](https://img.shields.io/github/last-commit/gift-framework/GIFT.svg)](https://github.com/gift-framework/GIFT/commits/main)
 
 ## Highlights
 
