@@ -22,25 +22,25 @@ class GIFTContentGenerator:
         return {
             "precision_achievements": [
                 "🎯 GIFT Framework: 0.13% précision moyenne sur 34 observables dimensionnels",
-                "📊 Résultat exceptionnel: 4 prédictions exactes (N_gen=3, δ_CP=197°, m_s/m_d=20, m_τ/m_e=3477)",
+                "📊 Résultat exceptionnel: 4 prédictions exactes (N_gen=3, delta_CP=197deg, m_s/m_d=20, m_tau/m_e=3477)",
                 "🔬 Précision remarquable: 13 observables avec <0.1% de déviation expérimentale",
-                "⚡ Performance GIFT: 11.3× plus prédictif que le Modèle Standard (3 paramètres → 34 observables)"
+                "⚡ Performance GIFT: 11.3x plus prédictif que le Modèle Standard (3 paramètres → 34 observables)"
             ],
             
             "mathematical_beauty": [
-                "🧮 E₈×E₈ → AdS₄×K₇ → Modèle Standard: réduction dimensionnelle élégante",
-                "🔢 N_gen = 3: rank(E₈) - Weyl = 8 - 5 = 3 (contrainte topologique exacte)",
-                "📐 δ_CP = 197° = 7×dim(G₂) + H* = 7×14 + 99 (formule topologique pure)",
-                "🌌 Ω_DE = ln(2) × 98/99 = 0.686146 (architecture binaire + cohomologie)",
-                "🎲 Q_Koide = 2/3 = dim(G₂)/b₂(K₇) = 14/21 (ratio topologique exact)"
+                "🧮 E8xE8 → AdS4xK7 → Modèle Standard: réduction dimensionnelle élégante",
+                "🔢 N_gen = 3: rank(E8) - Weyl = 8 - 5 = 3 (contrainte topologique exacte)",
+                "📐 delta_CP = 197deg = 7xdim(G2) + H* = 7x14 + 99 (formule topologique pure)",
+                "🌌 Omega_DE = ln(2) x 98/99 = 0.686146 (architecture binaire + cohomologie)",
+                "🎲 Q_Koide = 2/3 = dim(G2)/b2(K7) = 14/21 (ratio topologique exact)"
             ],
             
             "experimental_predictions": [
-                "🔬 Prédiction GIFT: DUNE mesurera δ_CP = 197° avec précision <5° (2027+)",
-                "🌍 Euclid testera Ω_DE = ln(2)×98/99 avec précision 1% (2025-2030)",
+                "🔬 Prédiction GIFT: DUNE mesurera delta_CP = 197deg avec précision <5deg (2027+)",
+                "🌍 Euclid testera Omega_DE = ln(2)x98/99 avec précision 1% (2025-2030)",
                 "⚛️ HL-LHC exclura définitivement la 4ème génération (contredit N_gen=3)",
-                "🎯 Hyper-K mesurera θ₂₃ = 85/99 rad = 49.193° avec précision <1°",
-                "📡 CMB-S4 testera n_s = ξ² = (5π/16)² avec précision Δn_s ~ 0.002"
+                "🎯 Hyper-K mesurera theta23 = 85/99 rad = 49.193deg avec précision <1deg",
+                "📡 CMB-S4 testera n_s = xi² = (5pi/16)² avec précision Deltan_s ~ 0.002"
             ],
             
             "theoretical_insights": [
@@ -52,7 +52,7 @@ class GIFTContentGenerator:
             ],
             
             "comparisons": [
-                "📈 GIFT vs Modèle Standard: 19 paramètres → 3 paramètres (6.3× amélioration)",
+                "📈 GIFT vs Modèle Standard: 19 paramètres → 3 paramètres (6.3x amélioration)",
                 "🎯 GIFT vs String Theory: prédictions spécifiques vs paysage statistique",
                 "⚡ GIFT vs SUSY: pas de SUSY requise, prédictions directes",
                 "🔬 GIFT vs GUTs: réduction dimensionnelle vs embedding direct"
@@ -66,16 +66,16 @@ class GIFTContentGenerator:
             ],
             
             "technical_details": [
-                "🔧 K₇ manifold: b₂=21 (bosons de jauge), b₃=77 (fermions chiraux), H*=99",
-                "📐 Formule exacte: b₃ = 2×dim(K₇)² - b₂ = 2×7² - 21 = 77",
-                "🎲 Paramètres fondamentaux: p₂=2, β₀=π/8, Weyl_factor=5",
-                "🔗 Relation prouvée: ξ = (5/2)β₀ = 5π/16 (vérification à 10⁻¹⁵ près)"
+                "🔧 K7 manifold: b2=21 (bosons de jauge), b3=77 (fermions chiraux), H*=99",
+                "📐 Formule exacte: b3 = 2xdim(K7)² - b2 = 2x7² - 21 = 77",
+                "🎲 Paramètres fondamentaux: p2=2, beta0=pi/8, Weyl_factor=5",
+                "🔗 Relation prouvée: xi = (5/2)beta0 = 5pi/16 (vérification à 10⁻¹⁵ près)"
             ],
             
             "call_to_action": [
                 "📖 Explorez le framework GIFT: github.com/gift-framework/GIFT",
                 "🔬 Notebook interactif disponible sur Binder et Colab",
-                "📊 Visualisations 3D du système de racines E₈ et dashboard de précision",
+                "📊 Visualisations 3D du système de racines E8 et dashboard de précision",
                 "💬 Rejoignez la discussion: questions et contributions bienvenues",
                 "📚 Documentation complète: 7000+ lignes dans les suppléments"
             ]
@@ -86,61 +86,61 @@ class GIFTContentGenerator:
         return [
             {
                 "fact": "N_gen = 3",
-                "formula": "rank(E₈) - Weyl = 8 - 5 = 3",
+                "formula": "rank(E8) - Weyl = 8 - 5 = 3",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
-                "fact": "δ_CP = 197°",
-                "formula": "7×dim(G₂) + H* = 7×14 + 99 = 197°",
+                "fact": "delta_CP = 197deg",
+                "formula": "7xdim(G2) + H* = 7x14 + 99 = 197deg",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
                 "fact": "m_s/m_d = 20",
-                "formula": "p₂² × Weyl_factor = 4 × 5 = 20",
+                "formula": "p2² x Weyl_factor = 4 x 5 = 20",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
-                "fact": "m_τ/m_e = 3477",
-                "formula": "dim(K₇) + 10×dim(E₈) + 10×H* = 7 + 2480 + 990 = 3477",
+                "fact": "m_tau/m_e = 3477",
+                "formula": "dim(K7) + 10xdim(E8) + 10xH* = 7 + 2480 + 990 = 3477",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
                 "fact": "Q_Koide = 2/3",
-                "formula": "dim(G₂)/b₂(K₇) = 14/21 = 2/3",
+                "formula": "dim(G2)/b2(K7) = 14/21 = 2/3",
                 "precision": "0.005%",
                 "status": "PROVEN"
             },
             {
-                "fact": "Ω_DE = 0.686146",
-                "formula": "ln(2) × 98/99",
+                "fact": "Omega_DE = 0.686146",
+                "formula": "ln(2) x 98/99",
                 "precision": "0.211%",
                 "status": "TOPOLOGICAL"
             },
             {
-                "fact": "θ₁₂ = 33.419°",
-                "formula": "arctan(√(δ/γ_GIFT))",
+                "fact": "theta12 = 33.419deg",
+                "formula": "arctan(√(delta/gamma_GIFT))",
                 "precision": "0.062%",
                 "status": "DERIVED"
             },
             {
-                "fact": "θ₁₃ = 8.571°",
-                "formula": "π/b₂(K₇) = π/21",
+                "fact": "theta13 = 8.571deg",
+                "formula": "pi/b2(K7) = pi/21",
                 "precision": "0.448%",
                 "status": "TOPOLOGICAL"
             },
             {
-                "fact": "θ₂₃ = 49.193°",
-                "formula": "(rank(E₈) + b₃(K₇))/H* = 85/99 rad",
+                "fact": "theta23 = 49.193deg",
+                "formula": "(rank(E8) + b3(K7))/H* = 85/99 rad",
                 "precision": "0.014%",
                 "status": "TOPOLOGICAL"
             },
             {
-                "fact": "α⁻¹(M_Z) = 127.958",
-                "formula": "2^(rank(E₈)-1) - 1/24 = 2⁷ - 1/24",
+                "fact": "alpha⁻¹(M_Z) = 127.958",
+                "formula": "2^(rank(E8)-1) - 1/24 = 2⁷ - 1/24",
                 "precision": "0.002%",
                 "status": "TOPOLOGICAL"
             }
@@ -272,16 +272,16 @@ class GIFTContentGenerator:
 🎯 Précision moyenne: 0.13% sur 34 observables
 ✅ 4 prédictions exactes validées
 🔬 13 observables avec précision exceptionnelle (<0.1%)
-📈 11.3× plus prédictif que le Modèle Standard
+📈 11.3x plus prédictif que le Modèle Standard
 
 🧮 Structure mathématique:
-• E₈×E₈ → AdS₄×K₇ → Modèle Standard
+• E8xE8 → AdS4xK7 → Modèle Standard
 • 3 paramètres géométriques seulement
 • Architecture binaire [[496,99,31]]
 
 🔬 Tests expérimentaux à venir:
-• DUNE (2027+): δ_CP = 197°
-• Euclid (2025-2030): Ω_DE = ln(2)×98/99
+• DUNE (2027+): delta_CP = 197deg
+• Euclid (2025-2030): Omega_DE = ln(2)x98/99
 • HL-LHC: exclusion 4ème génération
 
 #GIFT #WeeklySummary #Physics #Precision #Topology
@@ -291,10 +291,10 @@ class GIFTContentGenerator:
     def generate_monthly_highlight(self) -> str:
         """Génère un highlight mensuel"""
         highlights = [
-            "🎯 Découverte: b₃ = 2×dim(K₇)² - b₂ (loi topologique pour variétés G₂)",
-            "🔗 Relation prouvée: ξ = (5/2)β₀ (vérification à 10⁻¹⁵ près)",
-            "📊 Prédiction exacte: m_τ/m_e = 3477 (formule topologique additive)",
-            "🌌 Architecture binaire: Ω_DE = ln(2)×98/99 (information + cohomologie)",
+            "🎯 Découverte: b3 = 2xdim(K7)² - b2 (loi topologique pour variétés G2)",
+            "🔗 Relation prouvée: xi = (5/2)beta0 (vérification à 10⁻¹⁵ près)",
+            "📊 Prédiction exacte: m_tau/m_e = 3477 (formule topologique additive)",
+            "🌌 Architecture binaire: Omega_DE = ln(2)x98/99 (information + cohomologie)",
             "⚡ Unification: physique des particules + cosmologie en un cadre"
         ]
         

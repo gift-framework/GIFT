@@ -86,61 +86,61 @@ class GIFTContentGenerator:
         return [
             {
                 "fact": "N_gen = 3",
-                "formula": "rank(E₈) - Weyl = 8 - 5 = 3",
+                "formula": "rank(E8) - Weyl = 8 - 5 = 3",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
-                "fact": "δ_CP = 197°",
-                "formula": "7×dim(G₂) + H* = 7×14 + 99 = 197°",
+                "fact": "delta_CP = 197deg",
+                "formula": "7xdim(G2) + H* = 7x14 + 99 = 197deg",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
                 "fact": "m_s/m_d = 20",
-                "formula": "p₂² × Weyl_factor = 4 × 5 = 20",
+                "formula": "p2² x Weyl_factor = 4 x 5 = 20",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
-                "fact": "m_τ/m_e = 3477",
-                "formula": "dim(K₇) + 10×dim(E₈) + 10×H* = 7 + 2480 + 990 = 3477",
+                "fact": "m_tau/m_e = 3477",
+                "formula": "dim(K7) + 10xdim(E8) + 10xH* = 7 + 2480 + 990 = 3477",
                 "precision": "0.000%",
                 "status": "PROVEN"
             },
             {
                 "fact": "Q_Koide = 2/3",
-                "formula": "dim(G₂)/b₂(K₇) = 14/21 = 2/3",
+                "formula": "dim(G2)/b2(K7) = 14/21 = 2/3",
                 "precision": "0.005%",
                 "status": "PROVEN"
             },
             {
-                "fact": "Ω_DE = 0.686146",
-                "formula": "ln(2) × 98/99",
+                "fact": "Omega_DE = 0.686146",
+                "formula": "ln(2) x 98/99",
                 "precision": "0.211%",
                 "status": "TOPOLOGICAL"
             },
             {
-                "fact": "θ₁₂ = 33.419°",
-                "formula": "arctan(√(δ/γ_GIFT))",
+                "fact": "theta12 = 33.419deg",
+                "formula": "arctan(√(delta/gamma_GIFT))",
                 "precision": "0.062%",
                 "status": "DERIVED"
             },
             {
-                "fact": "θ₁₃ = 8.571°",
-                "formula": "π/b₂(K₇) = π/21",
+                "fact": "theta13 = 8.571deg",
+                "formula": "pi/b2(K7) = pi/21",
                 "precision": "0.448%",
                 "status": "TOPOLOGICAL"
             },
             {
-                "fact": "θ₂₃ = 49.193°",
-                "formula": "(rank(E₈) + b₃(K₇))/H* = 85/99 rad",
+                "fact": "theta23 = 49.193deg",
+                "formula": "(rank(E8) + b3(K7))/H* = 85/99 rad",
                 "precision": "0.014%",
                 "status": "TOPOLOGICAL"
             },
             {
-                "fact": "α⁻¹(M_Z) = 127.958",
-                "formula": "2^(rank(E₈)-1) - 1/24 = 2⁷ - 1/24",
+                "fact": "alpha⁻¹(M_Z) = 127.958",
+                "formula": "2^(rank(E8)-1) - 1/24 = 2⁷ - 1/24",
                 "precision": "0.002%",
                 "status": "TOPOLOGICAL"
             }
@@ -272,7 +272,7 @@ class GIFTContentGenerator:
 Mean precision: 0.13% across 34 observables
 4 exact predictions validated
 13 observables with exceptional precision (<0.1%)
-11.3× more predictive than Standard Model
+11.3x more predictive than Standard Model
 
 Mathematical structure:
 • E8xE8 -> AdS4xK7 -> Standard Model
