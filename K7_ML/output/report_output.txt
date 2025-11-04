@@ -1,0 +1,236 @@
+Device: cuda
+Parameters: 120,220
+Total epochs: 6000
+Analysis frequency: every 500 epochs
+Checkpoint frequency: every 500 epochs
+
+Starting training...
+
+Epoch     0/6000 | Loss: 2.871508e-01 | Ricci: 2.758144e-01 | G2: 0.000000e+00 | Phase: Ricci-flat approximation | 0.0min | ETA: 196.2min
+Epoch    50/6000 | Loss: 3.895289e-03 | Ricci: 1.505787e-03 | G2: 0.000000e+00 | Phase: Ricci-flat approximation | 0.6min | ETA: 73.3min
+Epoch   100/6000 | Loss: 2.466138e-03 | Ricci: 1.424002e-03 | G2: 0.000000e+00 | Phase: Ricci-flat approximation | 1.2min | ETA: 71.8min
+Epoch   150/6000 | Loss: 1.417392e-03 | Ricci: 7.564566e-04 | G2: 0.000000e+00 | Phase: Ricci-flat approximation | 1.8min | ETA: 70.8min
+Epoch   200/6000 | Loss: 2.083893e+03 | Ricci: 4.840410e-04 | G2: 4.167785e+03 | Phase: G₂ structure introduction | 2.5min | ETA: 71.7min
+Epoch   250/6000 | Loss: 7.717014e+01 | Ricci: 8.379961e-01 | G2: 1.534854e+02 | Phase: G₂ structure introduction | 5.0min | ETA: 115.5min
+Epoch   300/6000 | Loss: 2.379410e+01 | Ricci: 2.500055e-01 | G2: 4.733463e+01 | Phase: G₂ structure introduction | 7.6min | ETA: 144.1min
+Epoch   350/6000 | Loss: 1.184772e+01 | Ricci: 1.165843e-01 | G2: 2.357738e+01 | Phase: G₂ structure introduction | 10.2min | ETA: 164.0min
+Epoch   400/6000 | Loss: 8.359816e+00 | Ricci: 7.723045e-02 | G2: 1.664146e+01 | Phase: G₂ structure introduction | 12.8min | ETA: 178.1min
+Epoch   450/6000 | Loss: 7.361604e+00 | Ricci: 6.872196e-02 | G2: 1.465366e+01 | Phase: G₂ structure introduction | 15.3min | ETA: 188.3min
+Epoch   500/6000 | Loss: 1.437691e+01 | Ricci: 6.748419e-02 | G2: 1.436321e+01 | Phase: G₂ emphasis | 17.9min | ETA: 196.1min
+
+  Running analysis at epoch 500...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      12.733974 (target: 1.0)
+    Vol error:   1.173397e+01
+    Condition:   1.06
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_500.pt
+Epoch   550/6000 | Loss: 2.265004e+00 | Ricci: 9.988636e-03 | G2: 2.262978e+00 | Phase: G₂ emphasis | 20.4min | ETA: 201.9min
+Epoch   600/6000 | Loss: 6.060523e-01 | Ricci: 1.135278e-03 | G2: 6.058195e-01 | Phase: G₂ emphasis | 23.0min | ETA: 206.3min
+Epoch   650/6000 | Loss: 2.584012e-01 | Ricci: 1.513921e-04 | G2: 2.583686e-01 | Phase: G₂ emphasis | 25.5min | ETA: 209.7min
+Epoch   700/6000 | Loss: 1.423724e-01 | Ricci: 8.086591e-04 | G2: 1.422088e-01 | Phase: G₂ emphasis | 28.1min | ETA: 212.2min
+Epoch   750/6000 | Loss: 8.640207e-02 | Ricci: 1.217570e-03 | G2: 8.615651e-02 | Phase: G₂ emphasis | 30.6min | ETA: 214.0min
+Epoch   800/6000 | Loss: 5.554356e-02 | Ricci: 1.201768e-03 | G2: 5.530120e-02 | Phase: G₂ emphasis | 33.2min | ETA: 215.5min
+Epoch   850/6000 | Loss: 4.033438e-02 | Ricci: 1.142249e-03 | G2: 4.010398e-02 | Phase: G₂ emphasis | 35.8min | ETA: 216.7min
+Epoch   900/6000 | Loss: 3.359550e-02 | Ricci: 1.057601e-03 | G2: 3.338210e-02 | Phase: G₂ emphasis | 38.4min | ETA: 217.3min
+Epoch   950/6000 | Loss: 3.126040e-02 | Ricci: 1.059642e-03 | G2: 3.104661e-02 | Phase: G₂ emphasis | 40.9min | ETA: 217.4min
+Epoch  1000/6000 | Loss: 3.090294e-02 | Ricci: 1.095099e-03 | G2: 3.068202e-02 | Phase: G₂ emphasis | 43.5min | ETA: 217.3min
+
+  Running analysis at epoch 1000...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.546757 (target: 1.0)
+    Vol error:   5.467566e-01
+    Condition:   2.93
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_1000.pt
+Epoch  1050/6000 | Loss: 6.705349e-03 | Ricci: 8.261805e-04 | G2: 6.538548e-03 | Phase: G₂ emphasis | 46.1min | ETA: 216.9min
+Epoch  1100/6000 | Loss: 1.184780e-03 | Ricci: 6.443991e-04 | G2: 1.054639e-03 | Phase: G₂ emphasis | 48.6min | ETA: 216.4min
+Epoch  1150/6000 | Loss: 2.695823e-04 | Ricci: 4.958825e-04 | G2: 1.693860e-04 | Phase: G₂ emphasis | 51.2min | ETA: 215.9min
+Epoch  1200/6000 | Loss: 1.199160e-04 | Ricci: 4.141535e-04 | G2: 3.619573e-05 | Phase: G₂ emphasis | 53.8min | ETA: 215.1min
+Epoch  1250/6000 | Loss: 7.889259e-05 | Ricci: 3.295594e-04 | G2: 1.219720e-05 | Phase: G₂ emphasis | 56.4min | ETA: 214.1min
+Epoch  1300/6000 | Loss: 6.683423e-05 | Ricci: 2.970526e-04 | G2: 6.701934e-06 | Phase: G₂ emphasis | 58.9min | ETA: 212.9min
+Epoch  1350/6000 | Loss: 5.807008e-05 | Ricci: 2.624583e-04 | G2: 4.884303e-06 | Phase: G₂ emphasis | 61.5min | ETA: 211.6min
+Epoch  1400/6000 | Loss: 6.150565e-05 | Ricci: 2.826938e-04 | G2: 4.269653e-06 | Phase: G₂ emphasis | 64.1min | ETA: 210.3min
+Epoch  1450/6000 | Loss: 5.573052e-05 | Ricci: 2.551677e-04 | G2: 4.021415e-06 | Phase: G₂ emphasis | 66.6min | ETA: 208.9min
+Epoch  1500/6000 | Loss: 2.208331e-05 | Ricci: 2.759940e-04 | G2: 4.002948e-06 | Phase: G₂ dominance | 69.2min | ETA: 207.4min
+
+  Running analysis at epoch 1500...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.003563 (target: 1.0)
+    Vol error:   3.563046e-03
+    Condition:   5.25
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_1500.pt
+Epoch  1550/6000 | Loss: 1.649925e-05 | Ricci: 2.505739e-04 | G2: 1.860040e-06 | Phase: G₂ dominance | 71.7min | ETA: 205.8min
+Epoch  1600/6000 | Loss: 1.433974e-05 | Ricci: 2.220335e-04 | G2: 1.501618e-06 | Phase: G₂ dominance | 74.3min | ETA: 204.2min
+Epoch  1650/6000 | Loss: 1.344059e-05 | Ricci: 2.140065e-04 | G2: 1.255803e-06 | Phase: G₂ dominance | 76.9min | ETA: 202.5min
+Epoch  1700/6000 | Loss: 1.246158e-05 | Ricci: 2.000666e-04 | G2: 1.120716e-06 | Phase: G₂ dominance | 79.5min | ETA: 200.9min
+Epoch  1750/6000 | Loss: 1.218588e-05 | Ricci: 1.983860e-04 | G2: 1.024978e-06 | Phase: G₂ dominance | 82.1min | ETA: 199.2min
+Epoch  1800/6000 | Loss: 1.176627e-05 | Ricci: 1.921272e-04 | G2: 9.732278e-07 | Phase: G₂ dominance | 84.7min | ETA: 197.5min
+Epoch  1850/6000 | Loss: 1.163500e-05 | Ricci: 1.912779e-04 | G2: 9.317799e-07 | Phase: G₂ dominance | 87.3min | ETA: 195.8min
+Epoch  1900/6000 | Loss: 1.122294e-05 | Ricci: 1.839932e-04 | G2: 9.094289e-07 | Phase: G₂ dominance | 89.9min | ETA: 193.9min
+Epoch  1950/6000 | Loss: 1.118732e-05 | Ricci: 1.831067e-04 | G2: 9.132498e-07 | Phase: G₂ dominance | 92.5min | ETA: 192.0min
+Epoch  2000/6000 | Loss: 1.133627e-05 | Ricci: 1.858498e-04 | G2: 9.180371e-07 | Phase: G₂ dominance | 95.1min | ETA: 190.1min
+
+  Running analysis at epoch 2000...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000071 (target: 1.0)
+    Vol error:   7.104874e-05
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_2000.pt
+Epoch  2050/6000 | Loss: 1.047615e-05 | Ricci: 1.731143e-04 | G2: 8.134804e-07 | Phase: G₂ dominance | 97.7min | ETA: 188.1min
+Epoch  2100/6000 | Loss: 9.914018e-06 | Ricci: 1.654923e-04 | G2: 7.226992e-07 | Phase: G₂ dominance | 100.3min | ETA: 186.0min
+Epoch  2150/6000 | Loss: 9.318899e-06 | Ricci: 1.559044e-04 | G2: 6.698942e-07 | Phase: G₂ dominance | 102.8min | ETA: 184.0min
+Epoch  2200/6000 | Loss: 8.838355e-06 | Ricci: 1.481750e-04 | G2: 6.261066e-07 | Phase: G₂ dominance | 105.4min | ETA: 181.9min
+Epoch  2250/6000 | Loss: 8.247327e-06 | Ricci: 1.384955e-04 | G2: 5.765996e-07 | Phase: G₂ dominance | 107.9min | ETA: 179.8min
+Epoch  2300/6000 | Loss: 8.922956e-06 | Ricci: 1.518709e-04 | G2: 5.784604e-07 | Phase: G₂ dominance | 110.5min | ETA: 177.6min
+Epoch  2350/6000 | Loss: 8.002201e-06 | Ricci: 1.342924e-04 | G2: 5.603785e-07 | Phase: G₂ dominance | 113.1min | ETA: 175.5min
+Epoch  2400/6000 | Loss: 7.777368e-06 | Ricci: 1.297831e-04 | G2: 5.612230e-07 | Phase: G₂ dominance | 115.6min | ETA: 173.3min
+Epoch  2450/6000 | Loss: 8.070732e-06 | Ricci: 1.359260e-04 | G2: 5.511299e-07 | Phase: G₂ dominance | 118.2min | ETA: 171.1min
+Epoch  2500/6000 | Loss: 8.013483e-06 | Ricci: 1.345743e-04 | G2: 5.612042e-07 | Phase: G₂ dominance | 120.7min | ETA: 168.9min
+
+  Running analysis at epoch 2500...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000050 (target: 1.0)
+    Vol error:   4.994869e-05
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_2500.pt
+Epoch  2550/6000 | Loss: 7.625261e-06 | Ricci: 1.290469e-04 | G2: 5.085242e-07 | Phase: G₂ dominance | 123.3min | ETA: 166.7min
+Epoch  2600/6000 | Loss: 7.684867e-06 | Ricci: 1.315897e-04 | G2: 4.741493e-07 | Phase: G₂ dominance | 125.9min | ETA: 164.5min
+Epoch  2650/6000 | Loss: 6.864301e-06 | Ricci: 1.169138e-04 | G2: 4.367188e-07 | Phase: G₂ dominance | 128.4min | ETA: 162.2min
+Epoch  2700/6000 | Loss: 6.292465e-06 | Ricci: 1.063083e-04 | G2: 4.189807e-07 | Phase: G₂ dominance | 131.0min | ETA: 160.0min
+Epoch  2750/6000 | Loss: 6.040982e-06 | Ricci: 1.019829e-04 | G2: 4.028237e-07 | Phase: G₂ dominance | 133.5min | ETA: 157.7min
+Epoch  2800/6000 | Loss: 6.125082e-06 | Ricci: 1.043372e-04 | G2: 3.845359e-07 | Phase: G₂ dominance | 136.1min | ETA: 155.4min
+Epoch  2850/6000 | Loss: 6.275492e-06 | Ricci: 1.070787e-04 | G2: 3.901540e-07 | Phase: G₂ dominance | 138.6min | ETA: 153.1min
+Epoch  2900/6000 | Loss: 5.834894e-06 | Ricci: 9.885416e-05 | G2: 3.783072e-07 | Phase: G₂ dominance | 141.2min | ETA: 150.8min
+Epoch  2950/6000 | Loss: 5.913266e-06 | Ricci: 1.008345e-04 | G2: 3.711505e-07 | Phase: G₂ dominance | 143.8min | ETA: 148.6min
+Epoch  3000/6000 | Loss: 3.147473e-06 | Ricci: 9.889097e-05 | G2: 3.683194e-07 | Phase: Aggressive G₂ | 146.4min | ETA: 146.3min
+
+  Running analysis at epoch 3000...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000035 (target: 1.0)
+    Vol error:   3.492832e-05
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_3000.pt
+Epoch  3050/6000 | Loss: 3.210338e-06 | Ricci: 1.053768e-04 | G2: 3.457014e-07 | Phase: Aggressive G₂ | 149.0min | ETA: 144.0min
+Epoch  3100/6000 | Loss: 2.894557e-06 | Ricci: 9.402790e-05 | G2: 3.174069e-07 | Phase: Aggressive G₂ | 151.6min | ETA: 141.7min
+Epoch  3150/6000 | Loss: 2.848312e-06 | Ricci: 9.480153e-05 | G2: 2.961941e-07 | Phase: Aggressive G₂ | 154.2min | ETA: 139.4min
+Epoch  3200/6000 | Loss: 2.690219e-06 | Ricci: 8.944154e-05 | G2: 2.798394e-07 | Phase: Aggressive G₂ | 156.8min | ETA: 137.1min
+Epoch  3250/6000 | Loss: 2.750379e-06 | Ricci: 9.215578e-05 | G2: 2.818532e-07 | Phase: Aggressive G₂ | 159.4min | ETA: 134.8min
+Epoch  3300/6000 | Loss: 2.738306e-06 | Ricci: 9.298907e-05 | G2: 2.720557e-07 | Phase: Aggressive G₂ | 162.0min | ETA: 132.4min
+Epoch  3350/6000 | Loss: 2.689510e-06 | Ricci: 9.265938e-05 | G2: 2.584594e-07 | Phase: Aggressive G₂ | 164.5min | ETA: 130.1min
+Epoch  3400/6000 | Loss: 2.697710e-06 | Ricci: 9.290915e-05 | G2: 2.597479e-07 | Phase: Aggressive G₂ | 167.1min | ETA: 127.7min
+Epoch  3450/6000 | Loss: 2.691284e-06 | Ricci: 9.199782e-05 | G2: 2.636532e-07 | Phase: Aggressive G₂ | 169.7min | ETA: 125.3min
+Epoch  3500/6000 | Loss: 2.717094e-06 | Ricci: 9.358020e-05 | G2: 2.615937e-07 | Phase: Aggressive G₂ | 172.2min | ETA: 122.9min
+
+  Running analysis at epoch 3500...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000009 (target: 1.0)
+    Vol error:   8.702278e-06
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_3500.pt
+Epoch  3550/6000 | Loss: 2.475835e-06 | Ricci: 8.573061e-05 | G2: 2.350347e-07 | Phase: Aggressive G₂ | 174.8min | ETA: 120.6min
+Epoch  3600/6000 | Loss: 2.394508e-06 | Ricci: 8.282757e-05 | G2: 2.274721e-07 | Phase: Aggressive G₂ | 177.4min | ETA: 118.2min
+Epoch  3650/6000 | Loss: 2.272229e-06 | Ricci: 7.943198e-05 | G2: 2.095321e-07 | Phase: Aggressive G₂ | 179.9min | ETA: 115.8min
+Epoch  3700/6000 | Loss: 2.262247e-06 | Ricci: 7.995295e-05 | G2: 2.030605e-07 | Phase: Aggressive G₂ | 182.5min | ETA: 113.4min
+Epoch  3750/6000 | Loss: 2.262461e-06 | Ricci: 7.983433e-05 | G2: 2.037477e-07 | Phase: Aggressive G₂ | 185.0min | ETA: 110.9min
+Epoch  3800/6000 | Loss: 2.255807e-06 | Ricci: 8.078533e-05 | G2: 1.956252e-07 | Phase: Aggressive G₂ | 187.6min | ETA: 108.5min
+Epoch  3850/6000 | Loss: 2.265910e-06 | Ricci: 8.196747e-05 | G2: 1.909699e-07 | Phase: Aggressive G₂ | 190.2min | ETA: 106.1min
+Epoch  3900/6000 | Loss: 2.124607e-06 | Ricci: 7.606115e-05 | G2: 1.838329e-07 | Phase: Aggressive G₂ | 192.7min | ETA: 103.7min
+Epoch  3950/6000 | Loss: 2.098791e-06 | Ricci: 7.350638e-05 | G2: 1.920493e-07 | Phase: Aggressive G₂ | 195.3min | ETA: 101.3min
+Epoch  4000/6000 | Loss: 2.112507e-06 | Ricci: 7.490952e-05 | G2: 1.878030e-07 | Phase: Aggressive G₂ | 197.8min | ETA: 98.8min
+
+  Running analysis at epoch 4000...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000010 (target: 1.0)
+    Vol error:   9.655952e-06
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_4000.pt
+Epoch  4050/6000 | Loss: 2.039117e-06 | Ricci: 7.320321e-05 | G2: 1.745069e-07 | Phase: Aggressive G₂ | 200.4min | ETA: 96.4min
+Epoch  4100/6000 | Loss: 2.024574e-06 | Ricci: 7.421811e-05 | G2: 1.637584e-07 | Phase: Aggressive G₂ | 202.9min | ETA: 94.0min
+Epoch  4150/6000 | Loss: 1.896995e-06 | Ricci: 6.871117e-05 | G2: 1.583991e-07 | Phase: Aggressive G₂ | 205.5min | ETA: 91.5min
+Epoch  4200/6000 | Loss: 1.863866e-06 | Ricci: 6.866468e-05 | G2: 1.482198e-07 | Phase: Aggressive G₂ | 208.1min | ETA: 89.1min
+Epoch  4250/6000 | Loss: 1.929638e-06 | Ricci: 7.161651e-05 | G2: 1.503863e-07 | Phase: Aggressive G₂ | 210.6min | ETA: 86.7min
+Epoch  4300/6000 | Loss: 1.766587e-06 | Ricci: 6.403071e-05 | G2: 1.470830e-07 | Phase: Aggressive G₂ | 213.2min | ETA: 84.2min
+Epoch  4350/6000 | Loss: 1.786956e-06 | Ricci: 6.592884e-05 | G2: 1.408242e-07 | Phase: Aggressive G₂ | 215.7min | ETA: 81.8min
+Epoch  4400/6000 | Loss: 1.767284e-06 | Ricci: 6.548907e-05 | G2: 1.377770e-07 | Phase: Aggressive G₂ | 218.3min | ETA: 79.3min
+Epoch  4450/6000 | Loss: 1.736401e-06 | Ricci: 6.350868e-05 | G2: 1.401741e-07 | Phase: Aggressive G₂ | 220.9min | ETA: 76.9min
+Epoch  4500/6000 | Loss: 1.701587e-06 | Ricci: 6.256820e-05 | G2: 1.349323e-07 | Phase: Aggressive G₂ | 223.4min | ETA: 74.4min
+
+  Running analysis at epoch 4500...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000008 (target: 1.0)
+    Vol error:   7.748604e-06
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_4500.pt
+Epoch  4550/6000 | Loss: 1.633975e-06 | Ricci: 6.027475e-05 | G2: 1.281812e-07 | Phase: Aggressive G₂ | 226.0min | ETA: 72.0min
+Epoch  4600/6000 | Loss: 1.661553e-06 | Ricci: 6.222697e-05 | G2: 1.246052e-07 | Phase: Aggressive G₂ | 228.5min | ETA: 69.5min
+Epoch  4650/6000 | Loss: 1.514096e-06 | Ricci: 5.594567e-05 | G2: 1.183101e-07 | Phase: Aggressive G₂ | 231.1min | ETA: 67.0min
+Epoch  4700/6000 | Loss: 1.526365e-06 | Ricci: 5.688162e-05 | G2: 1.162389e-07 | Phase: Aggressive G₂ | 233.7min | ETA: 64.6min
+Epoch  4750/6000 | Loss: 1.493275e-06 | Ricci: 5.567892e-05 | G2: 1.132929e-07 | Phase: Aggressive G₂ | 236.3min | ETA: 62.1min
+Epoch  4800/6000 | Loss: 1.462995e-06 | Ricci: 5.492647e-05 | G2: 1.086087e-07 | Phase: Aggressive G₂ | 239.0min | ETA: 59.7min
+Epoch  4850/6000 | Loss: 1.349692e-06 | Ricci: 4.986753e-05 | G2: 1.045929e-07 | Phase: Aggressive G₂ | 241.6min | ETA: 57.2min
+Epoch  4900/6000 | Loss: 1.530118e-06 | Ricci: 5.829176e-05 | G2: 1.079403e-07 | Phase: Aggressive G₂ | 244.3min | ETA: 54.8min
+Epoch  4950/6000 | Loss: 1.395031e-06 | Ricci: 5.211079e-05 | G2: 1.050191e-07 | Phase: Aggressive G₂ | 246.9min | ETA: 52.3min
+Epoch  5000/6000 | Loss: 1.481780e-06 | Ricci: 5.577573e-05 | G2: 1.090452e-07 | Phase: Aggressive G₂ | 249.5min | ETA: 49.8min
+
+  Running analysis at epoch 5000...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000006 (target: 1.0)
+    Vol error:   5.960464e-06
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_5000.pt
+Epoch  5050/6000 | Loss: 1.366516e-06 | Ricci: 5.128751e-05 | G2: 1.014176e-07 | Phase: Aggressive G₂ | 252.2min | ETA: 47.4min
+Epoch  5100/6000 | Loss: 1.330492e-06 | Ricci: 5.079492e-05 | G2: 9.282082e-08 | Phase: Aggressive G₂ | 254.8min | ETA: 44.9min
+Epoch  5150/6000 | Loss: 1.323143e-06 | Ricci: 5.069652e-05 | G2: 9.124258e-08 | Phase: Aggressive G₂ | 257.4min | ETA: 42.4min
+Epoch  5200/6000 | Loss: 1.244556e-06 | Ricci: 4.754591e-05 | G2: 8.644311e-08 | Phase: Aggressive G₂ | 260.0min | ETA: 39.9min
+Epoch  5250/6000 | Loss: 1.207084e-06 | Ricci: 4.606917e-05 | G2: 8.374266e-08 | Phase: Aggressive G₂ | 262.6min | ETA: 37.5min
+Epoch  5300/6000 | Loss: 1.156071e-06 | Ricci: 4.406101e-05 | G2: 8.064806e-08 | Phase: Aggressive G₂ | 265.2min | ETA: 35.0min
+Epoch  5350/6000 | Loss: 1.236119e-06 | Ricci: 4.801343e-05 | G2: 8.089128e-08 | Phase: Aggressive G₂ | 267.8min | ETA: 32.5min
+Epoch  5400/6000 | Loss: 1.162315e-06 | Ricci: 4.437342e-05 | G2: 8.057584e-08 | Phase: Aggressive G₂ | 270.4min | ETA: 30.0min
+Epoch  5450/6000 | Loss: 1.204231e-06 | Ricci: 4.620001e-05 | G2: 8.257575e-08 | Phase: Aggressive G₂ | 273.1min | ETA: 27.5min
+Epoch  5500/6000 | Loss: 1.168185e-06 | Ricci: 4.488974e-05 | G2: 7.923647e-08 | Phase: Aggressive G₂ | 275.7min | ETA: 25.0min
+
+  Running analysis at epoch 5500...
+    ||φ||²:      7.000000 (target: 7.0)
+    Norm error:  4.768372e-07
+    det(g):      1.000005 (target: 1.0)
+    Vol error:   4.768372e-06
+    Condition:   5.27
+
+  ✓ Checkpoint saved: k7_g2_checkpoint_epoch_5500.pt
+Epoch  5550/6000 | Loss: 1.143193e-06 | Ricci: 4.409236e-05 | G2: 7.626898e-08 | Phase: Aggressive G₂ | 278.3min | ETA: 22.5min
+Epoch  5600/6000 | Loss: 1.045432e-06 | Ricci: 3.993812e-05 | G2: 7.179607e-08 | Phase: Aggressive G₂ | 281.0min | ETA: 20.0min
+Epoch  5650/6000 | Loss: 9.953801e-07 | Ricci: 3.822885e-05 | G2: 6.692352e-08 | Phase: Aggressive G₂ | 283.6min | ETA: 17.5min
+Epoch  5700/6000 | Loss: 9.848196e-07 | Ricci: 3.812127e-05 | G2: 6.467801e-08 | Phase: Aggressive G₂ | 286.2min | ETA: 15.0min
+Epoch  5750/6000 | Loss: 9.909461e-07 | Ricci: 3.839075e-05 | G2: 6.466530e-08 | Phase: Aggressive G₂ | 288.8min | ETA: 12.5min
+Epoch  5800/6000 | Loss: 9.321830e-07 | Ricci: 3.606304e-05 | G2: 6.124201e-08 | Phase: Aggressive G₂ | 291.4min | ETA: 10.0min
+Epoch  5850/6000 | Loss: 9.571631e-07 | Ricci: 3.725030e-05 | G2: 6.125431e-08 | Phase: Aggressive G₂ | 294.1min | ETA: 7.5min
+Epoch  5900/6000 | Loss: 9.056579e-07 | Ricci: 3.494243e-05 | G2: 6.001081e-08 | Phase: Aggressive G₂ | 296.7min | ETA: 5.0min
+Epoch  5950/6000 | Loss: 9.238647e-07 | Ricci: 3.588587e-05 | G2: 5.947816e-08 | Phase: Aggressive G₂ | 299.3min | ETA: 2.5min
+Epoch  5999/6000 | Loss: 8.923336e-07 | Ricci: 3.422217e-05 | G2: 6.013118e-08 | Phase: Aggressive G₂ | 301.9min | ETA: 0.0min
+
+================================================================================
+Training complete! Total time: 301.9 minutes
+Final losses:
+  Ricci: 3.422217e-05
+  G₂:    6.013118e-08
+================================================================================
+
