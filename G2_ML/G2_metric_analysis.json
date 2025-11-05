@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "total_epochs": 6000,
+    "final_ricci_loss": 3.447696508374065e-05,
+    "final_g2_loss": 4.9834930848646763e-08,
+    "training_time_minutes": 299.95
+  },
+  "metric_statistics": {
+    "determinant_mean": 1.0000035762786865,
+    "determinant_std": 2.324761953786947e-05,
+    "condition_number_mean": 5.372440338134766,
+    "min_eigenvalue": 0.4311424791812897,
+    "max_eigenvalue": 2.3165221214294434
+  },
+  "g2_structure": {
+    "phi_norm_squared_mean": 7.000000953674316,
+    "phi_norm_squared_target": 7.0,
+    "phi_norm_error": 9.5367431640625e-07
+  },
+  "topology": {
+    "b2_computed": 12,
+    "b3_computed": 77,
+    "b2_gift": 21,
+    "b3_gift": 77
+  },
+  "yukawa_scale": {
+    "mean": 2.2407145500183105,
+    "std": 3.098060915363021e-05
+  }
+}
