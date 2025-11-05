@@ -121,17 +121,6 @@ Estimated runtime: 5-6 hours on A100, 10-12 hours on T4.
 - Validation: Betti numbers, Ricci-flatness, torsion classes
 - Future: Yukawa couplings, matter curves (in progress)
 
-## Citation
-
-```
-@misc{g2_neural_metric_2025,
-  title={Physics-Informed Neural Networks for G₂ Holonomy Metrics},
-  author={Brieuc},
-  year={2025},
-  note={Version 0.1}
-}
-```
-
 ## Limitations & Future Work
 
 **Current limitations:**
@@ -144,13 +133,9 @@ Estimated runtime: 5-6 hours on A100, 10-12 hours on T4.
 - Higher precision polish (L-BFGS to ~10⁻¹⁰)
 - Full Yukawa computation with matter curves
 
-## License
-
-Research code – free to use with attribution.
-
 ---
 
-**Last updated:** November 2025  
+**Last updated:**  11/05/2025  
 **Status:** Initial results, validation complete  
-**Feedback welcome:** Especially from differential geometers!
+
 
