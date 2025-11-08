@@ -1,0 +1,76 @@
+{
+  "training_summary": {
+    "total_epochs": 10000,
+    "total_time_hours": 6.410445665650897,
+    "avg_time_per_epoch_seconds": 2.307760439634323,
+    "mode": "rigorous"
+  },
+  "final_metrics": {
+    "torsion_loss": 1.32703908625742e-11,
+    "det_gram": 1.1225404739379883,
+    "det_g": 0.9999998807907104,
+    "loss_total": 6.632012627960648e-06,
+    "loss_volume": 1.0829184771132816e-13,
+    "loss_ortho": 1.326394522038754e-05
+  },
+  "best_metrics": {
+    "best_torsion_loss": 1.3126993415879529e-11,
+    "best_gram_det": 1.5015549659729004
+  },
+  "test_set_metrics": {
+    "torsion_test_final": 1.3303478110793243e-11,
+    "det_gram_test_final": 0.9066509008407593
+  },
+  "phase_comparison": [
+    {
+      "Phase": "Phase 1 End",
+      "Epoch": 2000,
+      "Torsion_Loss": 1.7555004205860314e-06,
+      "det_Gram": 0.84306401014328,
+      "det_g": 0.9999998807907104,
+      "LR": 0.0001,
+      "Loss_Total": 5.376738045015372e-05,
+      "Loss_Volume": 1.0776622649810719e-13,
+      "Loss_Ortho": 5.359182978281751e-05
+    },
+    {
+      "Phase": "Phase 2 End",
+      "Epoch": 5000,
+      "Torsion_Loss": 1.2071480171016447e-07,
+      "det_Gram": 0.9533081650733948,
+      "det_g": 0.9999998807907104,
+      "LR": 0.0001,
+      "Loss_Total": 1.8354938219999894e-05,
+      "Loss_Volume": 1.1300162194860519e-13,
+      "Loss_Ortho": 3.622701842687093e-05
+    },
+    {
+      "Phase": "Phase 3 End",
+      "Epoch": 8000,
+      "Torsion_Loss": 1.8619798411445565e-11,
+      "det_Gram": 0.9224264621734619,
+      "det_g": 0.9999998807907104,
+      "LR": 5.0016666666666665e-05,
+      "Loss_Total": 6.107473382144235e-06,
+      "Loss_Volume": 1.0437310737909655e-13,
+      "Loss_Ortho": 2.0357932953629643e-05
+    },
+    {
+      "Phase": "Phase 4 End",
+      "Epoch": 10000,
+      "Torsion_Loss": 1.32703908625742e-11,
+      "det_Gram": 1.1225404739379883,
+      "det_g": 0.9999998807907104,
+      "LR": 1.0019999999999996e-05,
+      "Loss_Total": 6.632012627960648e-06,
+      "Loss_Volume": 1.0829184771132816e-13,
+      "Loss_Ortho": 1.326394522038754e-05
+    }
+  ],
+  "geometric_quality": {
+    "mean_det_metric_samples": 0.9999999403953552,
+    "std_det_metric_samples": 3.214326795841771e-07,
+    "det_gram_samples": 1.0105905532836914,
+    "metric_condition_number": 9.669343948364258
+  }
+}

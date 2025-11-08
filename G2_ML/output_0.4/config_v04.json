@@ -1,0 +1,147 @@
+{
+  "phi_hidden_dims": [
+    256,
+    256,
+    128
+  ],
+  "harmonic_hidden_dims": [
+    128,
+    128
+  ],
+  "n_harmonic_forms": 21,
+  "max_frequency": 8,
+  "epochs": 10000,
+  "batch_size": 2048,
+  "grad_accumulation_steps": 2,
+  "use_amp": false,
+  "exterior_derivative_mode": "rigorous",
+  "metric_reconstruction_mode": "contraction",
+  "lr_schedule": {
+    "type": "piecewise",
+    "phases": [
+      {
+        "epochs": [
+          0,
+          500
+        ],
+        "lr_range": [
+          0,
+          0.0001
+        ]
+      },
+      {
+        "epochs": [
+          500,
+          2000
+        ],
+        "lr": 0.0001
+      },
+      {
+        "epochs": [
+          2000,
+          5000
+        ],
+        "lr": 0.0001
+      },
+      {
+        "epochs": [
+          5000,
+          8000
+        ],
+        "lr_range": [
+          0.0001,
+          5e-05
+        ]
+      },
+      {
+        "epochs": [
+          8000,
+          10000
+        ],
+        "lr_range": [
+          5e-05,
+          1e-05
+        ]
+      }
+    ]
+  },
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "curriculum": {
+    "phase1": {
+      "range": [
+        0,
+        2000
+      ],
+      "weights": {
+        "torsion": 0.1,
+        "volume": 1.0,
+        "harmonic_ortho": 1.0,
+        "harmonic_det": 0.5
+      }
+    },
+    "phase2": {
+      "range": [
+        2000,
+        5000
+      ],
+      "weights": {
+        "torsion": 2.0,
+        "volume": 0.5,
+        "harmonic_ortho": 0.5,
+        "harmonic_det": 0.2
+      }
+    },
+    "phase3": {
+      "range": [
+        5000,
+        8000
+      ],
+      "weights": {
+        "torsion": 5.0,
+        "volume": 0.1,
+        "harmonic_ortho": 0.3,
+        "harmonic_det": 0.1
+      }
+    },
+    "phase4": {
+      "range": [
+        8000,
+        10000
+      ],
+      "weights": {
+        "torsion": 3.0,
+        "volume": 0.1,
+        "harmonic_ortho": 0.5,
+        "harmonic_det": 0.2
+      }
+    }
+  },
+  "validation_interval": 1000,
+  "validation_test_seed": 99999,
+  "validation_n_points": 1000,
+  "checkpoint_interval": 1000,
+  "plot_interval": 500,
+  "early_stopping": {
+    "enabled": true,
+    "metric": "det_gram",
+    "threshold": 0.8,
+    "patience": 2000
+  },
+  "log_metrics": [
+    "torsion_train",
+    "torsion_test",
+    "det_gram_train",
+    "det_gram_test",
+    "volume",
+    "lr",
+    "grad_norm"
+  ],
+  "seed": 44,
+  "torus_radii": 6.283185307179586,
+  "manifold_n_modes": 1500,
+  "manifold_encoding_dim": 3000,
+  "phi_network_params": 872739,
+  "harmonic_network_params": 8470329,
+  "total_params": 9343068
+}
