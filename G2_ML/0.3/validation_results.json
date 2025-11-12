@@ -1,0 +1,17 @@
+{
+  "torsion_pass": false,
+  "d_phi_norm": 0.00012445087486412376,
+  "d_phi_dual_norm": 0.00013762993330601603,
+  "volume_pass": true,
+  "det_g_mean": 0.9999998211860657,
+  "det_g_std": 3.389457958746789e-07,
+  "gram_pass": true,
+  "gram_error": 0.06885568797588348,
+  "det_gram": 0.9206137657165527,
+  "spd_pass": true,
+  "eig_min": 0.4918801784515381,
+  "eig_max": 5.718472003936768,
+  "periodicity_pass": true,
+  "phi_diff": 2.579785700618231e-07,
+  "all_pass": false
+}

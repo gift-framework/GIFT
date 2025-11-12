@@ -1,0 +1,84 @@
+{
+  "version": "0.6c",
+  "timestamp": "2025-11-10T11:24:50.054663",
+  "git_hash": "unknown",
+  "training": {
+    "epochs": 10000,
+    "time_hours": 0.8677935273779763,
+    "time_minutes": 52.06761164267858,
+    "geometry": "TCS_neck",
+    "final_torsion_train": 2.5809594461634333e-08,
+    "final_torsion_test": 0.1380050778388977,
+    "final_det_gram_train": 0.996719241142273,
+    "final_det_gram_test": 0.9977692365646362,
+    "final_loss": 1.1301692724227905
+  },
+  "b2_21": {
+    "extracted": true,
+    "det_gram": 0.9987549185752869,
+    "gram_error": 0.04990677163004875,
+    "validation_pass": true,
+    "n_eigenvalues_in_tolerance": 21.0
+  },
+  "b3_77": {
+    "extracted": true,
+    "method": "spectral_fourier",
+    "n_forms": 24,
+    "det_gram": 1.8060293941202842e-09,
+    "status": "PARTIAL",
+    "grid_resolution": 8
+  },
+  "tcs_validation": {
+    "ricci_scalar": 0.00013742988812737167,
+    "ricci_nonflat": true,
+    "decay_results": {
+      "phi_amplitude": {
+        "gamma_fitted": -0.2349969915285121,
+        "gamma_expected": 0.5780542986425339,
+        "match": false
+      },
+      "torsion": {
+        "gamma_fitted": -0.23499699280557165,
+        "gamma_expected": 0.5780542986425339,
+        "match": false
+      }
+    }
+  },
+  "yukawa": {
+    "computed": true,
+    "n_couplings": 9261,
+    "n_nonzero": 9261,
+    "range_min": -9.115007400512695,
+    "range_max": 9.032331466674805,
+    "mean_abs": 0.06321640312671661
+  },
+  "fixes_applied": {
+    "distinct_harmonic_init": true,
+    "increased_hidden_dims": "96\u2192128",
+    "improved_loss_normalization": true,
+    "tripled_harmonic_weights_phase1": true,
+    "separation_loss": true,
+    "safemetrics_helper": true,
+    "fixed_history_management": true,
+    "b3_grid_12": true
+  },
+  "manifold_config": {
+    "T_neck": 24.483972375451767,
+    "R_fiber": 6.283185307179586,
+    "fiber_radii": [
+      6.2831854820251465,
+      6.2831854820251465
+    ],
+    "K3_radii": [
+      6.2831854820251465,
+      6.2831854820251465,
+      3.8832221031188965,
+      3.8832221031188965
+    ],
+    "xi_gluing": 0.9817477042468103,
+    "gamma_decay": 0.5780542986425339,
+    "tau_complex": 0.3125,
+    "boundary_width": 3.672595856317765,
+    "n_fourier_modes": 16
+  }
+}
