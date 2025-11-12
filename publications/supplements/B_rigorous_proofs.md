@@ -835,20 +835,80 @@ This justifies m_μ/m_e = 27^φ formula from first principles, where 27 = dim(J�
 
 ---
 
-## B.9 Summary of Proven Relations
+## B.9 Theorem: Q_Koide Dual Mersenne Origin
+
+**Statement**: The Koide parameter admits dual topological representation:
+
+```
+Q_Koide = dim(G₂)/b₂(K₇) = 14/21 = 2/3  (established)
+Q_Koide = p₂/M₂ = 2/3                    (algorithmic discovery)
+```
+
+**Classification**: PHENOMENOLOGICAL (dual origin empirically established)
+
+### Derivation 1: Holonomy-Cohomology Ratio
+
+From Core Paper Section 4.6.1:
+```
+Q_Koide = dim(G₂)/b₂(K₇) = 14/21 = 2/3
+```
+Exact rational derived from G₂ Lie algebra dimension and second Betti number.
+
+### Derivation 2: Binary-Mersenne Representation
+
+Algorithmic exploration reveals:
+```
+Q_Koide = p₂/M₂
+where p₂ = 2 (binary duality parameter)
+      M₂ = 3 (second Mersenne prime: 2² - 1)
+Result: 2/3 = 0.666666... (exact rational)
+```
+
+### Equivalence Proof
+
+Both derivations yield identical result because:
+```
+b₂(K₇) = 21 = dim(K₇) × M₂ = 7 × 3
+dim(G₂) = 14 = dim(K₇) × p₂ = 7 × 2
+
+Therefore:
+dim(G₂)/b₂(K₇) = (7×2)/(7×3) = 2/3 = p₂/M₂  (exact)
+```
+
+### Physical Interpretation
+
+Mersenne representation suggests Koide formula encodes information structure:
+- p₂ = 2: Binary encoding (dual origin proven in B.2)
+- M₂ = 3: Smallest Mersenne prime
+- Ratio 2/3: Fundamental information compression ratio
+
+This dual origin strengthens topological necessity interpretation.
+
+### Verification
+
+| observables | experimental value | GIFT value | deviation |
+|-------------|-------------------|------------|-----------|
+| Q_Koide | 0.6667 ± 0.0001 | 0.666667 | 0.005% |
+
+**Status**: PHENOMENOLOGICAL (exact rational, dual origin empirically established, awaiting first-principles derivation of Mersenne connection)
+
+---
+
+## B.10 Summary of Proven Relations
 
 ### Dimensionless Exact Relations
 
 | Theorem | Statement | Type | Confidence |
 |---------|-----------|------|------------|
-| B.1 | δ_CP = 7*dim(G₂) + H* = 197° | Observable | >95% |
-| B.2 | m_τ/m_e = dim(K₇) + 10*dim(E₈) + 10*H* = 3477 | Observable | >95% |
-| B.3 | b₃ = 98 - b₂ = 77 | Topological constraint | >99% |
-| B.4 | N_gen = rank(E₈) - Weyl = 3 | Observable | >95% |
-| B.5 | Ω_DE = ln(2) * 98/99 | Observable | >90% |
-| B.6 | m_s/m_d = p₂² * Weyl_factor = 20 | Observable | >95% |
-| B.7 | γ_GIFT = 511/884 | Heat kernel coefficient | >95% |
-| B.8 | φ from E₈ (McKay) | Geometric derivation | >90% |
+| B.1 | ξ = (5/2)β₀ | Parameter relation | >99% |
+| B.2 | p₂ dual origin | Topological equality | >99% |
+| B.3 | N_gen = 3 | Observable | >95% |
+| B.4 | √17 dual origin | Higgs sector | >95% |
+| B.5 | Ω_DE triple origin | Observable | >90% |
+| B.6 | m_s/m_d = 20 | Observable | >95% |
+| B.7 | γ_GIFT formula | Heat kernel | >95% |
+| B.8 | φ from E₈ | Geometric derivation | >90% |
+| B.9 | Q_Koide Mersenne | Observable dual origin | >90% |
 
 ---
 

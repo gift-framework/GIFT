@@ -17,11 +17,12 @@ def main():
     print("1. Twitter Bot (automated posting)")
     print("2. Visualizations (interactive notebooks)")
     print("3. Documentation (web interface)")
-    print("4. Exit")
+    print("4. Agents (verification & maintenance)")
+    print("5. Exit")
     print()
     
     while True:
-        choice = input("Select option (1-4): ").strip()
+        choice = input("Select option (1-5): ").strip()
         
         if choice == "1":
             launch_twitter_bot()
@@ -33,10 +34,13 @@ def main():
             launch_documentation()
             break
         elif choice == "4":
+            launch_agents()
+            break
+        elif choice == "5":
             print("Goodbye!")
             break
         else:
-            print("Invalid choice. Please select 1-4.")
+            print("Invalid choice. Please select 1-5.")
 
 def launch_twitter_bot():
     """Launch the Twitter bot"""
@@ -127,6 +131,26 @@ def launch_documentation():
     except Exception as e:
         print(f"Error opening documentation: {e}")
         print(f"Manual: Open {docs_file.absolute()} in your browser")
+
+def launch_agents():
+    """Run maintenance agents"""
+    print("\nGIFT Agents:")
+    print("1. Verification")
+    print("2. Unicode sanitizer (scan)")
+    print("3. Docs integrity")
+    print("4. Notebook discovery")
+    print("5. Canonical monitor")
+    choice = input("Select (1-5): ").strip()
+    if choice == "1":
+        subprocess.run([sys.executable, "-m", "assets.agents.cli", "verify"]) 
+    elif choice == "2":
+        subprocess.run([sys.executable, "-m", "assets.agents.cli", "unicode"]) 
+    elif choice == "3":
+        subprocess.run([sys.executable, "-m", "assets.agents.cli", "docs"]) 
+    elif choice == "4":
+        subprocess.run([sys.executable, "-m", "assets.agents.cli", "notebooks"]) 
+    elif choice == "5":
+        subprocess.run([sys.executable, "-m", "assets.agents.cli", "canonical"]) 
 
 if __name__ == "__main__":
     main()
