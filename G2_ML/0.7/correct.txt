@@ -1,0 +1,66 @@
+Que faut‑il corriger / ajouter (étapes concrètes)
+1) Metric_from_phi — implémentation correcte (itérative)
+   - Utiliser la construction de Hitchin : pour une 3‑forme stable φ sur R^7 on définit la bilinéaire B(u,v) comme (i_u φ) ∧ (i_v φ) ∧ φ — c’est un 7‑forme proportionnel à vol_g × g(u,v). Numériquement :
+     - Choisir une base e_i, calculer s_ij = * ( (e_i ⌟ φ) ∧ (e_j ⌟ φ) ∧ φ ) (résultat scalaire).
+     - Construire g_ij ∝ s_ij et normaliser la densité pour obtenir det(g)=positive, puis renormaliser volume.
+   - En pratique on résout cela itérativement : partant d’un g0 (euclidien), calculer ψ = hodge_star_g0(φ), calculer s_ij via contraction phi, obtenir g1, itérer jusqu’à convergence. C’est plus cher mais nécessaire.
+   - Référence utile : N. Hitchin, “The geometry of three-forms in six and seven dimensions”; R. Bryant, “Metrics with exceptional holonomy”.
+
+2) Calcul du torsion et de la décomposition en classes
+   - Calculer dφ et d*φ explicitement (exterior derivative). Sur coordonnées locales xi, si φ = (1/6) φ_{ijk}(x) dx^i∧dx^j∧dx^k alors
+     dφ = (1/6) ∂_l φ_{ijk} dx^l∧dx^i∧dx^j∧dx^k — faut assembler avec antisymétrie correcte.
+   - Décomposer dφ dans les espaces de torsion τ0, τ1, τ2, τ3 (formules standard) et ajouter perte ||dφ||^2 + ||d*φ||^2. Minimiser ces termes tend vers torsion-free (dφ=0 and d*φ=0).
+   - Implémenter automatiquement la dérivation extérieure via autograd mais en construisant correctement les composantes antisymétriques (le notebook commence à faire des grad sur φ_network, mais il faut assembler les composantes de dφ proprement).
+
+3) Hodge star / inner products dépendants du metric
+   - Tous les produits L2(α,β) = ∫ α ∧ *β demandent la star qui dépend de g. Donc lors de calculer Gram(h2) il faut utiliser g_from_phi pour construire * et les intégrales/produits.
+   - Pour checker harmonicité: résoudre (ou approximer) Δ_g ω = 0, i.e. minimize ||dω||^2 + ||d*ω||^2 pour formes ω dans une classe cohomologique donnée.
+
+4) Topologie / Betti
+   - Pour contraindre b₂ et b₃ : rechercher des ensembles de formes fermées et lin. indépendantes (mod exactes). Procédure pratique :
+     - Paramétriser un espace de candidats fermés (imposer dα=0 via perte) et évaluer leur rang linéaire modulo exactes (ex. utiliser QR numérique sur vecteurs de coefficients moyennés).
+     - Rendre l’échantillonnage suffisamment global (mesh / quadrature) pour distinguer formes localement similaires.
+   - Vérifier invariants par comparaisons d’intégrales de représentants et non par simple determinant d’un gram local.
+
+5) Neck / TCS conditions
+   - Imposer sur le cylindre asymptotique la forme standard (contrainte explicite) et la compatibilité de gluing φ (inclure transformation φ sur l’autre bout).
+   - Implémenter conditions périodiques/identifications sur les coordonnées S¹×K3.
+
+6) Numérique / architecture
+   - Réduire taille initiale (fourier features, batch) pour prototyper.
+   - Utiliser méthode scalaire : minimiser Hitchin functional H(φ) = ∫ √(det B(φ)) dvol (variation de H donne torsion‑free conditions) — utiliser comme perte supplémentaire.
+   - Si possible, travailler sur sous‑espaces symétriques (ansatzs) ou utiliser représentation spectrale sur K3 pour alléger coût.
+
+Formule esquisse pour metric_from_phi (pseudocode)
+- Ceci est un squelette itératif (nécessite implémenter contractions/wedge/hodge) :
+
+```python
+# Pseudo : itératif
+def metric_from_phi_iterative(phi, g_init=None, niter=10):
+    if g_init is None:
+        g = torch.eye(7, device=phi.device).unsqueeze(0).repeat(phi.shape[0],1,1)  # batch x 7 x 7
+    else:
+        g = g_init
+
+    for _ in range(niter):
+        # compute Hodge star * w.r.t g  -> requires metric inverse and sqrt(det)
+        psi = hodge_star_from_metric(phi, g)    # psi is 4-form of shape (B,35?) or chosen rep
+        # compute s_ij = * ( (e_i ⌟ φ) ∧ (e_j ⌟ φ) ∧ φ )
+        s = compute_B_tensor(phi, psi)          # returns (B,7,7)
+        # symmetrize/normalize to get metric candidate
+        # enforce SPD and normalize det(g)=1 or desired volume
+        eigvals, eigvecs = torch.linalg.eigh(s)
+        eigvals = torch.clamp(eigvals, min=1e-6)
+        g = eigvecs @ torch.diag_embed(eigvals) @ eigvecs.transpose(-2,-1)
+        # normalize volume if desired
+        det = torch.det(g)
+        g = g * (det.pow(-1.0/7.0)).view(-1,1,1)
+    return g
+```
+
+Références et lectures recommandées
+- N. Hitchin, “Stable forms and special metrics” (2000)
+- R. Bryant, “Metrics with exceptional holonomy”
+- D. Joyce, “Compact manifolds with special holonomy”
+- A. Kovalev, travaux sur twisted connected sums (pour TCS G2)
+- Articles sur décomposition des torsions G2 (Fernández–Gray, etc.)
