@@ -44,15 +44,15 @@ Run all cells to generate complete prediction datasets.
 
 ### DUNE (Deep Underground Neutrino Experiment)
 
-**GIFT Exact Prediction: δCP = 197°**
+**GIFT Prediction: δCP = 197°**
 
-This is one of the most striking predictions:
+This prediction is derived exactly from geometric formulas:
 - Formula: δCP = 7×dim(G₂) + H*(K₇) = 7×14 + 99 = 197°
-- Status: **EXACT** (proven in Supplement B)
+- Status: Exact (proven in Supplement B)
 - Current measurement: 197° ± 24° (NuFIT 5.3)
 - DUNE precision target: ±2-5° by 2030
 
-**Falsification criterion**: If DUNE measures δCP significantly different from 197° with <5° uncertainty, GIFT is falsified.
+Falsification criterion: If DUNE measures δCP significantly different from 197° with <5° uncertainty, GIFT is falsified.
 
 ### New Particles
 
