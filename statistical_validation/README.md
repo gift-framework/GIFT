@@ -1,278 +1,243 @@
-# GIFT Framework v2.0 - Statistical Validation & Uncertainty Quantification
+# Statistical Validation and Uncertainty Quantification
 
-**Comprehensive statistical analysis of all 34 dimensionless GIFT predictions**
+**GIFT Framework v2.0**
 
 ## Overview
 
-This directory contains rigorous statistical validation tools for the GIFT framework, providing:
+This directory contains tools for statistical validation of GIFT predictions, including Monte Carlo uncertainty propagation, Sobol sensitivity analysis, and bootstrap validation on experimental data.
 
-1. **Monte Carlo Uncertainty Propagation** (1M samples)
-   - Propagate theoretical parameter uncertainties through all formulas
-   - Generate confidence intervals for all predictions
-   - Quantify theoretical vs experimental uncertainties
+## Contents
 
-2. **Sobol Global Sensitivity Analysis** (10k+ samples)
-   - Identify which fundamental parameters (p₂, Weyl, τ) drive each observable
-   - First-order and total sensitivity indices
-   - Parameter interaction effects
+- `gift_statistical_validation.ipynb`: Complete Jupyter notebook
+- `run_validation.py`: Standalone Python script
+- `requirements.txt`: Python dependencies
+- `full_results/`: Output directory for validation results
 
-3. **Bootstrap Validation** (10k samples)
-   - Test robustness against experimental uncertainties
-   - Validate predictions across experimental error bars
-   - Confidence intervals for deviations
-
-## Files
-
-- **`gift_statistical_validation.ipynb`**: Full Jupyter notebook with visualizations
-- **`run_validation.py`**: Standalone Python script for batch execution
-- **`README.md`**: This file
-
-## Quick Start
-
-### Option 1: Jupyter Notebook (Interactive)
+## Installation
 
 ```bash
-cd /home/user/GIFT/publications
-jupyter notebook gift_statistical_validation.ipynb
+pip install -r requirements.txt
 ```
 
-Run all cells sequentially. Full analysis takes ~15-20 minutes.
+Required packages:
+- numpy >= 1.21.0
+- pandas >= 1.3.0
+- scipy >= 1.7.0
+- matplotlib >= 3.4.0
+- seaborn >= 0.11.0
+- tqdm >= 4.62.0
+- SALib >= 1.4.0
 
-### Option 2: Python Script (Batch)
+## Usage
+
+### Quick Test
 
 ```bash
-cd /home/user/GIFT/statistical_validation
-
-# Quick test run (2-3 minutes)
 python run_validation.py --quick
+```
 
-# Full analysis (15-20 minutes)
+Executes reduced analysis:
+- Monte Carlo: 100,000 samples
+- Bootstrap: 1,000 samples
+- Sobol: 1,000 samples
+- Runtime: approximately 2 minutes
+
+### Standard Analysis
+
+```bash
 python run_validation.py --full
-
-# Custom configuration
-python run_validation.py --mc-samples 500000 --bootstrap 5000 --sobol 5000
 ```
 
-## Requirements
+Default configuration:
+- Monte Carlo: 1,000,000 samples
+- Bootstrap: 10,000 samples
+- Sobol: 10,000 samples
+- Runtime: approximately 15-20 minutes
 
-```bash
-pip install numpy pandas scipy matplotlib seaborn tqdm SALib
-```
-
-## Outputs
-
-After running, the following files are generated:
-
-### Data Files
-- `validation_results.json`: Complete numerical results
-- `gift_statistical_validation_summary.csv`: Summary table (notebook only)
-
-### Visualizations (from notebook)
-- `gift_uncertainty_distributions.png`: Distribution plots for all observables
-- `gift_sobol_indices.png`: Sensitivity analysis bar charts
-- `gift_statistical_validation_master.png`: Comprehensive master figure
-
-## Results Summary
-
-### Parameter Uncertainties
-
-Conservative theoretical uncertainties assumed:
-- **p₂ = 2.0 ± 0.001** (0.05% - theoretical robustness)
-- **Weyl_factor = 5 ± 0.1** (2% - integer structure robustness)
-- **τ = 3.8967 ± 0.01** (0.25% - dimensional ratio uncertainty)
-
-### Key Findings
-
-1. **Theoretical uncertainties << Experimental uncertainties**
-   - MC propagation shows predictions are stable
-   - Parameter variations have minimal impact on most observables
-   - Framework is robust to theoretical perturbations
-
-2. **Sobol Analysis Reveals Parameter Importance**
-   - Different observables depend on different fundamental parameters
-   - Some predictions (e.g., neutrino angles) highly sensitive to specific parameters
-   - Interaction effects generally small
-
-3. **Bootstrap Validation Confirms Robustness**
-   - Predictions remain within experimental errors across 10k resamples
-   - Mean deviations consistent with base framework (0.13%)
-   - No systematic drift or instability
-
-## Usage Examples
-
-### Quick Test Run
-
-```bash
-python run_validation.py --quick --output-dir quick_results
-```
-
-Output:
-- 100k Monte Carlo samples
-- 1k Bootstrap samples
-- 1k Sobol samples
-- Runtime: ~2-3 minutes
-
-### Production Run
-
-```bash
-python run_validation.py \
-    --mc-samples 1000000 \
-    --bootstrap 10000 \
-    --sobol 10000 \
-    --output-dir production_results \
-    --seed 42
-```
-
-Output:
-- 1M Monte Carlo samples (rigorous CI)
-- 10k Bootstrap samples
-- 10k Sobol samples
-- Runtime: ~15-20 minutes
-
-### Ultra-High Precision
+### Custom Configuration
 
 ```bash
 python run_validation.py \
     --mc-samples 10000000 \
     --bootstrap 100000 \
     --sobol 50000 \
-    --output-dir ultra_precision
+    --output-dir custom_results \
+    --seed 42
 ```
 
-Output:
-- 10M Monte Carlo samples (publication-grade)
-- 100k Bootstrap
-- 50k Sobol
-- Runtime: ~2-3 hours
-- **This is the recommended configuration for $200-300 cloud compute**
+## Methodology
 
-## Computational Costs
+### Monte Carlo Uncertainty Propagation
 
-Estimated runtime on different hardware:
+Propagates parameter uncertainties through GIFT formulas using sampling:
 
-| Configuration | Laptop (CPU) | Cloud CPU (8-core) | GPU (A100) |
-|---------------|--------------|-------------------|------------|
+Parameter uncertainties (assumed):
+- p2: 2.0 ± 0.001 (0.05%)
+- Weyl_factor: 5 ± 0.1 (2%)
+- tau: 3.8967 ± 0.01 (0.25%)
+
+For each sample:
+1. Draw parameter values from normal distributions
+2. Compute all observables
+3. Record results
+
+Output statistics:
+- Mean and standard deviation
+- Median and percentiles (2.5%, 16%, 84%, 97.5%)
+- Confidence intervals
+
+### Sobol Sensitivity Analysis
+
+Global sensitivity analysis using Saltelli sampling:
+
+1. Generate parameter combinations using Sobol sequences
+2. Evaluate model for all combinations
+3. Compute sensitivity indices:
+   - S1: First-order effects
+   - ST: Total effects (including interactions)
+   - S2: Second-order interactions
+
+Interpretation:
+- S1 indicates direct parameter influence
+- ST - S1 indicates interaction effects
+- Sum of S1 across parameters indicates additive nature
+
+### Bootstrap Validation
+
+Resamples experimental data within uncertainties:
+
+1. For each bootstrap iteration:
+   - Sample experimental values from normal distributions
+   - Compute deviations from GIFT predictions
+2. Aggregate results across iterations
+3. Compute confidence intervals for deviations
+
+## Output Format
+
+### JSON Results
+
+`validation_results.json` contains:
+
+```json
+{
+  "metadata": {
+    "timestamp": "ISO-8601 format",
+    "mc_samples": 1000000,
+    "bootstrap_samples": 10000,
+    "sobol_samples": 10000
+  },
+  "monte_carlo_statistics": {
+    "observable_name": {
+      "mean": float,
+      "std": float,
+      "q025": float,
+      "q975": float,
+      ...
+    }
+  },
+  "bootstrap_statistics": {...},
+  "sobol_indices": {...}
+}
+```
+
+### CSV Summary
+
+`gift_statistical_validation_summary.csv` includes:
+- Observable name
+- GIFT prediction (MC mean)
+- MC standard deviation
+- MC 95% confidence interval
+- Experimental value and uncertainty
+- Bootstrap deviation statistics
+- Sobol sensitivity indices
+
+## Computational Requirements
+
+### Runtime Estimates
+
+| Configuration | Laptop (CPU) | Cloud (8-core) | GPU |
+|---------------|--------------|----------------|-----|
 | Quick | 3 min | 1 min | 30 sec |
 | Standard | 20 min | 5 min | 2 min |
-| Ultra | 3 hours | 40 min | 15 min |
+| High precision (10M) | 3 hours | 40 min | 15 min |
 
-**Cloud Cost Estimates:**
-- AWS c6i.2xlarge (8 vCPU): ~$0.34/hr → Ultra run = $0.23
-- GCP n2-standard-8: ~$0.39/hr → Ultra run = $0.26
-- Azure D8s v3: ~$0.38/hr → Ultra run = $0.25
+### Memory Requirements
 
-**GPU Acceleration:**
-- Most operations are CPU-bound (statistical computations)
-- GPU beneficial for extremely large MC runs (>10M samples)
-- For standard analysis, CPU is sufficient
+- Quick: ~1 GB
+- Standard: ~4 GB
+- High precision: ~16 GB
+
+## Cloud Execution
+
+### AWS Example
+
+```bash
+# Launch c6i.8xlarge instance (32 vCPU)
+aws ec2 run-instances --instance-type c6i.8xlarge ...
+
+# Copy files and execute
+scp -r statistical_validation/ ubuntu@instance:/home/ubuntu/
+ssh ubuntu@instance
+cd statistical_validation
+python run_validation.py --full
+```
+
+Cost estimate: c6i.8xlarge at $1.36/hour
+- Standard run (5 min): $0.11
+- High precision (40 min): $0.91
+
+### Google Cloud Example
+
+```bash
+# Launch n2-standard-8 instance
+gcloud compute instances create validation-instance \
+    --machine-type=n2-standard-8
+
+# Execute validation
+gcloud compute ssh validation-instance
+cd statistical_validation
+python run_validation.py --full
+```
+
+Cost estimate: n2-standard-8 at $0.39/hour
+- Standard run (5 min): $0.03
+- High precision (40 min): $0.26
 
 ## Interpreting Results
 
 ### Monte Carlo Statistics
 
-For each observable, the output provides:
-- **mean**: Central estimate
-- **std**: Theoretical uncertainty from parameter variations
-- **q025, q975**: 95% confidence interval
-- **median, q16, q84**: Robust estimates
-
-**Interpretation:**
-- Small `std` → Prediction insensitive to parameter uncertainties
-- Large `std` → Observable depends critically on parameter values
-- CI includes experimental value → Consistent prediction
+Standard deviation indicates theoretical uncertainty from parameter variations:
+- Small std: Prediction insensitive to parameter uncertainties
+- Large std: Observable depends critically on parameter values
 
 ### Sobol Indices
 
-- **S1** (First-order): Direct effect of parameter
-- **ST** (Total): Including interactions with other parameters
-- **S2**: Second-order interactions (pairwise)
+First-order index (S1):
+- S1 > 0.5: Parameter dominates observable
+- S1 < 0.1: Parameter has minor influence
 
-**Interpretation:**
-- S1 ≈ ST → No interactions, parameter acts independently
-- ST >> S1 → Strong interactions with other parameters
-- Sum of S1 > 0.9 → Additive model, minimal interactions
+Total index (ST):
+- ST ≈ S1: Parameter acts independently
+- ST >> S1: Strong interactions with other parameters
 
 ### Bootstrap Deviations
 
-- **mean**: Average deviation across experimental resamples
-- **q025, q975**: 95% CI for deviation
-
-**Interpretation:**
-- Narrow CI → Stable prediction regardless of experimental fluctuations
-- Wide CI → Prediction sensitive to experimental uncertainties
-- CI includes zero → Perfect agreement possible within errors
-
-## Publication Use
-
-These results provide publication-ready:
-
-1. **Confidence intervals** for all predictions
-2. **Sensitivity analysis** identifying critical parameters
-3. **Robustness validation** against experimental uncertainties
-4. **Professional visualizations** for papers/presentations
-
-Recommended citation format:
-```
-GIFT Framework v2.0 predictions with 95% confidence intervals from
-Monte Carlo uncertainty propagation (N=1M). Bootstrap validation (N=10k)
-confirms robustness. Sobol sensitivity analysis identifies parameter
-contributions. See statistical_validation/ directory for details.
-```
-
-## Advanced Usage
-
-### Custom Parameter Uncertainties
-
-Edit `PARAM_UNCERTAINTIES` in `run_validation.py`:
-
-```python
-PARAM_UNCERTAINTIES = {
-    'p2': {'central': 2.0, 'uncertainty': 0.005},  # Increase to 0.25%
-    'Weyl_factor': {'central': 5, 'uncertainty': 0.2},  # Increase to 4%
-    'tau': {'central': 10416 / 2673, 'uncertainty': 0.02}  # Increase to 0.5%
-}
-```
-
-### Parallel Execution
-
-For massive runs, use joblib or multiprocessing:
-
-```python
-from joblib import Parallel, delayed
-
-# Split MC into batches
-n_jobs = 8
-samples_per_job = mc_samples // n_jobs
-
-results = Parallel(n_jobs=n_jobs)(
-    delayed(monte_carlo_uncertainty_propagation)(samples_per_job, seed+i)
-    for i in range(n_jobs)
-)
-```
-
-### GPU Acceleration (Future)
-
-For >10M samples, consider CuPy or JAX:
-
-```python
-import cupy as cp  # GPU arrays
-
-# Convert to GPU
-p2_samples_gpu = cp.asarray(p2_samples)
-# ... (rest of computation on GPU)
-```
+Confidence intervals on deviations indicate robustness:
+- Narrow CI: Stable prediction across experimental uncertainties
+- Wide CI: Prediction sensitive to experimental values
 
 ## Troubleshooting
 
-### SALib ImportError
+### SALib Not Found
 
 ```bash
 pip install SALib
-# or
-conda install -c conda-forge SALib
 ```
 
-### Memory Issues
+If installation fails, Sobol analysis will be skipped with warning message.
+
+### Memory Error
 
 Reduce sample sizes:
 ```bash
@@ -281,30 +246,54 @@ python run_validation.py --mc-samples 100000 --bootstrap 1000
 
 ### Slow Execution
 
-Use quick mode first:
+Use quick mode for testing:
 ```bash
 python run_validation.py --quick
 ```
 
-## Contact & Support
+Or increase parallelization (requires modification of script).
 
-- **Issues**: https://github.com/gift-framework/GIFT/issues
-- **Questions**: See main GIFT documentation
-- **Updates**: Check CHANGELOG.md
+## Citation
+
+If using these validation results in publications:
+
+```
+GIFT Framework v2.0 statistical validation with Monte Carlo
+uncertainty propagation (N=1M), Sobol sensitivity analysis
+(N=10k), and bootstrap validation (N=10k).
+Repository: https://github.com/gift-framework/GIFT
+```
+
+## Files
+
+```
+statistical_validation/
+├── README.md                    # This file
+├── run_validation.py           # Standalone script
+├── requirements.txt            # Dependencies
+├── quick_test/                 # Quick test results
+│   └── validation_results.json
+└── full_results/               # Full validation results
+    └── validation_results.json
+```
 
 ## Version History
 
-- **v1.0** (2025-11-13): Initial statistical validation framework
-  - Monte Carlo uncertainty propagation
+- v1.0 (2025-11-13): Initial implementation
+  - Monte Carlo propagation
   - Sobol sensitivity analysis
-  - Bootstrap experimental validation
+  - Bootstrap validation
+  - Test run completed (100k samples)
+  - Full run completed (1M samples)
 
-## License
+## Contact
 
-MIT License (same as main GIFT framework)
+For questions or issues:
+- Repository: https://github.com/gift-framework/GIFT
+- Issues: https://github.com/gift-framework/GIFT/issues
 
 ---
 
-**Generated**: 2025-11-13
-**GIFT Framework**: v2.0
-**Analysis Type**: Comprehensive Statistical Validation
+**Last updated**: 2025-11-13
+**GIFT version**: 2.0
+**Analysis type**: Statistical validation
