@@ -8,7 +8,7 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/gift-framework/GIFT.svg?style=social&label=Watch)](https://github.com/gift-framework/GIFT)
 [![GitHub forks](https://img.shields.io/github/forks/gift-framework/GIFT.svg?style=social&label=Fork)](https://github.com/gift-framework/GIFT)
 
-## Highlights
+## Overview
 
 - **Scope**: Geometric information approach to Standard Model parameters from E₈×E₈
 - **Precision**: 0.13% mean deviation across 34 dimensionless observables
@@ -17,6 +17,7 @@
 - **Mathematical results**: 9 exact relations with complete proofs
 - **Neutrino sector**: Full prediction including δ_CP = 197° (0.005% deviation)
 - **Cosmology**: Ω_DE = ln(2) from binary information architecture
+- **Statistical validation**: Monte Carlo uncertainty propagation (1M samples), Sobol sensitivity analysis
 
 ## Performance Metrics
 
@@ -96,6 +97,28 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 - Visualization tools
 - Parameter exploration
 - Runs on Binder (no installation)
+
+### Statistical Validation and Experimental Predictions
+
+**[Statistical Validation Notebook](publications/gift_statistical_validation.ipynb)** - Robustness analysis
+- Monte Carlo uncertainty propagation (1,000,000 samples)
+- Sobol global sensitivity analysis (Saltelli sampling)
+- Bootstrap validation with resampling
+- Uncertainty quantification for all observables
+- Standalone Python script: [statistical_validation/run_validation.py](statistical_validation/run_validation.py)
+
+**[Experimental Predictions Notebook](publications/gift_experimental_predictions.ipynb)** - DUNE and collider predictions
+- Complete DUNE oscillation spectra (νμ → νe, νμ → νμ)
+- CP violation predictions (δ_CP = 197° exact)
+- New particle searches: 3.897 GeV scalar, 20.4 GeV gauge boson, 4.77 GeV dark matter
+- Production cross-sections and experimental signatures
+- See [README_experimental_predictions.md](publications/README_experimental_predictions.md)
+
+**[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics (WIP)
+- Machine learning extraction of harmonic forms from K₇ geometry
+- b₂=21 harmonic 2-forms, b₃=77 harmonic 3-forms
+- Yukawa coupling computation from 21×21×21 tensor
+- Intended for GIFT v2.1 to replace Supplement F with data-driven K₇ metric
 
 ### Mathematical Supplements
 
@@ -184,35 +207,15 @@ Explore the framework through interactive Jupyter notebooks in [assets/visualiza
 
 See [assets/visualizations/README.md](assets/visualizations/README.md) for details.
 
-### Twitter Bot
-
-**Automated scientific communication** via [@GIFTheory](https://twitter.com/GIFTheory):
-
-- **Weekly posts**: Monday 10:00 AM (scientific content)
-- **Monthly highlights**: 1st of month 11:00 AM (key discoveries)
-- **Content types**: 8 categories (precision, math, experimental, theoretical, etc.)
-- **Language**: English (international scientific audience)
-- **Frequency**: Conservative (1 tweet/week max) to avoid spam
-
-**Features**:
-- Automated content generation from GIFT framework
-- 10-fact database with exact predictions
-- Experimental validation updates (DUNE, Euclid, LHC)
-- Educational threads explaining topological unification
-
-**Setup**: See [assets/twitter_bot/README.md](assets/twitter_bot/README.md) for complete installation and configuration instructions.
-
 **Quick Start**: Run `python assets/quick_start.py` for easy access to all interactive tools.
 
 ### Visualization Dashboard
 
-**Terminal-style interactive dashboard** with Pip-Boy aesthetic: [docs/index.html](docs/index.html)
+**Interactive dashboard**: [docs/index.html](docs/index.html)
 
 Features:
 - Three-tab interface for all visualizations
 - Keyboard shortcuts (1, 2, 3) for quick navigation
-- Black/amber monochrome terminal theme
-- Scanline effects for retro CRT appearance
 
 **Generate all figures automatically**:
 ```bash
@@ -240,6 +243,9 @@ gift/
 │   ├── gift_main.md                   # Core paper (~1100 lines)
 │   ├── gift_extensions.md             # Dimensional observables
 │   ├── gift_v2_notebook.ipynb         # Interactive notebook
+│   ├── gift_statistical_validation.ipynb  # Statistical robustness (1M MC samples)
+│   ├── gift_experimental_predictions.ipynb  # DUNE, collider predictions
+│   ├── README_experimental_predictions.md   # Experimental collaboration reference
 │   │
 │   └── supplements/                   # Detailed supplements
 │       ├── A_math_foundations.md      # E₈, K₇, reduction
@@ -247,7 +253,7 @@ gift/
 │       ├── C_complete_derivations.md  # All 34 predictions
 │       ├── D_phenomenology.md         # Experimental comparison
 │       ├── E_falsification.md         # Testing criteria
-│       └── F_K7_metric.md             # Explicit constructions
+│       └── F_K7_metric.md             # Explicit constructions (v2.1: replaced by G2_ML)
 │
 ├── assets/                            # Interactive assets and tools
 │   ├── README.md                      # Assets overview
@@ -261,6 +267,16 @@ gift/
 │       ├── e8_root_system_3d.ipynb    # E₈ 240 roots in 3D
 │       ├── precision_dashboard.ipynb  # All observables comparison
 │       └── dimensional_reduction_flow.ipynb # 496D → 99D → 4D animation
+│
+├── statistical_validation/            # Statistical robustness tools
+│   ├── run_validation.py              # Standalone validation script
+│   ├── README.md                      # Usage documentation
+│   └── full_results/                  # Complete validation outputs
+│       └── validation_results.json    # 1M MC sample results
+│
+├── G2_ML/                             # Machine learning for K₇ metrics (WIP)
+│   ├── COMPLETION_PLAN.md             # Development roadmap
+│   └── [notebooks and models]         # Neural network training (in progress)
 │
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Common questions
@@ -307,7 +323,7 @@ All 10 independent elements predicted with mean deviation 0.11%. Spans four orde
 | mτ/me | 3477.15 | 3477.00 | 0.004% |
 | mτ/mμ | 16.8167 | 16.8136 | 0.018% |
 
-Exceptional agreement. The mτ/me ratio has exact topological formula.
+The mτ/me ratio has exact topological formula. Mean deviation: 0.012%.
 
 ### Quark Masses
 
@@ -343,22 +359,22 @@ See [Supplement B](publications/supplements/B_rigorous_proofs.md) for complete p
 
 ### New Particles
 
-**Predicted but not yet observed**:
+Predicted but not yet observed:
 - **3.897 GeV Scalar**: From H³(K₇) = ℂ⁷⁷ cohomology structure
 - **20.4 GeV Gauge Boson**: From E₈×E₈ gauge field decomposition
 - **4.77 GeV Dark Matter**: From K₇ geometric structure
 
-These provide clear experimental tests for upcoming collider experiments.
+Search venues: Belle II, LHCb (scalar), LHC (gauge boson), XENON/LZ (dark matter).
 
 ### Falsification Criteria
 
-**Clear falsification routes**:
+Falsification routes:
 - Fourth generation discovery (contradicts N_gen = 3)
 - δ_CP measured at high precision inconsistent with 197°
 - Violation of exact relations (Q_Koide ≠ 2/3, m_s/m_d ≠ 20)
 - Systematic deviations across multiple sectors
 
-**Timeline for definitive tests**:
+Timeline for experimental tests:
 - 2028-2032: DUNE measures δ_CP to ~2-5° precision
 - 2025-2030: Belle II, LHCb improve CKM measurements
 - Ongoing: Fourth generation searches at colliders
@@ -403,6 +419,7 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 
 ## Version History
 
+- **v2.1** (In development): Statistical validation, experimental predictions, G2 ML for K₇ metrics
 - **v2.0.0** (2025-10-24): Modular structure, rigorous proofs, 0.13% precision, 34 observables
 - **v1.0.0** (Archived): Initial framework (available in git history)
 
