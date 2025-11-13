@@ -207,35 +207,15 @@ Explore the framework through interactive Jupyter notebooks in [assets/visualiza
 
 See [assets/visualizations/README.md](assets/visualizations/README.md) for details.
 
-### Twitter Bot
-
-**Automated scientific communication** via [@GIFTheory](https://twitter.com/GIFTheory):
-
-- **Weekly posts**: Monday 10:00 AM (scientific content)
-- **Monthly highlights**: 1st of month 11:00 AM (key discoveries)
-- **Content types**: 8 categories (precision, math, experimental, theoretical, etc.)
-- **Language**: English (international scientific audience)
-- **Frequency**: Conservative (1 tweet/week max) to avoid spam
-
-**Features**:
-- Automated content generation from GIFT framework
-- 10-fact database with exact predictions
-- Experimental validation updates (DUNE, Euclid, LHC)
-- Educational threads explaining topological unification
-
-**Setup**: See [assets/twitter_bot/README.md](assets/twitter_bot/README.md) for complete installation and configuration instructions.
-
 **Quick Start**: Run `python assets/quick_start.py` for easy access to all interactive tools.
 
 ### Visualization Dashboard
 
-**Terminal-style interactive dashboard** with Pip-Boy aesthetic: [docs/index.html](docs/index.html)
+**Interactive dashboard**: [docs/index.html](docs/index.html)
 
 Features:
 - Three-tab interface for all visualizations
 - Keyboard shortcuts (1, 2, 3) for quick navigation
-- Black/amber monochrome terminal theme
-- Scanline effects for retro CRT appearance
 
 **Generate all figures automatically**:
 ```bash
