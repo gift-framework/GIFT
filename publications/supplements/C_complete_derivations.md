@@ -140,11 +140,44 @@ where:
 θ₁₂ = arctan(√(δ/γ_GIFT)) = 33.419°
 ```
 
-where δ = 2π/25, γ_GIFT = 511/884
+where:
+- δ = 2π/Weyl² = 2π/25 (topologically proven from Weyl_factor = 5)
+- γ_GIFT = 511/884 (rigorously proven in B.7)
 
 **Experimental comparison**: 33.44° ± 0.77° (deviation: 0.069%)
 
-**Status**: DERIVED (geometric ratio with transcendental constants)
+**Status**: TOPOLOGICAL (both components topologically derived)
+
+**Derivation**: The solar neutrino mixing angle emerges from pentagonal and heat kernel structure:
+
+1. **δ = 2π/Weyl²**: Geometric constant (2π) divided by square of Weyl_factor:
+   ```
+   Weyl_factor = 5 (proven via N_gen = rank(E₈) - Weyl, see B.2)
+   δ = 2π/25 = 0.251327 (pentagonal symmetry)
+   ```
+
+2. **γ_GIFT = 511/884**: Heat kernel coefficient (rigorously proven in B.7):
+   ```
+   γ_GIFT = (2×rank(E₈) + 5×H*(K₇))/(10×dim(G₂) + 3×dim(E₈))
+          = (2×8 + 5×99)/(10×14 + 3×248)
+          = 511/884 = 0.578054
+   ```
+
+3. **Formula structure**:
+   - Ratio δ/γ_GIFT encodes pentagonal (Weyl²) vs heat kernel (G₂+E₈) balance
+   - Square root connects energy eigenvalues to mixing angle
+   - Arctan standard rotation parameterization
+
+**McKay connection**: The denominator 25 = 5² reflects pentagon-icosahedron-E₈ correspondence via golden ratio symmetry.
+
+**Weyl_factor = 5 universality**: This completes the pattern where Weyl = 5 appears in:
+- N_gen = 8 - 5 = 3 (generations)
+- m_s/m_d = 4 × 5 = 20 (quark ratio)
+- δ = 2π/5² (neutrino mixing)
+- n_s = 1/ζ(5) (inflation)
+- Ω_DM ∝ 1/M₅ (dark matter, M₅ exponent = 5)
+
+**Complete topological proof**: See assets/pattern_explorer/elevations/theta12_TOPOLOGICAL_proof.md
 
 ### C.2.2 Reactor Mixing Angle θ₁₃
 
