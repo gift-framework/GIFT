@@ -978,13 +978,13 @@ where all correction components are topologically derived:
 |------------|-------------|------|-----------|
 | H₀ (CMB, early) | 67.36 ± 0.54 km/s/Mpc | (input) | - |
 | H₀ (local, late) | 73.04 ± 1.04 km/s/Mpc | 72.93 km/s/Mpc | **0.145%** ✓ |
-| **Tension** | **8.4% (4σ crisis!)** | **RESOLVED!** | - |
+| **Tension** | **8.4% discrepancy** | **Addressed** | - |
 
 **Status**: **THEORETICAL** (geometric correction fully derived from topology)
 
-**Hubble Tension Resolution - MAJOR BREAKTHROUGH**:
+**Hubble Tension Resolution**:
 
-The 4σ discrepancy between CMB (early universe, 67.36) and local (late universe, 73.04) measurements is RESOLVED by geometric correction from K₇ compactification:
+The discrepancy between CMB (early universe, 67.36) and local (late universe, 73.04) measurements is addressed by geometric correction from K₇ compactification:
 
 1. **Physical mechanism**: CMB sees early universe with minimal compactification; local sees late universe with full K₇ geometry active
 

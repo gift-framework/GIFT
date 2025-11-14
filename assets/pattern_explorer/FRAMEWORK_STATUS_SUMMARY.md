@@ -134,12 +134,12 @@ Note: Two additional items in supplement C (temporal evolution ansatz, pattern d
 |------------|---------|------------|------------|-----------|--------|
 | Ω_DE | ln(2) × 98/99 | 0.6847 ± 0.0073 | 0.6861 | 0.211% | TOPOLOGICAL |
 | Ω_DM | (π+γ)/M₅ | 0.120 ± 0.002 | 0.11996 | 0.032% | THEORETICAL |
-| n_s | 1/ζ(5) | 0.9649 ± 0.0042 | 0.9648 | 0.053% | TOPOLOGICAL |
+| n_s | ζ(11)/ζ(5) | 0.9649 ± 0.0042 | 0.9649 | 0.0066% | TOPOLOGICAL |
 | H₀ | H₀^CMB × (ζ(3)/ξ)^β₀ | 73.04 ± 1.04 | 72.93 | 0.145% | THEORETICAL |
 
 **Mean deviation**: 0.12%
 
-**Comments**: Dark energy density involves binary architecture factor ln(2). Scalar spectral index establishes odd zeta series pattern (ζ(3) → sin²θ_W, ζ(5) → n_s). Hubble constant derivation addresses the 4σ tension between CMB (67.36 km/s/Mpc) and local (73.04 km/s/Mpc) measurements via geometric correction factor.
+**Comments**: Dark energy density involves binary architecture factor ln(2). Scalar spectral index establishes odd zeta series pattern (ζ(3) → sin²θ_W, ζ(5), ζ(11) → n_s). Hubble constant derivation addresses the tension between CMB (67.36 km/s/Mpc) and local (73.04 km/s/Mpc) measurements via geometric correction factor.
 
 ### 2.9 Dark Matter Sector (2 observables)
 
@@ -271,10 +271,11 @@ Both Mersenne primes (2^p - 1) and Fermat primes (2^(2^n) + 1) appear as topolog
 Systematic appearance of Riemann zeta function at odd integers:
 
 - **ζ(3) = 1.202057** (Apéry's constant): sin²θ_W via heat kernel
-- **ζ(5) = 1.036928**: n_s = 1/ζ(5) from 5D Weyl structure
-- **ζ(7)**: Predicted for additional observables
+- **ζ(5) = 1.036928**: n_s = ζ(11)/ζ(5) from zeta ratio structure
+- **ζ(7) = 1.008349**: Predicted for additional observables (Ω_DM = ζ(7)/τ shows 0.474% deviation)
+- **ζ(11) = 1.000494**: n_s = ζ(11)/ζ(5) connects spectral index to odd zeta ratios
 
-Pattern connects to Weyl_factor = 5 quintic symmetry.
+Pattern connects to systematic appearance of odd zeta values in cosmological observables.
 
 ### 5.3 Binary Architecture
 

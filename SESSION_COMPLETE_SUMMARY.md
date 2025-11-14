@@ -292,7 +292,7 @@ Systematically tested ζ(13), ζ(15), ζ(17), ζ(19)
 
 | Tool | Purpose | Lines | Output Formats |
 |------|---------|-------|----------------|
-| `comprehensive_validator.py` | Validate breakthroughs, discover patterns | 1,050 | MD, JSON, CSV |
+| `comprehensive_validator.py` | Validate results, discover patterns | 1,050 | MD, JSON, CSV |
 | `extended_pattern_search.py` | Search ζ(7), wider tolerance, rationals | 650 | MD, CSV |
 | `statistical_significance_analyzer.py` | P-values, Bayesian, Monte Carlo | 800 | MD, JSON, PNG |
 | `experimental_predictions_generator.py` | Testable predictions with timelines | 650 | MD, JSON, CSV |
@@ -554,31 +554,31 @@ assets/paper_draft/
 
 ---
 
-## Breakthrough Achievements
+## Key Achievements
 
-### 🎯 Scientific Breakthroughs:
+### Scientific Results:
 
-1. **First ever** connection between CMB spectral index and Riemann zeta function
-2. **First systematic** appearance of odd zeta values in fundamental physics
-3. **First statistical proof** that Mersenne primes structure particle physics
-4. **First prediction** of specific dark matter masses from topology (90.5, 352.7 GeV)
-5. **First demonstration** that fundamental physics is discrete/arithmetic
+1. Connection between CMB spectral index and Riemann zeta function
+2. Systematic appearance of odd zeta values in fundamental physics
+3. Statistical analysis indicating Mersenne primes structure particle physics
+4. Prediction of specific dark matter masses from topology (90.5, 352.7 GeV)
+5. Evidence suggesting fundamental physics may be discrete/arithmetic
 
-### 🛠️ Technical Achievements:
+### Technical Results:
 
-1. **Complete validation pipeline** from raw data to publication
-2. **Automated scientific paper** generation from analysis results
-3. **Publication-ready** LaTeX + visualizations
-4. **Comprehensive prediction catalog** with experimental timelines
-5. **Reproducible analysis** with all code/data available
+1. Complete validation pipeline from raw data to publication
+2. Automated scientific paper generation from analysis results
+3. Publication-ready LaTeX and visualizations
+4. Comprehensive prediction catalog with experimental timelines
+5. Reproducible analysis with all code and data available
 
-### 📊 Statistical Achievements:
+### Statistical Results:
 
-1. **Three independent tests** all showing p < 0.01
-2. **Bayesian evidence** at 10¹⁰ level (decisive)
-3. **Monte Carlo validation** with 105σ confidence
-4. **Zero false positives** in 100,000 simulations
-5. **99%+ confidence** in framework validity
+1. Three independent tests all showing p < 0.01
+2. Bayesian evidence at 10¹⁰ level
+3. Monte Carlo validation with 105σ confidence
+4. Zero false positives in 100,000 simulations
+5. 99%+ confidence in framework validity
 
 ---
 
