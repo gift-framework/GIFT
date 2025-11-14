@@ -282,9 +282,23 @@ m_s/m_d = p₂² * Weyl_factor = 4 * 5 = 20.000
 
 ### C.3.2 Additional Quark Ratios (9 observables)
 
-**Mean deviation**: 0.07%
+| Ratio | GIFT Value | Experimental | Deviation |
+|-------|------------|--------------|-----------|
+| m_b/m_u | 1935.15 | 1935.19 | 0.002% |
+| m_c/m_d | 272.0 | 271.94 | 0.022% |
+| m_d/m_u | 2.16135 | 2.162 | 0.030% |
+| m_c/m_s | 13.5914 | 13.6 | 0.063% |
+| m_t/m_c | 135.923 | 135.83 | 0.068% |
+| m_b/m_d | 896.0 | 895.07 | 0.104% |
+| m_b/m_c | 3.28648 | 3.29 | 0.107% |
+| m_t/m_s | 1849.0 | 1846.89 | 0.114% |
+| m_b/m_s | 44.6826 | 44.76 | 0.173% |
 
-**Status**: DERIVED (systematic geometric patterns)
+**Mean deviation**: 0.09%
+
+**Origin**: All ratios inherit topological nature from individual quark masses (m_u, m_d, m_s, m_c, m_b, m_t), which were elevated to THEORETICAL status on Day 3. Since both numerator and denominator have established topological origin, all ratios automatically have topological origin by mathematical construction.
+
+**Status**: THEORETICAL (by inheritance from THEORETICAL individual masses, established Day 3)
 
 **Quark ratio summary**: 10 ratios total, 1 exact (m_s/m_d), 9 exceptional precision (<0.2%).
 
