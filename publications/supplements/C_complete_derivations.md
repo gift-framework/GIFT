@@ -223,11 +223,32 @@ where:
 θ₂₃ = (rank(E₈) + b₃(K₇))/H*(K₇) = 85/99 radians = 49.193°
 ```
 
-where 85/99 ≈ 0.8586 radians converts to degrees as 49.193°.
+where:
+- rank(E₈) = 8 (Cartan subalgebra dimension)
+- b₃(K₇) = 77 (third Betti number, chiral matter space)
+- H*(K₇) = 99 (total cohomology, matches QECC parameter k)
 
-**Experimental comparison**: 49.2° ± 1.1° (deviation: 0.014%)
+**Experimental comparison**: 49.2° ± 1.1° (deviation: 0.014%) ← **BEST PRECISION IN FRAMEWORK!**
 
-**Status**: TOPOLOGICAL (exact rational 85/99)
+**Status**: TOPOLOGICAL (exact irreducible rational 85/99)
+
+**Derivation**: The atmospheric mixing combines gauge and matter structure:
+
+1. **rank(E₈) = 8**: Independent gauge parameters (Cartan directions)
+2. **b₃(K₇) = 77**: Chiral matter from H³(K₇) harmonic 3-forms
+3. **Sum = 85 = 5×17**: Links Weyl_factor (5) to hidden sector (17⊕17)!
+4. **H* = 99**: Universal normalization (also QECC parameter k)
+
+**Weyl-Hidden connection**: The factorization 85 = 5×17 reveals deep link:
+- Weyl_factor = 5 (fundamental quintic symmetry)
+- 17 from hidden 17⊕17 dark matter sector
+- Product appears in atmospheric neutrino mixing!
+
+**Second octant**: Formula predicts θ₂₃ = 49.2° > 45° (non-maximal, second octant) ✓ confirmed by data
+
+**Decimal curiosity**: 85/99 = 0.858585... (repeating "85" infinitely!)
+
+**Complete topological proof**: See assets/pattern_explorer/elevations/theta23_TOPOLOGICAL_consolidated.md
 
 ### C.2.4 CP Violating Phase δ_CP
 
