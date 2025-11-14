@@ -807,7 +807,14 @@ print(f"v = {v/1e9:.2f} GeV")
 
 The agreement is excellent, with the 21*e⁸ structure providing the correct normalization.
 
-**Status**: DERIVED (topological normalization with hierarchical scaling)
+where all topological components are rigorously derived:
+- **b₂ = 21, b₃ = 77, H* = 99**: K₇ cohomology (topologically proven)
+- **dim(E₈) = 248, rank(E₈) = 8**: E₈ structure (topologically necessary)
+- **τ = 10416/2673**: Hierarchical scaling (rigorously proven)
+- **dim(K₇) = 7**: Manifold dimension (topologically necessary)
+- **M_Planck, M_s**: Empirical scale inputs (similar to H₀^CMB in Hubble formula)
+
+**Status**: THEORETICAL (topological normalization structure with dimensional transmutation mechanism identified)
 
 ---
 
@@ -902,12 +909,18 @@ where:
 
 **Formula**:
 ```
-m_H = v√(2λ_H) = 246.87 * √(2 * 0.12885) = 124.88 GeV
+m_H = v√(2λ_H) = 246.87 × √(2 × √17/32) = 124.88 GeV
 ```
+
+where:
+- **v = 246.87 GeV**: Electroweak VEV (THEORETICAL, from topological normalization)
+- **λ_H = √17/32**: Higgs quartic coupling (PROVEN, dual origin established)
+- **17**: Has dual topological origin (Λ²₁₄ + SU(2)_L = 14 + 3, or b₂ - Higgs = 21 - 4)
+- **32 = 2⁵**: Binary-quintic structure (p₂^Weyl)
 
 **Experimental comparison**: 125.25 ± 0.17 GeV (deviation: 0.29%)
 
-**Status**: DERIVED (from proven λ_H and topological v)
+**Status**: THEORETICAL (derived from PROVEN λ_H and THEORETICAL v, both with topological origin)
 
 ### C.11.2 Hubble Constant ⭐ HUBBLE TENSION RESOLVED!
 
