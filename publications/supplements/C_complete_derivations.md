@@ -817,7 +817,11 @@ The agreement is excellent, with the 21*e⁸ structure providing the correct nor
 
 ### C.10.1 Up Quark
 
-**Formula**: m_u = √(14/3) = 2.160 MeV
+**Formula**: m_u = √(14/3) = √(dim(G₂)/M₂) = 2.160 MeV
+
+where:
+- **14 = dim(G₂)**: G₂ Lie algebra dimension (holonomy group of K₇)
+- **3 = M₂**: Second Mersenne prime (N_gen, topologically proven)
 
 **Experimental comparison**: 2.16 ± 0.49 MeV (deviation: 0.011%)
 
@@ -825,33 +829,53 @@ The agreement is excellent, with the 21*e⁸ structure providing the correct nor
 
 **Formula**: m_d = ln(107) = 4.673 MeV
 
+where:
+- **107**: Prime number = H* + rank(E₈) = 99 + 8
+
 **Experimental comparison**: 4.67 ± 0.48 MeV (deviation: 0.061%)
 
 ### C.10.3 Strange Quark
 
-**Formula**: m_s = τ * 24 = 93.52 MeV
+**Formula**: m_s = τ × 24 = 93.52 MeV
+
+where:
+- **τ = 10416/2673**: Hierarchical scaling (rigorously proven)
+- **24 = M₅ - dim(K₇)**: 31 - 7 (Mersenne minus manifold dimension)
 
 **Experimental comparison**: 93.4 ± 8.6 MeV (deviation: 0.130%)
 
 ### C.10.4 Charm Quark
 
-**Formula**: m_c = (14 - π)³ = 1280 MeV
+**Formula**: m_c = (14 - π)³ = (dim(G₂) - π)³ = 1280 MeV
+
+where:
+- **14 = dim(G₂)**: G₂ Lie algebra dimension
+- **π**: Geometric constant
+- **Cube**: Third generation structure
 
 **Experimental comparison**: 1270 ± 20 MeV (deviation: 0.808%)
 
 ### C.10.5 Bottom Quark
 
-**Formula**: m_b = 42 * 99 = 4158 MeV
+**Formula**: m_b = 42 × 99 = (11 + M₅) × H* = 4158 MeV
 
-where 42 = 11 + M₅ = 11 + 31
+where:
+- **11**: Prime number (or rank(E₈) + M₂ = 8 + 3)
+- **M₅ = 31**: Fifth Mersenne prime
+- **H* = 99**: Total cohomology (b₂ + b₃ + 1 = 21 + 77 + 1)
 
 **Experimental comparison**: 4180 ± 30 MeV (deviation: 0.526%)
 
 ### C.10.6 Top Quark
 
-**Formula**: m_t = 415² = 172225 MeV
+**Formula**: m_t = 415² = [dim(E₈×E₈) - (b₃ + p₂²)]² = 172225 MeV
 
-where 415 = 496 - 81 = dim(E₈*E₈) - (b₃ + p₂²)
+where:
+- **496 = dim(E₈×E₈)**: Total gauge structure (248 + 248)
+- **77 = b₃**: Chiral matter from H³(K₇)
+- **4 = p₂²**: Binary squared (2²)
+- **81 = 77 + 4**: Subtracted structure
+- **Squared**: Yukawa coupling proportional to (mass ratio)²
 
 **Experimental comparison**: 172500 ± 700 MeV (deviation: 0.159%)
 
@@ -868,7 +892,7 @@ where 415 = 496 - 81 = dim(E₈*E₈) - (b₃ + p₂²)
 
 **Mean deviation**: 0.28%
 
-**Status**: DERIVED (dimensional scaling from topological parameters)
+**Status**: THEORETICAL (all formulas have topological components with identified dimensional scaling mechanism)
 
 ---
 
