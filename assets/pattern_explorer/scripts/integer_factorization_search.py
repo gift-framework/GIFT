@@ -9,6 +9,7 @@ import pandas as pd
 from itertools import product, combinations
 from typing import List, Tuple, Dict
 import math
+from pathlib import Path
 
 # GIFT Framework Observables
 OBSERVABLES = {
@@ -461,7 +462,9 @@ def main():
     category_analysis = search.analyze_by_category()
 
     # Save to CSV
-    output_file = '/home/user/GIFT/integer_factorization_patterns.csv'
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    data_dir.mkdir(parents=True, exist_ok=True)
+    output_file = data_dir / 'integer_factorization_patterns.csv'
     all_results.to_csv(output_file, index=False)
     print(f"\nSaved all patterns to: {output_file}")
 

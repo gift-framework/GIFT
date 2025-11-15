@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 from itertools import combinations
 import math
+from pathlib import Path
 
 # Zeta function values at odd integers
 ZETA = {
@@ -256,7 +257,9 @@ def main():
     df_filtered = df[df['deviation_pct'] < 2.0].copy()
 
     # Save to CSV
-    output_file = '/home/user/GIFT/zeta_ratio_matches.csv'
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    data_dir.mkdir(parents=True, exist_ok=True)
+    output_file = data_dir / 'zeta_ratio_matches.csv'
     df_filtered.to_csv(output_file, index=False, float_format='%.6f')
 
     print(f"Analysis complete!")

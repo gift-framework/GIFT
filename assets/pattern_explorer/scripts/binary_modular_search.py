@@ -9,6 +9,7 @@ import math
 from fractions import Fraction
 from typing import List, Tuple, Dict
 import csv
+from pathlib import Path
 
 # Mathematical constants
 PI = np.pi
@@ -566,8 +567,12 @@ def main():
     # Generate statistics
     stats = generate_summary_statistics(all_patterns, categorized)
 
+    # Get data directory relative to this script
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    data_dir.mkdir(parents=True, exist_ok=True)
+
     # Save to CSV
-    csv_path = '/home/user/GIFT/binary_modular_patterns.csv'
+    csv_path = data_dir / 'binary_modular_patterns.csv'
     with open(csv_path, 'w', newline='') as csvfile:
         fieldnames = ['observable', 'formula', 'experimental', 'theoretical',
                       'deviation_pct', 'binary_repr', 'category']

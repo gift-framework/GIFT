@@ -424,7 +424,17 @@ class GoldenRatioPatternFinder:
 
 def main():
     """Main execution function"""
-    output_dir = Path('/home/user/GIFT')
+    # Get repository root relative to this script
+    # scripts/ -> pattern_explorer/ -> assets/ -> GIFT/
+    repo_root = Path(__file__).resolve().parent.parent.parent.parent
+
+    # Output to pattern_explorer/data and pattern_explorer/visualizations
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    viz_dir = Path(__file__).resolve().parent.parent / 'visualizations'
+
+    # Create directories if they don't exist
+    data_dir.mkdir(parents=True, exist_ok=True)
+    viz_dir.mkdir(parents=True, exist_ok=True)
 
     # Run pattern search
     finder = GoldenRatioPatternFinder(tolerance_pct=1.0)
@@ -434,12 +444,12 @@ def main():
     df = finder.get_results_df()
 
     # Save CSV
-    csv_path = output_dir / 'golden_ratio_patterns.csv'
+    csv_path = data_dir / 'golden_ratio_patterns.csv'
     df.to_csv(csv_path, index=False)
     print(f"\nResults saved to {csv_path}")
 
     # Generate visualizations
-    finder.generate_visualizations(output_dir)
+    finder.generate_visualizations(viz_dir)
 
     # Print summary statistics
     print("\n" + "="*70)

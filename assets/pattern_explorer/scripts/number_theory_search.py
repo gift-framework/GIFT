@@ -18,6 +18,7 @@ Uses mpmath for high-precision arbitrary-precision arithmetic.
 import mpmath as mp
 from mpmath import mp as mpf_context
 import csv
+from pathlib import Path
 import sys
 from typing import List, Tuple, Dict
 import itertools
@@ -734,11 +735,16 @@ def main():
     print(f"Found {len(matches)} matches within 1% tolerance")
 
     # Save results
-    csv_file = '/home/user/GIFT/number_theory_patterns.csv'
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    reports_dir = Path(__file__).resolve().parent.parent / 'reports'
+    data_dir.mkdir(parents=True, exist_ok=True)
+    reports_dir.mkdir(parents=True, exist_ok=True)
+
+    csv_file = data_dir / 'number_theory_patterns.csv'
     print(f"\nSaving CSV to {csv_file}...")
     save_results_csv(matches, csv_file)
 
-    md_file = '/home/user/GIFT/NUMBER_THEORY_PATTERNS_REPORT.md'
+    md_file = reports_dir / 'NUMBER_THEORY_PATTERNS_REPORT.md'
     print(f"Generating markdown report: {md_file}...")
     generate_markdown_report(matches, md_file)
 
@@ -748,7 +754,7 @@ def main():
     print(f"\nFiles generated:")
     print(f"  1. {csv_file}")
     print(f"  2. {md_file}")
-    print(f"  3. /home/user/GIFT/number_theory_search.py (this script)")
+    print(f"  3. {Path(__file__).resolve()} (this script)")
 
 if __name__ == '__main__':
     main()

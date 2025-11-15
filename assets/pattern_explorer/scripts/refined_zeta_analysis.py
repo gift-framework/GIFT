@@ -10,6 +10,7 @@ Refined analysis of odd zeta discoveries with focus on:
 import math
 import csv
 from typing import Dict, List, Tuple
+from pathlib import Path
 
 # High-precision zeta values
 ZETA = {
@@ -417,7 +418,9 @@ def main():
             print(f"   Significance: {sigma:.2f}σ")
 
         # Save to CSV
-        output_file = '/home/user/GIFT/refined_zeta_patterns.csv'
+        data_dir = Path(__file__).resolve().parent.parent / 'data'
+        data_dir.mkdir(parents=True, exist_ok=True)
+        output_file = data_dir / 'refined_zeta_patterns.csv'
         with open(output_file, 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(['Observable', 'Formula', 'Predicted', 'Experimental',

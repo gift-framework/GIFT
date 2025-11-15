@@ -7,9 +7,23 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from pathlib import Path
+
+# Get data directory relative to this script
+# scripts/ -> pattern_explorer/ -> data/
+data_dir = Path(__file__).resolve().parent.parent / 'data'
+viz_dir = Path(__file__).resolve().parent.parent / 'visualizations'
+
+# Create visualizations directory if it doesn't exist
+viz_dir.mkdir(parents=True, exist_ok=True)
 
 # Read results
-df = pd.read_csv('/home/user/GIFT/zeta_ratio_matches.csv')
+csv_path = data_dir / 'zeta_ratio_matches.csv'
+if not csv_path.exists():
+    print(f"Error: {csv_path} not found. Please run zeta_ratio_discovery.py first.")
+    exit(1)
+
+df = pd.read_csv(csv_path)
 
 # Create figure with multiple subplots
 fig = plt.figure(figsize=(16, 12))
@@ -108,8 +122,9 @@ ax6.set_title('Confidence Score Distribution', fontsize=12, fontweight='bold')
 ax6.grid(axis='y', alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('/home/user/GIFT/zeta_patterns_visualization.png', dpi=300, bbox_inches='tight')
-print("Visualization saved to: /home/user/GIFT/zeta_patterns_visualization.png")
+output_path1 = viz_dir / 'zeta_patterns_visualization.png'
+plt.savefig(output_path1, dpi=300, bbox_inches='tight')
+print(f"Visualization saved to: {output_path1}")
 
 # Create a second figure showing zeta ratio network
 fig2, ax = plt.subplots(figsize=(14, 10))
@@ -186,7 +201,8 @@ legend_elements = [
 ax.legend(handles=legend_elements, loc='upper right', fontsize=10)
 
 plt.tight_layout()
-plt.savefig('/home/user/GIFT/zeta_network_graph.png', dpi=300, bbox_inches='tight')
-print("Network graph saved to: /home/user/GIFT/zeta_network_graph.png")
+output_path2 = viz_dir / 'zeta_network_graph.png'
+plt.savefig(output_path2, dpi=300, bbox_inches='tight')
+print(f"Network graph saved to: {output_path2}")
 
 print("\nVisualization complete!")

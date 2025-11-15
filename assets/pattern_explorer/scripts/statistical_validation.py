@@ -488,8 +488,9 @@ def main():
     # Initialize validator
     validator = StatisticalValidator(n_observables=37)
 
-    # Set base directory
-    base_dir = Path('/home/user/GIFT')
+    # Set base directory relative to this script
+    # scripts/ -> pattern_explorer/ -> assets/ -> GIFT/
+    base_dir = Path(__file__).resolve().parent.parent.parent.parent
 
     # Load all patterns
     print("\nLoading pattern discovery files...")
