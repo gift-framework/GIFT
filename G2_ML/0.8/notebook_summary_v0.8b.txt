@@ -1,0 +1,508 @@
+
+================================================================================
+RÉSUMÉ COMPLET: Complete_G2_Metric_Training_v0_8b.ipynb
+================================================================================
+
+STRUCTURE GÉNÉRALE:
+- 32 cellules au total (15 Markdown, 17 Code)
+- 2670 lignes
+- Version: 0.8b OPTIMIZED
+
+================================================================================
+SECTIONS PRINCIPALES
+================================================================================
+
+Section 1: SETUP ET IMPORTS (Cell 3)
+-------------------------------------
+Bibliothèques:
+- torch, numpy, matplotlib, pandas
+- torch.nn, torch.optim
+- torch.utils.checkpoint (pour économie mémoire)
+
+Configuration:
+- Device: CUDA avec détection auto
+- OUTPUT_DIR: 'v08b_outputs'
+- Support Google Drive pour checkpoints
+
+Section 2: PARAMÈTRES GIFT (Cell 5)
+------------------------------------
+Constantes topologiques du framework GIFT:
+
+TCS MODULI:
+- τ (tau): 10416/2673 = 3.89675 (hierarchical scaling)
+- ξ (xi): 5π/16 = 0.98175 rad (gluing rotation)
+- γ (gamma): 511/884 = 0.57806 (asymptotic decay)
+- φ (phi): (1+√5)/2 = 1.618034 (golden ratio)
+- β₀: π/8
+- δ: 2π/25
+
+INVARIANTS TOPOLOGIQUES K₇:
+- b₂(K₇) = 21 (M₁: 11 + M₂: 10)
+- b₃(K₇) = 77 (M₁: 40 + M₂: 37)
+- χ(K₇) = 0
+- h*(K₇) = 99
+
+STRUCTURE DE JAUGE:
+- SU(3): 8 dimensions (gluons)
+- SU(2): 3 dimensions (weak)
+- U(1): 1 dimension (hypercharge)
+- Hidden: 9 dimensions
+
+Section 3: GÉOMÉTRIE DIFFÉRENTIELLE (Cell 7)
+---------------------------------------------
+Classe: DifferentialGeometry
+
+Méthodes clés:
+1. levi_civita_sign(indices) - Symbole de Levi-Civita
+2. interior_product(vector, form_3) - Produit intérieur i_v φ
+   Input: (batch, 7), (batch, 35)
+   Output: (batch, 21) 2-forme
+3. wedge_2_2(form1, form2) - Produit wedge de 2-formes
+   Input: 2 × (batch, 21)
+   Output: (batch, 35) 4-forme
+4. wedge_4_3(form_4, form_3) - Produit wedge → 7-forme
+   Input: (batch, 35), (batch, 35)
+   Output: (batch, 1) volume
+5. hodge_star_3form(form_3, metric) - Opérateur de Hodge *: Λ³ → Λ⁴
+   Input: (batch, 35), (batch, 7, 7)
+   Output: (batch, 35)
+6. exterior_derivative_3form(phi, coords) - Dérivée extérieure dφ
+   Input: (batch, 35), (batch, 7)
+   Output: (batch, 35) 4-forme
+   Utilise: autograd pour ∂φ/∂x^i
+
+Mappings d'indices:
+- 2-formes: 21 composantes
+- 3-formes: 35 composantes
+- 4-formes: 35 composantes
+- 7-formes: 1 composante
+
+Section 4: CONSTRUCTION MÉTRIQUE DE HITCHIN (Cell 9)
+----------------------------------------------------
+Fonction: metric_from_phi_hitchin()
+
+Théorie:
+B(u,v) = (i_u φ) ∧ (i_v φ) ∧ φ (forme bilinéaire)
+
+Algorithme itératif:
+1. Départ: g₀ = I (euclidien)
+2. Calcul ψ = *_g φ
+3. Pour vecteurs de base e_i: s_ij = *(e_i ⌟ φ) ∧ (e_j ⌟ φ) ∧ φ
+4. Construction métrique g depuis s_ij
+5. Normalisation det(g) = 1
+6. Itération jusqu'à convergence
+
+Paramètres:
+- n_iter: 5 (défaut) ou curriculum 1→2→3
+- g_init: warm start optionnel
+- Sortie: metric (batch, 7, 7) SPD
+
+Références:
+- Hitchin (2000) "Stable forms and special metrics"
+- Bryant "Metrics with exceptional holonomy"
+
+Section 5: CALCUL DE TORSION (Cell 11)
+---------------------------------------
+Fonction: compute_torsion_full()
+
+Décomposition de Fernández-Gray:
+- τ₀: dilaton (scalaire)
+- τ₁: 1-forme (7 composantes)
+- τ₂: 2-forme (21 composantes)
+- τ₃: 3-forme (35 composantes)
+
+Équations:
+- dφ = τ₀ ψ + 3 τ₁ ∧ φ + *τ₃
+- d*φ = 4 τ₁ ∧ *φ + τ₂ ∧ φ
+
+Condition torsion-free:
+- dφ = 0 AND d*φ = 0
+
+Retourne:
+{
+  'dphi': 4-forme dφ
+  'dstar_phi': 3-forme d*φ
+  'tau0': scalaire
+  'tau1': 1-forme
+  'tau2': 2-forme
+  'tau3': 3-forme
+  'torsion_norm': norme totale
+}
+
+Section 6: TOPOLOGIE K₇ (Cell 13)
+----------------------------------
+Classes:
+1. ACylManifold - Variété asymptotiquement cylindrique
+   - Topologies: 'quintic_P4' (M₁), 'CI_222_P6' (M₂)
+   - Méthode: sample_asymptotic_region(n_points, t_min, t_max)
+
+2. NeckRegion - Région de recollement
+   - T_neck = τ × 2π (période)
+   - k3_radii: radii K3 avec golden ratio
+   - Méthodes:
+     * sample_neck(n_points) → coords, warping
+     * decay_profile(t) → exp(-γ|t|/T_neck)
+
+3. CompleteK7Topology - Topologie complète K₇ = M₁ᵀ ∪_φ M₂ᵀ
+   - R_transition = 0.7 × T_neck
+   - Méthodes:
+     * sample_points(n_batch, region_weights) → coords, labels
+     * transition_function(coords) → w_m1, w_neck, w_m2
+
+Section 7: ARCHITECTURE NEURONALE (Cells 15-16)
+------------------------------------------------
+Classe: FourierEncoding
+- n_frequencies: 16 (optimisé vs 24 en v0.7)
+- B: matrice (7, n_freq) gaussienne
+- forward: x → [cos(2πxB), sin(2πxB)]
+- output_dim: 2 × n_frequencies
+
+Classe: ModularPhiNetwork
+Architecture:
+  Input: coords (batch, 7)
+  ↓ FourierEncoding (n_fourier=16)
+  ↓ Trunk: [192, 192, 96] avec SiLU + LayerNorm (réduit vs v0.7)
+  ├─ head_m1 → (batch, 35)
+  ├─ head_neck → (batch, 35)
+  └─ head_m2 → (batch, 35)
+  ↓ Blending: w_m1·φ_m1 + w_neck·φ_neck + w_m2·φ_m2
+  ↓ Normalisation: ||φ|| = √7
+  Output: φ (batch, 35)
+
+Initialisation:
+- Poids de sortie × 0.01
+- Biais = 0
+
+Section 8: FORMES HARMONIQUES (Cell 18)
+----------------------------------------
+Classe: ImprovedHarmonicFormsExtractor
+
+Architecture:
+- 21 réseaux parallèles (un par forme H²)
+- Chaque réseau: encoding_dim → 96 → 21
+- Perturbations apprises: (21, encoding_dim)
+- n_fourier: 16
+
+Méthodes:
+1. forward(coords) → (batch, 21, 21)
+   - 21 formes harmoniques
+   - Normalisation unitaire
+
+2. compute_closure_loss(h2_forms, coords, dg_engine)
+   - Enforce dω = 0 pour chaque 2-forme
+   - Utilise gradient comme proxy
+   - Échantillonnage: 5 formes × 21 composantes
+
+Section 9: FONCTIONS DE PERTE (Cell 20)
+----------------------------------------
+1. hitchin_functional(phi, metric)
+   H(φ) = ∫ √det(B(φ)) dvol
+   
+   Implémentation:
+   - volume_penalty: (√det(g) - 1)²
+   - anisotropy: max(λ)/min(λ) des valeurs propres
+   - Retour: volume_penalty + 0.1·log(anisotropy)
+
+2. combined_loss(phi, coords, metric, h2_forms, torsion_dict)
+   Composantes:
+   - Torsion: ||dφ||² + ||d*φ||² (poids: 2.0)
+   - Hitchin: H(φ) (poids: 1.0)
+   - Closure: ||dω||² (poids: 0.5)
+   - Orthogonality: ||Gram(H²) - I|| (poids: 0.3)
+   
+   Total = 2·torsion + 1·hitchin + 0.5·closure + 0.3·ortho
+
+Section 10: CONFIGURATION D'ENTRAÎNEMENT (Cell 22)
+---------------------------------------------------
+CONFIG = {
+  'epochs': 5000,  # ↓ de 8000
+  'batch_size': 1024,
+  'grad_accumulation_steps': 2,
+  'lr': 8e-5,
+  'weight_decay': 1e-4,
+  'grad_clip': 0.5,
+  
+  'metric_iterations_schedule': {
+    'phase1': 1,   # epochs 0-1500
+    'phase2': 2,   # epochs 1500-3500
+    'phase3': 3    # epochs 3500-5000
+  },
+  
+  'torsion_subsample_size': 256,  # vs batch complet
+  'validation_interval': 500,
+  'checkpoint_interval': 1000,
+  'use_amp': True,  # Mixed precision
+  'auto_resume': True,
+  
+  'curriculum': {
+    'phase1': {'range': [0, 1500], 'weights': {'m1': 0.2, 'neck': 0.6, 'm2': 0.2}},
+    'phase2': {'range': [1500, 3500], 'weights': {'m1': 0.3, 'neck': 0.4, 'm2': 0.3}},
+    'phase3': {'range': [3500, 5000], 'weights': {'m1': 0.25, 'neck': 0.5, 'm2': 0.25}}
+  }
+}
+
+Optimiseur: AdamW
+Scheduler: CosineAnnealingLR (T_max=5000, eta_min=1e-6)
+Scaler: GradScaler pour AMP
+
+Section 10.5: HELPER FUNCTIONS (Cell 24)
+-----------------------------------------
+1. get_metric_iterations(epoch) - Curriculum métrique
+   - epoch < 1500: 1 itération
+   - epoch < 3500: 2 itérations
+   - epoch ≥ 3500: 3 itérations
+
+2. find_latest_checkpoint(dir) - Trouve dernier checkpoint
+
+3. load_checkpoint(path, ...) - Charge modèles + optimiseur
+   Retourne: start_epoch, history
+
+4. save_checkpoint_to_drive(path, drive_dir)
+   - Copie vers Google Drive si activé
+
+Section 11: BOUCLE D'ENTRAÎNEMENT (Cell 27)
+--------------------------------------------
+Features clés:
+
+1. AUTO-RESUME:
+   - Détecte dernier checkpoint
+   - Continue depuis epoch sauvegardée
+
+2. BOUCLE PRINCIPALE:
+   for epoch in range(start_epoch, epochs):
+     - Échantillonnage région selon curriculum
+     - Gradient accumulation (2 steps)
+     - Mixed precision (AMP)
+     
+     Forward:
+       phi = phi_network(coords)
+       metric = metric_from_phi_hitchin(phi, coords, n_iter=curriculum)
+       
+     Warm start:
+       - g_init = metric précédente (tous les 10 epochs)
+       
+     Torsion subsampling:
+       - Si batch > 256: sous-échantillonner 256 points
+       - Recalcul phi sur sous-ensemble (préserve autograd)
+       
+     Backward:
+       - scaler.scale(loss).backward()
+       - Gradient clipping: max_norm=0.5
+       - scaler.step(optimizer)
+
+3. LOGGING (tous les 100 epochs):
+   - Loss, torsion, hitchin, closure, ortho
+   - Temps écoulé et ETA
+   - Curriculum phase actuelle
+
+4. CHECKPOINTS (tous les 1000 epochs):
+   - Sauvegarde modèles + optimiseur + scheduler + history
+   - Copie vers Google Drive
+
+5. EARLY STOPPING:
+   - Epoch > 3000 AND torsion < 1e-9 AND closure < 1e-3
+
+6. SAUVEGARDE FINALE:
+   - phi_network_final.pt
+   - harmonic_network_final.pt
+
+Section 12: VALIDATION ET VISUALISATION (Cell 29)
+--------------------------------------------------
+1. Validation:
+   - 500 points de test
+   - Calcul phi, metric, h2_forms
+   - Torsion finale
+
+2. Métriques affichées:
+   - Torsion norm
+   - det(metric)
+   - Shape h₂ forms
+
+3. Plots (4 subplots):
+   - Torsion (semilogy)
+   - Hitchin functional (semilogy)
+   - Closure (semilogy)
+   - Orthogonality (semilogy)
+
+4. Sauvegarde:
+   - training_results.png
+   - training_history.csv
+   - summary.json
+
+Section 13: EXTRACTION YUKAWA (Cell 30)
+----------------------------------------
+Fonctions:
+
+1. extract_harmonic_forms(harmonic_net, k7_topology, n_samples=4096)
+   - Extrait 21 formes H²
+   - Échantillonnage uniforme M₁/neck/M₂
+   - Retourne: (n_samples, 21, 21), coords
+
+2. wedge_product_2forms(omega_i, omega_j, omega_k)
+   - Calcul ω_i ∧ ω_j ∧ ω_k (3 formes 2-D)
+   - Intégration sur K₇
+   - Retourne: scalaire (couplage Yukawa)
+
+3. compute_yukawa_matrix(h2_forms, n_forms=21)
+   - Matrice complète Y_ijk pour i,j,k ∈ [0,20]
+   - 21³ = 9261 couplages
+   - Retourne: (21, 21, 21)
+
+4. extract_mass_hierarchy(yukawa_couplings, n_generations=3)
+   - SVD des tranches Y[:,:,k]
+   - Extraction valeurs singulières
+   - Hiérarchie masses fermions
+
+5. compare_with_gift_predictions(eigenvalues)
+   - Comparaison avec prédictions GIFT
+   - Rapports attendus depuis b₂, b₃
+
+6. analyze_topological_structure(yukawa_couplings)
+   - Symétries CKM
+   - Structure de saveur
+
+Exécution complète de l'analyse Yukawa incluse.
+
+Section 14: PHASE 4 ÉTENDUE (Cell 31)
+--------------------------------------
+Configuration Phase 4:
+
+But: Optimisation orthogonalité des formes H²
+
+CONFIG_PHASE4:
+- start_epoch: depuis checkpoint (5000)
+- additional_epochs: 2000
+- total_epochs: 7000
+- metric_iterations: 4 (↑)
+- ortho_weight: 1.0 (↑)
+- lr: 2e-5 → 2e-6 (diminution)
+- Mêmes batch_size, AMP, etc.
+
+Fonction de perte modifiée:
+- combined_loss_phase4()
+- Emphasis sur orthogonalité
+- Weights ajustés
+
+Entraînement additionnel:
+- 2000 epochs supplémentaires
+- Checkpoints tous les 500 epochs
+- Sauvegarde finale: epoch_7000_final.pt
+
+================================================================================
+OPTIMISATIONS CLÉS v0.8b vs v0.7
+================================================================================
+
+1. PERFORMANCE (~2-3× plus rapide):
+   - Epochs: 8000 → 5000
+   - Architecture: [256,256,128] → [192,192,96]
+   - n_fourier: 24 → 16
+   - Metric curriculum: 1 → 2 → 3
+   - Torsion subsample: batch → 256
+   - Validation: chaque 100 → chaque 500
+
+2. MIXED PRECISION:
+   - torch.cuda.amp.autocast
+   - GradScaler pour gradients
+   - Disable autocast pour det, eigh, inv
+
+3. AUTO-RESUME:
+   - Détection automatique checkpoint
+   - Continuation transparente
+
+4. WARM START:
+   - Métrique précédente comme g_init
+   - Convergence plus rapide
+
+5. GOOGLE DRIVE:
+   - Sauvegarde automatique checkpoints
+   - Protection contre perte session Colab
+
+================================================================================
+MATHÉMATIQUES RIGOUREUSES v0.8b
+================================================================================
+
+1. CONSTRUCTION HITCHIN:
+   - Métrique depuis 3-forme stable
+   - Itération B(u,v) = (i_u φ) ∧ (i_v φ) ∧ φ
+   - Normalisation det(g) = 1
+
+2. TORSION EXPLICITE:
+   - dφ calculé via autograd
+   - Décomposition τ₀, τ₁, τ₂, τ₃
+   - Loss: ||dφ||² + ||d*φ||² → 0
+
+3. HODGE STAR MÉTRIQUE:
+   - *_g dépend de g courant
+   - Produits L²: ∫ α ∧ *_g β
+   - Gram matrices avec métrique
+
+4. FORMES HARMONIQUES:
+   - Closure: dω = 0 (via loss)
+   - Coclosure: d*ω = 0
+   - Indépendance linéaire modulo exact
+
+5. TCS BOUNDARY:
+   - φ → φ_std cylindrique sur S¹×K3
+   - Rotation gluing ξ
+   - Identifications périodiques
+
+6. FONCTIONNELLE HITCHIN:
+   - H(φ) = ∫ √det(B(φ)) dvol
+   - Minimisation → G₂ torsion-free
+   - Objectif principal d'entraînement
+
+================================================================================
+RÉFÉRENCES THÉORIQUES
+================================================================================
+
+1. Hitchin, N. (2000) "Stable forms and special metrics"
+2. Bryant, R. "Metrics with exceptional holonomy"
+3. Joyce, D. "Compact manifolds with special holonomy"
+4. Kovalev, A. "Twisted connected sums and special Riemannian holonomy"
+5. Fernández-Gray decomposition of G₂ torsion
+
+================================================================================
+POINTS CLÉS POUR v0.9
+================================================================================
+
+1. ARCHITECTURE:
+   - Considérer réseaux plus profonds si capacité GPU
+   - Transformer architecture pour longue portée?
+   - Attention entre régions M₁/neck/M₂
+
+2. OPTIMISATIONS:
+   - Flash attention pour efficiency
+   - Gradient checkpointing si mémoire limitée
+   - Compiled mode (torch.compile)
+
+3. MATHÉMATIQUES:
+   - Hodge star plus précis (full metric dependence)
+   - d*φ exact (pas approximation)
+   - Torsion classes plus rigoureux
+
+4. CURRICULUM:
+   - Plus de phases (5-6 au lieu de 3)
+   - Metric iterations: 1→2→3→4→5
+   - Weights adaptatifs selon loss
+
+5. LOSS FUNCTIONS:
+   - Weights adaptatifs (pas fixes)
+   - Regularization: spectral norm, dropout
+   - Adversarial training?
+
+6. VALIDATION:
+   - Test set indépendant
+   - Métriques géométriques: volume K₇, courbure
+   - Vérification invariants topologiques
+
+7. YUKAWA:
+   - Extraction pendant entraînement (monitoring)
+   - Loss component: rapprochement masses observées
+   - Fine-tuning sur hiérarchie CKM
+
+8. CHECKPOINTING:
+   - Plus fréquent (500 epochs)
+   - Lightweight checkpoints (pas optimizer states)
+   - Wandb/tensorboard logging
+
+================================================================================

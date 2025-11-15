@@ -1,0 +1,481 @@
+
+================================================================================
+PARAMÈTRES ET HYPERPARAMÈTRES - v0.8b
+================================================================================
+
+Ce document liste TOUS les paramètres configurables pour référence rapide.
+
+================================================================================
+I. PARAMÈTRES GIFT (Topologie K₇)
+================================================================================
+
+TCS_MODULI = {
+    'tau': 10416 / 2673,              # 3.896750654 - Hierarchical scaling
+    'xi': 5 * np.pi / 16,             # 0.981747704 rad = 56.25° - Gluing rotation
+    'gamma': 511 / 884,               # 0.578054299 - Asymptotic decay rate
+    'phi': (1 + np.sqrt(5)) / 2,     # 1.618033989 - Golden ratio
+    'beta0': np.pi / 8,               # 0.392699082 rad - Phase parameter
+    'delta': 2 * np.pi / 25,          # 0.251327412 rad - Secondary twist
+}
+
+TOPOLOGICAL_INVARIANTS = {
+    'b2': 21,           # Second Betti number
+    'b3': 77,           # Third Betti number
+    'chi': 0,           # Euler characteristic
+    'h_star': 99,       # Effective DOF
+    
+    # M₁ (Quintic in P⁴)
+    'b2_m1': 11,
+    'b3_m1': 40,
+    
+    # M₂ (CI_{222} in P⁶)
+    'b2_m2': 10,
+    'b3_m2': 37,
+}
+
+GAUGE_STRUCTURE = {
+    'dim_su3': 8,       # SU(3) color - gluons
+    'dim_su2': 3,       # SU(2) weak
+    'dim_u1': 1,        # U(1) hypercharge
+    'dim_hidden': 9,    # Hidden sector
+}
+
+================================================================================
+II. ARCHITECTURE NEURONALE
+================================================================================
+
+FOURIER_ENCODING = {
+    'n_frequencies': 16,           # Nombre de fréquences (↓ de 24 en v0.7)
+    'scale': 1.0,                  # Échelle B matrix
+    'input_dim': 7,                # Coordonnées K₇
+    'output_dim': 32,              # 2 × n_frequencies
+}
+
+PHI_NETWORK = {
+    'hidden_dims': [192, 192, 96],    # Couches trunk (↓ de [256,256,128])
+    'n_fourier': 16,                   # Frequencies encoding (↓ de 24)
+    'encoding_dim': 32,                # 2 × n_fourier
+    
+    # Trois têtes modulaires
+    'head_dim': 96,                    # Dimension tête
+    'output_dim': 35,                  # 3-forme (35 composantes)
+    
+    # Normalisation
+    'phi_norm': 7.0,                   # ||φ|| = √7
+    
+    # Initialisation
+    'head_weight_scale': 0.01,         # Poids finaux × 0.01
+    'head_bias_init': 0.0,             # Biais = 0
+}
+
+HARMONIC_NETWORK = {
+    'n_forms': 21,                     # Nombre de formes H² (= b₂)
+    'n_components': 21,                # Composantes par 2-forme
+    'hidden_dim': 96,                  # Couche cachée
+    'n_fourier': 16,                   # Encoding frequencies
+    'encoding_dim': 32,                # 2 × n_fourier
+    
+    # Perturbations
+    'perturbation_scale': 0.01,        # Scale perturbations
+    'base_seed': 42,                   # Seed pour reproductibilité
+    
+    # Closure computation
+    'closure_sample_forms': 5,         # Formes échantillonnées (sur 21)
+    'closure_sample_components': 21,   # Composantes par forme
+}
+
+TOTAL_PARAMETERS = {
+    'phi_network': '~150k params',     # Estimation
+    'harmonic_network': '~60k params', # Estimation
+    'total': '~210k params',
+}
+
+================================================================================
+III. GÉOMÉTRIE DIFFÉRENTIELLE
+================================================================================
+
+DIFFERENTIAL_GEOMETRY = {
+    'dim': 7,                          # Dimension manifold
+    
+    # Formes différentielles
+    'n_1forms': 7,                     # dx^i
+    'n_2forms': 21,                    # C(7,2)
+    'n_3forms': 35,                    # C(7,3)
+    'n_4forms': 35,                    # C(7,4)
+    'n_7forms': 1,                     # Volume
+}
+
+METRIC_RECONSTRUCTION = {
+    'method': 'Hitchin',               # Construction de Hitchin
+    'n_iter_default': 5,               # Iterations par défaut
+    'curriculum_iter': [1, 2, 3],      # Curriculum phases
+    
+    # Normalisation
+    'det_target': 1.0,                 # det(g) = 1
+    'spd_epsilon': 1e-4,               # Clamp eigenvalues
+    
+    # Warm start
+    'warm_start_interval': 10,         # Update tous les N epochs
+}
+
+TORSION = {
+    'classes': ['tau0', 'tau1', 'tau2', 'tau3'],
+    'tau0_dim': 1,                     # Scalaire (dilaton)
+    'tau1_dim': 7,                     # 1-forme
+    'tau2_dim': 21,                    # 2-forme
+    'tau3_dim': 35,                    # 3-forme
+    
+    # Target
+    'target_dphi': 0.0,                # dφ = 0 (torsion-free)
+    'target_dstar_phi': 0.0,           # d*φ = 0
+}
+
+================================================================================
+IV. CONFIGURATION D'ENTRAÎNEMENT
+================================================================================
+
+TRAINING = {
+    'epochs': 5000,                    # Total epochs (↓ de 8000)
+    'batch_size': 1024,                # Batch size
+    'grad_accumulation_steps': 2,      # Gradient accumulation
+    'effective_batch': 2048,           # 1024 × 2
+    
+    # Optimiseur
+    'optimizer': 'AdamW',
+    'lr': 8e-5,                        # Learning rate
+    'weight_decay': 1e-4,              # L2 regularization
+    'betas': (0.9, 0.999),             # Adam betas (default)
+    'eps': 1e-8,                       # Adam epsilon (default)
+    
+    # Scheduler
+    'scheduler': 'CosineAnnealingLR',
+    'T_max': 5000,                     # Epochs
+    'eta_min': 1e-6,                   # LR minimum
+    
+    # Gradient clipping
+    'grad_clip': 0.5,                  # Max norm
+    
+    # Mixed precision
+    'use_amp': True,                   # Automatic Mixed Precision
+    'amp_dtype': 'float16',            # Half precision
+}
+
+CURRICULUM = {
+    'phase1': {
+        'range': [0, 1500],
+        'weights': {'m1': 0.2, 'neck': 0.6, 'm2': 0.2},
+        'metric_iter': 1,
+    },
+    'phase2': {
+        'range': [1500, 3500],
+        'weights': {'m1': 0.3, 'neck': 0.4, 'm2': 0.3},
+        'metric_iter': 2,
+    },
+    'phase3': {
+        'range': [3500, 5000],
+        'weights': {'m1': 0.25, 'neck': 0.5, 'm2': 0.25},
+        'metric_iter': 3,
+    },
+}
+
+OPTIMIZATIONS = {
+    'torsion_subsample_size': 256,     # Subsample pour torsion (vs 1024)
+    'torsion_subsample_ratio': 0.25,   # 256/1024
+    
+    'validation_interval': 500,        # Chaque N epochs (↑ de 100)
+    'checkpoint_interval': 1000,       # Chaque N epochs
+    'display_interval': 100,           # Logging tous les N
+    
+    'auto_resume': True,               # Auto-reprise checkpoint
+    'save_to_drive': True,             # Google Drive backup
+}
+
+================================================================================
+V. FONCTIONS DE PERTE
+================================================================================
+
+LOSS_WEIGHTS = {
+    'torsion': 2.0,                    # ||dφ||² + ||d*φ||²
+    'hitchin': 1.0,                    # H(φ) = ∫ √det(B) dvol
+    'closure': 0.5,                    # ||dω||² pour H²
+    'orthogonality': 0.3,              # ||Gram - I||
+}
+
+LOSS_COMPONENTS = {
+    'torsion': {
+        'metric': 'L2 norm',
+        'target': 0.0,
+        'threshold': 1e-9,             # Early stopping
+    },
+    
+    'hitchin': {
+        'volume_penalty': '(√det(g) - 1)²',
+        'anisotropy': 'log(λ_max/λ_min)',
+        'anisotropy_weight': 0.1,
+    },
+    
+    'closure': {
+        'metric': 'gradient norm',
+        'n_sampled_forms': 5,
+        'n_components': 21,
+        'threshold': 1e-3,             # Early stopping
+    },
+    
+    'orthogonality': {
+        'metric': '||Gram(H²) - I||_F',
+        'target': 'Identity matrix',
+    },
+}
+
+EARLY_STOPPING = {
+    'enabled': True,
+    'min_epoch': 3000,
+    'torsion_threshold': 1e-9,
+    'closure_threshold': 1e-3,
+}
+
+================================================================================
+VI. TOPOLOGIE K₇ - PARAMÈTRES GÉOMÉTRIQUES
+================================================================================
+
+NECK_REGION = {
+    'T_neck': 'tau × 2π',              # ≈ 24.48 (période)
+    'R_transition': '0.7 × T_neck',    # ≈ 17.13 (rayon transition)
+    
+    'k3_radii': [
+        '2π',                          # 6.283
+        '2π/φ',                        # 3.883
+        '2π/φ²',                       # 2.400
+        '2π',                          # 6.283
+        '2π',                          # 6.283
+    ],
+    
+    # Warping function
+    'warping_base': 1.0,
+    'warping_amplitude': 0.1,
+    'warping_decay': 0.1,
+    
+    # Twist
+    'twist_angle': 'xi × tanh(t / (T_neck/3))',
+    'twist_max': 'xi',                 # ≈ 0.982 rad
+}
+
+ACYL_MANIFOLDS = {
+    'M1': {
+        'type': 'quintic_P4',
+        'b2': 11,
+        'b3': 40,
+        't_range': [-24.48, -17.13],   # [-T_neck, -R_trans]
+    },
+    
+    'M2': {
+        'type': 'CI_222_P6',
+        'b2': 10,
+        'b3': 37,
+        't_range': [17.13, 24.48],     # [R_trans, T_neck]
+    },
+}
+
+TRANSITION = {
+    'function': 'tanh',
+    'sigma': '0.2 × R_transition',     # ≈ 3.43
+    'smoothness': 'C^∞',
+    
+    'weights': {
+        'w_m1': '0.5 × (1 - tanh((t + R_trans)/σ))',
+        'w_m2': '0.5 × (1 + tanh((t - R_trans)/σ))',
+        'w_neck': '1 - w_m1 - w_m2',
+    },
+}
+
+================================================================================
+VII. PHASE 4 (ENTRAÎNEMENT ÉTENDU)
+================================================================================
+
+PHASE4_CONFIG = {
+    'additional_epochs': 2000,         # Sur les 5000 initiaux
+    'total_epochs': 7000,              # Target final
+    
+    'metric_iterations': 4,            # ↑ de 3
+    'ortho_weight': 1.0,               # ↑ de 0.3
+    
+    'lr_start': 2e-5,                  # ↓ de 8e-5
+    'lr_end': 2e-6,                    # Learning rate finale
+    
+    'checkpoint_interval': 500,        # Plus fréquent
+    'display_interval': 100,
+    
+    'region_weights': {
+        'm1': 0.33,
+        'neck': 0.34,
+        'm2': 0.33,
+    },
+}
+
+================================================================================
+VIII. EXTRACTION YUKAWA
+================================================================================
+
+YUKAWA_EXTRACTION = {
+    'n_samples': 4096,                 # Points d'échantillonnage
+    'n_forms': 21,                     # Formes H²
+    'n_couplings': 9261,               # 21³ couplages Y_ijk
+    
+    'wedge_product': 'ω_i ∧ ω_j ∧ ω_k',
+    'integration_method': 'Monte Carlo',
+    
+    'region_weights': {
+        'm1': 0.33,
+        'neck': 0.34,
+        'm2': 0.33,
+    },
+    
+    'svd_tolerance': 1e-6,             # Tolérance SVD
+    'n_generations': 3,                # Générations de fermions
+}
+
+MASS_HIERARCHY = {
+    'method': 'SVD',
+    'n_slices': 21,                    # Y[:,:,k] pour k=0..20
+    'singular_values_per_slice': 21,
+    
+    'expected_ratios': {
+        'tau/phi': 'From GIFT predictions',
+        'family_structure': 'From b₂, b₃',
+    },
+}
+
+================================================================================
+IX. FICHIERS DE SORTIE
+================================================================================
+
+OUTPUT_FILES = {
+    'checkpoint_dir': 'v08b_outputs/',
+    
+    'checkpoints': [
+        'checkpoint_epoch_{N}.pt',     # Tous les 1000 epochs
+        'phi_network_final.pt',
+        'harmonic_network_final.pt',
+    ],
+    
+    'results': [
+        'training_history.csv',
+        'training_results.png',
+        'summary.json',
+    ],
+    
+    'yukawa': [
+        'yukawa_couplings.npy',        # (21, 21, 21)
+        'mass_eigenvalues.npy',
+        'yukawa_analysis.json',
+    ],
+}
+
+CHECKPOINT_CONTENTS = {
+    'epoch': 'int',
+    'phi_network': 'state_dict',
+    'harmonic_network': 'state_dict',
+    'optimizer': 'state_dict',
+    'scheduler': 'state_dict',
+    'history': 'dict[list]',
+    'config': 'dict',
+}
+
+================================================================================
+X. PRÉCISION NUMÉRIQUE
+================================================================================
+
+NUMERICAL = {
+    'dtype_default': 'float32',
+    'dtype_amp': 'float16',
+    
+    'epsilon_division': 1e-8,          # Éviter division par 0
+    'epsilon_norm': 1e-8,              # Normalisation
+    'epsilon_det': 1e-10,              # Déterminant
+    'epsilon_spd': 1e-8,               # SPD correction
+    'epsilon_eigenvalues': 1e-4,       # Clamp eigenvalues
+    
+    'autograd_tolerance': 1e-6,
+}
+
+DISABLE_AMP_FOR = [
+    'torch.det',                       # Déterminant
+    'torch.linalg.eigh',               # Eigen decomposition
+    'torch.linalg.eigvalsh',           # Eigenvalues
+    'torch.linalg.inv',                # Inversion matrice
+]
+
+================================================================================
+XI. SEEDS ET REPRODUCTIBILITÉ
+================================================================================
+
+REPRODUCIBILITY = {
+    'seed': 42,                        # Seed global
+    'torch_seed': 42,
+    'numpy_seed': 42,
+    
+    'harmonic_base_seed': 42,          # Pour 21 réseaux
+    'seed_offset': 1000,               # Entre chaque réseau
+    
+    'deterministic': False,            # torch.backends.cudnn
+    'benchmark': True,                 # Pour performance
+}
+
+================================================================================
+XII. VALIDATION
+================================================================================
+
+VALIDATION = {
+    'n_test_points': 500,
+    'metric_iter_test': 5,             # Convergence complète
+    
+    'metrics_computed': [
+        'torsion_norm',
+        'det_metric',
+        'h2_forms_shape',
+        'eigenvalues_metric',
+        'volume_K7',
+    ],
+    
+    'plots': [
+        'torsion_vs_epoch (semilogy)',
+        'hitchin_vs_epoch (semilogy)',
+        'closure_vs_epoch (semilogy)',
+        'orthogonality_vs_epoch (semilogy)',
+    ],
+}
+
+================================================================================
+NOTES POUR v0.9
+================================================================================
+
+Paramètres à considérer pour ajustement en v0.9:
+
+1. ARCHITECTURE:
+   - hidden_dims: [256, 256, 256, 128] (plus profond)
+   - n_fourier: 20-24 (plus de fréquences)
+   - Ajouter: dropout, spectral_norm
+
+2. TRAINING:
+   - epochs: 6000-8000
+   - curriculum: 5-6 phases
+   - metric_iter: jusqu'à 5-6
+   - batch_size: 2048 si VRAM suffisante
+
+3. LOSS WEIGHTS:
+   - Adaptatifs selon epoch/phase
+   - Annealing schedule
+
+4. OPTIMIZATIONS:
+   - torch.compile()
+   - Flash attention
+   - Gradient checkpointing
+
+5. VALIDATION:
+   - Test set séparé
+   - Métriques géométriques rigoureuses
+   - Vérification invariants topologiques
+
+================================================================================
+FIN DU DOCUMENT
+================================================================================

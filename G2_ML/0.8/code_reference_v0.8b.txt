@@ -1,0 +1,834 @@
+
+================================================================================
+CODE REFERENCE: v0.8b - Extraits de Code Complets
+================================================================================
+
+Ce document contient les extraits de code complets des composants clés
+pour référence lors de la création de la version 0.9.
+
+================================================================================
+1. FOURIER ENCODING
+================================================================================
+
+class FourierEncoding(nn.Module):
+    def __init__(self, n_frequencies=16, scale=1.0, device='cpu'):
+        super().__init__()
+        self.n_frequencies = n_frequencies
+        B = torch.randn(7, n_frequencies, device=device) * scale
+        self.register_buffer('B', B)
+
+    def forward(self, x):
+        x_proj = 2 * np.pi * x @ self.B
+        return torch.cat([torch.cos(x_proj), torch.sin(x_proj)], dim=-1)
+
+class ModularPhiNetwork(nn.Module):
+    def __init__(self, k7_topology, hidden_dims=[256, 256, 128], n_fourier=24):
+        super().__init__()
+        self.k7 = k7_topology
+        self.encoder = FourierEncoding(n_fourier, scale=1.0, device=k7_topology.device)
+        encoding_dim = n_fourier * 2
+
+        trunk_layers = []
+        prev_dim = encoding_dim
+        for h_dim in hidden_dims[:-1]:
+            trunk_layers.extend([nn.Linear(prev_dim, h_dim), nn.SiLU(), nn.LayerNorm(h_dim)])
+            prev_dim = h_dim
+        self.trunk = nn.Sequential(*trunk_layers)
+
+        head_dim = hidden_dims[-1]
+        self.head_m1 = nn.Sequential(nn.Linear(prev_dim, head_dim), nn.SiLU(), nn.Linear(head_dim, 35))
+        self.head_neck = nn.Sequential(nn.Linear(prev_dim, head_dim), nn.SiLU(), nn.Linear(head_dim, 35))
+        self.head_m2 = nn.Sequential(nn.Linear(prev_dim, head_dim), nn.SiLU(), nn.Linear(head_dim, 35))
+
+        for head in [self.head_m1, self.head_neck, self.head_m2]:
+            head[-1].weight.data.mul_(0.01)
+            head[-1].bias.data.zero_()
+
+    def forward(self, coords):
+        x = self.encoder(coords)
+        features = self.trunk(x)
+        phi_m1 = self.head_m1(features)
+        phi_neck = self.head_neck(features)
+        phi_m2 = self.head_m2(features)
+        w_m1, w_neck, w_m2 = self.k7.transition_function(coords)
+        phi = w_m1 * phi_m1 + w_neck * phi_neck + w_m2 * phi_m2
+        phi_norm = torch.norm(phi, dim=-1, keepdim=True)
+        phi = phi / (phi_norm + 1e-8) * np.sqrt(7.0)
+        return phi
+
+================================================================================
+2. DIFFERENTIAL GEOMETRY CORE METHODS (Sélection)
+================================================================================
+class DifferentialGeometry:
+    """
+    Rigorous differential geometry operations for G₂ manifolds.
+
+    Implements:
+    - Wedge products of differential forms
+    - Interior products (contractions)
+    - Hodge star operator (metric-dependent)
+    - Exterior derivatives
+    """
+
+    def __init__(self, device='cpu'):
+        self.device = device
+        self.dim = 7
+
+        # Precompute index mappings for efficiency
+        self._build_form_indices()
+
+    def _build_form_indices(self):
+        """Build index mappings for k-forms."""
+        from itertools import combinations
+
+        # 3-form indices: 35 components
+        self.idx_3form = list(combinations(range(7), 3))
+
+        # 4-form indices: 35 components
+        self.idx_4form = list(combinations(range(7), 4))
+
+        # 2-form indices: 21 components
+        self.idx_2form = list(combinations(range(7), 2))
+
+        # 7-form: 1 component (volume)
+        self.idx_7form = [(0,1,2,3,4,5,6)]
+
+        print(f"  Form index mappings built:")
+        print(f"    2-forms: {len(self.idx_2form)} components")
+        print(f"    3-forms: {len(self.idx_3form)} components")
+        print(f"    4-forms: {len(self.idx_4form)} components")
+
+    def levi_civita_sign(self, indices):
+        """
+        Compute sign of permutation (Levi-Civita symbol).
+        """
+        # Count inversions
+        inversions = 0
+        n = len(indices)
+        for i in range(n):
+            for j in range(i+1, n):
+                if indices[i] > indices[j]:
+                    inversions += 1
+        return (-1) ** inversions
+
+    def interior_product(self, vector, form_3):
+        """
+        Interior product (contraction): i_v φ for vector v and 3-form φ.
+
+        Result is a 2-form.
+
+        Args:
+            vector: (batch, 7) - vector field
+            form_3: (batch, 35) - 3-form φ
+
+        Returns:
+            (batch, 21) - resulting 2-form
+        """
+        batch_size = vector.shape[0]
+        result = torch.zeros(batch_size, 21, device=self.device)
+
+        # i_v φ_{ijk} = v^i φ_{ijk} (sum over contracted index)
+        for idx_2, (i, j) in enumerate(self.idx_2form):
+            # Find all 3-form components containing i,j
+            for idx_3, (a, b, c) in enumerate(self.idx_3form):
+                # Check if {a,b,c} contains {i,j} and one other index
+                indices_set = {a, b, c}
+                target_set = {i, j}
+
+                if target_set.issubset(indices_set):
+                    # Find the contracted index
+                    k = list(indices_set - target_set)[0]
+
+                    # Compute sign from permutation
+                    # i_v dx^a ∧ dx^b ∧ dx^c = v^a dx^b ∧ dx^c (if a is first)
+                    perm = [a, b, c]
+                    if k == a:
+                        sign = self.levi_civita_sign([i, j, k]) / self.levi_civita_sign([a, b, c])
+                        result[:, idx_2] += sign * vector[:, k] * form_3[:, idx_3]
+                    elif k == b:
+                      
+
+[... Voir Cell 7 pour le code complet ...]
+
+================================================================================
+3. METRIC FROM PHI (HITCHIN CONSTRUCTION)
+================================================================================
+def metric_from_phi_hitchin(phi, coords, g_init=None, n_iter=5, dg_engine=None):
+    """
+    Hitchin construction: reconstruct metric from stable 3-form.
+
+    Theory:
+    For a stable 3-form φ on R⁷, define bilinear form:
+        B(u,v) = (i_u φ) ∧ (i_v φ) ∧ φ
+
+    This is a 7-form proportional to vol_g × g(u,v).
+
+    Algorithm (iterative):
+    1. Start with g₀ (Euclidean)
+    2. Compute ψ = *_g φ
+    3. For basis vectors e_i, compute s_ij = *(e_i ⌟ φ) ∧ (e_j ⌟ φ) ∧ φ
+    4. Construct metric g from s_ij
+    5. Normalize det(g) = 1
+    6. Iterate until convergence
+
+    References:
+    - Hitchin, "The geometry of three-forms in six and seven dimensions"
+    - Bryant, "Metrics with exceptional holonomy"
+
+    Args:
+        phi: (batch, 35) - 3-form
+        coords: (batch, 7) - coordinates
+        g_init: (batch, 7, 7) - initial metric (optional)
+        n_iter: int - number of iterations
+        dg_engine: DifferentialGeometry instance
+
+    Returns:
+        metric: (batch, 7, 7) - reconstructed Riemannian metric
+    """
+    if dg_engine is None:
+        dg_engine = dg
+
+    batch_size = phi.shape[0]
+
+    # Initialize metric
+    if g_init is None:
+        g = torch.eye(7, device=phi.device).unsqueeze(0).repeat(batch_size, 1, 1)
+    else:
+        g = g_init.clone()
+
+    # Basis vectors
+    basis = torch.eye(7, device=phi.device)
+
+    for iteration in range(n_iter):
+        # Compute Hodge star *_g φ
+        psi = dg_engine.hodge_star_3form(phi, g)
+
+        # Compute B tensor: s_ij = * (e_i ⌟ φ) ∧ (e_j ⌟ φ) ∧ φ
+        s = torch.zeros(batch_size, 7, 7, device=phi.device)
+
+        for i in range(7):
+            # Repeat basis vector for batch
+            e_i = basis[i].unsqueeze(0).repeat(batch_size, 1)
+
+            # Interior product: i_{e_i} φ → 2-form
+            i_ei_phi = dg_engine.interior_product(e_i, phi)
+
+            for j in range(i, 7):
+                e_j = basis[j].unsqueeze(0).repeat(batch_size, 1)
+
+                # Interior product: i_{e_j} φ → 2-form
+                i_ej_phi = dg_engine.interior_product(e_j, phi)
+
+                # Wedge: (i_{e_i} φ) ∧ (i_{e_j} φ) → 4-form
+                wedge_result = dg_engine.wedge_2_2(i_ei_phi, i_ej_phi)
+
+                # Wedge with φ: 4-form ∧ 3-form → 7-form (scalar)
+                volume_form = dg_engine.wedge_4_3(wedge_result, phi)
+
+                # Extract scalar
+                s[:, i, j] = volume_form[:, 0]
+                s[:, j, i] = s[:, i, j]  # Symmetrize
+
+        # Ensure SPD (disable autocast for linalg operations)
+        with torch.amp.autocast(device_type='cuda', enabled=False):
+            eigvals, eigvecs = torch.linalg.eigh(s.float())
+            eigvals = torch.clamp(eigvals, min=1e-4)
+            g = eigvecs @ torch.diag_embed(eigvals) @ eigvecs.transpose(-2, -1)
+
+        # Normalize volume: det(g) = 1
+        # Disable autocast for det (not supported in float16)
+        with torch.amp.autocast(device_type='cuda', enabled=False):
+            det_g = torch.det(g)
+        scale = torch.pow(torch.abs(det_g) + 1e-10, -1.0/7.0)
+        g = g * scale.view(-1, 1, 1)
+
+    return g
+
+print("Hitchin metric construction implemented.")
+print("  - Iterative solver with {} iterations per batch".format(5))
+print("  - Uses interior products and wedge products")
+print("  - Enforces det(g) = 1 normalization")
+
+================================================================================
+4. TORSION COMPUTATION
+================================================================================
+def compute_torsion_full(phi, coords, metric, dg_engine=None):
+    """
+    Compute full torsion tensor and its decomposition.
+
+    For G₂ structure (φ, g), torsion classes:
+    - τ₀: dilaton (scalar)
+    - τ₁: 1-form (7 components)
+    - τ₂: 2-form (21 components)
+    - τ₃: 3-form (35 components)
+
+    From Fernández-Gray decomposition:
+        dφ = τ₀ ψ + 3 τ₁ ∧ φ + *τ₃
+        d*φ = 4 τ₁ ∧ *φ + τ₂ ∧ φ
+
+    where ψ = *φ is the dual 4-form.
+
+    Torsion-free condition: dφ = 0 and d*φ = 0.
+
+    Args:
+        phi: (batch, 35) - 3-form
+        coords: (batch, 7) - coordinates (requires grad)
+        metric: (batch, 7, 7) - metric
+        dg_engine: DifferentialGeometry instance
+
+    Returns:
+        dict with:
+            'dphi': 4-form dφ
+            'dstar_phi': 3-form d*φ
+            'tau0': scalar
+            'tau1': 1-form
+            'tau2': 2-form
+            'tau3': 3-form
+            'torsion_norm': total torsion
+    """
+    if dg_engine is None:
+        dg_engine = dg
+
+    batch_size = phi.shape[0]
+
+    # Ensure coords requires grad
+    if not coords.requires_grad:
+        coords = coords.clone().requires_grad_(True)
+
+    # Compute dφ (exterior derivative)
+    dphi = dg_engine.exterior_derivative_3form(phi, coords)
+
+    # Compute *φ (Hodge dual)
+    psi = dg_engine.hodge_star_3form(phi, metric)
+
+    # Compute d(*φ) - this is a 5-form, but in 7D we represent as Hodge dual of 2-form
+    # For simplicity, compute via gradient of psi components
+    # (Full implementation would need 5-form machinery)
+
+    # Simplified: use norm-based approximation for now
+    dphi_norm = torch.norm(dphi, dim=1)
+
+    # Decompose dφ into torsion classes (simplified projection)
+    # Full decomposition requires projecting onto irreducible representations
+
+    # τ₀: trace component (scalar)
+    tau0 = dphi.mean(dim=1)
+
+    # τ₁: vector component (approximate from gradient)
+    tau1 = torch.zeros(batch_size, 7, device=phi.device)
+    for i in range(min(3, 35)):  # Sample components for efficiency
+        grad = torch.autograd.grad(
+            dphi[:, i].sum(),
+            coords,
+            create_graph=True,
+            retain_graph=True
+        )[0]
+        tau1 += grad / 3.0
+
+    # τ₂ and τ₃: higher-order components (approximate)
+    tau2_norm = dphi_norm * 0.3  # Empirical split
+    tau3_norm = dphi_norm * 0.7
+
+    # Total torsion
+    torsion_norm = dphi_norm.mean()
+
+    return {
+        'dphi': dphi,
+        'dstar_phi': psi,  # Placeholder
+        'tau0': tau0,
+        'tau1': tau1,
+        'tau2': tau2_norm,
+        'tau3': tau3_norm,
+        'torsion_norm': torsion_norm
+    }
+
+print("\nTorsion computation implemented:")
+print("  - Exterior derivative dφ via autograd")
+print("  - Fernández-Gray decomposition (τ₀, τ₁, τ₂, τ₃)")
+print("  - Torsion-free target: ||dφ||² + ||d*φ||² → 0")
+
+================================================================================
+5. HARMONIC FORMS EXTRACTOR
+================================================================================
+class ImprovedHarmonicFormsExtractor(nn.Module):
+    """
+    Extract harmonic forms with proper closure conditions.
+
+    For b₂: 21 harmonic 2-forms satisfying:
+    - Closure: dω = 0
+    - Coclosure: d*ω = 0
+    - Linear independence modulo exact forms
+    """
+    def __init__(self, k7_topology, hidden_dim=96, n_fourier=16, base_seed=42):
+        super().__init__()
+        self.k7 = k7_topology
+        self.encoder = FourierEncoding(n_fourier, scale=0.8, device=k7_topology.device)
+        encoding_dim = n_fourier * 2
+
+        self.h2_networks = nn.ModuleList()
+        for i in range(21):
+            torch.manual_seed(base_seed + i * 1000)
+            network = nn.Sequential(
+                nn.Linear(encoding_dim, hidden_dim),
+                nn.SiLU(),
+                nn.Linear(hidden_dim, 21)
+            )
+            self.h2_networks.append(network)
+
+        self.h2_perturbations = nn.Parameter(torch.randn(21, encoding_dim, device=k7_topology.device) * 0.01)
+        torch.manual_seed(base_seed)
+
+    def forward(self, coords):
+        x = self.encoder(coords)
+        h2_forms = []
+        for i, net in enumerate(self.h2_networks):
+            x_perturbed = x + self.h2_perturbations[i]
+            h2_form = net(x_perturbed)
+            h2_form = h2_form / (h2_form.norm(dim=-1, keepdim=True) + 1e-8)
+            h2_forms.append(h2_form)
+        return torch.stack(h2_forms, dim=1)
+
+    def compute_closure_loss(self, h2_forms, coords, dg_engine):
+        """
+        Compute closure loss: ||dω||² for each 2-form ω.
+        """
+        # For each 2-form, compute exterior derivative
+        # (Simplified: use gradient norm as proxy)
+        closure_loss = 0.0
+        for i in range(min(5, 21)):  # Sample for efficiency
+            for j in range(21):
+                grad = torch.autograd.grad(
+                    h2_forms[:, i, j].sum(),
+                    coords,
+                    create_graph=True,
+                    retain_graph=True
+                )[0]
+                closure_loss += grad.norm() / (5 * 21)
+        return closure_loss
+
+harmonic_network = ImprovedHarmonicFormsExtractor(k7_topology, hidden_dim=96, n_fourier=16).to(device)
+print(f"Harmonic network initialized: {sum(p.numel() for p in harmonic_network.parameters()):,} parameters")
+print("  - Closure conditions: dω = 0 enforced via loss")
+
+================================================================================
+6. LOSS FUNCTIONS
+================================================================================
+def hitchin_functional(phi, metric):
+    """
+    Hitchin functional: H(φ) = ∫ √det(B(φ)) dvol
+
+    Minimizing H yields torsion-free G₂ structures.
+
+    Simplified approximation using metric determinant.
+    """
+    det_g = torch.det(metric)
+    sqrt_det = torch.sqrt(torch.abs(det_g) + 1e-10)
+
+    # Penalty for deviation from unit volume
+    volume_penalty = ((sqrt_det - 1.0) ** 2).mean()
+
+    # Additional: penalize metric anisotropy
+    eigvals = torch.linalg.eigvalsh(metric)
+    anisotropy = (eigvals.max(dim=1)[0] / (eigvals.min(dim=1)[0] + 1e-8)).mean()
+
+    return volume_penalty + 0.1 * torch.log(anisotropy + 1.0)
+
+def combined_loss(phi, coords, metric, h2_forms, torsion_dict):
+    """
+    Combined loss with all components.
+    """
+    # 1. Torsion minimization
+    torsion_loss = torsion_dict['torsion_norm']
+
+    # 2. Hitchin functional
+    hitchin_loss = hitchin_functional(phi, metric)
+
+    # 3. Closure for harmonic forms
+    closure_loss = harmonic_network.compute_closure_loss(h2_forms, coords, dg)
+
+    # 4. Orthogonality of h₂ forms
+    h2_flat = h2_forms.view(h2_forms.shape[0], 21, 21)
+    gram_h2 = torch.einsum('bik,bjk->bij', h2_flat, h2_flat).mean(dim=0)
+    gram_h2 = gram_h2 / (torch.norm(gram_h2) + 1e-8)
+    identity = torch.eye(21, device=coords.device)
+    ortho_loss = torch.norm(gram_h2 - identity)
+
+    total = torsion_loss * 2.0 + hitchin_loss * 1.0 + closure_loss * 0.5 + ortho_loss * 0.3
+
+    return total, {
+        'torsion': torsion_loss.item(),
+        'hitchin': hitchin_loss.item(),
+        'closure': closure_loss.item(),
+        'ortho': ortho_loss.item()
+    }
+
+print("\nLoss functions implemented:")
+print("  1. Torsion minimization: ||dφ||² + ||d*φ||²")
+print("  2. Hitchin functional: H(φ) = ∫ √det(B(φ)) dvol")
+print("  3. Closure conditions: ||dω||² for harmonic forms")
+print("  4. Orthogonality: Gram matrix → identity")
+
+================================================================================
+7. CONFIGURATION
+================================================================================
+CONFIG = {
+    # Optimized hyperparameters
+    'epochs': 5000,  # Reduced from 8000
+    'batch_size': 1024,
+    'grad_accumulation_steps': 2,
+    'lr': 8e-5,
+    'weight_decay': 1e-4,
+    'grad_clip': 0.5,
+
+    # Curriculum for metric iterations (optimization!)
+    'metric_iterations_schedule': {
+        'phase1': 1,  # Epochs 0-1500
+        'phase2': 2,  # Epochs 1500-3500
+        'phase3': 3   # Epochs 3500-5000
+    },
+
+    # Torsion subsampling
+    'torsion_subsample_size': 256,  # vs full batch
+
+    # Validation frequency
+    'validation_interval': 500,  # Less frequent
+    'checkpoint_interval': 1000,
+
+    # Mixed precision
+    'use_amp': True,
+
+    # Auto-resume
+    'auto_resume': True,
+    'checkpoint_dir': 'v08b_outputs',
+
+    'seed': 42,
+    'curriculum': {
+        'phase1': {'range': [0, 1500], 'weights': {'m1': 0.2, 'neck': 0.6, 'm2': 0.2}},
+        'phase2': {'range': [1500, 3500], 'weights': {'m1': 0.3, 'neck': 0.4, 'm2': 0.3}},
+        'phase3': {'range': [3500, 5000], 'weights': {'m1': 0.25, 'neck': 0.5, 'm2': 0.25}}
+    }
+}
+
+torch.manual_seed(CONFIG['seed'])
+np.random.seed(CONFIG['seed'])
+
+optimizer = optim.AdamW(
+    list(phi_network.parameters()) + list(harmonic_network.parameters()),
+    lr=CONFIG['lr'],
+    weight_decay=CONFIG['weight_decay']
+)
+
+scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=CONFIG['epochs'], eta_min=1e-6)
+
+# Mixed precision scaler
+scaler = torch.cuda.amp.GradScaler() if CONFIG['use_amp'] else None
+
+print("\nTraining configuration (v0.8b OPTIMIZED):")
+print(f"  Epochs: {CONFIG['epochs']} (reduced from 8000)")
+print(f"  Batch size: {CONFIG['batch_size']} × {CONFIG['grad_accumulation_steps']} = {CONFIG['batch_size']*CONFIG['grad_accumulation_steps']}")
+print(f"  Learning rate: {CONFIG['lr']:.2e}")
+print(f"  Metric iterations: Curriculum 1 → 2 → 3")
+print(f"  Torsion subsample: {CONFIG['torsion_subsample_size']} points")
+print(f"  Mixed precision: {CONFIG['use_amp']}")
+print(f"  Auto-resume: {CONFIG['auto_resume']}")
+
+
+================================================================================
+8. HELPER FUNCTIONS
+================================================================================
+def get_metric_iterations(epoch):
+    """Curriculum for metric iterations: 1 → 2 → 3."""
+    if epoch < 1500:
+        return 1
+    elif epoch < 3500:
+        return 2
+    else:
+        return 3
+
+def find_latest_checkpoint(checkpoint_dir):
+    """Find latest checkpoint in directory."""
+    checkpoint_dir = Path(checkpoint_dir)
+    if not checkpoint_dir.exists():
+        return None
+
+    checkpoints = list(checkpoint_dir.glob('checkpoint_epoch_*.pt'))
+    if not checkpoints:
+        return None
+
+    # Sort by epoch number
+    checkpoints.sort(key=lambda x: int(x.stem.split('_')[-1]))
+    return checkpoints[-1]
+
+def load_checkpoint(checkpoint_path, phi_net, harmonic_net, opt, sched=None):
+    """Load checkpoint and return start epoch."""
+    print(f'Loading checkpoint: {checkpoint_path}')
+    checkpoint = torch.load(checkpoint_path)
+
+    phi_net.load_state_dict(checkpoint['phi_network'])
+    harmonic_net.load_state_dict(checkpoint['harmonic_network'])
+    opt.load_state_dict(checkpoint['optimizer'])
+
+    if sched is not None and 'scheduler' in checkpoint:
+        sched.load_state_dict(checkpoint['scheduler'])
+
+    start_epoch = checkpoint['epoch'] + 1
+    history = checkpoint.get('history', {'epoch': [], 'loss': [], 'torsion': [], 'hitchin': [], 'closure': [], 'ortho': []})
+
+    print(f'Resumed from epoch {checkpoint["epoch"]} → starting at {start_epoch}')
+    return start_epoch, history
+
+def save_checkpoint_to_drive(checkpoint_path, drive_dir):
+    """Copy checkpoint to Google Drive."""
+    if not USE_DRIVE:
+        return
+    try:
+        import shutil
+        dest = drive_dir / checkpoint_path.name
+        shutil.copy2(checkpoint_path, dest)
+        print(f'  Saved to Drive: {dest.name}')
+    except Exception as e:
+        print(f'  Drive save failed: {e}')
+
+print('Helper functions loaded!')
+
+================================================================================
+9. TRAINING LOOP (Structure principale - simplifié)
+================================================================================
+# Auto-resume from checkpoint
+start_epoch = 0
+history = {'epoch': [], 'loss': [], 'torsion': [], 'hitchin': [], 'closure': [], 'ortho': []}
+g_warm_start = None  # For warm start
+
+if CONFIG['auto_resume']:
+    latest_checkpoint = find_latest_checkpoint(OUTPUT_DIR)
+    if latest_checkpoint:
+        start_epoch, history = load_checkpoint(
+            latest_checkpoint, phi_network, harmonic_network, optimizer, scheduler
+        )
+    else:
+        print('No checkpoint found, starting from scratch.')
+
+print("="*70)
+print("STARTING TRAINING - v0.8b OPTIMIZED IMPLEMENTATION")
+print("="*70)
+print(f"Starting from epoch {start_epoch}/{CONFIG['epochs']}")
+print(f"Optimizations: AMP={CONFIG['use_amp']}, Metric curriculum, Torsion subsample={CONFIG['torsion_subsample_size']}")
+print("="*70)
+
+start_time = time.time()
+
+def get_phase_weights(epoch):
+    for phase_name, phase_data in CONFIG['curriculum'].items():
+        if phase_data['range'][0] <= epoch < phase_data['range'][1]:
+            return phase_data['weights']
+    return {'m1': 0.25, 'neck': 0.5, 'm2': 0.25}
+
+try:
+    for epoch in range(start_epoch, CONFIG['epochs']):
+        phi_network.train()
+        harmonic_network.train()
+
+        region_weights = get_phase_weights(epoch)
+        optimizer.zero_grad()
+
+        epoch_metrics = {'loss': 0, 'torsion': 0, 'hitchin': 0, 'closure': 0, 'ortho': 0}
+
+        for step in range(CONFIG['grad_accumulation_steps']):
+            coords, _ = k7_topology.sample_points(CONFIG['batch_size'], region_weights)
+            coords.requires_grad_(True)
+
+            # Mixed precision context
+            with torch.amp.autocast(device_type='cuda', enabled=CONFIG['use_amp']):
+                # Forward
+                phi = phi_network(coords)
+
+                # Hitchin metric with curriculum and warm start
+                n_iter = get_metric_iterations(epoch)
+                metric = metric_from_phi_hitchin(
+                    phi, coords,
+                    g_init=g_warm_start.detach() if g_warm_start is not None else None,
+                    n_iter=n_iter,
+                    dg_engine=dg
+                )
+
+                # Update warm start for next iteration
+                if epoch % 10 == 0:  # Update every 10 epochs
+                    g_warm_start = metric.detach()
+
+                # Torsion computation (subsampled for efficiency)
+                if coords.shape[0] > CONFIG['torsion_subsample_size']:
+                    idx = torch.randperm(coords.shape[0], device=coords.device)[:CONFIG['torsion_subsample_size']]
+                    coords_torsion = coords[idx].clone().requires_grad_(True)
+                    # IMPORTANT: Recalculate phi from subsampled coords to preserve autograd graph
+                    phi_torsion = phi_network(coords_torsion)
+                    metric_torsion = metric_from_phi_hitchin(phi_torsion, coords_torsion, g_init=None, n_iter=1, dg_engine=dg)
+                else:
+                    coords_torsion = coords
+                    phi_torsion = phi
+                    metric_torsion = metric
+
+                torsion_dict = compute_torsion_full(phi_torsion, coords_torsion, metric_torsion, dg_engine=dg)
+
+                # Harmonic forms
+                h2_forms = harmonic_network(coords)
+
+                # Loss
+                loss, metrics = combined_loss(phi, coords, metric, h2_forms, torsion_dict)
+                loss = loss / CONFIG['grad_accumulation_steps']
+
+            # Backward with mixed precision
+            if CONFIG['use_amp']:
+                scaler.scale(loss).backward()
+            else:
+                loss.backward()
+
+            for k in epoch_metrics:
+                if k == 'loss':
+                    epoch_metrics[k] += loss.item()
+                elif k in metrics:
+                    epoch_metrics[k] += metrics[k] / CONFIG['grad_accumulation_steps']
+
+        # Gradient clipping
+        if CONFIG['use_amp']:
+            scaler.unscale_(optimizer)
+
+        torch.nn.utils.clip_grad_norm_(
+            list(phi_network.parameters()) + list(harmonic_network.parameters()),
+            CONFIG['grad_clip']
+        )
+
+        # Optimizer step
+        if CONFIG['use_amp']:
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            optimizer.step()
+
+        scheduler.step()
+
+        # Record history
+        for k, v in epoch_metrics.items():
+            history[k].append(v)
+        history['epoch'].append(epoch)
+
+        # Logging (less frequent in v0.8b)
+        if epoch % 100 == 0 or epoch == CONFIG['epochs'] - 1:
+            elapsed = time.time() - start_time
+            eta = elapsed / (epoch - start_epoch + 1) * (CONFIG['epochs'] - epoch - 1) if epoch > start_epoch else 0
+
+            clear_output(wait=True)
+            print(f"Epoch {epoch}/{CONFIG['epochs']} | Phase: {get_metric_iterations(epoch)} iter")
+            print("-" * 70)
+            print(f"  Loss:     {epoch_metrics['loss']:.4e}")
+            print(f"  Torsion:  {epoch_metrics['torsion']:
+
+[... Code complet dans Cell 27 ...]
+
+================================================================================
+10. VALIDATION CODE
+================================================================================
+print("\n" + "="*70)
+print("VALIDATION")
+print("="*70)
+
+phi_network.eval()
+harmonic_network.eval()
+
+# Generate test coordinates
+coords_test, _ = k7_topology.sample_points(500)
+
+# Compute phi, metric, and harmonic forms (no gradients needed)
+with torch.no_grad():
+    phi_test = phi_network(coords_test)
+    metric_test = metric_from_phi_hitchin(phi_test, coords_test, n_iter=5, dg_engine=dg)
+    h2_test = harmonic_network(coords_test)
+
+# Compute torsion (requires gradients)
+coords_test_grad = coords_test.clone().requires_grad_(True)
+phi_test_grad = phi_network(coords_test_grad)
+metric_test_grad = metric_from_phi_hitchin(phi_test_grad, coords_test_grad, n_iter=5, dg_engine=dg)
+torsion_test = compute_torsion_full(phi_test_grad, coords_test_grad, metric_test_grad, dg_engine=dg)
+
+print("\nFinal Metrics:")
+print(f"  Torsion norm:    {torsion_test['torsion_norm']:.4e}")
+print(f"  det(metric):     {torch.det(metric_test).mean():.6f}")
+print(f"  h₂ forms shape:  {h2_test.shape}")
+
+# Plot training curves
+fig, axes = plt.subplots(2, 2, figsize=(12, 8))
+fig.suptitle('v0.8 Training Results', fontsize=14)
+
+axes[0,0].semilogy(history['torsion'])
+axes[0,0].set_title('Torsion')
+axes[0,0].set_xlabel('Epoch')
+axes[0,0].grid(True, alpha=0.3)
+
+axes[0,1].semilogy(history['hitchin'])
+axes[0,1].set_title('Hitchin Functional')
+axes[0,1].set_xlabel('Epoch')
+axes[0,1].grid(True, alpha=0.3)
+
+axes[1,0].semilogy(history['closure'])
+axes[1,0].set_title('Closure (dω = 0)')
+axes[1,0].set_xlabel('Epoch')
+axes[1,0].grid(True, alpha=0.3)
+
+axes[1,1].semilogy(history['ortho'])
+axes[1,1].set_title('Orthogonality')
+axes[1,1].set_xlabel('Epoch')
+axes[1,1].grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.savefig(OUTPUT_DIR / 'training_results.png', dpi=150)
+plt.show()
+
+# Save results
+pd.DataFrame(history).to_csv(OUTPUT_DIR / 'training_history.csv', index=False)
+
+summary = {
+    'version': '0.8',
+    'final_torsion': float(history['torsion'][-1]),
+    'final_hitchin': float(history['hitchin'][-1]),
+    'improvements': [
+        'Hitchin metric construction (iterative)',
+        'Explicit torsion decomposition (τ₀, τ₁, τ₂, τ₃)',
+        'Metric-dependent Hodge star',
+        'Closure conditions for harmonic forms',
+        'Hitchin functional minimization'
+    ]
+}
+
+with open(OUTPUT_DIR / 'summary.json', 'w') as f:
+    json.dump(summary, f, indent=2)
+
+print("\n" + "="*70)
+print("v0.8 COMPLETE")
+print("="*70)
+print("All outputs saved to:", OUTPUT_DIR)
+print("\nKey improvements:")
+for imp in summary['improvements']:
+    print(f"  ✓ {imp}")
+
+================================================================================
+FIN DU DOCUMENT DE RÉFÉRENCE
+================================================================================
+
+Pour le code complet de chaque section, se référer au notebook:
+/home/user/GIFT/G2_ML/0.8/Complete_G2_Metric_Training_v0_8b.ipynb
+
+Cellules clés:
+- Cell 3: Imports
+- Cell 5: GIFT parameters
+- Cell 7: DifferentialGeometry class (289 lignes)
+- Cell 9: metric_from_phi_hitchin (95 lignes)
+- Cell 11: compute_torsion_full (94 lignes)
+- Cell 13: K7 topology classes (84 lignes)
+- Cell 15: Neural networks (45 lignes)
+- Cell 18: Harmonic forms (59 lignes)
+- Cell 20: Loss functions (54 lignes)
+- Cell 22: Configuration (60 lignes)
+- Cell 24: Helper functions (54 lignes)
+- Cell 27: Training loop (179 lignes)
+- Cell 29: Validation (81 lignes)
+- Cell 30: Yukawa extraction (351 lignes)
+- Cell 31: Phase 4 extended training (326 lignes)
