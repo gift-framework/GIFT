@@ -391,8 +391,7 @@ For questions about:
 - **Reproduction:** Checkpoints and trained models available in outputs/
 - **Collaboration:** Validation by differential geometers welcome
 
-**Author:** Brieuc  
-**Date:** November 2025  
+**Author:** Brieuc
 **Version:** 0.1 (initial results)
 
 ---

@@ -98,7 +98,7 @@
 - Ω_DM: 0.032%
 - sin²θ_W: 0.027%
 - α_s: 0.08%
-- ζ(5) in n_s: 0.053%
+- n_s = ζ(11)/ζ(5): 0.0066%
 - (15 total)
 
 ### Dark Matter (New Predictions)
@@ -197,6 +197,6 @@ Framework derives 37 Standard Model and cosmological observables from E₈×E₈
 ---
 
 **Document**: Quick reference for framework status
-**Date**: November 2025
+**Status**: Current framework summary
 **Use**: Overview for presentations, discussions, experimental contacts
 **Detail level**: High-level summary; see full documents for derivations

@@ -1,7 +1,6 @@
 # GIFT Framework - Internal Relations Deep Dive
 
 **Branch**: `local/internal-relations-deep-dive`
-**Date**: 2025-11-14
 **Status**: Exploratory Analysis
 
 ---

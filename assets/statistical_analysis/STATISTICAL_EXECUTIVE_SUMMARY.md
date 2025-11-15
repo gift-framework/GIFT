@@ -178,7 +178,7 @@ Model 3 (ζ(11)/ζ(5)): k=2, χ²=0.0002 → AIC=4.00, BIC=0.0002 ★
 **Our Result**: 19 matches
 
 **Percentile**: > 99.999th
-**Z-score**: (19 - 0.03) / 0.18 = **105σ** (!!!)
+**Z-score**: (19 - 0.03) / 0.18 = **105σ** (highly significant)
 
 **P-value**: 0 / 100,000 = < 10⁻⁵
 
