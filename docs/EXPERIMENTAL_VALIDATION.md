@@ -87,10 +87,10 @@ Selected examples:
 
 | Ratio | Experimental | GIFT | Deviation | Status |
 |-------|--------------|------|-----------|--------|
-| m_s/m_d | 20.0±1.7 | 20.0 | 0.000% | ✓ Exact |
-| m_c/m_s | 13.6±0.5 | 13.69 | 0.66% | ✓ Good |
+| m_s/m_d | 20.0±1.7 | 20.0 | 0.000% | Exact |
+| m_c/m_s | 13.6±0.5 | 13.69 | 0.66% | Good |
 | m_b/m_c | 3.29±0.06 | 3.25 | 1.22% | ~ Acceptable |
-| m_t/m_b | 41.3±0.8 | 41.6 | 0.73% | ✓ Good |
+| m_t/m_b | 41.3±0.8 | 41.6 | 0.73% | Good |
 
 **Status**: Most ratios show good agreement (mean 0.09%). The m_s/m_d = 20 exact prediction is particularly notable. Some ratios (m_b/m_c) show larger deviations around 1%, technically within combined uncertainties but worth monitoring.
 
@@ -100,12 +100,12 @@ All elements predicted with mean deviation 0.11%. Highlights:
 
 | Element | Experimental | GIFT | Deviation | Status |
 |---------|--------------|------|-----------|--------|
-| |V_ud| | 0.97446(21) | 0.97438 | 0.008% | ✓ Excellent |
-| |V_us| | 0.2253(7) | 0.2251 | 0.09% | ✓ Excellent |
-| |V_cb| | 0.0421(8) | 0.0422 | 0.24% | ✓ Good |
-| |V_ub| | 0.00382(24) | 0.00380 | 0.52% | ✓ Good |
+| |V_ud| | 0.97446(21) | 0.97438 | 0.008% | Excellent |
+| |V_us| | 0.2253(7) | 0.2251 | 0.09% | Excellent |
+| |V_cb| | 0.0421(8) | 0.0422 | 0.24% | Good |
+| |V_ub| | 0.00382(24) | 0.00380 | 0.52% | Good |
 
-**Status**: Entire CKM matrix predicted with sub-percent precision. This is remarkable as it spans multiple orders of magnitude (∼0.004 to ∼0.97).
+**Status**: Entire CKM matrix predicted with sub-percent precision. This is significant as it spans multiple orders of magnitude (∼0.004 to ∼0.97).
 
 **Experimental sources**:
 - PDG 2024: Quark mass ratios at various scales
@@ -116,9 +116,9 @@ All elements predicted with mean deviation 0.11%. Highlights:
 
 | Ratio | Experimental | GIFT | Deviation | Status |
 |-------|--------------|------|-----------|--------|
-| mμ/me | 206.768 | 206.795 | 0.013% | ✓ Confirmed |
-| mτ/me | 3477.15 | 3477.00 | 0.004% | ✓ Confirmed |
-| mτ/mμ | 16.8167 | 16.8136 | 0.018% | ✓ Confirmed |
+| mμ/me | 206.768 | 206.795 | 0.013% | Confirmed |
+| mτ/me | 3477.15 | 3477.00 | 0.004% | Confirmed |
+| mτ/mμ | 16.8167 | 16.8136 | 0.018% | Confirmed |
 
 **Status**: Exceptional agreement across all lepton mass ratios. The mτ/me ratio has an exact topological formula: mτ/me = dim(K₇) + 10·dim(E₈) + 10·H* = 7 + 10·248 + 10·222 = 3477 (exact).
 
@@ -128,7 +128,7 @@ All elements predicted with mean deviation 0.11%. Highlights:
 
 | Observable | Experimental | GIFT | Deviation | Status |
 |------------|--------------|------|-----------|--------|
-| Ω_DE | 0.6889(56) | ln(2) = 0.693 | 0.10% | ✓ Confirmed |
+| Ω_DE | 0.6889(56) | ln(2) = 0.693 | 0.10% | Confirmed |
 
 **Status**: Dark energy density predicted as natural logarithm of 2 from binary information architecture. Agrees with Planck 2018 measurements within uncertainties.
 

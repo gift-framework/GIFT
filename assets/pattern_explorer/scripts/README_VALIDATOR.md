@@ -1,8 +1,7 @@
 # GIFT Framework - Comprehensive Validation Tool
 
 **Version**: 1.0
-**Date**: Current work
-**Purpose**: Validate recent results and discover new mathematical patterns
+**Purpose**: Validate framework results and discover new mathematical patterns
 
 ---
 
@@ -30,10 +29,11 @@ Validates critical results from recent analysis:
   - CHAOS THEORY: δ_Feigenbaum/M₃ = 0.667029 (0.049% dev)
   - Links mass generation to chaotic dynamics!
 
-- **Spectral Index ζ(5) Formula**
-  - OLD: ξ² = (5π/16)² = 0.963829 (0.111% dev)
-  - NEW: 1/ζ(5) = 0.964387 (0.053% dev)
-  - 2× BETTER precision with odd zeta series!
+- **Spectral Index Zeta Formula**
+  - Original: ξ² = (5π/16)² = 0.963829 (0.111% dev)
+  - Previous: 1/ζ(5) = 0.964387 (0.053% dev)
+  - Current: ζ(11)/ζ(5) = 0.964864 (0.0066% dev)
+  - 15× precision improvement via odd zeta ratio
 
 - **Mersenne Exponent Arithmetic**
   - Validates 10+ exact matches from {2,3,5,7,13,17,19,31}
@@ -107,7 +107,7 @@ validation_results/
 └── discovered_patterns.csv         # Sortable pattern table
 ```
 
-## Validation Results (Nov 14, 2025)
+## Validation Results
 
 ### Consistency Checks
 
@@ -331,7 +331,7 @@ Repository: https://github.com/gift-framework/GIFT
 
 ## Version History
 
-- **v1.0** (2025-11-14): Initial release
+- **v1.0**: Initial release
   - Phase 1: Consistency checker with 16 checks
   - Phase 2: Pattern discoverer (ζ(7), Feigenbaum, Mersenne)
   - Phase 3: Report generation (MD, JSON, CSV)
