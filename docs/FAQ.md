@@ -168,7 +168,7 @@ Subjectively, several stand out:
 
 **N_gen = 3**: Explains why three generations exist as topological necessity, not accident.
 
-**Parameter reduction**: 19 → 3 is remarkable compression of required inputs.
+**Parameter reduction**: 19 → 3 is substantial compression of required inputs.
 
 ### What are the biggest tensions?
 

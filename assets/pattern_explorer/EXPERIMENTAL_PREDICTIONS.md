@@ -404,7 +404,7 @@ Framework would be **moderately challenged** if:
 
 Framework would be **strongly supported** if:
 
-1. **Dark matter detected** at m_χ₁ = 90.5 ± 5 GeV (revolutionary confirmation)
+1. **Dark matter detected** at m_χ₁ = 90.5 ± 5 GeV (definitive confirmation)
 2. **Second component** at m_χ₂ = 353 ± 20 GeV with mass ratio τ ≈ 3.9
 3. **All observable predictions** remain within 1% as experimental precision improves
 4. **Pattern structures** (Mersenne-Fermat, odd zeta, 17 universality) hold across new measurements
