@@ -207,7 +207,7 @@ Explore the framework through interactive Jupyter notebooks in [assets/visualiza
 
 See [assets/visualizations/README.md](assets/visualizations/README.md) for details.
 
-**Quick Start**: Run `python assets/quick_start.py` for easy access to all interactive tools.
+**Quick Start**: Run `python quick_start.py` for easy access to all interactive tools.
 
 ### Visualization Dashboard
 

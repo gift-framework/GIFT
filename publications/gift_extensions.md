@@ -236,7 +236,7 @@ Scaling dimension * Geometry = Hierarchical parameter * Dark energy
 #### 2.5.1 Formula: b₃ = 2*dim(K₇)² - b₂
 
 **Derivation**: b₂ + b₃ = 98 = 2 * 7²
-**Validation**: 21 + 77 = 98 (perfect match)
+**Validation**: 21 + 77 = 98 (exact agreement)
 
 #### 2.5.2 Interpretation
 
@@ -576,7 +576,7 @@ The perfect mapping of 5 frequencies to 5 physics sectors suggests:
 #### 5.2.2 Mid-Term Tests (2030-2035)
 
 **Hyper-K**: θ₂₃ precision < 1° (tests 85/99 formula)
-**CMB-S4**: n_s precision Δn_s ~ 0.002 (tests ξ² formula)
+**CMB-S4**: n_s precision Δn_s ~ 0.002 (tests ζ(11)/ζ(5) formula)
 **Future colliders**: Precision electroweak measurements
 
 #### 5.2.3 Long-Term Tests (2035+)

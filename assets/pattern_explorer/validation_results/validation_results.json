@@ -1,0 +1,449 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-14T17:00:37.216165",
+    "framework_version": "v2.1+",
+    "validator_version": "1.0"
+  },
+  "consistency": {
+    "timestamp": "2025-11-14T17:00:37.213608",
+    "phase": "consistency_checks",
+    "checks": {
+      "alpha_inv": {
+        "check_name": "alpha_inv_dual_derivations",
+        "passed": true,
+        "expected_value": 127.955,
+        "computed_value": 128.0,
+        "deviation_pct": 0.0351686139658487,
+        "formula": "(dim(E\u2088) + rank(E\u2088))/2",
+        "interpretation": "\n        OLD: \u03b1\u207b\u00b9 = 2\u2077 - 1/24 = 127.958 (dev: 0.0026%)\n        NEW: \u03b1\u207b\u00b9 = (248 + 8)/2 = 128.000 (dev: 0.0352%)\n\n        Mathematical relation:\n        - (dim + rank)/2 = 256/2 = 128 = 2\u2077 (exact)\n        - Difference: 128 - 127.958 = 0.042 \u2248 1/24 (consistency: 0.00%)\n\n        Both formulas valid. NEW formula is simpler (pure topology).\n        Factor 1/24 emerges as correction term.\n        ",
+        "confidence": "HIGH"
+      },
+      "koide_chaos": {
+        "check_name": "koide_chaos_connection",
+        "passed": true,
+        "expected_value": 0.6667,
+        "computed_value": 0.6670288013004272,
+        "deviation_pct": 0.04931772917762537,
+        "formula": "\u03b4_Feigenbaum/M\u2083 \u2248 dim(G\u2082)/b\u2082",
+        "interpretation": "\n        TOPOLOGICAL: Q = 14/21 = 2/3 = 0.666667 (dev: 0.0050%)\n        CHAOS THEORY: Q = \u03b4_F/7 = 0.667029 (dev: 0.0493%)\n\n        Feigenbaum relation:\n        - \u03b4_F = 4.669201609\n        - 7\u00d7(2/3) = 4.666666667\n        - Consistency: 0.054%\n\n        INTERPRETATION:\n        Both formulas agree within 0.05%. This suggests:\n        1. Mass generation may involve chaotic/fractal dynamics\n        2. Feigenbaum universality \u2192 Koide formula universality\n        3. Period-doubling \u2192 generation structure?\n\n        The 2/3 rational value is EXACT from topology.\n        Feigenbaum connection provides PHYSICAL mechanism (chaos theory).\n        ",
+        "confidence": "HIGH"
+      },
+      "spectral_index_zeta5": {
+        "check_name": "spectral_index_zeta5",
+        "passed": true,
+        "expected_value": 0.9648,
+        "computed_value": 0.9643873404292624,
+        "deviation_pct": 0.0427715143799285,
+        "formula": "1/\u03b6(5)",
+        "interpretation": "\n        ORIGINAL: n_s = \u03be\u00b2 = (5\u03c0/16)\u00b2 = 0.963829 (dev: 0.1007%)\n        ZETA SERIES: n_s = 1/\u03b6(5) = 0.964387 (dev: 0.0428%)\n\n        Improvement: 0.043% vs 0.101% \u2192 2\u00d7 BETTER precision!\n\n        \u03b6(5) computation: 1.0369277551\n\n        CONNECTION TO WEYL FACTOR:\n        - Weyl_factor = 5 (fundamental parameter)\n        - Spectral index involves \u03b6(5)\n        - Pattern: \u03b6(2n+1) for n = 0,1,2,... ?\n\n        This suggests ODD ZETA SERIES plays fundamental role:\n        - sin\u00b2\u03b8_W involves \u03b6(3)\n        - n_s involves \u03b6(5)\n        - Prediction: Search for \u03b6(7), \u03b6(9), ...\n        ",
+        "confidence": "HIGH"
+      },
+      "mersenne_arithmetic": {
+        "2 + 3": {
+          "check_name": "mersenne_addition_2+3",
+          "passed": true,
+          "expected_value": 5,
+          "computed_value": 5,
+          "deviation_pct": 0.0,
+          "formula": "2 + 3 = Weyl_factor",
+          "interpretation": "Mersenne exponent arithmetic: 2 + 3 = 5 = Weyl_factor",
+          "confidence": "EXACT"
+        },
+        "2 + 5": {
+          "check_name": "mersenne_addition_2+5",
+          "passed": true,
+          "expected_value": 7,
+          "computed_value": 7,
+          "deviation_pct": 0.0,
+          "formula": "2 + 5 = dim(K\u2087)",
+          "interpretation": "Mersenne exponent arithmetic: 2 + 5 = 7 = dim(K\u2087)",
+          "confidence": "EXACT"
+        },
+        "3 + 5": {
+          "check_name": "mersenne_addition_3+5",
+          "passed": true,
+          "expected_value": 8,
+          "computed_value": 8,
+          "deviation_pct": 0.0,
+          "formula": "3 + 5 = rank(E\u2088)",
+          "interpretation": "Mersenne exponent arithmetic: 3 + 5 = 8 = rank(E\u2088)",
+          "confidence": "EXACT"
+        },
+        "5 + 8": {
+          "check_name": "mersenne_addition_5+8",
+          "passed": true,
+          "expected_value": 13,
+          "computed_value": 13,
+          "deviation_pct": 0.0,
+          "formula": "5 + 8 = M\u2081\u2083_exponent",
+          "interpretation": "Mersenne exponent arithmetic: 5 + 8 = 13 = M\u2081\u2083_exponent",
+          "confidence": "EXACT"
+        },
+        "2 + 19": {
+          "check_name": "mersenne_addition_2+19",
+          "passed": true,
+          "expected_value": 21,
+          "computed_value": 21,
+          "deviation_pct": 0.0,
+          "formula": "2 + 19 = b\u2082(K\u2087)",
+          "interpretation": "Mersenne exponent arithmetic: 2 + 19 = 21 = b\u2082(K\u2087)",
+          "confidence": "EXACT"
+        },
+        "|3 - 5|": {
+          "check_name": "mersenne_difference_3-5",
+          "passed": true,
+          "expected_value": 2,
+          "computed_value": 2,
+          "deviation_pct": 0.0,
+          "formula": "|3 - 5| = p\u2082",
+          "interpretation": "Mersenne exponent arithmetic: |3 - 5| = 2 = p\u2082",
+          "confidence": "EXACT"
+        },
+        "|5 - 2|": {
+          "check_name": "mersenne_difference_5-2",
+          "passed": true,
+          "expected_value": 3,
+          "computed_value": 3,
+          "deviation_pct": 0.0,
+          "formula": "|5 - 2| = N_gen = M\u2082",
+          "interpretation": "Mersenne exponent arithmetic: |5 - 2| = 3 = N_gen = M\u2082",
+          "confidence": "EXACT"
+        },
+        "|7 - 2|": {
+          "check_name": "mersenne_difference_7-2",
+          "passed": true,
+          "expected_value": 5,
+          "computed_value": 5,
+          "deviation_pct": 0.0,
+          "formula": "|7 - 2| = Weyl_factor",
+          "interpretation": "Mersenne exponent arithmetic: |7 - 2| = 5 = Weyl_factor",
+          "confidence": "EXACT"
+        },
+        "|13 - 5|": {
+          "check_name": "mersenne_difference_13-5",
+          "passed": true,
+          "expected_value": 8,
+          "computed_value": 8,
+          "deviation_pct": 0.0,
+          "formula": "|13 - 5| = rank(E\u2088)",
+          "interpretation": "Mersenne exponent arithmetic: |13 - 5| = 8 = rank(E\u2088)",
+          "confidence": "EXACT"
+        },
+        "|3 - 2|": {
+          "check_name": "mersenne_difference_3-2",
+          "passed": true,
+          "expected_value": 1,
+          "computed_value": 1,
+          "deviation_pct": 0.0,
+          "formula": "|3 - 2| = H\u2070(K\u2087)",
+          "interpretation": "Mersenne exponent arithmetic: |3 - 2| = 1 = H\u2070(K\u2087)",
+          "confidence": "EXACT"
+        }
+      },
+      "odd_zeta_series": {
+        "zeta3_sin2thetaW": {
+          "check_name": "zeta3_in_sin2thetaW",
+          "passed": true,
+          "expected_value": 0.23121,
+          "computed_value": 0.23128202486891422,
+          "deviation_pct": 0.03115127758930073,
+          "formula": "\u03b6(3)\u00d7\u03b3/M\u2082",
+          "interpretation": "\u03b6(3) appears in weak mixing angle with 0.031% precision",
+          "confidence": "HIGH"
+        },
+        "zeta3_OmegaDE": {
+          "check_name": "zeta3_in_OmegaDE",
+          "passed": true,
+          "expected_value": 0.6889,
+          "computed_value": 0.6938460746067426,
+          "deviation_pct": 0.7179669918337463,
+          "formula": "\u03b6(3)\u00d7\u03b3",
+          "interpretation": "\u03b6(3) appears in dark energy density with 0.718% precision",
+          "confidence": "MEDIUM"
+        },
+        "zeta5_spectral_index": {
+          "check_name": "zeta5_in_spectral_index",
+          "passed": true,
+          "expected_value": 0.9648,
+          "computed_value": 0.9643873404292624,
+          "deviation_pct": 0.0427715143799285,
+          "formula": "1/\u03b6(5)",
+          "interpretation": "\u03b6(5) determines spectral index with 0.043% precision (2\u00d7 better than \u03be\u00b2)",
+          "confidence": "HIGH"
+        }
+      }
+    },
+    "summary": {
+      "total_checks": 16,
+      "passed": 16,
+      "failed": 0,
+      "pass_rate": 100.0,
+      "high_confidence": 5,
+      "exact_matches": 10
+    }
+  },
+  "discoveries": {
+    "timestamp": "2025-11-14T17:00:37.214162",
+    "phase": "pattern_discovery",
+    "discoveries": {
+      "zeta7": [],
+      "feigenbaum": [],
+      "mersenne_complete": [
+        {
+          "observable": "Weyl",
+          "formula": "2 + 3",
+          "gift_value": 5,
+          "target_value": 5,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates Weyl"
+        },
+        {
+          "observable": "dim(K\u2087)",
+          "formula": "2 + 5",
+          "gift_value": 7,
+          "target_value": 7,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates dim(K\u2087)"
+        },
+        {
+          "observable": "N_gen",
+          "formula": "|2 - 5|",
+          "gift_value": 3,
+          "target_value": 3,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates N_gen"
+        },
+        {
+          "observable": "Weyl",
+          "formula": "|2 - 7|",
+          "gift_value": 5,
+          "target_value": 5,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates Weyl"
+        },
+        {
+          "observable": "dim(G\u2082)",
+          "formula": "2 \u00d7 7",
+          "gift_value": 14,
+          "target_value": 14,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates dim(G\u2082)"
+        },
+        {
+          "observable": "b\u2082",
+          "formula": "2 + 19",
+          "gift_value": 21,
+          "target_value": 21,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates b\u2082"
+        },
+        {
+          "observable": "rank(E\u2088)",
+          "formula": "3 + 5",
+          "gift_value": 8,
+          "target_value": 8,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates rank(E\u2088)"
+        },
+        {
+          "observable": "p\u2082",
+          "formula": "|3 - 5|",
+          "gift_value": 2,
+          "target_value": 2,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates p\u2082"
+        },
+        {
+          "observable": "b\u2082",
+          "formula": "3 \u00d7 7",
+          "gift_value": 21,
+          "target_value": 21,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates b\u2082"
+        },
+        {
+          "observable": "dim(G\u2082)",
+          "formula": "|3 - 17|",
+          "gift_value": 14,
+          "target_value": 14,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates dim(G\u2082)"
+        },
+        {
+          "observable": "p\u2082",
+          "formula": "|5 - 7|",
+          "gift_value": 2,
+          "target_value": 2,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates p\u2082"
+        },
+        {
+          "observable": "rank(E\u2088)",
+          "formula": "|5 - 13|",
+          "gift_value": 8,
+          "target_value": 8,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates rank(E\u2088)"
+        },
+        {
+          "observable": "dim(G\u2082)",
+          "formula": "|5 - 19|",
+          "gift_value": 14,
+          "target_value": 14,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates dim(G\u2082)"
+        },
+        {
+          "observable": "p\u2082",
+          "formula": "|17 - 19|",
+          "gift_value": 2,
+          "target_value": 2,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates p\u2082"
+        },
+        {
+          "observable": "dim(G\u2082)",
+          "formula": "|17 - 31|",
+          "gift_value": 14,
+          "target_value": 14,
+          "deviation_pct": 0.0,
+          "complexity_score": 1,
+          "novelty": false,
+          "category": "mersenne_arithmetic",
+          "interpretation": "Mersenne exponent arithmetic generates dim(G\u2082)"
+        }
+      ],
+      "novel": [
+        {
+          "observable": "Omega_DM",
+          "formula": "(ln(2)\u00d7M\u2082)/rank",
+          "gift_value": 0.25993019270997947,
+          "target_value": 0.26,
+          "deviation_pct": 0.026848957700207857,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (ln(2)\u00d7M\u2082)/rank matches Omega_DM"
+        },
+        {
+          "observable": "sin2_theta_W",
+          "formula": "(\u03c6\u00d7M\u2082)/b\u2082",
+          "gift_value": 0.2311477126785564,
+          "target_value": 0.23121,
+          "deviation_pct": 0.026939717764624446,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (\u03c6\u00d7M\u2082)/b\u2082 matches sin2_theta_W"
+        },
+        {
+          "observable": "Q_Koide",
+          "formula": "(\u03b4_F\u00d7M\u2082)/b\u2082",
+          "gift_value": 0.6670288013004272,
+          "target_value": 0.6667,
+          "deviation_pct": 0.04931772917762537,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (\u03b4_F\u00d7M\u2082)/b\u2082 matches Q_Koide"
+        },
+        {
+          "observable": "sin2_theta_W",
+          "formula": "(ln(2)\u00d7M\u2083)/b\u2082",
+          "gift_value": 0.23104906018664842,
+          "target_value": 0.23121,
+          "deviation_pct": 0.06960763520244771,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (ln(2)\u00d7M\u2083)/b\u2082 matches sin2_theta_W"
+        },
+        {
+          "observable": "sin2_theta_23",
+          "formula": "(\u03c4\u00d7M\u2082)/b\u2082",
+          "gift_value": 0.5566778900112234,
+          "target_value": 0.558,
+          "deviation_pct": 0.23693727397431671,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (\u03c4\u00d7M\u2082)/b\u2082 matches sin2_theta_23"
+        },
+        {
+          "observable": "sin2_theta_13",
+          "formula": "(\u03b3\u00d7M\u2082)/b\u2083",
+          "gift_value": 0.022488922009150633,
+          "target_value": 0.02241,
+          "deviation_pct": 0.35217317782522867,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (\u03b3\u00d7M\u2082)/b\u2083 matches sin2_theta_13"
+        },
+        {
+          "observable": "sin2_theta_W",
+          "formula": "(\u03b3\u00d7M\u2085)/b\u2083",
+          "gift_value": 0.23238552742788984,
+          "target_value": 0.23121,
+          "deviation_pct": 0.5084241286665128,
+          "complexity_score": 3,
+          "novelty": true,
+          "category": "composite",
+          "interpretation": "Novel pattern: (\u03b3\u00d7M\u2085)/b\u2083 matches sin2_theta_W"
+        }
+      ]
+    },
+    "summary": {
+      "total_discoveries": 22,
+      "high_precision": 19,
+      "categories": {
+        "zeta_series": 0,
+        "chaos_theory": 0,
+        "mersenne_arithmetic": 15,
+        "novel": 7
+      }
+    }
+  }
+}
