@@ -343,7 +343,7 @@ Information flow: high-dimensional -> 4D observables
 **Status**: **TOPOLOGICAL** (derived from rank)
 **Physical role**:
 - Neutrino mixing: enters δ = 2π/25 formulas
-- Cosmology: n_s = ξ² where ξ = (5/2)β₀
+- Cosmology: n_s = ζ(11)/ζ(5) from odd zeta ratio
 - RG flow: appears in anomalous dimensions
 
 #### 3.1.3 Parameter 3: Weyl_factor = 5 (Pentagonal Symmetry)
@@ -757,7 +757,7 @@ All (<1%):            34 observables (100.0%)
 **CMB-S4 (Cosmic Microwave Background Stage 4)**
 - Timeline: 2030s
 - Target: n_s precision Δn_s ~ 0.002
-- Tests: n_s = ξ² formula
+- Tests: n_s = ζ(11)/ζ(5) formula
 
 ### 5.4 Cross-Sector Consistency Tests
 
@@ -1049,7 +1049,7 @@ p₂ = 2 (exact arithmetic: 14/7, 496/248)
 
 **2030-2035**:
 - Hyper-K: θ₂₃ = 85/99 test
-- CMB-S4: n_s = ξ² test
+- CMB-S4: n_s = ζ(11)/ζ(5) test
 - Dark matter detection: hidden sector
 
 **2035+**:
