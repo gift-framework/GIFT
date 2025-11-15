@@ -1,57 +1,57 @@
-# G₂ ML v0.9 - Complete Implementation
+# G ML v0.9 - Complete Implementation
 
 ## Vue d'Ensemble
 
-Version 0.9 du système d'apprentissage machine pour métriques G₂ sur variétés de Kovalev K₇.
+Version 0.9 du systme d'apprentissage machine pour mtriques G sur varits de Kovalev K.
 
-### Corrections Critiques Implémentées
+### Corrections Critiques Implmentes
 
 Cette version corrige **8 erreurs majeures** de la v0.8b:
 
-1. ✅ **Décomposition Fernández-Gray rigoureuse** - Projections exactes (pas approximations)
-2. ✅ **Hodge star complet** - Toutes les contractions métriques g^{ij}
-3. ✅ **Exterior derivative optimisé** - Jacobien en une passe (107× plus rapide!)
-4. ✅ **Stability check** - Vérification φ ∧ *φ > 0
-5. ✅ **Early stopping intelligent** - Patience=500 epochs
-6. ✅ **Float32 systématique** - Stabilité numérique garantie
-7. ✅ **Assertions partout** - Robustesse maximale
-8. ✅ **Checkpoints validés** - Sauvegarde sécurisée avec backup
+1.  **Dcomposition Fernndez-Gray rigoureuse** - Projections exactes (pas approximations)
+2.  **Hodge star complet** - Toutes les contractions mtriques g^{ij}
+3.  **Exterior derivative optimis** - Jacobien en une passe (107 plus rapide!)
+4.  **Stability check** - Vrification   * > 0
+5.  **Early stopping intelligent** - Patience=500 epochs
+6.  **Float32 systmatique** - Stabilit numrique garantie
+7.  **Assertions partout** - Robustesse maximale
+8.  **Checkpoints valids** - Sauvegarde scurise avec backup
 
 ## Structure des Fichiers
 
 ```
 G2_ML/0.9/
-├── README.md                                    # Ce fichier
-├── CHANGES_v0_9.md                             # Détails des corrections
-├── IMPLEMENTATION_SUMMARY_v0_9.md              # Résumé technique
-├── Complete_G2_Metric_Training_v0_9.ipynb      # Notebook principal
-└── v09_outputs/                                 # Résultats (créé au runtime)
-    ├── checkpoints/
-    ├── training_history.csv
-    └── yukawa/
+ README.md                                    # Ce fichier
+ CHANGES_v0_9.md                             # Dtails des corrections
+ IMPLEMENTATION_SUMMARY_v0_9.md              # Rsum technique
+ Complete_G2_Metric_Training_v0_9.ipynb      # Notebook principal
+ v09_outputs/                                 # Rsultats (cr au runtime)
+     checkpoints/
+     training_history.csv
+     yukawa/
 ```
 
 ## Quick Start
 
-### Option 1: Notebook Jupyter (Recommandé)
+### Option 1: Notebook Jupyter (Recommand)
 
 ```bash
 cd /home/user/GIFT/G2_ML/0.9/
 jupyter notebook Complete_G2_Metric_Training_v0_9.ipynb
 ```
 
-Puis exécuter les cellules séquentiellement.
+Puis excuter les cellules squentiellement.
 
 ### Option 2: Script Python
 
 ```bash
-# À venir: extraction du notebook en script .py
+#  venir: extraction du notebook en script .py
 python train_g2_metric_v0_9.py --config config_v0_9.yaml
 ```
 
 ## Configuration
 
-Paramètres clés dans le notebook (Cell "CONFIG"):
+Paramtres cls dans le notebook (Cell "CONFIG"):
 
 ```python
 CONFIG = {
@@ -70,68 +70,68 @@ CONFIG = {
 }
 ```
 
-## Résultats Attendus
+## Rsultats Attendus
 
 ### Performance
 
-| Métrique | v0.8b | v0.9 | Amélioration |
+| Mtrique | v0.8b | v0.9 | Amlioration |
 |----------|-------|------|--------------|
-| **Temps/epoch** | 1.5s | 0.5s | **3× plus rapide** |
-| **Convergence** | 5000 epochs | ~3500 epochs | **1.4× plus rapide** |
-| **Torsion finale** | ~10⁻⁶ | ~10⁻⁹ | **1000× meilleure** |
-| **Stabilité φ** | Non vérifié | 100% garanti | ✅ |
+| **Temps/epoch** | 1.5s | 0.5s | **3 plus rapide** |
+| **Convergence** | 5000 epochs | ~3500 epochs | **1.4 plus rapide** |
+| **Torsion finale** | ~10 | ~10 | **1000 meilleure** |
+| **Stabilit ** | Non vrifi | 100% garanti |  |
 
 ### Temps Total
 
-- **v0.8b**: ~2.1 heures (5000 epochs forcés)
+- **v0.8b**: ~2.1 heures (5000 epochs forcs)
 - **v0.9**: ~0.5 heures (early stopping ~3500)
-- **Speedup total**: **4.2×**
+- **Speedup total**: **4.2**
 
-## Améliorations Mathématiques
+## Amliorations Mathmatiques
 
 ### 1. Hodge Star Correct
 
 **Avant (v0.8b)**: Utilisait seulement `det(g)`
 
-**Maintenant (v0.9)**: Formule complète
+**Maintenant (v0.9)**: Formule complte
 ```
-(*φ)_{ijkl} = (1/3!) ε_{ijklmno} g^{mp} g^{nq} g^{or} φ^{pqr} / √det(g)
+(*)_{ijkl} = (1/3!) _{ijklmno} g^{mp} g^{nq} g^{or} ^{pqr} / det(g)
 ```
 
-### 2. Décomposition Torsion Exacte
+### 2. Dcomposition Torsion Exacte
 
 **Avant (v0.8b)**: Moyennes et approximations
 
-**Maintenant (v0.9)**: Projections sur représentations G₂
+**Maintenant (v0.9)**: Projections sur reprsentations G
 
 ```
-dφ = τ₀ ψ + 3 τ₁ ∧ φ + *τ₃
+d =   + 3    + *
 ```
 
 Extraction de chaque composante par projection.
 
-### 3. Exterior Derivative Optimisé
+### 3. Exterior Derivative Optimis
 
-**Avant (v0.8b)**: 245 appels `autograd.grad()` → 512ms
+**Avant (v0.8b)**: 245 appels `autograd.grad()`  512ms
 
-**Maintenant (v0.9)**: 1 appel `jacrev()` → 4.8ms
+**Maintenant (v0.9)**: 1 appel `jacrev()`  4.8ms
 
-**Speedup**: 107×
+**Speedup**: 107
 
 ## Utilisation
 
 ### Training Complet
 
 ```python
-# Dans le notebook, après avoir exécuté les cellules de setup:
+# Dans le notebook, aprs avoir excut les cellules de setup:
 
-# 1. Vérifier configuration
+# 1. Vrifier configuration
 print(CONFIG)
 
 # 2. Lancer training
 # (La cellule "Training Loop" contient tout le code)
 
-# 3. Monitoring en temps réel
+# 3. Monitoring en temps rel
 # - Loss components (torsion, hitchin, closure, stability)
 # - Early stopping status
 # - Checkpoint sauvegarde automatique
@@ -157,10 +157,10 @@ start_epoch, history = load_checkpoint(
 )
 ```
 
-### Extraction Résultats
+### Extraction Rsultats
 
 ```python
-# Histoire d'entraînement
+# Histoire d'entranement
 import pandas as pd
 history_df = pd.read_csv('v09_outputs/training_history.csv')
 
@@ -179,9 +179,9 @@ masses = np.load('v09_outputs/yukawa/mass_eigenvalues.npy')
 
 Le notebook inclut des validations:
 
-1. **Stabilité φ**: Vérifié à chaque epoch
+1. **Stabilit **: Vrifi  chaque epoch
 2. **Dimension tensors**: Assertions partout
-3. **Dtype**: Float32 pour métriques
+3. **Dtype**: Float32 pour mtriques
 4. **Checkpoints**: Validation avant sauvegarde
 
 ### Tests Manuels
@@ -196,47 +196,47 @@ def test_hodge_involution():
     star_star_phi = dg.hodge_star_4to3(star_phi, metric)
 
     error = torch.norm(star_star_phi - phi)
-    assert error < 1e-4, f"Hodge ** ≠ id: {error}"
-    print(f"✓ Hodge involution OK (error={error:.2e})")
+    assert error < 1e-4, f"Hodge **  id: {error}"
+    print(f" Hodge involution OK (error={error:.2e})")
 
 test_hodge_involution()
 ```
 
 ## Troubleshooting
 
-### Problème: CUDA Out of Memory
+### Problme: CUDA Out of Memory
 
 **Solution**:
 ```python
-CONFIG['batch_size'] = 512  # Réduire de 1024
+CONFIG['batch_size'] = 512  # Rduire de 1024
 CONFIG['grad_accumulation_steps'] = 4  # Augmenter de 2
 ```
 
-### Problème: Convergence Lente
+### Problme: Convergence Lente
 
 **Solution**:
 ```python
 CONFIG['lr'] = 1e-4  # Augmenter learning rate
-CONFIG['metric_iterations_schedule']['phase1'] = 2  # Plus d'itérations
+CONFIG['metric_iterations_schedule']['phase1'] = 2  # Plus d'itrations
 ```
 
-### Problème: Instabilité φ
+### Problme: Instabilit 
 
 **Solution**:
 ```python
 CONFIG['stability_weight'] = 0.5  # Augmenter poids
-# Vérifier initialisation réseau
+# Vrifier initialisation rseau
 phi_network.head_m1[-1].weight.data.mul_(0.001)  # Poids plus petits
 ```
 
-### Problème: Checkpoint Corrompu
+### Problme: Checkpoint Corrompu
 
 **Solution automatique**:
 ```python
-# Le système essaie automatiquement:
+# Le systme essaie automatiquement:
 # 1. Fichier principal
 # 2. Backup (.backup)
-# 3. Checkpoint précédent
+# 3. Checkpoint prcdent
 # 4. Restart from scratch
 
 # Manuel:
@@ -246,7 +246,7 @@ load_checkpoint(latest_good, ...)
 
 ## Benchmarks
 
-### Hardware Testé
+### Hardware Test
 
 - **GPU**: NVIDIA A100 (40GB)
 - **CPU**: Intel Xeon (32 cores)
@@ -256,15 +256,15 @@ load_checkpoint(latest_good, ...)
 
 ```
 Temps par epoch (batch=1024):
-├── Sampling: 2ms
-├── Forward phi_network: 15ms
-├── Hitchin metric (n_iter=3): 180ms
-├── Torsion computation: 160ms  (dont exterior_deriv: 5ms ✅)
-├── Harmonic forms: 25ms
-├── Loss computation: 8ms
-├── Backward: 80ms
-├── Optimizer step: 5ms
-└── Total: ~475ms
+ Sampling: 2ms
+ Forward phi_network: 15ms
+ Hitchin metric (n_iter=3): 180ms
+ Torsion computation: 160ms  (dont exterior_deriv: 5ms )
+ Harmonic forms: 25ms
+ Loss computation: 8ms
+ Backward: 80ms
+ Optimizer step: 5ms
+ Total: ~475ms
 
 Total pour 5000 epochs: ~40 minutes
 Avec early stopping (~3500): ~28 minutes
@@ -274,19 +274,19 @@ Avec early stopping (~3500): ~28 minutes
 
 | Feature | v0.7 | v0.8b | v0.9 |
 |---------|------|-------|------|
-| Hodge star | Approximation | det(g) only | ✅ Complet |
-| Torsion FG | Non | Approximé | ✅ Exact |
-| Exterior deriv | Lent | Très lent | ✅ Optimisé (jacrev) |
-| Stability | Non | Non | ✅ Oui |
-| Early stopping | Non | Non | ✅ Oui |
-| Float precision | Mixed | Mixed | ✅ Float32 strict |
-| Assertions | Rares | Quelques | ✅ Partout |
-| Checkpoints | Basique | Basique | ✅ Robustes |
-| Temps/epoch | 2.5s | 1.5s | ✅ 0.5s |
+| Hodge star | Approximation | det(g) only |  Complet |
+| Torsion FG | Non | Approxim |  Exact |
+| Exterior deriv | Lent | Trs lent |  Optimis (jacrev) |
+| Stability | Non | Non |  Oui |
+| Early stopping | Non | Non |  Oui |
+| Float precision | Mixed | Mixed |  Float32 strict |
+| Assertions | Rares | Quelques |  Partout |
+| Checkpoints | Basique | Basique |  Robustes |
+| Temps/epoch | 2.5s | 1.5s |  0.5s |
 
 ## Contribution
 
-Pour améliorer v0.9:
+Pour amliorer v0.9:
 
 1. **Fork** le repository
 2. **Branch**: `git checkout -b feature/my-improvement`
@@ -300,7 +300,7 @@ Si vous utilisez ce code dans vos recherches:
 
 ```bibtex
 @software{gift_g2ml_v09,
-  title = {GIFT G₂ ML v0.9: Machine Learning for G₂ Metrics on Kovalev Manifolds},
+  title = {GIFT G ML v0.9: Machine Learning for G Metrics on Kovalev Manifolds},
   author = {GIFT Framework Team},
   year = {2025},
   version = {0.9},
@@ -308,11 +308,11 @@ Si vous utilisez ce code dans vos recherches:
 }
 ```
 
-## Références
+## Rfrences
 
 1. **Kovalev, A.** (2003). "Twisted connected sums and special Riemannian holonomy"
 2. **Hitchin, N.** (2000). "Stable forms and special metrics"
-3. **Fernández, M., Gray, A.** (1982). "Riemannian manifolds with structure group G₂"
+3. **Fernndez, M., Gray, A.** (1982). "Riemannian manifolds with structure group G"
 4. **Bryant, R.** (2006). "Metrics with exceptional holonomy"
 5. **PyTorch Docs**: `torch.func.jacrev` - Jacobian computation
 
@@ -330,10 +330,10 @@ MIT License - See LICENSE file
 
 **Version**: 0.9
 **Date**: 2025-11-15
-**Status**: ✅ PRODUCTION READY
+**Status**:  PRODUCTION READY
 
 **Prochaine version (v1.0)**:
-- Transformer architecture pour longue portée
+- Transformer architecture pour longue porte
 - Adaptive loss weights
 - Multi-GPU training
 - Wandb integration
