@@ -52,6 +52,8 @@ class GIFTFrameworkStatistical:
         # Mathematical constants
         self.zeta2 = np.pi**2 / 6
         self.zeta3 = 1.2020569031595942
+        self.zeta5 = 1.0369277551433699
+        self.zeta11 = 1.0004941886041195
         self.phi = (1 + np.sqrt(5)) / 2
 
         # Experimental data
@@ -100,7 +102,7 @@ class GIFTFrameworkStatistical:
         # Higgs & Cosmology
         obs['lambda_H'] = np.sqrt(17) / 32
         obs['Omega_DE'] = np.log(2) * 98 / 99
-        obs['n_s'] = self.xi**2
+        obs['n_s'] = self.zeta11 / self.zeta5
 
         # Hubble constant
         H0_Planck = 67.36

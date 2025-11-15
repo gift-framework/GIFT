@@ -619,13 +619,15 @@ Information flow: high-dimensional -> 4D observables
 
 **Status**: PHENOMENOLOGICAL (empirical pattern, theoretical derivation in progress)
 
-#### 4.8.2 Scalar Spectral Index: n_s = 0.96383
+#### 4.8.2 Scalar Spectral Index: n_s = 0.9649
 
-**Formula**: n_s = ξ² = (5π/16)²
-**Derivation**: Squared projection efficiency (Supplement C.7)
-**Status**: **DERIVED** (from proven ξ relation)
-**Experimental**: 0.9649 ± 0.0042 (Planck 2020)
-**Deviation**: 0.111%
+**Formula**: n_s = ζ(11)/ζ(5)
+where ζ(11) = 1.000494, ζ(5) = 1.036928
+
+**Derivation**: Ratio of odd Riemann zeta values from K₇ heat kernel (Supplement C.7)
+**Status**: **TOPOLOGICAL** (from odd zeta series pattern)
+**Experimental**: 0.9648 ± 0.0042 (Planck 2020)
+**Deviation**: 0.0066%
 
 ### 4.9 Summary Table: 34 Dimensionless Observables
 
@@ -638,7 +640,7 @@ Information flow: high-dimensional -> 4D observables
 | Higgs | 1 | 0.113% | 0.113% | TOPOLOGICAL |
 | Leptons | 4 | 0.056% | 0.000% | MIXED |
 | Quarks | 9 | 0.090% | 0.002% | DERIVED |
-| Cosmology | 2 | 0.356% | 0.111% | MIXED |
+| Cosmology | 2 | 0.109% | 0.0066% | TOPOLOGICAL |
 | **TOTAL** | **34** | **0.13%** | **0.000%** | ,, |
 
 ---

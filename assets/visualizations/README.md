@@ -1,7 +1,7 @@
 # GIFT Framework Interactive Visualizations
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=visualizations/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/visualizations/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=assets/visualizations/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/)
 
 Interactive Jupyter notebooks visualizing the geometric and mathematical structures underlying the GIFT framework.
 
@@ -13,7 +13,7 @@ These visualizations provide interactive exploration of the dimensional reductio
 
 ### 1. E₈ Root System 3D (`e8_root_system_3d.ipynb`)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/visualizations/e8_root_system_3d.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/e8_root_system_3d.ipynb)
 
 **Description**: Interactive 3D visualization of the complete E₈ root system (240 roots) projected from 8D to 3D using Principal Component Analysis.
 
@@ -33,7 +33,7 @@ These visualizations provide interactive exploration of the dimensional reductio
 
 ### 2. Precision Dashboard (`precision_dashboard.ipynb`)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/visualizations/precision_dashboard.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
 
 **Description**: Comprehensive comparison of all validated dimensionless observables against experimental measurements across all physics sectors.
 
@@ -61,7 +61,7 @@ These visualizations provide interactive exploration of the dimensional reductio
 
 ### 3. Dimensional Reduction Flow (`dimensional_reduction_flow.ipynb`)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/visualizations/dimensional_reduction_flow.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/dimensional_reduction_flow.ipynb)
 
 **Description**: Animated visualization of the dimensional reduction process from E₈×E₈ (496D) through K₇ (99D) to the Standard Model (4D).
 

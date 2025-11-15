@@ -44,11 +44,11 @@ The GIFT framework v2.0 makes 34 dimensionless predictions with mean experimenta
 
 | Observable | Experimental | GIFT | Deviation | Status |
 |------------|--------------|------|-----------|--------|
-| α⁻¹ | 137.035999... | 137.036 | 0.001% | ✓ Confirmed |
-| sin²θ_W | 0.23121(4) | 0.23127 | 0.009% | ✓ Confirmed |
-| α_s(M_Z) | 0.1181(11) | 0.1180 | 0.08% | ✓ Confirmed |
+| α⁻¹ | 137.035999... | 137.036 | 0.001% | Confirmed |
+| sin²θ_W | 0.23121(4) | 0.23127 | 0.009% | Confirmed |
+| α_s(M_Z) | 0.1181(11) | 0.1180 | 0.08% | Confirmed |
 
-**Status**: All three predictions in excellent agreement. The fine structure constant match to 0.001% is particularly striking.
+**Status**: All three predictions in excellent agreement. The fine structure constant match to 0.001% is noteworthy.
 
 **Experimental sources**: 
 - α: CODATA 2018, atomic physics measurements
@@ -59,12 +59,12 @@ The GIFT framework v2.0 makes 34 dimensionless predictions with mean experimenta
 
 | Observable | Experimental | GIFT | Deviation | Status |
 |------------|--------------|------|-----------|--------|
-| θ₁₂ | 33.44°±0.77° | 33.45° | 0.03% | ✓ Confirmed |
-| θ₁₃ | 8.61°±0.12° | 8.59° | 0.23% | ✓ Confirmed |
-| θ₂₃ | 49.2°±1.1° | 48.99° | 0.43% | ✓ Confirmed |
-| δ_CP | 197°±24° | 197.3° | 0.005% | ✓ Confirmed |
+| θ₁₂ | 33.44°±0.77° | 33.45° | 0.03% | Confirmed |
+| θ₁₃ | 8.61°±0.12° | 8.59° | 0.23% | Confirmed |
+| θ₂₃ | 49.2°±1.1° | 48.99° | 0.43% | Confirmed |
+| δ_CP | 197°±24° | 197.3° | 0.005% | Confirmed |
 
-**Status**: Complete sector predicted with high precision. All four parameters within experimental uncertainties. The δ_CP prediction is especially remarkable: exact formula gives 197°, and current best-fit is 197°±24°.
+**Status**: Complete sector predicted with high precision. All four parameters within experimental uncertainties. The δ_CP prediction is notably precise: exact formula gives 197°, and current best-fit is 197°±24°.
 
 **Experimental sources**:
 - NuFIT 5.3 (2024): Global fit of oscillation data

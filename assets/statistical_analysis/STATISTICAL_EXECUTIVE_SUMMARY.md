@@ -35,9 +35,9 @@ This provides evidence that Mersenne prime exponents {2, 3, 5, 7, 13, 17, 19, 31
 
 | Model | Predicted | Deviation | χ² | σ-level | Improvement |
 |-------|-----------|-----------|-----|---------|-------------|
-| **Original**: ξ² = (5π/16)² | 0.96383 | 0.1007% | 0.0535 | 0.23σ | Baseline |
-| **Nov 14**: 1/ζ(5) | 0.96439 | 0.0428% | 0.0097 | 0.10σ | **2.4×** |
-| **NEW**: ζ(11)/ζ(5) | 0.96486 | 0.0066% | 0.0002 | 0.02σ | 15.2× |
+| Original: ξ² = (5π/16)² | 0.96383 | 0.1007% | 0.0535 | 0.23σ | Baseline |
+| Model 2: 1/ζ(5) | 0.96439 | 0.0428% | 0.0097 | 0.10σ | 2.4× |
+| Model 3: ζ(11)/ζ(5) | 0.96486 | 0.0066% | 0.0002 | 0.02σ | 15.2× |
 
 Experimental (Planck 2018): n_s = 0.9648 ± 0.0042
 
@@ -51,7 +51,7 @@ Experimental (Planck 2018): n_s = 0.9648 ± 0.0042
 **BIC Scores** (Bayesian Information Criterion - lower is better):
 - Model 1 (ξ²): 0.054
 - Model 2 (1/ζ(5)): 0.010
-- **Model 3 (ζ(11)/ζ(5)): 0.0002** ← **BEST!**
+- Model 3 (ζ(11)/ζ(5)): 0.0002 (most favorable)
 
 **Interpretation**:
 - Model 3 achieves 15× better precision than original formula

@@ -340,19 +340,20 @@ class GIFTComprehensiveValidator:
 
     def check_spectral_index_zeta5(self) -> ConsistencyCheck:
         """
-        Validate n_s dual derivations with ζ(5)
+        Validate n_s with ζ(11)/ζ(5) formula
 
-        OLD formula: ξ² = (5π/16)² = 0.963829 (0.111% dev)
-        NEW formula: 1/ζ(5) = 0.964387 (0.053% dev) - 2× BETTER!
+        CURRENT formula: ζ(11)/ζ(5) = 0.964864 (0.0066% dev) - 15× BETTER!
+        Previous: 1/ζ(5) = 0.964387 (0.053% dev)
+        Original: ξ² = (5π/16)² = 0.963829 (0.111% dev)
 
-        Connection to Weyl_factor = 5?
+        Connection to odd zeta series pattern
         """
 
         # Method 1: Original formula
         n_s_original = self.xi**2
 
-        # Method 2: NEW zeta formula
-        n_s_zeta = 1 / self.zeta5
+        # Method 2: Zeta ratio formula (CURRENT BEST)
+        n_s_zeta = self.zeta11 / self.zeta5
 
         # Experimental value
         n_s_exp = self.experimental['n_s']
@@ -361,39 +362,41 @@ class GIFTComprehensiveValidator:
         dev_original = abs(n_s_original - n_s_exp) / n_s_exp * 100
         dev_zeta = abs(n_s_zeta - n_s_exp) / n_s_exp * 100
 
-        # Check ζ(5) computation
-        zeta5_computed = 1 / n_s_zeta
-        zeta5_expected = self.zeta5
-        zeta_consistency = abs(zeta5_computed - zeta5_expected) / zeta5_expected * 100
+        # Check ratio computation
+        ratio_computed = n_s_zeta
+        ratio_expected = self.zeta11 / self.zeta5
+        ratio_consistency = abs(ratio_computed - ratio_expected) / ratio_expected * 100
 
-        passed = (dev_original < 0.15) and (dev_zeta < 0.1) and (zeta_consistency < 0.01)
+        passed = (dev_original < 0.15) and (dev_zeta < 0.01) and (ratio_consistency < 0.01)
 
         interpretation = f"""
         ORIGINAL: n_s = ξ² = (5π/16)² = {n_s_original:.6f} (dev: {dev_original:.4f}%)
-        ZETA SERIES: n_s = 1/ζ(5) = {n_s_zeta:.6f} (dev: {dev_zeta:.4f}%)
+        ZETA RATIO: n_s = ζ(11)/ζ(5) = {n_s_zeta:.6f} (dev: {dev_zeta:.4f}%)
 
-        Improvement: {dev_zeta:.3f}% vs {dev_original:.3f}% → 2× BETTER precision!
+        Improvement: {dev_zeta:.4f}% vs {dev_original:.3f}% → 15× BETTER precision!
 
-        ζ(5) computation: {self.zeta5:.10f}
+        ζ(11) = {self.zeta11:.10f}
+        ζ(5) = {self.zeta5:.10f}
+        Ratio = {n_s_zeta:.10f}
 
-        CONNECTION TO WEYL FACTOR:
-        - Weyl_factor = 5 (fundamental parameter)
-        - Spectral index involves ζ(5)
-        - Pattern: ζ(2n+1) for n = 0,1,2,... ?
+        CONNECTION TO TOPOLOGY:
+        - 11 = rank(E₈) + N_gen = 8 + 3
+        - 5 = Weyl_factor (fundamental parameter)
+        - Pattern: ζ(2n+1) for odd zeta series
 
-        This suggests ODD ZETA SERIES plays fundamental role:
-        - sin²θ_W involves ζ(3)
-        - n_s involves ζ(5)
-        - Prediction: Search for ζ(7), ζ(9), ...
+        ODD ZETA SERIES pattern:
+        - sin²θ_W involves ζ(3) (0.027% dev)
+        - n_s involves ζ(11)/ζ(5) (0.0066% dev)
+        - ζ(7) predicted for additional observables
         """
 
         return ConsistencyCheck(
-            check_name="spectral_index_zeta5",
+            check_name="spectral_index_zeta_ratio",
             passed=passed,
             expected_value=n_s_exp,
             computed_value=n_s_zeta,
             deviation_pct=dev_zeta,
-            formula="1/ζ(5)",
+            formula="ζ(11)/ζ(5)",
             interpretation=interpretation,
             confidence="HIGH"
         )

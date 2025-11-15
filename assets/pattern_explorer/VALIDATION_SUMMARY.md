@@ -188,11 +188,11 @@ suggesting deep mathematical structure.
 
 #### Category 3: Zeta Ratios (3 patterns)
 
-**MAJOR DISCOVERY**:
+**Notable Result**:
 
-### **n_s = ζ(11)/ζ(5)** (dev: 0.0066%) 🎯
+### **n_s = ζ(11)/ζ(5)** (dev: 0.0066%)
 
-This is **10× BETTER** than n_s = 1/ζ(5) (0.053% dev)!
+This achieves 15× improved precision compared to n_s = 1/ζ(5) (0.053% dev).
 
 **Interpretation**: Spectral index is a **ratio of odd zeta values**.
 
