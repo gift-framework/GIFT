@@ -7,6 +7,7 @@ Tests products, sums, and more complex combinations.
 import numpy as np
 import pandas as pd
 from itertools import combinations, permutations
+from pathlib import Path
 
 # Zeta function values
 ZETA = {
@@ -154,7 +155,9 @@ def main():
     # Filter to < 5% deviation for extended patterns (more lenient)
     df_good = df[df['deviation_pct'] < 5.0]
 
-    output_file = '/home/user/GIFT/extended_zeta_patterns.csv'
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    data_dir.mkdir(parents=True, exist_ok=True)
+    output_file = data_dir / 'extended_zeta_patterns.csv'
     df_good.to_csv(output_file, index=False, float_format='%.6f')
 
     print()

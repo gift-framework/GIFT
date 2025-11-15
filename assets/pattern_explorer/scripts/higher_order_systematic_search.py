@@ -8,6 +8,7 @@ import numpy as np
 import itertools
 from typing import List, Tuple, Dict
 import csv
+from pathlib import Path
 
 # Mathematical constants
 ZETA_VALUES = {
@@ -409,7 +410,9 @@ def main():
     searcher.rank_patterns()
 
     # Save to CSV
-    searcher.save_results('/home/user/GIFT/higher_order_patterns.csv')
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    data_dir.mkdir(parents=True, exist_ok=True)
+    searcher.save_results(data_dir / 'higher_order_patterns.csv')
 
     # Print summary
     searcher.print_summary(top_n=20)

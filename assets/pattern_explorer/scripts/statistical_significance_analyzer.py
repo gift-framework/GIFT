@@ -650,7 +650,7 @@ class StatisticalSignificanceAnalyzer:
         """Plot distribution of pattern deviations"""
 
         # Load discovered patterns
-        validation_csv = Path('/home/user/GIFT/assets/pattern_explorer/validation_results/discovered_patterns.csv')
+        validation_csv = Path(__file__).resolve().parent.parent / 'validation_results' / 'discovered_patterns.csv'
 
         if validation_csv.exists():
             df = pd.read_csv(validation_csv)

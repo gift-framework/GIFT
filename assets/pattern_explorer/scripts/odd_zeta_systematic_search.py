@@ -13,6 +13,7 @@ Based on validated patterns:
 import math
 from itertools import combinations, product
 from typing import Dict, List, Tuple, Optional
+from pathlib import Path
 
 # Odd zeta values (high precision)
 ZETA_VALUES = {
@@ -502,7 +503,9 @@ def main():
 
     # Save results to CSV
     import csv
-    output_file = '/home/user/GIFT/odd_zeta_discoveries.csv'
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
+    data_dir.mkdir(parents=True, exist_ok=True)
+    output_file = data_dir / 'odd_zeta_discoveries.csv'
     with open(output_file, 'w', newline='') as f:
         if finder.discoveries:
             fieldnames = finder.discoveries[0].keys()
@@ -541,7 +544,7 @@ def main():
             print(f"   Deviation: {disc['deviation_%']:.6f}%")
 
     # Save extended results
-    output_file2 = '/home/user/GIFT/odd_zeta_discoveries_extended.csv'
+    output_file2 = data_dir / 'odd_zeta_discoveries_extended.csv'
     with open(output_file2, 'w', newline='') as f:
         if finder2.discoveries:
             fieldnames = finder2.discoveries[0].keys()
