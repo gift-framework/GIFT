@@ -14,71 +14,29 @@ def main():
     print("=" * 40)
     print()
     print("Available options:")
-    print("1. Twitter Bot (automated posting)")
-    print("2. Visualizations (interactive notebooks)")
-    print("3. Documentation (web interface)")
-    print("4. Agents (verification & maintenance)")
-    print("5. Exit")
+    print("1. Visualizations (interactive notebooks)")
+    print("2. Documentation (web interface)")
+    print("3. Agents (verification & maintenance)")
+    print("4. Exit")
     print()
-    
+
     while True:
-        choice = input("Select option (1-5): ").strip()
-        
+        choice = input("Select option (1-4): ").strip()
+
         if choice == "1":
-            launch_twitter_bot()
-            break
-        elif choice == "2":
             launch_visualizations()
             break
-        elif choice == "3":
+        elif choice == "2":
             launch_documentation()
             break
-        elif choice == "4":
+        elif choice == "3":
             launch_agents()
             break
-        elif choice == "5":
+        elif choice == "4":
             print("Goodbye!")
             break
         else:
-            print("Invalid choice. Please select 1-5.")
-
-def launch_twitter_bot():
-    """Launch the Twitter bot"""
-    print("\nLaunching GIFT Twitter Bot...")
-    bot_dir = Path("assets/twitter_bot")
-    
-    if not bot_dir.exists():
-        print("Error: Twitter bot directory not found")
-        return
-    
-    try:
-        # Change to bot directory and run
-        os.chdir(bot_dir)
-        
-        print("Options:")
-        print("1. Test content generation")
-        print("2. Run bot once")
-        print("3. Start automated scheduler")
-        print("4. Back to main menu")
-        
-        choice = input("Select option (1-4): ").strip()
-        
-        if choice == "1":
-            subprocess.run([sys.executable, "content_generator_en.py"])
-        elif choice == "2":
-            subprocess.run([sys.executable, "twitter_bot_v2.py"])
-        elif choice == "3":
-            print("Starting scheduler... (Press Ctrl+C to stop)")
-            subprocess.run([sys.executable, "scheduler.py"])
-        elif choice == "4":
-            return
-        else:
-            print("Invalid choice")
-            
-    except Exception as e:
-        print(f"Error launching Twitter bot: {e}")
-    finally:
-        os.chdir("../..")
+            print("Invalid choice. Please select 1-4.")
 
 def launch_visualizations():
     """Launch Jupyter notebooks for visualizations"""

@@ -71,5 +71,3 @@ visualizations/outputs/
 
 # Agent reports
 assets/agents/reports/*.json
-
-twitter_bot/config.py
