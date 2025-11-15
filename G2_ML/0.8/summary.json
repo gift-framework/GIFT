@@ -1,0 +1,12 @@
+{
+  "version": "0.8",
+  "final_torsion": 0.00014577207912225276,
+  "final_hitchin": 0.8682941198348999,
+  "improvements": [
+    "Hitchin metric construction (iterative)",
+    "Explicit torsion decomposition (\u03c4\u2080, \u03c4\u2081, \u03c4\u2082, \u03c4\u2083)",
+    "Metric-dependent Hodge star",
+    "Closure conditions for harmonic forms",
+    "Hitchin functional minimization"
+  ]
+}
