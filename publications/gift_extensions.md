@@ -236,7 +236,7 @@ Scaling dimension * Geometry = Hierarchical parameter * Dark energy
 #### 2.5.1 Formula: b₃ = 2*dim(K₇)² - b₂
 
 **Derivation**: b₂ + b₃ = 98 = 2 * 7²
-**Validation**: 21 + 77 = 98 (perfect match)
+**Validation**: 21 + 77 = 98 (exact agreement)
 
 #### 2.5.2 Interpretation
 
