@@ -6,9 +6,11 @@ Tests invalid inputs, numerical edge cases, and error recovery.
 
 import pytest
 import numpy as np
-import torch
 import sys
 from pathlib import Path
+
+# Skip entire module if torch is not available
+torch = pytest.importorskip("torch", reason="PyTorch required for G2 geometry tests")
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "statistical_validation"))
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "G2_ML" / "0.2"))

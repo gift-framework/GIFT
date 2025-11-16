@@ -76,9 +76,24 @@ class TestFullObservablePipeline:
         for key in results[0].keys():
             vals = [r[key] for r in results]
 
-            # Should have some variation
-            if key not in ['delta_CP', 'Q_Koide', 'm_tau_m_e', 'lambda_H']:
-                # These are exact, others should vary slightly
+            # Topologically exact observables that don't depend on p2/Weyl_factor
+            # These are derived from mathematical/topological constants only
+            topological_constants = [
+                'delta_CP',      # 7*14 + 99 = 197
+                'Q_Koide',       # 14/21 = 2/3
+                'm_tau_m_e',     # 7 + 10*248 + 10*99 = 3477
+                'lambda_H',      # sqrt(17)/32
+                'alpha_inv_MZ',  # 2^7 - 1/24
+                'Omega_DE',      # ln(2) * 98/99
+                'alpha_s_MZ',    # sqrt(2)/12
+                'sin2thetaW',    # zeta(2) - sqrt(2)
+                'theta13',       # pi/21
+                'm_mu_m_e',      # 27^phi (golden ratio)
+                'n_s'            # zeta(11)/zeta(5)
+            ]
+
+            if key not in topological_constants:
+                # These should vary with parameters
                 std = np.std(vals)
                 assert std > 0, f"{key} should vary with parameters"
 
