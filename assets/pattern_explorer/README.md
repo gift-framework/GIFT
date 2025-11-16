@@ -60,7 +60,16 @@ For a quick overview of discoveries and current status:
 
 ## Running Scripts
 
-Most scripts can be run directly:
+**Recommended**: Use the unified CLI for easy access to all tools:
+
+```bash
+cd assets/pattern_explorer
+python3 pattern_explorer_cli.py
+```
+
+The CLI organizes all 20 scripts into logical categories with an interactive menu.
+
+**Alternative**: Run scripts directly (not recommended):
 
 ```bash
 cd assets/pattern_explorer/scripts
@@ -69,6 +78,8 @@ python3 zeta_ratio_discovery.py
 ```
 
 Scripts generate results in `../data/` and visualizations in `../visualizations/`.
+
+**Documentation**: See `SCRIPTS_GUIDE.md` for complete script organization and workflows.
 
 ## Key Discoveries
 
