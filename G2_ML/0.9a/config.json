@@ -1,0 +1,110 @@
+{
+  "phi_hidden_dims": [
+    384,
+    384,
+    256
+  ],
+  "phi_n_fourier": 32,
+  "harmonic_hidden_dim": 128,
+  "harmonic_n_fourier": 24,
+  "topology": "complete_K7",
+  "gift_params": {
+    "tau": 3.8967452300785634,
+    "xi": 0.9817477042468103,
+    "gamma": 0.5780542986425339,
+    "phi": 1.618033988749895,
+    "beta0": 0.39269908169872414,
+    "delta": 0.25132741228718347,
+    "b2": 21,
+    "b3": 77,
+    "chi": 0,
+    "h_star": 99,
+    "b2_m1": 11,
+    "b3_m1": 40,
+    "b2_m2": 10,
+    "b3_m2": 37,
+    "dim_su3": 8,
+    "dim_su2": 3,
+    "dim_u1": 1,
+    "dim_hidden": 9
+  },
+  "epochs": 10000,
+  "batch_size": 2048,
+  "grad_accumulation_steps": 2,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "curriculum": {
+    "phase1_neck_stability": {
+      "range": [
+        0,
+        2000
+      ],
+      "region_weights": {
+        "m1": 0.2,
+        "neck": 0.6,
+        "m2": 0.2
+      },
+      "loss_weights": {
+        "torsion": 0.5,
+        "volume": 2.0,
+        "topological": 1.0,
+        "boundary": 0.5
+      }
+    },
+    "phase2_acyl_matching": {
+      "range": [
+        2000,
+        5000
+      ],
+      "region_weights": {
+        "m1": 0.3,
+        "neck": 0.4,
+        "m2": 0.3
+      },
+      "loss_weights": {
+        "torsion": 2.0,
+        "volume": 0.5,
+        "topological": 1.5,
+        "boundary": 1.5
+      }
+    },
+    "phase3_cohomology_refinement": {
+      "range": [
+        5000,
+        8000
+      ],
+      "region_weights": {
+        "m1": 0.25,
+        "neck": 0.5,
+        "m2": 0.25
+      },
+      "loss_weights": {
+        "torsion": 5.0,
+        "volume": 0.2,
+        "topological": 3.0,
+        "boundary": 2.0
+      }
+    },
+    "phase4_harmonic_extraction": {
+      "range": [
+        8000,
+        10000
+      ],
+      "region_weights": {
+        "m1": 0.25,
+        "neck": 0.5,
+        "m2": 0.25
+      },
+      "loss_weights": {
+        "torsion": 3.0,
+        "volume": 0.1,
+        "topological": 5.0,
+        "boundary": 1.5
+      }
+    }
+  },
+  "validation_interval": 500,
+  "checkpoint_interval": 1000,
+  "seed": 42
+}
