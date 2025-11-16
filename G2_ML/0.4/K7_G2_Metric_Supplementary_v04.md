@@ -1,5 +1,7 @@
 # Supplementary Material: Numerical G₂ Metric Construction on K₇
 
+> ⚠️ **ARCHIVED DRAFT** - This supplementary material is from v0.4 (2025-10) and is **no longer current**. Superseded by production results from [v0.7](../0.7/) and [v0.9a](../0.9a/). See [G2_ML/STATUS.md](../STATUS.md) for publication-ready versions.
+
 **Complete 4-Phase Curriculum Learning**
 
 *Technical Appendices for Main Publication*

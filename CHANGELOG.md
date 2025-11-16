@@ -139,7 +139,7 @@ First public version of the GIFT framework demonstrating geometric derivation of
 
 ## Future Development
 
-### Planned for v2.1 (Tentative)
+### Planned for v2.1 (Unreleased, in development)
 
 **Enhancements Under Investigation**
 - Temporal framework integration (21·e⁸ structure)

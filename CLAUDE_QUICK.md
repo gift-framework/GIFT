@@ -299,8 +299,8 @@ python3 tools/check_pdf_sync.py
 
 ## Version Control
 
-**Current**: v2.0.0
-**Next**: v2.1 (planned)
+**Current stable**: v2.0.0 (2025-10-24)
+**In development**: v2.1 (unreleased)
 
 See `CHANGELOG.md` for history.
 
