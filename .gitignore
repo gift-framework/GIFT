@@ -62,6 +62,7 @@ desktop.ini
 
 # Coverage and testing
 .coverage
+coverage.xml
 htmlcov/
 .pytest_cache/
 .tox/
