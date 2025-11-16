@@ -26,3 +26,12 @@ tqdm>=4.62.0
 # Enhanced visualization
 kaleido>=0.2.1
 networkx>=3.0
+
+# Testing and quality assurance
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-xdist>=3.0.0
+pytest-mock>=3.10.0
+pytest-timeout>=2.1.0
+coverage>=7.0.0
+nbval>=0.10.0

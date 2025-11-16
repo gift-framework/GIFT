@@ -1,0 +1,60 @@
+{
+  "framework_version": "2.0.0",
+  "generated_date": "2025-11-16",
+  "parameters": {
+    "p2": 2.0,
+    "Weyl_factor": 5,
+    "tau": 3.8974358974358974
+  },
+  "observables": {
+    "alpha_inv_MZ": 127.95833333333333,
+    "sin2thetaW": 0.23091449701136963,
+    "alpha_s_MZ": 0.11785113019775792,
+    "theta12": 33.691506353742856,
+    "theta13": 8.57142857142857,
+    "theta23": 48.63309876303778,
+    "delta_CP": 197.0,
+    "Q_Koide": 0.6666666666666666,
+    "m_mu_m_e": 206.74858954634836,
+    "m_tau_m_e": 3477.0,
+    "m_s_m_d": 20.0,
+    "lambda_H": 0.12868256816145142,
+    "Omega_DE": 0.6847006532440801,
+    "n_s": 0.9647879925756843,
+    "H0": 73.05
+  },
+  "experimental_values": {
+    "alpha_inv_MZ": 127.955,
+    "sin2thetaW": 0.23122,
+    "alpha_s_MZ": 0.1179,
+    "theta12": 33.44,
+    "theta13": 8.61,
+    "theta23": 49.2,
+    "delta_CP": 197.0,
+    "Q_Koide": 0.6667,
+    "m_mu_m_e": 206.768,
+    "m_tau_m_e": 3477.0,
+    "m_s_m_d": 20.0,
+    "lambda_H": 0.129,
+    "Omega_DE": 0.6847,
+    "n_s": 0.9649,
+    "H0": 73.04
+  },
+  "deviations_percent": {
+    "alpha_inv_MZ": 0.003,
+    "sin2thetaW": 0.132,
+    "alpha_s_MZ": 0.042,
+    "theta12": 0.752,
+    "theta13": 0.450,
+    "theta23": 1.154,
+    "delta_CP": 0.000,
+    "Q_Koide": 0.005,
+    "m_mu_m_e": 0.009,
+    "m_tau_m_e": 0.000,
+    "m_s_m_d": 0.000,
+    "lambda_H": 0.256,
+    "Omega_DE": 0.008,
+    "n_s": 0.012,
+    "H0": 0.014
+  }
+}

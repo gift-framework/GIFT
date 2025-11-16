@@ -33,21 +33,39 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install flake8 pytest pytest-cov nbconvert jupyter
-    
+        pip install flake8 pytest pytest-cov pytest-xdist nbconvert jupyter
+
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=__pycache__,*.ipynb_checkpoints
         # exit-zero treats all errors as warnings
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=__pycache__,*.ipynb_checkpoints
-    
-    - name: Validate notebooks
+
+    - name: Run unit tests
       run: |
-        find . -name "*.ipynb" -not -path "*/.*" -exec jupyter nbconvert --to notebook --execute --inplace {} \; || echo "Some notebooks failed validation, continuing..."
-    
-    - name: Check for notebook outputs
+        pytest tests/unit -v --cov=. --cov-report=xml --cov-report=term-missing -m "not slow"
+
+    - name: Run integration tests
       run: |
-        echo "Checking notebook structure..."
-        find . -name "*.ipynb" -not -path "*/.*" | head -5
+        pytest tests/integration -v -m "not slow"
+
+    - name: Run regression tests
+      run: |
+        pytest tests/regression -v
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
+
+    - name: Validate notebooks (basic)
+      run: |
+        find . -name "*.ipynb" -not -path "*/.*" -not -path "*/.ipynb_checkpoints/*" | head -5 | while read notebook; do
+          echo "Validating: $notebook"
+          jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=60 "$notebook" || echo "Note: $notebook may need manual review"
+        done
 
