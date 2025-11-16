@@ -221,10 +221,10 @@ pytest -m "not slow"            # Fast tests only
 
 | Component | Status |
 |-----------|--------|
-| b₂=21 harmonic 2-forms | ✅ Complete |
-| b₃=77 harmonic 3-forms | 🔨 In progress |
-| Yukawa tensor | 📋 Planned |
-| Optimization | 📋 Planned |
+| b₂=21 harmonic 2-forms | Complete |
+| b₃=77 harmonic 3-forms | In progress |
+| Yukawa tensor | Planned |
+| Optimization | Planned |
 
 See `G2_ML/STATUS.md` for details.
 
@@ -446,4 +446,4 @@ Otherwise, this quick reference should suffice.
 **For**: GIFT Framework v2.0.0+
 **Last Updated**: 2025-11-16
 
-**Remember**: Mathematical correctness and intellectual honesty above all else.
+**Remember**: Mathematical correctness and intellectual honesty above all else. (and never use emojis in markdown or python files)
