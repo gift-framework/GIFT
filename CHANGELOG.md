@@ -11,10 +11,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/PHILOSOPHY.md` - Philosophical essay "On What Comes First" exploring mathematical primacy and epistemic humility
 - `.gitignore` - Standard ignore patterns for Python, Jupyter, and IDE files
 - GitHub workflows for link validation
+- `G2_ML/VERSIONS.md` - Comprehensive version index for all G2 ML framework versions
+- `G2_ML/FUTURE_WORK.md` - Planned enhancements replacing obsolete completion plan
+- `G2_ML/0.X/README.md` - Documentation for 8 previously undocumented versions (0.1, 0.2, 0.4, 0.6, 0.6c, 0.7, 0.8, 0.9)
+- `legacy_v1/README.md` - Guide to accessing archived v1.0 content via git history
+- ARCHIVED warnings to historical G2 ML documentation (versions <0.7)
 
 ### Changed
-- Updated `STRUCTURE.md` to include new philosophical perspectives documentation
+- Updated `STRUCTURE.md` to include complete repository structure (assets, G2_ML, tests, statistical_validation)
 - Corrected `postBuild` Binder setup script with accurate file paths
+- `G2_ML/STATUS.md` - Updated with actual implementation status (Yukawa complete, b3 partial 20/77, v0.9b in progress)
+- `G2_ML/COMPLETION_PLAN.md` - Archived as obsolete, replaced by FUTURE_WORK.md
+- `README.md` - Harmonized G2 ML status descriptions with reality (93% complete)
+- `TESTING_SUMMARY.md` - Updated with measured test coverage (69% actual vs estimated 80-90%)
+- `CLAUDE_QUICK.md` - Clarified version status (v2.0.0 stable, v2.1 unreleased)
+- Version references harmonized across all documentation (v2.0.0 stable, v2.1 in development)
+
+### Fixed
+- Resolved phantom references to non-existent `legacy_v1/` directory
+- Corrected G2_ML framework status claims (Yukawa now documented as complete in v0.8)
+- Fixed inconsistencies between README.md and G2_ML/STATUS.md regarding implementation status
 
 ## [2.0.0] - 2025-10-24
 
