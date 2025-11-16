@@ -1,6 +1,6 @@
 # CLAUDE.md - AI Assistant Guide for GIFT Framework
 
-> **📚 Complete Guide** (22,647 lines). For a quick reference, see [CLAUDE_QUICK.md](CLAUDE_QUICK.md) (~400 lines).
+> **Complete Guide** (22,647 lines). For a quick reference, see [CLAUDE_QUICK.md](CLAUDE_QUICK.md) (~400 lines).
 
 ## Repository Overview
 
@@ -729,7 +729,7 @@ jupyter nbconvert --to notebook --execute [notebook].ipynb
 9. **Test thoroughly** - Notebooks must execute without errors
 10. **Respect the philosophy** - Mathematical primacy and epistemic humility
 
-**This is not just a software project** - it's a scientific framework making testable predictions about fundamental physics. Maintain the highest standards of scientific integrity, reproducibility, and intellectual honesty.
+**This is not just a software project** - it's a scientific framework making testable predictions about fundamental physics. Maintain the highest standards of scientific integrity, reproducibility, intellectual honesty and no emojis.
 
 ---
 
