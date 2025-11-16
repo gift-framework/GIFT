@@ -1,5 +1,7 @@
 # G₂ Metric Learner v0.2 - Technical Documentation
 
+> ⚠️ **ARCHIVED VERSION** - This document is from v0.2 (2025-09) and is **no longer maintained**. For current work, see [v0.9a](../0.9a/) or [v0.7](../0.7/) (production versions). See [G2_ML/STATUS.md](../STATUS.md) for latest status.
+
 ## Overview
 
 Version 0.2 represents a fundamental redesign of the G₂ metric learning approach. Instead of learning metric tensors directly, this version learns the G₂ 3-form φ(x) and reconstructs the metric algebraically, while enforcing true torsion-free conditions through proper exterior derivatives.

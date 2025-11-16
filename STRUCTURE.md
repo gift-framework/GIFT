@@ -48,10 +48,52 @@ gift/
 │   ├── FAQ.md                         # Frequently asked questions
 │   ├── GLOSSARY.md                    # Technical terms and notation
 │   ├── PHILOSOPHY.md                  # Philosophical perspectives
-│   └── EXPERIMENTAL_VALIDATION.md     # Current experimental status
+│   ├── EXPERIMENTAL_VALIDATION.md     # Current experimental status
+│   └── *.md                           # Additional guides and references
 │
-└── legacy_v1/                         # Archived v1.0 version
-    └── README.md                      # Guide to v1 archive
+├── G2_ML/                             # Machine learning for K₇ metrics
+│   ├── README.md                      # Framework overview
+│   ├── STATUS.md                      # Current implementation status
+│   ├── FUTURE_WORK.md                 # Planned enhancements
+│   ├── 0.1/ through 0.6c/            # Development versions (archived)
+│   ├── 0.7/                          # Production: b₂=21 complete
+│   ├── 0.8/                          # Yukawa + partial b₃ (20/77)
+│   ├── 0.9a/                         # Latest production refinements
+│   ├── 0.9b/                         # Full b₃=77 (training in progress)
+│   └── tests/                        # G2 ML test suite
+│
+├── statistical_validation/           # Statistical analysis tools
+│   ├── run_validation.py             # Monte Carlo & Sobol validation
+│   ├── requirements.txt              # Validation dependencies
+│   └── full_results/                 # Validation output data
+│
+├── assets/                           # Interactive assets and tools
+│   ├── README.md                     # Assets overview
+│   ├── visualizations/               # Interactive Jupyter visualizations
+│   │   ├── e8_root_system_3d.ipynb  # E₈ 240 roots in 3D
+│   │   ├── precision_dashboard.ipynb # Observable vs experiment
+│   │   └── dimensional_reduction_flow.ipynb # 496D → 4D animation
+│   ├── agents/                       # Automated maintenance scripts
+│   │   ├── cli.py                    # Command-line interface
+│   │   ├── verifier.py               # Link and status validation
+│   │   ├── docs_integrity.py         # Documentation checks
+│   │   └── *.py                      # Additional agents
+│   ├── pattern_explorer/             # Mathematical pattern discovery
+│   │   ├── comprehensive_validator.py
+│   │   ├── number_theory_search.py
+│   │   └── discoveries/              # High-confidence findings
+│   └── paper_draft/                  # LaTeX paper drafts
+│       ├── ABSTRACT.txt              # Paper abstract
+│       └── gift_framework_paper.tex  # LaTeX source
+│
+├── tests/                            # Test suite (200+ tests)
+│   ├── unit/                         # Unit tests
+│   ├── integration/                  # Integration tests
+│   ├── regression/                   # Regression tests
+│   └── fixtures/                     # Test data
+│
+└── legacy_v1/                        # Archived v1.0 version
+    └── README.md                     # Guide to v1 archive
 ```
 
 ## Document Hierarchy

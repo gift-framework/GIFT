@@ -114,11 +114,12 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 - Production cross-sections and experimental signatures
 - See [README_experimental_predictions.md](publications/README_experimental_predictions.md)
 
-**[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics (WIP)
-- Machine learning extraction of harmonic forms from K₇ geometry
-- b₂=21 harmonic 2-forms, b₃=77 harmonic 3-forms
-- Yukawa coupling computation from 21×21×21 tensor
-- Intended for GIFT v2.1 to replace Supplement F with data-driven K₇ metric
+**[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics (93% complete)
+- ✅ b₂=21 harmonic 2-forms extracted and validated (v0.7, v0.9a)
+- ✅ Yukawa coupling tensor computed: 21×21×21 triple products (v0.8)
+- 🔨 b₃=77 harmonic 3-forms in progress: 20/77 partial (v0.8), full extraction training now (v0.9b)
+- Data-driven K₇ metric construction via deep learning
+- See [G2_ML/STATUS.md](G2_ML/STATUS.md) for detailed current status
 
 ### Mathematical Supplements
 
@@ -253,7 +254,7 @@ gift/
 │       ├── C_complete_derivations.md  # All 34 predictions
 │       ├── D_phenomenology.md         # Experimental comparison
 │       ├── E_falsification.md         # Testing criteria
-│       └── F_K7_metric.md             # Explicit constructions (v2.1: replaced by G2_ML)
+│       └── F_K7_metric.md             # Explicit constructions (G2_ML provides data-driven alternative)
 │
 ├── assets/                            # Interactive assets and tools
 │   ├── README.md                      # Assets overview
@@ -419,9 +420,9 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 
 ## Version History
 
-- **v2.1** (In development): Statistical validation, experimental predictions, G2 ML for K₇ metrics
-- **v2.0.0** (2025-10-24): Modular structure, rigorous proofs, 0.13% precision, 34 observables
-- **v1.0.0** (Archived): Initial framework (available in git history)
+- **v2.1** (Unreleased, in development): Statistical validation (200+ tests), G2 ML framework (93% complete), experimental predictions
+- **v2.0.0** (2025-10-24, current stable): Modular structure, rigorous proofs, 0.13% precision, 34 observables
+- **v1.0.0** (Archived): Initial framework (available in git history via `legacy_v1/`)
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed changes.
 

@@ -1,6 +1,8 @@
 # Physics-Informed Neural Network for G₂ Metric Learning
 
-**Method:** Self-supervised learning via differential geometry constraints  
+> ⚠️ **ARCHIVED VERSION** - This document is from v0.1 (2025-09) and is **no longer maintained**. For current work, see [v0.9a](../0.9a/) or [v0.7](../0.7/) (production versions). See [G2_ML/STATUS.md](../STATUS.md) for latest status.
+
+**Method:** Self-supervised learning via differential geometry constraints
 **No training data required** – purely physics-informed optimization
 
 ---
