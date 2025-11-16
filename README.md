@@ -115,9 +115,9 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 - See [README_experimental_predictions.md](publications/README_experimental_predictions.md)
 
 **[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics (93% complete)
-- ✅ b₂=21 harmonic 2-forms extracted and validated (v0.7, v0.9a)
-- ✅ Yukawa coupling tensor computed: 21×21×21 triple products (v0.8)
-- 🔨 b₃=77 harmonic 3-forms in progress: 20/77 partial (v0.8), full extraction training now (v0.9b)
+- b₂=21 harmonic 2-forms extracted and validated (v0.7, v0.9a)
+- Yukawa coupling tensor computed: 21×21×21 triple products (v0.8)
+- b₃=77 harmonic 3-forms in progress: 20/77 partial (v0.8), full extraction training now (v0.9b)
 - Data-driven K₇ metric construction via deep learning
 - See [G2_ML/STATUS.md](G2_ML/STATUS.md) for detailed current status
 
