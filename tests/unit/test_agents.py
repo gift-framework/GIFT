@@ -10,15 +10,16 @@ import sys
 import tempfile
 import os
 
-# Add agents to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "assets" / "agents"))
+# Add project root to path for imports
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
 
-from base import AgentResult
-from verifier import VerifierAgent
-from docs_integrity import DocsIntegrityAgent
-from unicode_sanitizer import UnicodeSanitizerAgent
-from utils.markdown import parse_links, extract_status_tags
-from utils.fs import discover_files
+from assets.agents.base import AgentResult
+from assets.agents.verifier import VerifierAgent
+from assets.agents.docs_integrity import DocsIntegrityAgent
+from assets.agents.unicode_sanitizer import UnicodeSanitizerAgent
+from assets.agents.utils.markdown import parse_links, extract_status_tags
+from assets.agents.utils.fs import discover_files
 
 
 class TestAgentResult:
