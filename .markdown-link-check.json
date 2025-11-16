@@ -5,12 +5,32 @@
     },
     {
       "pattern": "^https://mybinder.org"
+    },
+    {
+      "pattern": "^https://colab.research.google.com"
+    },
+    {
+      "pattern": "^https://img.shields.io"
+    },
+    {
+      "pattern": "^https://www.python.org"
+    },
+    {
+      "pattern": "^mailto:"
     }
   ],
   "timeout": "20s",
   "retryOn429": true,
   "retryCount": 3,
   "fallbackRetryDelay": "30s",
-  "aliveStatusCodes": [200, 206, 301, 302, 307, 308]
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308],
+  "httpHeaders": [
+    {
+      "urls": ["https://github.com"],
+      "headers": {
+        "Accept": "text/html"
+      }
+    }
+  ]
 }
 
