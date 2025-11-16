@@ -210,6 +210,10 @@ When citing specific predictions or results, include the relevant section:
 
 ## DOI Information
 
+**Status**: DOI registration pending. Once registered, this section will be updated with the official DOI.
+
+Planned DOI provider: Zenodo (10.5281/zenodo.*)
+
 When DOI becomes available, cite using:
 
 ```bibtex
@@ -217,13 +221,19 @@ When DOI becomes available, cite using:
   title={GIFT Framework v2: Geometric Information Field Theory},
   author={{GIFT Framework Team}},
   year={2025},
-  doi={10.5281/zenodo.XXXXXXX},
+  doi={10.5281/zenodo.XXXXXXX},  % TODO: Update with actual DOI when registered
   url={https://github.com/gift-framework/GIFT},
   version={2.0.0}
 }
 ```
 
-DOI registration is planned. Check repository for updates.
+To register a DOI for this repository:
+1. Create a GitHub release (v2.0.0)
+2. Link repository to Zenodo via GitHub integration
+3. Generate DOI automatically through Zenodo
+4. Update this file with the assigned DOI
+
+Check repository for updates on DOI availability.
 
 ## Version History
 

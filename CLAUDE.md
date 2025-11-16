@@ -1,5 +1,7 @@
 # CLAUDE.md - AI Assistant Guide for GIFT Framework
 
+> **📚 Complete Guide** (22,647 lines). For a quick reference, see [CLAUDE_QUICK.md](CLAUDE_QUICK.md) (~400 lines).
+
 ## Repository Overview
 
 **GIFT (Geometric Information Field Theory)** is a theoretical physics framework that derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction. This repository contains:
