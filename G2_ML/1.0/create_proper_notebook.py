@@ -23,6 +23,33 @@ for name in ['losses.py', 'training.py', 'validation.py', 'yukawa.py']:
                 break
         modules[name] = lines[start:]
 
+# Extract network architectures from K7_v1_0_main.py
+with open('K7_v1_0_main.py', 'r', encoding='utf-8') as f:
+    main_content = f.read()
+    main_lines = main_content.split('\n')
+
+    # Find class definitions
+    arch_lines = []
+    in_class = False
+    indent_level = 0
+
+    for i, line in enumerate(main_lines):
+        if line.strip().startswith('class FourierFeatures') or \
+           line.strip().startswith('class ModularPhiNetwork') or \
+           line.strip().startswith('class HarmonicFormsNetwork') or \
+           line.strip().startswith('class K7Topology'):
+            in_class = True
+            indent_level = len(line) - len(line.lstrip())
+            arch_lines.append(line)
+        elif in_class:
+            current_indent = len(line) - len(line.lstrip()) if line.strip() else indent_level + 4
+            if line.strip() and current_indent <= indent_level:
+                in_class = False
+            else:
+                arch_lines.append(line)
+
+    modules['architectures'] = arch_lines
+
 print(f"Loaded {len(modules)} modules")
 
 # Create notebook
@@ -198,6 +225,14 @@ main_code.append("# COMPLETE K7 v1.0 IMPLEMENTATION - ALL MODULES INLINE")
 main_code.append("# " + "="*60)
 main_code.append("")
 
+# Neural network architectures FIRST
+main_code.append("# " + "="*60)
+main_code.append("# NEURAL NETWORK ARCHITECTURES")
+main_code.append("# " + "="*60)
+main_code.append("")
+main_code.extend(modules['architectures'])
+main_code.append("")
+
 # Checkpoint manager
 main_code.append("# " + "="*60)
 main_code.append("# CHECKPOINT MANAGEMENT")
@@ -282,6 +317,10 @@ main_code.append("# " + "="*60)
 main_code.append("")
 main_code.extend(modules['yukawa.py'])
 
+main_code.append("")
+main_code.append("# Initialize topology")
+main_code.append("topology = K7Topology(CONFIG['gift_parameters'])")
+main_code.append("print('Topology initialized')")
 main_code.append("")
 main_code.append("print('All modules loaded successfully')")
 main_code.append(f"print('Total lines: ~{len(main_code)}')")
