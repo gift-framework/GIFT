@@ -389,7 +389,7 @@ If you use this framework in your research, please cite:
 ```bibtex
 @software{gift_framework_v2_2025,
   title={GIFT Framework v2: Geometric Information Field Theory},
-  author={{GIFT Framework Team}},
+  author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
   version={2.0.0},
