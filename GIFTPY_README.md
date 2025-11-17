@@ -1,36 +1,33 @@
-# 🎁 GIFTpy - Geometric Information Field Theory
+# GIFTpy - Geometric Information Field Theory
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)]()
 
-**Python package for computing Standard Model predictions from topological geometry**
+Python package for computing Standard Model predictions from topological geometry.
 
-GIFTpy provides a simple, elegant interface to the GIFT (Geometric Information Field Theory) framework, which derives Standard Model parameters from E₈×E₈ exceptional Lie algebras and K₇ manifolds with G₂ holonomy.
+GIFTpy provides an interface to the GIFT (Geometric Information Field Theory) framework, which derives Standard Model parameters from E₈×E₈ exceptional Lie algebras and K₇ manifolds with G₂ holonomy.
 
-## ✨ Key Features
+## Key Features
 
-- **43+ observables** predicted from pure geometry
-- **Mean 0.13% precision** compared to experiments
-- **Zero free parameters** - all predictions are topological
-- **Fast** - all computations complete in milliseconds
-- **Well-tested** - comprehensive test suite
-- **Easy to use** - intuitive API for beginners and experts
+- 43+ observables predicted from topological geometry
+- Mean deviation of approximately 0.3% compared to experimental values
+- Predictions derived from topological structures
+- Comprehensive test suite
+- Export functionality to multiple formats
 
-## 🚀 Quick Start
-
-### Installation
+## Installation
 
 ```bash
 # From repository (development)
 cd GIFT
 pip install -e .
 
-# From PyPI (future)
+# From PyPI (planned for future release)
 pip install giftpy
 ```
 
-### Basic Usage
+## Basic Usage
 
 ```python
 import giftpy
@@ -41,11 +38,9 @@ gift = giftpy.GIFT()
 # Compute individual observables
 alpha_s = gift.gauge.alpha_s()
 print(f"Strong coupling: α_s(M_Z) = {alpha_s:.6f}")
-# Output: α_s(M_Z) = 0.117851
 
 Q_Koide = gift.lepton.Q_Koide()
 print(f"Koide parameter: Q = {Q_Koide}")
-# Output: Q = 0.6666666666666666 (exact 2/3!)
 
 # Compute all observables
 results = gift.compute_all()
@@ -56,83 +51,59 @@ validation = gift.validate()
 print(validation.summary())
 ```
 
-### Example Output
+## Notable Predictions
 
-```
-╔═══════════════════════════════════════════════════════════╗
-║          GIFT Framework Validation Summary                ║
-╚═══════════════════════════════════════════════════════════╝
+### Koide Formula
 
-Total Observables: 11
-
-Precision Metrics:
-  Mean deviation:   0.3254%
-  Median deviation: 0.1178%
-  Max deviation:    2.0065%
-
-Distribution:
-  Exact       (<0.01%):   1 (  9.1%)
-  Exceptional (<0.1%):    3 ( 27.3%)
-  Excellent   (<0.5%):    7 ( 63.6%)
-  All under 1%:         False
-
-Status: ✓ VALIDATED
-```
-
-## 📊 Spectacular Predictions
-
-### Koide Formula (EXACT!)
-
-The most famous GIFT prediction: the Koide parameter
+The Koide parameter Q is derived from topological structure:
 
 ```python
 Q = gift.lepton.Q_Koide()
-# Returns: 0.6666... (exactly 2/3)
+# Returns: 0.6666... (2/3)
 
 # Topological origin: Q = dim(G₂)/b₂(K₇) = 14/21 = 2/3
 ```
 
-**Experimental**: Q = 0.666661 ± 0.000007
-**GIFT**: Q = 2/3 (EXACT!)
-**Deviation**: 0.0007%
+- Experimental: Q = 0.666661 ± 0.000007
+- GIFT: Q = 2/3
+- Deviation: 0.0007%
 
-This is the first theoretical derivation of the mysterious Koide formula discovered empirically in 1982!
+This provides a theoretical derivation of the Koide formula (Koide, 1982).
 
 ### Strong Coupling
 
 ```python
 alpha_s = gift.gauge.alpha_s()
-# Returns: 0.117851 (from √2/12)
+# Formula: √2/12
 ```
 
-**Experimental**: α_s(M_Z) = 0.1179 ± 0.0010
-**GIFT**: √2/12 = 0.117851
-**Deviation**: 0.0%
+- Experimental: α_s(M_Z) = 0.1179 ± 0.0010
+- GIFT: √2/12 = 0.117851
+- Deviation: 0.04%
 
 ### Fine Structure Constant
 
 ```python
 alpha_inv = gift.gauge.alpha_inv()
-# Returns: 127.958333... (from 2⁷ - 1/24)
+# Formula: 2⁷ - 1/24
 ```
 
-**Experimental**: α⁻¹(M_Z) = 127.952 ± 0.001
-**GIFT**: 2⁷ - 1/24 = 127.958333
-**Deviation**: 0.005%
+- Experimental: α⁻¹(M_Z) = 127.952 ± 0.001
+- GIFT: 2⁷ - 1/24 = 127.958333
+- Deviation: 0.005%
 
 ### CP Violation Phase
 
 ```python
-import numpy as np
 delta_CP = gift.neutrino.delta_CP(degrees=True)
-# Returns: ~197° (from ζ(3) + √5)
+# Formula: ζ(3) + √5
 ```
 
-**Experimental**: δ_CP = 197° ± 24°
-**GIFT**: ζ(3) + √5 ≈ 197°
-**Deviation**: 0.02%
+- Experimental: δ_CP = 197° ± 24°
+- GIFT: ζ(3) + √5 ≈ 197°
+- Deviation: 0.02%
 
-## 🔬 Physics Sectors
+## Physics Sectors
 
 ### Gauge Sector
 
@@ -153,14 +124,14 @@ theta_W = gift.gauge.theta_W(degrees=True)
 
 ```python
 # Mass ratios
-m_mu_m_e = gift.lepton.m_mu_m_e()    # = 27^φ
-m_tau_m_mu = gift.lepton.m_tau_m_mu()  # = 84/5
-m_tau_m_e = gift.lepton.m_tau_m_e()   # = 3547
+m_mu_m_e = gift.lepton.m_mu_m_e()
+m_tau_m_mu = gift.lepton.m_tau_m_mu()
+m_tau_m_e = gift.lepton.m_tau_m_e()
 
 # Koide formula
-Q_Koide = gift.lepton.Q_Koide()      # = 2/3 (exact!)
+Q_Koide = gift.lepton.Q_Koide()
 
-# Verify Koide formula
+# Verify Koide formula with physical masses
 result = gift.lepton.verify_koide_formula()
 print(result)
 ```
@@ -181,23 +152,23 @@ delta_CP = gift.neutrino.delta_CP(degrees=True)
 
 ```python
 # Mass ratios
-m_s_m_d = gift.quark.m_s_m_d()  # = 20 (exact!)
+m_s_m_d = gift.quark.m_s_m_d()
 
 # CKM matrix elements
-V_us = gift.quark.V_us()  # = 1/√5
+V_us = gift.quark.V_us()
 ```
 
 ### Cosmology
 
 ```python
 # Dark energy density
-Omega_DE = gift.cosmology.Omega_DE()  # = ln(2)
+Omega_DE = gift.cosmology.Omega_DE()
 
 # Scalar spectral index
-n_s = gift.cosmology.n_s()  # = ξ²
+n_s = gift.cosmology.n_s()
 ```
 
-## 📈 Advanced Usage
+## Advanced Usage
 
 ### Validation and Analysis
 
@@ -211,7 +182,7 @@ validation.plot(filename='validation.png')
 
 # Access detailed statistics
 print(f"Mean deviation: {validation.mean_deviation:.4f}%")
-print(f"Exact predictions: {validation.n_exact}")
+print(f"Number of predictions: {validation.n_observables}")
 print(f"χ²/dof: {validation.chi_squared_dof:.2f}")
 ```
 
@@ -225,7 +196,9 @@ gift.export('predictions.tex', format='latex')
 gift.export('predictions.xlsx', format='excel')
 ```
 
-### Custom Topological Constants (Research)
+### Custom Topological Constants
+
+For research purposes, custom topological constants can be specified:
 
 ```python
 from giftpy.core.constants import TopologicalConstants
@@ -252,7 +225,7 @@ diff = gift1.compare(gift2)
 print(diff)
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -265,23 +238,23 @@ pytest giftpy_tests/ --cov=giftpy --cov-report=html
 pytest giftpy_tests/test_observables.py::TestLeptonSector::test_Q_Koide_exact
 ```
 
-## 📚 Theory Background
+## Theory Background
 
 GIFT (Geometric Information Field Theory) derives Standard Model parameters from:
 
-1. **E₈×E₈ Lie algebras** (496 dimensions)
-2. **K₇ compact manifolds** with G₂ holonomy (7 dimensions)
-3. **Topological invariants**: Betti numbers b₂=21, b₃=77
+1. E₈×E₈ Lie algebras (496 dimensions)
+2. K₇ compact manifolds with G₂ holonomy (7 dimensions)
+3. Topological invariants: Betti numbers b₂=21, b₃=77
 
 ### Core Parameters
 
 GIFTpy uses 3 fundamental topological parameters:
 
-- **p₂ = 2**: Binary architecture
-- **rank(E₈) = 8**: E₈ Lie algebra rank
-- **Weyl factor = 5**: Weyl group structure
+- p₂ = 2: Binary architecture
+- rank(E₈) = 8: E₈ Lie algebra rank
+- Weyl factor = 5: Weyl group structure
 
-All other quantities are **derived** from these through topology.
+Other quantities are derived from these through topological relations.
 
 ### Key Identities
 
@@ -289,14 +262,14 @@ All other quantities are **derived** from these through topology.
 # β₀ = b₂/b₃ (base coupling)
 beta0 = CONSTANTS.beta0  # = 21/77
 
-# ξ = (5/2)β₀ (DERIVED, not free!)
+# ξ = (5/2)β₀ (derived parameter)
 xi = CONSTANTS.xi  # = 105/154
 
-# N_gen = 3 (PROVEN from topology)
+# N_gen = 3 (derived from topology)
 N_gen = CONSTANTS.N_gen  # = 3
 ```
 
-## 🗂️ Package Structure
+## Package Structure
 
 ```
 giftpy/
@@ -311,55 +284,55 @@ giftpy/
 │   ├── neutrino.py       # PMNS, oscillations
 │   ├── quark.py          # CKM, mass ratios
 │   └── cosmology.py      # Ω_DE, n_s
-├── topology/             # E₈, K₇ structures (WIP)
-├── temporal/             # τ framework (WIP)
+├── topology/             # E₈, K₇ structures (planned)
+├── temporal/             # τ framework (planned)
 └── tools/
     ├── export.py         # Data export
     └── visualization.py  # Plotting
 ```
 
-## 🛣️ Roadmap
+## Development Roadmap
 
 ### v0.1.0 (Current - MVP)
-- ✅ Core constants module
-- ✅ Main framework class
-- ✅ Gauge sector (3 observables)
-- ✅ Lepton sector (4 observables)
-- ✅ Neutrino sector (2 observables)
-- ✅ Quark sector (2 observables)
-- ✅ Cosmology sector (2 observables)
-- ✅ Validation system
-- ✅ Basic tests
+- Core constants module
+- Main framework class
+- Gauge sector (3 observables)
+- Lepton sector (4 observables)
+- Neutrino sector (2 observables)
+- Quark sector (2 observables)
+- Cosmology sector (2 observables)
+- Validation system
+- Basic tests
 
 ### v0.2.0 (Planned)
-- [ ] Complete all 43 observables
-- [ ] Advanced neutrino sector (full PMNS matrix)
-- [ ] Complete quark sector (all CKM elements)
-- [ ] Improved documentation
-- [ ] Jupyter notebook tutorials
+- Complete observable set (43+ total)
+- Advanced neutrino sector (full PMNS matrix)
+- Complete quark sector (all CKM elements)
+- Improved documentation
+- Jupyter notebook tutorials
 
 ### v0.3.0 (Planned)
-- [ ] Topology module (E₈ roots, K₇ cohomology)
-- [ ] Temporal framework (τ-parameter)
-- [ ] Interactive visualizations
-- [ ] Performance optimizations (Numba)
+- Topology module (E₈ roots, K₇ cohomology)
+- Temporal framework (τ-parameter)
+- Interactive visualizations
+- Performance optimizations
 
 ### v1.0.0 (Future)
-- [ ] Full production release
-- [ ] Complete documentation
-- [ ] Published on PyPI
-- [ ] Paper in JOSS
+- Production release
+- Complete documentation
+- PyPI publication
+- Potential submission to JOSS
 
-## 📖 Documentation
+## Documentation
 
-- **Quick Start**: This README
-- **API Reference**: See docstrings (Sphinx docs coming)
-- **Theory**: See `publications/gift_main.md` in main repo
-- **Examples**: See `examples/` directory
+- Quick Start: This README
+- API Reference: See docstrings (Sphinx documentation planned)
+- Theory: See `publications/gift_main.md` in main repository
+- Examples: See `examples/` directory
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! See `CONTRIBUTING.md` for guidelines.
+Contributions are welcome. See `CONTRIBUTING.md` for guidelines.
 
 ### Development Setup
 
@@ -381,17 +354,17 @@ black giftpy/
 mypy giftpy/
 ```
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file
 
-## 📞 Contact
+## Contact
 
-- **Repository**: https://github.com/gift-framework/GIFT
-- **Issues**: https://github.com/gift-framework/GIFT/issues
-- **Discussions**: https://github.com/gift-framework/GIFT/discussions
+- Repository: https://github.com/gift-framework/GIFT
+- Issues: https://github.com/gift-framework/GIFT/issues
+- Discussions: https://github.com/gift-framework/GIFT/discussions
 
-## 📚 Citation
+## Citation
 
 If you use GIFTpy in your research, please cite:
 
@@ -405,12 +378,10 @@ If you use GIFTpy in your research, please cite:
 }
 ```
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built on the theoretical work of the GIFT Framework research program.
 
----
+## References
 
-**Made with ❤️ by the GIFT Collaboration**
-
-*Deriving physics from pure geometry since 2024*
+Koide, Y. (1982). "A New Relation Among Lepton Masses". Letters to the Nuovo Cimento, 34, 201-205.

@@ -67,7 +67,7 @@ class GaugeSector:
         -----
         Experimental: α⁻¹(M_Z) = 127.952 ± 0.001
         GIFT prediction: 127.958333...
-        Deviation: ~0.005% (EXCEPTIONAL precision!)
+        Deviation: ~0.005% (EXCEPTIONAL precision)
 
         For Q ≠ M_Z, RG running would be applied (TODO).
 
@@ -140,7 +140,7 @@ class GaugeSector:
         -----
         Experimental: α_s(M_Z) = 0.1179 ± 0.0010
         GIFT prediction: 0.117900...
-        Deviation: ~0.0% (EXACT within errors!)
+        Deviation: ~0.0% (within experimental uncertainty)
 
         This is one of GIFT's most precise predictions.
 

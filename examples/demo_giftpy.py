@@ -13,13 +13,13 @@ def main():
     print()
 
     # Initialize GIFT framework
-    print("🔧 Initializing GIFT framework...")
+    print(" Initializing GIFT framework...")
     gift = giftpy.GIFT()
-    print(f"✓ GIFTpy version {gift.version}")
+    print(f" GIFTpy version {gift.version}")
     print()
 
     # Display topological constants
-    print("📐 Topological Constants")
+    print(" Topological Constants")
     print("-" * 70)
     print(f"  b₂(K₇) = {gift.constants.b2} (harmonic 2-forms)")
     print(f"  b₃(K₇) = {gift.constants.b3} (harmonic 3-forms)")
@@ -30,7 +30,7 @@ def main():
     print()
 
     # Gauge sector predictions
-    print("⚛️  Gauge Sector Predictions")
+    print("  Gauge Sector Predictions")
     print("-" * 70)
 
     alpha_s = gift.gauge.alpha_s()
@@ -55,14 +55,14 @@ def main():
     print()
 
     # Lepton sector - The spectacular predictions!
-    print("⚡ Lepton Sector - Spectacular Predictions!")
+    print(" Lepton Sector - Notable Predictions")
     print("-" * 70)
 
     Q_Koide = gift.lepton.Q_Koide()
     print(f"  Q_Koide = {Q_Koide}")
     print(f"    Formula: dim(G₂)/b₂(K₇) = 14/21 = 2/3 (EXACT!)")
     print(f"    Experimental: 0.666661 ± 0.000007")
-    print(f"    Deviation: {abs(Q_Koide - 0.666661)/0.666661*100:.4f}% 🎯")
+    print(f"    Deviation: {abs(Q_Koide - 0.666661)/0.666661*100:.4f}% ")
     print()
 
     m_mu_m_e = gift.lepton.m_mu_m_e()
@@ -73,7 +73,7 @@ def main():
     print()
 
     # Neutrino sector
-    print("🔄 Neutrino Sector")
+    print(" Neutrino Sector")
     print("-" * 70)
 
     import numpy as np
@@ -86,7 +86,7 @@ def main():
     print()
 
     # Cosmology
-    print("🌌 Cosmology")
+    print(" Cosmology")
     print("-" * 70)
 
     Omega_DE = gift.cosmology.Omega_DE()
@@ -97,7 +97,7 @@ def main():
     print()
 
     # Full validation
-    print("📊 Full Validation")
+    print(" Full Validation")
     print("-" * 70)
     validation = gift.validate(verbose=False)
     print(f"  Total observables: {validation.n_observables}")
@@ -110,14 +110,14 @@ def main():
     print()
 
     # Display all results
-    print("📋 All Predictions")
+    print(" All Predictions")
     print("-" * 70)
     results = gift.compute_all()
     print(results[['name', 'value', 'experimental', 'deviation_%']].to_string(index=False))
     print()
 
     print("=" * 70)
-    print("✓ Demo complete!")
+    print(" Demo complete!")
     print("=" * 70)
     print()
     print("For more information:")

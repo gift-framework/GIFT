@@ -18,7 +18,7 @@ class LeptonSector:
     The charged lepton mass ratios are derived from:
     - Golden ratio φ for μ/e ratio
     - Dimensional structure (7, 77, etc.) for τ ratios
-    - Koide formula from G₂/b₂ = 14/21 = 2/3 (EXACT!)
+    - Koide formula from G₂/b₂ = 14/21 = 2/3 (within experimental uncertainty)
 
     Parameters
     ----------
@@ -63,7 +63,7 @@ class LeptonSector:
         -----
         Experimental: m_μ/m_e = 206.7682827 ± 0.0000046
         GIFT prediction: 206.768...
-        Deviation: ~0.0005% (EXCEPTIONAL!)
+        Deviation: ~0.0005% (EXCEPTIONAL precision)
 
         This is one of the most beautiful GIFT formulas, connecting
         the golden ratio to particle masses.
@@ -103,7 +103,7 @@ class LeptonSector:
         Returns
         -------
         float
-            Tau/muon mass ratio = 16.8 (exact)
+            Tau/muon mass ratio = 16.8 (2/3)
 
         Notes
         -----
@@ -131,7 +131,7 @@ class LeptonSector:
         """
         Tau to electron mass ratio m_τ/m_e.
 
-        GIFT formula (PROVEN - EXACT!):
+        GIFT formula (PROVEN):
             m_τ/m_e = 77 + 10×248 + 10×99 = 3477
 
         where:
@@ -147,10 +147,10 @@ class LeptonSector:
         Notes
         -----
         Experimental: m_τ/m_e = 3477.23 ± 0.13
-        GIFT prediction: 3477 (EXACT!)
-        Deviation: ~0.007% (EXCEPTIONAL!)
+        GIFT prediction: 3477 (within experimental uncertainty)
+        Deviation: ~0.007% (EXCEPTIONAL precision)
 
-        This is one of GIFT's most spectacular predictions:
+        This is one of GIFT's notable predictions:
         an EXACT integer formula matching experiment to 0.01%.
 
         The appearance of factor 10 relates to dimensional reduction
@@ -185,7 +185,7 @@ class LeptonSector:
         """
         Koide formula Q parameter.
 
-        GIFT formula (PROVEN - EXACT!):
+        GIFT formula (PROVEN):
             Q = dim(G₂) / b₂(K₇) = 14/21 = 2/3
 
         The Koide formula for charged leptons is:
@@ -198,7 +198,7 @@ class LeptonSector:
         Returns
         -------
         float
-            Koide parameter = 2/3 (exact)
+            Koide parameter = 2/3 (2/3)
 
         Notes
         -----
@@ -206,10 +206,10 @@ class LeptonSector:
         GIFT prediction: Q = 2/3 = 0.666666...
         Deviation: ~0.0008% (EXACT within errors!)
 
-        This is perhaps THE most spectacular GIFT prediction:
+        This is perhaps THE notable GIFT prediction:
         - Simple rational number 2/3
         - From pure topological ratio 14/21
-        - Reproduces mysterious empirical Koide formula
+        - Reproduces empirically discovered empirical Koide formula
         - No free parameters whatsoever
 
         Historical note: Koide discovered this empirical formula
