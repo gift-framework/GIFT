@@ -1,0 +1,160 @@
+{
+  "version": "v1.0_tcs_refactored",
+  "seed": 42,
+  "gift_parameters": {
+    "tau": 3.8967452300785634,
+    "xi": 0.9817477042468103,
+    "epsilon0": 0.125,
+    "b2": 21,
+    "b3": 77
+  },
+  "architecture": {
+    "phi_network": {
+      "hidden_dims": [
+        384,
+        384,
+        256
+      ],
+      "n_fourier": 32
+    },
+    "harmonic_h2_network": {
+      "hidden_dim": 128,
+      "n_fourier": 24,
+      "n_forms": 21
+    },
+    "harmonic_h3_network": {
+      "hidden_dim": 128,
+      "n_fourier": 24,
+      "n_forms": 77
+    }
+  },
+  "training": {
+    "total_epochs": 15000,
+    "batch_size": 2048,
+    "grad_accumulation": 4,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "warmup_epochs": 500,
+    "subsample_coclosure": 8,
+    "subsample_harmonic": 16,
+    "calibration_interval": 50,
+    "curriculum": {
+      "phase1_neck_stability": {
+        "range": [
+          0,
+          2000
+        ],
+        "grid_n": 8,
+        "loss_weights": {
+          "torsion_closure": 0.5,
+          "torsion_coclosure": 0.5,
+          "volume": 2.0,
+          "gram_h2": 1.0,
+          "gram_h3": 0.5,
+          "boundary": 0.5,
+          "neck_smoothness": 0.1,
+          "harmonic_penalty": 0.01,
+          "calibration": 0.0
+        }
+      },
+      "phase2_acyl_matching": {
+        "range": [
+          2000,
+          5000
+        ],
+        "grid_n": 8,
+        "loss_weights": {
+          "torsion_closure": 1.0,
+          "torsion_coclosure": 1.0,
+          "volume": 0.5,
+          "gram_h2": 1.5,
+          "gram_h3": 1.0,
+          "boundary": 1.5,
+          "neck_smoothness": 0.2,
+          "harmonic_penalty": 0.02,
+          "calibration": 0.001
+        }
+      },
+      "phase3_cohomology_refinement": {
+        "range": [
+          5000,
+          8000
+        ],
+        "grid_n": 10,
+        "loss_weights": {
+          "torsion_closure": 2.0,
+          "torsion_coclosure": 2.0,
+          "volume": 0.2,
+          "gram_h2": 3.0,
+          "gram_h3": 2.0,
+          "boundary": 2.0,
+          "neck_smoothness": 0.3,
+          "harmonic_penalty": 0.05,
+          "calibration": 0.002
+        }
+      },
+      "phase4_harmonic_extraction": {
+        "range": [
+          8000,
+          10000
+        ],
+        "grid_n": 10,
+        "loss_weights": {
+          "torsion_closure": 3.0,
+          "torsion_coclosure": 3.0,
+          "volume": 0.1,
+          "gram_h2": 5.0,
+          "gram_h3": 3.0,
+          "boundary": 1.5,
+          "neck_smoothness": 0.2,
+          "harmonic_penalty": 0.1,
+          "calibration": 0.005
+        }
+      },
+      "phase5_calibration_finetune": {
+        "range": [
+          10000,
+          15000
+        ],
+        "grid_n": 12,
+        "loss_weights": {
+          "torsion_closure": 5.0,
+          "torsion_coclosure": 5.0,
+          "volume": 0.05,
+          "gram_h2": 5.0,
+          "gram_h3": 4.0,
+          "boundary": 1.0,
+          "neck_smoothness": 0.1,
+          "harmonic_penalty": 0.2,
+          "calibration": 0.01
+        }
+      }
+    }
+  },
+  "checkpointing": {
+    "interval": 500,
+    "keep_best": 5,
+    "auto_resume": true
+  },
+  "validation": {
+    "interval": 100,
+    "ricci_interval": 500,
+    "ricci_points": 1000
+  },
+  "yukawa_computation": {
+    "n_mc_samples": 20000,
+    "grid_n": 10,
+    "tucker_rank": [
+      3,
+      3,
+      3
+    ],
+    "antisymmetry_tolerance": 1e-06
+  },
+  "holonomy_test": {
+    "n_loops": 10,
+    "n_steps_per_loop": 50,
+    "preservation_tolerance": 0.0001
+  }
+}
