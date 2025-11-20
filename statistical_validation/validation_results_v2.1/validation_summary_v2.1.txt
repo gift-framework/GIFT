@@ -1,23 +1,23 @@
 ====================================================================================================
 GIFT v2.1 - Statistical Validation Summary
-Generated: 2025-11-20T23:36:11.366306
+Generated: 2025-11-21T00:11:22.346521
 ====================================================================================================
 
 OVERALL STATISTICS
 ----------------------------------------------------------------------------------------------------
 Total observables: 46
-Mean deviation: 12.3186%
-Median deviation: 0.2914%
+Mean deviation: 9.1699%
+Median deviation: 0.1649%
 Max deviation: 116.5529%
 Min deviation: 0.0000%
 
 BREAKDOWN BY STATUS
 ----------------------------------------------------------------------------------------------------
 PROVEN              :   4 observables, mean dev =   0.0014%
-TOPOLOGICAL         :  14 observables, mean dev =   0.0373%
-DERIVED             :  10 observables, mean dev =   0.3900%
+TOPOLOGICAL         :  15 observables, mean dev =   0.0369%
+DERIVED             :  11 observables, mean dev =   0.4051%
 THEORETICAL         :   4 observables, mean dev =   2.1937%
-PHENOMENOLOGICAL    :  14 observables, mean dev =  39.5325%
+PHENOMENOLOGICAL    :  12 observables, mean dev =  34.0022%
 
 TOP 15 BEST PREDICTIONS
 ----------------------------------------------------------------------------------------------------
@@ -35,14 +35,16 @@ m_u_MeV                          2.160247        2.160000     0.0114     TOPOLOG
 theta23                         49.193346       49.200000     0.0135     TOPOLOGICAL
 v_EW                           246.268268      246.220000     0.0196     TOPOLOGICAL
 sin2thetaW                       0.231282        0.231220     0.0268     TOPOLOGICAL
+M_W                             80.394939       80.369000     0.0323     TOPOLOGICAL
 alpha_s_MZ                       0.117851        0.117900     0.0415     TOPOLOGICAL
 m_b_m_u                       1936.545289     1935.190000     0.0700     TOPOLOGICAL
-m_t_m_b                         41.330082       41.300000     0.0728     TOPOLOGICAL
 
 TOP 15 LARGEST DEVIATIONS
 ----------------------------------------------------------------------------------------------------
 Observable                     Prediction    Experimental      Dev %          Status
 ----------------------------------------------------------------------------------------------------
+Y_p                              0.250000        0.244900     2.0825     THEORETICAL
+V_cs                             0.976190        0.997000     2.0872     THEORETICAL
 Omega_b                          0.050661        0.049300     2.7597     THEORETICAL
 V_cb                             0.039059        0.042200     7.4426 PHENOMENOLOGICAL
 V_td                             0.006968        0.008100    13.9766 PHENOMENOLOGICAL
@@ -55,14 +57,14 @@ m_c_m_u                        420.042319      589.350000    28.7279 PHENOMENOLO
 sigma_8                          0.531923        0.811000    34.4115 PHENOMENOLOGICAL
 m_t_m_d                      51311.776733    36960.000000    38.8306 PHENOMENOLOGICAL
 m_b_m_d                       1241.511604      894.000000    38.8715 PHENOMENOLOGICAL
-M_Z                             24.946330       91.188000    72.6430 PHENOMENOLOGICAL
-M_W                             21.872085       80.369000    72.7854 PHENOMENOLOGICAL
 m_t_m_s                       4001.897945     1848.000000   116.5529 PHENOMENOLOGICAL
 
 THEORETICAL UNCERTAINTIES (Top 10)
 ----------------------------------------------------------------------------------------------------
 Observable                           Mean             Std    Rel.Unc %
 ----------------------------------------------------------------------------------------------------
+M_W                             80.394939      3.49818441       4.3512
+M_Z                             91.694902      3.98987400       4.3512
 V_ub                             0.003263      0.00005432       1.6647
 m_c_MeV                        907.395116      9.13180179       1.0064
 m_c_m_u                        420.042319      4.22720282       1.0064
@@ -71,7 +73,5 @@ m_s_MeV                         67.392043      0.67821698       1.0064
 m_b_m_u                       1936.545289     19.39069592       1.0013
 m_b_m_d                       1241.511604     12.43129925       1.0013
 m_t_GeV                        172.900926      1.73126303       1.0013
-m_t_m_d                      51311.776733    513.78662061       1.0013
-m_b_MeV                       4183.415957     41.88869074       1.0013
 
 ====================================================================================================

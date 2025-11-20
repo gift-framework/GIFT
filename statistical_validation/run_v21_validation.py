@@ -36,7 +36,7 @@ from gift_v21_core import GIFTFrameworkV21, GIFTParameters, create_default_frame
 # ============================================================================
 
 PARAM_UNCERTAINTIES_V21 = {
-    # Static parameters (v2.0)
+    # Topological parameters
     'p2': {
         'central': 2.0,
         'uncertainty': 0.001,  # 0.05% - theoretical robustness
@@ -53,7 +53,7 @@ PARAM_UNCERTAINTIES_V21 = {
         'distribution': 'normal'
     },
 
-    # Torsional parameters (v2.1 NEW)
+    # Torsional dynamics parameters
     'T_norm': {
         'central': 0.0164,
         'uncertainty': 0.0005,  # 3% - from numerical reconstruction
