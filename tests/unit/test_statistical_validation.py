@@ -17,6 +17,7 @@ from run_validation import (
     PARAM_UNCERTAINTIES,
     monte_carlo_uncertainty_propagation,
     bootstrap_experimental_validation,
+    sobol_sensitivity_analysis,
 )
 
 
@@ -265,3 +266,104 @@ class TestEdgeCases:
         obs = gift.compute_all_observables()
         # m_s_m_d = p2^2 * Weyl, so should still be positive
         assert obs["m_s_m_d"] > 0
+
+
+class TestSobolAnalysis:
+    """Test Sobol global sensitivity analysis."""
+
+    @pytest.mark.slow
+    def test_sobol_returns_indices(self):
+        """Test Sobol analysis returns sensitivity indices."""
+        indices = sobol_sensitivity_analysis(n_samples=64, seed=42)
+        assert indices is not None, "Sobol returned None (SALib not installed?)"
+        assert isinstance(indices, dict)
+
+    @pytest.mark.slow
+    def test_sobol_indices_structure(self):
+        """Test Sobol indices have correct structure."""
+        indices = sobol_sensitivity_analysis(n_samples=64, seed=42)
+        if indices is None:
+            pytest.skip("SALib not installed")
+
+        # Should have indices for all 15 observables
+        assert len(indices) == 15
+
+        # Each observable should have S1 and ST indices
+        for obs_name, obs_indices in indices.items():
+            assert "S1" in obs_indices, f"{obs_name} missing S1"
+            assert "ST" in obs_indices, f"{obs_name} missing ST"
+            # 3 parameters -> 3 indices each
+            assert len(obs_indices["S1"]) == 3, f"{obs_name} S1 wrong length"
+            assert len(obs_indices["ST"]) == 3, f"{obs_name} ST wrong length"
+
+    @pytest.mark.slow
+    def test_sobol_indices_bounds(self):
+        """Test Sobol indices are in valid range for non-constant observables."""
+        indices = sobol_sensitivity_analysis(n_samples=64, seed=42)
+        if indices is None:
+            pytest.skip("SALib not installed")
+
+        # Only check non-topological (parameter-dependent) observables
+        # Topological observables are constant -> NaN indices (expected)
+        non_topological = ["theta12", "theta23", "m_mu_m_e", "m_s_m_d", "H0"]
+
+        for obs_name in non_topological:
+            obs_indices = indices[obs_name]
+            for i, s1 in enumerate(obs_indices["S1"]):
+                if not np.isnan(s1):
+                    assert s1 >= -0.5, f"{obs_name} S1[{i}] too negative: {s1}"
+                    assert s1 <= 1.5, f"{obs_name} S1[{i}] too large: {s1}"
+
+    @pytest.mark.slow
+    def test_sobol_topological_insensitive(self):
+        """Test topological observables have zero or NaN sensitivity."""
+        indices = sobol_sensitivity_analysis(n_samples=64, seed=42)
+        if indices is None:
+            pytest.skip("SALib not installed")
+
+        # Topological observables are constant -> Sobol gives NaN or [0,0,0]
+        topological = ["delta_CP", "Q_Koide", "m_tau_m_e", "lambda_H", "Omega_DE", "alpha_inv_MZ"]
+
+        for obs_name in topological:
+            s1_values = indices[obs_name]["S1"]
+            # All NaN or all ~0 indicates constant output
+            all_insensitive = all(np.isnan(s) or abs(s) < 0.01 for s in s1_values)
+            assert all_insensitive, f"{obs_name} should be insensitive, got S1={s1_values}"
+
+    @pytest.mark.slow
+    def test_sobol_m_s_m_d_sensitive_to_weyl(self):
+        """Test m_s/m_d is sensitive to Weyl_factor."""
+        indices = sobol_sensitivity_analysis(n_samples=256, seed=42)
+        if indices is None:
+            pytest.skip("SALib not installed")
+
+        # m_s_m_d = p2^2 * Weyl_factor
+        # Due to small parameter uncertainties, Weyl dominates sensitivity
+        # S1 indices are [p2, Weyl_factor, tau]
+        s1 = indices["m_s_m_d"]["S1"]
+
+        # Skip if NaN
+        if any(np.isnan(s) for s in s1):
+            pytest.skip("m_s_m_d produced NaN indices")
+
+        # Weyl should have dominant sensitivity, tau ~0
+        assert s1[1] > 0.5, f"m_s_m_d should be sensitive to Weyl, got S1={s1[1]}"
+        assert abs(s1[2]) < 0.01, f"m_s_m_d should be insensitive to tau, got S1={s1[2]}"
+
+    @pytest.mark.slow
+    def test_sobol_reproducibility(self):
+        """Test Sobol with same seed is reproducible."""
+        indices1 = sobol_sensitivity_analysis(n_samples=64, seed=42)
+        indices2 = sobol_sensitivity_analysis(n_samples=64, seed=42)
+
+        if indices1 is None:
+            pytest.skip("SALib not installed")
+
+        # Check non-topological observables (topological give NaN)
+        non_topological = ["m_s_m_d", "H0", "theta12"]
+        for obs_name in non_topological:
+            s1_1 = indices1[obs_name]["S1"]
+            s1_2 = indices2[obs_name]["S1"]
+            for i in range(3):
+                if not np.isnan(s1_1[i]):
+                    assert s1_1[i] == s1_2[i], f"{obs_name} S1[{i}] not reproducible"
