@@ -84,9 +84,10 @@ Open `publications/gift_v2_notebook.ipynb` and run cells sequentially:
 
 **Section 1**: Three geometric parameters
 ```python
-β₀ = 1/(4π²)  # Base coupling
-ξ = 5β₀/2     # Correlation parameter (derived!)
-ε₀ = 1/8      # Symmetry breaking scale
+p₂ = 2           # Binary duality: dim(G₂)/dim(K₇) = 14/7
+Weyl_factor = 5  # Pentagonal symmetry from |W(E₈)| = 2¹⁴×3⁵×5²×7
+β₀ = π/8         # Angular quantization: π/rank(E₈)
+ξ = 5π/16        # Derived: (Weyl_factor/p₂) × β₀
 ```
 
 **Section 2**: Derived quantities
@@ -168,19 +169,23 @@ All 10 elements predicted with mean deviation 0.11%.
 
 ### Three Geometric Parameters
 
-**β₀ = 1/(4π²)**: Base coupling strength
-- Emerges from E₈ root system normalization
-- Related to fine structure constant via β₀ = α·(geometric factors)
+**p₂ = 2**: Binary duality constant
+- Definition: dim(G₂)/dim(K₇) = 14/7 = 2
+- Role: Information encoding, particle/antiparticle duality
 
-**ξ = 5β₀/2**: Correlation parameter
-- **Exactly derived**: Not independent! Previously treated as free parameter
-- Governs breaking patterns and mixing matrices
+**Weyl_factor = 5**: Pentagonal symmetry
+- Origin: Unique perfect square 5² in |W(E₈)| = 2¹⁴ × 3⁵ × 5² × 7
+- Role: Generation count, mass ratios (e.g., m_s/m_d = p₂² × Weyl = 20)
 
-**ε₀ = 1/8**: Symmetry breaking scale
-- From G₂ holonomy structure
-- Controls mass hierarchies
+**β₀ = π/8**: Angular quantization
+- Definition: π/rank(E₈) = π/8
+- Role: Neutrino mixing, cosmological parameters
 
-**Parameter count**: 3 (down from Standard Model's 19)
+**ξ = 5π/16**: Correlation parameter (DERIVED)
+- Exact relation: (Weyl_factor/p₂) × β₀ = (5/2) × (π/8) = 5π/16
+- Reduces effective free parameters from 3 to 2
+
+**Parameter count**: 3 topological (p₂, Weyl, β₀) vs Standard Model's 19
 
 ### Example: Fine Structure Constant
 
@@ -231,7 +236,7 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 A: Yes. 34 observables compared with experiment, mean deviation 0.13%. See Supplement D and `docs/EXPERIMENTAL_VALIDATION.md`.
 
 **Q: How many free parameters?**
-A: 3 geometric parameters (β₀, ξ, ε₀), where ξ is derived from β₀ via exact relation. Standard Model has 19.
+A: 3 topological parameters (p₂=2, Weyl_factor=5, β₀=π/8), where ξ=5π/16 is derived. Standard Model has 19.
 
 **Q: Can this be falsified?**
 A: Yes. Multiple clear tests outlined in Supplement E. Strongest: fourth generation discovery or δ_CP deviation from 197° at high precision.

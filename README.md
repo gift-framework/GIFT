@@ -354,15 +354,16 @@ See [publications/gift_main.md](publications/gift_main.md) Section 4 for complet
 
 ## Exact Relations (PROVEN)
 
-The framework establishes rigorously proven identities:
+The framework establishes rigorously proven identities with explicit geometric anchoring:
 
-1. **N_gen = 3**: rank(E₈) - rank(Weyl) = 8 - 5 = 3
-2. **Q_Koide = 2/3**: Exact topological ratio (experimental: 0.666661)
-3. **m_s/m_d = 20**: Binary-pentagonal structure  
-4. **δ_CP = 197°**: 7·dim(G₂) + ζ(3) + √5 where ζ(3) ≈ 1.202
-5. **mτ/me = 3477**: dim(K₇) + 10·dim(E₈) + 10·H* = 7 + 2480 + 2220
-6. **Ω_DE = ln(2)·98/99**: Binary information architecture
-7. **ξ = 5β₀/2**: Parameter reduction from 4 to 3
+1. **N_gen = 3**: From Atiyah-Singer index theorem on K₇
+2. **Q_Koide = 2/3**: dim(G₂)/b₂(K₇) = 14/21 = 2/3 (experimental: 0.666661)
+3. **m_s/m_d = 20**: p₂²(=4) × Weyl_factor(=5) = 4 × 5 = 20
+4. **δ_CP = 197°**: 7(dim(K₇)) × 14(dim(G₂)) + 99(H*) = 98 + 99 = 197°
+5. **m_τ/m_e = 3477**: dim(K₇)(=7) + 10×dim(E₈)(=2480) + 10×H*(=990) = 7 + 2480 + 990 = 3477
+6. **Ω_DE = ln(2)×98/99**: ln(2) × (b₂+b₃)/H* = ln(2) × (21+77)/(21+77+1) = 0.6861
+7. **ξ = 5π/16**: (Weyl_factor/p₂) × β₀ = (5/2) × (π/8) = 5π/16
+8. **H* = 99**: b₂(K₇) + b₃(K₇) + 1 = 21 + 77 + 1 = 99
 
 See [Supplement B](publications/v2.1/supplements/B_rigorous_proofs.md) for complete proofs.
 
@@ -443,7 +444,7 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed chang
 - **Theoretical Basis**: E₈×E₈ Information Architecture
 - **Dimensional Reduction**: E₈×E₈ → AdS₄×K₇ → Standard Model
 - **Precision**: 0.13% mean deviation across 34 dimensionless observables
-- **Parameters**: 3 geometric (β₀, ξ, ε₀) where ξ = 5β₀/2
+- **Parameters**: 3 geometric (p₂=2, Weyl_factor=5, β₀=π/8) where ξ = 5π/16 (derived)
 
 ## Contact and Support
 
