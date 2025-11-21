@@ -5,32 +5,48 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased] - v2.1
 
 ### Added
-- `docs/PHILOSOPHY.md` - Philosophical essay "On What Comes First" exploring mathematical primacy and epistemic humility
+
+**v2.1 Documentation Structure**
+- `publications/v2.0/` and `publications/v2.1/` - Versioned publication directories
+- `publications/v2.1/GIFT_v21_Geometric_Justifications.md` - Detailed geometric derivation documentation
+- `publications/v2.1/GIFT_v21_Observable_Reference.md` - Complete observable catalog with formulas
+- `publications/v2.1/GIFT_v21_Statistical_Validation.md` - Statistical validation methodology
+
+**Comprehensive Test Infrastructure**
+- `tests/` - Main pytest test suite with unit, integration, regression, and notebook tests
+- `giftpy_tests/` - Framework-specific tests (observables, constants, framework)
+- `publications/tests/TEST_SYNTHESIS.md` - Comprehensive test synthesis document
+- `tests/unit/test_statistical_validation.py` - Sobol sensitivity analysis tests (6 tests)
+- `tests/unit/test_mathematical_properties.py` - Mathematical invariant tests
+- `tests/regression/test_observable_values.py` - Observable regression tests
+
+**Other Additions**
+- `docs/PHILOSOPHY.md` - Philosophical essay on mathematical primacy and epistemic humility
 - `.gitignore` - Standard ignore patterns for Python, Jupyter, and IDE files
 - GitHub workflows for link validation
 - `G2_ML/VERSIONS.md` - Comprehensive version index for all G2 ML framework versions
 - `G2_ML/FUTURE_WORK.md` - Planned enhancements replacing obsolete completion plan
-- `G2_ML/0.X/README.md` - Documentation for 8 previously undocumented versions (0.1, 0.2, 0.4, 0.6, 0.6c, 0.7, 0.8, 0.9)
+- `G2_ML/0.X/README.md` - Documentation for 8 previously undocumented versions
 - `legacy_v1/README.md` - Guide to accessing archived v1.0 content via git history
 - ARCHIVED warnings to historical G2 ML documentation (versions <0.7)
 
 ### Changed
-- Updated `STRUCTURE.md` to include complete repository structure (assets, G2_ML, tests, statistical_validation)
+- Publications reorganized into versioned directories (`v2.0/`, `v2.1/`)
+- Updated `STRUCTURE.md` to include complete repository structure
+- Updated `CLAUDE.md` to v1.1.0 reflecting test infrastructure and v2.1 structure
 - Corrected `postBuild` Binder setup script with accurate file paths
-- `G2_ML/STATUS.md` - Updated with actual implementation status (Yukawa complete, b3 partial 20/77, v0.9b in progress)
-- `G2_ML/COMPLETION_PLAN.md` - Archived as obsolete, replaced by FUTURE_WORK.md
-- `README.md` - Harmonized G2 ML status descriptions with reality (93% complete)
-- `TESTING_SUMMARY.md` - Updated with measured test coverage (69% actual vs estimated 80-90%)
-- `CLAUDE_QUICK.md` - Clarified version status (v2.0.0 stable, v2.1 unreleased)
+- `G2_ML/STATUS.md` - Updated with actual implementation status (93% complete)
+- `README.md` - Updated documentation paths to point to `publications/v2.1/`
 - Version references harmonized across all documentation (v2.0.0 stable, v2.1 in development)
 
 ### Fixed
 - Resolved phantom references to non-existent `legacy_v1/` directory
 - Corrected G2_ML framework status claims (Yukawa now documented as complete in v0.8)
 - Fixed inconsistencies between README.md and G2_ML/STATUS.md regarding implementation status
+- Fixed test tolerances to match actual framework formulas
 
 ## [2.0.0] - 2025-10-24
 

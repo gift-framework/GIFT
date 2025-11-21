@@ -80,17 +80,22 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 
 ### Main Documents
 
-**[Main Paper](publications/gift_main.md)** - Complete theoretical framework (~1100 lines)
+**[Main Paper](publications/v2.1/gift_main.md)** - Complete theoretical framework (~1100 lines)
 - Framework overview and key results
 - Mathematical structure summary
 - Experimental validation
 - Self-contained introduction
 
-**[Extensions](publications/gift_extensions.md)** - Dimensional observables and temporal framework
+**[Extensions](publications/v2.1/gift_extensions.md)** - Dimensional observables and temporal framework
 - Quark and lepton masses
-- Gauge boson masses  
+- Gauge boson masses
 - Hubble parameter predictions
 - Temporal framework (exploratory)
+
+**v2.1 Specific Documents** (`publications/v2.1/`):
+- [Geometric Justifications](publications/v2.1/GIFT_v21_Geometric_Justifications.md) - Detailed geometric derivations
+- [Observable Reference](publications/v2.1/GIFT_v21_Observable_Reference.md) - Complete observable catalog
+- [Statistical Validation](publications/v2.1/GIFT_v21_Statistical_Validation.md) - Validation methodology
 
 **[Interactive Notebook](publications/gift_v2_notebook.ipynb)** - Computational implementation
 - All calculations reproduced
@@ -123,40 +128,40 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 
 ### Mathematical Supplements
 
-Detailed derivations organized by topic in [publications/supplements/](publications/supplements/):
+Detailed derivations organized by topic in [publications/v2.1/supplements/](publications/v2.1/supplements/):
 
-**[Supplement A: Mathematical Foundations](publications/supplements/A_math_foundations.md)**
+**[Supplement A: Mathematical Foundations](publications/v2.1/supplements/A_math_foundations.md)**
 - E₈ Lie algebra structure and root system
 - K₇ manifold with G₂ holonomy
 - Dimensional reduction mechanism
 - Cohomology theory
 
-**[Supplement B: Rigorous Proofs](publications/supplements/B_rigorous_proofs.md)**
+**[Supplement B: Rigorous Proofs](publications/v2.1/supplements/B_rigorous_proofs.md)**
 - 9 exact relations with complete proofs
 - δ_CP = 197° (exact formula)
 - N_gen = 3 (topological necessity)
 - Ω_DE triple origin
 - Dual derivations for key parameters
 
-**[Supplement C: Complete Derivations](publications/supplements/C_complete_derivations.md)**
+**[Supplement C: Complete Derivations](publications/v2.1/supplements/C_complete_derivations.md)**
 - All 34 observable derivations
 - Step-by-step calculations
 - Numerical verification
 - Precision analysis
 
-**[Supplement D: Phenomenology](publications/supplements/D_phenomenology.md)**
+**[Supplement D: Phenomenology](publications/v2.1/supplements/D_phenomenology.md)**
 - Detailed experimental comparison
 - Statistical analysis
 - Sector-by-sector performance
 - Tension identification
 
-**[Supplement E: Falsification Criteria](publications/supplements/E_falsification.md)**
+**[Supplement E: Falsification Criteria](publications/v2.1/supplements/E_falsification.md)**
 - Clear experimental tests
 - Timeline for definitive measurements
 - Fourth generation constraints
 - δ_CP precision requirements
 
-**[Supplement F: K₇ Metric](publications/supplements/F_K7_metric.md)**
+**[Supplement F: K₇ Metric](publications/v2.1/supplements/F_K7_metric.md)**
 - Explicit K₇ metric construction
 - Harmonic 2-forms basis (H²(K₇) = ℝ²¹)
 - Harmonic 3-forms basis (H³(K₇) = ℝ⁷⁷)
@@ -241,20 +246,25 @@ gift/
 ├── postBuild                          # Binder configuration
 │
 ├── publications/                      # Main theoretical documents
-│   ├── gift_main.md                   # Core paper (~1100 lines)
-│   ├── gift_extensions.md             # Dimensional observables
+│   ├── v2.0/                          # Version 2.0 documents
+│   ├── v2.1/                          # Version 2.1 documents (latest)
+│   │   ├── gift_main.md               # Core paper (~1100 lines)
+│   │   ├── gift_extensions.md         # Dimensional observables
+│   │   ├── GIFT_v21_*.md              # v2.1 specific documents
+│   │   └── supplements/               # Detailed supplements (A-F)
+│   ├── tests/                         # Test synthesis and infrastructure
+│   │   └── TEST_SYNTHESIS.md          # Comprehensive test coverage
 │   ├── gift_v2_notebook.ipynb         # Interactive notebook
 │   ├── gift_statistical_validation.ipynb  # Statistical robustness (1M MC samples)
-│   ├── gift_experimental_predictions.ipynb  # DUNE, collider predictions
-│   ├── README_experimental_predictions.md   # Experimental collaboration reference
-│   │
-│   └── supplements/                   # Detailed supplements
-│       ├── A_math_foundations.md      # E₈, K₇, reduction
-│       ├── B_rigorous_proofs.md       # 9 proven theorems
-│       ├── C_complete_derivations.md  # All 34 predictions
-│       ├── D_phenomenology.md         # Experimental comparison
-│       ├── E_falsification.md         # Testing criteria
-│       └── F_K7_metric.md             # Explicit constructions (G2_ML provides data-driven alternative)
+│   └── gift_experimental_predictions.ipynb  # DUNE, collider predictions
+│
+├── tests/                             # Main test suite (pytest)
+│   ├── unit/                          # Unit tests
+│   ├── integration/                   # Integration tests
+│   ├── regression/                    # Observable regression tests
+│   └── notebooks/                     # Notebook execution tests
+│
+├── giftpy_tests/                      # Framework-specific tests
 │
 ├── assets/                            # Interactive assets and tools
 │   ├── README.md                      # Assets overview
@@ -354,7 +364,7 @@ The framework establishes rigorously proven identities:
 6. **Ω_DE = ln(2)·98/99**: Binary information architecture
 7. **ξ = 5β₀/2**: Parameter reduction from 4 to 3
 
-See [Supplement B](publications/supplements/B_rigorous_proofs.md) for complete proofs.
+See [Supplement B](publications/v2.1/supplements/B_rigorous_proofs.md) for complete proofs.
 
 ## Experimental Predictions
 
@@ -380,7 +390,7 @@ Timeline for experimental tests:
 - 2025-2030: Belle II, LHCb improve CKM measurements
 - Ongoing: Fourth generation searches at colliders
 
-See [Supplement E](publications/supplements/E_falsification.md) and [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) for details.
+See [Supplement E](publications/v2.1/supplements/E_falsification.md) and [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) for details.
 
 ## Citation
 
