@@ -76,10 +76,10 @@ E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
 
 ### 1.4 Paper Organization
 
-- **Part I** (Sections 2-4): Geometric architecture—E₈×E₈ structure, K₇ manifold, explicit metric
-- **Part II** (Sections 5-7): Torsional dynamics—torsion tensor, geodesic flow, scale bridge
-- **Part III** (Sections 8-10): Observable predictions—37 observables across all sectors
-- **Part IV** (Sections 11-14): Validation—experimental tests, theoretical implications, conclusions
+- **Part I** (Sections 2-4): Geometric architecture - E₈×E₈ structure, K₇ manifold, explicit metric
+- **Part II** (Sections 5-7): Torsional dynamics - torsion tensor, geodesic flow, scale bridge
+- **Part III** (Sections 8-10): Observable predictions - 37 observables across all sectors
+- **Part IV** (Sections 11-14): Validation - experimental tests, theoretical implications, conclusions
 
 Mathematical foundations appear in Supplement S1, rigorous proofs in Supplement S4, and complete derivations in Supplement S5.
 
@@ -970,7 +970,7 @@ Agreement would support geometric origin of parameters; significant deviation wo
 
 ### 14.4 Final Reflection
 
-Whether the specific K₇ construction with E₈×E₈ gauge structure represents physical reality or merely an effective description remains open. The framework's value lies not in claiming final truth but in demonstrating that geometric principles can substantially constrain—and potentially determine—the parameters of particle physics.
+Whether the specific K₇ construction with E₈×E₈ gauge structure represents physical reality or merely an effective description remains open. The framework's value lies not in claiming final truth but in demonstrating that geometric principles can substantially constrain - and potentially determine - the parameters of particle physics.
 
 The convergence of topology, geometry, and physics revealed here, while not constituting proof of geometric origin for natural laws, suggests promising directions for understanding the mathematical structure underlying physical reality. The ultimate test lies in experiment.
 

@@ -15,7 +15,7 @@ This document presents a comprehensive analysis of internal mathematical relatio
 - 17-fold symmetry patterns
 - Mersenne-Golden ratio scaling
 
-**Key Finding**: Framework parameters are **overdetermined** — single observables admit 3-5 independent exact derivations, suggesting topological necessity rather than tunable parameters.
+**Key Finding**: Framework parameters are **overdetermined** - single observables admit 3-5 independent exact derivations, suggesting topological necessity rather than tunable parameters.
 
 ---
 
