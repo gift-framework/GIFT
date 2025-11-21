@@ -116,7 +116,7 @@ G2_ML/[version]/
 - Quick overview: `README.md`
 - Getting started: `QUICK_START.md`
 - Scientific details: `publications/gift_main.md`
-- Mathematical rigor: `publications/supplements/B_rigorous_proofs.md`
+- Mathematical rigor: `publications/supplements/S4_rigorous_proofs.md`
 - Experimental validation: `docs/EXPERIMENTAL_VALIDATION.md`
 - Definitions: `docs/GLOSSARY.md`
 - Common questions: `docs/FAQ.md`
@@ -259,7 +259,7 @@ G2_ML/[version]/
 - Equations: `(#eq:delta-cp)`
 - Figures: `{#fig:e8-roots}`
 - Sections: `(#sec:foundations)`
-- External docs: `[Supplement B](publications/supplements/B_rigorous_proofs.md)`
+- External docs: `[Supplement S4](publications/supplements/S4_rigorous_proofs.md)`
 
 ### Jupyter Notebooks
 
@@ -371,18 +371,18 @@ python -m assets.agents.cli canonical     # Canonical monitor
 
 **To understand specific predictions**:
 1. Check `publications/gift_main.md` Section 4 (summary tables)
-2. Read detailed derivation in `publications/supplements/C_complete_derivations.md`
-3. Review mathematical foundations in `publications/supplements/A_math_foundations.md`
+2. Read detailed derivation in `publications/supplements/S5_complete_calculations.md`
+3. Review mathematical foundations in `publications/supplements/S1_mathematical_architecture.md`
 4. Check experimental status in `docs/EXPERIMENTAL_VALIDATION.md`
 
 ### Making Changes
 
 **Adding new predictions**:
 1. Derive from geometric structure with clear status classification
-2. Add to appropriate supplement (usually Supplement C)
+2. Add to appropriate supplement (usually Supplement S5)
 3. Update summary in `publications/gift_main.md` Section 4
 4. Verify numerically in notebook
-5. Compare with experiment in Supplement D
+5. Compare with experiment in Supplement S7
 6. Update `CHANGELOG.md`
 
 **Improving documentation**:
@@ -665,7 +665,7 @@ The framework uses three geometric parameters:
 
 ### Exact Relations
 
-**Nine proven exact relations** (Supplement B):
+**Nine proven exact relations** (Supplement S4):
 1. N_gen = 3 (generation number)
 2. Q_Koide = 2/3 (Koide formula parameter)
 3. m_s/m_d = 20 (quark mass ratio)
@@ -737,10 +737,10 @@ jupyter nbconvert --to notebook --execute [notebook].ipynb
 
 ### Key Papers (in `publications/`)
 - `gift_main.md` - Core framework
-- `supplements/A_math_foundations.md` - Mathematics
-- `supplements/B_rigorous_proofs.md` - Proofs
-- `supplements/C_complete_derivations.md` - All derivations
-- `supplements/E_falsification.md` - Testability
+- `supplements/S1_mathematical_architecture.md` - Mathematics
+- `supplements/S4_rigorous_proofs.md` - Proofs
+- `supplements/S5_complete_calculations.md` - All derivations
+- `supplements/S8_falsification_protocol.md` - Testability
 
 ## Contact and Support
 

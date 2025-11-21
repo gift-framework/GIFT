@@ -130,38 +130,38 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 
 Detailed derivations organized by topic in [publications/v2.1/supplements/](publications/v2.1/supplements/):
 
-**[Supplement A: Mathematical Foundations](publications/v2.1/supplements/A_math_foundations.md)**
+**[Supplement S1: Mathematical Foundations](publications/v2.1/supplements/S1_mathematical_architecture.md)**
 - E₈ Lie algebra structure and root system
 - K₇ manifold with G₂ holonomy
 - Dimensional reduction mechanism
 - Cohomology theory
 
-**[Supplement B: Rigorous Proofs](publications/v2.1/supplements/B_rigorous_proofs.md)**
+**[Supplement S4: Rigorous Proofs](publications/v2.1/supplements/S4_rigorous_proofs.md)**
 - 9 exact relations with complete proofs
 - δ_CP = 197° (exact formula)
 - N_gen = 3 (topological necessity)
 - Ω_DE triple origin
 - Dual derivations for key parameters
 
-**[Supplement C: Complete Derivations](publications/v2.1/supplements/C_complete_derivations.md)**
+**[Supplement S5: Complete Derivations](publications/v2.1/supplements/S5_complete_calculations.md)**
 - All 34 observable derivations
 - Step-by-step calculations
 - Numerical verification
 - Precision analysis
 
-**[Supplement D: Phenomenology](publications/v2.1/supplements/D_phenomenology.md)**
+**[Supplement S7: Phenomenology](publications/v2.1/supplements/S7_phenomenology.md)**
 - Detailed experimental comparison
 - Statistical analysis
 - Sector-by-sector performance
 - Tension identification
 
-**[Supplement E: Falsification Criteria](publications/v2.1/supplements/E_falsification.md)**
+**[Supplement S8: Falsification Criteria](publications/v2.1/supplements/S8_falsification_protocol.md)**
 - Clear experimental tests
 - Timeline for definitive measurements
 - Fourth generation constraints
 - δ_CP precision requirements
 
-**[Supplement F: K₇ Metric](publications/v2.1/supplements/F_K7_metric.md)**
+**[Supplement S1: K₇ Metric](publications/v2.1/supplements/S1_mathematical_architecture.md)**
 - Explicit K₇ metric construction
 - Harmonic 2-forms basis (H²(K₇) = ℝ²¹)
 - Harmonic 3-forms basis (H³(K₇) = ℝ⁷⁷)
@@ -365,7 +365,7 @@ The framework establishes rigorously proven identities with explicit geometric a
 7. **ξ = 5π/16**: (Weyl_factor/p₂) × β₀ = (5/2) × (π/8) = 5π/16
 8. **H* = 99**: b₂(K₇) + b₃(K₇) + 1 = 21 + 77 + 1 = 99
 
-See [Supplement B](publications/v2.1/supplements/B_rigorous_proofs.md) for complete proofs.
+See [Supplement S4](publications/v2.1/supplements/S4_rigorous_proofs.md) for complete proofs.
 
 ## Experimental Predictions
 
@@ -391,7 +391,7 @@ Timeline for experimental tests:
 - 2025-2030: Belle II, LHCb improve CKM measurements
 - Ongoing: Fourth generation searches at colliders
 
-See [Supplement E](publications/v2.1/supplements/E_falsification.md) and [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) for details.
+See [Supplement S8](publications/v2.1/supplements/S8_falsification_protocol.md) and [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) for details.
 
 ## Citation
 

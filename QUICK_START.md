@@ -118,7 +118,7 @@ Weyl_factor = 5  # Pentagonal symmetry from |W(E₈)| = 2¹⁴×3⁵×5²×7
 - Mathematical structure
 - Experimental validation
 
-**For Mathematical Rigor** → `publications/supplements/B_rigorous_proofs.md`
+**For Mathematical Rigor** → `publications/supplements/S4_rigorous_proofs.md`
 - Exact proofs of 9 key relations
 - Step-by-step derivations
 - Topological arguments
@@ -196,7 +196,7 @@ Derivation chain:
 4. Normalize gauge couplings via β₀
 5. Result: α⁻¹ = 137.036... (0.001% deviation)
 
-**See**: Supplement C.4 for complete derivation
+**See**: Supplement S5.4 for complete derivation
 
 ### Example: Three Generations
 
@@ -208,21 +208,21 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ```
 
 **Status**: PROVEN via index theorem
-**See**: Supplement B.4 for rigorous proof
+**See**: Supplement S4.4 for rigorous proof
 
 ## Finding Specific Information
 
 **Want to understand a specific prediction?**
-→ Check Supplement C (Complete Derivations)
+→ Check Supplement S5 (Complete Derivations)
 
 **Need rigorous mathematical proof?**
-→ Check Supplement B (Rigorous Proofs)
+→ Check Supplement S4 (Rigorous Proofs)
 
 **Looking for experimental comparison?**
-→ Check Supplement D (Phenomenology)
+→ Check Supplement S7 (Phenomenology)
 
 **Want to know if framework can be falsified?**
-→ Check Supplement E (Falsification Criteria)
+→ Check Supplement S8 (Falsification Criteria)
 
 **Need definition of technical term?**
 → Check `docs/GLOSSARY.md`
@@ -233,7 +233,7 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ## Common First Questions
 
 **Q: Is this tested experimentally?**
-A: Yes. 34 observables compared with experiment, mean deviation 0.13%. See Supplement D and `docs/EXPERIMENTAL_VALIDATION.md`.
+A: Yes. 34 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
 
 **Q: How many free parameters?**
 A: 3 topological parameters (p₂=2, Weyl_factor=5, β₀=π/8), where ξ=5π/16 is derived. Standard Model has 19.
@@ -252,14 +252,14 @@ A: E₈ is largest exceptional Lie algebra with unique properties. Two copies pr
 ### For Theorists
 
 1. Read main paper: `publications/gift_main.md`
-2. Study mathematical foundations: `publications/supplements/A_math_foundations.md`
-3. Examine proofs: `publications/supplements/B_rigorous_proofs.md`
+2. Study mathematical foundations: `publications/supplements/S1_mathematical_architecture.md`
+3. Examine proofs: `publications/supplements/S4_rigorous_proofs.md`
 4. Explore extensions and open questions
 
 ### For Experimentalists
 
 1. Review predictions: `publications/gift_main.md` Section 4
-2. Check falsification criteria: `publications/supplements/E_falsification.md`
+2. Check falsification criteria: `publications/supplements/S8_falsification_protocol.md`
 3. See experimental timeline: `docs/EXPERIMENTAL_VALIDATION.md`
 4. Identify relevant experiments for your facility
 
