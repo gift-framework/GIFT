@@ -132,8 +132,9 @@ class TestMonteCarloFunctions:
     @pytest.mark.slow
     def test_monte_carlo_different_seeds(self):
         """Test MC with different seeds gives different results."""
-        _, stats1 = monte_carlo_uncertainty_propagation(n_samples=100, seed=42)
-        _, stats2 = monte_carlo_uncertainty_propagation(n_samples=100, seed=123)
+        # Use 10000 samples to ensure batches run (batch_size=10000 in implementation)
+        _, stats1 = monte_carlo_uncertainty_propagation(n_samples=10000, seed=42)
+        _, stats2 = monte_carlo_uncertainty_propagation(n_samples=10000, seed=123)
         # At least one observable should differ
         differences = sum(
             1 for obs in stats1
