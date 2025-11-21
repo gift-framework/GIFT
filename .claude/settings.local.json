@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(ssh-keyscan:*)",
+      "Bash(~/.ssh/known_hosts)",
+      "Bash(python build_notebook_continuation.py:*)",
+      "Bash(python build_sections_4_5_6.py:*)",
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "Bash(git log:*)",
+      "Bash(git stash push:*)",
+      "Bash(git mv:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
