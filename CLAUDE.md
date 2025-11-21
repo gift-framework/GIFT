@@ -34,16 +34,27 @@
 ```
 GIFT/
 ├── publications/           # Main theoretical documents
-│   ├── gift_main.md       # Core paper
-│   ├── gift_extensions.md # Dimensional observables
-│   ├── supplements/       # 6 detailed mathematical documents (A-F)
+│   ├── v2.0/             # Version 2.0 documents
+│   ├── v2.1/             # Version 2.1 documents (latest)
+│   │   ├── gift_main.md  # Core paper
+│   │   ├── gift_extensions.md # Dimensional observables
+│   │   ├── supplements/  # 6 detailed mathematical documents (A-F)
+│   │   └── GIFT_v21_*.md # v2.1 specific documents
+│   ├── tests/            # Test synthesis and test infrastructure
 │   └── *.ipynb           # Interactive notebooks
+├── tests/                 # Main test suite (pytest)
+│   ├── unit/             # Unit tests
+│   ├── integration/      # Integration tests
+│   ├── regression/       # Regression tests for observable values
+│   └── notebooks/        # Notebook execution tests
+├── giftpy_tests/          # Framework-specific tests
 ├── docs/                  # Additional documentation
 │   ├── FAQ.md            # Common questions
 │   ├── GLOSSARY.md       # Technical definitions
 │   └── EXPERIMENTAL_VALIDATION.md
 ├── G2_ML/                 # Machine learning for K₇ metrics (WIP)
-│   └── 0.1/ through 0.9a/ # Versioned implementations
+│   ├── 0.1/ through 0.9a/ # Versioned implementations
+│   └── tests/            # ML-specific tests
 ├── statistical_validation/ # Monte Carlo & Sobol analysis
 ├── assets/                # Visualizations, agents, tools
 │   ├── visualizations/   # Interactive Jupyter notebooks
@@ -57,13 +68,16 @@ GIFT/
 
 ### Publication Structure
 
-**Main Documents** (`publications/`):
+**Versioned Documents** (`publications/v2.1/` - latest):
 - `gift_main.md` - Core theoretical framework with key results
 - `gift_extensions.md` - Dimensional observables and temporal framework
 - `gift_technical.md` - Technical details
 - `README_experimental_predictions.md` - Experimental collaboration reference
+- `GIFT_v21_Geometric_Justifications.md` - Geometric derivation details
+- `GIFT_v21_Observable_Reference.md` - Complete observable reference
+- `GIFT_v21_Statistical_Validation.md` - Statistical validation methods
 
-**Supplements** (`publications/supplements/`):
+**Supplements** (`publications/v2.1/supplements/`):
 - `A_math_foundations.md` - E₈ structure, K₇ manifold, dimensional reduction
 - `B_rigorous_proofs.md` - 9 proven exact relations with complete proofs
 - `C_complete_derivations.md` - All 34 observable derivations
@@ -417,6 +431,32 @@ python -m assets.agents.cli canonical     # Canonical monitor
 
 ## Testing and Validation
 
+### Running Tests with pytest
+
+**Full test suite**:
+```bash
+# Run all tests
+pytest
+
+# Run with verbose output
+pytest -v
+
+# Run specific test category
+pytest tests/unit/
+pytest tests/integration/
+pytest tests/regression/
+pytest giftpy_tests/
+```
+
+**Specific test files**:
+```bash
+pytest tests/unit/test_statistical_validation.py  # Sobol & MC tests
+pytest tests/unit/test_mathematical_properties.py  # Mathematical invariants
+pytest tests/regression/test_observable_values.py  # Observable regression tests
+```
+
+**Test documentation**: See `publications/tests/TEST_SYNTHESIS.md` for comprehensive test coverage analysis.
+
 ### Manual Testing
 
 **Notebooks**:
@@ -733,8 +773,8 @@ jupyter nbconvert --to notebook --execute [notebook].ipynb
 
 ---
 
-**Version**: 1.0.0 (2025-11-16)
-**For**: GIFT Framework v2.0.0+
+**Version**: 1.1.0 (2025-11-21)
+**For**: GIFT Framework v2.0.0+ (v2.1 in development)
 **Maintained by**: GIFT Framework Team
 **License**: MIT (same as repository)
 
