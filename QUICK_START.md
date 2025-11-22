@@ -233,13 +233,13 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ## Common First Questions
 
 **Q: Is this tested experimentally?**
-A: Yes. 34 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
+A: Yes. 37 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
 
 **Q: How many free parameters?**
 A: 3 topological parameters (p₂=2, Weyl_factor=5, β₀=π/8), where ξ=5π/16 is derived. Standard Model has 19.
 
 **Q: Can this be falsified?**
-A: Yes. Multiple clear tests outlined in Supplement E. Strongest: fourth generation discovery or δ_CP deviation from 197° at high precision.
+A: Yes. Multiple clear tests outlined in Supplement S8. Strongest: fourth generation discovery or δ_CP deviation from 197° at high precision.
 
 **Q: What about gravity?**
 A: Framework derives low-energy parameters but doesn't yet address quantum gravity directly. Connection to information theory suggests potential path forward.
