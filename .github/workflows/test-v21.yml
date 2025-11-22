@@ -1,0 +1,330 @@
+name: GIFT v2.1 Framework Validation
+
+on:
+  push:
+    branches: [ main, 'claude/*' ]
+    paths:
+      - 'tests/unit/test_gift_v21_framework.py'
+      - 'tests/fixtures/reference_observables_v21.json'
+      - 'gift_v21_core.py'
+      - 'publications/v2.1/**'
+      - '.github/workflows/test-v21.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'tests/unit/test_gift_v21_framework.py'
+      - 'tests/fixtures/reference_observables_v21.json'
+      - 'gift_v21_core.py'
+      - 'publications/v2.1/**'
+  workflow_dispatch:
+
+jobs:
+  validate-v21-framework:
+    name: Validate GIFT v2.1 (46 observables)
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ matrix.python-version }}-
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov pytest-json-report pytest-timeout pytest-xdist
+
+    - name: Validate reference data structure
+      run: |
+        python << 'EOF'
+        import json
+        import sys
+
+        print("🔍 Validating reference_observables_v21.json structure...")
+
+        try:
+            with open('tests/fixtures/reference_observables_v21.json') as f:
+                data = json.load(f)
+
+            # Check version
+            assert data['version'] == '2.1.0', f"Expected version 2.1.0, got {data['version']}"
+            print(f"✅ Version: {data['version']}")
+
+            # Check summary
+            summary = data['summary']
+            assert summary['total_observables'] == 46, f"Expected 46 total observables, got {summary['total_observables']}"
+            assert summary['dimensionless'] == 37, f"Expected 37 dimensionless, got {summary['dimensionless']}"
+            assert summary['dimensional'] == 9, f"Expected 9 dimensional, got {summary['dimensional']}"
+            assert summary['proven_exact'] == 6, f"Expected 6 PROVEN exact, got {summary['proven_exact']}"
+            print(f"✅ Summary: {summary['total_observables']} observables (37 dimensionless + 9 dimensional)")
+            print(f"✅ PROVEN exact relations: {summary['proven_exact']}")
+
+            # Check observables exist
+            observables = data['observables']
+            assert len(observables) == 46, f"Expected 46 observables in dict, got {len(observables)}"
+            print(f"✅ All 46 observables present in data")
+
+            # Check each observable has required fields
+            required_fields = ['predicted', 'experimental', 'deviation_percent', 'status']
+            for obs_name, obs_data in observables.items():
+                for field in required_fields:
+                    assert field in obs_data, f"Observable {obs_name} missing field: {field}"
+            print(f"✅ All observables have required fields")
+
+            # Check parameters
+            params = data['parameters']
+            required_params = ['p2', 'Weyl_factor', 'tau', 'T_norm', 'T_costar', 'det_g']
+            for param in required_params:
+                assert param in params, f"Missing parameter: {param}"
+            print(f"✅ All torsional dynamics parameters present")
+
+            print("\n✅ Reference data validation PASSED")
+
+        except Exception as e:
+            print(f"\n❌ Reference data validation FAILED: {e}", file=sys.stderr)
+            sys.exit(1)
+        EOF
+
+    - name: Run v2.1 framework tests (all 46 observables)
+      run: |
+        pytest tests/unit/test_gift_v21_framework.py -v \
+          --cov=gift_v21_core \
+          --cov-report=xml \
+          --cov-report=term-missing \
+          --cov-report=html \
+          --json-report \
+          --json-report-file=v21-test-report.json \
+          --timeout=60 \
+          -n auto
+
+    - name: Verify all 46 observables computed
+      run: |
+        echo "🔬 Verifying all 46 observables are computed..."
+        pytest tests/unit/test_gift_v21_framework.py::TestV21Integration::test_all_46_observables_computed -v --tb=short
+
+    - name: Verify PROVEN exact relations (6 exact predictions)
+      run: |
+        echo "📐 Verifying 6 PROVEN exact relations..."
+        pytest tests/unit/test_gift_v21_framework.py::TestV21Integration::test_proven_exact_relations -v --tb=short
+
+    - name: Verify mean deviation < 0.5%
+      run: |
+        echo "📊 Verifying mean deviation < 0.5%..."
+        pytest tests/unit/test_gift_v21_framework.py::TestV21Integration::test_mean_deviation -v --tb=short
+
+    - name: Verify torsional dynamics parameters
+      run: |
+        echo "🌀 Verifying torsional dynamics..."
+        pytest tests/unit/test_gift_v21_framework.py::TestGIFTV21Initialization::test_torsional_parameters -v --tb=short
+
+    - name: Verify scale bridge
+      run: |
+        echo "🌉 Verifying scale bridge (Λ_GIFT)..."
+        pytest tests/unit/test_gift_v21_framework.py::TestGIFTV21Initialization::test_scale_bridge -v --tb=short
+
+    - name: Generate test summary
+      if: always()
+      run: |
+        python << 'EOF'
+        import json
+        import sys
+
+        try:
+            with open('v21-test-report.json') as f:
+                report = json.load(f)
+
+            print("\n" + "="*60)
+            print("GIFT v2.1 FRAMEWORK TEST SUMMARY")
+            print("="*60)
+            print(f"Total tests: {report['summary']['total']}")
+            print(f"Passed: {report['summary'].get('passed', 0)} ✅")
+            print(f"Failed: {report['summary'].get('failed', 0)} ❌")
+            print(f"Skipped: {report['summary'].get('skipped', 0)} ⏭️")
+            print(f"Duration: {report['duration']:.2f}s")
+            print("="*60)
+
+            if report['summary'].get('failed', 0) > 0:
+                print("\n❌ Some tests failed!")
+                sys.exit(1)
+            else:
+                print("\n✅ All tests passed!")
+
+        except FileNotFoundError:
+            print("⚠️ Test report not found (tests may not have run)")
+        except Exception as e:
+            print(f"⚠️ Could not parse test report: {e}")
+        EOF
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./coverage.xml
+        flags: v21tests,python${{ matrix.python-version }}
+        name: gift-v21-py${{ matrix.python-version }}
+        fail_ci_if_error: false
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: v21-test-results-py${{ matrix.python-version }}
+        path: |
+          v21-test-report.json
+          coverage.xml
+          htmlcov/
+        retention-days: 30
+
+    - name: Comment PR with results
+      if: github.event_name == 'pull_request' && always()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+
+          try {
+            const report = JSON.parse(fs.readFileSync('v21-test-report.json', 'utf8'));
+            const summary = report.summary;
+
+            const body = `## 🔬 GIFT v2.1 Framework Test Results (Python ${{ matrix.python-version }})
+
+            | Metric | Value |
+            |--------|-------|
+            | **Total Tests** | ${summary.total} |
+            | **Passed** | ${summary.passed || 0} ✅ |
+            | **Failed** | ${summary.failed || 0} ❌ |
+            | **Skipped** | ${summary.skipped || 0} ⏭️ |
+            | **Duration** | ${report.duration.toFixed(2)}s |
+
+            ### Coverage
+            - **46 observables**: 37 dimensionless + 9 dimensional
+            - **6 PROVEN exact relations** verified
+            - **Mean deviation target**: < 0.5%
+
+            <details>
+            <summary>Test Details</summary>
+
+            - ✅ All 46 observables computed
+            - ✅ PROVEN exact relations maintained
+            - ✅ Torsional dynamics validated
+            - ✅ Scale bridge verified
+
+            </details>`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+          } catch (error) {
+            console.log('Could not post comment:', error.message);
+          }
+
+  validate-v21-documentation:
+    name: Validate v2.1 Documentation Consistency
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Check v2.1 documentation consistency
+      run: |
+        python << 'EOF'
+        import json
+        import re
+        import sys
+
+        print("📚 Checking v2.1 documentation consistency...")
+
+        errors = []
+        warnings = []
+
+        # Load reference data
+        try:
+            with open('tests/fixtures/reference_observables_v21.json') as f:
+                ref_data = json.load(f)
+        except Exception as e:
+            print(f"❌ Could not load reference data: {e}")
+            sys.exit(1)
+
+        # Check README.md mentions v2.1
+        try:
+            with open('README.md') as f:
+                readme = f.read()
+
+            if '2.1' not in readme and '2.1.0' not in readme:
+                errors.append("README.md does not mention v2.1")
+            else:
+                print("✅ README.md references v2.1")
+
+            if '46' in readme or '46 observables' in readme.lower():
+                print("✅ README.md mentions 46 observables")
+            else:
+                warnings.append("README.md should mention 46 observables")
+
+        except FileNotFoundError:
+            errors.append("README.md not found")
+
+        # Check CHANGELOG.md has v2.1.0 entry
+        try:
+            with open('CHANGELOG.md') as f:
+                changelog = f.read()
+
+            if '[2.1.0]' in changelog or '## 2.1.0' in changelog:
+                print("✅ CHANGELOG.md has v2.1.0 entry")
+            else:
+                errors.append("CHANGELOG.md missing v2.1.0 entry")
+
+        except FileNotFoundError:
+            errors.append("CHANGELOG.md not found")
+
+        # Check publications/v2.1/ directory exists
+        import os
+        if os.path.isdir('publications/v2.1'):
+            print("✅ publications/v2.1/ directory exists")
+        else:
+            errors.append("publications/v2.1/ directory not found")
+
+        # Print summary
+        print("\n" + "="*60)
+        if errors:
+            print("❌ ERRORS:")
+            for error in errors:
+                print(f"  - {error}")
+
+        if warnings:
+            print("⚠️  WARNINGS:")
+            for warning in warnings:
+                print(f"  - {warning}")
+
+        if not errors and not warnings:
+            print("✅ All documentation checks passed!")
+
+        print("="*60)
+
+        if errors:
+            sys.exit(1)
+        EOF

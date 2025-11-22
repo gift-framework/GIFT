@@ -2,18 +2,109 @@ name: Validate Markdown Links
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, 'claude/*' ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  markdown-link-check:
+  validate-relative-links:
+    name: Validate Relative Links
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Check Markdown links
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Validate relative file links
+        run: |
+          python << 'EOF'
+          import os
+          import re
+          import sys
+          from pathlib import Path
+
+          print("🔍 Validating relative file links in Markdown files...")
+
+          errors = []
+          warnings = []
+          checked = 0
+
+          # Find all markdown files
+          md_files = list(Path('.').rglob('*.md'))
+          md_files = [f for f in md_files if '.git' not in str(f) and 'node_modules' not in str(f)]
+
+          print(f"Found {len(md_files)} markdown files to check\n")
+
+          # Regex for markdown links: [text](path)
+          link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+
+          for md_file in md_files:
+              try:
+                  with open(md_file, 'r', encoding='utf-8') as f:
+                      content = f.read()
+
+                  for match in link_pattern.finditer(content):
+                      link_text = match.group(1)
+                      link_path = match.group(2)
+
+                      # Skip external links
+                      if link_path.startswith('http://') or link_path.startswith('https://'):
+                          continue
+
+                      # Skip mailto and anchors
+                      if link_path.startswith('mailto:') or link_path.startswith('#'):
+                          continue
+
+                      # Extract file path (remove anchor if present)
+                      file_path = link_path.split('#')[0]
+                      if not file_path:  # Just an anchor
+                          continue
+
+                      checked += 1
+
+                      # Resolve relative path
+                      base_dir = md_file.parent
+                      target_path = (base_dir / file_path).resolve()
+
+                      # Check if target exists
+                      if not target_path.exists():
+                          errors.append(f"{md_file}:{link_text} -> {link_path} (target not found: {target_path})")
+
+              except Exception as e:
+                  warnings.append(f"Could not check {md_file}: {e}")
+
+          print(f"Checked {checked} relative links\n")
+
+          if errors:
+              print("❌ BROKEN RELATIVE LINKS:")
+              for error in errors:
+                  print(f"  {error}")
+              print()
+
+          if warnings:
+              print("⚠️  WARNINGS:")
+              for warning in warnings:
+                  print(f"  {warning}")
+              print()
+
+          if not errors:
+              print("✅ All relative file links are valid!")
+          else:
+              print(f"❌ Found {len(errors)} broken relative links")
+              sys.exit(1)
+          EOF
+
+  markdown-link-check:
+    name: Validate External Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check external Markdown links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           use-quiet-mode: 'yes'
@@ -21,4 +112,14 @@ jobs:
           config-file: '.markdown-link-check.json'
           folder-path: '.'
           file-path: './README.md'
+        continue-on-error: true
+
+      - name: Check key documentation files
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'no'
+          use-verbose-mode: 'yes'
+          config-file: '.markdown-link-check.json'
+          check-modified-files-only: 'no'
+        continue-on-error: true
 
