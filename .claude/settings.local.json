@@ -14,7 +14,9 @@
       "Bash(cat:*)",
       "Bash(git log:*)",
       "Bash(git stash push:*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)"
     ],
     "deny": [],
     "ask": []
