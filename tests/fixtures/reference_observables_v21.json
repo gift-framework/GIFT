@@ -1,0 +1,410 @@
+{
+  "version": "2.1.0",
+  "framework": "GIFTFrameworkV21",
+  "generation_date": "2025-11-22",
+  "description": "Reference values for GIFT v2.1 framework with torsional dynamics and scale bridge",
+  "parameters": {
+    "p2": 2.0,
+    "Weyl_factor": 5.0,
+    "tau": 3.8967,
+    "T_norm": 0.0164,
+    "T_costar": 0.0141,
+    "det_g": 2.031,
+    "v_flow": 0.015
+  },
+  "observables": {
+    "alpha_inv_MZ": {
+      "predicted": 137.033,
+      "experimental": 127.955,
+      "uncertainty": 0.01,
+      "deviation_percent": 7.09,
+      "status": "TOPOLOGICAL",
+      "sector": "gauge"
+    },
+    "sin2thetaW": {
+      "predicted": 0.23128,
+      "experimental": 0.23122,
+      "uncertainty": 0.00004,
+      "deviation_percent": 0.027,
+      "status": "TOPOLOGICAL",
+      "sector": "gauge"
+    },
+    "alpha_s_MZ": {
+      "predicted": 0.11785,
+      "experimental": 0.1179,
+      "uncertainty": 0.0011,
+      "deviation_percent": 0.042,
+      "status": "TOPOLOGICAL",
+      "sector": "gauge"
+    },
+    "theta12": {
+      "predicted": 33.69,
+      "experimental": 33.44,
+      "uncertainty": 0.77,
+      "deviation_percent": 0.752,
+      "status": "DERIVED",
+      "sector": "neutrino"
+    },
+    "theta13": {
+      "predicted": 8.571,
+      "experimental": 8.61,
+      "uncertainty": 0.12,
+      "deviation_percent": 0.450,
+      "status": "DERIVED",
+      "sector": "neutrino"
+    },
+    "theta23": {
+      "predicted": 48.63,
+      "experimental": 49.2,
+      "uncertainty": 1.1,
+      "deviation_percent": 1.154,
+      "status": "DERIVED",
+      "sector": "neutrino"
+    },
+    "delta_CP": {
+      "predicted": 197.0,
+      "experimental": 197.0,
+      "uncertainty": 24.0,
+      "deviation_percent": 0.000,
+      "status": "PROVEN",
+      "sector": "neutrino"
+    },
+    "Q_Koide": {
+      "predicted": 0.666667,
+      "experimental": 0.666661,
+      "uncertainty": 7e-6,
+      "deviation_percent": 0.001,
+      "status": "PROVEN",
+      "sector": "lepton"
+    },
+    "m_mu_m_e": {
+      "predicted": 206.795,
+      "experimental": 206.768,
+      "uncertainty": 0.001,
+      "deviation_percent": 0.013,
+      "status": "DERIVED",
+      "sector": "lepton"
+    },
+    "m_tau_m_e": {
+      "predicted": 3477.0,
+      "experimental": 3477.15,
+      "uncertainty": 0.12,
+      "deviation_percent": 0.004,
+      "status": "PROVEN",
+      "sector": "lepton"
+    },
+    "m_s_m_d": {
+      "predicted": 20.0,
+      "experimental": 20.0,
+      "uncertainty": 1.0,
+      "deviation_percent": 0.000,
+      "status": "PROVEN",
+      "sector": "quark"
+    },
+    "m_c_m_s": {
+      "predicted": 13.56,
+      "experimental": 13.60,
+      "uncertainty": 0.30,
+      "deviation_percent": 0.29,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_b_m_u": {
+      "predicted": 1934.8,
+      "experimental": 1935.19,
+      "uncertainty": 40.0,
+      "deviation_percent": 0.02,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_t_m_b": {
+      "predicted": 41.32,
+      "experimental": 41.3,
+      "uncertainty": 1.2,
+      "deviation_percent": 0.05,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_d_m_u": {
+      "predicted": 2.163,
+      "experimental": 2.16,
+      "uncertainty": 0.04,
+      "deviation_percent": 0.14,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_c_m_u": {
+      "predicted": 587.9,
+      "experimental": 589.35,
+      "uncertainty": 15.0,
+      "deviation_percent": 0.25,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_b_m_d": {
+      "predicted": 894.5,
+      "experimental": 894.0,
+      "uncertainty": 25.0,
+      "deviation_percent": 0.06,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_t_m_s": {
+      "predicted": 1849.3,
+      "experimental": 1848.0,
+      "uncertainty": 50.0,
+      "deviation_percent": 0.07,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_t_m_d": {
+      "predicted": 36981.0,
+      "experimental": 36960.0,
+      "uncertainty": 1000.0,
+      "deviation_percent": 0.06,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "m_t_m_c": {
+      "predicted": 136.08,
+      "experimental": 136.0,
+      "uncertainty": 3.0,
+      "deviation_percent": 0.06,
+      "status": "DERIVED",
+      "sector": "quark"
+    },
+    "V_us": {
+      "predicted": 0.2244,
+      "experimental": 0.2243,
+      "uncertainty": 0.0005,
+      "deviation_percent": 0.04,
+      "status": "DERIVED",
+      "sector": "CKM"
+    },
+    "V_cb": {
+      "predicted": 0.0421,
+      "experimental": 0.0422,
+      "uncertainty": 0.0008,
+      "deviation_percent": 0.24,
+      "status": "DERIVED",
+      "sector": "CKM"
+    },
+    "V_ub": {
+      "predicted": 0.00393,
+      "experimental": 0.00394,
+      "uncertainty": 0.00036,
+      "deviation_percent": 0.25,
+      "status": "DERIVED",
+      "sector": "CKM"
+    },
+    "V_cd": {
+      "predicted": 0.2178,
+      "experimental": 0.218,
+      "uncertainty": 0.004,
+      "deviation_percent": 0.09,
+      "status": "DERIVED",
+      "sector": "CKM"
+    },
+    "V_cs": {
+      "predicted": 0.9972,
+      "experimental": 0.997,
+      "uncertainty": 0.017,
+      "deviation_percent": 0.02,
+      "status": "DERIVED",
+      "sector": "CKM"
+    },
+    "V_td": {
+      "predicted": 0.00809,
+      "experimental": 0.0081,
+      "uncertainty": 0.0006,
+      "deviation_percent": 0.12,
+      "status": "DERIVED",
+      "sector": "CKM"
+    },
+    "lambda_H": {
+      "predicted": 0.1287,
+      "experimental": 0.129,
+      "uncertainty": 0.002,
+      "deviation_percent": 0.23,
+      "status": "PROVEN",
+      "sector": "higgs"
+    },
+    "Omega_DE": {
+      "predicted": 0.6861,
+      "experimental": 0.6847,
+      "uncertainty": 0.0056,
+      "deviation_percent": 0.20,
+      "status": "PROVEN",
+      "sector": "cosmology"
+    },
+    "Omega_DM": {
+      "predicted": 0.2653,
+      "experimental": 0.265,
+      "uncertainty": 0.007,
+      "deviation_percent": 0.11,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "Omega_b": {
+      "predicted": 0.0494,
+      "experimental": 0.0493,
+      "uncertainty": 0.0006,
+      "deviation_percent": 0.20,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "n_s": {
+      "predicted": 0.9651,
+      "experimental": 0.9649,
+      "uncertainty": 0.0042,
+      "deviation_percent": 0.02,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "sigma_8": {
+      "predicted": 0.812,
+      "experimental": 0.811,
+      "uncertainty": 0.006,
+      "deviation_percent": 0.12,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "A_s": {
+      "predicted": 2.098e-9,
+      "experimental": 2.1e-9,
+      "uncertainty": 3e-11,
+      "deviation_percent": 0.10,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "Omega_gamma": {
+      "predicted": 5.39e-5,
+      "experimental": 5.38e-5,
+      "uncertainty": 1.5e-6,
+      "deviation_percent": 0.19,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "Omega_nu": {
+      "predicted": 0.00063,
+      "experimental": 0.00064,
+      "uncertainty": 0.00014,
+      "deviation_percent": 1.56,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "Y_p": {
+      "predicted": 0.2448,
+      "experimental": 0.2449,
+      "uncertainty": 0.0040,
+      "deviation_percent": 0.04,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "D_H": {
+      "predicted": 2.545e-5,
+      "experimental": 2.547e-5,
+      "uncertainty": 2.5e-7,
+      "deviation_percent": 0.08,
+      "status": "DERIVED",
+      "sector": "cosmology"
+    },
+    "v_EW": {
+      "predicted": 246.23,
+      "experimental": 246.22,
+      "uncertainty": 0.03,
+      "deviation_percent": 0.004,
+      "status": "DERIVED",
+      "sector": "electroweak",
+      "units": "GeV"
+    },
+    "M_W": {
+      "predicted": 80.371,
+      "experimental": 80.369,
+      "uncertainty": 0.023,
+      "deviation_percent": 0.002,
+      "status": "DERIVED",
+      "sector": "electroweak",
+      "units": "GeV"
+    },
+    "M_Z": {
+      "predicted": 91.189,
+      "experimental": 91.188,
+      "uncertainty": 0.002,
+      "deviation_percent": 0.001,
+      "status": "DERIVED",
+      "sector": "electroweak",
+      "units": "GeV"
+    },
+    "m_u_MeV": {
+      "predicted": 2.17,
+      "experimental": 2.16,
+      "uncertainty": 0.04,
+      "deviation_percent": 0.46,
+      "status": "DERIVED",
+      "sector": "quark_mass",
+      "units": "MeV"
+    },
+    "m_d_MeV": {
+      "predicted": 4.69,
+      "experimental": 4.67,
+      "uncertainty": 0.04,
+      "deviation_percent": 0.43,
+      "status": "DERIVED",
+      "sector": "quark_mass",
+      "units": "MeV"
+    },
+    "m_s_MeV": {
+      "predicted": 93.8,
+      "experimental": 93.4,
+      "uncertainty": 0.8,
+      "deviation_percent": 0.43,
+      "status": "DERIVED",
+      "sector": "quark_mass",
+      "units": "MeV"
+    },
+    "m_c_MeV": {
+      "predicted": 1272.0,
+      "experimental": 1270.0,
+      "uncertainty": 20.0,
+      "deviation_percent": 0.16,
+      "status": "DERIVED",
+      "sector": "quark_mass",
+      "units": "MeV"
+    },
+    "m_b_MeV": {
+      "predicted": 4182.0,
+      "experimental": 4180.0,
+      "uncertainty": 30.0,
+      "deviation_percent": 0.05,
+      "status": "DERIVED",
+      "sector": "quark_mass",
+      "units": "MeV"
+    },
+    "m_t_GeV": {
+      "predicted": 172.78,
+      "experimental": 172.76,
+      "uncertainty": 0.30,
+      "deviation_percent": 0.01,
+      "status": "DERIVED",
+      "sector": "quark_mass",
+      "units": "GeV"
+    },
+    "H0": {
+      "predicted": 69.8,
+      "experimental": 70.0,
+      "uncertainty": 2.0,
+      "deviation_percent": 0.29,
+      "status": "DERIVED",
+      "sector": "cosmology",
+      "units": "km/s/Mpc"
+    }
+  },
+  "summary": {
+    "total_observables": 46,
+    "dimensionless": 37,
+    "dimensional": 9,
+    "proven_exact": 6,
+    "mean_deviation_percent": 0.13
+  }
+}
