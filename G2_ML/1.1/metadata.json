@@ -1,0 +1,183 @@
+{
+  "version": "1.1",
+  "config": {
+    "n_grid": 16,
+    "n_grid_harmonics": 8,
+    "n_fourier": 10,
+    "hidden_dim": 256,
+    "n_layers": 6,
+    "batch_size": 1024,
+    "learning_rate": 0.0005,
+    "n_epochs_per_phase": 1500,
+    "checkpoint_freq": 500,
+    "checkpoint_dir": "checkpoints_v1_1",
+    "tcs": {
+      "r_neck_start": 0.35,
+      "r_neck_end": 0.65,
+      "r_acyl_cutoff": 10.0,
+      "twist_angle": 1.0471975511965976,
+      "neck_width": 5.0
+    },
+    "target": {
+      "det_g": 2.0,
+      "torsion_norm": 0.0164,
+      "b2": 21,
+      "b3": 77
+    },
+    "torsion_targets": {
+      "1": 0.001,
+      "2": 0.005,
+      "3": 0.01,
+      "4": 0.015,
+      "5": 0.0164
+    },
+    "yukawa_samples": 200000,
+    "torsion_threshold": 1e-06,
+    "torsion_floor": 1e-09,
+    "phases": {
+      "1": {
+        "name": "TCS_Neck",
+        "weights": {
+          "torsion": 1.0,
+          "det": 0.5,
+          "positivity": 1.0,
+          "neck_match": 2.0,
+          "acyl": 0.0,
+          "harmonicity": 0.0,
+          "rg_flow": 0.0
+        },
+        "early_stop": {
+          "patience": 200,
+          "criteria": {
+            "neck_match": 1e-05,
+            "det": 1e-05,
+            "positivity": 1e-07
+          }
+        }
+      },
+      "2": {
+        "name": "ACyl_Matching",
+        "weights": {
+          "torsion": 0.8,
+          "det": 0.8,
+          "positivity": 1.5,
+          "neck_match": 0.5,
+          "acyl": 0.5,
+          "harmonicity": 0.0,
+          "rg_flow": 0.0
+        },
+        "early_stop": {
+          "patience": 200,
+          "criteria": {
+            "acyl": 1e-05,
+            "det": 1e-05,
+            "torsion_target_reached": true
+          }
+        }
+      },
+      "3": {
+        "name": "Cohomology_Refinement",
+        "weights": {
+          "torsion": 0.6,
+          "det": 0.5,
+          "positivity": 1.0,
+          "neck_match": 0.5,
+          "acyl": 1.0,
+          "harmonicity": 1.0,
+          "rg_flow": 0.0
+        },
+        "early_stop": {
+          "patience": 200,
+          "criteria": {
+            "harmonicity": 0.0001,
+            "torsion_target_reached": true
+          }
+        }
+      },
+      "4": {
+        "name": "Harmonic_Extraction",
+        "weights": {
+          "torsion": 0.5,
+          "det": 1.0,
+          "positivity": 1.0,
+          "neck_match": 0.2,
+          "acyl": 0.5,
+          "harmonicity": 3.0,
+          "rg_flow": 0.1
+        },
+        "early_stop": {
+          "patience": 200,
+          "criteria": {
+            "harmonicity": 5e-05,
+            "torsion_target_reached": true
+          }
+        }
+      },
+      "5": {
+        "name": "RG_Calibration",
+        "weights": {
+          "torsion": 0.3,
+          "det": 2.0,
+          "positivity": 2.0,
+          "neck_match": 0.1,
+          "acyl": 0.2,
+          "harmonicity": 2.0,
+          "rg_flow": 1.0
+        },
+        "early_stop": {
+          "patience": 300,
+          "criteria": {
+            "torsion_target_reached": true,
+            "rg_flow": 0.01,
+            "det": 1e-06,
+            "positivity": 1e-08
+          }
+        }
+      }
+    },
+    "rg_flow": {
+      "lambda_max": 39.44,
+      "target_delta_alpha": -0.9,
+      "n_integration_steps": 100,
+      "geodesic_batch_freq": 0.1,
+      "calibration_epoch": 6000
+    }
+  },
+  "training_grid": "16^7",
+  "harmonics_grid": "8^7",
+  "b2_effective": 21,
+  "b3_effective": 77,
+  "b2_target": 21,
+  "b3_target": 77,
+  "yukawa_shape": [
+    21,
+    21,
+    77
+  ],
+  "yukawa_norm": 5.872879257714998e-10,
+  "final_loss": 0.3633373975753784,
+  "total_epochs": 4742,
+  "torsion_validation": {
+    "target": 0.0164,
+    "actual": 0.016124993562698364,
+    "error_percent": 1.6768685201319335,
+    "passed": true
+  },
+  "rg_flow_validation": {
+    "target_delta_alpha": -0.9,
+    "actual_delta_alpha": -0.007568359375,
+    "error_percent": 99.15907118055556,
+    "passed": false
+  },
+  "geometric_validation": {
+    "det_g_mean": 2.0000014305114746,
+    "det_g_error_percent": 7.152557373046875e-05,
+    "positive_definite": true,
+    "passed": true
+  },
+  "phenomenological_validation": {
+    "yukawa_norm": 5.872879257714998e-10,
+    "passed": false
+  },
+  "note": "v1.1: Torsion targeting + RG flow integration + Extended neck + Per-phase early stopping"
+}
