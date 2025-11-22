@@ -5,7 +5,7 @@ Neural network extraction of harmonic forms on compact G₂ manifolds for the GI
 ## Quick Links
 
 - **[STATUS.md](STATUS.md)** - Current implementation status, what works now, what's in progress
-- **[COMPLETION_PLAN.md](COMPLETION_PLAN.md)** - Detailed technical plan for remaining work
+- **[FUTURE_WORK.md](FUTURE_WORK.md)** - Detailed technical plan for remaining work
 - **Latest Version**: [0.9a/](0.9a/) - Production-ready b₂=21 implementation
 
 ## Overview
@@ -51,7 +51,7 @@ GPU recommended (training takes 6-8 hours on A100, much longer on CPU).
 ```
 G2_ML/
 ├── STATUS.md                  # Current implementation status (read this first!)
-├── COMPLETION_PLAN.md         # Detailed plan for remaining work
+├── FUTURE_WORK.md             # Detailed plan for remaining work
 ├── README.md                  # This file
 │
 ├── 0.1/ through 0.6/         # Archived development versions
@@ -144,7 +144,7 @@ All trained models validated via:
 
 ## What's Next
 
-See **[COMPLETION_PLAN.md](COMPLETION_PLAN.md)** for detailed plans:
+See **[FUTURE_WORK.md](FUTURE_WORK.md)** for detailed plans:
 
 1. **b₃=77 extraction** (v0.8) - $150-300, 1-2 days
 2. **Yukawa tensors** (v0.9) - $40-60, 6-12 hours
@@ -247,7 +247,7 @@ Weights w1, w2, w3 vary during curriculum learning.
 
 **Quick questions**: See [STATUS.md](STATUS.md) first
 
-**Technical details**: See [COMPLETION_PLAN.md](COMPLETION_PLAN.md)
+**Technical details**: See [FUTURE_WORK.md](FUTURE_WORK.md)
 
 **Code issues**: Each version directory has inline documentation
 
