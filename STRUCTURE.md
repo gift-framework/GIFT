@@ -198,23 +198,23 @@ PDF versions mirror markdown filenames:
 
 **Parameter Predictions**
 → `publications/gift_main.md` (Section 4: Dimensionless Observable Predictions)
-→ `publications/supplements/C_complete_derivations.md` (detailed derivations)
+→ `publications/supplements/S5_complete_calculations.md` (detailed derivations)
 
 **Mathematical Proofs**
-→ `publications/supplements/B_rigorous_proofs.md` (9 exact relations)
-→ `publications/supplements/A_math_foundations.md` (underlying mathematics)
+→ `publications/supplements/S4_rigorous_proofs.md` (9 exact relations)
+→ `publications/supplements/S1_mathematical_architecture.md` (underlying mathematics)
 
 **Experimental Comparison**
 → `publications/gift_main.md` (summary tables)
-→ `publications/supplements/D_phenomenology.md` (detailed analysis)
+→ `publications/supplements/S7_phenomenology.md` (detailed analysis)
 → `docs/EXPERIMENTAL_VALIDATION.md` (current status)
 
 **Geometric Construction**
-→ `publications/supplements/A_math_foundations.md` (K₇ manifold overview)
-→ `publications/supplements/F_K7_metric.md` (explicit metric and harmonic forms)
+→ `publications/supplements/S1_mathematical_architecture.md` (K₇ manifold overview)
+→ `publications/supplements/S1_mathematical_architecture.md` (explicit metric and harmonic forms)
 
 **Falsification Tests**
-→ `publications/supplements/E_falsification.md` (comprehensive criteria)
+→ `publications/supplements/S8_falsification_protocol.md` (comprehensive criteria)
 → `docs/EXPERIMENTAL_VALIDATION.md` (experimental timeline)
 
 **Definitions and Notation**

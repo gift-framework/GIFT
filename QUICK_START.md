@@ -84,9 +84,10 @@ Open `publications/gift_v2_notebook.ipynb` and run cells sequentially:
 
 **Section 1**: Three geometric parameters
 ```python
-β₀ = 1/(4π²)  # Base coupling
-ξ = 5β₀/2     # Correlation parameter (derived!)
-ε₀ = 1/8      # Symmetry breaking scale
+p₂ = 2           # Binary duality: dim(G₂)/dim(K₇) = 14/7
+Weyl_factor = 5  # Pentagonal symmetry from |W(E₈)| = 2¹⁴×3⁵×5²×7
+β₀ = π/8         # Angular quantization: π/rank(E₈)
+ξ = 5π/16        # Derived: (Weyl_factor/p₂) × β₀
 ```
 
 **Section 2**: Derived quantities
@@ -117,7 +118,7 @@ Open `publications/gift_v2_notebook.ipynb` and run cells sequentially:
 - Mathematical structure
 - Experimental validation
 
-**For Mathematical Rigor** → `publications/supplements/B_rigorous_proofs.md`
+**For Mathematical Rigor** → `publications/supplements/S4_rigorous_proofs.md`
 - Exact proofs of 9 key relations
 - Step-by-step derivations
 - Topological arguments
@@ -168,19 +169,23 @@ All 10 elements predicted with mean deviation 0.11%.
 
 ### Three Geometric Parameters
 
-**β₀ = 1/(4π²)**: Base coupling strength
-- Emerges from E₈ root system normalization
-- Related to fine structure constant via β₀ = α·(geometric factors)
+**p₂ = 2**: Binary duality constant
+- Definition: dim(G₂)/dim(K₇) = 14/7 = 2
+- Role: Information encoding, particle/antiparticle duality
 
-**ξ = 5β₀/2**: Correlation parameter
-- **Exactly derived**: Not independent! Previously treated as free parameter
-- Governs breaking patterns and mixing matrices
+**Weyl_factor = 5**: Pentagonal symmetry
+- Origin: Unique perfect square 5² in |W(E₈)| = 2¹⁴ × 3⁵ × 5² × 7
+- Role: Generation count, mass ratios (e.g., m_s/m_d = p₂² × Weyl = 20)
 
-**ε₀ = 1/8**: Symmetry breaking scale
-- From G₂ holonomy structure
-- Controls mass hierarchies
+**β₀ = π/8**: Angular quantization
+- Definition: π/rank(E₈) = π/8
+- Role: Neutrino mixing, cosmological parameters
 
-**Parameter count**: 3 (down from Standard Model's 19)
+**ξ = 5π/16**: Correlation parameter (DERIVED)
+- Exact relation: (Weyl_factor/p₂) × β₀ = (5/2) × (π/8) = 5π/16
+- Reduces effective free parameters from 3 to 2
+
+**Parameter count**: 3 topological (p₂, Weyl, β₀) vs Standard Model's 19
 
 ### Example: Fine Structure Constant
 
@@ -191,7 +196,7 @@ Derivation chain:
 4. Normalize gauge couplings via β₀
 5. Result: α⁻¹ = 137.036... (0.001% deviation)
 
-**See**: Supplement C.4 for complete derivation
+**See**: Supplement S5.4 for complete derivation
 
 ### Example: Three Generations
 
@@ -203,21 +208,21 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ```
 
 **Status**: PROVEN via index theorem
-**See**: Supplement B.4 for rigorous proof
+**See**: Supplement S4.4 for rigorous proof
 
 ## Finding Specific Information
 
 **Want to understand a specific prediction?**
-→ Check Supplement C (Complete Derivations)
+→ Check Supplement S5 (Complete Derivations)
 
 **Need rigorous mathematical proof?**
-→ Check Supplement B (Rigorous Proofs)
+→ Check Supplement S4 (Rigorous Proofs)
 
 **Looking for experimental comparison?**
-→ Check Supplement D (Phenomenology)
+→ Check Supplement S7 (Phenomenology)
 
 **Want to know if framework can be falsified?**
-→ Check Supplement E (Falsification Criteria)
+→ Check Supplement S8 (Falsification Criteria)
 
 **Need definition of technical term?**
 → Check `docs/GLOSSARY.md`
@@ -228,10 +233,10 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ## Common First Questions
 
 **Q: Is this tested experimentally?**
-A: Yes. 34 observables compared with experiment, mean deviation 0.13%. See Supplement D and `docs/EXPERIMENTAL_VALIDATION.md`.
+A: Yes. 34 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
 
 **Q: How many free parameters?**
-A: 3 geometric parameters (β₀, ξ, ε₀), where ξ is derived from β₀ via exact relation. Standard Model has 19.
+A: 3 topological parameters (p₂=2, Weyl_factor=5, β₀=π/8), where ξ=5π/16 is derived. Standard Model has 19.
 
 **Q: Can this be falsified?**
 A: Yes. Multiple clear tests outlined in Supplement E. Strongest: fourth generation discovery or δ_CP deviation from 197° at high precision.
@@ -247,14 +252,14 @@ A: E₈ is largest exceptional Lie algebra with unique properties. Two copies pr
 ### For Theorists
 
 1. Read main paper: `publications/gift_main.md`
-2. Study mathematical foundations: `publications/supplements/A_math_foundations.md`
-3. Examine proofs: `publications/supplements/B_rigorous_proofs.md`
+2. Study mathematical foundations: `publications/supplements/S1_mathematical_architecture.md`
+3. Examine proofs: `publications/supplements/S4_rigorous_proofs.md`
 4. Explore extensions and open questions
 
 ### For Experimentalists
 
 1. Review predictions: `publications/gift_main.md` Section 4
-2. Check falsification criteria: `publications/supplements/E_falsification.md`
+2. Check falsification criteria: `publications/supplements/S8_falsification_protocol.md`
 3. See experimental timeline: `docs/EXPERIMENTAL_VALIDATION.md`
 4. Identify relevant experiments for your facility
 
