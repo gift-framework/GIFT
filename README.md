@@ -121,7 +121,7 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 - CP violation predictions (δ_CP = 197° exact)
 - New particle searches: 3.897 GeV scalar, 20.4 GeV gauge boson, 4.77 GeV dark matter
 - Production cross-sections and experimental signatures
-- See [README_experimental_predictions.md](publications/README_experimental_predictions.md)
+- See [README_experimental_predictions.md](publications/v2.1/README_experimental_predictions.md)
 
 **[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics (93% complete)
 - b₂=21 harmonic 2-forms extracted and validated (v0.7, v0.9a)

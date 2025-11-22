@@ -1,7 +1,13 @@
 """Visualization utilities for GIFT predictions."""
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from giftpy.core.framework import GIFT
 
 
-def plot_predictions(gift: "GIFT", kind: str = "all", filename=None, show=True, **kwargs):
+def plot_predictions(gift: GIFT, kind: str = "all", filename=None, show=True, **kwargs):
     """
     Plot GIFT predictions (placeholder).
 

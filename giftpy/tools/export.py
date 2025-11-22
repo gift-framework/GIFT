@@ -1,9 +1,15 @@
 """Export utilities for GIFT predictions."""
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 import pandas as pd
 from pathlib import Path
 
+if TYPE_CHECKING:
+    from giftpy.core.framework import GIFT
 
-def export_predictions(gift: "GIFT", filename: str, format: str = "csv", **kwargs):
+
+def export_predictions(gift: GIFT, filename: str, format: str = "csv", **kwargs):
     """
     Export GIFT predictions to various formats.
 

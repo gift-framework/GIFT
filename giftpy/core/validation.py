@@ -4,10 +4,15 @@ Validation system for GIFT predictions.
 Compares GIFT predictions against experimental data and provides
 statistical analysis.
 """
+from __future__ import annotations
+
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 import pandas as pd
 import numpy as np
+
+if TYPE_CHECKING:
+    from .framework import GIFT
 
 
 @dataclass
@@ -147,7 +152,7 @@ Status: {status}
             print("Matplotlib not installed. Install with: pip install matplotlib")
 
 
-def validate_predictions(gift: "GIFT") -> ValidationResult:
+def validate_predictions(gift: GIFT) -> ValidationResult:
     """
     Validate all GIFT predictions against experimental data.
 

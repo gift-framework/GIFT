@@ -4,10 +4,15 @@ Core GIFT framework implementation.
 The GIFT class provides the main interface for computing all Standard Model
 predictions from topological geometry.
 """
-from typing import Optional, Dict, List
+from __future__ import annotations
+
+from typing import Optional, Dict, List, TYPE_CHECKING
 import pandas as pd
 
 from .constants import CONSTANTS, TopologicalConstants
+
+if TYPE_CHECKING:
+    from .validation import ValidationResult
 
 
 class GIFT:
@@ -323,7 +328,7 @@ class GIFT:
 
         return df
 
-    def validate(self, verbose: bool = True) -> "ValidationResult":
+    def validate(self, verbose: bool = True) -> ValidationResult:
         """
         Validate GIFT predictions against experimental data.
 
