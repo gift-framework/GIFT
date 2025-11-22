@@ -17,6 +17,15 @@
     },
     {
       "pattern": "^mailto:"
+    },
+    {
+      "pattern": "^#"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "{{BASEURL}}/"
     }
   ],
   "timeout": "20s",
