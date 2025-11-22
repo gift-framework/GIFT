@@ -11,7 +11,7 @@
 ## Overview
 
 - **Scope**: Geometric information approach to Standard Model parameters from E₈×E₈
-- **Precision**: 0.13% mean deviation across 34 dimensionless observables
+- **Precision**: 0.13% mean deviation across 37 observables (26 dimensionless + 11 dimensional)
 - **Parsimony**: 3 geometric parameters vs 19 in Standard Model (6.3× reduction)
 - **Testability**: Concrete experimental comparisons (DUNE, LHCb, Belle II)
 - **Mathematical results**: 9 exact relations with complete proofs
@@ -23,24 +23,24 @@
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| **Precision** | 0.13% | Mean deviation across 34 dimensionless observables |
+| **Precision** | 0.13% | Mean deviation across 37 observables |
 | **Parameter Reduction** | 19 → 3 | 6.3× improvement over Standard Model |
-| **Coverage** | 34 | Dimensionless observables predicted |
+| **Coverage** | 37 | Total observables (26 dimensionless + 11 dimensional) |
 | **Mathematical Rigor** | 9 | Proven exact relations with complete proofs |
 | **Experimental Tests** | 4 | Clear falsification routes identified |
-| **Neutrino Precision** | 0.005% | δ_CP = 197° prediction accuracy |
-| **Cosmological Fit** | 0.10% | Ω_DE = ln(2) vs experimental 0.6889 |
+| **Neutrino Precision** | 0.00% | δ_CP = 197° exact match |
+| **Cosmological Fit** | 0.21% | Ω_DE = ln(2) × 98/99 |
 
 ## Abstract
 
-The Geometric Information Field Theory (GIFT) framework studies a **topological unification** perspective on particle physics and cosmology based on the **E₈ Lie algebra** structure. The approach derives dimensionless parameters from geometric principles via **dimensional reduction** **E₈×E₈ → AdS₄×K₇ → Standard Model**, with a mean deviation of 0.13% across **34 dimensionless observables** using **three geometric parameters**.
+The Geometric Information Field Theory (GIFT) framework studies a **topological unification** perspective on particle physics and cosmology based on the **E₈ Lie algebra** structure. The approach derives Standard Model parameters from geometric principles via **dimensional reduction** **E₈×E₈ → AdS₄×K₇ → Standard Model**, with a mean deviation of 0.13% across **37 observables (26 dimensionless + 11 dimensional)** using **three geometric parameters**.
 
 Version 2.0 provides a modular structure with complete derivations, rigorous proofs where available, and explicit predictions for **neutrino physics**, **CP violation**, **dark energy**, and other **cosmological** observables derived from a **binary information architecture**.
 
 ## Key Results
 
 ### Precision Achievement
-- **Mean deviation**: 0.13% across 34 dimensionless observables
+- **Mean deviation**: 0.13% across 37 observables (26 dimensionless + 11 dimensional)
 - **Parameter reduction**: 19 → 3 (6.3× improvement over Standard Model)
 - **Exact predictions**: N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20
 
@@ -144,7 +144,7 @@ Detailed derivations organized by topic in [publications/v2.1/supplements/](publ
 - Dual derivations for key parameters
 
 **[Supplement S5: Complete Derivations](publications/v2.1/supplements/S5_complete_calculations.md)**
-- All 34 observable derivations
+- All 37 observable derivations
 - Step-by-step calculations
 - Numerical verification
 - Precision analysis
@@ -161,11 +161,11 @@ Detailed derivations organized by topic in [publications/v2.1/supplements/](publ
 - Fourth generation constraints
 - δ_CP precision requirements
 
-**[Supplement S1: K₇ Metric](publications/v2.1/supplements/S1_mathematical_architecture.md)**
-- Explicit K₇ metric construction
-- Harmonic 2-forms basis (H²(K₇) = ℝ²¹)
-- Harmonic 3-forms basis (H³(K₇) = ℝ⁷⁷)
-- Geometric computations
+**[Supplement S9: Extensions](publications/v2.1/supplements/S9_extensions.md)**
+- Quantum gravity connections
+- Information-theoretic interpretation
+- Future research directions
+- Speculative extensions
 
 ### Additional Documentation
 
@@ -431,8 +431,8 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 
 ## Version History
 
-- **v2.1** (Unreleased, in development): Statistical validation (200+ tests), G2 ML framework (93% complete), experimental predictions
-- **v2.0.0** (2025-10-24, current stable): Modular structure, rigorous proofs, 0.13% precision, 34 observables
+- **v2.1** (In development): Statistical validation (200+ tests), G2 ML framework (93% complete), 37 observables
+- **v2.0.0** (2025-10-24, current stable): Modular structure, rigorous proofs, 0.13% precision
 - **v1.0.0** (Archived): Initial framework (available in git history via `legacy_v1/`)
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed changes.
@@ -440,11 +440,11 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed chang
 ## Repository Information
 
 - **Framework**: Geometric Information Field Theory
-- **Version**: 2.0.0
+- **Version**: 2.1 (in development)
 - **Theoretical Basis**: E₈×E₈ Information Architecture
 - **Dimensional Reduction**: E₈×E₈ → AdS₄×K₇ → Standard Model
-- **Precision**: 0.13% mean deviation across 34 dimensionless observables
-- **Parameters**: 3 geometric (p₂=2, Weyl_factor=5, β₀=π/8) where ξ = 5π/16 (derived)
+- **Precision**: 0.13% mean deviation across 37 observables (26 dimensionless + 11 dimensional)
+- **Parameters**: 3 topological (p₂=2, Weyl_factor=5, β₀=π/8) where ξ = 5π/16 (derived)
 
 ## Contact and Support
 

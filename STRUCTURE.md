@@ -129,13 +129,16 @@ The core framework is presented in a modular structure:
    - Experimental validation
    - ~1100 lines, self-contained introduction
 
-2. **Six Supplements** (`publications/supplements/`)
-   - **Supplement A**: Mathematical foundations (E₈, K₇, dimensional reduction)
-   - **Supplement B**: Rigorous proofs (9 exact relations with complete derivations)
-   - **Supplement C**: Complete derivations (all 34 observables)
-   - **Supplement D**: Phenomenology (detailed experimental comparison)
-   - **Supplement E**: Falsification criteria (testability and experimental program)
-   - **Supplement F**: Explicit constructions (K₇ metric, harmonic forms)
+2. **Nine Supplements** (`publications/v2.1/supplements/`)
+   - **Supplement S1**: Mathematical architecture (E₈, K₇, dimensional reduction)
+   - **Supplement S2**: (In progress - K₇ construction details)
+   - **Supplement S3**: Torsional dynamics (geodesic flow, RG connection)
+   - **Supplement S4**: Rigorous proofs (9 exact relations with complete derivations)
+   - **Supplement S5**: Complete calculations (all 37 observables)
+   - **Supplement S6**: Numerical methods (algorithms, implementation)
+   - **Supplement S7**: Phenomenology (detailed experimental comparison)
+   - **Supplement S8**: Falsification protocol (testability and experimental program)
+   - **Supplement S9**: Extensions (quantum gravity, information theory, future directions)
 
 3. **Extensions** (`publications/gift_extensions.md`)
    - Dimensional observables (masses, VEV, Hubble parameter)
