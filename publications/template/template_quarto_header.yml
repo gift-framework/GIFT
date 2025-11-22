@@ -1,0 +1,53 @@
+---
+title: "Your Main Title Here"
+subtitle: "Optional Subtitle"
+author: 
+  - name: "Your Name"
+    affiliation: "Your Affiliation"
+    email: "your.email@example.com"
+date: today
+abstract: |
+  Your abstract text goes here. This template provides a clean, professional layout with golden ratio-based margins, proper spacing, and header/footer configuration.
+  
+  **Keywords**: keyword1, keyword2, keyword3
+
+format:
+  pdf:
+    documentclass: article
+    classoption: [11pt, a4paper]
+    geometry:
+      - margin=1.618cm
+      - top=2.618cm
+      - bottom=2.618cm
+    fontfamily: lmodern
+    fontenc: T1
+    linestretch: 1.2
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    colorlinks: true
+    linkcolor: blue
+    citecolor: blue
+    urlcolor: blue
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \usepackage{booktabs}
+        \usepackage{longtable}
+        \usepackage{float}
+        \setlength{\headheight}{14pt}
+        \setlength{\parskip}{0.4em}
+        \setlength{\parindent}{0pt}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{Your Document Title}
+        \fancyhead[R]{\thepage}
+        \renewcommand{\headrulewidth}{0.2pt}
+        \usepackage{titling}
+        \setlength{\droptitle}{-2.0em}
+    include-before-body:
+      text: |
+        \noindent\rule{\textwidth}{0.2pt}
+        \vspace{0.5em}
+---
+
