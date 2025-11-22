@@ -368,7 +368,7 @@ Nine mass ratios predicted, including exact relations:
 
 Dark energy density from binary information architecture.
 
-See [publications/gift_main.md](publications/gift_main.md) Section 4 for complete tables.
+See [publications/v2.1/gift_main.md](publications/v2.1/gift_main.md) Section 4 for complete tables.
 
 ## Exact Relations (PROVEN)
 

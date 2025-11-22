@@ -196,11 +196,11 @@ Improvements welcome! Potential enhancements:
 - Interactive parameter exploration widgets
 - Comparative visualizations with other unification approaches
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
 
 ## License
 
-These visualizations are part of the GIFT Framework and are licensed under the MIT License - see [LICENSE](../LICENSE).
+These visualizations are part of the GIFT Framework and are licensed under the MIT License - see [LICENSE](../../LICENSE).
 
 ## Citation
 
@@ -219,7 +219,7 @@ If you use these visualizations in your research, please cite:
 ## Questions and Support
 
 - **Documentation**: See main [README.md](../README.md)
-- **FAQ**: [docs/FAQ.md](../docs/FAQ.md)
+- **FAQ**: [docs/FAQ.md](../../docs/FAQ.md)
 - **Issues**: https://github.com/gift-framework/GIFT/issues
 - **Discussions**: Use "visualization" tag for visualization-specific questions
 

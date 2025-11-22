@@ -59,6 +59,10 @@ jobs:
                       if link_path.startswith('mailto:') or link_path.startswith('#'):
                           continue
 
+                      # Skip pandoc placeholders like (...)
+                      if link_path == '...':
+                          continue
+
                       # Extract file path (remove anchor if present)
                       file_path = link_path.split('#')[0]
                       if not file_path:  # Just an anchor
