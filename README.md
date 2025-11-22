@@ -130,11 +130,17 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 
 Detailed derivations organized by topic in [publications/v2.1/supplements/](publications/v2.1/supplements/):
 
-**[Supplement S1: Mathematical Foundations](publications/v2.1/supplements/S1_mathematical_architecture.md)**
+**[Supplement S1: Mathematical Architecture](publications/v2.1/supplements/S1_mathematical_architecture.md)**
 - E₈ Lie algebra structure and root system
 - K₇ manifold with G₂ holonomy
 - Dimensional reduction mechanism
 - Cohomology theory
+
+**[Supplement S3: Torsional Dynamics](publications/v2.1/supplements/S3_torsional_dynamics.md)**
+- Torsion tensor and geodesic flow
+- Connection to renormalization group
+- Scale bridge framework
+- Physical interpretation
 
 **[Supplement S4: Rigorous Proofs](publications/v2.1/supplements/S4_rigorous_proofs.md)**
 - 9 exact relations with complete proofs
@@ -143,11 +149,17 @@ Detailed derivations organized by topic in [publications/v2.1/supplements/](publ
 - Ω_DE triple origin
 - Dual derivations for key parameters
 
-**[Supplement S5: Complete Derivations](publications/v2.1/supplements/S5_complete_calculations.md)**
+**[Supplement S5: Complete Calculations](publications/v2.1/supplements/S5_complete_calculations.md)**
 - All 37 observable derivations
 - Step-by-step calculations
 - Numerical verification
 - Precision analysis
+
+**[Supplement S6: Numerical Methods](publications/v2.1/supplements/S6_numerical_methods.md)**
+- Computational algorithms
+- Implementation details
+- Code organization
+- Validation procedures
 
 **[Supplement S7: Phenomenology](publications/v2.1/supplements/S7_phenomenology.md)**
 - Detailed experimental comparison
@@ -155,7 +167,7 @@ Detailed derivations organized by topic in [publications/v2.1/supplements/](publ
 - Sector-by-sector performance
 - Tension identification
 
-**[Supplement S8: Falsification Criteria](publications/v2.1/supplements/S8_falsification_protocol.md)**
+**[Supplement S8: Falsification Protocol](publications/v2.1/supplements/S8_falsification_protocol.md)**
 - Clear experimental tests
 - Timeline for definitive measurements
 - Fourth generation constraints
@@ -166,6 +178,8 @@ Detailed derivations organized by topic in [publications/v2.1/supplements/](publ
 - Information-theoretic interpretation
 - Future research directions
 - Speculative extensions
+
+*Note: Supplement S2 (K₇ construction details) is currently in development.*
 
 ### Additional Documentation
 
