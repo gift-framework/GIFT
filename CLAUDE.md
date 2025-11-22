@@ -14,10 +14,10 @@
 - Documentation and educational materials
 
 **Key Metrics**:
-- Mean precision: 0.13% across 34 dimensionless observables
+- Mean precision: 0.13% across 46 observables (37 dimensionless + 9 dimensional)
 - Parameter reduction: 19 (Standard Model) → 3 (GIFT)
 - Mathematical rigor: 9 proven exact relations
-- Version: 2.0.0 (with 2.1 in development)
+- Version: 2.1.0 (current stable)
 
 ## Quick Reference
 
@@ -27,7 +27,7 @@
 2. `STRUCTURE.md` - Repository organization
 3. `QUICK_START.md` - Fast onboarding guide
 4. `CONTRIBUTING.md` - Scientific standards and contribution process
-5. `publications/gift_main.md` - Core theoretical paper (~1100 lines)
+5. `publications/v2.1/gift_main.md` - Core theoretical paper (~1100 lines)
 
 ### Key Directories
 
@@ -115,8 +115,8 @@ G2_ML/[version]/
 **Entry points for different audiences**:
 - Quick overview: `README.md`
 - Getting started: `QUICK_START.md`
-- Scientific details: `publications/gift_main.md`
-- Mathematical rigor: `publications/supplements/S4_rigorous_proofs.md`
+- Scientific details: `publications/v2.1/gift_main.md`
+- Mathematical rigor: `publications/v2.1/supplements/S4_rigorous_proofs.md`
 - Experimental validation: `docs/EXPERIMENTAL_VALIDATION.md`
 - Definitions: `docs/GLOSSARY.md`
 - Common questions: `docs/FAQ.md`
@@ -205,7 +205,7 @@ G2_ML/[version]/
 
 ### Notation and Mathematical Conventions
 
-**Follow** `publications/gift_main.md` Section 1.4 and `docs/GLOSSARY.md`:
+**Follow** `publications/v2.1/gift_main.md` Section 1.4 and `docs/GLOSSARY.md`:
 
 - E₈: Exceptional Lie algebra (dim 248)
 - K₇: Compact 7-dimensional manifold with G₂ holonomy
@@ -259,7 +259,7 @@ G2_ML/[version]/
 - Equations: `(#eq:delta-cp)`
 - Figures: `{#fig:e8-roots}`
 - Sections: `(#sec:foundations)`
-- External docs: `[Supplement S4](publications/supplements/S4_rigorous_proofs.md)`
+- External docs: `[Supplement S4](publications/v2.1/supplements/S4_rigorous_proofs.md)`
 
 ### Jupyter Notebooks
 
@@ -365,14 +365,14 @@ python -m assets.agents.cli canonical     # Canonical monitor
 **To understand GIFT fundamentals**:
 1. Read `README.md` - Overview and key results
 2. Read `QUICK_START.md` - Fast introduction
-3. Review `publications/gift_main.md` Sections 1-3
+3. Review `publications/v2.1/gift_main.md` Sections 1-3
 4. Check `docs/GLOSSARY.md` for unfamiliar terms
 5. Explore `docs/FAQ.md` for common questions
 
 **To understand specific predictions**:
-1. Check `publications/gift_main.md` Section 4 (summary tables)
-2. Read detailed derivation in `publications/supplements/S5_complete_calculations.md`
-3. Review mathematical foundations in `publications/supplements/S1_mathematical_architecture.md`
+1. Check `publications/v2.1/gift_main.md` Section 4 (summary tables)
+2. Read detailed derivation in `publications/v2.1/supplements/S5_complete_calculations.md`
+3. Review mathematical foundations in `publications/v2.1/supplements/S1_mathematical_architecture.md`
 4. Check experimental status in `docs/EXPERIMENTAL_VALIDATION.md`
 
 ### Making Changes
@@ -380,7 +380,7 @@ python -m assets.agents.cli canonical     # Canonical monitor
 **Adding new predictions**:
 1. Derive from geometric structure with clear status classification
 2. Add to appropriate supplement (usually Supplement S5)
-3. Update summary in `publications/gift_main.md` Section 4
+3. Update summary in `publications/v2.1/gift_main.md` Section 4
 4. Verify numerically in notebook
 5. Compare with experiment in Supplement S7
 6. Update `CHANGELOG.md`
@@ -422,7 +422,7 @@ python -m assets.agents.cli canonical     # Canonical monitor
 **When new measurements appear**:
 1. Update experimental values in relevant supplements
 2. Recalculate deviations
-3. Update tables in `publications/gift_main.md` Section 4
+3. Update tables in `publications/v2.1/gift_main.md` Section 4
 4. Update precision metrics in `README.md`
 5. Check `docs/EXPERIMENTAL_VALIDATION.md`
 6. Re-run statistical validation if needed
