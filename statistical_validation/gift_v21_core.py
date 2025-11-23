@@ -339,6 +339,7 @@ class GIFTFrameworkV21:
         obs['m_b_m_d'] = obs['m_b_m_u'] / obs['m_d_m_u']
         obs['m_t_m_s'] = obs['m_t_m_b'] * obs['m_b_m_u'] / obs['m_s_m_d']
         obs['m_t_m_d'] = obs['m_t_m_b'] * obs['m_b_m_d']
+        obs['m_t_m_c'] = obs['m_t_m_b'] * obs['m_b_m_u'] / obs['m_c_m_u']
 
         return obs
 
