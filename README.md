@@ -11,7 +11,7 @@
 
 ## Overview
 
-- **Version**: 2.1.0 with torsional geodesic dynamics
+- **Version**: 2.1.0
 - **Scope**: Geometric information approach to Standard Model parameters from E₈×E₈
 - **Precision**: 0.13% mean deviation across 46 observables (37 dimensionless + 9 dimensional)
 - **Parsimony**: 3 geometric parameters vs 19 in Standard Model (6.3× reduction)
