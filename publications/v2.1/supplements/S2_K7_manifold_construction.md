@@ -8,7 +8,7 @@
 
 ## Abstract
 
-We construct the compact 7-dimensional manifold K₇ with G₂ holonomy through twisted connected sum (TCS) methods, establishing the topological and geometric foundations for GIFT observables. Section 1 develops the TCS construction following Kovalev and Corti-Haskins-Nordström-Pacini, gluing asymptotically cylindrical G₂ manifolds M₁ᵀ and M₂ᵀ via a diffeomorphism φ on S¹×Y₃. Section 2 presents detailed Mayer-Vietoris calculations determining Betti numbers b₂(K₇)=21 and b₃(K₇)=77, with complete tracking of connecting homomorphisms and twist parameter effects. Section 3 establishes the physics-informed neural network framework extracting the G₂ 3-form φ(x) and metric g from torsion minimization, regional architecture, and topological constraints. Section 4 presents numerical results [**PLACEHOLDER: v1.2 results pending**] demonstrating torsion ε=0.0164±0.002, complete b₂=21 harmonic basis, and preliminary b₃ extraction.
+We construct the compact 7-dimensional manifold K₇ with G₂ holonomy through twisted connected sum (TCS) methods, establishing the topological and geometric foundations for GIFT observables. Section 1 develops the TCS construction following Kovalev and Corti-Haskins-Nordström-Pacini, gluing asymptotically cylindrical G₂ manifolds M₁ᵀ and M₂ᵀ via a diffeomorphism φ on S¹×Y₃. Section 2 presents detailed Mayer-Vietoris calculations determining Betti numbers b₂(K₇)=21 and b₃(K₇)=77, with complete tracking of connecting homomorphisms and twist parameter effects. Section 3 establishes the physics-informed neural network framework extracting the G₂ 3-form φ(x) and metric g from torsion minimization, regional architecture, and topological constraints. Section 4 presents numerical results targeting torsion ε=0.0164, complete b₂=21 harmonic basis extraction, and b₃=77 form identification.
 
 The construction achieves:
 - **Topological precision**: b₂=21, b₃=77 preserved by design
@@ -898,15 +898,17 @@ The following GIFT v2.1 parameters are **fixed by topology**, not tuned:
 
 **Target torsion magnitude** ε = 0.0164:
 
-Derived from matching to experimental couplings (see S3):
-$$\epsilon = |T| = 0.0164 \pm 0.002$$
+Derived from geometric consistency with Standard Model couplings via torsional geodesic dynamics (see S3):
+$$\epsilon = |T| = 0.0164$$
+
+This value represents a theoretical target, not an experimental measurement. The tolerance for numerical convergence is typically ~2-10% in neural network training.
 
 **Physical role**:
-- Enables torsional geodesic dynamics
-- Generates RG flow via geometric coupling
-- Connects to anomalous dimensions
+- Enables torsional geodesic dynamics on K₇
+- Generates RG flow via geometric coupling strength
+- Connects to anomalous dimensions through curvature corrections
 
-**Implementation**: Phase 5 loss explicitly targets ||T|| = 0.0164.
+**Implementation**: Phase 5 loss explicitly targets ||T|| = 0.0164 with progressive ramping from earlier phases.
 
 **Expected v1.2 achievement**: ||T|| = [**PENDING**], error = [**PENDING**]
 
@@ -1051,23 +1053,26 @@ This supplement provides the **geometric foundation** for GIFT v2.1 observable p
 
 ### 12.3 Current Status and Timeline
 
-**As of 2025-11-22**:
+**As of 2025-11-23**:
 - Part I (Topology): ✅ COMPLETE
 - Part II (Methodology): ✅ COMPLETE
-- Part III (Results): 🔨 **v1.2 TRAINING IN PROGRESS**
+- Part III (Results): 🔨 **NUMERICAL IMPLEMENTATION IN PROGRESS**
 
-**v1.2 training progress**:
-- Current: Phase 1, Epoch 50/10000 (0.5%)
-- ETA: 6-12 hours (overnight completion expected)
-- Next update: 2025-11-23 morning
+**Training status**:
+- v1.2 (completed): Achieved stable training but insufficient precision (torsion error >100%)
+- v1.2a (in preparation): Incorporates corrected epsilon derivative and adjusted RG flow coefficients
+- Fallback option: v1.1a results (torsion error 1.68%, excellent precision but partial RG flow)
 
-**Document completion**:
-- Upon v1.2 finish: Update all [**PENDING**] placeholders
-- Add final validation plots
-- Complete Yukawa/RG analysis
-- Finalize for GIFT v2.1 publication
+**Publication strategy**:
+- **Option A (conservative)**: Publish S2 with v1.1a numerical results, noting full GIFT 2.1 dual geometry is in active development
+- **Option B (ambitious)**: Complete v1.2a training, use results if precision <20% error achieved
 
-**Status**: DRAFT - Awaiting v1.2 numerical results for completion
+**Document completion timeline**:
+- v1.2a testing: ~1-2 days
+- Upon successful v1.2a: Update all [**PENDING**] placeholders with final metrics
+- Alternative: Finalize with v1.1a results and publish immediately
+
+**Status**: DRAFT - Theoretical foundations complete, numerical results pending final convergence optimization
 
 ---
 
