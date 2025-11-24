@@ -354,8 +354,4 @@ Predictions at different energy scales must be connected by RG flow:
 3. DUNE Collaboration (2020). Technical Design Report.
 4. CMB-S4 Collaboration (2022). Science Goals.
 
----
 
-*Document version: 1.0*
-*Last updated: 2025*
-*Status: Complete falsification protocol*

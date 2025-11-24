@@ -636,8 +636,3 @@ All 37 observables derive from these through geometric formulas.
 4. Planck Collaboration (2018). Cosmological parameters.
 5. NuFIT 5.2 (2023). Global neutrino oscillation analysis.
 
----
-
-*Document version: 1.0*
-*Last updated: 2025*
-*Status: Complete mathematical proofs for PROVEN observables*

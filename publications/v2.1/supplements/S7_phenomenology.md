@@ -380,8 +380,4 @@ The precision achieved suggests the framework captures fundamental aspects of na
 3. Planck Collaboration (2020). Planck 2018 results.
 4. CKMfitter Group (2023). CKM global fit.
 
----
 
-*Document version: 1.0*
-*Last updated: 2025*
-*Status: Complete phenomenological analysis*

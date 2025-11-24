@@ -543,8 +543,4 @@ Monte Carlo analysis (10^6 samples) confirms:
 3. Planck Collaboration (2018). Cosmological parameters.
 4. CKMfitter Group (2023). Global CKM fit.
 
----
 
-*Document version: 1.0*
-*Last updated: 2025*
-*Status: Complete derivations for all 37 observables*

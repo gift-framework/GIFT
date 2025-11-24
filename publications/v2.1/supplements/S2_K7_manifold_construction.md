@@ -1010,3 +1010,5 @@ This supplement demonstrates explicit G₂ metric construction on K₇ via physi
 *K₇ Manifold Construction*
 
 
+---
+

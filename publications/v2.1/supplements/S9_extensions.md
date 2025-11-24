@@ -407,8 +407,4 @@ The framework's success with 37 observables suggests these extensions may be fru
 4. Conway, J. H., Sloane, N. J. A. (1999). Sphere Packings, Lattices and Groups.
 5. Verlinde, E. (2011). On the origin of gravity and the laws of Newton. JHEP.
 
----
 
-*Document version: 1.0*
-*Last updated: 2025*
-*Status: Extensions and future directions*

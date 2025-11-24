@@ -565,8 +565,3 @@ def cache_result(params, result, cache_dir='./cache'):
 3. PyTorch documentation: https://pytorch.org/docs/
 4. SALib for sensitivity analysis: https://salib.readthedocs.io/
 
----
-
-*Document version: 1.0*
-*Last updated: 2025*
-*Status: Complete computational documentation*
