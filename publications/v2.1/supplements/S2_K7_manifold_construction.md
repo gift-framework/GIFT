@@ -1,4 +1,4 @@
-# Supplement S2: K₇ Manifold Construction (Version 1.2c)
+# Supplement S2: K₇ Manifold Construction
 
 ## Twisted Connected Sum, Mayer-Vietoris Analysis, and Neural Network Metric Extraction with Complete RG Flow
 
@@ -10,7 +10,7 @@
 
 We construct the compact 7-dimensional manifold K₇ with G₂ holonomy through twisted connected sum (TCS) methods, establishing the topological and geometric foundations for GIFT observables. Section 1 develops the TCS construction following Kovalev and Corti-Haskins-Nordström-Pacini, gluing asymptotically cylindrical G₂ manifolds M₁ᵀ and M₂ᵀ via a diffeomorphism φ on S¹×Y₃. Section 2 presents detailed Mayer-Vietoris calculations determining Betti numbers b₂(K₇)=21 and b₃(K₇)=77, with complete tracking of connecting homomorphisms and twist parameter effects. Section 3 establishes the physics-informed neural network framework extracting the G₂ 3-form φ(x) and metric g from torsion minimization, regional architecture, and topological constraints. Section 4 presents the complete 4-term RG flow formulation incorporating geometric gradient (A), curvature corrections (B), scale derivatives (C), and fractional torsion dynamics (D). Section 5 presents numerical results from version 1.2c.
 
-**Key innovation in v1.2c**: Complete RG flow integration with explicit fractional torsion component capturing the dominant geometric dynamics. Training shows fract_eff ≈ -0.499, extremely close to theoretical -0.5, demonstrating correct capture of underlying geometric structure.
+**Innovation in v1.2c**: Complete RG flow integration with explicit fractional torsion component capturing the dominant geometric dynamics. Training shows fract_eff ≈ -0.499, extremely close to theoretical -0.5, demonstrating correct capture of underlying geometric structure.
 
 The construction achieves:
 - **Topological precision**: b₂=21, b₃=77 preserved by design (TOPOLOGICAL)
@@ -627,7 +627,7 @@ where ω_i ∈ H²(K₇), Ω_k ∈ H³(K₇).
 
 The complete training history shows five distinct phases:
 
-| Phase | Epochs | Key Achievement |
+| Phase | Epochs | Achievement |
 |-------|--------|----------------|
 | 1: TCS_Neck | 1-2000 | TCS structure established |
 | 2: ACyl_Matching | 2001-4000 | Cylindrical asymptotics |
@@ -931,7 +931,6 @@ This supplement demonstrates explicit G₂ metric construction on K₇ via physi
 - Numerical precision limited by network approximation (~10⁻⁴)
 - Mathematical rigor less than analytical construction
 
-The v1.2c construction provides the first complete implementation of GIFT's torsional RG flow dynamics, demonstrating that machine learning can address traditionally intractable problems in differential geometry while revealing profound geometric structures underlying particle physics.
 
 ---
 
@@ -958,7 +957,7 @@ The v1.2c construction provides the first complete implementation of GIFT's tors
 
 **Future development**: Version 1.3 will focus on complete b₃=77 harmonic basis extraction and phenomenological applications (complete Yukawa tensor, neutrino sector, CP violation).
 
-### 12.2 Key Milestones
+### 12.2 Milestones
 
 **v0.7** (First stable release):
 - Achieved b₂=21 for first time
@@ -985,63 +984,6 @@ The v1.2c construction provides the first complete implementation of GIFT's tors
 
 ---
 
-## 13. Data Deliverables
-
-Upon completion of training, the following data products will be generated:
-
-### 13.1 Numerical Data Files
-
-**Metric data**:
-- `metric_v1_2c.npy`: Full metric tensor g_ij(x) on 16⁷ grid (shape: [16,16,16,16,16,16,16,7,7])
-- `metric_samples_v1_2c.npy`: Sampled metric at N_sample representative points
-- `phi_samples_v1_2c.npy`: G₂ 3-form φ at sampled points
-
-**Harmonic forms**:
-- `harmonic_2forms_v1_2c.npy`: b₂=21 harmonic 2-forms (shape: [21, N_points, 7, 7])
-- `harmonic_3forms_v1_2c.npy`: b₃=77 harmonic 3-forms (shape: [77, N_points, 7, 7, 7])
-
-**Yukawa couplings**:
-- `yukawa_tensor_v1_2c.npy`: Complete Yukawa tensor Y_ijk (shape: [21, 21, 77])
-- `yukawa_eigenvalues_v1_2c.npy`: Eigenvalue spectrum
-
-**Training data**:
-- `training_history_v1_2c.csv`: Complete loss and metric history per epoch
-- `rg_flow_components_v1_2c.csv`: Detailed A, B, C, D term evolution
-
-### 13.2 Model Checkpoints
-
-- `checkpoint_phase1_final_v1_2c.pt`: End of initialization phase
-- `checkpoint_phase2_final_v1_2c.pt`: End of torsion control phase
-- `checkpoint_phase3_final_v1_2c.pt`: End of RG integration phase
-- `checkpoint_phase4_final_v1_2c.pt`: End of fractional refinement phase
-- `checkpoint_phase5_final_v1_2c.pt`: Final converged model
-- `best_model_v1_2c.pt`: Best validation loss checkpoint
-
-### 13.3 LaTeX Tables
-
-Generated `.tex` files for publication:
-- `table_betti_numbers_v1_2c.tex`: Complete Betti spectrum
-- `table_geometric_properties_v1_2c.tex`: Torsion, determinant, etc.
-- `table_rg_flow_components_v1_2c.tex`: A, B, C, D term breakdown
-- `table_training_phases_v1_2c.tex`: Phase-by-phase results
-- `table_yukawa_spectrum_v1_2c.tex`: Yukawa eigenvalue hierarchy
-- `table_validation_tests_v1_2c.tex`: All consistency checks
-
-### 13.4 Visualization Figures
-
-- `fig_training_history_v1_2c.pdf`: Loss curves across all phases
-- `fig_rg_flow_decomposition_v1_2c.pdf`: A, B, C, D component evolution
-- `fig_fractional_convergence_v1_2c.pdf`: fract_eff → -0.5 convergence
-- `fig_torsion_distribution_v1_2c.pdf`: Spatial distribution of ||T||
-- `fig_harmonic_forms_v1_2c.pdf`: Visualization of selected harmonic 2-forms
-- `fig_yukawa_matrix_v1_2c.pdf`: Heatmap of Yukawa tensor structure
-
-### 13.5 Metadata
-
-- `metadata_v1_2c.json`: Complete configuration, hyperparameters, seeds, timestamps
-
----
-
 ## 14. References
 
 [1] Kovalev, A. (2003). "Twisted connected sums and special Riemannian holonomy." *J. Reine Angew. Math.* 565, 125-160.
@@ -1064,16 +1006,6 @@ Generated `.tex` files for publication:
 ---
 
 
-*GIFT Framework v2.1 - Supplement S2 (Version 1.2c)*
+*GIFT Framework v2.1 - Supplement S2*
 *K₇ Manifold Construction with Complete RG Flow*
 
-
----
-
-*This document presents complete results from G2_ML version 1.2c, representing the current state of explicit K₇ metric construction for GIFT v2.1 with complete 4-term RG flow implementation. Training completed successfully with 10,000 epochs across 5 phases.*
-
-**Document Status**: COMPLETE - All training results incorporated
-
-**Last Updated**: 2025-11-24
-
-**Training Status**: 100% complete (10,000 epochs)
