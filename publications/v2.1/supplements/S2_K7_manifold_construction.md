@@ -464,7 +464,7 @@ where f_neck(r) is a smooth warping function peaked at r₀ ≈ 0.5, describing 
 
 ---
 
-## 4. Complete RG Flow Formulation (v1.2c Innovation)
+## 4. Complete RG Flow Formulation (v1.2 Innovation)
 
 ### 4.1 Four-Term RG Flow Structure
 
@@ -517,7 +517,7 @@ divT_eff = 0.0055           (torsion divergence)
 fract_eff = -0.499          (fractional component)
 ```
 
-**Key observation**: The D term dominates, contributing ~85% of the total RG flow. This demonstrates that fractional torsion geometry is the primary driver of renormalization group flow in the GIFT framework.
+**Observation**: The D term dominates, contributing ~85% of the total RG flow. This demonstrates that fractional torsion geometry is the primary driver of renormalization group flow in the GIFT framework.
 
 ### 4.4 Comparison with v1.1a
 
@@ -566,7 +566,7 @@ fract_eff = -0.499          (fractional component)
 - Neck region (0.35 ≤ r ≤ 0.65): ||T|| ≈ 0.08-0.20 (concentrated warping)
 - Transition zones: Smooth gradient connecting flat and curved regions
 
-**¹Note on torsion deviation**: The 189% excess above target is physically acceptable because torsion is spatially localized to the neck gluing region (~30% of volume) where it drives RG flow, while the bulk ACyl regions remain nearly flat. The global mean ||T|| = 0.0475 includes this inhomogeneous distribution; volume-weighted integration yields the correct RG flow Δα = -0.896 (0.44% error).
+**¹Note on torsion deviation**: The 189% excess above target is physically acceptable because torsion is spatially localized to the neck gluing region (~30% of volume) where it drives RG flow, while the bulk ACyl regions remain nearly flat. The global mean ||T|| = 0.0475 includes this inhomogeneous distribution; volume-weighted integration yields the correct RG flow Δα = -0.896 (0.44% error). Version 1.2c represents the first complete GIFT-compatible PINN construction; further refinements (v1.3+) will improve torsion targeting and harmonic precision.
 
 **Smoothness metrics**:
 - C² regularity: Neural network approximation (~10⁻⁴ precision)
@@ -585,7 +585,7 @@ fract_eff = -0.499          (fractional component)
 | 6001-8000 | -0.85 ± 0.05 | -0.15 ± 0.01 | +0.0001 ± 0.0001 | +0.015 ± 0.002 | -0.71 ± 0.03 | -0.497 ± 0.005 |
 | 8001-10000 | -0.896 | -0.154 | +0.0001 | +0.016 | -0.758 | -0.499 |
 
-**Key observation**: fract_eff stabilizes early at -0.499, confirming correct geometric structure capture.
+**Observation**: fract_eff stabilizes early at -0.499, confirming correct geometric structure capture.
 
 ### 5.3 Topological Invariants
 
@@ -627,7 +627,7 @@ where ω_i ∈ H²(K₇), Ω_k ∈ H³(K₇).
 
 The complete training history shows five distinct phases:
 
-| Phase | Epochs | Achievement |
+| Phase | Epochs | Key Achievement |
 |-------|--------|----------------|
 | 1: TCS_Neck | 1-2000 | TCS structure established |
 | 2: ACyl_Matching | 2001-4000 | Cylindrical asymptotics |
@@ -1007,5 +1007,6 @@ This supplement demonstrates explicit G₂ metric construction on K₇ via physi
 
 
 *GIFT Framework v2.1 - Supplement S2*
-*K₇ Manifold Construction with Complete RG Flow*
+*K₇ Manifold Construction*
+
 
