@@ -1,0 +1,153 @@
+{
+  "version": "v1.2c",
+  "timestamp": "2025-11-24T18:08:49.145833",
+  "config": {
+    "n_grid": 16,
+    "n_grid_coarse": 8,
+    "n_grid_harmonics": 8,
+    "batch_size": 1024,
+    "n_fourier": 10,
+    "hidden_dim": 256,
+    "n_layers": 6,
+    "lr_phase12": 0.0001,
+    "lr_phase35": 0.0005,
+    "warmup_epochs": 200,
+    "lr_min": 1e-05,
+    "n_epochs_per_phase": 2000,
+    "print_every": 50,
+    "tcs": {
+      "r_neck_start": 0.35,
+      "r_neck_end": 0.65,
+      "neck_width": 5.0,
+      "twist_angle": 1.0471975511965976,
+      "r_acyl_cutoff": 10.0
+    },
+    "targets": {
+      "torsion_norm": 0.0164,
+      "det_g_target": 2.0,
+      "delta_alpha_target": -0.9,
+      "b2_target": 21,
+      "b3_target": 77
+    },
+    "rg_flow": {
+      "lambda_max": 39.44,
+      "n_steps": 100,
+      "epsilon_0": 0.125,
+      "A_init": -30.0,
+      "B_init": 1.0,
+      "C_init": 20.0,
+      "D_init": 1.2,
+      "l2_penalty": 0.0005
+    },
+    "phases": {
+      "1": {
+        "name": "TCS_Neck",
+        "weights": {
+          "torsion": 0.5,
+          "det": 0.5,
+          "positivity": 1.0,
+          "neck_match": 2.0,
+          "acyl": 0.0,
+          "acyl_strict": 0.0,
+          "harmonicity": 0.0,
+          "rg_flow": 0.0
+        }
+      },
+      "2": {
+        "name": "ACyl_Matching",
+        "weights": {
+          "torsion": 0.5,
+          "det": 0.8,
+          "positivity": 1.5,
+          "neck_match": 0.5,
+          "acyl": 0.5,
+          "acyl_strict": 0.5,
+          "harmonicity": 0.0,
+          "rg_flow": 0.0
+        }
+      },
+      "3": {
+        "name": "Cohomology_Refinement",
+        "weights": {
+          "torsion": 2.0,
+          "det": 0.5,
+          "positivity": 1.0,
+          "neck_match": 0.5,
+          "acyl": 1.0,
+          "acyl_strict": 1.0,
+          "harmonicity": 1.0,
+          "rg_flow": 0.2
+        }
+      },
+      "4": {
+        "name": "Harmonic_Extraction",
+        "weights": {
+          "torsion": 3.0,
+          "det": 1.0,
+          "positivity": 1.0,
+          "neck_match": 0.2,
+          "acyl": 0.5,
+          "acyl_strict": 1.0,
+          "harmonicity": 3.0,
+          "rg_flow": 0.5
+        }
+      },
+      "5": {
+        "name": "RG_Calibration",
+        "weights": {
+          "torsion": 3.5,
+          "det": 2.0,
+          "positivity": 2.0,
+          "neck_match": 0.1,
+          "acyl": 0.3,
+          "acyl_strict": 1.0,
+          "harmonicity": 1.0,
+          "rg_flow": 3.0
+        }
+      }
+    },
+    "output_dir": "outputs_v1_2c"
+  },
+  "final_metrics": {
+    "delta_alpha": -0.8960690291161227,
+    "delta_alpha_target": -0.9,
+    "delta_alpha_error_percent": 0.4367745426530314,
+    "torsion_norm_mean": 0.04745233924258024,
+    "torsion_norm_std": 0.0757554913803316,
+    "det_g_G2_mean": 2.0134265943945846,
+    "det_g_G2_std": 0.4835959119892991,
+    "det_g_GIFT_mean": 2.0151668186698766,
+    "b2_effective": 21,
+    "b3_effective": 77,
+    "yukawa_norm": 0.15
+  },
+  "rg_components": {
+    "A_divergence": -0.1541475088322162,
+    "B_norm": 7.478830658232043e-05,
+    "C_epsilon": 0.015785806065093708,
+    "D_fractality": -0.7577821146555827,
+    "RG_noD": -0.1382869144605402,
+    "total": -0.8960690291161227,
+    "div_T_eff": 0.00551854057089837,
+    "fract_eff": -0.49907824671370116,
+    "A": -27.932658436018773,
+    "B": 0.033213790850453104,
+    "C": 17.937389424293475,
+    "D": 1.51836334211194
+  },
+  "learned_coefficients": {
+    "A_final": -27.932658436018773,
+    "B_final": 0.033213790850453104,
+    "C_final": 17.937389424293475,
+    "D_final": 1.51836334211194,
+    "A_init": -30.0,
+    "B_init": 1.0,
+    "C_init": 20.0,
+    "D_init": 1.2
+  },
+  "training_summary": {
+    "total_epochs": 10000,
+    "final_loss": 1.7251095670888523,
+    "convergence_epoch": "17"
+  }
+}
