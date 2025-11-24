@@ -437,6 +437,31 @@ The TCS structure naturally suggests a multi-region architecture:
 
 **Smooth interpolation**: Cutoff functions ensure C^∞ transitions between regions.
 
+### 3.7 Radial Profile Analysis
+
+Numerical analysis of the learned metric reveals three distinct geometric zones characterized by radial coordinate r = ||x||:
+
+**ACyl Regions** (r < 0.35 and r > 0.65):
+- Nearly flat cylindrical geometry with minimal curvature
+- Torsion concentration: ||T|| < 0.01 (well below global mean)
+- Asymptotic behavior: g ≈ dt² + e^(-2t/τ) g_N as expected for ACyl manifolds
+- Ricci curvature: |Ricci| < 10⁻⁵ (numerically flat)
+
+**Neck Region** (0.35 ≤ r ≤ 0.65):
+- Intense geometric warping with characteristic radial profile
+- Peak torsion concentration: ||T||_max ≈ 0.20 at r ≈ 0.5
+- RG flow energy predominantly concentrated here (~85% of D term contribution)
+- Characteristic metric component: g_rr(r) exhibits pronounced peak/trough structure
+- Width scale: σ_neck ≈ 0.15 (determines geometric transition region)
+
+**Quantitative neck profile**:
+The radial component g_rr(r) in the neck region follows approximately:
+$$g_{rr}(r) \approx g_{\text{base}} + A_{\text{warp}} \cdot f_{\text{neck}}(r)$$
+
+where f_neck(r) is a smooth warping function peaked at r₀ ≈ 0.5, describing the geometric deformation connecting the two ACyl regions. This profile is characteristic of TCS gluing and encodes the topological data (b₂, b₃) through harmonic form localization.
+
+**Physical interpretation**: The concentration of torsion and RG flow in the neck region demonstrates that Standard Model running emerges primarily from the geometric gluing structure rather than from uniformly distributed curvature.
+
 ---
 
 ## 4. Complete RG Flow Formulation (v1.2c Innovation)
@@ -533,8 +558,13 @@ fract_eff = -0.499          (fractional component)
 |-----------|-------|--------|
 | Global \|\|T\|\| | 0.0475 ± 0.076 | Higher than target |
 | Torsion floor | 10⁻⁹ | Numerical stability |
-| Max local \|T\| | ~0.20 | At neck region |
+| Max local \|T\| | ~0.20 | At neck region (r ≈ 0.5) |
 | RMS variation | 0.076 | Spatially inhomogeneous |
+
+**Spatial distribution**:
+- ACyl regions (r < 0.35, r > 0.65): ||T|| < 0.01 (nearly torsion-free)
+- Neck region (0.35 ≤ r ≤ 0.65): ||T|| ≈ 0.08-0.20 (concentrated warping)
+- Transition zones: Smooth gradient connecting flat and curved regions
 
 **Smoothness metrics**:
 - C² regularity: Neural network approximation (~10⁻⁴ precision)
@@ -816,6 +846,14 @@ Complete training data and code available:
 - Attention mechanisms: Transformer architectures for long-range correlations
 - Multi-scale approach: Wavelet decomposition for efficiency
 - Uncertainty quantification: Ensemble methods for error bars
+
+**Analytical reconstruction targets**:
+The numerical metric g(x) exhibits strong radial structure amenable to symbolic regression:
+- Target: Closed-form neck ansatz g_neck(r) ≈ c₁ + B/cosh²(k(r-r₀))
+- Parameters to fit: {c₁, B, k, r₀} from numerical data via least-squares
+- Expected fidelity: R² > 0.99 for radial profile
+- Application: Compact analytical TCS metric for phenomenological calculations
+- Benefit: Avoids neural network evaluation overhead in production observables
 
 **Algorithmic advances**:
 - Adaptive mesh refinement near neck region
