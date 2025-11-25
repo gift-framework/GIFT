@@ -3,22 +3,21 @@ name: "CodeQL"
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - 'assets/visualizations/**/*.html'
-      - '**/outputs/**/*.html'
-      - 'docs/figures/**/*.html'
-      - 'publications/pdf/**'
-      - '**/*.pdf'
+    paths:
+      - '**.py'
+      - '**.js'
   pull_request:
     branches: [ main ]
-    paths-ignore:
-      - 'assets/visualizations/**/*.html'
-      - '**/outputs/**/*.html'
-      - 'docs/figures/**/*.html'
-      - 'publications/pdf/**'
-      - '**/*.pdf'
+    paths:
+      - '**.py'
+      - '**.js'
   schedule:
     - cron: '0 0 * * 1'  # Run weekly on Mondays
+
+# Cancel in-progress runs when a new commit is pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   analyze:

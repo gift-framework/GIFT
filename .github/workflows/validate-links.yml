@@ -2,10 +2,24 @@ name: Validate Markdown Links
 
 on:
   push:
-    branches: [ main, 'claude/*' ]
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - '.markdown-link-check.json'
   pull_request:
     branches: [ main ]
+    paths:
+      - '**.md'
+      - '.markdown-link-check.json'
   workflow_dispatch:
+  # Weekly scheduled run for external link validation
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday at 6 AM
+
+# Cancel in-progress runs when a new commit is pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate-relative-links:
