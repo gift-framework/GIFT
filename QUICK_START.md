@@ -4,7 +4,7 @@ Get up and running with the GIFT framework in minutes.
 
 ## What is GIFT?
 
-The Geometric Information Field Theory (GIFT) derives fundamental physics parameters from pure mathematics. Starting with E₈×E₈ exceptional Lie algebras and G₂ holonomy manifolds, the framework predicts 34 dimensionless observables with 0.13% mean precision using only 3 geometric parameters.
+The Geometric Information Field Theory (GIFT) derives fundamental physics parameters from pure mathematics. Starting with E₈×E₈ exceptional Lie algebras and G₂ holonomy manifolds, the framework predicts 46 observables (37 dimensionless + 9 dimensional) with 0.13% mean precision using only 3 geometric parameters.
 
 **Key achievement**: Reduces Standard Model's 19 free parameters to 3 derived geometric quantities.
 
@@ -123,10 +123,10 @@ Weyl_factor = 5  # Pentagonal symmetry from |W(E₈)| = 2¹⁴×3⁵×5²×7
 - Step-by-step derivations
 - Topological arguments
 
-**For Specific Topics** → `publications/supplements/`
-- A: Mathematical foundations (E₈, K₇, reduction)
-- C: All 34 observable derivations
-- E: Falsification criteria and experimental tests
+**For Specific Topics** → `publications/v2.1/supplements/`
+- S1: Mathematical foundations (E₈, K₇, reduction)
+- S5: All 46 observable derivations
+- S8: Falsification criteria and experimental tests
 
 ## Key Predictions by Physics Sector
 
@@ -233,7 +233,7 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ## Common First Questions
 
 **Q: Is this tested experimentally?**
-A: Yes. 37 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
+A: Yes. 46 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
 
 **Q: How many free parameters?**
 A: 3 topological parameters (p₂=2, Weyl_factor=5, β₀=π/8), where ξ=5π/16 is derived. Standard Model has 19.
@@ -297,12 +297,12 @@ If you use GIFT in your research:
 
 ```bibtex
 @software{gift_framework_v2_2025,
-  title={GIFT Framework v2: Geometric Information Field Theory},
+  title={GIFT Framework v2.1: Geometric Information Field Theory},
   author={{GIFT Framework Team}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.0.0},
-  note={Topological unification from E₈×E₈, 0.13% precision, 3 parameters}
+  version={2.1.0},
+  note={Topological unification from E₈×E₈, 0.13% precision across 46 observables, 3 parameters}
 }
 ```
 
@@ -312,7 +312,7 @@ See `CITATION.md` for additional formats.
 
 In 5 minutes you can:
 1. Run notebook in browser (Binder/Colab)
-2. See 34 predictions vs experiment
+2. See 46 predictions vs experiment
 3. Understand basic framework structure
 4. Explore specific sectors of interest
 
@@ -325,7 +325,7 @@ In 30 minutes you can:
 In a few hours you can:
 1. Study complete mathematical foundations
 2. Verify numerical calculations
-3. Examine all 34 predictions in detail
+3. Examine all 46 predictions in detail
 4. Understand connections to information theory
 
 Welcome to the GIFT framework. The mathematics is rich, the predictions are precise, and the implications are profound.

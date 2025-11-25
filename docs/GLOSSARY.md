@@ -378,7 +378,13 @@ This glossary is continuously updated. To suggest additions or corrections:
 2. Tag as "documentation"
 3. Specify term and proposed definition
 
+### Torsional Dynamics (v2.1)
+Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key parameters: |T_norm| = 0.0164, |T_costar| = 0.0141.
+
+### Scale Bridge (v2.1)
+Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
+
 ---
 
-Last updated: v2.0.0 (2025-10-24)
+Last updated: v2.1.0 (2025-11-22)
 
