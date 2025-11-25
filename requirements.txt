@@ -1,4 +1,9 @@
-# GIFT Framework v2 - Core Dependencies
+# GIFT Framework v2.1 - Core Dependencies
+
+# Local in-house package (install with pip install -e .)
+-e .
+
+# Scientific computing
 numpy>=1.21.0
 matplotlib>=3.5.0
 scipy>=1.7.0
