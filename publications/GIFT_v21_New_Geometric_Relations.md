@@ -14,9 +14,11 @@ This document presents newly discovered geometric derivations for observables cu
 | Observable | Current Formula | Proposed Formula | Improvement |
 |------------|-----------------|------------------|-------------|
 | sin²θ_W | ζ(2) - √2 | b₂/(b₃+dim(G₂)) = 3/13 | 0.216% → 0.195% |
+| sin²θ_W | (alt) | ζ(3)×γ_EM/3 | 0.216% → 0.027% |
 | m_μ/m_e | 27^φ | b₃ + H* + M₅ = 207 | 0.118% → 0.112% |
 | α_s | √2/12 | √2/(dim(G₂)-p₂) | Same, now geometric |
 | λ_H | √17/32 | √(dim(G₂)+N_gen)/2⁵ | Same, now geometric |
+| **κ_T** | 0.0164 (fit) | **1/(b₃-dim(G₂)-p₂) = 1/61** | **NEW: 0.04%** |
 
 ---
 
@@ -283,7 +285,75 @@ The number 24 represents a fundamental modular structure connecting:
 
 ---
 
-## 10. Open Questions
+## 10. Torsion Magnitude: κ_T = 1/61
+
+### Current Status: THEORETICAL
+
+**Current value**: κ_T = 0.0164 (phenomenological fit)
+
+### Proposed Topological Derivation
+
+**New formula**:
+$$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
+
+**Value**: 0.016393...
+
+**Deviation**: 0.04% (EXCELLENT)
+
+### Geometric Interpretation
+
+The torsion magnitude emerges from:
+- **b₃ = 77**: Matter sector (third Betti number)
+- **dim(G₂) = 14**: Holonomy correction
+- **p₂ = 2**: Binary duality factor
+
+The denominator 61 represents "pure matter degrees" after removing holonomy and duality contributions.
+
+### Supporting Relations
+
+The number 61:
+- 61 = 18th prime
+- 61 = H* - b₂ - 17 = 99 - 21 - 17
+- 61 = dim(K₇) × 9 - 2
+
+### Connection to DESI DR2 2025
+
+Recent DESI DR2 observations constrain cosmological torsion to α ≈ -0.00066 ± 0.00098.
+The GIFT prediction κ_T² ≈ 2.7×10⁻⁴ is compatible with these constraints.
+
+### Proposed Status: TOPOLOGICAL
+
+---
+
+## 11. The Number 221: Connecting Magic Numbers
+
+### Discovery
+
+$$221 = 13 \times 17 = \dim(E_8) - \dim(J_3(O)) = 248 - 27$$
+
+### Significance
+
+The numbers 13 and 17 appear throughout GIFT:
+
+| Number | Appearances |
+|--------|-------------|
+| 13 | sin²θ_W = 3/13, 91 = 7×13, F₇, rank(E₈)+Weyl |
+| 17 | λ_H = √17/32, dim(G₂)+N_gen, 7th prime |
+
+Their product 221 connects:
+- E₈ dimension (248)
+- Exceptional Jordan algebra (27)
+
+### Heat Kernel Connection
+
+The γ_GIFT denominator factorizes as:
+$$884 = 4 \times 13 \times 17 = 4 \times 221$$
+
+This links the heat kernel coefficient to the same magic numbers!
+
+---
+
+## 12. Open Questions
 
 1. **sin²θ_W**: Can we derive the 3/13 formula from first principles via dimensional reduction?
 
@@ -299,13 +369,22 @@ The number 24 represents a fundamental modular structure connecting:
 
 ## References
 
+### Internal
 - gift_2_1_main.md - Core theoretical framework
 - supplements/S4_rigorous_proofs.md - Rigorous proofs
 - supplements/S5_complete_calculations.md - Derivations
 - GIFT_v21_Observable_Reference.md - Observable catalog
 
+### External (from research plan)
+- Liu et al. (2025) - DESI DR2 torsion constraints
+- Barvinsky (2025) - Heat kernel expansion methods
+- Patel & Singh (2023) - J₃(O) and CKM matrix derivation
+- Wang et al. (2024) - E₈ particles in BaCo₂V₂O₈
+- Langlais (2025) - TCS G₂ manifold construction
+
 ---
 
-**Version**: 0.1 (research notes)
+**Version**: 0.2 (research notes - combined discoveries)
+**Date**: November 2025
 **Author**: GIFT Framework exploration
 **License**: MIT
