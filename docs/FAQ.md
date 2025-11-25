@@ -114,28 +114,36 @@ See Supplement A for complete mathematical details.
 
 ### What observables does GIFT predict?
 
-**34 dimensionless observables**:
+**46 observables (37 dimensionless + 9 dimensional)**:
+
+*Dimensionless (37):*
 - 3 gauge couplings (α, sin²θ_W, α_s)
-- 3 generation number (N_gen = 3)
+- 1 generation number (N_gen = 3)
 - 4 neutrino mixing angles (θ₁₂, θ₁₃, θ₂₃, δ_CP)
-- 9 quark mass ratios
+- 10 quark mass ratios
 - 3 lepton mass ratios
-- 10 CKM matrix elements
+- 6 CKM matrix elements
 - 1 Koide parameter
-- 1 dark energy density (Ω_DE)
+- 10 cosmological parameters (Ω_DE, etc.)
+
+*Dimensional (9, new in v2.1):*
+- 3 electroweak scale parameters (v_EW, M_W, M_Z)
+- 6 quark masses (m_u through m_t)
 
 Mean deviation from experiment: 0.13%
 
 ### What about dimensional parameters like masses?
 
-The v2.0 framework focuses on dimensionless observables (ratios, angles, coupling constants). Extensions (see `publications/gift_extensions.md`) propose a temporal framework for dimensional parameters:
+Version 2.1 introduces the **scale bridge** and **torsional dynamics** framework that connects dimensionless and dimensional observables:
 
-- Quark and lepton masses
-- Gauge boson masses (M_W, M_Z)
-- Vacuum expectation value (v)
-- Hubble constant (H₀)
+**Scale Bridge**: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶
 
-This temporal framework is more speculative (status: EXPLORATORY/PHENOMENOLOGICAL) compared to the dimensionless predictions (status: TOPOLOGICAL/PROVEN).
+This allows prediction of:
+- Quark masses (m_u = 2.16 MeV through m_t = 172.8 GeV)
+- Gauge boson masses (M_W = 80.37 GeV, M_Z = 91.19 GeV)
+- Vacuum expectation value (v_EW = 246.2 GeV)
+
+The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than the topological exact relations but show excellent agreement (mean deviation ~0.3% for dimensional observables).
 
 ### How accurate are the predictions?
 
@@ -154,7 +162,7 @@ This temporal framework is more speculative (status: EXPLORATORY/PHENOMENOLOGICA
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.13% across all 34 observables
+**Overall**: Mean 0.13% across all 46 observables
 
 See Supplement D for detailed statistical analysis.
 
@@ -344,15 +352,15 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v2.0) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v2.1) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v2_2025,
-  title={GIFT Framework v2: Geometric Information Field Theory},
+  title={GIFT Framework v2.1: Geometric Information Field Theory},
   author={{GIFT Framework Team}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.0.0}
+  version={2.1.0}
 }
 ```
 
