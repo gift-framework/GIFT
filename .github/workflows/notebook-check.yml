@@ -10,27 +10,149 @@ on:
     paths:
       - '**.ipynb'
   workflow_dispatch:
+    inputs:
+      check_all:
+        description: 'Check all notebooks (not just modified)'
+        required: false
+        default: 'false'
+        type: boolean
+
+# Cancel in-progress runs when a new commit is pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate-notebooks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0  # Need full history to detect changed files
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          
+          cache: 'pip'
+
       - name: Install dependencies
         run: |
-          pip install nbformat nbconvert jupyter
-          
-      - name: Check notebook format
-        run: |
-          echo "Checking all notebooks for valid format..."
-          find . -name "*.ipynb" -not -path "./.ipynb_checkpoints/*" | while read notebook; do
-            echo "Validating: $notebook"
-            jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=60 "$notebook" || echo "Note: $notebook may need manual review"
-          done
+          pip install nbformat nbconvert jupyter ipykernel
+          pip install -r requirements.txt
 
+      - name: Get changed notebooks
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.check_all }}" = "true" ]; then
+            echo "Checking all notebooks (manual trigger)"
+            NOTEBOOKS=$(find . -name "*.ipynb" -not -path "./.ipynb_checkpoints/*" -not -path "*/.*")
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "Checking notebooks changed in PR"
+            NOTEBOOKS=$(git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref }}...HEAD | grep '\.ipynb$' || true)
+          else
+            echo "Checking notebooks changed in last commit"
+            NOTEBOOKS=$(git diff --name-only --diff-filter=ACMR HEAD~1 HEAD | grep '\.ipynb$' || true)
+          fi
+
+          if [ -z "$NOTEBOOKS" ]; then
+            echo "No notebooks to check"
+            echo "notebooks=" >> $GITHUB_OUTPUT
+            echo "has_notebooks=false" >> $GITHUB_OUTPUT
+          else
+            echo "Found notebooks to check:"
+            echo "$NOTEBOOKS"
+            # Store as multiline output
+            echo "notebooks<<EOF" >> $GITHUB_OUTPUT
+            echo "$NOTEBOOKS" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            echo "has_notebooks=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate notebook format
+        if: steps.changed.outputs.has_notebooks == 'true'
+        run: |
+          echo "Validating notebook JSON structure..."
+          python << 'EOF'
+          import json
+          import sys
+          from pathlib import Path
+
+          notebooks_str = """${{ steps.changed.outputs.notebooks }}"""
+          notebooks = [nb.strip() for nb in notebooks_str.strip().split('\n') if nb.strip()]
+
+          errors = []
+          warnings = []
+
+          for nb_path in notebooks:
+              try:
+                  with open(nb_path, 'r', encoding='utf-8') as f:
+                      data = json.load(f)
+
+                  # Check basic structure
+                  if 'cells' not in data:
+                      errors.append(f"{nb_path}: Missing 'cells' key")
+                  if 'metadata' not in data:
+                      warnings.append(f"{nb_path}: Missing 'metadata' key")
+                  if 'nbformat' not in data:
+                      warnings.append(f"{nb_path}: Missing 'nbformat' version")
+
+                  print(f"  {nb_path}: OK")
+
+              except json.JSONDecodeError as e:
+                  errors.append(f"{nb_path}: JSON parse error - {e}")
+              except FileNotFoundError:
+                  warnings.append(f"{nb_path}: File not found (may have been deleted)")
+              except Exception as e:
+                  errors.append(f"{nb_path}: {e}")
+
+          if warnings:
+              print("\nWarnings:")
+              for w in warnings:
+                  print(f"  - {w}")
+
+          if errors:
+              print("\nErrors:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+
+          print(f"\nAll {len(notebooks)} notebooks validated successfully")
+          EOF
+
+      - name: Execute notebooks (non-blocking)
+        if: steps.changed.outputs.has_notebooks == 'true'
+        continue-on-error: true
+        run: |
+          echo "Executing notebooks to check for runtime errors..."
+          echo "(This is non-blocking - failures are reported but don't fail the build)"
+
+          notebooks_str="${{ steps.changed.outputs.notebooks }}"
+          failed=0
+          success=0
+
+          while IFS= read -r notebook; do
+            [ -z "$notebook" ] && continue
+            echo ""
+            echo "Executing: $notebook"
+
+            if timeout 120 jupyter nbconvert --to notebook --execute \
+                --ExecutePreprocessor.timeout=90 \
+                --ExecutePreprocessor.allow_errors=false \
+                --stdout "$notebook" > /dev/null 2>&1; then
+              echo "  SUCCESS"
+              ((success++))
+            else
+              echo "  NEEDS REVIEW (execution failed or timed out)"
+              ((failed++))
+            fi
+          done <<< "$notebooks_str"
+
+          echo ""
+          echo "==================================="
+          echo "Summary: $success passed, $failed need review"
+          echo "==================================="
+
+      - name: Skip message
+        if: steps.changed.outputs.has_notebooks != 'true'
+        run: echo "No notebooks were modified - skipping validation"

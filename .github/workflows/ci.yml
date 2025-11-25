@@ -3,8 +3,30 @@ name: CI
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'publications/**/*.md'
+      - 'publications/pdf/**'
+      - 'assets/visualizations/**/*.html'
+      - 'LICENSE'
+      - '.gitignore'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'publications/**/*.md'
+      - 'publications/pdf/**'
+      - 'assets/visualizations/**/*.html'
+      - 'LICENSE'
+      - '.gitignore'
+  workflow_dispatch:
+
+# Cancel in-progress runs when a new commit is pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -17,17 +39,10 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
-    
-    - name: Cache pip dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
+        cache: 'pip'  # Built-in caching, faster than separate cache action
     
     - name: Install dependencies
       run: |
@@ -35,12 +50,16 @@ jobs:
         pip install -r requirements.txt
         pip install flake8 pytest pytest-cov pytest-xdist nbconvert jupyter
 
-    - name: Lint with flake8
+    - name: Lint with flake8 (critical errors only)
       run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=__pycache__,*.ipynb_checkpoints
-        # exit-zero treats all errors as warnings
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=__pycache__,*.ipynb_checkpoints
+        # Only fail on critical Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=__pycache__,*.ipynb_checkpoints,venv,.venv
+
+    - name: Style check (non-blocking)
+      continue-on-error: true
+      run: |
+        # Style warnings - informational only, won't fail the build
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=__pycache__,*.ipynb_checkpoints,venv,.venv
 
     - name: Run unit tests
       run: |
@@ -55,17 +74,45 @@ jobs:
         pytest tests/regression -v
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      if: matrix.python-version == '3.11'  # Only upload once
+      uses: codecov/codecov-action@v4
       with:
         files: ./coverage.xml
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: false
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-    - name: Validate notebooks (basic)
+    - name: Quick notebook syntax check (non-blocking)
+      continue-on-error: true
       run: |
-        find . -name "*.ipynb" -not -path "*/.*" -not -path "*/.ipynb_checkpoints/*" | head -5 | while read notebook; do
-          echo "Validating: $notebook"
-          jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=60 "$notebook" || echo "Note: $notebook may need manual review"
-        done
+        # Only validate notebook JSON structure, not execution (execution is in separate workflow)
+        python << 'EOF'
+        import json
+        import sys
+        from pathlib import Path
+
+        notebooks = list(Path('.').rglob('*.ipynb'))
+        notebooks = [nb for nb in notebooks if '.ipynb_checkpoints' not in str(nb)]
+
+        errors = []
+        for nb in notebooks[:10]:  # Limit to first 10 for speed
+            try:
+                with open(nb, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                if 'cells' not in data or 'metadata' not in data:
+                    errors.append(f"{nb}: Invalid notebook structure")
+            except json.JSONDecodeError as e:
+                errors.append(f"{nb}: JSON parse error - {e}")
+            except Exception as e:
+                errors.append(f"{nb}: {e}")
+
+        if errors:
+            print("Notebook issues found (non-blocking):")
+            for err in errors:
+                print(f"  - {err}")
+        else:
+            print(f"Checked {min(len(notebooks), 10)} notebooks - all valid")
+        EOF
 
