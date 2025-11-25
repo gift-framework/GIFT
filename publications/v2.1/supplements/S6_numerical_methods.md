@@ -4,10 +4,6 @@
 
 *This supplement documents the computational framework, algorithms, and validation procedures used in GIFT numerical calculations.*
 
-**Document Status**: Technical Supplement
-**Audience**: Computational physicists, data scientists
-**Prerequisites**: Basic Python, numerical analysis
-
 ---
 
 ## 1. Computational Framework
@@ -565,3 +561,7 @@ def cache_result(params, result, cache_dir='./cache'):
 3. PyTorch documentation: https://pytorch.org/docs/
 4. SALib for sensitivity analysis: https://salib.readthedocs.io/
 
+---
+
+*GIFT Framework v2.1 - Supplement S6*
+*Numerical Methods*

@@ -4,10 +4,6 @@
 
 *This supplement provides complete mathematical proofs for observables and theorems carrying PROVEN status in the GIFT framework. Each proof proceeds from topological definitions to exact numerical predictions.*
 
-**Document Status**: Technical Supplement
-**Audience**: Mathematical physicists, pure mathematicians
-**Prerequisites**: Familiarity with Lie algebra theory, differential geometry, index theory
-
 ---
 
 ## 1. Exact Topological Identities
@@ -636,3 +632,7 @@ All 37 observables derive from these through geometric formulas.
 4. Planck Collaboration (2018). Cosmological parameters.
 5. NuFIT 5.2 (2023). Global neutrino oscillation analysis.
 
+---
+
+*GIFT Framework v2.1 - Supplement S4*
+*Rigorous Proofs*

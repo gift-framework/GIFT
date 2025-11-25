@@ -4,10 +4,6 @@
 
 *This supplement provides clear, quantitative falsification criteria for the GIFT framework, enabling rigorous experimental tests of the theoretical predictions.*
 
-**Document Status**: Technical Supplement
-**Audience**: Experimentalists, philosophers of science
-**Prerequisites**: Main paper
-
 ---
 
 ## 1. Falsification Philosophy
@@ -301,7 +297,7 @@ Predictions at different energy scales must be connected by RG flow:
 
 ## 8. Experimental Priority List
 
-### 8.1 Highest Priority (2025-2030)
+### 8.1 Highest Priority
 
 1. **delta_CP measurement** (DUNE, T2K, NOvA)
    - Current uncertainty: +/- 24 degrees
@@ -316,13 +312,13 @@ Predictions at different energy scales must be connected by RG flow:
 3. **theta_23 octant** (DUNE, NOvA)
    - GIFT prediction: second octant (> 45 degrees)
 
-### 8.2 Medium Priority (2030-2040)
+### 8.2 Medium Priority
 
 4. **Neutrino mass sum** (cosmology, KATRIN)
 5. **Tensor-to-scalar ratio** (CMB-S4)
 6. **Dark energy precision** (Euclid, LSST)
 
-### 8.3 Long-term (2040+)
+### 8.3 Long-term
 
 7. **Fourth generation searches** (future colliders)
 8. **Proton decay** (Hyper-Kamiokande, DUNE)
@@ -354,4 +350,8 @@ Predictions at different energy scales must be connected by RG flow:
 3. DUNE Collaboration (2020). Technical Design Report.
 4. CMB-S4 Collaboration (2022). Science Goals.
 
+---
+
+*GIFT Framework v2.1 - Supplement S8*
+*Falsification Protocol*
 

@@ -4,10 +4,6 @@
 
 *This supplement explores extensions of the GIFT framework to quantum gravity, information-theoretic interpretations, dimensional transmutation, and speculative directions for future research.*
 
-**Document Status**: Technical Supplement
-**Audience**: Theorists, interdisciplinary researchers
-**Prerequisites**: Main paper, S1 (Mathematical Architecture)
-
 ---
 
 ## 1. Quantum Gravity Interface
@@ -345,10 +341,10 @@ If GIFT predictions hold with continued precision:
 
 ### 7.2 Computational
 
-1. **Explicit K7 metric**: Currently approximated by ML
-2. **Full harmonic form basis**: 21 + 77 = 98 forms to compute
-3. **Yukawa coupling extraction**: From K7 geometry
-4. **RG running verification**: Match geodesic flow to beta functions
+1. **Explicit K7 metric**: Achieved via PINN v1.2c (det(g) = 2.0134, 0.67% error)
+2. **Full harmonic form basis**: b2=21 and b3=77 extracted exactly (v1.2c)
+3. **Yukawa coupling extraction**: Preliminary tensor available, phenomenology in progress
+4. **RG running verification**: 4-term flow (A+B+C+D) calibrated, Delta_alpha = -0.896 (0.44% error)
 
 ### 7.3 Experimental
 
@@ -361,21 +357,21 @@ If GIFT predictions hold with continued precision:
 
 ## 8. Future Directions
 
-### 8.1 Near-term (2025-2030)
+### 8.1 Near-term
 
 - Complete K7 metric computation via ML
 - Extract Yukawa couplings from geometry
 - Test delta_CP prediction with DUNE
 - Refine dimensional transmutation mechanism
 
-### 8.2 Medium-term (2030-2040)
+### 8.2 Medium-term
 
 - Develop quantum field theory on K7
 - Connect to quantum gravity approaches
 - Test tensor-to-scalar ratio prediction
 - Explore information-theoretic foundations
 
-### 8.3 Long-term (2040+)
+### 8.3 Long-term
 
 - Unify with quantum gravity
 - Address emergence of spacetime
@@ -407,4 +403,8 @@ The framework's success with 37 observables suggests these extensions may be fru
 4. Conway, J. H., Sloane, N. J. A. (1999). Sphere Packings, Lattices and Groups.
 5. Verlinde, E. (2011). On the origin of gravity and the laws of Newton. JHEP.
 
+---
+
+*GIFT Framework v2.1 - Supplement S9*
+*Extensions*
 

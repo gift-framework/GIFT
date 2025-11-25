@@ -1002,13 +1002,8 @@ This supplement demonstrates explicit G₂ metric construction on K₇ via physi
 
 [8] Brandhuber, A., Gomis, J., Gubser, S., Gukov, S. (2001). "Gauge theory at large N and new G₂ holonomy metrics." *Nucl. Phys. B* 611, 179-204.
 
-
 ---
-
 
 *GIFT Framework v2.1 - Supplement S2*
 *K₇ Manifold Construction*
-
-
----
 

@@ -243,10 +243,11 @@ where g_{eπ} varies slowly with position, maintaining approximate constancy ove
 
 **Physical interpretation**: Off-diagonal terms represent geometric cross-couplings manifesting as physical sector interactions.
 
-**Machine learning construction**:
-- Architecture: Input 7D coordinates, hidden layers [512, 1024, 2048, 1024, 512], output 7×7 symmetric tensor
-- Training: 10⁶ sample points on A100 GPU
-- Achieved precision: |Ric| < 10⁻¹⁰, |∇φ| < 10⁻⁸, b₂ = 21.000, b₃ = 77.000
+**Machine learning construction (v1.2c)**:
+- Architecture: Fourier features (70 dim) + 6×256 hidden layers (ReLU), ~450k parameters
+- Training: 10,000 epochs across 5 phases on A100 GPU (~8-12 hours)
+- Achieved: ||T|| = 0.0475, det(g) = 2.0134, b₂ = 21, b₃ = 77 (exact)
+- RG flow: 4-term formula with fract_eff = -0.499, Δα = -0.896 (0.44% from SM)
 
 ### 4.3 Volume Quantization
 

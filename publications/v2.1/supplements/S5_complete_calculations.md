@@ -4,10 +4,6 @@
 
 *This supplement provides complete derivations for all observable predictions in the GIFT framework, organized by sector with full error analysis.*
 
-**Document Status**: Technical Supplement
-**Audience**: Phenomenologists, experimentalists
-**Prerequisites**: Main paper, S1 (Mathematical Architecture), S4 (Rigorous Proofs)
-
 ---
 
 ## 1. Gauge Couplings (3 Observables)
@@ -542,5 +538,10 @@ Monte Carlo analysis (10^6 samples) confirms:
 2. NuFIT 5.2 (2023). Global neutrino oscillation analysis.
 3. Planck Collaboration (2018). Cosmological parameters.
 4. CKMfitter Group (2023). Global CKM fit.
+
+---
+
+*GIFT Framework v2.1 - Supplement S5*
+*Complete calculations*
 
 
