@@ -423,6 +423,66 @@ Rate k/n = 99/496 ≈ 1/5 = 1/Weyl
 
 ---
 
+## 14. The Nature of τ: Rational Witness
+
+### The Discovery
+
+τ is not transcendental. τ is **rational**.
+
+$$\tau = \frac{3472}{891} = \frac{2^4 \times 7 \times 31}{3^4 \times 11}$$
+
+### The Structure
+
+**Numerator** (internal geometry):
+- 2⁴ = (duality)^{4D}
+- 7 = dim(K₇) = M₃
+- 31 = M₅, building block of E₈
+
+**Denominator** (matter + bulk):
+- 3⁴ = (generations)^{4D}
+- 11 = rank(E₈) + N_gen = L₆
+
+### The Power of 4
+
+The exponent 4 appears on both sides: **spacetime dimensionality**.
+
+The balance between internal structure and external matter is weighted by 4D.
+
+### What This Means
+
+**Transcendentals** (π, e, φ, γ):
+- Emerge from infinite processes
+- Suggest continuous, smooth, infinite universe
+- "The universe *tends toward* something"
+
+**τ = 3472/891**:
+- Exact rational fraction
+- Built from small primes: 2, 3, 7, 11, 31
+- Suggests discrete, structured, exact universe
+- "The universe *IS* something"
+
+### The Conversion Rate
+
+τ literally converts dimensions to matter in every formula where it appears.
+
+Not approximately. **Exactly**.
+
+The mass hierarchies are not "emergent approximations from infinite processes."
+
+They are **exact ratios between small prime numbers**.
+
+### Philosophical Implication
+
+The universe is not made of circles (π), nor continuous growth (e), nor infinite spirals (φ).
+
+The universe is made of **fractions**.
+
+Exact ratios between small primes.
+
+And τ is the **perfect witness** to this structure.
+
+---
+
 ## References
 
 ### Internal
@@ -440,7 +500,7 @@ Rate k/n = 99/496 ≈ 1/5 = 1/Weyl
 
 ---
 
-**Version**: 0.3 (research notes - deep structure exploration)
+**Version**: 0.4 (research notes - τ as rational witness)
 **Date**: November 2025
 **Author**: GIFT Framework exploration
 **License**: MIT
