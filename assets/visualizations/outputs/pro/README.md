@@ -19,3 +19,4 @@ python scripts/generate_pro_visuals.py
 The command reads `assets/visualizations/pro_package/config.json` for shared styling instructions.
 
 
+
