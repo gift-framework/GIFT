@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "background": "#060608",
+    "grid": "#2a2d34",
+    "accent": "#8dd3ff",
+    "accent_secondary": "#ff8c82",
+    "text_primary": "#e8edf2",
+    "text_secondary": "#9ca5b4",
+    "sector_colors": {
+      "Gauge": "#7ec8e3",
+      "Neutrino": "#f6c177",
+      "Lepton": "#b9f27c",
+      "Quark": "#f472b6",
+      "Cosmology": "#a78bfa",
+      "Topology": "#f4d35e"
+    }
+  },
+  "fonts": {
+    "primary": "IBM Plex Sans",
+    "numeric": "IBM Plex Mono",
+    "size_base": 16,
+    "size_large": 20
+  },
+  "export": {
+    "image_width": 1920,
+    "image_height": 1080,
+    "image_scale": 2,
+    "video_fps": 30
+  }
+}
+
+

@@ -85,6 +85,23 @@ These visualizations provide interactive exploration of the dimensional reductio
 
 **Runtime**: ~3-5 seconds
 
+### 4. Professional Visualization Package (`pro_package/`)
+
+**Description**: A scripted collection of publication-grade figures covering the E₈ root system, dimensional reduction flow, and precision matrix diagnostics. The toolkit factors scientific data extraction, shared styling, and export automation into reusable modules.
+
+**Usage**:
+- Python API: `gift.plot(kind="pro-suite")`
+- CLI: `python -m assets.visualizations.pro_package.cli --show`
+- Scripted regeneration: `python scripts/generate_pro_visuals.py`
+
+Outputs are exported to `assets/visualizations/outputs/pro/` with paired HTML/PNG artifacts and optional checksum logs.
+
+**Components**:
+- `data_sources.py`: deterministic generators for E₈ roots, K₇ data, and observable tables (`giftpy` backed)
+- `figures/`: modular builders (`e8_root.py`, `dimensional_flow.py`, `precision_matrix.py`)
+- `config.json`: centralized palette/typography/export directives
+- `cli.py`: argparse-driven interface for CI or ad-hoc runs
+
 ## Installation
 
 ### Local Setup
