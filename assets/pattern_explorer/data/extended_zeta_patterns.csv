@@ -1,9 +1,0 @@
-observable,category,experimental_value,predicted_value,deviation_pct,formula,pattern_type
-m_s/m_d,quark_ratio,20.000000,19.999541,0.002293,10 × [1/ζ(19)+1/ζ(21)],inv_sum
-m_b/m_u,quark_ratio,1935.190000,1937.076258,0.097471,1e+04 × [ζ(3)-ζ(7)],difference
-H₀_ratio,cosmology,1.084323,1.087458,0.289124,1 × ζ(5)^3/ζ(7)^3,power_ratio
-m_t/m_c,quark_ratio,135.830000,134.385699,1.063315,100 × ζ(3)^2/ζ(5)^2,power_ratio
-m_μ/m_e,lepton,206.768000,204.527703,1.083483,100 × [ζ(5)+ζ(7)],sum
-α⁻¹,gauge,137.036000,139.348261,1.687339,100 × ζ(3)^2/ζ(5)^1,power_ratio
-m_b/m_d,quark_ratio,895.070000,862.522001,3.636363,1000 × ζ(5)/[ζ(3)×ζ(15)],triple
-m_t/m_s,quark_ratio,1846.890000,1937.076258,4.883142,1e+04 × [ζ(3)-ζ(7)],difference
