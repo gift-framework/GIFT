@@ -211,9 +211,14 @@ G2_ML/[version]/
 - K₇: Compact 7-dimensional manifold with G₂ holonomy
 - b₂(K₇) = 21: Second Betti number (harmonic 2-forms)
 - b₃(K₇) = 77: Third Betti number (harmonic 3-forms)
-- β₀ = 1/(4π²): Base coupling parameter
-- ξ = 5β₀/2: Correlation parameter (derived!)
-- ε₀ = 1/8: Symmetry breaking scale
+- H* = 99: Total effective cohomological dimension (b₂ + b₃ + 1)
+- p₂ = 2: Binary duality (dim(G₂)/dim(K₇) = 14/7)
+- β₀ = π/8: Angular quantization (π/rank(E₈))
+- Weyl_factor = 5: Pentagonal symmetry (from |W(E₈)| = 2¹⁴ × 3⁵ × 5² × 7)
+- ξ = 5π/16: Correlation parameter (derived: (Weyl/p₂) × β₀)
+- τ = 3.89675: Hierarchy parameter (496×21/(27×99))
+- det(g) = 2.031: K₇ metric determinant
+- |T| = 0.0164: Global torsion magnitude
 - N_gen = 3: Number of fermion generations
 - δ_CP: CP violation phase
 - α: Fine structure constant
@@ -656,12 +661,16 @@ pip install -r requirements.txt
 
 ### Three Parameters
 
-The framework uses three geometric parameters:
-- **β₀ = 1/(4π²)**: Base coupling from E₈ normalization
-- **ξ = 5β₀/2**: Correlation parameter (DERIVED, not free!)
-- **ε₀ = 1/8**: Symmetry breaking scale from G₂
+The framework uses three topological parameters (see gift_2_1_main.md Section 8.1):
+- **p₂ = 2**: Binary duality (dim(G₂)/dim(K₇) = 14/7)
+- **β₀ = π/8**: Angular quantization (π/rank(E₈))
+- **Weyl_factor = 5**: Pentagonal symmetry (from |W(E₈)| factorization)
 
-**Critical**: ξ is exactly derived as ξ = 5β₀/2, reducing free parameters from 3 to 2 effectively.
+**Derived relations**:
+- **ξ = 5π/16**: Correlation parameter (= (Weyl/p₂) × β₀)
+- **τ = 3.89675**: Hierarchy parameter (496×21/(27×99))
+
+**Critical**: ξ is exactly derived from the three topological parameters, reducing effective free parameters.
 
 ### Exact Relations
 
@@ -671,16 +680,17 @@ The framework uses three geometric parameters:
 3. m_s/m_d = 20 (quark mass ratio)
 4. δ_CP = 197° (CP violation phase)
 5. m_τ/m_e = 3477 (lepton mass ratio)
-6. Ω_DE = ln(2) (dark energy density)
-7. ξ = 5β₀/2 (parameter relation)
-8. Additional dual derivations for √17 and Ω_DE
+6. Ω_DE = ln(2) × 98/99 (dark energy density)
+7. ξ = 5π/16 (parameter relation)
+8. λ_H = √17/32 (Higgs coupling)
+9. b₃ = 2×dim(K₇)² - b₂ (Betti number relation)
 
 **These must remain exact** in any framework modifications.
 
 ### Experimental Validation
 
 **Current status** (`docs/EXPERIMENTAL_VALIDATION.md`):
-- 34 dimensionless observables predicted
+- 37 observables predicted (26 dimensionless + 11 dimensional)
 - Mean deviation: 0.13%
 - Best predictions: <0.01% (α, δ_CP, Q_Koide)
 - All predictions: <1.0%

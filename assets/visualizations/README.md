@@ -35,27 +35,29 @@ These visualizations provide interactive exploration of the dimensional reductio
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
 
-**Description**: Comprehensive comparison of all validated dimensionless observables against experimental measurements across all physics sectors.
+**Description**: Comprehensive comparison of all 37 validated observables (dimensionless and dimensional) against experimental measurements across all physics sectors.
 
 **Features**:
-- Sector-wise precision gauges (Gauge, Neutrino, Lepton, Quark, Higgs, Cosmology)
-- Interactive heatmap of all 16 observables sorted by precision
+- Sector-wise precision gauges (Gauge, Neutrino, Lepton, Quark Ratio, CKM, Electroweak, Quark Mass, Cosmology)
+- Interactive heatmap of all 37 observables sorted by precision
 - Statistical distributions (histogram and box plots)
-- Detailed results table with deviations
-- Mean deviation: ~0.15% across all observables
+- Detailed results table with deviations and status classifications
+- Mean deviation: ~0.13% across all observables
 
-**Sectors covered**:
+**Sectors covered (v2.1)**:
 - Gauge couplings (3): α⁻¹(M_Z), sin²θ_W, α_s(M_Z)
 - Neutrino mixing (4): θ₁₂, θ₁₃, θ₂₃, δ_CP
 - Lepton masses (4): Q_Koide, m_μ/m_e, m_τ/m_e, m_τ/m_μ
-- Quark ratios (1): m_s/m_d
-- Higgs sector (1): λ_H
-- Cosmology (3): Ω_DE, n_s, H₀
+- Quark ratios (10): m_s/m_d, m_c/m_s, m_b/m_u, m_t/m_b, m_c/m_d, m_b/m_d, m_t/m_c, m_t/m_s, m_d/m_u, m_b/m_s
+- CKM matrix (6): V_us, V_cb, V_ub, V_td, V_ts, V_tb
+- Electroweak scale (3): v_EW, M_W, M_Z
+- Quark masses (6): m_u, m_d, m_s, m_c, m_b, m_t
+- Cosmology (2): Ω_DE, H₀
 
 **Key results**:
-- 4 exact predictions (0.000% deviation): δ_CP, m_s/m_d, m_τ/m_e, N_gen
-- All observables < 0.5% deviation
-- Most observables < 0.2% deviation
+- 9 exact relations (PROVEN status): δ_CP, m_s/m_d, m_τ/m_e, Q_Koide, N_gen, ξ, λ_H, Ω_DE, b₃
+- All 37 observables < 1.0% deviation
+- Most observables < 0.5% deviation
 
 **Runtime**: ~2-3 seconds
 
@@ -193,9 +195,10 @@ All visualizations use colorblind-friendly palettes:
 ### Data Validation
 
 All numerical values are validated against:
-- `publications/gift_v2_notebook.ipynb` (computational validation)
-- Experimental values from PDG, NuFIT, Planck collaborations
-- Mathematical formulas from Supplements B and C
+- `publications/gift_2_1_main.md` (v2.1 reference document)
+- `publications/GIFT_v21_Observable_Reference.md` (complete observable reference)
+- Experimental values from PDG 2024, NuFIT 5.3, Planck collaborations
+- Mathematical formulas from v2.1 Supplements
 
 ### Reproducibility
 
