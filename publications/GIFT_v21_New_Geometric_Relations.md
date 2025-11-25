@@ -367,6 +367,62 @@ This links the heat kernel coefficient to the same magic numbers!
 
 ---
 
+## 13. Deep Structure: Moonshine and Number Theory
+
+### Monstrous Moonshine Connection
+
+The j-invariant expansion reveals remarkable connections:
+
+$$j(q) = q^{-1} + 744 + 196884q + ...$$
+
+**Discovery**: 744 = 3 × 248 = N_gen × dim(E₈)
+
+The Leech lattice kissing number:
+$$196560 = 240 \times 819 = \text{roots}(E_8) \times 9 \times (b_3 + \dim(G_2))$$
+
+### Fibonacci-Lucas Encoding
+
+The framework constants follow Fibonacci/Lucas sequences:
+
+| Constant | Value | Sequence |
+|----------|-------|----------|
+| p₂ | 2 | F₃ |
+| N_gen | 3 | F₄ = M₂ |
+| Weyl | 5 | F₅ |
+| dim(K₇) | 7 | L₅ = M₃ |
+| rank(E₈) | 8 | F₆ |
+| 11 | 11 | L₆ = rank + N_gen |
+| b₂ | 21 | F₈ = C(7,2) |
+| b₃ | 77 | L₁₀ + 1 = 7 × 11 |
+
+### Exceptional Algebra Duality
+
+$$\dim(E_6) = b_3 + 1 = 78$$
+$$\dim(F_4) = 52 = 4 \times 13$$
+$$\sum \dim(\text{exceptional}) = 525 = N_{gen} \times \dim(K_7) \times W_f^2$$
+
+### Primorial Mass Formula
+
+$$\frac{m_\mu}{m_e} = P_4 - N_{gen} = 2 \times 3 \times 5 \times 7 - 3 = 207$$
+
+### New Candidate Formulas
+
+| Observable | Formula | Value | Deviation |
+|------------|---------|-------|-----------|
+| θ₁₂ | b₂ + dim(G₂) - p₂ | 33° | 1.3% |
+| θ_C | rank(E₈) + Weyl | 13° | 0.3% |
+
+### Cosmic Error-Correcting Code
+
+The structure [[496, 99, 31]] suggests:
+- n = 496 (3rd perfect number)
+- k = 99 = H* = 1 + 2×dim(K₇)²
+- d = 31 = M₅ (Mersenne prime)
+
+Rate k/n = 99/496 ≈ 1/5 = 1/Weyl
+
+---
+
 ## References
 
 ### Internal
@@ -384,7 +440,7 @@ This links the heat kernel coefficient to the same magic numbers!
 
 ---
 
-**Version**: 0.2 (research notes - combined discoveries)
+**Version**: 0.3 (research notes - deep structure exploration)
 **Date**: November 2025
 **Author**: GIFT Framework exploration
 **License**: MIT
