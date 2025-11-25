@@ -38,17 +38,29 @@
 | D_bulk | 11 | Geometric | Bulk spacetime dimension |
 | Weyl | 5 | Algebraic | Weyl factor from |W(E₈)| containing 5² |
 
-### 1.2 Geometric Parameters
+### 1.2 Topological Parameters (from gift_2_1_main.md Section 8.1)
+
+| Parameter | Value | Formula | Status |
+|-----------|-------|---------|--------|
+| p₂ | 2 | dim(G₂)/dim(K₇) = 14/7 | TOPOLOGICAL (exact) |
+| β₀ | π/8 ≈ 0.39270 | π/rank(E₈) | TOPOLOGICAL (exact) |
+| Weyl_factor | 5 | From \|W(E₈)\| = 2¹⁴ × 3⁵ × 5² × 7 | TOPOLOGICAL (exact) |
+
+### 1.3 Derived Parameters
+
+| Parameter | Formula | Value | Status |
+|-----------|---------|-------|--------|
+| ξ | (Weyl/p₂) × β₀ = 5π/16 | ≈ 0.98175 | DERIVED (exact) |
+| τ | 496×21/(27×99) | 3.89675 | DERIVED |
+
+### 1.4 Metric Parameters (from ML fitting)
 
 | Parameter | Value | Uncertainty | Origin |
 |-----------|-------|-------------|--------|
-| β₀ | 0.4483 | ±0.001 | Base coupling from E₈ normalization |
-| ξ | 1.1208 | ±0.003 | Correlation parameter (= 5β₀/2) |
-| ε₀ | 0.9998 | ±0.0005 | Symmetry breaking scale |
 | det(g) | 2.031 | ±0.01 | K₇ metric determinant |
 | \|T\| | 0.0164 | ±0.001 | Global torsion magnitude |
 
-### 1.3 Mathematical Constants
+### 1.5 Mathematical Constants
 
 | Symbol | Value | Definition |
 |--------|-------|------------|
@@ -56,13 +68,12 @@
 | ζ(3) | 1.2020569032 | Riemann zeta function |
 | γ | 0.5772156649 | Euler-Mascheroni constant |
 
-### 1.4 Derived Constants
+### 1.6 Additional Derived Constants
 
 | Symbol | Formula | Value | Status |
 |--------|---------|-------|--------|
 | δ | 2π/Weyl² | 0.251327 | PROVEN |
 | γ_GIFT | (2·rank(E₈) + 5·H*)/(10·dim(G₂) + 3·dim(E₈)) | 511/884 = 0.578054 | PROVEN |
-| τ | 21·e⁸/(99·norm) | 3.89675 | DERIVED |
 
 ---
 

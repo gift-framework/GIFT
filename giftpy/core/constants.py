@@ -202,30 +202,36 @@ class TopologicalConstants:
         """
         return 0.5772156649015328606065120900824024310421593359399235988057
 
-    # ========== GIFT-Specific Parameters ==========
+    # ========== GIFT-Specific Parameters (v2.1 from gift_2_1_main.md Section 8.1) ==========
 
     @property
     def beta0(self) -> float:
         """
-        Base coupling parameter β₀ = b₂/b₃ = 21/77.
+        Angular quantization parameter β₀ = π/rank(E₈) = π/8.
 
-        This is the fundamental coupling ratio in GIFT.
+        From gift_2_1_main.md Section 8.1:
+        This is the fundamental angular parameter in GIFT.
+
+        Status: TOPOLOGICAL (exact)
         """
-        return self.b2 / self.b3
+        return np.pi / self.rank_E8  # π/8 ≈ 0.39269908
 
     @property
     def xi(self) -> float:
         """
-        Correlation parameter ξ = (5/2)β₀.
+        Correlation parameter ξ = (Weyl_factor/p₂) × β₀ = 5π/16.
 
         CRITICAL: This is DERIVED, not free!
-        ξ = (5/2) × (21/77) = 105/154 ≈ 0.681818
+        ξ = (5/2) × (π/8) = 5π/16 ≈ 0.98174770
 
+        From gift_2_1_main.md Section 8.1:
         Appears in:
-        - Cosmological spectral index: n_s = ξ²
         - Neutrino mixing hierarchies
+        - Scale bridge formulas
+
+        Status: DERIVED (exact from topological parameters)
         """
-        return (5 / 2) * self.beta0
+        return (self.Weyl_factor / self.p2) * self.beta0  # 5π/16
 
     @property
     def epsilon0(self) -> float:

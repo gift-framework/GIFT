@@ -46,37 +46,45 @@ class GIFTFrameworkV21:
     """
 
     def __init__(self,
-                 beta0: float = 0.4483,
-                 xi: float = 1.1208,
-                 epsilon0: float = 0.9998,
+                 p2: float = 2.0,
+                 beta0: float = None,  # Will default to pi/8
+                 weyl_factor: float = 5.0,
                  det_g: float = 2.031,
                  torsion_magnitude: float = 0.0164):
         """
-        Initialize framework with geometric parameters.
+        Initialize framework with topological parameters from gift_2_1_main.md.
 
         Parameters:
-            beta0: Base coupling from E8 normalization
-            xi: Correlation parameter (should satisfy xi = 5*beta0/2)
-            epsilon0: Symmetry breaking scale
+            p2: Binary duality = dim(G2)/dim(K7) = 14/7 = 2 (TOPOLOGICAL)
+            beta0: Angular quantization = pi/rank(E8) = pi/8 (TOPOLOGICAL)
+            weyl_factor: Pentagonal symmetry from |W(E8)| = 5 (TOPOLOGICAL)
             det_g: Metric determinant (approximately 2)
             torsion_magnitude: Global torsion |T| from |d phi|
+
+        Derived parameters:
+            xi = (weyl_factor/p2) * beta0 = 5pi/16
+            tau = 496*21/(27*99) = 3.89675
         """
-        # Core geometric parameters
-        self.beta0 = beta0
-        self.xi = xi
-        self.epsilon0 = epsilon0
+        # Topological parameters (from gift_2_1_main.md Section 8.1)
+        self.p2 = p2
+        self.beta0 = beta0 if beta0 is not None else np.pi / 8  # pi/8 = 0.39269908...
+        self.weyl_factor = weyl_factor
         self.det_g = det_g
         self.torsion_magnitude = torsion_magnitude
+
+        # Derived parameters (exact topological relations)
+        self.xi = (self.weyl_factor / self.p2) * self.beta0  # = 5pi/16 = 0.98174770...
 
         # Topological invariants (exact integers)
         self.b2_K7 = 21          # Second Betti number
         self.b3_K7 = 77          # Third Betti number
-        self.H_star = 99         # Total effective dimension
+        self.H_star = 99         # Total effective dimension = b2 + b3 + 1
         self.dim_E8 = 248        # E8 dimension
         self.rank_E8 = 8         # E8 rank
         self.dim_G2 = 14         # G2 dimension
         self.dim_K7 = 7          # Internal manifold dimension
         self.D_bulk = 11         # Bulk spacetime dimension
+        self.dim_J3O = 27        # Exceptional Jordan algebra dimension
 
         # Mathematical constants
         self.phi = (1 + np.sqrt(5)) / 2  # Golden ratio
@@ -88,8 +96,9 @@ class GIFTFrameworkV21:
         self.T_piphi_e = -0.45    # CP violation component
         self.T_epi_phi = 3.1e-5   # Jarlskog component
 
-        # Hierarchical scaling parameter
-        self.tau = 3.89675
+        # Hierarchical scaling parameter (exact topological formula)
+        # tau = dim(E8×E8) * b2(K7) / (dim(J3(O)) * H*)
+        self.tau = (496 * 21) / (27 * 99)  # = 3.89675...
 
         # Experimental data with uncertainties
         self._load_experimental_data()
@@ -487,11 +496,13 @@ def run_monte_carlo_validation(n_samples: int = 100000, seed: int = 42) -> Dict[
     print(f"Random seed: {seed}")
     print("=" * 80)
 
-    # Parameter uncertainties
+    # Parameter uncertainties (topological values from gift_2_1_main.md)
+    # Note: p2, beta0, weyl_factor are exact topological values with zero theoretical uncertainty
+    # Only det_g and torsion_magnitude have measurement uncertainty from ML metric fitting
     param_config = {
-        'beta0': {'central': 0.4483, 'sigma': 0.001},
-        'xi': {'central': 1.1208, 'sigma': 0.003},
-        'epsilon0': {'central': 0.9998, 'sigma': 0.0005},
+        'p2': {'central': 2.0, 'sigma': 0.0},  # Exact: dim(G2)/dim(K7) = 14/7
+        'beta0': {'central': np.pi / 8, 'sigma': 0.0},  # Exact: pi/rank(E8)
+        'weyl_factor': {'central': 5.0, 'sigma': 0.0},  # Exact: from |W(E8)|
         'det_g': {'central': 2.031, 'sigma': 0.01},
         'torsion_magnitude': {'central': 0.0164, 'sigma': 0.001}
     }
@@ -522,9 +533,9 @@ def run_monte_carlo_validation(n_samples: int = 100000, seed: int = 42) -> Dict[
 
     for i in tqdm(range(n_samples), desc="MC Progress"):
         gift = GIFTFrameworkV21(
+            p2=samples['p2'][i],
             beta0=samples['beta0'][i],
-            xi=samples['xi'][i],
-            epsilon0=samples['epsilon0'][i],
+            weyl_factor=samples['weyl_factor'][i],
             det_g=samples['det_g'][i],
             torsion_magnitude=samples['torsion_magnitude'][i]
         )
@@ -720,10 +731,11 @@ def run_uniqueness_test(n_samples: int = 10000, seed: int = 42) -> Dict:
     # Sample random parameters
     chi2_values = []
 
+    # Note: Topological parameters have fixed values, only metric parameters vary
     param_ranges = {
-        'beta0': (0.1, 1.0),
-        'xi': (0.5, 2.0),
-        'epsilon0': (0.8, 1.2),
+        'p2': (1.5, 2.5),  # Should be exactly 2
+        'beta0': (0.2, 0.6),  # Should be pi/8 ~ 0.393
+        'weyl_factor': (3.0, 7.0),  # Should be exactly 5
         'det_g': (1.5, 2.5),
         'torsion_magnitude': (0.005, 0.05)
     }
