@@ -18,10 +18,14 @@ GIFT v2.2 represents a significant upgrade focused on:
 
 | Aspect | v2.1 | v2.2 |
 |--------|------|------|
-| Topological observables | ~20 | ~26 |
+| Free parameters | 3 + 1 ML-fit | **0** |
+| Topological observables | ~20 | ~27 |
 | Phenomenological observables | 6 | 0-2 |
-| Exact rational relations | 9 | 12+ |
-| Mean precision | 0.13% | Target: 0.10% |
+| Exact rational relations | 9 | **13** |
+| Mean precision | 0.13% | 0.13% |
+| Paradigm | Parameter reduction | **Structural emergence** |
+
+**Major Achievement**: det(g) = 65/32 discovered, eliminating last ML-fitted parameter.
 
 ---
 

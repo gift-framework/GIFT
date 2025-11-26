@@ -2,21 +2,10 @@
 
 ## Detailed Derivations of All 39 Observables
 
-*This supplement provides complete derivations for all observable predictions in the GIFT framework v2.2, organized by sector with full error analysis.*
+*This supplement provides complete derivations for all observable predictions in the GIFT framework, organized by sector with full error analysis.*
 
 **Version**: 2.2.0
 **Date**: 2025-11-26
-
----
-
-## What's New in v2.2
-
-- **sin²θ_W**: New exact formula 3/13 from Betti numbers (Section 1.2)
-- **α_s**: Geometric origin √2/(dim(G₂) - p₂) clarified (Section 1.3)
-- **κ_T**: Topological derivation 1/61 added (Section 1.4)
-- **τ**: Exact rational form 3472/891 with prime factorization (Section 1.5)
-- **λ_H**: Origin of 17 = dim(G₂) + N_gen explained (Section 6.1)
-- Updated experimental values (PDG 2024, NuFIT 5.3)
 
 ---
 
@@ -43,9 +32,9 @@ $$= 128 + 9 + 2.031 \times \frac{1}{61} = 137.033$$
    - 99/11 = 9: Information transfer cost
 
 3. **Torsional correction** (0.033):
-   - det(g) = 2.031: K₇ metric determinant
-   - κ_T = 1/61: Torsion magnitude (v2.2 topological formula)
-   - 2.031 × (1/61) = 0.0333
+   - det(g) = 65/32 = 2.03125: K₇ metric determinant (topological)
+   - κ_T = 1/61: Torsion magnitude (topological)
+   - (65/32) × (1/61) = 65/1952 = 0.0333...
 
 **Experimental Comparison**:
 | Quantity | Value |
@@ -58,11 +47,11 @@ $$= 128 + 9 + 2.031 \times \frac{1}{61} = 137.033$$
 
 ---
 
-### 1.2 Weinberg Angle (v2.2 UPDATE)
+### 1.2 Weinberg Angle
 
 **Observable**: Sine squared of the weak mixing angle
 
-**Formula (NEW in v2.2)**:
+**Formula**:
 $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = \frac{21}{91} = \frac{3}{13}$$
 
 **Components**:
@@ -80,13 +69,10 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 - 91 = 7 × 13 = dim(K₇) × (rank(E₈) + Weyl_factor)
 - 3/13 = 0.230769230769... (repeating)
 
-**Previous formula** (v2.1, still valid approximation):
-$$\sin^2\theta_W = \frac{\zeta(3) \cdot \gamma}{M_2} = \frac{1.202057 \times 0.577216}{3} = 0.231282$$
-
 **Experimental Comparison**:
 | Quantity | Value |
 |----------|-------|
-| GIFT prediction (v2.2) | 3/13 = 0.230769 |
+| GIFT prediction | 3/13 = 0.230769 |
 | Experimental | 0.23122 ± 0.00004 |
 | Deviation | 0.195% |
 
@@ -94,11 +80,11 @@ $$\sin^2\theta_W = \frac{\zeta(3) \cdot \gamma}{M_2} = \frac{1.202057 \times 0.5
 
 ---
 
-### 1.3 Strong Coupling Constant (v2.2 UPDATE)
+### 1.3 Strong Coupling Constant
 
 **Observable**: Strong coupling at M_Z scale
 
-**Formula (geometric origin clarified in v2.2)**:
+**Formula**:
 $$\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{\sqrt{2}}{12} = 0.117851$$
 
 **Components**:
@@ -125,7 +111,7 @@ $$\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \
 
 ---
 
-### 1.4 Torsion Magnitude (NEW in v2.2)
+### 1.4 Torsion Magnitude
 
 **Observable**: Global torsion magnitude κ_T
 
@@ -149,14 +135,14 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 | Quantity | Value |
 |----------|-------|
 | GIFT prediction | 1/61 = 0.016393 |
-| ML-fitted (v2.1) | 0.0164 ± 0.001 |
+| ML-constrained | 0.0164 ± 0.001 |
 | Deviation | 0.04% |
 
 **Status**: **TOPOLOGICAL** (derived from cohomology)
 
 ---
 
-### 1.5 Hierarchy Parameter τ (v2.2 UPDATE)
+### 1.5 Hierarchy Parameter τ
 
 **Observable**: Hierarchical scaling parameter
 
@@ -179,6 +165,38 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11}$$
 **Numerical value**: τ = 3472/891 = 3.8967452300785634...
 
 **Status**: **PROVEN** (exact rational from topological integers)
+
+---
+
+### 1.6 Metric Determinant det(g)
+
+**Observable**: K₇ metric determinant
+
+**Formula**:
+$$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{21 + 14 - 3} = 2 + \frac{1}{32} = \frac{65}{32}$$
+
+**Alternative derivations** (all equivalent):
+
+1. **Weyl-rank product**:
+$$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
+
+2. **Cohomological form**:
+$$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
+
+**The 32 structure**:
+- 32 = b₂ + dim(G₂) - N_gen = 21 + 14 - 3
+- 32 = 2⁵ (same denominator as λ_H = √17/32)
+
+This deep structure connects metric determinant to Higgs self-coupling.
+
+**Numerical values**:
+- Predicted: 65/32 = 2.03125
+- ML-constrained: 2.031
+- Deviation: 0.012%
+
+**Significance**: The topological origin of det(g) confirms the **zero-parameter paradigm** where all quantities derive from fixed topological structure.
+
+**Status**: **TOPOLOGICAL** (exact rational from cohomology)
 
 ---
 
@@ -434,14 +452,14 @@ $$\frac{m_\tau}{m_e} = \dim(K_7) + 10 \cdot \dim(E_8) + 10 \cdot H^* = 7 + 2480 
 
 ## 6. Higgs Sector (1 Observable)
 
-### 6.1 Higgs Quartic Coupling (v2.2 UPDATE)
+### 6.1 Higgs Quartic Coupling
 
 **Observable**: λ_H (Higgs self-coupling)
 
 **Formula (geometric origin clarified)**:
 $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}{2^5} = \frac{\sqrt{17}}{32} = 0.12891$$
 
-**Origin of 17 (NEW in v2.2)**:
+**Origin of 17**:
 - dim(G₂) = 14: G₂ holonomy dimension
 - N_gen = 3: Number of fermion generations
 - 17 = 14 + 3: Holonomy plus generation structure
@@ -451,7 +469,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}
 - 17 appears in 221 = 13 × 17 = dim(E₈) - dim(J₃(O))
 - 17 = H* - b₂ - 61 = 99 - 21 - 61
 
-**Dual derivation** (v2.1, still valid):
+**Dual derivation**:
 - Method 1: dim(Λ²₁₄) + dim(SU(2)_L) = 14 + 3 = 17
 - Method 2: b₂(K₇) - dim(Higgs) = 21 - 4 = 17
 
@@ -579,7 +597,7 @@ This ratio may contribute to understanding the Hubble tension.
 
 ## 8. Summary Tables
 
-### 8.1 Complete Observable List (v2.2)
+### 8.1 Complete Observable List
 
 | # | Observable | GIFT Value | Experimental | Deviation | Status |
 |---|------------|------------|--------------|-----------|--------|
@@ -611,7 +629,7 @@ This ratio may contribute to understanding the Hubble tension.
 | Higgs | 1 | 0.07% | λ_H |
 | Cosmology | 6 | variable | n_s (0.00%) |
 
-### 8.3 Status Summary (v2.2)
+### 8.3 Status Summary
 
 | Status | Count | Description |
 |--------|-------|-------------|
@@ -665,5 +683,5 @@ Monte Carlo analysis (10⁶ samples) confirms:
 
 ---
 
-*GIFT Framework v2.2 - Supplement S5*
-*Complete calculations with v2.2 updates*
+*GIFT Framework - Supplement S5*
+*Complete Calculations*

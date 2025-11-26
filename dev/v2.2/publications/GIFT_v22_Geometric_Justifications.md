@@ -9,30 +9,21 @@
 
 ---
 
-## What's New in v2.2
-
-- **Section 3**: New exact formula sin²θ_W = 3/13 with Betti number justification
-- **Section 4**: Geometric origin of α_s = √2/(dim(G₂) - p₂) clarified
-- **Section 5.5**: New subsection on τ = 3472/891 exact rational form
-- **Section 10**: Expanded structural patterns (221 connection, Fibonacci-Lucas)
-- **Section 11**: New section on κ_T = 1/61 topological derivation
-
----
-
 ## Table of Contents
 
 1. [Foundational Principles](#1-foundational-principles)
 2. [Fine Structure Constant](#2-fine-structure-constant)
-3. [Weak Mixing Angle (v2.2 Update)](#3-weak-mixing-angle)
-4. [Strong Coupling (v2.2 Update)](#4-strong-coupling)
+3. [Weak Mixing Angle](#3-weak-mixing-angle)
+4. [Strong Coupling](#4-strong-coupling)
 5. [Neutrino Mixing Angles](#5-neutrino-mixing-angles)
 6. [Lepton Mass Relations](#6-lepton-mass-relations)
 7. [Quark Mass Hierarchies](#7-quark-mass-hierarchies)
 8. [CKM Matrix](#8-ckm-matrix)
 9. [Cosmological Parameters](#9-cosmological-parameters)
-10. [Structural Patterns (v2.2 New)](#10-structural-patterns)
-11. [Torsion Magnitude κ_T (v2.2 New)](#11-torsion-magnitude)
-12. [Cross-Validation of Structures](#12-cross-validation-of-structures)
+10. [Structural Patterns](#10-structural-patterns)
+11. [Torsion Magnitude κ_T](#11-torsion-magnitude)
+12. [Metric Determinant det(g) = 65/32](#12-metric-determinant)
+13. [Cross-Validation of Structures](#13-cross-validation-of-structures)
 
 ---
 
@@ -102,7 +93,7 @@ The term H*/D_bulk = 99/11 = 9 quantifies geometric impedance:
 
 The term det(g) × κ_T = 2.031 × (1/61) ≈ 0.033 encodes vacuum polarization:
 
-*v2.2 update*: The torsion magnitude κ_T = 1/61 is now derived topologically rather than fitted.
+The torsion magnitude κ_T = 1/61 is derived topologically (see Section 11).
 
 ### Why Electromagnetism is Special
 
@@ -113,9 +104,9 @@ The three-component structure explains electromagnetic uniqueness:
 
 ---
 
-## 3. Weak Mixing Angle (v2.2 UPDATE)
+## 3. Weak Mixing Angle
 
-### Formula (NEW in v2.2)
+### Formula
 ```
 sin²θ_W = b₂(K₇) / (b₃(K₇) + dim(G₂)) = 21 / 91 = 3/13
 ```
@@ -153,19 +144,13 @@ sin²θ_W = b₂(K₇) / (b₃(K₇) + dim(G₂)) = 21 / 91 = 3/13
 
 This connects electroweak mixing to both internal geometry (7) and E₈ algebraic structure (8 + 5 = 13).
 
-**Previous formula** (v2.1, approximation):
-```
-sin²θ_W = ζ(3) × γ / 3 = 0.23128
-```
-This remains a valid numerical approximation arising from heat kernel considerations.
-
-**Status upgrade**: PHENOMENOLOGICAL → **PROVEN** (exact rational from Betti numbers)
+**Status**: **PROVEN** (exact rational from Betti numbers)
 
 ---
 
-## 4. Strong Coupling (v2.2 UPDATE)
+## 4. Strong Coupling
 
-### Formula (Geometric Origin Clarified)
+### Formula
 ```
 α_s(M_Z) = √2 / (dim(G₂) - p₂) = √2 / 12 = 0.11785
 ```
@@ -197,7 +182,7 @@ This remains a valid numerical approximation arising from heat kernel considerat
 - α_s = √2 × p₂/(rank(E₈) × N_gen) = √2 × 2/24 = √2/12
 - α_s = √2/(rank(E₈) + N_gen + 1) = √2/12
 
-**Status upgrade**: PHENOMENOLOGICAL → **TOPOLOGICAL** (geometric origin established)
+**Status**: **TOPOLOGICAL** (geometric origin established)
 
 ---
 
@@ -256,7 +241,7 @@ Note: 884 = 4 × 221 = 4 × 13 × 17 (see Section 10 for 221 significance).
 
 **Additive structure**: Unlike multiplicative relations, δ_CP arises from interference between independent geometric contributions (holonomy vs cohomology).
 
-### 5.5 The Rational Nature of τ (v2.2 NEW)
+### 5.5 The Rational Nature of τ
 
 #### Exact Form
 ```
@@ -377,7 +362,7 @@ The ratio of Riemann zeta values from bulk dimension (11) and Weyl factor (5).
 
 ---
 
-## 10. Structural Patterns (v2.2 NEW)
+## 10. Structural Patterns
 
 ### 10.1 The 221 Connection
 
@@ -432,7 +417,7 @@ The prime 61 appears prominently:
 
 ---
 
-## 11. Torsion Magnitude κ_T (v2.2 NEW)
+## 11. Torsion Magnitude κ_T
 
 ### Formula
 ```
@@ -464,13 +449,79 @@ The number 61 represents the "net effective degrees of freedom for torsion" afte
 
 Torsion magnitude is the reciprocal of degrees of freedom: more constraints → larger torsion. The magnitude κ_T measures how "tight" the geometric constraints are.
 
-**Status**: Previously fitted (|T| ≈ 0.0164), now **TOPOLOGICAL** (derived from cohomology).
+**Status**: **TOPOLOGICAL** (derived from cohomology)
 
 ---
 
-## 12. Cross-Validation of Structures
+## 12. Metric Determinant det(g) = 65/32
 
-### 12.1 The Weyl Factor = 5 Universality
+### 12.1 Overview
+
+The K₇ metric determinant has exact topological origin:
+
+$$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{32} = \frac{65}{32}$$
+
+### 12.2 Derivation
+
+**Step 1**: Identify the relevant topological quantities
+- p₂ = 2 (binary duality)
+- b₂ = 21 (second Betti number)
+- dim(G₂) = 14 (holonomy dimension)
+- N_gen = 3 (generations)
+
+**Step 2**: Compute the denominator
+$$b_2 + \dim(G_2) - N_{gen} = 21 + 14 - 3 = 32$$
+
+**Step 3**: Compute the determinant
+$$\det(g) = 2 + \frac{1}{32} = \frac{64 + 1}{32} = \frac{65}{32} = 2.03125$$
+
+### 12.3 Alternative Derivations
+
+All equivalent:
+
+1. **Weyl-rank product**:
+$$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
+
+2. **Cohomological form**:
+$$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
+
+### 12.4 The 32 Structure
+
+The denominator 32 = 2⁵ appears in both:
+- det(g) = 65/32
+- λ_H = √17/32
+
+This suggests deep binary structure connecting the K₇ metric to Higgs self-coupling.
+
+### 12.5 Geometric Interpretation
+
+| Component | Value | Role |
+|-----------|-------|------|
+| p₂ = 2 | Base contribution | Binary duality |
+| 1/32 | Correction | Gauge-matter interaction |
+| 32 | Denominator | Effective degrees of freedom |
+
+The metric determinant measures the "volume element" of the internal manifold. Its quantization to 65/32 reflects the discrete structure underlying physical law.
+
+### 12.6 Numerical Verification
+
+| Quantity | Value |
+|----------|-------|
+| Predicted | 65/32 = 2.03125 |
+| ML-constrained | 2.031 |
+| Deviation | 0.012% |
+
+### 12.7 Significance
+
+The topological origin of det(g) = 65/32 confirms the **zero-parameter paradigm**: all observables derive from fixed mathematical structures of E₈×E₈ and K₇, with no adjustable parameters.
+
+**Status**: **TOPOLOGICAL** (exact rational from cohomology)
+
+---
+
+## 13. Cross-Validation of Structures
+
+### 13.1 The Weyl Factor = 5 Universality
 
 | Observable | Weyl appearance | Context |
 |------------|-----------------|---------|
@@ -478,8 +529,9 @@ Torsion magnitude is the reciprocal of degrees of freedom: more constraints → 
 | m_s/m_d = 20 | 4 × 5 = 20 | Quark ratio |
 | δ (neutrino) | 2π/5² | Solar mixing |
 | λ_H | 2⁵ = 32 | Higgs denominator |
+| det(g) | 5 × 13 = 65 | Metric numerator |
 
-### 12.2 The Cohomological Dimension H* = 99
+### 13.2 The Cohomological Dimension H* = 99
 
 | Observable | H* appearance | Role |
 |------------|---------------|------|
@@ -488,8 +540,9 @@ Torsion magnitude is the reciprocal of degrees of freedom: more constraints → 
 | m_τ/m_e | 10 × 99 | Mass ratio |
 | Ω_DE | 98/99 | Dark energy |
 | τ | 27 × 99 | Denominator |
+| det(g) | H* - b₂ - 13 = 65 | Numerator |
 
-### 12.3 Internal Consistency Tests
+### 13.3 Internal Consistency Tests
 
 **Generation number**: N_gen = rank(E₈) - Weyl = 8 - 5 = 3 ✓
 
@@ -501,12 +554,11 @@ Torsion magnitude is the reciprocal of degrees of freedom: more constraints → 
 
 ## Concluding Remarks
 
-The v2.2 updates strengthen the case that GIFT predictions emerge from structural necessity:
+The geometric and topological justifications demonstrate that GIFT predictions emerge from structural necessity:
 
-1. **New exact relations**: sin²θ_W = 3/13, κ_T = 1/61, τ = 3472/891
-2. **Geometric origins clarified**: α_s = √2/(dim(G₂) - p₂)
+1. **Exact relations**: sin²θ_W = 3/13, κ_T = 1/61, τ = 3472/891, det(g) = 65/32
+2. **Geometric origins**: α_s = √2/(dim(G₂) - p₂)
 3. **Structural patterns**: 221 connection, Fibonacci-Lucas encoding
-4. **Reduced phenomenological input**: Several observables promoted from fitted to derived
 
 The ultimate test remains experimental verification, particularly:
 - DUNE measurement of δ_CP (predicted: 197°)

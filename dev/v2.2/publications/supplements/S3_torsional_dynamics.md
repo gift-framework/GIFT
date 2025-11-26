@@ -9,15 +9,6 @@
 
 ---
 
-## What's New in v2.2
-
-- **Section 1.2.4**: Topological derivation of κ_T = 1/61 (previously fitted)
-- **Section 1.2.5**: DESI DR2 (2025) compatibility verification
-- **Section 4.4**: Updated physical applications with exact τ = 3472/891
-- Updated status classifications reflecting v2.2 promotions
-
----
-
 ## Abstract
 
 We present the complete dynamical framework connecting static topological structure to physical evolution. Section 1 develops the torsion tensor from the non-closure of the G₂ 3-form, establishing its physical origin and component structure. Section 2 derives the geodesic flow equation from variational principles and establishes conservation laws. Section 3 identifies geodesic flow with renormalization group evolution. Key results include:
@@ -120,7 +111,7 @@ The torsion tensor components arise from dφ and d*φ:
 
 $$T_{ijk} \sim (d\phi)_{lijk} g^{lm} + \text{(dual terms)}$$
 
-### 1.2.4 Topological Derivation of κ_T (v2.2 NEW)
+### 1.2.4 Topological Derivation of κ_T
 
 **The magnitude κ_T is now derived from cohomological structure**:
 
@@ -144,11 +135,9 @@ $$\boxed{\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \f
 
 **Numerical value**: κ_T = 1/61 = 0.016393442...
 
-**Comparison with v2.1**: Previously |T| ≈ 0.0164 was fitted from ML metric reconstruction. The v2.2 topological formula gives 0.016393..., a 0.04% improvement in precision.
+**Status**: **TOPOLOGICAL**
 
-**Status**: **TOPOLOGICAL** (upgraded from THEORETICAL)
-
-### 1.2.5 Experimental Compatibility (v2.2 NEW)
+### 1.2.5 Experimental Compatibility
 
 **DESI DR2 (2025) constraints**:
 
@@ -389,8 +378,10 @@ $$\frac{\dot{\alpha}}{\alpha} \sim H_0 \times |\Gamma| \times |v|^2$$
 
 With:
 - H₀ ≈ 2.3 × 10⁻¹⁸ s⁻¹
-- |Γ| ~ κ_T/det(g) = (1/61)/2 ≈ 0.008
+- |Γ| ~ κ_T/det(g) = (1/61)/(65/32) = 32/(61×65) ≈ 0.008
 - |v| = flow velocity
+
+**Note**: det(g) = 65/32 is **TOPOLOGICAL**.
 
 **Constraint**: |v| < 0.7
 
@@ -455,7 +446,7 @@ $$H_0 \approx 69.8 \text{ km/s/Mpc}$$
 
 Intermediate between CMB (67.4) and local (73.0) measurements.
 
-## 4.4 Hierarchy Parameter τ (v2.2 UPDATE)
+## 4.4 Hierarchy Parameter τ
 
 The exact rational form τ = 3472/891 provides:
 
@@ -472,7 +463,7 @@ Links to Mersenne primes (7 = M₃, 31 = M₅) and Lucas numbers (11 = L₅).
 
 # 5. Summary
 
-## Key Results (v2.2 Updated)
+## Key Results
 
 | Result | Value | Status |
 |--------|-------|--------|
@@ -495,7 +486,7 @@ $$\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} 
 **RG identification**:
 $$\lambda = \ln(\mu/\mu_0), \quad \beta^i = \frac{dx^i}{d\lambda}$$
 
-**Topological torsion** (v2.2):
+**Topological torsion**:
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 
 ## Physical Interpretation
@@ -524,5 +515,5 @@ The framework provides geometric foundations for:
 
 ---
 
-*GIFT Framework v2.2 - Supplement S3*
-*Torsional Dynamics with topological κ_T derivation*
+*GIFT Framework - Supplement S3*
+*Torsional Dynamics*

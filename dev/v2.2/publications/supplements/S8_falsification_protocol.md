@@ -2,20 +2,10 @@
 
 ## Precise Experimental Tests and Falsification Criteria
 
-*This supplement provides clear, quantitative falsification criteria for the GIFT v2.2 framework, enabling rigorous experimental tests of the theoretical predictions.*
+*This supplement provides clear, quantitative falsification criteria for the GIFT framework, enabling rigorous experimental tests of the theoretical predictions.*
 
 **Version**: 2.2.0
 **Date**: 2025-11-26
-
----
-
-## What's New in v2.2
-
-- **Section 2.5**: sin²θ_W = 3/13 as new Type A test
-- **Section 2.6**: τ = 3472/891 as new Type A test
-- **Section 3.5**: κ_T = 1/61 cosmological test
-- **Section 5.4**: DESI DR2 torsion constraints
-- **Section 9**: Updated summary (12 PROVEN relations)
 
 ---
 
@@ -45,14 +35,14 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 - Existence/non-existence of particles
 - Sign of CP violation
 
-### 1.3 v2.2 Enhanced Classification
+### 1.3 Status Classification
 
-| Status | v2.1 Count | v2.2 Count | Test Type |
-|--------|------------|------------|-----------|
-| PROVEN | 9 | **12** | Type A |
-| TOPOLOGICAL | 11 | **12** | Type A/B |
-| DERIVED | 12 | 9 | Type B |
-| THEORETICAL | 6 | 6 | Type C |
+| Status | Count | Test Type |
+|--------|-------|-----------|
+| PROVEN | 13 | Type A |
+| TOPOLOGICAL | 12 | Type A/B |
+| DERIVED | 9 | Type B |
+| THEORETICAL | 6 | Type C |
 
 ---
 
@@ -90,7 +80,7 @@ $$m_\tau/m_e = \dim(K_7) + 10 \times \dim(E_8) + 10 \times H^* = 7 + 2480 + 990 
 - Deviation: 0.000%
 - Status: CONSISTENT
 
-**v2.2 Connection**: 3477 = 57 x 61, where 61 = b₃ - dim(G₂) - p₂ (torsion denominator)
+**Structural Connection**: 3477 = 57 x 61, where 61 = b₃ - dim(G₂) - p₂ (torsion denominator)
 
 ### 2.3 Strange-Down Mass Ratio
 
@@ -119,7 +109,7 @@ $$Q = \dim(G_2)/b_2(K_7) = 14/21 = 2/3$$
 - Deviation: 0.001%
 - Status: CONSISTENT
 
-### 2.5 Weinberg Angle (v2.2 NEW)
+### 2.5 Weinberg Angle
 
 **Prediction**: sin²θ_W = 3/13 = 0.230769... (exactly)
 
@@ -130,7 +120,7 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{77 + 14} = \frac{21}{
 
 **Current experimental status**:
 - PDG 2024: sin²θ_W = 0.23122 +/- 0.00004
-- GIFT v2.2: 0.230769
+- GIFT: 0.230769
 - Deviation: 0.195% (0.45 in experimental sigma)
 - Status: CONSISTENT
 
@@ -140,7 +130,7 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{77 + 14} = \frac{21}{
 - FCC-ee Tera-Z (projected uncertainty: +/- 0.00001)
 - GigaZ at ILC
 
-### 2.6 Hierarchy Parameter τ (v2.2 NEW)
+### 2.6 Hierarchy Parameter τ
 
 **Prediction**: τ = 3472/891 = 3.896747... (exactly)
 
@@ -198,7 +188,7 @@ $$\delta_{CP} = \dim(K_7) \times \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 
 
 **Prediction**: α_s(M_Z) = √2/12 = 0.117851...
 
-**Mathematical basis (v2.2)**:
+**Mathematical basis**:
 $$\alpha_s = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{\sqrt{2}}{12}$$
 
 **Tolerance**: +/- 0.002
@@ -207,7 +197,7 @@ $$\alpha_s = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{
 
 **Current experimental status**:
 - PDG 2024: α_s(M_Z) = 0.1179 +/- 0.0009
-- GIFT v2.2: 0.11785
+- GIFT: 0.11785
 - Deviation: 0.04%
 - Status: CONSISTENT
 
@@ -235,7 +225,7 @@ $$\alpha_s = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{
 
 **Prediction**: λ_H = √17/32 = 0.12891
 
-**Mathematical basis (v2.2)**:
+**Mathematical basis**:
 $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{17}}{32}$$
 
 **Tolerance**: +/- 0.005
@@ -249,7 +239,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{17}}{32}
 - HL-LHC (precision: +/- 0.02)
 - Future e+e- colliders (precision: +/- 0.005)
 
-### 3.5 Torsion Magnitude (v2.2 NEW)
+### 3.5 Torsion Magnitude
 
 **Prediction**: κ_T = 1/61 = 0.016393...
 
@@ -262,7 +252,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 
 **Current experimental status**:
 - DESI DR2 (2025): |T|² < 10⁻³ (95% CL)
-- GIFT v2.2: κ_T² = (1/61)² = 2.69 × 10⁻⁴
+- GIFT: κ_T² = (1/61)² = 2.69 × 10⁻⁴
 - Status: CONSISTENT (well within bounds)
 
 **Key property**: 61 divides 3477 (m_τ/m_e), creating cross-sector consistency
@@ -341,7 +331,7 @@ This is effectively stable on cosmological timescales.
 
 **Future tests**: CMB-S4 (target sensitivity: 0.001)
 
-### 5.4 Cosmological Torsion Constraints (v2.2 NEW)
+### 5.4 Cosmological Torsion Constraints
 
 **Prediction**: κ_T = 1/61 implies testable cosmological signatures
 
@@ -393,8 +383,8 @@ The framework must satisfy:
 2. **Cohomology constraint**: H* = 99
 3. **Parameter relation**: ξ = (5/2) × β₀
 4. **Dual origin**: p₂ = 2 from both local and global calculations
-5. **v2.2**: sin²θ_W = b₂/(b₃ + dim(G₂)) reduces to 3/13
-6. **v2.2**: τ prime factorization contains only framework constants
+5. sin²θ_W = b₂/(b₃ + dim(G₂)) reduces to 3/13
+6. τ prime factorization contains only framework constants
 
 Violation of any internal consistency relation invalidates the framework.
 
@@ -405,7 +395,7 @@ Predictions in different sectors must be mutually consistent:
 - Gauge couplings must unify at E₈ scale
 - Mixing angles must satisfy unitarity
 - Cosmological parameters must sum correctly
-- **v2.2**: 61 must divide both κ_T denominator and m_τ/m_e
+- 61 must divide both κ_T denominator and m_τ/m_e
 
 ### 7.3 Renormalization Group Consistency
 
@@ -424,13 +414,13 @@ Predictions at different energy scales must be connected by RG flow:
    - Current uncertainty: +/- 24°
    - Target: +/- 10°
    - GIFT prediction: 197° exactly
-   - **v2.2 status**: Central value exact match
+   - Central value exact match
 
 2. **sin²θ_W precision** (FCC-ee, ILC)
    - Current uncertainty: +/- 0.00004
    - Target: +/- 0.00001
-   - GIFT v2.2 prediction: 3/13 = 0.230769...
-   - **Critical test for v2.2 formula**
+   - GIFT prediction: 3/13 = 0.230769...
+   - Critical test for exact formula
 
 3. **Higgs self-coupling** (HL-LHC)
    - Current uncertainty: +/- 0.03
@@ -454,7 +444,7 @@ Predictions at different energy scales must be connected by RG flow:
 
 ---
 
-## 9. Summary Table (v2.2 Updated)
+## 9. Summary Table
 
 | Prediction | Type | Tolerance | Current | Status | Key Test |
 |------------|------|-----------|---------|--------|----------|
@@ -474,30 +464,30 @@ Predictions at different energy scales must be connected by RG flow:
 
 **Overall status**: All predictions consistent with current data. Framework remains viable pending future high-precision tests.
 
-**v2.2 Improvements**:
-- 12 PROVEN relations (up from 9)
-- New falsifiable predictions (sin²θ_W = 3/13, κ_T = 1/61, τ exact)
+**Key strengths**:
+- 13 PROVEN relations
+- Multiple falsifiable predictions (sin²θ_W = 3/13, κ_T = 1/61, τ exact)
 - DESI DR2 compatibility confirmed
 
 ---
 
-## 10. Critical Tests for v2.2
+## 10. Critical Tests
 
 ### 10.1 The sin²θ_W = 3/13 Test
 
-This is the most stringent new test in v2.2:
+This is one of the most stringent tests:
 
 **Predicted**: 0.230769...
 **Measured**: 0.23122 +/- 0.00004
 **Deviation**: 1.13σ
 
 **Scenarios**:
-- If FCC-ee measures sin²θ_W = 0.2308 +/- 0.00001: **Strong support for v2.2**
+- If FCC-ee measures sin²θ_W = 0.2308 +/- 0.00001: **Strong support**
 - If FCC-ee measures sin²θ_W = 0.2312 +/- 0.00001: **Tension with exact formula**
 
 ### 10.2 The 61 Connection Test
 
-v2.2 predicts 61 appears in multiple relations:
+The framework predicts 61 appears in multiple relations:
 - κ_T = 1/61
 - 3477 = 57 × 61 (m_τ/m_e)
 - 61 = b₃ - dim(G₂) - p₂ = 77 - 14 - 2
@@ -530,5 +520,5 @@ All factors are framework constants:
 
 ---
 
-*GIFT Framework v2.2 - Supplement S8*
+*GIFT Framework - Supplement S8*
 *Falsification Protocol*

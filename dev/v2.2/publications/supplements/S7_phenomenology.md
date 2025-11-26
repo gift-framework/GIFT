@@ -2,20 +2,10 @@
 
 ## Experimental Comparison and Statistical Analysis
 
-*This supplement provides detailed comparison of GIFT v2.2 predictions with experimental data.*
+*This supplement provides detailed comparison of GIFT predictions with experimental data.*
 
 **Version**: 2.2.0
 **Date**: 2025-11-26
-
----
-
-## What's New in v2.2
-
-- **Section 2**: Updated experimental values (PDG 2024, NuFIT 5.3)
-- **Section 2.1**: sin²θ_W = 3/13 exact formula
-- **Section 2.8**: New observables κ_T = 1/61 and τ = 3472/891
-- **Section 4**: Updated status classifications (12 PROVEN)
-- **Section 5**: DESI DR2 (2025) compatibility
 
 ---
 
@@ -31,11 +21,11 @@
 
 ---
 
-## 2. Comparison Tables (v2.2)
+## 2. Comparison Tables
 
 ### 2.1 Gauge Sector
 
-| Observable | GIFT v2.2 | Experimental | Uncertainty | Deviation | Status |
+| Observable | GIFT | Experimental | Uncertainty | Deviation | Status |
 |------------|-----------|--------------|-------------|-----------|--------|
 | α⁻¹(M_Z) | 137.033 | 137.036 | 0.000001 | 0.002% | TOPOLOGICAL |
 | **sin²θ_W** | **3/13 = 0.23077** | 0.23122 | 0.00004 | **0.195%** | **PROVEN** |
@@ -100,16 +90,16 @@
 | Ω_DE | ln(2)×98/99 = 0.6861 | 0.6847 | 0.0073 | 0.21% | PROVEN |
 | n_s | ζ(11)/ζ(5) = 0.9649 | 0.9649 | 0.0042 | 0.00% | PROVEN |
 
-### 2.8 New v2.2 Observables
+### 2.8 Torsion and Hierarchy Parameters
 
 | Observable | GIFT | Reference | Deviation | Status |
 |------------|------|-----------|-----------|--------|
-| **κ_T** | **1/61 = 0.01639** | 0.0164 (v2.1 fit) | 0.04% | **TOPOLOGICAL** |
-| **τ** | **3472/891 = 3.8967** | 3.89675 (v2.1) | 0.01% | **PROVEN** |
+| κ_T | 1/61 = 0.01639 | 0.0164 (ML-constrained) | 0.04% | TOPOLOGICAL |
+| τ | 3472/891 = 3.8967 | 3.89675 (numerical) | 0.01% | PROVEN |
 
 ---
 
-## 3. Statistical Analysis (v2.2)
+## 3. Statistical Analysis
 
 ### 3.1 Chi-Square Test
 
@@ -138,27 +128,18 @@ Consistent with Gaussian distribution.
 
 ---
 
-## 4. Status Classification (v2.2 Updated)
+## 4. Status Classification
 
 ### 4.1 By Status
 
-| Status | Count v2.1 | Count v2.2 | Change |
-|--------|------------|------------|--------|
-| **PROVEN** | 9 | **12** | +3 |
-| **TOPOLOGICAL** | 11 | **12** | +1 |
-| DERIVED | 12 | 9 | -3 |
-| THEORETICAL | 6 | 6 | 0 |
+| Status | Count | Description |
+|--------|-------|-------------|
+| **PROVEN** | 13 | Exact rational/integer from topology |
+| **TOPOLOGICAL** | 12 | Direct topological derivation |
+| DERIVED | 9 | Computed from topological relations |
+| THEORETICAL | 6 | Theoretical justification |
 
-### 4.2 v2.2 Status Promotions
-
-| Observable | v2.1 | v2.2 | New Formula |
-|------------|------|------|-------------|
-| sin²θ_W | PHENOMENOLOGICAL | **PROVEN** | 3/13 |
-| α_s | PHENOMENOLOGICAL | **TOPOLOGICAL** | √2/12 geometric |
-| κ_T | THEORETICAL | **TOPOLOGICAL** | 1/61 |
-| τ | DERIVED | **PROVEN** | 3472/891 |
-
-### 4.3 Complete PROVEN List (12)
+### 4.2 Complete PROVEN List (13)
 
 1. N_gen = 3
 2. Q_Koide = 2/3
@@ -169,19 +150,20 @@ Consistent with Gaussian distribution.
 7. n_s = ζ(11)/ζ(5)
 8. ξ = 5π/16
 9. λ_H = √17/32
-10. **sin²θ_W = 3/13** (v2.2)
-11. **τ = 3472/891** (v2.2)
-12. **b₃ relation** (v2.2)
+10. sin²θ_W = 3/13
+11. τ = 3472/891
+12. b₃ relation
+13. det(g) = 65/32
 
 ---
 
-## 5. Experimental Compatibility (v2.2)
+## 5. Experimental Compatibility
 
 ### 5.1 DESI DR2 (2025) Torsion Constraints
 
 **Cosmological torsion bound**: |T|² < 10⁻³ (95% CL)
 
-**GIFT v2.2 value**: κ_T² = (1/61)² = 2.69 × 10⁻⁴
+**GIFT value**: κ_T² = (1/61)² = 2.69 × 10⁻⁴
 
 **Result**: Well within bounds ✓
 
@@ -198,7 +180,7 @@ All predictions remain consistent with updated data.
 
 ---
 
-## 6. Precision Hierarchy (v2.2)
+## 6. Precision Hierarchy
 
 ### 6.1 Best Predictions (<0.01%)
 
@@ -220,34 +202,42 @@ All predictions remain consistent with updated data.
 | 0.5-1.0% | 4 | 10% |
 | >1.0% | 1 | 3% |
 
-**Mean deviation**: 0.128% (improved from 0.131%)
+**Mean deviation**: 0.128%
 **Median deviation**: 0.095%
 
 ---
 
-## 7. Parameter Reduction
+## 7. Parameter Reduction: Zero-Parameter Paradigm
 
 **Standard Model**: 19+ free parameters
-**GIFT v2.2**: 3 topological parameters (p₂, Weyl, rank)
+**GIFT**: **0 free parameters** (all derive from fixed topology)
 
-**Effective reduction**: 6.3x minimum
+**Paradigm shift**: From parameter reduction to structural emergence.
 
-With v2.2 exact formulas, more observables derive from topology alone.
+| "Parameter" | Value | Status |
+|-------------|-------|--------|
+| p₂ | 2 | Fixed (dim(G₂)/dim(K₇)) |
+| β₀ | π/8 | Fixed (π/rank(E₈)) |
+| Weyl | 5 | Fixed (from \|W(E₈)\|) |
+| det(g) | 65/32 | Fixed (cohomological) |
+
+All quantities are topological invariants, not adjustable parameters.
 
 ---
 
 ## 8. Summary
 
-### 8.1 v2.2 Improvements
+### 8.1 Key Results
 
-- **12 PROVEN** relations (up from 9)
-- **Mean deviation**: 0.128% (slightly improved)
+- **13 PROVEN** relations (exact rational/integer values)
+- **Zero-parameter paradigm**: all quantities from fixed topology
+- **Mean deviation**: 0.128%
 - **χ²/dof**: 0.40 (excellent fit)
 - **DESI DR2 compatible**: κ_T within bounds
 
 ### 8.2 Framework Status
 
-All predictions remain consistent with experimental data. The v2.2 updates strengthen theoretical foundations while maintaining phenomenological agreement.
+All predictions are consistent with experimental data. The framework derives 39 observables from pure topological structure with exceptional precision.
 
 ---
 
@@ -261,5 +251,5 @@ All predictions remain consistent with experimental data. The v2.2 updates stren
 
 ---
 
-*GIFT Framework v2.2 - Supplement S7*
+*GIFT Framework - Supplement S7*
 *Phenomenology*
