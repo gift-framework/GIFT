@@ -328,11 +328,21 @@ $$221 = 13 \times 17 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 
 ---
 
-## 3.7 The Zero-Parameter Principle
+## 3.7 Structural Determination Without Continuous Parameters
 
 ### 3.7.1 From Parameters to Structure
 
 Traditional physics frameworks require parameters - continuous quantities adjusted to match experiment. The GIFT framework eliminates this requirement entirely.
+
+The terminology "zero-parameter" refers specifically to the absence of continuous adjustable quantities. The framework does involve discrete mathematical choices:
+
+| Choice | Alternatives exist? | Justification |
+|--------|---------------------|---------------|
+| E₈×E₈ gauge group | Yes (E₈, SO(32), etc.) | Anomaly cancellation, maximal exceptional structure |
+| K₇ via TCS | Yes (other G₂ manifolds) | Specific Betti numbers matching SM field content |
+| G₂ holonomy | Limited (Spin(7), SU(3), etc.) | N=1 SUSY preservation, chiral fermions |
+
+These discrete choices, once made, determine all predictions uniquely. No continuous parameter space is explored or optimized.
 
 **The Zero-Parameter Paradigm**: All quantities appearing in observable predictions derive from fixed mathematical structures:
 

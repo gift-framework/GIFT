@@ -285,9 +285,41 @@ $$221 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 
 ---
 
-## 5. Missing Observables
+## 5. Number-Theoretic Patterns: Status and Interpretation
 
-### 5.1 Strong CP Angle
+### 5.1 Classification
+
+The following patterns appear in the framework but are not used in deriving predictions:
+
+| Pattern | Observation | Status |
+|---------|-------------|--------|
+| Fibonacci encoding | p₂=F₃, N_gen=F₄, Weyl=F₅, b₂=F₈ | Descriptive, not predictive |
+| Mersenne primes | M₂=3 (generations), M₃=7 (dim K₇), M₅=31 (in τ) | Suggestive coincidence |
+| 221 = 13×17 | Links sin²θ_W and λ_H denominators | Unexplained connection |
+| Lucas numbers | L₄=7, L₅=11, L₆=18 in framework | Parallel to Fibonacci |
+
+### 5.2 Interpretation Options
+
+1. **Coincidence**: Patterns are numerological artifacts
+2. **Selection effect**: Structures with "nice" number theory are easier to discover
+3. **Deeper principle**: Unknown mathematical structure explains patterns
+
+The framework's falsifiable predictions do not depend on resolving this question. These patterns may serve as clues for future theoretical development but should not be considered established results.
+
+### 5.3 Cautionary Note
+
+While the appearance of Fibonacci, Lucas, and Mersenne sequences is intriguing, readers should distinguish between:
+
+- **Established results**: Exact topological formulas (sin²θ_W = 3/13, τ = 3472/891, etc.)
+- **Observations**: Number-theoretic patterns that may or may not reflect deeper structure
+
+The predictive success of the framework rests entirely on the established results.
+
+---
+
+## 6. Missing Observables
+
+### 6.1 Strong CP Angle
 
 **Prediction**: theta_QCD < 10^{-18}
 
@@ -298,7 +330,7 @@ $$\theta_{QCD} = \frac{\text{Tr}(G \tilde{G})}{32\pi^2} \approx \frac{1}{|W(E_8)
 
 **Status**: THEORETICAL (topological suppression mechanism)
 
-### 5.2 Neutrino Masses
+### 6.2 Neutrino Masses
 
 **Prediction**: Normal hierarchy with:
 $$\sum m_\nu = 0.0587 \text{ eV}$$
@@ -313,7 +345,7 @@ $$m_\nu \sim \frac{v^2}{M_{K7}}$$
 
 **Status**: EXPLORATORY (testable by KATRIN, cosmology)
 
-### 5.3 Baryon Asymmetry
+### 6.3 Baryon Asymmetry
 
 **Prediction**:
 $$\eta_B = \frac{n_B - n_{\bar{B}}}{n_\gamma} \approx \frac{N_{gen}}{H^* \cdot 10^8} = 3 \times 10^{-10}$$
@@ -324,7 +356,7 @@ $$\eta_B = \frac{n_B - n_{\bar{B}}}{n_\gamma} \approx \frac{N_{gen}}{H^* \cdot 1
 
 **Status**: EXPLORATORY
 
-### 5.4 sin^2(theta_W) Implications
+### 6.4 sin^2(theta_W) Implications
 
 **Exact formula**: sin^2(theta_W) = 3/13
 
@@ -338,7 +370,7 @@ $$\eta_B = \frac{n_B - n_{\bar{B}}}{n_\gamma} \approx \frac{N_{gen}}{H^* \cdot 1
 - GIFT predicts sin^2(theta_W) = 3/13 = 0.2308 at electroweak scale
 - The difference encodes RG running from unification to M_Z
 
-### 5.5 kappa_T Cosmological Implications
+### 6.5 kappa_T Cosmological Implications
 
 **Exact formula**: kappa_T = 1/61
 
@@ -354,9 +386,9 @@ $$\eta_B = \frac{n_B - n_{\bar{B}}}{n_\gamma} \approx \frac{N_{gen}}{H^* \cdot 1
 
 ---
 
-## 6. Speculative Directions
+## 7. Speculative Directions
 
-### 6.1 Emergence of Time
+### 7.1 Emergence of Time
 
 **Thermal time hypothesis**:
 
@@ -374,7 +406,7 @@ $$F = T \frac{\Delta S}{\Delta x}$$
 
 K7 cohomology provides entropy: S ~ log(H*) = log(99).
 
-### 6.2 Consciousness Studies
+### 7.2 Consciousness Studies
 
 **Speculative connection to Integrated Information Theory (IIT)**:
 
@@ -387,7 +419,7 @@ IIT posits consciousness correlates with integrated information Phi.
 
 **Status**: SPECULATIVE (no testable predictions yet)
 
-### 6.3 Multiverse Considerations
+### 7.3 Multiverse Considerations
 
 **Landscape vs unique solution**:
 
@@ -406,9 +438,9 @@ If GIFT predictions hold with continued precision:
 
 ---
 
-## 7. Open Problems
+## 8. Open Problems
 
-### 7.1 Theoretical
+### 8.1 Theoretical
 
 1. **~~First-principles derivation of tau~~**: **RESOLVED** - tau = 496*21/(27*99) = 3472/891
 2. **Complete proof of N_gen = 3**: Multiple arguments but no single definitive proof
@@ -416,14 +448,14 @@ If GIFT predictions hold with continued precision:
 4. **Quantum corrections**: How do loop effects modify topological predictions?
 5. **~~sin^2(theta_W) derivation~~**: **RESOLVED** - sin^2(theta_W) = b2/(b3 + dim(G2))
 
-### 7.2 Computational
+### 8.2 Computational
 
 1. **Explicit K7 metric**: Achieved via PINN v1.2c (det(g) = 2.0134, 0.67% error)
 2. **Full harmonic form basis**: b2=21 and b3=77 extracted exactly (v1.2c)
 3. **Yukawa coupling extraction**: Preliminary tensor available, phenomenology in progress
 4. **RG running verification**: 4-term flow (A+B+C+D) calibrated, Delta_alpha = -0.896 (0.44% error)
 
-### 7.3 Experimental
+### 8.3 Experimental
 
 1. **delta_CP precision**: DUNE will test 197 degree prediction
 2. **sin^2(theta_W) precision**: FCC-ee will test 3/13 = 0.230769 prediction
@@ -434,9 +466,9 @@ If GIFT predictions hold with continued precision:
 
 ---
 
-## 8. Future Directions
+## 9. Future Directions
 
-### 8.1 Near-term
+### 9.1 Near-term
 
 - Complete K7 metric computation via ML
 - Extract Yukawa couplings from geometry
@@ -444,7 +476,7 @@ If GIFT predictions hold with continued precision:
 - Test sin^2(theta_W) prediction with improved precision
 - Verify kappa_T with DESI DR3+
 
-### 8.2 Medium-term
+### 9.2 Medium-term
 
 - Develop quantum field theory on K7
 - Connect to quantum gravity approaches
@@ -452,7 +484,7 @@ If GIFT predictions hold with continued precision:
 - Explore information-theoretic foundations
 - Derive remaining observables from exact formulas
 
-### 8.3 Long-term
+### 9.3 Long-term
 
 - Unify with quantum gravity
 - Address emergence of spacetime
@@ -461,7 +493,7 @@ If GIFT predictions hold with continued precision:
 
 ---
 
-## 9. Summary
+## 10. Summary
 
 The GIFT framework opens several directions for extension:
 

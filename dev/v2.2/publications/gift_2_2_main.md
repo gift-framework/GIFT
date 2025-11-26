@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This work explores a geometric framework in which Standard Model parameters emerge as topological invariants of seven-dimensional manifolds with G₂ holonomy. The approach relates 39 dimensionless and dimensional observables to pure mathematical structure through the dimensional reduction chain E₈×E₈ → K₇ → Standard Model, achieving mean deviation 0.13% across six orders of magnitude. Remarkably, **no free parameters require adjustment**: all quantities derive from fixed topological invariants of E₈ and K₇.
+This work explores a geometric framework in which Standard Model parameters emerge as topological invariants of seven-dimensional manifolds with G₂ holonomy. The approach relates 39 dimensionless and dimensional observables to pure mathematical structure through the dimensional reduction chain E₈×E₈ → K₇ → Standard Model, achieving mean deviation 0.13% across six orders of magnitude. The framework contains **no continuous adjustable parameters**: all quantities derive from fixed topological invariants of discrete mathematical structures (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy).
 
 The framework introduces torsional geodesic dynamics connecting static topology to renormalization group flow via the equation:
 
@@ -74,7 +74,64 @@ E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
 
 **Core principle**: Observables emerge as topological invariants, not tunable couplings.
 
-### 1.4 Paper Organization
+### 1.4 Structural Assumptions and Derived Quantities
+
+The framework rests on discrete mathematical structure choices, not continuous parameter adjustments. The following table distinguishes foundational assumptions from derived predictions.
+
+#### Table 1: Framework Input-Output Structure
+
+| **Structural Input (Discrete Choices)** | **Mathematical Basis** |
+|-----------------------------------------|------------------------|
+| E₈×E₈ gauge group | Largest exceptional Lie algebra product; anomaly-free in heterotic string theory |
+| K₇ manifold via twisted connected sum | Joyce-Kovalev construction with specific building blocks |
+| G₂ holonomy | Preserves N=1 supersymmetry; admits calibrated geometry |
+| Betti numbers b₂(K₇) = 21, b₃(K₇) = 77 | Determined by TCS building blocks (quintic + CI(2,2,2)) |
+
+| **Derived Output** | **Count** | **Status** |
+|--------------------|-----------|------------|
+| Exact topological relations | 13 | PROVEN |
+| Direct topological consequences | 12 | TOPOLOGICAL |
+| Computed from topological relations | 9 | DERIVED |
+| Requiring single scale input | 5 | THEORETICAL |
+| **Total observables** | **39** | Mean deviation 0.128% |
+
+No continuous parameters are adjusted to fit experimental data. The structural choices determine all predictions uniquely.
+
+### 1.5 Result Hierarchy
+
+Framework results divide into three layers with decreasing epistemic certainty:
+
+#### Layer 1: Falsifiable Core (High confidence)
+
+Direct topological predictions testable by near-term experiments:
+
+| Prediction | Formula | Test | Timeline |
+|------------|---------|------|----------|
+| δ_CP = 197° | 7×dim(G₂) + H* | DUNE | 2027-2030 |
+| sin²θ_W = 3/13 | b₂/(b₃ + dim(G₂)) | FCC-ee | 2040s |
+| m_s/m_d = 20 | p₂² × Weyl | Lattice QCD | 2030 |
+| Q_Koide = 2/3 | dim(G₂)/b₂ | Precision masses | Ongoing |
+
+#### Layer 2: Structural Relations (Medium confidence)
+
+Derived quantities depending on Layer 1 plus additional geometric structure:
+
+- Quark mass ratios (m_c/m_s, m_t/m_b, etc.)
+- CKM matrix elements
+- Absolute mass scales (requiring Λ_GIFT bridge)
+
+#### Layer 3: Supplementary Patterns (Speculative)
+
+Number-theoretic observations suggesting deeper structure, not used in predictions:
+
+- Fibonacci-Lucas encoding of framework constants
+- Mersenne prime appearances (M₂=3, M₃=7, M₅=31)
+- 221 = 13×17 connection between sectors
+- Binary/pentagonal symmetry patterns
+
+These patterns, while intriguing, should be regarded as potential clues for future theoretical development rather than established results.
+
+### 1.6 Paper Organization
 
 - **Part I** (Sections 2-4): Geometric architecture - E₈×E₈ structure, K₇ manifold, explicit metric
 - **Part II** (Sections 5-7): Torsional dynamics - torsion tensor, geodesic flow, scale bridge
@@ -829,7 +886,7 @@ where R ≈ 1/54 is scalar curvature. The intermediate value 69.8 km/s/Mpc betwe
 
 ### 10.1 Statistical Overview: Zero-Parameter Framework
 
-The framework relates 39 observables to pure topological structure with **zero free parameters**:
+The framework relates 39 observables to pure topological structure with **zero continuous adjustable parameters**:
 
 - **Structural constants**: p₂ = 2, β₀ = π/8, Weyl = 5, det(g) = 65/32 (all derived, none adjustable)
 - **Derived relations**: ξ = 5π/16, τ = 3472/891 (exact rational)
@@ -1112,7 +1169,7 @@ This is not an approximation. The hierarchy parameter governing mass scales acro
 
 ### 14.1 Summary of Results
 
-This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with G₂ holonomy. The framework relates 39 observables to pure topological structure with **zero free parameters**, achieving mean precision 0.13% across six orders of magnitude.
+This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with G₂ holonomy. The framework relates 39 observables to pure topological structure with **zero continuous adjustable parameters**, achieving mean precision 0.13% across six orders of magnitude.
 
 **Key achievements**:
 - 13 exact topological relations with rigorous proofs (including τ = 3472/891, κ_T = 1/61, sin²θ_W = 3/13, **det(g) = 65/32**)
@@ -1122,6 +1179,8 @@ This work has explored geometric determination of Standard Model parameters thro
 - Discovery that the hierarchy parameter τ is exactly rational
 - Discovery that the metric determinant det(g) = 65/32 is topological (eliminates last fitted parameter)
 - Clear falsification criteria for experimental testing
+
+**Clarification on "zero-parameter"**: The framework makes discrete structural choices (E₈×E₈ gauge group, K₇ manifold topology) but contains no continuous quantities adjusted to fit data. Given these structural choices, all 39 observables follow without further input.
 
 ### 14.2 Central Role of Torsional Dynamics
 

@@ -364,6 +364,8 @@ The ratio of Riemann zeta values from bulk dimension (11) and Weyl factor (5).
 
 ## 10. Structural Patterns
 
+> **Note**: The patterns described in this section are observational. They are not required for the framework's predictive content and should be regarded as supplementary observations suggesting possible deeper mathematical structure. They do not carry the same epistemic status as the PROVEN and TOPOLOGICAL relations in Sections 2-9.
+
 ### 10.1 The 221 Connection
 
 The number 221 connects multiple observables:
