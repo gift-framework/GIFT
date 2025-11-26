@@ -1,0 +1,33 @@
+{
+  "version": "v1.4",
+  "framework": "K7 GIFT TCS Full",
+  "structural_constants": {
+    "p2": 2,
+    "N_gen": 3,
+    "Weyl_factor": 5,
+    "dim_K7": 7,
+    "rank_E8": 8,
+    "dim_G2": 14,
+    "dim_E8": 248,
+    "b2_K7": 21,
+    "b3_K7": 77,
+    "H_star": 99,
+    "M5": 31
+  },
+  "derived_quantities": {
+    "kappa_T": "1/61 = 0.016393",
+    "det_g": "65/32 = 2.031250",
+    "tau": "3472/891 = 3.896745"
+  },
+  "training_results": {
+    "best_kappa_dev": 0.0024534582040658393,
+    "best_det_dev": 5.8776750987677734e-09,
+    "best_T_val": 0.016393844829213782,
+    "best_det_val": 2.0312499998806097
+  },
+  "betti_numbers": {
+    "b2_eff": 21,
+    "b3_eff": 35,
+    "H_star_eff": 57
+  }
+}
