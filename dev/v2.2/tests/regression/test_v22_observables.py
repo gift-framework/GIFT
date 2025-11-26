@@ -284,7 +284,7 @@ class TestV22ExactFormulas:
         assert tau == Fraction(3472, 891)
 
         # Check float value
-        assert abs(float(tau) - 3.896747474747) < 1e-10
+        assert abs(float(tau) - 3.8967452300785634) < 1e-10
 
     def test_alpha_s_geometric_origin(self):
         """alpha_s = sqrt(2)/(dim(G2) - p2) = sqrt(2)/12."""
@@ -521,7 +521,7 @@ class TestNumericalStability:
 
         # tau
         tau = 3472/891
-        assert abs(tau - 3.896747474747475) < 1e-14
+        assert abs(tau - 3.8967452300785634) < 1e-14
 
     def test_no_overflow_in_calculations(self):
         """Large intermediate values should not overflow."""
