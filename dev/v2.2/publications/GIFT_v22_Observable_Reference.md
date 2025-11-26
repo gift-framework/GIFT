@@ -3,7 +3,25 @@
 **Version**: 2.2.0
 **Date**: 2025-11-26
 **Status**: Validated (Monte Carlo 10^5 samples)
-**Mean Precision**: 0.128% across 36 observables
+**Mean Precision**: 0.128% across 39 observables
+
+---
+
+## 0. Framework Logic Summary
+
+### What is assumed (structural input):
+
+1. **Gauge structure**: E₈×E₈ (motivated by anomaly cancellation, heterotic string theory)
+2. **Internal geometry**: 7-dimensional manifold K₇ with G₂ holonomy
+3. **Topology**: Twisted connected sum construction yielding b₂=21, b₃=77
+
+### What is derived (without continuous parameter adjustment):
+
+- All 39 observables in this document
+- All exact relations (Q = 2/3, m_s/m_d = 20, sin²θ_W = 3/13, etc.)
+- All topological formulas (κ_T = 1/61, τ = 3472/891, det(g) = 65/32)
+
+The framework contains no free continuous parameters. Predictions follow uniquely from structural choices.
 
 ---
 

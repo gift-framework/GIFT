@@ -209,10 +209,10 @@ All predictions remain consistent with updated data.
 
 ## 7. Parameter Reduction: Zero-Parameter Paradigm
 
-**Standard Model**: 19+ free parameters
-**GIFT**: **0 free parameters** (all derive from fixed topology)
+**Standard Model**: 19+ free continuous parameters
+**GIFT**: **0 continuous adjustable parameters** (all derive from fixed topology)
 
-**Paradigm shift**: From parameter reduction to structural emergence.
+**Paradigm shift**: From parameter reduction to structural emergence. The framework makes discrete structural choices (E₈×E₈ gauge group, K₇ manifold) but contains no continuous quantities adjusted to fit data.
 
 | "Parameter" | Value | Status |
 |-------------|-------|--------|

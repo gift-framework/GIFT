@@ -1,5 +1,20 @@
 Briefing Document: Geometric Information Field Theory (GIFT) Framework v2.2
 
+---
+
+## Framework Logic
+
+**Input (discrete mathematical structures):**
+- E₈×E₈ gauge group (dimension 496)
+- K₇ manifold with G₂ holonomy (b₂=21, b₃=77)
+
+**Output (derived without adjustment):**
+- 39 physical observables
+- 13 exact rational/integer relations
+- Mean precision 0.128% across 6 orders of magnitude
+
+---
+
 Executive Summary
 
 The Geometric Information Field Theory (GIFT) framework, in its version 2.2, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.128% across six orders of magnitude.
@@ -169,3 +184,16 @@ N_gen	3 (Exact)	High-Luminosity LHC	Discovery of a fourth generation of fundamen
 κ_T	1/61 (Exact)	DESI DR3+	Cosmological constraints on `
 
 The framework remains consistent with all current experimental data. The updates in v2.2 significantly bolster its theoretical consistency and provide new, sharp predictions that will either reinforce or challenge its foundations within the next decade.
+
+---
+
+## How to Read This Framework
+
+| Time | Read | You'll understand |
+|------|------|-------------------|
+| 5 min | This summary | Core claims and results |
+| 30 min | + main Sections 1,8,14 + Observable Section 11 | Full prediction set |
+| 2 hrs | + S1 + S4 | Mathematical foundations |
+| Deep | + S2,S3,S5-S9 | Complete technical details |
+
+See [READING_GUIDE.md](READING_GUIDE.md) for detailed navigation by interest area.
