@@ -342,9 +342,9 @@ where:
 
 *Step 8: Numerical value*
 
-$$\tau = \frac{3472}{891} = 3.896747474747...$$
+$$\tau = \frac{3472}{891} = 3.8967452300785634...$$
 
-Note: This is a repeating decimal (period 2), confirming rationality.
+Note: This is a repeating decimal (period 18), confirming rationality.
 
 **Significance**: τ is rational, not transcendental. Physical law encodes discrete ratios.
 
