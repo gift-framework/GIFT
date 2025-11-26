@@ -176,7 +176,7 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11}$$
 - **Numerator**: 2⁴ = p₂⁴, 7 = dim(K₇) = M₃, 31 = M₅ (Mersenne primes)
 - **Denominator**: 3⁴ = N_gen⁴, 11 = rank(E₈) + N_gen = L₆ (Lucas)
 
-**Numerical value**: τ = 3472/891 = 3.896747474747... (repeating)
+**Numerical value**: τ = 3472/891 = 3.8967452300785634...
 
 **Status**: **PROVEN** (exact rational from topological integers)
 

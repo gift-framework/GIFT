@@ -221,7 +221,7 @@ The quark mass hierarchy emerges from tau = 3472/891:
 
 **v2.1 Definition**: tau = 10416/2673 = 3.89675 (phenomenological)
 
-**v2.2 Definition**: tau = 3472/891 = 3.896747474... (exact rational)
+**v2.2 Definition**: tau = 3472/891 = 3.8967452... (exact rational)
 
 **Prime factorization**:
 $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11}$$

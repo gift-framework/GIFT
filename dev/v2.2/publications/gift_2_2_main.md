@@ -410,7 +410,7 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11} = \frac{p_2^4 \times \dim(
 - **Numerator**: 2⁴ = p₂⁴ (binary duality to 4th power), 7 = dim(K₇) = M₃ (Mersenne), 31 = M₅ (Mersenne)
 - **Denominator**: 3⁴ = N_gen⁴ (generations to 4th power), 11 = rank(E₈) + N_gen = L₆ (Lucas number)
 
-**Numerical value**: τ = 3472/891 = 3.896747474747... (repeating decimal)
+**Numerical value**: τ = 3472/891 = 3.8967452300785634...
 
 **Significance**: τ is rational, not transcendental. This indicates the framework encodes exact discrete ratios rather than continuous quantities requiring infinite precision.
 

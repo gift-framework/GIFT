@@ -96,7 +96,7 @@
 | kappa_T | 0.0164 (fit) | 0.016393 | [x] |
 | sin^2(theta_W) | 0.23072 | 0.230769 | [x] |
 | alpha_s | 0.11785 | 0.11785 | [x] |
-| tau | 3.89675 | 3.896747... | [x] |
+| tau | 3.89675 | 3.8967452... | [x] |
 
 ### 3.2 Deviation Calculations
 
@@ -248,7 +248,7 @@ alpha_s = math.sqrt(2)/12
 # Numerical checks
 assert abs(float(kappa_T) - 0.016393) < 0.000001
 assert abs(float(sin2_thetaW) - 0.230769) < 0.000001
-assert abs(float(tau) - 3.896747) < 0.000001
+assert abs(float(tau) - 3.8967452) < 0.000001
 assert abs(alpha_s - 0.117851) < 0.000001
 
 # Structural checks

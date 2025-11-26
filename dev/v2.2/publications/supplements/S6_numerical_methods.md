@@ -218,7 +218,7 @@ def compute_tau_v22():
 
     return {
         'exact': Fraction(3472, 891),
-        'float': 3472 / 891,  # 3.896747474747...
+        'float': 3472 / 891,  # 3.8967452300785634...
         'prime_num': '2^4 * 7 * 31',
         'prime_den': '3^4 * 11'
     }
