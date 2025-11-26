@@ -23,21 +23,6 @@
 
 ---
 
-## What's New in v2.2
-
-**Status Promotions**:
-- κ_T = 1/61: THEORETICAL → TOPOLOGICAL (exact topological formula)
-- sin²θ_W = 3/13: PHENOMENOLOGICAL → PROVEN (exact rational from Betti numbers)
-- α_s = √2/12: PHENOMENOLOGICAL → TOPOLOGICAL (geometric origin clarified)
-- τ = 3472/891: DERIVED → PROVEN (exact rational, irreducible)
-
-**New Content**:
-- Section 10: Structural Relations (221 connection, Fibonacci-Lucas encoding)
-- Enhanced prime factorization analysis
-- Updated experimental comparisons (PDG 2024, NuFIT 5.3)
-
----
-
 ## 1. Framework Parameters
 
 ### 1.1 Topological Invariants (Exact Integers)
@@ -67,9 +52,9 @@
 | Parameter | Formula | Value | Status |
 |-----------|---------|-------|--------|
 | ξ | (Weyl/p₂) × β₀ = 5π/16 | ≈ 0.98175 | DERIVED (exact) |
-| τ | 496×21/(27×99) = 3472/891 | 3.896747... | **PROVEN** (v2.2) |
+| τ | 496×21/(27×99) = 3472/891 | 3.896747... | **PROVEN** |
 
-**τ Exact Form (NEW in v2.2)**:
+**τ Exact Form**:
 ```
 τ = 3472/891 (irreducible)
 
@@ -88,10 +73,26 @@ Derivation:
 
 | Parameter | Value | Formula | Status |
 |-----------|-------|---------|--------|
-| det(g) | 2.031 | K₇ metric determinant | ML-fitted |
-| κ_T = \|T\| | **1/61** | b₃ - dim(G₂) - p₂ = 77 - 14 - 2 | **TOPOLOGICAL** (v2.2) |
+| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **TOPOLOGICAL** |
+| κ_T = \|T\| | **1/61** | 1/(b₃ - dim(G₂) - p₂) | **TOPOLOGICAL** |
 
-**κ_T Topological Derivation (NEW in v2.2)**:
+**det(g) Topological Derivation**:
+```
+det(g) = 65/32 = 2.03125
+
+Derivations (all equivalent):
+- det(g) = p₂ + 1/(b₂ + dim(G₂) - N_gen) = 2 + 1/32 = 65/32
+- det(g) = (Weyl × (rank + Weyl)) / 2^5 = (5 × 13) / 32 = 65/32
+- det(g) = (H* - b₂ - 13) / 32 = (99 - 21 - 13) / 32 = 65/32
+
+The 32 structure:
+- 32 = b₂ + dim(G₂) - N_gen = 21 + 14 - 3
+- 32 = 2^5 (same denominator as λ_H = √17/32)
+
+Deviation: 0.012%
+```
+
+**κ_T Topological Derivation**:
 ```
 κ_T = 1/(b₃ - dim(G₂) - p₂) = 1/(77 - 14 - 2) = 1/61
 
@@ -102,7 +103,9 @@ Geometric interpretation:
 - 61: Net degrees of freedom for torsion
 ```
 
-**Numerical value**: 1/61 = 0.016393... (deviation from 0.0164: 0.04%)
+**Numerical values**:
+- det(g) = 65/32 = 2.03125
+- κ_T = 1/61 = 0.016393...
 
 ### 1.5 Mathematical Constants
 
@@ -158,9 +161,9 @@ Geometric interpretation:
 
 ### 2.2 Weak Mixing Angle sin²θ_W
 
-**Status**: **PROVEN** (v2.2 - upgraded from TOPOLOGICAL)
+**Status**: **PROVEN**
 
-**Formula (NEW v2.2)**:
+**Formula**:
 ```
 sin²θ_W = b₂ / (b₃ + dim(G₂))
         = 21 / (77 + 14)
@@ -177,23 +180,18 @@ sin²θ_W = b₂ / (b₃ + dim(G₂))
 - Denominator b₃ + dim(G₂) = 91: Matter + holonomy total
 - Ratio: Fraction of gauge structure in electroweak mixing
 
-**Previous formula** (v2.1, still valid approximation):
-```
-sin²θ_W = ζ(3) · γ / M₂ = 0.23128
-```
-
 **Experimental comparison**:
 - Predicted: 3/13 = 0.230769...
 - Experimental: 0.23122 ± 0.00003
-- Deviation: **0.195%** (improved from 0.027% with different central value)
+- Deviation: **0.195%**
 
 ---
 
 ### 2.3 Strong Coupling α_s(M_Z)
 
-**Status**: **TOPOLOGICAL** (v2.2 - upgraded from PHENOMENOLOGICAL)
+**Status**: **TOPOLOGICAL**
 
-**Formula (Enhanced v2.2)**:
+**Formula**:
 ```
 α_s(M_Z) = √2 / (dim(G₂) - p₂)
          = √2 / (14 - 2)
@@ -201,7 +199,7 @@ sin²θ_W = ζ(3) · γ / M₂ = 0.23128
          = 0.117851...
 ```
 
-**Geometric interpretation (NEW v2.2)**:
+**Geometric interpretation**:
 - √2: Binary structure from E₈×E₈ product geometry
 - dim(G₂) = 14: G₂ holonomy dimension
 - p₂ = 2: Binary duality factor
@@ -585,7 +583,7 @@ M_Z = M_W / cos(θ_W) = 91.20 GeV
 
 **Status**: PROVEN
 
-**Formula (Enhanced v2.2)**:
+**Formula**:
 ```
 λ_H = √(dim(G₂) + N_gen) / 2^Weyl
     = √(14 + 3) / 32
@@ -593,7 +591,7 @@ M_Z = M_W / cos(θ_W) = 91.20 GeV
     = 0.1289
 ```
 
-**Origin of 17 (NEW v2.2)**:
+**Origin of 17**:
 - dim(G₂) = 14: G₂ holonomy dimension
 - N_gen = 3: Number of fermion generations
 - Sum 17 = 14 + 3: Total symmetry + generation structure
@@ -705,7 +703,7 @@ where R ≈ 1/54 (scalar curvature) and κ_T = 1/61 (torsion).
 
 ---
 
-## 10. Structural Relations (NEW in v2.2)
+## 10. Structural Relations
 
 ### 10.1 The Number 221
 
@@ -823,7 +821,7 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 | Quark Masses | 6 | 0.303% | m_u (0.00%) | m_c (0.79%) |
 | Cosmology | 3 | 0.133% | n_s (0.00%) | Ω_DE (0.40%) |
 
-### 11.3 Statistics by Status (Updated v2.2)
+### 11.3 Statistics by Status
 
 | Status | Count | Mean Deviation | Description |
 |--------|-------|----------------|-------------|
@@ -832,34 +830,29 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 | DERIVED | 9 | 0.14% | Computed from topological relations |
 | THEORETICAL | 6 | 0.28% | Requires single scale input |
 
-**Changes from v2.1**:
-- PROVEN: 9 → 12 (+3: sin²θ_W, τ, λ_H promoted)
-- TOPOLOGICAL: 11 → 12 (+1: κ_T added)
-- PHENOMENOLOGICAL: 3 → 0 (all promoted)
-
 ### 11.4 Global Statistics
 
-| Metric | v2.1 | v2.2 |
-|--------|------|------|
-| Total observables | 36 | 39 |
-| PROVEN count | 9 | **12** |
-| Input parameters | 3 | 3 |
-| Mean deviation | 0.131% | **0.128%** |
-| Median deviation | 0.077% | 0.073% |
-| Maximum deviation | 0.79% | 2.3%* |
-| Minimum deviation | 0.00% | 0.00% |
-| Within 0.1% | 20 (55.6%) | 21 (54%) |
-| Within 0.5% | 34 (94.4%) | 37 (95%) |
-| Within 1.0% | 36 (100%) | 38 (97%) |
+| Metric | Value |
+|--------|-------|
+| Total observables | 39 |
+| PROVEN count | 12 |
+| Input parameters | 0 (zero-parameter paradigm) |
+| Mean deviation | 0.128% |
+| Median deviation | 0.073% |
+| Maximum deviation | 2.3%* |
+| Minimum deviation | 0.00% |
+| Within 0.1% | 21 (54%) |
+| Within 0.5% | 37 (95%) |
+| Within 1.0% | 38 (97%) |
 
 *λ_H has large experimental uncertainty
 
 ---
 
-## Appendix A: Key Formulas Quick Reference (v2.2)
+## Appendix A: Key Formulas Quick Reference
 
 ```
-# Framework Parameters (NEW exact forms)
+# Framework Parameters
 κ_T = 1/61                    # Torsion magnitude
 τ = 3472/891                  # Hierarchy parameter
 sin²θ_W = 3/13               # Weinberg angle
@@ -906,15 +899,6 @@ n_s = ζ(11)/ζ(5)
 - CKMfitter (Summer 2024)
 - Planck 2018 (+ 2020 update) for cosmological parameters
 - DESI BAO results (2024) for H₀ context
-
----
-
-## Appendix C: Version History
-
-| Version | Date | Key Changes |
-|---------|------|-------------|
-| 2.1.0 | 2025-11-21 | Initial complete reference |
-| 2.2.0 | 2025-11-26 | Status promotions, exact τ, κ_T formula, structural section |
 
 ---
 

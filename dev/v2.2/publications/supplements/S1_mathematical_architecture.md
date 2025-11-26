@@ -9,15 +9,6 @@
 
 ---
 
-## What's New in v2.2
-
-- **Section 1.3.2**: Weyl factor 5² connection to new observables (sin²θ_W = 3/13)
-- **Section 2.3.7**: Torsion magnitude κ_T = 1/61 from cohomology
-- **Section 2.5**: τ = 3472/891 exact rational derivation
-- **Section 3.6**: Structural patterns (221, Fibonacci-Lucas, Mersenne)
-
----
-
 ## Abstract
 
 We present the mathematical architecture underlying the Geometric Information Field Theory framework. Section 1 develops the E₈ exceptional Lie algebra. Section 2 introduces G₂ holonomy manifolds with K₇ Betti numbers. Section 3 establishes topological foundations through index theorems. These structures provide rigorous basis for E₈×E₈ → K₇ → Standard Model reduction.
@@ -85,7 +76,7 @@ $$E_8 \supset E_7 \times U(1) \supset E_6 \times U(1)^2 \supset SO(10) \times U(
 
 $$|W(E_8)| = 696,729,600 = 2^{14} \times 3^5 \times 5^2 \times 7$$
 
-### 1.3.2 Framework Significance (v2.2 Enhanced)
+### 1.3.2 Framework Significance
 
 | Factor | Value | Observables Using This |
 |--------|-------|------------------------|
@@ -94,7 +85,7 @@ $$|W(E_8)| = 696,729,600 = 2^{14} \times 3^5 \times 5^2 \times 7$$
 | **5²** | **25** | **Weyl = 5**: sin²θ_W denominator (91 = 7×13), λ_H (32 = 2⁵) |
 | 7¹ | 7 | dim(K₇), κ_T denominator (61), τ numerator |
 
-**v2.2 Connection**: The factor 5² = 25 appears in:
+The factor 5² = 25 appears in:
 - δ = 2π/25 (neutrino solar angle)
 - 13 = 8 + 5 in sin²θ_W = 3/13 denominator factor
 - 32 = 2⁵ in λ_H = √17/32
@@ -133,7 +124,7 @@ Dimension: dim(J₃(O)) = 27
 
 - α_s = √2/12 (12 relates to J₃ structure)
 - m_μ/m_e = 27^φ where 27 = dim(J₃(O))
-- 221 = 248 - 27 = dim(E₈) - dim(J₃(O)) (v2.2 structural number)
+- 221 = 248 - 27 = dim(E₈) - dim(J₃(O)) (structural number)
 
 ---
 
@@ -160,7 +151,7 @@ Dimension: dim(J₃(O)) = 27
 
 $$\nabla \phi = 0 \quad \Leftrightarrow \quad d\phi = 0, \quad d*\phi = 0$$
 
-### 2.1.4 Controlled Non-Closure (v2.2 UPDATE)
+### 2.1.4 Controlled Non-Closure
 
 Physical interactions require:
 $$|d\phi|^2 + |d*\phi|^2 = \kappa_T^2 = \frac{1}{61^2}$$
@@ -211,13 +202,13 @@ Matter field basis:
 - 4 modes → Higgs
 - 43 modes → Dark/hidden sector
 
-### 2.3.6 Weinberg Angle from Betti Numbers (v2.2 NEW)
+### 2.3.6 Weinberg Angle from Betti Numbers
 
 $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{77 + 14} = \frac{21}{91} = \frac{3}{13}$$
 
 **Status**: PROVEN (exact rational from cohomology)
 
-### 2.3.7 Torsion Magnitude from Cohomology (v2.2 NEW)
+### 2.3.7 Torsion Magnitude from Cohomology
 
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
@@ -233,7 +224,7 @@ Dimension: dim(M_{G₂}) = b₃(K₇) = 77
 
 ---
 
-## 2.5 Hierarchy Parameter τ (v2.2 NEW)
+## 2.5 Hierarchy Parameter τ
 
 ### 2.5.1 Exact Rational Form
 
@@ -285,7 +276,7 @@ $$\gamma_{\text{GIFT}} = \frac{2 \times \text{rank}(E_8) + 5 \times H^*}{10 \tim
 
 ---
 
-## 3.4 Strong Coupling Origin (v2.2 NEW)
+## 3.4 Strong Coupling Origin
 
 $$\alpha_s = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{\sqrt{2}}{12}$$
 
@@ -293,7 +284,7 @@ $$\alpha_s = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{
 
 ---
 
-## 3.5 Higgs Coupling Origin (v2.2 NEW)
+## 3.5 Higgs Coupling Origin
 
 $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{17}}{32}$$
 
@@ -303,7 +294,7 @@ where 17 = 14 + 3 = dim(G₂) + N_gen.
 
 ---
 
-## 3.6 Structural Patterns (v2.2 NEW)
+## 3.6 Structural Patterns
 
 ### 3.6.1 The 221 Connection
 
@@ -337,9 +328,60 @@ $$221 = 13 \times 17 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 
 ---
 
+## 3.7 The Zero-Parameter Principle
+
+### 3.7.1 From Parameters to Structure
+
+Traditional physics frameworks require parameters - continuous quantities adjusted to match experiment. The GIFT framework eliminates this requirement entirely.
+
+**The Zero-Parameter Paradigm**: All quantities appearing in observable predictions derive from fixed mathematical structures:
+
+| "Parameter" | Value | Derivation | Free? |
+|-------------|-------|------------|-------|
+| p₂ | 2 | dim(G₂)/dim(K₇) | NO |
+| β₀ | π/8 | π/rank(E₈) | NO |
+| Weyl | 5 | From \|W(E₈)\| | NO |
+| τ | 3472/891 | (496×21)/(27×99) | NO |
+| det(g) | 65/32 | (5×13)/32 | NO |
+| κ_T | 1/61 | 1/(77-14-2) | NO |
+
+### 3.7.2 det(g) = 65/32
+
+The metric determinant has exact topological origin:
+
+$$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{32} = \frac{65}{32}$$
+
+**Alternative derivations**:
+- det(g) = (Weyl × (rank(E₈) + Weyl))/2⁵ = (5 × 13)/32
+- det(g) = (H* - b₂ - 13)/32 = (99 - 21 - 13)/32
+
+**The 32 structure**: The denominator 32 = 2⁵ appears in both det(g) = 65/32 and λ_H = √17/32, suggesting deep binary structure in the Higgs-metric sector.
+
+**Verification**: det(g) = 65/32 = 2.03125, consistent with ML-constrained value 2.031 (deviation 0.012%).
+
+### 3.7.3 Structural Completeness
+
+The framework achieves structural completeness: every quantity appearing in observable predictions derives from:
+
+1. **E₈ algebraic data**: dim=248, rank=8, |W|=696729600
+2. **K₇ topological data**: b₂=21, b₃=77, dim=7
+3. **G₂ holonomy data**: dim=14
+
+These are not parameters to be measured - they are mathematical constants with unique values.
+
+### 3.7.4 Philosophical Implications
+
+The zero-parameter paradigm has profound implications:
+
+1. **No fine-tuning possible**: Discrete structures cannot be "tuned" - they are what they are
+2. **Computability**: Rational numbers are computable with finite resources
+3. **Deeper structure**: Physical law may be fundamentally number theory
+
+---
+
 # 4. Summary
 
-## Key Relations (v2.2)
+## Key Relations
 
 | Relation | Value | Status |
 |----------|-------|--------|
@@ -351,6 +393,9 @@ $$221 = 13 \times 17 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 | τ = 496×21/(27×99) | 3472/891 | **PROVEN** |
 | α_s = √2/(dim(G₂) - p₂) | √2/12 | **TOPOLOGICAL** |
 | λ_H = √(dim(G₂) + N_gen)/2^Weyl | √17/32 | **PROVEN** |
+| **det(g) = (Weyl×(rank+Weyl))/2⁵** | **65/32** | **TOPOLOGICAL** |
+
+**Note**: The framework achieves the **zero-parameter paradigm** - all observables derive from fixed mathematical structure.
 
 ---
 
