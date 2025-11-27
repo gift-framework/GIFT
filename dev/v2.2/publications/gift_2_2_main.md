@@ -138,7 +138,7 @@ These patterns, while intriguing, should be regarded as potential clues for futu
 - **Part III** (Sections 8-10): Observable predictions - 37 observables across all sectors
 - **Part IV** (Sections 11-14): Validation - experimental tests, theoretical implications, conclusions
 
-Mathematical foundations appear in Supplement S1, rigorous proofs in Supplement S4, and complete derivations in Supplement S5.
+Mathematical foundations appear in Supplement S1, rigorous proofs and complete derivations in Supplement S4.
 
 ---
 
@@ -548,7 +548,7 @@ $$\xi = \frac{\text{Weyl\_factor}}{p_2} \cdot \beta_0 = \frac{5}{2} \cdot \frac{
 
 **Formula**: α⁻¹(M_Z) = 2^(rank(E₈)-1) - 1/24 = 2⁷ - 1/24 = 127.958
 
-**Derivation**: Gauge dimensional reduction from E₈ structure (Supplement S5)
+**Derivation**: Gauge dimensional reduction from E₈ structure (Supplement S4)
 
 **Status**: **TOPOLOGICAL**
 
@@ -712,7 +712,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 | m_b/m_s | 44.7 ± 1.0 | 44.76 | 0.13% |
 
 **Mean deviation**: 0.09%
-**Derivations**: Supplement S5
+**Derivations**: Supplement S4
 
 ### 8.6 CKM Matrix Elements (6 observables)
 
@@ -779,7 +779,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}
 
 **Formula**: n_s = ζ(11)/ζ(5) = 1.000494/1.036928 = 0.9649
 
-**Derivation**: Ratio of odd Riemann zeta values from K₇ heat kernel (Supplement S5)
+**Derivation**: Ratio of odd Riemann zeta values from K₇ heat kernel (Supplement S4)
 
 **Status**: **TOPOLOGICAL**
 
@@ -940,7 +940,7 @@ Good (<1%):           37 observables (100%)
 
 ### 11.1 Monte Carlo Uniqueness Test
 
-To assess whether the framework's parameter values represent a unique minimum, extensive Monte Carlo sampling was performed (methodology in Supplement S7).
+To assess whether the framework's parameter values represent a unique minimum, extensive Monte Carlo sampling was performed (methodology in Supplement S5).
 
 **Methodology**:
 - Parameter ranges: p₂ ∈ [1, 3], Weyl ∈ [3, 7], τ ∈ [3, 5]

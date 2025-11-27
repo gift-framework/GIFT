@@ -49,14 +49,12 @@ publications/
 ├── GIFT_v22_Statistical_Validation.md  # Statistical methods
 └── supplements/
     ├── S1_mathematical_architecture.md # E₈, G₂, cohomology
-    ├── S2_K7_manifold_construction.md  # TCS construction
+    ├── S2_K7_manifold_construction.md  # TCS, ML metrics, code
     ├── S3_torsional_dynamics.md        # Geodesics, RG flow
-    ├── S4_rigorous_proofs.md           # 13 exact proofs
-    ├── S5_complete_calculations.md     # All derivations
-    ├── S6_numerical_methods.md         # Code implementation
-    ├── S7_phenomenology.md             # Experimental comparison
-    ├── S8_falsification_protocol.md    # Tests and timelines
-    └── S9_extensions.md                # Future directions
+    ├── S4_complete_derivations.md      # Proofs + all calculations
+    ├── S5_experimental_validation.md   # Data comparison, falsification
+    ├── S6_theoretical_extensions.md    # QG, info theory, speculative
+    └── S7_dimensional_observables.md   # Masses, scale bridge, cosmology
 ```
 
 ## How to Read This Framework
@@ -66,7 +64,7 @@ publications/
 | 5 min | summary.txt | Core claims and results |
 | 30 min | + main Sections 1,8,14 + Observable Section 11 | Full prediction set |
 | 2 hrs | + S1 + S4 | Mathematical foundations |
-| Deep | + S2,S3,S5-S9 | Complete technical details |
+| Deep | + S2,S3,S5-S7 | Complete technical details |
 
 ## What "Zero-Parameter" Means
 

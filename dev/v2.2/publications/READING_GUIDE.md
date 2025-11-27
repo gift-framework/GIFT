@@ -30,11 +30,11 @@
 
 ### 2 hours
 
-**Add**: [supplements/S1_mathematical_architecture.md](supplements/S1_mathematical_architecture.md) + [supplements/S4_rigorous_proofs.md](supplements/S4_rigorous_proofs.md)
+**Add**: [supplements/S1_mathematical_architecture.md](supplements/S1_mathematical_architecture.md) + [supplements/S4_complete_derivations.md](supplements/S4_complete_derivations.md)
 
 **You'll understand**:
 - E₈×E₈ structure and K₇ construction
-- Complete proofs of 13 exact relations
+- Complete proofs and derivations of all 39 observables
 - Mathematical foundations
 
 ---
@@ -47,27 +47,28 @@
 - Explicit metric construction via ML
 - Torsion tensor and RG flow connection
 - Technical geometric details
+- Computational implementation
 
 ---
 
 ### Full study
 
-**Add**: [supplements/S5_complete_calculations.md](supplements/S5_complete_calculations.md) + [supplements/S6_numerical_methods.md](supplements/S6_numerical_methods.md) + [supplements/S7_phenomenology.md](supplements/S7_phenomenology.md)
+**Add**: [supplements/S5_experimental_validation.md](supplements/S5_experimental_validation.md) + [supplements/S7_dimensional_observables.md](supplements/S7_dimensional_observables.md)
 
 **You'll understand**:
-- All 39 observable derivations
-- Python implementation details
-- Statistical validation
+- Experimental comparison and statistical validation
+- Falsification criteria and timelines
+- Absolute mass predictions and scale bridge
 
 ---
 
 ### Research directions
 
-**Read**: [supplements/S8_falsification_protocol.md](supplements/S8_falsification_protocol.md) + [supplements/S9_extensions.md](supplements/S9_extensions.md)
+**Read**: [supplements/S6_theoretical_extensions.md](supplements/S6_theoretical_extensions.md)
 
 **You'll understand**:
-- Experimental tests and timelines
 - Quantum gravity connections
+- Information-theoretic interpretations
 - Speculative extensions
 
 ---
@@ -77,13 +78,13 @@
 ### For Experimentalists
 
 1. [GIFT_v22_Observable_Reference.md](GIFT_v22_Observable_Reference.md) - All predictions with uncertainties
-2. [supplements/S8_falsification_protocol.md](supplements/S8_falsification_protocol.md) - What to measure and when
-3. [supplements/S7_phenomenology.md](supplements/S7_phenomenology.md) - Comparison with current data
+2. [supplements/S5_experimental_validation.md](supplements/S5_experimental_validation.md) - Tests, timelines, and falsification criteria
+3. [supplements/S7_dimensional_observables.md](supplements/S7_dimensional_observables.md) - Absolute mass predictions
 
 ### For Mathematicians
 
 1. [supplements/S1_mathematical_architecture.md](supplements/S1_mathematical_architecture.md) - E₈, G₂, cohomology foundations
-2. [supplements/S4_rigorous_proofs.md](supplements/S4_rigorous_proofs.md) - Complete mathematical proofs
+2. [supplements/S4_complete_derivations.md](supplements/S4_complete_derivations.md) - Complete mathematical proofs
 3. [supplements/S2_K7_manifold_construction.md](supplements/S2_K7_manifold_construction.md) - TCS construction details
 
 ### For Phenomenologists
@@ -95,7 +96,7 @@
 ### For String Theorists
 
 1. [supplements/S1_mathematical_architecture.md](supplements/S1_mathematical_architecture.md) - E₈×E₈ heterotic connection
-2. [supplements/S9_extensions.md](supplements/S9_extensions.md) - M-theory and holography
+2. [supplements/S6_theoretical_extensions.md](supplements/S6_theoretical_extensions.md) - M-theory and holography
 3. [supplements/S2_K7_manifold_construction.md](supplements/S2_K7_manifold_construction.md) - G₂ compactification details
 
 ---
@@ -106,11 +107,11 @@
 |----------|----------|---------|
 | What does GIFT predict? | Observable_Reference | Section 11 |
 | How is sin²θ_W derived? | Geometric_Justifications | Section 3 |
-| What experiments test GIFT? | S8_falsification | Sections 2-3 |
-| What are the proofs? | S4_rigorous_proofs | Sections 2-6 |
-| How to run the code? | S6_numerical_methods | Section 2 |
+| What experiments test GIFT? | S5_experimental_validation | Part IV-V |
+| What are the proofs? | S4_complete_derivations | Parts II-VII |
+| How to run the code? | S2_K7_manifold_construction | Part VII |
 | What is zero-parameter? | GLOSSARY | Section 1 |
-| What are the structural patterns? | S9_extensions | Section 5 |
+| What are the structural patterns? | S6_theoretical_extensions | Part III |
 
 ---
 
@@ -130,16 +131,14 @@ GIFT v2.2 Publications
 |   +-- GIFT_v22_Geometric_Justifications.md  [Why each formula works]
 |   +-- GIFT_v22_Statistical_Validation.md    [Statistical methods]
 |
-+-- Supplements (detailed foundations)
++-- Supplements (7 detailed documents)
     +-- S1_mathematical_architecture.md    [E₈, G₂, cohomology]
-    +-- S2_K7_manifold_construction.md     [TCS, ML metrics]
+    +-- S2_K7_manifold_construction.md     [TCS, ML metrics, code]
     +-- S3_torsional_dynamics.md           [Geodesics, RG flow]
-    +-- S4_rigorous_proofs.md              [13 exact proofs]
-    +-- S5_complete_calculations.md        [All derivations]
-    +-- S6_numerical_methods.md            [Code implementation]
-    +-- S7_phenomenology.md                [Experimental comparison]
-    +-- S8_falsification_protocol.md       [Tests and timelines]
-    +-- S9_extensions.md                   [Future directions]
+    +-- S4_complete_derivations.md         [Proofs + all calculations]
+    +-- S5_experimental_validation.md      [Data comparison, falsification]
+    +-- S6_theoretical_extensions.md       [QG, info theory, speculative]
+    +-- S7_dimensional_observables.md      [Masses, scale bridge, cosmology]
 ```
 
 ---
@@ -151,7 +150,7 @@ GIFT v2.2 Publications
 | 5 min | summary.txt | Core claims and results |
 | 30 min | + main Sections 1,8,14 + Observable Section 11 | Full prediction set |
 | 2 hrs | + S1 + S4 | Mathematical foundations |
-| Deep | + S2,S3,S5-S9 | Complete technical details |
+| Deep | + S2,S3,S5-S7 | Complete technical details |
 
 ---
 
@@ -166,4 +165,4 @@ GIFT v2.2 Publications
 ---
 
 **Version**: 2.2.0
-**Last Updated**: 2025-11-26
+**Last Updated**: 2025-11-27
