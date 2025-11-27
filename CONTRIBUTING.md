@@ -135,7 +135,7 @@ The GIFT framework maintains strict standards:
 ### Mathematical Content
 
 **Notation**
-- Follow conventions in `publications/gift_main.md` Section 1.4
+- Follow conventions in `publications/gift_2_2_main.md` Section 1.4
 - Define all new symbols on first use
 - Use standard notation where possible (see `docs/GLOSSARY.md`)
 
@@ -262,7 +262,7 @@ Follow standard academic practices:
 ```
 Title: Derive axion mass from K₇ topology
 
-Description: Using the harmonic 3-form structure from Supplement F,
+Description: Using the harmonic 3-form structure from Supplement S2,
 I derive a prediction for axion mass: m_a = 10^-5 eV * (geometric factor).
 
 Status: THEORETICAL (proof outline provided, full rigor in progress)
@@ -279,7 +279,7 @@ Description: Include two-loop corrections in gauge coupling running,
 improving sin²θ_W prediction from 0.009% to 0.003% deviation.
 
 Impact: Strengthens agreement with experimental value.
-Method: Updated equations in Supplement C.7 with full derivation.
+Method: Updated equations in S4_complete_derivations.md with full derivation.
 ```
 
 ### What to Avoid

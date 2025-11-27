@@ -882,7 +882,7 @@ where R ≈ 1/54 is scalar curvature. The intermediate value 69.8 km/s/Mpc betwe
 
 ---
 
-## 10. Summary: 37 Observables
+## 10. Summary: 39 Observables
 
 ### 10.1 Statistical Overview: Zero-Parameter Framework
 
@@ -891,7 +891,7 @@ The framework relates 39 observables to pure topological structure with **zero c
 - **Structural constants**: p₂ = 2, β₀ = π/8, Weyl = 5, det(g) = 65/32 (all derived, none adjustable)
 - **Derived relations**: ξ = 5π/16, τ = 3472/891 (exact rational)
 - **Coverage**: 27 dimensionless + 12 dimensional observables
-- **Mean deviation**: 0.13%
+- **Mean deviation**: 0.128%
 - **Range**: 6 orders of magnitude (2 MeV to 173 GeV)
 - **Exact relations**: 13
 
@@ -915,7 +915,7 @@ The framework relates 39 observables to pure topological structure with **zero c
 | Quark | 16 | 0.18% | 0.00% | 0.81% |
 | CKM | 4 | 0.08% | 0.0001% | 0.23% |
 | Cosmology | 2 | 0.11% | 0.007% | 0.21% |
-| **Total** | **37** | **0.13%** | **0.00%** | **0.81%** |
+| **Total** | **39** | **0.128%** | **0.00%** | **0.81%** |
 
 ### 10.4 Precision Distribution
 
@@ -923,13 +923,13 @@ The framework relates 39 observables to pure topological structure with **zero c
 Exact (<0.01%):       5 observables (13.5%)
 Exceptional (<0.1%):  18 observables (48.6%)
 Excellent (<0.5%):    32 observables (86.5%)
-Good (<1%):           37 observables (100%)
+Good (<1%):           39 observables (100%)
 ```
 
 ### 10.5 Probability Assessment
 
 - **Null hypothesis**: Random number matching
-- **Calculation**: P(all 37 within 1%) ≈ (0.01)³⁷ ≈ 10⁻⁷⁴
+- **Calculation**: P(all 39 within 1%) ≈ (0.01)³⁹ ≈ 10⁻⁷⁸
 - **Observation**: The probability of coincidental agreement is negligible
 
 ---

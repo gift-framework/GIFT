@@ -7,26 +7,26 @@
 **GIFT (Geometric Information Field Theory)** derives Standard Model parameters from E₈×E₈ topology.
 
 **Key Metrics**:
-- 0.13% mean precision across 34 observables
-- 19 parameters (SM) → 3 parameters (GIFT)
-- 9 rigorously proven exact relations
-- Version: 2.0.0
+- 0.128% mean precision across 39 observables
+- 19 parameters (SM) → 0 continuous adjustable parameters (GIFT)
+- 13 rigorously proven exact relations
+- Version: 2.2.0
 
 ## Essential Files (Read These First)
 
 1. **README.md** - Framework overview
 2. **STRUCTURE.md** - Repository organization
-3. **publications/gift_main.md** - Core theoretical paper (~1100 lines)
-4. **docs/GLOSSARY.md** - Technical definitions
+3. **publications/gift_2_2_main.md** - Core theoretical paper (~1400 lines)
+4. **publications/GLOSSARY.md** - Technical definitions
 5. **CONTRIBUTING.md** - Scientific standards
 
 ## Repository Structure
 
 ```
 GIFT/
-├── publications/           # Main theoretical documents
-│   ├── gift_main.md       # Core paper
-│   ├── supplements/       # 6 detailed supplements (A-F)
+├── publications/           # Main theoretical documents (v2.2)
+│   ├── gift_2_2_main.md   # Core paper
+│   ├── supplements/       # 7 detailed supplements (S1-S7)
 │   └── *.ipynb           # Interactive notebooks
 ├── docs/                  # FAQ, glossary, validation
 ├── G2_ML/                 # Machine learning (90% complete)
@@ -38,20 +38,21 @@ GIFT/
 
 ## Quick Navigation
 
-**For theorists**: Start with `publications/gift_main.md`
+**For theorists**: Start with `publications/gift_2_2_main.md`
 **For experimentalists**: See `docs/EXPERIMENTAL_VALIDATION.md`
 **For coders**: Check `statistical_validation/run_validation.py`
 **For questions**: Read `docs/FAQ.md`
 
 ## Key Conventions
 
-### Notation (see docs/GLOSSARY.md)
+### Notation (see publications/GLOSSARY.md)
 
 - **E₈**: Exceptional Lie algebra (dim 248)
-- **K₇**: Compact 7D manifold with G₂ holonomy
-- **β₀ = 1/(4π²)**: Base coupling
-- **ξ = 5β₀/2**: Correlation parameter (DERIVED, not free!)
-- **ε₀ = 1/8**: Symmetry breaking scale
+- **K₇**: Compact 7D manifold with G₂ holonomy (b₂=21, b₃=77)
+- **H* = 99**: Total effective cohomological dimension (b₂ + b₃ + 1)
+- **β₀ = π/8**: Angular quantization (π/rank(E₈))
+- **ξ = 5π/16**: Correlation parameter (DERIVED: Weyl/p₂ × β₀)
+- **τ = 3472/891**: Hierarchy parameter (exact rational)
 - **N_gen = 3**: Number of generations
 
 ### Status Classifications
@@ -67,8 +68,8 @@ Use these consistently:
 
 ### File Naming
 
-- Publications: `gift_main.md`, `gift_extensions.md`
-- Supplements: `A_math_foundations.md`, `B_rigorous_proofs.md`, etc.
+- Publications: `gift_2_2_main.md`, `GIFT_v22_*.md`
+- Supplements: `S1_mathematical_architecture.md`, `S2_K7_manifold_construction.md`, etc.
 - Project files: ALL_CAPS (`README.md`, `CHANGELOG.md`)
 - Python: lowercase_with_underscores
 
@@ -77,8 +78,8 @@ Use these consistently:
 ### Understanding the Framework
 
 1. Read `README.md` for overview
-2. Read `publications/gift_main.md` Sections 1-3
-3. Check `docs/GLOSSARY.md` for terms
+2. Read `publications/gift_2_2_main.md` Sections 1-4
+3. Check `publications/GLOSSARY.md` for terms
 4. See `docs/FAQ.md` for questions
 
 ### Making Changes
@@ -124,45 +125,51 @@ pytest tests/
 - Skip proofs (for PROVEN status)
 - Overstate significance
 
-## Nine Exact Relations (PROVEN)
+## Thirteen Proven Exact Relations
 
-1. **N_gen = 3**: Three generations (topological)
-2. **Q_Koide = 2/3**: Koide formula parameter
-3. **m_s/m_d = 20**: Quark mass ratio
-4. **δ_CP = 197°**: CP violation phase
-5. **m_τ/m_e = 3477**: Lepton mass ratio
-6. **Ω_DE = ln(2)**: Dark energy density
-7. **ξ = 5β₀/2**: Parameter relation
-8-9. Dual derivations (see Supplement B)
+From S4_complete_derivations.md (authoritative list):
 
-All have precision <0.01% vs experiment.
+1. **N_gen = 3**: Three generations
+2. **p₂ = 2**: Binary duality (dim(G₂)/dim(K₇))
+3. **Q_Koide = 2/3**: Koide formula parameter
+4. **m_s/m_d = 20**: Quark mass ratio
+5. **δ_CP = 197°**: CP violation phase
+6. **m_τ/m_e = 3477**: Lepton mass ratio
+7. **Ω_DE = ln(2)×98/99**: Dark energy density
+8. **n_s = ζ(11)/ζ(5)**: Spectral index
+9. **ξ = 5π/16**: Correlation parameter
+10. **λ_H = √17/32**: Higgs coupling
+11. **sin²θ_W = 3/13**: Weinberg angle
+12. **τ = 3472/891**: Hierarchy parameter
+13. **det(g) = 65/32**: K₇ metric determinant
 
-## Three Parameters
+## Zero-Parameter Framework
 
-GIFT uses only 3 geometric parameters:
+GIFT v2.2 achieves **zero continuous adjustable parameters**:
 
-1. **β₀ = 1/(4π²)**: From E₈ normalization
-2. **ξ = 5β₀/2**: DERIVED (not free!)
-3. **ε₀ = 1/8**: From G₂ structure
-
-Effectively 2 free parameters (ξ derived).
+- **Structural inputs**: E₈×E₈ gauge group, K₇ with G₂ holonomy (discrete choices)
+- **All constants derived**: β₀, ξ, τ, det(g), κ_T follow from topology
+- **No fitting**: All 39 observables are structurally determined
 
 ## Document Hierarchy
 
 ### Publications
 
-- **gift_main.md**: Core framework (1,120 lines)
-- **gift_extensions.md**: Dimensional observables (695 lines)
-- **gift_technical.md**: Technical details (4,686 lines)
+- **gift_2_2_main.md**: Core framework (~1,400 lines)
+- **summary.txt**: Executive summary
+- **GIFT_v22_Observable_Reference.md**: Complete 39-observable catalog
+- **GIFT_v22_Geometric_Justifications.md**: Geometric derivation details
+- **GIFT_v22_Statistical_Validation.md**: Statistical validation methods
 
 ### Supplements (publications/supplements/)
 
-- **A**: Mathematical foundations (E₈, K₇, reduction)
-- **B**: Rigorous proofs (9 exact relations)
-- **C**: Complete derivations (all 34 observables)
-- **D**: Phenomenology (experimental comparison)
-- **E**: Falsification (testability criteria)
-- **F**: K₇ metric (explicit construction)
+- **S1**: Mathematical architecture (E₈, K₇, cohomology)
+- **S2**: K₇ manifold construction (TCS, G₂ holonomy)
+- **S3**: Torsional dynamics (torsion tensor, RG)
+- **S4**: Complete derivations (13 proven + all observables)
+- **S5**: Experimental validation (data comparison, falsification)
+- **S6**: Theoretical extensions (quantum gravity, speculative)
+- **S7**: Dimensional observables (absolute masses, cosmology)
 
 ## Code Organization
 
@@ -210,8 +217,8 @@ pytest -m "not slow"            # Fast tests only
 ```
 
 **200+ tests** covering:
-- 34 observables
-- 9 PROVEN exact relations (100% coverage)
+- 39 observables
+- 13 PROVEN exact relations (100% coverage)
 - G2 geometry
 - Error handling
 
@@ -255,24 +262,24 @@ Before committing:
 
 ## Experimental Validation
 
-**Current status**: 34 observables predicted
+**Current status**: 39 observables predicted (27 dimensionless + 12 dimensional)
 
-**Best predictions** (<0.01%):
-- α (fine structure constant)
-- δ_CP (CP violation)
-- Q_Koide (Koide formula)
+**Best predictions** (0.00% deviation):
+- δ_CP = 197° (CP violation)
+- m_s/m_d = 20 (quark ratio)
+- n_s (spectral index)
 
-**All predictions**: <1.0% deviation
+**All predictions**: <1.0% deviation, mean 0.128%
 
 See `docs/EXPERIMENTAL_VALIDATION.md` for updates.
 
 ## Common Questions
 
 **Q: How many parameters?**
-A: 3 (β₀, ξ, ε₀), but ξ is derived, so effectively 2.
+A: Zero continuous adjustable parameters. All quantities are structurally determined from E₈×E₈ and K₇ topology.
 
-**Q: What's PROVEN vs DERIVED?**
-A: PROVEN = rigorous proof. DERIVED = calculated from PROVEN results.
+**Q: What's PROVEN vs TOPOLOGICAL?**
+A: PROVEN = rigorous mathematical proof. TOPOLOGICAL = direct consequence of manifold structure.
 
 **Q: Can I modify predictions?**
 A: Yes, but clearly note changes. Don't claim PROVEN without proof.
@@ -299,8 +306,7 @@ python3 tools/check_pdf_sync.py
 
 ## Version Control
 
-**Current stable**: v2.0.0 (2025-10-24)
-**In development**: v2.1 (unreleased)
+**Current stable**: v2.2.0 (2025-11-27)
 
 See `CHANGELOG.md` for history.
 
@@ -398,11 +404,10 @@ python3 pattern_explorer_cli.py
 
 ## File Size Reference
 
-- CLAUDE.md: 22,647 lines (complete guide)
+- CLAUDE.md: ~22,000 lines (complete guide)
 - CLAUDE_QUICK.md: This file (quick reference)
-- gift_main.md: 1,120 lines (core paper)
-- gift_technical.md: 4,686 lines (detailed)
-- All supplements: ~6,640 lines total
+- gift_2_2_main.md: ~1,400 lines (core paper)
+- All supplements (S1-S7): ~8,000 lines total
 
 ## When to Use Full CLAUDE.md
 
@@ -420,9 +425,9 @@ Otherwise, this quick reference should suffice.
 **GIFT is**:
 - Theoretical physics framework
 - E₈×E₈ → Standard Model parameters
-- 0.13% mean precision, 34 observables
-- 3 parameters (2 effective)
-- 9 proven exact relations
+- 0.128% mean precision, 39 observables
+- Zero continuous adjustable parameters
+- 13 proven exact relations
 
 **When working with GIFT**:
 - Maintain mathematical rigor
@@ -441,9 +446,9 @@ Otherwise, this quick reference should suffice.
 
 ---
 
-**Quick Reference Version**: 1.0.0
-**Full Guide**: CLAUDE.md (22,647 lines)
-**For**: GIFT Framework v2.0.0+
-**Last Updated**: 2025-11-16
+**Quick Reference Version**: 2.2.0
+**Full Guide**: CLAUDE.md
+**For**: GIFT Framework v2.2.0
+**Last Updated**: 2025-11-27
 
 **Remember**: Mathematical correctness and intellectual honesty above all else. (and never use emojis in markdown or python files)

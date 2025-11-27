@@ -123,20 +123,20 @@ tau = 3472/891            # Hierarchy parameter
 - Key results at a glance
 - Installation and usage
 
-**For Theoretical Details** → `publications/gift_main.md`
-- Complete framework (~1100 lines)
+**For Theoretical Details** → `publications/gift_2_2_main.md`
+- Complete framework (~1400 lines)
 - Mathematical structure
 - Experimental validation
 
-**For Mathematical Rigor** → `publications/supplements/S4_rigorous_proofs.md`
-- Exact proofs of 9 key relations
+**For Mathematical Rigor** → `publications/supplements/S4_complete_derivations.md`
+- Exact proofs of 13 proven relations
 - Step-by-step derivations
 - Topological arguments
 
-**For Specific Topics** → `publications/v2.1/supplements/`
-- S1: Mathematical foundations (E₈, K₇, reduction)
-- S5: All 46 observable derivations
-- S8: Falsification criteria and experimental tests
+**For Specific Topics** → `publications/supplements/`
+- S1: Mathematical architecture (E₈, K₇, cohomology)
+- S4: All 39 observable derivations
+- S5: Experimental validation and falsification criteria
 
 ## Key Predictions by Physics Sector
 
@@ -148,7 +148,7 @@ tau = 3472/891            # Hierarchy parameter
 | sin²θ_W | 0.23121(4) | 0.23127 | 0.009% |
 | α_s(M_Z) | 0.1181(11) | 0.1180 | 0.08% |
 
-**Source**: Supplement C, Sections 4-6
+**Source**: S4_complete_derivations, Sections 4-6
 
 ### Neutrino Sector
 
@@ -159,13 +159,13 @@ tau = 3472/891            # Hierarchy parameter
 | θ₂₃ | 49.2°±1.1° | 48.99° | 0.43% |
 | δ_CP | 197°±24° | 197.3° | 0.005% |
 
-**Source**: Supplement C, Section 8
+**Source**: S4_complete_derivations, Section 8
 
 ### CKM Matrix
 
 All 10 elements predicted with mean deviation 0.11%.
 
-**Source**: Supplement C, Section 9
+**Source**: S4_complete_derivations, Section 9
 
 ### Cosmological Sector
 
@@ -223,16 +223,16 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ## Finding Specific Information
 
 **Want to understand a specific prediction?**
-→ Check Supplement S5 (Complete Derivations)
+→ Check S4_complete_derivations.md (all observables)
 
 **Need rigorous mathematical proof?**
-→ Check Supplement S4 (Rigorous Proofs)
+→ Check S4_complete_derivations.md (13 proven relations)
 
 **Looking for experimental comparison?**
-→ Check Supplement S7 (Phenomenology)
+→ Check S5_experimental_validation.md
 
 **Want to know if framework can be falsified?**
-→ Check Supplement S8 (Falsification Criteria)
+→ Check S5_experimental_validation.md (falsification criteria)
 
 **Need definition of technical term?**
 → Check `docs/GLOSSARY.md`
@@ -243,13 +243,13 @@ N_gen = rank(E₈) - rank(Weyl(E₇))
 ## Common First Questions
 
 **Q: Is this tested experimentally?**
-A: Yes. 46 observables compared with experiment, mean deviation 0.13%. See Supplement S7 and `docs/EXPERIMENTAL_VALIDATION.md`.
+A: Yes. 39 observables compared with experiment, mean deviation 0.128%. See S5_experimental_validation.md and `docs/EXPERIMENTAL_VALIDATION.md`.
 
 **Q: How many free parameters?**
-A: 3 topological parameters (p₂=2, Weyl_factor=5, β₀=π/8), where ξ=5π/16 is derived. Standard Model has 19.
+A: Zero continuous adjustable parameters. All quantities are structurally determined from E₈×E₈ and K₇ topology (discrete structural choices).
 
 **Q: Can this be falsified?**
-A: Yes. Multiple clear tests outlined in Supplement S8. Strongest: fourth generation discovery or δ_CP deviation from 197° at high precision.
+A: Yes. Multiple clear tests outlined in S5_experimental_validation.md. Strongest: fourth generation discovery or δ_CP deviation from 197° at high precision.
 
 **Q: What about gravity?**
 A: Framework derives low-energy parameters but doesn't yet address quantum gravity directly. Connection to information theory suggests potential path forward.
@@ -261,15 +261,15 @@ A: E₈ is largest exceptional Lie algebra with unique properties. Two copies pr
 
 ### For Theorists
 
-1. Read main paper: `publications/gift_main.md`
+1. Read main paper: `publications/gift_2_2_main.md`
 2. Study mathematical foundations: `publications/supplements/S1_mathematical_architecture.md`
-3. Examine proofs: `publications/supplements/S4_rigorous_proofs.md`
+3. Examine proofs: `publications/supplements/S4_complete_derivations.md`
 4. Explore extensions and open questions
 
 ### For Experimentalists
 
-1. Review predictions: `publications/gift_main.md` Section 4
-2. Check falsification criteria: `publications/supplements/S8_falsification_protocol.md`
+1. Review predictions: `publications/gift_2_2_main.md` Section 8
+2. Check falsification criteria: `publications/supplements/S5_experimental_validation.md`
 3. See experimental timeline: `docs/EXPERIMENTAL_VALIDATION.md`
 4. Identify relevant experiments for your facility
 
@@ -306,13 +306,13 @@ A: E₈ is largest exceptional Lie algebra with unique properties. Two copies pr
 If you use GIFT in your research:
 
 ```bibtex
-@software{gift_framework_v2_2025,
-  title={GIFT Framework v2.1: Geometric Information Field Theory},
+@software{gift_framework_v22_2025,
+  title={GIFT Framework v2.2: Geometric Information Field Theory},
   author={{GIFT Framework Team}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.1.0},
-  note={Topological unification from E₈×E₈, 0.13% precision across 46 observables, 3 parameters}
+  version={2.2.0},
+  note={Topological unification from E₈×E₈, 0.128% precision across 39 observables, zero adjustable parameters}
 }
 ```
 
@@ -322,7 +322,7 @@ See `CITATION.md` for additional formats.
 
 In 5 minutes you can:
 1. Run notebook in browser (Binder/Colab)
-2. See 46 predictions vs experiment
+2. See 39 predictions vs experiment
 3. Understand basic framework structure
 4. Explore specific sectors of interest
 
@@ -335,7 +335,7 @@ In 30 minutes you can:
 In a few hours you can:
 1. Study complete mathematical foundations
 2. Verify numerical calculations
-3. Examine all 46 predictions in detail
+3. Examine all 39 predictions in detail
 4. Understand connections to information theory
 
 Welcome to the GIFT framework. The mathematics is rich, the predictions are precise, and the implications are profound.
