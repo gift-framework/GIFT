@@ -5,6 +5,91 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2025-11-27
+
+### Major Release - Zero-Parameter Paradigm
+
+This version achieves the **zero-parameter paradigm**: all quantities derive from fixed topological structure with no continuous adjustable parameters. Key discoveries include topological derivations for sin²θ_W, κ_T, det(g), and τ.
+
+### Added
+
+**Topological Derivations (Zero-Parameter Achievement)**
+- **det(g) = 65/32**: Metric determinant now derived topologically (was ML-fitted 2.031)
+  - Formula: p₂ + 1/(b₂ + dim(G₂) - N_gen) = 2 + 1/32 = 65/32
+  - Deviation from ML-fit: 0.012%
+- **sin²θ_W = 3/13**: Weinberg angle now PROVEN (was PHENOMENOLOGICAL)
+  - Formula: b₂/(b₃ + dim(G₂)) = 21/91 = 3/13
+  - Experimental deviation: 0.195%
+- **κ_T = 1/61**: Torsion magnitude now TOPOLOGICAL
+  - Formula: 1/(b₃ - dim(G₂) - p₂) = 1/(77-14-2) = 1/61
+- **τ = 3472/891**: Hierarchy parameter now exact rational
+  - Formula: (496×21)/(27×99) = 3472/891
+  - Prime factorization: (2⁴×7×31)/(3⁴×11)
+
+**New PROVEN Relations**
+- Total PROVEN count: 9 → 13
+- sin²θ_W = 3/13 (new)
+- κ_T = 1/61 (new, was THEORETICAL)
+- det(g) = 65/32 (new, was ML-fitted)
+- τ = 3472/891 (new, exact rational)
+
+**Restructured Documentation**
+- Supplements consolidated: 9 → 7 documents
+- New: S2_K7_manifold_construction.md (from G2_ML content)
+- Merged: S4+S5 → S4_complete_derivations.md
+- Merged: S7+S8 → S5_experimental_validation.md
+- Renamed: S9 → S6_theoretical_extensions.md
+- New: S7_dimensional_observables.md
+- New: GLOSSARY.md, READING_GUIDE.md, publications/README.md
+
+### Changed
+
+**Framework Parameters**
+- Parameter count: 3 → 0 (all structurally determined)
+- Observable count: 46 → 39 (consolidated, no double-counting)
+- Mean precision: 0.13% → 0.128%
+
+**Status Promotions**
+| Observable | v2.1 Status | v2.2 Status |
+|------------|-------------|-------------|
+| sin²θ_W | PHENOMENOLOGICAL | **PROVEN** |
+| κ_T | THEORETICAL | **TOPOLOGICAL** |
+| det(g) | ML-fitted | **TOPOLOGICAL** |
+| τ | DERIVED | **PROVEN** |
+| α_s | PHENOMENOLOGICAL | **TOPOLOGICAL** |
+
+**Documentation Structure**
+- `publications/gift_2_1_main.md` → `publications/gift_2_2_main.md`
+- `publications/GIFT_v21_*.md` → `publications/GIFT_v22_*.md`
+- v2.1 documents archived to `legacy/legacy_v2.1/`
+
+**Key Formula Updates**
+- sin²θ_W: ζ(2) - √2 → 3/13 (exact rational)
+- κ_T: 0.0164 (fit) → 1/61 (topological)
+- det(g): 2.031 (ML) → 65/32 (topological)
+
+### Removed
+
+**Deprecated Content**
+- ML-fitted det(g) parameter
+- PHENOMENOLOGICAL status for sin²θ_W
+- Redundant supplements (consolidated)
+- v2.0 subdirectory structure
+
+### Fixed
+
+**Precision Improvements**
+- sin²θ_W deviation: 0.216% → 0.195% (formula change)
+- κ_T now exact (was fitted)
+- det(g) deviation: 0% → 0.012% (exact vs ML-fit)
+
+**Consistency**
+- All documents now use v2.2 terminology
+- Parameter claims unified: "no continuous adjustable parameters"
+- Observable count consistent across all files
+
+---
+
 ## [2.1.0] - 2025-11-22
 
 ### Major Release - Torsional Dynamics and Scale Bridge
