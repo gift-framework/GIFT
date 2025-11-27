@@ -1,33 +1,33 @@
 # Citation Guide
 
-This document provides formal citation formats for the GIFT Framework v2.
+This document provides formal citation formats for the GIFT Framework v2.2.
 
 ## Software Citation (Recommended)
 
 ### BibTeX
 
 ```bibtex
-@software{gift_framework_v2_2025,
-  title={GIFT Framework v2: Geometric Information Field Theory},
-  author={{GIFT Framework Team}},
+@software{gift_framework_v22_2025,
+  title={GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm},
+  author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.0.0},
+  version={2.2.0},
   license={MIT},
-  note={Topological unification of particle physics and cosmology from E₈×E₈}
+  note={39 observables, 0.128\% precision, all quantities structurally determined from E₈×E₈ topology}
 }
 ```
 
 ### APA Style
 
 ```
-GIFT Framework Team. (2025). GIFT Framework v2: Geometric Information Field Theory (Version 2.0.0) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2025). GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm (Version 2.2.0) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-GIFT Framework Team. "GIFT Framework v2: Geometric Information Field Theory." Version 2.0.0. GitHub, 2025. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm." Version 2.2.0. GitHub, 2025. https://github.com/gift-framework/GIFT.
 ```
 
 ## Theoretical Framework Citation
@@ -35,12 +35,12 @@ GIFT Framework Team. "GIFT Framework v2: Geometric Information Field Theory." Ve
 ### BibTeX
 
 ```bibtex
-@article{gift_framework_v2_theory_2025,
-  title={Geometric Information Field Theory v2: Topological Unification of Particle Physics and Cosmology from E₈×E₈ and G₂ Holonomy},
-  author={{GIFT Framework Team}},
+@article{gift_framework_v22_theory_2025,
+  title={Geometric Information Field Theory v2.2: Topological Unification of Standard Model Parameters Through Torsional Dynamics},
+  author={{Brieuc de La Fournière}},
   year={2025},
   journal={arXiv preprint},
-  note={Mean deviation 0.13\% across 34 observables, 3 geometric parameters},
+  note={Mean deviation 0.128\% across 39 observables, zero continuous adjustable parameters, 13 proven exact relations},
   url={https://github.com/gift-framework/GIFT}
 }
 ```
@@ -50,13 +50,13 @@ GIFT Framework Team. "GIFT Framework v2: Geometric Information Field Theory." Ve
 ### BibTeX
 
 ```bibtex
-@techreport{gift_technical_v2_2025,
-  title={GIFT Framework v2 - Technical Supplements: Complete Mathematical Derivations},
-  author={{GIFT Framework Team}},
+@techreport{gift_technical_v22_2025,
+  title={GIFT Framework v2.2 - Technical Supplements: Complete Mathematical Derivations},
+  author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
   type={Technical Supplement},
-  note={Six detailed supplements with rigorous proofs and derivations},
+  note={Seven detailed supplements (S1-S7) with 13 proven exact relations and all derivations},
   url={https://github.com/gift-framework/GIFT/tree/main/publications/supplements}
 }
 ```
@@ -82,10 +82,11 @@ When citing specific predictions or results, include the relevant section:
 ```bibtex
 @misc{gift_exact_relations_2025,
   title={Rigorously Proven Exact Relations in Fundamental Physics},
-  author={{GIFT Framework Team}},
+  author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2, Supplement B},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/B_rigorous_proofs.md}
+  howpublished={GIFT Framework v2.2, Supplement S4},
+  note={13 proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
 }
 ```
 
@@ -94,11 +95,11 @@ When citing specific predictions or results, include the relevant section:
 ```bibtex
 @misc{gift_cp_violation_2025,
   title={Exact Topological Formula for CP Violation Phase: δ_CP = 197°},
-  author={{GIFT Framework Team}},
+  author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2, Supplement B.1},
-  note={Formula: δ_CP = 7·dim(G₂) + ζ(3) + √5, precision 0.005\%},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/B_rigorous_proofs.md}
+  howpublished={GIFT Framework v2.2, Supplement S4},
+  note={Formula: δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°, exact},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
 }
 ```
 
@@ -107,11 +108,11 @@ When citing specific predictions or results, include the relevant section:
 ```bibtex
 @misc{gift_generation_number_2025,
   title={Topological Proof of Three Fermion Generations},
-  author={{GIFT Framework Team}},
+  author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2, Supplement B.4},
-  note={N_gen = rank(E₈) - rank(Weyl) = 3, exact},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/B_rigorous_proofs.md}
+  howpublished={GIFT Framework v2.2, Supplement S4},
+  note={N_gen = 3 from Atiyah-Singer index theorem on K₇},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
 }
 ```
 
@@ -130,81 +131,42 @@ When citing specific predictions or results, include the relevant section:
 
 ## Citing Specific Supplements
 
-### Supplement A: Mathematical Foundations
+### Supplement S1: Mathematical Architecture
 
 ```bibtex
-@techreport{gift_supp_a_2025,
-  title={GIFT Supplement A: Mathematical Foundations},
-  author={{GIFT Framework Team}},
+@techreport{gift_supp_s1_2025,
+  title={GIFT Supplement S1: Mathematical Architecture},
+  author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
-  note={E₈ structure, K₇ manifold, dimensional reduction},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/A_math_foundations.md}
+  note={E₈ structure, K₇ manifold, G₂ holonomy, cohomology},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S1_mathematical_architecture.md}
 }
 ```
 
-### Supplement B: Rigorous Proofs
+### Supplement S4: Complete Derivations
 
 ```bibtex
-@techreport{gift_supp_b_2025,
-  title={GIFT Supplement B: Rigorous Proofs},
-  author={{GIFT Framework Team}},
+@techreport{gift_supp_s4_2025,
+  title={GIFT Supplement S4: Complete Derivations},
+  author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
-  note={Nine exact relations with complete mathematical proofs},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/B_rigorous_proofs.md}
+  note={13 proven exact relations with proofs, all 39 observable derivations},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
 }
 ```
 
-### Supplement C: Complete Derivations
+### Supplement S5: Experimental Validation
 
 ```bibtex
-@techreport{gift_supp_c_2025,
-  title={GIFT Supplement C: Complete Derivations},
-  author={{GIFT Framework Team}},
+@techreport{gift_supp_s5_2025,
+  title={GIFT Supplement S5: Experimental Validation},
+  author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
-  note={All 34 dimensionless observable predictions},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/C_complete_derivations.md}
-}
-```
-
-### Supplement D: Phenomenology
-
-```bibtex
-@techreport{gift_supp_d_2025,
-  title={GIFT Supplement D: Phenomenology},
-  author={{GIFT Framework Team}},
-  year={2025},
-  institution={GIFT Framework},
-  note={Detailed experimental comparison and statistical analysis},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/D_phenomenology.md}
-}
-```
-
-### Supplement E: Falsification
-
-```bibtex
-@techreport{gift_supp_e_2025,
-  title={GIFT Supplement E: Falsification Criteria},
-  author={{GIFT Framework Team}},
-  year={2025},
-  institution={GIFT Framework},
-  note={Experimental tests and falsification criteria},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/E_falsification.md}
-}
-```
-
-### Supplement F: K₇ Metric
-
-```bibtex
-@techreport{gift_supp_f_2025,
-  title={GIFT Supplement F: Explicit Geometric Constructions},
-  author={{GIFT Framework Team}},
-  year={2025},
-  institution={GIFT Framework},
-  note={Complete K₇ metric and harmonic form bases},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/F_K7_metric.md}
+  note={Data comparison, statistical analysis, falsification protocol},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S5_experimental_validation.md}
 }
 ```
 
@@ -237,8 +199,10 @@ Check repository for updates on DOI availability.
 
 ## Version History
 
-- **v2.0.0** (2025-10-24): Current version with 0.13% precision, 3 parameters, 34 observables
-- **v1.0.0** (Archived): Available in git history, see `legacy_v1/` directory
+- **v2.2.0** (2025-11-27): Current version with 0.128% precision, zero parameters, 39 observables, 13 proven relations
+- **v2.1.0** (2025-11-22): Legacy, see `legacy/legacy_v2.1/`
+- **v2.0.0** (2025-10-24): Legacy, see `legacy/legacy_v2.0/`
+- **v1.0.0** (Archived): Available in `legacy/legacy_v1/`
 
 ## Author Attribution
 
@@ -348,4 +312,4 @@ Thank you for citing GIFT in your work. Proper attribution helps build the scien
 
 **Repository**: https://github.com/gift-framework/GIFT
 
-**Version**: 2.0.0 (2025-10-24)
+**Version**: 2.2.0 (2025-11-27)
