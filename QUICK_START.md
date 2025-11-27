@@ -14,9 +14,9 @@ The Geometric Information Field Theory (GIFT) derives fundamental physics parame
 
 No installation needed. Click either link:
 
-**Binder** (free, no account): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=publications/gift_v2_notebook.ipynb)
+**Binder** (free, no account): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
 
-**Google Colab** (requires Google account): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/publications/gift_v2_notebook.ipynb)
+**Google Colab** (requires Google account): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
 
 ### Option 2: Local Installation
 
@@ -32,8 +32,8 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Launch Jupyter
-jupyter notebook publications/gift_v2_notebook.ipynb
+# Launch visualization notebooks
+jupyter notebook assets/visualizations/
 ```
 
 **Requirements**: Python 3.11 or higher
@@ -85,7 +85,7 @@ Standard Model (SU(3)×SU(2)×U(1))
 
 ### Step 3: Explore the Notebook
 
-Open `publications/gift_v2_notebook.ipynb` and run cells sequentially:
+Open `assets/visualizations/precision_dashboard.ipynb` or explore the Python modules:
 
 **Section 1**: Topological constants (all structurally determined)
 ```python

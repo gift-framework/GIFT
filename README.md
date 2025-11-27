@@ -3,8 +3,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-2.2.0-green.svg)](CHANGELOG.md)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=publications/gift_v2_notebook.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/publications/gift_v2_notebook.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
 [![GitHub stars](https://img.shields.io/github/stars/gift-framework/GIFT.svg?style=social&label=Star)](https://github.com/gift-framework/GIFT)
 [![GitHub watchers](https://img.shields.io/github/watchers/gift-framework/GIFT.svg?style=social&label=Watch)](https://github.com/gift-framework/GIFT)
 [![GitHub forks](https://img.shields.io/github/forks/gift-framework/GIFT.svg?style=social&label=Fork)](https://github.com/gift-framework/GIFT)
@@ -72,8 +72,8 @@ cd gift
 # Install dependencies
 pip install -r requirements.txt
 
-# Launch notebook
-jupyter notebook publications/gift_v2_notebook.ipynb
+# Launch visualization notebooks
+jupyter notebook assets/visualizations/
 ```
 
 **Requirements**: Python 3.11 or higher
@@ -102,21 +102,21 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 - [Reading Guide](publications/READING_GUIDE.md) - Navigation by time/interest
 - [Glossary](publications/GLOSSARY.md) - Terminology definitions
 
-**[Interactive Notebook](publications/gift_v2_notebook.ipynb)** - Computational implementation
-- All calculations reproduced
-- Visualization tools
-- Parameter exploration
+**[Interactive Visualizations](assets/visualizations/)** - Computational notebooks
+- E8 root system 3D visualization
+- Precision dashboard across all sectors
+- Dimensional reduction flow animation
 - Runs on Binder (no installation)
 
 ### Statistical Validation and Experimental Predictions
 
-**[Statistical Validation Notebook](publications/gift_statistical_validation.ipynb)** - Robustness analysis
+**[Statistical Validation](statistical_validation/)** - Robustness analysis
 - Monte Carlo uncertainty propagation (10⁶ samples)
 - Uniqueness tests (no alternative minima found)
 - Exact rational constraints eliminate degeneracy
-- Standalone Python script: [statistical_validation/run_validation.py](statistical_validation/run_validation.py)
+- Core module: [statistical_validation/gift_v22_core.py](statistical_validation/gift_v22_core.py)
 
-**[Experimental Predictions Notebook](publications/gift_experimental_predictions.ipynb)** - DUNE and collider predictions
+**[Experimental Predictions](publications/supplements/S5_experimental_validation.md)** - DUNE and collider predictions
 - Complete DUNE oscillation spectra (νμ → νe, νμ → νμ)
 - CP violation predictions (δ_CP = 197° exact)
 - sin²θ_W = 3/13 precision test at FCC-ee

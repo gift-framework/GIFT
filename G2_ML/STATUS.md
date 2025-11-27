@@ -306,5 +306,5 @@ Key packages:
 **Status**: Active development
 **Version**: 0.9a (production b₂), 0.8 (Yukawa complete), 0.9b (b₃ training)
 **Last Updated**: 2025-11-16
-**Framework**: GIFT v2.0.0
+**Framework**: GIFT v2.2.0
 **License**: MIT

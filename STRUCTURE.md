@@ -27,7 +27,7 @@ gift/
 │   ├── GIFT_v22_Observable_Reference.md   # 39-observable catalog
 │   ├── GIFT_v22_Geometric_Justifications.md # Derivation details
 │   ├── GIFT_v22_Statistical_Validation.md  # Validation methods
-│   ├── gift_v2_notebook.ipynb         # Interactive computational notebook
+│   │   # (Interactive notebooks now in assets/visualizations/)
 │   │
 │   ├── supplements/                   # 7 detailed mathematical supplements
 │   │   ├── S1_mathematical_architecture.md  # E₈, G₂, cohomology
@@ -119,10 +119,10 @@ The core framework is presented in a modular structure:
 
 ### Computational Tools
 
-**Interactive Notebook** (`publications/gift_v2_notebook.ipynb`)
-- All calculations reproduced computationally
-- Visualization of geometric structures
-- Parameter exploration tools
+**Interactive Visualizations** (`assets/visualizations/`)
+- `e8_root_system_3d.ipynb`: E8 240-root structure visualization
+- `precision_dashboard.ipynb`: All observables vs experiment
+- `dimensional_reduction_flow.ipynb`: 496D -> 99D -> 4D animation
 - Runs on Binder or Google Colab without local installation
 
 ### Supporting Documentation

@@ -79,16 +79,16 @@ GIFT/
 - `S6_theoretical_extensions.md` - Quantum gravity, information theory, speculative
 - `S7_dimensional_observables.md` - Absolute masses, scale bridge, cosmology
 
-**Computational** (`publications/`):
-- `gift_v2_notebook.ipynb` - Main interactive implementation
-- `gift_statistical_validation.ipynb` - Monte Carlo validation
-- `gift_experimental_predictions.ipynb` - DUNE and collider predictions
+**Computational** (`assets/visualizations/`):
+- `e8_root_system_3d.ipynb` - E8 240-root 3D visualization
+- `precision_dashboard.ipynb` - All observables vs experiment
+- `dimensional_reduction_flow.ipynb` - 496D -> 99D -> 4D animation
 
 ### Code Organization
 
 **Python Modules**:
 - `quick_start.py` - Interactive launcher for visualizations, docs, agents
-- `statistical_validation/run_validation.py` - Standalone validation script
+- `statistical_validation/gift_v22_core.py` - Core validation module
 - `G2_ML/` - Neural network training for K₇ metric extraction
 - `assets/agents/` - Automated verification and maintenance tools
 

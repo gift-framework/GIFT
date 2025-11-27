@@ -511,7 +511,7 @@ connecting the fractal dimension D_H to dark energy (ln(2)) and geometric projec
 
 ### 8.1 Structural Constants: The Zero-Parameter Paradigm
 
-The framework employs no free parameters. All quantities are topological constants derived from E₈ and K₇ structure:
+The framework contains no continuous adjustable parameters. All quantities are topological constants derived from E₈ and K₇ structure:
 
 **Structural Constant 1: p₂ = 2 (Binary Duality)**
 - Definition: p₂ := dim(G₂)/dim(K₇) = 14/7 = 2

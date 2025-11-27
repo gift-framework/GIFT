@@ -1,7 +1,7 @@
 # Phase 2: Advanced Test Improvements
 
 **Created:** 2025-11-23
-**Version:** 2.1.0
+**Version:** 2.2.0
 **Status:** Completed
 
 ## Vue d'ensemble
@@ -416,5 +416,5 @@ La Phase 2 ajoute des techniques de test avancées qui vont bien au-delà de la 
 
 **Auteur:** GIFT Framework Test Suite Enhancement
 **Date:** 2025-11-23
-**Version:** 2.1.0
+**Version:** 2.2.0
 **License:** MIT

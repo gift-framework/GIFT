@@ -21,7 +21,7 @@
 - All exact relations (Q = 2/3, m_s/m_d = 20, sin²θ_W = 3/13, etc.)
 - All topological formulas (κ_T = 1/61, τ = 3472/891, det(g) = 65/32)
 
-The framework contains no free continuous parameters. Predictions follow uniquely from structural choices.
+The framework contains no continuous adjustable parameters. Predictions follow uniquely from structural choices.
 
 ---
 
@@ -920,7 +920,7 @@ n_s = ζ(11)/ζ(5)
 
 ---
 
-**Document Version**: 2.0
+**Document Version**: 2.2.0
 **Last Updated**: 2025-11-26
 **Validation**: Monte Carlo 10⁵ samples, seed 42
 **Repository**: https://github.com/gift-framework/GIFT
