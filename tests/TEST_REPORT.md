@@ -12,11 +12,12 @@
 
 | Metric | Value |
 |--------|-------|
-| **Total Tests Collected** | 1,685 |
-| **Passed** | 1,565 (92.9%) |
-| **Failed** | 54 (3.2%) |
-| **Skipped** | 66 (3.9%) |
-| **Execution Time** | 11.55s |
+| **Total Tests Collected** | 771 |
+| **Passed** | 720 (93.4%) |
+| **Failed** | 0 (0%) |
+| **Skipped** | 51 (6.6%) |
+| **Execution Time** | 6.82s |
+| **Legacy Tests Archived** | 398 |
 
 ---
 

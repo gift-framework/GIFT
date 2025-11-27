@@ -333,6 +333,11 @@ class TestFileIOErrorHandling:
     def test_csv_export_permission_error(self, tmp_path):
         """Test CSV export handles permission errors gracefully."""
         import csv
+        import os
+
+        # Skip if running as root (permissions don't apply)
+        if os.geteuid() == 0:
+            pytest.skip("Test not applicable when running as root")
 
         output_file = tmp_path / "test.csv"
 

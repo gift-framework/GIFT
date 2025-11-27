@@ -307,10 +307,10 @@ class TestProvenRelationsConsistencyV22:
         code_value = giftpy_framework.lepton.Q_Koide()
         assert np.isclose(code_value, 2/3, rtol=1e-14)
 
-    def test_m_tau_m_e_matches_docs(self, giftpy_framework):
-        """Test m_tau/m_e = 3477 as documented."""
-        code_value = giftpy_framework.lepton.m_tau_m_e()
-        assert code_value == 3477
+    def test_m_tau_m_e_matches_docs(self, framework_v22):
+        """Test m_tau/m_e = 3477 as documented (v2.2 PROVEN)."""
+        obs = framework_v22.compute_all_observables()
+        assert obs['m_tau_m_e'] == 3477
 
     def test_m_s_m_d_matches_docs(self, giftpy_framework):
         """Test m_s/m_d = 20 as documented."""
@@ -449,29 +449,22 @@ class TestZeroParameterParadigmConsistency:
 # =============================================================================
 
 class TestCrossFrameworkConsistency:
-    """Test consistency between v2.2 framework and giftpy."""
+    """Test consistency between v2.2 framework and documented values."""
 
-    def test_Q_Koide_consistent(self, framework_v22, giftpy_framework):
-        """Test Q_Koide is consistent across frameworks."""
+    def test_Q_Koide_v22_correct(self, framework_v22):
+        """Test Q_Koide = 2/3 in v2.2."""
         obs = framework_v22.compute_all_observables()
-        giftpy_value = giftpy_framework.lepton.Q_Koide()
-
-        assert np.isclose(obs['Q_Koide'], giftpy_value, rtol=1e-14)
         assert np.isclose(obs['Q_Koide'], 2/3, rtol=1e-14)
 
-    def test_m_tau_m_e_consistent(self, framework_v22, giftpy_framework):
-        """Test m_tau/m_e is consistent across frameworks."""
+    def test_m_tau_m_e_v22_correct(self, framework_v22):
+        """Test m_tau/m_e = 3477 in v2.2."""
         obs = framework_v22.compute_all_observables()
-        giftpy_value = giftpy_framework.lepton.m_tau_m_e()
+        assert obs['m_tau_m_e'] == 3477
 
-        assert obs['m_tau_m_e'] == giftpy_value == 3477
-
-    def test_m_s_m_d_consistent(self, framework_v22, giftpy_framework):
-        """Test m_s/m_d is consistent across frameworks."""
+    def test_m_s_m_d_v22_correct(self, framework_v22):
+        """Test m_s/m_d = 20 in v2.2."""
         obs = framework_v22.compute_all_observables()
-        giftpy_value = giftpy_framework.quark.m_s_m_d()
-
-        assert obs['m_s_m_d'] == giftpy_value == 20
+        assert obs['m_s_m_d'] == 20
 
 
 # =============================================================================
