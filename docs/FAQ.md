@@ -32,16 +32,16 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.13% mean deviation)
-- Falsifiability (clear criteria in Supplement E)
+- Precision of experimental agreement (currently 0.128% mean deviation across 39 observables)
+- Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**GIFT**: 3 geometric parameters (β₀, ξ, ε₀)
+**GIFT v2.2**: Zero continuous adjustable parameters
 
-Moreover, ξ = 5β₀/2 is exactly derived, reducing true independence to potentially 2 parameters. This represents a factor of ~10 improvement in explanatory power.
+All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all 39 observables.
 
 ### Can GIFT be falsified?
 
@@ -49,10 +49,11 @@ Yes. Clear falsification criteria include:
 
 1. **Fourth generation discovery**: N_gen = 3 is exact in GIFT
 2. **δ_CP precision measurement**: Predicted exactly as 197°
-3. **Exact relation violations**: Q_Koide ≠ 2/3, m_s/m_d ≠ 20, etc.
-4. **Systematic deviations**: If multiple predictions deviate beyond experimental errors
+3. **sin²θ_W precision**: Predicted as 3/13 = 0.230769...
+4. **Exact relation violations**: Q_Koide ≠ 2/3, m_s/m_d ≠ 20, etc.
+5. **Systematic deviations**: If multiple predictions deviate beyond experimental errors
 
-See Supplement E for comprehensive falsification criteria.
+See Supplement S5 for comprehensive falsification criteria.
 
 ## Mathematical Structure
 
