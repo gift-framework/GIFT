@@ -1,0 +1,55 @@
+{
+  "version": "v1.5c",
+  "framework": "K7 GIFT TCS Full with Local/Global Decomposition",
+  "description": "Correct implementation of H3(K7)=77 via spatial profiles",
+  "structural_constants": {
+    "p2": 2,
+    "N_gen": 3,
+    "Weyl_factor": 5,
+    "dim_K7": 7,
+    "rank_E8": 8,
+    "dim_G2": 14,
+    "dim_E8": 248,
+    "b2_K7": 21,
+    "b3_K7": 77,
+    "H_star": 99,
+    "M5": 31
+  },
+  "decomposition": {
+    "b3_local": 35,
+    "b3_global": 42,
+    "b3_total": 77,
+    "note": "35 = Lambda3(R7) point-wise dimension; 42 global modes via spatial profiles"
+  },
+  "local_fiber_decomposition": {
+    "Lambda3_1": 1,
+    "Lambda3_7": 7,
+    "Lambda3_27": 27,
+    "total": 35,
+    "note": "G2 irreps at each point"
+  },
+  "global_spatial_profiles": {
+    "region_profiles": 3,
+    "polynomial_profiles": 15,
+    "fourier_profiles": 14,
+    "coordinate_profiles": 10,
+    "total": 42,
+    "note": "chi_L, chi_R, chi_neck + spatial variations"
+  },
+  "derived_quantities": {
+    "kappa_T": "1/61 = 0.016393",
+    "det_g": "65/32 = 2.031250",
+    "tau": "3472/891 = 3.896745"
+  },
+  "training_config": {
+    "phases": [
+      {"name": "global_warmup", "epochs": 200, "freeze_local": true},
+      {"name": "global_torsion_control", "epochs": 600, "freeze_local": true},
+      {"name": "joint_with_anchor", "epochs": 800, "freeze_local": false, "local_lr_factor": 0.1},
+      {"name": "fine_tune", "epochs": 400, "freeze_local": false, "local_lr_factor": 0.01}
+    ],
+    "total_epochs": 2000
+  },
+  "key_insight": "H3(K7)=77 is FUNCTIONAL dimension (field space), not point-wise fiber dimension. Lambda3(R7)=35 at any point. Global modes distinguished by SPATIAL PROFILES, not fiber orthogonality.",
+  "status": "ready_for_training"
+}
