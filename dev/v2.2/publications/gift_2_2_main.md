@@ -4,7 +4,7 @@
 
 We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers b₂=21 and b₃=77, which determine gauge field and matter multiplicities through cohomological mappings.
 
-The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude T=1/61, hierarchy parameter λ=3472/891) derive from fixed algebraic and topological invariants. This eliminates parameter tuning by construction—discrete topological structures admit no continuous variation.
+The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude T=1/61, hierarchy parameter λ=3472/891) derive from fixed algebraic and topological invariants. This eliminates parameter tuning by construction, discrete topological structures admit no continuous variation.
 
 Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values . Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). Thirteen relations possess rigorous topological proofs, including three-generation structure (N_gen=3), Koide parameter (Q=2/3), and Weinberg angle (sin²θ_W=3/13) as exact rationals.
 
