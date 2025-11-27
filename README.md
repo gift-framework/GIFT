@@ -1,7 +1,7 @@
-# Geometric Information Field Theory v2.1
+# Geometric Information Field Theory v2.2
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.1.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-2.2.0-green.svg)](CHANGELOG.md)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=publications/gift_v2_notebook.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/publications/gift_v2_notebook.ipynb)
@@ -11,52 +11,52 @@
 
 ## Overview
 
-- **Version**: 2.1.0
+- **Version**: 2.2.0
 - **Scope**: Geometric information approach to Standard Model parameters from E₈×E₈
-- **Precision**: 0.13% mean deviation across 46 observables (37 dimensionless + 9 dimensional)
-- **Parsimony**: 3 geometric parameters vs 19 in Standard Model (6.3× reduction)
-- **Testability**: Concrete experimental comparisons (DUNE, LHCb, Belle II)
-- **Mathematical results**: 9 exact relations with complete proofs
+- **Precision**: 0.128% mean deviation across 39 observables
+- **Structural determination**: All quantities derive from fixed topological structure (no continuous adjustable parameters)
+- **Testability**: Concrete experimental comparisons (DUNE, FCC-ee, Lattice QCD)
+- **Mathematical results**: 13 exact relations with complete proofs
 - **Neutrino sector**: Full prediction including δ_CP = 197° (0.000% deviation - exact topological formula)
-- **Cosmology**: Ω_DE = ln(2) from binary information architecture (0.008% deviation)
-- **New in v2.1**: Torsional dynamics, RG flow geodesics, scale bridge (Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶)
-- **Statistical validation**: Monte Carlo uncertainty propagation (1M samples), Sobol sensitivity analysis
+- **Cosmology**: Ω_DE = ln(2)×98/99 from binary information architecture
+- **New in v2.2**: Zero-parameter paradigm (det(g) = 65/32, sin²θ_W = 3/13, κ_T = 1/61 all topological)
+- **Statistical validation**: Monte Carlo uncertainty propagation (10⁶ samples), uniqueness tests
 
 ## Performance Metrics
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| **Version** | 2.1.0 | Torsional dynamics + RG flow + scale bridge |
-| **Precision** | 0.13% | Mean deviation across 46 observables |
-| **Parameter Reduction** | 19 → 3 | 6.3× improvement over Standard Model |
-| **Coverage** | 46 | Total observables (37 dimensionless + 9 dimensional) |
-| **Mathematical Rigor** | 9 | Proven exact relations with complete proofs |
+| **Version** | 2.2.0 | Zero-parameter paradigm + torsional dynamics |
+| **Precision** | 0.128% | Mean deviation across 39 observables |
+| **Parameter Status** | 19 → 0 | All quantities structurally determined |
+| **Coverage** | 39 | Total observables predicted |
+| **Mathematical Rigor** | 13 | Proven exact relations with complete proofs |
 | **Experimental Tests** | 4 | Clear falsification routes identified |
 | **Neutrino Precision** | 0.000% | δ_CP = 197° exact topological formula |
-| **Cosmological Fit** | 0.008% | Ω_DE = ln(2) × 98/99 |
+| **Key Exact Results** | 3/13, 1/61, 65/32 | sin²θ_W, κ_T, det(g) all topological |
 
 ## Abstract
 
-The Geometric Information Field Theory (GIFT) framework studies a **topological unification** perspective on particle physics and cosmology based on the **E₈ Lie algebra** structure. The approach derives Standard Model parameters from geometric principles via **dimensional reduction** **E₈×E₈ → AdS₄×K₇ → Standard Model**, with a mean deviation of 0.13% across **46 observables (37 dimensionless + 9 dimensional)** using **three geometric parameters**.
+The Geometric Information Field Theory (GIFT) framework studies a **topological unification** perspective on particle physics and cosmology based on the **E₈ Lie algebra** structure. The approach derives Standard Model parameters from geometric principles via **dimensional reduction** **E₈×E₈ → AdS₄×K₇ → Standard Model**, with a mean deviation of 0.128% across **39 observables** using **no continuous adjustable parameters**.
 
-Version 2.1 introduces **torsional geodesic dynamics** connecting static topology to renormalization group flow, a **scale bridge** (Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶) linking dimensionless to dimensional parameters, and explicit **CKM matrix predictions**. The framework provides complete derivations, rigorous proofs where available, and explicit predictions for **neutrino physics**, **CP violation**, **quark masses**, **dark energy**, and other **cosmological** observables derived from a **binary information architecture**.
+Version 2.2 achieves the **zero-parameter paradigm**: all quantities derive from fixed topological structure. Key discoveries include **sin²θ_W = 3/13** (exact rational), **κ_T = 1/61** (torsion magnitude), **det(g) = 65/32** (metric determinant), and **τ = 3472/891** (hierarchy parameter - exact rational). The framework provides **13 proven exact relations** with rigorous proofs, **torsional geodesic dynamics** connecting geometry to renormalization group flow, and explicit predictions for **neutrino physics**, **CP violation**, **quark masses**, and **cosmological** observables.
 
 ## Key Results
 
 ### Precision Achievement
-- **Mean deviation**: 0.13% across 46 observables (37 dimensionless + 9 dimensional)
-- **Parameter reduction**: 19 → 3 (6.3× improvement over Standard Model)
-- **Exact predictions**: N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, δ_CP = 197°, m_τ/m_e = 3477
+- **Mean deviation**: 0.128% across 39 observables
+- **Structural determination**: All quantities derive from fixed E₈×E₈ and K₇ topology
+- **Exact predictions**: sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197°, Q_Koide = 2/3, m_s/m_d = 20, m_τ/m_e = 3477
 
 ### Predictions
 - **Fourth generation disfavored**: N_gen = 3 from **E₈ Lie algebra** rank–Weyl structure
 - **Neutrino sector**: Mixing parameters without phenomenological input
 - **CP violation**: δ_CP = 197° from a **topological** formula (0.000% deviation - exact)
-- **Dark energy**: Ω_DE = ln(2) from a **binary information** model
+- **Electroweak mixing**: sin²θ_W = 3/13 = b₂/(b₃ + dim(G₂)) (0.195% deviation)
 
 ### Mathematical Structure
-- **Exact relations**: 9 rigorously proven topological identities
-- **Dual origins**: Multiple independent derivations of key parameters (√17, Ω_DE)
+- **Exact relations**: 13 rigorously proven topological identities
+- **Rational exactness**: sin²θ_W, κ_T, det(g), τ all exact rationals
 - **Information theory**: [[496, 99, 31]] quantum error correction structure
 - **Topological basis**: Physical parameters as discrete invariants
 
@@ -84,22 +84,23 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 
 ### Main Documents
 
-**[Main Paper](publications/v2.1/gift_main.md)** - Complete theoretical framework (~1100 lines)
+**[Main Paper](publications/gift_2_2_main.md)** - Complete theoretical framework (~1400 lines)
 - Framework overview and key results
 - Mathematical structure summary
-- Experimental validation
+- 13 proven exact relations
 - Self-contained introduction
 
-**[Extensions](publications/v2.1/gift_extensions.md)** - Dimensional observables and temporal framework
-- Quark and lepton masses
-- Gauge boson masses
-- Hubble parameter predictions
-- Temporal framework (exploratory)
+**[Summary](publications/summary.txt)** - Executive briefing (5-minute read)
+- Core claims and results
+- Framework logic
+- Key predictions
 
-**v2.1 Specific Documents** (`publications/v2.1/`):
-- [Geometric Justifications](publications/v2.1/GIFT_v21_Geometric_Justifications.md) - Detailed geometric derivations
-- [Observable Reference](publications/v2.1/GIFT_v21_Observable_Reference.md) - Complete observable catalog
-- [Statistical Validation](publications/v2.1/GIFT_v21_Statistical_Validation.md) - Validation methodology
+**v2.2 Reference Documents** (`publications/`):
+- [Observable Reference](publications/GIFT_v22_Observable_Reference.md) - Complete 39-observable catalog
+- [Geometric Justifications](publications/GIFT_v22_Geometric_Justifications.md) - Detailed geometric derivations
+- [Statistical Validation](publications/GIFT_v22_Statistical_Validation.md) - Validation methodology
+- [Reading Guide](publications/READING_GUIDE.md) - Navigation by time/interest
+- [Glossary](publications/GLOSSARY.md) - Terminology definitions
 
 **[Interactive Notebook](publications/gift_v2_notebook.ipynb)** - Computational implementation
 - All calculations reproduced
@@ -110,80 +111,67 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 ### Statistical Validation and Experimental Predictions
 
 **[Statistical Validation Notebook](publications/gift_statistical_validation.ipynb)** - Robustness analysis
-- Monte Carlo uncertainty propagation (1,000,000 samples)
-- Sobol global sensitivity analysis (Saltelli sampling)
-- Bootstrap validation with resampling
-- Uncertainty quantification for all observables
+- Monte Carlo uncertainty propagation (10⁶ samples)
+- Uniqueness tests (no alternative minima found)
+- Exact rational constraints eliminate degeneracy
 - Standalone Python script: [statistical_validation/run_validation.py](statistical_validation/run_validation.py)
 
 **[Experimental Predictions Notebook](publications/gift_experimental_predictions.ipynb)** - DUNE and collider predictions
 - Complete DUNE oscillation spectra (νμ → νe, νμ → νμ)
 - CP violation predictions (δ_CP = 197° exact)
-- New particle searches: 3.897 GeV scalar, 20.4 GeV gauge boson, 4.77 GeV dark matter
-- Production cross-sections and experimental signatures
-- See [README_experimental_predictions.md](publications/v2.1/README_experimental_predictions.md)
+- sin²θ_W = 3/13 precision test at FCC-ee
+- m_s/m_d = 20 verification via Lattice QCD
 
-**[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics (93% complete)
-- b₂=21 harmonic 2-forms extracted and validated (v0.7, v0.9a)
-- Yukawa coupling tensor computed: 21×21×21 triple products (v0.8)
-- b₃=77 harmonic 3-forms in progress: 20/77 partial (v0.8), full extraction training now (v0.9b)
-- Data-driven K₇ metric construction via deep learning
-- See [G2_ML/STATUS.md](G2_ML/STATUS.md) for detailed current status
+**[G2 Metric Learning](G2_ML/)** - Neural network approach to K₇ manifold metrics
+- b₂=21 harmonic 2-forms extracted and validated
+- Note: det(g) = 65/32 now derived topologically (no longer ML-fitted)
+- See [G2_ML/STATUS.md](G2_ML/STATUS.md) for detailed status
 
 ### Mathematical Supplements
 
-Detailed derivations organized by topic in [publications/v2.1/supplements/](publications/v2.1/supplements/):
+Detailed derivations organized by topic in [publications/supplements/](publications/supplements/):
 
-**[Supplement S1: Mathematical Architecture](publications/v2.1/supplements/S1_mathematical_architecture.md)**
+**[Supplement S1: Mathematical Architecture](publications/supplements/S1_mathematical_architecture.md)**
 - E₈ Lie algebra structure and root system
 - K₇ manifold with G₂ holonomy
 - Dimensional reduction mechanism
-- Cohomology theory
+- Cohomology theory (b₂=21, b₃=77)
 
-**[Supplement S3: Torsional Dynamics](publications/v2.1/supplements/S3_torsional_dynamics.md)**
+**[Supplement S2: K₇ Manifold Construction](publications/supplements/S2_K7_manifold_construction.md)**
+- Twisted connected sum construction
+- G₂ holonomy and calibrated geometry
+- ML metric extraction methods
+- Code and implementation
+
+**[Supplement S3: Torsional Dynamics](publications/supplements/S3_torsional_dynamics.md)**
 - Torsion tensor and geodesic flow
 - Connection to renormalization group
-- Scale bridge framework
+- Scale bridge framework (Λ_GIFT)
 - Physical interpretation
 
-**[Supplement S4: Rigorous Proofs](publications/v2.1/supplements/S4_rigorous_proofs.md)**
-- 9 exact relations with complete proofs
-- δ_CP = 197° (exact formula)
-- N_gen = 3 (topological necessity)
-- Ω_DE triple origin
-- Dual derivations for key parameters
-
-**[Supplement S5: Complete Calculations](publications/v2.1/supplements/S5_complete_calculations.md)**
-- All 46 observable derivations (37 dimensionless + 9 dimensional)
+**[Supplement S4: Complete Derivations](publications/supplements/S4_complete_derivations.md)**
+- 13 proven exact relations with proofs
+- All 39 observable derivations
 - Step-by-step calculations
 - Numerical verification
-- Precision analysis
 
-**[Supplement S6: Numerical Methods](publications/v2.1/supplements/S6_numerical_methods.md)**
-- Computational algorithms
-- Implementation details
-- Code organization
-- Validation procedures
-
-**[Supplement S7: Phenomenology](publications/v2.1/supplements/S7_phenomenology.md)**
+**[Supplement S5: Experimental Validation](publications/supplements/S5_experimental_validation.md)**
 - Detailed experimental comparison
 - Statistical analysis
-- Sector-by-sector performance
-- Tension identification
+- Falsification protocol
+- Timeline for definitive tests
 
-**[Supplement S8: Falsification Protocol](publications/v2.1/supplements/S8_falsification_protocol.md)**
-- Clear experimental tests
-- Timeline for definitive measurements
-- Fourth generation constraints
-- δ_CP precision requirements
-
-**[Supplement S9: Extensions](publications/v2.1/supplements/S9_extensions.md)**
+**[Supplement S6: Theoretical Extensions](publications/supplements/S6_theoretical_extensions.md)**
 - Quantum gravity connections
 - Information-theoretic interpretation
-- Future research directions
 - Speculative extensions
+- Future research directions
 
-*Note: Supplement S2 (K₇ construction details) is currently in development.*
+**[Supplement S7: Dimensional Observables](publications/supplements/S7_dimensional_observables.md)**
+- Absolute mass predictions
+- Scale bridge applications
+- Cosmological parameters
+- Hubble tension considerations
 
 ### Additional Documentation
 
@@ -260,59 +248,46 @@ gift/
 ├── CHANGELOG.md                       # Version history
 ├── LICENSE                            # MIT License
 ├── requirements.txt                   # Python dependencies
-├── runtime.txt                        # Python version
-├── postBuild                          # Binder configuration
 │
-├── publications/                      # Main theoretical documents
-│   ├── v2.0/                          # Version 2.0 documents
-│   ├── v2.1/                          # Version 2.1 documents (latest)
-│   │   ├── gift_main.md               # Core paper (~1100 lines)
-│   │   ├── gift_extensions.md         # Dimensional observables
-│   │   ├── GIFT_v21_*.md              # v2.1 specific documents
-│   │   └── supplements/               # Detailed supplements (A-F)
-│   ├── tests/                         # Test synthesis and infrastructure
-│   │   └── TEST_SYNTHESIS.md          # Comprehensive test coverage
-│   ├── gift_v2_notebook.ipynb         # Interactive notebook
-│   ├── gift_statistical_validation.ipynb  # Statistical robustness (1M MC samples)
-│   └── gift_experimental_predictions.ipynb  # DUNE, collider predictions
+├── publications/                      # Main theoretical documents (v2.2)
+│   ├── gift_2_2_main.md               # Core paper (~1400 lines)
+│   ├── summary.txt                    # Executive summary
+│   ├── GIFT_v22_*.md                  # Reference documents
+│   ├── READING_GUIDE.md               # Navigation guide
+│   ├── GLOSSARY.md                    # Terminology
+│   └── supplements/                   # 7 detailed supplements (S1-S7)
+│       ├── S1_mathematical_architecture.md
+│       ├── S2_K7_manifold_construction.md
+│       ├── S3_torsional_dynamics.md
+│       ├── S4_complete_derivations.md
+│       ├── S5_experimental_validation.md
+│       ├── S6_theoretical_extensions.md
+│       └── S7_dimensional_observables.md
 │
 ├── tests/                             # Main test suite (pytest)
 │   ├── unit/                          # Unit tests
 │   ├── integration/                   # Integration tests
-│   ├── regression/                    # Observable regression tests
-│   └── notebooks/                     # Notebook execution tests
-│
-├── giftpy_tests/                      # Framework-specific tests
-│
-├── assets/                            # Interactive assets and tools
-│   ├── README.md                      # Assets overview
-│   ├── twitter_bot/                    # Automated Twitter bot
-│   │   ├── content_generator_en.py     # English content generator
-│   │   ├── twitter_bot_v2.py           # Main bot script
-│   │   ├── scheduler.py                # Automated scheduler
-│   │   └── README.md                   # Bot documentation
-│   └── visualizations/                # Interactive visualizations
-│       ├── README.md                  # Visualization guide
-│       ├── e8_root_system_3d.ipynb    # E₈ 240 roots in 3D
-│       ├── precision_dashboard.ipynb  # All observables comparison
-│       └── dimensional_reduction_flow.ipynb # 496D → 99D → 4D animation
+│   └── regression/                    # Observable regression tests
 │
 ├── statistical_validation/            # Statistical robustness tools
 │   ├── run_validation.py              # Standalone validation script
-│   ├── README.md                      # Usage documentation
 │   └── full_results/                  # Complete validation outputs
-│       └── validation_results.json    # 1M MC sample results
 │
-├── G2_ML/                             # Machine learning for K₇ metrics (WIP)
-│   ├── COMPLETION_PLAN.md             # Development roadmap
-│   └── [notebooks and models]         # Neural network training (in progress)
+├── G2_ML/                             # Machine learning for K₇ metrics
+│   └── [notebooks and models]         # Neural network training
+│
+├── assets/                            # Interactive assets and tools
+│   └── visualizations/                # Interactive visualizations
 │
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Common questions
 │   ├── GLOSSARY.md                    # Technical definitions
 │   └── EXPERIMENTAL_VALIDATION.md     # Experimental status
 │
-└── [legacy_v1/]                       # Archived v1.0 (git history)
+└── legacy/                            # Archived versions
+    ├── legacy_v1/                     # v1.0 archive
+    ├── legacy_v2.0/                   # v2.0 archive
+    └── legacy_v2.1/                   # v2.1 archive
 ```
 
 See [STRUCTURE.md](STRUCTURE.md) for detailed organization guide.
@@ -321,108 +296,114 @@ See [STRUCTURE.md](STRUCTURE.md) for detailed organization guide.
 
 ### Gauge Sector
 
-| Observable | Experimental | GIFT | Deviation |
-|------------|--------------|------|-----------|
-| α⁻¹ | 137.035999... | 137.036 | 0.001% |
-| sin²θ_W | 0.23121(4) | 0.23127 | 0.009% |
-| α_s(M_Z) | 0.1181(11) | 0.1180 | 0.08% |
+| Observable | Experimental | GIFT | Deviation | Status |
+|------------|--------------|------|-----------|--------|
+| α⁻¹ | 137.036 | 137.033 | 0.002% | TOPOLOGICAL |
+| sin²θ_W | 0.23122 | **3/13** = 0.23077 | 0.195% | **PROVEN** |
+| α_s(M_Z) | 0.1179 | **√2/12** = 0.11785 | 0.042% | TOPOLOGICAL |
 
-All three gauge couplings predicted with <0.1% precision.
+All three gauge couplings have topological derivations.
 
 ### Neutrino Sector (Complete)
 
-| Observable | Experimental | GIFT | Deviation |
-|------------|--------------|------|-----------|
-| θ₁₂ | 33.44° ± 0.77° | 33.45° | 0.03% |
-| θ₁₃ | 8.61° ± 0.12° | 8.59° | 0.23% |
-| θ₂₃ | 49.2° ± 1.1° | 48.99° | 0.43% |
-| δ_CP | 197° ± 24° | 197.3° | 0.005% |
+| Observable | Experimental | GIFT | Deviation | Status |
+|------------|--------------|------|-----------|--------|
+| θ₁₂ | 33.41° | 33.40° | 0.03% | TOPOLOGICAL |
+| θ₁₃ | 8.54° | π/21 = 8.571° | 0.36% | TOPOLOGICAL |
+| θ₂₃ | 49.3° | 85/99 rad = 49.19° | 0.22% | TOPOLOGICAL |
+| δ_CP | 197° | **197°** | 0.00% | **PROVEN** |
 
 Complete four-parameter prediction without neutrino-specific inputs.
 
-### CKM Matrix
-
-All 10 independent elements predicted with mean deviation 0.11%. Spans four orders of magnitude (0.004 to 0.97).
-
 ### Lepton Masses
 
-| Ratio | Experimental | GIFT | Deviation |
-|-------|--------------|------|-----------|
-| mμ/me | 206.768 | 206.795 | 0.013% |
-| mτ/me | 3477.15 | 3477.00 | 0.004% |
-| mτ/mμ | 16.8167 | 16.8136 | 0.018% |
+| Ratio | Experimental | GIFT | Deviation | Status |
+|-------|--------------|------|-----------|--------|
+| Q_Koide | 0.66666 | **2/3** | 0.001% | **PROVEN** |
+| mμ/me | 206.768 | 27^φ = 207.01 | 0.118% | TOPOLOGICAL |
+| mτ/me | 3477.15 | **3477** | 0.004% | **PROVEN** |
 
-The mτ/me ratio has exact topological formula. Mean deviation: 0.012%.
+### Quark Mass Ratios
 
-### Quark Masses
-
-Nine mass ratios predicted, including exact relations:
-- m_s/m_d = 20 (exact)
-- Mean deviation: 0.09%
+| Ratio | Experimental | GIFT | Deviation | Status |
+|-------|--------------|------|-----------|--------|
+| m_s/m_d | 20.0 | **20** | 0.00% | **PROVEN** |
+| m_c/m_s | 13.6 | τ×3.49 = 13.60 | 0.003% | DERIVED |
+| m_t/m_b | 41.3 | 41.41 | 0.26% | DERIVED |
 
 ### Cosmological Sector
 
-| Observable | Experimental | GIFT | Deviation |
-|------------|--------------|------|-----------|
-| Ω_DE | 0.6889(56) | ln(2) = 0.693 | 0.10% |
+| Observable | Experimental | GIFT | Deviation | Status |
+|------------|--------------|------|-----------|--------|
+| Ω_DE | 0.6889 | ln(2)×98/99 = 0.6861 | 0.40% | **PROVEN** |
+| n_s | 0.9649 | ζ(11)/ζ(5) = 0.9649 | 0.00% | **PROVEN** |
 
-Dark energy density from binary information architecture.
+See [publications/gift_2_2_main.md](publications/gift_2_2_main.md) Section 8 for complete tables.
 
-See [publications/v2.1/gift_main.md](publications/v2.1/gift_main.md) Section 4 for complete tables.
+## Exact Relations (13 PROVEN)
 
-## Exact Relations (PROVEN)
+The framework establishes 13 rigorously proven identities with explicit geometric anchoring:
 
-The framework establishes rigorously proven identities with explicit geometric anchoring:
+**Gauge Sector**
+1. **sin²θ_W = 3/13**: b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 (0.195% deviation)
+2. **α_s = √2/12**: √2/(dim(G₂) - p₂) = √2/12 (0.042% deviation)
+3. **λ_H = √17/32**: √(dim(G₂) + N_gen)/2^5 (2.3% deviation, large exp. uncertainty)
 
-1. **N_gen = 3**: From Atiyah-Singer index theorem on K₇
-2. **Q_Koide = 2/3**: dim(G₂)/b₂(K₇) = 14/21 = 2/3 (experimental: 0.666661)
-3. **m_s/m_d = 20**: p₂²(=4) × Weyl_factor(=5) = 4 × 5 = 20
-4. **δ_CP = 197°**: 7(dim(K₇)) × 14(dim(G₂)) + 99(H*) = 98 + 99 = 197°
-5. **m_τ/m_e = 3477**: dim(K₇)(=7) + 10×dim(E₈)(=2480) + 10×H*(=990) = 7 + 2480 + 990 = 3477
-6. **Ω_DE = ln(2)×98/99**: ln(2) × (b₂+b₃)/H* = ln(2) × (21+77)/(21+77+1) = 0.6861
-7. **ξ = 5π/16**: (Weyl_factor/p₂) × β₀ = (5/2) × (π/8) = 5π/16
-8. **H* = 99**: b₂(K₇) + b₃(K₇) + 1 = 21 + 77 + 1 = 99
+**Fermion Sector**
+4. **N_gen = 3**: From Atiyah-Singer index theorem on K₇
+5. **Q_Koide = 2/3**: dim(G₂)/b₂(K₇) = 14/21 = 2/3
+6. **m_s/m_d = 20**: p₂² × Weyl = 4 × 5 = 20
+7. **m_τ/m_e = 3477**: dim(K₇) + 10×dim(E₈) + 10×H* = 7 + 2480 + 990
 
-See [Supplement S4](publications/v2.1/supplements/S4_rigorous_proofs.md) for complete proofs.
+**Neutrino Sector**
+8. **δ_CP = 197°**: dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°
+
+**Structural Parameters**
+9. **κ_T = 1/61**: 1/(b₃ - dim(G₂) - p₂) = 1/(77-14-2) = 1/61
+10. **det(g) = 65/32**: p₂ + 1/(b₂ + dim(G₂) - N_gen) = 2 + 1/32 = 65/32
+11. **τ = 3472/891**: (dim(E₈×E₈)×b₂)/(dim(J₃(O))×H*) = (496×21)/(27×99)
+
+**Cosmological Sector**
+12. **Ω_DE = ln(2)×98/99**: Information-theoretic origin
+13. **n_s = ζ(11)/ζ(5)**: Bulk/Weyl zeta ratio = 0.9649
+
+See [Supplement S4](publications/supplements/S4_complete_derivations.md) for complete proofs.
 
 ## Experimental Predictions
 
-### New Particles
+### Critical Tests
 
-Predicted but not yet observed:
-- **3.897 GeV Scalar**: From H³(K₇) = ℂ⁷⁷ cohomology structure
-- **20.4 GeV Gauge Boson**: From E₈×E₈ gauge field decomposition
-- **4.77 GeV Dark Matter**: From K₇ geometric structure
-
-Search venues: Belle II, LHCb (scalar), LHC (gauge boson), XENON/LZ (dark matter).
+| Prediction | Test | Timeline | Falsification Criterion |
+|------------|------|----------|------------------------|
+| **δ_CP = 197°** | DUNE | 2027-2030 | Outside [187°, 207°] at ±5° precision |
+| **sin²θ_W = 3/13** | FCC-ee | 2040s | Outside [0.2295, 0.2320] at ±0.0001 |
+| **m_s/m_d = 20** | Lattice QCD | 2030 | Converges outside [19, 21] |
+| **N_gen = 3** | LHC | Ongoing | Fourth generation discovery |
+| **κ_T = 1/61** | DESI | Ongoing | κ_T² > 10⁻³ cosmological bound |
 
 ### Falsification Criteria
 
-Falsification routes:
-- Fourth generation discovery (contradicts N_gen = 3)
-- δ_CP measured at high precision inconsistent with 197°
+The framework would be falsified by:
+- Fourth generation fermion discovery (contradicts N_gen = 3)
+- δ_CP measured inconsistent with 197° at high precision
+- sin²θ_W deviating significantly from 3/13 = 0.230769...
 - Violation of exact relations (Q_Koide ≠ 2/3, m_s/m_d ≠ 20)
-- Systematic deviations across multiple sectors
+- κ_T exceeding DESI torsion bounds
 
-Timeline for experimental tests:
-- 2028-2032: DUNE measures δ_CP to ~2-5° precision
-- 2025-2030: Belle II, LHCb improve CKM measurements
-- Ongoing: Fourth generation searches at colliders
-
-See [Supplement S8](publications/v2.1/supplements/S8_falsification_protocol.md) and [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) for details.
+See [Supplement S5](publications/supplements/S5_experimental_validation.md) and [docs/EXPERIMENTAL_VALIDATION.md](docs/EXPERIMENTAL_VALIDATION.md) for details.
 
 ## Citation
 
 If you use this framework in your research, please cite:
 
 ```bibtex
-@software{gift_framework_v21_2025,
-  title={GIFT Framework v2.1: Geometric Information Field Theory with Torsional Dynamics},
+@software{gift_framework_v22_2025,
+  title={GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.1.0},
-  note={Topological unification from E₈×E₈ with torsional dynamics, 46 observables, 0.13\% precision, 3 parameters}
+  version={2.2.0},
+  note={Topological unification from E₈×E₈, 39 observables, 0.128\% precision, all quantities structurally determined}
 }
 ```
 
@@ -449,21 +430,23 @@ This work is licensed under the MIT License - see [LICENSE](LICENSE) file for de
 
 ## Version History
 
-- **v2.1.0** (2025-11-22, current stable): Torsional dynamics, RG flow, scale bridge, 46 observables, statistical validation (200+ tests), G2 ML framework
-- **v2.0.0** (2025-10-24, legacy): Static topological structure, 15 observables, modular organization (see `legacy_v2.0/`)
-- **v1.0.0** (Archived): Initial framework (available in git history via `legacy_v1/`)
+- **v2.2.0** (2025-11-27, current): Zero-parameter paradigm, 39 observables, 13 proven relations, det(g)=65/32, sin²θ_W=3/13, κ_T=1/61 all topological
+- **v2.1.0** (2025-11-22, legacy): Torsional dynamics, RG flow, scale bridge, 46 observables (see `legacy/legacy_v2.1/`)
+- **v2.0.0** (2025-10-24, legacy): Static topological structure, 15 observables (see `legacy/legacy_v2.0/`)
+- **v1.0.0** (Archived): Initial framework (see `legacy/legacy_v1/`)
 
 See [CHANGELOG.md](CHANGELOG.md) for complete version history and detailed changes.
 
 ## Repository Information
 
 - **Framework**: Geometric Information Field Theory
-- **Version**: 2.1.0 (current stable)
-- **Theoretical Basis**: E₈×E₈ Information Architecture + Torsional Geodesic Dynamics
+- **Version**: 2.2.0 (current)
+- **Theoretical Basis**: E₈×E₈ topology + K₇ G₂ holonomy + Torsional Geodesic Dynamics
 - **Dimensional Reduction**: E₈×E₈ → AdS₄×K₇ → Standard Model
-- **Precision**: 0.13% mean deviation across 46 observables (37 dimensionless + 9 dimensional)
-- **Parameters**: 3 topological (p₂=2, Weyl_factor=5, τ=3.8967) + torsional dynamics (|T|=0.0164, det_g=2.031)
-- **Scale Bridge**: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.632×10⁶ (dimensionless → dimensional)
+- **Precision**: 0.128% mean deviation across 39 observables
+- **Parameters**: None (all quantities structurally determined from E₈×E₈ and K₇ topology)
+- **Key Exact Values**: sin²θ_W=3/13, κ_T=1/61, det(g)=65/32, τ=3472/891
+- **Scale Bridge**: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.632×10⁶
 
 ## Contact and Support
 

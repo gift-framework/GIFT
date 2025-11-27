@@ -14,10 +14,10 @@
 - Documentation and educational materials
 
 **Key Metrics**:
-- Mean precision: 0.13% across 46 observables (37 dimensionless + 9 dimensional)
-- Parameter reduction: 19 (Standard Model) → 3 (GIFT)
-- Mathematical rigor: 9 proven exact relations
-- Version: 2.1.0 (current stable)
+- Mean precision: 0.128% across 39 observables
+- Parameter status: All quantities structurally determined (no continuous adjustable parameters)
+- Mathematical rigor: 13 proven exact relations
+- Version: 2.2.0 (current stable)
 
 ## Quick Reference
 
@@ -27,39 +27,32 @@
 2. `STRUCTURE.md` - Repository organization
 3. `QUICK_START.md` - Fast onboarding guide
 4. `CONTRIBUTING.md` - Scientific standards and contribution process
-5. `publications/v2.1/gift_main.md` - Core theoretical paper (~1100 lines)
+5. `publications/gift_2_2_main.md` - Core theoretical paper (~1400 lines)
 
 ### Key Directories
 
 ```
 GIFT/
-├── publications/           # Main theoretical documents
-│   ├── v2.0/             # Version 2.0 documents
-│   ├── v2.1/             # Version 2.1 documents (latest)
-│   │   ├── gift_main.md  # Core paper
-│   │   ├── gift_extensions.md # Dimensional observables
-│   │   ├── supplements/  # 6 detailed mathematical documents (A-F)
-│   │   └── GIFT_v21_*.md # v2.1 specific documents
-│   ├── tests/            # Test synthesis and test infrastructure
-│   └── *.ipynb           # Interactive notebooks
+├── publications/           # Main theoretical documents (v2.2)
+│   ├── gift_2_2_main.md   # Core paper
+│   ├── summary.txt        # Executive summary
+│   ├── GIFT_v22_*.md      # Reference documents
+│   ├── READING_GUIDE.md   # Navigation guide
+│   ├── GLOSSARY.md        # Terminology
+│   ├── supplements/       # 7 detailed mathematical documents (S1-S7)
+│   └── *.ipynb            # Interactive notebooks
 ├── tests/                 # Main test suite (pytest)
 │   ├── unit/             # Unit tests
 │   ├── integration/      # Integration tests
-│   ├── regression/       # Regression tests for observable values
-│   └── notebooks/        # Notebook execution tests
-├── giftpy_tests/          # Framework-specific tests
+│   └── regression/       # Regression tests for observable values
 ├── docs/                  # Additional documentation
 │   ├── FAQ.md            # Common questions
 │   ├── GLOSSARY.md       # Technical definitions
 │   └── EXPERIMENTAL_VALIDATION.md
-├── G2_ML/                 # Machine learning for K₇ metrics (WIP)
-│   ├── 0.1/ through 0.9a/ # Versioned implementations
-│   └── tests/            # ML-specific tests
-├── statistical_validation/ # Monte Carlo & Sobol analysis
+├── G2_ML/                 # Machine learning for K₇ metrics
+├── statistical_validation/ # Monte Carlo & validation
 ├── assets/                # Visualizations, agents, tools
-│   ├── visualizations/   # Interactive Jupyter notebooks
-│   ├── agents/          # Automated verification scripts
-│   └── pattern_explorer/ # Mathematical pattern analysis
+├── legacy/                # Archived versions (v1, v2.0, v2.1)
 ├── requirements.txt       # Python dependencies
 └── quick_start.py        # Interactive launcher
 ```
@@ -68,26 +61,27 @@ GIFT/
 
 ### Publication Structure
 
-**Versioned Documents** (`publications/v2.1/` - latest):
-- `gift_main.md` - Core theoretical framework with key results
-- `gift_extensions.md` - Dimensional observables and temporal framework
-- `gift_technical.md` - Technical details
-- `README_experimental_predictions.md` - Experimental collaboration reference
-- `GIFT_v21_Geometric_Justifications.md` - Geometric derivation details
-- `GIFT_v21_Observable_Reference.md` - Complete observable reference
-- `GIFT_v21_Statistical_Validation.md` - Statistical validation methods
+**Main Documents** (`publications/`):
+- `gift_2_2_main.md` - Core theoretical framework with key results (~1400 lines)
+- `summary.txt` - Executive summary (5-minute read)
+- `GIFT_v22_Observable_Reference.md` - Complete 39-observable catalog
+- `GIFT_v22_Geometric_Justifications.md` - Geometric derivation details
+- `GIFT_v22_Statistical_Validation.md` - Statistical validation methods
+- `READING_GUIDE.md` - Navigation by time and interest
+- `GLOSSARY.md` - Terminology definitions
 
-**Supplements** (`publications/v2.1/supplements/`):
-- `A_math_foundations.md` - E₈ structure, K₇ manifold, dimensional reduction
-- `B_rigorous_proofs.md` - 9 proven exact relations with complete proofs
-- `C_complete_derivations.md` - All 34 observable derivations
-- `D_phenomenology.md` - Experimental comparison and statistical analysis
-- `E_falsification.md` - Testability criteria and experimental tests
-- `F_K7_metric.md` - Explicit K₇ metric and harmonic form bases
+**Supplements** (`publications/supplements/`):
+- `S1_mathematical_architecture.md` - E₈ structure, K₇ manifold, cohomology
+- `S2_K7_manifold_construction.md` - TCS construction, G₂ holonomy, ML metrics
+- `S3_torsional_dynamics.md` - Torsion tensor, geodesic flow, RG connection
+- `S4_complete_derivations.md` - 13 proven relations + all observable derivations
+- `S5_experimental_validation.md` - Data comparison, falsification protocol
+- `S6_theoretical_extensions.md` - Quantum gravity, information theory, speculative
+- `S7_dimensional_observables.md` - Absolute masses, scale bridge, cosmology
 
 **Computational** (`publications/`):
 - `gift_v2_notebook.ipynb` - Main interactive implementation
-- `gift_statistical_validation.ipynb` - 1M Monte Carlo samples, Sobol analysis
+- `gift_statistical_validation.ipynb` - Monte Carlo validation
 - `gift_experimental_predictions.ipynb` - DUNE and collider predictions
 
 ### Code Organization
@@ -115,10 +109,10 @@ G2_ML/[version]/
 **Entry points for different audiences**:
 - Quick overview: `README.md`
 - Getting started: `QUICK_START.md`
-- Scientific details: `publications/v2.1/gift_main.md`
-- Mathematical rigor: `publications/v2.1/supplements/S4_rigorous_proofs.md`
+- Scientific details: `publications/gift_2_2_main.md`
+- Mathematical rigor: `publications/supplements/S4_complete_derivations.md`
 - Experimental validation: `docs/EXPERIMENTAL_VALIDATION.md`
-- Definitions: `docs/GLOSSARY.md`
+- Definitions: `publications/GLOSSARY.md` or `docs/GLOSSARY.md`
 - Common questions: `docs/FAQ.md`
 
 ## Development Workflows
@@ -205,7 +199,7 @@ G2_ML/[version]/
 
 ### Notation and Mathematical Conventions
 
-**Follow** `publications/v2.1/gift_main.md` Section 1.4 and `docs/GLOSSARY.md`:
+**Follow** `publications/gift_2_2_main.md` Section 1.4 and `publications/GLOSSARY.md`:
 
 - E₈: Exceptional Lie algebra (dim 248)
 - K₇: Compact 7-dimensional manifold with G₂ holonomy
@@ -216,14 +210,13 @@ G2_ML/[version]/
 - β₀ = π/8: Angular quantization (π/rank(E₈))
 - Weyl_factor = 5: Pentagonal symmetry (from |W(E₈)| = 2¹⁴ × 3⁵ × 5² × 7)
 - ξ = 5π/16: Correlation parameter (derived: (Weyl/p₂) × β₀)
-- τ = 3.89675: Hierarchy parameter (496×21/(27×99))
-- det(g) = 2.031: K₇ metric determinant
-- |T| = 0.0164: Global torsion magnitude
+- τ = 3472/891: Hierarchy parameter (exact rational, (496×21)/(27×99))
+- det(g) = 65/32: K₇ metric determinant (TOPOLOGICAL)
+- κ_T = 1/61: Global torsion magnitude (TOPOLOGICAL)
+- sin²θ_W = 3/13: Weinberg angle (PROVEN)
 - N_gen = 3: Number of fermion generations
-- δ_CP: CP violation phase
-- α: Fine structure constant
-- θ_W: Weak mixing angle
-- α_s: Strong coupling constant
+- δ_CP = 197°: CP violation phase (PROVEN)
+- α_s = √2/12: Strong coupling constant (TOPOLOGICAL)
 
 **Always define new symbols on first use.**
 
@@ -264,7 +257,7 @@ G2_ML/[version]/
 - Equations: `(#eq:delta-cp)`
 - Figures: `{#fig:e8-roots}`
 - Sections: `(#sec:foundations)`
-- External docs: `[Supplement S4](publications/v2.1/supplements/S4_rigorous_proofs.md)`
+- External docs: `[Supplement S4](publications/supplements/S4_complete_derivations.md)`
 
 ### Jupyter Notebooks
 
@@ -369,25 +362,25 @@ python -m assets.agents.cli canonical     # Canonical monitor
 
 **To understand GIFT fundamentals**:
 1. Read `README.md` - Overview and key results
-2. Read `QUICK_START.md` - Fast introduction
-3. Review `publications/v2.1/gift_main.md` Sections 1-3
-4. Check `docs/GLOSSARY.md` for unfamiliar terms
+2. Read `publications/summary.txt` - 5-minute executive summary
+3. Review `publications/gift_2_2_main.md` Sections 1-4
+4. Check `publications/GLOSSARY.md` for unfamiliar terms
 5. Explore `docs/FAQ.md` for common questions
 
 **To understand specific predictions**:
-1. Check `publications/v2.1/gift_main.md` Section 4 (summary tables)
-2. Read detailed derivation in `publications/v2.1/supplements/S5_complete_calculations.md`
-3. Review mathematical foundations in `publications/v2.1/supplements/S1_mathematical_architecture.md`
+1. Check `publications/gift_2_2_main.md` Section 8 (summary tables)
+2. Read detailed derivations in `publications/supplements/S4_complete_derivations.md`
+3. Review mathematical foundations in `publications/supplements/S1_mathematical_architecture.md`
 4. Check experimental status in `docs/EXPERIMENTAL_VALIDATION.md`
 
 ### Making Changes
 
 **Adding new predictions**:
 1. Derive from geometric structure with clear status classification
-2. Add to appropriate supplement (usually Supplement S5)
-3. Update summary in `publications/v2.1/gift_main.md` Section 4
+2. Add to appropriate supplement (usually Supplement S4)
+3. Update summary in `publications/gift_2_2_main.md` Section 8
 4. Verify numerically in notebook
-5. Compare with experiment in Supplement S7
+5. Compare with experiment in Supplement S5
 6. Update `CHANGELOG.md`
 
 **Improving documentation**:
@@ -427,7 +420,7 @@ python -m assets.agents.cli canonical     # Canonical monitor
 **When new measurements appear**:
 1. Update experimental values in relevant supplements
 2. Recalculate deviations
-3. Update tables in `publications/v2.1/gift_main.md` Section 4
+3. Update tables in `publications/gift_2_2_main.md` Section 8
 4. Update precision metrics in `README.md`
 5. Check `docs/EXPERIMENTAL_VALIDATION.md`
 6. Re-run statistical validation if needed
@@ -659,40 +652,45 @@ pip install -r requirements.txt
 
 **Maintain this philosophy** in all contributions.
 
-### Three Parameters
+### Zero-Parameter Paradigm
 
-The framework uses three topological parameters (see gift_2_1_main.md Section 8.1):
-- **p₂ = 2**: Binary duality (dim(G₂)/dim(K₇) = 14/7)
-- **β₀ = π/8**: Angular quantization (π/rank(E₈))
-- **Weyl_factor = 5**: Pentagonal symmetry (from |W(E₈)| factorization)
+Version 2.2 achieves structural determination: all quantities derive from fixed topological structure with **no continuous adjustable parameters** (see `publications/gift_2_2_main.md` Section 1.4).
 
-**Derived relations**:
-- **ξ = 5π/16**: Correlation parameter (= (Weyl/p₂) × β₀)
-- **τ = 3.89675**: Hierarchy parameter (496×21/(27×99))
+**Structural inputs** (discrete mathematical choices):
+- E₈×E₈ gauge group (dimension 496)
+- K₇ manifold with G₂ holonomy (b₂=21, b₃=77)
 
-**Critical**: ξ is exactly derived from the three topological parameters, reducing effective free parameters.
+**Key topological constants** (derived, not fitted):
+- **sin²θ_W = 3/13**: Weinberg angle (b₂/(b₃ + dim(G₂)))
+- **κ_T = 1/61**: Torsion magnitude (1/(b₃ - dim(G₂) - p₂))
+- **det(g) = 65/32**: Metric determinant (topological formula)
+- **τ = 3472/891**: Hierarchy parameter (exact rational)
 
 ### Exact Relations
 
-**Nine proven exact relations** (Supplement S4):
-1. N_gen = 3 (generation number)
-2. Q_Koide = 2/3 (Koide formula parameter)
-3. m_s/m_d = 20 (quark mass ratio)
-4. δ_CP = 197° (CP violation phase)
-5. m_τ/m_e = 3477 (lepton mass ratio)
-6. Ω_DE = ln(2) × 98/99 (dark energy density)
-7. ξ = 5π/16 (parameter relation)
-8. λ_H = √17/32 (Higgs coupling)
-9. b₃ = 2×dim(K₇)² - b₂ (Betti number relation)
+**Thirteen proven exact relations** (Supplement S4):
+1. sin²θ_W = 3/13 (Weinberg angle)
+2. α_s = √2/12 (strong coupling)
+3. λ_H = √17/32 (Higgs coupling)
+4. N_gen = 3 (generation number)
+5. Q_Koide = 2/3 (Koide parameter)
+6. m_s/m_d = 20 (quark mass ratio)
+7. m_τ/m_e = 3477 (lepton mass ratio)
+8. δ_CP = 197° (CP violation phase)
+9. κ_T = 1/61 (torsion magnitude)
+10. det(g) = 65/32 (metric determinant)
+11. τ = 3472/891 (hierarchy parameter)
+12. Ω_DE = ln(2)×98/99 (dark energy density)
+13. n_s = ζ(11)/ζ(5) (spectral index)
 
 **These must remain exact** in any framework modifications.
 
 ### Experimental Validation
 
 **Current status** (`docs/EXPERIMENTAL_VALIDATION.md`):
-- 37 observables predicted (26 dimensionless + 11 dimensional)
-- Mean deviation: 0.13%
-- Best predictions: <0.01% (α, δ_CP, Q_Koide)
+- 39 observables predicted
+- Mean deviation: 0.128%
+- Best predictions: 0.00% (δ_CP, m_s/m_d, n_s)
 - All predictions: <1.0%
 
 **Update regularly** with new experimental data from:
@@ -746,11 +744,10 @@ jupyter nbconvert --to notebook --execute [notebook].ipynb
 - Binder: https://mybinder.org/v2/gh/gift-framework/GIFT/main
 
 ### Key Papers (in `publications/`)
-- `gift_main.md` - Core framework
+- `gift_2_2_main.md` - Core framework
 - `supplements/S1_mathematical_architecture.md` - Mathematics
-- `supplements/S4_rigorous_proofs.md` - Proofs
-- `supplements/S5_complete_calculations.md` - All derivations
-- `supplements/S8_falsification_protocol.md` - Testability
+- `supplements/S4_complete_derivations.md` - Proofs + all derivations
+- `supplements/S5_experimental_validation.md` - Testability
 
 ## Contact and Support
 
@@ -783,8 +780,8 @@ jupyter nbconvert --to notebook --execute [notebook].ipynb
 
 ---
 
-**Version**: 1.1.0 (2025-11-21)
-**For**: GIFT Framework v2.0.0+ (v2.1 in development)
+**Version**: 1.2.0 (2025-11-27)
+**For**: GIFT Framework v2.2.0 (zero-parameter paradigm)
 **Maintained by**: GIFT Framework Team
 **License**: MIT (same as repository)
 
