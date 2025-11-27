@@ -1,49 +1,70 @@
-% GIFT Framework - Supplement S5: Experimental Validation
-% Version 2.2.0 - November 2025
-% Data Comparison, Statistical Analysis, and Falsification Criteria
-
 \documentclass[11pt,a4paper]{article}
 
-% Essential packages
+% ============================================
+% ENCODING & FONTS
+% ============================================
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{mathtools}
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{hyperref}
-\usepackage{cleveref}
+\usepackage{lmodern}
+
+% ============================================
+% PAGE LAYOUT
+% ============================================
+\usepackage[margin=1.618cm, top=2.618cm, bottom=2.618cm]{geometry}
+
+% ============================================
+% ESSENTIAL PACKAGES
+% ============================================
+\usepackage{float}
+\usepackage{caption}
+\usepackage{setspace}
 \usepackage{fancyhdr}
-\usepackage{geometry}
-\usepackage{enumitem}
 \usepackage{xcolor}
-\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
 
-% Page geometry
-\geometry{margin=2.5cm}
+% ============================================
+% HEADER/FOOTER
+% ============================================
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{GIFT Framework v2.2 --- Supplement S5}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
 
-% Hyperref setup
+% ============================================
+% HYPERREF
+% ============================================
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue!70!black,
-    citecolor=green!50!black,
-    urlcolor=blue!70!black,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
     pdftitle={GIFT Supplement S5: Experimental Validation},
     pdfauthor={GIFT Framework}
 }
 
-% Header/Footer
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\textsc{GIFT Framework}}
-\fancyhead[R]{\textsc{Supplement S5}}
-\fancyfoot[C]{\thepage}
+% ============================================
+% SPACING
+% ============================================
+\setstretch{1.2}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
 
-% Custom commands
-\newcommand{\E}{E_8}
-\newcommand{\EE}{E_8 \times E_8}
-\newcommand{\Gtwo}{G_2}
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+\newcommand{\E}{\mathrm{E}_8}
+\newcommand{\EE}{\mathrm{E}_8 \times \mathrm{E}_8}
+\newcommand{\Gtwo}{\mathrm{G}_2}
 \newcommand{\Kseven}{K_7}
 \newcommand{\Hstar}{H^*}
 \newcommand{\btwo}{b_2}
@@ -52,12 +73,12 @@
 \newcommand{\sinW}{\sin^2\theta_W}
 \newcommand{\deltaCP}{\delta_{CP}}
 \newcommand{\Ngen}{N_{\text{gen}}}
-\newcommand{\proven}{\textbf{PROVEN}}
-\newcommand{\topological}{\textbf{TOPOLOGICAL}}
-\newcommand{\derived}{\textbf{DERIVED}}
-\newcommand{\theoretical}{\textbf{THEORETICAL}}
-\newcommand{\exploratory}{\textbf{EXPLORATORY}}
-\newcommand{\consistent}{\textcolor{green!50!black}{\textbf{CONSISTENT}}}
+\newcommand{\proven}{\textsc{Proven}}
+\newcommand{\topological}{\textsc{Topological}}
+\newcommand{\derived}{\textsc{Derived}}
+\newcommand{\theoretical}{\textsc{Theoretical}}
+\newcommand{\exploratory}{\textsc{Exploratory}}
+\newcommand{\consistent}{\textcolor{green!50!black}{\textsc{Consistent}}}
 
 % Status box
 \newcommand{\statusbox}[1]{\fbox{\textsc{#1}}}
@@ -67,17 +88,23 @@
 \newtheorem{criterion}{Criterion}
 \newtheorem{test}{Test}
 
-% Handle degree symbol
-\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
-
-\title{\textbf{Supplement S5: Experimental Validation}\\[0.5em]
-\large Data Comparison, Statistical Analysis, and Falsification Criteria}
-\author{GIFT Framework v2.2.0}
+% ============================================
+% TITLE
+% ============================================
+\title{%
+\LARGE\textbf{Supplement S5: Experimental Validation}\\[0.5em]
+\large Data Comparison, Statistical Analysis, and Falsification Criteria
+}
+\author{GIFT Framework v2.2}
 \date{November 2025}
 
+% ============================================
+% DOCUMENT
+% ============================================
 \begin{document}
 
 \maketitle
+\noindent\rule{\textwidth}{0.2pt}
 
 \begin{abstract}
 This supplement provides detailed comparison of GIFT predictions with experimental data, statistical validation, and clear quantitative falsification criteria for rigorous experimental testing. We present sector-by-sector comparisons for all 39 observables, chi-square analysis, and explicit conditions under which the framework would be falsified.
