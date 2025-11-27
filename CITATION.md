@@ -72,8 +72,8 @@ When citing specific predictions or results, include the relevant section:
   title={Complete Neutrino Mixing Parameter Predictions from E₈×E₈ Topology},
   author={{GIFT Framework Team}},
   year={2025},
-  howpublished={GIFT Framework v2, Main Paper Section 4.2},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_main.md}
+  howpublished={GIFT Framework v2.2, Main Paper Section 8.4},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_2_2_main.md}
 }
 ```
 
@@ -123,9 +123,9 @@ When citing specific predictions or results, include the relevant section:
   title={Unified Cosmological Predictions: Dark Energy from Binary Information Architecture},
   author={{GIFT Framework Team}},
   year={2025},
-  howpublished={GIFT Framework v2, Main Paper Section 4.7},
-  note={Ω_DE = ln(2), precision 0.10\%},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_main.md}
+  howpublished={GIFT Framework v2.2, Main Paper Section 8.8},
+  note={Ω_DE = ln(2)×98/99, precision 0.10\%},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_2_2_main.md}
 }
 ```
 
@@ -179,18 +179,18 @@ Planned DOI provider: Zenodo (10.5281/zenodo.*)
 When DOI becomes available, cite using:
 
 ```bibtex
-@software{gift_framework_v2_2025,
-  title={GIFT Framework v2: Geometric Information Field Theory},
-  author={{GIFT Framework Team}},
+@software{gift_framework_v22_2025,
+  title={GIFT Framework v2.2: Geometric Information Field Theory},
+  author={{Brieuc de La Fournière}},
   year={2025},
   doi={10.5281/zenodo.XXXXXXX},  % TODO: Update with actual DOI when registered
   url={https://github.com/gift-framework/GIFT},
-  version={2.0.0}
+  version={2.2.0}
 }
 ```
 
 To register a DOI for this repository:
-1. Create a GitHub release (v2.0.0)
+1. Create a GitHub release (v2.2.0)
 2. Link repository to Zenodo via GitHub integration
 3. Generate DOI automatically through Zenodo
 4. Update this file with the assigned DOI
@@ -225,17 +225,17 @@ When using GIFT predictions in your research:
 
 1. **Cite framework**: Use software citation above
 2. **Cite specific results**: Use appropriate supplement citation
-3. **Specify version**: Always include version number (v2.0.0)
+3. **Specify version**: Always include version number (v2.2.0)
 4. **Note modifications**: If you modify predictions, clearly state changes
 5. **Link to repository**: Include GitHub URL for reproducibility
 
 ### Example Usage in Paper
 
-> "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197.3° [2], obtained from the exact formula δ_CP = 7·dim(G₂) + ζ(3) + √5."
+> "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197° [2], obtained from the exact formula δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°."
 >
-> [1] GIFT Framework Team, "GIFT Framework v2: Geometric Information Field Theory," v2.0.0, 2025, https://github.com/gift-framework/GIFT
+> [1] Brieuc de La Fournière, "GIFT Framework v2.2: Geometric Information Field Theory," v2.2.0, 2025, https://github.com/gift-framework/GIFT
 >
-> [2] GIFT Framework Team, "GIFT Supplement B: Rigorous Proofs," Section B.1, 2025.
+> [2] Brieuc de La Fournière, "GIFT Supplement S4: Complete Derivations," 2025.
 
 ## License Attribution
 
@@ -271,14 +271,14 @@ Notebook is also available via Binder:
 
 Cite:
 - Main framework (software citation)
-- Relevant mathematical supplements (A, B, C)
+- Relevant mathematical supplements (S1, S4)
 - Specific theorems or derivations used
 
 ### For Experimentalists
 
 Cite:
 - Main framework (software citation)
-- Phenomenology supplement (D)
+- Experimental validation supplement (S5)
 - Specific predictions being tested
 
 ### For Students and Educators

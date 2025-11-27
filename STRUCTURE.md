@@ -87,7 +87,7 @@ For different audiences and purposes:
 - Immediate results
 - Guided tour of capabilities
 
-**Scientific Details** → `publications/gift_main.md`
+**Scientific Details** → `publications/gift_2_2_main.md`
 - Complete theoretical framework
 - Main predictions and results
 - References to detailed supplements
@@ -96,28 +96,26 @@ For different audiences and purposes:
 
 The core framework is presented in a modular structure:
 
-1. **Main Paper** (`publications/gift_main.md`)
+1. **Main Paper** (`publications/gift_2_2_main.md`)
    - Overview of GIFT framework
    - Key results and predictions
    - Summary of mathematical structure
    - Experimental validation
-   - ~1100 lines, self-contained introduction
+   - ~1400 lines, self-contained introduction
 
-2. **Nine Supplements** (`publications/v2.1/supplements/`)
-   - **Supplement S1**: Mathematical architecture (E₈, K₇, dimensional reduction)
-   - **Supplement S2**: (In progress - K₇ construction details)
-   - **Supplement S3**: Torsional dynamics (geodesic flow, RG connection)
-   - **Supplement S4**: Rigorous proofs (9 exact relations with complete derivations)
-   - **Supplement S5**: Complete calculations (all 37 observables)
-   - **Supplement S6**: Numerical methods (algorithms, implementation)
-   - **Supplement S7**: Phenomenology (detailed experimental comparison)
-   - **Supplement S8**: Falsification protocol (testability and experimental program)
-   - **Supplement S9**: Extensions (quantum gravity, information theory, future directions)
+2. **Seven Supplements** (`publications/supplements/`)
+   - **Supplement S1**: Mathematical architecture (E₈, K₇, cohomology)
+   - **Supplement S2**: K₇ manifold construction (TCS, G₂ holonomy, ML metrics)
+   - **Supplement S3**: Torsional dynamics (torsion tensor, geodesic flow, RG)
+   - **Supplement S4**: Complete derivations (13 proven relations + all observables)
+   - **Supplement S5**: Experimental validation (data comparison, falsification protocol)
+   - **Supplement S6**: Theoretical extensions (quantum gravity, information theory)
+   - **Supplement S7**: Dimensional observables (absolute masses, scale bridge, cosmology)
 
-3. **Extensions** (`publications/gift_extensions.md`)
-   - Dimensional observables (masses, VEV, Hubble parameter)
-   - Temporal framework (21·e⁸ structure)
-   - Advanced topics and ongoing research
+3. **Reference Documents** (`publications/`)
+   - `GIFT_v22_Observable_Reference.md`: Complete 39-observable catalog
+   - `GIFT_v22_Geometric_Justifications.md`: Geometric derivation details
+   - `GIFT_v22_Statistical_Validation.md`: Statistical validation methods
 
 ### Computational Tools
 
@@ -143,14 +141,18 @@ The core framework is presented in a modular structure:
 
 ### Markdown Documents
 
-**Main papers**: Descriptive names
-- `gift_main.md`
-- `gift_extensions.md`
+**Main papers**: Versioned names
+- `gift_2_2_main.md`
+- `GIFT_v22_*.md` (reference documents)
 
-**Supplements**: Letter prefix indicating order
-- `A_math_foundations.md`
-- `B_rigorous_proofs.md`
-- etc.
+**Supplements**: S-prefix with descriptive names
+- `S1_mathematical_architecture.md`
+- `S2_K7_manifold_construction.md`
+- `S3_torsional_dynamics.md`
+- `S4_complete_derivations.md`
+- `S5_experimental_validation.md`
+- `S6_theoretical_extensions.md`
+- `S7_dimensional_observables.md`
 
 **Documentation**: Purpose-based names
 - `FAQ.md`
@@ -164,39 +166,37 @@ The core framework is presented in a modular structure:
 
 ### PDF Files
 
-PDF versions mirror markdown filenames:
-- `gift-main.pdf` ← `gift_main.md`
-- `gift_extensions.pdf` ← `gift_extensions.md`
-- `Supp_A.pdf` ← `A_math_foundations.md`
+PDF versions are in `publications/pdf/` with matching names.
 
 ## Navigation Guide
 
 ### Finding Specific Information
 
 **Parameter Predictions**
-→ `publications/gift_main.md` (Section 4: Dimensionless Observable Predictions)
-→ `publications/supplements/S5_complete_calculations.md` (detailed derivations)
+→ `publications/gift_2_2_main.md` (Section 8: Observable Predictions)
+→ `publications/supplements/S4_complete_derivations.md` (detailed derivations)
+→ `publications/GIFT_v22_Observable_Reference.md` (complete catalog)
 
 **Mathematical Proofs**
-→ `publications/supplements/S4_rigorous_proofs.md` (9 exact relations)
+→ `publications/supplements/S4_complete_derivations.md` (13 proven relations)
 → `publications/supplements/S1_mathematical_architecture.md` (underlying mathematics)
 
 **Experimental Comparison**
-→ `publications/gift_main.md` (summary tables)
-→ `publications/supplements/S7_phenomenology.md` (detailed analysis)
+→ `publications/gift_2_2_main.md` (summary tables)
+→ `publications/supplements/S5_experimental_validation.md` (detailed analysis)
 → `docs/EXPERIMENTAL_VALIDATION.md` (current status)
 
 **Geometric Construction**
 → `publications/supplements/S1_mathematical_architecture.md` (K₇ manifold overview)
-→ `publications/supplements/S1_mathematical_architecture.md` (explicit metric and harmonic forms)
+→ `publications/supplements/S2_K7_manifold_construction.md` (TCS construction, ML metrics)
 
 **Falsification Tests**
-→ `publications/supplements/S8_falsification_protocol.md` (comprehensive criteria)
+→ `publications/supplements/S5_experimental_validation.md` (comprehensive criteria)
 → `docs/EXPERIMENTAL_VALIDATION.md` (experimental timeline)
 
 **Definitions and Notation**
-→ `docs/GLOSSARY.md` (all technical terms)
-→ `publications/gift_main.md` (Section 1.4: Conventions)
+→ `publications/GLOSSARY.md` (all technical terms)
+→ `publications/gift_2_2_main.md` (Section 1.4: Conventions)
 
 ### Cross-References
 

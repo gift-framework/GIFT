@@ -668,20 +668,20 @@ Version 2.2 achieves structural determination: all quantities derive from fixed 
 
 ### Exact Relations
 
-**Thirteen proven exact relations** (Supplement S4):
-1. sin²θ_W = 3/13 (Weinberg angle)
-2. α_s = √2/12 (strong coupling)
-3. λ_H = √17/32 (Higgs coupling)
-4. N_gen = 3 (generation number)
-5. Q_Koide = 2/3 (Koide parameter)
-6. m_s/m_d = 20 (quark mass ratio)
-7. m_τ/m_e = 3477 (lepton mass ratio)
-8. δ_CP = 197° (CP violation phase)
-9. κ_T = 1/61 (torsion magnitude)
-10. det(g) = 65/32 (metric determinant)
-11. τ = 3472/891 (hierarchy parameter)
-12. Ω_DE = ln(2)×98/99 (dark energy density)
-13. n_s = ζ(11)/ζ(5) (spectral index)
+**Thirteen proven exact relations** (from Supplement S4):
+1. N_gen = 3 (generation number)
+2. p₂ = 2 (binary duality)
+3. Q_Koide = 2/3 (Koide parameter)
+4. m_s/m_d = 20 (quark mass ratio)
+5. δ_CP = 197° (CP violation phase)
+6. m_τ/m_e = 3477 (lepton mass ratio)
+7. Ω_DE = ln(2)×98/99 (dark energy density)
+8. n_s = ζ(11)/ζ(5) (spectral index)
+9. ξ = 5π/16 (correlation parameter)
+10. λ_H = √17/32 (Higgs coupling)
+11. sin²θ_W = 3/13 (Weinberg angle)
+12. τ = 3472/891 (hierarchy parameter)
+13. det(g) = 65/32 (metric determinant)
 
 **These must remain exact** in any framework modifications.
 

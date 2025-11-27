@@ -89,7 +89,7 @@ K₇ denotes a compact 7-dimensional manifold with G₂ holonomy. While various 
 - b₃(K₇) = 77: Chiral fermion content
 - Total dimension 7: Extra dimensions beyond 4D spacetime
 
-See Supplement F for explicit metric construction.
+See Supplement S2 for explicit metric construction.
 
 ### How does dimensional reduction work?
 
@@ -109,29 +109,31 @@ Starting configuration: 11-dimensional theory with E₈×E₈ gauge group
 - Gauge symmetry → SU(3)×SU(2)×U(1)
 - Chiral fermions from cohomology H³(K₇)
 
-See Supplement A for complete mathematical details.
+See Supplement S1 for complete mathematical details.
 
 ## Predictions and Results
 
 ### What observables does GIFT predict?
 
-**46 observables (37 dimensionless + 9 dimensional)**:
+**39 observables (27 dimensionless + 12 dimensional)**:
 
-*Dimensionless (37):*
+*Dimensionless (27):*
 - 3 gauge couplings (α, sin²θ_W, α_s)
 - 1 generation number (N_gen = 3)
 - 4 neutrino mixing angles (θ₁₂, θ₁₃, θ₂₃, δ_CP)
-- 10 quark mass ratios
+- 6 quark mass ratios
 - 3 lepton mass ratios
-- 6 CKM matrix elements
+- 4 CKM matrix elements
 - 1 Koide parameter
-- 10 cosmological parameters (Ω_DE, etc.)
+- 2 cosmological parameters (Ω_DE, n_s)
+- Additional structural constants
 
-*Dimensional (9, new in v2.1):*
+*Dimensional (12):*
 - 3 electroweak scale parameters (v_EW, M_W, M_Z)
 - 6 quark masses (m_u through m_t)
+- 3 lepton masses
 
-Mean deviation from experiment: 0.13%
+Mean deviation from experiment: 0.128%
 
 ### What about dimensional parameters like masses?
 
@@ -163,21 +165,21 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.13% across all 46 observables
+**Overall**: Mean 0.128% across all 39 observables
 
-See Supplement D for detailed statistical analysis.
+See Supplement S5 for detailed statistical analysis.
 
 ### What is the most impressive prediction?
 
 Subjectively, several stand out:
 
-**δ_CP = 197°**: Exact topological formula δ_CP = 7·dim(G₂) + ζ(3) + √5, experimentally confirmed to 0.005%. This is a dimensionless angle determined by pure mathematics.
+**δ_CP = 197°**: Exact topological formula δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°, experimentally confirmed to <0.2%. This is a dimensionless angle determined by pure mathematics.
 
 **Complete neutrino sector**: All four parameters (three angles, one phase) predicted with <0.5% deviation without any neutrino-specific inputs.
 
 **N_gen = 3**: Explains why three generations exist as topological necessity, not accident.
 
-**Parameter reduction**: 19 → 3 is substantial compression of required inputs.
+**Zero-parameter paradigm**: All 39 observables derived from fixed topological structure with no continuous adjustable parameters.
 
 ### What are the biggest tensions?
 
@@ -283,7 +285,7 @@ Current framework treats parameters at characteristic scales (typically M_Z). Ex
 - Two-loop corrections where relevant
 - Threshold corrections at various scales
 
-Future refinements may achieve higher precision through more sophisticated RG treatment. See Supplement C for details on running included so far.
+Future refinements may achieve higher precision through more sophisticated RG treatment. See Supplement S3 for details on torsional dynamics and RG connections.
 
 ## Philosophical Questions
 
@@ -346,22 +348,22 @@ See `CONTRIBUTING.md` for detailed guidelines. Contributions welcome in:
 Depends on background:
 
 **General science literacy**: Start with README.md, then QUICK_START.md
-**Undergraduate physics**: Main paper Section 1-2, then notebook
-**Graduate student**: Main paper fully, then Supplements A & C
-**Professional physicist**: Main paper, Supplement B (proofs), Supplement E (falsification)
-**Mathematician**: Supplements A (foundations) and B (proofs)
+**Undergraduate physics**: Main paper Section 1-4, then notebook
+**Graduate student**: Main paper fully, then Supplements S1 & S4
+**Professional physicist**: Main paper, Supplement S4 (proofs), Supplement S5 (falsification)
+**Mathematician**: Supplements S1 (foundations) and S4 (proofs)
 
 ### Is there a paper I can cite?
 
-Current version (v2.1) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v2.2) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
-@software{gift_framework_v2_2025,
-  title={GIFT Framework v2.1: Geometric Information Field Theory},
-  author={{GIFT Framework Team}},
+@software{gift_framework_v22_2025,
+  title={GIFT Framework v2.2: Geometric Information Field Theory},
+  author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.1.0}
+  version={2.2.0}
 }
 ```
 

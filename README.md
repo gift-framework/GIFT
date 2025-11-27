@@ -342,24 +342,26 @@ See [publications/gift_2_2_main.md](publications/gift_2_2_main.md) Section 8 for
 
 ## Exact Relations (13 PROVEN)
 
-The framework establishes 13 rigorously proven identities with explicit geometric anchoring:
+The framework establishes 13 rigorously proven identities with explicit geometric anchoring (from [Supplement S4](publications/supplements/S4_complete_derivations.md)):
 
-**Gauge Sector**
-1. **sin²θ_W = 3/13**: b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 (0.195% deviation)
-2. **α_s = √2/12**: √2/(dim(G₂) - p₂) = √2/12 (0.042% deviation)
-3. **λ_H = √17/32**: √(dim(G₂) + N_gen)/2^5 (2.3% deviation, large exp. uncertainty)
+**Structural Constants**
+1. **N_gen = 3**: From Atiyah-Singer index theorem on K₇
+2. **p₂ = 2**: Binary duality, dim(G₂)/dim(K₇) = 14/7 = 2
+3. **ξ = 5π/16**: Correlation parameter, (Weyl/p₂) × β₀ = (5/2) × (π/8)
 
 **Fermion Sector**
-4. **N_gen = 3**: From Atiyah-Singer index theorem on K₇
-5. **Q_Koide = 2/3**: dim(G₂)/b₂(K₇) = 14/21 = 2/3
-6. **m_s/m_d = 20**: p₂² × Weyl = 4 × 5 = 20
-7. **m_τ/m_e = 3477**: dim(K₇) + 10×dim(E₈) + 10×H* = 7 + 2480 + 990
+4. **Q_Koide = 2/3**: dim(G₂)/b₂(K₇) = 14/21 = 2/3
+5. **m_s/m_d = 20**: p₂² × Weyl = 4 × 5 = 20
+6. **m_τ/m_e = 3477**: dim(K₇) + 10×dim(E₈) + 10×H* = 7 + 2480 + 990
+
+**Gauge Sector**
+7. **sin²θ_W = 3/13**: b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 (0.195% deviation)
+8. **λ_H = √17/32**: √(dim(G₂) + N_gen)/2^5 (2.3% deviation, large exp. uncertainty)
 
 **Neutrino Sector**
-8. **δ_CP = 197°**: dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°
+9. **δ_CP = 197°**: dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°
 
 **Structural Parameters**
-9. **κ_T = 1/61**: 1/(b₃ - dim(G₂) - p₂) = 1/(77-14-2) = 1/61
 10. **det(g) = 65/32**: p₂ + 1/(b₂ + dim(G₂) - N_gen) = 2 + 1/32 = 65/32
 11. **τ = 3472/891**: (dim(E₈×E₈)×b₂)/(dim(J₃(O))×H*) = (496×21)/(27×99)
 
