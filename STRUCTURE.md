@@ -1,6 +1,6 @@
 # Repository Structure
 
-This document describes the organization of the GIFT v2 framework repository.
+This document describes the organization of the GIFT v2.2 framework repository.
 
 ## Overview
 
@@ -18,82 +18,56 @@ gift/
 ├── CONTRIBUTING.md                    # Contribution guidelines
 ├── QUICK_START.md                     # Fast onboarding guide
 ├── requirements.txt                   # Python dependencies
-├── runtime.txt                        # Python version specification
-├── postBuild                          # Binder configuration
 │
-├── publications/                      # Main theoretical documents
-│   ├── gift_main.md                   # Core theoretical paper (~1100 lines)
-│   ├── gift_extensions.md             # Dimensional observables and temporal framework
+├── publications/                      # Main theoretical documents (v2.2)
+│   ├── gift_2_2_main.md               # Core theoretical paper (~1400 lines)
+│   ├── summary.txt                    # Executive summary (5-min read)
+│   ├── READING_GUIDE.md               # Navigation by time/interest
+│   ├── GLOSSARY.md                    # Terminology definitions
+│   ├── GIFT_v22_Observable_Reference.md   # 39-observable catalog
+│   ├── GIFT_v22_Geometric_Justifications.md # Derivation details
+│   ├── GIFT_v22_Statistical_Validation.md  # Validation methods
 │   ├── gift_v2_notebook.ipynb         # Interactive computational notebook
 │   │
-│   ├── supplements/                   # Detailed mathematical supplements
-│   │   ├── A_math_foundations.md      # E₈ structure, K₇ manifold, reduction
-│   │   ├── B_rigorous_proofs.md       # Complete proofs of exact relations
-│   │   ├── C_complete_derivations.md  # All 34 observable derivations
-│   │   ├── D_phenomenology.md         # Experimental comparison
-│   │   ├── E_falsification.md         # Testability and falsification criteria
-│   │   └── F_K7_metric.md             # Explicit geometric constructions
+│   ├── supplements/                   # 7 detailed mathematical supplements
+│   │   ├── S1_mathematical_architecture.md  # E₈, G₂, cohomology
+│   │   ├── S2_K7_manifold_construction.md   # TCS, ML metrics
+│   │   ├── S3_torsional_dynamics.md         # Geodesics, RG flow
+│   │   ├── S4_complete_derivations.md       # 13 proofs + all derivations
+│   │   ├── S5_experimental_validation.md    # Data comparison, falsification
+│   │   ├── S6_theoretical_extensions.md     # QG, info theory
+│   │   └── S7_dimensional_observables.md    # Masses, scale bridge
 │   │
-│   └── pdf/                           # PDF versions of all documents
-│       ├── gift-main.pdf              # Main paper PDF
-│       ├── gift_extensions.pdf        # Extensions PDF
-│       ├── Supp_A.pdf                 # Mathematical foundations PDF
-│       ├── Supp_B.pdf                 # Rigorous proofs PDF
-│       ├── Supp_C.pdf                 # Complete derivations PDF
-│       ├── Supp_D.pdf                 # Phenomenology PDF
-│       ├── Supp_E.pdf                 # Falsification PDF
-│       └── Supp_F.pdf                 # K₇ metric PDF
+│   └── pdf/                           # PDF versions (generated)
 │
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Frequently asked questions
 │   ├── GLOSSARY.md                    # Technical terms and notation
 │   ├── PHILOSOPHY.md                  # Philosophical perspectives
 │   ├── EXPERIMENTAL_VALIDATION.md     # Current experimental status
-│   └── *.md                           # Additional guides and references
+│   └── *.md                           # Additional guides
 │
 ├── G2_ML/                             # Machine learning for K₇ metrics
 │   ├── README.md                      # Framework overview
 │   ├── STATUS.md                      # Current implementation status
-│   ├── FUTURE_WORK.md                 # Planned enhancements
-│   ├── 0.1/ through 0.6c/            # Development versions (archived)
-│   ├── 0.7/                          # Production: b₂=21 complete
-│   ├── 0.8/                          # Yukawa + partial b₃ (20/77)
-│   ├── 0.9a/                         # Latest production refinements
-│   ├── 0.9b/                         # Full b₃=77 (training in progress)
-│   └── tests/                        # G2 ML test suite
+│   └── [versioned dirs]               # Neural network training
 │
-├── statistical_validation/           # Statistical analysis tools
-│   ├── run_validation.py             # Monte Carlo & Sobol validation
-│   ├── requirements.txt              # Validation dependencies
-│   └── full_results/                 # Validation output data
+├── statistical_validation/            # Statistical analysis tools
+│   ├── run_validation.py              # Monte Carlo validation
+│   └── full_results/                  # Validation output data
 │
-├── assets/                           # Interactive assets and tools
-│   ├── README.md                     # Assets overview
-│   ├── visualizations/               # Interactive Jupyter visualizations
-│   │   ├── e8_root_system_3d.ipynb  # E₈ 240 roots in 3D
-│   │   ├── precision_dashboard.ipynb # Observable vs experiment
-│   │   └── dimensional_reduction_flow.ipynb # 496D → 4D animation
-│   ├── agents/                       # Automated maintenance scripts
-│   │   ├── cli.py                    # Command-line interface
-│   │   ├── verifier.py               # Link and status validation
-│   │   ├── docs_integrity.py         # Documentation checks
-│   │   └── *.py                      # Additional agents
-│   ├── pattern_explorer/             # Mathematical pattern discovery
-│   │   ├── comprehensive_validator.py
-│   │   ├── number_theory_search.py
-│   │   └── discoveries/              # High-confidence findings
-│   └── paper_draft/                  # LaTeX paper drafts
-│       ├── ABSTRACT.txt              # Paper abstract
-│       └── gift_framework_paper.tex  # LaTeX source
+├── assets/                            # Interactive assets and tools
+│   └── visualizations/                # Interactive Jupyter visualizations
 │
-├── tests/                            # Test suite (200+ tests)
-│   ├── unit/                         # Unit tests
-│   ├── integration/                  # Integration tests
-│   ├── regression/                   # Regression tests
-│   └── fixtures/                     # Test data
+├── tests/                             # Test suite
+│   ├── unit/                          # Unit tests
+│   ├── integration/                   # Integration tests
+│   └── regression/                    # Regression tests
 │
-└── legacy_v1/                        # Archived v1.0 version
-    └── README.md                     # Guide to v1 archive
+└── legacy/                            # Archived versions
+    ├── legacy_v1/                     # v1.0 archive
+    ├── legacy_v2.0/                   # v2.0 archive
+    └── legacy_v2.1/                   # v2.1 archive
 ```
 
 ## Document Hierarchy

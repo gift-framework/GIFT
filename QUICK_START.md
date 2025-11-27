@@ -4,9 +4,9 @@ Get up and running with the GIFT framework in minutes.
 
 ## What is GIFT?
 
-The Geometric Information Field Theory (GIFT) derives fundamental physics parameters from pure mathematics. Starting with E₈×E₈ exceptional Lie algebras and G₂ holonomy manifolds, the framework predicts 46 observables (37 dimensionless + 9 dimensional) with 0.13% mean precision using only 3 geometric parameters.
+The Geometric Information Field Theory (GIFT) derives fundamental physics parameters from pure mathematics. Starting with E₈×E₈ exceptional Lie algebras and G₂ holonomy manifolds, the framework predicts 39 observables with 0.128% mean precision using no continuous adjustable parameters.
 
-**Key achievement**: Reduces Standard Model's 19 free parameters to 3 derived geometric quantities.
+**Key achievement**: All quantities structurally determined from fixed topological structure (zero-parameter paradigm).
 
 ## Installation
 
@@ -42,23 +42,28 @@ jupyter notebook publications/gift_v2_notebook.ipynb
 
 ### Step 1: Key Results
 
-The framework makes exact predictions for several quantities:
+The framework makes exact predictions (13 PROVEN relations):
 
-**Exact Relations (0% deviation by construction)**
+**Exact Rational/Integer Relations (PROVEN)**
+- Weinberg angle: sin²θ_W = 3/13 (0.195% deviation)
+- Torsion magnitude: κ_T = 1/61
+- Metric determinant: det(g) = 65/32
+- Hierarchy parameter: τ = 3472/891
+- CP violation phase: δ_CP = 197° (exact)
+- Koide parameter: Q = 2/3
+- Quark mass ratio: m_s/m_d = 20 (exact)
 - Number of generations: N_gen = 3
-- Koide relation parameter: Q = 2/3
-- Strange/down quark mass ratio: m_s/m_d = 20
 
-**High-Precision Predictions (<0.01% deviation)**
-- Fine structure constant: α⁻¹ = 137.036 (0.001%)
-- CP violation phase: δ_CP = 197° (0.005%)
-- Koide formula: Q_measured = 0.666661 (0.005%)
+**High-Precision Predictions (<0.1% deviation)**
+- Fine structure constant: α⁻¹ = 137.033 (0.002%)
+- Strong coupling: α_s = √2/12 (0.042%)
+- Spectral index: n_s = ζ(11)/ζ(5) = 0.9649 (exact)
 
 **Complete Neutrino Sector (all <0.5%)**
-- θ₁₂ = 33.45° (0.03% deviation)
-- θ₁₃ = 8.59° (0.23% deviation)
-- θ₂₃ = 48.99° (0.43% deviation)
-- δ_CP = 197.3° (0.005% deviation)
+- θ₁₂ = 33.40° (0.03% deviation)
+- θ₁₃ = π/21 = 8.571° (0.36% deviation)
+- θ₂₃ = 49.19° (0.22% deviation)
+- δ_CP = 197° (0.00% deviation - exact)
 
 ### Step 2: Understanding the Framework
 
@@ -82,22 +87,27 @@ Standard Model (SU(3)×SU(2)×U(1))
 
 Open `publications/gift_v2_notebook.ipynb` and run cells sequentially:
 
-**Section 1**: Three geometric parameters
+**Section 1**: Topological constants (all structurally determined)
 ```python
-p₂ = 2           # Binary duality: dim(G₂)/dim(K₇) = 14/7
-Weyl_factor = 5  # Pentagonal symmetry from |W(E₈)| = 2¹⁴×3⁵×5²×7
-β₀ = π/8         # Angular quantization: π/rank(E₈)
-ξ = 5π/16        # Derived: (Weyl_factor/p₂) × β₀
+# Betti numbers from K₇ manifold
+b2 = 21          # Second Betti number
+b3 = 77          # Third Betti number
+H_star = 99      # Effective dimension: b2 + b3 + 1
+
+# Key derived quantities (exact)
+sin2_theta_W = 3/13       # Weinberg angle: b2/(b3 + dim(G2))
+kappa_T = 1/61            # Torsion: 1/(b3 - dim(G2) - p2)
+det_g = 65/32             # Metric determinant
+tau = 3472/891            # Hierarchy parameter
 ```
 
-**Section 2**: Derived quantities
-- Fine structure constant
-- Weak mixing angle
-- Strong coupling
-- Generation number
+**Section 2**: Exact predictions
+- Gauge couplings (α, sin²θ_W, α_s)
+- Generation number (N_gen = 3)
+- Fermion mass ratios
 
 **Section 3**: Neutrino predictions
-- Complete mixing matrix
+- Complete mixing matrix with δ_CP = 197°
 - Mass hierarchy
 - CP violation
 
