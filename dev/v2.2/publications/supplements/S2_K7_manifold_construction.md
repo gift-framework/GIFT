@@ -830,6 +830,310 @@ CONFIG = {
 
 ---
 
+# Part VII: Computational Implementation
+
+*The following content provides the complete computational framework for GIFT numerical calculations, migrated from Supplement S6.*
+
+## 15a. Software Stack and Installation
+
+### 15a.1 Software Stack
+
+```python
+# Core numerical libraries
+numpy>=1.24.0
+scipy>=1.10.0
+sympy>=1.11.0
+
+# Machine learning
+torch>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0
+plotly>=5.14.0
+```
+
+### 15a.2 Installation
+
+```bash
+git clone https://github.com/gift-framework/GIFT.git
+cd GIFT
+pip install -r requirements.txt
+```
+
+---
+
+## 15b. Core Algorithms
+
+### 15b.1 Topological Parameter Computation
+
+```python
+import numpy as np
+from fractions import Fraction
+
+# E8 parameters
+dim_E8 = 248
+rank_E8 = 8
+
+# K7 cohomology
+b2_K7 = 21
+b3_K7 = 77
+H_star = b2_K7 + b3_K7 + 1  # = 99
+
+# G2 parameters
+dim_G2 = 14
+dim_K7 = 7
+
+# Derived parameters (exact)
+p2 = dim_G2 // dim_K7  # = 2
+Wf = 5  # Weyl factor
+N_gen = rank_E8 - Wf  # = 3
+
+# Framework parameters
+beta_0 = np.pi / rank_E8
+xi = (Wf / p2) * beta_0  # = 5*pi/16
+```
+
+### 15b.2 Weinberg Angle Computation
+
+```python
+def compute_weinberg_angle():
+    """Compute sin^2(theta_W) = 3/13 from Betti numbers."""
+
+    # Exact formula
+    numerator = b2_K7
+    denominator = b3_K7 + dim_G2
+
+    # Verify reduction
+    from math import gcd
+    g = gcd(numerator, denominator)  # = 7
+
+    sin2_theta_W_exact = Fraction(numerator, denominator)
+    # = Fraction(21, 91) = Fraction(3, 13)
+
+    sin2_theta_W_float = float(sin2_theta_W_exact)
+    # = 0.230769230769...
+
+    return {
+        'exact': sin2_theta_W_exact,  # 3/13
+        'float': sin2_theta_W_float,   # 0.230769...
+        'experimental': 0.23122,
+        'deviation_pct': abs(sin2_theta_W_float - 0.23122) / 0.23122 * 100
+    }
+```
+
+### 15b.3 Strong Coupling Computation
+
+```python
+def compute_alpha_s():
+    """Compute alpha_s = sqrt(2)/(dim(G2) - p2) with geometric origin."""
+
+    # Formula with geometric interpretation
+    sqrt_2 = np.sqrt(2)  # E8 root length
+    effective_dof = dim_G2 - p2  # 14 - 2 = 12
+
+    alpha_s = sqrt_2 / effective_dof
+
+    # Alternative verifications (all give 12)
+    assert dim_G2 - p2 == 12
+    assert 8 + 3 + 1 == 12  # dim(SU3) + dim(SU2) + dim(U1)
+    assert b2_K7 - 9 == 12   # b2 - SM gauge fields
+
+    return {
+        'value': alpha_s,  # 0.117851...
+        'formula': 'sqrt(2)/(dim(G2) - p2)',
+        'experimental': 0.1179,
+        'deviation_pct': abs(alpha_s - 0.1179) / 0.1179 * 100
+    }
+```
+
+### 15b.4 Torsion Magnitude Computation
+
+```python
+def compute_kappa_T():
+    """Compute kappa_T = 1/61 from cohomology."""
+
+    # Topological formula
+    denominator = b3_K7 - dim_G2 - p2  # 77 - 14 - 2 = 61
+    kappa_T = Fraction(1, denominator)
+
+    # Alternative verifications of 61
+    assert H_star - b2_K7 - 17 == 61  # 99 - 21 - 17
+    assert denominator == 61
+
+    # 61 is the 18th prime
+    # 61 divides 3477 = m_tau/m_e
+    assert 3477 % 61 == 0
+
+    return {
+        'exact': kappa_T,  # Fraction(1, 61)
+        'float': float(kappa_T),  # 0.016393442...
+        'ml_constrained': 0.0164,
+        'deviation_pct': abs(float(kappa_T) - 0.0164) / 0.0164 * 100
+    }
+```
+
+### 15b.5 Hierarchy Parameter Computation
+
+```python
+def compute_tau():
+    """Compute tau = 3472/891 exact rational."""
+
+    # Exact formula
+    dim_E8xE8 = 496
+    dim_J3O = 27  # Exceptional Jordan algebra
+
+    numerator = dim_E8xE8 * b2_K7  # 496 * 21 = 10416
+    denominator = dim_J3O * H_star  # 27 * 99 = 2673
+
+    tau_unreduced = Fraction(numerator, denominator)
+    # gcd(10416, 2673) = 3
+    # tau = 3472/891
+
+    # Prime factorization
+    # 3472 = 2^4 * 7 * 31
+    # 891 = 3^4 * 11
+    assert 3472 == 2**4 * 7 * 31
+    assert 891 == 3**4 * 11
+
+    # Verify framework constant interpretations
+    assert 2 == p2
+    assert 7 == dim_K7
+    assert 31 == 31  # M5 Mersenne prime
+    assert 3 == N_gen
+    assert 11 == rank_E8 + N_gen  # L5 Lucas number
+
+    return {
+        'exact': Fraction(3472, 891),
+        'float': 3472 / 891,  # 3.8967452300785634...
+        'prime_num': '2^4 * 7 * 31',
+        'prime_den': '3^4 * 11'
+    }
+```
+
+---
+
+## 15c. Validation Suite
+
+### 15c.1 Unit Tests
+
+```python
+import pytest
+from fractions import Fraction
+
+class TestTopologicalConstants:
+    """Unit tests for topological constants."""
+
+    def test_betti_numbers(self):
+        assert b2_K7 == 21
+        assert b3_K7 == 77
+        assert b2_K7 + b3_K7 == 98
+
+    def test_weinberg_angle(self):
+        """Test sin^2(theta_W) = 3/13."""
+        sin2_thetaW = Fraction(b2_K7, b3_K7 + dim_G2)
+        assert sin2_thetaW == Fraction(3, 13)
+        assert float(sin2_thetaW) == pytest.approx(0.230769, rel=1e-5)
+
+    def test_kappa_T(self):
+        """Test kappa_T = 1/61."""
+        kappa_T = Fraction(1, b3_K7 - dim_G2 - p2)
+        assert kappa_T == Fraction(1, 61)
+        assert float(kappa_T) == pytest.approx(0.016393, rel=1e-4)
+
+    def test_tau(self):
+        """Test tau = 3472/891."""
+        tau = Fraction(496 * 21, 27 * 99)
+        assert tau == Fraction(3472, 891)
+        assert float(tau) == pytest.approx(3.896747, rel=1e-5)
+
+    def test_alpha_s(self):
+        """Test alpha_s = sqrt(2)/12."""
+        alpha_s = np.sqrt(2) / (dim_G2 - p2)
+        assert alpha_s == pytest.approx(0.117851, rel=1e-4)
+
+class TestExactRelations:
+    """Unit tests for exact relations."""
+
+    def test_tau_prime_factorization(self):
+        """Verify tau = (2^4 * 7 * 31)/(3^4 * 11)."""
+        assert 3472 == 2**4 * 7 * 31
+        assert 891 == 3**4 * 11
+
+    def test_61_properties(self):
+        """Verify 61 properties."""
+        assert b3_K7 - dim_G2 - p2 == 61
+        assert H_star - b2_K7 - 17 == 61
+        assert 3477 % 61 == 0  # m_tau/m_e
+
+    def test_221_structure(self):
+        """Verify 221 = 13 * 17."""
+        assert 221 == 13 * 17
+        assert 221 == dim_E8 - 27  # dim(E8) - dim(J3O)
+        assert 884 == 4 * 221
+```
+
+### 15c.2 Integration Tests
+
+```python
+class TestFullPipeline:
+    """Integration tests for pipeline."""
+
+    def test_all_observables(self):
+        """Verify all 39 observables compute correctly."""
+        results = compute_all_observables()
+        assert len(results) >= 39
+
+        # Check key observables
+        assert 'kappa_T' in results
+        assert results['kappa_T'] == pytest.approx(1/61, rel=1e-6)
+
+        assert 'tau' in results
+        assert results['tau'] == pytest.approx(3472/891, rel=1e-6)
+```
+
+---
+
+## 15d. Performance Benchmarks
+
+| Operation | Time (ms) |
+|-----------|-----------|
+| Topological constants | < 0.1 |
+| Gauge couplings | < 1 |
+| All 39 observables | < 15 |
+| Monte Carlo (10^6) | ~5000 |
+| K7 metric training | ~3600000 |
+
+---
+
+## 15e. Reproducibility
+
+### 15e.1 Version Tracking
+
+All results tagged with:
+- Framework version
+- Key formulas: sin²θ_W=3/13, κ_T=1/61, τ=3472/891
+
+### 15e.2 Key Hyperparameters (Reference)
+
+```python
+CONFIG = {
+    'n_points': 2048,
+    'n_epochs': 2000,
+    'lr_local': 1e-4,
+    'lr_global': 5e-4,
+    'loss_weights': {
+        'kappa_T': 200.0,
+        'kappa_relative': 500.0,
+        'det_g': 5.0,
+        'local_anchor': 20.0,
+        'global_torsion': 50.0,
+    },
+    'betti_threshold': 1e-8,
+}
+```
+
+---
+
 ## 16. Summary
 
 This supplement demonstrates explicit G₂ metric construction on K₇ via physics-informed neural networks, achieving all GIFT v2.2 structural predictions:
