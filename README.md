@@ -154,7 +154,8 @@ MIT License - see [LICENSE](LICENSE)
 
 - **Repository**: https://github.com/gift-framework/GIFT
 - **Issues**: https://github.com/gift-framework/GIFT/issues
-- **Author**: [brieuc@bdelaf.com](mailto:brieuc@bdelaf.com)
+- **Author**: [contact](mailto:brieuc@bdelaf.com)
 
 ---
 > **Gift from bit**
+---
