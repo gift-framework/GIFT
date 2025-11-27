@@ -23,11 +23,9 @@ gift/
 │   ├── gift_2_2_main.md               # Core theoretical paper (~1400 lines)
 │   ├── summary.txt                    # Executive summary (5-min read)
 │   ├── READING_GUIDE.md               # Navigation by time/interest
-│   ├── GLOSSARY.md                    # Terminology definitions
 │   ├── GIFT_v22_Observable_Reference.md   # 39-observable catalog
 │   ├── GIFT_v22_Geometric_Justifications.md # Derivation details
 │   ├── GIFT_v22_Statistical_Validation.md  # Validation methods
-│   │   # (Interactive notebooks now in assets/visualizations/)
 │   │
 │   ├── supplements/                   # 7 detailed mathematical supplements
 │   │   ├── S1_mathematical_architecture.md  # E₈, G₂, cohomology
@@ -38,13 +36,18 @@ gift/
 │   │   ├── S6_theoretical_extensions.md     # QG, info theory
 │   │   └── S7_dimensional_observables.md    # Masses, scale bridge
 │   │
-│   └── pdf/                           # PDF versions (generated)
+│   ├── tex/                           # LaTeX source files
+│   │   ├── main.tex                   # Main paper source
+│   │   └── S1-S7.tex                  # Supplement sources
+│   │
+│   └── pdf/                           # PDF versions (generated from tex/)
 │
 ├── docs/                              # Additional documentation
 │   ├── FAQ.md                         # Frequently asked questions
 │   ├── GLOSSARY.md                    # Technical terms and notation
 │   ├── PHILOSOPHY.md                  # Philosophical perspectives
 │   ├── EXPERIMENTAL_VALIDATION.md     # Current experimental status
+│   ├── tests/                         # Test documentation and reports
 │   └── *.md                           # Additional guides
 │
 ├── G2_ML/                             # Machine learning for K₇ metrics
@@ -195,7 +198,7 @@ PDF versions are in `publications/pdf/` with matching names.
 → `docs/EXPERIMENTAL_VALIDATION.md` (experimental timeline)
 
 **Definitions and Notation**
-→ `publications/GLOSSARY.md` (all technical terms)
+→ `docs/GLOSSARY.md` (all technical terms)
 → `publications/gift_2_2_main.md` (Section 1.4: Conventions)
 
 ### Cross-References
