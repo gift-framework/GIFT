@@ -33,6 +33,8 @@
 \usepackage{listings}
 \DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
 
+\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
+
 % ============================================
 % LISTINGS CONFIGURATION (for code blocks)
 % ============================================
@@ -63,7 +65,7 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Geometric Information Field Theory 2.2}
+\fancyhead[L]{Geometric Information Field Theory 2.1}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -75,8 +77,8 @@
     linkcolor=blue,
     citecolor=blue,
     urlcolor=blue,
-    pdftitle={Geometric Information Field Theory v2.2},
-    pdfauthor={Brieuc de La Fourniere}
+    pdftitle={Geometric Information Field Theory},
+    pdfauthor={Brieuc de La Fournière}
 }
 
 % ============================================
@@ -120,7 +122,7 @@
 \newcommand{\DE}{\mathrm{DE}}
 \newcommand{\rank}{\mathrm{rank}}
 \newcommand{\proven}{\textsc{Proven}}
-\newcommand{\topomark}{\textsc{Topological}}
+\newcommand{\topological}{\textsc{Topological}}
 \newcommand{\derived}{\textsc{Derived}}
 \newcommand{\theoretical}{\textsc{Theoretical}}
 \newcommand{\phenomenological}{\textsc{Phenomenological}}
@@ -145,7 +147,7 @@
   \def\Pl{Pl}%
   \def\DE{DE}%
   \def\proven{Proven}%
-  \def\topomark{Topological}%
+  \def\topological{Topological}%
   \def\derived{Derived}%
   \def\theoretical{Theoretical}%
   \def\phenomenological{Phenomenological}%
@@ -157,6 +159,7 @@
 \title{%
 \LARGE\textbf{Geometric Information Field Theory}\\[0.3em]
 \Large Topological Unification of Standard Model Parameters\\
+Through Torsional Dynamics
 }
 \author{}
 \date{}
@@ -171,28 +174,32 @@
 % ============================================
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
-{Brieuc de La Fournière\\
-Independent researcher}
-\vfill
-
-\begin{abstract}
-
-We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional $\Gtwo$ holonomy manifold $\Kseven$ coupled to $\E_8 \times \E_8$ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers $b_2(\Kseven) = 21$ and $b_3(\Kseven) = 77$, which determine gauge field and matter multiplicities through cohomological mappings.
-
-The framework contains no continuous adjustable parameters. All structural constants (metric determinant $\det(g) = 65/32$, torsion magnitude $\kappa_T = 1/61$, hierarchy parameter $\tau = 3472/891$) derive from fixed algebraic and topological invariants. This eliminates parameter tuning by construction---discrete topological structures admit no continuous variation.
-
-Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128\% from experimental values. Sector-specific deviations include: gauge (0.06\%), leptons (0.04\%), CKM matrix (0.08\%), neutrinos (0.13\%), quarks (0.18\%), cosmology (0.11\%). Thirteen relations possess rigorous topological proofs, including three-generation structure ($N_{\mathrm{gen}} = 3$), Koide parameter ($Q = 2/3$), and Weinberg angle ($\sin^2\theta_W = 3/13$) as exact rationals.
-
-Monte Carlo validation over $10^4$ parameter configurations finds no competitive alternative minima ($\chi^2_{\mathrm{optimal}} = 45.2$ vs.\ $\chi^2_{\mathrm{random}} = 15{,}420 \pm 3{,}140$ for 37 observables). Near-term falsification criteria include DUNE measurement of $\delta_{\CP} = 197° \pm 5°$ (2027--2030) and lattice QCD determination of $m_s/m_d = 20.000 \pm 0.5$ (2030).
-
-Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
 \vspace{0.5em}
 
+\begin{abstract}
+{GIFT Framework v2.1\\
+Geometric Information Field Theory}
+
+\vfill
+This work explores a geometric framework in which Standard Model parameters emerge as topological invariants of seven-dimensional manifolds with $\Gtwo$ holonomy. The approach relates 37 dimensionless and dimensional observables to three geometric parameters through the dimensional reduction chain $\E_8 \times \E_8 \to \Kseven \to \text{Standard Model}$, achieving mean deviation 0.13\% across six orders of magnitude.
+
+The framework introduces torsional geodesic dynamics connecting static topology to renormalization group flow via the equation:
+\[
+\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}
+\]
+where $\lambda$ identifies with $\ln(\mu)$. A scale bridge connects topological integers to physical dimensions:
+\[
+\Lambda_{\GIFT} = \frac{21 \cdot e^8 \cdot 248}{7 \cdot \pi^4} = 1.632 \times 10^6
+\]
+
+Nine exact topological relations emerge with rigorous proofs, including the tau-electron mass ratio $m_\tau/m_e = 3477$, the $\CP$ violation phase $\delta_{\CP} = 197°$, the Koide parameter $Q = 2/3$, and the strange-down ratio $m_s/m_d = 20$. Statistical validation through $10^6$ Monte Carlo samples finds no alternative minima. The framework predicts specific signatures testable at DUNE ($\delta_{\CP}$ measurement to $\pm 5°$), offering falsifiable criteria through near-term experiments.
+
+Whether these mathematical structures reflect physical reality or represent an effective description remains open. The framework's value lies in demonstrating that geometric principles can substantially constrain Standard Model parameters.
+
+\vspace{0.5em}
 \textbf{Keywords}: $\E_8$ exceptional Lie algebra; $\Gtwo$ holonomy; dimensional reduction; Standard Model parameters; torsional geometry; topological invariants
-
 \end{abstract}
-
 
 \vfill
 \noindent\rule{\textwidth}{0.2pt}
@@ -216,7 +223,7 @@ Throughout this paper, we use the following classifications:
 
 \begin{itemize}
     \item \proven: Exact topological identity with rigorous mathematical proof (see Supplement S4)
-    \item \topomark: Direct consequence of manifold structure without empirical input
+    \item \topological: Direct consequence of manifold structure without empirical input
     \item \derived: Calculated from proven/topological relations
     \item \theoretical: Has theoretical justification, proof incomplete
     \item \phenomenological: Empirically accurate, theoretical derivation in progress
@@ -272,95 +279,16 @@ The Geometric Information Field Theory (GIFT) proposes that physical parameters 
 
 \textbf{Core principle}: Observables emerge as topological invariants, not tunable couplings.
 
-\subsection{Structural Assumptions and Derived Quantities}
-
-The framework rests on discrete mathematical structure choices, not continuous parameter adjustments. The following table distinguishes foundational assumptions from derived predictions.
-
-\begin{table}[H]
-\centering
-\caption{Framework Input-Output Structure}
-\begin{tabular}{ll}
-\toprule
-\textbf{Structural Input (Discrete Choices)} & \textbf{Mathematical Basis} \\
-\midrule
-$\E_8 \times \E_8$ gauge group & Largest exceptional Lie algebra product \\
-$\Kseven$ manifold via twisted connected sum & Joyce-Kovalev construction \\
-$\Gtwo$ holonomy & Preserves N=1 supersymmetry \\
-Betti numbers $b_2(\Kseven) = 21$, $b_3(\Kseven) = 77$ & TCS building blocks \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{lll}
-\toprule
-\textbf{Derived Output} & \textbf{Count} & \textbf{Status} \\
-\midrule
-Exact topological relations & 13 & \proven \\
-Direct topological consequences & 12 & \topomark \\
-Computed from topological relations & 9 & \derived \\
-Requiring single scale input & 5 & \theoretical \\
-\textbf{Total observables} & \textbf{39} & Mean deviation 0.128\% \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-No continuous parameters are adjusted to fit experimental data. The structural choices determine all predictions uniquely.
-
-\subsection{Result Hierarchy}
-
-Framework results divide into three layers with decreasing epistemic certainty:
-
-\subsubsection{Layer 1: Falsifiable Core (High confidence)}
-
-Direct topological predictions testable by near-term experiments:
-
-\begin{table}[H]
-\centering
-\begin{tabular}{llll}
-\toprule
-\textbf{Prediction} & \textbf{Formula} & \textbf{Test} & \textbf{Timeline} \\
-\midrule
-$\delta_{\CP} = 197°$ & $7 \times \dimE(\Gtwo) + H^*$ & DUNE & 2027--2030 \\
-$\sin^2\theta_W = 3/13$ & $b_2/(b_3 + \dimE(\Gtwo))$ & FCC-ee & 2040s \\
-$m_s/m_d = 20$ & $p_2^2 \times \Weyl$ & Lattice QCD & 2030 \\
-$Q_{\text{Koide}} = 2/3$ & $\dimE(\Gtwo)/b_2$ & Precision masses & Ongoing \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsubsection{Layer 2: Structural Relations (Medium confidence)}
-
-Derived quantities depending on Layer 1 plus additional geometric structure:
-\begin{itemize}
-    \item Quark mass ratios ($m_c/m_s$, $m_t/m_b$, etc.)
-    \item CKM matrix elements
-    \item Absolute mass scales (requiring $\Lambda_{\GIFT}$ bridge)
-\end{itemize}
-
-\subsubsection{Layer 3: Supplementary Patterns (Speculative)}
-
-Number-theoretic observations suggesting deeper structure, not used in predictions:
-\begin{itemize}
-    \item Fibonacci-Lucas encoding of framework constants
-    \item Mersenne prime appearances ($M_2=3$, $M_3=7$, $M_5=31$)
-    \item $221 = 13 \times 17$ connection between sectors
-    \item Binary/pentagonal symmetry patterns
-\end{itemize}
-
-These patterns, while intriguing, should be regarded as potential clues for future theoretical development rather than established results.
-
 \subsection{Paper Organization}
 
 \begin{itemize}
     \item \textbf{Part I} (Sections 2--4): Geometric architecture --- $\E_8 \times \E_8$ structure, $\Kseven$ manifold, explicit metric
     \item \textbf{Part II} (Sections 5--7): Torsional dynamics --- torsion tensor, geodesic flow, scale bridge
-    \item \textbf{Part III} (Sections 8--10): Observable predictions --- 39 observables across all sectors
+    \item \textbf{Part III} (Sections 8--10): Observable predictions --- 37 observables across all sectors
     \item \textbf{Part IV} (Sections 11--14): Validation --- experimental tests, theoretical implications, conclusions
 \end{itemize}
 
-Mathematical foundations appear in Supplement S1, rigorous proofs and complete derivations in Supplement S4.
+Mathematical foundations appear in Supplement S1, rigorous proofs in Supplement S4, and complete derivations in Supplement S5.
 
 % ============================================
 % PART I: GEOMETRIC ARCHITECTURE
@@ -560,37 +488,22 @@ where $g_{e\pi}$ varies slowly with position, maintaining approximate constancy 
     \item RG flow: 4-term formula with $\text{fract}_{\text{eff}} = -0.499$, $\Delta\alpha = -0.896$ (0.44\% from SM)
 \end{itemize}
 
-\subsection{Volume Quantization: \texorpdfstring{$\det(g) = 65/32$}{det(g) = 65/32}}
+\subsection{Volume Quantization}
 
-The metric determinant has exact topological origin:
+The metric determinant exhibits remarkable quantization:
 \[
-\det(g) = \frac{65}{32} = 2.03125
+\det(g) = 2.031 \approx p_2 = 2
 \]
 
-\textbf{Topological derivation}:
-\[
-\det(g) = p_2 + \frac{1}{b_2 + \dimE(\Gtwo) - N_{\text{gen}}} = 2 + \frac{1}{21 + 14 - 3} = 2 + \frac{1}{32} = \frac{65}{32}
-\]
+This convergence to the binary invariant $p_2 = 2$ suggests fundamental discretization of the internal volume element. The parameter $p_2$ admits triple geometric origin:
 
-\textbf{Alternative derivations (all equivalent)}:
 \begin{enumerate}
-    \item \textbf{Weyl-rank product}: $\det(g) = (\Weyl \times (\rk(\E_8) + \Weyl))/2^5 = (5 \times 13)/32 = 65/32$
-    \item \textbf{Cohomological form}: $\det(g) = (H^* - b_2 - 13)/32 = (99 - 21 - 13)/32 = 65/32$
-    \item \textbf{Binary duality plus correction}: $\det(g) = p_2 + 1/32 = 65/32$
+    \item \textbf{Ratio interpretation}: $\dimE(\Gtwo)/\dimE(\Kseven) = 14/7 = 2$
+    \item \textbf{$\E_8$ decomposition}: $\dimE(\E_8 \times \E_8)/\dimE(\E_8) = 496/248 = 2$
+    \item \textbf{Root length}: $\sqrt{2}$ appears in $\E_8$ root system normalization
 \end{enumerate}
 
-\textbf{The 32 structure}: The denominator $32 = 2^5 = b_2 + \dimE(\Gtwo) - N_{\text{gen}}$ appears also in $\lambda_H = \sqrt{17}/32$, suggesting deep binary structure in the Higgs-metric sector.
-
-\textbf{Numerical verification}:
-\begin{itemize}
-    \item Predicted: $65/32 = 2.03125$
-    \item Experimental verification: Consistent with ML-constrained value 2.031
-    \item Deviation: 0.012\%
-\end{itemize}
-
-\textbf{Significance}: The metric determinant has exact topological origin, consistent with the \textbf{zero-parameter paradigm} where all quantities derive from fixed topological structure.
-
-\textbf{Status}: \topomark{} (exact rational from cohomology)
+\textbf{Status}: \topological{} (volume quantization by binary duality)
 
 % ============================================
 % PART II: TORSIONAL DYNAMICS
@@ -600,37 +513,14 @@ The metric determinant has exact topological origin:
 
 \section{Torsion Tensor}
 
-\subsection{Physical Origin and Topological Derivation}
+\subsection{Physical Origin}
 
-Standard $\Gtwo$ holonomy manifolds satisfy the closure conditions $d\varphi = 0$ and $d{*}\varphi = 0$ for the parallel 3-form. However, physical interactions require breaking this idealization. The framework introduces controlled non-closure with magnitude derived from cohomological structure.
-
-\textbf{Topological formula for torsion magnitude}:
+Standard $\Gtwo$ holonomy manifolds satisfy the closure conditions $d\varphi = 0$ and $d{*}\varphi = 0$ for the parallel 3-form. However, physical interactions require breaking this idealization. The framework introduces controlled non-closure:
 \[
-\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}
+|d\varphi|^2 + |d{*}\varphi|^2 = (0.0164)^2
 \]
 
-\textbf{Geometric interpretation}: The denominator 61 represents effective matter degrees of freedom:
-\begin{itemize}
-    \item $b_3 = 77$: Total matter sector (harmonic 3-forms)
-    \item $\dimE(\Gtwo) = 14$: Holonomy contribution (subtracted)
-    \item $p_2 = 2$: Binary duality contribution (subtracted)
-\end{itemize}
-
-\textbf{Alternative representations}:
-\begin{itemize}
-    \item $61 = H^* - b_2 - 17 = 99 - 21 - 17$
-    \item 61 is the 18th prime number
-    \item 61 appears in $m_\tau/m_e = 3477 = 3 \times 19 \times 61$
-\end{itemize}
-
-\textbf{Numerical value}: $\kappa_T = 1/61 = 0.016393\ldots$
-
-The global torsion satisfies:
-\[
-|d\varphi|^2 + |d{*}\varphi|^2 = \kappa_T^2 = (1/61)^2
-\]
-
-\textbf{Status}: \topomark{} (derived from cohomology, compatible with DESI DR2 2025 torsion constraints)
+This small but non-zero torsion generates the geometric coupling necessary for phenomenology while maintaining approximate $\Gtwo$ structure. The magnitude 0.0164 emerges from matching to observed coupling constants.
 
 \subsection{Torsion Tensor Components}
 
@@ -657,16 +547,14 @@ $T_{e\pi,\varphi}$ & $\sim 10^{-5}$ & Jarlskog invariant (small) \\
 
 \subsection{Global Properties}
 
-The global torsion magnitude $|T| = \kappa_T = 1/61$ satisfies:
+The global torsion magnitude $|T| \approx 0.0164$ satisfies:
 \[
-|T|^2 = \sum_{ijk} |T_{ijk}|^2 = \kappa_T^2 = \frac{1}{3721}
+|T|^2 = \sum_{ijk} |T_{ijk}|^2 \approx (0.0164)^2
 \]
 
 \textbf{Conservation laws}: Torsion satisfies Bianchi-type identities constraining its evolution.
 
 \textbf{Symmetry properties}: Antisymmetry in lower indices, with specific transformation rules under $\Gtwo$ structure group.
-
-\textbf{Experimental compatibility}: The value $\kappa_T^2 \approx 2.7 \times 10^{-4}$ is consistent with DESI DR2 (2025) cosmological torsion constraints.
 
 % ============================================
 % SECTION 6: GEODESIC FLOW
@@ -743,37 +631,20 @@ The scale parameter emerges as:
 Each factor has topological origin:
 \begin{itemize}
     \item $21 = b_2(\Kseven)$: gauge field multiplicity
-    \item $e^8 = \exp(\rk(\E_8))$: exponential of algebraic rank
+    \item $e^8 = \exp(\rank(\E_8))$: exponential of algebraic rank
     \item $248 = \dimE(\E_8)$: total algebraic dimension
     \item $7 = \dimE(\Kseven)$: manifold dimension
     \item $\pi^4$: geometric phase space volume
 \end{itemize}
 
-\subsection{Hierarchy Parameter: Exact Rational Form}
+\subsection{Hierarchy Parameter}
 
-The parameter $\tau$ governs hierarchical relationships across scales and admits an exact rational representation:
+The parameter $\tau$ governs hierarchical relationships across scales:
 \[
-\tau = \frac{\dimE(\E_8 \times \E_8) \cdot b_2(\Kseven)}{\dimE(J_3(\mathbb{O})) \cdot H^*} = \frac{496 \times 21}{27 \times 99} = \frac{10416}{2673} = \frac{3472}{891}
+\tau = \frac{\dimE(\E_8 \times \E_8) \cdot b_2(\Kseven)}{\dimE(J_3(\mathbb{O})) \cdot H^*} = \frac{496 \times 21}{27 \times 99} = \frac{10416}{2673} = 3.89675\ldots
 \]
 
-where $\dimE(J_3(\mathbb{O})) = 27$ is the exceptional Jordan algebra dimension, and $3472/891$ is the irreducible form (gcd = 3).
-
-\textbf{Prime factorization reveals deep structure}:
-\[
-\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11} = \frac{p_2^4 \times \dimE(\Kseven) \times M_5}{N_{\text{gen}}^4 \times (\rk(\E_8) + N_{\text{gen}})}
-\]
-
-\textbf{Interpretation of factors}:
-\begin{itemize}
-    \item \textbf{Numerator}: $2^4 = p_2^4$ (binary duality to 4th power), $7 = \dimE(\Kseven) = M_3$ (Mersenne), $31 = M_5$ (Mersenne)
-    \item \textbf{Denominator}: $3^4 = N_{\text{gen}}^4$ (generations to 4th power), $11 = \rk(\E_8) + N_{\text{gen}} = L_6$ (Lucas number)
-\end{itemize}
-
-\textbf{Numerical value}: $\tau = 3472/891 = 3.8967452300785634\ldots$
-
-\textbf{Significance}: $\tau$ is rational, not transcendental. This indicates the framework encodes exact discrete ratios rather than continuous quantities requiring infinite precision.
-
-\textbf{Status}: \proven{} (exact rational from topological integers)
+where $\dimE(J_3(\mathbb{O})) = 27$ is the exceptional Jordan algebra dimension.
 
 \textbf{Mathematical resonances}:
 \begin{itemize}
@@ -808,36 +679,29 @@ connecting the fractal dimension $D_H$ to dark energy ($\ln(2)$) and geometric p
 
 \section{Dimensionless Parameters}
 
-\subsection{Structural Constants: The Zero-Parameter Paradigm}
+\subsection{Fundamental Parameters}
 
-The framework employs no free parameters. All quantities are topological constants derived from $\E_8$ and $\Kseven$ structure:
+The framework employs three topological constants:
 
-\textbf{Structural Constant 1: $p_2 = 2$ (Binary Duality)}
+\textbf{Parameter 1: $p_2 = 2$ (Binary Duality)}
 \begin{itemize}
     \item Definition: $p_2 := \dimE(\Gtwo)/\dimE(\Kseven) = 14/7 = 2$
-    \item Status: \proven{} (exact arithmetic, not adjustable)
+    \item Status: \proven{} (exact arithmetic)
     \item Role: Information encoding, particle/antiparticle duality
 \end{itemize}
 
-\textbf{Structural Constant 2: $\beta_0 = \pi/8$ (Angular Quantization)}
+\textbf{Parameter 2: $\beta_0 = \pi/8$ (Angular Quantization)}
 \begin{itemize}
-    \item Definition: $\beta_0 := \pi/\rk(\E_8) = \pi/8$
-    \item Status: \topomark{} (derived from rank, not adjustable)
+    \item Definition: $\beta_0 := \pi/\rank(\E_8) = \pi/8$
+    \item Status: \topological{} (derived from rank)
     \item Role: Neutrino mixing, cosmological parameters
 \end{itemize}
 
-\textbf{Structural Constant 3: $\text{Weyl}_{\text{factor}} = 5$ (Pentagonal Symmetry)}
+\textbf{Parameter 3: $\text{Weyl}_{\text{factor}} = 5$ (Pentagonal Symmetry)}
 \begin{itemize}
     \item Origin: Unique perfect square $5^2$ in $|W(\E_8)| = 2^{14} \times 3^5 \times 5^2 \times 7$
-    \item Status: \topomark{} (from group order, not adjustable)
+    \item Status: \topological{} (from group order)
     \item Role: Generation count, mass ratios
-\end{itemize}
-
-\textbf{Structural Constant 4: $\det(g) = 65/32$ (Metric Determinant)}
-\begin{itemize}
-    \item Definition: $\det(g) = p_2 + 1/(b_2 + \dimE(\Gtwo) - N_{\text{gen}}) = 65/32$
-    \item Status: \topomark{} (exact rational, not adjustable)
-    \item Role: Volume quantization, coupling constants
 \end{itemize}
 
 \textbf{Derived relation} (proof in Supplement S4):
@@ -845,17 +709,15 @@ The framework employs no free parameters. All quantities are topological constan
 \xi = \frac{\text{Weyl}_{\text{factor}}}{p_2} \cdot \beta_0 = \frac{5}{2} \cdot \frac{\pi}{8} = \frac{5\pi}{16}
 \]
 
-\textbf{The Zero-Parameter Claim}: Unlike traditional physics frameworks requiring adjustable parameters, GIFT v2.2 derives all quantities from fixed mathematical structures. The ``parameters'' $p_2$, $\beta_0$, Weyl, and $\det(g)$ are not free parameters to be fitted but topological invariants with unique values determined by $\E_8 \times \E_8$ and $\Kseven$ geometry.
-
 \subsection{Gauge Couplings (3 observables)}
 
 \subsubsection[Fine Structure Constant alpha inverse at MZ]{Fine Structure Constant: $\alpha^{-1}(M_Z) = 127.958$}
 
-\textbf{Formula}: $\alpha^{-1}(M_Z) = 2^{\rk(\E_8)-1} - 1/24 = 2^7 - 1/24 = 127.958$
+\textbf{Formula}: $\alpha^{-1}(M_Z) = 2^{\rank(\E_8)-1} - 1/24 = 2^7 - 1/24 = 127.958$
 
-\textbf{Derivation}: Gauge dimensional reduction from $\E_8$ structure (Supplement S4)
+\textbf{Derivation}: Gauge dimensional reduction from $\E_8$ structure (Supplement S5)
 
-\textbf{Status}: \topomark
+\textbf{Status}: \topological
 
 \begin{center}
 \begin{tabular}{llll}
@@ -869,18 +731,14 @@ $\alpha^{-1}(M_Z)$ & $127.955 \pm 0.016$ & 127.958 & 0.002\% \\
 
 \subsubsection[Strong Coupling alpha s at MZ]{Strong Coupling: $\alpha_s(M_Z) = 0.11785$}
 
-\textbf{Formula with geometric origin}:
-\[
-\alpha_s(M_Z) = \frac{\sqrt{2}}{\dimE(\Gtwo) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{\sqrt{2}}{12}
-\]
+\textbf{Formula}: $\alpha_s(M_Z) = \sqrt{2}/12$
 
-\textbf{Geometric interpretation}:
 \begin{itemize}
-    \item $\sqrt{2}$: $\E_8$ root length (all roots have length $\sqrt{2}$ in standard normalization)
-    \item $12 = \dimE(\Gtwo) - p_2$: Effective gauge degrees of freedom after duality subtraction
+    \item $\sqrt{2}$ from $\E_8$ root length normalization
+    \item $12 = 8 + 3 + 1$ (total gauge bosons)
 \end{itemize}
 
-\textbf{Status}: \topomark{} (geometric origin established)
+\textbf{Status}: \phenomenological
 
 \begin{center}
 \begin{tabular}{llll}
@@ -892,30 +750,18 @@ $\alpha_s(M_Z)$ & $0.1179 \pm 0.0009$ & 0.11785 & 0.04\% \\
 \end{tabular}
 \end{center}
 
-\subsubsection[Weinberg Angle sin squared theta W]{Weinberg Angle: $\sin^2\theta_W = 3/13$}
+\subsubsection[Weinberg Angle sin squared theta W]{Weinberg Angle: $\sin^2\theta_W = 0.23072$}
 
-\textbf{Topological formula}:
-\[
-\sin^2\theta_W = \frac{b_2(\Kseven)}{b_3(\Kseven) + \dimE(\Gtwo)} = \frac{21}{77 + 14} = \frac{21}{91} = \frac{3}{13}
-\]
+\textbf{Formula}: $\sin^2\theta_W = \zeta(2) - \sqrt{2} = \pi^2/6 - \sqrt{2}$
 
-\textbf{Geometric interpretation}:
-\begin{itemize}
-    \item Numerator $b_2 = 21$: Gauge sector dimension (harmonic 2-forms)
-    \item Denominator $91 = b_3 + \dimE(\Gtwo)$: Matter-holonomy sector
-    \item $91 = 7 \times 13 = \dimE(\Kseven) \times (\rk(\E_8) + \text{Weyl})$
-\end{itemize}
-
-\textbf{Numerical value}: $3/13 = 0.230769\ldots$
-
-\textbf{Status}: \topomark{} (exact rational from cohomology)
+\textbf{Status}: \phenomenological
 
 \begin{center}
 \begin{tabular}{llll}
 \toprule
 \textbf{Observable} & \textbf{Experimental} & \textbf{GIFT} & \textbf{Deviation} \\
 \midrule
-$\sin^2\theta_W$ & $0.23122 \pm 0.00004$ & 0.230769 & 0.195\% \\
+$\sin^2\theta_W$ & $0.23122 \pm 0.00004$ & 0.23072 & 0.22\% \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -946,7 +792,7 @@ $\theta_{12}$ & $33.44° \pm 0.77°$ & $33.419°$ & 0.06\% \\
 
 \textbf{Formula}: $\theta_{13} = \pi/b_2(\Kseven) = \pi/21$
 
-\textbf{Status}: \topomark{} (direct from Betti number)
+\textbf{Status}: \topological{} (direct from Betti number)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -960,9 +806,9 @@ $\theta_{13}$ & $8.61° \pm 0.12°$ & $8.571°$ & 0.45\% \\
 
 \subsubsection[Atmospheric Mixing Angle theta twenty three]{Atmospheric Mixing Angle: $\theta_{23} = 49.193°$}
 
-\textbf{Formula}: $\theta_{23} = (\rk(\E_8) + b_3(\Kseven))/H^* \text{ rad} = 85/99 \text{ rad} = 49.193°$
+\textbf{Formula}: $\theta_{23} = (\rank(\E_8) + b_3(\Kseven))/H^* \text{ rad} = 85/99 \text{ rad} = 49.193°$
 
-\textbf{Status}: \topomark{} (exact rational)
+\textbf{Status}: \topological{} (exact rational)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1034,7 +880,7 @@ $m_\mu/m_e$ & $206.768 \pm 0.001$ & 207.012 & 0.12\% \\
 
 \textbf{Formula}: $m_\tau/m_\mu = (\dimE(\Kseven) + b_3(\Kseven))/\text{Weyl}_{\text{factor}} = 84/5 = 16.8$
 
-\textbf{Status}: \topomark{} (exact rational)
+\textbf{Status}: \topological{} (exact rational)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1102,7 +948,7 @@ $m_b/m_s$ & $44.7 \pm 1.0$ & 44.76 & 0.13\% \\
 
 \textbf{Mean deviation}: 0.09\%
 
-\textbf{Derivations}: Supplement S4
+\textbf{Derivations}: Supplement S5
 
 \subsection{CKM Matrix Elements (6 observables)}
 
@@ -1110,7 +956,7 @@ $m_b/m_s$ & $44.7 \pm 1.0$ & 44.76 & 0.13\% \\
 
 \textbf{Formula}: $\theta_C = \theta_{13} \times \sqrt{\dimE(\Kseven)/N_{\text{gen}}} = (\pi/21) \times \sqrt{7/3}$
 
-\textbf{Status}: \topomark
+\textbf{Status}: \topological
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1133,34 +979,20 @@ $|V_{tb}|$ & $0.999105 \pm 0.000032$ & 0.999106 & 0.0001\% \\
 
 \subsubsection[Higgs Quartic Coupling lambda H]{Higgs Quartic Coupling: $\lambda_H = \sqrt{17}/32$}
 
-\textbf{Formula with explicit geometric origin}:
-\[
-\lambda_H = \frac{\sqrt{\dimE(\Gtwo) + N_{\text{gen}}}}{2^{\Weyl}} = \frac{\sqrt{14 + 3}}{2^5} = \frac{\sqrt{17}}{32}
-\]
-
-\textbf{Geometric interpretation}:
+\textbf{Formula}: $\lambda_H = \sqrt{17}/32$
 \begin{itemize}
-    \item \textbf{Numerator}: $\sqrt{17}$ where $17 = \dimE(\Gtwo) + N_{\text{gen}} = 14 + 3$ (holonomy plus generations)
-    \item \textbf{Denominator}: $32 = 2^5 = 2^{\text{Weyl}}$ (binary duality raised to pentagonal power)
+    \item 17 from dual topological origin (Supplement S4)
+    \item $32 = 2^5 = 2^{\text{Weyl}_{\text{factor}}}$
 \end{itemize}
 
-\textbf{Significance of 17}:
-\begin{itemize}
-    \item 17 is prime
-    \item 17 appears in $221 = 13 \times 17 = \dimE(\E_8) - \dimE(J_3(\mathbb{O}))$
-    \item $17 = H^* - b_2 - 61 = 99 - 21 - 61$
-\end{itemize}
-
-\textbf{Numerical value}: $\lambda_H = \sqrt{17}/32 = 0.128906\ldots$
-
-\textbf{Status}: \proven{} (exact topological formula with geometric origin)
+\textbf{Status}: \topological{} (dual origin proven)
 
 \begin{center}
 \begin{tabular}{llll}
 \toprule
 \textbf{Observable} & \textbf{Experimental} & \textbf{GIFT} & \textbf{Deviation} \\
 \midrule
-$\lambda_H$ & $0.129 \pm 0.003$ & 0.12891 & 0.07\% \\
+$\lambda_H$ & $0.129 \pm 0.003$ & 0.12885 & 0.11\% \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1178,7 +1010,7 @@ $\lambda_H$ & $0.129 \pm 0.003$ & 0.12891 & 0.07\% \\
     \item $\ln(2)$ from binary information architecture
 \end{itemize}
 
-\textbf{Status}: \topomark{} (cohomology ratio with binary architecture)
+\textbf{Status}: \topological{} (cohomology ratio with binary architecture)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1194,9 +1026,9 @@ $\Omega_{\DE}$ & $0.6847 \pm 0.0073$ & 0.6861 & 0.21\% \\
 
 \textbf{Formula}: $n_s = \zeta(11)/\zeta(5) = 1.000494/1.036928 = 0.9649$
 
-\textbf{Derivation}: Ratio of odd Riemann zeta values from $\Kseven$ heat kernel (Supplement S4)
+\textbf{Derivation}: Ratio of odd Riemann zeta values from $\Kseven$ heat kernel (Supplement S5)
 
-\textbf{Status}: \topomark
+\textbf{Status}: \topological
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1269,19 +1101,18 @@ where $R \approx 1/54$ is scalar curvature. The intermediate value 69.8 km/s/Mpc
 % ============================================
 % SECTION 10: SUMMARY
 % ============================================
-\section{Summary: 39 Observables}
+\section{Summary: 37 Observables}
 
-\subsection{Statistical Overview: Zero-Parameter Framework}
+\subsection{Statistical Overview}
 
-The framework relates 39 observables to pure topological structure with \textbf{zero continuous adjustable parameters}:
+The framework relates 37 observables to 3 topological parameters:
 
 \begin{itemize}
-    \item \textbf{Structural constants}: $p_2 = 2$, $\beta_0 = \pi/8$, $\Weyl = 5$, $\det(g) = 65/32$ (all derived, none adjustable)
-    \item \textbf{Derived relations}: $\xi = 5\pi/16$, $\tau = 3472/891$ (exact rational)
-    \item \textbf{Coverage}: 27 dimensionless + 12 dimensional observables
+    \item \textbf{Input parameters}: $p_2 = 2$, $\text{Weyl}_{\text{factor}} = 5$, $\tau = 3.89675$
+    \item \textbf{Constraint}: $\xi = 5\pi/16$ (derived, reduces effective parameters)
+    \item \textbf{Coverage}: 26 dimensionless + 11 dimensional observables
     \item \textbf{Mean deviation}: 0.13\%
     \item \textbf{Range}: 6 orders of magnitude (2 MeV to 173 GeV)
-    \item \textbf{Exact relations}: 13
 \end{itemize}
 
 \subsection{Classification by Status}
@@ -1291,10 +1122,10 @@ The framework relates 39 observables to pure topological structure with \textbf{
 \toprule
 \textbf{Status} & \textbf{Count} & \textbf{Examples} \\
 \midrule
-\proven & 13 & $N_{\text{gen}}$, $Q_{\text{Koide}}$, $m_s/m_d$, $\delta_{\CP}$, $m_\tau/m_e$, $\Omega_{\DE}$, $\xi$, $\lambda_H$, $\tau$, $\kappa_T$, $\sin^2\theta_W$, $\det(g)$ \\
-\topomark & 12 & $\theta_{13}$, $\theta_{23}$, $m_\tau/m_\mu$, $n_s$, $\alpha_s$, gauge bosons \\
+\proven & 9 & $N_{\text{gen}}$, $Q_{\text{Koide}}$, $m_s/m_d$, $\delta_{\CP}$, $m_\tau/m_e$, $\Omega_{\DE}$, $\xi$, $\lambda_H$, $b_3$ relation \\
+\topological & 12 & $\theta_{13}$, $\theta_{23}$, $m_\tau/m_\mu$, $n_s$, gauge bosons \\
 \derived & 10 & $\theta_{12}$, CKM elements, quark ratios \\
-\phenomenological & 3 & $m_\mu/m_e$, some absolute masses \\
+\phenomenological & 6 & $\alpha_s$, $\sin^2\theta_W$, $m_\mu/m_e$, absolute masses \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1345,7 +1176,7 @@ Good (<1%):           37 observables (100%)
 
 \subsection{Monte Carlo Uniqueness Test}
 
-To assess whether the framework's parameter values represent a unique minimum, extensive Monte Carlo sampling was performed (methodology in Supplement S5).
+To assess whether the framework's parameter values represent a unique minimum, extensive Monte Carlo sampling was performed (methodology in Supplement S7).
 
 \textbf{Methodology}:
 \begin{itemize}
@@ -1505,12 +1336,12 @@ The topological derivation admits no flexibility; a fourth generation would defi
 Standard Model & 19 & 0 & No \\
 MSSM & $>100$ & Few & Partially \\
 String Landscape & $\sim 500$ & Statistical & No \\
-\textbf{GIFT Framework} & \textbf{0} & \textbf{39} & \textbf{Yes} \\
+\textbf{GIFT Framework} & \textbf{3} & \textbf{37} & \textbf{Yes} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The combination of complete parameter elimination ($19 \to 0$) with increased predictions ($0 \to 39$) distinguishes the geometric approach. All structural constants ($p_2$, $\beta_0$, Weyl, $\det(g)$) are topological invariants, not adjustable parameters.
+The combination of parameter reduction ($19 \to 3$) with increased predictions ($0 \to 37$) distinguishes the geometric approach.
 
 % ============================================
 % SECTION 13: THEORETICAL IMPLICATIONS
@@ -1606,28 +1437,6 @@ The bulk dimension $D_{\text{bulk}} = 11$ matches M-theory's critical dimension.
     \item Quantum gravity (effective field theory below Planck scale)
 \end{itemize}
 
-\subsection{\texorpdfstring{$\tau$}{tau} as Rational Witness: Discrete Structure of Physical Law}
-
-The discovery that $\tau = 3472/891$ is exactly rational (not merely approximated by a rational) has profound implications.
-
-\textbf{The rational nature of $\tau$}:
-\[
-\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11}
-\]
-
-This is not an approximation. The hierarchy parameter governing mass scales across the Standard Model is the ratio of two integers, each factorizable into framework constants.
-
-\textbf{Why this matters}:
-
-\begin{enumerate}
-    \item \textbf{Discrete vs.\ continuous}: Physical law may be fundamentally discrete, not continuous. The framework encodes exact ratios, not real numbers requiring infinite precision.
-    \item \textbf{Computability}: Rational numbers are computable with finite resources. If physical law is based on rationals, the universe is in principle simulable.
-    \item \textbf{No fine-tuning}: Discrete structures cannot be ``tuned'' --- they are what they are. The fine-tuning problem dissolves when parameters are topological integers.
-    \item \textbf{Deeper structure}: The prime factorization $(2^4 \times 7 \times 31)/(3^4 \times 11)$ expresses $\tau$ entirely in terms of framework constants.
-\end{enumerate}
-
-\textbf{Philosophical implication}: The rationality of $\tau$ suggests that physical law is, at its deepest level, number theory.
-
 % ============================================
 % SECTION 14: CONCLUSION
 % ============================================
@@ -1635,20 +1444,16 @@ This is not an approximation. The hierarchy parameter governing mass scales acro
 
 \subsection{Summary of Results}
 
-This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with $\Gtwo$ holonomy. The framework relates 39 observables to pure topological structure with \textbf{zero continuous adjustable parameters}, achieving mean precision 0.13\% across six orders of magnitude.
+This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with $\Gtwo$ holonomy. The framework relates 37 observables to three geometric parameters, achieving mean precision 0.13\% across six orders of magnitude.
 
 \textbf{Key achievements}:
 \begin{itemize}
-    \item 13 exact topological relations with rigorous proofs (including $\tau = 3472/891$, $\kappa_T = 1/61$, $\sin^2\theta_W = 3/13$, $\det(g) = 65/32$)
-    \item \textbf{Zero-parameter paradigm}: All structural constants derive from fixed topological invariants
+    \item 9 exact topological relations with rigorous proofs
     \item Torsional geodesic dynamics providing geometric RG flow interpretation
     \item Scale bridge $21 \times e^8$ connecting topology to physics
-    \item Discovery that the hierarchy parameter $\tau$ is exactly rational
-    \item Discovery that the metric determinant $\det(g) = 65/32$ is topological (eliminates last fitted parameter)
+    \item 124 passing tests validating all predictions
     \item Clear falsification criteria for experimental testing
 \end{itemize}
-
-\textbf{Clarification on ``zero-parameter''}: The framework makes discrete structural choices ($\E_8 \times \E_8$ gauge group, $\Kseven$ manifold topology) but contains no continuous quantities adjusted to fit data. Given these structural choices, all 39 observables follow without further input.
 
 \subsection{Central Role of Torsional Dynamics}
 
@@ -1685,7 +1490,7 @@ We acknowledge experimental collaborations (Planck, NuFIT, PDG, ATLAS, CMS, T2K,
 \section*{Supplementary Materials}
 \addcontentsline{toc}{section}{Supplementary Materials}
 
-Seven technical supplements provide detailed foundations:
+Nine technical supplements provide detailed foundations:
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1695,10 +1500,12 @@ Seven technical supplements provide detailed foundations:
 S1 & Mathematical Architecture & 30 & $\E_8$ algebra, $\Gtwo$ manifolds, cohomology \\
 S2 & $\Kseven$ Manifold Construction & 40 & Twisted connected sum, ML metrics \\
 S3 & Torsional Dynamics & 35 & Geodesic equations, RG connection \\
-S4 & Complete Derivations & 50 & 13 proven relations, all observable derivations \\
-S5 & Experimental Validation & 25 & Data comparisons, statistics \\
-S6 & Theoretical Extensions & 25 & Quantum gravity, information theory \\
-S7 & Dimensional Observables & 30 & Absolute masses, scale bridge, cosmology \\
+S4 & Rigorous Proofs & 25 & 9 proven relations with complete derivations \\
+S5 & Complete Calculations & 50 & All 37 observable derivations \\
+S6 & Numerical Methods & 20 & Algorithms, code implementation \\
+S7 & Phenomenology & 30 & Experimental comparisons, statistics \\
+S8 & Falsification Protocol & 15 & Experimental tests and timelines \\
+S9 & Extensions & 25 & Quantum gravity, information theory \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1721,7 +1528,7 @@ S7 & Dimensional Observables & 30 & Absolute masses, scale bridge, cosmology \\
 \textbf{Symbol} & \textbf{Value} & \textbf{Definition} \\
 \midrule
 $\dimE(\E_8)$ & 248 & $\E_8$ Lie algebra dimension \\
-$\rk(\E_8)$ & 8 & $\E_8$ Cartan subalgebra dimension \\
+$\rank(\E_8)$ & 8 & $\E_8$ Cartan subalgebra dimension \\
 $\dimE(\Gtwo)$ & 14 & $\Gtwo$ Lie group dimension \\
 $\dimE(\Kseven)$ & 7 & Internal manifold dimension \\
 $b_2(\Kseven)$ & 21 & Second Betti number \\
@@ -1732,25 +1539,21 @@ $\dimE(J_3(\mathbb{O}))$ & 27 & Exceptional Jordan algebra dimension \\
 \end{tabular}
 \end{center}
 
-\subsection{Structural Constants (Zero-Parameter Framework)}
+\subsection{Framework Parameters}
 
 \begin{center}
-\begin{tabular}{llll}
+\begin{tabular}{lll}
 \toprule
-\textbf{Symbol} & \textbf{Value} & \textbf{Origin} & \textbf{Status} \\
+\textbf{Symbol} & \textbf{Value} & \textbf{Origin} \\
 \midrule
-$p_2$ & 2 & $\dimE(\Gtwo)/\dimE(\Kseven)$ & Fixed \\
-$\text{Weyl}_{\text{factor}}$ & 5 & From $|W(\E_8)|$ factorization & Fixed \\
-$\beta_0$ & $\pi/8$ & $\pi/\rk(\E_8)$ & Fixed \\
-$\det(g)$ & $65/32 = 2.03125$ & $(\Weyl \times (\rk + \Weyl))/2^5$ & Fixed \\
-$\xi$ & $5\pi/16$ & $(\text{Weyl}/p_2) \times \beta_0$ & Derived \\
-$\tau$ & $3472/891 = 3.8967\ldots$ & $496 \times 21/(27 \times 99)$ & Derived \\
-$\kappa_T$ & $1/61 = 0.01639\ldots$ & $1/(b_3 - \dimE(\Gtwo) - p_2)$ & Derived \\
+$p_2$ & 2 & $\dimE(\Gtwo)/\dimE(\Kseven)$ \\
+$\text{Weyl}_{\text{factor}}$ & 5 & From $|W(\E_8)|$ factorization \\
+$\beta_0$ & $\pi/8$ & $\pi/\rank(\E_8)$ \\
+$\xi$ & $5\pi/16$ & $(\text{Weyl}/p_2) \times \beta_0$ \\
+$\tau$ & 3.89675 & $496 \times 21/(27 \times 99)$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-
-\textbf{Note}: All ``structural constants'' are topological invariants, not free parameters. None require adjustment to match experiment.
 
 \subsection{Mathematical Constants}
 
@@ -1759,11 +1562,11 @@ $\kappa_T$ & $1/61 = 0.01639\ldots$ & $1/(b_3 - \dimE(\Gtwo) - p_2)$ & Derived \
 \toprule
 \textbf{Symbol} & \textbf{Value} & \textbf{Role} \\
 \midrule
-$\pi$ & $3.14159\ldots$ & Geometric phase \\
-$e$ & $2.71828\ldots$ & Exponential scaling \\
-$\phi$ & $1.61803\ldots$ & Golden ratio \\
-$\gamma$ & $0.57722\ldots$ & Euler-Mascheroni \\
-$\zeta(3)$ & $1.20206\ldots$ & Ap\'ery's constant \\
+$\pi$ & 3.14159\ldots & Geometric phase \\
+$e$ & 2.71828\ldots & Exponential scaling \\
+$\phi$ & 1.61803\ldots & Golden ratio \\
+$\gamma$ & 0.57722\ldots & Euler-Mascheroni \\
+$\zeta(3)$ & 1.20206\ldots & Ap\'ery's constant \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1867,7 +1670,7 @@ Zenodo. \url{https://doi.org/10.5281/zenodo.17434034}
 \noindent\hrulefill
 \vspace{0.5em}
 
-\noindent\textit{GIFT Framework v2.2}
+\noindent\textit{GIFT Framework v2.1}
 
 \noindent\textit{Main Document}
 
