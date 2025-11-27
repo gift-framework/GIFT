@@ -28,7 +28,14 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{enumitem}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % HEADER/FOOTER
 % ============================================
@@ -48,7 +55,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S7: Dimensional Observables},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La Fournière}
 }
 
 % ============================================
@@ -101,23 +108,27 @@
 \LARGE\textbf{Supplement S7: Dimensional Observables}\\[0.5em]
 \large Absolute Masses, Scale Bridge, and Cosmological Parameters
 }
-\author{GIFT Framework v2.2}
-\date{November 2025}
+\author{}
+\date{}
 
 % ============================================
 % DOCUMENT
 % ============================================
 \begin{document}
-
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
-
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
 This supplement extends the dimensionless predictions of the main document to absolute mass scales and cosmological observables, addressing the dimensional transmutation problem. We present the scale bridge mechanism connecting topological predictions to physical masses in GeV, and provide detailed comparisons with PDG 2024 and Planck 2020 data.
 \end{abstract}
-
-\tableofcontents
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
 \newpage
+\tableofcontents
+\noindent\rule{\textwidth}{0.2pt}
+\vfill
 
 %=============================================================================
 \part{The Scale Bridge}
@@ -771,14 +782,10 @@ Cosmology & 4 & 1.7\% & $n_s$ \\
     \item Weinberg, S. (1972). \textit{Gravitation and Cosmology}.
 \end{enumerate}
 
-\vspace{2em}
-\hrule
-\vspace{1em}
-\noindent\textbf{Document Version}: 2.2.0\\
-\textbf{Last Updated}: November 2025\\
-\textbf{GIFT Framework}: \url{https://github.com/gift-framework/GIFT}
+\vfill
+\noindent\hrulefill\\
+\textit{GIFT Framework v2.2 --- Supplement S7: Dimensional Observables}
 
-\vspace{0.5em}
 \noindent\textit{This supplement contains dimensional observables and scale bridge content extracted from former S9 (Extensions).}
 
 \end{document}

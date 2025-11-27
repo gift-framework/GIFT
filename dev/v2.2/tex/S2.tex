@@ -27,7 +27,14 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{listings}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % LISTINGS CONFIGURATION
 % ============================================
@@ -61,7 +68,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S2: K7 Manifold Construction},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La fournière}
 }
 
 % ============================================
@@ -79,7 +86,7 @@
 \newcommand{\Kseven}{K_7}
 \newcommand{\dimE}{\mathrm{dim}}
 \newcommand{\rk}{\mathrm{rank}}
-\newcommand{\topmark}{\textsc{Topological}}
+\newcommand{\topomark}{\textsc{Topological}}
 \newcommand{\structural}{\textsc{Structural}}
 \newcommand{\numerical}{\textsc{Numerical}}
 \newcommand{\validated}{\textsc{Validated}}
@@ -94,14 +101,17 @@
 \large Explicit $\Gtwo$ Metric via Twisted Connected Sum\\
 and Physics-Informed Neural Networks
 }
-\author{GIFT Framework v2.2}
-\date{November 2025}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
-
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
+
 We construct the compact 7-dimensional manifold $\Kseven$ with $\Gtwo$ holonomy through twisted connected sum (TCS) methods, establishing the geometric foundation for GIFT v2.2 observables. The construction achieves complete topological recovery---$b_2 = 21$ and $b_3 = 77$ exact---with metric invariants matching structural predictions: $\kappa_T = 0.0165$ (0.62\% from $1/61$) and $\det(g) = 2.03125$ (exact match to $65/32$).
 
 \textbf{Key innovations in v1.6}:
@@ -125,7 +135,7 @@ The construction validates the GIFT framework's core claim: Standard Model struc
 \addcontentsline{toc}{section}{Status Classifications}
 
 \begin{itemize}
-    \item \topmark: Exact consequence of manifold structure with rigorous proof
+    \item \topomark: Exact consequence of manifold structure with rigorous proof
     \item \structural: Derived from fixed mathematical constants ($\E_8$, $\Gtwo$, $\Kseven$ data)
     \item \numerical: Determined via neural network optimization
     \item \validated: Structural prediction confirmed by numerical construction
@@ -236,7 +246,7 @@ where the gluing is performed over a neck region $N = [-R, R] \times S^1 \times 
     \item Signature: $\sigma(\Kseven) = 0$
 \end{itemize}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 % ============================================
 % SECTION 2: MAYER-VIETORIS ANALYSIS
@@ -280,7 +290,7 @@ Since $\dimE(\mathrm{im}(\delta)) = 0$ in this case:
 b_2(\Kseven) = 0 + 21 = 21
 \]
 
-\textbf{Result}: $b_2(\Kseven) = 21$ \textbf{EXACT} (\topmark)
+\textbf{Result}: $b_2(\Kseven) = 21$ \textbf{EXACT} (\topomark)
 
 \textbf{Physical interpretation} (from Supplement S1):
 \begin{itemize}
@@ -300,7 +310,7 @@ With appropriate choice of building blocks and twist, detailed Mayer-Vietoris an
 b_3(\Kseven) = 40 + 37 = 77
 \]
 
-\textbf{Status}: \topmark{} (exact)
+\textbf{Status}: \topomark{} (exact)
 
 \textbf{Local/Global decomposition} (validated by v1.6):
 \[
@@ -344,7 +354,7 @@ $k$ & $b_k(\Kseven)$ & Derivation \\
 H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99
 \]
 
-\textbf{Status}: All \topmark{} (exact mathematical results)
+\textbf{Status}: All \topomark{} (exact mathematical results)
 
 % ============================================
 % SECTION 3: STRUCTURAL METRIC INVARIANTS
@@ -381,7 +391,7 @@ $\det(g)$ & $(\text{Weyl} \times (\rk(\E_8) + \text{Weyl}))/2^5$ & $65/32 = 2.03
     \item $p_2 = 2$ binary duality factor
 \end{itemize}
 
-\textbf{Status}: \topmark{} (derived from cohomology)
+\textbf{Status}: \topomark{} (derived from cohomology)
 
 \subsection{Metric Determinant $\det(g) = 65/32$}
 
@@ -398,7 +408,7 @@ $\det(g)$ & $(\text{Weyl} \times (\rk(\E_8) + \text{Weyl}))/2^5$ & $65/32 = 2.03
 
 \textbf{The 32 structure}: The denominator $32 = 2^5$ appears in both $\det(g) = 65/32$ and $\lambda_H = \sqrt{17}/32$, suggesting deep binary structure in the Higgs-metric sector.
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsection{Representation Content}
 
@@ -1340,9 +1350,9 @@ This supplement demonstrates explicit $\Gtwo$ metric construction on $\Kseven$ v
 
 \textbf{Topological achievements}:
 \begin{itemize}
-    \item $b_2 = 21$, $b_3 = 77$ exact (\topmark)
+    \item $b_2 = 21$, $b_3 = 77$ exact (\topomark)
     \item Local/global decomposition: $35 + 42 = 77$ (\structural)
-    \item Complete Mayer-Vietoris analysis (\topmark)
+    \item Complete Mayer-Vietoris analysis (\topomark)
 \end{itemize}
 
 \textbf{Structural validation}:

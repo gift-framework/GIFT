@@ -29,7 +29,14 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{tikz}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % HEADER/FOOTER
 % ============================================
@@ -49,7 +56,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S6: Theoretical Extensions},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La Fournière}
 }
 
 % ============================================
@@ -106,18 +113,19 @@
 % DOCUMENT
 % ============================================
 \begin{document}
-
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
-
-\warningbox{\exploratory{} --- Content in this supplement is speculative and extends beyond the established predictive framework.}
-
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
 This supplement explores extensions of the GIFT framework to quantum gravity, information-theoretic interpretations, and speculative directions for future research. These ideas represent potential avenues for theoretical development but should not be confused with the established predictive content of the framework.
 \end{abstract}
-
-\tableofcontents
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
 \newpage
+\tableofcontents
+\vfill
 
 %=============================================================================
 \part{Quantum Gravity Interface}
@@ -572,10 +580,10 @@ The GIFT framework opens several speculative directions:
 \end{enumerate}
 
 \textbf{Key distinction}: These extensions are exploratory. The core predictive success of GIFT (13 proven relations, 39 observables) does not depend on resolving these speculative questions.
-
-%=============================================================================
+\vfill
+%===========================================================================
 \section*{References}
-%=============================================================================
+%===========================================================================
 
 \begin{enumerate}
     \item Green, M. B., Schwarz, J. H., Witten, E. (1987). \textit{Superstring Theory}. Cambridge.
@@ -585,15 +593,10 @@ The GIFT framework opens several speculative directions:
     \item Verlinde, E. (2011). On the origin of gravity and the laws of Newton. \textit{JHEP}.
     \item Tononi, G. (2008). Consciousness as integrated information. \textit{Biol. Bull.}
 \end{enumerate}
+\vfill
+\noindent\hrulefill\\
+\textit{GIFT Framework v2.2 --- Supplement S6: Theoretical Extensions}
 
-\vspace{2em}
-\hrule
-\vspace{1em}
-\noindent\textbf{Document Version}: 2.2.0\\
-\textbf{Last Updated}: November 2025\\
-\textbf{GIFT Framework}: \url{https://github.com/gift-framework/GIFT}
-
-\vspace{0.5em}
 \noindent\textit{This supplement contains speculative content extracted from former S9 (Extensions). The dimensional observables and scale bridge content has been moved to Supplement S7.}
 
 \end{document}

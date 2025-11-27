@@ -120,7 +120,7 @@
 \newcommand{\DE}{\mathrm{DE}}
 \newcommand{\rank}{\mathrm{rank}}
 \newcommand{\proven}{\textsc{Proven}}
-\newcommand{\topmark}{\textsc{Topological}}
+\newcommand{\topomark}{\textsc{Topological}}
 \newcommand{\derived}{\textsc{Derived}}
 \newcommand{\theoretical}{\textsc{Theoretical}}
 \newcommand{\phenomenological}{\textsc{Phenomenological}}
@@ -145,7 +145,7 @@
   \def\Pl{Pl}%
   \def\DE{DE}%
   \def\proven{Proven}%
-  \def\topmark{Topological}%
+  \def\topomark{Topological}%
   \def\derived{Derived}%
   \def\theoretical{Theoretical}%
   \def\phenomenological{Phenomenological}%
@@ -157,7 +157,6 @@
 \title{%
 \LARGE\textbf{Geometric Information Field Theory}\\[0.3em]
 \Large Topological Unification of Standard Model Parameters\\
-Through Torsional Dynamics
 }
 \author{}
 \date{}
@@ -172,32 +171,28 @@ Through Torsional Dynamics
 % ============================================
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
-
-\vspace{0.5em}
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 
 \begin{abstract}
-{GIFT Framework v2.2\\
-Geometric Information Field Theory}
 
-\vfill
-This work explores a geometric framework in which Standard Model parameters emerge as topological invariants of seven-dimensional manifolds with $\Gtwo$ holonomy. The approach relates 39 dimensionless and dimensional observables to pure mathematical structure through the dimensional reduction chain $\E_8 \times \E_8 \to \Kseven \to \text{Standard Model}$, achieving mean deviation 0.13\% across six orders of magnitude. The framework contains \textbf{no continuous adjustable parameters}: all quantities derive from fixed topological invariants of discrete mathematical structures ($\E_8 \times \E_8$ gauge group, $\Kseven$ manifold with $\Gtwo$ holonomy).
+We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional $\Gtwo$ holonomy manifold $\Kseven$ coupled to $\E_8 \times \E_8$ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers $b_2(\Kseven) = 21$ and $b_3(\Kseven) = 77$, which determine gauge field and matter multiplicities through cohomological mappings.
 
-The framework introduces torsional geodesic dynamics connecting static topology to renormalization group flow via the equation:
-\[
-\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}
-\]
-where $\lambda$ identifies with $\ln(\mu)$. A scale bridge connects topological integers to physical dimensions:
-\[
-\Lambda_{\GIFT} = \frac{21 \cdot e^8 \cdot 248}{7 \cdot \pi^4} = 1.632 \times 10^6
-\]
+The framework contains no continuous adjustable parameters. All structural constants (metric determinant $\det(g) = 65/32$, torsion magnitude $\kappa_T = 1/61$, hierarchy parameter $\tau = 3472/891$) derive from fixed algebraic and topological invariants. This eliminates parameter tuning by construction---discrete topological structures admit no continuous variation.
 
-Thirteen exact topological relations emerge with rigorous proofs, including the tau-electron mass ratio $m_\tau/m_e = 3477$, the $\CP$ violation phase $\delta_{\CP} = 197°$, the Koide parameter $Q = 2/3$, the strange-down ratio $m_s/m_d = 20$, the torsion magnitude $\kappa_T = 1/61$, the Weinberg angle $\sin^2\theta_W = 3/13$, and the metric determinant $\det(g) = 65/32$. Notably, the hierarchy parameter $\tau = 3472/891$ is exactly rational, revealing discrete rather than continuous structure. The discovery that $\det(g) = 65/32$ eliminates the last ML-fitted parameter, achieving the \textbf{zero-parameter paradigm}. Statistical validation through $10^6$ Monte Carlo samples finds no alternative minima. The framework predicts specific signatures testable at DUNE ($\delta_{\CP}$ measurement to $\pm 5°$), offering falsifiable criteria through near-term experiments.
+Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128\% from experimental values. Sector-specific deviations include: gauge (0.06\%), leptons (0.04\%), CKM matrix (0.08\%), neutrinos (0.13\%), quarks (0.18\%), cosmology (0.11\%). Thirteen relations possess rigorous topological proofs, including three-generation structure ($N_{\mathrm{gen}} = 3$), Koide parameter ($Q = 2/3$), and Weinberg angle ($\sin^2\theta_W = 3/13$) as exact rationals.
 
-Whether these mathematical structures reflect physical reality or represent an effective description remains open. The framework's value lies in demonstrating that geometric principles can substantially constrain Standard Model parameters.
+Monte Carlo validation over $10^4$ parameter configurations finds no competitive alternative minima ($\chi^2_{\mathrm{optimal}} = 45.2$ vs.\ $\chi^2_{\mathrm{random}} = 15{,}420 \pm 3{,}140$ for 37 observables). Near-term falsification criteria include DUNE measurement of $\delta_{\CP} = 197° \pm 5°$ (2027--2030) and lattice QCD determination of $m_s/m_d = 20.000 \pm 0.5$ (2030).
+
+Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
 \vspace{0.5em}
+
 \textbf{Keywords}: $\E_8$ exceptional Lie algebra; $\Gtwo$ holonomy; dimensional reduction; Standard Model parameters; torsional geometry; topological invariants
+
 \end{abstract}
+
 
 \vfill
 \noindent\rule{\textwidth}{0.2pt}
@@ -221,7 +216,7 @@ Throughout this paper, we use the following classifications:
 
 \begin{itemize}
     \item \proven: Exact topological identity with rigorous mathematical proof (see Supplement S4)
-    \item \topmark: Direct consequence of manifold structure without empirical input
+    \item \topomark: Direct consequence of manifold structure without empirical input
     \item \derived: Calculated from proven/topological relations
     \item \theoretical: Has theoretical justification, proof incomplete
     \item \phenomenological: Empirically accurate, theoretical derivation in progress
@@ -303,7 +298,7 @@ Betti numbers $b_2(\Kseven) = 21$, $b_3(\Kseven) = 77$ & TCS building blocks \\
 \textbf{Derived Output} & \textbf{Count} & \textbf{Status} \\
 \midrule
 Exact topological relations & 13 & \proven \\
-Direct topological consequences & 12 & \topmark \\
+Direct topological consequences & 12 & \topomark \\
 Computed from topological relations & 9 & \derived \\
 Requiring single scale input & 5 & \theoretical \\
 \textbf{Total observables} & \textbf{39} & Mean deviation 0.128\% \\
@@ -595,7 +590,7 @@ The metric determinant has exact topological origin:
 
 \textbf{Significance}: The metric determinant has exact topological origin, consistent with the \textbf{zero-parameter paradigm} where all quantities derive from fixed topological structure.
 
-\textbf{Status}: \topmark{} (exact rational from cohomology)
+\textbf{Status}: \topomark{} (exact rational from cohomology)
 
 % ============================================
 % PART II: TORSIONAL DYNAMICS
@@ -635,7 +630,7 @@ The global torsion satisfies:
 |d\varphi|^2 + |d{*}\varphi|^2 = \kappa_T^2 = (1/61)^2
 \]
 
-\textbf{Status}: \topmark{} (derived from cohomology, compatible with DESI DR2 2025 torsion constraints)
+\textbf{Status}: \topomark{} (derived from cohomology, compatible with DESI DR2 2025 torsion constraints)
 
 \subsection{Torsion Tensor Components}
 
@@ -827,21 +822,21 @@ The framework employs no free parameters. All quantities are topological constan
 \textbf{Structural Constant 2: $\beta_0 = \pi/8$ (Angular Quantization)}
 \begin{itemize}
     \item Definition: $\beta_0 := \pi/\rk(\E_8) = \pi/8$
-    \item Status: \topmark{} (derived from rank, not adjustable)
+    \item Status: \topomark{} (derived from rank, not adjustable)
     \item Role: Neutrino mixing, cosmological parameters
 \end{itemize}
 
 \textbf{Structural Constant 3: $\text{Weyl}_{\text{factor}} = 5$ (Pentagonal Symmetry)}
 \begin{itemize}
     \item Origin: Unique perfect square $5^2$ in $|W(\E_8)| = 2^{14} \times 3^5 \times 5^2 \times 7$
-    \item Status: \topmark{} (from group order, not adjustable)
+    \item Status: \topomark{} (from group order, not adjustable)
     \item Role: Generation count, mass ratios
 \end{itemize}
 
 \textbf{Structural Constant 4: $\det(g) = 65/32$ (Metric Determinant)}
 \begin{itemize}
     \item Definition: $\det(g) = p_2 + 1/(b_2 + \dimE(\Gtwo) - N_{\text{gen}}) = 65/32$
-    \item Status: \topmark{} (exact rational, not adjustable)
+    \item Status: \topomark{} (exact rational, not adjustable)
     \item Role: Volume quantization, coupling constants
 \end{itemize}
 
@@ -860,7 +855,7 @@ The framework employs no free parameters. All quantities are topological constan
 
 \textbf{Derivation}: Gauge dimensional reduction from $\E_8$ structure (Supplement S4)
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \begin{center}
 \begin{tabular}{llll}
@@ -885,7 +880,7 @@ $\alpha^{-1}(M_Z)$ & $127.955 \pm 0.016$ & 127.958 & 0.002\% \\
     \item $12 = \dimE(\Gtwo) - p_2$: Effective gauge degrees of freedom after duality subtraction
 \end{itemize}
 
-\textbf{Status}: \topmark{} (geometric origin established)
+\textbf{Status}: \topomark{} (geometric origin established)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -913,7 +908,7 @@ $\alpha_s(M_Z)$ & $0.1179 \pm 0.0009$ & 0.11785 & 0.04\% \\
 
 \textbf{Numerical value}: $3/13 = 0.230769\ldots$
 
-\textbf{Status}: \topmark{} (exact rational from cohomology)
+\textbf{Status}: \topomark{} (exact rational from cohomology)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -951,7 +946,7 @@ $\theta_{12}$ & $33.44° \pm 0.77°$ & $33.419°$ & 0.06\% \\
 
 \textbf{Formula}: $\theta_{13} = \pi/b_2(\Kseven) = \pi/21$
 
-\textbf{Status}: \topmark{} (direct from Betti number)
+\textbf{Status}: \topomark{} (direct from Betti number)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -967,7 +962,7 @@ $\theta_{13}$ & $8.61° \pm 0.12°$ & $8.571°$ & 0.45\% \\
 
 \textbf{Formula}: $\theta_{23} = (\rk(\E_8) + b_3(\Kseven))/H^* \text{ rad} = 85/99 \text{ rad} = 49.193°$
 
-\textbf{Status}: \topmark{} (exact rational)
+\textbf{Status}: \topomark{} (exact rational)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1039,7 +1034,7 @@ $m_\mu/m_e$ & $206.768 \pm 0.001$ & 207.012 & 0.12\% \\
 
 \textbf{Formula}: $m_\tau/m_\mu = (\dimE(\Kseven) + b_3(\Kseven))/\text{Weyl}_{\text{factor}} = 84/5 = 16.8$
 
-\textbf{Status}: \topmark{} (exact rational)
+\textbf{Status}: \topomark{} (exact rational)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1115,7 +1110,7 @@ $m_b/m_s$ & $44.7 \pm 1.0$ & 44.76 & 0.13\% \\
 
 \textbf{Formula}: $\theta_C = \theta_{13} \times \sqrt{\dimE(\Kseven)/N_{\text{gen}}} = (\pi/21) \times \sqrt{7/3}$
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1183,7 +1178,7 @@ $\lambda_H$ & $0.129 \pm 0.003$ & 0.12891 & 0.07\% \\
     \item $\ln(2)$ from binary information architecture
 \end{itemize}
 
-\textbf{Status}: \topmark{} (cohomology ratio with binary architecture)
+\textbf{Status}: \topomark{} (cohomology ratio with binary architecture)
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1201,7 +1196,7 @@ $\Omega_{\DE}$ & $0.6847 \pm 0.0073$ & 0.6861 & 0.21\% \\
 
 \textbf{Derivation}: Ratio of odd Riemann zeta values from $\Kseven$ heat kernel (Supplement S4)
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1297,7 +1292,7 @@ The framework relates 39 observables to pure topological structure with \textbf{
 \textbf{Status} & \textbf{Count} & \textbf{Examples} \\
 \midrule
 \proven & 13 & $N_{\text{gen}}$, $Q_{\text{Koide}}$, $m_s/m_d$, $\delta_{\CP}$, $m_\tau/m_e$, $\Omega_{\DE}$, $\xi$, $\lambda_H$, $\tau$, $\kappa_T$, $\sin^2\theta_W$, $\det(g)$ \\
-\topmark & 12 & $\theta_{13}$, $\theta_{23}$, $m_\tau/m_\mu$, $n_s$, $\alpha_s$, gauge bosons \\
+\topomark & 12 & $\theta_{13}$, $\theta_{23}$, $m_\tau/m_\mu$, $n_s$, $\alpha_s$, gauge bosons \\
 \derived & 10 & $\theta_{12}$, CKM elements, quark ratios \\
 \phenomenological & 3 & $m_\mu/m_e$, some absolute masses \\
 \bottomrule
