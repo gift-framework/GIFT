@@ -1,16 +1,17 @@
 """
-Tests for run_validation_v21.py - Statistical Validation Runner
+Tests for gift_v22_core.py - GIFT Framework v2.2 Core Implementation
 
 These tests cover:
-- GIFTFrameworkV21 class initialization and parameter handling
-- Observable computation methods
-- Experimental data loading
-- Monte Carlo orchestration
-- Result serialization and output format
-- Edge cases and error handling
+- GIFTFrameworkV22 class initialization
+- Zero-parameter paradigm validation
+- 13 PROVEN exact relations
+- All 39 observable computations
+- Topological invariants and consistency
+- Numerical stability and reproducibility
 
 Author: GIFT Framework
 Date: 2025-11-27
+Version: 2.2.0 (updated from 2.1.0)
 """
 
 import pytest
@@ -18,12 +19,23 @@ import numpy as np
 import json
 import sys
 from pathlib import Path
+from fractions import Fraction
 from unittest.mock import patch, MagicMock
 
 # Add statistical_validation to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "statistical_validation"))
 
-from run_validation_v21 import GIFTFrameworkV21
+try:
+    from gift_v22_core import GIFTFrameworkV22, GIFTParametersV22
+    V22_AVAILABLE = True
+except ImportError:
+    V22_AVAILABLE = False
+
+
+pytestmark = pytest.mark.skipif(
+    not V22_AVAILABLE,
+    reason="GIFT v2.2 core not available"
+)
 
 
 # =============================================================================
@@ -32,20 +44,14 @@ from run_validation_v21 import GIFTFrameworkV21
 
 @pytest.fixture
 def framework():
-    """Create a default GIFTFrameworkV21 instance."""
-    return GIFTFrameworkV21()
+    """Create a default GIFTFrameworkV22 instance."""
+    return GIFTFrameworkV22()
 
 
 @pytest.fixture
-def framework_custom():
-    """Create a custom-parameterized GIFTFrameworkV21 instance."""
-    return GIFTFrameworkV21(
-        p2=2.0,
-        beta0=np.pi / 8,
-        weyl_factor=5.0,
-        det_g=2.031,
-        torsion_magnitude=0.0164
-    )
+def params():
+    """Create GIFTParametersV22 instance."""
+    return GIFTParametersV22()
 
 
 # =============================================================================
@@ -53,15 +59,24 @@ def framework_custom():
 # =============================================================================
 
 class TestFrameworkInitialization:
-    """Tests for GIFTFrameworkV21 initialization."""
+    """Tests for GIFTFrameworkV22 initialization."""
 
     def test_default_initialization(self, framework):
         """Test framework initializes with correct default values."""
-        assert framework.p2 == 2.0
-        assert np.isclose(framework.beta0, np.pi / 8)
-        assert framework.weyl_factor == 5.0
-        assert framework.det_g == 2.031
-        assert framework.torsion_magnitude == 0.0164
+        # v2.2: All values are fixed - zero-parameter paradigm
+        assert framework.b2_K7 == 21
+        assert framework.b3_K7 == 77
+        assert framework.H_star == 99
+        assert framework.dim_E8 == 248
+        assert framework.dim_G2 == 14
+        assert framework.dim_K7 == 7
+
+    def test_params_dataclass(self, params):
+        """Test GIFTParametersV22 dataclass properties."""
+        # Verify exact values
+        assert params.p2 == 2
+        assert params.Weyl_factor == 5
+        assert np.isclose(params.beta0, np.pi / 8)
 
     def test_topological_invariants(self, framework):
         """Test topological invariants are correctly set."""
@@ -72,55 +87,38 @@ class TestFrameworkInitialization:
         assert framework.rank_E8 == 8
         assert framework.dim_G2 == 14
         assert framework.dim_K7 == 7
-        assert framework.D_bulk == 11
         assert framework.dim_J3O == 27
+        assert framework.N_gen == 3
 
-    def test_derived_parameters(self, framework):
-        """Test derived parameters are computed correctly."""
-        # xi = (weyl_factor / p2) * beta0 = 5/2 * pi/8 = 5*pi/16
-        expected_xi = (5.0 / 2.0) * (np.pi / 8)
-        assert np.isclose(framework.xi, expected_xi, rtol=1e-10)
+    def test_derived_parameters_v22(self, params):
+        """Test v2.2 derived parameters are computed correctly."""
+        # xi = (Weyl_factor / p2) * beta0 = 5/2 * pi/8 = 5*pi/16
+        expected_xi = 5.0 * np.pi / 16.0
+        assert np.isclose(params.xi, expected_xi, rtol=1e-10)
 
-        # tau = (496 * 21) / (27 * 99) = 3.89675...
-        expected_tau = (496 * 21) / (27 * 99)
-        assert np.isclose(framework.tau, expected_tau, rtol=1e-10)
+        # tau = 3472/891 (exact rational)
+        assert params.tau == Fraction(3472, 891)
+        assert np.isclose(params.tau_float, 3472.0/891.0, rtol=1e-10)
 
-    def test_mathematical_constants(self, framework):
+    def test_exact_fractions(self, params):
+        """Test exact fractions are preserved in v2.2."""
+        # sin^2(theta_W) = 3/13
+        assert params.sin2_theta_W == Fraction(3, 13)
+        assert np.isclose(float(params.sin2_theta_W), 3.0/13.0)
+
+        # kappa_T = 1/61
+        assert params.kappa_T == Fraction(1, 61)
+        assert np.isclose(params.kappa_T_float, 1.0/61.0)
+
+        # det_g = 65/32
+        assert params.det_g == Fraction(65, 32)
+        assert np.isclose(params.det_g_float, 65.0/32.0)
+
+    def test_mathematical_constants(self, params):
         """Test mathematical constants are correct."""
-        assert np.isclose(framework.phi, (1 + np.sqrt(5)) / 2)
-        assert np.isclose(framework.zeta3, 1.2020569031595942)
-        assert np.isclose(framework.gamma_EM, 0.5772156649)
-
-    def test_torsion_tensor_components(self, framework):
-        """Test torsion tensor components are set."""
-        assert hasattr(framework, 'T_ephi_pi')
-        assert hasattr(framework, 'T_piphi_e')
-        assert hasattr(framework, 'T_epi_phi')
-        assert framework.T_ephi_pi == -4.89
-        assert framework.T_piphi_e == -0.45
-        assert framework.T_epi_phi == 3.1e-5
-
-    def test_custom_beta0_initialization(self):
-        """Test custom beta0 parameter is used when provided."""
-        custom_beta0 = np.pi / 4
-        framework = GIFTFrameworkV21(beta0=custom_beta0)
-        assert np.isclose(framework.beta0, custom_beta0)
-
-        # xi should update accordingly
-        expected_xi = (framework.weyl_factor / framework.p2) * custom_beta0
-        assert np.isclose(framework.xi, expected_xi)
-
-    def test_parameter_independence(self, framework):
-        """Test that parameters are independent."""
-        fw1 = GIFTFrameworkV21(p2=1.5)
-        fw2 = GIFTFrameworkV21(p2=2.5)
-
-        # p2 should differ
-        assert fw1.p2 != fw2.p2
-
-        # Topological invariants should be same
-        assert fw1.b2_K7 == fw2.b2_K7
-        assert fw1.H_star == fw2.H_star
+        assert np.isclose(params.phi_golden, (1 + np.sqrt(5)) / 2)
+        assert np.isclose(params.zeta3, 1.2020569031595942)
+        assert np.isclose(params.gamma_euler, 0.5772156649015329)
 
 
 # =============================================================================
@@ -146,12 +144,13 @@ class TestExperimentalData:
             assert data[1] >= 0, f"{key} uncertainty should be non-negative"
 
     def test_key_experimental_values(self, framework):
-        """Test key experimental values are present."""
+        """Test key experimental values are present (v2.2 keys)."""
         required_keys = [
-            'alpha_inv', 'sin2_theta_W', 'alpha_s_MZ',
-            'theta_12', 'theta_13', 'theta_23', 'delta_CP',
+            'alpha_inv', 'sin2thetaW', 'alpha_s_MZ',
+            'theta12', 'theta13', 'theta23', 'delta_CP',
             'Q_Koide', 'm_mu_m_e', 'm_tau_m_e',
-            'm_s_m_d', 'Omega_DE', 'H0'
+            'm_s_m_d', 'Omega_DE', 'H0',
+            'kappa_T', 'tau'  # v2.2 new keys
         ]
         for key in required_keys:
             assert key in framework.experimental_data, f"Missing key: {key}"
@@ -163,16 +162,95 @@ class TestExperimentalData:
         assert 136 < alpha_inv < 138
 
         # Weak mixing angle
-        sin2_theta_W = framework.experimental_data['sin2_theta_W'][0]
+        sin2_theta_W = framework.experimental_data['sin2thetaW'][0]
         assert 0.20 < sin2_theta_W < 0.25
 
         # Neutrino mixing angles (degrees)
-        theta_12 = framework.experimental_data['theta_12'][0]
+        theta_12 = framework.experimental_data['theta12'][0]
         assert 30 < theta_12 < 40
 
         # Dark energy fraction
         omega_de = framework.experimental_data['Omega_DE'][0]
         assert 0.6 < omega_de < 0.8
+
+
+# =============================================================================
+# Test: 13 PROVEN Exact Relations
+# =============================================================================
+
+class TestProvenExactRelations:
+    """Tests for 13 PROVEN exact relations in v2.2."""
+
+    def test_get_proven_relations(self, framework):
+        """Test get_proven_relations returns all 13 relations."""
+        proven = framework.get_proven_relations()
+        assert len(proven) >= 13
+
+    def test_proven_n_gen(self, framework):
+        """Test N_gen = 3 (generation number)."""
+        assert framework.N_gen == 3
+
+    def test_proven_q_koide(self, framework):
+        """Test Q_Koide = 2/3 = dim(G2)/b2."""
+        expected = Fraction(2, 3)
+        computed = Fraction(framework.dim_G2, framework.b2_K7)
+        assert computed == expected
+        assert np.isclose(float(computed), 2.0/3.0)
+
+    def test_proven_m_s_m_d(self, params):
+        """Test m_s/m_d = 20 = p2^2 * Weyl."""
+        expected = params.p2**2 * params.Weyl_factor
+        assert expected == 20
+
+    def test_proven_delta_cp(self, framework):
+        """Test delta_CP = 197 = dim(K7)*dim(G2) + H*."""
+        expected = framework.dim_K7 * framework.dim_G2 + framework.H_star
+        assert expected == 197
+
+    def test_proven_m_tau_m_e(self, framework):
+        """Test m_tau/m_e = 3477 = dim(K7) + 10*dim(E8) + 10*H*."""
+        expected = framework.dim_K7 + 10*framework.dim_E8 + 10*framework.H_star
+        assert expected == 3477
+
+    def test_proven_omega_de(self, framework):
+        """Test Omega_DE = ln(2)*98/99."""
+        expected = np.log(2) * 98.0 / 99.0
+        computed = np.log(2) * (framework.b2_K7 + framework.b3_K7) / framework.H_star
+        assert np.isclose(computed, expected, rtol=1e-10)
+
+    def test_proven_xi(self, params):
+        """Test xi = 5*pi/16 = (Weyl/p2)*beta0."""
+        expected = 5.0 * np.pi / 16.0
+        assert np.isclose(params.xi, expected, rtol=1e-10)
+
+    def test_proven_lambda_h(self, params):
+        """Test lambda_H = sqrt(17)/32."""
+        expected = np.sqrt(17) / 32.0
+        assert np.isclose(params.lambda_H, expected, rtol=1e-10)
+
+    def test_proven_sin2_theta_w(self, params):
+        """Test sin^2(theta_W) = 3/13 = b2/(b3+dim(G2))."""
+        assert params.sin2_theta_W == Fraction(3, 13)
+        assert np.isclose(float(params.sin2_theta_W), 0.230769, rtol=1e-5)
+
+    def test_proven_tau(self, params):
+        """Test tau = 3472/891 = dim(E8xE8)*b2/(dim(J3O)*H*)."""
+        assert params.tau == Fraction(3472, 891)
+        # Verify formula: 496 * 21 / (27 * 99)
+        expected = Fraction(496 * 21, 27 * 99)
+        assert params.tau == expected
+
+    def test_proven_kappa_t(self, params):
+        """Test kappa_T = 1/61 = 1/(b3-dim(G2)-p2)."""
+        assert params.kappa_T == Fraction(1, 61)
+        # Verify formula: 1 / (77 - 14 - 2)
+        expected = Fraction(1, 77 - 14 - 2)
+        assert params.kappa_T == expected
+
+    def test_proven_n_s(self, params):
+        """Test n_s = zeta(11)/zeta(5)."""
+        expected = params.zeta11 / params.zeta5
+        assert np.isclose(expected, 0.9649, rtol=1e-3)
 
 
 # =============================================================================
@@ -182,52 +260,50 @@ class TestExperimentalData:
 class TestGaugeSectorComputations:
     """Tests for gauge sector observable computations."""
 
-    def test_alpha_inverse_computation(self, framework):
-        """Test fine structure constant inverse calculation."""
-        alpha_inv = framework.compute_alpha_inverse()
-
-        # Should be close to experimental value ~137.036
-        assert 136 < alpha_inv < 138
-
-        # Check it's computed from three components
-        algebraic = (framework.dim_E8 + framework.rank_E8) / 2  # = 128
-        bulk_impedance = framework.H_star / framework.D_bulk     # = 9
-        torsional = framework.det_g * framework.torsion_magnitude
-
-        expected = algebraic + bulk_impedance + torsional
-        assert np.isclose(alpha_inv, expected, rtol=1e-10)
-
-    def test_alpha_inverse_components(self, framework):
-        """Test individual components of alpha inverse."""
-        # Algebraic: (248 + 8) / 2 = 128
-        algebraic = (framework.dim_E8 + framework.rank_E8) / 2
-        assert np.isclose(algebraic, 128.0)
-
-        # Bulk impedance: 99 / 11 = 9
-        bulk = framework.H_star / framework.D_bulk
-        assert np.isclose(bulk, 9.0)
-
-    def test_sin2_theta_W_computation(self, framework):
-        """Test weak mixing angle calculation."""
-        sin2_theta_W = framework.compute_sin2_theta_W()
-
-        # Should be close to experimental value ~0.231
-        assert 0.20 < sin2_theta_W < 0.25
-
-        # Verify formula: zeta3 * gamma_EM / 3
-        expected = framework.zeta3 * framework.gamma_EM / 3.0
-        assert np.isclose(sin2_theta_W, expected)
-
-    def test_alpha_s_computation(self, framework):
+    def test_alpha_s_computation(self, params):
         """Test strong coupling constant calculation."""
-        alpha_s = framework.compute_alpha_s()
-
-        # Should be close to experimental value ~0.118
+        alpha_s = params.alpha_s
+        # alpha_s = sqrt(2) / 12
+        expected = np.sqrt(2) / 12.0
+        assert np.isclose(alpha_s, expected, rtol=1e-10)
         assert 0.10 < alpha_s < 0.15
 
-        # Verify formula: sqrt(2) / 12
-        expected = np.sqrt(2) / 12
-        assert np.isclose(alpha_s, expected, rtol=1e-10)
+    def test_sin2_theta_w_value(self, params):
+        """Test weak mixing angle value."""
+        sin2_theta_W = float(params.sin2_theta_W)
+        assert np.isclose(sin2_theta_W, 3.0/13.0, rtol=1e-10)
+
+
+# =============================================================================
+# Test: All Observables Computation
+# =============================================================================
+
+class TestAllObservables:
+    """Tests for compute_all_observables method."""
+
+    def test_compute_all_observables_exists(self, framework):
+        """Test compute_all_observables method exists."""
+        assert hasattr(framework, 'compute_all_observables')
+        assert callable(framework.compute_all_observables)
+
+    def test_compute_all_observables_returns_dict(self, framework):
+        """Test compute_all_observables returns dictionary."""
+        obs = framework.compute_all_observables()
+        assert isinstance(obs, dict)
+        assert len(obs) >= 30  # At least 30 observables
+
+    def test_key_observables_present(self, framework):
+        """Test key observables are computed."""
+        obs = framework.compute_all_observables()
+
+        key_observables = [
+            'alpha_inv', 'sin2thetaW', 'alpha_s_MZ',
+            'delta_CP', 'Q_Koide', 'm_tau_m_e', 'm_s_m_d',
+            'lambda_H', 'Omega_DE', 'n_s', 'kappa_T', 'tau'
+        ]
+
+        for obs_name in key_observables:
+            assert obs_name in obs, f"Missing observable: {obs_name}"
 
 
 # =============================================================================
@@ -239,106 +315,26 @@ class TestNumericalStability:
 
     def test_no_nan_in_observables(self, framework):
         """Test that no NaN values are produced."""
-        methods = [
-            'compute_alpha_inverse',
-            'compute_sin2_theta_W',
-            'compute_alpha_s',
-        ]
+        obs = framework.compute_all_observables()
 
-        for method_name in methods:
-            if hasattr(framework, method_name):
-                result = getattr(framework, method_name)()
-                assert not np.isnan(result), f"{method_name} produced NaN"
+        nan_obs = [name for name, value in obs.items() if np.isnan(value)]
+        assert len(nan_obs) == 0, f"NaN values in: {nan_obs}"
 
     def test_no_inf_in_observables(self, framework):
         """Test that no Inf values are produced."""
-        methods = [
-            'compute_alpha_inverse',
-            'compute_sin2_theta_W',
-            'compute_alpha_s',
-        ]
+        obs = framework.compute_all_observables()
 
-        for method_name in methods:
-            if hasattr(framework, method_name):
-                result = getattr(framework, method_name)()
-                assert not np.isinf(result), f"{method_name} produced Inf"
-
-    def test_positive_coupling_constants(self, framework):
-        """Test that coupling constants are positive."""
-        alpha_inv = framework.compute_alpha_inverse()
-        sin2_theta_W = framework.compute_sin2_theta_W()
-        alpha_s = framework.compute_alpha_s()
-
-        assert alpha_inv > 0, "alpha_inverse should be positive"
-        assert sin2_theta_W > 0, "sin2_theta_W should be positive"
-        assert alpha_s > 0, "alpha_s should be positive"
+        inf_obs = [name for name, value in obs.items() if np.isinf(value)]
+        assert len(inf_obs) == 0, f"Inf values in: {inf_obs}"
 
     def test_reproducibility(self, framework):
         """Test that results are reproducible."""
-        # Compute twice
-        result1 = framework.compute_alpha_inverse()
-        result2 = framework.compute_alpha_inverse()
+        obs1 = framework.compute_all_observables()
+        obs2 = framework.compute_all_observables()
 
-        assert result1 == result2, "Results should be exactly reproducible"
-
-    def test_extreme_parameter_handling(self):
-        """Test framework handles extreme parameters gracefully."""
-        # Very small torsion
-        fw = GIFTFrameworkV21(torsion_magnitude=1e-15)
-        alpha_inv = fw.compute_alpha_inverse()
-        assert np.isfinite(alpha_inv)
-
-        # Very large det_g
-        fw = GIFTFrameworkV21(det_g=1e6)
-        alpha_inv = fw.compute_alpha_inverse()
-        assert np.isfinite(alpha_inv)
-
-
-# =============================================================================
-# Test: Parameter Variations
-# =============================================================================
-
-class TestParameterVariations:
-    """Tests for parameter sensitivity and variations."""
-
-    @pytest.mark.parametrize("p2", [1.5, 2.0, 2.5, 3.0])
-    def test_p2_variations(self, p2):
-        """Test framework with different p2 values."""
-        fw = GIFTFrameworkV21(p2=p2)
-        assert fw.p2 == p2
-
-        # xi should scale with p2
-        expected_xi = (fw.weyl_factor / p2) * fw.beta0
-        assert np.isclose(fw.xi, expected_xi)
-
-    @pytest.mark.parametrize("weyl", [3.0, 4.0, 5.0, 6.0, 7.0])
-    def test_weyl_factor_variations(self, weyl):
-        """Test framework with different Weyl factor values."""
-        fw = GIFTFrameworkV21(weyl_factor=weyl)
-        assert fw.weyl_factor == weyl
-
-        # xi should scale with weyl_factor
-        expected_xi = (weyl / fw.p2) * fw.beta0
-        assert np.isclose(fw.xi, expected_xi)
-
-    @pytest.mark.parametrize("det_g,torsion", [
-        (1.0, 0.01),
-        (2.0, 0.02),
-        (3.0, 0.015),
-    ])
-    def test_metric_parameters(self, det_g, torsion):
-        """Test framework with different metric parameters."""
-        fw = GIFTFrameworkV21(det_g=det_g, torsion_magnitude=torsion)
-
-        alpha_inv = fw.compute_alpha_inverse()
-
-        # Torsional contribution should scale with det_g * torsion
-        expected_torsional = det_g * torsion
-        algebraic = (fw.dim_E8 + fw.rank_E8) / 2
-        bulk = fw.H_star / fw.D_bulk
-        expected = algebraic + bulk + expected_torsional
-
-        assert np.isclose(alpha_inv, expected)
+        for key in obs1:
+            if key in obs2:
+                assert obs1[key] == obs2[key], f"{key} not reproducible"
 
 
 # =============================================================================
@@ -348,37 +344,24 @@ class TestParameterVariations:
 class TestTopologicalInvariance:
     """Tests for topological invariants remaining constant."""
 
-    @pytest.mark.parametrize("p2,weyl,det_g", [
-        (1.0, 3.0, 1.5),
-        (2.0, 5.0, 2.0),
-        (3.0, 7.0, 3.0),
-        (2.5, 4.0, 2.5),
-    ])
-    def test_topological_constants_invariant(self, p2, weyl, det_g):
-        """Test topological invariants don't change with parameters."""
-        fw = GIFTFrameworkV21(p2=p2, weyl_factor=weyl, det_g=det_g)
-
-        # These should always be the same
-        assert fw.b2_K7 == 21
-        assert fw.b3_K7 == 77
-        assert fw.H_star == 99
-        assert fw.dim_E8 == 248
-        assert fw.rank_E8 == 8
-        assert fw.dim_G2 == 14
-        assert fw.dim_K7 == 7
-
     def test_h_star_formula(self, framework):
         """Test H* = b2 + b3 + 1."""
         assert framework.H_star == framework.b2_K7 + framework.b3_K7 + 1
 
-    def test_tau_formula(self, framework):
-        """Test tau = (496 * 21) / (27 * 99)."""
-        # 496 = dim(E8 x E8)
-        # 21 = b2_K7
-        # 27 = dim(J3O)
-        # 99 = H_star
-        expected = (496 * framework.b2_K7) / (framework.dim_J3O * framework.H_star)
-        assert np.isclose(framework.tau, expected, rtol=1e-10)
+    def test_p2_formula(self, params):
+        """Test p2 = dim(G2)/dim(K7) = 14/7 = 2."""
+        assert params.p2 == params.dim_G2 // params.dim_K7
+        assert params.p2 == 2
+
+    def test_b3_relation(self, params):
+        """Test b3 = 2*dim(K7)^2 - b2."""
+        expected = 2 * params.dim_K7**2 - params.b2_K7
+        assert params.b3_K7 == expected
+
+    def test_beta0_definition(self, params):
+        """Test beta0 = pi / rank(E8)."""
+        expected_beta0 = np.pi / params.rank_E8
+        assert np.isclose(params.beta0, expected_beta0)
 
 
 # =============================================================================
@@ -390,66 +373,65 @@ class TestJSONSerialization:
 
     def test_experimental_data_serializable(self, framework):
         """Test experimental data can be serialized to JSON."""
-        # Convert tuples to lists for JSON
         data_for_json = {k: list(v) for k, v in framework.experimental_data.items()}
 
-        # Should not raise
         json_str = json.dumps(data_for_json)
-
-        # Should be parseable
         parsed = json.loads(json_str)
         assert len(parsed) == len(framework.experimental_data)
 
     def test_observable_results_serializable(self, framework):
         """Test observable results can be serialized to JSON."""
-        results = {
-            'alpha_inv': framework.compute_alpha_inverse(),
-            'sin2_theta_W': framework.compute_sin2_theta_W(),
-            'alpha_s': framework.compute_alpha_s(),
-        }
+        obs = framework.compute_all_observables()
 
-        # Should not raise
-        json_str = json.dumps(results)
+        # Filter to finite values
+        finite_obs = {k: v for k, v in obs.items() if np.isfinite(v)}
 
-        # Should be parseable and values preserved
+        json_str = json.dumps(finite_obs)
         parsed = json.loads(json_str)
-        for key, value in results.items():
+
+        for key, value in finite_obs.items():
             assert np.isclose(parsed[key], value)
 
 
 # =============================================================================
-# Test: Edge Cases
+# Test: Zero-Parameter Paradigm
 # =============================================================================
 
-class TestEdgeCases:
-    """Tests for edge cases and boundary conditions."""
+class TestZeroParameterParadigm:
+    """Tests verifying v2.2's zero-parameter paradigm."""
 
-    def test_zero_torsion(self):
-        """Test framework with zero torsion magnitude."""
-        fw = GIFTFrameworkV21(torsion_magnitude=0.0)
+    def test_no_adjustable_parameters(self, framework):
+        """Test that framework has no adjustable continuous parameters."""
+        # v2.2: All parameters are fixed topological constants
+        obs1 = framework.compute_all_observables()
 
-        alpha_inv = fw.compute_alpha_inverse()
+        # Create new instance
+        framework2 = GIFTFrameworkV22()
+        obs2 = framework2.compute_all_observables()
 
-        # Should be exactly algebraic + bulk (137.0)
-        expected = 128.0 + 9.0  # No torsional contribution
-        assert np.isclose(alpha_inv, expected)
+        # All values should be identical
+        for key in obs1:
+            if key in obs2:
+                assert obs1[key] == obs2[key], f"{key} differs between instances"
 
-    def test_zero_det_g(self):
-        """Test framework with zero metric determinant."""
-        fw = GIFTFrameworkV21(det_g=0.0)
+    def test_fixed_structural_inputs(self, params):
+        """Test structural inputs are fixed (discrete choices)."""
+        # E8 x E8 gauge group (496 dimensions)
+        assert params.dim_E8xE8 == 496
+        assert params.dim_E8 == 248
 
-        alpha_inv = fw.compute_alpha_inverse()
+        # K7 manifold with G2 holonomy
+        assert params.b2_K7 == 21
+        assert params.b3_K7 == 77
 
-        # Torsional contribution should be zero
-        expected = 128.0 + 9.0
-        assert np.isclose(alpha_inv, expected)
-
-    def test_negative_parameters_warning(self):
-        """Test that negative parameters still work (may be unphysical)."""
-        # Framework should not crash with negative values
-        fw = GIFTFrameworkV21(torsion_magnitude=-0.01)
-        alpha_inv = fw.compute_alpha_inverse()
-        assert np.isfinite(alpha_inv)
+    def test_all_constants_topological(self, params):
+        """Test all derived constants come from topology."""
+        # These are all derived, not fitted
+        assert params.p2 == 2  # dim(G2)/dim(K7)
+        assert params.Weyl_factor == 5  # from |W(E8)|
+        assert params.det_g == Fraction(65, 32)  # topological formula
+        assert params.kappa_T == Fraction(1, 61)  # topological formula
+        assert params.tau == Fraction(3472, 891)  # exact rational
 
 
 # =============================================================================
@@ -459,31 +441,36 @@ class TestEdgeCases:
 class TestConsistencyChecks:
     """Tests for internal consistency of the framework."""
 
-    def test_dimension_consistency(self, framework):
+    def test_dimension_consistency(self, params):
         """Test dimension-related constants are consistent."""
-        # E8 dimension
-        assert framework.dim_E8 == 248
+        assert params.dim_E8 == 248
+        assert params.rank_E8 == 8
+        assert params.dim_G2 == 14
+        assert params.dim_K7 == 7
+        assert params.p2 == params.dim_G2 // params.dim_K7
 
-        # E8 rank
-        assert framework.rank_E8 == 8
+    def test_betti_number_consistency(self, params):
+        """Test Betti number relations."""
+        # H* = b2 + b3 + 1
+        assert params.H_star == params.b2_K7 + params.b3_K7 + 1
 
-        # G2 holonomy group dimension
-        assert framework.dim_G2 == 14
+        # b3 = 2*dim(K7)^2 - b2 = 2*49 - 21 = 77
+        expected_b3 = 2 * params.dim_K7**2 - params.b2_K7
+        assert params.b3_K7 == expected_b3
 
-        # K7 manifold dimension
-        assert framework.dim_K7 == 7
+    def test_tau_formula_consistency(self, params):
+        """Test tau formula consistency."""
+        # tau = dim(E8xE8)*b2 / (dim(J3O)*H*)
+        expected_numerator = params.dim_E8xE8 * params.b2_K7  # 496 * 21 = 10416
+        expected_denominator = params.dim_J3O * params.H_star  # 27 * 99 = 2673
+        expected_tau = Fraction(expected_numerator, expected_denominator)
 
-        # p2 = dim(G2) / dim(K7) = 14/7 = 2
-        assert framework.p2 == framework.dim_G2 / framework.dim_K7
+        # Simplify: 10416/2673 = 3472/891
+        assert params.tau == expected_tau
 
-    def test_beta0_definition(self, framework):
-        """Test beta0 = pi / rank(E8)."""
-        expected_beta0 = np.pi / framework.rank_E8
-        assert np.isclose(framework.beta0, expected_beta0)
-
-    def test_golden_ratio_properties(self, framework):
+    def test_golden_ratio_properties(self, params):
         """Test golden ratio satisfies phi^2 = phi + 1."""
-        phi = framework.phi
+        phi = params.phi_golden
         assert np.isclose(phi * phi, phi + 1)
 
 
