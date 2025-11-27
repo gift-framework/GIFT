@@ -320,7 +320,7 @@ This version represents a substantial advancement in the Geometric Information F
 - Modular supplement system with six detailed mathematical documents
 - `STRUCTURE.md` explaining repository organization
 - `CONTRIBUTING.md` with contribution guidelines
-- `QUICK_START.md` for rapid onboarding
+- Quick start section in `README.md`
 - `docs/FAQ.md` addressing common questions
 - `docs/GLOSSARY.md` defining technical terms
 - `docs/EXPERIMENTAL_VALIDATION.md` tracking experimental status

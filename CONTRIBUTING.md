@@ -221,7 +221,7 @@ Substantial contributions may warrant co-authorship on specific publications, de
 
 ### Resources
 
-- **Documentation**: Start with `README.md` and `QUICK_START.md`
+- **Documentation**: Start with `README.md` and `STRUCTURE.md`
 - **Questions**: Open an issue tagged "question"
 - **Discussions**: Use GitHub discussions for broader topics
 
