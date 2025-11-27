@@ -26,7 +26,14 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % HEADER/FOOTER
 % ============================================
@@ -46,7 +53,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S1: Mathematical Architecture},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La fournière}
 }
 
 % ============================================
@@ -66,7 +73,7 @@
 \newcommand{\Weyl}{\mathrm{Weyl}}
 \newcommand{\rk}{\mathrm{rank}}
 \newcommand{\proven}{\textsc{Proven}}
-\newcommand{\topmark}{\textsc{Topological}}
+\newcommand{\topomark}{\textsc{Topological}}
 \newcommand{\derived}{\textsc{Derived}}
 
 % ============================================
@@ -77,16 +84,23 @@
 \large $\E_8$ Exceptional Lie Algebra, $\Gtwo$ Holonomy Manifolds,\\
 and Topological Foundations
 }
-\author{GIFT Framework v2.2}
-\date{November 2025}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
-
+\noindent\rule{\textwidth}{0.2pt}
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
 This supplement provides complete mathematical foundations for the GIFT framework v2.2, establishing the algebraic and geometric structures underlying observable predictions. Section 1 develops the $\E_8$ exceptional Lie algebra. Section 2 introduces $\Gtwo$ holonomy manifolds with $\Kseven$ Betti numbers. Section 3 establishes topological foundations through index theorems. These structures provide rigorous basis for $\E_8 \times \E_8 \to \Kseven \to \text{Standard Model}$ reduction.
-\end{abstract}
 
+
+\end{abstract}
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
+\newpage
 \tableofcontents
 \newpage
 
@@ -347,7 +361,7 @@ Matter field basis:
 
 \textbf{Interpretation}: $61$ = effective matter degrees of freedom for torsion
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsection{Moduli Space}
 
@@ -420,7 +434,7 @@ For $\Gtwo$ holonomy: $p_1(\Kseven) = 0$, $\chi(\Kseven) = 0$
 \alpha_s = \frac{\sqrt{2}}{\dimE(\Gtwo) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{\sqrt{2}}{12}
 \]
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsection{Higgs Coupling Origin}
 
@@ -562,19 +576,19 @@ These are not parameters to be measured --- they are mathematical constants with
 \midrule
 $p_2 = \dimE(\Gtwo)/\dimE(\Kseven)$ & $14/7 = 2$ & \proven \\
 $N_{\text{gen}} = \rk(\E_8) - \Weyl$ & $8 - 5 = 3$ & \proven \\
-$H^* = b_2 + b_3 + 1$ & 99 & \topmark \\
+$H^* = b_2 + b_3 + 1$ & 99 & \topomark \\
 $\sin^2\theta_W = b_2/(b_3 + \dimE(\Gtwo))$ & $3/13$ & \proven \\
-$\kappa_T = 1/(b_3 - \dimE(\Gtwo) - p_2)$ & $1/61$ & \topmark \\
+$\kappa_T = 1/(b_3 - \dimE(\Gtwo) - p_2)$ & $1/61$ & \topomark \\
 $\tau = 496 \times 21/(27 \times 99)$ & $3472/891$ & \proven \\
-$\alpha_s = \sqrt{2}/(\dimE(\Gtwo) - p_2)$ & $\sqrt{2}/12$ & \topmark \\
+$\alpha_s = \sqrt{2}/(\dimE(\Gtwo) - p_2)$ & $\sqrt{2}/12$ & \topomark \\
 $\lambda_H = \sqrt{\dimE(\Gtwo) + N_{\text{gen}}}/2^{\Weyl}$ & $\sqrt{17}/32$ & \proven \\
-$\det(g) = (\Weyl \times (\rk + \Weyl))/2^5$ & $65/32$ & \topmark \\
+$\det(g) = (\Weyl \times (\rk + \Weyl))/2^5$ & $65/32$ & \topomark \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \textbf{Note}: The framework achieves the \textbf{zero-parameter paradigm} --- all observables derive from fixed mathematical structure.
-
+\vfill
 % ============================================
 % REFERENCES
 % ============================================

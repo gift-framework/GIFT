@@ -27,7 +27,14 @@
 \usepackage{longtable}
 \usepackage{array}
 \DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % HEADER/FOOTER
 % ============================================
@@ -47,7 +54,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S4: Complete Derivations},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La Fournière}
 }
 
 % ============================================
@@ -66,7 +73,7 @@
 \newcommand{\dimE}{\mathrm{dim}}
 \newcommand{\rk}{\mathrm{rank}}
 \newcommand{\proven}{\textsc{Proven}}
-\newcommand{\topmark}{\textsc{Topological}}
+\newcommand{\topomark}{\textsc{Topological}}
 \newcommand{\derived}{\textsc{Derived}}
 \newcommand{\theoretical}{\textsc{Theoretical}}
 \newcommand{\exploratory}{\textsc{Exploratory}}
@@ -82,16 +89,20 @@
 \LARGE\textbf{Supplement S4: Complete Derivations}\\[0.5em]
 \large Mathematical Proofs and Calculations for All 39 Observables
 }
-\author{GIFT Framework v2.2}
-\date{November 2025}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
-
+\noindent\rule{\textwidth}{0.2pt}
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
 This supplement provides complete mathematical proofs and detailed calculations for all observable predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions, organized by sector with full error analysis. The framework achieves 13 proven relations and 39 total observables with mean deviation 0.128\%.
 \end{abstract}
-
+\vfill\noindent\rule{\textwidth}{0.2pt}
+\newpage
 \tableofcontents
 \newpage
 
@@ -135,8 +146,8 @@ A result achieves \proven{} status when:
 \textbf{Status} & \textbf{Criterion} \\
 \midrule
 \proven & Complete mathematical proof, exact result from topology \\
-\topmark & Direct consequence of manifold structure, no empirical input \\
-\derived & Computed from \proven/\topmark{} relations \\
+\topomark & Direct consequence of manifold structure, no empirical input \\
+\derived & Computed from \proven/\topomark{} relations \\
 \theoretical & Theoretical justification, proof incomplete \\
 \exploratory & Preliminary investigation \\
 \bottomrule
@@ -275,7 +286,7 @@ Denominator: $891 = 3^4 \times 11$
 
 \textbf{Statement}: The global torsion magnitude equals exactly $1/61$.
 
-\textbf{Classification}: \topmark
+\textbf{Classification}: \topomark
 
 \subsection{Proof}
 
@@ -312,13 +323,13 @@ The number 61 represents effective matter degrees of freedom:
 
 \textbf{Experimental comparison}: $\kappa_T^2 = 2.69 \times 10^{-4}$ is consistent with DESI DR2 (2025) torsion constraints.
 
-\textbf{Status}: \topmark{} $\blacksquare$
+\textbf{Status}: \topomark{} $\blacksquare$
 
 \section{Metric Determinant $\det(g) = 65/32$}
 
 \textbf{Statement}: The $\Kseven$ metric determinant is exactly $65/32$.
 
-\textbf{Classification}: \topmark
+\textbf{Classification}: \topomark
 
 \subsection{Proof}
 
@@ -361,7 +372,7 @@ Deviation & 0.012\% \\
 
 \textbf{The 32 structure}: Both $\det(g) = 65/32$ and $\lambda_H = \sqrt{17}/32$ share denominator $32 = 2^5$, suggesting deep binary structure in the Higgs-metric sector.
 
-\textbf{Status}: \topmark{} $\blacksquare$
+\textbf{Status}: \topomark{} $\blacksquare$
 
 \section{Weinberg Angle $\sin^2\theta_W = 3/13$}
 
@@ -453,8 +464,8 @@ Deviation & 0.195\% \\
 
     \item \textbf{Torsional correction} (0.033):
     \begin{itemize}
-        \item $\det(g) = 65/32 = 2.03125$: $\Kseven$ metric determinant (\topmark)
-        \item $\kappa_T = 1/61$: Torsion magnitude (\topmark)
+        \item $\det(g) = 65/32 = 2.03125$: $\Kseven$ metric determinant (\topomark)
+        \item $\kappa_T = 1/61$: Torsion magnitude (\topomark)
         \item $(65/32) \times (1/61) = 65/1952 = 0.0333\ldots$
     \end{itemize}
 \end{enumerate}
@@ -472,7 +483,7 @@ Deviation & 0.0022\% \\
 \end{tabular}
 \end{center}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \section{Strong Coupling $\alpha_s = \sqrt{2}/12$}
 
@@ -512,7 +523,7 @@ Deviation & 0.041\% \\
 \end{tabular}
 \end{center}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \section{Electroweak Relations}
 
@@ -675,7 +686,7 @@ Deviation & 0.118\% \\
 \end{tabular}
 \end{center}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsection{Koide Parameter $Q = 2/3$ (\proven)}
 
@@ -743,7 +754,7 @@ Deviation & 0.027\% \\
 \end{tabular}
 \end{center}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsection{Reactor Mixing Angle $\theta_{13}$}
 
@@ -765,7 +776,7 @@ Deviation & 0.36\% \\
 \end{tabular}
 \end{center}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsection{Atmospheric Mixing Angle $\theta_{23}$}
 
@@ -787,7 +798,7 @@ Deviation & 0.22\% \\
 \end{tabular}
 \end{center}
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \section{CP Violation Phase $\delta_{\CP} = 197°$ (\proven)}
 
@@ -1019,7 +1030,7 @@ Deviation & 0.07\% \\
 \textbf{Status} & \textbf{Count} & \textbf{Description} \\
 \midrule
 \proven & 13 & Exact rational/integer from topology \\
-\topmark & 12 & Direct topological derivation \\
+\topomark & 12 & Direct topological derivation \\
 \derived & 9 & Computed from topological relations \\
 \theoretical & 4 & Theoretical justification \\
 \exploratory & 1 & Preliminary investigation \\
@@ -1065,7 +1076,7 @@ $>1.0\%$ & 1 & 3\% \\
 \textbf{Mean deviation}: 0.128\%
 
 \textbf{Median deviation}: 0.095\%
-
+\vfill
 % ============================================
 % REFERENCES
 % ============================================

@@ -29,7 +29,14 @@
 \usepackage{array}
 \usepackage{enumitem}
 \DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % HEADER/FOOTER
 % ============================================
@@ -49,7 +56,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S5: Experimental Validation},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La Fournière}
 }
 
 % ============================================
@@ -95,24 +102,28 @@
 \LARGE\textbf{Supplement S5: Experimental Validation}\\[0.5em]
 \large Data Comparison, Statistical Analysis, and Falsification Criteria
 }
-\author{GIFT Framework v2.2}
-\date{November 2025}
+\author{}
+\date{}
 
 % ============================================
 % DOCUMENT
 % ============================================
 \begin{document}
-
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
-
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
 This supplement provides detailed comparison of GIFT predictions with experimental data, statistical validation, and clear quantitative falsification criteria for rigorous experimental testing. We present sector-by-sector comparisons for all 39 observables, chi-square analysis, and explicit conditions under which the framework would be falsified.
 \end{abstract}
-
-\tableofcontents
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
 \newpage
-
+\tableofcontents
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
+\vfill
 %=============================================================================
 \part{Data Sources and Methodology}
 %=============================================================================
@@ -749,6 +760,7 @@ $\tau$ & $< 3.85$ or $> 3.95$ & Must equal $3472/891$ \\
 \end{tabular}
 \caption{Parameter exclusion zones defining falsification}
 \end{table}
+\newpage
 
 %=============================================================================
 \section*{References}
@@ -765,14 +777,10 @@ $\tau$ & $< 3.85$ or $> 3.95$ & Must equal $3472/891$ \\
     \item CMB-S4 Collaboration (2022). Science Goals.
 \end{enumerate}
 
-\vspace{2em}
-\hrule
-\vspace{1em}
-\noindent\textbf{Document Version}: 2.2.0\\
-\textbf{Last Updated}: November 2025\\
-\textbf{GIFT Framework}: \url{https://github.com/gift-framework/GIFT}
+\vfill
+\noindent\hrulefill\\
+\textit{GIFT Framework v2.2 --- Supplement S5: Experimental Validation}
 
-\vspace{0.5em}
 \noindent\textit{This supplement merges content from former S7 (Phenomenology) and S8 (Falsification Protocol).}
 
 \end{document}

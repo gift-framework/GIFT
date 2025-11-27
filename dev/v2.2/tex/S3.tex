@@ -26,7 +26,14 @@
 \usepackage{booktabs}
 \usepackage{array}
 \DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
-
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
 % ============================================
 % HEADER/FOOTER
 % ============================================
@@ -46,7 +53,7 @@
     citecolor=blue,
     urlcolor=blue,
     pdftitle={GIFT Supplement S3: Torsional Dynamics},
-    pdfauthor={GIFT Framework}
+    pdfauthor={Brieuc de La Fournière}
 }
 
 % ============================================
@@ -66,7 +73,7 @@
 \newcommand{\rk}{\mathrm{rank}}
 \newcommand{\RG}{\mathrm{RG}}
 \newcommand{\proven}{\textsc{Proven}}
-\newcommand{\topmark}{\textsc{Topological}}
+\newcommand{\topomark}{\textsc{Topological}}
 \newcommand{\theoretical}{\textsc{Theoretical}}
 \newcommand{\phenomenological}{\textsc{Phenomenological}}
 \newcommand{\CP}{\mathrm{CP}}
@@ -79,27 +86,33 @@
 \large Complete Formulation of Torsional Geodesic Dynamics\\
 and Connection to RG Flow
 }
-\author{GIFT Framework v2.2}
-\date{November 2025}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
-
+\noindent\rule{\textwidth}{0.2pt}
+{Brieuc de La Fournière\\
+Independent researcher}
+\vfill
 \begin{abstract}
 This supplement provides the mathematical formulation of torsional geodesic dynamics underlying the GIFT framework. We derive the torsion tensor from non-closure conditions, establish the geodesic flow equation, and demonstrate the connection to renormalization group flow. Key results include: torsion magnitude $\kappa_T = 1/61$ (topologically derived), torsional geodesic equation with quadratic velocity dependence, and ultra-slow flow velocity $|v| \approx 0.015$ ensuring experimental compatibility.
 \end{abstract}
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
+\newpage
 
 \section*{Status Classifications}
 
 \begin{itemize}
     \item \proven: Exact mathematical result with rigorous derivation
-    \item \topmark: Direct consequence of manifold structure
+    \item \topomark: Direct consequence of manifold structure
     \item \theoretical: Theoretical justification, numerical verification pending
     \item \phenomenological: Constrained by experimental data
 \end{itemize}
 
 \tableofcontents
-\newpage
+\vfill\noindent\rule{\textwidth}{0.2pt}
 
 % ============================================
 % SECTION 1: TORSION TENSOR
@@ -234,7 +247,7 @@ T_{ijk} \sim (d\varphi)_{lijk} g^{lm} + \text{(dual terms)}
 
 \textbf{Numerical value}: $\kappa_T = 1/61 = 0.016393442\ldots$
 
-\textbf{Status}: \topmark
+\textbf{Status}: \topomark
 
 \subsubsection{Experimental Compatibility}
 
@@ -535,7 +548,7 @@ With:
     \item $|v|$ = flow velocity
 \end{itemize}
 
-\textbf{Note}: $\det(g) = 65/32$ is \topmark.
+\textbf{Note}: $\det(g) = 65/32$ is \topomark.
 
 \textbf{Constraint}: $|v| < 0.7$
 
@@ -646,7 +659,7 @@ Links to Mersenne primes ($7 = M_3$, $31 = M_5$) and Lucas numbers ($11 = L_5$).
 \toprule
 \textbf{Result} & \textbf{Value} & \textbf{Status} \\
 \midrule
-Torsion magnitude & $\kappa_T = 1/61$ & \topmark \\
+Torsion magnitude & $\kappa_T = 1/61$ & \topomark \\
 $T_{e\varphi,\pi}$ & $-4.89$ & \theoretical \\
 $T_{\pi\varphi,e}$ & $-0.45$ & \theoretical \\
 $T_{e\pi,\varphi}$ & $\sim 3 \times 10^{-5}$ & \theoretical \\
