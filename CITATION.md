@@ -253,17 +253,17 @@ See [LICENSE](LICENSE) file for complete terms.
 When using computational notebook results:
 
 ```bibtex
-@software{gift_computational_notebook_2025,
-  title={GIFT Framework v2: Interactive Computational Notebook},
+@software{gift_visualizations_2025,
+  title={GIFT Framework v2.2: Interactive Visualizations},
   author={{GIFT Framework Team}},
   year={2025},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_v2_notebook.ipynb},
-  note={Jupyter notebook with all calculations and visualizations}
+  url={https://github.com/gift-framework/GIFT/tree/main/assets/visualizations},
+  note={Jupyter notebooks with E8 visualization, precision dashboard, and dimensional reduction}
 }
 ```
 
-Notebook is also available via Binder:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=publications/gift_v2_notebook.ipynb)
+Notebooks are also available via Binder:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
 
 ## Citation Best Practices
 

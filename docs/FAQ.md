@@ -268,7 +268,7 @@ This transparency allows readers to assess confidence levels for each prediction
 
 ### How is this computed?
 
-All calculations available in `publications/gift_v2_notebook.ipynb`:
+All calculations available in `assets/visualizations/` and `statistical_validation/`:
 
 **Analytical**: Mathematical derivations in supplements
 **Numerical**: Python implementation with NumPy, SciPy, SymPy

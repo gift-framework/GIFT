@@ -99,8 +99,8 @@ pip install -r requirements.txt
 # Interactive launcher
 python quick_start.py
 
-# Main notebook
-jupyter notebook publications/gift_v2_notebook.ipynb
+# Visualization notebooks
+jupyter notebook assets/visualizations/
 
 # Statistical validation
 cd statistical_validation/
@@ -180,11 +180,11 @@ GIFT v2.2 achieves **zero continuous adjustable parameters**:
 - `G2_ML/` - Neural networks for K₇ metric (90% complete)
 - `assets/agents/` - Automated verification tools
 
-### Notebooks
+### Visualizations (`assets/visualizations/`)
 
-- `gift_v2_notebook.ipynb` - Main implementation
-- `gift_statistical_validation.ipynb` - 1M Monte Carlo samples
-- `gift_experimental_predictions.ipynb` - DUNE predictions
+- `e8_root_system_3d.ipynb` - E8 root structure
+- `precision_dashboard.ipynb` - All observables
+- `dimensional_reduction_flow.ipynb` - 496D -> 4D flow
 
 ## Git Workflow
 
@@ -371,8 +371,8 @@ pip install -r requirements.txt
 # Interactive
 python quick_start.py
 
-# Notebooks
-jupyter notebook publications/gift_v2_notebook.ipynb
+# Visualizations
+jupyter notebook assets/visualizations/
 
 # Validation
 cd statistical_validation/

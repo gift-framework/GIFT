@@ -15,9 +15,8 @@ export PYTHONPATH="${PYTHONPATH}:."
 
 # Create symbolic links for easy access
 ln -sf publications/gift_2_2_main.md README_main.md || echo "Could not create symlink"
-ln -sf publications/gift_v2_notebook.ipynb NOTEBOOK.ipynb || echo "Could not create symlink"
 
 echo "GIFT Framework v2.2.0 Binder environment ready!"
 echo "Main paper: publications/gift_2_2_main.md"
 echo "Supplements: publications/supplements/"
-echo "Interactive notebook: publications/gift_v2_notebook.ipynb"
+echo "Visualizations: assets/visualizations/"

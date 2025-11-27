@@ -1,10 +1,10 @@
-# GIFT Framework v2.0 - Visualization Dashboard
+# GIFT Framework v2.2 - Visualization Dashboard
 
 Terminal-style interactive dashboard showcasing GIFT framework visualizations.
 
 ## Overview
 
-This directory contains a Pip-Boy themed visualization dashboard for the GIFT Framework v2.0. The dashboard provides an interactive, terminal-aesthetic interface for exploring computational results.
+This directory contains a Pip-Boy themed visualization dashboard for the GIFT Framework v2.2. The dashboard provides an interactive, terminal-aesthetic interface for exploring computational results.
 
 ## Dashboard
 
@@ -19,22 +19,22 @@ Features:
 ## Visualizations
 
 ### 1. E8 Root System (Tab 1)
-- Complete 240-root structure of exceptional Lie algebra E₈
+- Complete 240-root structure of exceptional Lie algebra E8
 - 3D interactive projection from 8D using PCA
 - Foundation for 496-dimensional information architecture
 - Source: `visualizations/e8_root_system_3d.ipynb`
 
 ### 2. Precision Analysis (Tab 2)
 - Statistical comparison across all physics sectors
-- 16 validated observables from 34 total predictions
+- 39 validated observables with 13 proven exact relations
 - Sector-wise performance: Gauge, Neutrino, Lepton, Quark, Higgs, Cosmology
-- Mean deviation: 0.15%
+- Mean deviation: 0.128%
 - Source: `visualizations/precision_dashboard.ipynb`
 
 ### 3. Dimensional Reduction Flow (Tab 3)
 - Animated visualization of dimensional reduction
-- E₈×E₈ (496D) → K₇ (99D) → Standard Model (4D)
-- Cohomology structure: H²(K₇)=21, H³(K₇)=77
+- E8xE8 (496D) -> K7 (99D) -> Standard Model (4D)
+- Cohomology structure: H2(K7)=21, H3(K7)=77
 - Source: `visualizations/dimensional_reduction_flow.ipynb`
 
 ## Directory Structure
@@ -174,16 +174,15 @@ To add new visualizations:
 
 ## License
 
-Part of GIFT Framework v2.0 - MIT License
+Part of GIFT Framework v2.2 - MIT License
 
 ## Links
 
 - Main Repository: https://github.com/gift-framework/GIFT
-- Main Paper: `../publications/gift_main.md`
+- Main Paper: `../publications/gift_2_2_main.md`
 - Supplements: `../publications/supplements/`
-- Interactive Notebook: `../publications/gift_v2_notebook.ipynb`
+- Visualizations: `../assets/visualizations/`
 
 ---
 
-GIFT FRAMEWORK v2.0 | VISUALIZATION TERMINAL | TOPOLOGICAL UNIFICATION
-
+GIFT FRAMEWORK v2.2 | VISUALIZATION TERMINAL | TOPOLOGICAL UNIFICATION

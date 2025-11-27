@@ -515,7 +515,7 @@ The metric determinant measures the "volume element" of the internal manifold. I
 
 ### 12.7 Significance
 
-The topological origin of det(g) = 65/32 confirms the **zero-parameter paradigm**: all observables derive from fixed mathematical structures of E₈×E₈ and K₇, with no adjustable parameters.
+The topological origin of det(g) = 65/32 confirms the **zero-parameter paradigm**: all observables derive from fixed mathematical structures of E₈×E₈ and K₇, with no continuous adjustable parameters.
 
 **Status**: **TOPOLOGICAL** (exact rational from cohomology)
 
@@ -569,6 +569,6 @@ The ultimate test remains experimental verification, particularly:
 
 ---
 
-**Document Version**: 2.0
+**Document Version**: 2.2.0
 **Date**: 2025-11-26
 **Status**: Working document for v2.2 publication

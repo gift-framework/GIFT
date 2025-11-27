@@ -8,7 +8,7 @@ The framework contains no continuous adjustable parameters. All structural const
 
 Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values . Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). Thirteen relations possess rigorous topological proofs, including three-generation structure (N_gen=3), Koide parameter (Q=2/3), and Weinberg angle (sin²θ_W=3/13) as exact rationals.
 
-Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 37 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
+Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 39 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
 
 Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
@@ -131,7 +131,7 @@ These patterns, while intriguing, should be regarded as potential clues for futu
 
 - **Part I** (Sections 2-4): Geometric architecture - E₈×E₈ structure, K₇ manifold, explicit metric
 - **Part II** (Sections 5-7): Torsional dynamics - torsion tensor, geodesic flow, scale bridge
-- **Part III** (Sections 8-10): Observable predictions - 37 observables across all sectors
+- **Part III** (Sections 8-10): Observable predictions - 39 observables across all sectors
 - **Part IV** (Sections 11-14): Validation - experimental tests, theoretical implications, conclusions
 
 Mathematical foundations appear in Supplement S1, rigorous proofs and complete derivations in Supplement S4.
@@ -511,7 +511,7 @@ connecting the fractal dimension D_H to dark energy (ln(2)) and geometric projec
 
 ### 8.1 Structural Constants: The Zero-Parameter Paradigm
 
-The framework employs no free parameters. All quantities are topological constants derived from E₈ and K₇ structure:
+The framework contains no continuous adjustable parameters. All quantities are topological constants derived from E₈ and K₇ structure:
 
 **Structural Constant 1: p₂ = 2 (Binary Duality)**
 - Definition: p₂ := dim(G₂)/dim(K₇) = 14/7 = 2
@@ -947,7 +947,7 @@ To assess whether the framework's parameter values represent a unique minimum, e
 **Results**:
 - Configurations converging to primary minimum: 98.7%
 - Alternative minima found: 0
-- Best χ²: 45.2 for 37 observables
+- Best χ²: 45.2 for 39 observables
 - Mean χ² of random samples: 15,420 ± 3,140
 
 The absence of competitive alternative minima suggests the framework identifies a unique preferred region in parameter space.
@@ -973,7 +973,7 @@ Comprehensive pytest validation (124 tests, 100% passing):
 
 | Test Category | Tests | Coverage |
 |---------------|-------|----------|
-| Observable values | 60 | All 37 observables |
+| Observable values | 60 | All 39 observables |
 | Exact relations | 8 | All PROVEN status |
 | Statistical methods | 29 | MC, Bootstrap, Sobol |
 | Mathematical properties | 35 | Topological invariants |
@@ -1107,7 +1107,7 @@ The bulk dimension D_bulk = 11 matches M-theory's critical dimension.
 ### 13.5 Philosophical Considerations
 
 **Mathematical Universe Hypothesis**:
-- The framework's success (0.13% mean deviation from pure topology) suggests deep connection between mathematical structures and physical law
+- The framework's success (0.128% mean deviation from pure topology) suggests deep connection between mathematical structures and physical law
 - Observables appear as topological invariants, not merely described by mathematics
 
 **Epistemic Humility**:
@@ -1165,7 +1165,7 @@ This is not an approximation. The hierarchy parameter governing mass scales acro
 
 ### 14.1 Summary of Results
 
-This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with G₂ holonomy. The framework relates 39 observables to pure topological structure with **zero continuous adjustable parameters**, achieving mean precision 0.13% across six orders of magnitude.
+This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with G₂ holonomy. The framework relates 39 observables to pure topological structure with **zero continuous adjustable parameters**, achieving mean precision 0.128% across six orders of magnitude.
 
 **Key achievements**:
 - 13 exact topological relations with rigorous proofs (including τ = 3472/891, κ_T = 1/61, sin²θ_W = 3/13, **det(g) = 65/32**)
@@ -1214,8 +1214,8 @@ Nine technical supplements provide detailed foundations:
 | S1 | Mathematical Architecture | 30 | E₈ algebra, G₂ manifolds, cohomology |
 | S2 | K₇ Manifold Construction | 40 | Twisted connected sum, ML metrics |
 | S3 | Torsional Dynamics | 35 | Geodesic equations, RG connection |
-| S4 | Rigorous Proofs | 40 | 12 proven relations with complete derivations |
-| S5 | Complete Calculations | 50 | All 37 observable derivations |
+| S4 | Rigorous Proofs | 40 | 13 proven relations with complete derivations |
+| S5 | Complete Calculations | 50 | All 39 observable derivations |
 | S6 | Numerical Methods | 20 | Algorithms, code implementation |
 | S7 | Phenomenology | 30 | Experimental comparisons, statistics |
 | S8 | Falsification Protocol | 15 | Experimental tests and timelines |
