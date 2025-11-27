@@ -112,7 +112,7 @@ G2_ML/[version]/
 - Scientific details: `publications/gift_2_2_main.md`
 - Mathematical rigor: `publications/supplements/S4_complete_derivations.md`
 - Experimental validation: `docs/EXPERIMENTAL_VALIDATION.md`
-- Definitions: `publications/GLOSSARY.md` or `docs/GLOSSARY.md`
+- Definitions: `docs/GLOSSARY.md`
 - Common questions: `docs/FAQ.md`
 
 ## Development Workflows
@@ -199,7 +199,7 @@ G2_ML/[version]/
 
 ### Notation and Mathematical Conventions
 
-**Follow** `publications/gift_2_2_main.md` Section 1.4 and `publications/GLOSSARY.md`:
+**Follow** `publications/gift_2_2_main.md` Section 1.4 and `docs/GLOSSARY.md`:
 
 - E₈: Exceptional Lie algebra (dim 248)
 - K₇: Compact 7-dimensional manifold with G₂ holonomy
@@ -364,7 +364,7 @@ python -m assets.agents.cli canonical     # Canonical monitor
 1. Read `README.md` - Overview and key results
 2. Read `publications/summary.txt` - 5-minute executive summary
 3. Review `publications/gift_2_2_main.md` Sections 1-4
-4. Check `publications/GLOSSARY.md` for unfamiliar terms
+4. Check `docs/GLOSSARY.md` for unfamiliar terms
 5. Explore `docs/FAQ.md` for common questions
 
 **To understand specific predictions**:

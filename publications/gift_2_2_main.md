@@ -895,8 +895,8 @@ The framework relates 39 observables to pure topological structure with **zero c
 
 | Status | Count | Examples |
 |--------|-------|----------|
-| **PROVEN** | 13 | N_gen, Q_Koide, m_s/m_d, δ_CP, m_τ/m_e, Ω_DE, ξ, λ_H, b₃ relation, τ rational, κ_T = 1/61, sin²θ_W = 3/13, **det(g) = 65/32** |
-| **TOPOLOGICAL** | 12 | θ₁₃, θ₂₃, m_τ/m_μ, n_s, α_s, gauge bosons |
+| **PROVEN** | 13 | N_gen, p₂, Q_Koide, m_s/m_d, δ_CP, m_τ/m_e, Ω_DE, n_s, ξ, λ_H, sin²θ_W = 3/13, τ = 3472/891, **det(g) = 65/32** |
+| **TOPOLOGICAL** | 12 | κ_T = 1/61, θ₁₃, θ₂₃, m_τ/m_μ, α_s, gauge bosons |
 | **DERIVED** | 10 | θ₁₂, CKM elements, quark ratios |
 | **PHENOMENOLOGICAL** | 3 | m_μ/m_e, some absolute masses |
 

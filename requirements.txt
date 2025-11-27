@@ -24,6 +24,10 @@ papermill>=2.4.0
 # Statistical analysis and machine learning
 scikit-learn>=1.0.0
 statsmodels>=0.13.0
+SALib>=1.4.0
+
+# Deep learning (for G2_ML)
+torch>=1.9.0
 
 # Additional utilities
 tqdm>=4.62.0

@@ -17,7 +17,7 @@
 1. **README.md** - Framework overview
 2. **STRUCTURE.md** - Repository organization
 3. **publications/gift_2_2_main.md** - Core theoretical paper (~1400 lines)
-4. **publications/GLOSSARY.md** - Technical definitions
+4. **docs/GLOSSARY.md** - Technical definitions
 5. **CONTRIBUTING.md** - Scientific standards
 
 ## Repository Structure
@@ -45,7 +45,7 @@ GIFT/
 
 ## Key Conventions
 
-### Notation (see publications/GLOSSARY.md)
+### Notation (see docs/GLOSSARY.md)
 
 - **E₈**: Exceptional Lie algebra (dim 248)
 - **K₇**: Compact 7D manifold with G₂ holonomy (b₂=21, b₃=77)
@@ -79,7 +79,7 @@ Use these consistently:
 
 1. Read `README.md` for overview
 2. Read `publications/gift_2_2_main.md` Sections 1-4
-3. Check `publications/GLOSSARY.md` for terms
+3. Check `docs/GLOSSARY.md` for terms
 4. See `docs/FAQ.md` for questions
 
 ### Making Changes

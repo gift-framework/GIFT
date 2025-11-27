@@ -100,7 +100,7 @@ See [QUICK_START.md](QUICK_START.md) for detailed onboarding guide.
 - [Geometric Justifications](publications/GIFT_v22_Geometric_Justifications.md) - Detailed geometric derivations
 - [Statistical Validation](publications/GIFT_v22_Statistical_Validation.md) - Validation methodology
 - [Reading Guide](publications/READING_GUIDE.md) - Navigation by time/interest
-- [Glossary](publications/GLOSSARY.md) - Terminology definitions
+- [Glossary](docs/GLOSSARY.md) - Terminology definitions
 
 **[Interactive Visualizations](assets/visualizations/)** - Computational notebooks
 - E8 root system 3D visualization
@@ -203,10 +203,10 @@ Explore the framework through interactive Jupyter notebooks in [assets/visualiza
 - Weyl group structure and connection to N_gen = 3
 
 **[Precision Dashboard](assets/visualizations/precision_dashboard.ipynb)**
-- All 16 validated observables vs experimental data
+- All 39 validated observables vs experimental data
 - Sector-wise performance gauges
 - Interactive heatmaps and statistical analysis
-- Mean deviation: 0.15% across all sectors
+- Mean deviation: 0.128% across all sectors
 
 **[Dimensional Reduction Flow](assets/visualizations/dimensional_reduction_flow.ipynb)**
 - Animated visualization of E₈×E₈ (496D) → K₇ (99D) → SM (4D)
