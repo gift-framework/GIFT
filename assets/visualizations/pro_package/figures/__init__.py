@@ -26,3 +26,4 @@ def registry() -> Dict[str, FigureFn]:
 
 
 
+
