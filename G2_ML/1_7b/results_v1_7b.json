@@ -1,0 +1,222 @@
+{
+  "version": "1.7b",
+  "timestamp": "20251127_122153",
+  "architecture": "hybrid_analytic_ml",
+  "backbone_mode": "full",
+  "targets": {
+    "kappa_T": 0.01639344262295082,
+    "det_g": 2.03125,
+    "b2": 21,
+    "b3": 77
+  },
+  "achieved": {
+    "kappa_T": 0.037413500600620264,
+    "det_g": 2.03125,
+    "phi_back_norm": 7.009014457689878,
+    "delta_phi_norm": 0.7617825593964389,
+    "phi_total_norm": 7.555765870609145,
+    "residual_ratio": 0.10082135582835683
+  },
+  "deviations": {
+    "kappa_T_rel": 1.282223536637836,
+    "det_g_rel": 0.0
+  },
+  "analytical_fits": {
+    "phi_012": {
+      "R2": 0.997389005140129,
+      "RMS": 0.027176614054076485,
+      "top_coefficients": [
+        [
+          "bump*sin(pi*lam)",
+          34.37790035615802
+        ],
+        [
+          "bump*cos(pi*lam)",
+          13.506649984932052
+        ],
+        [
+          "sin(1*pi*lam)",
+          -10.49933633073583
+        ],
+        [
+          "lam^2*cos(pi*lam)",
+          -10.440744728668179
+        ],
+        [
+          "lam*cos(1*pi*lam)",
+          -7.060038885468253
+        ]
+      ]
+    },
+    "phi_013": {
+      "R2": 0.9999124666608472,
+      "RMS": 0.005201712710596041,
+      "top_coefficients": [
+        [
+          "bump*sin(pi*lam)",
+          -4.609722925445808
+        ],
+        [
+          "bump*cos(pi*lam)",
+          -2.3166550240617862
+        ],
+        [
+          "cos(2*pi*lam)",
+          1.7319683258111984
+        ],
+        [
+          "sin(1*pi*lam)",
+          1.5287050114316019
+        ],
+        [
+          "lam*sin(1*pi*lam)",
+          1.4915091578950026
+        ]
+      ]
+    },
+    "delta_012": {
+      "R2": 0.9053178955255272,
+      "RMS": 0.027176577958437732,
+      "top_coefficients": [
+        [
+          "bump*sin(pi*lam)",
+          34.42074950129408
+        ],
+        [
+          "bump*cos(pi*lam)",
+          13.505524022382456
+        ],
+        [
+          "lam^2*cos(pi*lam)",
+          -10.259246512536354
+        ],
+        [
+          "sin(1*pi*lam)",
+          -9.999492093923077
+        ],
+        [
+          "lam*cos(1*pi*lam)",
+          -7.121850925010268
+        ]
+      ]
+    },
+    "delta_013": {
+      "R2": 0.765646652824049,
+      "RMS": 0.005201772955219669,
+      "top_coefficients": [
+        [
+          "bump*sin(pi*lam)",
+          -4.620920700577762
+        ],
+        [
+          "bump*cos(pi*lam)",
+          -2.4751238399679147
+        ],
+        [
+          "sin(1*pi*lam)",
+          1.3307954141012739
+        ],
+        [
+          "lam^2*cos(pi*lam)",
+          1.187838400387955
+        ],
+        [
+          "lam*cos(1*pi*lam)",
+          0.9610543025294643
+        ]
+      ]
+    }
+  },
+  "backbone_coefficients": {
+    "phi_012": {
+      "constant": 1.2,
+      "linear": -0.4,
+      "quadratic": -0.2,
+      "sin_pi": -0.4766,
+      "cos_pi": -0.3704,
+      "sin_2pi": -0.3303,
+      "cos_2pi": -0.0992
+    },
+    "phi_013": {
+      "constant": 1.5,
+      "linear": 0.3633,
+      "quadratic": -3.0,
+      "sin_pi": 0.1689,
+      "cos_pi": -0.9,
+      "sin_2pi": -0.0514,
+      "cos_2pi": 0.8497
+    }
+  },
+  "training": {
+    "n_epochs": 1500,
+    "final_loss": 0.40237191947527573,
+    "n_parameters": 9507
+  },
+  "config": {
+    "version": "1.7b",
+    "v16_model_path": "../1_6/data/models_v1_6.pt",
+    "v16_coords_path": "../1_6/sample_coords_v1_6.pt",
+    "v16_results_path": "../1_6/data/results_v1_6.json",
+    "kappa_T_target": 0.01639344262295082,
+    "det_g_target": 2.03125,
+    "b2_target": 21,
+    "b3_target": 77,
+    "backbone_mode": "full",
+    "residual_net": {
+      "hidden_dims": [
+        64,
+        64,
+        32
+      ],
+      "fourier_features": 16,
+      "activation": "silu"
+    },
+    "n_points": 2048,
+    "n_epochs": 1500,
+    "lr_residual": 0.0005,
+    "weight_decay": 1e-06,
+    "loss_weights": {
+      "kappa_T": 500.0,
+      "det_g": 5.0,
+      "closure": 1.0,
+      "coclosure": 1.0,
+      "g2_consistency": 2.0,
+      "residual_norm": 10.0,
+      "spd": 5.0
+    },
+    "phases": [
+      {
+        "name": "warmup",
+        "epochs": 300,
+        "residual_weight": 1.0,
+        "lr_factor": 1.0
+      },
+      {
+        "name": "relax",
+        "epochs": 700,
+        "residual_weight": 1.0,
+        "lr_factor": 0.5
+      },
+      {
+        "name": "finetune",
+        "epochs": 500,
+        "residual_weight": 0.8,
+        "lr_factor": 0.1
+      }
+    ],
+    "tcs": {
+      "neck_half_length": 0.8,
+      "neck_width": 0.4,
+      "twist_angle": 0.7853981633974483,
+      "left_scale": 1.0,
+      "right_scale": 1.0
+    },
+    "enriched_basis": {
+      "max_polynomial_order": 3,
+      "max_fourier_k": 4,
+      "include_mixed_terms": true,
+      "include_bump_functions": true
+    },
+    "use_symbolic_regression": false
+  }
+}
