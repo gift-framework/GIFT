@@ -422,3 +422,4 @@ Part of the GIFT (Geometric Information Field Theory) framework.
 **Author**: GIFT Development Team  
 **Status**: Complete implementation, ready for training
 
+

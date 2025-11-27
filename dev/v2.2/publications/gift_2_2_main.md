@@ -1,20 +1,16 @@
 # Geometric Information Field Theory: Topological Unification of Standard Model Parameters Through Torsional Dynamics
 
-## Abstract
+## **Abstract**
 
-This work explores a geometric framework in which Standard Model parameters emerge as topological invariants of seven-dimensional manifolds with G₂ holonomy. The approach relates 39 dimensionless and dimensional observables to pure mathematical structure through the dimensional reduction chain E₈×E₈ → K₇ → Standard Model, achieving mean deviation 0.13% across six orders of magnitude. The framework contains **no continuous adjustable parameters**: all quantities derive from fixed topological invariants of discrete mathematical structures (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy).
+We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers b₂=21 and b₃=77, which determine gauge field and matter multiplicities through cohomological mappings.
 
-The framework introduces torsional geodesic dynamics connecting static topology to renormalization group flow via the equation:
+The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude T=1/61, hierarchy parameter λ=3472/891) derive from fixed algebraic and topological invariants. This eliminates parameter tuning by construction—discrete topological structures admit no continuous variation.
 
-$$\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}$$
+Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values . Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). Thirteen relations possess rigorous topological proofs, including three-generation structure (N_gen=3), Koide parameter (Q=2/3), and Weinberg angle (sin²θ_W=3/13) as exact rationals.
 
-where λ identifies with ln(μ). A scale bridge connects topological integers to physical dimensions:
+Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 37 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
 
-$$\Lambda_{\text{GIFT}} = \frac{21 \cdot e^8 \cdot 248}{7 \cdot \pi^4} = 1.632 \times 10^6$$
-
-Thirteen exact topological relations emerge with rigorous proofs, including the tau-electron mass ratio m_τ/m_e = 3477, the CP violation phase δ_CP = 197°, the Koide parameter Q = 2/3, the strange-down ratio m_s/m_d = 20, the torsion magnitude κ_T = 1/61, the Weinberg angle sin²θ_W = 3/13, and the metric determinant det(g) = 65/32. Notably, the hierarchy parameter τ = 3472/891 is exactly rational, revealing discrete rather than continuous structure. The discovery that det(g) = 65/32 eliminates the last ML-fitted parameter, achieving the **zero-parameter paradigm**. Statistical validation through 10⁶ Monte Carlo samples finds no alternative minima. The framework predicts specific signatures testable at DUNE (δ_CP measurement to ±5°), offering falsifiable criteria through near-term experiments.
-
-Whether these mathematical structures reflect physical reality or represent an effective description remains open. The framework's value lies in demonstrating that geometric principles can substantially constrain Standard Model parameters.
+Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
 **Keywords**: E₈ exceptional Lie algebra; G₂ holonomy; dimensional reduction; Standard Model parameters; torsional geometry; topological invariants
 
