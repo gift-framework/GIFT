@@ -171,7 +171,7 @@ See `CITATION.md` in main repository for complete citation information.
 
 **For v1.0 questions**: Best effort only, v2.0 is recommended
 
-**For current framework**: See main `README.md`, `QUICK_START.md`, and documentation in `docs/`
+**For current framework**: See main `README.md` and documentation in `docs/`
 
 **Issues**: https://github.com/gift-framework/GIFT/issues
 

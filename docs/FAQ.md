@@ -347,7 +347,7 @@ See `CONTRIBUTING.md` for detailed guidelines. Contributions welcome in:
 
 Depends on background:
 
-**General science literacy**: Start with README.md, then QUICK_START.md
+**General science literacy**: Start with README.md, then publications/summary.txt
 **Undergraduate physics**: Main paper Section 1-4, then notebook
 **Graduate student**: Main paper fully, then Supplements S1 & S4
 **Professional physicist**: Main paper, Supplement S4 (proofs), Supplement S5 (falsification)

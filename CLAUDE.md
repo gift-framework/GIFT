@@ -23,11 +23,10 @@
 
 ### Essential Files to Understand First
 
-1. `README.md` - Complete framework overview
-2. `STRUCTURE.md` - Repository organization
-3. `QUICK_START.md` - Fast onboarding guide
-4. `CONTRIBUTING.md` - Scientific standards and contribution process
-5. `publications/gift_2_2_main.md` - Core theoretical paper (~1400 lines)
+1. `README.md` - Complete framework overview with quick start
+2. `STRUCTURE.md` - Repository navigation
+3. `CONTRIBUTING.md` - Scientific standards and contribution process
+4. `publications/gift_2_2_main.md` - Core theoretical paper (~1400 lines)
 
 ### Key Directories
 
@@ -108,7 +107,7 @@ G2_ML/[version]/
 
 **Entry points for different audiences**:
 - Quick overview: `README.md`
-- Getting started: `QUICK_START.md`
+- Navigation: `STRUCTURE.md`
 - Scientific details: `publications/gift_2_2_main.md`
 - Mathematical rigor: `publications/supplements/S4_complete_derivations.md`
 - Experimental validation: `docs/EXPERIMENTAL_VALIDATION.md`
