@@ -299,6 +299,39 @@ Gen3  [-0.0001,  0.0002,  0.0007]
 
 **Conclusion**: The three generations are **strongly separated** (ratio >> 1), confirming the GIFT prediction that N_gen = 3 emerges from K7 topology with quasi-independent generation structure.
 
+### 6.5 Analytical Ansatz Extraction
+
+Fitting the dominant 3-form components to analytical functions of lambda:
+
+**phi_012** (dx^0 ^ dx^1 ^ dx^2):
+```
+phi_012(l) = 1.71 - 0.55*l - 0.27*l^2 - 0.48*sin(pi*l) - 0.37*cos(pi*l)
+R^2 = 0.85
+```
+
+**phi_013** (dx^0 ^ dx^1 ^ dx^3):
+```
+phi_013(l) = 2.02 + 0.36*l - 4.15*l^2 + 0.17*sin(pi*l) - 1.19*cos(pi*l)
+R^2 = 0.81
+```
+
+**Key observations**:
+
+| Feature | phi_012 | phi_013 | Interpretation |
+|---------|---------|---------|----------------|
+| Constant | +1.71 | +2.02 | Canonical G2 baseline |
+| Linear | -0.55 | +0.36 | **Opposite signs**: TCS asymmetry |
+| Quadratic | -0.27 | -4.15 | Strong l^2 in phi_013: neck structure |
+| Fourier | moderate | strong cos | Oscillatory gluing region |
+
+**Physical interpretation**:
+- **R^2 ~ 85%**: The neck coordinate lambda explains most of the 3-form variation
+- **Opposite linear terms**: Reflect M1-M2 asymmetry in TCS construction
+- **Large l^2 in phi_013**: Indicates complex structure in the gluing region (l ~ 0.5)
+- **Fourier terms**: Capture ACyl (asymptotically cylindrical) oscillations
+
+The remaining ~15% variance comes from the 6 transverse coordinates (x_1 through x_6), consistent with a non-trivial 7-dimensional geometry.
+
 ---
 
 ## 7. Physical Implications
