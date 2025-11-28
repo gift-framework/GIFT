@@ -73,3 +73,5 @@ visualizations/outputs/
 
 # Agent reports
 assets/agents/reports/*.json
+# Model checkpoints
+checkpoints/
