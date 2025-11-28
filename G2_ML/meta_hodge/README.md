@@ -9,7 +9,7 @@ Yukawa couplings offline.
 ## Layout
 
 - `config.py` – discovery utilities and lightweight registry of historical
-  notebooks/checkpoints.
+  notebooks/checkpoints plus a helper to summarize discovered assets.
 - `geometry_loader.py` – unified API to sample coordinates and load metric/phi
   predictors as `ModelBundle` objects.
 - `candidate_library.py` – aggregates candidate 2- and 3-form features from all
@@ -52,6 +52,16 @@ extractor = YukawaExtractor(x, metric)
 yukawas = extractor.compute(results["H2"].eigenvectors, results["H3"].eigenvectors)
 extractor.save(yukawas, Path("artifacts/meta_hodge"))
 ```
+
+To quickly **explore** what assets are available without running the full
+pipeline, use the CLI helper:
+
+```bash
+python scripts/run_meta_hodge.py --explore --export-registry artifacts/meta_hodge/registry.json
+```
+
+This prints a short summary and optionally writes the registry to disk for
+later reference.
 
 The provided implementation emphasizes clarity and modularity; individual
 components can be swapped for more precise physics-aware approximations without

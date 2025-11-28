@@ -6,7 +6,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional
 
-__all__ = ["VersionInfo", "locate_historical_assets", "DEFAULT_VERSION_PRIORITY", "DEFAULT_SAMPLE_SIZE"]
+__all__ = [
+    "VersionInfo",
+    "locate_historical_assets",
+    "DEFAULT_VERSION_PRIORITY",
+    "DEFAULT_SAMPLE_SIZE",
+    "summarize_registry",
+]
 
 
 @dataclass
@@ -92,3 +98,25 @@ def locate_historical_assets(base_dir: Optional[Path] = None) -> Dict[str, Versi
         )
 
     return registry
+
+
+def summarize_registry(registry: Dict[str, VersionInfo]) -> str:
+    """Return a human-readable summary of discovered assets.
+
+    The summary lists each semantic version label alongside the number of
+    notebooks and checkpoints. It is intended for quick "exploration" of the
+    repository content without loading any models.
+    """
+
+    lines = ["Discovered historical K7/G2 assets:"]
+    if not registry:
+        lines.append("  (none found)")
+        return "\n".join(lines)
+
+    for key in sorted(registry):
+        info = registry[key]
+        lines.append(
+            f"  - {key}: {len(info.notebook_paths)} notebooks, "
+            f"{len(info.checkpoint_paths)} checkpoints"
+        )
+    return "\n".join(lines)
