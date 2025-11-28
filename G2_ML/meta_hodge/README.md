@@ -61,7 +61,9 @@ python scripts/run_meta_hodge.py --explore --export-registry artifacts/meta_hodg
 ```
 
 This prints a short summary and optionally writes the registry to disk for
-later reference.
+later reference. The script prepends the repository root to ``PYTHONPATH`` so
+it can be launched directly from a fresh checkout without installing the
+package.
 
 The provided implementation emphasizes clarity and modularity; individual
 components can be swapped for more precise physics-aware approximations without

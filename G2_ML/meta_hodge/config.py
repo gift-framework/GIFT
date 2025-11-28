@@ -72,7 +72,9 @@ def locate_historical_assets(base_dir: Optional[Path] = None) -> Dict[str, Versi
     typically encodes the semantic version (e.g., ``1_8`` or ``0.7``).
     """
 
-    base = base_dir or Path(__file__).resolve().parents[1]
+    # Default to the repository root (``.../GIFT``) so we can find the top-level
+    # ``G2_ML`` directory regardless of where the module is imported from.
+    base = base_dir or Path(__file__).resolve().parents[2]
     g2_dir = base / "G2_ML"
     registry: Dict[str, VersionInfo] = {}
     if not g2_dir.exists():
