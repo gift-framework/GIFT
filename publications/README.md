@@ -8,7 +8,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 - **Main paper**: [gift_2_2_main.md](gift_2_2_main.md)
 - **All predictions**: [GIFT_v22_Observable_Reference.md](GIFT_v22_Observable_Reference.md)
 - **Reading guide**: [READING_GUIDE.md](READING_GUIDE.md)
-- **Terminology**: [GLOSSARY.md](GLOSSARY.md)
+- **Terminology**: [GLOSSARY.md](../docs/GLOSSARY.md)
 
 ## Key Results
 
@@ -42,7 +42,6 @@ publications/
 ├── gift_2_2_main.md                    # Main paper
 ├── summary.txt                         # Executive summary
 ├── READING_GUIDE.md                    # Navigation guide
-├── GLOSSARY.md                         # Terminology definitions
 ├── README.md                           # This file
 ├── GIFT_v22_Observable_Reference.md    # Complete observable list
 ├── GIFT_v22_Geometric_Justifications.md # Formula derivations
