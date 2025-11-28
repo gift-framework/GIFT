@@ -83,10 +83,20 @@ Full tables: [Main Paper Section 8](publications/gift_2_2_main.md)
 
 - **[Main Paper](publications/gift_2_2_main.md)** - Complete theoretical framework (~1400 lines)
 - **[Observable Reference](publications/GIFT_v22_Observable_Reference.md)** - All 39 observables
-- **[S4: Derivations](publications/supplements/S4_complete_derivations.md)** - Proofs of 13 exact relations
-- **[S5: Validation](publications/supplements/S5_experimental_validation.md)** - Experimental comparison
 - **[Glossary](docs/GLOSSARY.md)** - Technical terms
 - **[FAQ](docs/FAQ.md)** - Common questions
+
+### Mathematical Supplements (S1-S7)
+
+| Supplement | Title | Description |
+|------------|-------|-------------|
+| **[S1](publications/supplements/S1_mathematical_architecture.md)** | Mathematical Architecture | E₈ exceptional Lie algebra foundations: root system (240 roots), Weyl group, Cartan matrix, Dynkin diagram. Establishes branching E₈ → E₇ → E₆ → SO(10) → SU(5) for Standard Model embedding. |
+| **[S2](publications/supplements/S2_K7_manifold_construction.md)** | K₇ Manifold Construction | Twisted connected sum (TCS) construction of the compact 7-manifold with G₂ holonomy. Derives Betti numbers b₂=21, b₃=77 via Mayer-Vietoris. Physics-informed neural networks validate metric invariants. |
+| **[S3](publications/supplements/S3_torsional_dynamics.md)** | Torsional Dynamics | Torsion tensor from G₂ 3-form non-closure. Derives geodesic flow equation and connection to renormalization group. Establishes κ_T = 1/61 (topological) and ultra-slow flow velocity |v| ~ 0.015. |
+| **[S4](publications/supplements/S4_complete_derivations.md)** | Complete Derivations | Full mathematical proofs of all 13 exact relations and detailed calculations for 39 observables. Organized by sector (gauge, fermion, neutrino, cosmology) with error analysis. |
+| **[S5](publications/supplements/S5_experimental_validation.md)** | Experimental Validation | Comparison with PDG 2024, NuFIT 5.3, Planck 2020, DESI DR2. Chi-square analysis, pull distributions. Defines falsification criteria (Type A/B/C) and experimental timeline. |
+| **[S6](publications/supplements/S6_theoretical_extensions.md)** | Theoretical Extensions | Speculative extensions: M-theory embedding (11D → 10D → 4D), AdS/CFT correspondence, information-theoretic interpretations, number-theoretic patterns. Status: EXPLORATORY. |
+| **[S7](publications/supplements/S7_dimensional_observables.md)** | Dimensional Observables | Bridge from dimensionless ratios to absolute masses (GeV). Derives scale parameter Lambda_GIFT from b₂, e⁸, dim(E₈). Covers fermion masses, boson masses, cosmological parameters. |
 
 ### Interactive Tools
 
