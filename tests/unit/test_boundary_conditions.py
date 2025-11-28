@@ -96,7 +96,7 @@ class TestTorusBoundaries:
         """Model should handle corner points of fundamental domain."""
         # All 2^7 = 128 corners
         corners = torch.tensor([
-            [i * 2 * np.pi for i in format(n, '07b')]
+            [int(i) * 2 * np.pi for i in format(n, '07b')]
             for n in range(128)
         ], dtype=torch.float32)
 

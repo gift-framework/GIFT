@@ -37,18 +37,18 @@ class TestG2MLErrors:
             )
 
     def test_invalid_hidden_dims(self):
-        """Should handle invalid hidden dimensions."""
+        """Should handle unusual hidden dimensions gracefully."""
         from G2_phi_network import G2PhiNetwork
 
-        # Empty hidden dims might be invalid
-        with pytest.raises((ValueError, IndexError, RuntimeError)):
-            model = G2PhiNetwork(
-                encoding_type='fourier',
-                hidden_dims=[]
-            )
-            # Try to use it
-            coords = torch.rand(10, 7)
-            model(coords)
+        # Empty hidden dims - model should still work (direct input->output)
+        model = G2PhiNetwork(
+            encoding_type='fourier',
+            hidden_dims=[]
+        )
+        coords = torch.rand(10, 7)
+        output = model(coords)
+        # Should still produce output with correct shape
+        assert output.shape == (10, 35)
 
     def test_wrong_input_dimension(self):
         """Should raise error for wrong input dimension."""
