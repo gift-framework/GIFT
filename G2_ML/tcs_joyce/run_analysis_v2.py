@@ -126,11 +126,25 @@ def build_hybrid_global_modes(
     # If we have the full H3 (77 modes), use modes 35-76 directly
     if Phi is not None and Phi.shape[1] >= 77:
         print("  Using pre-computed H3 global modes (35-76)")
-        return Phi[:, 35:77]
+        # Phi shape is (N, 77, 35) - reduce to (N, 42) by taking norm
+        if Phi.dim() == 3:
+            # Take norm of 3-form components to get mode strength
+            global_Phi = Phi[:, 35:77, :]  # (N, 42, 35)
+            return torch.norm(global_Phi, dim=2)  # (N, 42)
+        else:
+            return Phi[:, 35:77]
 
     # If we have H2 (21 modes), use them to inform global mode structure
     if omega is not None:
         print("  Building global modes informed by H2 (omega)")
+
+        # omega shape might be (N, 21, 21) for 2-form components
+        # or (N, 21) for mode values
+        if omega.dim() == 3:
+            # Reduce to mode values by taking norm
+            omega_vals = torch.norm(omega, dim=2)  # (N, 21)
+        else:
+            omega_vals = omega
 
         global_modes = []
 
@@ -140,7 +154,7 @@ def build_hybrid_global_modes(
             i1 = j % 21
             i2 = (j + 7) % 21
             # Approximate omega_i ^ omega_j contribution
-            h2_combo = omega[:, i1] * omega[:, i2]
+            h2_combo = omega_vals[:, i1] * omega_vals[:, i2]
 
             # Weight by TCS profile
             if j < 14:
@@ -158,6 +172,101 @@ def build_hybrid_global_modes(
     # Fallback to phi-based construction
     print("  Using phi-based global mode construction")
     return build_tcs_global_modes_v2(phi, coords)
+
+
+def analyze_with_full_forms(
+    Phi: torch.Tensor,
+) -> dict:
+    """Analyze using the full 3-form tensor directly.
+
+    This is the most accurate method when we have the full
+    Phi tensor of shape (N, 77, 35).
+    """
+    N = Phi.shape[0]
+
+    print("\n" + "=" * 70)
+    print("FULL 3-FORM SPECTRAL ANALYSIS")
+    print("=" * 70)
+
+    print(f"\n[1] Using full Phi tensor: {Phi.shape}")
+
+    # Build Gram matrix from 3-form inner products
+    # M_ij = <Phi_i, Phi_j> = sum_k Phi_i^k * Phi_j^k averaged over samples
+    print("\n[2] Computing 3-form Gram matrix...")
+
+    # Phi is (N, 77, 35) - flatten the 35 components
+    Phi_flat = Phi.view(N, 77, -1)  # (N, 77, 35)
+
+    # Inner product: sum over components dimension
+    # M_ij = (1/N) sum_n sum_k Phi[n,i,k] * Phi[n,j,k]
+    M = torch.einsum('nik,njk->ij', Phi_flat, Phi_flat) / N
+    M = 0.5 * (M + M.T)
+
+    print(f"    Gram shape: {M.shape}")
+
+    # Eigendecomposition
+    print("\n[3] Eigendecomposition...")
+    eigenvalues, _ = torch.linalg.eigh(M)
+    eigenvalues = eigenvalues.flip(0)
+    eigenvalues = torch.clamp(eigenvalues, min=0)
+
+    print(f"    Top 5: {[f'{e:.6f}' for e in eigenvalues[:5].tolist()]}")
+    print(f"    Around 43: {[f'{e:.6f}' for e in eigenvalues[40:46].tolist()]}")
+
+    # Count significant
+    threshold = eigenvalues.max() * 0.01
+    n_significant = (eigenvalues > threshold).sum().item()
+    print(f"    Significant (>1% max): {n_significant}")
+
+    # Gap analysis
+    print("\n[4] Gap analysis...")
+    gaps = torch.abs(eigenvalues[:-1] - eigenvalues[1:])
+    mean_gap = gaps[20:55].mean()
+
+    print(f"    Mean gap: {mean_gap:.6f}")
+    print()
+    print("    Pos | Eigenvalue | Gap      | Ratio")
+    print("    " + "-" * 42)
+
+    for pos in range(38, 48):
+        ev = eigenvalues[pos].item()
+        g = gaps[pos].item()
+        r = g / (mean_gap + 1e-10)
+        mark = " *** 43! ***" if pos == 42 else ""
+        print(f"    {pos:>3} | {ev:>10.6f} | {g:.6f} | {r:>5.2f}x{mark}")
+
+    idx = gaps[30:50].argmax().item() + 30
+    print(f"\n    Largest gap [30-50]: position {idx}")
+
+    # Tau
+    print("\n[5] Tau analysis...")
+    tau_target = 3472.0 / 891.0
+
+    s43 = eigenvalues[:43].sum().item()
+    s34 = eigenvalues[43:].sum().item()
+    tau = s43 / (s34 + 1e-10)
+    err = abs(tau - tau_target) / tau_target * 100
+
+    print(f"    Sum(1:43) = {s43:.6f}")
+    print(f"    Sum(44:77) = {s34:.6f}")
+    print(f"    Tau = {tau:.4f} (target: {tau_target:.4f})")
+    print(f"    Error = {err:.2f}%")
+
+    print()
+    print("=" * 70)
+    print("SUMMARY (Full 3-form analysis)")
+    print("=" * 70)
+    print(f"  Significant modes: {n_significant}")
+    print(f"  Largest gap: position {idx}")
+    print(f"  Gap at 42-43: {gaps[42]/mean_gap:.2f}x mean")
+    print(f"  Tau = {tau:.4f}")
+
+    if idx == 42 or idx == 43:
+        print("\n  *** GAP NEAR 43 DETECTED! ***")
+
+    print("=" * 70)
+
+    return {'eigenvalues': eigenvalues, 'largest_gap': idx, 'tau': tau}
 
 
 def analyze_spectrum_v2(
@@ -306,12 +415,18 @@ def main():
 
     phi, coords, omega, Phi = load_data(args.samples)
 
-    # Try different coupling strengths
-    for coupling in [1.0, 2.0, 5.0]:
-        print(f"\n{'#' * 70}")
-        print(f"# COUPLING STRENGTH = {coupling}")
-        print(f"{'#' * 70}")
-        results = analyze_spectrum_v2(phi, coords, omega, Phi, coupling)
+    # If we have full Phi tensor, run the direct 3-form analysis first
+    if Phi is not None and Phi.dim() == 3:
+        print("\n" + "#" * 70)
+        print("# METHOD 1: FULL 3-FORM GRAM MATRIX")
+        print("#" * 70)
+        results_full = analyze_with_full_forms(Phi)
+
+    # Then run the mode-based analysis
+    print("\n" + "#" * 70)
+    print("# METHOD 2: MODE-BASED ANALYSIS")
+    print("#" * 70)
+    results = analyze_spectrum_v2(phi, coords, omega, Phi, args.coupling)
 
 
 if __name__ == '__main__':
