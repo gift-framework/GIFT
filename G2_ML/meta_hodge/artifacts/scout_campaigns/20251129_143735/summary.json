@@ -1,0 +1,9 @@
+{
+  "total_probes": 80,
+  "stable_count": 0,
+  "unstable_count": 80,
+  "anomaly_count": 0,
+  "stability_rate": 0.0,
+  "n_regions": 0,
+  "top_surprises": []
+}

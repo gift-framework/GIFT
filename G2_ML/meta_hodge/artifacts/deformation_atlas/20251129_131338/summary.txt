@@ -1,0 +1,17 @@
+Deformation Atlas Summary
+========================================
+Total points: 343
+Positive definite: 343 (100.0%)
+Stable: 31 (9.0%)
+det(g) range: [2.0312, 2.0312] (target: 2.0312)
+kappa_T range: [0.4345, 903.9335] (target: 0.0164)
+Stable sigma range: [0.5, 1.5]
+Stable s range: [0.5, 1.5]
+Stable alpha range: [-0.4, 0.4]
+
+Config:
+  sigma_values: (0.5, 0.67, 0.83, 1.0, 1.17, 1.33, 1.5)
+  s_values: (0.5, 0.67, 0.83, 1.0, 1.17, 1.33, 1.5)
+  alpha_values: (-0.4, -0.27, -0.13, 0.0, 0.13, 0.27, 0.4)
+  baseline_version: 1_6
+  num_samples: 200
