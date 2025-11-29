@@ -1,42 +1,42 @@
 # G2_ML v1.9 - Hodge Pure
 
-**Goal**: Learn true harmonic forms H² and H³ on the fixed v1.8 metric, then compute proper Yukawa.
+**Goal**: Learn true harmonic forms H2 and H3 on the fixed v1.8 metric, then compute proper Yukawa tensor.
 
 ## Motivation
 
 The spectral analysis from v1.8 showed:
 - det(g) = 2.03125 EXACT
 - kappa_T = 0.0163 (0.59% error)
-- A significant gap at position 42→43 in the Yukawa Gram matrix
+- A significant gap at position 42->43 in the Yukawa Gram matrix
 
 However, tau = 3472/891 did not emerge because we used proxy constructions instead of true harmonic forms.
 
-## Approach
+## Architecture
 
-### Phase 1: Hodge Training
+### Phase 1: H2 Training (21 Harmonic 2-Forms)
 
 On the **frozen** v1.8 metric, learn:
 
-1. **H² modes (21)**: Harmonic 2-forms ω_i satisfying
-   - dω = 0 (closed)
-   - d*ω = 0 (co-closed)
-   - Gram(ω) ≈ I₂₁ (orthonormal)
+- **H2 modes (21)**: Harmonic 2-forms omega_i satisfying
+  - d(omega) = 0 (closed)
+  - d*(omega) = 0 (co-closed)
+  - Gram(omega) ~ I_21 (orthonormal)
 
-2. **H³ modes (77)**: Harmonic 3-forms Φ_k satisfying
-   - dΦ = 0 (closed)
-   - d*Φ = 0 (co-closed)
-   - Gram(Φ) ≈ I₇₇ (orthonormal)
-   - G₂ compatibility (local modes ≈ phi structure)
+### Phase 2: H3 Training (77 Harmonic 3-Forms)
 
-### Phase 2: Yukawa Computation
+- **H3 modes (77 = 35 local + 42 global)**:
+  - d(Phi) = 0 (closed)
+  - d*(Phi) = 0 (co-closed)
+  - Gram(Phi) ~ I_77 (orthonormal)
+  - G2 compatibility for local modes
+
+### Phase 3: Yukawa Computation
 
 With proper harmonic bases:
 
 ```
-Y_ijk = ∫_{K7} ω_i ∧ ω_j ∧ Φ_k
+Y_ijk = integral_{K7} omega_i ^ omega_j ^ Phi_k
 ```
-
-### Phase 3: Spectral Verification
 
 Compute Gram matrix M = Y Y^T and check:
 - Does rank = 43?
@@ -44,11 +44,39 @@ Compute Gram matrix M = Y Y^T and check:
 
 ## Files
 
-- `config.json`: Configuration
-- `hodge_forms.py`: Network architectures for H² and H³
-- `train_hodge.py`: Training script
+| File | Description |
+|------|-------------|
+| `config.json` | Training configuration |
+| `hodge_forms.py` | H2Network, H3Network, loss functions |
+| `exterior_calculus.py` | d, d*, Hodge star, wedge product operators |
+| `yukawa_integral.py` | Yukawa tensor computation and analysis |
+| `train_hodge.py` | CLI training script |
+| `K7_Hodge_Pure_v1_9.ipynb` | **All-in-one Colab notebook** |
+
+## Colab Notebook Features
+
+The `K7_Hodge_Pure_v1_9.ipynb` notebook includes:
+
+- **Auto-resume**: Checkpoints saved every 500 epochs, automatic resume on restart
+- **Live visualization**: Training progress plots update in real-time
+- **Multi-format output**:
+  - `yukawa.npz`: Yukawa tensor, Gram matrix, eigenvalues
+  - `models.pt`: Trained H2 and H3 model weights
+  - `final_metrics.json`: Analysis summary
+  - `eigenvalues.csv`: Eigenvalue table
+  - `samples.npz`: Sample evaluations for further analysis
+  - `yukawa_spectrum.png`: Visualization
 
 ## Usage
+
+### Colab (Recommended)
+
+1. Upload `K7_Hodge_Pure_v1_9.ipynb` to Colab
+2. Upload `samples.npz` from v1.8 (or let it generate synthetic data)
+3. Run all cells
+4. Download outputs from `outputs_v1_9/`
+
+### Local
 
 ```bash
 # Full training
@@ -64,14 +92,21 @@ python train_hodge.py --phase yukawa
 
 If the theory is correct:
 - The Yukawa Gram matrix should have rank 43
-- The ratio sum(λ_visible) / sum(λ_hidden) should approach 3472/891 ≈ 3.897
+- The ratio sum(lambda_visible) / sum(lambda_hidden) should approach 3472/891
 - The 43/77 split becomes a geometric invariant, not imposed by hand
 
 ## Dependencies
 
-- v1.8 trained metric (from `../1_8/samples.npz`)
 - PyTorch
+- NumPy, Matplotlib
+- v1.8 trained metric (`../1_8/samples.npz`)
 
 ## Status
 
-**Scaffold ready** - Needs proper exterior calculus implementation for dω and d*ω.
+**READY FOR TRAINING**
+
+- Exterior calculus operators implemented (d, d*, Hodge star, wedge)
+- H2 and H3 networks with orthonormality constraints
+- Yukawa integral via Monte Carlo wedge product
+- Checkpointing and resume
+- Multi-format output export

@@ -1,0 +1,24 @@
+{
+  "geometry": {
+    "det_g_mean": 2.029670000076294,
+    "det_g_target": 2.03125
+  },
+  "training": {
+    "h2_epochs": 3000,
+    "h3_epochs": 5000,
+    "h2_final_loss": 1.792343340412117e-07,
+    "h3_final_loss": 0.02157316356897354
+  },
+  "yukawa": {
+    "n_visible": 20,
+    "gap_43_ratio": 4.3892217860275196e-08,
+    "tau_estimate": 0.0,
+    "tau_error_pct": Infinity,
+    "nonzero_count": 77,
+    "tau_target": 3.8967452300785634
+  },
+  "verdict": {
+    "43_77_confirmed": false,
+    "tau_emerged": false
+  }
+}
