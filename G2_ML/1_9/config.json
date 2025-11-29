@@ -1,0 +1,74 @@
+{
+  "version": "1.9",
+  "name": "Hodge Pure - Harmonic Forms on Fixed Metric",
+  "description": "Learn true H2 (21) and H3 (77) harmonic forms on the v1.8 calibrated metric",
+
+  "geometry": {
+    "dim": 7,
+    "coordinate_type": "TCS",
+    "has_neck": true,
+    "b2_K7": 21,
+    "b3_K7": 77,
+    "b3_local": 35,
+    "b3_global": 42,
+    "dim_G2": 14,
+    "p2": 2,
+    "target_det_g": 2.03125,
+    "target_kappa_T": 0.01639344262295082
+  },
+
+  "hodge": {
+    "phase": "hodge_only",
+    "freeze_metric": true,
+    "metric_source": "../1_8/samples.npz",
+
+    "h2_modes": {
+      "n_modes": 21,
+      "loss_weights": {
+        "closed": 1.0,
+        "coclosed": 1.0,
+        "orthonormality": 0.1
+      }
+    },
+
+    "h3_modes": {
+      "n_modes": 77,
+      "n_local": 35,
+      "n_global": 42,
+      "loss_weights": {
+        "closed": 1.0,
+        "coclosed": 1.0,
+        "orthonormality": 0.1,
+        "g2_compatibility": 0.5
+      }
+    }
+  },
+
+  "yukawa": {
+    "compute_after_hodge": true,
+    "integral_method": "monte_carlo",
+    "n_integration_points": 10000,
+    "gram_matrix_size": [77, 77],
+    "expected_rank": 43,
+    "tau_target": 3.8967452300785634
+  },
+
+  "training": {
+    "n_epochs_h2": 3000,
+    "n_epochs_h3": 5000,
+    "lr_h2": 0.001,
+    "lr_h3": 0.0005,
+    "batch_size": 2048,
+    "weight_decay": 1e-05,
+    "scheduler_patience": 300,
+    "scheduler_factor": 0.5,
+    "max_grad_norm": 1.0
+  },
+
+  "logging": {
+    "log_every": 100,
+    "save_checkpoints": true,
+    "checkpoint_dir": "outputs_v1_9/checkpoints",
+    "verbose": true
+  }
+}
