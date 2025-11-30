@@ -26,20 +26,19 @@
 1. `README.md` - Complete framework overview with quick start
 2. `STRUCTURE.md` - Repository navigation
 3. `CONTRIBUTING.md` - Scientific standards and contribution process
-4. `publications/gift_2_2_main.md` - Core theoretical paper (~1400 lines)
+4. `publications/markdown/gift_2_2_main.md` - Core theoretical paper (~1400 lines)
 
 ### Key Directories
 
 ```
 GIFT/
 ├── publications/           # Main theoretical documents (v2.2)
-│   ├── gift_2_2_main.md   # Core paper
-│   ├── summary.txt        # Executive summary
-│   ├── GIFT_v22_*.md      # Reference documents
-│   ├── READING_GUIDE.md   # Navigation guide
-│   ├── GLOSSARY.md        # Terminology
-│   ├── supplements/       # 7 detailed mathematical documents (S1-S7)
-│   └── *.ipynb            # Interactive notebooks
+│   ├── README.md          # Overview, reading guide, summary
+│   ├── markdown/          # Core paper + S1-S7 supplements
+│   ├── references/        # Observable reference docs
+│   ├── pdf/               # Generated PDFs
+│   ├── tex/               # LaTeX sources
+│   └── template/          # Document templates
 ├── tests/                 # Main test suite (pytest)
 │   ├── unit/             # Unit tests
 │   ├── integration/      # Integration tests
@@ -60,16 +59,8 @@ GIFT/
 
 ### Publication Structure
 
-**Main Documents** (`publications/`):
+**Main Documents** (`publications/markdown/`):
 - `gift_2_2_main.md` - Core theoretical framework with key results (~1400 lines)
-- `summary.txt` - Executive summary (5-minute read)
-- `GIFT_v22_Observable_Reference.md` - Complete 39-observable catalog
-- `GIFT_v22_Geometric_Justifications.md` - Geometric derivation details
-- `GIFT_v22_Statistical_Validation.md` - Statistical validation methods
-- `READING_GUIDE.md` - Navigation by time and interest
-- `GLOSSARY.md` - Terminology definitions
-
-**Supplements** (`publications/supplements/`):
 - `S1_mathematical_architecture.md` - E₈ structure, K₇ manifold, cohomology
 - `S2_K7_manifold_construction.md` - TCS construction, G₂ holonomy, ML metrics
 - `S3_torsional_dynamics.md` - Torsion tensor, geodesic flow, RG connection
@@ -77,6 +68,16 @@ GIFT/
 - `S5_experimental_validation.md` - Data comparison, falsification protocol
 - `S6_theoretical_extensions.md` - Quantum gravity, information theory, speculative
 - `S7_dimensional_observables.md` - Absolute masses, scale bridge, cosmology
+
+**Reference Documents** (`publications/references/`):
+- `GIFT_v22_Observable_Reference.md` - Complete 39-observable catalog
+- `GIFT_v22_Geometric_Justifications.md` - Geometric derivation details
+- `GIFT_v22_Statistical_Validation.md` - Statistical validation methods
+
+**Overview** (`publications/README.md`):
+- Executive summary (5-minute read)
+- Reading guide by time and interest
+- Quick reference navigation
 
 **Computational** (`assets/visualizations/`):
 - `e8_root_system_3d.ipynb` - E8 240-root 3D visualization
@@ -108,8 +109,8 @@ G2_ML/[version]/
 **Entry points for different audiences**:
 - Quick overview: `README.md`
 - Navigation: `STRUCTURE.md`
-- Scientific details: `publications/gift_2_2_main.md`
-- Mathematical rigor: `publications/supplements/S4_complete_derivations.md`
+- Scientific details: `publications/markdown/gift_2_2_main.md`
+- Mathematical rigor: `publications/markdown/S4_complete_derivations.md`
 - Experimental validation: `docs/EXPERIMENTAL_VALIDATION.md`
 - Definitions: `docs/GLOSSARY.md`
 - Common questions: `docs/FAQ.md`
@@ -198,7 +199,7 @@ G2_ML/[version]/
 
 ### Notation and Mathematical Conventions
 
-**Follow** `publications/gift_2_2_main.md` Section 1.4 and `docs/GLOSSARY.md`:
+**Follow** `publications/markdown/gift_2_2_main.md` Section 1.4 and `docs/GLOSSARY.md`:
 
 - E₈: Exceptional Lie algebra (dim 248)
 - K₇: Compact 7-dimensional manifold with G₂ holonomy
@@ -256,7 +257,7 @@ G2_ML/[version]/
 - Equations: `(#eq:delta-cp)`
 - Figures: `{#fig:e8-roots}`
 - Sections: `(#sec:foundations)`
-- External docs: `[Supplement S4](publications/supplements/S4_complete_derivations.md)`
+- External docs: `[Supplement S4](publications/markdown/S4_complete_derivations.md)`
 
 ### Jupyter Notebooks
 
@@ -361,15 +362,15 @@ python -m assets.agents.cli canonical     # Canonical monitor
 
 **To understand GIFT fundamentals**:
 1. Read `README.md` - Overview and key results
-2. Read `publications/summary.txt` - 5-minute executive summary
-3. Review `publications/gift_2_2_main.md` Sections 1-4
+2. Read `publications/README.md` - 5-minute executive summary
+3. Review `publications/markdown/gift_2_2_main.md` Sections 1-4
 4. Check `docs/GLOSSARY.md` for unfamiliar terms
 5. Explore `docs/FAQ.md` for common questions
 
 **To understand specific predictions**:
-1. Check `publications/gift_2_2_main.md` Section 8 (summary tables)
-2. Read detailed derivations in `publications/supplements/S4_complete_derivations.md`
-3. Review mathematical foundations in `publications/supplements/S1_mathematical_architecture.md`
+1. Check `publications/markdown/gift_2_2_main.md` Section 8 (summary tables)
+2. Read detailed derivations in `publications/markdown/S4_complete_derivations.md`
+3. Review mathematical foundations in `publications/markdown/S1_mathematical_architecture.md`
 4. Check experimental status in `docs/EXPERIMENTAL_VALIDATION.md`
 
 ### Making Changes
@@ -377,7 +378,7 @@ python -m assets.agents.cli canonical     # Canonical monitor
 **Adding new predictions**:
 1. Derive from geometric structure with clear status classification
 2. Add to appropriate supplement (usually Supplement S4)
-3. Update summary in `publications/gift_2_2_main.md` Section 8
+3. Update summary in `publications/markdown/gift_2_2_main.md` Section 8
 4. Verify numerically in notebook
 5. Compare with experiment in Supplement S5
 6. Update `CHANGELOG.md`
@@ -419,7 +420,7 @@ python -m assets.agents.cli canonical     # Canonical monitor
 **When new measurements appear**:
 1. Update experimental values in relevant supplements
 2. Recalculate deviations
-3. Update tables in `publications/gift_2_2_main.md` Section 8
+3. Update tables in `publications/markdown/gift_2_2_main.md` Section 8
 4. Update precision metrics in `README.md`
 5. Check `docs/EXPERIMENTAL_VALIDATION.md`
 6. Re-run statistical validation if needed
@@ -653,7 +654,7 @@ pip install -r requirements.txt
 
 ### Zero-Parameter Paradigm
 
-Version 2.2 achieves structural determination: all quantities derive from fixed topological structure with **no continuous adjustable parameters** (see `publications/gift_2_2_main.md` Section 1.4).
+Version 2.2 achieves structural determination: all quantities derive from fixed topological structure with **no continuous adjustable parameters** (see `publications/markdown/gift_2_2_main.md` Section 1.4).
 
 **Structural inputs** (discrete mathematical choices):
 - E₈×E₈ gauge group (dimension 496)

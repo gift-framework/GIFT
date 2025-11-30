@@ -156,7 +156,7 @@ This positions the work as:
 ## References
 
 - Joyce (2000): "Compact Manifolds with Special Holonomy"
-- GIFT v2.2: `publications/gift_2_2_main.md`
+- GIFT v2.2: `publications/markdown/gift_2_2_main.md`
 - K7 Deformation Atlas: `G2_ML/meta_hodge/K7_DEFORMATION_ATLAS.md`
 
 ## Version History

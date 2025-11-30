@@ -7,13 +7,9 @@ Quick reference for finding specific content in the GIFT framework.
 ```
 gift/
 ├── publications/                      # Theoretical documents
-│   ├── gift_2_2_main.md              # Core paper (~1400 lines)
-│   ├── summary.txt                   # Executive summary (5 min)
-│   ├── READING_GUIDE.md              # Navigation by time/interest
-│   ├── GIFT_v22_Observable_Reference.md
-│   ├── GIFT_v22_Geometric_Justifications.md
-│   ├── GIFT_v22_Statistical_Validation.md
-│   ├── supplements/                  # Mathematical details
+│   ├── README.md                     # Overview, reading guide, summary
+│   ├── markdown/                     # Main documents
+│   │   ├── gift_2_2_main.md         # Core paper (~1400 lines)
 │   │   ├── S1_mathematical_architecture.md   # E₈, K₇, cohomology
 │   │   ├── S2_K7_manifold_construction.md    # TCS, G₂, ML metrics
 │   │   ├── S3_torsional_dynamics.md          # Geodesics, RG flow
@@ -21,6 +17,10 @@ gift/
 │   │   ├── S5_experimental_validation.md     # Data, falsification
 │   │   ├── S6_theoretical_extensions.md      # QG, info theory
 │   │   └── S7_dimensional_observables.md     # Masses, cosmology
+│   ├── references/                   # Quick reference documents
+│   │   ├── GIFT_v22_Observable_Reference.md
+│   │   ├── GIFT_v22_Geometric_Justifications.md
+│   │   └── GIFT_v22_Statistical_Validation.md
 │   ├── tex/                          # LaTeX sources
 │   └── pdf/                          # Generated PDFs
 │
@@ -31,14 +31,14 @@ gift/
 │   ├── EXPERIMENTAL_VALIDATION.md    # Current status
 │   └── tests/                        # Test documentation
 │
-├── assets/visualizations/            # Interactive notebooks
-│   ├── precision_dashboard.ipynb     # 39 observables vs experiment
-│   ├── e8_root_system_3d.ipynb      # 240-root visualization
-│   └── dimensional_reduction_flow.ipynb
+├── assets/                           # Tools and resources
+│   ├── visualizations/              # Interactive notebooks
+│   ├── agents/                      # Automated verification tools
+│   └── documents_template/          # LaTeX/Quarto templates
 │
 ├── statistical_validation/           # Monte Carlo tools
 ├── G2_ML/                           # Neural network for K₇
-├── tests/                           # pytest suite
+├── tests/                           # pytest suite + test guides
 └── legacy/                          # v1, v2.0, v2.1 archives
 ```
 
@@ -47,13 +47,13 @@ gift/
 | Looking for... | Go to |
 |----------------|-------|
 | Framework overview | `README.md` |
-| 5-minute summary | `publications/summary.txt` |
-| Complete theory | `publications/gift_2_2_main.md` |
-| All 39 observables | `publications/GIFT_v22_Observable_Reference.md` |
-| Proofs (13 exact relations) | `publications/supplements/S4_complete_derivations.md` |
-| Experimental comparison | `publications/supplements/S5_experimental_validation.md` |
-| Falsification criteria | `publications/supplements/S5_experimental_validation.md` |
-| Mathematical foundations | `publications/supplements/S1_mathematical_architecture.md` |
+| 5-minute summary | `publications/README.md` |
+| Complete theory | `publications/markdown/gift_2_2_main.md` |
+| All 39 observables | `publications/references/GIFT_v22_Observable_Reference.md` |
+| Proofs (13 exact relations) | `publications/markdown/S4_complete_derivations.md` |
+| Experimental comparison | `publications/markdown/S5_experimental_validation.md` |
+| Falsification criteria | `publications/markdown/S5_experimental_validation.md` |
+| Mathematical foundations | `publications/markdown/S1_mathematical_architecture.md` |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Common questions | `docs/FAQ.md` |
 | Interactive visualizations | `assets/visualizations/` |

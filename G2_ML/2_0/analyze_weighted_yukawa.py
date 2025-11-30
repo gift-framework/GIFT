@@ -322,8 +322,8 @@ def main():
     parser.add_argument('--sigma', type=float, default=0.3, help='Neck bump sigma')
     parser.add_argument('--offset', type=float, default=0.2, help='Base offset')
     parser.add_argument('--asymmetry', type=float, default=0.0, help='Left/right asymmetry')
-    parser.add_argument('--model-path', type=str, default='outputs_v2_0/models.pt', help='Path to models')
-    parser.add_argument('--data-path', type=str, default='outputs_v2_0/samples.npz', help='Path to samples')
+    parser.add_argument('--model-path', type=str, default='models.pt', help='Path to models')
+    parser.add_argument('--data-path', type=str, default='samples.npz', help='Path to samples')
     args = parser.parse_args()
 
     print("="*60)

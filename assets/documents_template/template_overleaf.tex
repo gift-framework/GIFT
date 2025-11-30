@@ -1,0 +1,280 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================
+% ENCODING & FONTS
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% ============================================
+% PAGE LAYOUT (Golden Ratio)
+% ============================================
+\usepackage[margin=1.618cm, top=2.618cm, bottom=2.618cm]{geometry}
+
+% ============================================
+% ESSENTIAL PACKAGES
+% ============================================
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{graphicx}
+\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
+
+% ============================================
+% HEADER/FOOTER CONFIGURATION
+% ============================================
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Your Document Title}  % Modify this
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+% ============================================
+% HYPERREF CONFIGURATION
+% ============================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={Your Document Title},  % Modify this
+    pdfauthor={Your Name}  % Modify this
+}
+
+% ============================================
+% SPACING AND FORMATTING
+% ============================================
+\setstretch{1.2}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+
+% ============================================
+% TITLE FORMATTING
+% ============================================
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
+
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Gtwo}{\mathrm{G}_2}
+\newcommand{\Kseven}{K_7}
+\newcommand{\AdS}{\mathrm{AdS}}
+\newcommand{\dimE}{\mathrm{dim}}
+\newcommand{\Weyl}{\mathrm{Weyl}}
+\newcommand{\rk}{\mathrm{rank}}
+\newcommand{\SM}{\mathrm{SM}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Der}{\mathrm{Der}}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\Ric}{\mathrm{Ric}}
+\newcommand{\Riem}{\mathrm{Riem}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\Det}{\mathrm{det}}
+\newcommand{\Index}{\mathrm{Index}}
+\newcommand{\CP}{\mathrm{CP}}
+\newcommand{\GIFT}{\mathrm{GIFT}}
+\newcommand{\EW}{\mathrm{EW}}
+\newcommand{\Pl}{\mathrm{Pl}}
+\newcommand{\DE}{\mathrm{DE}}
+\newcommand{\proven}{\textsc{Proven}}
+\newcommand{\topological}{\textsc{Topological}}
+\newcommand{\derived}{\textsc{Derived}}
+\newcommand{\theoretical}{\textsc{Theoretical}}
+\newcommand{\phenomenological}{\textsc{Phenomenological}}
+
+\pdfstringdefDisableCommands{%
+  \def\textsubscript#1{#1}%
+  \def\textsuperscript#1{#1}%
+  \def\CP{CP}%
+  \def\Gtwo{G2}%
+  \def\Kseven{K7}%
+  \def\GIFT{GIFT}%
+  \def\E{E}%
+  \def\AdS{AdS}%
+  \def\dimE{dim}%
+  \def\Weyl{Weyl}%
+  \def\rk{rank}%
+  \def\SM{SM}%
+  \def\SU{SU}%
+  \def\SO{SO}%
+  \def\U{U}%
+  \def\Spin{Spin}%
+  \def\Sp{Sp}%
+  \def\Aut{Aut}%
+  \def\Der{Der}%
+  \def\Vol{Vol}%
+  \def\Ric{Ric}%
+  \def\Riem{Riem}%
+  \def\Tr{Tr}%
+  \def\Det{det}%
+  \def\Index{Index}%
+  \def\EW{EW}%
+  \def\Pl{Pl}%
+  \def\DE{DE}%
+  \def\proven{Proven}%
+  \def\topological{Topological}%
+  \def\derived{Derived}%
+  \def\theoretical{Theoretical}%
+  \def\phenomenological{Phenomenological}%
+}
+
+% ============================================
+% TITLE PAGE SETUP
+% ============================================
+\title{%
+\LARGE\textbf{Your Main Title Here:\\
+Optional Subtitle}
+}
+\author{}
+\date{}
+
+% ============================================
+% DOCUMENT START
+% ============================================
+\begin{document}
+
+% ============================================
+% TITLE PAGE WITH CUSTOM LAYOUT
+% ============================================
+\maketitle
+\noindent\rule{\textwidth}{0.2pt}
+
+\vspace{0.5em}
+
+{Your Name\\
+Your Affiliation\\
+your.email@example.com}
+
+\vfill
+
+\begin{abstract}
+Your abstract text goes here. This template provides a clean, professional layout with golden ratio-based margins, proper spacing, and header/footer configuration. It is designed to be simple and compatible with Markdown or Quarto markdown workflows.
+
+\vspace{0.5em}
+
+\textbf{Keywords}: keyword1, keyword2, keyword3
+\end{abstract}
+
+\vfill
+
+\noindent\rule{\textwidth}{0.2pt}
+
+\newpage
+
+% ============================================
+% TABLE OF CONTENTS (Optional)
+% ============================================
+\tableofcontents
+\newpage
+
+% ============================================
+% MAIN CONTENT
+% ============================================
+
+\section{Introduction}
+
+Your content begins here. This template maintains consistent spacing and professional formatting throughout.
+
+\subsection{Subsection Example}
+
+Example text with mathematical notation: $E = mc^2$
+
+Block equation example:
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\end{equation}
+
+\subsection{Lists and Formatting}
+
+Itemized list:
+\begin{itemize}
+    \item First item
+    \item Second item
+    \item Third item
+\end{itemize}
+
+Enumerated list:
+\begin{enumerate}
+    \item First point
+    \item Second point
+    \item Third point
+\end{enumerate}
+
+\section{Tables and Figures}
+
+\subsection{Table Example}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
+\midrule
+Data 1 & Data 2 & Data 3 \\
+Data 4 & Data 5 & Data 6 \\
+\bottomrule
+\end{tabular}
+\caption{Example table with booktabs formatting}
+\end{table}
+
+\subsection{Figure Example}
+
+\begin{figure}[H]
+\centering
+% \includegraphics[width=0.8\textwidth]{your-figure.png}
+\caption{Example figure caption}
+\end{figure}
+
+\section{Citations and References}
+
+Example citation reference \cite{example2024}.
+
+\section{Conclusion}
+
+Your concluding remarks go here.
+
+% ============================================
+% BIBLIOGRAPHY (Optional)
+% ============================================
+\begin{thebibliography}{99}
+
+\bibitem{example2024}
+Author, A. (2024). Title of the work. \emph{Journal Name}, Volume(Issue), pages.
+
+\end{thebibliography}
+
+% ============================================
+% APPENDICES (Optional)
+% ============================================
+% \appendix
+% \section{Appendix Title}
+% Appendix content here.
+
+\end{document}
+

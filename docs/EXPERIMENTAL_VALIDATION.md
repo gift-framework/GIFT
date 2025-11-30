@@ -438,8 +438,8 @@ The coming decade will provide definitive tests, particularly the DUNE measureme
 
 ---
 
-For detailed derivations: See `publications/supplements/`
-For falsification criteria: See `publications/supplements/S5_experimental_validation.md`
+For detailed derivations: See `publications/markdown/`
+For falsification criteria: See `publications/markdown/S5_experimental_validation.md`
 For questions: See `docs/FAQ.md` or open an issue
 
 **Repository**: https://github.com/gift-framework/GIFT
