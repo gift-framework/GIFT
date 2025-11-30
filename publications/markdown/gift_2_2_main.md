@@ -314,14 +314,17 @@ where g_{eπ} varies slowly with position, maintaining approximate constancy ove
 
 **Physical interpretation**: Off-diagonal terms represent geometric cross-couplings manifesting as physical sector interactions.
 
-**Certified PINN results** (see Supplement S2):
+**Certified PINN cross-checks** (see Supplement S2):
 
-| Quantity | Target | Achieved | Status |
-|----------|--------|----------|--------|
-| det(g) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
+| Quantity | Topological Target | PINN Result | Status |
+|----------|-------------------|-------------|--------|
+| det(g) | 65/32 (TOPOLOGICAL) | 2.0312490 ± 0.0001 | CERTIFIED |
+| b₃ | 77 (TOPOLOGICAL) | 76 (spectral, Δ=1) | NUMERICAL |
 | \|\|T\|\| | < ε₀ | 0.00140 | CERTIFIED |
 | λ_min(g) | > 0 | 1.078 | CERTIFIED |
 | Joyce margin | > 1 | 20× | PROVEN (Lean) |
+
+The TCS construction fixes topological values exactly; PINN provides independent numerical cross-checks.
 
 Architecture: Fourier features (64 dim) + 4×256 hidden layers (SiLU), ~200k parameters.
 

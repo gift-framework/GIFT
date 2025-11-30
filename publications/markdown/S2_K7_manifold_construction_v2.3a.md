@@ -16,13 +16,17 @@ We establish existence of a G₂ holonomy metric on a compact 7-manifold K₇ wi
 
 3. **Formal certification**: Lean 4 theorem prover verifies that Joyce's perturbation theorem applies, with 20× safety margin below the torsion threshold.
 
+The Betti numbers b₂ = 21 and b₃ = 77 are fixed by the TCS construction (topological); the PINN reconstruction recovers b₂ exactly and b₃ within one mode via spectral analysis.
+
 **Summary of achievements**:
 
 | Property | Target | Achieved | Status |
 |----------|--------|----------|--------|
-| b₂(K₇) | 21 | 21 | TOPOLOGICAL |
-| b₃(K₇) | 77 | 76 ± 1 | TOPOLOGICAL |
-| det(g) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
+| b₂(K₇) | 21 (TCS) | 21 | TOPOLOGICAL |
+| b₃(K₇) (topological) | 77 (TCS) | — | TOPOLOGICAL |
+| b₃(K₇) (spectral estimate) | 77 | 76 (Δ = 1 mode) | NUMERICAL |
+| det(g) (formula) | 65/32 | — | TOPOLOGICAL |
+| det(g) (PINN) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
 | ||T|| | < ε₀ | 0.00140 | CERTIFIED |
 | Joyce margin | > 1 | 20× | PROVEN |
 
@@ -173,14 +177,19 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 
 ### 3.3 Metric Determinant det(g) = 65/32
 
-**Primary derivation**:
+**Stage 1: Topological formula** (exact target):
 $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^{\text{Weyl}}} = \frac{5 \times 13}{32} = \frac{65}{32}$$
 
 **Alternative derivations** (all equivalent):
 - det(g) = p₂ + 1/(b₂ + dim(G₂) - N_gen) = 2 + 1/32 = 65/32
 - det(g) = (H* - b₂ - 13)/32 = (99 - 21 - 13)/32 = 65/32
 
-**Status**: TOPOLOGICAL
+**Status**: TOPOLOGICAL (exact rational value)
+
+**Stage 2: Numerical certification** (see Section 6.2):
+The PINN achieves det(g) = 2.0312490 ± 0.0001, matching the topological target 65/32 = 2.03125 to 0.00005% precision.
+
+**Status**: CERTIFIED (interval arithmetic verification)
 
 ---
 
@@ -277,11 +286,13 @@ Total: ~10,000 epochs on standard GPU hardware.
 
 | Property | Target | Achieved | Status |
 |----------|--------|----------|--------|
-| det(g) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
+| det(g) (topological) | 65/32 | — | TOPOLOGICAL |
+| det(g) (PINN) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
 | ||T|| | < ε₀ | 0.00140 | CERTIFIED |
 | λ_min(g) | > 0 | 1.078 | CERTIFIED |
-| b₂ effective | 21 | 21 | NUMERICAL |
-| b₃ effective | 77 | 76 ± 1 | NUMERICAL |
+| b₂ (spectral) | 21 | 21 | NUMERICAL |
+| b₃ (topological) | 77 (TCS) | — | TOPOLOGICAL |
+| b₃ (spectral) | 77 | 76 (Δ = 1 mode) | NUMERICAL |
 
 ### 6.2 Determinant Verification
 
@@ -424,7 +435,7 @@ By Joyce's theorem, since ||T(φ_num)|| = 0.00140 < 0.0288 = ε₀ with 20× mar
 ### 9.1 Theorem Statement
 
 **Theorem (K₇ G₂ Existence)**:
-There exists a compact 7-manifold K₇ with:
+Under the hypotheses of Joyce's Theorem 11.6.1 (taken as an axiom in the Lean formalization), there exists a compact 7-manifold K₇ with:
 1. Holonomy exactly G₂
 2. Betti numbers (b₂, b₃) = (21, 77)
 3. Metric determinant det(g) = 65/32
@@ -447,17 +458,20 @@ There exists a compact 7-manifold K₇ with:
 │              K₇ EXISTENCE CERTIFICATE                       │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  PROVEN (Lean kernel-verified):                            │
-│    - ||T|| = 0.00140 < 0.0288 = ε₀                        │
-│    - Safety margin: 20×                                    │
-│    - det(g) = 65/32 ± 0.0001%                             │
-│    - g positive definite (λ_min = 1.078)                  │
-│    - Exists φ_tf : torsion_norm φ_tf = 0                  │
+│  TOPOLOGICAL (exact, from TCS construction):               │
+│    - b₂ = 21, b₃ = 77 (Mayer-Vietoris)                    │
+│    - det(g) = 65/32 (topological formula)                 │
+│    - H* = 99, χ(K₇) = 0                                   │
 │                                                             │
-│  TOPOLOGICAL (exact):                                       │
-│    - b₂ = 21, b₃ = 77                                     │
-│    - H* = 99                                               │
-│    - χ(K₇) = 0                                            │
+│  CERTIFIED (PINN + interval arithmetic):                   │
+│    - det(g) = 2.0312490 ± 0.0001 (matches 65/32)          │
+│    - ||T|| = 0.00140 < 0.0288 = ε₀                        │
+│    - g positive definite (λ_min = 1.078)                  │
+│    - b₃ spectral estimate: 76 (Δ = 1 mode from 77)        │
+│                                                             │
+│  PROVEN (Lean kernel-verified):                            │
+│    - Safety margin: 20×                                    │
+│    - Exists φ_tf : torsion_norm φ_tf = 0                  │
 │                                                             │
 │  AXIOMS (external mathematics):                            │
 │    - Joyce Theorem 11.6.1                                  │
@@ -586,23 +600,25 @@ lake build
 
 This supplement demonstrates G₂ metric existence on K₇ through variational methods with formal verification:
 
-**Topological achievements**:
-- b₂ = 21, b₃ = 77 from Mayer-Vietoris (TOPOLOGICAL)
-- Local/global decomposition: 35 + 42 = 77 (TOPOLOGICAL)
-- H* = 99 effective cohomological dimension (TOPOLOGICAL)
+**Topological achievements** (exact, from TCS construction):
+- b₂ = 21, b₃ = 77 from Mayer-Vietoris — TOPOLOGICAL
+- det(g) = 65/32 from topological formula — TOPOLOGICAL
+- Local/global decomposition: 35 + 42 = 77 — TOPOLOGICAL
+- H* = 99 effective cohomological dimension — TOPOLOGICAL
 
-**Numerical validation**:
-- det(g) = 2.0312490 ± 0.0001 (0.00005% from 65/32) — CERTIFIED
+**Numerical cross-checks** (PINN reconstruction):
+- det(g) = 2.0312490 ± 0.0001 matches topological 65/32 — CERTIFIED
 - ||T|| = 0.00140 with 20× margin below Joyce threshold — CERTIFIED
-- Spectral gap at b₃ ≈ 77 with 29.7× magnitude — NUMERICAL
+- b₂ spectral: 21 (exact match) — NUMERICAL
+- b₃ spectral: 76 (Δ = 1 mode from topological 77) — NUMERICAL
 
 **Formal certification**:
 - Lean 4 verifies Joyce theorem applicability — PROVEN
 - All numerical bounds machine-checked — PROVEN
-- Existence of torsion-free G₂ structure guaranteed — PROVEN
+- Existence of torsion-free G₂ structure guaranteed (conditional on Joyce axiom) — PROVEN
 
 **GIFT paradigm validation**:
-The construction validates the zero continuous adjustable parameter paradigm. All targets (det(g) = 65/32, κ_T = 1/61, b₂ = 21, b₃ = 77) derive from fixed mathematical structure. The neural network confirms these predictions rather than discovering them through unconstrained optimization.
+The construction validates the zero continuous adjustable parameter paradigm. All targets (det(g) = 65/32, κ_T = 1/61, b₂ = 21, b₃ = 77) derive from fixed mathematical structure. The TCS construction fixes these values exactly; the neural network provides independent numerical cross-checks rather than discovering the values through unconstrained optimization.
 
 ---
 

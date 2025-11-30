@@ -193,12 +193,15 @@ This variational formulation inverts the classical approach: constraints are inp
 
 | Property | Status | Evidence |
 |----------|--------|----------|
-| (b₂, b₃) = (21, 77) | TOPOLOGICAL | Mayer-Vietoris |
-| det(g) = 65/32 | CERTIFIED | PINN + interval arithmetic |
+| b₂ = 21 | TOPOLOGICAL | Mayer-Vietoris (TCS) |
+| b₃ = 77 | TOPOLOGICAL | Mayer-Vietoris (TCS) |
+| b₃ spectral estimate | NUMERICAL | 76 (Δ=1 mode from 77) |
+| det(g) = 65/32 | TOPOLOGICAL | Exact rational formula |
+| det(g) PINN cross-check | CERTIFIED | 2.0312490 ± 0.0001 |
 | \|\|T\|\| < ε₀ | CERTIFIED | 20× margin |
-| ∃ φ_tf (torsion-free) | PROVEN (Lean) | Joyce + formal verification |
+| ∃ φ_tf (torsion-free) | PROVEN (Lean) | Joyce axiom + formal verification |
 
-See Supplement S2 for complete construction and certification.
+The TCS construction fixes topological values exactly; PINN cross-checks provide numerical confirmation. See Supplement S2 for complete construction and certification.
 
 ---
 
