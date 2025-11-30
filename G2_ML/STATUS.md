@@ -2,17 +2,20 @@
 
 ## Quick Summary
 
-**Completion**: 93% ✅
+**Completion**: 93% (classic approach) + new paradigm in progress
 **Latest Version**: 0.9a (b₂=21), 0.8 (Yukawa)
-**Last Update**: 2025-11-16
+**New Paradigm**: variational_g2 (constraints-first PINN approach)
+**Last Update**: 2025-11-30
 
 | Component | Status | Version | Completion |
 |-----------|--------|---------|------------|
 | b₂=21 Harmonic 2-Forms | ✅ **Complete** | 0.7, 0.9a | 100% |
 | b₃=77 Harmonic 3-Forms | 🔶 **Partial** | 0.8 (n=20/77) | 26% |
 | Yukawa Tensor | ✅ **Complete** | 0.8 | 100% |
+| Variational G2 (PINN) | 🔨 **WIP** | variational_g2 | ~70% |
+| Meta-Hodge Pipeline | ✅ **Complete** | meta_hodge | 100% |
+| TCS Global Modes | ✅ **Complete** | tcs_joyce | 100% |
 | Hyperparameter Optimization | 📋 **Planned** | Future | 0% |
-| Documentation | ✅ **Complete** | All versions | 100% |
 
 ## What Works Now
 
@@ -106,21 +109,45 @@
 
 **Status**: Planned, awaiting full b₃=77 completion
 
+## New Paradigm: Constraints-First Approach
+
+### The Shift
+
+The classic approach (v0.x-1.x) tried to "learn" a TCS/Joyce metric and verify GIFT constraints emerge.
+**Problem**: 42 global modes were artificial (polynomials/trig), only 35 local modes coupled to Yukawa.
+
+The **new paradigm** (variational_g2, 2.x) inverts this:
+- GIFT constraints (det(g)=65/32, kappa_T=1/61, b₂=21, b₃=77) are **inputs**
+- The metric is the **emergent output**
+- No TCS/Joyce assumption - geometry emerges from constraints
+
+### Current Results (variational_g2)
+
+`outputs/rigorous_certificate.json`:
+- **det(g) = 65/32** verified to 1.5e-13% relative error
+- **Metric positivity**: min eigenvalue = 1.096
+- **Torsion**: ||T(phi)|| <= 0.0355 < 0.1 (heuristic)
+- **Status**: NUMERICALLY_PROMISING
+
+Next: Strengthen numerical certificate toward rigorous proof.
+
+---
+
 ## Version History
 
 | Version | Date | Focus | Status |
 |---------|------|-------|--------|
-| 0.1 | 2025-09 | Initial prototype | Archived |
-| 0.2 | 2025-09 | Architecture refinement | Archived |
-| 0.3 | 2025-10 | Loss function improvements | Archived |
-| 0.4 | 2025-10 | Curriculum learning | Archived |
-| 0.5 | 2025-10 | b₃ exploration (preliminary) | Archived |
-| 0.6 | 2025-11 | Enhanced validation | Archived |
+| 0.1-0.6c | 2025-09/11 | Early development | Archived* |
 | **0.7** | **2025-11** | **b₂=21 completion** | **Production** ✅ |
 | **0.8** | **2025-11** | **Yukawa + partial b₃ (20/77)** | **Complete** ✅ |
 | 0.9a | 2025-11 | Latest refinements | Production ✅ |
 | 0.9b | 2025-11 | Full b₃=77 extraction | **Training** 🔨 |
-| 1.0 | Future | Complete framework | Target 🎯 |
+| 1.x series | 2025-11 | Extended exploration | Milestones kept |
+| **variational_g2** | **2025-11** | **Constraints-first PINN** | **WIP** 🔨 |
+| meta_hodge | 2025-11 | Cross-version analysis | Complete ✅ |
+| tcs_joyce | 2025-11 | TCS global modes | Complete ✅ |
+
+*Archived versions moved to `archived/` folder. See `archived/README.md`.
 
 ## Budget Status
 
@@ -304,7 +331,7 @@ Key packages:
 ---
 
 **Status**: Active development
-**Version**: 0.9a (production b₂), 0.8 (Yukawa complete), 0.9b (b₃ training)
-**Last Updated**: 2025-11-16
+**Version**: 0.9a (production b₂), 0.8 (Yukawa), variational_g2 (new paradigm)
+**Last Updated**: 2025-11-30
 **Framework**: GIFT v2.2.0
 **License**: MIT
