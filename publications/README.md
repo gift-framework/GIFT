@@ -89,8 +89,7 @@ publications/
 │   ├── GIFT_v22_Geometric_Justifications.md
 │   └── GIFT_v22_Statistical_Validation.md
 ├── pdf/                                   # Generated PDFs
-├── tex/                                   # LaTeX sources
-└── template/                              # Document templates
+└── tex/                                   # LaTeX sources
 ```
 
 ---
