@@ -34,7 +34,7 @@ print("INVESTIGATION: Missing Mode in b3 = 76")
 print("="*60)
 
 # === Test 1: Original sin/cos modulation ===
-print("\n[1] Original: sin(πλ) / cos(πλ)")
+print("\n[1] Original: sin(pi*lam) / cos(pi*lam)")
 s1_plus_orig = np.sin(np.pi * lam)[:, None]
 s1_minus_orig = np.cos(np.pi * lam)[:, None]
 
@@ -51,11 +51,11 @@ print(f"  Effective rank: {rank_orig}")
 print(f"  Smallest 5 singular values: {S[-5:]}")
 
 # Issue: sin(π*0) = 0 and sin(π*1) = 0!
-print(f"\n  Problem: sin(π×0) = {np.sin(0):.4f}, sin(π×1) = {np.sin(np.pi):.6f}")
+print(f"\n  Problem: sin(pi*0) = {np.sin(0):.4f}, sin(pi*1) = {np.sin(np.pi):.6f}")
 print(f"  The sin term vanishes at BOTH endpoints!")
 
 # === Test 2: Shifted sin/cos ===
-print("\n[2] Shifted: sin(π(λ+0.5)) / cos(π(λ+0.5))")
+print("\n[2] Shifted: sin(pi*(lam+0.5)) / cos(pi*(lam+0.5))")
 s1_plus_shift = np.sin(np.pi * (lam + 0.5))[:, None]
 s1_minus_shift = np.cos(np.pi * (lam + 0.5))[:, None]
 
@@ -67,8 +67,8 @@ U, S, Vh = np.linalg.svd(basis_shift - basis_shift.mean(axis=0), full_matrices=F
 rank_shift = np.sum(S > 1e-6 * S[0])
 print(f"  Effective rank: {rank_shift}")
 
-# === Test 3: Linear modulation (1-λ) / λ ===
-print("\n[3] Linear: (1-λ) for X+, λ for X-")
+# === Test 3: Linear modulation (1-lam) / lam ===
+print("\n[3] Linear: (1-lam) for X+, lam for X-")
 s1_plus_lin = (1 - lam)[:, None]
 s1_minus_lin = lam[:, None]
 
@@ -81,7 +81,7 @@ rank_lin = np.sum(S > 1e-6 * S[0])
 print(f"  Effective rank: {rank_lin}")
 
 # === Test 4: Half-period sin/cos ===
-print("\n[4] Half-period: sin(πλ/2) / cos(πλ/2)")
+print("\n[4] Half-period: sin(pi*lam/2) / cos(pi*lam/2)")
 s1_plus_half = np.sin(np.pi * lam / 2)[:, None]
 s1_minus_half = np.cos(np.pi * lam / 2)[:, None]
 
@@ -94,7 +94,7 @@ rank_half = np.sum(S > 1e-6 * S[0])
 print(f"  Effective rank: {rank_half}")
 
 # === Test 5: Different frequencies for X+ and X- ===
-print("\n[5] Mixed frequencies: sin(πλ) / sin(2πλ)")
+print("\n[5] Mixed frequencies: sin(pi*lam) / sin(2*pi*lam)")
 s1_plus_mix = np.sin(np.pi * lam)[:, None]
 s1_minus_mix = np.sin(2 * np.pi * lam)[:, None]
 
@@ -111,13 +111,13 @@ print("\n" + "="*60)
 print("SUMMARY")
 print("="*60)
 print(f"""
-Modulation          | Rank | Target
---------------------|------|-------
-sin(πλ)/cos(πλ)     | {rank_orig:4d} |   77
-sin(π(λ+0.5))/cos   | {rank_shift:4d} |   77
-(1-λ)/λ linear      | {rank_lin:4d} |   77
-sin(πλ/2)/cos       | {rank_half:4d} |   77
-sin(πλ)/sin(2πλ)    | {rank_mix:4d} |   77
+Modulation             | Rank | Target
+-----------------------|------|-------
+sin(pi*lam)/cos        | {rank_orig:4d} |   77
+sin(pi*(lam+0.5))/cos  | {rank_shift:4d} |   77
+(1-lam)/lam linear     | {rank_lin:4d} |   77
+sin(pi*lam/2)/cos      | {rank_half:4d} |   77
+sin(pi*lam)/sin(2pi)   | {rank_mix:4d} |   77
 """)
 
 # Check which one gives 77
