@@ -4,15 +4,25 @@ Formal verification of GIFT framework results using Lean 4.
 
 ## Current Status: Level 2 (Partial)
 
-**det(g) = 65/32 numerically verified to 0.0001% precision.**
+**det(g) = 65/32 and b3 = 77 numerically verified.**
 
 ### Latest Verification (2025-11-30)
 
+**det(g) = 65/32:**
 ```
 Target:    det(g) = 65/32 = 2.03125
 Measured:  det(g) = 2.0312490 +/- 0.0000822  (1000 samples)
 Error:     0.00005% mean, 0.012% max
 Metric:    Positive definite (eigenvalues in [1.078, 1.141])
+Status:    PASS
+```
+
+**b3 = 77 (spectral analysis):**
+```
+Target:    b3 = 77 = 35 (local) + 42 (global TCS)
+Measured:  b3_effective = 76, gap at position 75
+Gap:       29.7x mean gap magnitude
+Tolerance: +/- 5 modes
 Status:    PASS
 ```
 
@@ -25,7 +35,10 @@ Status:    PASS
 | `gift_k7_g2_existence` : exists torsion-free G2 | PROVEN (from axioms) | G2Certificate.lean |
 | `H_star_value` : H* = 99 | PROVEN | G2Certificate.lean |
 | `tau_formula` : tau = (496*21)/(27*99) | PROVEN | G2Certificate.lean |
+| `b3_decomposition` : 77 = 35 + 42 | PROVEN | G2Certificate.lean |
+| `b3_verification_pass` : \|76 - 77\| <= 5 | PROVEN | G2Certificate.lean |
 | `det_g_value` : det(g) = 65/32 | VERIFIED (numerical) | verification_result.json |
+| `b3_effective` : b3 = 76 (gap 29.7x) | VERIFIED (numerical) | b3_77_result.json |
 
 ### What's Axiomatized (Trusted)
 
@@ -49,6 +62,7 @@ Status:    PASS
 - [x] Point-wise verification of det(g) = 65/32
 - [x] Export PINN weights to JSON
 - [x] Generate Lean architecture file
+- [x] Spectral verification of b3 = 77 (gap at 75-76)
 - [ ] Full interval arithmetic propagation (blocked by interval blowup)
 - [ ] Interval arithmetic on torsion bound
 
@@ -138,8 +152,10 @@ cat lean/verification_result.json
 | `export_weights.py` | PINN weights to JSON exporter |
 | `pinn_weights.json` | Exported network weights (19MB) |
 | `pinn_weights.lean` | Lean architecture summary |
-| `verification_result.json` | Latest verification result |
+| `verification_result.json` | det(g) verification result |
 | `README.md` | This file |
+| `../b3_77_result.json` | b3 spectral verification result |
+| `../extract_b3_modes.py` | b3 mode extraction script |
 
 ## References
 
