@@ -125,6 +125,25 @@ gift/
 
 See [STRUCTURE.md](STRUCTURE.md) for navigation guide.
 
+## Connect
+
+### Platforms
+
+| Platform | Link |
+|----------|------|
+| Zenodo | [10.5281/zenodo.17751250](https://doi.org/10.5281/zenodo.17751250) |
+| ResearchGate | [Author page](https://www.researchgate.net/publication/398078100_Geometric_Information_Field_Theory_v22) |
+| SSRN | [Author page](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7701350) |
+
+### Media
+
+| Platform | Link |
+|----------|------|
+| YouTube | [@giftheory](https://youtube.com/@giftheory) |
+| Substack | [giftheory.substack.com](https://substack.com/@giftheory) |
+| X/Twitter | [@GIFTheory](https://x.com/GIFTheory) |
+| Instagram | [@theory.gift](https://instagram.com/theory.gift) |
+
 ## Falsification Tests
 
 | Prediction | Test | Timeline | Criterion |
