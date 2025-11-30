@@ -16,7 +16,7 @@
 
 1. **README.md** - Framework overview
 2. **STRUCTURE.md** - Repository organization
-3. **publications/gift_2_2_main.md** - Core theoretical paper (~1400 lines)
+3. **publications/markdown/gift_2_2_main.md** - Core theoretical paper (~1400 lines)
 4. **docs/GLOSSARY.md** - Technical definitions
 5. **CONTRIBUTING.md** - Scientific standards
 
@@ -25,9 +25,11 @@
 ```
 GIFT/
 ├── publications/           # Main theoretical documents (v2.2)
-│   ├── gift_2_2_main.md   # Core paper
-│   ├── supplements/       # 7 detailed supplements (S1-S7)
-│   └── *.ipynb           # Interactive notebooks
+│   ├── README.md          # Overview, reading guide, summary
+│   ├── markdown/          # Core paper + S1-S7 supplements
+│   ├── references/        # Observable reference docs
+│   ├── pdf/               # Generated PDFs
+│   └── tex/               # LaTeX sources
 ├── docs/                  # FAQ, glossary, validation
 ├── G2_ML/                 # Machine learning (90% complete)
 ├── statistical_validation/ # Monte Carlo validation
@@ -38,7 +40,7 @@ GIFT/
 
 ## Quick Navigation
 
-**For theorists**: Start with `publications/gift_2_2_main.md`
+**For theorists**: Start with `publications/markdown/gift_2_2_main.md`
 **For experimentalists**: See `docs/EXPERIMENTAL_VALIDATION.md`
 **For coders**: Check `statistical_validation/run_validation.py`
 **For questions**: Read `docs/FAQ.md`
@@ -78,7 +80,7 @@ Use these consistently:
 ### Understanding the Framework
 
 1. Read `README.md` for overview
-2. Read `publications/gift_2_2_main.md` Sections 1-4
+2. Read `publications/markdown/gift_2_2_main.md` Sections 1-4
 3. Check `docs/GLOSSARY.md` for terms
 4. See `docs/FAQ.md` for questions
 
@@ -153,15 +155,16 @@ GIFT v2.2 achieves **zero continuous adjustable parameters**:
 
 ## Document Hierarchy
 
-### Publications
+### Publications (publications/)
 
-- **gift_2_2_main.md**: Core framework (~1,400 lines)
-- **summary.txt**: Executive summary
-- **GIFT_v22_Observable_Reference.md**: Complete 39-observable catalog
-- **GIFT_v22_Geometric_Justifications.md**: Geometric derivation details
-- **GIFT_v22_Statistical_Validation.md**: Statistical validation methods
+- **README.md**: Overview, reading guide, executive summary
+- **markdown/gift_2_2_main.md**: Core framework (~1,400 lines)
+- **markdown/S1-S7**: Supplements (mathematical details)
+- **references/GIFT_v22_Observable_Reference.md**: Complete 39-observable catalog
+- **references/GIFT_v22_Geometric_Justifications.md**: Geometric derivation details
+- **references/GIFT_v22_Statistical_Validation.md**: Statistical validation methods
 
-### Supplements (publications/supplements/)
+### Supplements (publications/markdown/)
 
 - **S1**: Mathematical architecture (E₈, K₇, cohomology)
 - **S2**: K₇ manifold construction (TCS, G₂ holonomy)

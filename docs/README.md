@@ -179,8 +179,8 @@ Part of GIFT Framework v2.2 - MIT License
 ## Links
 
 - Main Repository: https://github.com/gift-framework/GIFT
-- Main Paper: `../publications/gift_2_2_main.md`
-- Supplements: `../publications/supplements/`
+- Main Paper: `../publications/markdown/gift_2_2_main.md`
+- Supplements: `../publications/markdown/`
 - Visualizations: `../assets/visualizations/`
 
 ---

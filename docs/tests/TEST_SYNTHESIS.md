@@ -391,8 +391,8 @@ pytest-cov>=4.0  # Coverage reporting
 ## References
 
 - GIFT Framework v2.0 Documentation
-- `publications/gift_main.md` - Core theoretical paper
-- `publications/supplements/B_rigorous_proofs.md` - Exact relation proofs
+- `publications/markdown/gift_2_2_main.md` - Core theoretical paper
+- `publications/markdown/S4_complete_derivations.md` - Exact relation proofs
 - `statistical_validation/run_validation.py` - Implementation under test
 
 ---
