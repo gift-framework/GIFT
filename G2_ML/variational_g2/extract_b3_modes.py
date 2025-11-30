@@ -24,8 +24,21 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+# Add src to path - need to handle relative imports in model.py
+_src_path = str(Path(__file__).parent / "src")
+sys.path.insert(0, _src_path)
+
+# Patch relative imports by making src a proper package context
+import importlib.util
+def _load_module_from_file(name, filepath):
+    spec = importlib.util.spec_from_file_location(name, filepath)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+# Pre-load constraints to avoid relative import issues
+_constraints = _load_module_from_file("constraints", Path(_src_path) / "constraints.py")
 
 
 # GIFT constants
@@ -50,31 +63,73 @@ class B3Result:
 
     def to_dict(self) -> Dict:
         return {
-            "b3_effective": self.b3_effective,
-            "b3_target": B3_TARGET,
-            "gap_position": self.gap_position,
+            "b3_effective": int(self.b3_effective),
+            "b3_target": int(B3_TARGET),
+            "gap_position": int(self.gap_position),
             "gap_magnitude": float(self.gap_magnitude),
             "local_contribution": float(self.local_contribution),
             "global_contribution": float(self.global_contribution),
-            "match": self.match,
-            "eigenvalues_first_100": self.eigenvalues[:100].tolist(),
+            "match": bool(self.match),
+            "eigenvalues_first_100": [float(x) for x in self.eigenvalues[:100].tolist()],
         }
+
+
+class FourierFeatures(nn.Module):
+    """Fourier feature encoding for coordinate inputs."""
+    def __init__(self, B: torch.Tensor):
+        super().__init__()
+        self.register_buffer('B', B)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        proj = x @ self.B.T
+        return torch.cat([torch.sin(proj), torch.cos(proj)], dim=-1)
+
+
+class SimpleG2Net(nn.Module):
+    """Minimal G2 network matching checkpoint structure."""
+    def __init__(self, state_dict: dict):
+        super().__init__()
+        # Fourier features
+        self.fourier = FourierFeatures(state_dict['fourier.B'])
+
+        # MLP layers
+        self.mlp = nn.Sequential(
+            nn.Linear(128, 256), nn.SiLU(),
+            nn.Linear(256, 512), nn.SiLU(),
+            nn.Linear(512, 512), nn.SiLU(),
+            nn.Linear(512, 256), nn.SiLU(),
+        )
+        self.output_layer = nn.Linear(256, 35)
+
+        # Learnable scale/bias
+        self.bias = nn.Parameter(state_dict['bias'])
+        self.scale = nn.Parameter(state_dict['scale'])
+
+        # Load MLP weights
+        self.mlp[0].weight.data = state_dict['mlp.0.weight']
+        self.mlp[0].bias.data = state_dict['mlp.0.bias']
+        self.mlp[2].weight.data = state_dict['mlp.2.weight']
+        self.mlp[2].bias.data = state_dict['mlp.2.bias']
+        self.mlp[4].weight.data = state_dict['mlp.4.weight']
+        self.mlp[4].bias.data = state_dict['mlp.4.bias']
+        self.mlp[6].weight.data = state_dict['mlp.6.weight']
+        self.mlp[6].bias.data = state_dict['mlp.6.bias']
+        self.output_layer.weight.data = state_dict['output_layer.weight']
+        self.output_layer.bias.data = state_dict['output_layer.bias']
+
+    def forward(self, x: torch.Tensor) -> dict:
+        features = self.fourier(x)
+        hidden = self.mlp(features)
+        phi_raw = self.output_layer(hidden)
+        phi = phi_raw * self.scale + self.bias
+        return {'phi_components': phi}
 
 
 def load_model(checkpoint_path: Path) -> nn.Module:
     """Load PINN model from checkpoint."""
-    from model import G2VariationalNet
-
-    checkpoint = torch.load(checkpoint_path, map_location='cpu')
-    config = checkpoint.get('config', {})
-
-    model = G2VariationalNet(
-        input_dim=config.get('input_dim', 7),
-        hidden_dim=config.get('hidden_dim', 256),
-        num_layers=config.get('num_layers', 4),
-        num_frequencies=config.get('num_frequencies', 64),
-    )
-    model.load_state_dict(checkpoint['model_state_dict'])
+    checkpoint = torch.load(checkpoint_path, map_location='cpu', weights_only=False)
+    state_dict = checkpoint['model_state_dict']
+    model = SimpleG2Net(state_dict)
     model.eval()
     return model
 
@@ -250,8 +305,8 @@ def compute_gram_spectrum(basis: torch.Tensor) -> Tuple[np.ndarray, np.ndarray]:
 
     # Sort ascending
     idx = torch.argsort(eigenvalues)
-    eigenvalues = eigenvalues[idx].cpu().numpy()
-    eigenvectors = eigenvectors[:, idx].cpu().numpy()
+    eigenvalues = eigenvalues[idx].detach().cpu().numpy()
+    eigenvectors = eigenvectors[:, idx].detach().cpu().numpy()
 
     return eigenvalues, eigenvectors
 
@@ -300,8 +355,8 @@ def analyze_spectrum(eigenvalues: np.ndarray) -> B3Result:
     print(f"\n{'='*60}")
     print("SPECTRAL ANALYSIS RESULTS")
     print(f"{'='*60}")
-    print(f"\nTarget b₃ = {B3_TARGET} (35 local + 42 global)")
-    print(f"Effective b₃ = {b3_effective}")
+    print(f"\nTarget b3 = {B3_TARGET} (35 local + 42 global)")
+    print(f"Effective b3 = {b3_effective}")
     print(f"Gap position = {gap_position}")
     print(f"Gap magnitude = {gap_magnitude:.2f}x mean")
     print(f"\nLocal contribution (35 modes): {local_contribution:.1%}")
@@ -327,14 +382,14 @@ def run_analysis(
     domain: Tuple[float, float] = (-1.0, 1.0),
     seed: int = 42
 ) -> Dict:
-    """Run full b₃ = 77 verification."""
+    """Run full b3 = 77 verification."""
 
     print(f"\n{'='*60}")
-    print("B₃ = 77 VERIFICATION (GIFT Structure-Based)")
+    print("B3 = 77 VERIFICATION (GIFT Structure-Based)")
     print(f"{'='*60}")
-    print(f"\nUsing GIFT decomposition: 77 = 35 + 42 = 35 + 2×21")
-    print(f"  - 35 local modes (Λ³ℝ⁷)")
-    print(f"  - 42 global modes (2 × Λ²ℝ⁷ ∧ S¹)")
+    print(f"\nUsing GIFT decomposition: 77 = 35 + 42 = 35 + 2x21")
+    print(f"  - 35 local modes (Lambda^3 R^7)")
+    print(f"  - 42 global modes (2 x Lambda^2 R^7 ^ S^1)")
 
     # Generate sample points
     torch.manual_seed(seed)
@@ -362,10 +417,10 @@ def run_analysis(
     print(f"{'='*60}")
 
     if result.match:
-        print(f"\n  b₃ = 77 CONFIRMED")
+        print(f"\n  b3 = 77 CONFIRMED")
         print(f"  Gap at position {result.gap_position} matches target!")
     else:
-        print(f"\n  b₃ = {result.b3_effective} (target: 77)")
+        print(f"\n  b3 = {result.b3_effective} (target: 77)")
         print(f"  Gap at position {result.gap_position}")
 
         if result.b3_effective < B3_TARGET:
