@@ -73,7 +73,7 @@ When citing specific predictions or results, include the relevant section:
   author={{GIFT Framework Team}},
   year={2025},
   howpublished={GIFT Framework v2.2, Main Paper Section 8.4},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_2_2_main.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_2_main.md}
 }
 ```
 
@@ -86,7 +86,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   howpublished={GIFT Framework v2.2, Supplement S4},
   note={13 proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
 }
 ```
 
@@ -99,7 +99,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   howpublished={GIFT Framework v2.2, Supplement S4},
   note={Formula: δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°, exact},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
 }
 ```
 
@@ -112,7 +112,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   howpublished={GIFT Framework v2.2, Supplement S4},
   note={N_gen = 3 from Atiyah-Singer index theorem on K₇},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
 }
 ```
 
@@ -125,7 +125,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   howpublished={GIFT Framework v2.2, Main Paper Section 8.8},
   note={Ω_DE = ln(2)×98/99, precision 0.10\%},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/gift_2_2_main.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_2_main.md}
 }
 ```
 
@@ -140,7 +140,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={E₈ structure, K₇ manifold, G₂ holonomy, cohomology},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S1_mathematical_architecture.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S1_mathematical_architecture.md}
 }
 ```
 
@@ -153,7 +153,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={13 proven exact relations with proofs, all 39 observable derivations},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
 }
 ```
 
@@ -166,7 +166,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={Data comparison, statistical analysis, falsification protocol},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/supplements/S5_experimental_validation.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S5_experimental_validation.md}
 }
 ```
 

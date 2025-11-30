@@ -135,7 +135,7 @@ The GIFT framework maintains strict standards:
 ### Mathematical Content
 
 **Notation**
-- Follow conventions in `publications/gift_2_2_main.md` Section 1.4
+- Follow conventions in `publications/markdown/gift_2_2_main.md` Section 1.4
 - Define all new symbols on first use
 - Use standard notation where possible (see `docs/GLOSSARY.md`)
 
