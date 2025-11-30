@@ -76,3 +76,5 @@ assets/agents/reports/*.json
 # Model checkpoints
 checkpoints/
 verification_result.json
+pinn_weights.json
+pinn_weights.lean

@@ -356,7 +356,7 @@ def verify_det_g_from_network(
     print(f"\n{'='*60}")
     print(f"VERIFICATION RESULT: {'PASS' if success else 'FAIL'}")
     print(f"{'='*60}")
-    print(f"det(g) ∈ [{det_g.lo:.6f}, {det_g.hi:.6f}]")
+    print(f"det(g) in [{det_g.lo:.6f}, {det_g.hi:.6f}]")
     print(f"Target: {target} ± {tolerance}")
     print(f"Message: {msg}")
 
