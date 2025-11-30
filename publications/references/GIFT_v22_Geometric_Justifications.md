@@ -505,19 +505,21 @@ This suggests deep binary structure connecting the K₇ metric to Higgs self-cou
 
 The metric determinant measures the "volume element" of the internal manifold. Its quantization to 65/32 reflects the discrete structure underlying physical law.
 
-### 12.6 Numerical Verification
+### 12.6 Numerical Cross-Check
 
-| Quantity | Value |
-|----------|-------|
-| Predicted | 65/32 = 2.03125 |
-| ML-constrained | 2.031 |
-| Deviation | 0.012% |
+| Quantity | Value | Status |
+|----------|-------|--------|
+| Topological target | 65/32 = 2.03125 | TOPOLOGICAL |
+| PINN reconstruction | 2.0312490 ± 0.0001 | CERTIFIED |
+| Deviation | 0.00005% | — |
+
+**Lean 4 certification**: The PINN solution satisfies Joyce's perturbation theorem with 20× safety margin (||T|| = 0.00140 < ε₀ = 0.0288). See Supplement S2 and `G2_ML/G2_Lean/G2Certificate.lean`.
 
 ### 12.7 Significance
 
-The topological origin of det(g) = 65/32 confirms the **zero-parameter paradigm**: all observables derive from fixed mathematical structures of E₈×E₈ and K₇, with no continuous adjustable parameters.
+The topological origin of det(g) = 65/32 confirms the **zero-parameter paradigm**: all observables derive from fixed mathematical structures of E₈×E₈ and K₇, with no continuous adjustable parameters. The PINN provides an independent numerical cross-check, not a fitting procedure.
 
-**Status**: **TOPOLOGICAL** (exact rational from cohomology)
+**Status**: **TOPOLOGICAL** (exact rational from cohomology) + **CERTIFIED** (PINN + Lean)
 
 ---
 

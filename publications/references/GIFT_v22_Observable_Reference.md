@@ -91,7 +91,7 @@ Derivation:
 
 | Parameter | Value | Formula | Status |
 |-----------|-------|---------|--------|
-| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **TOPOLOGICAL** |
+| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **TOPOLOGICAL + CERTIFIED** |
 | κ_T = \|T\| | **1/61** | 1/(b₃ - dim(G₂) - p₂) | **TOPOLOGICAL** |
 
 **det(g) Topological Derivation**:
@@ -107,7 +107,8 @@ The 32 structure:
 - 32 = b₂ + dim(G₂) - N_gen = 21 + 14 - 3
 - 32 = 2^5 (same denominator as λ_H = √17/32)
 
-Deviation: 0.012%
+PINN cross-check: 2.0312490 ± 0.0001 (deviation: 0.00005%)
+Lean 4 verification: Joyce margin 20× (see Supplement S2)
 ```
 
 **κ_T Topological Derivation**:

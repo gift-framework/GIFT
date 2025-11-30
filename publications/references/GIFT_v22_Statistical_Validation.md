@@ -36,13 +36,15 @@ The GIFT framework has undergone comprehensive statistical validation to assess:
 - Compute statistical moments of resulting distributions
 
 **Configuration**:
-| Parameter | Central Value | Formula | Uncertainty (1-sigma) |
-|-----------|---------------|--------------|----------------------|
-| sin^2(theta_W) | 0.230769 | 3/13 | 0 (exact) |
-| alpha_s | 0.117851 | sqrt(2)/12 | 0 (exact) |
-| kappa_T | 0.016393 | 1/61 | 0 (exact) |
-| tau | 3.896747 | 3472/891 | 0 (exact) |
-| det(g) | 2.031 | Topological | 0.01 |
+| Parameter | Central Value | Formula | Uncertainty (1-sigma) | Status |
+|-----------|---------------|--------------|----------------------|--------|
+| sin^2(theta_W) | 0.230769 | 3/13 | 0 (exact) | PROVEN |
+| alpha_s | 0.117851 | sqrt(2)/12 | 0 (exact) | TOPOLOGICAL |
+| kappa_T | 0.016393 | 1/61 | 0 (exact) | TOPOLOGICAL |
+| tau | 3.896747 | 3472/891 | 0 (exact) | PROVEN |
+| det(g) | 2.0312490 | 65/32 | 0.0001 | CERTIFIED |
+
+**Note**: det(g) = 65/32 is TOPOLOGICAL (exact formula). PINN cross-check achieves 2.0312490 ± 0.0001, verified by Lean 4 with 20× Joyce margin. See Supplement S2.
 
 **Sample sizes**:
 - Standard run: 100,000 samples
@@ -156,10 +158,10 @@ where the sum runs over all observables with experimental uncertainties.
 
 | Observable | Prediction | Reference | Deviation | Status |
 |------------|------------|-----------|-----------|--------|
-| kappa_T | 1/61 = 0.01639 | 0.0164 (ML-constrained) | 0.04% | TOPOLOGICAL |
+| kappa_T | 1/61 = 0.01639 | 0.0164 (PINN) | 0.04% | TOPOLOGICAL |
 | tau | 3472/891 = 3.8967 | 3.89675 (numerical) | 0.01% | PROVEN |
 
-**Note**: Both have exact topological formulas.
+**Note**: Both have exact topological formulas. κ_T cross-checked via PINN torsion computation.
 
 ---
 
