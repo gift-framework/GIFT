@@ -132,7 +132,7 @@ See [STRUCTURE.md](STRUCTURE.md) for navigation guide.
 | Platform | Link |
 |----------|------|
 | Zenodo | [10.5281/zenodo.17751250](https://doi.org/10.5281/zenodo.17751250) |
-| ResearchGate | [Author page](https://www.researchgate.net/publication/398078100_Geometric_Information_Field_Theory_v22) |
+| ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 | SSRN | [Author page](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7701350) |
 
 ### Media
