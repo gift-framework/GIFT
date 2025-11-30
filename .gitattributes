@@ -3,3 +3,4 @@
 *.npz filter=lfs diff=lfs merge=lfs -text
 *.npy filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+G2_ML/variational_g2/lean/pinn_weights.json filter=lfs diff=lfs merge=lfs -text

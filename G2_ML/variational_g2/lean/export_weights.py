@@ -189,7 +189,7 @@ def standard_g2_signs : List ℤ := [1, 1, 1, 1, -1, -1, -1]
 end GIFT.PINN
 '''
 
-    with open(lean_path, 'w') as f:
+    with open(lean_path, 'w', encoding='utf-8') as f:
         f.write(lean_content)
 
     print(f"Exported weights to: {output_path}")
