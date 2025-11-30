@@ -22,8 +22,7 @@ gift/
 │   │   ├── GIFT_v22_Geometric_Justifications.md
 │   │   └── GIFT_v22_Statistical_Validation.md
 │   ├── tex/                          # LaTeX sources
-│   ├── pdf/                          # Generated PDFs
-│   └── template/                     # Document templates
+│   └── pdf/                          # Generated PDFs
 │
 ├── docs/                             # Supporting documentation
 │   ├── FAQ.md                        # Common questions
@@ -32,14 +31,14 @@ gift/
 │   ├── EXPERIMENTAL_VALIDATION.md    # Current status
 │   └── tests/                        # Test documentation
 │
-├── assets/visualizations/            # Interactive notebooks
-│   ├── precision_dashboard.ipynb     # 39 observables vs experiment
-│   ├── e8_root_system_3d.ipynb      # 240-root visualization
-│   └── dimensional_reduction_flow.ipynb
+├── assets/                           # Tools and resources
+│   ├── visualizations/              # Interactive notebooks
+│   ├── agents/                      # Automated verification tools
+│   └── documents_template/          # LaTeX/Quarto templates
 │
 ├── statistical_validation/           # Monte Carlo tools
 ├── G2_ML/                           # Neural network for K₇
-├── tests/                           # pytest suite
+├── tests/                           # pytest suite + test guides
 └── legacy/                          # v1, v2.0, v2.1 archives
 ```
 
