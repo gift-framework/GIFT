@@ -843,7 +843,7 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 
 | Status | Count | Mean Deviation | Description |
 |--------|-------|----------------|-------------|
-| **PROVEN** | **12** | 0.15% | Exact rational/integer from topology |
+| **PROVEN** | **13** | 0.15% | Exact rational/integer from topology |
 | **TOPOLOGICAL** | **12** | 0.09% | Direct topological derivation |
 | DERIVED | 9 | 0.14% | Computed from topological relations |
 | THEORETICAL | 6 | 0.28% | Requires single scale input |
@@ -853,7 +853,7 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 | Metric | Value |
 |--------|-------|
 | Total observables | 39 |
-| PROVEN count | 12 |
+| PROVEN count | 13 |
 | Input parameters | 0 (zero-parameter paradigm) |
 | Mean deviation | 0.128% |
 | Median deviation | 0.073% |

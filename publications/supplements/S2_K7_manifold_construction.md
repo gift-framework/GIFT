@@ -246,7 +246,7 @@ where:
 - 21 dimensions in 7-rep (3 copies of 7)
 - 54 dimensions in 27-rep (2 copies of 27)
 
-**Verification**: 2 + 21 + 54 = 77 = b₃(K₇) ✓
+**Verification**: 2 + 21 + 54 = 77 = b₃(K₇) (confirmed)
 
 **Status**: STRUCTURAL (validated by v1.6)
 

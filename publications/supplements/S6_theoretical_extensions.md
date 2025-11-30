@@ -114,7 +114,7 @@ $$S_{BH} = \frac{A}{4\ell_P^2} \cdot \frac{H^*}{100}$$
 
 ### 4.1 Lattice Properties
 
-The E₈ lattice has remarkable error-correcting properties:
+The E₈ lattice has notable error-correcting properties:
 
 - Densest lattice packing in 8D
 - Self-dual: E₈ = E₈*

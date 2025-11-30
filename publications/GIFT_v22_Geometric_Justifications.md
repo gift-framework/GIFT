@@ -546,11 +546,11 @@ The topological origin of det(g) = 65/32 confirms the **zero-parameter paradigm*
 
 ### 13.3 Internal Consistency Tests
 
-**Generation number**: N_gen = rank(E₈) - Weyl = 8 - 5 = 3 ✓
+**Generation number**: N_gen = rank(E₈) - Weyl = 8 - 5 = 3
 
-**Betti relation**: b₂ + b₃ = 98 compatible with H* = 99 ✓
+**Betti relation**: b₂ + b₃ = 98 compatible with H* = 99
 
-**Coupling unification**: Three gauge couplings approximately unify at high energy ✓
+**Coupling unification**: Three gauge couplings approximately unify at high energy
 
 ---
 

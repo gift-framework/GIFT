@@ -138,7 +138,7 @@ The GIFT v2.2 framework makes 39 predictions for physical observables. The overa
 * Mean Deviation: 0.128%
 * Median Deviation: 0.073%
 * Observables with < 0.5% Deviation: 37 out of 39 (95%)
-* PROVEN Predictions: 12 observables are derived as exact integers or rationals with rigorous proofs.
+* PROVEN Predictions: 13 observables are derived as exact integers or rationals with rigorous proofs.
 
 4.2 Summary of Key PROVEN Predictions
 

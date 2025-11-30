@@ -285,7 +285,7 @@ delta_CP = 7 × dim_G2 + H_star = 7×14 + 99 = 197
 - `dim_G2 = 14` (constant)
 - `H_star = 99` (constant)
 
-**Status**: ✅ **Parameter-independent** (all constants)
+**Status**: [OK] **Parameter-independent** (all constants)
 
 **Question**: Why do tests fail? Possible floating-point precision?
 
@@ -302,7 +302,7 @@ Q_Koide = dim_G2 / b2_K7 = 14 / 21 = 2/3
 - `dim_G2 = 14` (constant)
 - `b2_K7 = 21` (constant)
 
-**Status**: ✅ **Parameter-independent**
+**Status**: [OK] **Parameter-independent**
 
 ---
 
@@ -315,7 +315,7 @@ m_tau_m_e = dim_K7 + 10×dim_E8 + 10×H_star = 7 + 2480 + 990 = 3477
 
 **Uses**: Only topological constants
 
-**Status**: ✅ **Parameter-independent**
+**Status**: [OK] **Parameter-independent**
 
 ---
 
@@ -327,10 +327,10 @@ m_s_m_d = p2² × Weyl_factor = 4 × 5 = 20
 ```
 
 **Uses**:
-- `self.params.p2` ⚠️ **PARAMETER**
-- `self.params.Weyl_factor` ⚠️ **PARAMETER**
+- `self.params.p2` [WARN] **PARAMETER**
+- `self.params.Weyl_factor` [WARN] **PARAMETER**
 
-**Status**: ❌ **Parameter-DEPENDENT**
+**Status**: [ERR] **Parameter-DEPENDENT**
 
 **Problem**: Code uses `self.params.p2` not a constant!
 
@@ -345,7 +345,7 @@ lambda_H = √17 / 32
 
 **Uses**: Mathematical constant only
 
-**Status**: ✅ **Parameter-independent**
+**Status**: [OK] **Parameter-independent**
 
 ---
 
@@ -534,64 +534,64 @@ obs['m_s_m_d'] = self.p2_topological**2 * self.Weyl_topological
 
 | # | Observable | Status | Deviation | Priority |
 |---|------------|--------|-----------|----------|
-| 1 | alpha_inv_MZ | ⚠️ MISMATCH | 6.6% | MEDIUM |
-| 2 | sin2thetaW | ✅ OK | <1% | - |
-| 3 | alpha_s_MZ | ✅ OK | <1% | - |
-| 4 | theta12 | ✅ OK | <1% | - |
-| 5 | theta13 | ✅ OK | <1% | - |
-| 6 | theta23 | ✅ OK | <1% | - |
-| 7 | delta_CP | ✅ OK | 0% | - |
-| 8 | Q_Koide | ✅ OK | 0% | - |
-| 9 | m_mu_m_e | ✅ OK | <1% | - |
-| 10 | m_tau_m_e | ✅ OK | 0% | - |
-| 11 | m_s_m_d | ✅ OK | 0% | - |
-| 12 | m_c_m_s | ✅ OK | <1% | - |
-| 13 | m_b_m_u | ✅ OK | <1% | - |
-| 14 | m_t_m_b | ✅ OK | <1% | - |
-| 15 | m_d_m_u | ❌ WRONG | 27.9% | **CRITICAL** |
-| 16 | m_c_m_u | ❌ WRONG | 28.6% | HIGH |
-| 17 | m_b_m_d | ❌ WRONG | 38.8% | HIGH |
-| 18 | m_t_m_s | ❌ WRONG | 116.4% | **CRITICAL** |
-| 19 | m_t_m_d | ❌ WRONG | 38.7% | HIGH |
-| 20 | m_t_m_c | ❌ MISSING | N/A | **CRITICAL** |
-| 21 | V_us | ✅ OK | <1% | - |
-| 22 | V_cb | ⚠️ MISMATCH | 7.2% | MEDIUM |
-| 23 | V_ub | ⚠️ MISMATCH | 17.0% | MEDIUM |
-| 24 | V_cd | ✅ OK | <1% | - |
-| 25 | V_cs | ✅ OK | <5% | - |
-| 26 | V_td | ⚠️ MISMATCH | 13.9% | MEDIUM |
-| 27 | lambda_H | ✅ OK | <1% | - |
-| 28 | Omega_DE | ✅ OK | <1% | - |
-| 29 | Omega_DM | ✅ OK | <1% | - |
-| 30 | Omega_b | ✅ OK | <1% | - |
-| 31 | n_s | ✅ OK | <1% | - |
-| 32 | sigma_8 | ❌ WRONG | 34.5% | **CRITICAL** |
-| 33 | A_s | ⚠️ PLACEHOLDER | N/A | LOW |
-| 34 | Omega_gamma | ✅ OK | <1% | - |
-| 35 | Omega_nu | ✅ OK | <1% | - |
-| 36 | Y_p | ✅ OK | <1% | - |
-| 37 | D_H | ✅ OK | <1% | - |
-| 38 | v_EW | ✅ OK | <1% | - |
-| 39 | M_W | ✅ OK | <1% | - |
-| 40 | M_Z | ✅ OK | <1% | - |
-| 41 | m_u_MeV | ✅ OK | <1% | - |
-| 42 | m_d_MeV | ❌ WRONG | 28.2% | HIGH |
-| 43 | m_s_MeV | ❌ WRONG | 28.2% | HIGH |
-| 44 | m_c_MeV | ❌ WRONG | 28.7% | HIGH |
-| 45 | m_b_MeV | ✅ OK | <1% | - |
-| 46 | m_t_GeV | ✅ OK | <1% | - |
-| 47 | H0 | ✅ OK | <1% | - |
+| 1 | alpha_inv_MZ | [WARN] MISMATCH | 6.6% | MEDIUM |
+| 2 | sin2thetaW | [OK] OK | <1% | - |
+| 3 | alpha_s_MZ | [OK] OK | <1% | - |
+| 4 | theta12 | [OK] OK | <1% | - |
+| 5 | theta13 | [OK] OK | <1% | - |
+| 6 | theta23 | [OK] OK | <1% | - |
+| 7 | delta_CP | [OK] OK | 0% | - |
+| 8 | Q_Koide | [OK] OK | 0% | - |
+| 9 | m_mu_m_e | [OK] OK | <1% | - |
+| 10 | m_tau_m_e | [OK] OK | 0% | - |
+| 11 | m_s_m_d | [OK] OK | 0% | - |
+| 12 | m_c_m_s | [OK] OK | <1% | - |
+| 13 | m_b_m_u | [OK] OK | <1% | - |
+| 14 | m_t_m_b | [OK] OK | <1% | - |
+| 15 | m_d_m_u | [ERR] WRONG | 27.9% | **CRITICAL** |
+| 16 | m_c_m_u | [ERR] WRONG | 28.6% | HIGH |
+| 17 | m_b_m_d | [ERR] WRONG | 38.8% | HIGH |
+| 18 | m_t_m_s | [ERR] WRONG | 116.4% | **CRITICAL** |
+| 19 | m_t_m_d | [ERR] WRONG | 38.7% | HIGH |
+| 20 | m_t_m_c | [ERR] MISSING | N/A | **CRITICAL** |
+| 21 | V_us | [OK] OK | <1% | - |
+| 22 | V_cb | [WARN] MISMATCH | 7.2% | MEDIUM |
+| 23 | V_ub | [WARN] MISMATCH | 17.0% | MEDIUM |
+| 24 | V_cd | [OK] OK | <1% | - |
+| 25 | V_cs | [OK] OK | <5% | - |
+| 26 | V_td | [WARN] MISMATCH | 13.9% | MEDIUM |
+| 27 | lambda_H | [OK] OK | <1% | - |
+| 28 | Omega_DE | [OK] OK | <1% | - |
+| 29 | Omega_DM | [OK] OK | <1% | - |
+| 30 | Omega_b | [OK] OK | <1% | - |
+| 31 | n_s | [OK] OK | <1% | - |
+| 32 | sigma_8 | [ERR] WRONG | 34.5% | **CRITICAL** |
+| 33 | A_s | [WARN] PLACEHOLDER | N/A | LOW |
+| 34 | Omega_gamma | [OK] OK | <1% | - |
+| 35 | Omega_nu | [OK] OK | <1% | - |
+| 36 | Y_p | [OK] OK | <1% | - |
+| 37 | D_H | [OK] OK | <1% | - |
+| 38 | v_EW | [OK] OK | <1% | - |
+| 39 | M_W | [OK] OK | <1% | - |
+| 40 | M_Z | [OK] OK | <1% | - |
+| 41 | m_u_MeV | [OK] OK | <1% | - |
+| 42 | m_d_MeV | [ERR] WRONG | 28.2% | HIGH |
+| 43 | m_s_MeV | [ERR] WRONG | 28.2% | HIGH |
+| 44 | m_c_MeV | [ERR] WRONG | 28.7% | HIGH |
+| 45 | m_b_MeV | [OK] OK | <1% | - |
+| 46 | m_t_GeV | [OK] OK | <1% | - |
+| 47 | H0 | [OK] OK | <1% | - |
 
 **Status Key**:
-- ✅ OK: <5% deviation, acceptable
-- ⚠️ MISMATCH: 5-20% deviation, needs investigation
-- ❌ WRONG: >20% deviation, formula error
-- ❌ MISSING: Not implemented
+- [OK] OK: <5% deviation, acceptable
+- [WARN] MISMATCH: 5-20% deviation, needs investigation
+- [ERR] WRONG: >20% deviation, formula error
+- [ERR] MISSING: Not implemented
 
 **Count**:
-- ✅ OK: 31 observables (66%)
-- ⚠️ MISMATCH: 5 observables (11%)
-- ❌ WRONG/MISSING: 11 observables (23%)
+- [OK] OK: 31 observables (66%)
+- [WARN] MISMATCH: 5 observables (11%)
+- [ERR] WRONG/MISSING: 11 observables (23%)
 
 ---
 

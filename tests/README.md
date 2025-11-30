@@ -242,16 +242,21 @@ Tests Jupyter notebooks:
 
 ### PROVEN Exact Relations
 
-All 9 PROVEN exact relations must have 100% test coverage:
+All 13 PROVEN exact relations must have 100% test coverage:
 
-1. ✓ N_gen = 3
-2. ✓ Q_Koide = 2/3
-3. ✓ m_s/m_d = 20
-4. ✓ δ_CP = 197°
-5. ✓ m_τ/m_e = 3477
-6. ✓ Ω_DE = ln(2) × 98/99
-7. ✓ ξ = 5β₀/2
-8. ✓ λ_H = √17/32
+1. N_gen = 3
+2. p2 = 2
+3. Q_Koide = 2/3
+4. m_s/m_d = 20
+5. delta_CP = 197 degrees
+6. m_tau/m_e = 3477
+7. Omega_DE = ln(2) x 98/99
+8. n_s = zeta(11)/zeta(5)
+9. xi = 5*pi/16
+10. lambda_H = sqrt(17)/32
+11. sin2theta_W = 3/13
+12. tau = 3472/891
+13. det(g) = 65/32
 
 ## Test Fixtures
 
@@ -259,9 +264,9 @@ All 9 PROVEN exact relations must have 100% test coverage:
 
 `fixtures/reference_observables.json` contains:
 
-- Framework version: 2.0.0
-- Default parameters
-- All 34 observable predictions
+- Framework version: 2.2.0
+- Topological parameters (no adjustable parameters)
+- All 39 observable predictions
 - Experimental values
 - Deviation percentages
 
