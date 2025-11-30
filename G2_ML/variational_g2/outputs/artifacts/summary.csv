@@ -1,0 +1,3 @@
+metric,target,achieved,error_percent
+det_g,2.03125,2.0312440395355225,0.0002934382512019231
+min_eigenvalue,>0,1.0784167051315308,N/A
