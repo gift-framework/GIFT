@@ -111,7 +111,7 @@ $$N_{\text{gen}} = \frac{168}{56} = 3$$
 *Verification*:
 - LHS: (8 + 3) × 21 = 11 × 21 = 231
 - RHS: 3 × 77 = 231
-- LHS = RHS ✓
+- LHS = RHS (verified)
 
 ### Proof Method 2: Atiyah-Singer Index Theorem
 

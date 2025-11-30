@@ -261,31 +261,31 @@ pytest tests/regression/ tests/performance/ tests/property/ tests/documentation/
 ## Métriques de Qualité
 
 ### Tests de Régression
-- ✅ 46 observables avec suivi historique
-- ✅ Tolérances adaptatives par type (PROVEN, TOPOLOGICAL, DERIVED)
-- ✅ Détection automatique de changements significatifs (>1%)
-- ✅ Rapports JSON détaillés
-- ✅ Tests de variance inter-runs (std = 0 pour déterminisme)
+- - 46 observables avec suivi historique
+- - Tolérances adaptatives par type (PROVEN, TOPOLOGICAL, DERIVED)
+- - Détection automatique de changements significatifs (>1%)
+- - Rapports JSON détaillés
+- - Tests de variance inter-runs (std = 0 pour déterminisme)
 
 ### Performance
-- ✅ Baseline: initialisation < 100ms
-- ✅ Baseline: tous observables < 2s
-- ✅ Scalabilité linéaire vérifiée (R² > 0.8)
-- ✅ Mémoire: footprint < 100 MB
-- ✅ Pas de fuite mémoire (< 50 MB après 10 itérations)
+- - Baseline: initialisation < 100ms
+- - Baseline: tous observables < 2s
+- - Scalabilité linéaire vérifiée (R² > 0.8)
+- - Mémoire: footprint < 100 MB
+- - Pas de fuite mémoire (< 50 MB après 10 itérations)
 
 ### Property-Based
-- ✅ ~30 propriétés vérifiées
-- ✅ Génération automatique de centaines de cas
-- ✅ Invariants topologiques validés (indépendance paramétrique)
-- ✅ Contraintes physiques respectées (bornes, positivité)
-- ✅ Stabilité numérique garantie
+- - ~30 propriétés vérifiées
+- - Génération automatique de centaines de cas
+- - Invariants topologiques validés (indépendance paramétrique)
+- - Contraintes physiques respectées (bornes, positivité)
+- - Stabilité numérique garantie
 
 ### Documentation
-- ✅ Docstrings présents (>50% des méthodes)
-- ✅ Exemples de code validés par exécution
-- ✅ Conventions de nommage respectées
-- ✅ API cohérente (compute methods → dict)
+- - Docstrings présents (>50% des méthodes)
+- - Exemples de code validés par exécution
+- - Conventions de nommage respectées
+- - API cohérente (compute methods → dict)
 
 ---
 
@@ -398,12 +398,12 @@ pytest -m "not slow" tests/
 La Phase 2 ajoute des techniques de test avancées qui vont bien au-delà de la simple couverture de code. Avec property-based testing, benchmarking systématique, et validation de documentation, le framework GIFT dispose maintenant d'une suite de tests robuste et professionnelle.
 
 **Points forts:**
-- ✅ Génération automatique de cas de test (Hypothesis)
-- ✅ Détection proactive de régressions
-- ✅ Monitoring de performance avec baselines
-- ✅ Validation de la qualité de documentation
-- ✅ Tests basés sur les propriétés mathématiques
-- ✅ Profiling mémoire systématique
+- - Génération automatique de cas de test (Hypothesis)
+- - Détection proactive de régressions
+- - Monitoring de performance avec baselines
+- - Validation de la qualité de documentation
+- - Tests basés sur les propriétés mathématiques
+- - Profiling mémoire systématique
 
 **Prochaines étapes recommandées:**
 1. Intégrer Hypothesis dans le CI/CD

@@ -473,7 +473,7 @@ Links to Mersenne primes (7 = M₃, 31 = M₅) and Lucas numbers (11 = L₅).
 | T_{eπ,φ} | ~3×10⁻⁵ | THEORETICAL |
 | Flow velocity | |v| ≈ 0.015 | PHENOMENOLOGICAL |
 | α̇/α bound | <10⁻¹⁶ yr⁻¹ | PHENOMENOLOGICAL |
-| DESI DR2 compatibility | κ_T² < 10⁻³ | ✓ |
+| DESI DR2 compatibility | κ_T² < 10⁻³ | PASS |
 
 ## Main Equations
 

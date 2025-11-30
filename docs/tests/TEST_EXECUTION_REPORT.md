@@ -41,11 +41,11 @@ Execution Time: ~45 seconds
 
 ## Test Results by Category
 
-### ✅ Passing Categories (High Success Rate)
+### [PASS] Passing Categories (High Success Rate)
 
 #### 1. Documentation Validation (100% Pass)
 **File**: `tests/documentation/test_docstring_validation.py`
-**Status**: ✅ **30/30 passed**
+**Status**: [PASS] **30/30 passed**
 
 **What Works:**
 - Docstring presence validation
@@ -65,7 +65,7 @@ Execution Time: ~45 seconds
 
 #### 2. Agent Utilities (94% Pass)
 **File**: `tests/unit/test_agent_utilities.py`
-**Status**: ✅ **38/40 passed**, ⚠️ 2 failed
+**Status**: [PASS] **38/40 passed**, [WARN] 2 failed
 
 **What Works:**
 - Markdown link parsing
@@ -81,7 +81,7 @@ Execution Time: ~45 seconds
 
 #### 3. Export & Visualization (94% Pass)
 **File**: `tests/unit/test_export_visualization.py`
-**Status**: ✅ **24/25 passed**, ⚠️ 1 failed
+**Status**: [PASS] **24/25 passed**, [WARN] 1 failed
 
 **What Works:**
 - JSON export/import (round-trip validation)
@@ -95,11 +95,11 @@ Execution Time: ~45 seconds
 
 ---
 
-### ⚠️ Partially Passing Categories
+### [WARN] Partially Passing Categories
 
 #### 4. Observable Precision Tests (40% Pass)
 **File**: `tests/unit/test_observable_precision.py`
-**Status**: ⚠️ **24/60 passed**, ❌ 36 failed
+**Status**: [WARN] **24/60 passed**, [FAIL] 36 failed
 
 **What Works:**
 - Framework initialization and basic computation
@@ -120,7 +120,7 @@ Execution Time: ~45 seconds
 
 #### 5. Statistical Validation (50% Pass)
 **File**: `tests/unit/test_statistical_validation_v21.py`
-**Status**: ⚠️ **15/30 passed**, ❌ 15 failed
+**Status**: [WARN] **15/30 passed**, [FAIL] 15 failed
 
 **What Works:**
 - Basic framework instantiation
@@ -140,7 +140,7 @@ Execution Time: ~45 seconds
 
 #### 6. Edge Cases & Error Handling (70% Pass)
 **File**: `tests/unit/test_edge_cases_errors.py`
-**Status**: ⚠️ **35/50 passed**, ❌ 15 failed
+**Status**: [WARN] **35/50 passed**, [FAIL] 15 failed
 
 **What Works:**
 - Basic parameter validation
@@ -158,11 +158,11 @@ Execution Time: ~45 seconds
 
 ---
 
-### ❌ Failing Categories (Need Attention)
+### [FAIL] Failing Categories (Need Attention)
 
 #### 7. Regression Tests (20% Pass)
 **File**: `tests/regression/test_enhanced_observable_regression.py`
-**Status**: ❌ **8/40 passed**, ❌ 32 failed
+**Status**: [FAIL] **8/40 passed**, [FAIL] 32 failed
 
 **Critical Issues:**
 1. **Baseline value mismatches**: Many observables return different values than baseline
@@ -187,10 +187,10 @@ FAILED tests/regression/test_enhanced_observable_regression.py::TestObservableSt
 
 #### 8. Performance Benchmarks (60% Pass)
 **File**: `tests/performance/test_benchmarks.py`
-**Status**: ⚠️ **21/35 passed**, ❌ 14 failed
+**Status**: [WARN] **21/35 passed**, [FAIL] 14 failed
 
 **What Works:**
-- Framework initialization timing (< 100ms ✓)
+- Framework initialization timing (< 100ms [OK])
 - Basic computation timing
 - Memory footprint measurement (using psutil)
 - Parallel execution testing
@@ -203,8 +203,8 @@ FAILED tests/regression/test_enhanced_observable_regression.py::TestObservableSt
 
 **Performance Baselines (Current vs Target):**
 ```
-Initialization:        45ms vs 100ms target  ✓
-All observables:      1.8s vs 2.0s target   ✓
+Initialization:        45ms vs 100ms target  [OK]
+All observables:      1.8s vs 2.0s target   [OK]
 Monte Carlo (100):   12.3s vs 10.0s target  ✗ (23% over)
 ```
 
@@ -214,7 +214,7 @@ Monte Carlo (100):   12.3s vs 10.0s target  ✗ (23% over)
 
 #### 9. Property-Based Tests (30% Pass)
 **File**: `tests/property/test_property_based.py`
-**Status**: ❌ **9/30 passed**, ❌ 21 failed
+**Status**: [FAIL] **9/30 passed**, [FAIL] 21 failed
 
 **What Works:**
 - Basic deterministic computation (same params → same results)
@@ -429,7 +429,7 @@ statsmodels==0.14.4
 
 ## Recommendations by Priority
 
-### 🔴 Critical (Fix Immediately)
+### Critical (Fix Immediately)
 
 1. **Complete Observable Implementation**
    - Implement all 46 expected observables
@@ -450,7 +450,7 @@ statsmodels==0.14.4
    - Estimated effort: 4-6 hours
    - Blocks: ~30 tests
 
-### 🟡 High Priority (Fix Soon)
+### High Priority (Fix Soon)
 
 4. **Standardize Parameter Interface**
    - Define clear parameter API
@@ -473,7 +473,7 @@ statsmodels==0.14.4
    - Estimated effort: 1-2 days
    - Blocks: ~14 tests
 
-### 🟢 Medium Priority (Address When Possible)
+### Medium Priority (Address When Possible)
 
 7. **Fix Minor Test Issues**
    - Permission error test
@@ -497,7 +497,7 @@ statsmodels==0.14.4
 
 ## Success Stories
 
-### What's Working Well ✨
+### What's Working Well
 
 1. **Documentation Quality**: 100% pass rate on docstring validation
    - All public APIs properly documented
@@ -636,18 +636,18 @@ Pass Rate:        74.9% (415/554)
 This test execution represents a **massive improvement** in GIFT framework quality assurance:
 
 **Achievements:**
-✅ Added 13 comprehensive test files
-✅ Increased coverage from 12.5% to 30%
-✅ Created ~5,700 lines of high-quality test code
-✅ Implemented advanced testing techniques (property-based, performance, regression)
-✅ 75% of tests passing on first run
-✅ Identified specific issues preventing 100% pass rate
+[PASS] Added 13 comprehensive test files
+[PASS] Increased coverage from 12.5% to 30%
+[PASS] Created ~5,700 lines of high-quality test code
+[PASS] Implemented advanced testing techniques (property-based, performance, regression)
+[PASS] 75% of tests passing on first run
+[PASS] Identified specific issues preventing 100% pass rate
 
 **Current Challenges:**
-⚠️ ~85 tests blocked by incomplete observable implementation
-⚠️ ~30 tests blocked by outdated baselines
-⚠️ ~15 tests blocked by topological invariance issues
-⚠️ ~120 G2_ML tests require PyTorch environment
+[WARN] ~85 tests blocked by incomplete observable implementation
+[WARN] ~30 tests blocked by outdated baselines
+[WARN] ~15 tests blocked by topological invariance issues
+[WARN] ~120 G2_ML tests require PyTorch environment
 
 **Path Forward:**
 The test suite is **production-ready** and provides excellent diagnostic information. With focused effort on the 3 critical issues (observables, topological invariance, baselines), we can achieve **>90% pass rate within days**.

@@ -381,7 +381,7 @@ These are not parameters to be measured - they are mathematical constants with u
 
 ### 3.7.4 Philosophical Implications
 
-The zero-parameter paradigm has profound implications:
+The zero-parameter paradigm has significant implications:
 
 1. **No fine-tuning possible**: Discrete structures cannot be "tuned" - they are what they are
 2. **Computability**: Rational numbers are computable with finite resources

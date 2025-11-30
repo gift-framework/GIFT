@@ -178,10 +178,9 @@ fig.write_image('my_visualization.png', width=1200, height=900)
 ## Scientific References
 
 These visualizations implement mathematical structures from:
-- **Supplement A**: E₈ Lie algebra, K₇ manifold, dimensional reduction
-- **Supplement B**: Rigorous proofs of exact relations
-- **Supplement C**: Complete observable derivations
-- **Main Paper**: Framework overview and key results
+- **Supplement S1**: E₈ Lie algebra, K₇ manifold, dimensional reduction
+- **Supplement S4**: Complete derivations and rigorous proofs of exact relations
+- **Main Paper**: Framework overview and key results (gift_2_2_main.md)
 
 ## Technical Notes
 
@@ -195,10 +194,10 @@ All visualizations use colorblind-friendly palettes:
 ### Data Validation
 
 All numerical values are validated against:
-- `publications/gift_2_1_main.md` (v2.1 reference document)
-- `publications/GIFT_v21_Observable_Reference.md` (complete observable reference)
+- `publications/gift_2_2_main.md` (v2.2 reference document)
+- `publications/GIFT_v22_Observable_Reference.md` (complete observable reference)
 - Experimental values from PDG 2024, NuFIT 5.3, Planck collaborations
-- Mathematical formulas from v2.1 Supplements
+- Mathematical formulas from v2.2 Supplements (S1-S7)
 
 ### Reproducibility
 

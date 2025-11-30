@@ -140,7 +140,7 @@ m_mu_m_e = base_ratio * (1.0 - radiative_epsilon)  # 206.765
 
 **Can we justify ε = 1/840 geometrically?**
 
-❌ **NO** - Analysis:
+[NO] - Analysis:
 
 1. **Origin of 1/840**:
    - This is a **QED vacuum polarization** correction from standard quantum field theory
@@ -160,7 +160,7 @@ m_mu_m_e = base_ratio * (1.0 - radiative_epsilon)  # 206.765
    - Radiative factor (1 - ε) is quantum field theory (QFT)
    - GIFT + QFT = Complete prediction
 
-**Geometric justification level**: ⭐☆☆☆☆ (1/5)
+**Geometric justification level**: (1/5)
 - Base formula has full geometric justification
 - But the correction factor does NOT
 
@@ -189,7 +189,7 @@ v_EW = v_base * radiative_corr  # 246.13 GeV
 
 **Can we justify α/(4π) geometrically?**
 
-❌ **NO** - Analysis:
+[NO] - Analysis:
 
 1. **Origin of α/(4π)**:
    - Standard **electroweak radiative correction**
@@ -208,7 +208,7 @@ v_EW = v_base * radiative_corr  # 246.13 GeV
    - Radiative correction is standard QFT
    - Again: GIFT (tree-level) + QFT (loop-level) = Full prediction
 
-**Geometric justification level**: ⭐☆☆☆☆ (1/5)
+**Geometric justification level**: (1/5)
 - Base has geometric justification
 - Radiative correction does not
 
@@ -239,7 +239,7 @@ M_Z = M_W / sqrt(1.0 - sin2thetaW_onshell)  # 91.20 GeV
 
 **Can we justify scheme choice geometrically?**
 
-⚠️ **PARTIALLY** - Analysis:
+[PARTIAL] - Analysis:
 
 1. **The issue**:
    - GIFT predicts sin²θ_W = 0.23128 (close to MS-bar scheme value)
@@ -261,7 +261,7 @@ M_Z = M_W / sqrt(1.0 - sin2thetaW_onshell)  # 91.20 GeV
    - QFT tells us: "for mass relations, use on-shell version ≈ 0.22"
    - Correction is **physically justified** but not **geometrically derived**
 
-**Geometric justification level**: ⭐⭐☆☆☆ (2/5)
+**Geometric justification level**: (2/5)
 - The corrected result matches documentation value exactly!
 - But the renormalization scheme distinction is QFT, not geometry
 - This might actually be GIFT working correctly + us understanding scheme properly
@@ -287,7 +287,7 @@ obs['m_s_m_d'] = p2_topological**2 * Weyl_topological  # = 20.0 (exact)
 
 **Can we justify this geometrically?**
 
-✅ **YES!** - Analysis:
+[YES] - Analysis:
 
 1. **This is a BUG FIX, not a new formula**:
    - Documentation says: m_s/m_d = 4 × 5 = 20 (exact, PROVEN)
@@ -305,7 +305,7 @@ obs['m_s_m_d'] = p2_topological**2 * Weyl_topological  # = 20.0 (exact)
    - We changed to constants (right)
    - NO new physics, just correct implementation
 
-**Geometric justification level**: ⭐⭐⭐⭐⭐ (5/5)
+**Geometric justification level**: (5/5)
 - **Fully justified** - this IS the geometric prediction
 - Our "correction" was just implementing it correctly
 
@@ -322,7 +322,7 @@ obs['m_t_m_c'] = obs['m_t_m_b'] * obs['m_b_m_u'] / obs['m_c_m_u']
 
 **Can we justify this geometrically?**
 
-✅ **YES** - Analysis:
+[YES] - Analysis:
 
 1. **This is a DERIVED observable**:
    - Computed from other ratios: m_t/m_b, m_b/m_u, m_c/m_u
@@ -333,7 +333,7 @@ obs['m_t_m_c'] = obs['m_t_m_b'] * obs['m_b_m_u'] / obs['m_c_m_u']
    - Just computing a ratio that was missing
    - All constituent ratios already in framework
 
-**Geometric justification level**: ⭐⭐⭐⭐☆ (4/5)
+**Geometric justification level**: (4/5)
 - Fully justified as derived quantity
 - Not fundamental, but consistently computed
 
@@ -357,7 +357,7 @@ obs['m_d_m_u'] = np.log(107.0) / np.sqrt(self.dim_G2 / 3.0)
 
 **Can we justify this geometrically?**
 
-✅ **PARTIALLY** - Analysis:
+[PARTIAL] - Analysis:
 
 1. **Documentation says**:
    - m_u = √(14/3) MeV (explicit)
@@ -379,7 +379,7 @@ obs['m_d_m_u'] = np.log(107.0) / np.sqrt(self.dim_G2 / 3.0)
    - Fixed implementation to match documentation
    - But ln(107) origin unclear
 
-**Geometric justification level**: ⭐⭐⭐☆☆ (3/5)
+**Geometric justification level**: (3/5)
 - Formula is correct per documentation
 - But ln(107) origin not fully explained geometrically
 
@@ -403,7 +403,7 @@ obs['M_W'] = M_W_base * torsion_factor_W
 
 **Can we justify these geometrically?**
 
-❌ **NO** - Analysis:
+[NO] - Analysis:
 
 1. **These are empirical calibrations**:
    - 20.6: Fitted to CMB/LSS data
@@ -419,7 +419,7 @@ obs['M_W'] = M_W_base * torsion_factor_W
    - They improve agreement but lack derivation
    - Standard practice in physics, but not GIFT's claimed strength
 
-**Geometric justification level**: ☆☆☆☆☆ (0/5)
+**Geometric justification level**: (0/5)
 - Pure fits, no geometric justification
 
 **Appropriate classification**: **PHENOMENOLOGICAL** (or **EXPLORATORY**)
@@ -430,14 +430,14 @@ obs['M_W'] = M_W_base * torsion_factor_W
 
 | Correction | Improvement | Geometric Justification Level | Original GIFT Level | Can Match? |
 |------------|-------------|-------------------------------|-------------------|------------|
-| m_s/m_d constants | (bug fix) | ⭐⭐⭐⭐⭐ (5/5) FULL | ⭐⭐⭐⭐⭐ PROVEN | ✅ YES (is GIFT) |
-| m_t/m_c added | (missing) | ⭐⭐⭐⭐☆ (4/5) HIGH | ⭐⭐⭐⭐☆ DERIVED | ✅ YES (is GIFT) |
-| m_d/m_u formula | 5580× | ⭐⭐⭐☆☆ (3/5) MEDIUM | ⭐⭐⭐☆☆ THEORETICAL | ✅ YES (is GIFT) |
-| M_Z scheme | 48× | ⭐⭐☆☆☆ (2/5) LOW | ⭐⭐⭐⭐☆ DERIVED | ⚠️ PARTIAL (QFT) |
-| m_μ/m_e QED | 94× | ⭐☆☆☆☆ (1/5) VERY LOW | ⭐⭐⭐⭐⭐ TOPOLOGICAL | ❌ NO (QFT) |
-| v_EW radiative | 6.5× | ⭐☆☆☆☆ (1/5) VERY LOW | ⭐⭐⭐☆☆ THEORETICAL | ❌ NO (QFT) |
-| sigma_8 calib | 203× | ☆☆☆☆☆ (0/5) NONE | N/A (missing) | ❌ NO (fit) |
-| M_W torsion | (small) | ☆☆☆☆☆ (0/5) NONE | ⭐⭐⭐⭐☆ DERIVED | ❌ NO (fit) |
+| m_s/m_d constants | (bug fix) | (5/5) FULL | (5/5) PROVEN | YES (is GIFT) |
+| m_t/m_c added | (missing) | (4/5) HIGH | (4/5) DERIVED | YES (is GIFT) |
+| m_d/m_u formula | 5580× | (3/5) MEDIUM | (3/5) THEORETICAL | YES (is GIFT) |
+| M_Z scheme | 48× | (2/5) LOW | (4/5) DERIVED | PARTIAL (QFT) |
+| m_μ/m_e QED | 94× | (1/5) VERY LOW | (5/5) TOPOLOGICAL | NO (QFT) |
+| v_EW radiative | 6.5× | (1/5) VERY LOW | (3/5) THEORETICAL | NO (QFT) |
+| sigma_8 calib | 203× | (0/5) NONE | N/A (missing) | NO (fit) |
+| M_W torsion | (small) | (0/5) NONE | (4/5) DERIVED | NO (fit) |
 
 **Key insight**: Our corrections fall into three categories:
 
@@ -478,9 +478,9 @@ Let's check the math:
 
 | Observable | Our correction | Torsion term | Match? |
 |------------|----------------|--------------|---------|
-| m_μ/m_e | × (1 - 1/840) = × 0.99881 | det(g)×\|T\| = 0.033 | ❌ NO (0.12% vs 0.033) |
-| v_EW | × (1 - α/4π) = × 0.99942 | det(g)×\|T\| = 0.033 | ❌ NO (0.058% vs 0.033) |
-| α⁻¹ | + 0.033 | det(g)×\|T\| = 0.033 | ✅ YES! |
+| m_μ/m_e | × (1 - 1/840) = × 0.99881 | det(g)×\|T\| = 0.033 | NO (0.12% vs 0.033) |
+| v_EW | × (1 - α/4π) = × 0.99942 | det(g)×\|T\| = 0.033 | NO (0.058% vs 0.033) |
+| α⁻¹ | + 0.033 | det(g)×\|T\| = 0.033 | YES! |
 
 **Finding**:
 - For α⁻¹, the torsion correction DOES provide quantum effects
@@ -524,58 +524,58 @@ Let's check the math:
 ### 5.1 GIFT_v21_Geometric_Justifications.md Standard
 
 **Required elements** for each observable:
-1. ✅ Formula statement
-2. ✅ Component breakdown
-3. ✅ Geometric justification for each component
+1.Formula statement
+2.Component breakdown
+3.Geometric justification for each component
    - Why this manifold property?
    - Why this mathematical constant?
    - Physical interpretation
-4. ✅ Cross-validation (same constants appear elsewhere)
-5. ✅ Experimental comparison
+4.Cross-validation (same constants appear elsewhere)
+5.Experimental comparison
 
 **Can we provide this for our corrections?**
 
 | Element | m_μ/m_e QED | v_EW radiative | M_Z scheme |
 |---------|-------------|----------------|------------|
-| Formula | ✅ Yes | ✅ Yes | ✅ Yes |
-| Components | ✅ Base + ε | ✅ Base + α/(4π) | ✅ On-shell choice |
-| Geometric justification | ❌ Only base | ❌ Only base | ⚠️ QFT convention |
-| Cross-validation | ❌ 1/840 unique | ❌ α/(4π) from QFT | ⚠️ Standard practice |
-| Experimental | ✅ Excellent | ✅ Excellent | ✅ Excellent |
+| Formula | Yes | Yes | Yes |
+| Components | Base + e | Base + alpha/(4pi) | On-shell choice |
+| Geometric justification | Only base | Only base | QFT convention |
+| Cross-validation | 1/840 unique | alpha/(4pi) from QFT | Standard practice |
+| Experimental | Excellent | Excellent | Excellent |
 
 **Score**: 2/5 for radiative corrections vs 5/5 for original GIFT observables
 
 ### 5.2 GIFT_v21_Observable_Reference.md Standard
 
 **Required elements**:
-1. ✅ Status classification (PROVEN/TOPOLOGICAL/DERIVED/THEORETICAL)
-2. ✅ Explicit formula
-3. ✅ Derivation notes
-4. ✅ Experimental comparison with deviation
+1.Status classification (PROVEN/TOPOLOGICAL/DERIVED/THEORETICAL)
+2.Explicit formula
+3.Derivation notes
+4.Experimental comparison with deviation
 
 **Our corrections**:
 
 | Correction | Status we can claim | Status in docs | Match? |
 |------------|---------------------|----------------|--------|
-| m_μ/m_e base | TOPOLOGICAL | TOPOLOGICAL | ✅ |
-| m_μ/m_e +QED | RADIATIVE (new) | - | ❌ Need new category |
-| v_EW base | THEORETICAL | THEORETICAL | ✅ |
-| v_EW +radiative | RADIATIVE (new) | - | ❌ Need new category |
-| M_Z | DERIVED (if scheme explained) | DERIVED | ⚠️ Maybe |
+| m_μ/m_e base | TOPOLOGICAL | TOPOLOGICAL | Yes |
+| m_μ/m_e +QED | RADIATIVE (new) | - | Need new category |
+| v_EW base | THEORETICAL | THEORETICAL | Yes |
+| v_EW +radiative | RADIATIVE (new) | - | Need new category |
+| M_Z | DERIVED (if scheme explained) | DERIVED | Maybe |
 
 ### 5.3 GIFT_v21_Statistical_Validation.md Standard
 
 **Required elements**:
-1. ✅ Monte Carlo uncertainty propagation
-2. ✅ Parameter sensitivity analysis
-3. ✅ Uniqueness testing
-4. ✅ Robustness classification
+1.Monte Carlo uncertainty propagation
+2.Parameter sensitivity analysis
+3.Uniqueness testing
+4.Robustness classification
 
 **Our corrections fit here easily**:
-- Can run Monte Carlo on corrected formulas ✅
-- Can test sensitivity ✅
-- Can verify uniqueness ✅
-- Can classify robustness ✅
+- Can run Monte Carlo on corrected formulas - Yes
+- Can test sensitivity - Yes
+- Can verify uniqueness - Yes
+- Can classify robustness - Yes
 
 **This document doesn't require geometric justification**, so our corrections fit fine.
 
@@ -620,14 +620,14 @@ m_μ/m_e = 27^φ × (1 - ε_QED) = 206.765
 ```
 
 **Advantages**:
-- ✅ Honest about what's geometric vs what's QFT
-- ✅ Shows GIFT provides base structure
-- ✅ Explains dramatic precision improvement
-- ✅ Maintains intellectual honesty
+- [+] Honest about what's geometric vs what's QFT
+- [+] Shows GIFT provides base structure
+- [+] Explains dramatic precision improvement
+- [+] Maintains intellectual honesty
 
 **Disadvantages**:
-- ⚠️ Admits not everything is pure topology
-- ⚠️ Some might see as weakening GIFT's claims
+- [-] Admits not everything is pure topology
+- [-] Some might see as weakening GIFT's claims
 
 ---
 
@@ -649,13 +649,13 @@ Geometric torsion → Quantum loops (unifying principle)
 ```
 
 **Advantages**:
-- ✅ Keeps everything within GIFT framework
-- ✅ Ambitious theoretical unification
+- [+] Keeps everything within GIFT framework
+- [+] Ambitious theoretical unification
 
 **Disadvantages**:
-- ❌ Requires NEW THEORY development
-- ❌ Currently unjustified (our ε ≠ |T|)
-- ❌ Risk of over-claiming
+- [-] Requires NEW THEORY development
+- [-] Currently unjustified (our ε ≠ |T|)
+- [-] Risk of over-claiming
 
 ---
 
@@ -668,9 +668,9 @@ Geometric torsion → Quantum loops (unifying principle)
 5. Discuss in limitations section
 
 **Advantages**:
-- ✅ Honest and complete
-- ✅ Shows path from geometry to precision
-- ✅ Maintains scientific credibility
+- [+] Honest and complete
+- [+] Shows path from geometry to precision
+- [+] Maintains scientific credibility
 
 ---
 
@@ -720,20 +720,20 @@ Status classifications:
 **Détails** (Details):
 
 **Corrections qui PEUVENT être justifiées au même niveau** (3/8):
-- ✅ m_s/m_d (constantes topologiques) - Bug fix, full GIFT justification
-- ✅ m_t/m_c (dérivé) - Derived, consistent with GIFT
-- ✅ m_d/m_u (formule correcte) - Matches documentation
+- [OK] m_s/m_d (constantes topologiques) - Bug fix, full GIFT justification
+- [OK] m_t/m_c (dérivé) - Derived, consistent with GIFT
+- [OK] m_d/m_u (formule correcte) - Matches documentation
 
 **Corrections qui NE PEUVENT PAS être justifiées géométriquement** (5/8):
-- ❌ m_μ/m_e (correction QED ε=1/840) - QFT loop, not topology
-- ❌ v_EW (correction radiative α/4π) - QFT loop, not topology
-- ❌ M_Z (schéma de renormalisation) - QFT convention, not topology
-- ❌ sigma_8 (facteur calibré 20.6) - Empirical fit
-- ❌ M_W (facteur de torsion 3.677) - Empirical fit
+- [NO] m_mu/m_e (correction QED ε=1/840) - QFT loop, not topology
+- [NO] v_EW (correction radiative α/4π) - QFT loop, not topology
+- [NO] M_Z (schéma de renormalisation) - QFT convention, not topology
+- [NO] sigma_8 (facteur calibré 20.6) - Empirical fit
+- [NO] M_W (facteur de torsion 3.677) - Empirical fit
 
 **Niveau de justification géométrique**:
-- Documentation GIFT: ⭐⭐⭐⭐⭐ (5/5) - Pure topology/geometry
-- Nos corrections: ⭐⭐☆☆☆ (2/5) moyenne - Mix of GIFT + QFT + fits
+- Documentation GIFT: (5/5) - Pure topology/geometry
+- Nos corrections: (2/5) moyenne - Mix of GIFT + QFT + fits
 
 ### 7.2 Key Insight
 

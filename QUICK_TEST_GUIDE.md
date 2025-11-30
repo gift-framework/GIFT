@@ -1,6 +1,6 @@
 # Guide Rapide - Tests GIFT Framework
 
-## 🚀 Lancer les tests
+## Lancer les tests
 
 ### Tests rapides (sans torch)
 ```bash
@@ -11,7 +11,7 @@ pytest tests/unit/test_gift_framework.py tests/unit/test_agents.py tests/integra
 pytest tests/unit/test_gift_framework.py --cov=statistical_validation --cov-report=html
 ```
 
-### Tests complets (avec torch installé)
+### Tests complets (avec torch installe)
 ```bash
 # Tous les tests
 pytest tests/ -v
@@ -19,25 +19,25 @@ pytest tests/ -v
 # Uniquement tests rapides
 pytest -m "not slow" -v
 
-# En parallèle (plus rapide)
+# En parallele (plus rapide)
 pytest -n auto -v
 ```
 
-## 📊 Commandes utiles
+## Commandes utiles
 
-### Par catégorie
+### Par categorie
 ```bash
 pytest tests/unit              # Tests unitaires
-pytest tests/integration       # Tests d'intégration
-pytest tests/regression        # Tests de régression
-pytest G2_ML/tests             # Tests G2 ML (nécessite torch)
+pytest tests/integration       # Tests d'integration
+pytest tests/regression        # Tests de regression
+pytest G2_ML/tests             # Tests G2 ML (necessite torch)
 ```
 
 ### Avec filtres
 ```bash
 pytest -k "gauge"              # Tous les tests avec "gauge" dans le nom
 pytest -k "GIFT"               # Tests du framework GIFT
-pytest -k "delta_CP"           # Tests pour δCP
+pytest -k "delta_CP"           # Tests pour delta_CP
 ```
 
 ### Rapport de couverture
@@ -46,24 +46,24 @@ pytest --cov=. --cov-report=html
 open htmlcov/index.html        # Ouvrir le rapport HTML
 ```
 
-## ✅ Tests critiques validés
+## Tests critiques valides
 
-- ✓ 34 observables dimensionnels
-- ✓ 9 relations PROVEN exactes
-- ✓ Précision < 0.2% vs expérience
-- ✓ Stabilité numérique
-- ✓ Validation expérimentale
+- 39 observables (34 dimensionnels + 5 cosmologiques)
+- 13 relations PROVEN exactes
+- Precision < 0.2% vs experience
+- Stabilite numerique
+- Validation experimentale
 
-## 📁 Structure
+## Structure
 
 ```
 tests/
-├── unit/                   # Tests unitaires (27/27 ✓)
+├── unit/                   # Tests unitaires
 │   ├── test_gift_framework.py
 │   ├── test_agents.py
 │   └── test_error_handling.py
-├── integration/            # Tests d'intégration (6/7 ✓)
-├── regression/             # Tests de régression (7/10 ✓)
+├── integration/            # Tests d'integration
+├── regression/             # Tests de regression
 └── notebooks/              # Tests notebooks
 
 G2_ML/tests/               # Tests G2 ML (~150 tests)
@@ -71,23 +71,23 @@ G2_ML/tests/               # Tests G2 ML (~150 tests)
 └── test_manifold.py
 ```
 
-## 🎯 Résultats actuels
+## Resultats actuels
 
 **59/64 tests passent** (92%) sans torch
 **~210+ tests** disponibles avec torch
 
-Les échecs mineurs sont sur des tests très stricts
-(variations numériques < 0.2%).
+Les echecs mineurs sont sur des tests tres stricts
+(variations numeriques < 0.2%).
 
-## 🔥 CI/CD
+## CI/CD
 
-Les tests s'exécutent automatiquement sur chaque push :
+Les tests s'executent automatiquement sur chaque push :
 - Linting (flake8)
 - Tests unitaires + couverture
-- Tests d'intégration
-- Tests de régression
+- Tests d'integration
+- Tests de regression
 - Upload vers Codecov
 
-## 📖 Documentation complète
+## Documentation complete
 
-Voir `tests/README.md` pour le guide complet !
+Voir `tests/README.md` pour le guide complet.

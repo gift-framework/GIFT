@@ -454,7 +454,7 @@ All mass predictions must be compared at consistent renormalization scale. PDG v
 **DESI bound**: |T|² < 10⁻³
 **GIFT value**: κ_T² = (1/61)² = 2.69 × 10⁻⁴
 
-**Result**: Well within bounds ✓
+**Result**: Well within bounds (satisfied)
 
 ### 20.2 w₀-w_a Constraints
 

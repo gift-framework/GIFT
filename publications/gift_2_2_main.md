@@ -1134,7 +1134,7 @@ The bulk dimension D_bulk = 11 matches M-theory's critical dimension.
 
 ### 13.7 τ as Rational Witness: Discrete Structure of Physical Law
 
-The discovery that τ = 3472/891 is exactly rational (not merely approximated by a rational) has profound implications.
+The discovery that τ = 3472/891 is exactly rational (not merely approximated by a rational) has significant implications.
 
 **The rational nature of τ**:
 
@@ -1207,19 +1207,17 @@ We acknowledge experimental collaborations (Planck, NuFIT, PDG, ATLAS, CMS, T2K,
 
 ## Supplementary Materials
 
-Nine technical supplements provide detailed foundations:
+Seven technical supplements provide detailed foundations:
 
-| Supplement | Title | Pages | Content |
-|------------|-------|-------|---------|
-| S1 | Mathematical Architecture | 30 | E₈ algebra, G₂ manifolds, cohomology |
-| S2 | K₇ Manifold Construction | 40 | Twisted connected sum, ML metrics |
-| S3 | Torsional Dynamics | 35 | Geodesic equations, RG connection |
-| S4 | Rigorous Proofs | 40 | 13 proven relations with complete derivations |
-| S5 | Complete Calculations | 50 | All 39 observable derivations |
-| S6 | Numerical Methods | 20 | Algorithms, code implementation |
-| S7 | Phenomenology | 30 | Experimental comparisons, statistics |
-| S8 | Falsification Protocol | 15 | Experimental tests and timelines |
-| S9 | Extensions | 25 | Quantum gravity, information theory |
+| Supplement | Title | Content |
+|------------|-------|---------|
+| S1 | Mathematical Architecture | E₈ algebra, G₂ manifolds, cohomology |
+| S2 | K₇ Manifold Construction | Twisted connected sum, ML metrics |
+| S3 | Torsional Dynamics | Geodesic equations, RG connection |
+| S4 | Complete Derivations | 13 proven relations, all 39 observable derivations |
+| S5 | Experimental Validation | Data comparison, statistical analysis, falsification criteria |
+| S6 | Theoretical Extensions | Quantum gravity, information theory, speculative directions |
+| S7 | Dimensional Observables | Absolute masses, scale bridge, cosmological parameters |
 
 **Code Repository**: https://github.com/gift-framework/GIFT
 **Interactive Notebooks**: Available at repository
