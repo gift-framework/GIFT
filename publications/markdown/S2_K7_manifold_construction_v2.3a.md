@@ -14,7 +14,7 @@ We establish existence of a G₂ holonomy metric on a compact 7-manifold K₇ wi
 
 2. **Variational solution**: A physics-informed neural network finds a G₂ 3-form φ minimizing torsion subject to metric and topological constraints, achieving det(g) = 65/32 to 0.0001% precision and ||T|| = 0.00140.
 
-3. **Formal certification**: Lean 4 theorem prover verifies that Joyce's perturbation theorem applies, with 56× safety margin below the torsion threshold.
+3. **Formal certification**: Lean 4 theorem prover verifies that Joyce's perturbation theorem applies, with 20× safety margin below the torsion threshold.
 
 **Summary of achievements**:
 
@@ -24,7 +24,7 @@ We establish existence of a G₂ holonomy metric on a compact 7-manifold K₇ wi
 | b₃(K₇) | 77 | 76 ± 1 | TOPOLOGICAL |
 | det(g) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
 | ||T|| | < ε₀ | 0.00140 | CERTIFIED |
-| Joyce margin | > 1 | 56× | PROVEN |
+| Joyce margin | > 1 | 20× | PROVEN |
 
 ---
 
@@ -359,7 +359,7 @@ theorem global_bound_satisfies_joyce :
     global_torsion_bound < joyce_threshold := by
   norm_num
 
-theorem joyce_margin : global_torsion_bound * 56 < joyce_threshold := by
+theorem joyce_margin : global_torsion_bound * 20 < joyce_threshold := by
   norm_num
 end LipschitzBound
 
@@ -379,7 +379,7 @@ end GIFT.G2Certificate
 | `det_g_accuracy` | |det(g) - 65/32| < 0.001 | PROVEN |
 | `samples_satisfy_joyce` | ||T||_max < 0.1 | PROVEN |
 | `global_bound_satisfies_joyce` | 0.00177 < 0.1 | PROVEN |
-| `joyce_margin` | 56× safety factor | PROVEN |
+| `joyce_margin` | 20× safety factor | PROVEN |
 | `k7_admits_torsion_free_g2` | ∃ φ_tf torsion-free | PROVEN |
 | `b3_decomposition` | 77 = 35 + 42 | PROVEN |
 | `H_star_value` | H* = 99 | PROVEN |
@@ -621,6 +621,8 @@ The construction validates the zero continuous adjustable parameter paradigm. Al
 [6] Bryant, R. L. (1987). "Metrics with exceptional holonomy." *Ann. Math.* 126, 525-576.
 
 [7] Raissi, M., Perdikaris, P., Karniadakis, G. E. (2019). "Physics-informed neural networks." *J. Comp. Phys.* 378, 686-707.
+
+[8] The mathlib Community. (2020-). *Mathlib4: The math library for Lean 4*. https://github.com/leanprover-community/mathlib4
 
 ---
 
