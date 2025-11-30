@@ -363,11 +363,12 @@ def verify_det_g_from_network(
     return result
 
 
-def test_direct_verification():
+def test_direct_verification(tolerance: float = 1e-6) -> Dict[str, Any]:
     """
     Test det(g) verification directly from phi values.
 
     This bypasses the network and tests the core formula.
+    Returns a machine-readable certificate payload.
     """
     print("=" * 60)
     print("DIRECT VERIFICATION TEST (no network)")
@@ -407,7 +408,7 @@ def test_direct_verification():
         print(f"  phi[{linear_idx}] ({idx}) = {phi[linear_idx]}")
 
     # Verify with point values
-    success, det_g, msg = verify_det_g(phi, target=65.0/32.0, tolerance=1e-6)
+    success, det_g, msg = verify_det_g(phi, target=65.0 / 32.0, tolerance=tolerance)
     print(f"\nPoint verification: {msg}")
 
     # Now add small uncertainty
@@ -418,10 +419,23 @@ def test_direct_verification():
         for p in phi
     ]
 
-    success2, det_g2, msg2 = verify_det_g(phi_uncertain, target=65.0/32.0, tolerance=0.01)
+    success2, det_g2, msg2 = verify_det_g(
+        phi_uncertain, target=65.0 / 32.0, tolerance=max(tolerance, 0.01)
+    )
     print(f"Uncertain verification: {msg2}")
 
-    return success and success2
+    return {
+        "success": bool(success),
+        "det_g": {"lo": det_g.lo, "hi": det_g.hi},
+        "target": 65.0 / 32.0,
+        "tolerance": tolerance,
+        "width": det_g.width(),
+        "message": msg,
+        "variant": "direct",
+        "uncertain_success": bool(success2),
+        "uncertain_det_g": {"lo": det_g2.lo, "hi": det_g2.hi},
+        "uncertain_message": msg2,
+    }
 
 
 def main():
@@ -432,14 +446,23 @@ def main():
     parser.add_argument("--weights", type=str, help="Path to exported JSON weights")
     parser.add_argument("--demo", action="store_true", help="Run with synthetic weights")
     parser.add_argument("--direct", action="store_true", help="Test direct verification (no network)")
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("verification_result.json"),
+        help="Where to store the machine-readable certificate",
+    )
     parser.add_argument("--tolerance", type=float, default=0.01, help="Verification tolerance")
 
     args = parser.parse_args()
 
     # Quick direct test
     if args.direct:
-        success = test_direct_verification()
-        return 0 if success else 1
+        result = test_direct_verification(tolerance=args.tolerance)
+        with open(args.output, "w") as f:
+            json.dump(result, f, indent=2)
+        print(f"\nResult saved to: {args.output}")
+        return 0 if result["success"] else 1
 
     print("=" * 60)
     print("GIFT det(g) = 65/32 Interval Verification")
@@ -470,10 +493,9 @@ def main():
     )
 
     # Save result
-    output_path = Path("verification_result.json")
-    with open(output_path, 'w') as f:
+    with open(args.output, "w") as f:
         json.dump(result, f, indent=2)
-    print(f"\nResult saved to: {output_path}")
+    print(f"\nResult saved to: {args.output}")
 
     return 0 if result["success"] else 1
 

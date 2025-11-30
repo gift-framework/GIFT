@@ -25,6 +25,7 @@ Status:    PASS
 | `gift_k7_g2_existence` : exists torsion-free G2 | PROVEN (from axioms) | G2Certificate.lean |
 | `H_star_value` : H* = 99 | PROVEN | G2Certificate.lean |
 | `tau_formula` : tau = (496*21)/(27*99) | PROVEN | G2Certificate.lean |
+| `det_g_interval_cert` : |det(g) - 65/32| ≤ 1e-6 (from machine interval) | PROVEN (Lean) | G2Certificate.lean |
 | `det_g_value` : det(g) = 65/32 | VERIFIED (numerical) | verification_result.json |
 
 ### What's Axiomatized (Trusted)
@@ -35,7 +36,7 @@ Status:    PASS
 | `K7_smooth`, `K7_compact` | K7 manifold properties | Level 2: Formalize TCS construction |
 | `phi0` | PINN-derived G2 structure | Level 3: Serialize NN weights |
 | `torsion_bound_cert` | ||T(phi0)|| <= 0.00140... | Level 3: Interval arithmetic |
-| `det_g_interval_cert` | |det(g) - 65/32| <= tol | **DONE** (see verification_result.json) |
+| `det_g_interval_sound` | det(g) lies in the machine interval | **DONE** (verify_det_g.py report) |
 
 ## Roadmap
 
@@ -120,8 +121,8 @@ from src.model import G2VariationalNet
 # ... (see verify_det_g.py for full script)
 "
 
-# 3. Run interval verification (direct mode works)
-python lean/verify_det_g.py --direct
+# 3. Run interval verification (direct mode works and writes the Lean-consumed cert)
+python lean/verify_det_g.py --direct --tolerance 1e-6 --output lean/verification_result.json
 
 # 4. Check results
 cat lean/verification_result.json

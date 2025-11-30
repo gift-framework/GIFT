@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "det_g": {
+    "lo": 2.0312500000000013,
+    "hi": 2.0312500000000013
+  },
+  "target": 2.03125,
+  "tolerance": 1e-06,
+  "width": 0.0,
+  "message": "VERIFIED: det(g) = [2.03125, 2.03125] within tolerance of 2.03125",
+  "variant": "direct",
+  "uncertain_success": false,
+  "uncertain_det_g": {
+    "lo": 2.0043825375257627,
+    "hi": 2.058451559713284
+  },
+  "uncertain_message": "PARTIAL: det(g) = [2.00438, 2.05845] overlaps but not contained in [2.02125, 2.04125]"
+}
