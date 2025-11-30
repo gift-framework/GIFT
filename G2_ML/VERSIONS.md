@@ -2,25 +2,47 @@
 
 **Framework Completion**: 93%
 **Latest Production**: v0.9a (b₂=21), v0.8 (Yukawa)
-**In Progress**: v0.9b (full b₃=77 training)
-**Last Updated**: 2025-11-16
+**In Progress**: v0.9b (full b₃=77), variational_g2 (PINN approach)
+**Last Updated**: 2025-11-30
 
 ## Quick Version Guide
 
 | Version | Status | Key Features | Use Case |
 |---------|--------|--------------|----------|
-| **0.9b** | 🔨 Training | Full b₃=77 extraction | **Next milestone** |
+| **variational_g2** | 🔨 WIP | PINN variational approach | **New paradigm** |
+| **2_1** | 🔨 WIP | Constraints-first formulation | New approach |
+| **2_0** | 🔨 WIP | Weighted Yukawa analysis | TCS exploration |
+| **0.9b** | 🔨 Training | Full b₃=77 extraction | Next milestone |
 | **0.9a** | ✅ Production | b₂=21 latest refinements | **Recommended for b₂** |
 | **0.8** | ✅ Complete | Yukawa + partial b₃ (20/77) | **Yukawa analysis** |
 | **0.7** | ✅ Production | b₂=21 stable | Alternative to 0.9a |
-| 0.6c | ⚠️ Archived | Validation refinements | Historical |
-| 0.6b | ⚠️ Archived | Validation improvements | Historical |
-| 0.6 | ⚠️ Archived | Enhanced validation | Historical |
-| 0.5 | ⚠️ Archived | b₃ exploration (prelim) | Historical |
-| 0.4 | ⚠️ Archived | Curriculum learning | Historical |
-| 0.3 | ⚠️ Archived | Loss improvements | Historical |
-| 0.2 | ⚠️ Archived | Architecture refinement | Historical |
-| 0.1 | ⚠️ Archived | Initial prototype | Historical |
+| 1.x series | ✅/⚠️ | Extended exploration | Milestones kept |
+| 0.1-0.6c | ⚠️ Archived | Early development | See archived/ |
+
+## Folder Structure
+
+```
+G2_ML/
+├── Production (v0.x)
+│   ├── 0.7/          b₂=21 first stable
+│   ├── 0.8/          Yukawa computed
+│   ├── 0.9a/         Latest production
+│   └── 0.9b/         Full b₃=77 (in progress)
+├── Extended (v1.x milestones)
+│   ├── 1.0f, 1_1c, 1_2c, 1_3c/   Series finals
+│   ├── 1_4 - 1_8/                Exploration
+│   └── 1_9b/                     Fixed hodge
+├── New Paradigm (v2.x)
+│   ├── 2_0/          Weighted Yukawa
+│   └── 2_1/          Variational formulation
+├── Specialized Modules
+│   ├── variational_g2/   PINN-based metric extraction
+│   ├── meta_hodge/       Historical data mining
+│   └── tcs_joyce/        TCS global modes
+└── archived/
+    ├── early_development/   0.1-0.6c, 0.9
+    └── v1_iterations/       Intermediate 1.x versions
+```
 
 ---
 
@@ -139,123 +161,78 @@
 
 ---
 
-### v0.6c - Validation Refinements ⚠️
+### Archived Versions (0.1-0.6c, 0.9) ⚠️
 
-**Status**: ⚠️ Archived
-**Date**: 2025-11
-**Focus**: Third iteration of validation improvements
+**Location**: `archived/early_development/`
 
-**Historical Note**: Final stepping stone before v0.7 production release
+Early development versions preserved for historical reference.
+See `archived/README.md` for details.
 
-**Migration**: Use v0.7 or v0.9a
+| Version | Focus | Key Innovation |
+|---------|-------|----------------|
+| 0.1 | Initial prototype | Proof of feasibility |
+| 0.2 | Architecture | 2x faster convergence |
+| 0.3 | Loss functions | Improved training |
+| 0.4 | Curriculum learning | 70% -> 85% success |
+| 0.5 | b₃ exploration | Preliminary investigation |
+| 0.6-0.6c | Validation | Gram matrix analysis |
+| 0.9 | Refinement | Superseded by 0.9a |
 
----
-
-### v0.6b - Validation Improvements ⚠️
-
-**Status**: ⚠️ Archived
-**Date**: 2025-11
-**Focus**: Second validation iteration
-
-**Migration**: Use v0.7 or v0.9a
-
----
-
-### v0.6 - Enhanced Validation ⚠️
-
-**Status**: ⚠️ Archived
-**Date**: 2025-11
-**Focus**: Comprehensive validation metrics
-
-**Improvements**:
-- Gram matrix analysis
-- Eigenvalue spectrum validation
-- Torsion measurements
-- Hitchin functional evaluation
-
-**Migration**: Validation methods integrated into v0.7+
+**Migration**: Use v0.7 or v0.9a for production work.
 
 ---
 
-### v0.5 - b₃ Exploration (Preliminary) ⚠️
+### New Paradigm: variational_g2 🔨
 
-**Status**: ⚠️ Archived
-**Date**: 2025-10
-**Focus**: Preliminary b₃ harmonic 3-forms exploration
+**Status**: Work in Progress
+**Location**: `variational_g2/`
+**Approach**: Physics-Informed Neural Network (PINN)
 
-**Historical Note**: Early investigation into b₃=77 extraction
+**Key Shift**: Constraints as PRIMARY inputs, metric as EMERGENT output.
+Does NOT assume TCS/Joyce - lets geometry emerge from GIFT constraints.
 
-**Migration**: For b₃ work, see v0.8 (partial) or v0.9b (in progress)
+**Constraints enforced**:
+- det(g) = 65/32 (GIFT topological)
+- kappa_T = 1/61 (torsion magnitude)
+- b₂ = 21, b₃ = 77 (cohomology)
+- Metric positivity
 
----
+**Training phases**:
+1. Initialization (warm start)
+2. Constraint enforcement
+3. Torsion minimization
+4. Refinement
 
-### v0.4 - Curriculum Learning ⚠️
-
-**Status**: ⚠️ Archived
-**Date**: 2025-10
-**Focus**: Multi-phase training schedule implementation
-
-**Key Innovation**: Curriculum learning approach
-- Phase 1: Orthonormality
-- Phase 2: + Closedness
-- Phase 3: + Coclosedness
-
-**Impact**: Improved training success rate from 70% to 85%
-
-**Key Files**:
-- `K7_G2_Metric_Publication_v04.md` (archived draft)
-- `K7_G2_Metric_Supplementary_v04.md` (archived)
-
-**Migration**: Curriculum approach adopted in v0.7+
+**Output**: `outputs/rigorous_certificate.json`
+- det(g) verified to 1.5e-13% relative error
+- Status: NUMERICALLY_PROMISING
 
 ---
 
-### v0.3 - Loss Function Improvements ⚠️
+### New Paradigm: meta_hodge
 
-**Status**: ⚠️ Archived
-**Date**: 2025-10
-**Focus**: Enhanced loss functions
+**Location**: `meta_hodge/`
+**Purpose**: Historical data mining from all versions
 
-**Migration**: Use v0.7 or v0.9a
+Aggregates learned metrics from v0.1 through v1.9b to:
+- Build candidate library
+- Run unified Hodge analysis
+- Extract Yukawa couplings across versions
+- Analyze stability patterns
 
----
-
-### v0.2 - Architecture Refinement ⚠️
-
-**Status**: ⚠️ Archived
-**Date**: 2025-09
-**Focus**: Network architecture improvements
-
-**Improvements**:
-- Refined PhiNetwork architecture
-- Better numerical stability
-- Enhanced gradient flow
-- 2× faster convergence vs. v0.1
-
-**Key Files**:
-- `TECHNICAL_DOCUMENTATION.md` (archived)
-
-**Migration**: Use v0.7 or v0.9a
+**Key outputs**: K7_GIFT_ATLAS.md, K7_DEFORMATION_ATLAS.md
 
 ---
 
-### v0.1 - Initial Prototype ⚠️
+### New Paradigm: tcs_joyce
 
-**Status**: ⚠️ Archived
-**Date**: 2025-09
-**Focus**: Proof-of-concept
+**Location**: `tcs_joyce/`
+**Purpose**: Geometrically-motivated TCS global modes
 
-**Features**:
-- Basic PhiNetwork architecture
-- Initial harmonic 2-form extraction
-- Foundational loss functions
-
-**Key Files**:
-- `TECHNICAL_DOCUMENTATION.md` (archived)
-
-**Historical Significance**: Demonstrated feasibility of ML approach to G₂ metric learning
-
-**Migration**: Use v0.7 or v0.9a
+Replaces artificial polynomial/trig modes with proper TCS construction:
+- 42 global modes = 14 left + 14 right + 14 neck
+- Profile functions for CY3 regions
+- Expected: better eigenvalue gap, 43/77 structure
 
 ---
 
@@ -288,13 +265,14 @@ All archived versions (0.1-0.6c) available for historical reference. Each contai
 ## Version Progression Timeline
 
 ```
-2025-09: 0.1 → 0.2 → 0.3  (Architecture development)
-2025-10: 0.4 → 0.5 → 0.6  (Curriculum learning, validation)
+2025-09: 0.1 → 0.2 → 0.3  (Architecture development)        [archived]
+2025-10: 0.4 → 0.5 → 0.6  (Curriculum learning, validation) [archived]
 2025-11: 0.6b → 0.6c → 0.7 ✅ (Production milestone)
 2025-11: 0.8 ✅  (Yukawa + partial b₃)
 2025-11: 0.9a ✅ (Latest production)
 2025-11: 0.9b 🔨 (Full b₃=77 in progress)
-Future:  1.0 🎯 (Complete framework target)
+2025-11: 1.x series (Extended exploration, milestones kept)
+2025-11: 2.x + variational_g2 🔨 (New paradigm - constraints first)
 ```
 
 ---
@@ -320,9 +298,9 @@ Future:  1.0 🎯 (Complete framework target)
 - v0.9b: Active development
 
 **Archived Versions** (⚠️):
-- v0.1-0.6c: No active support
-- Available for historical reference only
-- Documented migration paths to production versions
+- v0.1-0.6c, 0.9: Located in `archived/early_development/`
+- v1.x iterations: Located in `archived/v1_iterations/`
+- See `archived/README.md` for full inventory
 
 ---
 
@@ -331,6 +309,7 @@ Future:  1.0 🎯 (Complete framework target)
 - **[STATUS.md](STATUS.md)** - Current implementation status (detailed)
 - **[README.md](README.md)** - Framework overview
 - **[FUTURE_WORK.md](FUTURE_WORK.md)** - Planned enhancements
+- **[archived/README.md](archived/README.md)** - Archived versions guide
 - **Individual version READMEs** - Version-specific documentation
 
 ---
@@ -342,14 +321,19 @@ Future:  1.0 🎯 (Complete framework target)
 2. **v0.8** - Yukawa tensors (unique capability)
 3. **v0.7** - Stable b₂=21 (proven alternative)
 
+**New Paradigm (WIP)**:
+- **variational_g2** - PINN-based constraints-first approach
+- **meta_hodge** - Cross-version analysis pipeline
+- **tcs_joyce** - TCS global modes
+
 **Coming Soon**: v0.9b with full b₃=77 extraction
 
 **For Details**: See version-specific README.md in each directory
 
 ---
 
-**Last Updated**: 2025-11-16
-**Framework**: GIFT v2.0.0
+**Last Updated**: 2025-11-30
+**Framework**: GIFT v2.2.0
 **Maintained by**: GIFT Framework Team
 **License**: MIT
 
