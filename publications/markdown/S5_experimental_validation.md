@@ -61,12 +61,23 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 3. **Clear experimental signatures** for testing
 4. **Explicit exclusions** of alternative scenarios
 
-### 3.2 Classification of Tests
+### 3.2 Status Classifications
+
+| Status | Criterion |
+|--------|-----------|
+| **PROVEN** | Complete mathematical proof, exact result from topology |
+| **PROVEN (Lean)** | Verified by Lean 4 kernel with Mathlib |
+| **TOPOLOGICAL** | Direct consequence of manifold structure |
+| **CERTIFIED** | Numerical result verified via interval arithmetic + Lean |
+| **DERIVED** | Computed from PROVEN/TOPOLOGICAL relations |
+
+### 3.3 Classification of Tests
 
 **Type A (Absolute)**: Violation of topological identity falsifies framework immediately
 - N_gen = 3 (generation number)
 - Exact rational relations (sin²θ_W = 3/13, τ = 3472/891)
 - Exact integer relations
+- CERTIFIED quantities (det(g), ||T||) with Lean verification
 
 **Type B (Bounded)**: Deviation beyond stated tolerance is problematic
 - Most observables with finite precision
@@ -89,9 +100,11 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 | **α_s(M_Z)** | **√2/12 = 0.11785** | 0.1179 | 0.0009 | 0.042% | **TOPOLOGICAL** |
 | **κ_T** | **1/61 = 0.01639** | 0.0164 | 0.001 | 0.04% | **TOPOLOGICAL** |
 | **τ** | **3472/891 = 3.8967** | 3.897 | internal | 0.01% | **PROVEN** |
-| **det(g)** | **65/32 = 2.03125** | 2.031 | ML-constrained | 0.012% | **TOPOLOGICAL** |
+| **det(g)** | **65/32 = 2.03125** | 2.0312490 ± 0.0001 | PINN + Lean | **0.00005%** | **CERTIFIED** |
 
-**Sector mean deviation**: 0.053%
+**Note on det(g)**: The value 65/32 is TOPOLOGICAL (exact formula). The PINN cross-check achieves 2.0312490 ± 0.0001, verified by Lean 4 with 20× Joyce margin. See Supplement S2 for full certification.
+
+**Sector mean deviation**: 0.044%
 
 ---
 
@@ -287,14 +300,29 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 
 **Status**: CONSISTENT (well within bounds)
 
-### 14.6 Additional Type A Predictions
+### 14.6 Metric Determinant det(g) = 65/32
+
+**Prediction**: det(g) = 65/32 = 2.03125 (exactly)
+
+**Mathematical basis** (TOPOLOGICAL):
+$$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{32} = \frac{65}{32}$$
+
+**Numerical certification** (CERTIFIED):
+- PINN achieves: 2.0312490 ± 0.0001
+- Deviation from 65/32: 0.00005%
+- Lean 4 verification: Joyce margin 20×
+
+**Falsification criterion**: If independent metric computations (e.g., full TCS or orbifold resolution) yield det(g) inconsistent with 65/32 by more than 0.01%, the topological formula is questioned.
+
+**Current status**: CERTIFIED (PINN + Lean verification). See Supplement S2 for complete certification.
+
+### 14.7 Additional Type A Predictions
 
 | Prediction | Formula | Value | Tolerance | Status |
 |------------|---------|-------|-----------|--------|
 | m_τ/m_e | 7 + 2480 + 990 | 3477 | ± 0.5 | CONSISTENT |
 | m_s/m_d | 4 × 5 | 20 | ± 1 | CONSISTENT |
 | Q_Koide | 14/21 | 2/3 | ± 0.001 | CONSISTENT |
-| det(g) | 65/32 | 2.03125 | ± 0.01 | CONSISTENT |
 
 ---
 
