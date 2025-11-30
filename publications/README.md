@@ -40,33 +40,33 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 | Time | Read | You'll understand |
 |------|------|-------------------|
 | 5 min | Executive Summary (below) | Core claims and results |
-| 30 min | + [Main Paper](markdown/gift_2_2_main.md) Sections 1,8,14 | Full prediction set |
-| 2 hrs | + [S1](markdown/S1_mathematical_architecture.md) + [S4](markdown/S4_complete_derivations.md) | Mathematical foundations |
-| Half day | + [S2](markdown/S2_K7_manifold_construction.md), [S3](markdown/S3_torsional_dynamics.md) | Technical geometric details |
-| Full study | + [S5](markdown/S5_experimental_validation.md), [S7](markdown/S7_dimensional_observables.md) | Experimental validation |
-| Research | + [S6](markdown/S6_theoretical_extensions.md) | Speculative extensions |
+| 30 min | + [Main Paper](markdown/gift_2_3_main.md) Sections 1,8,14 | Full prediction set |
+| 2 hrs | + [S1](markdown/S1_mathematical_architecture_v23.md) + [S4](markdown/S4_complete_derivations_v23.md) | Mathematical foundations |
+| Half day | + [S2](markdown/S2_K7_manifold_construction_v23.md), [S3](markdown/S3_torsional_dynamics_v23.md) | Technical geometric details |
+| Full study | + [S5](markdown/S5_experimental_validation_v23.md), [S7](markdown/S7_dimensional_observables_v23.md) | Experimental validation |
+| Research | + [S6](markdown/S6_theoretical_extensions_v23.md) | Speculative extensions |
 
 ### By Interest
 
 **For Experimentalists:**
-1. [Observable Reference](references/GIFT_v22_Observable_Reference.md) - All predictions with uncertainties
-2. [S5: Experimental Validation](markdown/S5_experimental_validation.md) - Tests, timelines, falsification
-3. [S7: Dimensional Observables](markdown/S7_dimensional_observables.md) - Absolute mass predictions
+1. [Observable Reference](references/GIFT_v23_Observable_Reference.md) - All predictions with uncertainties
+2. [S5: Experimental Validation](markdown/S5_experimental_validation_v23.md) - Tests, timelines, falsification
+3. [S7: Dimensional Observables](markdown/S7_dimensional_observables_v23.md) - Absolute mass predictions
 
 **For Mathematicians:**
-1. [S1: Mathematical Architecture](markdown/S1_mathematical_architecture.md) - E₈, G₂, cohomology
-2. [S4: Complete Derivations](markdown/S4_complete_derivations.md) - All proofs
-3. [S2: K₇ Construction](markdown/S2_K7_manifold_construction.md) - TCS construction
+1. [S1: Mathematical Architecture](markdown/S1_mathematical_architecture_v23.md) - E₈, G₂, cohomology
+2. [S4: Complete Derivations](markdown/S4_complete_derivations_v23.md) - All proofs
+3. [S2: K₇ Construction](markdown/S2_K7_manifold_construction_v23.md) - TCS construction
 
 **For Phenomenologists:**
-1. [Main Paper](markdown/gift_2_2_main.md) - Full framework
-2. [Geometric Justifications](references/GIFT_v22_Geometric_Justifications.md) - Why each formula
-3. [S3: Torsional Dynamics](markdown/S3_torsional_dynamics.md) - RG flow interpretation
+1. [Main Paper](markdown/gift_2_3_main.md) - Full framework
+2. [Geometric Justifications](references/GIFT_v23_Geometric_Justifications.md) - Why each formula
+3. [S3: Torsional Dynamics](markdown/S3_torsional_dynamics_v23.md) - RG flow interpretation
 
 **For String Theorists:**
-1. [S1: Mathematical Architecture](markdown/S1_mathematical_architecture.md) - E₈×E₈ heterotic connection
-2. [S6: Theoretical Extensions](markdown/S6_theoretical_extensions.md) - M-theory, holography
-3. [S2: K₇ Construction](markdown/S2_K7_manifold_construction.md) - G₂ compactification
+1. [S1: Mathematical Architecture](markdown/S1_mathematical_architecture_v23.md) - E₈×E₈ heterotic connection
+2. [S6: Theoretical Extensions](markdown/S6_theoretical_extensions_v23.md) - M-theory, holography
+3. [S2: K₇ Construction](markdown/S2_K7_manifold_construction_v23.md) - G₂ compactification
 
 ---
 
@@ -76,19 +76,19 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 publications/
 ├── README.md                              # This file
 ├── markdown/                              # Main documents
-│   ├── gift_2_2_main.md                  # Core paper
-│   ├── S1_mathematical_architecture.md   # E₈, G₂, cohomology
-│   ├── S2_K7_manifold_construction.md    # TCS construction (original)
+│   ├── gift_2_3_main.md                  # Core paper
+│   ├── S1_mathematical_architecture_v23.md   # E₈, G₂, cohomology
+│   ├── S2_K7_manifold_construction_v23.md    # TCS construction (original)
 │   ├── S2_K7_manifold_construction_v2.3a.md  # Variational + Lean certified
-│   ├── S3_torsional_dynamics.md          # Geodesics, RG flow
-│   ├── S4_complete_derivations.md        # Proofs + all calculations
-│   ├── S5_experimental_validation.md     # Data, falsification
-│   ├── S6_theoretical_extensions.md      # QG, info theory
-│   └── S7_dimensional_observables.md     # Masses, cosmology
+│   ├── S3_torsional_dynamics_v23.md          # Geodesics, RG flow
+│   ├── S4_complete_derivations_v23.md        # Proofs + all calculations
+│   ├── S5_experimental_validation_v23.md     # Data, falsification
+│   ├── S6_theoretical_extensions_v23.md      # QG, info theory
+│   └── S7_dimensional_observables_v23.md     # Masses, cosmology
 ├── references/                            # Quick reference docs
-│   ├── GIFT_v22_Observable_Reference.md  # All 39 observables
-│   ├── GIFT_v22_Geometric_Justifications.md
-│   └── GIFT_v22_Statistical_Validation.md
+│   ├── GIFT_v23_Observable_Reference.md  # All 39 observables
+│   ├── GIFT_v23_Geometric_Justifications.md
+│   └── GIFT_v23_Statistical_Validation.md
 ├── pdf/                                   # Generated PDFs
 └── tex/                                   # LaTeX sources
 ```
@@ -99,12 +99,12 @@ publications/
 
 | Question | Document | Section |
 |----------|----------|---------|
-| What does GIFT predict? | [Observable Reference](references/GIFT_v22_Observable_Reference.md) | Section 11 |
-| How is sin²θ_W derived? | [Geometric Justifications](references/GIFT_v22_Geometric_Justifications.md) | Section 3 |
-| What experiments test GIFT? | [S5](markdown/S5_experimental_validation.md) | Part IV-V |
-| What are the proofs? | [S4](markdown/S4_complete_derivations.md) | Parts II-VII |
+| What does GIFT predict? | [Observable Reference](references/GIFT_v23_Observable_Reference.md) | Section 11 |
+| How is sin²θ_W derived? | [Geometric Justifications](references/GIFT_v23_Geometric_Justifications.md) | Section 3 |
+| What experiments test GIFT? | [S5](markdown/S5_experimental_validation_v23.md) | Part IV-V |
+| What are the proofs? | [S4](markdown/S4_complete_derivations_v23.md) | Parts II-VII |
 | What is zero-parameter? | [Glossary](../docs/GLOSSARY.md) | Section 1 |
-| Structural patterns | [S6](markdown/S6_theoretical_extensions.md) | Part III |
+| Structural patterns | [S6](markdown/S6_theoretical_extensions_v23.md) | Part III |
 
 ---
 

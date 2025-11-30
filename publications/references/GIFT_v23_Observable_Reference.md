@@ -57,7 +57,7 @@ The framework contains no continuous adjustable parameters. Predictions follow u
 | D_bulk | 11 | Geometric | Bulk spacetime dimension |
 | Weyl | 5 | Algebraic | Weyl factor from |W(E₈)| containing 5² |
 
-### 1.2 Topological Parameters (from gift_2_2_main.md Section 8.1)
+### 1.2 Topological Parameters (from gift_2_3_main.md Section 8.1)
 
 | Parameter | Value | Formula | Status |
 |-----------|-------|---------|--------|
