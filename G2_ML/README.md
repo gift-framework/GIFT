@@ -6,7 +6,8 @@ Neural network extraction of harmonic forms on compact G₂ manifolds for the GI
 
 - **[STATUS.md](STATUS.md)** - Current implementation status, what works now, what's in progress
 - **[FUTURE_WORK.md](FUTURE_WORK.md)** - Detailed technical plan for remaining work
-- **Latest Version**: [0.9a/](0.9a/) - Production-ready b₂=21 implementation
+- **Latest Version**: [2_1/](2_1/) - Current development version
+- **Archived Versions**: [archived/](archived/) - Historical development versions
 
 ## Overview
 
@@ -24,17 +25,14 @@ See **[STATUS.md](STATUS.md)** for detailed current status.
 
 ## Quick Start
 
-### Run Latest Implementation (b₂=21)
+### Run Latest Implementation
+
+Check the latest version directories (1_9b/, 2_0/, 2_1/) for current implementations.
+
+For archived stable versions:
 
 ```bash
-cd 0.9a/
-jupyter notebook Complete_G2_Metric_Training_v0_9a.ipynb
-```
-
-Or use stable production version:
-
-```bash
-cd 0.7/
+cd archived/early_development/0.7/
 jupyter notebook Complete_G2_Metric_Training_v0_7.ipynb
 ```
 
@@ -50,21 +48,29 @@ GPU recommended (training takes 6-8 hours on A100, much longer on CPU).
 
 ```
 G2_ML/
+├── README.md                  # This file
 ├── STATUS.md                  # Current implementation status (read this first!)
 ├── FUTURE_WORK.md             # Detailed plan for remaining work
-├── README.md                  # This file
+├── VERSIONS.md                # Version history and changelog
 │
-├── 0.1/ through 0.6/         # Archived development versions
-├── 0.7/                      # Production: b₂=21 complete ✅
-├── 0.8/                      # Planned: b₃=77 extraction 🔨
-├── 0.9/                      # Future: Yukawa tensors 📋
-└── 0.9a/                     # Latest: b₂=21 with refinements ✅
+├── 1_9b/                      # Version 1.9b
+├── 2_0/                       # Version 2.0
+├── 2_1/                       # Version 2.1 (latest)
+│
+├── archived/                  # Historical versions
+│   ├── early_development/    # Versions 0.1 through 0.9
+│   └── v1_iterations/        # Versions 1.0 through 1.x
+│
+├── research_modules/          # Specialized research modules
+│   ├── meta_hodge/           # Hodge theory implementations
+│   ├── tcs_joyce/            # Joyce's construction methods
+│   └── variational_g2/       # Variational approaches
+│
+├── G2_Lean/                   # Lean formal verification (linked on X.com)
+└── tests/                     # Test suite
 ```
 
-Each version directory contains:
-- Complete training notebook
-- Python modules (geometry, manifold, networks, losses, training, evaluation)
-- Results and validation data
+Each version directory contains notebooks, models, and validation data specific to that version.
 
 ## What You Can Do Now
 
@@ -131,24 +137,21 @@ All trained models validated via:
 
 ## Versions
 
-| Version | Status | Features |
-|---------|--------|----------|
-| 0.1-0.6 | Archived | Development iterations |
-| **0.7** | **Production** | **b₂=21 complete, validated** |
-| 0.8 | Planned | b₃=77 extraction (in progress) |
-| 0.9 | Future | Yukawa tensor computation |
-| **0.9a** | **Latest** | **b₂=21 with improvements** |
-| 1.0 | Target | Complete framework |
+| Version | Status | Location | Features |
+|---------|--------|----------|----------|
+| 0.1-0.9 | Archived | archived/early_development/ | Early development iterations |
+| 1.0-1.x | Archived | archived/v1_iterations/ | Version 1 iterations |
+| **1.9b** | Stable | 1_9b/ | Stable version |
+| **2.0** | Stable | 2_0/ | Version 2.0 |
+| **2.1** | **Current** | 2_1/ | **Latest development version** |
 
-**Recommendation**: Use **v0.9a** for new work (latest refinements) or **v0.7** for stability.
+**Recommendation**: Use **2.1/** for current work. See [VERSIONS.md](VERSIONS.md) for detailed version history.
 
 ## What's Next
 
-See **[FUTURE_WORK.md](FUTURE_WORK.md)** for detailed plans:
+See **[FUTURE_WORK.md](FUTURE_WORK.md)** for detailed plans on ongoing research directions.
 
-1. **b₃=77 extraction** (v0.8) - $150-300, 1-2 days
-2. **Yukawa tensors** (v0.9) - $40-60, 6-12 hours
-3. **Architecture optimization** - $50-100, 1 day
+For specialized research modules, see [research_modules/README.md](research_modules/README.md).
 
 ## Scientific Context
 

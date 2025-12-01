@@ -1,0 +1,59 @@
+{
+  "type": "G2_NUMERICAL_VERIFICATION",
+  "version": "2.2",
+  "method": "high_precision_float64_autograd",
+  "rigorous": false,
+  "n_samples": 3000,
+  "normalization": {
+    "raw_det_mean": 0.9957504659506876,
+    "scale_factor": 1.0522409623174804,
+    "target_det": 2.03125
+  },
+  "determinant": {
+    "target": 2.03125,
+    "range": [
+      2.016659074444127,
+      2.0434061921699715
+    ],
+    "mean": 2.031250000000003,
+    "relative_error_percent": 1.530399738560216e-13
+  },
+  "positivity": {
+    "min_eigenvalue": 1.0958078855084212,
+    "all_positive_at_samples": true,
+    "global_guarantee": false
+  },
+  "torsion": {
+    "n_samples": 3000,
+    "d_phi_squared": {
+      "lower": 0.0005695412028577645,
+      "upper": 0.000569541202857797
+    },
+    "d_phi_norm": {
+      "lower": 0.025111796214561142,
+      "upper": 0.02511179621456186
+    },
+    "torsion_norm": {
+      "lower": 0.025111796214561142,
+      "upper": 0.03551344278218273
+    },
+    "per_point_stats": {
+      "d_phi_sq_mean": 0.0005695412028577807,
+      "d_phi_sq_max": 0.0011809288270233
+    }
+  },
+  "joyce_theorem": {
+    "torsion_upper_bound": 0.03551344278218273,
+    "epsilon_heuristic_tight": 0.1,
+    "epsilon_heuristic_loose": 1.0,
+    "epsilon_0_known": false,
+    "status": "NUMERICALLY_PROMISING",
+    "conclusion": "NUMERICALLY PROMISING: ||T(phi)|| <= 3.5513e-02 < 0.1. Torsion is small, suggesting a torsion-free G2 structure MAY exist nearby. However, this is NOT a proof: epsilon_0 for K7 is unknown and could be much smaller."
+  },
+  "topology": {
+    "b3_verified": false,
+    "note": "Laplacian spectrum must be computed separately to verify b3=77"
+  },
+  "conclusion": "NUMERICALLY_PROMISING",
+  "honest_summary": "This is numerical verification, not a rigorous proof. det(g)=65/32 and positivity are satisfied to float64 precision. Torsion bounds are heuristic. Joyce epsilon_0 is unknown. Global topology (b3=77) requires separate Laplacian analysis."
+}
