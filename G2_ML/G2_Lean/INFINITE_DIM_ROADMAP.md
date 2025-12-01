@@ -367,20 +367,25 @@ While waiting for full Mathlib support, use a **hybrid verification**:
 
 ```
 G2_ML/G2_Lean/
-├── Certified_G2_Manifold_Construction.ipynb  # Current (finite-dim)
+├── Certified_G2_Manifold_Construction.ipynb  # PINN + Lean pipeline
 ├── INFINITE_DIM_ROADMAP.md                   # This file
-├── GIFT/
-│   ├── G2Certificate.lean                    # v1.0 (Fin 35)
-│   ├── G2CertificateV2.lean                  # v2.0 (infinite-dim scaffold)
-│   ├── HodgeStar.lean                        # Hodge star basics
-│   ├── G2RepTheory.lean                      # G₂ representations
-│   ├── TorsionTensor.lean                    # Torsion definitions
-│   └── NumericalBounds.lean                  # Imported bounds
-└── numerical/
+├── G2Certificate.lean                        # v1.0 (Fin 35 → ℝ, standalone)
+├── G2CertificateV2.lean                      # v2.0 (infinite-dim scaffold) ← NEW
+├── GIFT/                                     # Colab-generated (via notebook)
+│   └── G2Certificate.lean                    # v1.0 copy for lake build
+└── numerical/                                # Future: eigenvalue pipeline
     ├── eigenvalue_computation.py             # λ₁ estimation
     ├── interval_bounds.py                    # Rigorous intervals
     └── export_to_lean.py                     # Generate .lean constants
 ```
+
+### Current Status
+
+| File | Status | Description |
+|------|--------|-------------|
+| `G2Certificate.lean` | COMPLETE | Finite-dim model, all proofs verified |
+| `G2CertificateV2.lean` | SCAFFOLD | Infinite-dim, 4 sorry + 10 axioms |
+| `numerical/` | PLANNED | Eigenvalue pipeline for SORRY 4 |
 
 ---
 
