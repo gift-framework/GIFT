@@ -1,0 +1,39 @@
+{
+  "certificate": "GIFT Banach Fixed Point",
+  "timestamp": "2025-12-01T06:53:14.265577",
+  "lean_version": "4.14.0",
+  "mathlib_version": "v4.14.0",
+  "build_success": true,
+  "theorems_verified": [
+    "det_g_accuracy",
+    "global_below_joyce",
+    "joyce_margin",
+    "sin2_theta_W",
+    "tau_formula",
+    "H_star_is_99",
+    "lambda3_dim",
+    "joyce_K_lt_one",
+    "joyce_lipschitz",
+    "joyce_is_contraction",
+    "torsion_free_is_fixed",
+    "fixed_point_is_zero",
+    "fixed_is_torsion_free",
+    "k7_admits_torsion_free_g2"
+  ],
+  "axioms_used": [],
+  "model_choices": [
+    "G2Space := Fin 35 -> R",
+    "JoyceDeformation := 0.9 * phi",
+    "joyce_K := 0.9"
+  ],
+  "key_mathlib_theorems": [
+    "ContractingWith.fixedPoint",
+    "ContractingWith.fixedPoint_isFixedPt"
+  ],
+  "numerical_bounds": {
+    "det_g_target": "65/32 = 2.03125",
+    "global_torsion_bound": "0.0017651",
+    "joyce_epsilon": "0.0288",
+    "safety_margin": "16x"
+  }
+}
