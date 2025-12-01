@@ -85,6 +85,7 @@ Full tables: [Main Paper Section 8](publications/markdown/gift_2_2_main.md)
 - **[Observable Reference](publications/references/GIFT_v22_Observable_Reference.md)** - All 39 observables
 - **[Glossary](docs/GLOSSARY.md)** - Technical terms
 - **[FAQ](docs/FAQ.md)** - Common questions
+- **[Philosophy](docs/PHILOSOPHY.md)** - The philosophy behind GIFT
 
 ### Mathematical Supplements (S1-S7)
 
