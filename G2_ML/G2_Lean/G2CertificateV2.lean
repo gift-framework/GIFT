@@ -86,9 +86,14 @@ axiom Omega3_K7 : Type
 
 -- Axiom: Omega3 is a real vector space (infinite-dimensional)
 axiom Omega3_K7_addCommGroup : AddCommGroup Omega3_K7
-axiom Omega3_K7_module : Module ℝ Omega3_K7
+attribute [instance] Omega3_K7_addCommGroup
 
-attribute [instance] Omega3_K7_addCommGroup Omega3_K7_module
+-- Derive AddCommMonoid from AddCommGroup (required for Module)
+noncomputable instance Omega3_K7_addCommMonoid : AddCommMonoid Omega3_K7 :=
+  inferInstance
+
+axiom Omega3_K7_module : Module ℝ Omega3_K7
+attribute [instance] Omega3_K7_module
 
 /-! ## Section 5: G₂ Structure Definition
 
