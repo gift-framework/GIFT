@@ -1,0 +1,44 @@
+{
+  "version": "2.0",
+  "status": "SCAFFOLD",
+  "main_theorem": "k7_admits_infinite_torsion_free_g2",
+  "model": "G2Structures (infinite-dimensional)",
+  "upgrade_from": "v1.0: Fin 35 \u2192 \u211d (finite-dimensional)",
+  "sorry_items": {
+    "SORRY_1": {
+      "name": "G2Structures_metricSpace",
+      "requires": "L\u00b2 norm on differential forms",
+      "mathlib_gap": "Hodge star \u22c6 not formalized"
+    },
+    "SORRY_2": {
+      "name": "torsion_norm",
+      "requires": "Exterior derivative d, Hodge star \u22c6",
+      "mathlib_gap": "d on manifold forms incomplete"
+    },
+    "SORRY_3": {
+      "name": "G2Structures_completeSpace",
+      "requires": "Hodge decomposition theorem",
+      "mathlib_gap": "Elliptic regularity not formalized"
+    },
+    "SORRY_4": {
+      "name": "joyce_lipschitz",
+      "requires": "Spectral bounds \u03bb\u2081(K\u2087) > 0",
+      "mathlib_gap": "Laplacian spectral theory"
+    }
+  },
+  "mathlib_used": [
+    "ContractingWith.fixedPoint",
+    "ContractingWith.fixedPoint_isFixedPt",
+    "LipschitzWith",
+    "NNReal"
+  ],
+  "numerical_bounds": {
+    "global_torsion_bound": "2857/1000000 = 0.002857",
+    "joyce_threshold": "1/10 = 0.1",
+    "safety_margin": ">35x",
+    "contraction_K": "0.9 (conservative)"
+  },
+  "lean_version": "4.14.0",
+  "mathlib_version": "v4.14.0",
+  "timestamp": "2025-12-01T23:06:56.872319"
+}
