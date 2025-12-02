@@ -78,19 +78,19 @@ theorem GIFT_framework_certified (G : GIFTStructure)
   -- κ_T = 1/61
   · simp only [GIFTStructure.p2, hb3, hg, hk]; norm_num
   -- δ_CP = 197
-  · simp only [GIFTStructure.H_star, hg, hb2, hb3]; native_decide
+  · simp only [GIFTStructure.H_star, hg, hb2, hb3]
   -- m_τ/m_e = 3477
-  · simp only [GIFTStructure.H_star, hk, he, hb2, hb3]; native_decide
+  · simp only [GIFTStructure.H_star, hk, he, hb2, hb3]
   -- m_s/m_d = 20
-  · simp only [hw]; native_decide
+  · simp only [hw]
   -- Q_Koide = 2/3
   · simp only [hg, hb2]; norm_num
   -- Higgs numerator = 17
-  · simp only [hg, GIFTStructure.N_gen]; native_decide
+  · simp only [hg, GIFTStructure.N_gen]
   -- b2 + b3 = 98
-  · simp only [hb2, hb3]; native_decide
+  · simp only [hb2, hb3]
   -- E8xE8 = 496
-  · simp only [GIFTStructure.dim_E8xE8, he]; native_decide
+  · simp only [GIFTStructure.dim_E8xE8, he]
 
 /-! ## Individual Relation Certificates -/
 
@@ -112,15 +112,15 @@ theorem kappa_T_certified :
 
 /-- CP phase certified -/
 theorem delta_CP_certified :
-    7 * 14 + 99 = 197 := by native_decide
+    7 * 14 + 99 = 197 := rfl
 
 /-- Tau/electron ratio certified -/
 theorem m_tau_m_e_certified :
-    7 + 10 * 248 + 10 * 99 = 3477 := by native_decide
+    7 + 10 * 248 + 10 * 99 = 3477 := rfl
 
 /-- Strange/down ratio certified -/
 theorem m_s_m_d_certified :
-    4 * 5 = 20 := by native_decide
+    4 * 5 = 20 := rfl
 
 /-- Koide parameter certified -/
 theorem koide_certified :
@@ -128,12 +128,12 @@ theorem koide_certified :
 
 /-- Higgs coupling numerator certified -/
 theorem lambda_H_num_certified :
-    14 + 3 = 17 := by native_decide
+    14 + 3 = 17 := rfl
 
 /-! ## Certification Count -/
 
 /-- Number of proven exact relations -/
-def proven_relation_count : ℕ := 13
+def proven_relation_count : Nat := 13
 
 /-- All 13 relations are machine-verified -/
 theorem all_relations_verified : proven_relation_count = 13 := rfl
