@@ -1,5 +1,7 @@
 # GIFT Framework - Lean 4 Formalization
 
+[![Lean CI](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
+
 Formal verification of the Geometric Information Field Theory (GIFT) framework in Lean 4, proving that all 39 observables derive from fixed mathematical structures with **zero continuous adjustable parameters**.
 
 ## Quick Start
@@ -115,9 +117,46 @@ The proofs use only standard Lean axioms:
 
 No physics-specific axioms are required for the arithmetic relations.
 
+## CI/CD
+
+The project uses GitHub Actions for continuous integration:
+
+- **Build**: Compiles all Lean modules with Mathlib
+- **Cache**: Uses Mathlib precompiled cache for fast builds (~5 min vs hours)
+- **Lint**: Checks for `sorry`, counts theorems/axioms
+- **Axiom audit**: Verifies only standard Lean axioms are used
+
+### Local Development
+
+```bash
+# First time setup
+cd Lean
+lake update
+lake exe cache get    # Download Mathlib precompiled oleans
+
+# Build
+lake build            # Full build
+lake build GIFT.Certificate  # Build only Certificate module
+
+# Check a specific file
+lake env lean GIFT/Relations/GaugeSector.lean
+```
+
+### Partial Builds
+
+The lakefile defines individual targets for faster iteration:
+
+```bash
+lake build GIFT.Algebra      # Just E₈ modules
+lake build GIFT.Geometry     # Just G₂ modules
+lake build GIFT.Relations    # Just physics sectors
+lake build GIFT.Certificate  # Just main theorems
+```
+
 ## References
 
 - GIFT v2.3 Main Paper
 - Supplement S1: Mathematical Architecture
 - Supplement S4: Rigorous Proofs
 - [Mathlib4 Documentation](https://leanprover-community.github.io/mathlib4_docs/)
+- [Lean 4 Manual](https://lean-lang.org/lean4/doc/)
