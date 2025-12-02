@@ -1,6 +1,6 @@
 # Citation Guide
 
-This document provides formal citation formats for the GIFT Framework v2.2.
+This document provides formal citation formats for the GIFT Framework v2.3a.
 
 ## Software Citation (Recommended)
 
@@ -8,7 +8,7 @@ This document provides formal citation formats for the GIFT Framework v2.2.
 
 ```bibtex
 @software{gift_framework_v22_2025,
-  title={GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm},
+  title={GIFT Framework v2.3a: Geometric Information Field Theory - Zero Parameter Paradigm},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
@@ -21,7 +21,7 @@ This document provides formal citation formats for the GIFT Framework v2.2.
 ### APA Style
 
 ```
-de La Fournière, B. (2025). GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm (Version 2.2.0) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2025). GIFT Framework v2.3a: Geometric Information Field Theory - Zero Parameter Paradigm (Version 2.3.0) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style

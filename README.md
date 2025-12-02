@@ -1,7 +1,7 @@
-# Geometric Information Field Theory v2.2
+# Geometric Information Field Theory v2.3a
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.2.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-2.3.0-green.svg)](CHANGELOG.md)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
@@ -159,12 +159,12 @@ Details: [S5](publications/markdown/S5_experimental_validation.md), [Experimenta
 ## Citation
 
 ```bibtex
-@software{gift_framework_v22_2025,
-  title={GIFT Framework v2.2: Geometric Information Field Theory},
+@software{gift_framework_v23a_2025,
+  title={GIFT Framework v2.3a: Geometric Information Field Theory},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.2.0}
+  version={2.3.0}
 }
 ```
 

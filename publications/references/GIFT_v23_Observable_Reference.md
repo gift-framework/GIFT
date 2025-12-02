@@ -1,6 +1,6 @@
-# GIFT Framework v2.2 - Complete Observable Reference
+# GIFT Framework v2.3a - Complete Observable Reference
 
-**Version**: 2.2.0
+**Version**: 2.3.0
 **Date**: 2025-11-26
 **Status**: Validated (Monte Carlo 10^5 samples)
 **Mean Precision**: 0.128% across 39 observables
@@ -57,7 +57,7 @@ The framework contains no continuous adjustable parameters. Predictions follow u
 | D_bulk | 11 | Geometric | Bulk spacetime dimension |
 | Weyl | 5 | Algebraic | Weyl factor from |W(E₈)| containing 5² |
 
-### 1.2 Topological Parameters (from gift_2_2_main.md Section 8.1)
+### 1.2 Topological Parameters (from gift_2_3_main.md Section 8.1)
 
 | Parameter | Value | Formula | Status |
 |-----------|-------|---------|--------|
@@ -91,7 +91,7 @@ Derivation:
 
 | Parameter | Value | Formula | Status |
 |-----------|-------|---------|--------|
-| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **TOPOLOGICAL** |
+| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **TOPOLOGICAL + CERTIFIED** |
 | κ_T = \|T\| | **1/61** | 1/(b₃ - dim(G₂) - p₂) | **TOPOLOGICAL** |
 
 **det(g) Topological Derivation**:
@@ -107,7 +107,8 @@ The 32 structure:
 - 32 = b₂ + dim(G₂) - N_gen = 21 + 14 - 3
 - 32 = 2^5 (same denominator as λ_H = √17/32)
 
-Deviation: 0.012%
+PINN cross-check: 2.0312490 ± 0.0001 (deviation: 0.00005%)
+Lean 4 verification: Joyce margin 20× (see Supplement S2)
 ```
 
 **κ_T Topological Derivation**:

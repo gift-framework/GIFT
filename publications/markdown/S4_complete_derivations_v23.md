@@ -54,7 +54,9 @@ A result achieves PROVEN status when:
 | Status | Criterion |
 |--------|-----------|
 | **PROVEN** | Complete mathematical proof, exact result from topology |
+| **PROVEN (Lean)** | Verified by Lean 4 kernel with Mathlib (machine-checked) |
 | **TOPOLOGICAL** | Direct consequence of manifold structure, no empirical input |
+| **CERTIFIED** | Numerical result verified via interval arithmetic with rigorous bounds |
 | **DERIVED** | Computed from PROVEN/TOPOLOGICAL relations |
 | **THEORETICAL** | Theoretical justification, proof incomplete |
 | **EXPLORATORY** | Preliminary investigation |
@@ -208,7 +210,7 @@ $$\kappa_T = \frac{1}{61} = 0.016393442622950...$$
 
 **Statement**: The K₇ metric determinant is exactly 65/32.
 
-**Classification**: TOPOLOGICAL
+**Classification**: TOPOLOGICAL (formula) + CERTIFIED (numerical verification)
 
 ### Proof
 
@@ -230,17 +232,24 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \f
 
 $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
 
-*Step 5: Numerical verification*
+*Step 5: Numerical verification via PINN + Lean certification*
 
-| Quantity | Value |
-|----------|-------|
-| Predicted | 65/32 = 2.03125 |
-| ML-validated | 2.031 |
-| Deviation | 0.012% |
+| Quantity | Value | Status |
+|----------|-------|--------|
+| Topological target | 65/32 = 2.03125 | TOPOLOGICAL |
+| PINN result | 2.0312490 ± 0.0001 | CERTIFIED |
+| Deviation | 0.00005% | — |
+
+**Lean 4 certification** (see `G2_ML/G2_Lean/G2Certificate.lean`):
+
+The PINN-derived metric is verified by Lean 4 theorem prover:
+- Interval arithmetic confirms det(g) = 65/32 within 0.0001%
+- Torsion ||T|| = 0.00140 satisfies Joyce bound with 20× margin
+- Joyce's perturbation theorem (axiomatized) guarantees torsion-free G₂ existence
 
 **The 32 structure**: Both det(g) = 65/32 and λ_H = √17/32 share denominator 32 = 2⁵, suggesting deep binary structure in the Higgs-metric sector.
 
-**Status**: TOPOLOGICAL ∎
+**Status**: TOPOLOGICAL (exact formula) + CERTIFIED (PINN cross-check) ∎
 
 ---
 
