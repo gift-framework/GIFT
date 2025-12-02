@@ -238,10 +238,9 @@ theorem det_g_from_Weyl :
   unfold det_g Weyl_factor rank_E8
   norm_num
 
-theorem det_g_numerical : (det_g : ℚ) = 203125 / 100000 := by
-  unfold det_g; norm_num
+theorem det_g_value : det_g = 65 / 32 := rfl
 
-theorem det_g_exact : (65 : ℚ) / 32 = 5 * 13 / 32 := by norm_num
+theorem det_g_factored : (65 : ℚ) = 5 * 13 := by norm_num
 
 end ProvenRelations
 
@@ -255,9 +254,10 @@ section DerivedConstants
 /-- Torsion magnitude κ_T = 1/61 -/
 def kappa_T : ℚ := 1 / 61
 
-theorem kappa_T_from_topology :
-    kappa_T = 1 / (b3_K7 - dim_G2 - p2) := by
-  unfold kappa_T b3_K7 dim_G2 p2; norm_num
+theorem kappa_T_value : kappa_T = 1 / 61 := rfl
+
+theorem kappa_T_check : (b3_K7 : ℚ) - dim_G2 - p2 = 61 := by
+  unfold b3_K7 dim_G2 p2; norm_num
 
 /-- b₃ decomposition: 77 = 35 (local) + 42 (global TCS) -/
 theorem b3_decomposition : b3_K7 = dim_Lambda3_R7 + 2 * b2_K7 := by
