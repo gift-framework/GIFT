@@ -71,7 +71,7 @@ jupyter notebook assets/visualizations/
 
 Complete proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
 
-**🔬 Machine-Verified Results:**
+**Machine-Verified Results:**
 - **det(g) = 65/32**: Certified via Lean 4 with 0.0001% precision (20× Joyce margin)
 - **13 PROVEN Relations**: All topological identities formally verified
 - **Banach Fixed Point**: Existence theorem for G₂ structures proven
