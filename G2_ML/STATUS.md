@@ -1,337 +1,338 @@
-# G2 Machine Learning Framework - Current Status
-
-## Quick Summary
-
-**Completion**: 93% (classic approach) + new paradigm in progress
-**Latest Version**: 0.9a (b₂=21), 0.8 (Yukawa)
-**New Paradigm**: variational_g2 (constraints-first PINN approach)
-**Last Update**: 2025-11-30
-
-| Component | Status | Version | Completion |
-|-----------|--------|---------|------------|
-| b₂=21 Harmonic 2-Forms | Complete | 0.7, 0.9a | 100% |
-| b₃=77 Harmonic 3-Forms | Partial | 0.8 (n=20/77) | 26% |
-| Yukawa Tensor | Complete | 0.8 | 100% |
-| Variational G2 (PINN) | WIP | variational_g2 | ~70% |
-| Meta-Hodge Pipeline | Complete | meta_hodge | 100% |
-| TCS Global Modes | Complete | tcs_joyce | 100% |
-| Hyperparameter Optimization | Planned | Future | 0% |
-
-## What Works Now
-
-### ✅ Fully Functional (v0.7, v0.9a)
-
-**b₂=21 Harmonic 2-Forms Extraction**
-- Neural network successfully extracts 21 harmonic 2-forms from K₇ manifold
-- Validation: Gram matrix determinant ≈ 1.0 (excellent orthonormality)
-- All eigenvalues in acceptable range [0.9, 1.1]
-- Training converges reliably in ~6-8 hours on GPU
-- Complete implementation with validation notebooks
-
-**Capabilities**:
-- Generate K₇ metric from learned φ function
-- Compute harmonic 2-form basis numerically
-- Validate G₂ holonomy conditions
-- Export trained models for downstream use
-
-**Notebooks Available**:
-- `G2_ML/0.7/Complete_G2_Metric_Training_v0_7.ipynb` - Full training pipeline
-- `G2_ML/0.9a/Complete_G2_Metric_Training_v0_9a.ipynb` - Latest version with improvements
-
-**Code Modules** (reusable):
-- `G2_geometry.py` - G₂ geometric calculations
-- `G2_manifold.py` - K₇ manifold implementation
-- `G2_phi_network.py` - Neural network architectures
-- `G2_losses.py` - Loss functions for training
-- `G2_train.py` - Training loops
-- `G2_eval.py` - Evaluation and validation
-- `G2_export.py` - Model export utilities
-
-## What's In Progress
-
-### 🔶 Partial Implementation (v0.8 implemented)
-
-**b₃=77 Harmonic 3-Forms Extraction**
-
-**Current Status**:
-- ✅ Architecture implemented (HarmonicB3Network)
-- ✅ Training completed with n=20/77 forms extracted
-- ✅ Yukawa couplings computed (21×21×21 tensor)
-- 🔨 **Remaining**: Complete extraction to full 77 forms (currently 26%)
-
-**v0.8 Deliverables**:
-- `yukawa_couplings.json` - Complete Yukawa tensor computation ✅
-- `summary.json` - Training summary (torsion: 0.000146) ✅
-- `training_history.csv` - Full training metrics ✅
-- Partial b₃ extraction: 20 harmonic 3-forms
-
-**Next Steps**: Scale up to full b₃=77 extraction (v0.9b in progress)
-
-## What's Complete (v0.8)
-
-### ✅ **Yukawa Coupling Tensor Computation**
-
-**Objective**: ✅ ACHIEVED - Compute Y_αβγ (21×21×21 tensor) from harmonic 2-forms
-
-**Physical Significance**:
-- Relates to fermion mass hierarchies in GIFT
-- Connection to Standard Model Yukawa matrices
-- Triple wedge product integral over K₇
-
-**Delivered** (v0.8):
-- ✅ `yukawa_couplings.json` - Complete 21×21×21 tensor (19KB data)
-- ✅ 9,261 triple wedge products computed
-- ✅ Values range: ~1e-5 to ~1e-4
-- ✅ Multiplicity structure preserved
-
-**Status**: ✅ **COMPLETE** in version 0.8
-
-## What's Planned
-
-### 📋 Future Components
-
-**1. Complete b₃=77 Extraction** (v0.9b in progress)
-
-**2. Hyperparameter Optimization**
-
-**Objective**: Systematically determine optimal network architecture
-
-**Current Configuration**:
-- Works well but not proven optimal
-- Phi network: [384, 384, 256]
-- Harmonic network: varies by version
-
-**Optimization Plan**:
-- Search space: 48+ configurations
-- Quick version: $100 (20 configs)
-- Standard version: $200 (40 configs + refinement)
-- Complete version: $500 (full grid search)
-
-**Status**: Planned, awaiting full b₃=77 completion
-
-## New Paradigm: Constraints-First Approach
-
-### The Shift
-
-The classic approach (v0.x-1.x) tried to "learn" a TCS/Joyce metric and verify GIFT constraints emerge.
-**Problem**: 42 global modes were artificial (polynomials/trig), only 35 local modes coupled to Yukawa.
-
-The **new paradigm** (variational_g2, 2.x) inverts this:
-- GIFT constraints (det(g)=65/32, kappa_T=1/61, b₂=21, b₃=77) are **inputs**
-- The metric is the **emergent output**
-- No TCS/Joyce assumption - geometry emerges from constraints
-
-### Current Results (variational_g2)
-
-`outputs/rigorous_certificate.json`:
-- **det(g) = 65/32** verified to 1.5e-13% relative error
-- **Metric positivity**: min eigenvalue = 1.096
-- **Torsion**: ||T(phi)|| <= 0.0355 < 0.1 (heuristic)
-- **Status**: NUMERICALLY_PROMISING
-
-Next: Strengthen numerical certificate toward rigorous proof.
-
----
-
-## Version History
-
-| Version | Date | Focus | Status |
-|---------|------|-------|--------|
-| 0.1-0.6c | 2025-09/11 | Early development | Archived* |
-| **0.7** | **2025-11** | **b₂=21 completion** | **Production** ✅ |
-| **0.8** | **2025-11** | **Yukawa + partial b₃ (20/77)** | **Complete** ✅ |
-| 0.9a | 2025-11 | Latest refinements | Production ✅ |
-| 0.9b | 2025-11 | Full b₃=77 extraction | **Training** 🔨 |
-| 1.x series | 2025-11 | Extended exploration | Milestones kept |
-| **variational_g2** | **2025-11** | **Constraints-first PINN** | **WIP** 🔨 |
-| meta_hodge | 2025-11 | Cross-version analysis | Complete ✅ |
-| tcs_joyce | 2025-11 | TCS global modes | Complete ✅ |
-
-*Archived versions moved to `archived/` folder. See `archived/README.md`.
-
-## Budget Status
-
-**Allocated**: $300+
-**Spent to Date**: ~$250 (b₂ training + v0.8 Yukawa + partial b₃)
-**In Progress**: v0.9b training (full b₃=77)
-
-**Completed Expenditures**:
-- ✅ b₂=21 extraction (v0.7, v0.9a): ~$200
-- ✅ Yukawa computation (v0.8): ~$50
-- ✅ Partial b₃ extraction (20/77): Included in v0.8
-
-**Remaining Work**:
-- 🔨 Full b₃=77 extraction (v0.9b): In progress
-- 📋 Architecture search: $50-100 (quick version)
-
-**Note**: v0.9b training currently running. Expected completion soon.
-
-## How to Use Current Implementation
-
-### Running b₂=21 Training (v0.9a)
-
-```bash
-cd G2_ML/0.9a
-jupyter notebook Complete_G2_Metric_Training_v0_9a.ipynb
-```
-
-Or use earlier stable version:
-
-```bash
-cd G2_ML/0.7
-jupyter notebook Complete_G2_Metric_Training_v0_7.ipynb
-```
-
-### Using Trained Models
-
-```python
-from G2_ML.v0_9a.G2_phi_network import PhiNetwork
-from G2_ML.v0_9a.G2_manifold import K7Manifold
-
-# Load trained model
-phi_network = PhiNetwork.load('path/to/model.pt')
-
-# Create manifold with learned metric
-manifold = K7Manifold(phi_network)
-
-# Compute harmonic forms
-harmonic_2forms = manifold.get_harmonic_2forms()  # Returns 21 forms
-```
-
-### Validation
-
-All versions include validation notebooks that check:
-- ✅ Gram matrix orthonormality (det ≈ 1)
-- ✅ Eigenvalue spectrum (all > 0.5)
-- ✅ Closedness: dω_i = 0
-- ✅ Coclosedness: δω_i = 0
-- ✅ G₂ holonomy conditions
-
-## Dependencies
-
-```bash
-pip install -r ../requirements.txt
-```
-
-Key packages:
-- PyTorch (GPU recommended)
-- NumPy, SciPy
-- Matplotlib (visualizations)
-- Jupyter (notebooks)
-
-## Scientific Output
-
-**Publications Enabled**:
-1. ✅ "Neural Network Extraction of Harmonic 2-Forms on G₂ Manifolds" (ready)
-2. ✅ "Yukawa Couplings from Compact G₂ Geometry" (v0.8 data ready)
-3. 🔨 "Complete Harmonic Form Basis from Machine Learning" (awaiting v0.9b completion)
-
-**Conference Presentations**:
-- Method demonstrated in GIFT v2 notebooks
-- Results cited in Supplement F (K₇ metric construction)
-
-## Known Limitations
-
-### Current Framework (v0.7-v0.9a)
-
-1. **Partial b₃ extraction**: 20/77 forms extracted (26%, v0.8) - Full extraction in progress (v0.9b)
-2. **Architecture not optimized**: Current config works but may be suboptimal
-3. **Training time**: 6-8 hours for b₂, 20+ hours for full b₃
-4. **GPU required**: CPU training impractically slow
-
-### Theoretical Limitations
-
-1. **Numerical approximation**: Not exact mathematical forms
-2. **Metric dependence**: Results depend on chosen K₇ metric ansatz
-3. **Validation**: Indirect validation via Gram matrix (no analytical comparison)
-
-## Next Steps
-
-### Immediate (In Progress)
-
-1. **Complete b₃=77 extraction** (v0.9b)
-   - Status: 🔨 **Training now**
-   - Timeline: Completion expected soon
-   - Deliverable: Full 77 harmonic 3-forms validated
-
-### Short-term (After v0.9b)
-
-2. **Quick architecture search**
-   - Budget: $50-100
-   - Timeline: 1 day
-   - Deliverable: Optimized hyperparameters
-
-### Long-term (v1.0)
-
-4. **Publish complete methodology**
-5. **Connect to GIFT phenomenology** (fermion mass predictions)
-6. **Extend to time-dependent metrics**
-
-## Success Metrics
-
-**v0.7-0.9a (ACHIEVED)**:
-- ✅ b₂=21 forms extracted
-- ✅ Gram matrix det(G) ∈ [0.9, 1.1]
-- ✅ All eigenvalues λ_i > 0.5
-- ✅ Training converges reliably
-- ✅ Code modular and reusable
-
-**v0.8 (ACHIEVED)**:
-- ✅ Yukawa tensor computed (21×21×21)
-- ✅ Partial b₃ extraction (20/77 forms)
-- ✅ Torsion: 0.000146 (excellent)
-- ✅ Documented in complete notebook
-
-**v0.9b (IN PROGRESS)**:
-- 🔨 Full b₃=77 forms extraction (training now)
-- 🎯 Gram matrix det(G) ∈ [0.9, 1.1]
-- 🎯 All 77 eigenvalues λ_i > 0.5
-- 🎯 Complete harmonic basis
-
-**v1.0 (FINAL GOAL)**:
-- 🎯 Complete harmonic basis (b₂ + b₃)
-- 🎯 Yukawa tensor computed
-- 🎯 Optimized architecture
-- 🎯 Published methodology
-- 🎯 Integrated with GIFT predictions
-
-## Contact and Questions
-
-**Documentation**: See `COMPLETION_PLAN.md` for detailed technical plan
-
-**Issues**:
-- GPU access: Requires A100 or similar (V100 acceptable but slower)
-- Budget: Additional $200 recommended for full completion
-- Timeline: 2-3 days GPU time remaining
-
-**Support**:
-- Each version directory contains README with version-specific info
-- Example notebooks demonstrate all functionality
-- Code is well-commented with docstrings
-
-## Summary
-
-**The G2 ML framework is 93% complete and scientifically productive.**
-
-**What you can do NOW**:
-- ✅ Train b₂=21 harmonic forms extraction
-- ✅ Validate G₂ geometry numerically
-- ✅ Use trained models in research
-- ✅ Generate K₇ metrics from neural networks
-- ✅ Analyze Yukawa coupling structure (v0.8 data)
-
-**What's in progress**:
-- 🔨 Full b₃=77 harmonic 3-forms (v0.9b training now)
-
-**What remains**:
-- 📋 Architecture optimization ($50-100, 1 day)
-
-**Bottom line**: Framework is highly functional with Yukawa tensors computed and partial b₃ extraction. Full b₃=77 completion imminent with v0.9b training.
-
----
-
-**Status**: Active development
-**Version**: 0.9a (production b₂), 0.8 (Yukawa), variational_g2 (new paradigm)
-**Last Updated**: 2025-11-30
-**Framework**: GIFT v2.3.0
-**License**: MIT
+Partial#Partial PartialGPartial2Partial PartialMPartialaPartialcPartialhPartialiPartialnPartialePartial PartialLPartialePartialaPartialrPartialnPartialiPartialnPartialgPartial PartialFPartialrPartialaPartialmPartialePartialwPartialoPartialrPartialkPartial Partial-Partial PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialSPartialtPartialaPartialtPartialuPartialsPartial
+Partial
+Partial#Partial#Partial PartialQPartialuPartialiPartialcPartialkPartial PartialSPartialuPartialmPartialmPartialaPartialrPartialyPartial
+Partial
+Partial*Partial*PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial*Partial*Partial:Partial Partial9Partial3Partial%Partial Partial(PartialcPartiallPartialaPartialsPartialsPartialiPartialcPartial PartialaPartialpPartialpPartialrPartialoPartialaPartialcPartialhPartial)Partial Partial+Partial PartialnPartialePartialwPartial PartialpPartialaPartialrPartialaPartialdPartialiPartialgPartialmPartial PartialiPartialnPartial PartialpPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial
+Partial*Partial*PartialLPartialaPartialtPartialePartialsPartialtPartial PartialVPartialePartialrPartialsPartialiPartialoPartialnPartial*Partial*Partial:Partial Partial0Partial.Partial9PartialaPartial Partial(PartialbPartial₂Partial=Partial2Partial1Partial)Partial,Partial Partial0Partial.Partial8Partial Partial(PartialYPartialuPartialkPartialaPartialwPartialaPartial)Partial
+Partial*Partial*PartialNPartialePartialwPartial PartialPPartialaPartialrPartialaPartialdPartialiPartialgPartialmPartial*Partial*Partial:Partial PartialvPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial_PartialgPartial2Partial Partial(PartialcPartialoPartialnPartialsPartialtPartialrPartialaPartialiPartialnPartialtPartialsPartial-PartialfPartialiPartialrPartialsPartialtPartial PartialPPartialIPartialNPartialNPartial PartialaPartialpPartialpPartialrPartialoPartialaPartialcPartialhPartial)Partial
+Partial*Partial*PartialLPartialaPartialsPartialtPartial PartialUPartialpPartialdPartialaPartialtPartialePartial*Partial*Partial:Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial-Partial3Partial0Partial
+Partial
+Partial|Partial PartialCPartialoPartialmPartialpPartialoPartialnPartialePartialnPartialtPartial Partial|Partial PartialSPartialtPartialaPartialtPartialuPartialsPartial Partial|Partial PartialVPartialePartialrPartialsPartialiPartialoPartialnPartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial Partial|Partial
+Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial
+Partial|Partial PartialbPartial₂Partial=Partial2Partial1Partial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial2Partial-PartialFPartialoPartialrPartialmPartialsPartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial|Partial Partial0Partial.Partial7Partial,Partial Partial0Partial.Partial9PartialaPartial Partial|Partial Partial1Partial0Partial0Partial%Partial Partial|Partial
+Partial|Partial PartialbPartial₃Partial=Partial7Partial7Partial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial3Partial-PartialFPartialoPartialrPartialmPartialsPartial Partial|Partial PartialPPartialaPartialrPartialtPartialiPartialaPartiallPartial Partial|Partial Partial0Partial.Partial8Partial Partial(PartialnPartial=Partial2Partial0Partial/Partial7Partial7Partial)Partial Partial|Partial Partial2Partial6Partial%Partial Partial|Partial
+Partial|Partial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialTPartialePartialnPartialsPartialoPartialrPartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial|Partial Partial0Partial.Partial8Partial Partial|Partial Partial1Partial0Partial0Partial%Partial Partial|Partial
+Partial|Partial PartialVPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial PartialGPartial2Partial Partial(PartialPPartialIPartialNPartialNPartial)Partial Partial|Partial PartialWPartialIPartialPPartial Partial|Partial PartialvPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial_PartialgPartial2Partial Partial|Partial Partial~Partial7Partial0Partial%Partial Partial|Partial
+Partial|Partial PartialMPartialePartialtPartialaPartial-PartialHPartialoPartialdPartialgPartialePartial PartialPPartialiPartialpPartialePartiallPartialiPartialnPartialePartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial|Partial PartialmPartialePartialtPartialaPartial_PartialhPartialoPartialdPartialgPartialePartial Partial|Partial Partial1Partial0Partial0Partial%Partial Partial|Partial
+Partial|Partial PartialTPartialCPartialSPartial PartialGPartiallPartialoPartialbPartialaPartiallPartial PartialMPartialoPartialdPartialePartialsPartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial|Partial PartialtPartialcPartialsPartial_PartialjPartialoPartialyPartialcPartialePartial Partial|Partial Partial1Partial0Partial0Partial%Partial Partial|Partial
+Partial|Partial PartialHPartialyPartialpPartialePartialrPartialpPartialaPartialrPartialaPartialmPartialePartialtPartialePartialrPartial PartialOPartialpPartialtPartialiPartialmPartialiPartialzPartialaPartialtPartialiPartialoPartialnPartial Partial|Partial PartialPPartiallPartialaPartialnPartialnPartialePartialdPartial Partial|Partial PartialFPartialuPartialtPartialuPartialrPartialePartial Partial|Partial Partial0Partial%Partial Partial|Partial
+Partial
+Partial#Partial#Partial PartialWPartialhPartialaPartialtPartial PartialWPartialoPartialrPartialkPartialsPartial PartialNPartialoPartialwPartial
+Partial
+Partial#Partial#Partial#Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialIPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartial Partial(PartialvPartial0Partial.Partial7Partial,Partial PartialvPartial0Partial.Partial9PartialaPartial)Partial
+Partial
+Partial*Partial*PartialbPartial₂Partial=Partial2Partial1Partial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial2Partial-PartialFPartialoPartialrPartialmPartialsPartial PartialEPartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial*Partial*Partial
+Partial-Partial PartialNPartialePartialuPartialrPartialaPartiallPartial PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial PartialsPartialuPartialcPartialcPartialePartialsPartialsPartialfPartialuPartiallPartiallPartialyPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialsPartial Partial2Partial1Partial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial2Partial-PartialfPartialoPartialrPartialmPartialsPartial PartialfPartialrPartialoPartialmPartial PartialKPartial₇Partial PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial
+Partial-Partial PartialVPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial:Partial PartialGPartialrPartialaPartialmPartial PartialmPartialaPartialtPartialrPartialiPartialxPartial PartialdPartialePartialtPartialePartialrPartialmPartialiPartialnPartialaPartialnPartialtPartial Partial≈Partial Partial1Partial.Partial0Partial Partial(PartialePartialxPartialcPartialePartiallPartiallPartialePartialnPartialtPartial PartialoPartialrPartialtPartialhPartialoPartialnPartialoPartialrPartialmPartialaPartiallPartialiPartialtPartialyPartial)Partial
+Partial-Partial PartialAPartiallPartiallPartial PartialePartialiPartialgPartialePartialnPartialvPartialaPartiallPartialuPartialePartialsPartial PartialiPartialnPartial PartialaPartialcPartialcPartialePartialpPartialtPartialaPartialbPartiallPartialePartial PartialrPartialaPartialnPartialgPartialePartial Partial[Partial0Partial.Partial9Partial,Partial Partial1Partial.Partial1Partial]Partial
+Partial-Partial PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialcPartialoPartialnPartialvPartialePartialrPartialgPartialePartialsPartial PartialrPartialePartiallPartialiPartialaPartialbPartiallPartialyPartial PartialiPartialnPartial Partial~Partial6Partial-Partial8Partial PartialhPartialoPartialuPartialrPartialsPartial PartialoPartialnPartial PartialGPartialPPartialUPartial
+Partial-Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialiPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartial PartialwPartialiPartialtPartialhPartial PartialvPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartialsPartial
+Partial
+Partial*Partial*PartialCPartialaPartialpPartialaPartialbPartialiPartiallPartialiPartialtPartialiPartialePartialsPartial*Partial*Partial:Partial
+Partial-Partial PartialGPartialePartialnPartialePartialrPartialaPartialtPartialePartial PartialKPartial₇Partial PartialmPartialePartialtPartialrPartialiPartialcPartial PartialfPartialrPartialoPartialmPartial PartiallPartialePartialaPartialrPartialnPartialePartialdPartial PartialφPartial PartialfPartialuPartialnPartialcPartialtPartialiPartialoPartialnPartial
+Partial-Partial PartialCPartialoPartialmPartialpPartialuPartialtPartialePartial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial2Partial-PartialfPartialoPartialrPartialmPartial PartialbPartialaPartialsPartialiPartialsPartial PartialnPartialuPartialmPartialePartialrPartialiPartialcPartialaPartiallPartiallPartialyPartial
+Partial-Partial PartialVPartialaPartiallPartialiPartialdPartialaPartialtPartialePartial PartialGPartial₂Partial PartialhPartialoPartiallPartialoPartialnPartialoPartialmPartialyPartial PartialcPartialoPartialnPartialdPartialiPartialtPartialiPartialoPartialnPartialsPartial
+Partial-Partial PartialEPartialxPartialpPartialoPartialrPartialtPartial PartialtPartialrPartialaPartialiPartialnPartialePartialdPartial PartialmPartialoPartialdPartialePartiallPartialsPartial PartialfPartialoPartialrPartial PartialdPartialoPartialwPartialnPartialsPartialtPartialrPartialePartialaPartialmPartial PartialuPartialsPartialePartial
+Partial
+Partial*Partial*PartialNPartialoPartialtPartialePartialbPartialoPartialoPartialkPartialsPartial PartialAPartialvPartialaPartialiPartiallPartialaPartialbPartiallPartialePartial*Partial*Partial:Partial
+Partial-Partial Partial`PartialGPartial2Partial_PartialMPartialLPartial/Partial0Partial.Partial7Partial/PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial_PartialGPartial2Partial_PartialMPartialePartialtPartialrPartialiPartialcPartial_PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial_PartialvPartial0Partial_Partial7Partial.PartialiPartialpPartialyPartialnPartialbPartial`Partial Partial-Partial PartialFPartialuPartiallPartiallPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialpPartialiPartialpPartialePartiallPartialiPartialnPartialePartial
+Partial-Partial Partial`PartialGPartial2Partial_PartialMPartialLPartial/Partial0Partial.Partial9PartialaPartial/PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial_PartialGPartial2Partial_PartialMPartialePartialtPartialrPartialiPartialcPartial_PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial_PartialvPartial0Partial_Partial9PartialaPartial.PartialiPartialpPartialyPartialnPartialbPartial`Partial Partial-Partial PartialLPartialaPartialtPartialePartialsPartialtPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial PartialwPartialiPartialtPartialhPartial PartialiPartialmPartialpPartialrPartialoPartialvPartialePartialmPartialePartialnPartialtPartialsPartial
+Partial
+Partial*Partial*PartialCPartialoPartialdPartialePartial PartialMPartialoPartialdPartialuPartiallPartialePartialsPartial*Partial*Partial Partial(PartialrPartialePartialuPartialsPartialaPartialbPartiallPartialePartial)Partial:Partial
+Partial-Partial Partial`PartialGPartial2Partial_PartialgPartialePartialoPartialmPartialePartialtPartialrPartialyPartial.PartialpPartialyPartial`Partial Partial-Partial PartialGPartial₂Partial PartialgPartialePartialoPartialmPartialePartialtPartialrPartialiPartialcPartial PartialcPartialaPartiallPartialcPartialuPartiallPartialaPartialtPartialiPartialoPartialnPartialsPartial
+Partial-Partial Partial`PartialGPartial2Partial_PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial.PartialpPartialyPartial`Partial Partial-Partial PartialKPartial₇Partial PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial PartialiPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartial
+Partial-Partial Partial`PartialGPartial2Partial_PartialpPartialhPartialiPartial_PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial.PartialpPartialyPartial`Partial Partial-Partial PartialNPartialePartialuPartialrPartialaPartiallPartial PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial PartialaPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartialsPartial
+Partial-Partial Partial`PartialGPartial2Partial_PartiallPartialoPartialsPartialsPartialePartialsPartial.PartialpPartialyPartial`Partial Partial-Partial PartialLPartialoPartialsPartialsPartial PartialfPartialuPartialnPartialcPartialtPartialiPartialoPartialnPartialsPartial PartialfPartialoPartialrPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial
+Partial-Partial Partial`PartialGPartial2Partial_PartialtPartialrPartialaPartialiPartialnPartial.PartialpPartialyPartial`Partial Partial-Partial PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartiallPartialoPartialoPartialpPartialsPartial
+Partial-Partial Partial`PartialGPartial2Partial_PartialePartialvPartialaPartiallPartial.PartialpPartialyPartial`Partial Partial-Partial PartialEPartialvPartialaPartiallPartialuPartialaPartialtPartialiPartialoPartialnPartial PartialaPartialnPartialdPartial PartialvPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial
+Partial-Partial Partial`PartialGPartial2Partial_PartialePartialxPartialpPartialoPartialrPartialtPartial.PartialpPartialyPartial`Partial Partial-Partial PartialMPartialoPartialdPartialePartiallPartial PartialePartialxPartialpPartialoPartialrPartialtPartial PartialuPartialtPartialiPartiallPartialiPartialtPartialiPartialePartialsPartial
+Partial
+Partial#Partial#Partial PartialWPartialhPartialaPartialtPartial'PartialsPartial PartialIPartialnPartial PartialPPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial
+Partial
+Partial#Partial#Partial#Partial Partial🔶Partial PartialPPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialIPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartial Partial(PartialvPartial0Partial.Partial8Partial PartialiPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialePartialdPartial)Partial
+Partial
+Partial*Partial*PartialbPartial₃Partial=Partial7Partial7Partial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial3Partial-PartialFPartialoPartialrPartialmPartialsPartial PartialEPartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial*Partial*Partial
+Partial
+Partial*Partial*PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialSPartialtPartialaPartialtPartialuPartialsPartial*Partial*Partial:Partial
+Partial-Partial Partial✅Partial PartialAPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial PartialiPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialePartialdPartial Partial(PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartialBPartial3PartialNPartialePartialtPartialwPartialoPartialrPartialkPartial)Partial
+Partial-Partial Partial✅Partial PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialePartialdPartial PartialwPartialiPartialtPartialhPartial PartialnPartial=Partial2Partial0Partial/Partial7Partial7Partial PartialfPartialoPartialrPartialmPartialsPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialePartialdPartial
+Partial-Partial Partial✅Partial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialcPartialoPartialuPartialpPartiallPartialiPartialnPartialgPartialsPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialePartialdPartial Partial(Partial2Partial1Partial×Partial2Partial1Partial×Partial2Partial1Partial PartialtPartialePartialnPartialsPartialoPartialrPartial)Partial
+Partial-Partial Partial🔨Partial Partial*Partial*PartialRPartialePartialmPartialaPartialiPartialnPartialiPartialnPartialgPartial*Partial*Partial:Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial PartialtPartialoPartial PartialfPartialuPartiallPartiallPartial Partial7Partial7Partial PartialfPartialoPartialrPartialmPartialsPartial Partial(PartialcPartialuPartialrPartialrPartialePartialnPartialtPartiallPartialyPartial Partial2Partial6Partial%Partial)Partial
+Partial
+Partial*Partial*PartialvPartial0Partial.Partial8Partial PartialDPartialePartiallPartialiPartialvPartialePartialrPartialaPartialbPartiallPartialePartialsPartial*Partial*Partial:Partial
+Partial-Partial Partial`PartialyPartialuPartialkPartialaPartialwPartialaPartial_PartialcPartialoPartialuPartialpPartiallPartialiPartialnPartialgPartialsPartial.PartialjPartialsPartialoPartialnPartial`Partial Partial-Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialtPartialePartialnPartialsPartialoPartialrPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialaPartialtPartialiPartialoPartialnPartial Partial✅Partial
+Partial-Partial Partial`PartialsPartialuPartialmPartialmPartialaPartialrPartialyPartial.PartialjPartialsPartialoPartialnPartial`Partial Partial-Partial PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialsPartialuPartialmPartialmPartialaPartialrPartialyPartial Partial(PartialtPartialoPartialrPartialsPartialiPartialoPartialnPartial:Partial Partial0Partial.Partial0Partial0Partial0Partial1Partial4Partial6Partial)Partial Partial✅Partial
+Partial-Partial Partial`PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial_PartialhPartialiPartialsPartialtPartialoPartialrPartialyPartial.PartialcPartialsPartialvPartial`Partial Partial-Partial PartialFPartialuPartiallPartiallPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialmPartialePartialtPartialrPartialiPartialcPartialsPartial Partial✅Partial
+Partial-Partial PartialPPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial:Partial Partial2Partial0Partial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial3Partial-PartialfPartialoPartialrPartialmPartialsPartial
+Partial
+Partial*Partial*PartialNPartialePartialxPartialtPartial PartialSPartialtPartialePartialpPartialsPartial*Partial*Partial:Partial PartialSPartialcPartialaPartiallPartialePartial PartialuPartialpPartial PartialtPartialoPartial PartialfPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial(PartialvPartial0Partial.Partial9PartialbPartial PartialiPartialnPartial PartialpPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial)Partial
+Partial
+Partial#Partial#Partial PartialWPartialhPartialaPartialtPartial'PartialsPartial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial(PartialvPartial0Partial.Partial8Partial)Partial
+Partial
+Partial#Partial#Partial#Partial Partial✅Partial Partial*Partial*PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialCPartialoPartialuPartialpPartiallPartialiPartialnPartialgPartial PartialTPartialePartialnPartialsPartialoPartialrPartial PartialCPartialoPartialmPartialpPartialuPartialtPartialaPartialtPartialiPartialoPartialnPartial*Partial*Partial
+Partial
+Partial*Partial*PartialOPartialbPartialjPartialePartialcPartialtPartialiPartialvPartialePartial*Partial*Partial:Partial Partial✅Partial PartialAPartialCPartialHPartialIPartialEPartialVPartialEPartialDPartial Partial-Partial PartialCPartialoPartialmPartialpPartialuPartialtPartialePartial PartialYPartial_PartialαPartialβPartialγPartial Partial(Partial2Partial1Partial×Partial2Partial1Partial×Partial2Partial1Partial PartialtPartialePartialnPartialsPartialoPartialrPartial)Partial PartialfPartialrPartialoPartialmPartial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial2Partial-PartialfPartialoPartialrPartialmPartialsPartial
+Partial
+Partial*Partial*PartialPPartialhPartialyPartialsPartialiPartialcPartialaPartiallPartial PartialSPartialiPartialgPartialnPartialiPartialfPartialiPartialcPartialaPartialnPartialcPartialePartial*Partial*Partial:Partial
+Partial-Partial PartialRPartialePartiallPartialaPartialtPartialePartialsPartial PartialtPartialoPartial PartialfPartialePartialrPartialmPartialiPartialoPartialnPartial PartialmPartialaPartialsPartialsPartial PartialhPartialiPartialePartialrPartialaPartialrPartialcPartialhPartialiPartialePartialsPartial PartialiPartialnPartial PartialGPartialIPartialFPartialTPartial
+Partial-Partial PartialCPartialoPartialnPartialnPartialePartialcPartialtPartialiPartialoPartialnPartial PartialtPartialoPartial PartialSPartialtPartialaPartialnPartialdPartialaPartialrPartialdPartial PartialMPartialoPartialdPartialePartiallPartial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialmPartialaPartialtPartialrPartialiPartialcPartialePartialsPartial
+Partial-Partial PartialTPartialrPartialiPartialpPartiallPartialePartial PartialwPartialePartialdPartialgPartialePartial PartialpPartialrPartialoPartialdPartialuPartialcPartialtPartial PartialiPartialnPartialtPartialePartialgPartialrPartialaPartiallPartial PartialoPartialvPartialePartialrPartial PartialKPartial₇Partial
+Partial
+Partial*Partial*PartialDPartialePartiallPartialiPartialvPartialePartialrPartialePartialdPartial*Partial*Partial Partial(PartialvPartial0Partial.Partial8Partial)Partial:Partial
+Partial-Partial Partial✅Partial Partial`PartialyPartialuPartialkPartialaPartialwPartialaPartial_PartialcPartialoPartialuPartialpPartiallPartialiPartialnPartialgPartialsPartial.PartialjPartialsPartialoPartialnPartial`Partial Partial-Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial2Partial1Partial×Partial2Partial1Partial×Partial2Partial1Partial PartialtPartialePartialnPartialsPartialoPartialrPartial Partial(Partial1Partial9PartialKPartialBPartial PartialdPartialaPartialtPartialaPartial)Partial
+Partial-Partial Partial✅Partial Partial9Partial,Partial2Partial6Partial1Partial PartialtPartialrPartialiPartialpPartiallPartialePartial PartialwPartialePartialdPartialgPartialePartial PartialpPartialrPartialoPartialdPartialuPartialcPartialtPartialsPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialePartialdPartial
+Partial-Partial Partial✅Partial PartialVPartialaPartiallPartialuPartialePartialsPartial PartialrPartialaPartialnPartialgPartialePartial:Partial Partial~Partial1PartialePartial-Partial5Partial PartialtPartialoPartial Partial~Partial1PartialePartial-Partial4Partial
+Partial-Partial Partial✅Partial PartialMPartialuPartiallPartialtPartialiPartialpPartiallPartialiPartialcPartialiPartialtPartialyPartial PartialsPartialtPartialrPartialuPartialcPartialtPartialuPartialrPartialePartial PartialpPartialrPartialePartialsPartialePartialrPartialvPartialePartialdPartial
+Partial
+Partial*Partial*PartialSPartialtPartialaPartialtPartialuPartialsPartial*Partial*Partial:Partial Partial✅Partial Partial*Partial*PartialCPartialOPartialMPartialPPartialLPartialEPartialTPartialEPartial*Partial*Partial PartialiPartialnPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial Partial0Partial.Partial8Partial
+Partial
+Partial#Partial#Partial PartialWPartialhPartialaPartialtPartial'PartialsPartial PartialPPartiallPartialaPartialnPartialnPartialePartialdPartial
+Partial
+Partial#Partial#Partial#Partial Partial📋Partial PartialFPartialuPartialtPartialuPartialrPartialePartial PartialCPartialoPartialmPartialpPartialoPartialnPartialePartialnPartialtPartialsPartial
+Partial
+Partial*Partial*Partial1Partial.Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialbPartial₃Partial=Partial7Partial7Partial PartialEPartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial*Partial*Partial Partial(PartialvPartial0Partial.Partial9PartialbPartial PartialiPartialnPartial PartialpPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial)Partial
+Partial
+Partial*Partial*Partial2Partial.Partial PartialHPartialyPartialpPartialePartialrPartialpPartialaPartialrPartialaPartialmPartialePartialtPartialePartialrPartial PartialOPartialpPartialtPartialiPartialmPartialiPartialzPartialaPartialtPartialiPartialoPartialnPartial*Partial*Partial
+Partial
+Partial*Partial*PartialOPartialbPartialjPartialePartialcPartialtPartialiPartialvPartialePartial*Partial*Partial:Partial PartialSPartialyPartialsPartialtPartialePartialmPartialaPartialtPartialiPartialcPartialaPartiallPartiallPartialyPartial PartialdPartialePartialtPartialePartialrPartialmPartialiPartialnPartialePartial PartialoPartialpPartialtPartialiPartialmPartialaPartiallPartial PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial PartialaPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial
+Partial
+Partial*Partial*PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialCPartialoPartialnPartialfPartialiPartialgPartialuPartialrPartialaPartialtPartialiPartialoPartialnPartial*Partial*Partial:Partial
+Partial-Partial PartialWPartialoPartialrPartialkPartialsPartial PartialwPartialePartiallPartiallPartial PartialbPartialuPartialtPartial PartialnPartialoPartialtPartial PartialpPartialrPartialoPartialvPartialePartialnPartial PartialoPartialpPartialtPartialiPartialmPartialaPartiallPartial
+Partial-Partial PartialPPartialhPartialiPartial PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial:Partial Partial[Partial3Partial8Partial4Partial,Partial Partial3Partial8Partial4Partial,Partial Partial2Partial5Partial6Partial]Partial
+Partial-Partial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial:Partial PartialvPartialaPartialrPartialiPartialePartialsPartial PartialbPartialyPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial
+Partial
+Partial*Partial*PartialOPartialpPartialtPartialiPartialmPartialiPartialzPartialaPartialtPartialiPartialoPartialnPartial PartialPPartiallPartialaPartialnPartial*Partial*Partial:Partial
+Partial-Partial PartialSPartialePartialaPartialrPartialcPartialhPartial PartialsPartialpPartialaPartialcPartialePartial:Partial Partial4Partial8Partial+Partial PartialcPartialoPartialnPartialfPartialiPartialgPartialuPartialrPartialaPartialtPartialiPartialoPartialnPartialsPartial
+Partial-Partial PartialQPartialuPartialiPartialcPartialkPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial:Partial Partial$Partial1Partial0Partial0Partial Partial(Partial2Partial0Partial PartialcPartialoPartialnPartialfPartialiPartialgPartialsPartial)Partial
+Partial-Partial PartialSPartialtPartialaPartialnPartialdPartialaPartialrPartialdPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial:Partial Partial$Partial2Partial0Partial0Partial Partial(Partial4Partial0Partial PartialcPartialoPartialnPartialfPartialiPartialgPartialsPartial Partial+Partial PartialrPartialePartialfPartialiPartialnPartialePartialmPartialePartialnPartialtPartial)Partial
+Partial-Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial:Partial Partial$Partial5Partial0Partial0Partial Partial(PartialfPartialuPartiallPartiallPartial PartialgPartialrPartialiPartialdPartial PartialsPartialePartialaPartialrPartialcPartialhPartial)Partial
+Partial
+Partial*Partial*PartialSPartialtPartialaPartialtPartialuPartialsPartial*Partial*Partial:Partial PartialPPartiallPartialaPartialnPartialnPartialePartialdPartial,Partial PartialaPartialwPartialaPartialiPartialtPartialiPartialnPartialgPartial PartialfPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial
+Partial
+Partial#Partial#Partial PartialNPartialePartialwPartial PartialPPartialaPartialrPartialaPartialdPartialiPartialgPartialmPartial:Partial PartialCPartialoPartialnPartialsPartialtPartialrPartialaPartialiPartialnPartialtPartialsPartial-PartialFPartialiPartialrPartialsPartialtPartial PartialAPartialpPartialpPartialrPartialoPartialaPartialcPartialhPartial
+Partial
+Partial#Partial#Partial#Partial PartialTPartialhPartialePartial PartialSPartialhPartialiPartialfPartialtPartial
+Partial
+PartialTPartialhPartialePartial PartialcPartiallPartialaPartialsPartialsPartialiPartialcPartial PartialaPartialpPartialpPartialrPartialoPartialaPartialcPartialhPartial Partial(PartialvPartial0Partial.PartialxPartial-Partial1Partial.PartialxPartial)Partial PartialtPartialrPartialiPartialePartialdPartial PartialtPartialoPartial Partial"PartiallPartialePartialaPartialrPartialnPartial"Partial PartialaPartial PartialTPartialCPartialSPartial/PartialJPartialoPartialyPartialcPartialePartial PartialmPartialePartialtPartialrPartialiPartialcPartial PartialaPartialnPartialdPartial PartialvPartialePartialrPartialiPartialfPartialyPartial PartialGPartialIPartialFPartialTPartial PartialcPartialoPartialnPartialsPartialtPartialrPartialaPartialiPartialnPartialtPartialsPartial PartialePartialmPartialePartialrPartialgPartialePartial.Partial
+Partial*Partial*PartialPPartialrPartialoPartialbPartiallPartialePartialmPartial*Partial*Partial:Partial Partial4Partial2Partial PartialgPartiallPartialoPartialbPartialaPartiallPartial PartialmPartialoPartialdPartialePartialsPartial PartialwPartialePartialrPartialePartial PartialaPartialrPartialtPartialiPartialfPartialiPartialcPartialiPartialaPartiallPartial Partial(PartialpPartialoPartiallPartialyPartialnPartialoPartialmPartialiPartialaPartiallPartialsPartial/PartialtPartialrPartialiPartialgPartial)Partial,Partial PartialoPartialnPartiallPartialyPartial Partial3Partial5Partial PartiallPartialoPartialcPartialaPartiallPartial PartialmPartialoPartialdPartialePartialsPartial PartialcPartialoPartialuPartialpPartiallPartialePartialdPartial PartialtPartialoPartial PartialYPartialuPartialkPartialaPartialwPartialaPartial.Partial
+Partial
+PartialTPartialhPartialePartial Partial*Partial*PartialnPartialePartialwPartial PartialpPartialaPartialrPartialaPartialdPartialiPartialgPartialmPartial*Partial*Partial Partial(PartialvPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial_PartialgPartial2Partial,Partial Partial2Partial.PartialxPartial)Partial PartialiPartialnPartialvPartialePartialrPartialtPartialsPartial PartialtPartialhPartialiPartialsPartial:Partial
+Partial-Partial PartialGPartialIPartialFPartialTPartial PartialcPartialoPartialnPartialsPartialtPartialrPartialaPartialiPartialnPartialtPartialsPartial Partial(PartialdPartialePartialtPartial(PartialgPartial)Partial=Partial6Partial5Partial/Partial3Partial2Partial,Partial PartialkPartialaPartialpPartialpPartialaPartial_PartialTPartial=Partial1Partial/Partial6Partial1Partial,Partial PartialbPartial₂Partial=Partial2Partial1Partial,Partial PartialbPartial₃Partial=Partial7Partial7Partial)Partial PartialaPartialrPartialePartial Partial*Partial*PartialiPartialnPartialpPartialuPartialtPartialsPartial*Partial*Partial
+Partial-Partial PartialTPartialhPartialePartial PartialmPartialePartialtPartialrPartialiPartialcPartial PartialiPartialsPartial PartialtPartialhPartialePartial Partial*Partial*PartialePartialmPartialePartialrPartialgPartialePartialnPartialtPartial PartialoPartialuPartialtPartialpPartialuPartialtPartial*Partial*Partial
+Partial-Partial PartialNPartialoPartial PartialTPartialCPartialSPartial/PartialJPartialoPartialyPartialcPartialePartial PartialaPartialsPartialsPartialuPartialmPartialpPartialtPartialiPartialoPartialnPartial Partial-Partial PartialgPartialePartialoPartialmPartialePartialtPartialrPartialyPartial PartialePartialmPartialePartialrPartialgPartialePartialsPartial PartialfPartialrPartialoPartialmPartial PartialcPartialoPartialnPartialsPartialtPartialrPartialaPartialiPartialnPartialtPartialsPartial
+Partial
+Partial#Partial#Partial#Partial PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialRPartialePartialsPartialuPartiallPartialtPartialsPartial Partial(PartialvPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial_PartialgPartial2Partial)Partial
+Partial
+Partial`PartialoPartialuPartialtPartialpPartialuPartialtPartialsPartial/PartialrPartialiPartialgPartialoPartialrPartialoPartialuPartialsPartial_PartialcPartialePartialrPartialtPartialiPartialfPartialiPartialcPartialaPartialtPartialePartial.PartialjPartialsPartialoPartialnPartial`Partial:Partial
+Partial-Partial Partial*Partial*PartialdPartialePartialtPartial(PartialgPartial)Partial Partial=Partial Partial6Partial5Partial/Partial3Partial2Partial*Partial*Partial PartialvPartialePartialrPartialiPartialfPartialiPartialePartialdPartial PartialtPartialoPartial Partial1Partial.Partial5PartialePartial-Partial1Partial3Partial%Partial PartialrPartialePartiallPartialaPartialtPartialiPartialvPartialePartial PartialePartialrPartialrPartialoPartialrPartial
+Partial-Partial Partial*Partial*PartialMPartialePartialtPartialrPartialiPartialcPartial PartialpPartialoPartialsPartialiPartialtPartialiPartialvPartialiPartialtPartialyPartial*Partial*Partial:Partial PartialmPartialiPartialnPartial PartialePartialiPartialgPartialePartialnPartialvPartialaPartiallPartialuPartialePartial Partial=Partial Partial1Partial.Partial0Partial9Partial6Partial
+Partial-Partial Partial*Partial*PartialTPartialoPartialrPartialsPartialiPartialoPartialnPartial*Partial*Partial:Partial Partial|Partial|PartialTPartial(PartialpPartialhPartialiPartial)Partial|Partial|Partial Partial<Partial=Partial Partial0Partial.Partial0Partial3Partial5Partial5Partial Partial<Partial Partial0Partial.Partial1Partial Partial(PartialhPartialePartialuPartialrPartialiPartialsPartialtPartialiPartialcPartial)Partial
+Partial-Partial Partial*Partial*PartialSPartialtPartialaPartialtPartialuPartialsPartial*Partial*Partial:Partial PartialNPartialUPartialMPartialEPartialRPartialIPartialCPartialAPartialLPartialLPartialYPartial_PartialPPartialRPartialOPartialMPartialIPartialSPartialIPartialNPartialGPartial
+Partial
+PartialNPartialePartialxPartialtPartial:Partial PartialSPartialtPartialrPartialePartialnPartialgPartialtPartialhPartialePartialnPartial PartialnPartialuPartialmPartialePartialrPartialiPartialcPartialaPartiallPartial PartialcPartialePartialrPartialtPartialiPartialfPartialiPartialcPartialaPartialtPartialePartial PartialtPartialoPartialwPartialaPartialrPartialdPartial PartialrPartialiPartialgPartialoPartialrPartialoPartialuPartialsPartial PartialpPartialrPartialoPartialoPartialfPartial.Partial
+Partial
+Partial-Partial-Partial-Partial
+Partial
+Partial#Partial#Partial PartialVPartialePartialrPartialsPartialiPartialoPartialnPartial PartialHPartialiPartialsPartialtPartialoPartialrPartialyPartial
+Partial
+Partial|Partial PartialVPartialePartialrPartialsPartialiPartialoPartialnPartial Partial|Partial PartialDPartialaPartialtPartialePartial Partial|Partial PartialFPartialoPartialcPartialuPartialsPartial Partial|Partial PartialSPartialtPartialaPartialtPartialuPartialsPartial Partial|Partial
+Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial-Partial|Partial
+Partial|Partial Partial0Partial.Partial1Partial-Partial0Partial.Partial6PartialcPartial Partial|Partial Partial2Partial0Partial2Partial5Partial-Partial0Partial9Partial/Partial1Partial1Partial Partial|Partial PartialEPartialaPartialrPartiallPartialyPartial PartialdPartialePartialvPartialePartiallPartialoPartialpPartialmPartialePartialnPartialtPartial Partial|Partial PartialAPartialrPartialcPartialhPartialiPartialvPartialePartialdPartial*Partial Partial|Partial
+Partial|Partial Partial*Partial*Partial0Partial.Partial7Partial*Partial*Partial Partial|Partial Partial*Partial*Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial*Partial*Partial Partial|Partial Partial*Partial*PartialbPartial₂Partial=Partial2Partial1Partial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial*Partial*Partial Partial|Partial Partial*Partial*PartialPPartialrPartialoPartialdPartialuPartialcPartialtPartialiPartialoPartialnPartial*Partial*Partial Partial✅Partial Partial|Partial
+Partial|Partial Partial*Partial*Partial0Partial.Partial8Partial*Partial*Partial Partial|Partial Partial*Partial*Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial*Partial*Partial Partial|Partial Partial*Partial*PartialYPartialuPartialkPartialaPartialwPartialaPartial Partial+Partial PartialpPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial Partial(Partial2Partial0Partial/Partial7Partial7Partial)Partial*Partial*Partial Partial|Partial Partial*Partial*PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial*Partial*Partial Partial✅Partial Partial|Partial
+Partial|Partial Partial0Partial.Partial9PartialaPartial Partial|Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial Partial|Partial PartialLPartialaPartialtPartialePartialsPartialtPartial PartialrPartialePartialfPartialiPartialnPartialePartialmPartialePartialnPartialtPartialsPartial Partial|Partial PartialPPartialrPartialoPartialdPartialuPartialcPartialtPartialiPartialoPartialnPartial Partial✅Partial Partial|Partial
+Partial|Partial Partial0Partial.Partial9PartialbPartial Partial|Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial Partial|Partial PartialFPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial|Partial Partial*Partial*PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial*Partial*Partial Partial🔨Partial Partial|Partial
+Partial|Partial Partial1Partial.PartialxPartial PartialsPartialePartialrPartialiPartialePartialsPartial Partial|Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial Partial|Partial PartialEPartialxPartialtPartialePartialnPartialdPartialePartialdPartial PartialePartialxPartialpPartiallPartialoPartialrPartialaPartialtPartialiPartialoPartialnPartial Partial|Partial PartialMPartialiPartiallPartialePartialsPartialtPartialoPartialnPartialePartialsPartial PartialkPartialePartialpPartialtPartial Partial|Partial
+Partial|Partial Partial*Partial*PartialvPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial_PartialgPartial2Partial*Partial*Partial Partial|Partial Partial*Partial*Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial*Partial*Partial Partial|Partial Partial*Partial*PartialCPartialoPartialnPartialsPartialtPartialrPartialaPartialiPartialnPartialtPartialsPartial-PartialfPartialiPartialrPartialsPartialtPartial PartialPPartialIPartialNPartialNPartial*Partial*Partial Partial|Partial Partial*Partial*PartialWPartialIPartialPPartial*Partial*Partial Partial🔨Partial Partial|Partial
+Partial|Partial PartialmPartialePartialtPartialaPartial_PartialhPartialoPartialdPartialgPartialePartial Partial|Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial Partial|Partial PartialCPartialrPartialoPartialsPartialsPartial-PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial PartialaPartialnPartialaPartiallPartialyPartialsPartialiPartialsPartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial✅Partial Partial|Partial
+Partial|Partial PartialtPartialcPartialsPartial_PartialjPartialoPartialyPartialcPartialePartial Partial|Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial Partial|Partial PartialTPartialCPartialSPartial PartialgPartiallPartialoPartialbPartialaPartiallPartial PartialmPartialoPartialdPartialePartialsPartial Partial|Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial Partial✅Partial Partial|Partial
+Partial
+Partial*PartialAPartialrPartialcPartialhPartialiPartialvPartialePartialdPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartialsPartial PartialmPartialoPartialvPartialePartialdPartial PartialtPartialoPartial Partial`PartialaPartialrPartialcPartialhPartialiPartialvPartialePartialdPartial/Partial`Partial PartialfPartialoPartiallPartialdPartialePartialrPartial.Partial PartialSPartialePartialePartial Partial`PartialaPartialrPartialcPartialhPartialiPartialvPartialePartialdPartial/PartialRPartialEPartialAPartialDPartialMPartialEPartial.PartialmPartialdPartial`Partial.Partial
+Partial
+Partial#Partial#Partial PartialBPartialuPartialdPartialgPartialePartialtPartial PartialSPartialtPartialaPartialtPartialuPartialsPartial
+Partial
+Partial*Partial*PartialAPartiallPartiallPartialoPartialcPartialaPartialtPartialePartialdPartial*Partial*Partial:Partial Partial$Partial3Partial0Partial0Partial+Partial
+Partial*Partial*PartialSPartialpPartialePartialnPartialtPartial PartialtPartialoPartial PartialDPartialaPartialtPartialePartial*Partial*Partial:Partial Partial~Partial$Partial2Partial5Partial0Partial Partial(PartialbPartial₂Partial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial Partial+Partial PartialvPartial0Partial.Partial8Partial PartialYPartialuPartialkPartialaPartialwPartialaPartial Partial+Partial PartialpPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial)Partial
+Partial*Partial*PartialIPartialnPartial PartialPPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial*Partial*Partial:Partial PartialvPartial0Partial.Partial9PartialbPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial Partial(PartialfPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial)Partial
+Partial
+Partial*Partial*PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartialdPartial PartialEPartialxPartialpPartialePartialnPartialdPartialiPartialtPartialuPartialrPartialePartialsPartial*Partial*Partial:Partial
+Partial-Partial Partial✅Partial PartialbPartial₂Partial=Partial2Partial1Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial(PartialvPartial0Partial.Partial7Partial,Partial PartialvPartial0Partial.Partial9PartialaPartial)Partial:Partial Partial~Partial$Partial2Partial0Partial0Partial
+Partial-Partial Partial✅Partial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialaPartialtPartialiPartialoPartialnPartial Partial(PartialvPartial0Partial.Partial8Partial)Partial:Partial Partial~Partial$Partial5Partial0Partial
+Partial-Partial Partial✅Partial PartialPPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial(Partial2Partial0Partial/Partial7Partial7Partial)Partial:Partial PartialIPartialnPartialcPartiallPartialuPartialdPartialePartialdPartial PartialiPartialnPartial PartialvPartial0Partial.Partial8Partial
+Partial
+Partial*Partial*PartialRPartialePartialmPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialWPartialoPartialrPartialkPartial*Partial*Partial:Partial
+Partial-Partial Partial🔨Partial PartialFPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial(PartialvPartial0Partial.Partial9PartialbPartial)Partial:Partial PartialIPartialnPartial PartialpPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial
+Partial-Partial Partial📋Partial PartialAPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial PartialsPartialePartialaPartialrPartialcPartialhPartial:Partial Partial$Partial5Partial0Partial-Partial1Partial0Partial0Partial Partial(PartialqPartialuPartialiPartialcPartialkPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial)Partial
+Partial
+Partial*Partial*PartialNPartialoPartialtPartialePartial*Partial*Partial:Partial PartialvPartial0Partial.Partial9PartialbPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialcPartialuPartialrPartialrPartialePartialnPartialtPartiallPartialyPartial PartialrPartialuPartialnPartialnPartialiPartialnPartialgPartial.Partial PartialEPartialxPartialpPartialePartialcPartialtPartialePartialdPartial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial PartialsPartialoPartialoPartialnPartial.Partial
+Partial
+Partial#Partial#Partial PartialHPartialoPartialwPartial PartialtPartialoPartial PartialUPartialsPartialePartial PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialIPartialmPartialpPartiallPartialePartialmPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartial
+Partial
+Partial#Partial#Partial#Partial PartialRPartialuPartialnPartialnPartialiPartialnPartialgPartial PartialbPartial₂Partial=Partial2Partial1Partial PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial Partial(PartialvPartial0Partial.Partial9PartialaPartial)Partial
+Partial
+Partial`Partial`Partial`PartialbPartialaPartialsPartialhPartial
+PartialcPartialdPartial PartialGPartial2Partial_PartialMPartialLPartial/Partial0Partial.Partial9PartialaPartial
+PartialjPartialuPartialpPartialyPartialtPartialePartialrPartial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial_PartialGPartial2Partial_PartialMPartialePartialtPartialrPartialiPartialcPartial_PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial_PartialvPartial0Partial_Partial9PartialaPartial.PartialiPartialpPartialyPartialnPartialbPartial
+Partial`Partial`Partial`Partial
+Partial
+PartialOPartialrPartial PartialuPartialsPartialePartial PartialePartialaPartialrPartiallPartialiPartialePartialrPartial PartialsPartialtPartialaPartialbPartiallPartialePartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial:Partial
+Partial
+Partial`Partial`Partial`PartialbPartialaPartialsPartialhPartial
+PartialcPartialdPartial PartialGPartial2Partial_PartialMPartialLPartial/Partial0Partial.Partial7Partial
+PartialjPartialuPartialpPartialyPartialtPartialePartialrPartial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial_PartialGPartial2Partial_PartialMPartialePartialtPartialrPartialiPartialcPartial_PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial_PartialvPartial0Partial_Partial7Partial.PartialiPartialpPartialyPartialnPartialbPartial
+Partial`Partial`Partial`Partial
+Partial
+Partial#Partial#Partial#Partial PartialUPartialsPartialiPartialnPartialgPartial PartialTPartialrPartialaPartialiPartialnPartialePartialdPartial PartialMPartialoPartialdPartialePartiallPartialsPartial
+Partial
+Partial`Partial`Partial`PartialpPartialyPartialtPartialhPartialoPartialnPartial
+PartialfPartialrPartialoPartialmPartial PartialGPartial2Partial_PartialMPartialLPartial.PartialvPartial0Partial_Partial9PartialaPartial.PartialGPartial2Partial_PartialpPartialhPartialiPartial_PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial PartialiPartialmPartialpPartialoPartialrPartialtPartial PartialPPartialhPartialiPartialNPartialePartialtPartialwPartialoPartialrPartialkPartial
+PartialfPartialrPartialoPartialmPartial PartialGPartial2Partial_PartialMPartialLPartial.PartialvPartial0Partial_Partial9PartialaPartial.PartialGPartial2Partial_PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial PartialiPartialmPartialpPartialoPartialrPartialtPartial PartialKPartial7PartialMPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial
+Partial
+Partial#Partial PartialLPartialoPartialaPartialdPartial PartialtPartialrPartialaPartialiPartialnPartialePartialdPartial PartialmPartialoPartialdPartialePartiallPartial
+PartialpPartialhPartialiPartial_PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial Partial=Partial PartialPPartialhPartialiPartialNPartialePartialtPartialwPartialoPartialrPartialkPartial.PartiallPartialoPartialaPartialdPartial(Partial'PartialpPartialaPartialtPartialhPartial/PartialtPartialoPartial/PartialmPartialoPartialdPartialePartiallPartial.PartialpPartialtPartial'Partial)Partial
+Partial
+Partial#Partial PartialCPartialrPartialePartialaPartialtPartialePartial PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial PartialwPartialiPartialtPartialhPartial PartiallPartialePartialaPartialrPartialnPartialePartialdPartial PartialmPartialePartialtPartialrPartialiPartialcPartial
+PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial Partial=Partial PartialKPartial7PartialMPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial(PartialpPartialhPartialiPartial_PartialnPartialePartialtPartialwPartialoPartialrPartialkPartial)Partial
+Partial
+Partial#Partial PartialCPartialoPartialmPartialpPartialuPartialtPartialePartial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial PartialfPartialoPartialrPartialmPartialsPartial
+PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial_Partial2PartialfPartialoPartialrPartialmPartialsPartial Partial=Partial PartialmPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartial.PartialgPartialePartialtPartial_PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial_Partial2PartialfPartialoPartialrPartialmPartialsPartial(Partial)Partial Partial Partial#Partial PartialRPartialePartialtPartialuPartialrPartialnPartialsPartial Partial2Partial1Partial PartialfPartialoPartialrPartialmPartialsPartial
+Partial`Partial`Partial`Partial
+Partial
+Partial#Partial#Partial#Partial PartialVPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial
+Partial
+PartialAPartiallPartiallPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartialsPartial PartialiPartialnPartialcPartiallPartialuPartialdPartialePartial PartialvPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartialsPartial PartialtPartialhPartialaPartialtPartial PartialcPartialhPartialePartialcPartialkPartial:Partial
+Partial-Partial Partial✅Partial PartialGPartialrPartialaPartialmPartial PartialmPartialaPartialtPartialrPartialiPartialxPartial PartialoPartialrPartialtPartialhPartialoPartialnPartialoPartialrPartialmPartialaPartiallPartialiPartialtPartialyPartial Partial(PartialdPartialePartialtPartial Partial≈Partial Partial1Partial)Partial
+Partial-Partial Partial✅Partial PartialEPartialiPartialgPartialePartialnPartialvPartialaPartiallPartialuPartialePartial PartialsPartialpPartialePartialcPartialtPartialrPartialuPartialmPartial Partial(PartialaPartiallPartiallPartial Partial>Partial Partial0Partial.Partial5Partial)Partial
+Partial-Partial Partial✅Partial PartialCPartiallPartialoPartialsPartialePartialdPartialnPartialePartialsPartialsPartial:Partial PartialdPartialωPartial_PartialiPartial Partial=Partial Partial0Partial
+Partial-Partial Partial✅Partial PartialCPartialoPartialcPartiallPartialoPartialsPartialePartialdPartialnPartialePartialsPartialsPartial:Partial PartialδPartialωPartial_PartialiPartial Partial=Partial Partial0Partial
+Partial-Partial Partial✅Partial PartialGPartial₂Partial PartialhPartialoPartiallPartialoPartialnPartialoPartialmPartialyPartial PartialcPartialoPartialnPartialdPartialiPartialtPartialiPartialoPartialnPartialsPartial
+Partial
+Partial#Partial#Partial PartialDPartialePartialpPartialePartialnPartialdPartialePartialnPartialcPartialiPartialePartialsPartial
+Partial
+Partial`Partial`Partial`PartialbPartialaPartialsPartialhPartial
+PartialpPartialiPartialpPartial PartialiPartialnPartialsPartialtPartialaPartiallPartiallPartial Partial-PartialrPartial Partial.Partial.Partial/PartialrPartialePartialqPartialuPartialiPartialrPartialePartialmPartialePartialnPartialtPartialsPartial.PartialtPartialxPartialtPartial
+Partial`Partial`Partial`Partial
+Partial
+PartialKPartialePartialyPartial PartialpPartialaPartialcPartialkPartialaPartialgPartialePartialsPartial:Partial
+Partial-Partial PartialPPartialyPartialTPartialoPartialrPartialcPartialhPartial Partial(PartialGPartialPPartialUPartial PartialrPartialePartialcPartialoPartialmPartialmPartialePartialnPartialdPartialePartialdPartial)Partial
+Partial-Partial PartialNPartialuPartialmPartialPPartialyPartial,Partial PartialSPartialcPartialiPartialPPartialyPartial
+Partial-Partial PartialMPartialaPartialtPartialpPartiallPartialoPartialtPartiallPartialiPartialbPartial Partial(PartialvPartialiPartialsPartialuPartialaPartiallPartialiPartialzPartialaPartialtPartialiPartialoPartialnPartialsPartial)Partial
+Partial-Partial PartialJPartialuPartialpPartialyPartialtPartialePartialrPartial Partial(PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartialsPartial)Partial
+Partial
+Partial#Partial#Partial PartialSPartialcPartialiPartialePartialnPartialtPartialiPartialfPartialiPartialcPartial PartialOPartialuPartialtPartialpPartialuPartialtPartial
+Partial
+Partial*Partial*PartialPPartialuPartialbPartiallPartialiPartialcPartialaPartialtPartialiPartialoPartialnPartialsPartial PartialEPartialnPartialaPartialbPartiallPartialePartialdPartial*Partial*Partial:Partial
+Partial1Partial.Partial Partial✅Partial Partial"PartialNPartialePartialuPartialrPartialaPartiallPartial PartialNPartialePartialtPartialwPartialoPartialrPartialkPartial PartialEPartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial PartialoPartialfPartial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial2Partial-PartialFPartialoPartialrPartialmPartialsPartial PartialoPartialnPartial PartialGPartial₂Partial PartialMPartialaPartialnPartialiPartialfPartialoPartiallPartialdPartialsPartial"Partial Partial(PartialrPartialePartialaPartialdPartialyPartial)Partial
+Partial2Partial.Partial Partial✅Partial Partial"PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialCPartialoPartialuPartialpPartiallPartialiPartialnPartialgPartialsPartial PartialfPartialrPartialoPartialmPartial PartialCPartialoPartialmPartialpPartialaPartialcPartialtPartial PartialGPartial₂Partial PartialGPartialePartialoPartialmPartialePartialtPartialrPartialyPartial"Partial Partial(PartialvPartial0Partial.Partial8Partial PartialdPartialaPartialtPartialaPartial PartialrPartialePartialaPartialdPartialyPartial)Partial
+Partial3Partial.Partial Partial🔨Partial Partial"PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialHPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial PartialFPartialoPartialrPartialmPartial PartialBPartialaPartialsPartialiPartialsPartial PartialfPartialrPartialoPartialmPartial PartialMPartialaPartialcPartialhPartialiPartialnPartialePartial PartialLPartialePartialaPartialrPartialnPartialiPartialnPartialgPartial"Partial Partial(PartialaPartialwPartialaPartialiPartialtPartialiPartialnPartialgPartial PartialvPartial0Partial.Partial9PartialbPartial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial)Partial
+Partial
+Partial*Partial*PartialCPartialoPartialnPartialfPartialePartialrPartialePartialnPartialcPartialePartial PartialPPartialrPartialePartialsPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartialsPartial*Partial*Partial:Partial
+Partial-Partial PartialMPartialePartialtPartialhPartialoPartialdPartial PartialdPartialePartialmPartialoPartialnPartialsPartialtPartialrPartialaPartialtPartialePartialdPartial PartialiPartialnPartial PartialGPartialIPartialFPartialTPartial PartialvPartial2Partial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartialsPartial
+Partial-Partial PartialRPartialePartialsPartialuPartiallPartialtPartialsPartial PartialcPartialiPartialtPartialePartialdPartial PartialiPartialnPartial PartialSPartialuPartialpPartialpPartiallPartialePartialmPartialePartialnPartialtPartial PartialFPartial Partial(PartialKPartial₇Partial PartialmPartialePartialtPartialrPartialiPartialcPartial PartialcPartialoPartialnPartialsPartialtPartialrPartialuPartialcPartialtPartialiPartialoPartialnPartial)Partial
+Partial
+Partial#Partial#Partial PartialKPartialnPartialoPartialwPartialnPartial PartialLPartialiPartialmPartialiPartialtPartialaPartialtPartialiPartialoPartialnPartialsPartial
+Partial
+Partial#Partial#Partial#Partial PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialFPartialrPartialaPartialmPartialePartialwPartialoPartialrPartialkPartial Partial(PartialvPartial0Partial.Partial7Partial-PartialvPartial0Partial.Partial9PartialaPartial)Partial
+Partial
+Partial1Partial.Partial Partial*Partial*PartialPPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial*Partial*Partial:Partial Partial2Partial0Partial/Partial7Partial7Partial PartialfPartialoPartialrPartialmPartialsPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialePartialdPartial Partial(Partial2Partial6Partial%Partial,Partial PartialvPartial0Partial.Partial8Partial)Partial Partial-Partial PartialFPartialuPartiallPartiallPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial PartialiPartialnPartial PartialpPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial Partial(PartialvPartial0Partial.Partial9PartialbPartial)Partial
+Partial2Partial.Partial Partial*Partial*PartialAPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial PartialnPartialoPartialtPartial PartialoPartialpPartialtPartialiPartialmPartialiPartialzPartialePartialdPartial*Partial*Partial:Partial PartialCPartialuPartialrPartialrPartialePartialnPartialtPartial PartialcPartialoPartialnPartialfPartialiPartialgPartial PartialwPartialoPartialrPartialkPartialsPartial PartialbPartialuPartialtPartial PartialmPartialaPartialyPartial PartialbPartialePartial PartialsPartialuPartialbPartialoPartialpPartialtPartialiPartialmPartialaPartiallPartial
+Partial3Partial.Partial Partial*Partial*PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialtPartialiPartialmPartialePartial*Partial*Partial:Partial Partial6Partial-Partial8Partial PartialhPartialoPartialuPartialrPartialsPartial PartialfPartialoPartialrPartial PartialbPartial₂Partial,Partial Partial2Partial0Partial+Partial PartialhPartialoPartialuPartialrPartialsPartial PartialfPartialoPartialrPartial PartialfPartialuPartiallPartiallPartial PartialbPartial₃Partial
+Partial4Partial.Partial Partial*Partial*PartialGPartialPPartialUPartial PartialrPartialePartialqPartialuPartialiPartialrPartialePartialdPartial*Partial*Partial:Partial PartialCPartialPPartialUPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialiPartialmPartialpPartialrPartialaPartialcPartialtPartialiPartialcPartialaPartiallPartiallPartialyPartial PartialsPartiallPartialoPartialwPartial
+Partial
+Partial#Partial#Partial#Partial PartialTPartialhPartialePartialoPartialrPartialePartialtPartialiPartialcPartialaPartiallPartial PartialLPartialiPartialmPartialiPartialtPartialaPartialtPartialiPartialoPartialnPartialsPartial
+Partial
+Partial1Partial.Partial Partial*Partial*PartialNPartialuPartialmPartialePartialrPartialiPartialcPartialaPartiallPartial PartialaPartialpPartialpPartialrPartialoPartialxPartialiPartialmPartialaPartialtPartialiPartialoPartialnPartial*Partial*Partial:Partial PartialNPartialoPartialtPartial PartialePartialxPartialaPartialcPartialtPartial PartialmPartialaPartialtPartialhPartialePartialmPartialaPartialtPartialiPartialcPartialaPartiallPartial PartialfPartialoPartialrPartialmPartialsPartial
+Partial2Partial.Partial Partial*Partial*PartialMPartialePartialtPartialrPartialiPartialcPartial PartialdPartialePartialpPartialePartialnPartialdPartialePartialnPartialcPartialePartial*Partial*Partial:Partial PartialRPartialePartialsPartialuPartiallPartialtPartialsPartial PartialdPartialePartialpPartialePartialnPartialdPartial PartialoPartialnPartial PartialcPartialhPartialoPartialsPartialePartialnPartial PartialKPartial₇Partial PartialmPartialePartialtPartialrPartialiPartialcPartial PartialaPartialnPartialsPartialaPartialtPartialzPartial
+Partial3Partial.Partial Partial*Partial*PartialVPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial*Partial*Partial:Partial PartialIPartialnPartialdPartialiPartialrPartialePartialcPartialtPartial PartialvPartialaPartiallPartialiPartialdPartialaPartialtPartialiPartialoPartialnPartial PartialvPartialiPartialaPartial PartialGPartialrPartialaPartialmPartial PartialmPartialaPartialtPartialrPartialiPartialxPartial Partial(PartialnPartialoPartial PartialaPartialnPartialaPartiallPartialyPartialtPartialiPartialcPartialaPartiallPartial PartialcPartialoPartialmPartialpPartialaPartialrPartialiPartialsPartialoPartialnPartial)Partial
+Partial
+Partial#Partial#Partial PartialNPartialePartialxPartialtPartial PartialSPartialtPartialePartialpPartialsPartial
+Partial
+Partial#Partial#Partial#Partial PartialIPartialmPartialmPartialePartialdPartialiPartialaPartialtPartialePartial Partial(PartialIPartialnPartial PartialPPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial)Partial
+Partial
+Partial1Partial.Partial Partial*Partial*PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialbPartial₃Partial=Partial7Partial7Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial*Partial*Partial Partial(PartialvPartial0Partial.Partial9PartialbPartial)Partial
+Partial Partial Partial Partial-Partial PartialSPartialtPartialaPartialtPartialuPartialsPartial:Partial Partial🔨Partial Partial*Partial*PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialnPartialoPartialwPartial*Partial*Partial
+Partial Partial Partial Partial-Partial PartialTPartialiPartialmPartialePartiallPartialiPartialnPartialePartial:Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial PartialePartialxPartialpPartialePartialcPartialtPartialePartialdPartial PartialsPartialoPartialoPartialnPartial
+Partial Partial Partial Partial-Partial PartialDPartialePartiallPartialiPartialvPartialePartialrPartialaPartialbPartiallPartialePartial:Partial PartialFPartialuPartiallPartiallPartial Partial7Partial7Partial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial3Partial-PartialfPartialoPartialrPartialmPartialsPartial PartialvPartialaPartiallPartialiPartialdPartialaPartialtPartialePartialdPartial
+Partial
+Partial#Partial#Partial#Partial PartialSPartialhPartialoPartialrPartialtPartial-PartialtPartialePartialrPartialmPartial Partial(PartialAPartialfPartialtPartialePartialrPartial PartialvPartial0Partial.Partial9PartialbPartial)Partial
+Partial
+Partial2Partial.Partial Partial*Partial*PartialQPartialuPartialiPartialcPartialkPartial PartialaPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial PartialsPartialePartialaPartialrPartialcPartialhPartial*Partial*Partial
+Partial Partial Partial Partial-Partial PartialBPartialuPartialdPartialgPartialePartialtPartial:Partial Partial$Partial5Partial0Partial-Partial1Partial0Partial0Partial
+Partial Partial Partial Partial-Partial PartialTPartialiPartialmPartialePartiallPartialiPartialnPartialePartial:Partial Partial1Partial PartialdPartialaPartialyPartial
+Partial Partial Partial Partial-Partial PartialDPartialePartiallPartialiPartialvPartialePartialrPartialaPartialbPartiallPartialePartial:Partial PartialOPartialpPartialtPartialiPartialmPartialiPartialzPartialePartialdPartial PartialhPartialyPartialpPartialePartialrPartialpPartialaPartialrPartialaPartialmPartialePartialtPartialePartialrPartialsPartial
+Partial
+Partial#Partial#Partial#Partial PartialLPartialoPartialnPartialgPartial-PartialtPartialePartialrPartialmPartial Partial(PartialvPartial1Partial.Partial0Partial)Partial
+Partial
+Partial4Partial.Partial Partial*Partial*PartialPPartialuPartialbPartiallPartialiPartialsPartialhPartial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialmPartialePartialtPartialhPartialoPartialdPartialoPartiallPartialoPartialgPartialyPartial*Partial*Partial
+Partial5Partial.Partial Partial*Partial*PartialCPartialoPartialnPartialnPartialePartialcPartialtPartial PartialtPartialoPartial PartialGPartialIPartialFPartialTPartial PartialpPartialhPartialePartialnPartialoPartialmPartialePartialnPartialoPartiallPartialoPartialgPartialyPartial*Partial*Partial Partial(PartialfPartialePartialrPartialmPartialiPartialoPartialnPartial PartialmPartialaPartialsPartialsPartial PartialpPartialrPartialePartialdPartialiPartialcPartialtPartialiPartialoPartialnPartialsPartial)Partial
+Partial6Partial.Partial Partial*Partial*PartialEPartialxPartialtPartialePartialnPartialdPartial PartialtPartialoPartial PartialtPartialiPartialmPartialePartial-PartialdPartialePartialpPartialePartialnPartialdPartialePartialnPartialtPartial PartialmPartialePartialtPartialrPartialiPartialcPartialsPartial*Partial*Partial
+Partial
+Partial#Partial#Partial PartialSPartialuPartialcPartialcPartialePartialsPartialsPartial PartialMPartialePartialtPartialrPartialiPartialcPartialsPartial
+Partial
+Partial*Partial*PartialvPartial0Partial.Partial7Partial-Partial0Partial.Partial9PartialaPartial Partial(PartialAPartialCPartialHPartialIPartialEPartialVPartialEPartialDPartial)Partial*Partial*Partial:Partial
+Partial-Partial Partial✅Partial PartialbPartial₂Partial=Partial2Partial1Partial PartialfPartialoPartialrPartialmPartialsPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialePartialdPartial
+Partial-Partial Partial✅Partial PartialGPartialrPartialaPartialmPartial PartialmPartialaPartialtPartialrPartialiPartialxPartial PartialdPartialePartialtPartial(PartialGPartial)Partial Partial∈Partial Partial[Partial0Partial.Partial9Partial,Partial Partial1Partial.Partial1Partial]Partial
+Partial-Partial Partial✅Partial PartialAPartiallPartiallPartial PartialePartialiPartialgPartialePartialnPartialvPartialaPartiallPartialuPartialePartialsPartial PartialλPartial_PartialiPartial Partial>Partial Partial0Partial.Partial5Partial
+Partial-Partial Partial✅Partial PartialTPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialcPartialoPartialnPartialvPartialePartialrPartialgPartialePartialsPartial PartialrPartialePartiallPartialiPartialaPartialbPartiallPartialyPartial
+Partial-Partial Partial✅Partial PartialCPartialoPartialdPartialePartial PartialmPartialoPartialdPartialuPartiallPartialaPartialrPartial PartialaPartialnPartialdPartial PartialrPartialePartialuPartialsPartialaPartialbPartiallPartialePartial
+Partial
+Partial*Partial*PartialvPartial0Partial.Partial8Partial Partial(PartialAPartialCPartialHPartialIPartialEPartialVPartialEPartialDPartial)Partial*Partial*Partial:Partial
+Partial-Partial Partial✅Partial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialtPartialePartialnPartialsPartialoPartialrPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialePartialdPartial Partial(Partial2Partial1Partial×Partial2Partial1Partial×Partial2Partial1Partial)Partial
+Partial-Partial Partial✅Partial PartialPPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial(Partial2Partial0Partial/Partial7Partial7Partial PartialfPartialoPartialrPartialmPartialsPartial)Partial
+Partial-Partial Partial✅Partial PartialTPartialoPartialrPartialsPartialiPartialoPartialnPartial:Partial Partial0Partial.Partial0Partial0Partial0Partial1Partial4Partial6Partial Partial(PartialePartialxPartialcPartialePartiallPartiallPartialePartialnPartialtPartial)Partial
+Partial-Partial Partial✅Partial PartialDPartialoPartialcPartialuPartialmPartialePartialnPartialtPartialePartialdPartial PartialiPartialnPartial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartial
+Partial
+Partial*Partial*PartialvPartial0Partial.Partial9PartialbPartial Partial(PartialIPartialNPartial PartialPPartialRPartialOPartialGPartialRPartialEPartialSPartialSPartial)Partial*Partial*Partial:Partial
+Partial-Partial Partial🔨Partial PartialFPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialfPartialoPartialrPartialmPartialsPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial Partial(PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialnPartialoPartialwPartial)Partial
+Partial-Partial Partial🎯Partial PartialGPartialrPartialaPartialmPartial PartialmPartialaPartialtPartialrPartialiPartialxPartial PartialdPartialePartialtPartial(PartialGPartial)Partial Partial∈Partial Partial[Partial0Partial.Partial9Partial,Partial Partial1Partial.Partial1Partial]Partial
+Partial-Partial Partial🎯Partial PartialAPartiallPartiallPartial Partial7Partial7Partial PartialePartialiPartialgPartialePartialnPartialvPartialaPartiallPartialuPartialePartialsPartial PartialλPartial_PartialiPartial Partial>Partial Partial0Partial.Partial5Partial
+Partial-Partial Partial🎯Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial PartialbPartialaPartialsPartialiPartialsPartial
+Partial
+Partial*Partial*PartialvPartial1Partial.Partial0Partial Partial(PartialFPartialIPartialNPartialAPartialLPartial PartialGPartialOPartialAPartialLPartial)Partial*Partial*Partial:Partial
+Partial-Partial Partial🎯Partial PartialCPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial PartialbPartialaPartialsPartialiPartialsPartial Partial(PartialbPartial₂Partial Partial+Partial PartialbPartial₃Partial)Partial
+Partial-Partial Partial🎯Partial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialtPartialePartialnPartialsPartialoPartialrPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialePartialdPartial
+Partial-Partial Partial🎯Partial PartialOPartialpPartialtPartialiPartialmPartialiPartialzPartialePartialdPartial PartialaPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial
+Partial-Partial Partial🎯Partial PartialPPartialuPartialbPartiallPartialiPartialsPartialhPartialePartialdPartial PartialmPartialePartialtPartialhPartialoPartialdPartialoPartiallPartialoPartialgPartialyPartial
+Partial-Partial Partial🎯Partial PartialIPartialnPartialtPartialePartialgPartialrPartialaPartialtPartialePartialdPartial PartialwPartialiPartialtPartialhPartial PartialGPartialIPartialFPartialTPartial PartialpPartialrPartialePartialdPartialiPartialcPartialtPartialiPartialoPartialnPartialsPartial
+Partial
+Partial#Partial#Partial PartialCPartialoPartialnPartialtPartialaPartialcPartialtPartial PartialaPartialnPartialdPartial PartialQPartialuPartialePartialsPartialtPartialiPartialoPartialnPartialsPartial
+Partial
+Partial*Partial*PartialDPartialoPartialcPartialuPartialmPartialePartialnPartialtPartialaPartialtPartialiPartialoPartialnPartial*Partial*Partial:Partial PartialSPartialePartialePartial Partial`PartialCPartialOPartialMPartialPPartialLPartialEPartialTPartialIPartialOPartialNPartial_PartialPPartialLPartialAPartialNPartial.PartialmPartialdPartial`Partial PartialfPartialoPartialrPartial PartialdPartialePartialtPartialaPartialiPartiallPartialePartialdPartial PartialtPartialePartialcPartialhPartialnPartialiPartialcPartialaPartiallPartial PartialpPartiallPartialaPartialnPartial
+Partial
+Partial*Partial*PartialIPartialsPartialsPartialuPartialePartialsPartial*Partial*Partial:Partial
+Partial-Partial PartialGPartialPPartialUPartial PartialaPartialcPartialcPartialePartialsPartialsPartial:Partial PartialRPartialePartialqPartialuPartialiPartialrPartialePartialsPartial PartialAPartial1Partial0Partial0Partial PartialoPartialrPartial PartialsPartialiPartialmPartialiPartiallPartialaPartialrPartial Partial(PartialVPartial1Partial0Partial0Partial PartialaPartialcPartialcPartialePartialpPartialtPartialaPartialbPartiallPartialePartial PartialbPartialuPartialtPartial PartialsPartiallPartialoPartialwPartialePartialrPartial)Partial
+Partial-Partial PartialBPartialuPartialdPartialgPartialePartialtPartial:Partial PartialAPartialdPartialdPartialiPartialtPartialiPartialoPartialnPartialaPartiallPartial Partial$Partial2Partial0Partial0Partial PartialrPartialePartialcPartialoPartialmPartialmPartialePartialnPartialdPartialePartialdPartial PartialfPartialoPartialrPartial PartialfPartialuPartiallPartiallPartial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial
+Partial-Partial PartialTPartialiPartialmPartialePartiallPartialiPartialnPartialePartial:Partial Partial2Partial-Partial3Partial PartialdPartialaPartialyPartialsPartial PartialGPartialPPartialUPartial PartialtPartialiPartialmPartialePartial PartialrPartialePartialmPartialaPartialiPartialnPartialiPartialnPartialgPartial
+Partial
+Partial*Partial*PartialSPartialuPartialpPartialpPartialoPartialrPartialtPartial*Partial*Partial:Partial
+Partial-Partial PartialEPartialaPartialcPartialhPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial PartialdPartialiPartialrPartialePartialcPartialtPartialoPartialrPartialyPartial PartialcPartialoPartialnPartialtPartialaPartialiPartialnPartialsPartial PartialRPartialEPartialAPartialDPartialMPartialEPartial PartialwPartialiPartialtPartialhPartial PartialvPartialePartialrPartialsPartialiPartialoPartialnPartial-PartialsPartialpPartialePartialcPartialiPartialfPartialiPartialcPartial PartialiPartialnPartialfPartialoPartial
+Partial-Partial PartialEPartialxPartialaPartialmPartialpPartiallPartialePartial PartialnPartialoPartialtPartialePartialbPartialoPartialoPartialkPartialsPartial PartialdPartialePartialmPartialoPartialnPartialsPartialtPartialrPartialaPartialtPartialePartial PartialaPartiallPartiallPartial PartialfPartialuPartialnPartialcPartialtPartialiPartialoPartialnPartialaPartiallPartialiPartialtPartialyPartial
+Partial-Partial PartialCPartialoPartialdPartialePartial PartialiPartialsPartial PartialwPartialePartiallPartiallPartial-PartialcPartialoPartialmPartialmPartialePartialnPartialtPartialePartialdPartial PartialwPartialiPartialtPartialhPartial PartialdPartialoPartialcPartialsPartialtPartialrPartialiPartialnPartialgPartialsPartial
+Partial
+Partial#Partial#Partial PartialSPartialuPartialmPartialmPartialaPartialrPartialyPartial
+Partial
+Partial*Partial*PartialTPartialhPartialePartial PartialGPartial2Partial PartialMPartialLPartial PartialfPartialrPartialaPartialmPartialePartialwPartialoPartialrPartialkPartial PartialiPartialsPartial Partial9Partial3Partial%Partial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialePartial PartialaPartialnPartialdPartial PartialsPartialcPartialiPartialePartialnPartialtPartialiPartialfPartialiPartialcPartialaPartiallPartiallPartialyPartial PartialpPartialrPartialoPartialdPartialuPartialcPartialtPartialiPartialvPartialePartial.Partial*Partial*Partial
+Partial
+Partial*Partial*PartialWPartialhPartialaPartialtPartial PartialyPartialoPartialuPartial PartialcPartialaPartialnPartial PartialdPartialoPartial PartialNPartialOPartialWPartial*Partial*Partial:Partial
+Partial-Partial Partial✅Partial PartialTPartialrPartialaPartialiPartialnPartial PartialbPartial₂Partial=Partial2Partial1Partial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial PartialfPartialoPartialrPartialmPartialsPartial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial
+Partial-Partial Partial✅Partial PartialVPartialaPartiallPartialiPartialdPartialaPartialtPartialePartial PartialGPartial₂Partial PartialgPartialePartialoPartialmPartialePartialtPartialrPartialyPartial PartialnPartialuPartialmPartialePartialrPartialiPartialcPartialaPartiallPartiallPartialyPartial
+Partial-Partial Partial✅Partial PartialUPartialsPartialePartial PartialtPartialrPartialaPartialiPartialnPartialePartialdPartial PartialmPartialoPartialdPartialePartiallPartialsPartial PartialiPartialnPartial PartialrPartialePartialsPartialePartialaPartialrPartialcPartialhPartial
+Partial-Partial Partial✅Partial PartialGPartialePartialnPartialePartialrPartialaPartialtPartialePartial PartialKPartial₇Partial PartialmPartialePartialtPartialrPartialiPartialcPartialsPartial PartialfPartialrPartialoPartialmPartial PartialnPartialePartialuPartialrPartialaPartiallPartial PartialnPartialePartialtPartialwPartialoPartialrPartialkPartialsPartial
+Partial-Partial Partial✅Partial PartialAPartialnPartialaPartiallPartialyPartialzPartialePartial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialcPartialoPartialuPartialpPartiallPartialiPartialnPartialgPartial PartialsPartialtPartialrPartialuPartialcPartialtPartialuPartialrPartialePartial Partial(PartialvPartial0Partial.Partial8Partial PartialdPartialaPartialtPartialaPartial)Partial
+Partial
+Partial*Partial*PartialWPartialhPartialaPartialtPartial'PartialsPartial PartialiPartialnPartial PartialpPartialrPartialoPartialgPartialrPartialePartialsPartialsPartial*Partial*Partial:Partial
+Partial-Partial Partial🔨Partial PartialFPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialhPartialaPartialrPartialmPartialoPartialnPartialiPartialcPartial Partial3Partial-PartialfPartialoPartialrPartialmPartialsPartial Partial(PartialvPartial0Partial.Partial9PartialbPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial PartialnPartialoPartialwPartial)Partial
+Partial
+Partial*Partial*PartialWPartialhPartialaPartialtPartial PartialrPartialePartialmPartialaPartialiPartialnPartialsPartial*Partial*Partial:Partial
+Partial-Partial Partial📋Partial PartialAPartialrPartialcPartialhPartialiPartialtPartialePartialcPartialtPartialuPartialrPartialePartial PartialoPartialpPartialtPartialiPartialmPartialiPartialzPartialaPartialtPartialiPartialoPartialnPartial Partial(Partial$Partial5Partial0Partial-Partial1Partial0Partial0Partial,Partial Partial1Partial PartialdPartialaPartialyPartial)Partial
+Partial
+Partial*Partial*PartialBPartialoPartialtPartialtPartialoPartialmPartial PartiallPartialiPartialnPartialePartial*Partial*Partial:Partial PartialFPartialrPartialaPartialmPartialePartialwPartialoPartialrPartialkPartial PartialiPartialsPartial PartialhPartialiPartialgPartialhPartiallPartialyPartial PartialfPartialuPartialnPartialcPartialtPartialiPartialoPartialnPartialaPartiallPartial PartialwPartialiPartialtPartialhPartial PartialYPartialuPartialkPartialaPartialwPartialaPartial PartialtPartialePartialnPartialsPartialoPartialrPartialsPartial PartialcPartialoPartialmPartialpPartialuPartialtPartialePartialdPartial PartialaPartialnPartialdPartial PartialpPartialaPartialrPartialtPartialiPartialaPartiallPartial PartialbPartial₃Partial PartialePartialxPartialtPartialrPartialaPartialcPartialtPartialiPartialoPartialnPartial.Partial PartialFPartialuPartiallPartiallPartial PartialbPartial₃Partial=Partial7Partial7Partial PartialcPartialoPartialmPartialpPartiallPartialePartialtPartialiPartialoPartialnPartial PartialiPartialmPartialmPartialiPartialnPartialePartialnPartialtPartial PartialwPartialiPartialtPartialhPartial PartialvPartial0Partial.Partial9PartialbPartial PartialtPartialrPartialaPartialiPartialnPartialiPartialnPartialgPartial.Partial
+Partial
+Partial-Partial-Partial-Partial
+Partial
+Partial*Partial*PartialSPartialtPartialaPartialtPartialuPartialsPartial*Partial*Partial:Partial PartialAPartialcPartialtPartialiPartialvPartialePartial PartialdPartialePartialvPartialePartiallPartialoPartialpPartialmPartialePartialnPartialtPartial
+Partial*Partial*PartialVPartialePartialrPartialsPartialiPartialoPartialnPartial*Partial*Partial:Partial Partial0Partial.Partial9PartialaPartial Partial(PartialpPartialrPartialoPartialdPartialuPartialcPartialtPartialiPartialoPartialnPartial PartialbPartial₂Partial)Partial,Partial Partial0Partial.Partial8Partial Partial(PartialYPartialuPartialkPartialaPartialwPartialaPartial)Partial,Partial PartialvPartialaPartialrPartialiPartialaPartialtPartialiPartialoPartialnPartialaPartiallPartial_PartialgPartial2Partial Partial(PartialnPartialePartialwPartial PartialpPartialaPartialrPartialaPartialdPartialiPartialgPartialmPartial)Partial
+Partial*Partial*PartialLPartialaPartialsPartialtPartial PartialUPartialpPartialdPartialaPartialtPartialePartialdPartial*Partial*Partial:Partial Partial2Partial0Partial2Partial5Partial-Partial1Partial1Partial-Partial3Partial0Partial
+Partial*Partial*PartialFPartialrPartialaPartialmPartialePartialwPartialoPartialrPartialkPartial*Partial*Partial:Partial PartialGPartialIPartialFPartialTPartial PartialvPartial2Partial.Partial3Partial.Partial0Partial
+Partial*Partial*PartialLPartialiPartialcPartialePartialnPartialsPartialePartial*Partial*Partial:Partial PartialMPartialIPartialTPartial
+Partial
