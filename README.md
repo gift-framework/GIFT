@@ -21,16 +21,16 @@ The **Geometric Information Field Theory (GIFT)** derives Standard Model paramet
 ## Formal Verification Highlights
 
 **Machine-Verified Results (Lean 4):**
-- ✅ **det(g) = 65/32**: Metric determinant certified to 0.0001% precision
-- ✅ **Banach Fixed Point Theorem**: Existence of torsion-free G₂ structures proven
-- ✅ **Joyce Perturbation Theorem**: 20× safety margin for manifold existence
-- ✅ **13 PROVEN Relations**: All exact topological identities formally verified
+- **det(g) = 65/32**: Metric determinant certified to 0.0001% precision
+- **Banach Fixed Point Theorem**: Existence of torsion-free G₂ structures proven
+- **Joyce Perturbation Theorem**: 20× safety margin for manifold existence
+- **13 PROVEN Relations**: All exact topological identities formally verified
 
 **Computational Validation:**
-- 🔬 Physics-informed neural networks (PINN) with 1M+ training samples
-- 📊 Monte Carlo uncertainty propagation (10⁵ configurations)
-- 🎯 Mean precision: 0.128% across 39 observables
-- 🧮 Interval arithmetic with rigorous error bounds
+- Physics-informed neural networks (PINN) with 1M+ training samples
+- Monte Carlo uncertainty propagation (10⁵ configurations)
+- Mean precision: 0.128% across 39 observables
+- Interval arithmetic with rigorous error bounds
 
 ## Quick Start
 
