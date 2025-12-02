@@ -1,8 +1,8 @@
-# GIFT Framework v2.2 - Geometric and Topological Justifications
+# GIFT Framework v2.3a - Geometric and Topological Justifications
 
 **Purpose**: This document provides detailed physical, geometric, and topological justifications for each observable formula in the GIFT framework. The aim is to demonstrate that predictions emerge from structural necessity rather than numerical coincidence.
 
-**Version**: 2.2.0
+**Version**: 2.3.0
 **Date**: 2025-11-26
 
 **Epistemic Status**: Speculative theoretical framework. While the mathematical structures are well-defined, their physical interpretation remains conjectural pending experimental validation.

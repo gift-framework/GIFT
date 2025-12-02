@@ -412,7 +412,7 @@ The certificate has progressively eliminated axioms through partition of unity m
 |---------|------------|------------|
 | v2.0 | 4 | Initial scaffold |
 | v2.1 | 3 | SORRY 4 resolved via λ₁ = 579/10000 |
-| v2.2 | 0 | Partition of unity resolves SORRY 1-3 |
+| v2.3a | 0 | Partition of unity resolves SORRY 1-3 |
 
 ### 7.4 Remaining Axioms
 
@@ -491,7 +491,7 @@ Under the hypotheses of Joyce's Theorem 11.6.1 (taken as an axiom in the Lean fo
 │    - Banach fixed point (no axioms for FP theorem)        │
 │    - Exists φ_tf : torsion_norm φ_tf = 0                  │
 │                                                             │
-│  SORRY REDUCTION: v2.0(4) → v2.1(3) → v2.2(0)             │
+│  SORRY REDUCTION: v2.0(4) → v2.1(3) → v2.3a(0)            │
 │                                                             │
 │  STATUS: EXISTENCE CERTIFIED                                │
 │                                                             │
@@ -634,7 +634,7 @@ This supplement demonstrates G₂ metric existence on K₇ through variational m
 **Formal certification** (Lean 4.14.0 + Mathlib 4.14.0):
 - Banach fixed point theorem from Mathlib (no axioms for FP) — PROVEN
 - All numerical bounds machine-checked — PROVEN
-- SORRY reduction: v2.0(4) → v2.1(3) → v2.2(0 core SORRY) — PROVEN
+- SORRY reduction: v2.0(4) → v2.1(3) → v2.3a(0 core SORRY) — PROVEN
 - Existence of torsion-free G₂ structure via ContractingWith.fixedPoint — PROVEN
 
 **GIFT paradigm validation**:

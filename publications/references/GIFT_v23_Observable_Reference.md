@@ -1,6 +1,6 @@
-# GIFT Framework v2.2 - Complete Observable Reference
+# GIFT Framework v2.3a - Complete Observable Reference
 
-**Version**: 2.2.0
+**Version**: 2.3.0
 **Date**: 2025-11-26
 **Status**: Validated (Monte Carlo 10^5 samples)
 **Mean Precision**: 0.128% across 39 observables

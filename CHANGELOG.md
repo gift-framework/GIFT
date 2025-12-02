@@ -5,6 +5,52 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2025-12-02
+
+### Major Release - Complete Framework Unification v2.3a
+
+This version achieves complete framework unification with v2.3a designation, ensuring all documents, references, and implementations are perfectly aligned.
+
+#### Added
+
+**Framework Unification (v2.3a)**
+- Complete version alignment across all 150+ files
+- Unified documentation structure with consistent v2.3a references
+- Harmonized formulas, results, and calculations across all documents
+- Eliminated all emojis and special symbols from documentation
+- Comprehensive citation guide updated for v2.3a
+
+**Documentation Consolidation**
+- All README files aligned to v2.3a
+- CHANGELOG updated with v2.3.0 entry
+- CITATION.md fully updated for v2.3a
+- All docs/ files synchronized
+- G2_ML documentation aligned
+
+#### Changed
+
+**Version References**
+- README.md: Updated to v2.3a with correct badge
+- All publications: Consistent v2.3a naming
+- All tests: Updated to v2.3a baselines
+- All visualizations: v2.3a branding
+
+**Content Harmonization**
+- All 39 observables consistent across documents
+- Mean precision 0.128% verified in all locations
+- 13 proven relations confirmed throughout
+- Zero-parameter paradigm emphasized consistently
+
+#### Fixed
+
+**Documentation Inconsistencies**
+- Eliminated all v2.2 references in current documentation
+- Unified formula presentations
+- Synchronized result tables
+- Aligned experimental validation data
+
+---
+
 ## [2.2.0] - 2025-11-27
 
 ### Major Release - Zero-Parameter Paradigm

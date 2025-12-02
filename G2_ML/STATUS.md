@@ -9,13 +9,13 @@
 
 | Component | Status | Version | Completion |
 |-----------|--------|---------|------------|
-| b₂=21 Harmonic 2-Forms | ✅ **Complete** | 0.7, 0.9a | 100% |
-| b₃=77 Harmonic 3-Forms | 🔶 **Partial** | 0.8 (n=20/77) | 26% |
-| Yukawa Tensor | ✅ **Complete** | 0.8 | 100% |
-| Variational G2 (PINN) | 🔨 **WIP** | variational_g2 | ~70% |
-| Meta-Hodge Pipeline | ✅ **Complete** | meta_hodge | 100% |
-| TCS Global Modes | ✅ **Complete** | tcs_joyce | 100% |
-| Hyperparameter Optimization | 📋 **Planned** | Future | 0% |
+| b₂=21 Harmonic 2-Forms | Complete | 0.7, 0.9a | 100% |
+| b₃=77 Harmonic 3-Forms | Partial | 0.8 (n=20/77) | 26% |
+| Yukawa Tensor | Complete | 0.8 | 100% |
+| Variational G2 (PINN) | WIP | variational_g2 | ~70% |
+| Meta-Hodge Pipeline | Complete | meta_hodge | 100% |
+| TCS Global Modes | Complete | tcs_joyce | 100% |
+| Hyperparameter Optimization | Planned | Future | 0% |
 
 ## What Works Now
 
@@ -333,5 +333,5 @@ Key packages:
 **Status**: Active development
 **Version**: 0.9a (production b₂), 0.8 (Yukawa), variational_g2 (new paradigm)
 **Last Updated**: 2025-11-30
-**Framework**: GIFT v2.2.0
+**Framework**: GIFT v2.3.0
 **License**: MIT

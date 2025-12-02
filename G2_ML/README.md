@@ -14,8 +14,8 @@ Neural network extraction of harmonic forms on compact G₂ manifolds for the GI
 The G2_ML framework uses deep learning to extract harmonic forms from the compact 7-dimensional K₇ manifold with G₂ holonomy. These harmonic forms are essential for dimensional reduction in the GIFT theoretical framework.
 
 **Target**: Extract complete harmonic basis:
-- **b₂=21**: 21 harmonic 2-forms ✅ **Complete** (v0.7, v0.9a)
-- **b₃=77**: 77 harmonic 3-forms 🔨 **In Progress** (v0.8 planned)
+- **b₂=21**: 21 harmonic 2-forms - Complete (v0.7, v0.9a)
+- **b₃=77**: 77 harmonic 3-forms - In Progress (v0.8 planned)
 
 ## Current Status
 
@@ -76,7 +76,7 @@ Each version directory contains notebooks, models, and validation data specific 
 
 With current implementation (v0.7, v0.9a):
 
-✅ **Train harmonic 2-forms extraction**
+- Train harmonic 2-forms extraction
 ```python
 # See notebooks for complete examples
 from G2_phi_network import PhiNetwork
@@ -86,7 +86,7 @@ model = PhiNetwork(input_dim=7, hidden_dims=[384, 384, 256])
 trained_model = train_harmonic_network(model, epochs=10000)
 ```
 
-✅ **Validate G₂ geometry**
+- Validate G₂ geometry
 ```python
 from G2_eval import validate_harmonic_forms
 
@@ -95,7 +95,7 @@ results = validate_harmonic_forms(trained_model)
 # Check: All eigenvalues > 0.5
 ```
 
-✅ **Generate K₇ metrics**
+- Generate K₇ metrics
 ```python
 from G2_manifold import K7Manifold
 
@@ -130,10 +130,10 @@ Training time: ~6-8 hours on A100 GPU
 ### Validation
 
 All trained models validated via:
-- Gram matrix determinant: det(G) ∈ [0.9, 1.1] ✅
-- Eigenvalue spectrum: all λ_i > 0.5 ✅
-- Closedness: dω_i ≈ 0 ✅
-- Coclosedness: δω_i ≈ 0 ✅
+- Gram matrix determinant: det(G) ∈ [0.9, 1.1] (verified)
+- Eigenvalue spectrum: all λ_i > 0.5 (verified)
+- Closedness: dω_i ≈ 0 (verified)
+- Coclosedness: δω_i ≈ 0 (verified)
 
 ## Versions
 

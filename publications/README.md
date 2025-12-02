@@ -1,4 +1,4 @@
-# GIFT Framework v2.2 - Publications
+# GIFT Framework v2.3a - Publications
 
 Geometric Information Field Theory: Deriving Standard Model parameters from E₈×E₈ topology.
 
@@ -110,11 +110,11 @@ publications/
 
 ## Executive Summary
 
-The Geometric Information Field Theory (GIFT) framework, in its version 2.2, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.128% across six orders of magnitude.
+The Geometric Information Field Theory (GIFT) framework, in its version 2.3a, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.128% across six orders of magnitude.
 
 ### The Zero-Parameter Paradigm
 
-The central achievement of v2.2 is the establishment of the Zero-Parameter Paradigm. This paradigm shift was enabled by the discovery of an exact topological origin for the internal manifold's metric determinant, det(g) = 65/32. The topological formula is cross-checked by physics-informed neural network (PINN) reconstruction achieving 2.0312490 ± 0.0001 (0.00005% deviation), with formal verification via Lean 4 theorem prover establishing G₂ existence through Joyce's perturbation theorem (20× safety margin). With this development, the framework contains zero adjustable parameters; all quantities derive directly from the immutable properties of the underlying mathematical structures.
+The central achievement of v2.3a is the establishment of the Zero-Parameter Paradigm. This paradigm shift was enabled by the discovery of an exact topological origin for the internal manifold's metric determinant, det(g) = 65/32. The topological formula is cross-checked by physics-informed neural network (PINN) reconstruction achieving 2.0312490 ± 0.0001 (0.00005% deviation), with formal verification via Lean 4 theorem prover establishing G₂ existence through Joyce's perturbation theorem (20× safety margin). With this development, the framework contains zero adjustable parameters; all quantities derive directly from the immutable properties of the underlying mathematical structures.
 
 The framework contains **zero continuous adjustable parameters**:
 - No fitting to experimental data
@@ -123,9 +123,9 @@ The framework contains **zero continuous adjustable parameters**:
 
 Given these structural choices, all 39 observables follow uniquely.
 
-### Key v2.2 Exact Derivations
+### Key v2.3a Exact Derivations
 
-| Observable | v2.2 Status | Exact Formula |
+| Observable | v2.3a Status | Exact Formula |
 |------------|-------------|---------------|
 | sin²θ_W | PROVEN | 3/13 = b₂/(b₃ + dim(G₂)) |
 | κ_T | TOPOLOGICAL | 1/61 = 1/(b₃ - dim(G₂) - p₂) |
