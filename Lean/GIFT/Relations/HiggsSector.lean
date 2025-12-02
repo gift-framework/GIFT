@@ -8,13 +8,11 @@ Higgs coupling relations derived from topology:
 
 import Mathlib.Tactic
 import GIFT.Relations.Constants
+import GIFT.Relations.GaugeSector
 
 namespace GIFT.Relations
 
 /-! ## Higgs Self-Coupling lambda_H -/
-
-/-- dim(SU(2)) for reference -/
-def dim_SU2 : Nat := 3
 
 /-- lambda_H numerator: dim(G2) + N_gen = 14 + 3 = 17 -/
 theorem lambda_H_numerator : dim_G2 + N_gen = 17 := rfl
