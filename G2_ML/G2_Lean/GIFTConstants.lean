@@ -257,7 +257,7 @@ def kappa_T : ℚ := 1 / 61
 theorem kappa_T_value : kappa_T = 1 / 61 := rfl
 
 /-- Verifies: b₃ - dim(G₂) - p₂ = 77 - 14 - 2 = 61 -/
-theorem kappa_T_denominator : (77 : ℚ) - 14 - 2 = 61 := by norm_num
+theorem kappa_T_denominator : 77 - 14 - 2 = (61 : ℕ) := by norm_num
 
 /-- b₃ decomposition: 77 = 35 (local) + 42 (global TCS) -/
 theorem b3_decomposition : b3_K7 = dim_Lambda3_R7 + 2 * b2_K7 := by
