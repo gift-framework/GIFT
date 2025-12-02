@@ -49,9 +49,7 @@ def G2_num_roots : ℕ := 12
 theorem G2_roots_count : G2_num_roots = 12 := rfl
 
 /-- G₂ dimension from roots + rank: 12 + 2 = 14 -/
-theorem G2_dim_from_roots : G2_num_roots + rank_G2 = dim_G2 := by
-  simp only [G2_num_roots, rank_G2, dim_G2]
-  native_decide
+theorem G2_dim_from_roots : G2_num_roots + rank_G2 = dim_G2 := rfl
 
 /-! ## Connection to 7-Manifolds -/
 
@@ -59,9 +57,7 @@ theorem G2_dim_from_roots : G2_num_roots + rank_G2 = dim_G2 := by
 def dim_G2_manifold : ℕ := 7
 
 /-- The ratio p₂ = dim(G₂)/dim(M) = 14/7 = 2 -/
-theorem p2_exact : dim_G2 / dim_G2_manifold = 2 := by
-  simp only [dim_G2, dim_G2_manifold]
-  native_decide
+theorem p2_exact : dim_G2 / dim_G2_manifold = 2 := rfl
 
 /-- p₂ = 2 is exact (no remainder) -/
 theorem p2_divides : dim_G2_manifold ∣ dim_G2 := by

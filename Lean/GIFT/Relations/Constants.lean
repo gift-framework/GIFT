@@ -58,13 +58,9 @@ def N_gen : ℕ := 3
 
 theorem E8xE8_is_2E8 : dim_E8xE8 = 2 * dim_E8 := by native_decide
 
-theorem H_star_is_99 : H_star = 99 := by
-  simp only [H_star, b2_K7, b3_K7]
-  native_decide
+theorem H_star_is_99 : H_star = 99 := rfl
 
-theorem p2_is_2 : p2 = 2 := by
-  simp only [p2, dim_G2, dim_K7]
-  native_decide
+theorem p2_is_2 : p2 = 2 := rfl
 
 theorem N_gen_is_3 : N_gen = 3 := rfl
 
