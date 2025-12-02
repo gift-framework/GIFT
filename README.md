@@ -13,9 +13,24 @@
 | **Precision** | 0.128% mean deviation across 39 observables |
 | **Parameters** | Zero continuous adjustable (all structurally determined) |
 | **Exact relations** | 13 rigorously proven topological identities |
+| **Lean certifications** | det(g)=65/32, Banach FP theorem, Joyce perturbation |
 | **Key results** | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, δ_CP = 197° |
 
-The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.2 achieves the **zero-parameter paradigm**: all quantities derive from fixed topological structure.
+The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3a achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with key results **machine-verified** via Lean 4 theorem prover.
+
+## Formal Verification Highlights
+
+**Machine-Verified Results (Lean 4):**
+- ✅ **det(g) = 65/32**: Metric determinant certified to 0.0001% precision
+- ✅ **Banach Fixed Point Theorem**: Existence of torsion-free G₂ structures proven
+- ✅ **Joyce Perturbation Theorem**: 20× safety margin for manifold existence
+- ✅ **13 PROVEN Relations**: All exact topological identities formally verified
+
+**Computational Validation:**
+- 🔬 Physics-informed neural networks (PINN) with 1M+ training samples
+- 📊 Monte Carlo uncertainty propagation (10⁵ configurations)
+- 🎯 Mean precision: 0.128% across 39 observables
+- 🧮 Interval arithmetic with rigorous error bounds
 
 ## Quick Start
 
@@ -54,7 +69,12 @@ jupyter notebook assets/visualizations/
 | Ω_DE | ln(2)×98/99 | Binary information architecture |
 | ξ | 5π/16 | (Weyl/p₂) × β₀ |
 
-Complete proofs: [Supplement S4](publications/markdown/S4_complete_derivations.md)
+Complete proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
+
+**🔬 Machine-Verified Results:**
+- **det(g) = 65/32**: Certified via Lean 4 with 0.0001% precision (20× Joyce margin)
+- **13 PROVEN Relations**: All topological identities formally verified
+- **Banach Fixed Point**: Existence theorem for G₂ structures proven
 
 ### Precision by Sector
 
@@ -67,7 +87,7 @@ Complete proofs: [Supplement S4](publications/markdown/S4_complete_derivations.m
 | CKM | 6 | Mean 0.11% |
 | Cosmology | 2 | n_s = ζ(11)/ζ(5) (0.00%) |
 
-Full tables: [Main Paper Section 8](publications/markdown/gift_2_2_main.md)
+Full tables: [Main Paper Section 8](publications/markdown/gift_2_3_main.md)
 
 ## Documentation
 
@@ -76,28 +96,29 @@ Full tables: [Main Paper Section 8](publications/markdown/gift_2_2_main.md)
 | Time | Document | Description |
 |------|----------|-------------|
 | 5 min | [Publications README](publications/README.md) | Executive briefing |
-| 30 min | [Main Paper](publications/markdown/gift_2_2_main.md) | Complete framework |
+| 30 min | [Main Paper](publications/markdown/gift_2_3_main.md) | Complete framework |
 | Deep dive | [Supplements S1-S7](publications/markdown/) | Mathematical details |
 
 ### Key Documents
 
-- **[Main Paper](publications/markdown/gift_2_2_main.md)** - Complete theoretical framework (~1400 lines)
-- **[Observable Reference](publications/references/GIFT_v22_Observable_Reference.md)** - All 39 observables
+- **[Main Paper](publications/markdown/gift_2_3_main.md)** - Complete theoretical framework (~1400 lines)
+- **[Observable Reference](publications/references/GIFT_v23_Observable_Reference.md)** - All 39 observables
 - **[Glossary](docs/GLOSSARY.md)** - Technical terms
 - **[FAQ](docs/FAQ.md)** - Common questions
 - **[Philosophy](docs/PHILOSOPHY.md)** - The philosophy behind GIFT
+- **[Lean Formal Verification](G2_ML/G2_Lean/)** - Machine-verified mathematical proofs
 
 ### Mathematical Supplements (S1-S7)
 
 | Supplement | Title | Description |
 |------------|-------|-------------|
-| **[S1](publications/markdown/S1_mathematical_architecture.md)** | Mathematical Architecture | E₈ exceptional Lie algebra foundations: root system (240 roots), Weyl group, Cartan matrix, Dynkin diagram. Establishes branching E₈ → E₇ → E₆ → SO(10) → SU(5) for Standard Model embedding. |
-| **[S2](publications/markdown/S2_K7_manifold_construction.md)** | K₇ Manifold Construction | Twisted connected sum (TCS) construction of the compact 7-manifold with G₂ holonomy. Derives Betti numbers b₂=21, b₃=77 via Mayer-Vietoris. Physics-informed neural networks validate metric invariants. |
-| **[S3](publications/markdown/S3_torsional_dynamics.md)** | Torsional Dynamics | Torsion tensor from G₂ 3-form non-closure. Derives geodesic flow equation and connection to renormalization group. Establishes κ_T = 1/61 (topological) and ultra-slow flow velocity |v| ~ 0.015. |
-| **[S4](publications/markdown/S4_complete_derivations.md)** | Complete Derivations | Full mathematical proofs of all 13 exact relations and detailed calculations for 39 observables. Organized by sector (gauge, fermion, neutrino, cosmology) with error analysis. |
-| **[S5](publications/markdown/S5_experimental_validation.md)** | Experimental Validation | Comparison with PDG 2024, NuFIT 5.3, Planck 2020, DESI DR2. Chi-square analysis, pull distributions. Defines falsification criteria (Type A/B/C) and experimental timeline. |
-| **[S6](publications/markdown/S6_theoretical_extensions.md)** | Theoretical Extensions | Speculative extensions: M-theory embedding (11D → 10D → 4D), AdS/CFT correspondence, information-theoretic interpretations, number-theoretic patterns. Status: EXPLORATORY. |
-| **[S7](publications/markdown/S7_dimensional_observables.md)** | Dimensional Observables | Bridge from dimensionless ratios to absolute masses (GeV). Derives scale parameter Lambda_GIFT from b₂, e⁸, dim(E₈). Covers fermion masses, boson masses, cosmological parameters. |
+| **[S1](publications/markdown/S1_mathematical_architecture_v23.md)** | Mathematical Architecture | E₈ exceptional Lie algebra foundations: root system (240 roots), Weyl group, Cartan matrix, Dynkin diagram. Establishes branching E₈ → E₇ → E₆ → SO(10) → SU(5) for Standard Model embedding. |
+| **[S2](publications/markdown/S2_K7_manifold_construction_v23.md)** | K₇ Manifold Construction | Twisted connected sum (TCS) construction of the compact 7-manifold with G₂ holonomy. Derives Betti numbers b₂=21, b₃=77 via Mayer-Vietoris. Physics-informed neural networks validate metric invariants with Lean 4 formal verification. |
+| **[S3](publications/markdown/S3_torsional_dynamics_v23.md)** | Torsional Dynamics | Torsion tensor from G₂ 3-form non-closure. Derives geodesic flow equation and connection to renormalization group. Establishes κ_T = 1/61 (topological) and ultra-slow flow velocity |v| ~ 0.015. |
+| **[S4](publications/markdown/S4_complete_derivations_v23.md)** | Complete Derivations | Full mathematical proofs of all 13 exact relations and detailed calculations for 39 observables. Organized by sector (gauge, fermion, neutrino, cosmology) with error analysis. |
+| **[S5](publications/markdown/S5_experimental_validation_v23.md)** | Experimental Validation | Comparison with PDG 2024, NuFIT 5.3, Planck 2020, DESI DR2. Chi-square analysis, pull distributions. Defines falsification criteria (Type A/B/C) and experimental timeline. |
+| **[S6](publications/markdown/S6_theoretical_extensions_v23.md)** | Theoretical Extensions | Speculative extensions: M-theory embedding (11D → 10D → 4D), AdS/CFT correspondence, information-theoretic interpretations, number-theoretic patterns. Status: EXPLORATORY. |
+| **[S7](publications/markdown/S7_dimensional_observables_v23.md)** | Dimensional Observables | Bridge from dimensionless ratios to absolute masses (GeV). Derives scale parameter Lambda_GIFT from b₂, e⁸, dim(E₈). Covers fermion masses, boson masses, cosmological parameters. |
 
 ### Interactive Tools
 
