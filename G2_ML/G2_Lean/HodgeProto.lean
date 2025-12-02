@@ -31,10 +31,15 @@ We axiomatize Λ³(ℝ⁷) directly as a 35-dimensional real vector space.
 -- 3-forms on E7 (axiomatized as type)
 axiom Lambda3_E7 : Type
 
--- Vector space structure
+-- Vector space structure (AddCommGroup → AddCommMonoid → Module)
 axiom Lambda3_addCommGroup : AddCommGroup Lambda3_E7
+attribute [instance] Lambda3_addCommGroup
+
+-- AddCommMonoid derived from AddCommGroup
+noncomputable instance Lambda3_addCommMonoid : AddCommMonoid Lambda3_E7 := inferInstance
+
 axiom Lambda3_module : Module ℝ Lambda3_E7
-attribute [instance] Lambda3_addCommGroup Lambda3_module
+attribute [instance] Lambda3_module
 
 -- Dimension = C(7,3) = 35
 theorem dim_Lambda3 : Nat.choose 7 3 = 35 := by native_decide
@@ -49,6 +54,15 @@ On ℝ⁷, we have ⋆ : Λ³ → Λ⁴.
 
 -- 4-forms (for Hodge star codomain)
 axiom Lambda4_E7 : Type
+
+-- Vector space structure for Lambda4
+axiom Lambda4_addCommGroup : AddCommGroup Lambda4_E7
+attribute [instance] Lambda4_addCommGroup
+
+noncomputable instance Lambda4_addCommMonoid : AddCommMonoid Lambda4_E7 := inferInstance
+
+axiom Lambda4_module : Module ℝ Lambda4_E7
+attribute [instance] Lambda4_module
 
 -- Hodge star (axiomatized)
 axiom hodge_star_flat : Lambda3_E7 →ₗ[ℝ] Lambda4_E7
@@ -114,10 +128,12 @@ axiom G2Structures_K7_nonempty : Nonempty G2Structures_K7
 instance : Nonempty G2Structures_K7 := G2Structures_K7_nonempty
 
 -- LIFTING AXIOMS (partition of unity principle)
+-- MetricSpace must be registered BEFORE CompleteSpace (provides UniformSpace)
 axiom G2Structures_K7_metricSpace : MetricSpace G2Structures_K7
-axiom G2Structures_K7_completeSpace : CompleteSpace G2Structures_K7
+attribute [instance] G2Structures_K7_metricSpace
 
-attribute [instance] G2Structures_K7_metricSpace G2Structures_K7_completeSpace
+axiom G2Structures_K7_completeSpace : CompleteSpace G2Structures_K7
+attribute [instance] G2Structures_K7_completeSpace
 
 -- Torsion on K₇ (lifted from flat)
 axiom torsion_K7 : G2Structures_K7 → ℝ
