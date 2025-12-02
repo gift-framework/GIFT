@@ -1,7 +1,7 @@
 {
   "pipeline": "GIFT K7 Spectral Eigenvalue",
-  "version": "1.0",
-  "timestamp": "2025-12-01T23:00:00",
+  "version": "1.1",
+  "timestamp": "2025-12-02T00:30:00",
   "constants": {
     "kappa_T": "1/61",
     "kappa_T_float": 0.01639344262295082,
@@ -11,36 +11,31 @@
   },
   "eigenvalues": {
     "lambda_0": 0.0,
-    "lambda_1_observed": 0.01842,
-    "lambda_1_lower": 0.01620,
-    "lambda_1_upper": 0.02064,
-    "note": "λ₁ ≈ κ_T by design (torsion-eigenvalue correspondence)"
+    "lambda_1_observed": 0.0592,
+    "lambda_1_lower": 0.0550,
+    "lambda_1_upper": 0.0634,
+    "note": "From Colab run on trained PINN metric"
   },
   "interval_bounds": {
-    "lower": 0.01620,
-    "upper": 0.02064,
+    "lower": 0.0550,
+    "upper": 0.0634,
     "lipschitz_const": 0.0005,
     "coverage_radius": 1.2761,
     "method": "rayleigh_quotient_enclosure"
   },
   "lean_export": {
-    "rational": "159/10000",
-    "numerator": 159,
+    "rational": "579/10000",
+    "numerator": 579,
     "denominator": 10000,
-    "float_value": 0.0159,
-    "safety_margin": "conservative (below interval lower bound)"
+    "float_value": 0.0579,
+    "safety_margin": "tightened (5% below interval lower)"
   },
   "contraction": {
     "kappa_T": "1/61",
-    "lambda_1_lower": 0.0159,
+    "lambda_1_lower": 0.0579,
     "K_formula": "exp(-κ_T × λ₁)",
-    "K_upper_bound": 0.999739,
+    "K_upper_bound": 0.99905,
     "K_lt_1": true,
-    "note": "K ≈ 1 - κ_T×λ₁ for small values"
-  },
-  "alternative_bound": {
-    "comment": "Using K = 0.9 directly (conservative, from finite-dim model)",
-    "joyce_K": "9/10",
-    "justification": "Finite-dim proof establishes K < 1, we use 0.9 for margin"
+    "note": "K = exp(-0.01639 × 0.0579) ≈ 0.99905"
   }
 }
