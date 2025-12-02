@@ -60,8 +60,6 @@ def dim_G2_manifold : ℕ := 7
 theorem p2_exact : dim_G2 / dim_G2_manifold = 2 := rfl
 
 /-- p₂ = 2 is exact (no remainder) -/
-theorem p2_divides : dim_G2_manifold ∣ dim_G2 := by
-  simp only [dim_G2, dim_G2_manifold]
-  decide
+theorem p2_divides : dim_G2_manifold ∣ dim_G2 := ⟨2, rfl⟩
 
 end GIFT.Geometry

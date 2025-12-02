@@ -23,17 +23,13 @@ def euler_char_simplified (M : G2Manifold) : ℤ :=
   -- This simplifies strangely; let's use direct formula
 
 /-- Direct computation for K₇ -/
-theorem K7_euler : euler_char K7 = 0 := by
-  simp only [euler_char, K7]
-  native_decide
+theorem K7_euler : euler_char K7 = 0 := rfl
 
 /-- Alternative Euler characteristic: χ = 2(b₀ - b₁ + b₂) - b₃ for 7-mfd -/
 def euler_alt (M : G2Manifold) : ℤ := 2 * (M.b0 + M.b2) - M.b3
 
 /-- K₇ Euler characteristic (alternative) -/
-theorem K7_euler_alt : euler_alt K7 = -33 := by
-  simp only [euler_alt, K7]
-  native_decide
+theorem K7_euler_alt : euler_alt K7 = -33 := rfl
 
 /-! ## Index Theorems -/
 

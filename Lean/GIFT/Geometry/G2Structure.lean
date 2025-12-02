@@ -62,9 +62,7 @@ def dim_Lambda4_R7 : ℕ := Nat.choose 7 4
 theorem Lambda4_dim : dim_Lambda4_R7 = 35 := by native_decide
 
 /-- Hodge duality: dim Λ³ = dim Λ⁴ = 35 -/
-theorem Lambda3_Lambda4_duality : dim_Lambda3_R7 = dim_Lambda4_R7 := by
-  simp only [dim_Lambda3_R7, dim_Lambda4_R7]
-  native_decide
+theorem Lambda3_Lambda4_duality : dim_Lambda3_R7 = dim_Lambda4_R7 := rfl
 
 /-! ## Torsion-Free Condition -/
 
