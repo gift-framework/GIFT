@@ -444,6 +444,14 @@ abbrev ChartIndex := Fin K7_cover_size
 axiom ChartDomain : ChartIndex → Type
 axiom chart_is_R7 : ∀ i, ChartDomain i ≃ EuclideanSpace ℝ (Fin 7)
 
+-- UniformSpace structure on charts (induced from ℝ⁷)
+axiom ChartDomain_uniformSpace : ∀ i, UniformSpace (ChartDomain i)
+attribute [instance] ChartDomain_uniformSpace
+
+-- MetricSpace structure on charts (from ℝ⁷ diffeomorphism)
+axiom ChartDomain_metricSpace : ∀ i, MetricSpace (ChartDomain i)
+attribute [instance] ChartDomain_metricSpace
+
 -- Partition of unity functions ρ_i : K₇ → [0,1]
 axiom partition_func : ChartIndex → K7 → ℝ
 axiom partition_nonneg : ∀ i x, 0 ≤ partition_func i x
