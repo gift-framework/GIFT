@@ -1,530 +1,531 @@
-"""
-Performance benchmarks and profiling tests for GIFT framework.
-
-Features:
-- Observable computation timing
-- Memory usage profiling
-- Scalability tests
-- Performance regression detection
-- Optimization validation
-- Bottleneck identification
-
-Version: 2.1.0
-"""
-
-import pytest
-import numpy as np
-import time
-import sys
-from pathlib import Path
-import gc
-
-# Add paths
-PROJECT_ROOT = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(PROJECT_ROOT / "statistical_validation"))
-
-try:
-    from gift_v21_core import GIFTFrameworkV21
-    V21_AVAILABLE = True
-except ImportError:
-    V21_AVAILABLE = False
-
-
-pytestmark = pytest.mark.skipif(
-    not V21_AVAILABLE,
-    reason="GIFT v2.1 not available"
-)
-
-
-# Performance baselines (in seconds, on reference hardware)
-PERFORMANCE_BASELINES = {
-    "framework_initialization": 0.1,
-    "single_observable_computation": 1.0,
-    "all_observables_computation": 2.0,
-    "monte_carlo_100_samples": 10.0,
-}
-
-
-class TestComputationTiming:
-    """Test computation timing and performance."""
-
-    def test_framework_initialization_time(self):
-        """Test framework initialization is fast."""
-        start = time.time()
-
-        framework = GIFTFrameworkV21()
-
-        elapsed = time.time() - start
-
-        # Should be very fast (< 100ms)
-        assert elapsed < PERFORMANCE_BASELINES["framework_initialization"], (
-            f"Initialization took {elapsed:.3f}s (baseline: {PERFORMANCE_BASELINES['framework_initialization']}s)"
-        )
-
-    def test_observable_computation_time(self):
-        """Test all observables computation time."""
-        framework = GIFTFrameworkV21()
-
-        start = time.time()
-
-        obs = framework.compute_all_observables()
-
-        elapsed = time.time() - start
-
-        print(f"\n⏱️  All observables computed in {elapsed:.3f}s")
-
-        # Should complete in reasonable time
-        assert elapsed < PERFORMANCE_BASELINES["all_observables_computation"], (
-            f"Computation took {elapsed:.3f}s (baseline: {PERFORMANCE_BASELINES['all_observables_computation']}s)"
-        )
-
-    def test_repeated_computation_overhead(self):
-        """Test overhead of repeated computations."""
-        framework = GIFTFrameworkV21()
-
-        # First computation (may include lazy initialization)
-        start = time.time()
-        obs1 = framework.compute_all_observables()
-        first_time = time.time() - start
-
-        # Second computation (should be fast if cached)
-        start = time.time()
-        obs2 = framework.compute_all_observables()
-        second_time = time.time() - start
-
-        print(f"\n⏱️  First: {first_time:.3f}s, Second: {second_time:.3f}s")
-
-        # Second should not be significantly slower
-        assert second_time < 2 * first_time, (
-            "Repeated computation much slower than first"
-        )
-
-    def test_single_framework_instance_overhead(self):
-        """Test overhead of creating single framework instance."""
-        timings = []
-
-        for i in range(10):
-            start = time.time()
-            framework = GIFTFrameworkV21()
-            obs = framework.compute_all_observables()
-            elapsed = time.time() - start
-
-            timings.append(elapsed)
-
-        mean_time = np.mean(timings)
-        std_time = np.std(timings)
-
-        print(f"\n⏱️  Mean: {mean_time:.3f}s ± {std_time:.3f}s")
-
-        # Standard deviation should be reasonable
-        assert std_time < 0.5 * mean_time, "High variability in computation time"
-
-
-class TestMemoryUsage:
-    """Test memory usage and efficiency."""
-
-    def test_framework_memory_footprint(self):
-        """Test framework instance doesn't use excessive memory."""
-        try:
-            import psutil
-            import os
-
-            process = psutil.Process(os.getpid())
-
-            # Measure before
-            gc.collect()
-            mem_before = process.memory_info().rss / 1024 / 1024  # MB
-
-            # Create framework
-            framework = GIFTFrameworkV21()
-            obs = framework.compute_all_observables()
-
-            # Measure after
-            gc.collect()
-            mem_after = process.memory_info().rss / 1024 / 1024  # MB
-
-            mem_increase = mem_after - mem_before
-
-            print(f"\n💾 Memory increase: {mem_increase:.1f} MB")
-
-            # Should not use excessive memory (< 100 MB for basic computation)
-            assert mem_increase < 100, (
-                f"Excessive memory usage: {mem_increase:.1f} MB"
-            )
-
-        except ImportError:
-            pytest.skip("psutil not available for memory profiling")
-
-    def test_memory_cleanup_after_computation(self):
-        """Test memory is properly cleaned up."""
-        try:
-            import psutil
-            import os
-
-            process = psutil.Process(os.getpid())
-
-            gc.collect()
-            mem_baseline = process.memory_info().rss / 1024 / 1024
-
-            # Create and destroy many instances
-            for i in range(10):
-                framework = GIFTFrameworkV21()
-                obs = framework.compute_all_observables()
-                del framework
-                del obs
-
-            gc.collect()
-            mem_after = process.memory_info().rss / 1024 / 1024
-
-            mem_increase = mem_after - mem_baseline
-
-            print(f"\n💾 Memory after 10 iterations: +{mem_increase:.1f} MB")
-
-            # Should not have significant memory leak
-            assert mem_increase < 50, (
-                f"Possible memory leak: {mem_increase:.1f} MB after 10 iterations"
-            )
-
-        except ImportError:
-            pytest.skip("psutil not available")
-
-    def test_large_monte_carlo_memory_efficiency(self):
-        """Test memory efficiency with large Monte Carlo simulation."""
-        try:
-            import psutil
-            import os
-
-            process = psutil.Process(os.getpid())
-
-            gc.collect()
-            mem_before = process.memory_info().rss / 1024 / 1024
-
-            # Run Monte Carlo
-            n_samples = 100
-            results = []
-
-            for i in range(n_samples):
-                framework = GIFTFrameworkV21()
-                obs = framework.compute_all_observables()
-
-                # Only store one value to test memory efficiency
-                if 'alpha_inv_MZ' in obs:
-                    results.append(obs['alpha_inv_MZ'])
-
-                # Cleanup
-                del framework
-                del obs
-
-                if i % 10 == 0:
-                    gc.collect()
-
-            gc.collect()
-            mem_after = process.memory_info().rss / 1024 / 1024
-
-            mem_increase = mem_after - mem_before
-
-            print(f"\n💾 Memory for 100 samples: +{mem_increase:.1f} MB")
-
-            # Should scale linearly, not quadratically
-            assert mem_increase < 200, (
-                f"Excessive memory usage for 100 samples: {mem_increase:.1f} MB"
-            )
-
-        except ImportError:
-            pytest.skip("psutil not available")
-
-
-class TestScalability:
-    """Test computational scalability."""
-
-    def test_parameter_sweep_scalability(self):
-        """Test performance scales linearly with number of evaluations."""
-        sample_sizes = [10, 20, 50]
-        timings = []
-
-        for n_samples in sample_sizes:
-            start = time.time()
-
-            for i in range(n_samples):
-                framework = GIFTFrameworkV21()
-                obs = framework.compute_all_observables()
-
-            elapsed = time.time() - start
-            time_per_sample = elapsed / n_samples
-
-            timings.append((n_samples, elapsed, time_per_sample))
-
-            print(f"\n⏱️  {n_samples} samples: {elapsed:.2f}s ({time_per_sample:.3f}s/sample)")
-
-        # Time per sample should be roughly constant
-        times_per_sample = [t[2] for t in timings]
-        variation = np.std(times_per_sample) / np.mean(times_per_sample)
-
-        assert variation < 0.5, (
-            f"High variation in time per sample: {variation*100:.1f}%"
-        )
-
-    def test_parallel_potential(self):
-        """Test that computations are independent (parallelizable)."""
-        # Test that results are identical regardless of order
-        frameworks = [GIFTFrameworkV21() for _ in range(5)]
-
-        results = [fw.compute_all_observables() for fw in frameworks]
-
-        # All should give same results (order-independent)
-        for i in range(1, len(results)):
-            for key in results[0]:
-                if key in results[i]:
-                    assert results[0][key] == results[i][key], (
-                        f"Results not order-independent for {key}"
-                    )
-
-
-class TestPerformanceRegression:
-    """Detect performance regressions."""
-
-    def test_computation_time_regression(self):
-        """Test computation time hasn't regressed."""
-        framework = GIFTFrameworkV21()
-
-        # Warm up
-        obs = framework.compute_all_observables()
-
-        # Measure performance
-        start = time.time()
-
-        for i in range(5):
-            obs = framework.compute_all_observables()
-
-        elapsed = time.time() - start
-        avg_time = elapsed / 5
-
-        print(f"\n⏱️  Average computation time: {avg_time:.3f}s")
-
-        # Compare with baseline
-        baseline = PERFORMANCE_BASELINES["all_observables_computation"]
-
-        # Should not be significantly slower than baseline
-        assert avg_time < 1.5 * baseline, (
-            f"PERFORMANCE REGRESSION: {avg_time:.3f}s vs baseline {baseline:.3f}s"
-        )
-
-    def test_no_quadratic_slowdown(self):
-        """Test computation time doesn't grow quadratically."""
-        # Test with increasing parameter variations
-        n_values = [5, 10, 20]
-        timings = []
-
-        for n in n_values:
-            start = time.time()
-
-            for i in range(n):
-                p2 = 2.0 + 0.1 * (i / n)
-                framework = GIFTFrameworkV21(p2=p2)
-                obs = framework.compute_all_observables()
-
-            elapsed = time.time() - start
-            timings.append((n, elapsed))
-
-        # Fit linear model: time = a * n + b
-        # If growth is linear, R^2 should be high
-        n_array = np.array([t[0] for t in timings])
-        time_array = np.array([t[1] for t in timings])
-
-        # Simple linear fit
-        slope = np.cov(n_array, time_array)[0, 1] / np.var(n_array)
-        intercept = np.mean(time_array) - slope * np.mean(n_array)
-
-        predicted = slope * n_array + intercept
-        residuals = time_array - predicted
-
-        r_squared = 1 - (np.sum(residuals**2) / np.sum((time_array - np.mean(time_array))**2))
-
-        print(f"\n📊 Linear fit R²: {r_squared:.3f}")
-
-        # Should be approximately linear
-        assert r_squared > 0.8, (
-            f"Non-linear scaling detected: R²={r_squared:.3f}"
-        )
-
-
-class TestBottleneckIdentification:
-    """Identify performance bottlenecks."""
-
-    def test_identify_slowest_observables(self):
-        """Identify which observables are slowest to compute."""
-        framework = GIFTFrameworkV21()
-
-        # This is a simplified test - real profiling would use cProfile
-        # For now, just test that we can compute all observables
-
-        start = time.time()
-        obs = framework.compute_all_observables()
-        total_time = time.time() - start
-
-        print(f"\n⏱️  Total time for {len(obs)} observables: {total_time:.3f}s")
-        print(f"⏱️  Average time per observable: {total_time/len(obs):.4f}s")
-
-        # Should be efficient
-        assert total_time / len(obs) < 0.1, "Observables taking too long on average"
-
-    def test_initialization_overhead(self):
-        """Test initialization overhead vs computation time."""
-        # Measure initialization
-        start = time.time()
-        framework = GIFTFrameworkV21()
-        init_time = time.time() - start
-
-        # Measure computation
-        start = time.time()
-        obs = framework.compute_all_observables()
-        compute_time = time.time() - start
-
-        print(f"\n⏱️  Init: {init_time:.4f}s, Compute: {compute_time:.3f}s")
-
-        # Initialization should be small fraction of total
-        assert init_time < 0.5 * compute_time, (
-            "Initialization overhead too high"
-        )
-
-
-class TestCachingEffectiveness:
-    """Test effectiveness of any caching mechanisms."""
-
-    def test_repeated_access_performance(self):
-        """Test that repeated access to same observable is fast."""
-        framework = GIFTFrameworkV21()
-
-        # First access (compute)
-        start = time.time()
-        obs1 = framework.compute_all_observables()
-        first_time = time.time() - start
-
-        # Second access (may be cached)
-        start = time.time()
-        obs2 = framework.compute_all_observables()
-        second_time = time.time() - start
-
-        print(f"\n⏱️  First access: {first_time:.3f}s")
-        print(f"⏱️  Second access: {second_time:.3f}s")
-
-        # If there's caching, second should be faster or same
-        # If no caching, should still be comparable
-        assert second_time <= 2 * first_time
-
-
-class TestNumericalPrecisionVsSpeed:
-    """Test trade-offs between precision and speed."""
-
-    def test_precision_maintained_despite_optimizations(self):
-        """Test that any speed optimizations don't compromise precision."""
-        framework = GIFTFrameworkV21()
-
-        # Compute observables
-        obs = framework.compute_all_observables()
-
-        # Known exact values
-        exact_values = {
-            "delta_CP": 197.0,
-            "Q_Koide": 2/3,
-            "m_tau_m_e": 3477.0,
-            "m_s_m_d": 20.0,
-        }
-
-        for obs_name, exact_val in exact_values.items():
-            if obs_name in obs:
-                computed_val = obs[obs_name]
-
-                # Should maintain high precision
-                rel_error = abs(computed_val - exact_val) / exact_val
-
-                assert rel_error < 1e-10, (
-                    f"{obs_name}: precision compromised ({rel_error:.2e} relative error)"
-                )
-
-
-class TestConcurrentPerformance:
-    """Test performance with concurrent operations."""
-
-    def test_no_interference_between_instances(self):
-        """Test multiple instances don't interfere."""
-        # Create multiple instances
-        frameworks = [GIFTFrameworkV21() for _ in range(3)]
-
-        # Time sequential execution
-        start = time.time()
-        results_seq = []
-        for fw in frameworks:
-            results_seq.append(fw.compute_all_observables())
-        sequential_time = time.time() - start
-
-        # Create fresh instances
-        frameworks2 = [GIFTFrameworkV21() for _ in range(3)]
-
-        # Time again (should be similar)
-        start = time.time()
-        results_seq2 = []
-        for fw in frameworks2:
-            results_seq2.append(fw.compute_all_observables())
-        sequential_time2 = time.time() - start
-
-        print(f"\n⏱️  Sequential run 1: {sequential_time:.3f}s")
-        print(f"⏱️  Sequential run 2: {sequential_time2:.3f}s")
-
-        # Should have similar performance
-        assert abs(sequential_time - sequential_time2) < 0.5 * sequential_time
-
-
-class TestBenchmarkReporting:
-    """Generate benchmark reports."""
-
-    def test_generate_performance_report(self, tmp_path):
-        """Generate comprehensive performance benchmark report."""
-        import json
-        import datetime
-
-        report = {
-            "timestamp": datetime.datetime.now().isoformat(),
-            "version": "2.1.0",
-            "benchmarks": {}
-        }
-
-        # Framework initialization
-        start = time.time()
-        framework = GIFTFrameworkV21()
-        init_time = time.time() - start
-
-        report["benchmarks"]["initialization"] = {
-            "time_seconds": init_time,
-            "baseline_seconds": PERFORMANCE_BASELINES["framework_initialization"],
-            "within_baseline": init_time < PERFORMANCE_BASELINES["framework_initialization"]
-        }
-
-        # Observable computation
-        start = time.time()
-        obs = framework.compute_all_observables()
-        compute_time = time.time() - start
-
-        report["benchmarks"]["all_observables"] = {
-            "time_seconds": compute_time,
-            "n_observables": len(obs),
-            "time_per_observable": compute_time / len(obs),
-            "baseline_seconds": PERFORMANCE_BASELINES["all_observables_computation"],
-            "within_baseline": compute_time < PERFORMANCE_BASELINES["all_observables_computation"]
-        }
-
-        # Save report
-        report_file = tmp_path / "performance_benchmark.json"
-
-        with open(report_file, 'w') as f:
-            json.dump(report, f, indent=2)
-
-        print("\n" + "="*60)
-        print("PERFORMANCE BENCHMARK REPORT")
-        print("="*60)
-        print(f"Initialization: {init_time*1000:.1f}ms")
-        print(f"All observables: {compute_time:.3f}s ({len(obs)} observables)")
-        print(f"Per observable: {compute_time/len(obs)*1000:.1f}ms")
-        print("="*60)
-
-        assert report_file.exists()
+-"-"-"-
+-P-e-r-f-o-r-m-a-n-c-e- -b-e-n-c-h-m-a-r-k-s- -a-n-d- -p-r-o-f-i-l-i-n-g- -t-e-s-t-s- -f-o-r- -G-I-F-T- -f-r-a-m-e-w-o-r-k-.-
+-
+-F-e-a-t-u-r-e-s-:-
+--- -O-b-s-e-r-v-a-b-l-e- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-i-n-g-
+--- -M-e-m-o-r-y- -u-s-a-g-e- -p-r-o-f-i-l-i-n-g-
+--- -S-c-a-l-a-b-i-l-i-t-y- -t-e-s-t-s-
+--- -P-e-r-f-o-r-m-a-n-c-e- -r-e-g-r-e-s-s-i-o-n- -d-e-t-e-c-t-i-o-n-
+--- -O-p-t-i-m-i-z-a-t-i-o-n- -v-a-l-i-d-a-t-i-o-n-
+--- -B-o-t-t-l-e-n-e-c-k- -i-d-e-n-t-i-f-i-c-a-t-i-o-n-
+-
+-V-e-r-s-i-o-n-:- -2-.-1-.-0-
+-"-"-"-
+-
+-i-m-p-o-r-t- -p-y-t-e-s-t-
+-i-m-p-o-r-t- -n-u-m-p-y- -a-s- -n-p-
+-i-m-p-o-r-t- -t-i-m-e-
+-i-m-p-o-r-t- -s-y-s-
+-f-r-o-m- -p-a-t-h-l-i-b- -i-m-p-o-r-t- -P-a-t-h-
+-i-m-p-o-r-t- -g-c-
+-
+-#- -A-d-d- -p-a-t-h-s-
+-P-R-O-J-E-C-T-_-R-O-O-T- -=- -P-a-t-h-(-_-_-f-i-l-e-_-_-)-.-p-a-r-e-n-t-.-p-a-r-e-n-t-.-p-a-r-e-n-t-
+-s-y-s-.-p-a-t-h-.-i-n-s-e-r-t-(-0-,- -s-t-r-(-P-R-O-J-E-C-T-_-R-O-O-T- -/- -"-s-t-a-t-i-s-t-i-c-a-l-_-v-a-l-i-d-a-t-i-o-n-"-)-)-
+-
+-t-r-y-:-
+- - - - -f-r-o-m- -g-i-f-t-_-v-2-1-_-c-o-r-e- -i-m-p-o-r-t- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-
+- - - - -V-2-1-_-A-V-A-I-L-A-B-L-E- -=- -T-r-u-e-
+-e-x-c-e-p-t- -I-m-p-o-r-t-E-r-r-o-r-:-
+- - - - -V-2-1-_-A-V-A-I-L-A-B-L-E- -=- -F-a-l-s-e-
+-
+-
+-p-y-t-e-s-t-m-a-r-k- -=- -p-y-t-e-s-t-.-m-a-r-k-.-s-k-i-p-i-f-(-
+- - - - -n-o-t- -V-2-1-_-A-V-A-I-L-A-B-L-E-,-
+- - - - -r-e-a-s-o-n-=-"-G-I-F-T- -v-2-.-1- -n-o-t- -a-v-a-i-l-a-b-l-e-"-
+-)-
+-
+-
+-#- -P-e-r-f-o-r-m-a-n-c-e- -b-a-s-e-l-i-n-e-s- -(-i-n- -s-e-c-o-n-d-s-,- -o-n- -r-e-f-e-r-e-n-c-e- -h-a-r-d-w-a-r-e-)-
+-P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S- -=- -{-
+- - - - -"-f-r-a-m-e-w-o-r-k-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-"-:- -0-.-1-,-
+- - - - -"-s-i-n-g-l-e-_-o-b-s-e-r-v-a-b-l-e-_-c-o-m-p-u-t-a-t-i-o-n-"-:- -1-.-0-,-
+- - - - -"-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-_-c-o-m-p-u-t-a-t-i-o-n-"-:- -2-.-0-,-
+- - - - -"-m-o-n-t-e-_-c-a-r-l-o-_-1-0-0-_-s-a-m-p-l-e-s-"-:- -1-0-.-0-,-
+-}-
+-
+-
+-c-l-a-s-s- -T-e-s-t-C-o-m-p-u-t-a-t-i-o-n-T-i-m-i-n-g-:-
+- - - - -"-"-"-T-e-s-t- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-i-n-g- -a-n-d- -p-e-r-f-o-r-m-a-n-c-e-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-f-r-a-m-e-w-o-r-k-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-_-t-i-m-e-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -f-r-a-m-e-w-o-r-k- -i-n-i-t-i-a-l-i-z-a-t-i-o-n- -i-s- -f-a-s-t-.-"-"-"-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -e-l-a-p-s-e-d- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -#- -S-h-o-u-l-d- -b-e- -v-e-r-y- -f-a-s-t- -(-<- -1-0-0-m-s-)-
+- - - - - - - - -a-s-s-e-r-t- -e-l-a-p-s-e-d- -<- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-f-r-a-m-e-w-o-r-k-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-"-]-,- -(-
+- - - - - - - - - - - - -f-"-I-n-i-t-i-a-l-i-z-a-t-i-o-n- -t-o-o-k- -{-e-l-a-p-s-e-d-:-.-3-f-}-s- -(-b-a-s-e-l-i-n-e-:- -{-P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-'-f-r-a-m-e-w-o-r-k-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-'-]-}-s-)-"-
+- - - - - - - - -)-
+-
+- - - - -d-e-f- -t-e-s-t-_-o-b-s-e-r-v-a-b-l-e-_-c-o-m-p-u-t-a-t-i-o-n-_-t-i-m-e-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -a-l-l- -o-b-s-e-r-v-a-b-l-e-s- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-e-.-"-"-"-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+-
+- - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - -e-l-a-p-s-e-d- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -A-l-l- -o-b-s-e-r-v-a-b-l-e-s- -c-o-m-p-u-t-e-d- -i-n- -{-e-l-a-p-s-e-d-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -S-h-o-u-l-d- -c-o-m-p-l-e-t-e- -i-n- -r-e-a-s-o-n-a-b-l-e- -t-i-m-e-
+- - - - - - - - -a-s-s-e-r-t- -e-l-a-p-s-e-d- -<- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-_-c-o-m-p-u-t-a-t-i-o-n-"-]-,- -(-
+- - - - - - - - - - - - -f-"-C-o-m-p-u-t-a-t-i-o-n- -t-o-o-k- -{-e-l-a-p-s-e-d-:-.-3-f-}-s- -(-b-a-s-e-l-i-n-e-:- -{-P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-'-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-_-c-o-m-p-u-t-a-t-i-o-n-'-]-}-s-)-"-
+- - - - - - - - -)-
+-
+- - - - -d-e-f- -t-e-s-t-_-r-e-p-e-a-t-e-d-_-c-o-m-p-u-t-a-t-i-o-n-_-o-v-e-r-h-e-a-d-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -o-v-e-r-h-e-a-d- -o-f- -r-e-p-e-a-t-e-d- -c-o-m-p-u-t-a-t-i-o-n-s-.-"-"-"-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -#- -F-i-r-s-t- -c-o-m-p-u-t-a-t-i-o-n- -(-m-a-y- -i-n-c-l-u-d-e- -l-a-z-y- -i-n-i-t-i-a-l-i-z-a-t-i-o-n-)-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s-1- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -f-i-r-s-t-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -#- -S-e-c-o-n-d- -c-o-m-p-u-t-a-t-i-o-n- -(-s-h-o-u-l-d- -b-e- -f-a-s-t- -i-f- -c-a-c-h-e-d-)-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s-2- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -s-e-c-o-n-d-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -F-i-r-s-t-:- -{-f-i-r-s-t-_-t-i-m-e-:-.-3-f-}-s-,- -S-e-c-o-n-d-:- -{-s-e-c-o-n-d-_-t-i-m-e-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -S-e-c-o-n-d- -s-h-o-u-l-d- -n-o-t- -b-e- -s-i-g-n-i-f-i-c-a-n-t-l-y- -s-l-o-w-e-r-
+- - - - - - - - -a-s-s-e-r-t- -s-e-c-o-n-d-_-t-i-m-e- -<- -2- -*- -f-i-r-s-t-_-t-i-m-e-,- -(-
+- - - - - - - - - - - - -"-R-e-p-e-a-t-e-d- -c-o-m-p-u-t-a-t-i-o-n- -m-u-c-h- -s-l-o-w-e-r- -t-h-a-n- -f-i-r-s-t-"-
+- - - - - - - - -)-
+-
+- - - - -d-e-f- -t-e-s-t-_-s-i-n-g-l-e-_-f-r-a-m-e-w-o-r-k-_-i-n-s-t-a-n-c-e-_-o-v-e-r-h-e-a-d-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -o-v-e-r-h-e-a-d- -o-f- -c-r-e-a-t-i-n-g- -s-i-n-g-l-e- -f-r-a-m-e-w-o-r-k- -i-n-s-t-a-n-c-e-.-"-"-"-
+- - - - - - - - -t-i-m-i-n-g-s- -=- -[-]-
+-
+- - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-1-0-)-:-
+- - - - - - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - - - - - -e-l-a-p-s-e-d- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - - - - - -t-i-m-i-n-g-s-.-a-p-p-e-n-d-(-e-l-a-p-s-e-d-)-
+-
+- - - - - - - - -m-e-a-n-_-t-i-m-e- -=- -n-p-.-m-e-a-n-(-t-i-m-i-n-g-s-)-
+- - - - - - - - -s-t-d-_-t-i-m-e- -=- -n-p-.-s-t-d-(-t-i-m-i-n-g-s-)-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -M-e-a-n-:- -{-m-e-a-n-_-t-i-m-e-:-.-3-f-}-s- -±- -{-s-t-d-_-t-i-m-e-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -S-t-a-n-d-a-r-d- -d-e-v-i-a-t-i-o-n- -s-h-o-u-l-d- -b-e- -r-e-a-s-o-n-a-b-l-e-
+- - - - - - - - -a-s-s-e-r-t- -s-t-d-_-t-i-m-e- -<- -0-.-5- -*- -m-e-a-n-_-t-i-m-e-,- -"-H-i-g-h- -v-a-r-i-a-b-i-l-i-t-y- -i-n- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-e-"-
+-
+-
+-c-l-a-s-s- -T-e-s-t-M-e-m-o-r-y-U-s-a-g-e-:-
+- - - - -"-"-"-T-e-s-t- -m-e-m-o-r-y- -u-s-a-g-e- -a-n-d- -e-f-f-i-c-i-e-n-c-y-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-f-r-a-m-e-w-o-r-k-_-m-e-m-o-r-y-_-f-o-o-t-p-r-i-n-t-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -f-r-a-m-e-w-o-r-k- -i-n-s-t-a-n-c-e- -d-o-e-s-n-'-t- -u-s-e- -e-x-c-e-s-s-i-v-e- -m-e-m-o-r-y-.-"-"-"-
+- - - - - - - - -t-r-y-:-
+- - - - - - - - - - - - -i-m-p-o-r-t- -p-s-u-t-i-l-
+- - - - - - - - - - - - -i-m-p-o-r-t- -o-s-
+-
+- - - - - - - - - - - - -p-r-o-c-e-s-s- -=- -p-s-u-t-i-l-.-P-r-o-c-e-s-s-(-o-s-.-g-e-t-p-i-d-(-)-)-
+-
+- - - - - - - - - - - - -#- -M-e-a-s-u-r-e- -b-e-f-o-r-e-
+- - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+- - - - - - - - - - - - -m-e-m-_-b-e-f-o-r-e- -=- -p-r-o-c-e-s-s-.-m-e-m-o-r-y-_-i-n-f-o-(-)-.-r-s-s- -/- -1-0-2-4- -/- -1-0-2-4- - -#- -M-B-
+-
+- - - - - - - - - - - - -#- -C-r-e-a-t-e- -f-r-a-m-e-w-o-r-k-
+- - - - - - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - - - - - -#- -M-e-a-s-u-r-e- -a-f-t-e-r-
+- - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+- - - - - - - - - - - - -m-e-m-_-a-f-t-e-r- -=- -p-r-o-c-e-s-s-.-m-e-m-o-r-y-_-i-n-f-o-(-)-.-r-s-s- -/- -1-0-2-4- -/- -1-0-2-4- - -#- -M-B-
+-
+- - - - - - - - - - - - -m-e-m-_-i-n-c-r-e-a-s-e- -=- -m-e-m-_-a-f-t-e-r- --- -m-e-m-_-b-e-f-o-r-e-
+-
+- - - - - - - - - - - - -p-r-i-n-t-(-f-"-\-n-💾- -M-e-m-o-r-y- -i-n-c-r-e-a-s-e-:- -{-m-e-m-_-i-n-c-r-e-a-s-e-:-.-1-f-}- -M-B-"-)-
+-
+- - - - - - - - - - - - -#- -S-h-o-u-l-d- -n-o-t- -u-s-e- -e-x-c-e-s-s-i-v-e- -m-e-m-o-r-y- -(-<- -1-0-0- -M-B- -f-o-r- -b-a-s-i-c- -c-o-m-p-u-t-a-t-i-o-n-)-
+- - - - - - - - - - - - -a-s-s-e-r-t- -m-e-m-_-i-n-c-r-e-a-s-e- -<- -1-0-0-,- -(-
+- - - - - - - - - - - - - - - - -f-"-E-x-c-e-s-s-i-v-e- -m-e-m-o-r-y- -u-s-a-g-e-:- -{-m-e-m-_-i-n-c-r-e-a-s-e-:-.-1-f-}- -M-B-"-
+- - - - - - - - - - - - -)-
+-
+- - - - - - - - -e-x-c-e-p-t- -I-m-p-o-r-t-E-r-r-o-r-:-
+- - - - - - - - - - - - -p-y-t-e-s-t-.-s-k-i-p-(-"-p-s-u-t-i-l- -n-o-t- -a-v-a-i-l-a-b-l-e- -f-o-r- -m-e-m-o-r-y- -p-r-o-f-i-l-i-n-g-"-)-
+-
+- - - - -d-e-f- -t-e-s-t-_-m-e-m-o-r-y-_-c-l-e-a-n-u-p-_-a-f-t-e-r-_-c-o-m-p-u-t-a-t-i-o-n-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -m-e-m-o-r-y- -i-s- -p-r-o-p-e-r-l-y- -c-l-e-a-n-e-d- -u-p-.-"-"-"-
+- - - - - - - - -t-r-y-:-
+- - - - - - - - - - - - -i-m-p-o-r-t- -p-s-u-t-i-l-
+- - - - - - - - - - - - -i-m-p-o-r-t- -o-s-
+-
+- - - - - - - - - - - - -p-r-o-c-e-s-s- -=- -p-s-u-t-i-l-.-P-r-o-c-e-s-s-(-o-s-.-g-e-t-p-i-d-(-)-)-
+-
+- - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+- - - - - - - - - - - - -m-e-m-_-b-a-s-e-l-i-n-e- -=- -p-r-o-c-e-s-s-.-m-e-m-o-r-y-_-i-n-f-o-(-)-.-r-s-s- -/- -1-0-2-4- -/- -1-0-2-4-
+-
+- - - - - - - - - - - - -#- -C-r-e-a-t-e- -a-n-d- -d-e-s-t-r-o-y- -m-a-n-y- -i-n-s-t-a-n-c-e-s-
+- - - - - - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-1-0-)-:-
+- - - - - - - - - - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - - - - - - - - - -d-e-l- -f-r-a-m-e-w-o-r-k-
+- - - - - - - - - - - - - - - - -d-e-l- -o-b-s-
+-
+- - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+- - - - - - - - - - - - -m-e-m-_-a-f-t-e-r- -=- -p-r-o-c-e-s-s-.-m-e-m-o-r-y-_-i-n-f-o-(-)-.-r-s-s- -/- -1-0-2-4- -/- -1-0-2-4-
+-
+- - - - - - - - - - - - -m-e-m-_-i-n-c-r-e-a-s-e- -=- -m-e-m-_-a-f-t-e-r- --- -m-e-m-_-b-a-s-e-l-i-n-e-
+-
+- - - - - - - - - - - - -p-r-i-n-t-(-f-"-\-n-💾- -M-e-m-o-r-y- -a-f-t-e-r- -1-0- -i-t-e-r-a-t-i-o-n-s-:- -+-{-m-e-m-_-i-n-c-r-e-a-s-e-:-.-1-f-}- -M-B-"-)-
+-
+- - - - - - - - - - - - -#- -S-h-o-u-l-d- -n-o-t- -h-a-v-e- -s-i-g-n-i-f-i-c-a-n-t- -m-e-m-o-r-y- -l-e-a-k-
+- - - - - - - - - - - - -a-s-s-e-r-t- -m-e-m-_-i-n-c-r-e-a-s-e- -<- -5-0-,- -(-
+- - - - - - - - - - - - - - - - -f-"-P-o-s-s-i-b-l-e- -m-e-m-o-r-y- -l-e-a-k-:- -{-m-e-m-_-i-n-c-r-e-a-s-e-:-.-1-f-}- -M-B- -a-f-t-e-r- -1-0- -i-t-e-r-a-t-i-o-n-s-"-
+- - - - - - - - - - - - -)-
+-
+- - - - - - - - -e-x-c-e-p-t- -I-m-p-o-r-t-E-r-r-o-r-:-
+- - - - - - - - - - - - -p-y-t-e-s-t-.-s-k-i-p-(-"-p-s-u-t-i-l- -n-o-t- -a-v-a-i-l-a-b-l-e-"-)-
+-
+- - - - -d-e-f- -t-e-s-t-_-l-a-r-g-e-_-m-o-n-t-e-_-c-a-r-l-o-_-m-e-m-o-r-y-_-e-f-f-i-c-i-e-n-c-y-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -m-e-m-o-r-y- -e-f-f-i-c-i-e-n-c-y- -w-i-t-h- -l-a-r-g-e- -M-o-n-t-e- -C-a-r-l-o- -s-i-m-u-l-a-t-i-o-n-.-"-"-"-
+- - - - - - - - -t-r-y-:-
+- - - - - - - - - - - - -i-m-p-o-r-t- -p-s-u-t-i-l-
+- - - - - - - - - - - - -i-m-p-o-r-t- -o-s-
+-
+- - - - - - - - - - - - -p-r-o-c-e-s-s- -=- -p-s-u-t-i-l-.-P-r-o-c-e-s-s-(-o-s-.-g-e-t-p-i-d-(-)-)-
+-
+- - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+- - - - - - - - - - - - -m-e-m-_-b-e-f-o-r-e- -=- -p-r-o-c-e-s-s-.-m-e-m-o-r-y-_-i-n-f-o-(-)-.-r-s-s- -/- -1-0-2-4- -/- -1-0-2-4-
+-
+- - - - - - - - - - - - -#- -R-u-n- -M-o-n-t-e- -C-a-r-l-o-
+- - - - - - - - - - - - -n-_-s-a-m-p-l-e-s- -=- -1-0-0-
+- - - - - - - - - - - - -r-e-s-u-l-t-s- -=- -[-]-
+-
+- - - - - - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-n-_-s-a-m-p-l-e-s-)-:-
+- - - - - - - - - - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - - - - - - - - - -#- -O-n-l-y- -s-t-o-r-e- -o-n-e- -v-a-l-u-e- -t-o- -t-e-s-t- -m-e-m-o-r-y- -e-f-f-i-c-i-e-n-c-y-
+- - - - - - - - - - - - - - - - -i-f- -'-a-l-p-h-a-_-i-n-v-_-M-Z-'- -i-n- -o-b-s-:-
+- - - - - - - - - - - - - - - - - - - - -r-e-s-u-l-t-s-.-a-p-p-e-n-d-(-o-b-s-[-'-a-l-p-h-a-_-i-n-v-_-M-Z-'-]-)-
+-
+- - - - - - - - - - - - - - - - -#- -C-l-e-a-n-u-p-
+- - - - - - - - - - - - - - - - -d-e-l- -f-r-a-m-e-w-o-r-k-
+- - - - - - - - - - - - - - - - -d-e-l- -o-b-s-
+-
+- - - - - - - - - - - - - - - - -i-f- -i- -%- -1-0- -=-=- -0-:-
+- - - - - - - - - - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+-
+- - - - - - - - - - - - -g-c-.-c-o-l-l-e-c-t-(-)-
+- - - - - - - - - - - - -m-e-m-_-a-f-t-e-r- -=- -p-r-o-c-e-s-s-.-m-e-m-o-r-y-_-i-n-f-o-(-)-.-r-s-s- -/- -1-0-2-4- -/- -1-0-2-4-
+-
+- - - - - - - - - - - - -m-e-m-_-i-n-c-r-e-a-s-e- -=- -m-e-m-_-a-f-t-e-r- --- -m-e-m-_-b-e-f-o-r-e-
+-
+- - - - - - - - - - - - -p-r-i-n-t-(-f-"-\-n-💾- -M-e-m-o-r-y- -f-o-r- -1-0-0- -s-a-m-p-l-e-s-:- -+-{-m-e-m-_-i-n-c-r-e-a-s-e-:-.-1-f-}- -M-B-"-)-
+-
+- - - - - - - - - - - - -#- -S-h-o-u-l-d- -s-c-a-l-e- -l-i-n-e-a-r-l-y-,- -n-o-t- -q-u-a-d-r-a-t-i-c-a-l-l-y-
+- - - - - - - - - - - - -a-s-s-e-r-t- -m-e-m-_-i-n-c-r-e-a-s-e- -<- -2-0-0-,- -(-
+- - - - - - - - - - - - - - - - -f-"-E-x-c-e-s-s-i-v-e- -m-e-m-o-r-y- -u-s-a-g-e- -f-o-r- -1-0-0- -s-a-m-p-l-e-s-:- -{-m-e-m-_-i-n-c-r-e-a-s-e-:-.-1-f-}- -M-B-"-
+- - - - - - - - - - - - -)-
+-
+- - - - - - - - -e-x-c-e-p-t- -I-m-p-o-r-t-E-r-r-o-r-:-
+- - - - - - - - - - - - -p-y-t-e-s-t-.-s-k-i-p-(-"-p-s-u-t-i-l- -n-o-t- -a-v-a-i-l-a-b-l-e-"-)-
+-
+-
+-c-l-a-s-s- -T-e-s-t-S-c-a-l-a-b-i-l-i-t-y-:-
+- - - - -"-"-"-T-e-s-t- -c-o-m-p-u-t-a-t-i-o-n-a-l- -s-c-a-l-a-b-i-l-i-t-y-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-p-a-r-a-m-e-t-e-r-_-s-w-e-e-p-_-s-c-a-l-a-b-i-l-i-t-y-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -p-e-r-f-o-r-m-a-n-c-e- -s-c-a-l-e-s- -l-i-n-e-a-r-l-y- -w-i-t-h- -n-u-m-b-e-r- -o-f- -e-v-a-l-u-a-t-i-o-n-s-.-"-"-"-
+- - - - - - - - -s-a-m-p-l-e-_-s-i-z-e-s- -=- -[-1-0-,- -2-0-,- -5-0-]-
+- - - - - - - - -t-i-m-i-n-g-s- -=- -[-]-
+-
+- - - - - - - - -f-o-r- -n-_-s-a-m-p-l-e-s- -i-n- -s-a-m-p-l-e-_-s-i-z-e-s-:-
+- - - - - - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+-
+- - - - - - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-n-_-s-a-m-p-l-e-s-)-:-
+- - - - - - - - - - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - - - - - -e-l-a-p-s-e-d- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+- - - - - - - - - - - - -t-i-m-e-_-p-e-r-_-s-a-m-p-l-e- -=- -e-l-a-p-s-e-d- -/- -n-_-s-a-m-p-l-e-s-
+-
+- - - - - - - - - - - - -t-i-m-i-n-g-s-.-a-p-p-e-n-d-(-(-n-_-s-a-m-p-l-e-s-,- -e-l-a-p-s-e-d-,- -t-i-m-e-_-p-e-r-_-s-a-m-p-l-e-)-)-
+-
+- - - - - - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -{-n-_-s-a-m-p-l-e-s-}- -s-a-m-p-l-e-s-:- -{-e-l-a-p-s-e-d-:-.-2-f-}-s- -(-{-t-i-m-e-_-p-e-r-_-s-a-m-p-l-e-:-.-3-f-}-s-/-s-a-m-p-l-e-)-"-)-
+-
+- - - - - - - - -#- -T-i-m-e- -p-e-r- -s-a-m-p-l-e- -s-h-o-u-l-d- -b-e- -r-o-u-g-h-l-y- -c-o-n-s-t-a-n-t-
+- - - - - - - - -t-i-m-e-s-_-p-e-r-_-s-a-m-p-l-e- -=- -[-t-[-2-]- -f-o-r- -t- -i-n- -t-i-m-i-n-g-s-]-
+- - - - - - - - -v-a-r-i-a-t-i-o-n- -=- -n-p-.-s-t-d-(-t-i-m-e-s-_-p-e-r-_-s-a-m-p-l-e-)- -/- -n-p-.-m-e-a-n-(-t-i-m-e-s-_-p-e-r-_-s-a-m-p-l-e-)-
+-
+- - - - - - - - -a-s-s-e-r-t- -v-a-r-i-a-t-i-o-n- -<- -0-.-5-,- -(-
+- - - - - - - - - - - - -f-"-H-i-g-h- -v-a-r-i-a-t-i-o-n- -i-n- -t-i-m-e- -p-e-r- -s-a-m-p-l-e-:- -{-v-a-r-i-a-t-i-o-n-*-1-0-0-:-.-1-f-}-%-"-
+- - - - - - - - -)-
+-
+- - - - -d-e-f- -t-e-s-t-_-p-a-r-a-l-l-e-l-_-p-o-t-e-n-t-i-a-l-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -t-h-a-t- -c-o-m-p-u-t-a-t-i-o-n-s- -a-r-e- -i-n-d-e-p-e-n-d-e-n-t- -(-p-a-r-a-l-l-e-l-i-z-a-b-l-e-)-.-"-"-"-
+- - - - - - - - -#- -T-e-s-t- -t-h-a-t- -r-e-s-u-l-t-s- -a-r-e- -i-d-e-n-t-i-c-a-l- -r-e-g-a-r-d-l-e-s-s- -o-f- -o-r-d-e-r-
+- - - - - - - - -f-r-a-m-e-w-o-r-k-s- -=- -[-G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)- -f-o-r- -_- -i-n- -r-a-n-g-e-(-5-)-]-
+-
+- - - - - - - - -r-e-s-u-l-t-s- -=- -[-f-w-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)- -f-o-r- -f-w- -i-n- -f-r-a-m-e-w-o-r-k-s-]-
+-
+- - - - - - - - -#- -A-l-l- -s-h-o-u-l-d- -g-i-v-e- -s-a-m-e- -r-e-s-u-l-t-s- -(-o-r-d-e-r---i-n-d-e-p-e-n-d-e-n-t-)-
+- - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-1-,- -l-e-n-(-r-e-s-u-l-t-s-)-)-:-
+- - - - - - - - - - - - -f-o-r- -k-e-y- -i-n- -r-e-s-u-l-t-s-[-0-]-:-
+- - - - - - - - - - - - - - - - -i-f- -k-e-y- -i-n- -r-e-s-u-l-t-s-[-i-]-:-
+- - - - - - - - - - - - - - - - - - - - -a-s-s-e-r-t- -r-e-s-u-l-t-s-[-0-]-[-k-e-y-]- -=-=- -r-e-s-u-l-t-s-[-i-]-[-k-e-y-]-,- -(-
+- - - - - - - - - - - - - - - - - - - - - - - - -f-"-R-e-s-u-l-t-s- -n-o-t- -o-r-d-e-r---i-n-d-e-p-e-n-d-e-n-t- -f-o-r- -{-k-e-y-}-"-
+- - - - - - - - - - - - - - - - - - - - -)-
+-
+-
+-c-l-a-s-s- -T-e-s-t-P-e-r-f-o-r-m-a-n-c-e-R-e-g-r-e-s-s-i-o-n-:-
+- - - - -"-"-"-D-e-t-e-c-t- -p-e-r-f-o-r-m-a-n-c-e- -r-e-g-r-e-s-s-i-o-n-s-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-c-o-m-p-u-t-a-t-i-o-n-_-t-i-m-e-_-r-e-g-r-e-s-s-i-o-n-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-e- -h-a-s-n-'-t- -r-e-g-r-e-s-s-e-d-.-"-"-"-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -#- -W-a-r-m- -u-p-
+- - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - -#- -M-e-a-s-u-r-e- -p-e-r-f-o-r-m-a-n-c-e-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+-
+- - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-5-)-:-
+- - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - -e-l-a-p-s-e-d- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+- - - - - - - - -a-v-g-_-t-i-m-e- -=- -e-l-a-p-s-e-d- -/- -5-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -A-v-e-r-a-g-e- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-e-:- -{-a-v-g-_-t-i-m-e-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -C-o-m-p-a-r-e- -w-i-t-h- -b-a-s-e-l-i-n-e-
+- - - - - - - - -b-a-s-e-l-i-n-e- -=- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-_-c-o-m-p-u-t-a-t-i-o-n-"-]-
+-
+- - - - - - - - -#- -S-h-o-u-l-d- -n-o-t- -b-e- -s-i-g-n-i-f-i-c-a-n-t-l-y- -s-l-o-w-e-r- -t-h-a-n- -b-a-s-e-l-i-n-e-
+- - - - - - - - -a-s-s-e-r-t- -a-v-g-_-t-i-m-e- -<- -1-.-5- -*- -b-a-s-e-l-i-n-e-,- -(-
+- - - - - - - - - - - - -f-"-P-E-R-F-O-R-M-A-N-C-E- -R-E-G-R-E-S-S-I-O-N-:- -{-a-v-g-_-t-i-m-e-:-.-3-f-}-s- -v-s- -b-a-s-e-l-i-n-e- -{-b-a-s-e-l-i-n-e-:-.-3-f-}-s-"-
+- - - - - - - - -)-
+-
+- - - - -d-e-f- -t-e-s-t-_-n-o-_-q-u-a-d-r-a-t-i-c-_-s-l-o-w-d-o-w-n-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-e- -d-o-e-s-n-'-t- -g-r-o-w- -q-u-a-d-r-a-t-i-c-a-l-l-y-.-"-"-"-
+- - - - - - - - -#- -T-e-s-t- -w-i-t-h- -i-n-c-r-e-a-s-i-n-g- -p-a-r-a-m-e-t-e-r- -v-a-r-i-a-t-i-o-n-s-
+- - - - - - - - -n-_-v-a-l-u-e-s- -=- -[-5-,- -1-0-,- -2-0-]-
+- - - - - - - - -t-i-m-i-n-g-s- -=- -[-]-
+-
+- - - - - - - - -f-o-r- -n- -i-n- -n-_-v-a-l-u-e-s-:-
+- - - - - - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+-
+- - - - - - - - - - - - -f-o-r- -i- -i-n- -r-a-n-g-e-(-n-)-:-
+- - - - - - - - - - - - - - - - -p-2- -=- -2-.-0- -+- -0-.-1- -*- -(-i- -/- -n-)-
+- - - - - - - - - - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-p-2-=-p-2-)-
+- - - - - - - - - - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - - - - - -e-l-a-p-s-e-d- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+- - - - - - - - - - - - -t-i-m-i-n-g-s-.-a-p-p-e-n-d-(-(-n-,- -e-l-a-p-s-e-d-)-)-
+-
+- - - - - - - - -#- -F-i-t- -l-i-n-e-a-r- -m-o-d-e-l-:- -t-i-m-e- -=- -a- -*- -n- -+- -b-
+- - - - - - - - -#- -I-f- -g-r-o-w-t-h- -i-s- -l-i-n-e-a-r-,- -R-^-2- -s-h-o-u-l-d- -b-e- -h-i-g-h-
+- - - - - - - - -n-_-a-r-r-a-y- -=- -n-p-.-a-r-r-a-y-(-[-t-[-0-]- -f-o-r- -t- -i-n- -t-i-m-i-n-g-s-]-)-
+- - - - - - - - -t-i-m-e-_-a-r-r-a-y- -=- -n-p-.-a-r-r-a-y-(-[-t-[-1-]- -f-o-r- -t- -i-n- -t-i-m-i-n-g-s-]-)-
+-
+- - - - - - - - -#- -S-i-m-p-l-e- -l-i-n-e-a-r- -f-i-t-
+- - - - - - - - -s-l-o-p-e- -=- -n-p-.-c-o-v-(-n-_-a-r-r-a-y-,- -t-i-m-e-_-a-r-r-a-y-)-[-0-,- -1-]- -/- -n-p-.-v-a-r-(-n-_-a-r-r-a-y-)-
+- - - - - - - - -i-n-t-e-r-c-e-p-t- -=- -n-p-.-m-e-a-n-(-t-i-m-e-_-a-r-r-a-y-)- --- -s-l-o-p-e- -*- -n-p-.-m-e-a-n-(-n-_-a-r-r-a-y-)-
+-
+- - - - - - - - -p-r-e-d-i-c-t-e-d- -=- -s-l-o-p-e- -*- -n-_-a-r-r-a-y- -+- -i-n-t-e-r-c-e-p-t-
+- - - - - - - - -r-e-s-i-d-u-a-l-s- -=- -t-i-m-e-_-a-r-r-a-y- --- -p-r-e-d-i-c-t-e-d-
+-
+- - - - - - - - -r-_-s-q-u-a-r-e-d- -=- -1- --- -(-n-p-.-s-u-m-(-r-e-s-i-d-u-a-l-s-*-*-2-)- -/- -n-p-.-s-u-m-(-(-t-i-m-e-_-a-r-r-a-y- --- -n-p-.-m-e-a-n-(-t-i-m-e-_-a-r-r-a-y-)-)-*-*-2-)-)-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-📊- -L-i-n-e-a-r- -f-i-t- -R-²-:- -{-r-_-s-q-u-a-r-e-d-:-.-3-f-}-"-)-
+-
+- - - - - - - - -#- -S-h-o-u-l-d- -b-e- -a-p-p-r-o-x-i-m-a-t-e-l-y- -l-i-n-e-a-r-
+- - - - - - - - -a-s-s-e-r-t- -r-_-s-q-u-a-r-e-d- ->- -0-.-8-,- -(-
+- - - - - - - - - - - - -f-"-N-o-n---l-i-n-e-a-r- -s-c-a-l-i-n-g- -d-e-t-e-c-t-e-d-:- -R-²-=-{-r-_-s-q-u-a-r-e-d-:-.-3-f-}-"-
+- - - - - - - - -)-
+-
+-
+-c-l-a-s-s- -T-e-s-t-B-o-t-t-l-e-n-e-c-k-I-d-e-n-t-i-f-i-c-a-t-i-o-n-:-
+- - - - -"-"-"-I-d-e-n-t-i-f-y- -p-e-r-f-o-r-m-a-n-c-e- -b-o-t-t-l-e-n-e-c-k-s-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-i-d-e-n-t-i-f-y-_-s-l-o-w-e-s-t-_-o-b-s-e-r-v-a-b-l-e-s-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-I-d-e-n-t-i-f-y- -w-h-i-c-h- -o-b-s-e-r-v-a-b-l-e-s- -a-r-e- -s-l-o-w-e-s-t- -t-o- -c-o-m-p-u-t-e-.-"-"-"-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -#- -T-h-i-s- -i-s- -a- -s-i-m-p-l-i-f-i-e-d- -t-e-s-t- --- -r-e-a-l- -p-r-o-f-i-l-i-n-g- -w-o-u-l-d- -u-s-e- -c-P-r-o-f-i-l-e-
+- - - - - - - - -#- -F-o-r- -n-o-w-,- -j-u-s-t- -t-e-s-t- -t-h-a-t- -w-e- -c-a-n- -c-o-m-p-u-t-e- -a-l-l- -o-b-s-e-r-v-a-b-l-e-s-
+-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -t-o-t-a-l-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -T-o-t-a-l- -t-i-m-e- -f-o-r- -{-l-e-n-(-o-b-s-)-}- -o-b-s-e-r-v-a-b-l-e-s-:- -{-t-o-t-a-l-_-t-i-m-e-:-.-3-f-}-s-"-)-
+- - - - - - - - -p-r-i-n-t-(-f-"-⏱-️- - -A-v-e-r-a-g-e- -t-i-m-e- -p-e-r- -o-b-s-e-r-v-a-b-l-e-:- -{-t-o-t-a-l-_-t-i-m-e-/-l-e-n-(-o-b-s-)-:-.-4-f-}-s-"-)-
+-
+- - - - - - - - -#- -S-h-o-u-l-d- -b-e- -e-f-f-i-c-i-e-n-t-
+- - - - - - - - -a-s-s-e-r-t- -t-o-t-a-l-_-t-i-m-e- -/- -l-e-n-(-o-b-s-)- -<- -0-.-1-,- -"-O-b-s-e-r-v-a-b-l-e-s- -t-a-k-i-n-g- -t-o-o- -l-o-n-g- -o-n- -a-v-e-r-a-g-e-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-_-o-v-e-r-h-e-a-d-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -i-n-i-t-i-a-l-i-z-a-t-i-o-n- -o-v-e-r-h-e-a-d- -v-s- -c-o-m-p-u-t-a-t-i-o-n- -t-i-m-e-.-"-"-"-
+- - - - - - - - -#- -M-e-a-s-u-r-e- -i-n-i-t-i-a-l-i-z-a-t-i-o-n-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - -i-n-i-t-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -#- -M-e-a-s-u-r-e- -c-o-m-p-u-t-a-t-i-o-n-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -c-o-m-p-u-t-e-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -I-n-i-t-:- -{-i-n-i-t-_-t-i-m-e-:-.-4-f-}-s-,- -C-o-m-p-u-t-e-:- -{-c-o-m-p-u-t-e-_-t-i-m-e-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -I-n-i-t-i-a-l-i-z-a-t-i-o-n- -s-h-o-u-l-d- -b-e- -s-m-a-l-l- -f-r-a-c-t-i-o-n- -o-f- -t-o-t-a-l-
+- - - - - - - - -a-s-s-e-r-t- -i-n-i-t-_-t-i-m-e- -<- -0-.-5- -*- -c-o-m-p-u-t-e-_-t-i-m-e-,- -(-
+- - - - - - - - - - - - -"-I-n-i-t-i-a-l-i-z-a-t-i-o-n- -o-v-e-r-h-e-a-d- -t-o-o- -h-i-g-h-"-
+- - - - - - - - -)-
+-
+-
+-c-l-a-s-s- -T-e-s-t-C-a-c-h-i-n-g-E-f-f-e-c-t-i-v-e-n-e-s-s-:-
+- - - - -"-"-"-T-e-s-t- -e-f-f-e-c-t-i-v-e-n-e-s-s- -o-f- -a-n-y- -c-a-c-h-i-n-g- -m-e-c-h-a-n-i-s-m-s-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-r-e-p-e-a-t-e-d-_-a-c-c-e-s-s-_-p-e-r-f-o-r-m-a-n-c-e-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -t-h-a-t- -r-e-p-e-a-t-e-d- -a-c-c-e-s-s- -t-o- -s-a-m-e- -o-b-s-e-r-v-a-b-l-e- -i-s- -f-a-s-t-.-"-"-"-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -#- -F-i-r-s-t- -a-c-c-e-s-s- -(-c-o-m-p-u-t-e-)-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s-1- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -f-i-r-s-t-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -#- -S-e-c-o-n-d- -a-c-c-e-s-s- -(-m-a-y- -b-e- -c-a-c-h-e-d-)-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s-2- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -s-e-c-o-n-d-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -F-i-r-s-t- -a-c-c-e-s-s-:- -{-f-i-r-s-t-_-t-i-m-e-:-.-3-f-}-s-"-)-
+- - - - - - - - -p-r-i-n-t-(-f-"-⏱-️- - -S-e-c-o-n-d- -a-c-c-e-s-s-:- -{-s-e-c-o-n-d-_-t-i-m-e-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -I-f- -t-h-e-r-e-'-s- -c-a-c-h-i-n-g-,- -s-e-c-o-n-d- -s-h-o-u-l-d- -b-e- -f-a-s-t-e-r- -o-r- -s-a-m-e-
+- - - - - - - - -#- -I-f- -n-o- -c-a-c-h-i-n-g-,- -s-h-o-u-l-d- -s-t-i-l-l- -b-e- -c-o-m-p-a-r-a-b-l-e-
+- - - - - - - - -a-s-s-e-r-t- -s-e-c-o-n-d-_-t-i-m-e- -<-=- -2- -*- -f-i-r-s-t-_-t-i-m-e-
+-
+-
+-c-l-a-s-s- -T-e-s-t-N-u-m-e-r-i-c-a-l-P-r-e-c-i-s-i-o-n-V-s-S-p-e-e-d-:-
+- - - - -"-"-"-T-e-s-t- -t-r-a-d-e---o-f-f-s- -b-e-t-w-e-e-n- -p-r-e-c-i-s-i-o-n- -a-n-d- -s-p-e-e-d-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-p-r-e-c-i-s-i-o-n-_-m-a-i-n-t-a-i-n-e-d-_-d-e-s-p-i-t-e-_-o-p-t-i-m-i-z-a-t-i-o-n-s-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -t-h-a-t- -a-n-y- -s-p-e-e-d- -o-p-t-i-m-i-z-a-t-i-o-n-s- -d-o-n-'-t- -c-o-m-p-r-o-m-i-s-e- -p-r-e-c-i-s-i-o-n-.-"-"-"-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+-
+- - - - - - - - -#- -C-o-m-p-u-t-e- -o-b-s-e-r-v-a-b-l-e-s-
+- - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+-
+- - - - - - - - -#- -K-n-o-w-n- -e-x-a-c-t- -v-a-l-u-e-s-
+- - - - - - - - -e-x-a-c-t-_-v-a-l-u-e-s- -=- -{-
+- - - - - - - - - - - - -"-d-e-l-t-a-_-C-P-"-:- -1-9-7-.-0-,-
+- - - - - - - - - - - - -"-Q-_-K-o-i-d-e-"-:- -2-/-3-,-
+- - - - - - - - - - - - -"-m-_-t-a-u-_-m-_-e-"-:- -3-4-7-7-.-0-,-
+- - - - - - - - - - - - -"-m-_-s-_-m-_-d-"-:- -2-0-.-0-,-
+- - - - - - - - -}-
+-
+- - - - - - - - -f-o-r- -o-b-s-_-n-a-m-e-,- -e-x-a-c-t-_-v-a-l- -i-n- -e-x-a-c-t-_-v-a-l-u-e-s-.-i-t-e-m-s-(-)-:-
+- - - - - - - - - - - - -i-f- -o-b-s-_-n-a-m-e- -i-n- -o-b-s-:-
+- - - - - - - - - - - - - - - - -c-o-m-p-u-t-e-d-_-v-a-l- -=- -o-b-s-[-o-b-s-_-n-a-m-e-]-
+-
+- - - - - - - - - - - - - - - - -#- -S-h-o-u-l-d- -m-a-i-n-t-a-i-n- -h-i-g-h- -p-r-e-c-i-s-i-o-n-
+- - - - - - - - - - - - - - - - -r-e-l-_-e-r-r-o-r- -=- -a-b-s-(-c-o-m-p-u-t-e-d-_-v-a-l- --- -e-x-a-c-t-_-v-a-l-)- -/- -e-x-a-c-t-_-v-a-l-
+-
+- - - - - - - - - - - - - - - - -a-s-s-e-r-t- -r-e-l-_-e-r-r-o-r- -<- -1-e---1-0-,- -(-
+- - - - - - - - - - - - - - - - - - - - -f-"-{-o-b-s-_-n-a-m-e-}-:- -p-r-e-c-i-s-i-o-n- -c-o-m-p-r-o-m-i-s-e-d- -(-{-r-e-l-_-e-r-r-o-r-:-.-2-e-}- -r-e-l-a-t-i-v-e- -e-r-r-o-r-)-"-
+- - - - - - - - - - - - - - - - -)-
+-
+-
+-c-l-a-s-s- -T-e-s-t-C-o-n-c-u-r-r-e-n-t-P-e-r-f-o-r-m-a-n-c-e-:-
+- - - - -"-"-"-T-e-s-t- -p-e-r-f-o-r-m-a-n-c-e- -w-i-t-h- -c-o-n-c-u-r-r-e-n-t- -o-p-e-r-a-t-i-o-n-s-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-n-o-_-i-n-t-e-r-f-e-r-e-n-c-e-_-b-e-t-w-e-e-n-_-i-n-s-t-a-n-c-e-s-(-s-e-l-f-)-:-
+- - - - - - - - -"-"-"-T-e-s-t- -m-u-l-t-i-p-l-e- -i-n-s-t-a-n-c-e-s- -d-o-n-'-t- -i-n-t-e-r-f-e-r-e-.-"-"-"-
+- - - - - - - - -#- -C-r-e-a-t-e- -m-u-l-t-i-p-l-e- -i-n-s-t-a-n-c-e-s-
+- - - - - - - - -f-r-a-m-e-w-o-r-k-s- -=- -[-G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)- -f-o-r- -_- -i-n- -r-a-n-g-e-(-3-)-]-
+-
+- - - - - - - - -#- -T-i-m-e- -s-e-q-u-e-n-t-i-a-l- -e-x-e-c-u-t-i-o-n-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -r-e-s-u-l-t-s-_-s-e-q- -=- -[-]-
+- - - - - - - - -f-o-r- -f-w- -i-n- -f-r-a-m-e-w-o-r-k-s-:-
+- - - - - - - - - - - - -r-e-s-u-l-t-s-_-s-e-q-.-a-p-p-e-n-d-(-f-w-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-)-
+- - - - - - - - -s-e-q-u-e-n-t-i-a-l-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -#- -C-r-e-a-t-e- -f-r-e-s-h- -i-n-s-t-a-n-c-e-s-
+- - - - - - - - -f-r-a-m-e-w-o-r-k-s-2- -=- -[-G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)- -f-o-r- -_- -i-n- -r-a-n-g-e-(-3-)-]-
+-
+- - - - - - - - -#- -T-i-m-e- -a-g-a-i-n- -(-s-h-o-u-l-d- -b-e- -s-i-m-i-l-a-r-)-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -r-e-s-u-l-t-s-_-s-e-q-2- -=- -[-]-
+- - - - - - - - -f-o-r- -f-w- -i-n- -f-r-a-m-e-w-o-r-k-s-2-:-
+- - - - - - - - - - - - -r-e-s-u-l-t-s-_-s-e-q-2-.-a-p-p-e-n-d-(-f-w-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-)-
+- - - - - - - - -s-e-q-u-e-n-t-i-a-l-_-t-i-m-e-2- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -p-r-i-n-t-(-f-"-\-n-⏱-️- - -S-e-q-u-e-n-t-i-a-l- -r-u-n- -1-:- -{-s-e-q-u-e-n-t-i-a-l-_-t-i-m-e-:-.-3-f-}-s-"-)-
+- - - - - - - - -p-r-i-n-t-(-f-"-⏱-️- - -S-e-q-u-e-n-t-i-a-l- -r-u-n- -2-:- -{-s-e-q-u-e-n-t-i-a-l-_-t-i-m-e-2-:-.-3-f-}-s-"-)-
+-
+- - - - - - - - -#- -S-h-o-u-l-d- -h-a-v-e- -s-i-m-i-l-a-r- -p-e-r-f-o-r-m-a-n-c-e-
+- - - - - - - - -a-s-s-e-r-t- -a-b-s-(-s-e-q-u-e-n-t-i-a-l-_-t-i-m-e- --- -s-e-q-u-e-n-t-i-a-l-_-t-i-m-e-2-)- -<- -0-.-5- -*- -s-e-q-u-e-n-t-i-a-l-_-t-i-m-e-
+-
+-
+-c-l-a-s-s- -T-e-s-t-B-e-n-c-h-m-a-r-k-R-e-p-o-r-t-i-n-g-:-
+- - - - -"-"-"-G-e-n-e-r-a-t-e- -b-e-n-c-h-m-a-r-k- -r-e-p-o-r-t-s-.-"-"-"-
+-
+- - - - -d-e-f- -t-e-s-t-_-g-e-n-e-r-a-t-e-_-p-e-r-f-o-r-m-a-n-c-e-_-r-e-p-o-r-t-(-s-e-l-f-,- -t-m-p-_-p-a-t-h-)-:-
+- - - - - - - - -"-"-"-G-e-n-e-r-a-t-e- -c-o-m-p-r-e-h-e-n-s-i-v-e- -p-e-r-f-o-r-m-a-n-c-e- -b-e-n-c-h-m-a-r-k- -r-e-p-o-r-t-.-"-"-"-
+- - - - - - - - -i-m-p-o-r-t- -j-s-o-n-
+- - - - - - - - -i-m-p-o-r-t- -d-a-t-e-t-i-m-e-
+-
+- - - - - - - - -r-e-p-o-r-t- -=- -{-
+- - - - - - - - - - - - -"-t-i-m-e-s-t-a-m-p-"-:- -d-a-t-e-t-i-m-e-.-d-a-t-e-t-i-m-e-.-n-o-w-(-)-.-i-s-o-f-o-r-m-a-t-(-)-,-
+- - - - - - - - - - - - -"-v-e-r-s-i-o-n-"-:- -"-2-.-1-.-0-"-,-
+- - - - - - - - - - - - -"-b-e-n-c-h-m-a-r-k-s-"-:- -{-}-
+- - - - - - - - -}-
+-
+- - - - - - - - -#- -F-r-a-m-e-w-o-r-k- -i-n-i-t-i-a-l-i-z-a-t-i-o-n-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -f-r-a-m-e-w-o-r-k- -=- -G-I-F-T-F-r-a-m-e-w-o-r-k-V-2-1-(-)-
+- - - - - - - - -i-n-i-t-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -r-e-p-o-r-t-[-"-b-e-n-c-h-m-a-r-k-s-"-]-[-"-i-n-i-t-i-a-l-i-z-a-t-i-o-n-"-]- -=- -{-
+- - - - - - - - - - - - -"-t-i-m-e-_-s-e-c-o-n-d-s-"-:- -i-n-i-t-_-t-i-m-e-,-
+- - - - - - - - - - - - -"-b-a-s-e-l-i-n-e-_-s-e-c-o-n-d-s-"-:- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-f-r-a-m-e-w-o-r-k-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-"-]-,-
+- - - - - - - - - - - - -"-w-i-t-h-i-n-_-b-a-s-e-l-i-n-e-"-:- -i-n-i-t-_-t-i-m-e- -<- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-f-r-a-m-e-w-o-r-k-_-i-n-i-t-i-a-l-i-z-a-t-i-o-n-"-]-
+- - - - - - - - -}-
+-
+- - - - - - - - -#- -O-b-s-e-r-v-a-b-l-e- -c-o-m-p-u-t-a-t-i-o-n-
+- - - - - - - - -s-t-a-r-t- -=- -t-i-m-e-.-t-i-m-e-(-)-
+- - - - - - - - -o-b-s- -=- -f-r-a-m-e-w-o-r-k-.-c-o-m-p-u-t-e-_-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-(-)-
+- - - - - - - - -c-o-m-p-u-t-e-_-t-i-m-e- -=- -t-i-m-e-.-t-i-m-e-(-)- --- -s-t-a-r-t-
+-
+- - - - - - - - -r-e-p-o-r-t-[-"-b-e-n-c-h-m-a-r-k-s-"-]-[-"-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-"-]- -=- -{-
+- - - - - - - - - - - - -"-t-i-m-e-_-s-e-c-o-n-d-s-"-:- -c-o-m-p-u-t-e-_-t-i-m-e-,-
+- - - - - - - - - - - - -"-n-_-o-b-s-e-r-v-a-b-l-e-s-"-:- -l-e-n-(-o-b-s-)-,-
+- - - - - - - - - - - - -"-t-i-m-e-_-p-e-r-_-o-b-s-e-r-v-a-b-l-e-"-:- -c-o-m-p-u-t-e-_-t-i-m-e- -/- -l-e-n-(-o-b-s-)-,-
+- - - - - - - - - - - - -"-b-a-s-e-l-i-n-e-_-s-e-c-o-n-d-s-"-:- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-_-c-o-m-p-u-t-a-t-i-o-n-"-]-,-
+- - - - - - - - - - - - -"-w-i-t-h-i-n-_-b-a-s-e-l-i-n-e-"-:- -c-o-m-p-u-t-e-_-t-i-m-e- -<- -P-E-R-F-O-R-M-A-N-C-E-_-B-A-S-E-L-I-N-E-S-[-"-a-l-l-_-o-b-s-e-r-v-a-b-l-e-s-_-c-o-m-p-u-t-a-t-i-o-n-"-]-
+- - - - - - - - -}-
+-
+- - - - - - - - -#- -S-a-v-e- -r-e-p-o-r-t-
+- - - - - - - - -r-e-p-o-r-t-_-f-i-l-e- -=- -t-m-p-_-p-a-t-h- -/- -"-p-e-r-f-o-r-m-a-n-c-e-_-b-e-n-c-h-m-a-r-k-.-j-s-o-n-"-
+-
+- - - - - - - - -w-i-t-h- -o-p-e-n-(-r-e-p-o-r-t-_-f-i-l-e-,- -'-w-'-)- -a-s- -f-:-
+- - - - - - - - - - - - -j-s-o-n-.-d-u-m-p-(-r-e-p-o-r-t-,- -f-,- -i-n-d-e-n-t-=-2-)-
+-
+- - - - - - - - -p-r-i-n-t-(-"-\-n-"- -+- -"-=-"-*-6-0-)-
+- - - - - - - - -p-r-i-n-t-(-"-P-E-R-F-O-R-M-A-N-C-E- -B-E-N-C-H-M-A-R-K- -R-E-P-O-R-T-"-)-
+- - - - - - - - -p-r-i-n-t-(-"-=-"-*-6-0-)-
+- - - - - - - - -p-r-i-n-t-(-f-"-I-n-i-t-i-a-l-i-z-a-t-i-o-n-:- -{-i-n-i-t-_-t-i-m-e-*-1-0-0-0-:-.-1-f-}-m-s-"-)-
+- - - - - - - - -p-r-i-n-t-(-f-"-A-l-l- -o-b-s-e-r-v-a-b-l-e-s-:- -{-c-o-m-p-u-t-e-_-t-i-m-e-:-.-3-f-}-s- -(-{-l-e-n-(-o-b-s-)-}- -o-b-s-e-r-v-a-b-l-e-s-)-"-)-
+- - - - - - - - -p-r-i-n-t-(-f-"-P-e-r- -o-b-s-e-r-v-a-b-l-e-:- -{-c-o-m-p-u-t-e-_-t-i-m-e-/-l-e-n-(-o-b-s-)-*-1-0-0-0-:-.-1-f-}-m-s-"-)-
+- - - - - - - - -p-r-i-n-t-(-"-=-"-*-6-0-)-
+-
+- - - - - - - - -a-s-s-e-r-t- -r-e-p-o-r-t-_-f-i-l-e-.-e-x-i-s-t-s-(-)-
+-
