@@ -29,9 +29,7 @@ def dim_J3O : ℕ := 27
 theorem J3O_dimension_formula : 3 + 3 * 8 = 27 := by native_decide
 
 /-- Alternative: 3 diagonal + 3 upper triangle × 8 -/
-theorem J3O_dimension_alt : 3 + 3 * dim_octonions = dim_J3O := by
-  simp only [dim_octonions, dim_J3O]
-  native_decide
+theorem J3O_dimension_alt : 3 + 3 * dim_octonions = dim_J3O := rfl
 
 /-! ## Connection to E₈ -/
 
@@ -39,9 +37,7 @@ theorem J3O_dimension_alt : 3 + 3 * dim_octonions = dim_J3O := by
 def dim_E8 : ℕ := 248
 
 /-- E₈ minus J₃(𝕆) -/
-theorem E8_minus_J3O : dim_E8 - dim_J3O = 221 := by
-  simp only [dim_E8, dim_J3O]
-  native_decide
+theorem E8_minus_J3O : dim_E8 - dim_J3O = 221 := rfl
 
 /-- 221 = 13 × 17 (significant in GIFT) -/
 theorem factor_221 : 221 = 13 * 17 := by native_decide

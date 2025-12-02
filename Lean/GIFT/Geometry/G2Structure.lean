@@ -39,9 +39,7 @@ def dim_Lambda3_7 : ℕ := 7
 def dim_Lambda3_27 : ℕ := 27
 
 /-- The G₂ orbit decomposition sums to 35 -/
-theorem G2_orbit_sum : dim_Lambda3_1 + dim_Lambda3_7 + dim_Lambda3_27 = 35 := by
-  simp only [dim_Lambda3_1, dim_Lambda3_7, dim_Lambda3_27]
-  native_decide
+theorem G2_orbit_sum : dim_Lambda3_1 + dim_Lambda3_7 + dim_Lambda3_27 = 35 := rfl
 
 /-- List version of orbit sum -/
 theorem G2_orbit_list_sum : Lambda3_decomposition.sum = 35 := by native_decide

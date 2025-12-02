@@ -33,9 +33,7 @@ theorem typeII_formula : 2^8 / 2 = 128 := by native_decide
 def E8_num_roots : ℕ := 240
 
 /-- E₈ roots = Type I + Type II -/
-theorem E8_roots_sum : typeI_count + typeII_count = E8_num_roots := by
-  simp only [typeI_count, typeII_count, E8_num_roots]
-  native_decide
+theorem E8_roots_sum : typeI_count + typeII_count = E8_num_roots := rfl
 
 /-! ## E₈ Lie Algebra Dimension -/
 
@@ -46,9 +44,7 @@ def E8_rank : ℕ := 8
 def dim_E8 : ℕ := 248
 
 /-- E₈ dimension = roots + Cartan -/
-theorem E8_dim_formula : E8_num_roots + E8_rank = dim_E8 := by
-  simp only [E8_num_roots, E8_rank, dim_E8]
-  native_decide
+theorem E8_dim_formula : E8_num_roots + E8_rank = dim_E8 := rfl
 
 /-! ## Root Properties -/
 
@@ -64,14 +60,10 @@ axiom E8_Dynkin_simply_laced : True
 def dim_E8xE8 : ℕ := 496
 
 /-- E₈ × E₈ dimension formula -/
-theorem dim_E8xE8_is_2_dim_E8 : 2 * dim_E8 = dim_E8xE8 := by
-  simp only [dim_E8, dim_E8xE8]
-  native_decide
+theorem dim_E8xE8_is_2_dim_E8 : 2 * dim_E8 = dim_E8xE8 := rfl
 
 /-- Alternative form -/
-theorem E8xE8_sum : dim_E8 + dim_E8 = dim_E8xE8 := by
-  simp only [dim_E8, dim_E8xE8]
-  native_decide
+theorem E8xE8_sum : dim_E8 + dim_E8 = dim_E8xE8 := rfl
 
 /-! ## Key Integer 248 -/
 

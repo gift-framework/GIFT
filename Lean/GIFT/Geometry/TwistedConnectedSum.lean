@@ -52,13 +52,9 @@ structure K7_manifold where
   b3 : ℕ := 77
 
 /-- K₇ Betti numbers from TCS -/
-theorem K7_b2_from_TCS : TCS_b2 Quintic CI_222 = 21 := by
-  simp only [TCS_b2, Quintic, CI_222]
-  native_decide
+theorem K7_b2_from_TCS : TCS_b2 Quintic CI_222 = 21 := rfl
 
-theorem K7_b3_from_TCS : TCS_b3 Quintic CI_222 = 77 := by
-  simp only [TCS_b3, Quintic, CI_222]
-  native_decide
+theorem K7_b3_from_TCS : TCS_b3 Quintic CI_222 = 77 := rfl
 
 /-! ## K₇ Topological Invariants -/
 
@@ -72,9 +68,7 @@ def b3_K7 : ℕ := 77
     = 2 - 2b₂ + b₃ (using Poincaré duality) -/
 def euler_char_K7 : ℤ := 2 * b2_K7 - b3_K7 + 2
 
-theorem K7_euler_char : euler_char_K7 = -33 := by
-  simp only [euler_char_K7, b2_K7, b3_K7]
-  native_decide
+theorem K7_euler_char : euler_char_K7 = -33 := rfl
 
 /-! ## TCS Properties -/
 
