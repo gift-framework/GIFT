@@ -91,5 +91,5 @@
    "inputRev": "main",
    "inherited": true,
    "configFile": "lakefile.toml"}],
- "name": "gift_certificates",
+ "name": "gift_banach",
  "lakeDir": ".lake"}

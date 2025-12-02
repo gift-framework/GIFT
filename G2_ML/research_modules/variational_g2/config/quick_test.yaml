@@ -1,0 +1,93 @@
+# Quick test configuration for G2 Variational Training
+# Reduced epochs for testing
+
+physics:
+  b2: 21
+  b3: 77
+  h_star: 99
+  det_g: 2.03125
+  det_g_exact: "65/32"
+  kappa_T: 0.01639344
+  kappa_T_exact: "1/61"
+  g2_dim: 14
+  k7_dim: 7
+  p2: 2
+  beta_0: 0.392699
+  weyl_factor: 5
+  xi: 0.981748
+
+model:
+  input_dim: 7
+  phi_components: 35
+  fourier_features:
+    enabled: true
+    num_frequencies: 32
+    scale: 1.0
+  hidden_layers: [128, 256, 128]
+  activation: "silu"
+  output_activation: "none"
+  positivity:
+    method: "eigenvalue_projection"
+    min_eigenvalue: 0.000001
+
+training:
+  phases:
+    - name: "quick_test"
+      epochs: 100
+      focus: "quick validation"
+      weights:
+        torsion: 1.0
+        det: 1.0
+        positivity: 1.0
+        cohomology: 0.0
+      lr: 0.001
+
+  total_epochs: 100
+  grid:
+    resolution: 8
+    domain: [-1.0, 1.0]
+  batch_size: 512
+  num_workers: 0
+  optimizer: "adam"
+  weight_decay: 0.000001
+  lr_schedule:
+    type: "cosine_annealing"
+    T_max: 100
+    eta_min: 0.0001
+  grad_clip: 1.0
+  checkpoint_freq: 50
+  early_stopping:
+    enabled: false
+    patience: 50
+    min_delta: 0.0000001
+
+validation:
+  metrics:
+    det_g:
+      target: 2.03125
+      tolerance: 0.01
+    kappa_T:
+      target: 0.01639344
+      tolerance: 0.005
+  eval_freq: 20
+  grid_resolution: 8
+
+output:
+  checkpoints_dir: "outputs/checkpoints"
+  metrics_dir: "outputs/metrics"
+  artifacts_dir: "outputs/artifacts"
+  save_phi: true
+  save_metric: true
+  save_harmonic_bases: false
+  save_validation: true
+  model_format: "pt"
+  data_format: "npz"
+
+logging:
+  level: "INFO"
+  tensorboard: false
+  wandb: false
+  log_freq: 10
+
+seed: 42
+deterministic: true

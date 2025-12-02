@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-11-30T16:14:33.811684",
+  "level": "4b",
+  "method": "effective_lipschitz",
+  "n_samples": 500,
+  "lipschitz": {
+    "L_eff_max": 0.0004527181154116988,
+    "L_eff_p99": 0.0003527892113197595,
+    "L_eff_mean": 0.00018582156917545944,
+    "L_safe": 0.0009054362308233976,
+    "safety_factor": 2.0
+  },
+  "coverage": {
+    "delta_max": 1.2761350517418983,
+    "delta_p99": 0.9963617241878756,
+    "delta_mean": 0.6861176799838152
+  },
+  "torsion": {
+    "max": 0.0006096773431636393,
+    "mean": 0.0004523760871961713,
+    "std": 3.939612361136824e-05,
+    "p99": 0.0005460652173496783
+  },
+  "bounds": {
+    "global_bound": 0.0017651362544344453,
+    "global_bound_p99": 0.0008975708842151146,
+    "joyce_threshold": 0.1,
+    "satisfies_joyce": true
+  }
+}
