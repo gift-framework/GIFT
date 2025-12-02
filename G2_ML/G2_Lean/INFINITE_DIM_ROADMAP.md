@@ -407,12 +407,15 @@ G2_ML/G2_Lean/
 - [x] Hodge star stub on flat ℝ⁷ (HodgeProto.lean)
 - [x] G₂ structures on flat space
 - [x] Lifting axioms (partition of unity)
-- [ ] Tie HodgeProto to G2CertificateV2
+- [x] Tie HodgeProto to G2CertificateV2
 
-### Milestone 4: Full Formalization
+### Milestone 4: Partition of Unity Resolution (PARTIAL)
+- [x] Partition of unity stub in G2CertificateV2.lean (Section 16-17)
+- [x] Local L² metric → global metric framework
+- [x] Local torsion → global torsion framework
+- [x] Local completeness → global completeness framework
+- [ ] Eliminate remaining inner `sorry` (elementary analysis)
 - [ ] Hodge decomposition theorem (Mathlib WIP)
-- [ ] L² theory on compact manifolds
-- [ ] All lifting axioms eliminated
 
 ---
 
@@ -436,5 +439,6 @@ G2_ML/G2_Lean/
 
 ---
 
-*Last updated: 2025-12-01*
+*Last updated: 2025-12-02*
 *GIFT Framework v2.2.0*
+*Milestone 4 Partial: Partition of Unity stub added*
