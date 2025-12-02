@@ -13,10 +13,11 @@ namespace GIFT.Relations
 
 /-! ## Higgs Self-Coupling λ_H -/
 
+/-- dim(SU(2)) for reference -/
+def dim_SU2 : ℕ := 3
+
 /-- λ_H numerator: dim(G₂) + N_gen = 14 + 3 = 17 -/
-theorem lambda_H_numerator : dim_G2 + N_gen = 17 := by
-  simp only [dim_G2, N_gen]
-  native_decide
+theorem lambda_H_numerator : dim_G2 + N_gen = 17 := rfl
 
 /-- λ_H denominator: 2⁵ = 32 -/
 theorem lambda_H_denominator : 2^5 = 32 := by native_decide
@@ -25,9 +26,7 @@ theorem lambda_H_denominator : 2^5 = 32 := by native_decide
 theorem lambda_H_squared : (17 : ℚ) / 32 = 17 / 32 := by norm_num
 
 /-- 17 from framework: 99 - 21 - 61 = 17 -/
-theorem seventeen_structure : H_star - b2_K7 - 61 = 17 := by
-  simp only [H_star, b2_K7, b3_K7]
-  native_decide
+theorem seventeen_structure : H_star - b2_K7 - 61 = 17 := rfl
 
 /-- Alternative: 221/13 = 17 (from E₈ - J₃(𝕆) = 221 = 13 × 17) -/
 theorem seventeen_from_221 : 221 / 13 = 17 := by native_decide
@@ -44,12 +43,12 @@ theorem higgs_mass_structure : 17 + 32 = 49 := by native_decide
 theorem factor_49 : 49 = 7^2 := by native_decide
 
 /-- m_H in units of v: involves dim(G₂) -/
-theorem higgs_v_structure : 2 * dim_G2 = 28 := by native_decide
+theorem higgs_v_structure : 2 * dim_G2 = 28 := rfl
 
 /-! ## Higgs VEV Structure -/
 
 /-- v² structure from b₂ × b₃ = 21 × 77 = 1617 -/
-theorem vev_squared_structure : b2_K7 * b3_K7 = 1617 := by native_decide
+theorem vev_squared_structure : b2_K7 * b3_K7 = 1617 := rfl
 
 /-- 1617 = 3 × 7 × 7 × 11 = 3 × 7² × 11 -/
 theorem factor_1617 : 1617 = 3 * 539 := by native_decide
@@ -74,10 +73,6 @@ theorem higgs_complex_real : 2 * 2 = 4 := by native_decide
 theorem ewsb_decomposition : 1 + 3 = 4 := by native_decide
 
 /-- Goldstones become W⁺, W⁻, Z longitudinal modes -/
-theorem goldstone_count : 3 = dim_SU2 := by
-  simp only [dim_SU2]
-
-/-- dim(SU(2)) for reference -/
-def dim_SU2 : ℕ := 3
+theorem goldstone_count : 3 = dim_SU2 := rfl
 
 end GIFT.Relations

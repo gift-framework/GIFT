@@ -62,9 +62,7 @@ theorem K7_betti_sum : K7.b2 + K7.b3 = 98 := by native_decide
 def H_star (M : G2Manifold) : ℕ := M.b2 + M.b3 + 1
 
 /-- H*(K₇) = 99 -/
-theorem K7_H_star : H_star K7 = 99 := by
-  simp only [H_star, K7]
-  native_decide
+theorem K7_H_star : H_star K7 = 99 := rfl
 
 /-- Alternative: 21 + 77 + 1 = 99 -/
 theorem H_star_explicit : 21 + 77 + 1 = 99 := by native_decide
@@ -101,8 +99,6 @@ def total_betti (M : G2Manifold) : ℕ :=
   M.b0 + M.b1 + M.b2 + M.b3 + M.b4 + M.b5 + M.b6 + M.b7
 
 /-- Total Betti sum for K₇ -/
-theorem K7_total_betti : total_betti K7 = 198 := by
-  simp only [total_betti, K7]
-  native_decide
+theorem K7_total_betti : total_betti K7 = 198 := rfl
 
 end GIFT.Topology
