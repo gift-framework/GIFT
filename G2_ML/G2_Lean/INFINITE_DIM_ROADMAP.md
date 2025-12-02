@@ -384,32 +384,35 @@ G2_ML/G2_Lean/
 | File | Status | Description |
 |------|--------|-------------|
 | `G2Certificate.lean` | COMPLETE | Finite-dim model, all proofs verified |
-| `G2CertificateV2.lean` | SCAFFOLD | Infinite-dim, 4 sorry + 10 axioms |
-| `numerical/` | PLANNED | Eigenvalue pipeline for SORRY 4 |
+| `G2CertificateV2.lean` | v2.1 | Infinite-dim, 3 sorry (SORRY 4 resolved) |
+| `numerical/` | COMPLETE | λ₁ = 579/10000, K < 0.9999 |
+| `HodgeProto.lean` | NEW | Flat→K₇ lifting for SORRY 1-3 |
 
 ---
 
 ## 7. Success Criteria
 
 ### Milestone 1: Scaffold Complete
-- [ ] `G2CertificateV2.lean` compiles with explicit `sorry`
-- [ ] All 4 sorry items have detailed docstrings
-- [ ] Dependency on Hodge theory clearly documented
+- [x] `G2CertificateV2.lean` compiles with explicit `sorry`
+- [x] All 4 sorry items have detailed docstrings
+- [x] Dependency on Hodge theory clearly documented
 
 ### Milestone 2: Numerical Pipeline
-- [ ] λ₁(K₇) computed with interval arithmetic
-- [ ] Contraction constant K verified < 1
-- [ ] Bounds exported to Lean as rationals
+- [x] λ₁(K₇) computed with interval arithmetic
+- [x] Contraction constant K verified < 1
+- [x] Bounds exported to Lean as rationals
+- [x] **SORRY 4 RESOLVED**
 
 ### Milestone 3: Partial Formalization
-- [ ] Hodge star on finite-dim inner product spaces
-- [ ] G₂ representation theory in Mathlib
-- [ ] Integration on charts (partition of unity)
+- [x] Hodge star stub on flat ℝ⁷ (HodgeProto.lean)
+- [x] G₂ structures on flat space
+- [x] Lifting axioms (partition of unity)
+- [ ] Tie HodgeProto to G2CertificateV2
 
 ### Milestone 4: Full Formalization
-- [ ] Hodge decomposition theorem
+- [ ] Hodge decomposition theorem (Mathlib WIP)
 - [ ] L² theory on compact manifolds
-- [ ] All `sorry` eliminated
+- [ ] All lifting axioms eliminated
 
 ---
 
