@@ -1,6 +1,4 @@
-# CLAUDE_QUICK.md - Quick Reference for AI Assistants
-
-> **Condensed guide for the GIFT Framework**. For complete details, see [CLAUDE.md](CLAUDE.md).
+#AI_AGENTS.md - Quick Reference for AI Assistants
 
 ## What is GIFT?
 
