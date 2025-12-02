@@ -498,8 +498,18 @@ theorem torsion_global_zero_iff_local :
       ∀ i, torsion_local i (restrict_to_chart φ i) = 0 := by
   intro φ
   simp only [torsion_from_partition]
-  rw [Finset.sum_eq_zero_iff]
-  simp only [Finset.mem_univ, true_implies]
+  constructor
+  · -- (→) sum = 0 implies each term = 0 (using nonneg)
+    intro h_sum i
+    have h_nonneg : ∀ j ∈ Finset.univ, 0 ≤ torsion_local j (restrict_to_chart φ j) :=
+      fun j _ => torsion_local_nonneg j _
+    rw [Finset.sum_eq_zero_iff h_nonneg] at h_sum
+    exact h_sum i (Finset.mem_univ i)
+  · -- (←) each term = 0 implies sum = 0
+    intro h_all
+    apply Finset.sum_eq_zero
+    intro i _
+    exact h_all i
 
 -- SORRY 3 RESOLUTION: CompleteSpace from local completeness
 -- Each L²(U_i) is complete (standard), gluing via partition preserves limits

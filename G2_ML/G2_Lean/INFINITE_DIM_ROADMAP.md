@@ -409,12 +409,14 @@ G2_ML/G2_Lean/
 - [x] Lifting axioms (partition of unity)
 - [x] Tie HodgeProto to G2CertificateV2
 
-### Milestone 4: Partition of Unity Resolution (PARTIAL)
+### Milestone 4: Partition of Unity Resolution (NEARLY COMPLETE)
 - [x] Partition of unity stub in G2CertificateV2.lean (Section 16-17)
 - [x] Local L² metric → global metric framework
 - [x] Local torsion → global torsion framework
 - [x] Local completeness → global completeness framework
-- [ ] Eliminate remaining inner `sorry` (elementary analysis)
+- [x] `L2_global_gives_metric`: PROVEN (L2_local_refl + L2_local_symm)
+- [x] `torsion_global_zero_iff_local`: PROVEN (Finset.sum_eq_zero_iff + nonneg)
+- [ ] `completeness_from_partition`: 1 sorry (needs Pi.completeSpace + closed embedding)
 - [ ] Hodge decomposition theorem (Mathlib WIP)
 
 ---
@@ -441,4 +443,4 @@ G2_ML/G2_Lean/
 
 *Last updated: 2025-12-02*
 *GIFT Framework v2.2.0*
-*Milestone 4 Partial: Partition of Unity stub added*
+*Milestone 4 Nearly Complete: 2/3 proofs, 1 inner sorry remains*
