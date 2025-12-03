@@ -1,10 +1,10 @@
-# GIFT Framework v2.2 - Visualization Dashboard
+# GIFT Framework v2.3 - Visualization Dashboard
 
 Terminal-style interactive dashboard showcasing GIFT framework visualizations.
 
 ## Overview
 
-This directory contains a Pip-Boy themed visualization dashboard for the GIFT Framework v2.2. The dashboard provides an interactive, terminal-aesthetic interface for exploring computational results.
+This directory contains a Pip-Boy themed visualization dashboard for the GIFT Framework v2.3. The dashboard provides an interactive, terminal-aesthetic interface for exploring computational results.
 
 ## Dashboard
 
@@ -174,15 +174,17 @@ To add new visualizations:
 
 ## License
 
-Part of GIFT Framework v2.2 - MIT License
+Part of GIFT Framework v2.3 - MIT License
 
 ## Links
 
 - Main Repository: https://github.com/gift-framework/GIFT
-- Main Paper: `../publications/markdown/gift_2_2_main.md`
+- Main Paper: `../publications/markdown/gift_2_3_main.md`
 - Supplements: `../publications/markdown/`
 - Visualizations: `../assets/visualizations/`
+- Lean 4 Proofs: `../Lean/`
+- Coq Proofs: `../COQ/`
 
 ---
 
-GIFT FRAMEWORK v2.2 | VISUALIZATION TERMINAL | TOPOLOGICAL UNIFICATION
+GIFT FRAMEWORK v2.3 | VISUALIZATION TERMINAL | TOPOLOGICAL UNIFICATION
