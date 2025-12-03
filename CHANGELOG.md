@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.3] - 2025-12-03
 
-### Major Release - Lean 4 Formal Verification
+### Major Release - Dual Formal Verification (Lean 4 + Coq)
 
-This version achieves complete Lean 4 formal verification, establishing machine-verified proofs for all 13 exact relations with zero domain-specific axioms.
+This version achieves complete formal verification in **both Lean 4 and Coq**, establishing independently machine-verified proofs for all 13 exact relations with zero domain-specific axioms.
 
 #### Added
 
@@ -19,11 +19,23 @@ This version achieves complete Lean 4 formal verification, establishing machine-
 - Zero domain-specific axioms (only propext, Quot.sound)
 - Zero `sorry` (all proofs complete)
 
+**Coq Verification**
+- Complete formalization in `/COQ/` with 21 modules
+- All 13 exact relations independently proven
+- Zero `Admitted` statements (all proofs complete)
+- Zero explicit axioms beyond Coq core
+- Parallel module structure: Algebra, Geometry, Topology, Relations, Certificate
+
+**Unified CI Pipeline**
+- `.github/workflows/verification.yml` - Combined Lean + Coq + G2 validation
+- `.github/workflows/coq.yml` - Dedicated Coq CI with lint and audit
+- Verification report generation with summary statistics
+
 **Publication Updates**
-- All main documents updated with Lean CI badges
-- New status classification: **PROVEN (Lean)** for machine-verified relations
-- Section 11.4 in Observable Reference with complete Lean theorem mapping
-- Lean verification summary table in main paper
+- All main documents updated with Lean and Coq CI badges
+- New status classification: **PROVEN (Lean)** and **PROVEN (Coq)** for machine-verified relations
+- Section 11.4 in Observable Reference with complete theorem mapping
+- Dual verification summary tables in main paper
 
 **Framework Unification**
 - Complete version alignment across all files

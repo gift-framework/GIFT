@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-2.3-green.svg)](CHANGELOG.md)
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](Lean/)
+[![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](COQ/)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
@@ -13,14 +14,18 @@
 |--------|-------|
 | **Precision** | 0.128% mean deviation across 39 observables |
 | **Parameters** | Zero continuous adjustable (all structurally determined) |
-| **Lean-verified relations** | **13 formally proven** (zero domain axioms, zero sorry) |
+| **Formally verified relations** | **13 proven** in Lean 4 + Coq (dual verification, zero axioms) |
 | **Key results** | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |
 
-The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **13 exact relations machine-verified** via Lean 4 theorem prover and Mathlib.
+The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **13 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
 
-## Formal Verification (Lean 4)
+## Formal Verification (Lean 4 + Coq)
 
-The `/Lean/` directory contains a complete Lean 4 formalization with **17 modules**, proving all 13 exact relations from topological inputs:
+All 13 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation.
+
+### Lean 4 Formalization
+
+The `/Lean/` directory contains a complete Lean 4 formalization with **17 modules**:
 
 | Module | Content |
 |--------|---------|
@@ -30,12 +35,25 @@ The `/Lean/` directory contains a complete Lean 4 formalization with **17 module
 | `GIFT.Relations` | All 13 physical relations (7 modules) |
 | `GIFT.Certificate` | Main theorem + zero-parameter proof (3 modules) |
 
-**Verification status:**
-- Lean 4.14.0 + Mathlib 4.14.0
-- **0 domain-specific axioms** (only propext, Quot.sound)
-- **0 sorry** (all proofs complete)
+**Status:** Lean 4.14.0 + Mathlib 4.14.0 | **0 sorry** | **0 domain axioms**
 
 See [Lean/README.md](Lean/README.md) for build instructions.
+
+### Coq Formalization
+
+The `/COQ/` directory contains a parallel Coq 8.18 formalization with **21 modules**:
+
+| Directory | Content |
+|-----------|---------|
+| `Algebra/` | E₈ root system, Weyl group, Jordan algebra (5 modules) |
+| `Geometry/` | G₂ group, structure, holonomy, TCS (4 modules) |
+| `Topology/` | Betti numbers, cohomology, Euler characteristic (3 modules) |
+| `Relations/` | Gauge, neutrino, quark, lepton, Higgs, cosmology (7 modules) |
+| `Certificate/` | Main theorem + zero-parameter proof (3 modules) |
+
+**Status:** Coq 8.18 | **0 Admitted** | **0 explicit axioms**
+
+See [COQ/README.md](COQ/README.md) for build instructions.
 
 **Computational Validation:**
 - Physics-informed neural networks (PINN) with 1M+ training samples
@@ -108,7 +126,8 @@ Full tables: [Main Paper Section 8](publications/markdown/gift_2_3_main.md)
 
 - **[Main Paper](publications/markdown/gift_2_3_main.md)** - Complete theoretical framework (~1400 lines)
 - **[Observable Reference](publications/references/GIFT_v23_Observable_Reference.md)** - All 39 observables
-- **[Lean Formal Verification](Lean/)** - Machine-verified proofs (17 modules, 0 sorry)
+- **[Lean 4 Proofs](Lean/)** - Machine-verified proofs (17 modules, 0 sorry)
+- **[Coq Proofs](COQ/)** - Independent verification (21 modules, 0 Admitted)
 - **[Glossary](docs/GLOSSARY.md)** - Technical terms
 - **[FAQ](docs/FAQ.md)** - Common questions
 - **[Philosophy](docs/PHILOSOPHY.md)** - The philosophy behind GIFT
@@ -144,6 +163,8 @@ gift/
 │   └── pdf/               # Generated PDFs
 ├── Lean/                  # Lean 4 formal verification (17 modules)
 │   └── GIFT/              # Algebra, Geometry, Topology, Relations, Certificate
+├── COQ/                   # Coq 8.18 formal verification (21 modules)
+│   └── */                 # Algebra, Geometry, Topology, Relations, Certificate
 ├── assets/visualizations/ # Interactive notebooks
 ├── statistical_validation/ # Monte Carlo validation
 ├── G2_ML/                 # Neural network for K₇ metrics

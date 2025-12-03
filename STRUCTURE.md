@@ -9,18 +9,18 @@ gift/
 ├── publications/                      # Theoretical documents
 │   ├── README.md                     # Overview, reading guide, summary
 │   ├── markdown/                     # Main documents
-│   │   ├── gift_2_2_main.md         # Core paper (~1400 lines)
-│   │   ├── S1_mathematical_architecture.md   # E₈, K₇, cohomology
-│   │   ├── S2_K7_manifold_construction.md    # TCS, G₂, ML metrics
-│   │   ├── S3_torsional_dynamics.md          # Geodesics, RG flow
-│   │   ├── S4_complete_derivations.md        # 13 proofs + all derivations
-│   │   ├── S5_experimental_validation.md     # Data, falsification
-│   │   ├── S6_theoretical_extensions.md      # QG, info theory
-│   │   └── S7_dimensional_observables.md     # Masses, cosmology
+│   │   ├── gift_2_3_main.md         # Core paper (~1400 lines)
+│   │   ├── S1_mathematical_architecture_v23.md   # E₈, K₇, cohomology
+│   │   ├── S2_K7_manifold_construction_v23.md    # TCS, G₂, ML metrics
+│   │   ├── S3_torsional_dynamics_v23.md          # Geodesics, RG flow
+│   │   ├── S4_complete_derivations_v23.md        # 13 proofs + all derivations
+│   │   ├── S5_experimental_validation_v23.md     # Data, falsification
+│   │   ├── S6_theoretical_extensions_v23.md      # QG, info theory
+│   │   └── S7_dimensional_observables_v23.md     # Masses, cosmology
 │   ├── references/                   # Quick reference documents
-│   │   ├── GIFT_v22_Observable_Reference.md
-│   │   ├── GIFT_v22_Geometric_Justifications.md
-│   │   └── GIFT_v22_Statistical_Validation.md
+│   │   ├── GIFT_v23_Observable_Reference.md
+│   │   ├── GIFT_v23_Geometric_Justifications.md
+│   │   └── GIFT_v23_Statistical_Validation.md
 │   ├── tex/                          # LaTeX sources
 │   └── pdf/                          # Generated PDFs
 │
@@ -36,10 +36,12 @@ gift/
 │   ├── agents/                      # Automated verification tools
 │   └── documents_template/          # LaTeX/Quarto templates
 │
+├── Lean/                            # Lean 4 formal verification (17 modules)
+├── COQ/                             # Coq 8.18 formal verification (21 modules)
 ├── statistical_validation/           # Monte Carlo tools
 ├── G2_ML/                           # Neural network for K₇
 ├── tests/                           # pytest suite + test guides
-└── legacy/                          # v1, v2.0, v2.1 archives
+└── legacy/                          # v1, v2.0, v2.1, v2.2 archives
 ```
 
 ## Find What You Need
@@ -48,12 +50,14 @@ gift/
 |----------------|-------|
 | Framework overview | `README.md` |
 | 5-minute summary | `publications/README.md` |
-| Complete theory | `publications/markdown/gift_2_2_main.md` |
-| All 39 observables | `publications/references/GIFT_v22_Observable_Reference.md` |
-| Proofs (13 exact relations) | `publications/markdown/S4_complete_derivations.md` |
-| Experimental comparison | `publications/markdown/S5_experimental_validation.md` |
-| Falsification criteria | `publications/markdown/S5_experimental_validation.md` |
-| Mathematical foundations | `publications/markdown/S1_mathematical_architecture.md` |
+| Complete theory | `publications/markdown/gift_2_3_main.md` |
+| All 39 observables | `publications/references/GIFT_v23_Observable_Reference.md` |
+| Proofs (13 exact relations) | `publications/markdown/S4_complete_derivations_v23.md` |
+| Experimental comparison | `publications/markdown/S5_experimental_validation_v23.md` |
+| Falsification criteria | `publications/markdown/S5_experimental_validation_v23.md` |
+| Mathematical foundations | `publications/markdown/S1_mathematical_architecture_v23.md` |
+| Lean 4 formal proofs | `Lean/` |
+| Coq formal proofs | `COQ/` |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Common questions | `docs/FAQ.md` |
 | Interactive visualizations | `assets/visualizations/` |
@@ -65,6 +69,8 @@ Results use these status labels:
 
 | Status | Meaning |
 |--------|---------|
+| **PROVEN (Lean)** | Machine-verified in Lean 4 theorem prover |
+| **PROVEN (Coq)** | Machine-verified in Coq proof assistant |
 | **PROVEN** | Exact topological identity with rigorous proof |
 | **TOPOLOGICAL** | Direct consequence of manifold structure |
 | **DERIVED** | Calculated from proven/topological relations |
@@ -73,8 +79,9 @@ Results use these status labels:
 
 ## File Naming
 
-- **Main papers**: `gift_2_2_main.md`, `GIFT_v22_*.md`
-- **Supplements**: `S1_*.md` through `S7_*.md`
+- **Main papers**: `gift_2_3_main.md`, `GIFT_v23_*.md`
+- **Supplements**: `S1_*_v23.md` through `S7_*_v23.md`
+- **Formal proofs**: `Lean/GIFT/*.lean`, `COQ/*/*.v`
 - **Project files**: ALL_CAPS (`README.md`, `CHANGELOG.md`)
 
 ## Maintenance
