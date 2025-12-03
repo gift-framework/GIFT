@@ -1,7 +1,0 @@
-{
-  "method": "chunked_orthogonal_spectral",
-  "n_forms_extracted": 72,
-  "det_gram_b3": 1.446389916371587e-20,
-  "grid_resolution": 12,
-  "success": false
-}
