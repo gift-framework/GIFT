@@ -1,12 +1,12 @@
 # GIFT Framework Verification Report
 
-**Generated**: 2025-12-03T14:48:19Z
+**Generated**: 2025-12-03T17:12:25Z
 **Pipeline Version**: 1.0
 **GIFT Version**: 2.3
 
 **Repository**:
-- Commit: `0814cb22b1868abace2ae54221b284a2e578796d`
-- Branch: `claude/review-gift-framework-progress-011jkcjCdV8o4jxvXyGoxqFS`
+- Commit: `089d54735a85137a763d8e10497889c62b9becbc`
+- Branch: `claude/review-gift-framework-progress-01TbAGKAFxe9xvrmB2FoTCEs`
 
 ---
 
@@ -14,8 +14,8 @@
 
 | Component | Status | Key Metric | Issues |
 |-----------|--------|------------|--------|
-| Lean 4 | **NOT RUN** | 0 theorems | N/A sorry |
-| Coq | **NOT RUN** | 0 theorems | N/A Admitted |
+| Lean 4 | **FAIL** | 0 theorems | N/A sorry |
+| Coq | **FAIL** | 0 theorems | N/A Admitted |
 | G2 Metric | **PASS** | det(g) = 2.0312490 | 0.000049230% dev |
 
 ### Overall Assessment
@@ -28,7 +28,23 @@ Some verification components require attention. See details below.
 
 ### 2.1 Build Information
 
-Lean verification results not available.
+| Property | Value |
+|----------|-------|
+| Lean Version | not_installed |
+| Mathlib Version | 4.14.0 |
+| Build Success | unknown |
+| Build Time | N/As |
+
+### 2.2 Theorem Verification
+
+| Metric | Count | Expected |
+|--------|-------|----------|
+| Theorems Verified | 0 | 13 |
+| Sorry Statements | 0 | 0 |
+
+### 2.3 Axiom Audit
+
+Domain-specific axioms: **0** (only standard Lean axioms: propext, Quot.sound)
 
 ---
 
@@ -36,7 +52,18 @@ Lean verification results not available.
 
 ### 3.1 Build Information
 
-Coq verification results not available.
+| Property | Value |
+|----------|-------|
+| Coq Version | not_installed |
+| Build Success | unknown |
+| Build Time | N/As |
+
+### 3.2 Theorem Verification
+
+| Metric | Count | Expected |
+|--------|-------|----------|
+| Theorems Verified | 0 | 13 |
+| Admitted Statements | 0 | 0 |
 
 ---
 
@@ -163,7 +190,7 @@ Portable Jupyter notebooks are available in `pipeline/notebooks/`:
 
 | Property | Value |
 |----------|-------|
-| Report Generated | 2025-12-03T14:48:19Z |
+| Report Generated | 2025-12-03T17:12:25Z |
 | Pipeline Version | 1.0 |
 | GIFT Version | 2.3 |
 | Report File | `pipeline/outputs/reports/GIFT_Verification_Report_2025-12-03.md` |
