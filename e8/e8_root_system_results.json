@@ -1,0 +1,34 @@
+{
+  "E8_roots": {
+    "total": 240,
+    "type_I": 112,
+    "type_II": 128,
+    "positive": 120,
+    "all_length_sqrt2": true,
+    "has_opposite_pairs": true
+  },
+  "cartan_matrix": {
+    "determinant": 1,
+    "rank": 8
+  },
+  "weyl_group": {
+    "order": 696729600,
+    "factorization": "2^14 \u00d7 3^5 \u00d7 5^2 \u00d7 7",
+    "weyl_factor": 5
+  },
+  "branching": {
+    "E8_to_E7": "248 = 133 + 56 + 56\u0304 + 1 + 1 + 1",
+    "E7_to_E6": "133 = 78 + 27 + 27\u0304 + 1",
+    "E6_to_SO10": "27 = 16 + 10 + 1",
+    "SO10_to_SU5": "16 = 10 + 5\u0304 + 1",
+    "SU5_to_SM": "10 = (3\u0304,1) + (3,2) + (1,1)"
+  },
+  "GIFT_connections": {
+    "dim_E8": 248,
+    "rank_E8": 8,
+    "dim_E8xE8": 496,
+    "dim_J3O": 27,
+    "weyl_factor": 5,
+    "N_gen": 3
+  }
+}
