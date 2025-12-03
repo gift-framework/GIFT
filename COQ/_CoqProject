@@ -1,6 +1,7 @@
 -Q . GIFT
 
 Algebra/E8RootSystem.v
+Algebra/E8RootsExplicit.v
 Algebra/E8WeylGroup.v
 Algebra/E8Representations.v
 Algebra/ExceptionalJordan.v
