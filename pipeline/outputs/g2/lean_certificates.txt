@@ -1,0 +1,42 @@
+# G2 Lean Certificate Extraction
+# Timestamp: 2025-12-03T17:12:02Z
+
+## G2CertificateV2.lean
+def global_torsion_bound : ℚ := 2857 / 1000000
+theorem global_below_joyce : global_torsion_bound < joyce_threshold := by
+  unfold global_torsion_bound joyce_threshold; norm_num
+theorem joyce_margin : joyce_threshold / global_torsion_bound > 35 := by
+  unfold global_torsion_bound joyce_threshold; norm_num
+
+## GIFT_Banach_FP_Certificate.lean
+def global_torsion_bound : ℚ := 17651 / 10000000
+theorem global_below_joyce : global_torsion_bound < joyce_epsilon := by
+  unfold global_torsion_bound joyce_epsilon; norm_num
+theorem joyce_margin : joyce_epsilon / global_torsion_bound > 16 := by
+  unfold global_torsion_bound joyce_epsilon; norm_num
+
+## GIFTConstants.lean
+def dim_E8 : ℕ := 248
+def rank_E8 : ℕ := 8
+def dim_E8xE8 : ℕ := 496
+def dim_G2 : ℕ := 14
+def dim_K7 : ℕ := 7
+def b2_K7 : ℕ := 21
+def b3_K7 : ℕ := 77
+def H_star : ℕ := b2_K7 + b3_K7 + 1
+def dim_J3O : ℕ := 27
+def Weyl_factor : ℕ := 5
+def dim_Lambda3_R7 : ℕ := 35
+def N_gen : ℕ := 3
+def p2 : ℕ := 2
+def Q_Koide : ℚ := 2 / 3
+def ms_md_ratio : ℕ := 20
+def delta_CP_deg : ℚ := 197
+def m_tau_m_e_ratio : ℕ := 3477
+def n_s_numerical : ℚ := 9649 / 10000
+def sin2_theta_W : ℚ := 3 / 13
+def tau : ℚ := 3472 / 891
+def det_g : ℚ := 65 / 32
+def kappa_T : ℚ := 1 / 61
+def certificate_summary : String :=
+
