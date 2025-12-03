@@ -1,7 +1,6 @@
 # Geometric Information Field Theory: Topological Unification of Standard Model Parameters Through Torsional Dynamics
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgMTlsMTAgNSAxMC01TDEyIDJ6Ii8+PC9zdmc+)](https://github.com/gift-framework/GIFT/tree/main/Lean)
-[![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
 
 ## **Abstract**
 

@@ -1,7 +1,6 @@
 # GIFT Framework v2.3 - Publications
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
-[![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
 
 Geometric Information Field Theory: Deriving Standard Model parameters from E₈×E₈ topology.
 
