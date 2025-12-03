@@ -23,7 +23,7 @@ from gift_v22_core import GIFTFrameworkV22, GIFTParametersV22
 
 @pytest.fixture
 def gift_framework():
-    """Create GIFT v2.3a framework."""
+    """Create GIFT v2.3 framework."""
     return GIFTFrameworkV22()
 
 

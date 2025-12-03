@@ -1,9 +1,9 @@
-# GIFT Framework v2.3a - Complete Observable Reference
+# GIFT Framework v2.3 - Complete Observable Reference
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
 [![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
 
-**Version**: 2.3.1
+**Version**: 2.3
 **Date**: 2025-12-03
 **Status**: Validated (Monte Carlo 10^5 samples) + **Lean 4 Formal Verification**
 **Mean Precision**: 0.128% across 39 observables
@@ -945,7 +945,7 @@ n_s = ζ(11)/ζ(5)
 
 ---
 
-**Document Version**: 2.3.1
+**Document Version**: 2.3
 **Last Updated**: 2025-12-03
 **Validation**: Monte Carlo 10⁵ samples, seed 42 + Lean 4 formal verification
 **Repository**: https://github.com/gift-framework/GIFT

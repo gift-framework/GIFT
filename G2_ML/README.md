@@ -280,5 +280,5 @@ When using this framework:
 **Status**: Active development (90% complete)
 **Latest version**: 2.1
 **Last updated**: 2025-12-03
-**Framework**: GIFT v2.3.1
+**Framework**: GIFT v2.3
 **Lean Proofs**: See `/Lean/` for formal verification

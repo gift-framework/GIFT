@@ -5,80 +5,47 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.3.1] - 2025-12-03
+## [2.3] - 2025-12-03
 
-### Lean 4 Formal Verification Integration
+### Major Release - Lean 4 Formal Verification
 
-This version integrates complete Lean 4 formal verification across all publications, establishing machine-verified proofs for all 13 exact relations.
+This version achieves complete Lean 4 formal verification, establishing machine-verified proofs for all 13 exact relations with zero domain-specific axioms.
 
 #### Added
 
-**Lean 4 Verification Summary**
+**Lean 4 Verification**
 - Complete formalization in `/Lean/` with 17 modules
 - All 13 exact relations proven: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
 - Zero domain-specific axioms (only propext, Quot.sound)
 - Zero `sorry` (all proofs complete)
 
 **Publication Updates**
-- All 5 main documents updated with Lean CI badges
+- All main documents updated with Lean CI badges
 - New status classification: **PROVEN (Lean)** for machine-verified relations
 - Section 11.4 in Observable Reference with complete Lean theorem mapping
-- Lean verification summary table in main paper (Section "Status Classifications")
+- Lean verification summary table in main paper
+
+**Framework Unification**
+- Complete version alignment across all files
+- Unified documentation structure with consistent v2.3 references
+- Harmonized formulas, results, and calculations across all documents
+- Comprehensive citation guide updated for v2.3
 
 #### Changed
 
 **Status Classifications**
 - 13 relations upgraded from PROVEN/TOPOLOGICAL to **PROVEN (Lean)**
 - Each relation now includes Lean theorem reference (e.g., `weinberg_angle_certified`)
-- Version bumped to 2.3.1 across all publications
 
 **Documentation**
 - README.md: Added Lean badges, updated structure, new verification section
 - publications/README.md: New Lean verification section with module structure
-- S1, S5: Updated status markers with Lean theorem references
-
----
-
-## [2.3.0] - 2025-12-02
-
-### Major Release - Complete Framework Unification v2.3a
-
-This version achieves complete framework unification with v2.3a designation, ensuring all documents, references, and implementations are perfectly aligned.
-
-#### Added
-
-**Framework Unification (v2.3a)**
-- Complete version alignment across all 150+ files
-- Unified documentation structure with consistent v2.3a references
-- Harmonized formulas, results, and calculations across all documents
-- Eliminated all emojis and special symbols from documentation
-- Comprehensive citation guide updated for v2.3a
-
-**Documentation Consolidation**
-- All README files aligned to v2.3a
-- CHANGELOG updated with v2.3.0 entry
-- CITATION.md fully updated for v2.3a
-- All docs/ files synchronized
-- G2_ML documentation aligned
-
-#### Changed
-
-**Version References**
-- README.md: Updated to v2.3a with correct badge
-- All publications: Consistent v2.3a naming
-- All tests: Updated to v2.3a baselines
-- All visualizations: v2.3a branding
-
-**Content Harmonization**
-- All 39 observables consistent across documents
-- Mean precision 0.128% verified in all locations
-- 13 proven relations confirmed throughout
-- Zero-parameter paradigm emphasized consistently
+- All documentation aligned to v2.3
 
 #### Fixed
 
 **Documentation Inconsistencies**
-- Eliminated all v2.2 references in current documentation
+- Unified version references to v2.3 throughout
 - Unified formula presentations
 - Synchronized result tables
 - Aligned experimental validation data

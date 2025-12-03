@@ -1,7 +1,7 @@
-# Geometric Information Field Theory v2.3a
+# Geometric Information Field Theory v2.3
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.3.1-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-2.3-green.svg)](CHANGELOG.md)
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](Lean/)
 [![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
@@ -17,7 +17,7 @@
 | **Lean-verified relations** | **13 formally proven** (zero domain axioms, zero sorry) |
 | **Key results** | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |
 
-The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3a achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **13 exact relations machine-verified** via Lean 4 theorem prover and Mathlib.
+The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **13 exact relations machine-verified** via Lean 4 theorem prover and Mathlib.
 
 ## Formal Verification (Lean 4)
 
@@ -189,7 +189,7 @@ Details: [S5](publications/markdown/S5_experimental_validation.md), [Experimenta
 
 ```bibtex
 @software{gift_framework_v23a_2025,
-  title={GIFT Framework v2.3a: Geometric Information Field Theory},
+  title={GIFT Framework v2.3: Geometric Information Field Theory},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
