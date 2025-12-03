@@ -6,7 +6,7 @@
 
 *This supplement provides detailed comparison of GIFT predictions with experimental data, statistical validation, and clear quantitative falsification criteria for rigorous experimental testing.*
 
-**Version**: 2.3.1
+**Version**: 2.3
 **Date**: December 2025
 **Lean Verification**: 13 relations formally verified with Mathlib 4.14.0
 

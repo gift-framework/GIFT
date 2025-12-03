@@ -117,7 +117,7 @@ class TestCollectHeadings:
 
     def test_heading_with_special_chars(self):
         """Test heading with special characters."""
-        text = "# What's New in v2.3a?"
+        text = "# What's New in v2.3?"
         result = collect_headings(text)
 
         assert len(result) == 1

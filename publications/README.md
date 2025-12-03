@@ -1,4 +1,4 @@
-# GIFT Framework v2.3a - Publications
+# GIFT Framework v2.3 - Publications
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
 [![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
@@ -109,8 +109,7 @@ publications/
 ├── markdown/                              # Main documents
 │   ├── gift_2_3_main.md                  # Core paper
 │   ├── S1_mathematical_architecture_v23.md   # E₈, G₂, cohomology
-│   ├── S2_K7_manifold_construction_v23.md    # TCS construction (original)
-│   ├── S2_K7_manifold_construction_v2.3a.md  # Variational + Lean certified
+│   ├── S2_K7_manifold_construction_v23.md    # TCS construction
 │   ├── S3_torsional_dynamics_v23.md          # Geodesics, RG flow
 │   ├── S4_complete_derivations_v23.md        # Proofs + all calculations
 │   ├── S5_experimental_validation_v23.md     # Data, falsification
@@ -141,11 +140,11 @@ publications/
 
 ## Executive Summary
 
-The Geometric Information Field Theory (GIFT) framework, in its version 2.3a, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.128% across six orders of magnitude.
+The Geometric Information Field Theory (GIFT) framework, in its version 2.3, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.128% across six orders of magnitude.
 
 ### The Zero-Parameter Paradigm
 
-The central achievement of v2.3a is the establishment of the Zero-Parameter Paradigm. This paradigm shift was enabled by the discovery of an exact topological origin for the internal manifold's metric determinant, det(g) = 65/32. The topological formula is cross-checked by physics-informed neural network (PINN) reconstruction achieving 2.0312490 ± 0.0001 (0.00005% deviation), with formal verification via Lean 4 theorem prover establishing G₂ existence through Joyce's perturbation theorem (20× safety margin). With this development, the framework contains zero adjustable parameters; all quantities derive directly from the immutable properties of the underlying mathematical structures.
+The central achievement of v2.3 is the establishment of the Zero-Parameter Paradigm. This paradigm shift was enabled by the discovery of an exact topological origin for the internal manifold's metric determinant, det(g) = 65/32. The topological formula is cross-checked by physics-informed neural network (PINN) reconstruction achieving 2.0312490 ± 0.0001 (0.00005% deviation), with formal verification via Lean 4 theorem prover establishing G₂ existence through Joyce's perturbation theorem (20× safety margin). With this development, the framework contains zero adjustable parameters; all quantities derive directly from the immutable properties of the underlying mathematical structures.
 
 The framework contains **zero continuous adjustable parameters**:
 - No fitting to experimental data
@@ -154,9 +153,9 @@ The framework contains **zero continuous adjustable parameters**:
 
 Given these structural choices, all 39 observables follow uniquely.
 
-### Key v2.3a Exact Derivations
+### Key v2.3 Exact Derivations
 
-| Observable | v2.3a Status | Exact Formula |
+| Observable | v2.3 Status | Exact Formula |
 |------------|-------------|---------------|
 | sin²θ_W | **PROVEN (Lean)** | 3/13 = b₂/(b₃ + dim(G₂)) |
 | κ_T | **PROVEN (Lean)** | 1/61 = 1/(b₃ - dim(G₂) - p₂) |
@@ -210,7 +209,7 @@ The framework remains consistent with all current experimental data.
 
 ---
 
-**Version**: 2.3.1
+**Version**: 2.3
 **Last Updated**: 2025-12-03
 **Repository**: https://github.com/gift-framework/GIFT
 **Lean Proofs**: https://github.com/gift-framework/GIFT/tree/main/Lean

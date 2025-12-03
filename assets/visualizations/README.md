@@ -194,10 +194,10 @@ All visualizations use colorblind-friendly palettes:
 ### Data Validation
 
 All numerical values are validated against:
-- `publications/markdown/gift_2_3_main.md` (v2.3a reference document)
-- `publications/references/GIFT_v22_Observable_Reference.md` (complete observable reference)
+- `publications/markdown/gift_2_3_main.md` (v2.3 reference document)
+- `publications/references/GIFT_v23_Observable_Reference.md` (complete observable reference)
 - Experimental values from PDG 2024, NuFIT 5.3, Planck collaborations
-- Mathematical formulas from v2.3a Supplements (S1-S7)
+- Mathematical formulas from v2.3 Supplements (S1-S7)
 
 ### Reproducibility
 

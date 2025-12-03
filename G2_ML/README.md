@@ -66,8 +66,9 @@ G2_ML/
 │   ├── tcs_joyce/            # Joyce's construction methods
 │   └── variational_g2/       # Variational approaches
 │
-├── G2_Lean/                   # Lean formal verification (linked on X.com)
 └── tests/                     # Test suite
+
+**Note**: Lean formal verification is now in `/Lean/` at repository root (17 modules, 0 sorry).
 ```
 
 Each version directory contains notebooks, models, and validation data specific to that version.
@@ -277,6 +278,7 @@ When using this framework:
 ---
 
 **Status**: Active development (90% complete)
-**Latest version**: 0.9a
-**Last updated**: 2025-11-16
-**Framework**: GIFT v2.0.0
+**Latest version**: 2.1
+**Last updated**: 2025-12-03
+**Framework**: GIFT v2.3
+**Lean Proofs**: See `/Lean/` for formal verification

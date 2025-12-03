@@ -583,7 +583,7 @@ The framework contains no continuous adjustable parameters. All quantities are t
 **Derived relations** (proofs in Supplement S4):
 $$\xi = \frac{\text{Weyl\_factor}}{p_2} \cdot \beta_0 = \frac{5}{2} \cdot \frac{\pi}{8} = \frac{5\pi}{16}$$
 
-**The Zero-Parameter Claim**: Unlike traditional physics frameworks requiring adjustable parameters, GIFT v2.3a derives all quantities from fixed mathematical structures. The "parameters" p₂, β₀, Weyl, and det(g) are not free parameters to be fitted but topological invariants with unique values determined by E₈×E₈ and K₇ geometry.
+**The Zero-Parameter Claim**: Unlike traditional physics frameworks requiring adjustable parameters, GIFT v2.3 derives all quantities from fixed mathematical structures. The "parameters" p₂, β₀, Weyl, and det(g) are not free parameters to be fitted but topological invariants with unique values determined by E₈×E₈ and K₇ geometry.
 
 ### 8.2 Gauge Couplings (3 observables)
 

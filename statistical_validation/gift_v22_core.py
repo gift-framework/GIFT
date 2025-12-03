@@ -1,7 +1,7 @@
 """
-GIFT Framework v2.3a - Core Implementation with Zero-Parameter Paradigm
+GIFT Framework v2.3 - Core Implementation with Zero-Parameter Paradigm
 
-This module implements the GIFT v2.3a framework with exact topological formulas,
+This module implements the GIFT v2.3 framework with exact topological formulas,
 extending v2.1 with:
 - sin^2(theta_W) = 3/13 (PROVEN)
 - kappa_T = 1/61 (TOPOLOGICAL)
