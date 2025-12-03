@@ -9,7 +9,8 @@ import torch
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "0.2"))
+# Add G2_ML/archived/early_development/0.2 to path (legacy version for these tests)
+sys.path.insert(0, str(Path(__file__).parent.parent / "archived" / "early_development" / "0.2"))
 
 from G2_manifold import create_manifold
 
