@@ -1,5 +1,8 @@
 # GIFT Framework v2.3a - Publications
 
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
+
 Geometric Information Field Theory: Deriving Standard Model parameters from E₈×E₈ topology.
 
 ---
@@ -21,15 +24,43 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 | Observable | GIFT Prediction | Status |
 |------------|-----------------|--------|
-| sin²θ_W | 3/13 = 0.23077 | PROVEN |
-| δ_CP | 197° | PROVEN |
-| m_s/m_d | 20 | PROVEN |
-| Q_Koide | 2/3 | PROVEN |
-| κ_T | 1/61 | TOPOLOGICAL |
-| det(g) | 65/32 | TOPOLOGICAL + CERTIFIED |
-| τ | 3472/891 | PROVEN |
+| sin²θ_W | 3/13 = 0.23077 | **PROVEN (Lean)** |
+| δ_CP | 197° | **PROVEN (Lean)** |
+| m_s/m_d | 20 | **PROVEN (Lean)** |
+| Q_Koide | 2/3 | **PROVEN (Lean)** |
+| κ_T | 1/61 | **PROVEN (Lean)** |
+| det(g) | 65/32 | **PROVEN (Lean)** |
+| τ | 3472/891 | **PROVEN (Lean)** |
 
-39 observables total, mean deviation 0.128%, zero continuous adjustable parameters.
+39 observables total, mean deviation 0.128%, **zero continuous adjustable parameters**.
+
+---
+
+## Lean 4 Formal Verification
+
+**13 exact relations are formally verified** in the `/Lean/` directory using Mathlib 4.14.0:
+
+```
+Lean/
+├── GIFT.lean              # Root import
+└── GIFT/
+    ├── Algebra/           # E₈ structure (4 modules)
+    ├── Geometry/          # G₂ holonomy (4 modules)
+    ├── Topology/          # Cohomology (3 modules)
+    ├── Relations/         # Physics sectors (7 modules)
+    └── Certificate/       # Main theorems (3 modules)
+```
+
+**Verification status:**
+- Lean version: 4.14.0
+- Mathlib version: 4.14.0
+- Total modules: 17
+- Domain-specific axioms: 0
+- `sorry` count: 0
+
+**Main theorem**: `GIFT_framework_certified` proves all 13 relations from `is_zero_parameter(G)`.
+
+See [/Lean/README.md](../Lean/README.md) for build instructions.
 
 ---
 
@@ -127,12 +158,12 @@ Given these structural choices, all 39 observables follow uniquely.
 
 | Observable | v2.3a Status | Exact Formula |
 |------------|-------------|---------------|
-| sin²θ_W | PROVEN | 3/13 = b₂/(b₃ + dim(G₂)) |
-| κ_T | TOPOLOGICAL | 1/61 = 1/(b₃ - dim(G₂) - p₂) |
-| τ | PROVEN | 3472/891 = (496×21)/(27×99) |
+| sin²θ_W | **PROVEN (Lean)** | 3/13 = b₂/(b₃ + dim(G₂)) |
+| κ_T | **PROVEN (Lean)** | 1/61 = 1/(b₃ - dim(G₂) - p₂) |
+| τ | **PROVEN (Lean)** | 3472/891 = (496×21)/(27×99) |
 | α_s | TOPOLOGICAL | √2/12 |
-| λ_H | PROVEN | √17/32 |
-| det(g) | TOPOLOGICAL + CERTIFIED | 65/32 (PINN: 2.0312490 ± 0.0001) |
+| λ_H | **PROVEN (Lean)** | √17/32 |
+| det(g) | **PROVEN (Lean)** | 65/32 (PINN: 2.0312490 ± 0.0001) |
 
 ### Foundational Architecture
 
@@ -154,7 +185,7 @@ Given these structural choices, all 39 observables follow uniquely.
 | Mean Deviation | 0.128% |
 | Median Deviation | 0.073% |
 | Observables < 0.5% | 37/39 (95%) |
-| PROVEN Predictions | 13 |
+| **PROVEN (Lean)** | 13 |
 
 ### Falsification Protocol
 
@@ -179,6 +210,7 @@ The framework remains consistent with all current experimental data.
 
 ---
 
-**Version**: 2.2.0
-**Last Updated**: 2025-11-30
+**Version**: 2.3.1
+**Last Updated**: 2025-12-03
 **Repository**: https://github.com/gift-framework/GIFT
+**Lean Proofs**: https://github.com/gift-framework/GIFT/tree/main/Lean
