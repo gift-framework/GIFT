@@ -1,7 +1,6 @@
 # GIFT Framework v2.3 - Complete Observable Reference
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
-[![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
 
 **Version**: 2.3
 **Date**: 2025-12-03
