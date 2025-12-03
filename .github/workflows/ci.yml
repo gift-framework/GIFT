@@ -86,7 +86,7 @@ jobs:
 
       - name: Run research module tests
         run: |
-          pytest G2_ML/research_modules/harmonic_yukawa/tests -v --tb=short || true
+          pytest G2_ML/research_modules/*/tests -v --tb=short || true
 
       - name: Upload coverage
         uses: codecov/codecov-action@v4
@@ -106,6 +106,8 @@ jobs:
           echo "| Unit tests | Completed |" >> $GITHUB_STEP_SUMMARY
           echo "| Integration tests | Completed |" >> $GITHUB_STEP_SUMMARY
           echo "| Regression tests | Completed |" >> $GITHUB_STEP_SUMMARY
+          echo "| G2 ML tests | Completed |" >> $GITHUB_STEP_SUMMARY
+          echo "| Research modules | Completed |" >> $GITHUB_STEP_SUMMARY
 
   # ============================================================================
   # MULTI-VERSION COMPATIBILITY (only on main, not PRs)
