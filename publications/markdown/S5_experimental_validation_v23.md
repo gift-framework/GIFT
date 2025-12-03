@@ -1,11 +1,14 @@
 # Supplement S5: Experimental Validation
 
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+
 ## Data Comparison, Statistical Analysis, and Falsification Criteria
 
 *This supplement provides detailed comparison of GIFT predictions with experimental data, statistical validation, and clear quantitative falsification criteria for rigorous experimental testing.*
 
-**Version**: 2.2.0
-**Date**: November 2025
+**Version**: 2.3.1
+**Date**: December 2025
+**Lean Verification**: 13 relations formally verified with Mathlib 4.14.0
 
 ---
 
@@ -96,11 +99,11 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 | Observable | GIFT | Experimental | Uncertainty | Deviation | Status |
 |------------|-----------|--------------|-------------|-----------|--------|
 | α⁻¹(M_Z) | 137.033 | 137.036 | 0.000001 | 0.002% | TOPOLOGICAL |
-| **sin²θ_W** | **3/13 = 0.23077** | 0.23122 | 0.00004 | **0.195%** | **PROVEN** |
+| **sin²θ_W** | **3/13 = 0.23077** | 0.23122 | 0.00004 | **0.195%** | **PROVEN (Lean)** |
 | **α_s(M_Z)** | **√2/12 = 0.11785** | 0.1179 | 0.0009 | 0.042% | **TOPOLOGICAL** |
-| **κ_T** | **1/61 = 0.01639** | 0.0164 | 0.001 | 0.04% | **TOPOLOGICAL** |
-| **τ** | **3472/891 = 3.8967** | 3.897 | internal | 0.01% | **PROVEN** |
-| **det(g)** | **65/32 = 2.03125** | 2.0312490 ± 0.0001 | PINN + Lean | **0.00005%** | **CERTIFIED** |
+| **κ_T** | **1/61 = 0.01639** | 0.0164 | 0.001 | 0.04% | **PROVEN (Lean)** |
+| **τ** | **3472/891 = 3.8967** | 3.897 | internal | 0.01% | **PROVEN (Lean)** |
+| **det(g)** | **65/32 = 2.03125** | 2.0312490 ± 0.0001 | PINN + Lean | **0.00005%** | **PROVEN (Lean)** |
 
 **Note on det(g)**: The value 65/32 is TOPOLOGICAL (exact formula). The PINN cross-check achieves 2.0312490 ± 0.0001, verified by Lean 4 with 20× Joyce margin. See Supplement S2 for full certification.
 
@@ -115,7 +118,7 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 | θ₁₂ | 33.42° | 33.41° | 0.75° | 0.03% | TOPOLOGICAL |
 | θ₁₃ | 8.571° | 8.54° | 0.12° | 0.36% | TOPOLOGICAL |
 | θ₂₃ | 49.19° | 49.3° | 1.0° | 0.22% | TOPOLOGICAL |
-| **δ_CP** | **197°** | 197° | 24° | **0.00%** | **PROVEN** |
+| **δ_CP** | **197°** | 197° | 24° | **0.00%** | **PROVEN (Lean)** |
 
 **Sector mean deviation**: 0.15%
 
@@ -125,7 +128,7 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 
 | Observable | GIFT | Experimental | Uncertainty | Deviation | Status |
 |------------|------|--------------|-------------|-----------|--------|
-| **m_s/m_d** | **20.00** | 20.0 | 1.0 | **0.00%** | **PROVEN** |
+| **m_s/m_d** | **20.00** | 20.0 | 1.0 | **0.00%** | **PROVEN (Lean)** |
 | m_c/m_s | 13.60 | 13.6 | 0.2 | 0.00% | DERIVED |
 | m_b/m_c | 3.287 | 3.29 | 0.03 | 0.09% | DERIVED |
 | m_t/m_b | 41.41 | 41.3 | 0.3 | 0.27% | DERIVED |
@@ -152,9 +155,9 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 
 | Observable | GIFT | Experimental | Uncertainty | Deviation | Status |
 |------------|------|--------------|-------------|-----------|--------|
-| **Q_Koide** | **2/3** | 0.666661 | 0.000007 | **0.001%** | **PROVEN** |
+| **Q_Koide** | **2/3** | 0.666661 | 0.000007 | **0.001%** | **PROVEN (Lean)** |
 | m_μ/m_e | 207.01 | 206.768 | 0.001 | 0.117% | TOPOLOGICAL |
-| **m_τ/m_e** | **3477** | 3477.0 | 0.1 | **0.000%** | **PROVEN** |
+| **m_τ/m_e** | **3477** | 3477.0 | 0.1 | **0.000%** | **PROVEN (Lean)** |
 
 **Sector mean deviation**: 0.04%
 
@@ -164,7 +167,7 @@ A viable physical theory must be falsifiable. GIFT adheres to this principle by 
 
 | Observable | GIFT | Experimental | Uncertainty | Deviation | Status |
 |------------|------|--------------|-------------|-----------|--------|
-| **λ_H** | **√17/32 = 0.12891** | 0.129 | 0.003 | **0.07%** | **PROVEN** |
+| **λ_H** | **√17/32 = 0.12891** | 0.129 | 0.003 | **0.07%** | **PROVEN (Lean)** |
 
 ---
 

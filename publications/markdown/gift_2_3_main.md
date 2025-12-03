@@ -1,12 +1,15 @@
 # Geometric Information Field Theory: Topological Unification of Standard Model Parameters Through Torsional Dynamics
 
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgMTlsMTAgNSAxMC01TDEyIDJ6Ii8+PC9zdmc+)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
+
 ## **Abstract**
 
 We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers b₂=21 and b₃=77, which determine gauge field and matter multiplicities through cohomological mappings.
 
 The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891) derive from fixed algebraic and topological invariants. The metric determinant det(g) = 65/32 has exact topological origin, confirmed by physics-informed neural network to 0.0001% precision with Lean 4 formal verification establishing G₂ existence via Joyce's perturbation theorem (20× safety margin). This eliminates parameter tuning by construction; discrete topological structures admit no continuous variation.
 
-Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values . Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). Thirteen relations possess rigorous topological proofs, including three-generation structure (N_gen=3), Koide parameter (Q=2/3), and Weinberg angle (sin²θ_W=3/13) as exact rationals.
+Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values. Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). **Thirteen relations are formally verified in Lean 4** with Mathlib, using only standard axioms (propext, Quot.sound) and zero domain-specific axioms: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√(17/32), H*=99, p₂=2, N_gen=3, and E₈×E₈=496.
 
 Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 39 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
 
@@ -20,13 +23,27 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 Throughout this paper, we use the following classifications:
 
+- **PROVEN (Lean)**: Formally verified by Lean 4 kernel with Mathlib—machine-checked proofs using only standard axioms (propext, Quot.sound), zero domain-specific axioms, zero sorry
 - **PROVEN**: Exact topological identity with rigorous mathematical proof (see Supplement S4)
-- **PROVEN (Lean)**: Verified by Lean 4 kernel with Mathlib (machine-checked)
 - **TOPOLOGICAL**: Direct consequence of manifold structure without empirical input
 - **CERTIFIED**: Numerical result verified via interval arithmetic with rigorous bounds
 - **DERIVED**: Calculated from proven/topological relations
 - **THEORETICAL**: Has theoretical justification, proof incomplete
 - **PHENOMENOLOGICAL**: Empirically accurate, theoretical derivation in progress
+
+### Lean 4 Verification Summary
+
+The framework includes a complete Lean 4 formalization (`/Lean/`) with 17 modules proving all 13 exact relations from topological inputs alone:
+
+| Module | Content | Theorems |
+|--------|---------|----------|
+| `GIFT.Algebra` | E₈ root system, Weyl group, representations | ~20 |
+| `GIFT.Geometry` | G₂ group, structure, holonomy, TCS | ~25 |
+| `GIFT.Topology` | Betti numbers, cohomology, Euler characteristic | ~15 |
+| `GIFT.Relations` | All 13 physical relations by sector | ~30 |
+| `GIFT.Certificate` | Main theorem, zero-parameter proof | ~10 |
+
+**Main theorem**: `GIFT_framework_certified` proves that given `is_zero_parameter(G)`, all 13 relations follow by pure computation.
 
 ---
 
@@ -87,7 +104,7 @@ The framework rests on discrete mathematical structure choices, not continuous p
 
 | **Derived Output** | **Count** | **Status** |
 |--------------------|-----------|------------|
-| Exact topological relations | 13 | PROVEN |
+| Exact topological relations | 13 | **PROVEN (Lean)** |
 | Direct topological consequences | 12 | TOPOLOGICAL |
 | Computed from topological relations | 9 | DERIVED |
 | Requiring single scale input | 5 | THEORETICAL |
@@ -510,7 +527,7 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11} = \frac{p_2^4 \times \dim(
 
 **Significance**: τ is rational, not transcendental. This indicates the framework encodes exact discrete ratios rather than continuous quantities requiring infinite precision.
 
-**Status**: **PROVEN** (exact rational from topological integers)
+**Status**: **PROVEN (Lean)** — `tau_certified` in `GIFT.Certificate.MainTheorem`
 
 **Mathematical resonances**:
 - τ² ≈ 15.18 ≈ 3π²/2 (within 2.8%)
@@ -615,7 +632,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Numerical value**: 3/13 = 0.230769...
 
-**Status**: **TOPOLOGICAL** (exact rational from cohomology)
+**Status**: **PROVEN (Lean)** — `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -661,7 +678,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Derivation**: Additive topological formula where dim(G₂) = 14 is the G₂ Lie algebra dimension (proof in Supplement S4)
 
-**Status**: **PROVEN** (topological necessity)
+**Status**: **PROVEN (Lean)** — `delta_CP_certified` in `GIFT.Relations.NeutrinoSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -673,7 +690,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: Q = dim(G₂)/b₂(K₇) = 14/21 = 2/3
 
-**Status**: **PROVEN** (exact topological ratio)
+**Status**: **PROVEN (Lean)** — `koide_certified` in `GIFT.Relations.LeptonSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -705,7 +722,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: m_τ/m_e = dim(K₇) + 10 × dim(E₈) + 10 × H* = 7 + 2480 + 990 = 3477
 
-**Status**: **PROVEN** (additive topological structure, proof in Supplement S4)
+**Status**: **PROVEN (Lean)** — `m_tau_m_e_certified` in `GIFT.Relations.LeptonSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -717,7 +734,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: m_s/m_d = p₂² × Weyl_factor = 4 × 5 = 20
 
-**Status**: **PROVEN** (binary-pentagonal structure)
+**Status**: **PROVEN (Lean)** — `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -778,7 +795,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}
 
 **Numerical value**: λ_H = √17/32 = 0.128906...
 
-**Status**: **PROVEN** (exact topological formula with geometric origin)
+**Status**: **PROVEN (Lean)** — `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -925,10 +942,10 @@ The framework relates 39 observables to pure topological structure with **zero c
 
 | Status | Count | Examples |
 |--------|-------|----------|
-| **PROVEN** | 13 | N_gen, p₂, Q_Koide, m_s/m_d, δ_CP, m_τ/m_e, Ω_DE, n_s, ξ, λ_H, sin²θ_W = 3/13, τ = 3472/891, **det(g) = 65/32** |
-| **TOPOLOGICAL** | 12 | κ_T = 1/61, θ₁₃, θ₂₃, m_τ/m_μ, α_s, gauge bosons |
+| **PROVEN (Lean)** | 13 | sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496 |
+| **TOPOLOGICAL** | 12 | θ₁₃, θ₂₃, m_τ/m_μ, α_s, gauge bosons |
 | **DERIVED** | 10 | θ₁₂, CKM elements, quark ratios |
-| **PHENOMENOLOGICAL** | 3 | m_μ/m_e, some absolute masses |
+| **PHENOMENOLOGICAL** | 4 | m_μ/m_e, Ω_DE, n_s, some absolute masses |
 
 
 ### 10.3 Sector Analysis
@@ -1198,12 +1215,12 @@ This is not an approximation. The hierarchy parameter governing mass scales acro
 This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with G₂ holonomy. The framework relates 39 observables to pure topological structure with **zero continuous adjustable parameters**, achieving mean precision 0.128% across six orders of magnitude.
 
 **Key achievements**:
-- 13 exact topological relations with rigorous proofs (including τ = 3472/891, κ_T = 1/61, sin²θ_W = 3/13, **det(g) = 65/32**)
+- **13 exact relations formally verified in Lean 4** with Mathlib (zero domain-specific axioms, zero sorry)
+- All relations proven: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
 - **Zero-parameter paradigm**: All structural constants derive from fixed topological invariants
 - Torsional geodesic dynamics providing geometric RG flow interpretation
 - Scale bridge 21×e⁸ connecting topology to physics
 - Discovery that the hierarchy parameter τ is exactly rational
-- Discovery that the metric determinant det(g) = 65/32 is topological (eliminates last fitted parameter)
 - Clear falsification criteria for experimental testing
 
 **Clarification on "zero-parameter"**: The framework makes discrete structural choices (E₈×E₈ gauge group, K₇ manifold topology) but contains no continuous quantities adjusted to fit data. Given these structural choices, all 39 observables follow without further input.

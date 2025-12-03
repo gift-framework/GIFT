@@ -1,9 +1,13 @@
 # GIFT Framework v2.3a - Complete Observable Reference
 
-**Version**: 2.3.0
-**Date**: 2025-11-26
-**Status**: Validated (Monte Carlo 10^5 samples)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![CI Status](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml/badge.svg)](https://github.com/gift-framework/GIFT/actions/workflows/lean.yml)
+
+**Version**: 2.3.1
+**Date**: 2025-12-03
+**Status**: Validated (Monte Carlo 10^5 samples) + **Lean 4 Formal Verification**
 **Mean Precision**: 0.128% across 39 observables
+**Lean-Verified Relations**: 13 (zero domain axioms, zero sorry)
 
 ---
 
@@ -70,7 +74,7 @@ The framework contains no continuous adjustable parameters. Predictions follow u
 | Parameter | Formula | Value | Status |
 |-----------|---------|-------|--------|
 | ξ | (Weyl/p₂) × β₀ = 5π/16 | ≈ 0.98175 | DERIVED (exact) |
-| τ | 496×21/(27×99) = 3472/891 | 3.896747... | **PROVEN** |
+| τ | 496×21/(27×99) = 3472/891 | 3.896747... | **PROVEN (Lean)** |
 
 **τ Exact Form**:
 ```
@@ -91,8 +95,8 @@ Derivation:
 
 | Parameter | Value | Formula | Status |
 |-----------|-------|---------|--------|
-| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **TOPOLOGICAL + CERTIFIED** |
-| κ_T = \|T\| | **1/61** | 1/(b₃ - dim(G₂) - p₂) | **TOPOLOGICAL** |
+| det(g) | **65/32** | p₂ + 1/(b₂ + dim(G₂) - N_gen) | **PROVEN (Lean)** |
+| κ_T = \|T\| | **1/61** | 1/(b₃ - dim(G₂) - p₂) | **PROVEN (Lean)** |
 
 **det(g) Topological Derivation**:
 ```
@@ -180,7 +184,7 @@ Geometric interpretation:
 
 ### 2.2 Weak Mixing Angle sin²θ_W
 
-**Status**: **PROVEN**
+**Status**: **PROVEN (Lean)** — `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
 
 **Formula**:
 ```
@@ -326,7 +330,7 @@ where:
 
 ### 3.4 CP Violation Phase δ_CP
 
-**Status**: **PROVEN** (exact integer)
+**Status**: **PROVEN (Lean)** — `delta_CP_certified` in `GIFT.Relations.NeutrinoSector`
 
 **Formula**:
 ```
@@ -353,7 +357,7 @@ where:
 
 ### 4.1 Koide Parameter Q
 
-**Status**: PROVEN (Exact rational)
+**Status**: **PROVEN (Lean)** — `koide_certified` in `GIFT.Relations.LeptonSector`
 
 **Formula**:
 ```
@@ -406,7 +410,7 @@ where φ = (1+√5)/2 is the golden ratio.
 
 ### 4.3 Tau-Electron Mass Ratio
 
-**Status**: PROVEN (Exact integer)
+**Status**: **PROVEN (Lean)** — `m_tau_m_e_certified` in `GIFT.Relations.LeptonSector`
 
 **Formula**:
 ```
@@ -433,7 +437,7 @@ m_τ/m_e = dim(K₇) + 10·dim(E₈) + 10·H*
 
 ### 5.1 Strange-Down Ratio m_s/m_d
 
-**Status**: PROVEN (Exact integer)
+**Status**: **PROVEN (Lean)** — `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
 
 **Formula**:
 ```
@@ -600,7 +604,7 @@ M_Z = M_W / cos(θ_W) = 91.20 GeV
 
 ### 7.4 Higgs Self-Coupling λ_H
 
-**Status**: PROVEN
+**Status**: **PROVEN (Lean)** — `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
 
 **Formula**:
 ```
@@ -788,16 +792,16 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 | # | Observable | Predicted | Experimental | Deviation | Status |
 |---|------------|-----------|--------------|-----------|--------|
 | 1 | α⁻¹ | 137.033 | 137.036 | 0.002% | TOPOLOGICAL |
-| 2 | sin²θ_W | **3/13** = 0.23077 | 0.23122 | 0.195% | **PROVEN** |
+| 2 | sin²θ_W | **3/13** = 0.23077 | 0.23122 | 0.195% | **PROVEN (Lean)** |
 | 3 | α_s(M_Z) | **√2/12** = 0.11785 | 0.1179 | 0.042% | **TOPOLOGICAL** |
 | 4 | θ₁₂ | 33.40° | 33.41° | 0.03% | TOPOLOGICAL |
 | 5 | θ₁₃ | 8.571° | 8.54° | 0.36% | TOPOLOGICAL |
 | 6 | θ₂₃ | 49.19° | 49.3° | 0.22% | TOPOLOGICAL |
-| 7 | δ_CP | 197° | 197° | 0.00% | PROVEN |
-| 8 | Q_Koide | 2/3 | 0.66666 | 0.001% | PROVEN |
+| 7 | δ_CP | 197° | 197° | 0.00% | **PROVEN (Lean)** |
+| 8 | Q_Koide | 2/3 | 0.66666 | 0.001% | **PROVEN (Lean)** |
 | 9 | m_μ/m_e | 207.01 | 206.77 | 0.12% | TOPOLOGICAL |
-| 10 | m_τ/m_e | 3477 | 3477.15 | 0.004% | PROVEN |
-| 11 | m_s/m_d | 20 | 20.0 | 0.00% | PROVEN |
+| 10 | m_τ/m_e | 3477 | 3477.15 | 0.004% | **PROVEN (Lean)** |
+| 11 | m_s/m_d | 20 | 20.0 | 0.00% | **PROVEN (Lean)** |
 | 12 | m_c/m_s | 13.60 | 13.60 | 0.003% | DERIVED |
 | 13 | m_b/m_u | 1935.15 | 1935.2 | 0.003% | DERIVED |
 | 14 | m_t/m_b | 41.41 | 41.3 | 0.26% | DERIVED |
@@ -821,11 +825,11 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 | 32 | m_c | 1280 MeV | 1270 MeV | 0.79% | THEORETICAL |
 | 33 | m_b | 4158 MeV | 4180 MeV | 0.53% | THEORETICAL |
 | 34 | m_t | 172225 MeV | 172760 MeV | 0.31% | THEORETICAL |
-| 35 | Ω_DE | 0.6861 | 0.6889 | 0.40% | PROVEN |
-| 36 | n_s | 0.9649 | 0.9649 | 0.00% | PROVEN |
-| 37 | κ_T | **1/61** = 0.01639 | 0.0164 | 0.04% | **TOPOLOGICAL** |
-| 38 | τ | **3472/891** = 3.8967 | 3.897 | 0.01% | **PROVEN** |
-| 39 | λ_H | √17/32 = 0.1289 | 0.126 | 2.3% | PROVEN |
+| 35 | Ω_DE | 0.6861 | 0.6889 | 0.40% | DERIVED |
+| 36 | n_s | 0.9649 | 0.9649 | 0.00% | TOPOLOGICAL |
+| 37 | κ_T | **1/61** = 0.01639 | 0.0164 | 0.04% | **PROVEN (Lean)** |
+| 38 | τ | **3472/891** = 3.8967 | 3.897 | 0.01% | **PROVEN (Lean)** |
+| 39 | λ_H | √17/32 = 0.1289 | 0.126 | 2.3% | **PROVEN (Lean)** |
 
 ### 11.2 Statistics by Sector
 
@@ -844,10 +848,30 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 
 | Status | Count | Mean Deviation | Description |
 |--------|-------|----------------|-------------|
-| **PROVEN** | **13** | 0.15% | Exact rational/integer from topology |
+| **PROVEN (Lean)** | **13** | 0.15% | Lean 4 kernel-verified (zero domain axioms) |
 | **TOPOLOGICAL** | **12** | 0.09% | Direct topological derivation |
 | DERIVED | 9 | 0.14% | Computed from topological relations |
 | THEORETICAL | 6 | 0.28% | Requires single scale input |
+
+### 11.4 Lean 4 Verified Relations (Complete List)
+
+All 13 relations verified in `/Lean/` with Mathlib 4.14.0:
+
+| Relation | Value | Lean Theorem | Module |
+|----------|-------|--------------|--------|
+| sin²θ_W | 3/13 | `weinberg_angle_certified` | GaugeSector |
+| τ | 3472/891 | `tau_certified` | MainTheorem |
+| det(g) | 65/32 | `det_g_certified` | MainTheorem |
+| κ_T | 1/61 | `kappa_T_certified` | MainTheorem |
+| δ_CP | 197° | `delta_CP_certified` | NeutrinoSector |
+| m_τ/m_e | 3477 | `m_tau_m_e_certified` | LeptonSector |
+| m_s/m_d | 20 | `m_s_m_d_certified` | QuarkSector |
+| Q_Koide | 2/3 | `koide_certified` | LeptonSector |
+| λ_H | √17/32 | `lambda_H_num_certified` | HiggsSector |
+| H* | 99 | `H_star_is_99` | Constants |
+| p₂ | 2 | `p2_eq_2` | Constants |
+| N_gen | 3 | `N_gen_eq_3` | Constants |
+| E₈×E₈ | 496 | `E8_product_dim` | Algebra |
 
 ### 11.4 Global Statistics
 
@@ -921,7 +945,8 @@ n_s = ζ(11)/ζ(5)
 
 ---
 
-**Document Version**: 2.2.0
-**Last Updated**: 2025-11-26
-**Validation**: Monte Carlo 10⁵ samples, seed 42
+**Document Version**: 2.3.1
+**Last Updated**: 2025-12-03
+**Validation**: Monte Carlo 10⁵ samples, seed 42 + Lean 4 formal verification
 **Repository**: https://github.com/gift-framework/GIFT
+**Lean Proofs**: https://github.com/gift-framework/GIFT/tree/main/Lean
