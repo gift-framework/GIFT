@@ -1,0 +1,208 @@
+name: Analysis
+
+# Consolidated quality checks, security scanning, and validation
+# These are INFORMATIONAL - they don't block PRs but provide useful feedback
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1" # Every Monday at 6 AM UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  # ============================================================================
+  # SECURITY ANALYSIS
+  # ============================================================================
+  security:
+    name: Security (CodeQL)
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:python"
+
+  # ============================================================================
+  # CODE QUALITY
+  # ============================================================================
+  quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
+
+      - name: Install tools
+        run: |
+          pip install mypy radon flake8 types-requests
+          pip install -r requirements.txt || true
+
+      - name: Type check (mypy)
+        run: |
+          echo "## Type Check Results" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          mypy --ignore-missing-imports --no-error-summary \
+            --exclude 'venv|\.venv|build|dist|__pycache__|\.ipynb_checkpoints' \
+            statistical_validation/ assets/agents/ 2>&1 | head -50 >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Style check
+        run: |
+          echo "## Style Issues" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          flake8 . --count --max-complexity=10 --max-line-length=127 \
+            --exclude=__pycache__,*.ipynb_checkpoints,venv,.venv \
+            --statistics 2>&1 | tail -20 >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Complexity report
+        run: |
+          echo "## Complexity Report" >> $GITHUB_STEP_SUMMARY
+          echo "Top 10 most complex functions:" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          radon cc . -a -s --exclude "venv,.venv,__pycache__,.ipynb_checkpoints" \
+            --total-average 2>&1 | tail -15 >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  # ============================================================================
+  # DOCUMENTATION
+  # ============================================================================
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Validate relative links
+        run: |
+          python << 'EOF'
+          import re
+          import sys
+          from pathlib import Path
+
+          print("Validating relative file links in Markdown files...")
+          errors = []
+          checked = 0
+
+          for md_file in Path('.').rglob('*.md'):
+              if '.git' in str(md_file):
+                  continue
+              try:
+                  content = md_file.read_text(encoding='utf-8')
+                  for match in re.finditer(r'\[([^\]]+)\]\(([^)]+)\)', content):
+                      link_path = match.group(2)
+                      if link_path.startswith(('http://', 'https://', 'mailto:', '#', '...')):
+                          continue
+                      file_path = link_path.split('#')[0]
+                      if not file_path:
+                          continue
+                      checked += 1
+                      target = (md_file.parent / file_path).resolve()
+                      if not target.exists():
+                          errors.append(f"{md_file}: {link_path}")
+              except Exception as e:
+                  print(f"Warning: {md_file}: {e}")
+
+          print(f"Checked {checked} relative links")
+          if errors:
+              print(f"\nBroken links ({len(errors)}):")
+              for e in errors[:10]:
+                  print(f"  {e}")
+              sys.exit(1)
+          print("All relative links valid!")
+          EOF
+
+      - name: Check external links (README only)
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: "yes"
+          config-file: ".markdown-link-check.json"
+          file-path: "./README.md"
+        continue-on-error: true
+
+  # ============================================================================
+  # NOTEBOOKS
+  # ============================================================================
+  notebooks:
+    name: Notebooks
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Validate notebook structure
+        run: |
+          python << 'EOF'
+          import json
+          from pathlib import Path
+
+          notebooks = [nb for nb in Path('.').rglob('*.ipynb')
+                       if '.ipynb_checkpoints' not in str(nb)]
+
+          errors = []
+          for nb in notebooks[:20]:  # Check first 20
+              try:
+                  data = json.loads(nb.read_text(encoding='utf-8'))
+                  if 'cells' not in data:
+                      errors.append(f"{nb}: Missing 'cells'")
+              except json.JSONDecodeError as e:
+                  errors.append(f"{nb}: JSON error - {e}")
+              except Exception as e:
+                  errors.append(f"{nb}: {e}")
+
+          print(f"Checked {min(len(notebooks), 20)} notebooks")
+          if errors:
+              print("\nIssues found:")
+              for e in errors:
+                  print(f"  {e}")
+          else:
+              print("All notebooks valid!")
+          EOF
+
+      - name: Notebook summary
+        if: always()
+        run: |
+          echo "## Notebook Validation" >> $GITHUB_STEP_SUMMARY
+          TOTAL=$(find . -name "*.ipynb" -not -path "*/.ipynb_checkpoints/*" | wc -l)
+          echo "Total notebooks: $TOTAL" >> $GITHUB_STEP_SUMMARY
