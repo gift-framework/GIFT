@@ -12,6 +12,7 @@ A compact 7-dimensional Riemannian manifold with G₂ holonomy. The subscript 7 
 
 ### Status Classifications
 Framework uses hierarchical classification for results:
+- **PROVEN (Lean)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
 - **PROVEN**: Exact topological identity with rigorous mathematical proof
 - **TOPOLOGICAL**: Direct consequence of topological structure
 - **DERIVED**: Calculated from proven relations
@@ -384,7 +385,10 @@ Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key
 ### Scale Bridge (v2.1)
 Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
 
+### Lean 4 (v2.3.1)
+Theorem prover used for formal verification of GIFT exact relations. The `/Lean/` directory contains 17 modules proving all 13 exact relations with zero domain-specific axioms. Key theorem: `GIFT_framework_certified`.
+
 ---
 
-Last updated: v2.1.0 (2025-11-22)
+Last updated: v2.3.1 (2025-12-03)
 
