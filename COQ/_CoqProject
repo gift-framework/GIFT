@@ -1,0 +1,27 @@
+-Q . GIFT
+
+Algebra/E8RootSystem.v
+Algebra/E8WeylGroup.v
+Algebra/E8Representations.v
+Algebra/ExceptionalJordan.v
+
+Geometry/G2Group.v
+Geometry/G2Structure.v
+Geometry/G2Holonomy.v
+Geometry/TwistedConnectedSum.v
+
+Topology/BettiNumbers.v
+Topology/CohomologyStructure.v
+Topology/EulerCharacteristic.v
+
+Relations/Constants.v
+Relations/GaugeSector.v
+Relations/NeutrinoSector.v
+Relations/QuarkSector.v
+Relations/LeptonSector.v
+Relations/HiggsSector.v
+Relations/CosmologySector.v
+
+Certificate/ZeroParameter.v
+Certificate/MainTheorem.v
+Certificate/Summary.v
