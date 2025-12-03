@@ -17,6 +17,7 @@ with zero continuous adjustable parameters.
 -/
 
 import GIFT.Algebra.E8RootSystem
+import GIFT.Algebra.E8RootsExplicit
 import GIFT.Algebra.E8WeylGroup
 import GIFT.Algebra.E8Representations
 import GIFT.Algebra.ExceptionalJordan
