@@ -1,0 +1,6 @@
+# Aggregate Checksum
+# Algorithm: SHA-256
+# Timestamp: 2025-12-03T14:48:01Z
+# Method: SHA-256 of concatenated source checksums
+
+sha256:be6c93bbf60841dad16840c4c1425d1c986e7329830a09338370e02976a1c876  GIFT_AGGREGATE

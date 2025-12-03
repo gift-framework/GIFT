@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-12-03T14:48:10Z",
+  "component": "g2_metric",
+  "status": "PASS",
+  "lean_certificates": {
+    "found": "4/4",
+    "files": [
+      "G2CertificateV2.lean",
+      "G2CertificateV2_2.lean",
+      "GIFTConstants.lean",
+      "GIFT_Banach_FP_Certificate.lean"
+    ]
+  },
+  "metric_validation": {
+    "det_g_computed": 2.0312490,
+    "det_g_exact": 2.03125,
+    "det_g_formula": "65/32",
+    "deviation_percent": .000049230,
+    "tolerance_percent": 0.01,
+    "within_tolerance": true
+  },
+  "banach_certificate": {
+    "contraction_constant_K": 0.9,
+    "joyce_threshold": 0.1,
+    "torsion_bound": 0.002857,
+    "safety_margin": 35,
+    "safety_margin_formula": "threshold / torsion_bound"
+  },
+  "pinn_metadata": {
+    "architecture": "7x128x128x128x21",
+    "final_precision": "0.00005%",
+    "training_method": "physics_informed_neural_network"
+  },
+  "source_checksum": "sha256:80a097542a16516b83ff5b37da1476809f1bb4c8304b1567a24d5de32e4c7f8f"
+}
