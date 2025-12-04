@@ -1,44 +1,22 @@
-# GIFT Framework - Visualization Figures
+# GIFT Framework - Static Figures
 
-This directory contains exported HTML visualizations for the dashboard.
+This directory contains static visualization assets (PNG format).
 
 ## Contents
 
-When `generate_all_figures.py` is run, the following files are copied here:
+| File | Description |
+|------|-------------|
+| `E8_roots_dark.png` | E₈ root system projection (dark theme) |
+| `E8_roots_light.png` | E₈ root system projection (light theme) |
+| `K7_TCS_dark.png` | K₇ twisted connected sum diagram (dark theme) |
+| `K7_TCS_light.png` | K₇ twisted connected sum diagram (light theme) |
+| `Metro_Map_dark.png` | GIFT framework overview (dark theme) |
+| `Metro_Map_light.png` | GIFT framework overview (light theme) |
 
-- `e8_roots.html` - E₈ root system 3D visualization
-- `precision_dashboard.html` - Precision analysis dashboard
-- `dimensional_reduction.html` - Dimensional reduction flow
+## Interactive Versions
 
-## Generation
-
-To populate this directory with figures:
-
-```bash
-# From repository root
-python generate_all_figures.py
-```
-
-This will:
-1. Execute all visualization notebooks
-2. Generate figures in `visualizations/outputs/`
-3. Copy HTML files to this directory
-
-## Usage
-
-These HTML files are:
-- Referenced by `../index.html` (dashboard)
-- Embedded in iframes for display
-- Self-contained with embedded Plotly.js
-- Fully interactive
-
-## Note
-
-This directory may be empty in the repository. Generated figures are created on-demand and can be large (1-5MB each). They are typically generated locally or via CI/CD for deployment.
-
-For GitHub Pages deployment, ensure figures are present before pushing or set up automated generation in GitHub Actions.
+For interactive visualizations, see the Jupyter notebooks in [`assets/visualizations/`](../../assets/visualizations/).
 
 ---
 
-Part of GIFT Framework v2.0 Visualization Dashboard
-
+Part of GIFT Framework v2.3

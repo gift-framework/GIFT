@@ -166,7 +166,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={Data comparison, statistical analysis, falsification protocol},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S5_experimental_validation.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S5_experimental_validation_v23.md}
 }
 ```
 
