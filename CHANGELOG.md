@@ -5,23 +5,54 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.1] - 2025-12-04
+
+### Topological Extension - 25 Certified Relations
+
+This release updates documentation to reflect the **25 certified relations** now proven in [gift-framework/core](https://github.com/gift-framework/core) (13 original + 12 topological extension).
+
+#### Added
+
+**12 New Topological Extension Relations** (v1.1.0 of giftpy)
+- α_s denom = 12 (dim(G₂) - p₂)
+- γ_GIFT = 511/884 ((2·rank(E₈) + 5·H*) / (10·dim(G₂) + 3·dim(E₈)))
+- δ penta = 25 (Weyl² pentagonal structure)
+- θ₂₃ = 85/99 ((rank(E₈) + b₃) / H*)
+- θ₁₃ denom = 21 (b₂ Betti number)
+- α_s² denom = 144 ((dim(G₂) - p₂)²)
+- λ_H² = 17/1024 ((dim(G₂) + N_gen) / 32²)
+- θ₁₂ factor = 12775 (Weyl² × γ_num)
+- m_μ/m_e base = 27 (dim(J₃(O)))
+- n_s indices = 11, 5 (D_bulk, Weyl_factor)
+- Ω_DE frac = 98/99 ((H* - 1) / H*)
+- α⁻¹ base = 137 ((dim(E₈) + rank(E₈))/2 + H*/11)
+
+#### Changed
+- Updated all documentation to reference 25 proven relations
+- README.md: Added complete table of all 25 relations
+- Main paper: Updated abstract and Lean verification summary
+- Observable Reference: Added Extension Relations table
+- Statistical Validation: Updated status classifications
+
+---
+
 ## [2.3] - 2025-12-03
 
 ### Major Release - Dual Formal Verification (Lean 4 + Coq)
 
-This version achieves complete formal verification in **both Lean 4 and Coq**, establishing independently machine-verified proofs for all 13 exact relations with zero domain-specific axioms.
+This version achieves complete formal verification in **both Lean 4 and Coq**, establishing independently machine-verified proofs for all 13 original exact relations with zero domain-specific axioms.
 
 #### Added
 
 **Lean 4 Verification** (now in [gift-framework/core](https://github.com/gift-framework/core))
 - Complete formalization with 17 modules
-- All 13 exact relations proven: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
+- All 13 original exact relations proven: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
 - Zero domain-specific axioms (only propext, Quot.sound)
 - Zero `sorry` (all proofs complete)
 
 **Coq Verification** (now in [gift-framework/core](https://github.com/gift-framework/core))
 - Complete formalization with 21 modules
-- All 13 exact relations independently proven
+- All 13 original exact relations independently proven
 - Zero `Admitted` statements (all proofs complete)
 - Zero explicit axioms beyond Coq core
 - Parallel module structure: Algebra, Geometry, Topology, Relations, Certificate

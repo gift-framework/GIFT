@@ -170,6 +170,7 @@ All elements predicted with mean deviation 0.11%. Highlights:
 | v2.1 | 46 | 3 | 0.13% | Torsional dynamics, scale bridge, 9 dimensional observables |
 | v2.2 | 39 | 0 | 0.128% | Zero-parameter paradigm, 13 proven relations, consolidated catalog |
 | v2.3 | 39 | 0 | 0.128% | Dual formal verification (Lean 4 + Coq), unified CI pipeline |
+| v2.3.1 | 39 | 0 | 0.128% | 25 proven relations (12 topological extension), giftpy v1.1.0 |
 
 ### Experimental Precision Trends
 
@@ -343,12 +344,12 @@ No sector shows systematic problems. All perform well.
 - Perfect fit by construction (parameters chosen to match)
 - No predictive power for these 19 numbers
 
-**GIFT v2.3**: Zero continuous adjustable parameters, 39 predictions
+**GIFT v2.3.1**: Zero continuous adjustable parameters, 39 predictions
 - Mean deviation 0.128% without adjusting
 - Genuine predictive power
 - Complete elimination of free parameters
 - All quantities structurally determined
-- 13 relations formally verified in both Lean 4 and Coq
+- 25 relations formally verified in both Lean 4 and Coq (13 original + 12 topological extension)
 
 **Other unification attempts**:
 - SU(5) GUT: Incorrect sin²θ_W prediction (~0.20 vs 0.23)

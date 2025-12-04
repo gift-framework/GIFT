@@ -17,7 +17,7 @@ The GIFT framework has undergone comprehensive statistical validation to assess:
 
 **Key findings**:
 - Mean deviation: **0.128%** across 39 observables
-- **13 PROVEN** exact relations
+- **25 PROVEN** exact relations (13 original + 12 topological extension)
 - **0 PHENOMENOLOGICAL** predictions
 - No alternative minima found in parameter space
 - Predictions robust to parameter variations within uncertainties
@@ -226,10 +226,10 @@ Exact rational formulas provide:
 
 | Status | Count | Description |
 |--------|-------|-------------|
-| **PROVEN** | 13 | Exact rational/integer from topology |
-| **TOPOLOGICAL** | 12 | Direct topological derivation |
-| DERIVED | 9 | Computed from topological relations |
-| THEORETICAL | 6 | Theoretical justification |
+| **PROVEN (Lean + Coq)** | 25 | Exact rational/integer from topology (dual-verified) |
+| **TOPOLOGICAL** | 5 | Direct topological derivation |
+| DERIVED | 5 | Computed from topological relations |
+| THEORETICAL | 4 | Theoretical justification |
 | PHENOMENOLOGICAL | 0 | None (all predictions have topological basis) |
 
 ---
@@ -320,9 +320,9 @@ The GIFT framework demonstrates:
 
 1. **High Precision**: Mean deviation 0.128% across 39 observables
 
-2. **Strong Foundations**: 13 PROVEN relations, 0 PHENOMENOLOGICAL
+2. **Strong Foundations**: 25 PROVEN relations (dual Lean + Coq verified), 0 PHENOMENOLOGICAL
 
-3. **Testability**: Exact predictions (3/13, 1/61, 3472/891, 65/32) provide sharp tests
+3. **Testability**: Exact predictions (3/13, 1/61, 3472/891, 65/32, 511/884, 85/99, 98/99, etc.) provide sharp tests
 
 4. **Compatibility**: DESI DR2 torsion constraints satisfied
 
@@ -333,9 +333,9 @@ The GIFT framework demonstrates:
 | Aspect | Value |
 |--------|-------|
 | Mean deviation | 0.128% |
-| PROVEN relations | 13 |
+| PROVEN relations | 25 |
 | PHENOMENOLOGICAL | 0 |
-| Exact rationals | 9 |
+| Exact rationals | 21 |
 | Total observables | 39 |
 
 ### 9.3 Recommendation

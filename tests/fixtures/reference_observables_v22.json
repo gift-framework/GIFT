@@ -210,9 +210,10 @@
     },
     "summary": {
         "total_observables": 39,
-        "proven_count": 13,
-        "topological_count": 7,
-        "derived_count": 19,
+        "proven_count": 25,
+        "topological_count": 5,
+        "derived_count": 5,
+        "theoretical_count": 4,
         "mean_deviation_percent": 0.128,
         "within_0_5_percent": 31
     },
@@ -222,5 +223,19 @@
         "tau": "DERIVED -> PROVEN (exact formula: 3472/891)",
         "det_g": "FITTED -> TOPOLOGICAL (exact formula: 65/32)",
         "n_s": "DERIVED -> PROVEN (exact formula: zeta(11)/zeta(5))"
+    },
+    "v23_1_extensions": {
+        "gamma_GIFT": "NEW - PROVEN (exact formula: 511/884)",
+        "theta_23": "NEW - PROVEN (exact formula: 85/99)",
+        "alpha_inv_base": "NEW - PROVEN (exact formula: 137)",
+        "Omega_DE_frac": "NEW - PROVEN (exact formula: 98/99)",
+        "alpha_s_denom": "NEW - PROVEN (exact formula: 12)",
+        "delta_penta": "NEW - PROVEN (exact formula: 25)",
+        "theta_13_denom": "NEW - PROVEN (exact formula: 21)",
+        "alpha_s_sq_denom": "NEW - PROVEN (exact formula: 144)",
+        "lambda_H_sq": "NEW - PROVEN (exact formula: 17/1024)",
+        "theta_12_factor": "NEW - PROVEN (exact formula: 12775)",
+        "m_mu_m_e_base": "NEW - PROVEN (exact formula: 27)",
+        "ns_indices": "NEW - PROVEN (exact formula: 11, 5)"
     }
 }

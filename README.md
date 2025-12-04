@@ -14,14 +14,14 @@
 |--------|-------|
 | **Precision** | 0.128% mean deviation across 39 observables |
 | **Parameters** | Zero continuous adjustable (all structurally determined) |
-| **Formally verified relations** | **13 proven** in Lean 4 + Coq (dual verification, zero axioms) |
+| **Formally verified relations** | **25 proven** in Lean 4 + Coq (dual verification, zero axioms) |
 | **Key results** | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |
 
-The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **13 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
+The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **25 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
 
 ## Formal Verification (Lean 4 + Coq)
 
-All 13 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation.
+All 25 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension).
 
 ### Mathematical Core Repository
 
@@ -66,23 +66,42 @@ jupyter notebook assets/visualizations/
 
 ## Key Results
 
-### 13 Lean-Verified Exact Relations
+### 25 Lean-Verified Exact Relations
+
+#### Original 13 Relations
 
 | Relation | Value | Formula | Status |
 |----------|-------|---------|--------|
-| sin²θ_W | 3/13 | b₂/(b₃ + dim(G₂)) | **PROVEN (Lean)** |
-| τ | 3472/891 | (496×21)/(27×99) | **PROVEN (Lean)** |
-| det(g) | 65/32 | Topological formula | **PROVEN (Lean)** |
-| κ_T | 1/61 | 1/(b₃ - dim(G₂) - p₂) | **PROVEN (Lean)** |
-| δ_CP | 197° | 7×dim(G₂) + H* | **PROVEN (Lean)** |
-| Q_Koide | 2/3 | dim(G₂)/b₂ | **PROVEN (Lean)** |
-| m_s/m_d | 20 | p₂² × Weyl | **PROVEN (Lean)** |
-| m_τ/m_e | 3477 | dim(K₇) + 10×dim(E₈) + 10×H* | **PROVEN (Lean)** |
-| λ_H | √17/32 | √(dim(G₂)+N_gen)/2⁵ | **PROVEN (Lean)** |
-| H* | 99 | b₂ + b₃ + 1 | **PROVEN (Lean)** |
-| p₂ | 2 | dim(G₂)/dim(K₇) | **PROVEN (Lean)** |
-| N_gen | 3 | rank(E₈) - Weyl | **PROVEN (Lean)** |
-| E₈×E₈ | 496 | 2 × dim(E₈) | **PROVEN (Lean)** |
+| sin²θ_W | 3/13 | b₂/(b₃ + dim(G₂)) | **PROVEN (Lean + Coq)** |
+| τ | 3472/891 | (496×21)/(27×99) | **PROVEN (Lean + Coq)** |
+| det(g) | 65/32 | Topological formula | **PROVEN (Lean + Coq)** |
+| κ_T | 1/61 | 1/(b₃ - dim(G₂) - p₂) | **PROVEN (Lean + Coq)** |
+| δ_CP | 197° | 7×dim(G₂) + H* | **PROVEN (Lean + Coq)** |
+| Q_Koide | 2/3 | dim(G₂)/b₂ | **PROVEN (Lean + Coq)** |
+| m_s/m_d | 20 | p₂² × Weyl | **PROVEN (Lean + Coq)** |
+| m_τ/m_e | 3477 | dim(K₇) + 10×dim(E₈) + 10×H* | **PROVEN (Lean + Coq)** |
+| λ_H | √17/32 | √(dim(G₂)+N_gen)/2⁵ | **PROVEN (Lean + Coq)** |
+| H* | 99 | b₂ + b₃ + 1 | **PROVEN (Lean + Coq)** |
+| p₂ | 2 | dim(G₂)/dim(K₇) | **PROVEN (Lean + Coq)** |
+| N_gen | 3 | rank(E₈) - Weyl | **PROVEN (Lean + Coq)** |
+| E₈×E₈ | 496 | 2 × dim(E₈) | **PROVEN (Lean + Coq)** |
+
+#### Topological Extension (12 New Relations)
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| α_s denom | 12 | dim(G₂) - p₂ | **PROVEN (Lean + Coq)** |
+| γ_GIFT | 511/884 | (2·rank(E₈) + 5·H*) / (10·dim(G₂) + 3·dim(E₈)) | **PROVEN (Lean + Coq)** |
+| δ penta | 25 | Weyl² (pentagonal structure) | **PROVEN (Lean + Coq)** |
+| θ₂₃ | 85/99 | (rank(E₈) + b₃) / H* | **PROVEN (Lean + Coq)** |
+| θ₁₃ denom | 21 | b₂ (Betti number) | **PROVEN (Lean + Coq)** |
+| α_s² denom | 144 | (dim(G₂) - p₂)² | **PROVEN (Lean + Coq)** |
+| λ_H² | 17/1024 | (dim(G₂) + N_gen) / 32² | **PROVEN (Lean + Coq)** |
+| θ₁₂ factor | 12775 | Weyl² × γ_num | **PROVEN (Lean + Coq)** |
+| m_μ/m_e base | 27 | dim(J₃(O)) | **PROVEN (Lean + Coq)** |
+| n_s indices | 11, 5 | D_bulk, Weyl_factor | **PROVEN (Lean + Coq)** |
+| Ω_DE frac | 98/99 | (H* - 1) / H* | **PROVEN (Lean + Coq)** |
+| α⁻¹ base | 137 | (dim(E₈) + rank(E₈))/2 + H*/11 | **PROVEN (Lean + Coq)** |
 
 Complete proofs: [gift-framework/core](https://github.com/gift-framework/core) | Paper proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
 

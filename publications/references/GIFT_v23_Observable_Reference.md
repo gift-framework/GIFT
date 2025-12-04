@@ -847,37 +847,56 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 
 | Status | Count | Mean Deviation | Description |
 |--------|-------|----------------|-------------|
-| **PROVEN (Lean)** | **13** | 0.15% | Lean 4 kernel-verified (zero domain axioms) |
-| **TOPOLOGICAL** | **12** | 0.09% | Direct topological derivation |
-| DERIVED | 9 | 0.14% | Computed from topological relations |
-| THEORETICAL | 6 | 0.28% | Requires single scale input |
+| **PROVEN (Lean + Coq)** | **25** | 0.12% | Dual-verified (Lean 4 + Coq 8.18, zero domain axioms) |
+| **TOPOLOGICAL** | **5** | 0.09% | Direct topological derivation |
+| DERIVED | 5 | 0.14% | Computed from topological relations |
+| THEORETICAL | 4 | 0.28% | Requires single scale input |
 
-### 11.4 Lean 4 Verified Relations (Complete List)
+### 11.4 Lean 4 + Coq Verified Relations (Complete List)
 
-All 13 relations verified in [gift-framework/core](https://github.com/gift-framework/core) with Mathlib 4.14.0:
+All 25 relations verified in [gift-framework/core](https://github.com/gift-framework/core) with Mathlib 4.14.0 and Coq 8.18:
+
+#### Original 13 Relations
 
 | Relation | Value | Lean Theorem | Module |
 |----------|-------|--------------|--------|
-| sin²θ_W | 3/13 | `weinberg_angle_certified` | GaugeSector |
-| τ | 3472/891 | `tau_certified` | MainTheorem |
-| det(g) | 65/32 | `det_g_certified` | MainTheorem |
-| κ_T | 1/61 | `kappa_T_certified` | MainTheorem |
-| δ_CP | 197° | `delta_CP_certified` | NeutrinoSector |
-| m_τ/m_e | 3477 | `m_tau_m_e_certified` | LeptonSector |
-| m_s/m_d | 20 | `m_s_m_d_certified` | QuarkSector |
-| Q_Koide | 2/3 | `koide_certified` | LeptonSector |
-| λ_H | √17/32 | `lambda_H_num_certified` | HiggsSector |
-| H* | 99 | `H_star_is_99` | Constants |
-| p₂ | 2 | `p2_eq_2` | Constants |
-| N_gen | 3 | `N_gen_eq_3` | Constants |
+| sin²θ_W | 3/13 | `weinberg_angle_certified` | Relations |
+| τ | 3472/891 | `tau_certified` | Relations |
+| det(g) | 65/32 | `det_g_certified` | Relations |
+| κ_T | 1/61 | `kappa_T_certified` | Relations |
+| δ_CP | 197° | `delta_CP_certified` | Relations |
+| m_τ/m_e | 3477 | `m_tau_m_e_certified` | Relations |
+| m_s/m_d | 20 | `m_s_m_d_certified` | Relations |
+| Q_Koide | 2/3 | `koide_certified` | Relations |
+| λ_H | √17/32 | `lambda_H_num_certified` | Relations |
+| H* | 99 | `H_star_is_99` | Topology |
+| p₂ | 2 | `p2_eq_2` | Geometry |
+| N_gen | 3 | `N_gen_eq_3` | Algebra |
 | E₈×E₈ | 496 | `E8_product_dim` | Algebra |
 
-### 11.4 Global Statistics
+#### Topological Extension (12 New Relations)
+
+| Relation | Value | Lean Theorem | Module |
+|----------|-------|--------------|--------|
+| α_s denom | 12 | `alpha_s_denom` | Relations.GaugeSector |
+| γ_GIFT | 511/884 | `gamma_GIFT_certified` | Relations.NeutrinoSector |
+| δ penta | 25 | `delta_penta` | Relations.GaugeSector |
+| θ₂₃ | 85/99 | `theta_23_certified` | Relations.NeutrinoSector |
+| θ₁₃ denom | 21 | `theta_13_denom` | Relations.NeutrinoSector |
+| α_s² denom | 144 | `alpha_s_sq_denom` | Relations.GaugeSector |
+| λ_H² | 17/1024 | `lambda_H_sq` | Relations.LeptonSector |
+| θ₁₂ factor | 12775 | `theta_12_factor` | Relations.NeutrinoSector |
+| m_μ/m_e base | 27 | `m_mu_m_e_base` | Relations.LeptonSector |
+| n_s indices | 11, 5 | `ns_indices` | Relations.Cosmology |
+| Ω_DE frac | 98/99 | `Omega_DE_frac` | Relations.Cosmology |
+| α⁻¹ base | 137 | `alpha_inv_base` | Relations.GaugeSector |
+
+### 11.5 Global Statistics
 
 | Metric | Value |
 |--------|-------|
 | Total observables | 39 |
-| PROVEN count | 13 |
+| PROVEN count | 25 |
 | Input parameters | 0 (zero-parameter paradigm) |
 | Mean deviation | 0.128% |
 | Median deviation | 0.073% |

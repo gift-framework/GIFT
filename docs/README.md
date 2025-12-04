@@ -26,7 +26,7 @@ Features:
 
 ### 2. Precision Analysis (Tab 2)
 - Statistical comparison across all physics sectors
-- 39 validated observables with 13 proven exact relations
+- 39 validated observables with 25 proven exact relations
 - Sector-wise performance: Gauge, Neutrino, Lepton, Quark, Higgs, Cosmology
 - Mean deviation: 0.128%
 - Source: `visualizations/precision_dashboard.ipynb`

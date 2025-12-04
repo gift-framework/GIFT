@@ -15,7 +15,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 **Output (derived without adjustment):**
 - 39 physical observables
-- 13 exact rational/integer relations
+- 25 exact rational/integer relations (13 original + 12 topological extension)
 - Mean precision 0.128% across 6 orders of magnitude
 
 ---
@@ -38,7 +38,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 ## Formal Verification (Lean 4 + Coq)
 
-**13 exact relations are independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation.
+**25 exact relations are independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension).
 
 > **Note:** Formal proofs are maintained in a dedicated repository: [gift-framework/core](https://github.com/gift-framework/core)
 
@@ -46,10 +46,12 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 ```
 core/Lean/
-├── GiftCore/
-│   ├── Basic.lean         # Core definitions
-│   ├── Relations.lean     # Physical relations
-│   └── Proofs.lean        # All 13 theorems
+├── GIFT/
+│   ├── Algebra.lean       # E₈, G₂ structures
+│   ├── Topology.lean      # Betti numbers
+│   ├── Relations.lean     # Original 13 relations
+│   ├── Relations/         # Extension modules (12 new)
+│   └── Certificate.lean   # All 25 theorems
 ```
 
 **Status:** Lean 4.14.0 + Mathlib 4.14.0 | **0 sorry** | **0 domain axioms**
@@ -60,16 +62,17 @@ See [gift-framework/core/Lean](https://github.com/gift-framework/core/tree/main/
 
 ```
 core/COQ/
-├── GiftCore.v             # Core definitions
-├── Relations.v            # Physical relations
-└── Proofs.v               # All 13 theorems
+├── Algebra/               # E₈, G₂ structures
+├── Topology/              # Betti numbers
+├── Relations/             # All 25 relations
+└── Certificate/           # All 25 theorems
 ```
 
 **Status:** Coq 8.18 | **0 Admitted** | **0 explicit axioms**
 
 See [gift-framework/core/COQ](https://github.com/gift-framework/core/tree/main/COQ) for build instructions.
 
-**Main theorem**: `GIFT_framework_certified` proves all 13 relations from `is_zero_parameter(G)` in both systems.
+**Main theorem**: `all_25_relations_certified` proves all 25 relations from `is_zero_parameter(G)` in both systems.
 
 ---
 
@@ -193,7 +196,7 @@ Given these structural choices, all 39 observables follow uniquely.
 | Mean Deviation | 0.128% |
 | Median Deviation | 0.073% |
 | Observables < 0.5% | 37/39 (95%) |
-| **PROVEN (Lean)** | 13 |
+| **PROVEN (Lean + Coq)** | 25 |
 
 ### Falsification Protocol
 
