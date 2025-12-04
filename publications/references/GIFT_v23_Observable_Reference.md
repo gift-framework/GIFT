@@ -854,7 +854,7 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 
 ### 11.4 Lean 4 Verified Relations (Complete List)
 
-All 13 relations verified in `/Lean/` with Mathlib 4.14.0:
+All 13 relations verified in [gift-framework/core](https://github.com/gift-framework/core) with Mathlib 4.14.0:
 
 | Relation | Value | Lean Theorem | Module |
 |----------|-------|--------------|--------|

@@ -182,8 +182,7 @@ Part of GIFT Framework v2.3 - MIT License
 - Main Paper: `../publications/markdown/gift_2_3_main.md`
 - Supplements: `../publications/markdown/`
 - Visualizations: `../assets/visualizations/`
-- Lean 4 Proofs: `../Lean/`
-- Coq Proofs: `../COQ/`
+- Formal Proofs (Lean 4 + Coq): https://github.com/gift-framework/core
 
 ---
 
