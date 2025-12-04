@@ -8,7 +8,7 @@ We present a geometric framework deriving Standard Model parameters from topolog
 
 The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891) derive from fixed algebraic and topological invariants. The metric determinant det(g) = 65/32 has exact topological origin, confirmed by physics-informed neural network to 0.0001% precision with Lean 4 formal verification establishing G₂ existence via Joyce's perturbation theorem (20× safety margin). This eliminates parameter tuning by construction; discrete topological structures admit no continuous variation.
 
-Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values. Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). **Thirteen relations are formally verified in Lean 4** with Mathlib, using only standard axioms (propext, Quot.sound) and zero domain-specific axioms: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√(17/32), H*=99, p₂=2, N_gen=3, and E₈×E₈=496.
+Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128% from experimental values. Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). **Twenty-five relations are formally verified in Lean 4 and Coq** with Mathlib, using only standard axioms (propext, Quot.sound) and zero domain-specific axioms. The original 13 relations: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√(17/32), H*=99, p₂=2, N_gen=3, and E₈×E₈=496, plus 12 topological extensions including γ_GIFT=511/884, θ₂₃=85/99, α⁻¹ base=137, and Ω_DE=98/99.
 
 Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 39 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
 
@@ -32,15 +32,17 @@ Throughout this paper, we use the following classifications:
 
 ### Lean 4 Verification Summary
 
-The framework includes a complete Lean 4 formalization in the dedicated [gift-framework/core](https://github.com/gift-framework/core) repository, proving all 13 exact relations from topological inputs alone:
+The framework includes a complete Lean 4 and Coq formalization in the dedicated [gift-framework/core](https://github.com/gift-framework/core) repository, proving all 25 exact relations from topological inputs alone (13 original + 12 topological extension):
 
 | Module | Content | Theorems |
 |--------|---------|----------|
-| `GiftCore.Basic` | E₈, G₂, K₇ definitions | Core structures |
-| `GiftCore.Relations` | All physical relations | 13 exact identities |
-| `GiftCore.Proofs` | Main theorem | `GIFT_framework_certified` |
+| `GIFT.Algebra` | E₈, G₂ definitions | Core structures |
+| `GIFT.Topology` | K₇, Betti numbers | Topological invariants |
+| `GIFT.Relations` | Original 13 relations | Physical identities |
+| `GIFT.Relations/*` | Extension modules | 12 new relations (gauge, neutrino, lepton, cosmology sectors) |
+| `GIFT.Certificate` | Master theorem | `all_25_relations_certified` |
 
-**Main theorem**: `GIFT_framework_certified` proves that given `is_zero_parameter(G)`, all 13 relations follow by pure computation.
+**Main theorem**: `all_25_relations_certified` proves that given `is_zero_parameter(G)`, all 25 relations follow by pure computation.
 
 ---
 
@@ -101,9 +103,9 @@ The framework rests on discrete mathematical structure choices, not continuous p
 
 | **Derived Output** | **Count** | **Status** |
 |--------------------|-----------|------------|
-| Exact topological relations | 13 | **PROVEN (Lean)** |
-| Direct topological consequences | 12 | TOPOLOGICAL |
-| Computed from topological relations | 9 | DERIVED |
+| Exact topological relations | 25 | **PROVEN (Lean + Coq)** |
+| Direct topological consequences | 5 | TOPOLOGICAL |
+| Computed from topological relations | 4 | DERIVED |
 | Requiring single scale input | 5 | THEORETICAL |
 | **Total observables** | **39** | Mean deviation 0.128% |
 
@@ -933,16 +935,16 @@ The framework relates 39 observables to pure topological structure with **zero c
 - **Coverage**: 27 dimensionless + 12 dimensional observables
 - **Mean deviation**: 0.128%
 - **Range**: 6 orders of magnitude (2 MeV to 173 GeV)
-- **Exact relations**: 13
+- **Exact relations**: 25 (13 original + 12 topological extension)
 
 ### 10.2 Classification by Status
 
 | Status | Count | Examples |
 |--------|-------|----------|
-| **PROVEN (Lean)** | 13 | sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496 |
-| **TOPOLOGICAL** | 12 | θ₁₃, θ₂₃, m_τ/m_μ, α_s, gauge bosons |
-| **DERIVED** | 10 | θ₁₂, CKM elements, quark ratios |
-| **PHENOMENOLOGICAL** | 4 | m_μ/m_e, Ω_DE, n_s, some absolute masses |
+| **PROVEN (Lean + Coq)** | 25 | sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496, γ_GIFT=511/884, θ₂₃=85/99, α⁻¹ base=137, Ω_DE=98/99, + 8 more |
+| **TOPOLOGICAL** | 5 | m_τ/m_μ, gauge bosons, remaining direct consequences |
+| **DERIVED** | 5 | θ₁₂, CKM elements, quark ratios |
+| **PHENOMENOLOGICAL** | 4 | Some absolute masses requiring scale input |
 
 
 ### 10.3 Sector Analysis
@@ -1212,8 +1214,9 @@ This is not an approximation. The hierarchy parameter governing mass scales acro
 This work has explored geometric determination of Standard Model parameters through seven-dimensional manifolds with G₂ holonomy. The framework relates 39 observables to pure topological structure with **zero continuous adjustable parameters**, achieving mean precision 0.128% across six orders of magnitude.
 
 **Key achievements**:
-- **13 exact relations formally verified in Lean 4** with Mathlib (zero domain-specific axioms, zero sorry)
-- All relations proven: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
+- **25 exact relations formally verified in Lean 4 and Coq** with Mathlib (zero domain-specific axioms, zero sorry)
+- Original 13 relations: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
+- Plus 12 topological extensions: γ_GIFT=511/884, θ₂₃=85/99, α⁻¹ base=137, Ω_DE=98/99, α_s denom=12, and more
 - **Zero-parameter paradigm**: All structural constants derive from fixed topological invariants
 - Torsional geodesic dynamics providing geometric RG flow interpretation
 - Scale bridge 21×e⁸ connecting topology to physics
@@ -1258,7 +1261,7 @@ Seven technical supplements provide detailed foundations:
 | S1 | Mathematical Architecture | E₈ algebra, G₂ manifolds, cohomology |
 | S2 | K₇ Manifold Construction | Twisted connected sum, ML metrics |
 | S3 | Torsional Dynamics | Geodesic equations, RG connection |
-| S4 | Complete Derivations | 13 proven relations, all 39 observable derivations |
+| S4 | Complete Derivations | 25 proven relations, all 39 observable derivations |
 | S5 | Experimental Validation | Data comparison, statistical analysis, falsification criteria |
 | S6 | Theoretical Extensions | Quantum gravity, information theory, speculative directions |
 | S7 | Dimensional Observables | Absolute masses, scale bridge, cosmological parameters |

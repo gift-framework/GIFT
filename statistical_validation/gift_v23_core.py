@@ -1,21 +1,22 @@
 """
-GIFT Framework v2.3 - Core Implementation with Zero-Parameter Paradigm
+GIFT Framework v2.3.1 - Core Implementation with Zero-Parameter Paradigm
 
-This module implements the GIFT v2.3 framework with exact topological formulas:
-- sin^2(theta_W) = 3/13 (PROVEN - Lean 4)
+This module implements the GIFT v2.3.1 framework with exact topological formulas:
+- sin^2(theta_W) = 3/13 (PROVEN - Lean 4 + Coq)
 - kappa_T = 1/61 (TOPOLOGICAL)
-- tau = 3472/891 (PROVEN - Lean 4)
-- det(g) = 65/32 (TOPOLOGICAL, Lean 4 verified)
-- 13 PROVEN exact relations (formally verified in Lean 4)
+- tau = 3472/891 (PROVEN - Lean 4 + Coq)
+- det(g) = 65/32 (TOPOLOGICAL, Lean 4 + Coq verified)
+- 25 PROVEN exact relations (formally verified in Lean 4 + Coq)
+  - 13 original + 12 topological extension
 
 Key Features:
 - Zero continuous adjustable parameters
 - 39 observables (27 dimensionless + 12 dimensional)
 - Mean deviation 0.128% across 6 orders of magnitude
-- Formal verification via Lean 4 with Mathlib
+- Dual formal verification via Lean 4 + Coq
 
 Author: GIFT Framework Team
-Version: 2.3.0
+Version: 2.3.1
 """
 
 import numpy as np
@@ -154,12 +155,13 @@ class GIFTFrameworkV23:
     - 27 dimensionless (exact topological relations)
     - 12 dimensional (with scale bridge)
 
-    v2.3 features:
-    - 13 PROVEN relations formally verified in Lean 4 with Mathlib
-    - sin^2(theta_W) = 3/13 (Lean 4 verified)
+    v2.3.1 features:
+    - 25 PROVEN relations formally verified in Lean 4 + Coq (13 original + 12 extension)
+    - sin^2(theta_W) = 3/13 (Lean 4 + Coq verified)
     - kappa_T = 1/61 (exact topological derivation)
-    - tau = 3472/891 (Lean 4 verified)
-    - det(g) = 65/32 (Lean 4 verified via Joyce perturbation theorem)
+    - tau = 3472/891 (Lean 4 + Coq verified)
+    - det(g) = 65/32 (Lean 4 + Coq verified via Joyce perturbation theorem)
+    - gamma_GIFT = 511/884, theta_23 = 85/99, alpha_inv_base = 137, Omega_DE = 98/99
     - Mean deviation 0.128% across 39 observables
     """
 
