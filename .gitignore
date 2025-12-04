@@ -70,6 +70,8 @@ htmlcov/
 .pytest_cache/
 .tox/
 .hypothesis/
+test_results.xml
+tests/test_results.xml
 
 # Generated figures
 visualizations/outputs/
