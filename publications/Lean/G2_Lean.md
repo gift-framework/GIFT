@@ -16,7 +16,8 @@ The complete implementation (training code, Lean proof, Colab notebook) runs in 
 
 **License**: Code (MIT), Text (CC BY 4.0)
 
-**Repository**: https://github.com/gift-framework/GIFT/
+**Main Repository**: https://github.com/gift-framework/GIFT/
+**Formal Proofs**: https://github.com/gift-framework/core/
 
 ---
 
@@ -78,7 +79,7 @@ This accessibility constraint also shaped technical choices (simplified geometry
 
 ### 1.5 Paper Organization
 
-§2 provides background on G₂ geometry and formal verification landscape. §3 details our three-phase pipeline. §4 walks through the Lean implementation and key proofs. §5 presents numerical validation and reproducibility data. §6 discusses limitations, implications, and future work. Complete code is available at https://github.com/gift-framework/GIFT/tree/main/G2_ML/G2_Lean.
+§2 provides background on G₂ geometry and formal verification landscape. §3 details our three-phase pipeline. §4 walks through the Lean implementation and key proofs. §5 presents numerical validation and reproducibility data. §6 discusses limitations, implications, and future work. Complete formal proofs are available at https://github.com/gift-framework/core/tree/main/Lean, with supporting ML code at https://github.com/gift-framework/GIFT/tree/main/G2_ML/G2_Lean.
 
 ---
 
@@ -494,12 +495,12 @@ We provide three levels of verification:
 #### Level 1: Lean Proof Only (2 minutes)
 
 ```bash
-git clone [REPO_URL]
-cd G2_ML/G2_Lean
+git clone https://github.com/gift-framework/core
+cd core/Lean
 lake build
 ```
 
-This downloads pre-compiled Mathlib cache (5,685 modules) and verifies our 336-line proof. **Requires**: Lean 4.14.0, 4GB RAM.
+This downloads pre-compiled Mathlib cache (5,685 modules) and verifies the formal proofs. **Requires**: Lean 4.14.0, 4GB RAM.
 
 #### Level 2: Pre-trained PINN + Lean (5 minutes)
 
@@ -682,7 +683,7 @@ Our contributions include:
 3. **Reproducible**: Open-source implementation executable on free-tier cloud GPUs
 4. **Domain-specific**: Computer-verified existence proof for a model of compact exceptional holonomy geometry
 
-While our model simplifies certain geometric structures for tractability, it provides a concrete example and suggests directions for future complete formalizations. The complete Lean code (336 lines) and training notebooks are available at https://github.com/gift-framework/GIFT/tree/main/G2_ML/G2_Lean.
+While our model simplifies certain geometric structures for tractability, it provides a concrete example and suggests directions for future complete formalizations. The complete Lean proofs are available at https://github.com/gift-framework/core/tree/main/Lean, with training notebooks at https://github.com/gift-framework/GIFT/tree/main/G2_ML/G2_Lean.
 
 We hope this work encourages development of differential geometry infrastructure in Mathlib and exploration of connections between machine learning and theorem proving for mathematical verification.
 

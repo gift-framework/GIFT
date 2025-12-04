@@ -13,14 +13,14 @@ This version achieves complete formal verification in **both Lean 4 and Coq**, e
 
 #### Added
 
-**Lean 4 Verification**
-- Complete formalization in `/Lean/` with 17 modules
+**Lean 4 Verification** (now in [gift-framework/core](https://github.com/gift-framework/core))
+- Complete formalization with 17 modules
 - All 13 exact relations proven: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√17/32, H*=99, p₂=2, N_gen=3, E₈×E₈=496
 - Zero domain-specific axioms (only propext, Quot.sound)
 - Zero `sorry` (all proofs complete)
 
-**Coq Verification**
-- Complete formalization in `/COQ/` with 21 modules
+**Coq Verification** (now in [gift-framework/core](https://github.com/gift-framework/core))
+- Complete formalization with 21 modules
 - All 13 exact relations independently proven
 - Zero `Admitted` statements (all proofs complete)
 - Zero explicit axioms beyond Coq core

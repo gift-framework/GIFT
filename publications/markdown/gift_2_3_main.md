@@ -1,6 +1,6 @@
 # Geometric Information Field Theory: Topological Unification of Standard Model Parameters Through Torsional Dynamics
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgMTlsMTAgNSAxMC01TDEyIDJ6Ii8+PC9zdmc+)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgMTlsMTAgNSAxMC01TDEyIDJ6Ii8+PC9zdmc+)](https://github.com/gift-framework/core/tree/main/Lean)
 
 ## **Abstract**
 
@@ -32,15 +32,13 @@ Throughout this paper, we use the following classifications:
 
 ### Lean 4 Verification Summary
 
-The framework includes a complete Lean 4 formalization (`/Lean/`) with 17 modules proving all 13 exact relations from topological inputs alone:
+The framework includes a complete Lean 4 formalization in the dedicated [gift-framework/core](https://github.com/gift-framework/core) repository, proving all 13 exact relations from topological inputs alone:
 
 | Module | Content | Theorems |
 |--------|---------|----------|
-| `GIFT.Algebra` | E₈ root system, Weyl group, representations | ~20 |
-| `GIFT.Geometry` | G₂ group, structure, holonomy, TCS | ~25 |
-| `GIFT.Topology` | Betti numbers, cohomology, Euler characteristic | ~15 |
-| `GIFT.Relations` | All 13 physical relations by sector | ~30 |
-| `GIFT.Certificate` | Main theorem, zero-parameter proof | ~10 |
+| `GiftCore.Basic` | E₈, G₂, K₇ definitions | Core structures |
+| `GiftCore.Relations` | All physical relations | 13 exact identities |
+| `GiftCore.Proofs` | Main theorem | `GIFT_framework_certified` |
 
 **Main theorem**: `GIFT_framework_certified` proves that given `is_zero_parameter(G)`, all 13 relations follow by pure computation.
 

@@ -1,6 +1,6 @@
 # GIFT Framework v2.3 - Complete Observable Reference
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
 
 **Version**: 2.3
 **Date**: 2025-12-03
@@ -854,7 +854,7 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 
 ### 11.4 Lean 4 Verified Relations (Complete List)
 
-All 13 relations verified in `/Lean/` with Mathlib 4.14.0:
+All 13 relations verified in [gift-framework/core](https://github.com/gift-framework/core) with Mathlib 4.14.0:
 
 | Relation | Value | Lean Theorem | Module |
 |----------|-------|--------------|--------|
@@ -948,4 +948,4 @@ n_s = ζ(11)/ζ(5)
 **Last Updated**: 2025-12-03
 **Validation**: Monte Carlo 10⁵ samples, seed 42 + Lean 4 formal verification
 **Repository**: https://github.com/gift-framework/GIFT
-**Lean Proofs**: https://github.com/gift-framework/GIFT/tree/main/Lean
+**Formal Proofs**: https://github.com/gift-framework/core

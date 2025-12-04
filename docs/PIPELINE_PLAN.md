@@ -25,8 +25,8 @@ Consolidate the GIFT framework verification into a unified, reproducible pipelin
 
 | Component | Location | Status | Lines |
 |-----------|----------|--------|-------|
-| Lean 4 Framework | `/Lean/` | Complete | 2,053 |
-| Coq Framework | `/COQ/` | Complete | 1,560 |
+| Lean 4 Framework | [gift-framework/core](https://github.com/gift-framework/core) | Complete | 2,053 |
+| Coq Framework | [gift-framework/core](https://github.com/gift-framework/core) | Complete | 1,560 |
 | G2 Lean Certificate | `/G2_ML/G2_Lean/` | Complete | ~1,000 |
 | Publications | `/publications/` | v2.3 | 176 KB |
 
@@ -48,8 +48,8 @@ Total notebooks identified: 80+
 
 | System | Location | Command |
 |--------|----------|---------|
-| Lean 4 | `/Lean/lakefile.lean` | `lake build` |
-| Coq | `/COQ/Makefile` | `make` |
+| Lean 4 | [gift-framework/core/Lean](https://github.com/gift-framework/core) | `lake build` |
+| Coq | [gift-framework/core/COQ](https://github.com/gift-framework/core) | `make` |
 | G2 PINN | Python scripts | Manual execution |
 
 ---
