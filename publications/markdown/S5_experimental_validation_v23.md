@@ -1,6 +1,6 @@
 # Supplement S5: Experimental Validation
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
 
 ## Data Comparison, Statistical Analysis, and Falsification Criteria
 

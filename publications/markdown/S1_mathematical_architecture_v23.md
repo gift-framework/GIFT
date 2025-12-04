@@ -1,6 +1,6 @@
 # Supplement S1: Mathematical Architecture
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
 
 ## E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and Topological Foundations
 

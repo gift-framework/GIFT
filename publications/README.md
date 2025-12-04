@@ -1,7 +1,7 @@
 # GIFT Framework v2.3 - Publications
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/GIFT/tree/main/Lean)
-[![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/GIFT/tree/main/COQ)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
+[![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core/tree/main/COQ)
 
 Geometric Information Field Theory: Deriving Standard Model parameters from E₈×E₈ topology.
 
@@ -40,37 +40,34 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 **13 exact relations are independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation.
 
+> **Note:** Formal proofs are maintained in a dedicated repository: [gift-framework/core](https://github.com/gift-framework/core)
+
 ### Lean 4
 
 ```
-Lean/
-├── GIFT.lean              # Root import
-└── GIFT/
-    ├── Algebra/           # E₈ structure (4 modules)
-    ├── Geometry/          # G₂ holonomy (4 modules)
-    ├── Topology/          # Cohomology (3 modules)
-    ├── Relations/         # Physics sectors (7 modules)
-    └── Certificate/       # Main theorems (3 modules)
+core/Lean/
+├── GiftCore/
+│   ├── Basic.lean         # Core definitions
+│   ├── Relations.lean     # Physical relations
+│   └── Proofs.lean        # All 13 theorems
 ```
 
-**Status:** Lean 4.14.0 + Mathlib 4.14.0 | 17 modules | **0 sorry** | **0 domain axioms**
+**Status:** Lean 4.14.0 + Mathlib 4.14.0 | **0 sorry** | **0 domain axioms**
 
-See [/Lean/README.md](../Lean/README.md) for build instructions.
+See [gift-framework/core/Lean](https://github.com/gift-framework/core/tree/main/Lean) for build instructions.
 
 ### Coq
 
 ```
-COQ/
-├── Algebra/           # E₈ root system, Weyl group, Jordan algebra (5 modules)
-├── Geometry/          # G₂ group, structure, holonomy, TCS (4 modules)
-├── Topology/          # Betti numbers, cohomology, Euler (3 modules)
-├── Relations/         # Gauge, neutrino, quark, lepton, Higgs, cosmology (7 modules)
-└── Certificate/       # Main theorem + zero-parameter proof (3 modules)
+core/COQ/
+├── GiftCore.v             # Core definitions
+├── Relations.v            # Physical relations
+└── Proofs.v               # All 13 theorems
 ```
 
-**Status:** Coq 8.18 | 21 modules | **0 Admitted** | **0 explicit axioms**
+**Status:** Coq 8.18 | **0 Admitted** | **0 explicit axioms**
 
-See [/COQ/README.md](../COQ/README.md) for build instructions.
+See [gift-framework/core/COQ](https://github.com/gift-framework/core/tree/main/COQ) for build instructions.
 
 **Main theorem**: `GIFT_framework_certified` proves all 13 relations from `is_zero_parameter(G)` in both systems.
 
@@ -224,4 +221,4 @@ The framework remains consistent with all current experimental data.
 **Version**: 2.3
 **Last Updated**: 2025-12-03
 **Repository**: https://github.com/gift-framework/GIFT
-**Lean Proofs**: https://github.com/gift-framework/GIFT/tree/main/Lean
+**Formal Proofs**: https://github.com/gift-framework/core
