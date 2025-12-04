@@ -3,6 +3,9 @@ Unit tests for Notebook Execution Agent.
 
 Tests notebook discovery and execution status reporting
 for Jupyter notebooks in the project.
+
+Note: These tests require the assets/agents module which has been removed.
+Tests are skipped if the module is not available.
 """
 
 import pytest
@@ -11,11 +14,21 @@ from unittest.mock import patch, MagicMock
 import shutil
 import sys
 
-# Add agents to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "assets"))
+# Try to import agents module (may not exist)
+try:
+    sys.path.insert(0, str(Path(__file__).parent.parent.parent / "assets"))
+    from agents.notebook_exec import NotebookExecutionAgent
+    from agents.base import AgentResult
+    AGENTS_AVAILABLE = True
+except ImportError:
+    AGENTS_AVAILABLE = False
+    NotebookExecutionAgent = None
+    AgentResult = None
 
-from agents.notebook_exec import NotebookExecutionAgent
-from agents.base import AgentResult
+pytestmark = pytest.mark.skipif(
+    not AGENTS_AVAILABLE,
+    reason="assets/agents module not available (removed in cleanup)"
+)
 
 
 # =============================================================================

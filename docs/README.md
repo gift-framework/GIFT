@@ -20,13 +20,6 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 - K₇ TCS construction diagrams
 - Framework overview (Metro Map)
 
-## Interactive Visualizations
-
-For interactive notebooks, see [`assets/visualizations/`](../assets/visualizations/):
-- [Precision Dashboard](../assets/visualizations/precision_dashboard.ipynb)
-- [E₈ Root System 3D](../assets/visualizations/e8_root_system_3d.ipynb)
-- [Dimensional Reduction Flow](../assets/visualizations/dimensional_reduction_flow.ipynb)
-
 ## Main Documentation
 
 - [Main Paper](../publications/markdown/gift_2_3_main.md) - Complete theoretical framework

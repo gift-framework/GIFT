@@ -7,12 +7,12 @@ This document provides formal citation formats for the GIFT Framework v2.3.
 ### BibTeX
 
 ```bibtex
-@software{gift_framework_v22_2025,
+@software{gift_framework_v23_2025,
   title={GIFT Framework v2.3: Geometric Information Field Theory - Zero Parameter Paradigm},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.2.0},
+  version={2.3.1},
   license={MIT},
   note={39 observables, 0.128\% precision, all quantities structurally determined from E₈×E₈ topology}
 }
@@ -27,7 +27,7 @@ de La Fournière, B. (2025). GIFT Framework v2.3: Geometric Information Field Th
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v2.2: Geometric Information Field Theory - Zero Parameter Paradigm." Version 2.2.0. GitHub, 2025. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v2.3: Geometric Information Field Theory - Zero Parameter Paradigm." Version 2.3.1. GitHub, 2025. https://github.com/gift-framework/GIFT.
 ```
 
 ## Theoretical Framework Citation
@@ -35,8 +35,8 @@ de La Fournière, Brieuc. "GIFT Framework v2.2: Geometric Information Field Theo
 ### BibTeX
 
 ```bibtex
-@article{gift_framework_v22_theory_2025,
-  title={Geometric Information Field Theory v2.2: Topological Unification of Standard Model Parameters Through Torsional Dynamics},
+@article{gift_framework_v23_theory_2025,
+  title={Geometric Information Field Theory v2.3: Topological Unification of Standard Model Parameters Through Torsional Dynamics},
   author={{Brieuc de La Fournière}},
   year={2025},
   journal={arXiv preprint},
@@ -50,8 +50,8 @@ de La Fournière, Brieuc. "GIFT Framework v2.2: Geometric Information Field Theo
 ### BibTeX
 
 ```bibtex
-@techreport{gift_technical_v22_2025,
-  title={GIFT Framework v2.2 - Technical Supplements: Complete Mathematical Derivations},
+@techreport{gift_technical_v23_2025,
+  title={GIFT Framework v2.3 - Technical Supplements: Complete Mathematical Derivations},
   author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
@@ -72,8 +72,8 @@ When citing specific predictions or results, include the relevant section:
   title={Complete Neutrino Mixing Parameter Predictions from E₈×E₈ Topology},
   author={{GIFT Framework Team}},
   year={2025},
-  howpublished={GIFT Framework v2.2, Main Paper Section 8.4},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_2_main.md}
+  howpublished={GIFT Framework v2.3, Main Paper Section 8.4},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_3_main.md}
 }
 ```
 
@@ -84,9 +84,9 @@ When citing specific predictions or results, include the relevant section:
   title={Rigorously Proven Exact Relations in Fundamental Physics},
   author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2.2, Supplement S4},
+  howpublished={GIFT Framework v2.3, Supplement S4},
   note={25 proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, γ_GIFT = 511/884, θ₂₃ = 85/99, α⁻¹ base = 137},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
 }
 ```
 
@@ -97,9 +97,9 @@ When citing specific predictions or results, include the relevant section:
   title={Exact Topological Formula for CP Violation Phase: δ_CP = 197°},
   author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2.2, Supplement S4},
+  howpublished={GIFT Framework v2.3, Supplement S4},
   note={Formula: δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°, exact},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
 }
 ```
 
@@ -110,9 +110,9 @@ When citing specific predictions or results, include the relevant section:
   title={Topological Proof of Three Fermion Generations},
   author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2.2, Supplement S4},
+  howpublished={GIFT Framework v2.3, Supplement S4},
   note={N_gen = 3 from Atiyah-Singer index theorem on K₇},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
 }
 ```
 
@@ -123,9 +123,9 @@ When citing specific predictions or results, include the relevant section:
   title={Unified Cosmological Predictions: Dark Energy from Binary Information Architecture},
   author={{GIFT Framework Team}},
   year={2025},
-  howpublished={GIFT Framework v2.2, Main Paper Section 8.8},
+  howpublished={GIFT Framework v2.3, Main Paper Section 8.8},
   note={Ω_DE = ln(2)×98/99, precision 0.10\%},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_2_main.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_3_main.md}
 }
 ```
 
@@ -140,7 +140,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={E₈ structure, K₇ manifold, G₂ holonomy, cohomology},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S1_mathematical_architecture.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S1_mathematical_architecture_v23.md}
 }
 ```
 
@@ -153,7 +153,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={25 proven exact relations with proofs, all 39 observable derivations},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
 }
 ```
 
@@ -179,18 +179,18 @@ Planned DOI provider: Zenodo (10.5281/zenodo.*)
 When DOI becomes available, cite using:
 
 ```bibtex
-@software{gift_framework_v22_2025,
-  title={GIFT Framework v2.2: Geometric Information Field Theory},
+@software{gift_framework_v23_2025,
+  title={GIFT Framework v2.3: Geometric Information Field Theory},
   author={{Brieuc de La Fournière}},
   year={2025},
   doi={10.5281/zenodo.XXXXXXX},  % TODO: Update with actual DOI when registered
   url={https://github.com/gift-framework/GIFT},
-  version={2.2.0}
+  version={2.3.1}
 }
 ```
 
 To register a DOI for this repository:
-1. Create a GitHub release (v2.2.0)
+1. Create a GitHub release (v2.3.1)
 2. Link repository to Zenodo via GitHub integration
 3. Generate DOI automatically through Zenodo
 4. Update this file with the assigned DOI
@@ -235,7 +235,7 @@ When using GIFT predictions in your research:
 
 > "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197° [2], obtained from the exact formula δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°."
 >
-> [1] Brieuc de La Fournière, "GIFT Framework v2.2: Geometric Information Field Theory," v2.2.0, 2025, https://github.com/gift-framework/GIFT
+> [1] Brieuc de La Fournière, "GIFT Framework v2.3: Geometric Information Field Theory," v2.3.1, 2025, https://github.com/gift-framework/GIFT
 >
 > [2] Brieuc de La Fournière, "GIFT Supplement S4: Complete Derivations," 2025.
 
@@ -255,12 +255,12 @@ See [LICENSE](LICENSE) file for complete terms.
 When using computational notebook results:
 
 ```bibtex
-@software{gift_visualizations_2025,
-  title={GIFT Framework v2.2: Interactive Visualizations},
+@software{gift_notebooks_2025,
+  title={GIFT Framework v2.3: Computational Notebooks},
   author={{GIFT Framework Team}},
   year={2025},
-  url={https://github.com/gift-framework/GIFT/tree/main/assets/visualizations},
-  note={Jupyter notebooks with E8 visualization, precision dashboard, and dimensional reduction}
+  url={https://github.com/gift-framework/GIFT/tree/main/G2_ML},
+  note={Jupyter notebooks for G2 manifold and metric learning}
 }
 ```
 

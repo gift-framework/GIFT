@@ -15,7 +15,7 @@ This directory contains static visualization assets (PNG format).
 
 ## Interactive Versions
 
-For interactive visualizations, see the Jupyter notebooks in [`assets/visualizations/`](../../assets/visualizations/).
+For interactive visualizations, see Binder: https://mybinder.org/v2/gh/gift-framework/GIFT/main
 
 ---
 

@@ -26,7 +26,7 @@ def parse_args(argv=None):
     )
     parser.add_argument(
         "--output-dir",
-        default="assets/visualizations/outputs/pro",
+        default="outputs/visualizations",
         help="Directory for exported figures.",
     )
     parser.add_argument(
@@ -54,7 +54,7 @@ class TestParseArgs:
         args = parse_args([])
 
         assert args.figure is None
-        assert args.output_dir == "assets/visualizations/outputs/pro"
+        assert args.output_dir == "outputs/visualizations"
         assert args.config is None
         assert args.show is False
 
@@ -377,7 +377,7 @@ class TestCLIIntegration:
         """Test default output path is used."""
         args = parse_args([])
 
-        assert args.output_dir == "assets/visualizations/outputs/pro"
+        assert args.output_dir == "outputs/visualizations"
 
     def test_output_dir_converted_to_path(self):
         """Test output_dir is converted to Path."""

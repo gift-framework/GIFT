@@ -8,13 +8,13 @@
 - 0.128% mean precision across 39 observables
 - 19 parameters (SM) → 0 continuous adjustable parameters (GIFT)
 - 13 rigorously proven exact relations
-- Version: 2.2.0
+- Version: 2.3.1
 
 ## Essential Files (Read These First)
 
 1. **README.md** - Framework overview
 2. **STRUCTURE.md** - Repository organization
-3. **publications/markdown/gift_2_2_main.md** - Core theoretical paper (~1400 lines)
+3. **publications/markdown/gift_2_3_main.md** - Core theoretical paper (~1400 lines)
 4. **docs/GLOSSARY.md** - Technical definitions
 5. **CONTRIBUTING.md** - Scientific standards
 
@@ -22,7 +22,7 @@
 
 ```
 GIFT/
-├── publications/           # Main theoretical documents (v2.2)
+├── publications/           # Main theoretical documents (v2.3)
 │   ├── README.md          # Overview, reading guide, summary
 │   ├── markdown/          # Core paper + S1-S7 supplements
 │   ├── references/        # Observable reference docs
@@ -31,14 +31,13 @@ GIFT/
 ├── docs/                  # FAQ, glossary, validation
 ├── G2_ML/                 # Machine learning (90% complete)
 ├── statistical_validation/ # Monte Carlo validation
-├── assets/                # Visualizations, agents, tools
 ├── tests/                 # 200+ tests
 └── requirements.txt       # Dependencies
 ```
 
 ## Quick Navigation
 
-**For theorists**: Start with `publications/markdown/gift_2_2_main.md`
+**For theorists**: Start with `publications/markdown/gift_2_3_main.md`
 **For experimentalists**: See `docs/EXPERIMENTAL_VALIDATION.md`
 **For coders**: Check `statistical_validation/run_validation.py`
 **For questions**: Read `docs/FAQ.md`
@@ -68,7 +67,7 @@ Use these consistently:
 
 ### File Naming
 
-- Publications: `gift_2_2_main.md`, `GIFT_v22_*.md`
+- Publications: `gift_2_3_main.md`, `GIFT_v23_*.md`
 - Supplements: `S1_mathematical_architecture.md`, `S2_K7_manifold_construction.md`, etc.
 - Project files: ALL_CAPS (`README.md`, `CHANGELOG.md`)
 - Python: lowercase_with_underscores
@@ -78,7 +77,7 @@ Use these consistently:
 ### Understanding the Framework
 
 1. Read `README.md` for overview
-2. Read `publications/markdown/gift_2_2_main.md` Sections 1-4
+2. Read `publications/markdown/gift_2_3_main.md` Sections 1-4
 3. Check `docs/GLOSSARY.md` for terms
 4. See `docs/FAQ.md` for questions
 
@@ -99,8 +98,8 @@ pip install -r requirements.txt
 # Interactive launcher
 python quick_start.py
 
-# Visualization notebooks
-jupyter notebook assets/visualizations/
+# Browse Jupyter notebooks
+jupyter notebook G2_ML/
 
 # Statistical validation
 cd statistical_validation/
@@ -145,7 +144,7 @@ From S4_complete_derivations.md (authoritative list):
 
 ## Zero-Parameter Framework
 
-GIFT v2.2 achieves **zero continuous adjustable parameters**:
+GIFT v2.3 achieves **zero continuous adjustable parameters**:
 
 - **Structural inputs**: E₈×E₈ gauge group, K₇ with G₂ holonomy (discrete choices)
 - **All constants derived**: β₀, ξ, τ, det(g), κ_T follow from topology
@@ -156,11 +155,11 @@ GIFT v2.2 achieves **zero continuous adjustable parameters**:
 ### Publications (publications/)
 
 - **README.md**: Overview, reading guide, executive summary
-- **markdown/gift_2_2_main.md**: Core framework (~1,400 lines)
+- **markdown/gift_2_3_main.md**: Core framework (~1,400 lines)
 - **markdown/S1-S7**: Supplements (mathematical details)
-- **references/GIFT_v22_Observable_Reference.md**: Complete 39-observable catalog
-- **references/GIFT_v22_Geometric_Justifications.md**: Geometric derivation details
-- **references/GIFT_v22_Statistical_Validation.md**: Statistical validation methods
+- **references/GIFT_v23_Observable_Reference.md**: Complete 39-observable catalog
+- **references/GIFT_v23_Geometric_Justifications.md**: Geometric derivation details
+- **references/GIFT_v23_Statistical_Validation.md**: Statistical validation methods
 
 ### Supplements (publications/markdown/)
 
@@ -179,13 +178,11 @@ GIFT v2.2 achieves **zero continuous adjustable parameters**:
 - `quick_start.py` - Interactive launcher
 - `statistical_validation/run_validation.py` - Validation script
 - `G2_ML/` - Neural networks for K₇ metric (90% complete)
-- `assets/agents/` - Automated verification tools
 
-### Visualizations (`assets/visualizations/`)
+### Notebooks (`G2_ML/`)
 
-- `e8_root_system_3d.ipynb` - E8 root structure
-- `precision_dashboard.ipynb` - All observables
-- `dimensional_reduction_flow.ipynb` - 496D -> 4D flow
+- Various G2 manifold and metric learning notebooks
+- See `G2_ML/` subdirectories for specific notebooks
 
 ## Git Workflow
 
@@ -307,7 +304,7 @@ python3 tools/check_pdf_sync.py
 
 ## Version Control
 
-**Current stable**: v2.2.0 (2025-11-27)
+**Current stable**: v2.3.1 (2025-12-04)
 
 See `CHANGELOG.md` for history.
 
@@ -372,8 +369,8 @@ pip install -r requirements.txt
 # Interactive
 python quick_start.py
 
-# Visualizations
-jupyter notebook assets/visualizations/
+# Notebooks
+jupyter notebook G2_ML/
 
 # Validation
 cd statistical_validation/
@@ -406,8 +403,8 @@ python3 pattern_explorer_cli.py
 ## File Size Reference
 
 - CLAUDE.md: ~22,000 lines (complete guide)
-- CLAUDE_QUICK.md: This file (quick reference)
-- gift_2_2_main.md: ~1,400 lines (core paper)
+- AI_AGENTS.md: This file (quick reference)
+- gift_2_3_main.md: ~1,400 lines (core paper)
 - All supplements (S1-S7): ~8,000 lines total
 
 ## When to Use Full CLAUDE.md
@@ -447,9 +444,9 @@ Otherwise, this quick reference should suffice.
 
 ---
 
-**Quick Reference Version**: 2.2.0
+**Quick Reference Version**: 2.3.1
 **Full Guide**: CLAUDE.md
-**For**: GIFT Framework v2.2.0
-**Last Updated**: 2025-11-27
+**For**: GIFT Framework v2.3.1
+**Last Updated**: 2025-12-04
 
 **Remember**: Mathematical correctness and intellectual honesty above all else. (and never use emojis in markdown or python files)

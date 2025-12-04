@@ -31,11 +31,6 @@ gift/
 │   ├── EXPERIMENTAL_VALIDATION.md    # Current status
 │   └── tests/                        # Test documentation
 │
-├── assets/                           # Tools and resources
-│   ├── visualizations/              # Interactive notebooks
-│   ├── agents/                      # Automated verification tools
-│   └── documents_template/          # LaTeX/Quarto templates
-│
 ├── statistical_validation/           # Monte Carlo tools
 ├── G2_ML/                           # Neural network for K₇
 ├── tests/                           # pytest suite + test guides
@@ -57,7 +52,7 @@ gift/
 | Formal proofs (Lean 4 + Coq) | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Common questions | `docs/FAQ.md` |
-| Interactive visualizations | `assets/visualizations/` |
+| Notebooks | `G2_ML/` |
 | Validation code | `statistical_validation/` |
 
 ## Status Classifications
