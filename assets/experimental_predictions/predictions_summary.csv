@@ -1,8 +1,0 @@
-Observable,Sector,Formula,Predicted,Current_Exp,Deviation_σ,Timeline,Years,Priority
-n_s (spectral index),cosmology,ζ(11)/ζ(5),0.9648639296628596,0.9648,0.015221348299909204,mid_term,2028-2035,CRITICAL
-Ω_DM (dark matter density),cosmology,ζ(7)/τ,0.25876705246177795,0.26,0.10274562818517186,near_term,2025-2030,HIGH
-Ω_DE (dark energy density),cosmology,ln(2) × (98/99),0.6861456938876226,0.6889,0.25039146476157903,near_term,2024-2030,HIGH
-m_χ₁ (lightest dark matter),dark_matter,√M₁₃ = √8191,90.50414355155237,0.0,0.0,near_term,2024-2030,CRITICAL
-m_χ₂ (heavier dark matter),dark_matter,τ × √M₁₃,352.6715896868573,0.0,0.0,mid_term,2029-2040,HIGH
-Q_Koide (lepton mass formula),particle_physics,2/3 (exact) ≈ δ_F/7,0.6666666666666666,0.6667,0.3333333333332966,near_term,2024-2030,HIGH
-m_s/m_d (strange/down mass ratio),particle_physics,20 (exact integer),20.0,20.0,0.0,near_term,2024-2028,MEDIUM
