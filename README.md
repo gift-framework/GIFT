@@ -6,7 +6,6 @@
 [![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
 
 ## Overview
 
@@ -49,17 +48,12 @@ The `core` repository contains:
 
 ## Quick Start
 
-### Run in Browser (No Installation)
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=assets/visualizations/) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
-
 ### Local Installation
 
 ```bash
 git clone https://github.com/gift-framework/GIFT.git
-cd gift
+cd GIFT
 pip install -r requirements.txt
-jupyter notebook assets/visualizations/
 ```
 
 **Requirements**: Python 3.11+
@@ -149,14 +143,6 @@ Full tables: [Main Paper Section 8](publications/markdown/gift_2_3_main.md)
 | **[S6](publications/markdown/S6_theoretical_extensions_v23.md)** | Theoretical Extensions | Speculative extensions: M-theory embedding (11D → 10D → 4D), AdS/CFT correspondence, information-theoretic interpretations, number-theoretic patterns. Status: EXPLORATORY. |
 | **[S7](publications/markdown/S7_dimensional_observables_v23.md)** | Dimensional Observables | Bridge from dimensionless ratios to absolute masses (GeV). Derives scale parameter Lambda_GIFT from b₂, e⁸, dim(E₈). Covers fermion masses, boson masses, cosmological parameters. |
 
-### Interactive Tools
-
-| Notebook | Description |
-|----------|-------------|
-| [Precision Dashboard](assets/visualizations/precision_dashboard.ipynb) | All 39 observables vs experiment |
-| [E₈ Root System](assets/visualizations/e8_root_system_3d.ipynb) | 240-root 3D visualization |
-| [Dimensional Flow](assets/visualizations/dimensional_reduction_flow.ipynb) | 496D → 99D → 4D animation |
-
 ## Repository Structure
 
 ```
@@ -166,7 +152,6 @@ gift/
 │   ├── references/        # Observable reference, geometric justifications
 │   ├── tex/               # LaTeX sources
 │   └── pdf/               # Generated PDFs
-├── assets/visualizations/ # Interactive notebooks
 ├── statistical_validation/ # Monte Carlo validation
 ├── G2_ML/                 # Neural network for K₇ metrics
 ├── tests/                 # Test suite

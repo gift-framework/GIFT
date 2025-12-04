@@ -13,9 +13,8 @@
 /README.md @gift-framework
 /CITATION.md @gift-framework
 
-# Visualizations and notebooks
-/assets/visualizations/ @gift-framework
-/publications/gift_v2_notebook.ipynb @gift-framework
+# Machine learning and notebooks
+/G2_ML/ @gift-framework
 
 # Configuration and infrastructure
 /.github/ @gift-framework

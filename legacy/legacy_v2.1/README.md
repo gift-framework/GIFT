@@ -112,7 +112,6 @@ Physical applications:
 ## Related Resources
 
 - **Main repository**: [github.com/gift-framework/GIFT](https://github.com/gift-framework/GIFT)
-- **Interactive notebooks**: `../assets/visualizations/`
 - **Statistical validation**: `../statistical_validation/`
 - **ML implementations**: `../G2_ML/`
 

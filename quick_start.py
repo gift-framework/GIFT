@@ -40,38 +40,24 @@ def main():
 
 def launch_visualizations():
     """Launch Jupyter notebooks for visualizations"""
-    print("\nLaunching GIFT Visualizations...")
-    viz_dir = Path("assets/visualizations")
-    
-    if not viz_dir.exists():
-        print("Error: Visualizations directory not found")
-        return
-    
-    try:
-        # Check if Jupyter is installed
-        result = subprocess.run([sys.executable, "-c", "import jupyter"], 
-                              capture_output=True)
-        if result.returncode != 0:
-            print("Jupyter not found. Installing...")
-            subprocess.run([sys.executable, "-m", "pip", "install", "jupyter"])
-        
-        # Launch Jupyter
-        os.chdir(viz_dir)
-        print("Starting Jupyter notebook server...")
-        print("Available notebooks:")
-        print("- e8_root_system_3d.ipynb")
-        print("- precision_dashboard.ipynb") 
-        print("- dimensional_reduction_flow.ipynb")
-        print("\nOpening in browser...")
-        subprocess.run([sys.executable, "-m", "jupyter", "notebook"])
-        
-    except Exception as e:
-        print(f"Error launching visualizations: {e}")
-        print("\nAlternative: Use online platforms:")
-        print("- Binder: https://mybinder.org/v2/gh/gift-framework/GIFT/main?filepath=assets/visualizations/")
-        print("- Colab: https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/")
-    finally:
-        os.chdir("../..")
+    print("\nGIFT Visualizations")
+    print("-" * 40)
+    print("Interactive visualizations are available via Binder:")
+    print("  https://mybinder.org/v2/gh/gift-framework/GIFT/main")
+    print()
+    print("For local notebooks, see G2_ML/ directory.")
+    print()
+
+    # Check for G2_ML notebooks
+    g2ml_dir = Path("G2_ML")
+    if g2ml_dir.exists():
+        notebooks = list(g2ml_dir.rglob("*.ipynb"))
+        if notebooks:
+            print(f"Found {len(notebooks)} notebook(s) in G2_ML/:")
+            for nb in notebooks[:5]:
+                print(f"  - {nb}")
+            if len(notebooks) > 5:
+                print(f"  ... and {len(notebooks) - 5} more")
 
 def launch_documentation():
     """Launch documentation web interface"""
