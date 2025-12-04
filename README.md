@@ -2,8 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-2.3-green.svg)](CHANGELOG.md)
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](Lean/)
-[![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](COQ/)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
+[![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gift-framework/GIFT/main)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gift-framework/GIFT/blob/main/assets/visualizations/precision_dashboard.ipynb)
@@ -23,37 +23,24 @@ The **Geometric Information Field Theory (GIFT)** derives Standard Model paramet
 
 All 13 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation.
 
-### Lean 4 Formalization
+### Mathematical Core Repository
 
-The `/Lean/` directory contains a complete Lean 4 formalization with **17 modules**:
+The formal proofs are maintained in a dedicated repository:
 
-| Module | Content |
-|--------|---------|
-| `GIFT.Algebra` | E₈ root system, Weyl group (4 modules) |
-| `GIFT.Geometry` | G₂ holonomy, TCS construction (4 modules) |
-| `GIFT.Topology` | Betti numbers, cohomology (3 modules) |
-| `GIFT.Relations` | All 13 physical relations (7 modules) |
-| `GIFT.Certificate` | Main theorem + zero-parameter proof (3 modules) |
+**[gift-framework/core](https://github.com/gift-framework/core)** — Exact rational and integer relations formally verified in two independent proof assistants.
 
-**Status:** Lean 4.14.0 + Mathlib 4.14.0 | **0 sorry** | **0 domain axioms**
+| Proof Assistant | Modules | Status |
+|-----------------|---------|--------|
+| **Lean 4** (Mathlib 4.14+) | 17 modules | **0 sorry** · **0 domain axioms** |
+| **Coq 8.18** | 21 modules | **0 Admitted** · **0 explicit axioms** |
 
-See [Lean/README.md](Lean/README.md) for build instructions.
+The `core` repository contains:
+- Complete Lean 4 formalization (Algebra, Geometry, Topology, Relations, Certificate)
+- Complete Coq formalization (parallel structure)
+- Continuous integration and verification
+- Build instructions and documentation
 
-### Coq Formalization
-
-The `/COQ/` directory contains a parallel Coq 8.18 formalization with **21 modules**:
-
-| Directory | Content |
-|-----------|---------|
-| `Algebra/` | E₈ root system, Weyl group, Jordan algebra (5 modules) |
-| `Geometry/` | G₂ group, structure, holonomy, TCS (4 modules) |
-| `Topology/` | Betti numbers, cohomology, Euler characteristic (3 modules) |
-| `Relations/` | Gauge, neutrino, quark, lepton, Higgs, cosmology (7 modules) |
-| `Certificate/` | Main theorem + zero-parameter proof (3 modules) |
-
-**Status:** Coq 8.18 | **0 Admitted** | **0 explicit axioms**
-
-See [COQ/README.md](COQ/README.md) for build instructions.
+> **Note**: The original proofs were developed in this repository and have been migrated to `gift-framework/core` for independent verification. Historical versions are preserved in [`legacy/formal_proofs_v23_local/`](legacy/formal_proofs_v23_local/).
 
 **Computational Validation:**
 - Physics-informed neural networks (PINN) with 1M+ training samples
@@ -97,7 +84,7 @@ jupyter notebook assets/visualizations/
 | N_gen | 3 | rank(E₈) - Weyl | **PROVEN (Lean)** |
 | E₈×E₈ | 496 | 2 × dim(E₈) | **PROVEN (Lean)** |
 
-Complete proofs: [Lean/](Lean/) | Paper proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
+Complete proofs: [gift-framework/core](https://github.com/gift-framework/core) | Paper proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
 
 ### Precision by Sector
 
@@ -126,8 +113,7 @@ Full tables: [Main Paper Section 8](publications/markdown/gift_2_3_main.md)
 
 - **[Main Paper](publications/markdown/gift_2_3_main.md)** - Complete theoretical framework (~1400 lines)
 - **[Observable Reference](publications/references/GIFT_v23_Observable_Reference.md)** - All 39 observables
-- **[Lean 4 Proofs](Lean/)** - Machine-verified proofs (17 modules, 0 sorry)
-- **[Coq Proofs](COQ/)** - Independent verification (21 modules, 0 Admitted)
+- **[Formal Proofs](https://github.com/gift-framework/core)** - Machine-verified in Lean 4 + Coq (gift-framework/core)
 - **[Glossary](docs/GLOSSARY.md)** - Technical terms
 - **[FAQ](docs/FAQ.md)** - Common questions
 - **[Philosophy](docs/PHILOSOPHY.md)** - The philosophy behind GIFT
@@ -161,17 +147,15 @@ gift/
 │   ├── references/        # Observable reference, geometric justifications
 │   ├── tex/               # LaTeX sources
 │   └── pdf/               # Generated PDFs
-├── Lean/                  # Lean 4 formal verification (17 modules)
-│   └── GIFT/              # Algebra, Geometry, Topology, Relations, Certificate
-├── COQ/                   # Coq 8.18 formal verification (21 modules)
-│   └── */                 # Algebra, Geometry, Topology, Relations, Certificate
 ├── assets/visualizations/ # Interactive notebooks
 ├── statistical_validation/ # Monte Carlo validation
 ├── G2_ML/                 # Neural network for K₇ metrics
 ├── tests/                 # Test suite
 ├── docs/                  # FAQ, glossary, guides
-└── legacy/                # Archived versions (v1, v2.0, v2.1)
+└── legacy/                # Archived versions (v1, v2.0, v2.1, formal proofs)
 ```
+
+**Formal Verification**: See [gift-framework/core](https://github.com/gift-framework/core) for Lean 4 and Coq proofs.
 
 See [STRUCTURE.md](STRUCTURE.md) for navigation guide.
 

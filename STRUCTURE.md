@@ -36,12 +36,10 @@ gift/
 │   ├── agents/                      # Automated verification tools
 │   └── documents_template/          # LaTeX/Quarto templates
 │
-├── Lean/                            # Lean 4 formal verification (17 modules)
-├── COQ/                             # Coq 8.18 formal verification (21 modules)
 ├── statistical_validation/           # Monte Carlo tools
 ├── G2_ML/                           # Neural network for K₇
 ├── tests/                           # pytest suite + test guides
-└── legacy/                          # v1, v2.0, v2.1, v2.2 archives
+└── legacy/                          # v1, v2.0, v2.1, v2.2, formal proofs archives
 ```
 
 ## Find What You Need
@@ -56,8 +54,7 @@ gift/
 | Experimental comparison | `publications/markdown/S5_experimental_validation_v23.md` |
 | Falsification criteria | `publications/markdown/S5_experimental_validation_v23.md` |
 | Mathematical foundations | `publications/markdown/S1_mathematical_architecture_v23.md` |
-| Lean 4 formal proofs | `Lean/` |
-| Coq formal proofs | `COQ/` |
+| Formal proofs (Lean 4 + Coq) | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Common questions | `docs/FAQ.md` |
 | Interactive visualizations | `assets/visualizations/` |
@@ -81,7 +78,7 @@ Results use these status labels:
 
 - **Main papers**: `gift_2_3_main.md`, `GIFT_v23_*.md`
 - **Supplements**: `S1_*_v23.md` through `S7_*_v23.md`
-- **Formal proofs**: `Lean/GIFT/*.lean`, `COQ/*/*.v`
+- **Formal proofs**: See [gift-framework/core](https://github.com/gift-framework/core)
 - **Project files**: ALL_CAPS (`README.md`, `CHANGELOG.md`)
 
 ## Maintenance
