@@ -206,7 +206,7 @@ See [STRUCTURE.md](STRUCTURE.md) for navigation guide.
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S5](publications/markdown/S5_experimental_validation.md), [Experimental Status](docs/EXPERIMENTAL_VALIDATION.md)
+Details: [S5](publications/markdown/S5_experimental_validation_v23.md), [Experimental Status](docs/EXPERIMENTAL_VALIDATION.md)
 
 ## Citation
 
