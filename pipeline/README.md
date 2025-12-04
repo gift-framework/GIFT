@@ -18,6 +18,18 @@ This directory contains the unified verification pipeline for the Geometric Info
 
 ## Quick Start
 
+### Setup (First Time)
+
+The formal proofs (Lean 4 + Coq) are maintained in the **[gift-framework/core](https://github.com/gift-framework/core)** repository. Before running verification, clone it locally:
+
+```bash
+# Clone core repository (required for Lean/Coq verification)
+./pipeline/scripts/setup_core.sh
+
+# Or install the Python package
+pip install giftpy
+```
+
 ### Full Verification
 
 ```bash
@@ -62,6 +74,7 @@ pipeline/
 ├── config.env                # Configuration parameters
 │
 ├── scripts/                  # Verification scripts
+│   ├── setup_core.sh         # Clone/update gift-framework/core
 │   ├── verify_lean.sh        # Lean 4 build and verification
 │   ├── verify_coq.sh         # Coq build and verification
 │   ├── verify_g2.sh          # G2 metric validation
@@ -124,7 +137,13 @@ opam install coq.8.18.0
 
 **Python dependencies**:
 ```bash
+pip install giftpy  # Official GIFT package from gift-framework/core
 pip install torch numpy jupyter
+```
+
+**Setup Core Repository** (for local Lean/Coq verification):
+```bash
+./pipeline/scripts/setup_core.sh
 ```
 
 ---
@@ -249,14 +268,24 @@ sha256:xyz789...  GIFT_AGGREGATE
 
 ## Troubleshooting
 
+### Core repository not found
+
+```bash
+# Clone gift-framework/core
+./pipeline/scripts/setup_core.sh
+
+# Or force fresh clone
+./pipeline/scripts/setup_core.sh --force
+```
+
 ### Lean build fails
 
 ```bash
 # Check Lean version
 lean --version
 
-# Update dependencies
-cd Lean
+# Update dependencies (in core)
+cd .cache/gift-core/Lean
 lake update
 lake build
 ```
@@ -267,8 +296,8 @@ lake build
 # Check Coq version
 coqc --version
 
-# Rebuild
-cd COQ
+# Rebuild (in core)
+cd .cache/gift-core/Coq
 make clean
 make depend
 make

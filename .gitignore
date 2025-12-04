@@ -60,6 +60,9 @@ desktop.ini
 .env
 .local
 
+# Cached repositories (cloned by pipeline)
+.cache/
+
 # Coverage and testing
 .coverage
 coverage.xml
