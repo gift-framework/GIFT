@@ -1,15 +1,26 @@
 # Statistical Validation and Uncertainty Quantification
 
-**GIFT Framework v2.0**
+**GIFT Framework v2.3**
 
 ## Overview
 
 This directory contains tools for statistical validation of GIFT predictions, including Monte Carlo uncertainty propagation, Sobol sensitivity analysis, and bootstrap validation on experimental data.
 
+## Core Implementations
+
+| File | Version | Description |
+|------|---------|-------------|
+| `gift_v23_core.py` | **v2.3** | Current - 13 PROVEN relations (8 Lean 4 verified) |
+| `gift_v22_core.py` | v2.2 | Zero-parameter paradigm |
+| `gift_v21_core.py` | v2.1 | Torsional dynamics |
+| `run_validation_v21.py` | v2.1 | Validation runner |
+
 ## Contents
 
-- `gift_statistical_validation.ipynb`: Complete Jupyter notebook
-- `run_validation.py`: Standalone Python script
+- `gift_v23_core.py`: Core implementation v2.3 with Lean 4 verification
+- `gift_v22_core.py`: Core implementation v2.2
+- `gift_v21_core.py`: Core implementation v2.1
+- `run_validation_v21.py`: Validation runner script
 - `requirements.txt`: Python dependencies
 - `full_results/`: Output directory for validation results
 
@@ -279,7 +290,13 @@ statistical_validation/
 
 ## Version History
 
-- v1.0 (2025-11-13): Initial implementation
+- v2.3 (2024-12): Added gift_v23_core.py with Lean 4 verification
+  - 13 PROVEN relations (8 Lean 4 verified)
+  - 39 observables with mean deviation 0.128%
+- v2.2 (2024-11): Zero-parameter paradigm
+  - sin^2(theta_W) = 3/13, tau = 3472/891, det(g) = 65/32
+- v2.1 (2024-11): Torsional dynamics integration
+- v1.0 (2024-11-13): Initial implementation
   - Monte Carlo propagation
   - Sobol sensitivity analysis
   - Bootstrap validation
@@ -294,6 +311,6 @@ For questions or issues:
 
 ---
 
-**Last updated**: 2025-11-13
-**GIFT version**: 2.0
+**Last updated**: 2024-12-04
+**GIFT version**: 2.3
 **Analysis type**: Statistical validation
