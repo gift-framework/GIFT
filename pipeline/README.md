@@ -10,8 +10,8 @@
 
 This directory contains the unified verification pipeline for the Geometric Information Field Theory (GIFT) framework. The pipeline provides reproducible verification of:
 
-1. **Lean 4 Formal Verification**: 13 exact relations proven in Lean 4 with Mathlib
-2. **Coq Formal Verification**: Independent verification of the same 13 relations in Coq
+1. **Lean 4 Formal Verification**: 25 exact relations proven in Lean 4 with Mathlib (13 original + 12 topological extension)
+2. **Coq Formal Verification**: Independent verification of the same 25 relations in Coq
 3. **G2 Metric Validation**: PINN-based reconstruction and Banach fixed point certificate
 
 ---
@@ -213,7 +213,9 @@ File: `outputs/g2/validation.json`
 
 ## Verified Relations
 
-The pipeline verifies the following 13 exact relations, all derived from zero adjustable parameters:
+The pipeline verifies 25 exact relations (13 original + 12 topological extension), all derived from zero adjustable parameters.
+
+### Original 13 Relations
 
 | # | Observable | Formula | Value |
 |---|------------|---------|-------|
@@ -230,6 +232,23 @@ The pipeline verifies the following 13 exact relations, all derived from zero ad
 | 11 | p₂ | dim(G₂)/dim(K₇) | 2 |
 | 12 | N_gen | Topological | 3 |
 | 13 | dim(E₈×E₈) | 2 × 248 | 496 |
+
+### Topological Extension (12 New Relations)
+
+| # | Observable | Formula | Value |
+|---|------------|---------|-------|
+| 14 | α_s denom | dim(G₂) - p₂ | 12 |
+| 15 | γ_GIFT | (2·rank(E₈) + 5·H*) / (10·dim(G₂) + 3·dim(E₈)) | 511/884 |
+| 16 | δ_penta | Weyl² | 25 |
+| 17 | θ₂₃ | (rank(E₈) + b₃) / H* | 85/99 |
+| 18 | θ₁₃ denom | b₂ | 21 |
+| 19 | α_s² denom | (dim(G₂) - p₂)² | 144 |
+| 20 | λ_H² | (dim(G₂) + N_gen) / 32² | 17/1024 |
+| 21 | θ₁₂ factor | Weyl² × γ_num | 12775 |
+| 22 | m_μ/m_e base | dim(J₃(O)) | 27 |
+| 23 | n_s indices | D_bulk, Weyl | 11, 5 |
+| 24 | Ω_DE frac | (H* - 1) / H* | 98/99 |
+| 25 | α⁻¹ base | (dim(E₈) + rank(E₈))/2 + H*/11 | 137 |
 
 ---
 
