@@ -183,7 +183,7 @@ Geometric interpretation:
 
 ### 2.2 Weak Mixing Angle sin²θ_W
 
-**Status**: **PROVEN (Lean)** — `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
+**Status**: **PROVEN (Lean)**: `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
 
 **Formula**:
 ```
@@ -329,7 +329,7 @@ where:
 
 ### 3.4 CP Violation Phase δ_CP
 
-**Status**: **PROVEN (Lean)** — `delta_CP_certified` in `GIFT.Relations.NeutrinoSector`
+**Status**: **PROVEN (Lean)**: `delta_CP_certified` in `GIFT.Relations.NeutrinoSector`
 
 **Formula**:
 ```
@@ -356,7 +356,7 @@ where:
 
 ### 4.1 Koide Parameter Q
 
-**Status**: **PROVEN (Lean)** — `koide_certified` in `GIFT.Relations.LeptonSector`
+**Status**: **PROVEN (Lean)**: `koide_certified` in `GIFT.Relations.LeptonSector`
 
 **Formula**:
 ```
@@ -409,7 +409,7 @@ where φ = (1+√5)/2 is the golden ratio.
 
 ### 4.3 Tau-Electron Mass Ratio
 
-**Status**: **PROVEN (Lean)** — `m_tau_m_e_certified` in `GIFT.Relations.LeptonSector`
+**Status**: **PROVEN (Lean)**: `m_tau_m_e_certified` in `GIFT.Relations.LeptonSector`
 
 **Formula**:
 ```
@@ -436,7 +436,7 @@ m_τ/m_e = dim(K₇) + 10·dim(E₈) + 10·H*
 
 ### 5.1 Strange-Down Ratio m_s/m_d
 
-**Status**: **PROVEN (Lean)** — `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
+**Status**: **PROVEN (Lean)**: `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
 
 **Formula**:
 ```
@@ -603,7 +603,7 @@ M_Z = M_W / cos(θ_W) = 91.20 GeV
 
 ### 7.4 Higgs Self-Coupling λ_H
 
-**Status**: **PROVEN (Lean)** — `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
+**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
 
 **Formula**:
 ```
@@ -848,9 +848,9 @@ Framework constants systematically encode Fibonacci (F_n) and Lucas (L_n) number
 | Status | Count | Mean Deviation | Description |
 |--------|-------|----------------|-------------|
 | **PROVEN (Lean + Coq)** | **39** | 0.12% | Dual-verified (Lean 4 + Coq 8.18, zero domain axioms) |
-| **TOPOLOGICAL** | **0** | — | Promoted to PROVEN |
-| DERIVED | 0 | — | Promoted to PROVEN |
-| THEORETICAL | 0 | — | All observables now PROVEN |
+| **TOPOLOGICAL** | **0** | - | Promoted to PROVEN |
+| DERIVED | 0 | - | Promoted to PROVEN |
+| THEORETICAL | 0 | - | All observables now PROVEN |
 
 ### 11.4 Lean 4 + Coq Verified Relations (Complete List)
 

@@ -142,7 +142,7 @@ See [CITATION.md](CITATION.md) for additional formats.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE)
+MIT License. See [LICENSE](LICENSE)
 
 ---
 

@@ -238,7 +238,7 @@ $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$
 |----------|-------|--------|
 | Topological target | 65/32 = 2.03125 | TOPOLOGICAL |
 | PINN result | 2.0312490 ± 0.0001 | CERTIFIED |
-| Deviation | 0.00005% | — |
+| Deviation | 0.00005% | - |
 
 **Lean 4 certification** (see [gift-framework/core](https://github.com/gift-framework/core) or `legacy/G2_ML/G2_Lean/G2Certificate.lean`):
 
@@ -688,7 +688,7 @@ $$\Omega_{DM} = \frac{b_2(K_7)}{b_3(K_7)} = \frac{21}{77} = 0.2727$$
 **Formula**:
 $$r = \frac{p_2^4}{b_2(K_7) \cdot b_3(K_7)} = \frac{16}{1617} = 0.0099$$
 
-**Experimental comparison**: r < 0.036 (95% CL) — consistent
+**Experimental comparison**: r < 0.036 (95% CL) [consistent]
 
 **Status**: THEORETICAL (testable by CMB-S4)
 
