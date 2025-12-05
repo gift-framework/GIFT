@@ -344,7 +344,7 @@ The spectral analysis of the 3-form Laplacian yields:
 
 ### 7.1 Certificate Architecture
 
-The existence proof is formalized in Lean 4 with Mathlib 4.14.0 (see `G2_ML/G2_Lean/G2CertificateV2_3_Portable_trained.ipynb`). The certificate compiles in approximately 5-10 minutes on standard cloud platforms.
+The existence proof is formalized in Lean 4 with Mathlib 4.14.0. The production implementation is available via `pip install giftpy` ([gift-framework/core](https://github.com/gift-framework/core)). Historical notebooks are archived in `legacy/G2_ML/G2_Lean/`.
 
 ```lean
 namespace GIFT.G2CertificateV2
@@ -579,38 +579,36 @@ The (2, 21, 54) representation content under G₂ matches Standard Model fermion
 
 ### 13.1 Code Availability
 
-```
-G2_ML/variational_g2/
-├── src/                    # PINN implementation
-│   ├── model.py           # G2VariationalNet
-│   ├── constraints.py     # Constraint functions
-│   ├── loss.py            # Variational loss
-│   └── training.py        # Training protocol
-├── config/                # Configuration files
-├── notebooks/             # Jupyter notebooks
-│   └── Level5_Joyce_Banach_FP.ipynb
-├── outputs/
-│   ├── artifacts/         # Certificates
-│   └── metrics/           # Validation results
-
-G2_ML/G2_Lean/
-├── G2CertificateV2_3_Portable_trained.ipynb  # Main certificate (Colab-ready)
-├── GIFT_Banach_FP_Certificate.lean           # Standalone Lean file
-├── lakefile.lean                              # Build configuration
-└── README.md                                  # Documentation
-```
-
-### 13.2 Build Commands
-
-**Lean Verification** (recommended: use the Colab notebook):
-1. Open `G2_ML/G2_Lean/G2CertificateV2_3_Portable_trained.ipynb` in Google Colab
-2. Run all cells (builds in ~5-10 minutes with Mathlib cache)
-
-**Local build**:
+**Production code** (recommended):
 ```bash
-cd G2_ML/G2_Lean
-lake update && lake exe cache get
-lake build
+pip install giftpy
+```
+See [gift-framework/core](https://github.com/gift-framework/core) for:
+- `gift_core/geometry/` — K3, ACyl CY3, TCS construction
+- `gift_core/g2/` — G₂ form, holonomy, torsion
+- `gift_core/harmonic/` — Hodge Laplacian, harmonic forms
+- `gift_core/nn/` — Physics-informed neural network
+- `gift_core/verification/` — Lean/Coq certificate export
+
+**Historical notebooks** (archived in `legacy/G2_ML/`):
+- `G2_Lean/G2CertificateV2_3_Portable_trained.ipynb` — Development certificate
+- `variational_g2/` — Original PINN development
+
+### 13.2 Usage
+
+**With giftpy** (production):
+```python
+import gift_core as gc
+config = gc.PipelineConfig(neck_length=15.0, use_pinn=True)
+result = gc.run_pipeline(config)
+print(f"det(g) = {result.det_g}")  # 65/32
+lean_proof = result.certificate.to_lean()
+```
+
+**Lean verification** (via giftpy):
+```bash
+pip install giftpy
+python -c "from gift_core import run_pipeline; r = run_pipeline(); print(r.certificate.to_lean())"
 ```
 
 ---

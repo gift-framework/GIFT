@@ -36,8 +36,8 @@ The formal proofs are maintained in a dedicated repository:
 The `core` repository contains:
 - Complete Lean 4 formalization (Algebra, Geometry, Topology, Relations, Certificate)
 - Complete Coq formalization (parallel structure)
+- **K₇ metric pipeline** (giftpy v1.2.0) — G₂ geometry, harmonic forms, Yukawa extraction
 - Continuous integration and verification
-- Build instructions and documentation
 
 > **Note**: The original proofs were developed in this repository and have been migrated to `gift-framework/core` for independent verification. Historical versions are preserved in [`legacy/formal_proofs_v23_local/`](legacy/formal_proofs_v23_local/).
 
@@ -153,13 +153,14 @@ gift/
 │   ├── tex/               # LaTeX sources
 │   └── pdf/               # Generated PDFs
 ├── statistical_validation/ # Monte Carlo validation
-├── G2_ML/                 # Neural network for K₇ metrics
 ├── tests/                 # Test suite
 ├── docs/                  # FAQ, glossary, guides
-└── legacy/                # Archived versions (v1, v2.0, v2.1, formal proofs)
+└── legacy/                # Archived: v1, v2.0, v2.1, formal proofs, G2_ML
 ```
 
-**Formal Verification**: See [gift-framework/core](https://github.com/gift-framework/core) for Lean 4 and Coq proofs.
+**Core Library** ([gift-framework/core](https://github.com/gift-framework/core)):
+- Formal proofs (Lean 4 + Coq) — 25 certified relations
+- K₇ metric pipeline (`pip install giftpy`) — G₂ geometry, harmonic forms, physics extraction
 
 See [STRUCTURE.md](STRUCTURE.md) for navigation guide.
 

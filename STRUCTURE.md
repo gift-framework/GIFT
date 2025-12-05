@@ -32,9 +32,8 @@ gift/
 │   └── tests/                        # Test documentation
 │
 ├── statistical_validation/           # Monte Carlo tools
-├── G2_ML/                           # Neural network for K₇
 ├── tests/                           # pytest suite + test guides
-└── legacy/                          # v1, v2.0, v2.1, v2.2, formal proofs archives
+└── legacy/                          # Archived: v1, v2.0, v2.1, v2.2, formal proofs, G2_ML
 ```
 
 ## Find What You Need
@@ -50,10 +49,11 @@ gift/
 | Falsification criteria | `publications/markdown/S5_experimental_validation_v23.md` |
 | Mathematical foundations | `publications/markdown/S1_mathematical_architecture_v23.md` |
 | Formal proofs (Lean 4 + Coq) | [gift-framework/core](https://github.com/gift-framework/core) |
+| K₇ metric pipeline | [giftpy](https://github.com/gift-framework/core) (`pip install giftpy`) |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Common questions | `docs/FAQ.md` |
-| Notebooks | `G2_ML/` |
 | Validation code | `statistical_validation/` |
+| Historical ML notebooks | `legacy/G2_ML/` (archived) |
 
 ## Status Classifications
 
