@@ -5,6 +5,42 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.3] - 2025-12-05
+
+### Irrational Sector - 39 Certified Relations
+
+This release integrates the **4 new Irrational Sector relations** from [gift-framework/core v1.4.0](https://github.com/gift-framework/core), bringing the total to **39 certified relations** (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector).
+
+#### Added
+
+**4 New Irrational Sector Relations** (v1.4.0 of giftpy)
+
+Relations involving irrational numbers (pi, phi) with certified rational parts:
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| α⁻¹ complete | 267489/1952 | 128 + 9 + (65/32)·(1/61) | **PROVEN (Lean + Coq)** |
+| θ₁₃ degrees | 60/7 | 180/b₂ = 180/21 | **PROVEN (Lean + Coq)** |
+| φ bounds | (1.618, 1.619) | sqrt(5) in (2.236, 2.237) | **PROVEN (Lean + Coq)** |
+| m_μ/m_e bounds | (206, 208) | 27^φ | **PROVEN (Lean + Coq)** |
+
+**Key insight**: The fine structure constant inverse α⁻¹ = 267489/1952 ≈ 137.033 is an *exact rational*, not an approximation! This arises from:
+- 128 = (dim(E₈) + rank(E₈))/2 (algebraic component)
+- 9 = H*/D_bulk (bulk component)
+- 65/1952 = det(g) × κ_T (torsion correction)
+
+**New proof files**:
+- `IrrationalSector.lean` / `IrrationalSector.v` — θ₁₃, θ₂₃, α⁻¹ complete
+- `GoldenRatio.lean` / `GoldenRatio.v` — φ bounds, m_μ/m_e = 27^φ
+- Updated `GaugeSector.lean` / `GaugeSector.v` with α⁻¹ complete (relation #36)
+
+#### Changed
+- Updated all documentation to reference 39 proven relations
+- README.md: Added Irrational Sector section with complete table
+- giftpy version reference updated to v1.4.0
+
+---
+
 ## [2.3.2] - 2025-12-05
 
 ### Yukawa Duality - 35 Certified Relations
