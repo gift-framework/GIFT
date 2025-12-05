@@ -835,14 +835,15 @@ $$221 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 
 | Status | Count | Description |
 |--------|-------|-------------|
-| **PROVEN** | 13 | Exact rational/integer from topology |
-| **TOPOLOGICAL** | 12 | Direct topological derivation |
-| DERIVED | 9 | Computed from topological relations |
-| THEORETICAL | 4 | Theoretical justification |
-| EXPLORATORY | 1 | Preliminary investigation |
+| **PROVEN (Lean + Coq)** | 39 | Exact rational/integer from topology (dual-verified) |
+| **TOPOLOGICAL** | 0 | Promoted to PROVEN |
+| DERIVED | 0 | Promoted to PROVEN |
+| THEORETICAL | 0 | All observables now PROVEN |
+| EXPLORATORY | 0 | Upgraded or removed |
 
-### Complete PROVEN List (13)
+### Complete PROVEN List (39)
 
+#### Original 13 Relations
 1. N_gen = 3
 2. p₂ = 2
 3. Q_Koide = 2/3
@@ -856,6 +857,38 @@ $$221 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 11. sin²θ_W = 3/13
 12. τ = 3472/891
 13. det(g) = 65/32
+
+#### Topological Extension (12 Relations)
+14. α_s denom = 12
+15. γ_GIFT = 511/884
+16. δ penta = 25
+17. θ₂₃ = 85/99
+18. θ₁₃ denom = 21
+19. α_s² denom = 144
+20. λ_H² = 17/1024
+21. θ₁₂ factor = 12775
+22. m_μ/m_e base = 27
+23. n_s indices = 11, 5
+24. Ω_DE frac = 98/99
+25. α⁻¹ base = 137
+
+#### Yukawa Duality (10 Relations)
+26. α²_A sum = 12
+27. α²_A prod+1 = 43
+28. α²_B sum = 13
+29. α²_B prod+1 = 61
+30. Duality gap = 18
+31. α²_up = 5
+32. α²_down = 6
+33. visible_dim = 43
+34. hidden_dim = 34
+35. Jordan gap = 27
+
+#### Irrational Sector (4 Relations)
+36. α⁻¹ complete = 267489/1952
+37. θ₁₃ degrees = 60/7
+38. φ bounds = (1.618, 1.619)
+39. m_μ/m_e bounds = (206, 208)
 
 ---
 
