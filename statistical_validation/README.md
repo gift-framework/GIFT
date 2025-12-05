@@ -10,14 +10,14 @@ This directory contains tools for statistical validation of GIFT predictions, in
 
 | File | Version | Description |
 |------|---------|-------------|
-| `gift_v23_core.py` | **v2.3** | Current - 13 PROVEN relations (8 Lean 4 verified) |
-| `gift_v22_core.py` | v2.2 | Zero-parameter paradigm |
+| `gift_v23_core.py` | **v2.3** | Current - 25 PROVEN relations (formally verified in Lean 4 + Coq) |
+| `gift_v22_core.py` | v2.2 | Zero-parameter paradigm (13 relations) |
 | `gift_v21_core.py` | v2.1 | Torsional dynamics |
 | `run_validation_v21.py` | v2.1 | Validation runner |
 
 ## Contents
 
-- `gift_v23_core.py`: Core implementation v2.3 with Lean 4 verification
+- `gift_v23_core.py`: Core implementation v2.3 with Lean 4 + Coq verification (25 relations)
 - `gift_v22_core.py`: Core implementation v2.2
 - `gift_v21_core.py`: Core implementation v2.1
 - `run_validation_v21.py`: Validation runner script
@@ -269,7 +269,7 @@ Or increase parallelization (requires modification of script).
 If using these validation results in publications:
 
 ```
-GIFT Framework v2.0 statistical validation with Monte Carlo
+GIFT Framework v2.3 statistical validation with Monte Carlo
 uncertainty propagation (N=1M), Sobol sensitivity analysis
 (N=10k), and bootstrap validation (N=10k).
 Repository: https://github.com/gift-framework/GIFT
@@ -290,10 +290,12 @@ statistical_validation/
 
 ## Version History
 
-- v2.3 (2024-12): Added gift_v23_core.py with Lean 4 verification
-  - 13 PROVEN relations (8 Lean 4 verified)
+- v2.3.1 (2025-12): Topological extension with dual verification
+  - 25 PROVEN relations (13 original + 12 extension, formally verified in Lean 4 + Coq)
   - 39 observables with mean deviation 0.128%
+  - Formal proofs maintained in [gift-framework/core](https://github.com/gift-framework/core)
 - v2.2 (2024-11): Zero-parameter paradigm
+  - 13 PROVEN relations
   - sin^2(theta_W) = 3/13, tau = 3472/891, det(g) = 65/32
 - v2.1 (2024-11): Torsional dynamics integration
 - v1.0 (2024-11-13): Initial implementation
@@ -311,6 +313,6 @@ For questions or issues:
 
 ---
 
-**Last updated**: 2024-12-04
-**GIFT version**: 2.3
+**Last updated**: 2025-12-05
+**GIFT version**: 2.3.1
 **Analysis type**: Statistical validation
