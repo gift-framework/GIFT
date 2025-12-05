@@ -5,6 +5,42 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.2] - 2025-12-05
+
+### Yukawa Duality - 35 Certified Relations
+
+This release integrates the **10 new Yukawa Duality relations** from [gift-framework/core v1.3.0](https://github.com/gift-framework/core), bringing the total to **35 certified relations** (13 original + 12 topological extension + 10 Yukawa duality).
+
+#### Added
+
+**10 New Yukawa Duality Relations** (v1.3.0 of giftpy)
+
+The Extended Koide formula exhibits a **duality** between two α² structures:
+- **Structure A** (Topological): {2, 3, 7} → visible sector
+- **Structure B** (Dynamical): {2, 5, 6} → torsion constraint
+
+| Relation | Value | Formula |
+|----------|-------|---------|
+| α²_A sum | 12 | 2 + 3 + 7 = dim(SM gauge) |
+| α²_A prod+1 | 43 | 2×3×7 + 1 = visible_dim |
+| α²_B sum | 13 | 2 + 5 + 6 = rank(E₈) + Weyl |
+| α²_B prod+1 | 61 | 2×5×6 + 1 = κ_T⁻¹ |
+| Duality gap | 18 | 61 - 43 = p₂ × N_gen² |
+| α²_up (B) | 5 | dim(K₇) - p₂ = Weyl |
+| α²_down (B) | 6 | dim(G₂) - rank(E₈) = 2×N_gen |
+| visible_dim | 43 | b₃ - hidden_dim |
+| hidden_dim | 34 | b₃ - visible_dim |
+| Jordan gap | 27 | 61 - 34 = dim(J₃(𝕆)) |
+
+**Key insight**: The torsion κ_T = 1/61 mediates between topology (Structure A) and physical masses (Structure B).
+
+#### Changed
+- Updated all documentation to reference 35 proven relations
+- README.md: Added Yukawa Duality section with complete table
+- giftpy version reference updated to v1.3.0
+
+---
+
 ## [2.3.1] - 2025-12-04
 
 ### Topological Extension - 25 Certified Relations
