@@ -1,0 +1,299 @@
+# PROMPT CLAUDE CODE — GIFT Paper for Foundations of Physics
+
+## CONTEXT
+
+You are composing a scientific paper for submission to **Foundations of Physics** (Springer).
+
+The GIFT framework (Geometric Information Field Theory) derives Standard Model parameters from topological invariants of a G₂ holonomy manifold. Your job is to write a **20-25 page paper** that presents this work with appropriate academic humility, aiming for peer review.
+
+## AVAILABLE SOURCES
+
+In the repo you have access to:
+- `/mnt/project/gift_2_2_main.md` — Main paper (current version)
+- `/mnt/project/S1_mathematical_architecture.md` — Mathematical foundations
+- `/mnt/project/S2_K7_manifold_construction.md` — K₇ TCS construction
+- `/mnt/project/S3_torsional_dynamics.md` — Torsion analysis
+- `/mnt/project/S4_rigorous_proofs.md` — Proofs of exact relations
+- `/mnt/project/S5_complete_calculations.md` — Full calculations
+- `/mnt/project/S6_numerical_methods.md` — PINN methods
+- `/mnt/project/S7_phenomenology.md` — Phenomenological predictions
+- `/mnt/project/S8_falsification_protocol.md` — Falsifiability criteria
+- `/mnt/project/GLOSSARY.md` — Definitions
+- `/mnt/project/PHILOSOPHY.md` — Conceptual foundations
+
+Also available: Lean 4 and Coq proof files, Python notebooks for E₈ roots and PINN.
+
+## OUTPUT FORMAT
+
+Generate a LaTeX file using Springer's template structure:
+- `GIFT_FoP_submission.tex` (main file)
+- Target: **20-25 pages** when compiled
+- Bibliography: BibTeX format
+
+## STRUCTURE — FOLLOW EXACTLY
+```
+1. ABSTRACT (250 words MAX)
+   - One sentence: the parameter problem
+   - One sentence: our approach (G₂ topology)
+   - One sentence: results (39 observables, 0.13% deviation)
+   - One sentence: falsifiable prediction (δ_CP = 197°)
+   - One sentence: caveat (exploratory, not claiming correctness)
+
+2. INTRODUCTION (2-3 pages)
+   - The parameter problem: 19 free parameters in SM, no explanation
+   - Historical context: GUTs, string theory, M-theory attempts
+   - G₂ holonomy in string/M-theory (cite Joyce, Acharya, Witten)
+   - Our contribution: explicit topological derivation
+   - Paper structure overview
+
+3. MATHEMATICAL FRAMEWORK (4-5 pages)
+   3.1 E₈×E₈ Heterotic Structure
+       - dim(E₈) = 248, rank = 8
+       - Weyl group, Weyl factor = 5
+       - Why E₈×E₈ (heterotic string motivation)
+   
+   3.2 The K₇ Manifold
+       - Twisted Connected Sum construction
+       - Building blocks: Quintic (b₂=11, b₃=40) + CI(2,2,2) (b₂=10, b₃=37)
+       - Result: b₂=21, b₃=77
+   
+   3.3 G₂ Holonomy
+       - dim(G₂) = 14
+       - Torsion-free condition
+       - H* = b₂ + b₃ + 1 = 99
+   
+   3.4 Cohomology-to-Physics Map
+       - H²(K₇) → gauge fields (21 forms)
+       - H³(K₇) → matter fields (77 forms)
+       - Generation counting constraint → N_gen = 3
+
+4. DERIVATION OF OBSERVABLES (5-6 pages)
+   4.1 Gauge Sector
+       - sin²θ_W = b₂/(b₃ + dim G₂) = 21/91 = 3/13
+       - Comparison with experiment
+   
+   4.2 Hierarchy Parameter
+       - τ = (dim E₈×E₈ × b₂)/(dim J₃(𝕆) × H*) = 3472/891
+       - Role in mass hierarchy
+   
+   4.3 Fermion Masses
+       - m_τ/m_e = 7 + 10×248 + 10×99 = 3477
+       - m_s/m_d = 4×5 = 20
+       - Koide relation: Q = dim(G₂)/b₂ = 2/3
+   
+   4.4 Neutrino Sector
+       - δ_CP = 7×14 + 99 = 197°
+       - Mixing angle structures
+   
+   4.5 Higgs and Cosmology
+       - λ_H = √(17/32)
+       - Ω_DE structure
+   
+   4.6 Summary Table
+       [TABLE: All 39 observables with experimental values, GIFT values, deviations]
+
+5. FORMAL VERIFICATION (2 pages)
+   5.1 Motivation for Proof Assistants
+       - Eliminating arithmetic errors
+       - Ensuring logical consistency
+       - Novel in theoretical physics
+   
+   5.2 Lean 4 Implementation
+       - 17 modules, ~100 theorems
+       - Zero sorry statements
+       - Main theorem structure
+   
+   5.3 Coq Implementation
+       - 21 modules, ~100 theorems
+       - Zero Admitted
+       - Cross-validation value
+   
+   5.4 What Is Proven vs Conjectured
+       - Proven: arithmetic relations (exact)
+       - Conjectured: physical interpretation
+
+6. FALSIFIABLE PREDICTIONS (2 pages)
+   6.1 The δ_CP Prediction
+       - GIFT predicts: δ_CP = 197° exactly
+       - Current experimental value: 197° ± 24° (T2K/NOvA)
+       - DUNE sensitivity: ±5° by 2030
+   
+   6.2 Falsification Criteria
+       - If DUNE measures δ_CP outside [187°, 207°]: framework in serious difficulty
+       - If δ_CP ≈ 197°: strong support (not proof)
+   
+   6.3 Other Potential Tests
+       - Proton decay (if accessible)
+       - Precision Higgs measurements
+       - Cosmological observations
+
+7. DISCUSSION (3-4 pages)
+   7.1 Relation to String/M-Theory
+       - G₂ compactifications in M-theory
+       - How GIFT relates to Acharya et al.
+       - Differences and extensions
+   
+   7.2 Comparison with Other Approaches
+       - Lisi's E₈ theory: similarities and differences
+       - Loop quantum gravity: different philosophy
+       - Asymptotic safety: complementary?
+   
+   7.3 Open Questions (BE EXPLICIT AND HONEST)
+       - Why E₈×E₈ specifically? (No dynamical explanation)
+       - Why this particular K₇? (Selection principle missing)
+       - Scale bridge justification (Planck to EW)
+       - 42 missing harmonic forms (global vs local topology)
+       - Physical mechanism for compactification
+   
+   7.4 Philosophical Implications
+       - Are constants "derived" or "fundamental"?
+       - Role of topology in physics
+       - Limits of the framework
+
+8. CONCLUSION (1 page)
+   - Summary of what was achieved
+   - Explicit statement: "We do not claim this framework is correct"
+   - The value: falsifiability, explicitness, formal verification
+   - Future: await DUNE, continue mathematical development
+   - Invitation for criticism and scrutiny
+
+ACKNOWLEDGMENTS
+   - Thank Mitchell Porter for discussions
+   - Thank Ed Hirst for feedback (if applicable)
+   - AI assistance disclosure (be transparent)
+
+REFERENCES (50-80 citations)
+```
+
+## TONE — CRITICAL INSTRUCTIONS
+
+### ALWAYS USE:
+- "We propose...", "We explore...", "We investigate..."
+- "This suggests...", "This indicates...", "One interpretation is..."
+- "If this framework is correct, then..."
+- "Within the GIFT framework, it follows that..."
+- "A possible explanation is...", "One candidate mechanism is..."
+
+### NEVER USE:
+- "Revolutionary", "Breakthrough", "Theory of Everything"
+- "We have solved...", "We prove that physics..."
+- "The correct theory", "The only explanation"
+- "Obviously", "Clearly" (unless mathematically trivial)
+- Exclamation marks
+
+### EXAMPLE TRANSFORMATIONS:
+
+❌ "GIFT solves the hierarchy problem"
+✓ "Within GIFT, the hierarchy parameter τ emerges from topological invariants, offering a possible geometric origin for the mass hierarchy"
+
+❌ "We have derived all Standard Model parameters"
+✓ "We obtain expressions for 39 Standard Model observables in terms of topological integers"
+
+❌ "This proves that E₈ is the symmetry of nature"
+✓ "The E₈×E₈ structure provides the algebraic framework from which these relations emerge"
+
+❌ "Our prediction will be confirmed by DUNE"
+✓ "DUNE's measurement of δ_CP will provide a decisive test of this prediction"
+
+## MANDATORY ELEMENTS
+
+1. **Limitations section**: Must explicitly list what the framework does NOT explain
+
+2. **Comparison with competitors**: Cite and discuss Lisi (2007), string phenomenology papers, LQG
+
+3. **Falsifiability**: The word "falsifiable" or "falsification" must appear at least 5 times
+
+4. **Uncertainty quantification**: When giving numerical predictions, state what the uncertainties mean
+
+5. **Data availability statement**: 
+```
+   All calculations, code, and formal proofs are available at:
+   - Paper and calculations: https://zenodo.org/records/15526659
+   - Code repository: https://github.com/music-of-the-primes/GIFT
+```
+
+6. **Competing interests**: "The author declares no competing interests."
+
+7. **AI disclosure**: Be transparent about AI assistance in research and writing
+
+## KEY CITATIONS TO INCLUDE
+```bibtex
+% G₂ Holonomy
+@book{joyce2000compact,
+  author = {Joyce, Dominic D.},
+  title = {Compact Manifolds with Special Holonomy},
+  publisher = {Oxford University Press},
+  year = {2000}
+}
+
+@article{kovalev2003twisted,
+  author = {Kovalev, Alexei},
+  title = {Twisted connected sums and special Riemannian holonomy},
+  journal = {Journal für die reine und angewandte Mathematik},
+  year = {2003}
+}
+
+% M-theory on G₂
+@article{acharya2004m,
+  author = {Acharya, Bobby S. and Gukov, Sergei},
+  title = {M theory and singularities of exceptional holonomy manifolds},
+  journal = {Physics Reports},
+  year = {2004}
+}
+
+% E₈ approaches
+@article{lisi2007exceptionally,
+  author = {Lisi, A. Garrett},
+  title = {An Exceptionally Simple Theory of Everything},
+  journal = {arXiv:0711.0770},
+  year = {2007}
+}
+
+% Particle Data Group
+@article{pdg2024,
+  author = {{Particle Data Group}},
+  title = {Review of Particle Physics},
+  journal = {Physical Review D},
+  year = {2024}
+}
+
+% Neutrino experiments
+@article{t2k2023,
+  author = {{T2K Collaboration}},
+  title = {Measurements of neutrino oscillation parameters},
+  year = {2023}
+}
+
+% Formal verification
+@article{avigad2018mechanizing,
+  author = {Avigad, Jeremy},
+  title = {The mechanization of mathematics},
+  journal = {Notices of the American Mathematical Society},
+  year = {2018}
+}
+```
+
+## FINAL CHECKS
+
+Before completing, verify:
+- [ ] Paper is 20-25 pages (estimate ~300 words/page)
+- [ ] Abstract ≤ 250 words
+- [ ] Every claim has a citation or derivation
+- [ ] All 13 exact relations appear with formulas
+- [ ] Table of 39 observables is complete
+- [ ] Open questions section is substantial (≥1 page)
+- [ ] "Falsifiable" appears ≥5 times
+- [ ] No "revolutionary", "breakthrough", "ToE" language
+- [ ] Limitations are explicit and honest
+- [ ] DUNE prediction is clearly stated with timeline
+
+## OUTPUT
+
+Generate:
+1. `GIFT_FoP_submission.tex` — Main LaTeX file
+2. `GIFT_FoP_references.bib` — BibTeX bibliography
+3. `GIFT_FoP_tables.tex` — Tables (if separate)
+
+The paper should read as a humble but rigorous proposal, inviting scrutiny rather than demanding acceptance. The goal is peer review, not immediate acclaim.
+
+Remember: We are ASKING for criticism. We WANT reviewers to engage. The tone should say "please examine this carefully" not "accept our genius."
