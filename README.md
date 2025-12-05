@@ -26,21 +26,28 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 ## Navigation
 
-###**"Show me the numbers"**
+### "Show me the numbers"
 
 → [Observable Reference](publications/references/GIFT_v23_Observable_Reference.md) All 39 observables with formulas, values, deviations
+
 → [39 Observables CSV](publications/references/39_observables.csv) Machine-readable data
 
-###**"Show me the proofs"**
+### "Show me the proofs"
+
 → [gift-framework/core](https://github.com/gift-framework/core) Lean 4 + Coq formal verification (39 relations, zero axioms)
+
 → [S4: Complete Derivations](publications/markdown/S4_complete_derivations_v23.md) Mathematical proofs
 
-###**"Show me the framework"**
+### "Show me the framework"
+
 → [Main Paper](publications/markdown/gift_2_3_main.md) Complete theoretical framework
+
 → [Supplements S1-S7](publications/markdown/) Mathematical details by topic
 
-###**"Show me an introduction"**
+### "Show me an introduction"
+
 → [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) Video overview
+
 → [Philosophy](docs/PHILOSOPHY.md) Foundational perspective
 
 ---
