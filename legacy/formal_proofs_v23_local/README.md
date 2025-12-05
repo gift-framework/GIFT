@@ -1,6 +1,6 @@
 # Archived: Local Formal Proofs (v2.3)
 
-**Status**: ARCHIVED - December 2024
+**Status**: ARCHIVED - December 2025 (updated with Yukawa Duality v1.3.0)
 
 This directory contains the original Lean 4 and Coq formalizations that were developed in this repository. These proofs have been **migrated to the dedicated formal verification repository**.
 
@@ -34,7 +34,7 @@ formal_proofs_v23_local/
 
 ## Historical Note
 
-These formalizations prove that **13 exact relations** in GIFT derive from fixed topological integers with **zero continuous adjustable parameters**:
+These formalizations prove that **35 exact relations** in GIFT derive from fixed topological integers with **zero continuous adjustable parameters** (13 original + 12 topological extension + 10 Yukawa duality):
 
 | Relation | Value | Status |
 |----------|-------|--------|

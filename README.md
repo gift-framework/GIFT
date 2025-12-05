@@ -13,14 +13,14 @@
 |--------|-------|
 | **Precision** | 0.128% mean deviation across 39 observables |
 | **Parameters** | Zero continuous adjustable (all structurally determined) |
-| **Formally verified relations** | **25 proven** in Lean 4 + Coq (dual verification, zero axioms) |
+| **Formally verified relations** | **35 proven** in Lean 4 + Coq (dual verification, zero axioms) |
 | **Key results** | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |
 
-The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **25 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
+The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **35 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
 
 ## Formal Verification (Lean 4 + Coq)
 
-All 25 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension).
+All 35 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension + 10 Yukawa duality).
 
 ### Mathematical Core Repository
 
@@ -36,7 +36,7 @@ The formal proofs are maintained in a dedicated repository:
 The `core` repository contains:
 - Complete Lean 4 formalization (Algebra, Geometry, Topology, Relations, Certificate)
 - Complete Coq formalization (parallel structure)
-- **K₇ metric pipeline** (giftpy v1.2.0) — G₂ geometry, harmonic forms, Yukawa extraction
+- **K₇ metric pipeline** (giftpy v1.3.0) — G₂ geometry, harmonic forms, Yukawa extraction, Yukawa duality
 - Continuous integration and verification
 
 > **Note**: The original proofs were developed in this repository and have been migrated to `gift-framework/core` for independent verification. Historical versions are preserved in [`legacy/formal_proofs_v23_local/`](legacy/formal_proofs_v23_local/).
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## Key Results
 
-### 25 Lean-Verified Exact Relations
+### 35 Lean-Verified Exact Relations
 
 #### Original 13 Relations
 
@@ -96,6 +96,28 @@ pip install -r requirements.txt
 | n_s indices | 11, 5 | D_bulk, Weyl_factor | **PROVEN (Lean + Coq)** |
 | Ω_DE frac | 98/99 | (H* - 1) / H* | **PROVEN (Lean + Coq)** |
 | α⁻¹ base | 137 | (dim(E₈) + rank(E₈))/2 + H*/11 | **PROVEN (Lean + Coq)** |
+
+#### Yukawa Duality (10 New Relations - v1.3.0)
+
+The Extended Koide formula exhibits a **duality** between two α² structures that are both topologically determined:
+
+| Structure | α² values | Sum | Product+1 | Physical meaning |
+|-----------|-----------|-----|-----------|------------------|
+| **A** (Topological) | {2, 3, 7} | 12 = gauge_dim | 43 = visible | K3 signature origin |
+| **B** (Dynamical) | {2, 5, 6} | 13 = rank+Weyl | 61 = κ_T⁻¹ | Exact mass fit |
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| α²_A sum | 12 | 2 + 3 + 7 = dim(SM gauge) | **PROVEN (Lean + Coq)** |
+| α²_A prod+1 | 43 | 2×3×7 + 1 = visible_dim | **PROVEN (Lean + Coq)** |
+| α²_B sum | 13 | 2 + 5 + 6 = rank(E₈) + Weyl | **PROVEN (Lean + Coq)** |
+| α²_B prod+1 | 61 | 2×5×6 + 1 = κ_T⁻¹ | **PROVEN (Lean + Coq)** |
+| Duality gap | 18 | 61 - 43 = p₂ × N_gen² | **PROVEN (Lean + Coq)** |
+| α²_up (B) | 5 | dim(K₇) - p₂ = Weyl | **PROVEN (Lean + Coq)** |
+| α²_down (B) | 6 | dim(G₂) - rank(E₈) = 2×N_gen | **PROVEN (Lean + Coq)** |
+| visible_dim | 43 | b₃ - hidden_dim | **PROVEN (Lean + Coq)** |
+| hidden_dim | 34 | b₃ - visible_dim | **PROVEN (Lean + Coq)** |
+| Jordan gap | 27 | 61 - 34 = dim(J₃(𝕆)) | **PROVEN (Lean + Coq)** |
 
 Complete proofs: [gift-framework/core](https://github.com/gift-framework/core) | Paper proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
 
@@ -159,7 +181,7 @@ gift/
 ```
 
 **Core Library** ([gift-framework/core](https://github.com/gift-framework/core)):
-- Formal proofs (Lean 4 + Coq) — 25 certified relations
+- Formal proofs (Lean 4 + Coq) — 35 certified relations
 - K₇ metric pipeline (`pip install giftpy`) — G₂ geometry, harmonic forms, physics extraction
 
 See [STRUCTURE.md](STRUCTURE.md) for navigation guide.
