@@ -336,14 +336,14 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{32} = \frac
 **Prediction**: Ω_DE = ln(2) × 98/99 = 0.686146
 **Tolerance**: ± 1%
 **Falsification criterion**: If Ω_DE is measured outside [0.679, 0.693] with uncertainty < 0.003, framework is disfavored.
-**Current status**: Planck 2020: 0.6847 ± 0.0073 — CONSISTENT
+**Current status**: Planck 2020: 0.6847 ± 0.0073 [CONSISTENT]
 
 ### 15.2 Strong Coupling
 
 **Prediction**: α_s(M_Z) = √2/12 = 0.117851...
 **Tolerance**: ± 0.002
 **Falsification criterion**: If α_s(M_Z) is measured outside [0.116, 0.120] with uncertainty < 0.0005, framework prediction needs revision.
-**Current status**: PDG 2024: 0.1179 ± 0.0009 — CONSISTENT
+**Current status**: PDG 2024: 0.1179 ± 0.0009 [CONSISTENT]
 
 ### 15.3 Neutrino Mixing Angles
 
@@ -357,7 +357,7 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{32} = \frac
 
 **Prediction**: λ_H = √17/32 = 0.12891
 **Tolerance**: ± 0.005
-**Current status**: LHC: 0.129 ± 0.003 — CONSISTENT
+**Current status**: LHC: 0.129 ± 0.003 [CONSISTENT]
 
 ---
 

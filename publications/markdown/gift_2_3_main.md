@@ -22,7 +22,7 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 Throughout this paper, we use the following classifications:
 
-- **PROVEN (Lean)**: Formally verified by Lean 4 kernel with Mathlib—machine-checked proofs using only standard axioms (propext, Quot.sound), zero domain-specific axioms, zero sorry
+- **PROVEN (Lean)**: Formally verified by Lean 4 kernel with Mathlib, machine-checked proofs using only standard axioms (propext, Quot.sound), zero domain-specific axioms, zero sorry
 - **PROVEN**: Exact topological identity with rigorous mathematical proof (see Supplement S4)
 - **TOPOLOGICAL**: Direct consequence of manifold structure without empirical input
 - **CERTIFIED**: Numerical result verified via interval arithmetic with rigorous bounds
@@ -526,7 +526,7 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11} = \frac{p_2^4 \times \dim(
 
 **Significance**: τ is rational, not transcendental. This indicates the framework encodes exact discrete ratios rather than continuous quantities requiring infinite precision.
 
-**Status**: **PROVEN (Lean)** — `tau_certified` in `GIFT.Certificate.MainTheorem`
+**Status**: **PROVEN (Lean)**: `tau_certified` in `GIFT.Certificate.MainTheorem`
 
 **Mathematical resonances**:
 - τ² ≈ 15.18 ≈ 3π²/2 (within 2.8%)
@@ -631,7 +631,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Numerical value**: 3/13 = 0.230769...
 
-**Status**: **PROVEN (Lean)** — `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
+**Status**: **PROVEN (Lean)**: `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -677,7 +677,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Derivation**: Additive topological formula where dim(G₂) = 14 is the G₂ Lie algebra dimension (proof in Supplement S4)
 
-**Status**: **PROVEN (Lean)** — `delta_CP_certified` in `GIFT.Relations.NeutrinoSector`
+**Status**: **PROVEN (Lean)**: `delta_CP_certified` in `GIFT.Relations.NeutrinoSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -689,7 +689,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: Q = dim(G₂)/b₂(K₇) = 14/21 = 2/3
 
-**Status**: **PROVEN (Lean)** — `koide_certified` in `GIFT.Relations.LeptonSector`
+**Status**: **PROVEN (Lean)**: `koide_certified` in `GIFT.Relations.LeptonSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -721,7 +721,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: m_τ/m_e = dim(K₇) + 10 × dim(E₈) + 10 × H* = 7 + 2480 + 990 = 3477
 
-**Status**: **PROVEN (Lean)** — `m_tau_m_e_certified` in `GIFT.Relations.LeptonSector`
+**Status**: **PROVEN (Lean)**: `m_tau_m_e_certified` in `GIFT.Relations.LeptonSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -733,7 +733,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: m_s/m_d = p₂² × Weyl_factor = 4 × 5 = 20
 
-**Status**: **PROVEN (Lean)** — `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
+**Status**: **PROVEN (Lean)**: `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -794,7 +794,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}
 
 **Numerical value**: λ_H = √17/32 = 0.128906...
 
-**Status**: **PROVEN (Lean)** — `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
+**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|

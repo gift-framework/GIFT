@@ -30,8 +30,8 @@ Relations involving irrational numbers (pi, phi) with certified rational parts:
 - 65/1952 = det(g) × κ_T (torsion correction)
 
 **New proof files**:
-- `IrrationalSector.lean` / `IrrationalSector.v` — θ₁₃, θ₂₃, α⁻¹ complete
-- `GoldenRatio.lean` / `GoldenRatio.v` — φ bounds, m_μ/m_e = 27^φ
+- `IrrationalSector.lean` / `IrrationalSector.v`: θ₁₃, θ₂₃, α⁻¹ complete
+- `GoldenRatio.lean` / `GoldenRatio.v`: φ bounds, m_μ/m_e = 27^φ
 - Updated `GaugeSector.lean` / `GaugeSector.v` with α⁻¹ complete (relation #36)
 
 #### Changed

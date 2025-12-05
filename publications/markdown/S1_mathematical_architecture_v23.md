@@ -246,7 +246,7 @@ Matter field basis:
 
 $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{77 + 14} = \frac{21}{91} = \frac{3}{13}$$
 
-**Status**: **PROVEN (Lean)** — `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
+**Status**: **PROVEN (Lean)**: `weinberg_angle_certified` in `GIFT.Relations.GaugeSector`
 
 ### 2.3.7 Torsion Magnitude from Cohomology
 
@@ -254,7 +254,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 
 **Interpretation**: 61 = effective matter degrees of freedom for torsion
 
-**Status**: **PROVEN (Lean)** — `kappa_T_certified` in `GIFT.Certificate.MainTheorem`
+**Status**: **PROVEN (Lean)**: `kappa_T_certified` in `GIFT.Certificate.MainTheorem`
 
 ---
 
@@ -283,7 +283,7 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11}$$
 - 3⁴ = N_gen⁴ (generations)
 - 11 = rank(E₈) + N_gen = L₅ (Lucas)
 
-**Status**: **PROVEN (Lean)** — `tau_certified` in `GIFT.Certificate.MainTheorem`
+**Status**: **PROVEN (Lean)**: `tau_certified` in `GIFT.Certificate.MainTheorem`
 
 ---
 
@@ -330,7 +330,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{17}}{32}
 
 where 17 = 14 + 3 = dim(G₂) + N_gen.
 
-**Status**: **PROVEN (Lean)** — `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
+**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
 
 ---
 

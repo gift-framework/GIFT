@@ -23,9 +23,9 @@ The Betti numbers b₂ = 21 and b₃ = 77 are fixed by the TCS construction (top
 | Property | Target | Achieved | Status |
 |----------|--------|----------|--------|
 | b₂(K₇) | 21 (TCS) | 21 | TOPOLOGICAL |
-| b₃(K₇) (topological) | 77 (TCS) | — | TOPOLOGICAL |
+| b₃(K₇) (topological) | 77 (TCS) | - | TOPOLOGICAL |
 | b₃(K₇) (spectral estimate) | 77 | 76 (Δ = 1 mode) | NUMERICAL |
-| det(g) (formula) | 65/32 | — | TOPOLOGICAL |
+| det(g) (formula) | 65/32 | - | TOPOLOGICAL |
 | det(g) (PINN) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
 | ||T|| | < ε₀ | 0.00286 | CERTIFIED |
 | Joyce margin | > 1 | 35× | PROVEN |
@@ -286,12 +286,12 @@ Total: ~10,000 epochs (runs in 5-10 minutes on free cloud platforms like Colab).
 
 | Property | Target | Achieved | Status |
 |----------|--------|----------|--------|
-| det(g) (topological) | 65/32 | — | TOPOLOGICAL |
+| det(g) (topological) | 65/32 | - | TOPOLOGICAL |
 | det(g) (PINN) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
 | ||T|| | < ε₀ | 0.00286 | CERTIFIED |
 | λ_min(g) | > 0 | 1.078 | CERTIFIED |
 | b₂ (spectral) | 21 | 21 | NUMERICAL |
-| b₃ (topological) | 77 (TCS) | — | TOPOLOGICAL |
+| b₃ (topological) | 77 (TCS) | - | TOPOLOGICAL |
 | b₃ (spectral) | 77 | 76 (Δ = 1 mode) | NUMERICAL |
 
 ### 6.2 Determinant Verification
@@ -423,7 +423,7 @@ The certificate has progressively eliminated axioms through partition of unity m
 | `joyce_lipschitz` | Lipschitz bound | Contraction property |
 | `fixed_point_torsion_zero` | Fixed point characterization | Joyce theorem consequence |
 
-The Banach fixed point theorem itself is **not axiomatized** — it comes from Mathlib's `ContractingWith.fixedPoint`.
+The Banach fixed point theorem itself is **not axiomatized**: it comes from Mathlib's `ContractingWith.fixedPoint`.
 
 ---
 
@@ -584,15 +584,15 @@ The (2, 21, 54) representation content under G₂ matches Standard Model fermion
 pip install giftpy
 ```
 See [gift-framework/core](https://github.com/gift-framework/core) for:
-- `gift_core/geometry/` — K3, ACyl CY3, TCS construction
-- `gift_core/g2/` — G₂ form, holonomy, torsion
-- `gift_core/harmonic/` — Hodge Laplacian, harmonic forms
-- `gift_core/nn/` — Physics-informed neural network
-- `gift_core/verification/` — Lean/Coq certificate export
+- `gift_core/geometry/`: K3, ACyl CY3, TCS construction
+- `gift_core/g2/`: G₂ form, holonomy, torsion
+- `gift_core/harmonic/`: Hodge Laplacian, harmonic forms
+- `gift_core/nn/`: Physics-informed neural network
+- `gift_core/verification/`: Lean/Coq certificate export
 
 **Historical notebooks** (archived in `legacy/G2_ML/`):
-- `G2_Lean/G2CertificateV2_3_Portable_trained.ipynb` — Development certificate
-- `variational_g2/` — Original PINN development
+- `G2_Lean/G2CertificateV2_3_Portable_trained.ipynb`: Development certificate
+- `variational_g2/`: Original PINN development
 
 ### 13.2 Usage
 
@@ -618,22 +618,22 @@ python -c "from gift_core import run_pipeline; r = run_pipeline(); print(r.certi
 This supplement demonstrates G₂ metric existence on K₇ through variational methods with formal verification:
 
 **Topological achievements** (exact, from TCS construction):
-- b₂ = 21, b₃ = 77 from Mayer-Vietoris — TOPOLOGICAL
-- det(g) = 65/32 from topological formula — TOPOLOGICAL
-- Local/global decomposition: 35 + 42 = 77 — TOPOLOGICAL
-- H* = 99 effective cohomological dimension — TOPOLOGICAL
+- b₂ = 21, b₃ = 77 from Mayer-Vietoris [TOPOLOGICAL]
+- det(g) = 65/32 from topological formula [TOPOLOGICAL]
+- Local/global decomposition: 35 + 42 = 77 [TOPOLOGICAL]
+- H* = 99 effective cohomological dimension [TOPOLOGICAL]
 
 **Numerical cross-checks** (PINN reconstruction):
-- det(g) = 2.0312490 ± 0.0001 matches topological 65/32 — CERTIFIED
-- ||T|| = 0.00286 with 35× margin below Joyce threshold — CERTIFIED
-- b₂ spectral: 21 (exact match) — NUMERICAL
-- b₃ spectral: 76 (Δ = 1 mode from topological 77) — NUMERICAL
+- det(g) = 2.0312490 ± 0.0001 matches topological 65/32 [CERTIFIED]
+- ||T|| = 0.00286 with 35× margin below Joyce threshold [CERTIFIED]
+- b₂ spectral: 21 (exact match) [NUMERICAL]
+- b₃ spectral: 76 (Δ = 1 mode from topological 77) [NUMERICAL]
 
 **Formal certification** (Lean 4.14.0 + Mathlib 4.14.0):
-- Banach fixed point theorem from Mathlib (no axioms for FP) — PROVEN
-- All numerical bounds machine-checked — PROVEN
-- SORRY reduction: v2.0(4) → v2.1(3) → v2.3(0 core SORRY) — PROVEN
-- Existence of torsion-free G₂ structure via ContractingWith.fixedPoint — PROVEN
+- Banach fixed point theorem from Mathlib (no axioms for FP) [PROVEN]
+- All numerical bounds machine-checked [PROVEN]
+- SORRY reduction: v2.0(4) → v2.1(3) → v2.3(0 core SORRY) [PROVEN]
+- Existence of torsion-free G₂ structure via ContractingWith.fixedPoint [PROVEN]
 
 **GIFT paradigm validation**:
 The construction validates the zero continuous adjustable parameter paradigm. All targets (det(g) = 65/32, κ_T = 1/61, b₂ = 21, b₃ = 77) derive from fixed mathematical structure. The TCS construction fixes these values exactly; the neural network provides independent numerical cross-checks rather than discovering the values through unconstrained optimization.

@@ -8,7 +8,7 @@
 
 Differential geometry theorems are notoriously difficult to formalize due to infinite-dimensional function spaces, nonlinear partial differential equations, and technical analytic estimates. We present a hybrid methodology combining physics-informed neural networks (PINNs) with formal verification in Lean 4, demonstrating feasibility through the construction of a compact 7-manifold with exceptional G₂ holonomy.
 
-Our pipeline transforms numerical solutions into formally verified existence proofs: (1) a PINN learns a candidate G₂ structure on the Kovalev K₇ manifold satisfying topological constraints; (2) interval arithmetic produces rigorous numerical certificates; (3) Lean 4 encodes these bounds and proves existence via Mathlib's Banach fixed-point theorem. Critically, our formalization uses **no axioms beyond Lean's core foundations** (`propext`, `Quot.sound`)—the existence proof is constructive and kernel-checked.
+Our pipeline transforms numerical solutions into formally verified existence proofs: (1) a PINN learns a candidate G₂ structure on the Kovalev K₇ manifold satisfying topological constraints; (2) interval arithmetic produces rigorous numerical certificates; (3) Lean 4 encodes these bounds and proves existence via Mathlib's Banach fixed-point theorem. Critically, our formalization uses **no axioms beyond Lean's core foundations** (`propext`, `Quot.sound`): the existence proof is constructive and kernel-checked.
 
 The complete implementation (training code, Lean proof, Colab notebook) runs in under 1 hour on free-tier cloud GPUs, enabling independent verification. While our approach simplifies certain geometric structures for tractability, it provides a concrete example of certifying machine learning-assisted mathematics using interactive theorem provers. To our knowledge, no prior work has formalized existence proofs for exceptional holonomy geometries in proof assistants.
 
@@ -452,8 +452,8 @@ Critical check:
 - `Quot.sound` (quotient soundness): Foundational axiom for quotient types, essential for constructing quotients in dependent type theory.
 
 These are **Lean core axioms**, not additional assumptions introduced by our proof. Notably absent:
-- `Classical.choice` (axiom of choice) — not needed
-- `Classical.em` (excluded middle) — proof is constructive
+- `Classical.choice` (axiom of choice): not needed
+- `Classical.em` (excluded middle): proof is constructive
 - Any domain-specific axioms (Joyce's theorem, etc.)
 
 Our proof is fully constructive within Lean's standard foundations.
