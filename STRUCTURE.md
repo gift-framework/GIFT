@@ -1,87 +1,39 @@
-# Repository Navigation
+# Repository Structure
 
-Quick reference for finding specific content in the GIFT framework.
+This repository contains the theoretical documentation for GIFT v2.3.
 
 ## Directory Layout
 
 ```
-gift/
-├── publications/                      # Theoretical documents
-│   ├── README.md                     # Overview, reading guide, summary
-│   ├── markdown/                     # Main documents
-│   │   ├── gift_2_3_main.md         # Core paper (~1400 lines)
-│   │   ├── S1_mathematical_architecture_v23.md   # E₈, K₇, cohomology
-│   │   ├── S2_K7_manifold_construction_v23.md    # TCS, G₂, ML metrics
-│   │   ├── S3_torsional_dynamics_v23.md          # Geodesics, RG flow
-│   │   ├── S4_complete_derivations_v23.md        # 13 proofs + all derivations
-│   │   ├── S5_experimental_validation_v23.md     # Data, falsification
-│   │   ├── S6_theoretical_extensions_v23.md      # QG, info theory
-│   │   └── S7_dimensional_observables_v23.md     # Masses, cosmology
-│   ├── references/                   # Quick reference documents
-│   │   ├── GIFT_v23_Observable_Reference.md
-│   │   ├── GIFT_v23_Geometric_Justifications.md
-│   │   └── GIFT_v23_Statistical_Validation.md
-│   ├── tex/                          # LaTeX sources
-│   └── pdf/                          # Generated PDFs
+GIFT/
+├── publications/                     # Theoretical documents
+│   ├── README.md                    # Overview and reading guide
+│   ├── markdown/                    # Main documents
+│   │   ├── gift_2_3_main.md        # Core paper
+│   │   └── S1-S7 supplements       # Mathematical details
+│   ├── references/                  # Quick reference documents
+│   ├── tex/                         # LaTeX sources
+│   └── pdf/                         # Generated PDFs
 │
-├── docs/                             # Supporting documentation
-│   ├── FAQ.md                        # Common questions
-│   ├── GLOSSARY.md                   # Technical terms
-│   ├── PHILOSOPHY.md                 # Philosophical perspectives
-│   ├── EXPERIMENTAL_VALIDATION.md    # Current status
-│   └── tests/                        # Test documentation
-│
-├── statistical_validation/           # Monte Carlo tools
-├── tests/                           # pytest suite + test guides
-└── legacy/                          # Archived: v1, v2.0, v2.1, v2.2, formal proofs, G2_ML
+└── docs/                            # Supporting documentation
+    ├── FAQ.md                       # Common questions
+    ├── GLOSSARY.md                  # Technical terms
+    └── PHILOSOPHY.md                # Foundational perspective
 ```
 
-## Find What You Need
+## Quick Navigation
 
 | Looking for... | Go to |
 |----------------|-------|
 | Framework overview | `README.md` |
-| 5-minute summary | `publications/README.md` |
 | Complete theory | `publications/markdown/gift_2_3_main.md` |
 | All 39 observables | `publications/references/GIFT_v23_Observable_Reference.md` |
-| Proofs (39 exact relations) | `publications/markdown/S4_complete_derivations_v23.md` + [core](https://github.com/gift-framework/core) |
-| Experimental comparison | `publications/markdown/S5_experimental_validation_v23.md` |
-| Falsification criteria | `publications/markdown/S5_experimental_validation_v23.md` |
-| Mathematical foundations | `publications/markdown/S1_mathematical_architecture_v23.md` |
-| Formal proofs (Lean 4 + Coq) | [gift-framework/core](https://github.com/gift-framework/core) |
-| K₇ metric pipeline | [giftpy](https://github.com/gift-framework/core) (`pip install giftpy`) |
+| Proofs | `publications/markdown/S4_complete_derivations_v23.md` |
+| Formal verification | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
-| Common questions | `docs/FAQ.md` |
-| Validation code | `statistical_validation/` |
-| Historical ML notebooks | `legacy/G2_ML/` (archived) |
 
-## Status Classifications
+## Related Repositories
 
-Results use these status labels:
-
-| Status | Meaning |
-|--------|---------|
-| **PROVEN (Lean)** | Machine-verified in Lean 4 theorem prover |
-| **PROVEN (Coq)** | Machine-verified in Coq proof assistant |
-| **PROVEN** | Exact topological identity with rigorous proof |
-| **TOPOLOGICAL** | Direct consequence of manifold structure |
-| **DERIVED** | Calculated from proven/topological relations |
-| **THEORETICAL** | Theoretical justification, proof in progress |
-| **PHENOMENOLOGICAL** | Empirically accurate, derivation in progress |
-
-## File Naming
-
-- **Main papers**: `gift_2_3_main.md`, `GIFT_v23_*.md`
-- **Supplements**: `S1_*_v23.md` through `S7_*_v23.md`
-- **Formal proofs**: See [gift-framework/core](https://github.com/gift-framework/core)
-- **Project files**: ALL_CAPS (`README.md`, `CHANGELOG.md`)
-
-## Maintenance
-
-When updating the framework:
-
-1. Update relevant section in main paper or supplements
-2. Update `CHANGELOG.md`
-3. Regenerate PDFs if needed (`publications/tex/` → `publications/pdf/`)
-4. Run notebooks to verify calculations
-5. Update `docs/EXPERIMENTAL_VALIDATION.md` with new data
+| Repository | Content |
+|------------|---------|
+| [gift-framework/core](https://github.com/gift-framework/core) | Formal proofs (Lean 4 + Coq), K₇ metric pipeline, validation code |

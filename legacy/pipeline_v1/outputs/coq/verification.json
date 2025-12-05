@@ -1,7 +1,0 @@
-{
-  "timestamp": "2025-12-03T14:48:47Z",
-  "component": "coq",
-  "status": "FAIL",
-  "error": "Coq not installed",
-  "coq_version": "not_installed"
-}
