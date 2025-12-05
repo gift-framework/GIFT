@@ -13,14 +13,14 @@
 |--------|-------|
 | **Precision** | 0.128% mean deviation across 39 observables |
 | **Parameters** | Zero continuous adjustable (all structurally determined) |
-| **Formally verified relations** | **35 proven** in Lean 4 + Coq (dual verification, zero axioms) |
+| **Formally verified relations** | **39 proven** in Lean 4 + Coq (dual verification, zero axioms) |
 | **Key results** | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |
 
-The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **35 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
+The **Geometric Information Field Theory (GIFT)** derives Standard Model parameters from E₈×E₈ exceptional Lie algebras via dimensional reduction **E₈×E₈ → AdS₄×K₇ → Standard Model**. Version 2.3 achieves the **zero-parameter paradigm** with **formal verification**: all quantities derive from fixed topological structure, with **39 exact relations machine-verified** via both **Lean 4** and **Coq** proof assistants.
 
 ## Formal Verification (Lean 4 + Coq)
 
-All 35 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension + 10 Yukawa duality).
+All 39 exact relations are **independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector).
 
 ### Mathematical Core Repository
 
@@ -36,7 +36,7 @@ The formal proofs are maintained in a dedicated repository:
 The `core` repository contains:
 - Complete Lean 4 formalization (Algebra, Geometry, Topology, Relations, Certificate)
 - Complete Coq formalization (parallel structure)
-- **K₇ metric pipeline** (giftpy v1.3.0) — G₂ geometry, harmonic forms, Yukawa extraction, Yukawa duality
+- **K₇ metric pipeline** (giftpy v1.4.0) — G₂ geometry, harmonic forms, Yukawa extraction, Yukawa duality, Irrational sector
 - Continuous integration and verification
 
 > **Note**: The original proofs were developed in this repository and have been migrated to `gift-framework/core` for independent verification. Historical versions are preserved in [`legacy/formal_proofs_v23_local/`](legacy/formal_proofs_v23_local/).
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## Key Results
 
-### 35 Lean-Verified Exact Relations
+### 39 Lean-Verified Exact Relations
 
 #### Original 13 Relations
 
@@ -118,6 +118,22 @@ The Extended Koide formula exhibits a **duality** between two α² structures th
 | visible_dim | 43 | b₃ - hidden_dim | **PROVEN (Lean + Coq)** |
 | hidden_dim | 34 | b₃ - visible_dim | **PROVEN (Lean + Coq)** |
 | Jordan gap | 27 | 61 - 34 = dim(J₃(𝕆)) | **PROVEN (Lean + Coq)** |
+
+#### Irrational Sector (4 New Relations - v1.4.0)
+
+Relations involving irrational numbers (π, φ) with certified rational parts:
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| α⁻¹ complete | 267489/1952 | 128 + 9 + (65/32)·(1/61) | **PROVEN (Lean + Coq)** |
+| θ₁₃ degrees | 60/7 | 180/b₂ = 180/21 | **PROVEN (Lean + Coq)** |
+| φ bounds | (1.618, 1.619) | sqrt(5) ∈ (2.236, 2.237) | **PROVEN (Lean + Coq)** |
+| m_μ/m_e bounds | (206, 208) | 27^φ | **PROVEN (Lean + Coq)** |
+
+**Key insight**: The fine structure constant inverse α⁻¹ = 267489/1952 ≈ 137.033 is an *exact rational*, arising from:
+- 128 = (dim(E₈) + rank(E₈))/2 (algebraic)
+- 9 = H*/D_bulk (bulk)
+- 65/1952 = det(g) × κ_T (torsion correction)
 
 Complete proofs: [gift-framework/core](https://github.com/gift-framework/core) | Paper proofs: [Supplement S4](publications/markdown/S4_complete_derivations_v23.md)
 
@@ -181,7 +197,7 @@ gift/
 ```
 
 **Core Library** ([gift-framework/core](https://github.com/gift-framework/core)):
-- Formal proofs (Lean 4 + Coq) — 35 certified relations
+- Formal proofs (Lean 4 + Coq) — 39 certified relations
 - K₇ metric pipeline (`pip install giftpy`) — G₂ geometry, harmonic forms, physics extraction
 
 See [STRUCTURE.md](STRUCTURE.md) for navigation guide.

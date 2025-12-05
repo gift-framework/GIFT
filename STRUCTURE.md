@@ -44,7 +44,7 @@ gift/
 | 5-minute summary | `publications/README.md` |
 | Complete theory | `publications/markdown/gift_2_3_main.md` |
 | All 39 observables | `publications/references/GIFT_v23_Observable_Reference.md` |
-| Proofs (35 exact relations) | `publications/markdown/S4_complete_derivations_v23.md` + [core](https://github.com/gift-framework/core) |
+| Proofs (39 exact relations) | `publications/markdown/S4_complete_derivations_v23.md` + [core](https://github.com/gift-framework/core) |
 | Experimental comparison | `publications/markdown/S5_experimental_validation_v23.md` |
 | Falsification criteria | `publications/markdown/S5_experimental_validation_v23.md` |
 | Mathematical foundations | `publications/markdown/S1_mathematical_architecture_v23.md` |

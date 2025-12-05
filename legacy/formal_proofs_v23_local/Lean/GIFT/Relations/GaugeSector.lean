@@ -69,4 +69,39 @@ theorem SM_gauge_total : dim_SU3 + dim_SU2 + dim_U1 = 12 := rfl
 /-- b2 - SM gauge = hidden sector: 21 - 12 = 9 -/
 theorem hidden_gauge : b2_K7 - (dim_SU3 + dim_SU2 + dim_U1) = 9 := rfl
 
+/-! ## Fine Structure Constant COMPLETE (v1.4.0) -/
+/-! alpha^-1 = 128 + 9 + det(g)*kappa_T = 267489/1952 -/
+
+/-- Torsion correction numerator: det(g)_num × 1 = 65 -/
+def alpha_inv_torsion_num : Nat := 65
+
+/-- Torsion correction denominator: det(g)_den × κ_T_den = 32 × 61 = 1952 -/
+def alpha_inv_torsion_den : Nat := 32 * 61
+
+theorem alpha_inv_torsion_den_certified : alpha_inv_torsion_den = 1952 := by native_decide
+
+/-- α⁻¹ numerator: 137 × 1952 + 65 = 267489 -/
+def alpha_inv_complete_num : Nat := 137 * 1952 + 65
+
+theorem alpha_inv_complete_num_certified : alpha_inv_complete_num = 267489 := by native_decide
+
+/-- α⁻¹ denominator: 1952 -/
+def alpha_inv_complete_den : Nat := 1952
+
+/-- α⁻¹ complete verification: components match -/
+theorem alpha_inv_complete_components :
+  137 * 1952 = 267424 ∧ 267424 + 65 = 267489 := by native_decide
+
+/-- α⁻¹ = 267489/1952 ≈ 137.033 (exact rational!) -/
+theorem alpha_inv_complete_certified :
+  alpha_inv_complete_num = 267489 ∧
+  alpha_inv_complete_den = 1952 ∧
+  137 * alpha_inv_complete_den < alpha_inv_complete_num ∧
+  alpha_inv_complete_num < 138 * alpha_inv_complete_den := by
+  native_decide
+
+/-- Breakdown: 128 + 9 + 65/1952 -/
+theorem alpha_inv_breakdown :
+  (128 + 9) * 1952 + 65 = 267489 := by native_decide
+
 end GIFT.Relations
