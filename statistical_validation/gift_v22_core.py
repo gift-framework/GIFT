@@ -1,7 +1,7 @@
 """
-GIFT Framework v2.3 - Core Implementation with Zero-Parameter Paradigm
+GIFT Framework v2.2 - Core Implementation with Zero-Parameter Paradigm
 
-This module implements the GIFT v2.3 framework with exact topological formulas,
+This module implements the GIFT v2.2 framework with exact topological formulas,
 extending v2.1 with:
 - sin^2(theta_W) = 3/13 (PROVEN)
 - kappa_T = 1/61 (TOPOLOGICAL)
@@ -13,6 +13,8 @@ Key Features:
 - Zero continuous adjustable parameters
 - 39 observables (27 dimensionless + 12 dimensional)
 - Mean deviation 0.128% across 6 orders of magnitude
+
+Note: For v2.3 with 25 formally verified relations, see gift_v23_core.py
 
 Author: GIFT Framework Team
 Version: 2.2.0
