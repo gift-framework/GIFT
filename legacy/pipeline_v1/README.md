@@ -1,18 +1,35 @@
-# GIFT Framework Verification Pipeline
+# GIFT Framework Verification Pipeline (ARCHIVED)
 
-**Version**: 1.0
+> **⚠️ ARCHIVED**: This pipeline has been superseded by [giftpy](https://pypi.org/project/giftpy/) from [gift-framework/core](https://github.com/gift-framework/core).
+>
+> **Use instead:**
+> ```bash
+> pip install giftpy
+> ```
+>
+> The `giftpy` package (v1.4.0) includes:
+> - 39 certified relations (Lean 4 + Coq verified)
+> - K₇ metric pipeline with G₂ geometry
+> - Monte Carlo validation
+> - All formal proofs
+
+---
+
+**Version**: 1.0 (archived)
 **GIFT Version**: 2.3
 **Last Updated**: 2025-12-03
 
 ---
 
-## Overview
+## Overview (Historical)
 
-This directory contains the unified verification pipeline for the Geometric Information Field Theory (GIFT) framework. The pipeline provides reproducible verification of:
+This directory contains the archived verification pipeline. It was superseded by giftpy.
 
-1. **Lean 4 Formal Verification**: 25 exact relations proven in Lean 4 with Mathlib (13 original + 12 topological extension)
-2. **Coq Formal Verification**: Independent verification of the same 25 relations in Coq
-3. **G2 Metric Validation**: PINN-based reconstruction and Banach fixed point certificate
+Original capabilities:
+
+1. **Lean 4 Formal Verification**: 25 exact relations (now 39 in giftpy v1.4.0)
+2. **Coq Formal Verification**: Independent verification
+3. **G2 Metric Validation**: PINN-based reconstruction
 
 ---
 
