@@ -40,7 +40,7 @@ de La Fournière, Brieuc. "GIFT Framework v2.3: Geometric Information Field Theo
   author={{Brieuc de La Fournière}},
   year={2025},
   journal={arXiv preprint},
-  note={Mean deviation 0.128\% across 39 observables, zero continuous adjustable parameters, 25 proven exact relations},
+  note={Mean deviation 0.128\% across 39 observables, zero continuous adjustable parameters, 39 proven exact relations},
   url={https://github.com/gift-framework/GIFT}
 }
 ```
@@ -56,7 +56,7 @@ de La Fournière, Brieuc. "GIFT Framework v2.3: Geometric Information Field Theo
   year={2025},
   institution={GIFT Framework},
   type={Technical Supplement},
-  note={Seven detailed supplements (S1-S7) with 25 proven exact relations and all derivations},
+  note={Seven detailed supplements (S1-S7) with 39 proven exact relations and all derivations},
   url={https://github.com/gift-framework/GIFT/tree/main/publications/supplements}
 }
 ```
@@ -85,7 +85,7 @@ When citing specific predictions or results, include the relevant section:
   author={{Brieuc de La Fournière}},
   year={2025},
   howpublished={GIFT Framework v2.3, Supplement S4},
-  note={25 proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, γ_GIFT = 511/884, θ₂₃ = 85/99, α⁻¹ base = 137},
+  note={39 proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, γ_GIFT = 511/884, θ₂₃ = 85/99, α⁻¹ base = 137, α⁻¹ complete = 267489/1952, Yukawa duality},
   url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
 }
 ```
@@ -152,7 +152,7 @@ When citing specific predictions or results, include the relevant section:
   author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
-  note={25 proven exact relations with proofs, all 39 observable derivations},
+  note={39 proven exact relations with proofs, all 39 observable derivations},
   url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
 }
 ```
@@ -199,7 +199,8 @@ Check repository for updates on DOI availability.
 
 ## Version History
 
-- **v2.3.1** (2025-12-04): Current version with 0.128% precision, zero parameters, 39 observables, 25 proven relations
+- **v2.3.3** (2025-12-05): Current version with 0.128% precision, zero parameters, 39 observables, 39 proven relations (giftpy v1.4.0)
+- **v2.3.1** (2025-12-04): 25 proven relations (12 topological extension), giftpy v1.1.0
 - **v2.3.0** (2025-12-03): Dual Lean 4 + Coq verification, 13 original proven relations
 - **v2.2.0** (2025-11-27): Zero-parameter paradigm, 39 observables
 - **v2.1.0** (2025-11-22): Legacy, see `legacy/legacy_v2.1/`

@@ -171,6 +171,7 @@ All elements predicted with mean deviation 0.11%. Highlights:
 | v2.2 | 39 | 0 | 0.128% | Zero-parameter paradigm, 13 proven relations, consolidated catalog |
 | v2.3 | 39 | 0 | 0.128% | Dual formal verification (Lean 4 + Coq), unified CI pipeline |
 | v2.3.1 | 39 | 0 | 0.128% | 25 proven relations (12 topological extension), giftpy v1.1.0 |
+| v2.3.3 | 39 | 0 | 0.128% | 39 proven relations (+ 10 Yukawa + 4 irrational), giftpy v1.4.0 |
 
 ### Experimental Precision Trends
 
@@ -349,7 +350,7 @@ No sector shows systematic problems. All perform well.
 - Genuine predictive power
 - Complete elimination of free parameters
 - All quantities structurally determined
-- 25 relations formally verified in both Lean 4 and Coq (13 original + 12 topological extension)
+- 39 relations formally verified in both Lean 4 and Coq (13 original + 12 topological + 10 Yukawa + 4 irrational)
 
 **Other unification attempts**:
 - SU(5) GUT: Incorrect sin²θ_W prediction (~0.20 vs 0.23)

@@ -437,7 +437,7 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{32} = \frac
 
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
-| PROVEN relations | 13 | Maximum rigor achieved |
+| PROVEN relations | 39 | Maximum rigor achieved |
 | Mean deviation | 0.128% | Sub-percent precision |
 | χ²/dof | 0.40 | Excellent fit |
 | p-value | 0.99 | Statistically consistent |
@@ -483,7 +483,7 @@ All quantities are topological invariants, not adjustable parameters.
 
 ### 23.1 Key Results
 
-- **13 PROVEN** relations (exact rational/integer values)
+- **39 PROVEN** relations (exact rational/integer values, 13 original + 12 topological + 10 Yukawa + 4 irrational)
 - **Zero-parameter paradigm**: all quantities from fixed topology
 - **Mean deviation**: 0.128%
 - **χ²/dof**: 0.40 (excellent fit)
