@@ -240,7 +240,7 @@ $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$
 | PINN result | 2.0312490 ± 0.0001 | CERTIFIED |
 | Deviation | 0.00005% | — |
 
-**Lean 4 certification** (see `G2_ML/G2_Lean/G2Certificate.lean`):
+**Lean 4 certification** (see [gift-framework/core](https://github.com/gift-framework/core) or `legacy/G2_ML/G2_Lean/G2Certificate.lean`):
 
 The PINN-derived metric is verified by Lean 4 theorem prover:
 - Interval arithmetic confirms det(g) = 65/32 within 0.0001%

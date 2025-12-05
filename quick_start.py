@@ -45,19 +45,12 @@ def launch_visualizations():
     print("Interactive visualizations are available via Binder:")
     print("  https://mybinder.org/v2/gh/gift-framework/GIFT/main")
     print()
-    print("For local notebooks, see G2_ML/ directory.")
+    print("K7 metric pipeline (production):")
+    print("  pip install giftpy")
+    print("  https://github.com/gift-framework/core")
     print()
-
-    # Check for G2_ML notebooks
-    g2ml_dir = Path("G2_ML")
-    if g2ml_dir.exists():
-        notebooks = list(g2ml_dir.rglob("*.ipynb"))
-        if notebooks:
-            print(f"Found {len(notebooks)} notebook(s) in G2_ML/:")
-            for nb in notebooks[:5]:
-                print(f"  - {nb}")
-            if len(notebooks) > 5:
-                print(f"  ... and {len(notebooks) - 5} more")
+    print("Historical notebooks archived in legacy/G2_ML/")
+    print()
 
 def launch_documentation():
     """Launch documentation web interface"""

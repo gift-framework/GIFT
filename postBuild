@@ -19,4 +19,4 @@ ln -sf publications/markdown/gift_2_3_main.md README_main.md || echo "Could not 
 echo "GIFT Framework v2.3.1 Binder environment ready!"
 echo "Main paper: publications/markdown/gift_2_3_main.md"
 echo "Supplements: publications/markdown/"
-echo "Notebooks: G2_ML/"
+echo "K7 pipeline: pip install giftpy (https://github.com/gift-framework/core)"

@@ -513,7 +513,7 @@ The metric determinant measures the "volume element" of the internal manifold. I
 | PINN reconstruction | 2.0312490 ± 0.0001 | CERTIFIED |
 | Deviation | 0.00005% | — |
 
-**Lean 4 certification**: The PINN solution satisfies Joyce's perturbation theorem with 20× safety margin (||T|| = 0.00140 < ε₀ = 0.0288). See Supplement S2 and `G2_ML/G2_Lean/G2Certificate.lean`.
+**Lean 4 certification**: The PINN solution satisfies Joyce's perturbation theorem with 20× safety margin (||T|| = 0.00140 < ε₀ = 0.0288). See Supplement S2 and [gift-framework/core](https://github.com/gift-framework/core).
 
 ### 12.7 Significance
 

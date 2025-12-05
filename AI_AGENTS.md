@@ -29,8 +29,8 @@ GIFT/
 │   ├── pdf/               # Generated PDFs
 │   └── tex/               # LaTeX sources
 ├── docs/                  # FAQ, glossary, validation
-├── G2_ML/                 # Machine learning (90% complete)
 ├── statistical_validation/ # Monte Carlo validation
+├── legacy/                # Archived: G2_ML, formal proofs, old versions
 ├── tests/                 # 200+ tests
 └── requirements.txt       # Dependencies
 ```
@@ -98,8 +98,8 @@ pip install -r requirements.txt
 # Interactive launcher
 python quick_start.py
 
-# Browse Jupyter notebooks
-jupyter notebook G2_ML/
+# K7 metric pipeline (production)
+pip install giftpy
 
 # Statistical validation
 cd statistical_validation/
@@ -177,12 +177,14 @@ GIFT v2.3 achieves **zero continuous adjustable parameters**:
 
 - `quick_start.py` - Interactive launcher
 - `statistical_validation/run_validation.py` - Validation script
-- `G2_ML/` - Neural networks for K₇ metric (90% complete)
 
-### Notebooks (`G2_ML/`)
+### K₇ Metric Pipeline
 
-- Various G2 manifold and metric learning notebooks
-- See `G2_ML/` subdirectories for specific notebooks
+The production K₇ metric code is now in [gift-framework/core](https://github.com/gift-framework/core):
+```bash
+pip install giftpy
+```
+Historical ML notebooks are archived in `legacy/G2_ML/`.
 
 ## Git Workflow
 
@@ -220,18 +222,19 @@ pytest -m "not slow"            # Fast tests only
 - G2 geometry
 - Error handling
 
-## G2_ML Status
+## K₇ Metric Status
 
-**Version**: 0.9a (90% complete)
+The K₇ metric pipeline is now production-ready in **giftpy v1.2.0**:
 
 | Component | Status |
 |-----------|--------|
-| b₂=21 harmonic 2-forms | Complete |
-| b₃=77 harmonic 3-forms | In progress |
-| Yukawa tensor | Planned |
-| Optimization | Planned |
+| TCS construction | Complete (giftpy) |
+| G₂ holonomy | Complete (giftpy) |
+| Harmonic forms | Complete (giftpy) |
+| Yukawa tensor | Complete (giftpy) |
+| Lean/Coq export | Complete (giftpy) |
 
-See `G2_ML/STATUS.md` for details.
+Install: `pip install giftpy` | Docs: [gift-framework/core](https://github.com/gift-framework/core)
 
 ## Pattern Explorer
 
@@ -369,8 +372,8 @@ pip install -r requirements.txt
 # Interactive
 python quick_start.py
 
-# Notebooks
-jupyter notebook G2_ML/
+# K7 pipeline
+pip install giftpy
 
 # Validation
 cd statistical_validation/

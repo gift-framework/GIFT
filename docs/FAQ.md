@@ -268,7 +268,7 @@ This transparency allows readers to assess confidence levels for each prediction
 
 ### How is this computed?
 
-All calculations available in `statistical_validation/` and `G2_ML/`:
+All calculations available in `statistical_validation/` and [giftpy](https://github.com/gift-framework/core):
 
 **Analytical**: Mathematical derivations in supplements
 **Numerical**: Python implementation with NumPy, SciPy, SymPy
