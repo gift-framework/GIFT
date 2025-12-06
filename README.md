@@ -63,6 +63,12 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 ---
 
+## Interactive Visualizations
+
+[![View Blueprint](https://img.shields.io/badge/View-Blueprint_Graph-blue?style=for-the-badge)](https://htmlpreview.github.io/?https://github.com/gift-framework/gift/blob/main/docs/figures/gift_blueprint.html)
+
+---
+
 ## Supplements
 
 | Document | Content |
