@@ -50,6 +50,17 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 → [Philosophy](docs/PHILOSOPHY.md) Foundational perspective
 
+### Domain-specific guides
+
+**"I'm a geometer"**
+→ [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline
+
+**"I'm a physicist"**
+→ [Information Geometry for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters
+
+**"I'm interested in formalization"**
+→ [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations
+
 ---
 
 ## Supplements
