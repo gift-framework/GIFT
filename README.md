@@ -69,7 +69,7 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 [View K7 Manifold Lean Blueprint](https://gift-framework.github.io/GIFT/docs/figures/k7_blueprint.html)
 
-*[created with Lean Blueprint Copilot](https://github.com/augustepoiroux/LeanBlueprintCopilot)*
+[created with Lean Blueprint Copilot](https://github.com/augustepoiroux/LeanBlueprintCopilot)
 ---
 
 ## Supplements
