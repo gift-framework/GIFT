@@ -6,7 +6,7 @@ This report presents a comprehensive statistical validation of the GIFT (Geometr
 
 ## Validation Objectives
 
-The primary objective is to determine whether the GIFT framework's exceptional agreement with experimental data (mean deviation of 0.128% across 39 observables) results from:
+The primary objective is to determine whether the GIFT framework's exceptional agreement with experimental data (mean deviation of 0.198% across 39 observables) results from:
 - Genuine topological constraints (expected outcome)
 - Overfitting to experimental data (null hypothesis to be tested)
 

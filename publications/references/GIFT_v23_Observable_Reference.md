@@ -5,7 +5,7 @@
 **Version**: 2.3.3
 **Date**: 2025-12-05
 **Status**: Validated (Monte Carlo 10^5 samples) + **Lean 4 + Coq Formal Verification**
-**Mean Precision**: 0.128% across 39 observables
+**Mean Precision**: 0.198% across 39 observables
 **Lean+Coq-Verified Relations**: 39 (zero domain axioms, zero sorry/Admitted)
 
 ---
@@ -467,7 +467,7 @@ m_c/m_s = τ × 3.49
         = 13.600
 ```
 
-where τ = 3472/891 is the exact hierarchical scaling parameter (v2.2).
+where τ = 3472/891 is the exact hierarchical scaling parameter (v2.3).
 
 **Experimental comparison**:
 - Predicted: 13.600
@@ -922,7 +922,7 @@ All 39 relations verified in [gift-framework/core](https://github.com/gift-frame
 | Total observables | 39 |
 | PROVEN count | 39 |
 | Input parameters | 0 (zero-parameter paradigm) |
-| Mean deviation | 0.128% |
+| Mean deviation | 0.198% |
 | Median deviation | 0.073% |
 | Maximum deviation | 2.3%* |
 | Minimum deviation | 0.00% |
