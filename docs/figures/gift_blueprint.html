@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFT Framework - Blueprint Dependency Graph</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --border-color: #30363d;
+            --accent-green: #3fb950;
+            --accent-green-dim: #238636;
+            --accent-blue: #58a6ff;
+            --accent-blue-dim: #1f6feb;
+            --accent-yellow: #d29922;
+            --accent-yellow-dim: #9e6a03;
+            --accent-purple: #a371f7;
+            --accent-purple-dim: #8957e5;
+            --accent-cyan: #39d353;
+            --edge-color: #484f58;
+            --edge-highlight: #58a6ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .version {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            background: var(--bg-tertiary);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        /* Filters */
+        .filters {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .filter-title {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .filter-btn {
+            padding: 6px 10px;
+            font-size: 0.7rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-blue-dim);
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+        }
+
+        .filter-btn[data-status="proven"] { border-left: 3px solid var(--accent-green); }
+        .filter-btn[data-status="topological"] { border-left: 3px solid var(--accent-cyan); }
+        .filter-btn[data-status="certified"] { border-left: 3px solid var(--accent-blue); }
+        .filter-btn[data-status="derived"] { border-left: 3px solid var(--accent-yellow); }
+        .filter-btn[data-status="theoretical"] { border-left: 3px solid var(--accent-purple); }
+
+        /* Search */
+        .search-container {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-radius: 6px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Detail Panel */
+        .detail-panel {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .detail-header {
+            margin-bottom: 16px;
+        }
+
+        .detail-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .detail-status {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.65rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-status.proven { background: var(--accent-green-dim); color: var(--accent-green); }
+        .detail-status.topological { background: rgba(57, 211, 83, 0.2); color: var(--accent-cyan); }
+        .detail-status.certified { background: var(--accent-blue-dim); color: var(--accent-blue); }
+        .detail-status.derived { background: var(--accent-yellow-dim); color: var(--accent-yellow); }
+        .detail-status.theoretical { background: var(--accent-purple-dim); color: var(--accent-purple); }
+
+        .detail-section {
+            margin-bottom: 16px;
+        }
+
+        .detail-section-title {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .formula-box {
+            background: var(--bg-tertiary);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border-left: 3px solid var(--accent-blue);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .value-item {
+            background: var(--bg-tertiary);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .value-label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .value-number {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .value-number.predicted { color: var(--accent-blue); }
+        .value-number.experimental { color: var(--accent-green); }
+        .value-number.deviation { color: var(--accent-yellow); }
+
+        .dependencies-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .dep-tag {
+            padding: 4px 8px;
+            font-size: 0.65rem;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .dep-tag:hover {
+            background: var(--accent-blue-dim);
+            color: var(--text-primary);
+        }
+
+        /* Graph Container */
+        .graph-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #graph {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            display: flex;
+            gap: 16px;
+            font-size: 0.7rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.proven { background: var(--accent-green); }
+        .legend-dot.topological { background: var(--accent-cyan); }
+        .legend-dot.certified { background: var(--accent-blue); }
+        .legend-dot.derived { background: var(--accent-yellow); }
+        .legend-dot.theoretical { background: var(--accent-purple); }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .control-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .control-btn:hover {
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+        }
+
+        /* Layer Labels */
+        .layer-label {
+            position: absolute;
+            left: 10px;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+
+        /* Node Styles (SVG) */
+        .node {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .node.dimmed {
+            opacity: 0.2;
+        }
+
+        .node-rect {
+            rx: 6;
+            ry: 6;
+            stroke-width: 2;
+            transition: all 0.2s;
+        }
+
+        .node.proven .node-rect { fill: var(--accent-green-dim); stroke: var(--accent-green); }
+        .node.topological .node-rect { fill: rgba(57, 211, 83, 0.15); stroke: var(--accent-cyan); }
+        .node.certified .node-rect { fill: var(--accent-blue-dim); stroke: var(--accent-blue); }
+        .node.derived .node-rect { fill: var(--accent-yellow-dim); stroke: var(--accent-yellow); }
+        .node.theoretical .node-rect { fill: var(--accent-purple-dim); stroke: var(--accent-purple); }
+        .node.axiom .node-rect { fill: var(--bg-tertiary); stroke: var(--text-muted); stroke-dasharray: 4 2; }
+
+        .node:hover .node-rect,
+        .node.selected .node-rect {
+            stroke-width: 3;
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+
+        .node-label {
+            fill: var(--text-primary);
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            pointer-events: none;
+        }
+
+        .node-sublabel {
+            fill: var(--text-muted);
+            font-size: 9px;
+            font-family: 'JetBrains Mono', monospace;
+            pointer-events: none;
+        }
+
+        .edge {
+            fill: none;
+            stroke: var(--edge-color);
+            stroke-width: 1.5;
+            transition: all 0.3s;
+        }
+
+        .edge.dimmed {
+            opacity: 0.1;
+        }
+
+        .edge.highlighted {
+            stroke: var(--edge-highlight);
+            stroke-width: 2.5;
+        }
+
+        .edge.dashed {
+            stroke-dasharray: 5 3;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 0.75rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            max-width: 280px;
+            z-index: 1000;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-formula {
+            color: var(--accent-blue);
+            font-size: 0.7rem;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-value {
+            color: var(--text-secondary);
+            font-size: 0.65rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            .sidebar { display: none; }
+            .controls { display: none; }
+            .legend { background: white; color: black; }
+            body { background: white; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: absolute;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <div class="logo">GIFT BLUEPRINT</div>
+                <div class="version">v2.3 - Dependency Graph</div>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">39</div>
+                    <div class="stat-label">Observables</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0.128%</div>
+                    <div class="stat-label">Mean Deviation</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Free Parameters</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">39</div>
+                    <div class="stat-label">Lean 4 Proofs</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-title">Filter by Status</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-status="proven" data-filter="proven">Proven</button>
+                    <button class="filter-btn" data-status="topological" data-filter="topological">Topological</button>
+                    <button class="filter-btn" data-status="certified" data-filter="certified">Certified</button>
+                    <button class="filter-btn" data-status="derived" data-filter="derived">Derived</button>
+                    <button class="filter-btn" data-status="theoretical" data-filter="theoretical">Theoretical</button>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-title">Filter by Sector</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all-sector">All</button>
+                    <button class="filter-btn" data-filter="gauge">Gauge</button>
+                    <button class="filter-btn" data-filter="neutrino">Neutrino</button>
+                    <button class="filter-btn" data-filter="lepton">Lepton</button>
+                    <button class="filter-btn" data-filter="quark">Quark</button>
+                    <button class="filter-btn" data-filter="ckm">CKM</button>
+                    <button class="filter-btn" data-filter="electroweak">Electroweak</button>
+                    <button class="filter-btn" data-filter="cosmology">Cosmology</button>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search observables..." id="searchInput">
+            </div>
+
+            <div class="detail-panel" id="detailPanel">
+                <div class="empty-state">
+                    <div class="empty-state-icon">&#9679;</div>
+                    <div>Click a node to view details</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Graph -->
+        <main class="graph-container">
+            <svg id="graph"></svg>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-dot proven"></div>
+                    <span>Proven (Lean 4)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot topological"></div>
+                    <span>Topological</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot certified"></div>
+                    <span>Certified</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot derived"></div>
+                    <span>Derived</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot theoretical"></div>
+                    <span>Theoretical</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="zoomIn" title="Zoom In">+</button>
+                <button class="control-btn" id="zoomOut" title="Zoom Out">-</button>
+                <button class="control-btn" id="resetZoom" title="Reset View">&#8634;</button>
+            </div>
+
+            <div class="tooltip" id="tooltip"></div>
+        </main>
+    </div>
+
+    <!-- D3.js must load FIRST -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <script>
+        // GIFT Framework Data
+        const nodes = [
+            // Layer 0: Foundational Axioms
+            { id: "e8_structure", label: "E8 x E8", sublabel: "dim=496, rank=16", layer: 0, status: "axiom", sector: "foundation",
+              formula: "dim(E8) = 248, rank(E8) = 8", description: "Exceptional Lie algebra gauge structure" },
+            { id: "g2_holonomy", label: "G2 Holonomy", sublabel: "dim=14", layer: 0, status: "axiom", sector: "foundation",
+              formula: "dim(G2) = 14", description: "Holonomy group of K7 manifold" },
+            { id: "k7_topology", label: "K7 Topology", sublabel: "b2=21, b3=77", layer: 0, status: "axiom", sector: "foundation",
+              formula: "b2(K7) = 21, b3(K7) = 77", description: "Twisted connected sum construction" },
+
+            // Layer 1: Structural Invariants
+            { id: "h_star", label: "H*", sublabel: "= 99", layer: 1, status: "proven", sector: "structural",
+              formula: "H* = b2 + b3 + 1 = 21 + 77 + 1 = 99", predicted: 99, description: "Total effective dimension" },
+            { id: "kappa_t", label: "kappa_T", sublabel: "= 1/61", layer: 1, status: "proven", sector: "structural",
+              formula: "kappa_T = 1/(b3 - dim(G2) - p2) = 1/(77-14-2) = 1/61", predicted: 0.01639, experimental: 0.0164, deviation: 0.04 },
+            { id: "det_g", label: "det(g)", sublabel: "= 65/32", layer: 1, status: "proven", sector: "structural",
+              formula: "det(g) = Weyl x (rank + Weyl) / 2^5 = 5 x 13 / 32 = 65/32", predicted: 2.03125, deviation: 0.00005 },
+            { id: "tau", label: "tau", sublabel: "= 3472/891", layer: 1, status: "proven", sector: "structural",
+              formula: "tau = 496 x 21 / (27 x 99) = 3472/891", predicted: 3.8967, experimental: 3.897, deviation: 0.01 },
+
+            // Layer 2: Gauge Sector
+            { id: "sin2_theta_w", label: "sin2(theta_W)", sublabel: "= 3/13", layer: 2, status: "proven", sector: "gauge",
+              formula: "sin2(theta_W) = b2/(b3 + dim(G2)) = 21/91 = 3/13", predicted: 0.23077, experimental: 0.23122, deviation: 0.195 },
+            { id: "alpha_inv", label: "alpha^-1", sublabel: "= 137.033", layer: 2, status: "topological", sector: "gauge",
+              formula: "alpha^-1 = (dim(E8)+rank(E8))/2 + H*/D_bulk + det(g)*kappa_T = 128 + 9 + 0.033", predicted: 137.033, experimental: 137.036, deviation: 0.002 },
+            { id: "alpha_s", label: "alpha_s(M_Z)", sublabel: "= sqrt(2)/12", layer: 2, status: "topological", sector: "gauge",
+              formula: "alpha_s = sqrt(2)/(dim(G2) - p2) = sqrt(2)/12", predicted: 0.11785, experimental: 0.1179, deviation: 0.042 },
+
+            // Layer 3: Neutrino Mixing
+            { id: "theta_12", label: "theta_12", sublabel: "= 33.40 deg", layer: 3, status: "topological", sector: "neutrino",
+              formula: "theta_12 = arctan(sqrt(delta/gamma_GIFT))", predicted: 33.40, experimental: 33.41, deviation: 0.03, unit: "deg" },
+            { id: "theta_13", label: "theta_13", sublabel: "= 8.571 deg", layer: 3, status: "topological", sector: "neutrino",
+              formula: "theta_13 = pi/b2(K7) = pi/21", predicted: 8.571, experimental: 8.54, deviation: 0.36, unit: "deg" },
+            { id: "theta_23", label: "theta_23", sublabel: "= 49.19 deg", layer: 3, status: "topological", sector: "neutrino",
+              formula: "theta_23 = (rank(E8) + b3)/H* = 85/99 rad", predicted: 49.19, experimental: 49.3, deviation: 0.22, unit: "deg" },
+            { id: "delta_cp", label: "delta_CP", sublabel: "= 197 deg", layer: 3, status: "proven", sector: "neutrino",
+              formula: "delta_CP = 7 * dim(G2) + H* = 98 + 99 = 197 deg", predicted: 197, experimental: 197, deviation: 0.00, unit: "deg" },
+
+            // Layer 4: Lepton Mass Relations
+            { id: "q_koide", label: "Q_Koide", sublabel: "= 2/3", layer: 4, status: "proven", sector: "lepton",
+              formula: "Q = dim(G2)/b2(K7) = 14/21 = 2/3", predicted: 0.666667, experimental: 0.666661, deviation: 0.001 },
+            { id: "m_mu_m_e", label: "m_mu/m_e", sublabel: "= 207.01", layer: 4, status: "topological", sector: "lepton",
+              formula: "m_mu/m_e = 27^phi", predicted: 207.012, experimental: 206.768, deviation: 0.118 },
+            { id: "m_tau_m_e", label: "m_tau/m_e", sublabel: "= 3477", layer: 4, status: "proven", sector: "lepton",
+              formula: "m_tau/m_e = dim(K7) + 10*dim(E8) + 10*H* = 7 + 2480 + 990", predicted: 3477, experimental: 3477.15, deviation: 0.004 },
+
+            // Layer 5: Quark Mass Ratios
+            { id: "m_s_m_d", label: "m_s/m_d", sublabel: "= 20", layer: 5, status: "proven", sector: "quark",
+              formula: "m_s/m_d = 4 * Weyl = 4 * 5 = 20", predicted: 20, experimental: 20.0, deviation: 0.00 },
+            { id: "m_c_m_s", label: "m_c/m_s", sublabel: "= 13.60", layer: 5, status: "derived", sector: "quark",
+              formula: "m_c/m_s = tau * 3.49", predicted: 13.600, experimental: 13.60, deviation: 0.003 },
+            { id: "m_t_m_b", label: "m_t/m_b", sublabel: "= 41.41", layer: 5, status: "derived", sector: "quark",
+              formula: "m_t/m_b = tau * D_bulk", predicted: 41.408, experimental: 41.3, deviation: 0.26 },
+            { id: "m_d_m_u", label: "m_d/m_u", sublabel: "= 2.163", layer: 5, status: "derived", sector: "quark",
+              formula: "Isospin breaking", predicted: 2.163, experimental: 2.16, deviation: 0.14 },
+
+            // Layer 6: CKM Matrix
+            { id: "v_us", label: "|V_us|", sublabel: "= 0.2245", layer: 6, status: "theoretical", sector: "ckm",
+              formula: "Cabibbo angle from b2 structure", predicted: 0.2245, experimental: 0.2243, deviation: 0.089 },
+            { id: "v_cb", label: "|V_cb|", sublabel: "= 0.04214", layer: 6, status: "theoretical", sector: "ckm",
+              formula: "Second generation mixing", predicted: 0.04214, experimental: 0.0422, deviation: 0.14 },
+            { id: "v_ub", label: "|V_ub|", sublabel: "= 0.00395", layer: 6, status: "theoretical", sector: "ckm",
+              formula: "Third generation coupling", predicted: 0.003947, experimental: 0.00394, deviation: 0.18 },
+            { id: "v_tb", label: "|V_tb|", sublabel: "= 0.9991", layer: 6, status: "theoretical", sector: "ckm",
+              formula: "Near-unity (unitarity)", predicted: 0.999106, experimental: 0.999105, deviation: 0.0001 },
+
+            // Layer 7: Electroweak Scale
+            { id: "v_ew", label: "v_EW", sublabel: "= 246.87 GeV", layer: 7, status: "theoretical", sector: "electroweak",
+              formula: "Dimensional transmutation via Lambda_GIFT", predicted: 246.87, experimental: 246.22, deviation: 0.26, unit: "GeV" },
+            { id: "m_w", label: "M_W", sublabel: "= 80.40 GeV", layer: 7, status: "derived", sector: "electroweak",
+              formula: "M_W = (g2/2) * v_EW", predicted: 80.40, experimental: 80.369, deviation: 0.039, unit: "GeV" },
+            { id: "m_z", label: "M_Z", sublabel: "= 91.20 GeV", layer: 7, status: "derived", sector: "electroweak",
+              formula: "M_Z = M_W / cos(theta_W)", predicted: 91.20, experimental: 91.188, deviation: 0.013, unit: "GeV" },
+            { id: "lambda_h", label: "lambda_H", sublabel: "= sqrt(17)/32", layer: 7, status: "proven", sector: "electroweak",
+              formula: "lambda_H = sqrt(dim(G2) + N_gen) / 2^Weyl = sqrt(17)/32", predicted: 0.1289, experimental: 0.126, deviation: 2.3 },
+
+            // Layer 8: Cosmology
+            { id: "omega_de", label: "Omega_DE", sublabel: "= 0.6861", layer: 8, status: "proven", sector: "cosmology",
+              formula: "Omega_DE = ln(2) * (H* - 1)/H* = ln(2) * 98/99", predicted: 0.6861, experimental: 0.6889, deviation: 0.40 },
+            { id: "n_s", label: "n_s", sublabel: "= 0.9649", layer: 8, status: "proven", sector: "cosmology",
+              formula: "n_s = zeta(11)/zeta(5)", predicted: 0.9649, experimental: 0.9649, deviation: 0.00 },
+        ];
+
+        const edges = [
+            // From axioms to structural
+            { source: "e8_structure", target: "h_star" },
+            { source: "g2_holonomy", target: "h_star" },
+            { source: "k7_topology", target: "h_star" },
+            { source: "k7_topology", target: "kappa_t" },
+            { source: "g2_holonomy", target: "kappa_t" },
+            { source: "e8_structure", target: "det_g" },
+            { source: "k7_topology", target: "det_g" },
+            { source: "e8_structure", target: "tau" },
+            { source: "h_star", target: "tau" },
+
+            // From structural to gauge
+            { source: "k7_topology", target: "sin2_theta_w" },
+            { source: "g2_holonomy", target: "sin2_theta_w" },
+            { source: "e8_structure", target: "alpha_inv" },
+            { source: "h_star", target: "alpha_inv" },
+            { source: "det_g", target: "alpha_inv" },
+            { source: "kappa_t", target: "alpha_inv" },
+            { source: "g2_holonomy", target: "alpha_s" },
+
+            // From structural to neutrino
+            { source: "e8_structure", target: "theta_12" },
+            { source: "h_star", target: "theta_12" },
+            { source: "k7_topology", target: "theta_13" },
+            { source: "e8_structure", target: "theta_23" },
+            { source: "h_star", target: "theta_23" },
+            { source: "g2_holonomy", target: "delta_cp" },
+            { source: "h_star", target: "delta_cp" },
+
+            // From structural to lepton
+            { source: "g2_holonomy", target: "q_koide" },
+            { source: "k7_topology", target: "q_koide" },
+            { source: "e8_structure", target: "m_tau_m_e" },
+            { source: "h_star", target: "m_tau_m_e" },
+
+            // From structural to quark
+            { source: "e8_structure", target: "m_s_m_d" },
+            { source: "tau", target: "m_c_m_s" },
+            { source: "tau", target: "m_t_m_b" },
+
+            // From gauge to electroweak
+            { source: "sin2_theta_w", target: "m_w" },
+            { source: "sin2_theta_w", target: "m_z" },
+            { source: "v_ew", target: "m_w" },
+            { source: "m_w", target: "m_z" },
+            { source: "g2_holonomy", target: "lambda_h" },
+
+            // From quark to CKM
+            { source: "k7_topology", target: "v_us" },
+            { source: "m_s_m_d", target: "v_cb", dashed: true },
+            { source: "m_c_m_s", target: "v_ub", dashed: true },
+
+            // From structural to cosmology
+            { source: "h_star", target: "omega_de" },
+            { source: "e8_structure", target: "n_s" },
+        ];
+
+        // D3 Visualization
+        const svg = d3.select("#graph");
+        const container = document.querySelector(".graph-container");
+        let width = container.clientWidth;
+        let height = container.clientHeight;
+
+        svg.attr("width", width).attr("height", height);
+
+        // Create zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.3, 3])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+
+        const g = svg.append("g");
+
+        // Define arrow marker
+        svg.append("defs").append("marker")
+            .attr("id", "arrowhead")
+            .attr("viewBox", "-0 -5 10 10")
+            .attr("refX", 20)
+            .attr("refY", 0)
+            .attr("orient", "auto")
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .append("path")
+            .attr("d", "M 0,-5 L 10,0 L 0,5")
+            .attr("fill", "#484f58");
+
+        // Calculate node positions (hierarchical layout)
+        const layerHeight = 90;
+        const nodeWidth = 120;
+        const nodeHeight = 50;
+        const startY = 60;
+
+        // Group nodes by layer
+        const layers = {};
+        nodes.forEach(node => {
+            if (!layers[node.layer]) layers[node.layer] = [];
+            layers[node.layer].push(node);
+        });
+
+        // Position nodes
+        Object.keys(layers).forEach(layer => {
+            const layerNodes = layers[layer];
+            const layerWidth = layerNodes.length * (nodeWidth + 30);
+            const startX = (width - layerWidth) / 2 + nodeWidth / 2;
+            
+            layerNodes.forEach((node, i) => {
+                node.x = startX + i * (nodeWidth + 30);
+                node.y = startY + parseInt(layer) * layerHeight;
+            });
+        });
+
+        // Create node map for edge drawing
+        const nodeMap = {};
+        nodes.forEach(n => nodeMap[n.id] = n);
+
+        // Draw edges
+        const edgeElements = g.selectAll(".edge")
+            .data(edges)
+            .enter()
+            .append("path")
+            .attr("class", d => "edge" + (d.dashed ? " dashed" : ""))
+            .attr("d", d => {
+                const source = nodeMap[d.source];
+                const target = nodeMap[d.target];
+                if (!source || !target) return "";
+                
+                const dx = target.x - source.x;
+                const dy = target.y - source.y;
+                const dr = Math.sqrt(dx * dx + dy * dy) * 0.5;
+                
+                // Simple curved path
+                const midX = (source.x + target.x) / 2;
+                const midY = (source.y + target.y) / 2;
+                const offset = dx === 0 ? 0 : Math.sign(dx) * 20;
+                
+                return `M${source.x},${source.y + nodeHeight/2} 
+                        Q${midX + offset},${midY} 
+                        ${target.x},${target.y - nodeHeight/2}`;
+            })
+            .attr("marker-end", "url(#arrowhead)");
+
+        // Draw nodes
+        const nodeElements = g.selectAll(".node")
+            .data(nodes)
+            .enter()
+            .append("g")
+            .attr("class", d => `node ${d.status}`)
+            .attr("transform", d => `translate(${d.x - nodeWidth/2}, ${d.y - nodeHeight/2})`)
+            .on("click", (event, d) => showDetail(d))
+            .on("mouseenter", (event, d) => highlightConnections(d))
+            .on("mouseleave", () => resetHighlight());
+
+        nodeElements.append("rect")
+            .attr("class", "node-rect")
+            .attr("width", nodeWidth)
+            .attr("height", nodeHeight);
+
+        nodeElements.append("text")
+            .attr("class", "node-label")
+            .attr("x", nodeWidth / 2)
+            .attr("y", nodeHeight / 2 - 5)
+            .attr("text-anchor", "middle")
+            .text(d => d.label);
+
+        nodeElements.append("text")
+            .attr("class", "node-sublabel")
+            .attr("x", nodeWidth / 2)
+            .attr("y", nodeHeight / 2 + 10)
+            .attr("text-anchor", "middle")
+            .text(d => d.sublabel);
+
+        // Tooltip
+        const tooltip = document.getElementById("tooltip");
+
+        function showTooltip(event, d) {
+            tooltip.innerHTML = `
+                <div class="tooltip-title">${d.label}</div>
+                <div class="tooltip-formula">${d.formula || ''}</div>
+                ${d.predicted ? `<div class="tooltip-value">Predicted: ${d.predicted}${d.unit ? ' ' + d.unit : ''}</div>` : ''}
+                ${d.deviation !== undefined ? `<div class="tooltip-value">Deviation: ${d.deviation}%</div>` : ''}
+            `;
+            tooltip.style.left = (event.pageX + 15) + "px";
+            tooltip.style.top = (event.pageY - 10) + "px";
+            tooltip.classList.add("visible");
+        }
+
+        function hideTooltip() {
+            tooltip.classList.remove("visible");
+        }
+
+        // Detail Panel
+        function showDetail(d) {
+            const panel = document.getElementById("detailPanel");
+            
+            const dependsOn = edges.filter(e => e.target === d.id).map(e => nodeMap[e.source]);
+            const feeds = edges.filter(e => e.source === d.id).map(e => nodeMap[e.target]);
+            
+            panel.innerHTML = `
+                <div class="detail-header">
+                    <div class="detail-title">${d.label}</div>
+                    <span class="detail-status ${d.status}">${d.status}</span>
+                </div>
+                
+                ${d.description ? `
+                <div class="detail-section">
+                    <div class="detail-section-title">Description</div>
+                    <div style="color: var(--text-secondary); font-size: 0.8rem;">${d.description}</div>
+                </div>
+                ` : ''}
+                
+                <div class="detail-section">
+                    <div class="detail-section-title">Formula</div>
+                    <div class="formula-box">${d.formula || 'N/A'}</div>
+                </div>
+                
+                ${d.predicted !== undefined ? `
+                <div class="detail-section">
+                    <div class="detail-section-title">Values</div>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-label">Predicted</div>
+                            <div class="value-number predicted">${d.predicted}${d.unit ? ' ' + d.unit : ''}</div>
+                        </div>
+                        ${d.experimental !== undefined ? `
+                        <div class="value-item">
+                            <div class="value-label">Experimental</div>
+                            <div class="value-number experimental">${d.experimental}${d.unit ? ' ' + d.unit : ''}</div>
+                        </div>
+                        ` : ''}
+                        ${d.deviation !== undefined ? `
+                        <div class="value-item">
+                            <div class="value-label">Deviation</div>
+                            <div class="value-number deviation">${d.deviation}%</div>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+                ` : ''}
+                
+                ${dependsOn.length > 0 ? `
+                <div class="detail-section">
+                    <div class="detail-section-title">Depends On</div>
+                    <div class="dependencies-list">
+                        ${dependsOn.map(dep => `<span class="dep-tag" onclick="focusNode('${dep.id}')">${dep.label}</span>`).join('')}
+                    </div>
+                </div>
+                ` : ''}
+                
+                ${feeds.length > 0 ? `
+                <div class="detail-section">
+                    <div class="detail-section-title">Feeds Into</div>
+                    <div class="dependencies-list">
+                        ${feeds.map(f => `<span class="dep-tag" onclick="focusNode('${f.id}')">${f.label}</span>`).join('')}
+                    </div>
+                </div>
+                ` : ''}
+            `;
+
+            // Highlight selected node
+            nodeElements.classed("selected", n => n.id === d.id);
+        }
+
+        function focusNode(id) {
+            const node = nodeMap[id];
+            if (node) {
+                showDetail(node);
+                highlightConnections(node);
+            }
+        }
+
+        // Highlight connections
+        function highlightConnections(d) {
+            const connectedIds = new Set([d.id]);
+            
+            edges.forEach(e => {
+                if (e.source === d.id) connectedIds.add(e.target);
+                if (e.target === d.id) connectedIds.add(e.source);
+            });
+
+            nodeElements.classed("dimmed", n => !connectedIds.has(n.id));
+            
+            edgeElements
+                .classed("dimmed", e => e.source !== d.id && e.target !== d.id)
+                .classed("highlighted", e => e.source === d.id || e.target === d.id);
+        }
+
+        function resetHighlight() {
+            nodeElements.classed("dimmed", false);
+            edgeElements.classed("dimmed", false).classed("highlighted", false);
+        }
+
+        // Filters
+        document.querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const filter = btn.dataset.filter;
+                const status = btn.dataset.status;
+                
+                // Handle status filters
+                if (filter && !filter.includes("sector")) {
+                    document.querySelectorAll(".filter-btn[data-status], .filter-btn[data-filter='all']").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    
+                    if (filter === "all") {
+                        nodeElements.style("display", "block");
+                        edgeElements.style("display", "block");
+                    } else {
+                        nodeElements.style("display", d => d.status === filter || d.status === "axiom" ? "block" : "none");
+                        edgeElements.style("display", e => {
+                            const s = nodeMap[e.source];
+                            const t = nodeMap[e.target];
+                            return (s && t && (s.status === filter || t.status === filter || s.status === "axiom")) ? "block" : "none";
+                        });
+                    }
+                }
+                
+                // Handle sector filters
+                if (filter && filter.includes("sector") || ["gauge", "neutrino", "lepton", "quark", "ckm", "electroweak", "cosmology"].includes(filter)) {
+                    document.querySelectorAll(".filter-btn[data-filter='all-sector'], .filter-btn[data-filter='gauge'], .filter-btn[data-filter='neutrino'], .filter-btn[data-filter='lepton'], .filter-btn[data-filter='quark'], .filter-btn[data-filter='ckm'], .filter-btn[data-filter='electroweak'], .filter-btn[data-filter='cosmology']").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    
+                    if (filter === "all-sector") {
+                        nodeElements.style("display", "block");
+                        edgeElements.style("display", "block");
+                    } else {
+                        nodeElements.style("display", d => d.sector === filter || d.sector === "foundation" || d.sector === "structural" ? "block" : "none");
+                        edgeElements.style("display", e => {
+                            const s = nodeMap[e.source];
+                            const t = nodeMap[e.target];
+                            return (s && t && (s.sector === filter || t.sector === filter || s.sector === "foundation" || s.sector === "structural")) ? "block" : "none";
+                        });
+                    }
+                }
+            });
+        });
+
+        // Search
+        const searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase();
+            
+            if (query === "") {
+                nodeElements.style("opacity", 1);
+                edgeElements.style("opacity", 1);
+                return;
+            }
+            
+            const matchingIds = new Set();
+            nodes.forEach(n => {
+                if (n.label.toLowerCase().includes(query) || 
+                    n.id.toLowerCase().includes(query) ||
+                    (n.formula && n.formula.toLowerCase().includes(query))) {
+                    matchingIds.add(n.id);
+                }
+            });
+            
+            nodeElements.style("opacity", d => matchingIds.has(d.id) ? 1 : 0.15);
+            edgeElements.style("opacity", e => matchingIds.has(e.source) || matchingIds.has(e.target) ? 1 : 0.1);
+        });
+
+        // Zoom controls
+        document.getElementById("zoomIn").addEventListener("click", () => {
+            svg.transition().call(zoom.scaleBy, 1.3);
+        });
+
+        document.getElementById("zoomOut").addEventListener("click", () => {
+            svg.transition().call(zoom.scaleBy, 0.7);
+        });
+
+        document.getElementById("resetZoom").addEventListener("click", () => {
+            svg.transition().call(zoom.transform, d3.zoomIdentity);
+        });
+
+        // Resize handler
+        window.addEventListener("resize", () => {
+            width = container.clientWidth;
+            height = container.clientHeight;
+            svg.attr("width", width).attr("height", height);
+        });
+
+        // Initial center
+        const initialTransform = d3.zoomIdentity.translate(0, 20).scale(0.9);
+        svg.call(zoom.transform, initialTransform);
+    </script>
+</body>
+</html>
+
