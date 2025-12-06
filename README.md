@@ -13,7 +13,7 @@ A geometric framework deriving Standard Model parameters from topological invari
 
 | Metric | Value |
 |--------|-------|
-| Precision | 0.128% mean deviation across 39 observables |
+| Precision | 0.198% mean deviation across 39 observables |
 | Adjustable parameters | Zero (all structurally determined) |
 | Formally verified relations | 39 proven in Lean 4 + Coq (dual verification, zero axioms) |
 | Key exact results | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |

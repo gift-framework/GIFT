@@ -903,7 +903,7 @@ $$221 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 | 0.5-1.0% | 4 | 10% |
 | >1.0% | 1 | 3% |
 
-**Mean deviation**: 0.128%
+**Mean deviation**: 0.198%
 **Median deviation**: 0.095%
 
 ---

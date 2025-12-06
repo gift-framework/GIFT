@@ -199,7 +199,7 @@ Check repository for updates on DOI availability.
 
 ## Version History
 
-- **v2.3.3** (2025-12-05): Current version with 0.128% precision, zero parameters, 39 observables, 39 proven relations (giftpy v1.4.0)
+- **v2.3.3** (2025-12-05): Current version with 0.198% precision, zero parameters, 39 observables, 39 proven relations (giftpy v1.4.0)
 - **v2.3.1** (2025-12-04): 25 proven relations (12 topological extension), giftpy v1.1.0
 - **v2.3.0** (2025-12-03): Dual Lean 4 + Coq verification, 13 original proven relations
 - **v2.2.0** (2025-11-27): Zero-parameter paradigm, 39 observables
@@ -228,7 +228,7 @@ When using GIFT predictions in your research:
 
 1. **Cite framework**: Use software citation above
 2. **Cite specific results**: Use appropriate supplement citation
-3. **Specify version**: Always include version number (v2.2.0)
+3. **Specify version**: Always include version number (v2.3.3)
 4. **Note modifications**: If you modify predictions, clearly state changes
 5. **Link to repository**: Include GitHub URL for reproducibility
 
@@ -253,15 +253,15 @@ See [LICENSE](LICENSE) file for complete terms.
 
 ## Citing Computational Results
 
-When using computational notebook results:
+When using computational validation results:
 
 ```bibtex
-@software{gift_notebooks_2025,
-  title={GIFT Framework v2.3: Computational Notebooks},
+@software{gift_validation_2025,
+  title={GIFT Framework v2.3: Statistical Validation},
   author={{GIFT Framework Team}},
   year={2025},
-  url={https://github.com/gift-framework/GIFT/tree/main/G2_ML},
-  note={Jupyter notebooks for G2 manifold and metric learning}
+  url={https://github.com/gift-framework/GIFT/tree/main/statistical_validation},
+  note={Monte Carlo validation and statistical significance tests}
 }
 ```
 

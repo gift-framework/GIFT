@@ -38,4 +38,3 @@ Numero,Observable,Formule,Valeur_Predite,Unite,Valeur_Experimentale,Incertitude_
 37,kappa_T,1/(b3 - dim(G2) - p2) = 1/(77 - 14 - 2) = 1/61,0.01639,unitless,0.0164,0.0001,0.04,TOPOLOGICAL,Structural Relations
 38,tau,"496×21/(27×99) = 3472/891",3.8967,unitless,3.897,0.001,0.01,PROVEN,Structural Relations
 39,lambda_H,"√(dim(G2) + N_gen) / 2^Weyl = √(14 + 3) / 32 = √17/32",0.1289,unitless,0.126,0.008,2.3,PROVEN,Electroweak Scale
-

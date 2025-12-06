@@ -16,7 +16,7 @@ The GIFT framework has undergone comprehensive statistical validation to assess:
 4. Status promotion justifications
 
 **Key findings**:
-- Mean deviation: **0.128%** across 39 observables
+- Mean deviation: **0.198%** across 39 observables
 - **39 PROVEN** exact relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector)
 - **0 PHENOMENOLOGICAL** predictions
 - No alternative minima found in parameter space
@@ -75,7 +75,7 @@ where the sum runs over all observables with experimental uncertainties.
 | Metric | Value |
 |--------|-------|
 | Total observables | 39 |
-| Mean relative deviation | 0.128% |
+| Mean relative deviation | 0.198% |
 | Median relative deviation | 0.071% |
 | Standard deviation of deviations | 0.168% |
 | Maximum deviation | 0.787% |
@@ -318,7 +318,7 @@ The framework would be falsified by:
 
 The GIFT framework demonstrates:
 
-1. **High Precision**: Mean deviation 0.128% across 39 observables
+1. **High Precision**: Mean deviation 0.198% across 39 observables
 
 2. **Strong Foundations**: 39 PROVEN relations (dual Lean + Coq verified), 0 PHENOMENOLOGICAL
 
@@ -332,7 +332,7 @@ The GIFT framework demonstrates:
 
 | Aspect | Value |
 |--------|-------|
-| Mean deviation | 0.128% |
+| Mean deviation | 0.198% |
 | PROVEN relations | 39 |
 | PHENOMENOLOGICAL | 0 |
 | Exact rationals | 39 |

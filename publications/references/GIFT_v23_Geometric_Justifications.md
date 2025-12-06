@@ -571,6 +571,6 @@ The ultimate test remains experimental verification, particularly:
 
 ---
 
-**Document Version**: 2.2.0
-**Date**: 2025-11-26
-**Status**: Working document for v2.2 publication
+**Document Version**: 2.3.0
+**Date**: 2025-12-06
+**Status**: Working document for v2.3 publication
