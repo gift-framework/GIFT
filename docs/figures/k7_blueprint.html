@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K7 Manifold - Blueprint Construction Graph</title>
+    <script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #0a0e14;
+            --bg-secondary: #12171f;
+            --bg-tertiary: #1a2028;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --border-color: #2d3640;
+            --accent-teal: #2dd4bf;
+            --accent-teal-dim: #0d9488;
+            --accent-indigo: #818cf8;
+            --accent-indigo-dim: #4f46e5;
+            --accent-amber: #fbbf24;
+            --accent-amber-dim: #d97706;
+            --accent-rose: #fb7185;
+            --accent-rose-dim: #e11d48;
+            --accent-emerald: #34d399;
+            --accent-emerald-dim: #059669;
+            --edge-color: #3d4654;
+            --edge-highlight: #2dd4bf;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container { display: flex; height: 100vh; }
+
+        .sidebar {
+            width: 340px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(135deg, #0d9488 0%, #12171f 100%);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-indigo));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .version { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+        .info-box {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+        }
+
+        .info-title {
+            font-size: 0.7rem;
+            color: var(--accent-teal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .info-text {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            background: var(--bg-tertiary);
+            padding: 12px 8px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value { font-size: 1.3rem; font-weight: 700; color: var(--accent-teal); }
+        .stat-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+        .filters {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .filter-title { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .filter-buttons { display: flex; flex-wrap: wrap; gap: 6px; }
+
+        .filter-btn {
+            padding: 6px 10px;
+            font-size: 0.7rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover { border-color: var(--accent-teal); color: var(--text-primary); }
+        .filter-btn.active { background: var(--accent-teal-dim); border-color: var(--accent-teal); color: var(--text-primary); }
+
+        .search-container { padding: 16px 20px; border-bottom: 1px solid var(--border-color); }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-radius: 6px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .search-input:focus { border-color: var(--accent-teal); }
+        .search-input::placeholder { color: var(--text-muted); }
+
+        .detail-panel { flex: 1; overflow-y: auto; padding: 20px; }
+        .detail-header { margin-bottom: 16px; }
+        .detail-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+
+        .detail-status {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.65rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-status.algebraic { background: var(--accent-indigo-dim); color: var(--accent-indigo); }
+        .detail-status.topological { background: var(--accent-teal-dim); color: var(--accent-teal); }
+        .detail-status.geometric { background: var(--accent-amber-dim); color: var(--accent-amber); }
+        .detail-status.derived { background: var(--accent-rose-dim); color: var(--accent-rose); }
+        .detail-status.physical { background: var(--accent-emerald-dim); color: var(--accent-emerald); }
+
+        .detail-section { margin-bottom: 16px; }
+        .detail-section-title { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+
+        .formula-box {
+            background: var(--bg-tertiary);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border-left: 3px solid var(--accent-teal);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .value-item { background: var(--bg-tertiary); padding: 10px; border-radius: 6px; }
+        .value-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2px; }
+        .value-number { font-size: 0.9rem; font-weight: 600; color: var(--accent-teal); }
+
+        .dependencies-list { display: flex; flex-wrap: wrap; gap: 4px; }
+
+        .dep-tag {
+            padding: 4px 8px;
+            font-size: 0.65rem;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .dep-tag:hover { background: var(--accent-teal-dim); color: var(--text-primary); }
+
+        .graph-container { flex: 1; position: relative; overflow: hidden; }
+        #graph { width: 100%; height: 100%; }
+
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            display: flex;
+            gap: 16px;
+            font-size: 0.7rem;
+        }
+
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .legend-dot.algebraic { background: var(--accent-indigo); }
+        .legend-dot.topological { background: var(--accent-teal); }
+        .legend-dot.geometric { background: var(--accent-amber); }
+        .legend-dot.derived { background: var(--accent-rose); }
+        .legend-dot.physical { background: var(--accent-emerald); }
+
+        .controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .control-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .control-btn:hover { border-color: var(--accent-teal); color: var(--text-primary); }
+
+        .node { cursor: pointer; transition: opacity 0.3s; }
+        .node.dimmed { opacity: 0.2; }
+        .node-rect { rx: 6; ry: 6; stroke-width: 2; transition: all 0.2s; }
+
+        .node.algebraic .node-rect { fill: var(--accent-indigo-dim); stroke: var(--accent-indigo); }
+        .node.topological .node-rect { fill: var(--accent-teal-dim); stroke: var(--accent-teal); }
+        .node.geometric .node-rect { fill: var(--accent-amber-dim); stroke: var(--accent-amber); }
+        .node.derived .node-rect { fill: var(--accent-rose-dim); stroke: var(--accent-rose); }
+        .node.physical .node-rect { fill: var(--accent-emerald-dim); stroke: var(--accent-emerald); }
+
+        .node:hover .node-rect, .node.selected .node-rect {
+            stroke-width: 3;
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+
+        .node-label { fill: var(--text-primary); font-size: 10px; font-family: 'JetBrains Mono', monospace; pointer-events: none; }
+        .node-sublabel { fill: var(--text-muted); font-size: 8px; font-family: 'JetBrains Mono', monospace; pointer-events: none; }
+
+        .edge { fill: none; stroke: var(--edge-color); stroke-width: 1.5; transition: all 0.3s; }
+        .edge.dimmed { opacity: 0.1; }
+        .edge.highlighted { stroke: var(--edge-highlight); stroke-width: 2.5; }
+
+        .layer-label {
+            position: absolute;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+
+        .empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+        .empty-state-icon { font-size: 2rem; margin-bottom: 10px; }
+
+        @media print {
+            .sidebar { display: none; }
+            .controls { display: none; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <div class="logo">K7 MANIFOLD BLUEPRINT</div>
+                <div class="version">Twisted Connected Sum Construction</div>
+            </header>
+
+            <div class="info-box">
+                <div class="info-title">What is K7?</div>
+                <div class="info-text">
+                    K7 is a compact 7-dimensional manifold with G2 holonomy, constructed via the Twisted Connected Sum (TCS) method. It serves as the internal space in M-theory compactification, determining all physical observables in the GIFT framework.
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Dimension</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">21</div>
+                    <div class="stat-label">b2</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">77</div>
+                    <div class="stat-label">b3</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-title">Filter by Type</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="algebraic">Algebraic</button>
+                    <button class="filter-btn" data-filter="topological">Topological</button>
+                    <button class="filter-btn" data-filter="geometric">Geometric</button>
+                    <button class="filter-btn" data-filter="derived">Derived</button>
+                    <button class="filter-btn" data-filter="physical">Physical</button>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search components..." id="searchInput">
+            </div>
+
+            <div class="detail-panel" id="detailPanel">
+                <div class="empty-state">
+                    <div class="empty-state-icon">&#9671;</div>
+                    <div>Click a node to view details</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="graph-container">
+            <svg id="graph"></svg>
+            
+            <div class="legend">
+                <div class="legend-item"><div class="legend-dot algebraic"></div><span>Algebraic Input</span></div>
+                <div class="legend-item"><div class="legend-dot topological"></div><span>Topological</span></div>
+                <div class="legend-item"><div class="legend-dot geometric"></div><span>Geometric</span></div>
+                <div class="legend-item"><div class="legend-dot derived"></div><span>Derived</span></div>
+                <div class="legend-item"><div class="legend-dot physical"></div><span>Physical Output</span></div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="zoomIn" title="Zoom In">+</button>
+                <button class="control-btn" id="zoomOut" title="Zoom Out">-</button>
+                <button class="control-btn" id="resetZoom" title="Reset View">&#8634;</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function initGraph() {
+            if (typeof d3 === 'undefined') {
+                setTimeout(initGraph, 100);
+                return;
+            }
+
+            const nodes = [
+                // Layer 0: Algebraic Building Blocks
+                { id: "k3_surface", label: "K3 Surface", sublabel: "b2 = 22", layer: 0, status: "algebraic", category: "input",
+                  formula: "K3: unique simply-connected compact complex surface with c1 = 0", 
+                  description: "4-dimensional Calabi-Yau manifold with b2 = 22 harmonic 2-forms",
+                  value: "b2(K3) = 22" },
+                  
+                { id: "acyl_cy3_plus", label: "ACyl CY3 (+)", sublabel: "Z+ half", layer: 0, status: "algebraic", category: "input",
+                  formula: "Asymptotically Cylindrical Calabi-Yau 3-fold",
+                  description: "Non-compact CY3 with cylindrical end S1 x K3, contributes b3 = 20",
+                  value: "b3(Z+) = 20" },
+                  
+                { id: "acyl_cy3_minus", label: "ACyl CY3 (-)", sublabel: "Z- half", layer: 0, status: "algebraic", category: "input",
+                  formula: "Asymptotically Cylindrical Calabi-Yau 3-fold",
+                  description: "Non-compact CY3 with cylindrical end S1 x K3, contributes b3 = 23",
+                  value: "b3(Z-) = 23" },
+
+                { id: "s1_circle", label: "S1 Circle", sublabel: "Gluing parameter", layer: 0, status: "algebraic", category: "input",
+                  formula: "S1 = U(1) compact dimension",
+                  description: "Circle for the cylindrical neck region, radius R",
+                  value: "dim = 1" },
+
+                // Layer 1: TCS Construction
+                { id: "cylinder_plus", label: "S1 x Z+", sublabel: "7-dim half", layer: 1, status: "topological", category: "construction",
+                  formula: "Product: S1 x ACyl_CY3(+)",
+                  description: "First 7-dimensional building block for TCS",
+                  value: "dim = 1 + 6 = 7" },
+
+                { id: "cylinder_minus", label: "S1 x Z-", sublabel: "7-dim half", layer: 1, status: "topological", category: "construction",
+                  formula: "Product: S1 x ACyl_CY3(-)",
+                  description: "Second 7-dimensional building block for TCS",
+                  value: "dim = 1 + 6 = 7" },
+
+                { id: "neck_region", label: "Neck Region", sublabel: "S1 x S1 x K3", layer: 1, status: "topological", category: "construction",
+                  formula: "T2 x K3 (matching region)",
+                  description: "Where the two halves are glued with a hyper-Kahler rotation",
+                  value: "dim = 2 + 4 = 6" },
+
+                // Layer 2: Gluing & Matching
+                { id: "hk_rotation", label: "HK Rotation", sublabel: "Matching", layer: 2, status: "geometric", category: "construction",
+                  formula: "Hyper-Kahler rotation on K3 fiber",
+                  description: "Rotation of complex structures to match CY3 halves",
+                  value: "angle in SU(2)" },
+
+                { id: "tcs_gluing", label: "TCS Gluing", sublabel: "Joyce construction", layer: 2, status: "geometric", category: "construction",
+                  formula: "K7 = (S1 x Z+) #_T2xK3 (S1 x Z-)",
+                  description: "Twisted connected sum producing compact G2 manifold",
+                  value: "Compact 7-manifold" },
+
+                // Layer 3: Topological Invariants
+                { id: "b2_k7", label: "b2(K7)", sublabel: "= 21", layer: 3, status: "topological", category: "invariant",
+                  formula: "b2(K7) = b2(K3) - 1 = 22 - 1 = 21",
+                  description: "Second Betti number: counts harmonic 2-forms (gauge DOF)",
+                  value: "21" },
+
+                { id: "b3_k7", label: "b3(K7)", sublabel: "= 77", layer: 3, status: "topological", category: "invariant",
+                  formula: "b3(K7) = 34 + 43 = 77 (Mayer-Vietoris)",
+                  description: "Third Betti number: 34 kernel + 43 boundary contributions",
+                  value: "77" },
+
+                { id: "euler_k7", label: "chi(K7)", sublabel: "= 0", layer: 3, status: "topological", category: "invariant",
+                  formula: "chi(K7) = 2(1 - b1 + b2 - b3/2) = 0",
+                  description: "Euler characteristic vanishes for G2 holonomy",
+                  value: "0" },
+
+                { id: "pi1_k7", label: "pi1(K7)", sublabel: "= 0", layer: 3, status: "topological", category: "invariant",
+                  formula: "Fundamental group is trivial",
+                  description: "K7 is simply connected",
+                  value: "trivial" },
+
+                // Layer 4: G2 Structure
+                { id: "g2_holonomy", label: "Hol(g) = G2", sublabel: "dim = 14", layer: 4, status: "geometric", category: "structure",
+                  formula: "Holonomy group of Levi-Civita connection",
+                  description: "The metric has exactly G2 holonomy (not proper subgroup)",
+                  value: "dim(G2) = 14" },
+
+                { id: "phi_3form", label: "phi (3-form)", sublabel: "Calibration", layer: 4, status: "geometric", category: "structure",
+                  formula: "phi in Omega^3(K7), d(phi) = 0",
+                  description: "Closed and co-closed 3-form defining G2 structure",
+                  value: "Parallel" },
+
+                { id: "psi_4form", label: "*phi (4-form)", sublabel: "Hodge dual", layer: 4, status: "geometric", category: "structure",
+                  formula: "*phi in Omega^4(K7), d(*phi) = 0",
+                  description: "Hodge dual of phi, also parallel",
+                  value: "Parallel" },
+
+                { id: "torsion_free", label: "Torsion-Free", sublabel: "Nearly", layer: 4, status: "geometric", category: "structure",
+                  formula: "d(phi) = 0, d(*phi) = 0 (ideally)",
+                  description: "Joyce's perturbation: small controlled torsion kappa_T = 1/61",
+                  value: "kappa_T = 1/61" },
+
+                // Layer 5: Derived Parameters
+                { id: "h_star", label: "H*", sublabel: "= 99", layer: 5, status: "derived", category: "derived",
+                  formula: "H* = b2 + b3 + 1 = 21 + 77 + 1",
+                  description: "Total effective cohomological dimension",
+                  value: "99" },
+
+                { id: "kappa_t", label: "kappa_T", sublabel: "= 1/61", layer: 5, status: "derived", category: "derived",
+                  formula: "kappa_T = 1/(b3 - dim(G2) - p2) = 1/(77-14-2)",
+                  description: "Torsion magnitude from cohomological formula",
+                  value: "1/61 = 0.01639" },
+
+                { id: "det_g", label: "det(g)", sublabel: "= 65/32", layer: 5, status: "derived", category: "derived",
+                  formula: "det(g) = p2 + 1/(b2 + dim(G2) - N_gen)",
+                  description: "Metric determinant from topological data",
+                  value: "65/32 = 2.03125" },
+
+                { id: "p2_factor", label: "p2", sublabel: "= 2", layer: 5, status: "derived", category: "derived",
+                  formula: "p2 = dim(G2)/dim(K7) = 14/7",
+                  description: "Binary duality factor",
+                  value: "2" },
+
+                // Layer 6: Physical Outputs
+                { id: "n_gen", label: "N_gen", sublabel: "= 3", layer: 6, status: "physical", category: "physics",
+                  formula: "N_gen = rank(E8) - Weyl = 8 - 5",
+                  description: "Number of fermion generations from E8 structure",
+                  value: "3 generations" },
+
+                { id: "gauge_dof", label: "Gauge DOF", sublabel: "= 21", layer: 6, status: "physical", category: "physics",
+                  formula: "= b2(K7) harmonic 2-forms",
+                  description: "Gauge field degrees of freedom in 4D",
+                  value: "21 modes" },
+
+                { id: "matter_dof", label: "Matter DOF", sublabel: "= 77", layer: 6, status: "physical", category: "physics",
+                  formula: "= b3(K7) harmonic 3-forms",
+                  description: "Matter field multiplicities from 3-form zero modes",
+                  value: "77 modes" },
+
+                { id: "sin2_theta", label: "sin2(theta_W)", sublabel: "= 3/13", layer: 6, status: "physical", category: "physics",
+                  formula: "sin2(theta_W) = b2/(b3 + dim(G2)) = 21/91",
+                  description: "Weinberg angle from K7 topology",
+                  value: "0.23077" },
+
+                { id: "susy", label: "N=1 SUSY", sublabel: "4D preserved", layer: 6, status: "physical", category: "physics",
+                  formula: "G2 holonomy => N=1 in 4D",
+                  description: "Exactly one supersymmetry preserved (chiral)",
+                  value: "Minimal SUSY" },
+            ];
+
+            const edges = [
+                // From building blocks to products
+                { source: "k3_surface", target: "acyl_cy3_plus" },
+                { source: "k3_surface", target: "acyl_cy3_minus" },
+                { source: "s1_circle", target: "cylinder_plus" },
+                { source: "s1_circle", target: "cylinder_minus" },
+                { source: "acyl_cy3_plus", target: "cylinder_plus" },
+                { source: "acyl_cy3_minus", target: "cylinder_minus" },
+                
+                // Neck construction
+                { source: "k3_surface", target: "neck_region" },
+                { source: "s1_circle", target: "neck_region" },
+                
+                // Gluing process
+                { source: "cylinder_plus", target: "tcs_gluing" },
+                { source: "cylinder_minus", target: "tcs_gluing" },
+                { source: "neck_region", target: "hk_rotation" },
+                { source: "hk_rotation", target: "tcs_gluing" },
+                
+                // Topological invariants from construction
+                { source: "tcs_gluing", target: "b2_k7" },
+                { source: "tcs_gluing", target: "b3_k7" },
+                { source: "k3_surface", target: "b2_k7" },
+                { source: "acyl_cy3_plus", target: "b3_k7" },
+                { source: "acyl_cy3_minus", target: "b3_k7" },
+                { source: "tcs_gluing", target: "euler_k7" },
+                { source: "tcs_gluing", target: "pi1_k7" },
+                
+                // G2 structure from TCS
+                { source: "tcs_gluing", target: "g2_holonomy" },
+                { source: "g2_holonomy", target: "phi_3form" },
+                { source: "g2_holonomy", target: "psi_4form" },
+                { source: "phi_3form", target: "torsion_free" },
+                { source: "psi_4form", target: "torsion_free" },
+                
+                // Derived parameters
+                { source: "b2_k7", target: "h_star" },
+                { source: "b3_k7", target: "h_star" },
+                { source: "b3_k7", target: "kappa_t" },
+                { source: "g2_holonomy", target: "kappa_t" },
+                { source: "b2_k7", target: "det_g" },
+                { source: "g2_holonomy", target: "det_g" },
+                { source: "g2_holonomy", target: "p2_factor" },
+                
+                // Physical outputs
+                { source: "b2_k7", target: "gauge_dof" },
+                { source: "b3_k7", target: "matter_dof" },
+                { source: "b2_k7", target: "sin2_theta" },
+                { source: "b3_k7", target: "sin2_theta" },
+                { source: "g2_holonomy", target: "sin2_theta" },
+                { source: "g2_holonomy", target: "susy" },
+                { source: "h_star", target: "n_gen" },
+            ];
+
+            const svg = d3.select("#graph");
+            const container = document.querySelector(".graph-container");
+            let width = container.clientWidth;
+            let height = container.clientHeight;
+
+            svg.attr("width", width).attr("height", height);
+
+            const zoom = d3.zoom()
+                .scaleExtent([0.3, 3])
+                .on("zoom", (event) => g.attr("transform", event.transform));
+
+            svg.call(zoom);
+            const g = svg.append("g");
+
+            svg.append("defs").append("marker")
+                .attr("id", "arrowhead")
+                .attr("viewBox", "-0 -5 10 10")
+                .attr("refX", 18)
+                .attr("refY", 0)
+                .attr("orient", "auto")
+                .attr("markerWidth", 5)
+                .attr("markerHeight", 5)
+                .append("path")
+                .attr("d", "M 0,-5 L 10,0 L 0,5")
+                .attr("fill", "#3d4654");
+
+            const layerHeight = 100;
+            const nodeWidth = 110;
+            const nodeHeight = 46;
+            const startY = 50;
+
+            const layers = {};
+            nodes.forEach(node => {
+                if (!layers[node.layer]) layers[node.layer] = [];
+                layers[node.layer].push(node);
+            });
+
+            Object.keys(layers).forEach(layer => {
+                const layerNodes = layers[layer];
+                const layerWidth = layerNodes.length * (nodeWidth + 20);
+                const startX = (width - layerWidth) / 2 + nodeWidth / 2;
+                layerNodes.forEach((node, i) => {
+                    node.x = startX + i * (nodeWidth + 20);
+                    node.y = startY + parseInt(layer) * layerHeight;
+                });
+            });
+
+            const nodeMap = {};
+            nodes.forEach(n => nodeMap[n.id] = n);
+
+            const edgeElements = g.selectAll(".edge")
+                .data(edges)
+                .enter()
+                .append("path")
+                .attr("class", "edge")
+                .attr("d", d => {
+                    const source = nodeMap[d.source];
+                    const target = nodeMap[d.target];
+                    if (!source || !target) return "";
+                    const midX = (source.x + target.x) / 2;
+                    const midY = (source.y + target.y) / 2;
+                    const dx = target.x - source.x;
+                    const offset = dx === 0 ? 0 : Math.sign(dx) * 15;
+                    return `M${source.x},${source.y + nodeHeight/2} Q${midX + offset},${midY} ${target.x},${target.y - nodeHeight/2}`;
+                })
+                .attr("marker-end", "url(#arrowhead)");
+
+            const nodeElements = g.selectAll(".node")
+                .data(nodes)
+                .enter()
+                .append("g")
+                .attr("class", d => `node ${d.status}`)
+                .attr("transform", d => `translate(${d.x - nodeWidth/2}, ${d.y - nodeHeight/2})`)
+                .on("click", (event, d) => showDetail(d))
+                .on("mouseenter", (event, d) => highlightConnections(d))
+                .on("mouseleave", () => resetHighlight());
+
+            nodeElements.append("rect")
+                .attr("class", "node-rect")
+                .attr("width", nodeWidth)
+                .attr("height", nodeHeight);
+
+            nodeElements.append("text")
+                .attr("class", "node-label")
+                .attr("x", nodeWidth / 2)
+                .attr("y", nodeHeight / 2 - 4)
+                .attr("text-anchor", "middle")
+                .text(d => d.label);
+
+            nodeElements.append("text")
+                .attr("class", "node-sublabel")
+                .attr("x", nodeWidth / 2)
+                .attr("y", nodeHeight / 2 + 10)
+                .attr("text-anchor", "middle")
+                .text(d => d.sublabel);
+
+            function showDetail(d) {
+                const panel = document.getElementById("detailPanel");
+                const dependsOn = edges.filter(e => e.target === d.id).map(e => nodeMap[e.source]).filter(Boolean);
+                const feeds = edges.filter(e => e.source === d.id).map(e => nodeMap[e.target]).filter(Boolean);
+                
+                panel.innerHTML = `
+                    <div class="detail-header">
+                        <div class="detail-title">${d.label}</div>
+                        <span class="detail-status ${d.status}">${d.status}</span>
+                    </div>
+                    ${d.description ? `<div class="detail-section"><div class="detail-section-title">Description</div><div style="color: var(--text-secondary); font-size: 0.8rem;">${d.description}</div></div>` : ''}
+                    <div class="detail-section">
+                        <div class="detail-section-title">Definition</div>
+                        <div class="formula-box">${d.formula || 'N/A'}</div>
+                    </div>
+                    ${d.value ? `
+                    <div class="detail-section">
+                        <div class="detail-section-title">Value</div>
+                        <div class="values-grid">
+                            <div class="value-item"><div class="value-label">Result</div><div class="value-number">${d.value}</div></div>
+                        </div>
+                    </div>` : ''}
+                    ${dependsOn.length > 0 ? `<div class="detail-section"><div class="detail-section-title">Depends On</div><div class="dependencies-list">${dependsOn.map(dep => `<span class="dep-tag">${dep.label}</span>`).join('')}</div></div>` : ''}
+                    ${feeds.length > 0 ? `<div class="detail-section"><div class="detail-section-title">Feeds Into</div><div class="dependencies-list">${feeds.map(f => `<span class="dep-tag">${f.label}</span>`).join('')}</div></div>` : ''}
+                `;
+                nodeElements.classed("selected", n => n.id === d.id);
+            }
+
+            function highlightConnections(d) {
+                const connectedIds = new Set([d.id]);
+                edges.forEach(e => {
+                    if (e.source === d.id) connectedIds.add(e.target);
+                    if (e.target === d.id) connectedIds.add(e.source);
+                });
+                nodeElements.classed("dimmed", n => !connectedIds.has(n.id));
+                edgeElements.classed("dimmed", e => e.source !== d.id && e.target !== d.id)
+                           .classed("highlighted", e => e.source === d.id || e.target === d.id);
+            }
+
+            function resetHighlight() {
+                nodeElements.classed("dimmed", false);
+                edgeElements.classed("dimmed", false).classed("highlighted", false);
+            }
+
+            // Filters
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const filter = btn.dataset.filter;
+                    if (filter === "all") {
+                        nodeElements.style("display", "block");
+                        edgeElements.style("display", "block");
+                    } else {
+                        nodeElements.style("display", d => d.status === filter ? "block" : "none");
+                    }
+                    btn.parentElement.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                });
+            });
+
+            // Search
+            document.getElementById("searchInput").addEventListener("input", (e) => {
+                const query = e.target.value.toLowerCase();
+                if (query === "") {
+                    nodeElements.style("opacity", 1);
+                    return;
+                }
+                nodeElements.style("opacity", d => 
+                    d.label.toLowerCase().includes(query) || 
+                    d.id.toLowerCase().includes(query) ||
+                    (d.description && d.description.toLowerCase().includes(query)) ? 1 : 0.15
+                );
+            });
+
+            // Zoom controls
+            document.getElementById("zoomIn").addEventListener("click", () => svg.transition().call(zoom.scaleBy, 1.3));
+            document.getElementById("zoomOut").addEventListener("click", () => svg.transition().call(zoom.scaleBy, 0.7));
+            document.getElementById("resetZoom").addEventListener("click", () => svg.transition().call(zoom.transform, d3.zoomIdentity));
+
+            // Resize
+            window.addEventListener("resize", () => {
+                width = container.clientWidth;
+                height = container.clientHeight;
+                svg.attr("width", width).attr("height", height);
+            });
+
+            // Initial transform
+            svg.call(zoom.transform, d3.zoomIdentity.translate(0, 10).scale(0.85));
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initGraph);
+        } else {
+            initGraph();
+        }
+    </script>
+</body>
+</html>
+
