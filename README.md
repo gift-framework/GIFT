@@ -66,10 +66,11 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 ## Interactive Visualizations
 
 [View GIFT Lean Blueprint](https://gift-framework.github.io/GIFT/docs/figures/gift_blueprint.html)
-
+---
 [View K7 Manifold Lean Blueprint](https://gift-framework.github.io/GIFT/docs/figures/k7_blueprint.html)
-
+---
 [created with Lean Blueprint Copilot](https://github.com/augustepoiroux/LeanBlueprintCopilot)
+
 ---
 
 ## Supplements
