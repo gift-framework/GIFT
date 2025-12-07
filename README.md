@@ -87,6 +87,14 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 ---
 
+## Related Repositories
+
+| Repository | Content |
+|------------|---------|
+| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4 + Coq), K₇ metric pipeline |
+
+---
+
 ## Key Results
 
 ### Precision by Sector
@@ -190,14 +198,6 @@ See [CITATION.md](CITATION.md) for additional formats.
 ## License
 
 MIT License. See [LICENSE](LICENSE)
-
----
-
-## Related Repositories
-
-| Repository | Content |
-|------------|---------|
-| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4 + Coq), K₇ metric pipeline |
 
 ---
 
