@@ -6,11 +6,11 @@
 
 We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers b₂=21 and b₃=77, which determine gauge field and matter multiplicities through cohomological mappings.
 
-The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891) derive from fixed algebraic and topological invariants. The metric determinant det(g) = 65/32 has exact topological origin, confirmed by physics-informed neural network to 0.0001% precision with Lean 4 formal verification establishing G₂ existence via Joyce's perturbation theorem (20× safety margin). This eliminates parameter tuning by construction; discrete topological structures admit no continuous variation.
+The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891) derive from fixed algebraic and topological invariants. The metric determinant det(g) = 65/32 has exact topological origin, cross-checked by physics-informed neural network to 0.0001% precision with Lean 4 formal verification supporting G₂ existence via Joyce's perturbation theorem (20× safety margin). Within this framework, discrete topological structures admit no continuous variation.
 
 Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.198% from experimental values. Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). **Twenty-five relations are formally verified in Lean 4 and Coq** with Mathlib, using only standard axioms (propext, Quot.sound) and zero domain-specific axioms. The original 13 relations: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√(17/32), H*=99, p₂=2, N_gen=3, and E₈×E₈=496, plus 12 topological extensions including γ_GIFT=511/884, θ₂₃=85/99, α⁻¹ base=137, and Ω_DE=98/99.
 
-Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 39 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
+Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima in the tested parameter space (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 39 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
 
 Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
@@ -29,6 +29,8 @@ Throughout this paper, we use the following classifications:
 - **DERIVED**: Calculated from proven/topological relations
 - **THEORETICAL**: Has theoretical justification, proof incomplete
 - **PHENOMENOLOGICAL**: Empirically accurate, theoretical derivation in progress
+
+> **Note on "PROVEN" status**: Throughout this document, "PROVEN" indicates that a relation has been formally verified by Lean 4 and Coq proof assistants as following from framework axioms. This certifies **mathematical correctness within the model**, not physical validity—which remains subject to experimental test.
 
 ### Lean 4 Verification Summary
 
@@ -109,7 +111,7 @@ The framework rests on discrete mathematical structure choices, not continuous p
 | Requiring single scale input | 5 | THEORETICAL |
 | **Total observables** | **39** | Mean deviation 0.198% |
 
-No continuous parameters are adjusted to fit experimental data. The structural choices determine all predictions uniquely.
+No continuous parameters are adjusted to fit experimental data. Given these structural choices, all predictions follow without further input.
 
 ### 1.5 Result Hierarchy
 
@@ -334,7 +336,7 @@ The decomposition 77 = 48 + 29 naturally accommodates three complete generations
 
 ### 3.6 Existence Certification
 
-The variational solution achieves ||T|| = 0.00140 with 20× margin below Joyce's threshold ε₀ = 0.0288. Lean 4 formal verification (Mathlib) establishes:
+The variational solution achieves ||T|| = 0.00140 with 20× margin below Joyce's threshold ε₀ = 0.0288. Lean 4 formal verification (Mathlib) demonstrates:
 
 | Theorem | Statement | Status |
 |---------|-----------|--------|
@@ -342,7 +344,7 @@ The variational solution achieves ||T|| = 0.00140 with 20× margin below Joyce's
 | `global_bound_satisfies_joyce` | \|\|T\|\| < ε₀ | PROVEN (Lean) |
 | `k7_admits_torsion_free_g2` | ∃ φ_tf torsion-free | PROVEN (Lean) |
 
-By Joyce's Theorem 11.6.1, existence of torsion-free G₂ structure on K₇ is guaranteed.
+By Joyce's Theorem 11.6.1, these bounds imply the existence of a nearby torsion-free G₂ structure on K₇.
 
 **Status**: CERTIFIED (See Supplement S2 for complete certificate)
 
@@ -415,7 +417,7 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}} = 2 + \frac{1}{21 + 14 - 3
 | Deviation | 0.00005% |
 | Lean status | PROVEN |
 
-The PINN does not discover det(g); it confirms the topological prediction with extraordinary precision, validating the zero-parameter paradigm.
+The PINN does not discover det(g); it provides an independent numerical cross-check consistent with the topological prediction to high precision, supporting the zero-parameter approach.
 
 **Status**: **TOPOLOGICAL** (prediction) + **CERTIFIED** (validation)
 
@@ -523,7 +525,7 @@ Consistency with cosmological constraints requires ultra-slow K₇ flow velocity
 
 $$|v| \approx 1.5 \times 10^{-2}$$
 
-This ensures coupling constants appear approximately constant at laboratory scales while evolving over cosmological time:
+This implies coupling constants would appear approximately constant at laboratory scales while evolving over cosmological time:
 
 $$\left|\frac{\dot{\alpha}}{\alpha}\right| \sim H_0 \times |\Gamma| \times |v|^2 \sim 10^{-16} \text{ yr}^{-1}$$
 
@@ -1065,7 +1067,7 @@ Global sensitivity analysis reveals which parameters dominate each observable:
 | θ₁₂ | 0.0 | **0.996** | 0.0 | Parametric |
 | H₀ | 0.001 | **0.996** | 0.0 | Parametric |
 
-**Key finding**: Topological observables show zero sensitivity to parameter variations, confirming their status as true invariants. Parameter-dependent observables are dominated by Weyl_factor.
+**Key finding**: Topological observables show zero sensitivity to parameter variations, consistent with their status as invariants. Parameter-dependent observables are dominated by Weyl_factor.
 
 ### 11.3 Test Suite Validation
 
@@ -1106,7 +1108,7 @@ This represents the most stringent near-term test.
 
 #### Fourth Generation Searches
 
-- **Prediction**: N_gen = 3 exactly (topologically proven)
+- **Prediction**: N_gen = 3 exactly (topologically derived)
 - **LHC Run 3 sensitivity**: m_t' < 1.5 TeV
 - **Falsification**: Any fourth generation fermion discovery
 
@@ -1221,7 +1223,7 @@ The bulk dimension D_bulk = 11 matches M-theory's critical dimension.
 ### 13.6 Limitations and Open Questions
 
 **Addressed**:
-- Generation number (N_gen = 3 proven)
+- Generation number (N_gen = 3 derived)
 - Mass hierarchies (from torsion components)
 - CP violation (δ_CP = 197° from topology)
 - Dark energy (Ω_DE from binary architecture)

@@ -2,7 +2,7 @@
 
 ## Variational G₂ Geometry with Formal Verification
 
-*This supplement establishes the existence of a G₂ holonomy metric on the compact 7-manifold K₇ through two complementary approaches: (1) the classical twisted connected sum (TCS) construction providing topological structure, and (2) a variational formulation with physics-informed neural networks providing numerical evidence certified by formal verification. For mathematical foundations of G₂ geometry, see Supplement S1. For applications to torsional dynamics, see Supplement S3.*
+*This supplement presents evidence for the existence of a G₂ holonomy metric on the compact 7-manifold K₇ through two complementary approaches: (1) the classical twisted connected sum (TCS) construction providing topological structure, and (2) a variational formulation with physics-informed neural networks providing numerical evidence certified by formal verification. For mathematical foundations of G₂ geometry, see Supplement S1. For applications to torsional dynamics, see Supplement S3.*
 
 ---
 
@@ -155,7 +155,7 @@ This connects b₃ to b₂: b₃ = C(7,3) + 2×b₂ = 35 + 42 = 77
 
 ### 3.1 The Zero-Parameter Paradigm
 
-The GIFT framework establishes that all metric invariants derive from fixed mathematical structure. The constraints are **inputs** to any construction; the specific geometry is **emergent**.
+The GIFT framework proposes that all metric invariants derive from fixed mathematical structure. The constraints are **inputs** to any construction; the specific geometry is **emergent**.
 
 | Invariant | Formula | Value | Status |
 |-----------|---------|-------|--------|
@@ -232,7 +232,7 @@ The constraints are **primary** (inputs); the metric is **emergent** (output).
 
 $$\|\phi - \phi_0\|_{C^0} \leq C \cdot \|T(\phi_0)\|$$
 
-If the variational problem P admits a solution φ_num with sufficiently small torsion, Joyce's theorem guarantees existence of an exact torsion-free G₂ structure nearby.
+If the variational problem P admits a solution φ_num with sufficiently small torsion, Joyce's theorem implies the existence of an exact torsion-free G₂ structure nearby.
 
 ---
 
@@ -460,11 +460,11 @@ Under the hypotheses of Joyce's Theorem 11.6.1 (taken as an axiom in the Lean fo
 
 ### 9.2 Proof Summary
 
-1. **Topological constraints** (Sections 1-3): Mayer-Vietoris analysis on TCS construction establishes b₂ = 21, b₃ = 77 as necessary conditions. Status: TOPOLOGICAL.
+1. **Topological constraints** (Sections 1-3): Mayer-Vietoris analysis on TCS construction yields b₂ = 21, b₃ = 77 as necessary conditions. Status: TOPOLOGICAL.
 
 2. **Variational solution** (Sections 4-5): PINN finds φ_num satisfying det(g) = 65/32 ± 0.0001% and ||T|| = 0.00286. Status: CERTIFIED.
 
-3. **Joyce application** (Sections 7-8): Since ||T|| < ε₀ with 35× margin, Joyce's theorem guarantees ∃ φ_exact torsion-free. Status: PROVEN.
+3. **Joyce application** (Sections 7-8): Since ||T|| < ε₀ with 35× margin, Joyce's theorem implies ∃ φ_exact torsion-free. Status: PROVEN.
 
 4. **Formal verification** (Section 7): Lean 4 kernel verifies all numerical bounds and theorem application. Status: PROVEN.
 
@@ -542,7 +542,7 @@ The (2, 21, 54) representation content under G₂ matches Standard Model fermion
 
 1. **Numerical evidence**: A PINN-derived G₂ structure with det(g) = 65/32 and small torsion exists.
 2. **Formal certification**: Lean verifies that Joyce's theorem applies to this solution.
-3. **Existence guarantee**: A torsion-free G₂ structure exists near the numerical solution.
+3. **Existence implication**: By Joyce's theorem, a torsion-free G₂ structure exists near the numerical solution.
 
 ### 12.2 What This Result Does NOT Claim
 
