@@ -8,7 +8,7 @@ We present a geometric framework deriving Standard Model parameters from topolog
 
 The framework contains no continuous adjustable parameters. All structural constants (metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891) derive from fixed algebraic and topological invariants. The metric determinant det(g) = 65/32 has exact topological origin, cross-checked by physics-informed neural network to 0.0001% precision with Lean 4 formal verification supporting G₂ existence via Joyce's perturbation theorem (20× safety margin). Within this framework, discrete topological structures admit no continuous variation.
 
-Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.198% from experimental values. Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). **Twenty-five relations are formally verified in Lean 4 and Coq** with Mathlib, using only standard axioms (propext, Quot.sound) and zero domain-specific axioms. The original 13 relations: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√(17/32), H*=99, p₂=2, N_gen=3, and E₈×E₈=496, plus 12 topological extensions including γ_GIFT=511/884, θ₂₃=85/99, α⁻¹ base=137, and Ω_DE=98/99.
+Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.198% from experimental values. Sector-specific deviations include: gauge (0.06%), leptons (0.04%), CKM matrix (0.08%), neutrinos (0.13%), quarks (0.18%), cosmology (0.11%). **Thirty-nine relations are formally verified in Lean 4 and Coq** with Mathlib, using only standard axioms (propext, Quot.sound) and zero domain-specific axioms. The original 13 relations: sin²θ_W=3/13, τ=3472/891, det(g)=65/32, κ_T=1/61, δ_CP=197°, m_τ/m_e=3477, m_s/m_d=20, Q_Koide=2/3, λ_H=√(17/32), H*=99, p₂=2, N_gen=3, and E₈×E₈=496, plus 12 topological extensions including γ_GIFT=511/884, θ₂₃=85/99, α⁻¹ base=137, and Ω_DE=98/99.
 
 Monte Carlo validation over 10⁴ parameter configurations finds no competitive alternative minima in the tested parameter space (χ²_optimal=45.2 vs. χ²_random=15,420±3,140 for 39 observables). Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20.000±0.5 (2030).
 
@@ -735,7 +735,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: Q = dim(G₂)/b₂(K₇) = 14/21 = 2/3
 
-**Status**: **PROVEN (Lean)**: `koide_certified` in `GIFT.Relations.LeptonSector`
+**Status**: **PROVEN (Lean)**: `koide_certified` in `GIFT.Relations`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -779,7 +779,7 @@ $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = 
 
 **Formula**: m_s/m_d = p₂² × Weyl_factor = 4 × 5 = 20
 
-**Status**: **PROVEN (Lean)**: `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
+**Status**: **PROVEN (Lean)**: `m_s_m_d_certified` in `GIFT.Relations`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
@@ -840,7 +840,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}
 
 **Numerical value**: λ_H = √17/32 = 0.128906...
 
-**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
+**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations`
 
 | Observable | Experimental | GIFT | Deviation |
 |------------|--------------|------|-----------|
