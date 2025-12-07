@@ -211,6 +211,37 @@ The framework remains consistent with all current experimental data.
 
 ---
 
+## Important Limitations
+
+Readers should understand these caveats before evaluating the framework:
+
+### Model Selection vs Parameter Fitting
+
+"Zero continuous adjustable parameters" means no fitting to data. However, the framework makes **discrete structural choices** (E₈×E₈ gauge group, K₇ manifold with specific Betti numbers, TCS building blocks). These are mathematically motivated but still constitute model selection—the framework does not explain why nature chose this particular topology.
+
+### Statistical Validation Scope
+
+The reported p-values (~10⁻²⁶) test against random rational coincidence—a necessary but weak null hypothesis. The validation **does not**:
+- Compare against alternative physical models
+- Account for look-elsewhere effects
+- Quantify the probability of finding *some* topology matching observations
+
+### Number-Theoretic Patterns
+
+Patterns involving Fibonacci, Lucas, Mersenne numbers (S6 Part III) are **exploratory observations**. In integer-rich mathematical structures, some apparent patterns are expected by chance. No blind statistical analysis has quantified the false-positive rate.
+
+### Epistemic Status Summary
+
+| Layer | Status | Confidence |
+|-------|--------|------------|
+| Core predictions (δ_CP, sin²θ_W, etc.) | Falsifiable | High |
+| Structural relations (quark ratios, CKM) | Derived | Medium |
+| Number-theoretic patterns | Exploratory | Low |
+
+For detailed discussion, see [GIFTPY_FOR_GEOMETERS](../docs/GIFTPY_FOR_GEOMETERS.md) and [S6](markdown/S6_theoretical_extensions_v23.md).
+
+---
+
 ## Key Concepts
 
 1. **E₈×E₈**: The gauge group (dimension 496) providing algebraic structure

@@ -356,7 +356,7 @@ where:
 
 ### 4.1 Koide Parameter Q
 
-**Status**: **PROVEN (Lean)**: `koide_certified` in `GIFT.Relations.LeptonSector`
+**Status**: **PROVEN (Lean)**: `koide_certified` in `GIFT.Relations`
 
 **Formula**:
 ```
@@ -436,7 +436,7 @@ m_τ/m_e = dim(K₇) + 10·dim(E₈) + 10·H*
 
 ### 5.1 Strange-Down Ratio m_s/m_d
 
-**Status**: **PROVEN (Lean)**: `m_s_m_d_certified` in `GIFT.Relations.QuarkSector`
+**Status**: **PROVEN (Lean)**: `m_s_m_d_certified` in `GIFT.Relations`
 
 **Formula**:
 ```
@@ -603,7 +603,7 @@ M_Z = M_W / cos(θ_W) = 91.20 GeV
 
 ### 7.4 Higgs Self-Coupling λ_H
 
-**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations.HiggsSector`
+**Status**: **PROVEN (Lean)**: `lambda_H_num_certified` in `GIFT.Relations`
 
 **Formula**:
 ```

@@ -29,7 +29,7 @@
 
 ### 1.1 Purpose and Scope
 
-This supplement establishes the mathematical foundations for GIFT framework predictions. Each theorem:
+This supplement presents the mathematical foundations for GIFT framework predictions. Each theorem:
 - Begins with explicit topological definitions
 - Proceeds through rigorous derivation
 - Concludes with numerical verification against experiment
@@ -43,7 +43,7 @@ A result achieves PROVEN status when:
 2. No empirical input is required (only topological integers)
 3. The derivation contains no gaps or approximations
 4. The result is exact (integer or exact rational)
-5. Numerical verification confirms experimental agreement
+5. Numerical verification supports experimental agreement
 
 ---
 
@@ -243,9 +243,9 @@ $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$
 **Lean 4 certification** (see [gift-framework/core](https://github.com/gift-framework/core) or `legacy/G2_ML/G2_Lean/G2Certificate.lean`):
 
 The PINN-derived metric is verified by Lean 4 theorem prover:
-- Interval arithmetic confirms det(g) = 65/32 within 0.0001%
+- Interval arithmetic supports det(g) = 65/32 within 0.0001%
 - Torsion ||T|| = 0.00140 satisfies Joyce bound with 20× margin
-- Joyce's perturbation theorem (axiomatized) guarantees torsion-free G₂ existence
+- Joyce's perturbation theorem (axiomatized) implies torsion-free G₂ existence
 
 **The 32 structure**: Both det(g) = 65/32 and λ_H = √17/32 share denominator 32 = 2⁵, suggesting deep binary structure in the Higgs-metric sector.
 
@@ -932,10 +932,10 @@ Observable correlations arise from shared topological parameters:
 
 ### 27.3 Monte Carlo Validation
 
-Monte Carlo analysis (10⁶ samples) confirms:
+Monte Carlo analysis (10⁶ samples) indicates:
 - No observable deviates > 3σ from experiment
 - Distribution is compatible with statistical fluctuations
-- No systematic bias detected
+- No systematic bias detected in the tested parameter space
 
 ---
 

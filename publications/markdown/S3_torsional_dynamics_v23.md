@@ -147,7 +147,7 @@ The DESI collaboration's second data release provides cosmological constraints o
 
 **GIFT value**: κ_T² = (1/61)² = 1/3721 ≈ 2.69 × 10⁻⁴
 
-**Result**: κ_T² is well within DESI DR2 bounds, confirming experimental compatibility.
+**Result**: κ_T² is well within DESI DR2 bounds, consistent with experimental compatibility.
 
 ---
 
