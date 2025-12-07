@@ -17,10 +17,33 @@ The GIFT framework has undergone comprehensive statistical validation to assess:
 
 **Key findings**:
 - Mean deviation: **0.198%** across 39 observables
-- **39 PROVEN** exact relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector)
+- **39 formally verified** exact relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector)
 - **0 PHENOMENOLOGICAL** predictions
-- No alternative minima found in parameter space
+- No alternative minima found in tested parameter space
 - Predictions robust to parameter variations within uncertainties
+
+---
+
+## Important Methodological Caveats
+
+**Before interpreting these results, readers should understand the validation's scope and limitations:**
+
+### What This Validation Tests
+
+The statistical tests address a **specific null hypothesis**: that random rational/integer expressions coincidentally match experimental values to observed precision. The tests establish that GIFT predictions are *unlikely to be random coincidence*.
+
+### What This Validation Does NOT Test
+
+| Limitation | Implication |
+|------------|-------------|
+| No comparison with alternative physics | Does not establish GIFT is more likely than other GUTs, string vacua, or anthropic models |
+| No look-elsewhere effect | Does not account for the space of possible topological frameworks |
+| No model selection penalty | The probability of finding *some* topology matching data is not quantified |
+| Simplistic null | "Random matching" is far from realistic competing theories |
+
+### Epistemic Status
+
+The validation demonstrates **internal consistency** and **non-random structure** but does not constitute proof of physical correctness. High precision (0.198%) is necessary but not sufficient evidence. A rigorous Bayesian model comparison against competing frameworks has not been performed.
 
 ---
 
@@ -247,14 +270,19 @@ For sin^2(theta_W) = 3/13:
 
 ### 6.2 Combined Probability
 
-What is the probability of 13 exact relations holding simultaneously?
+What is the probability of 13 exact relations holding simultaneously under the random-coincidence null?
 
 For each exact relation, assume 1% prior probability of random agreement:
 ```
-P(13 exact relations) ~ (0.01)^13 = 10^-26
+P(13 exact relations | random null) ~ (0.01)^13 = 10^-26
 ```
 
-This effectively rules out coincidental agreement.
+**Interpretation**: Under the tested null hypothesis (random rational coincidence), simultaneous agreement is extremely unlikely. However, this calculation:
+- Does not account for look-elsewhere effects
+- Does not compare against alternative physical models
+- Assumes independence between relations
+
+The result suggests **non-random structure** but does not directly address whether GIFT correctly describes nature.
 
 ### 6.3 Information Content
 
@@ -316,17 +344,19 @@ The framework would be falsified by:
 
 ### 9.1 Validation Summary
 
-The GIFT framework demonstrates:
+The GIFT framework demonstrates internal consistency and non-random structure:
 
-1. **High Precision**: Mean deviation 0.198% across 39 observables
+1. **Precision**: Mean deviation 0.198% across 39 observables (against a random-coincidence null)
 
-2. **Strong Foundations**: 39 PROVEN relations (dual Lean + Coq verified), 0 PHENOMENOLOGICAL
+2. **Formal Verification**: 39 relations verified in Lean + Coq, 0 PHENOMENOLOGICAL
 
-3. **Testability**: Exact predictions (3/13, 1/61, 3472/891, 65/32, 511/884, 85/99, 98/99, etc.) provide sharp tests
+3. **Testability**: Exact predictions (3/13, 1/61, 3472/891, etc.) provide sharp falsification criteria
 
-4. **Compatibility**: DESI DR2 torsion constraints satisfied
+4. **Compatibility**: Consistent with DESI DR2 torsion constraints
 
-5. **Uniqueness**: Exact rationals eliminate parameter degeneracy
+5. **Structure**: Exact rationals suggest non-random pattern
+
+**Important caveat**: These results establish that GIFT is *internally consistent* and *unlikely to be random coincidence*, but do not establish correctness over alternative theories. See "Important Methodological Caveats" above.
 
 ### 9.2 Summary Statistics
 

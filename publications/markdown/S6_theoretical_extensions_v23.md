@@ -182,6 +182,17 @@ for some characteristic area A.
 
 # Part III: Number-Theoretic Patterns
 
+> **Epistemic Status: HIGHLY SPECULATIVE**
+>
+> The patterns documented in this section have **exploratory status only**. Important caveats:
+>
+> 1. **Selection bias risk**: In any mathematical structure involving small integers, some pattern-matching with well-known sequences (Fibonacci, Mersenne, etc.) is expected by chance
+> 2. **No blind analysis**: These patterns were identified after the framework was constructed, not predicted a priori
+> 3. **False-positive rate unknown**: No statistical analysis has estimated how many such patterns would be expected randomly
+> 4. **Not predictive**: These patterns do not generate new predictions beyond those in Parts I-II
+>
+> **These observations are included for completeness and as potential directions for future investigation, not as evidence for the framework.** Readers should apply strong skepticism.
+
 ## 7. Fibonacci-Lucas Encoding
 
 ### 7.1 Framework Constants and Sequences

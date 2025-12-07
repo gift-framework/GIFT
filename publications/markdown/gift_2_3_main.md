@@ -154,6 +154,50 @@ These patterns, while intriguing, should be regarded as potential clues for futu
 
 Mathematical foundations appear in Supplement S1, rigorous proofs and complete derivations in Supplement S4.
 
+### 1.7 Key Limitations and Epistemic Status
+
+Before proceeding, readers should understand the framework's limitations:
+
+#### Model Selection vs Parameter Elimination
+
+The framework eliminates **continuous** parameter fitting but makes **discrete structural choices**:
+
+| Choice | Alternatives | Justification |
+|--------|-------------|---------------|
+| E₈×E₈ gauge group | E₆, SO(32), etc. | Anomaly-free, contains SM |
+| K₇ manifold (b₂=21, b₃=77) | Other G₂ manifolds | TCS construction, generation count |
+| TCS building blocks | Other ACyl 3-folds | Produces required Betti numbers |
+
+These choices are mathematically motivated but constitute model selection. The framework does not explain *why* nature chose this particular topology—only what follows *if* it did.
+
+#### Statistical Validation: Scope and Limits
+
+The reported statistical significance (p ~ 10⁻²⁶) must be interpreted carefully:
+
+**What is tested**: Random rational numbers coincidentally matching 13+ experimental values
+**What is NOT tested**: Comparison against alternative physical frameworks (other GUTs, string vacua, anthropic models)
+
+The validation establishes that GIFT predictions are *unlikely to be random coincidence* but does not establish that GIFT is *more likely than competing theories*. A rigorous Bayesian comparison against alternative models has not been performed.
+
+#### Number-Theoretic Patterns: Exploratory Status
+
+Section 8.9 and Supplement S6 document various patterns (Fibonacci, Mersenne, 221 = 13×17). These observations have **exploratory status**:
+
+- In any integer-rich mathematical structure, some patterns are expected by chance
+- No blind analysis has quantified the false-positive rate
+- These patterns are reported as observations, not predictions
+
+The absence of systematic pattern-selection analysis means these correlations should be regarded as suggestive, not probative.
+
+#### K₇ Uniqueness: Open Question
+
+The specific K₇ manifold is unusual among known G₂ constructions. It remains unproven whether:
+- K₇ is the unique G₂ manifold producing SM phenomenology
+- Other manifolds with similar Betti numbers would yield different physics
+- The K₇ properties are explanatory or coincidental
+
+See Supplement S2 for detailed discussion of K₇'s special status.
+
 ---
 
 # Part I: Geometric Architecture
@@ -830,6 +874,16 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{14 + 3}}
 | n_s | 0.9649 ± 0.0042 | 0.9649 | 0.007% |
 
 ### 8.9 Structural Relations
+
+> **Epistemic Status: EXPLORATORY**
+>
+> This section documents number-theoretic patterns observed in framework constants. These patterns have **exploratory status only**:
+> - No blind analysis has been performed
+> - In integer-rich mathematical structures, some apparent patterns are expected by chance
+> - The false-positive rate for pattern-finding has not been quantified
+> - These observations are reported for completeness, not as evidence
+>
+> Readers should apply appropriate skepticism. The patterns may reflect deep structure, selection bias, or coincidence.
 
 This section documents number-theoretic patterns emerging from the framework's topological structure.
 
