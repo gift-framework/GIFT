@@ -24,40 +24,6 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 ---
 
-## Key Caveats & Limitations
-
-Before exploring the framework, readers should be aware of important limitations:
-
-### What "Zero-Parameter" Means (and Doesn't Mean)
-
-The framework contains **no continuous adjustable parameters** fitted to data. However, it does make **discrete structural choices**:
-- Selecting E₈×E₈ as gauge group (among possible exceptional groups)
-- Selecting the specific K₇ manifold (among G₂ manifolds with different Betti numbers)
-- Selecting the TCS building blocks (quintic + CI(2,2,2))
-
-These choices are not arbitrary—each has mathematical motivation—but they constitute model selection. The framework predicts 39 observables *given* these choices; it does not explain *why* nature chose this particular geometry.
-
-### Statistical Claims: Context Required
-
-The statistical validation (p-values ~10⁻²⁶) tests against a **simplistic null hypothesis**: random rational numbers matching observations. This is a necessary but weak test. The validation does **not**:
-- Compare against competing physical models (other GUTs, string vacua)
-- Account for look-elsewhere effects across possible topological frameworks
-- Quantify model selection probability
-
-High precision (0.198% mean deviation) is necessary but not sufficient evidence for the framework's correctness.
-
-### Number-Theoretic Patterns: Exploratory
-
-The framework exhibits many number-theoretic patterns (Fibonacci-Lucas, Mersenne primes, 221 = 13×17). These are presented as **exploratory observations**, not established results. In an integer-rich mathematical environment, some pattern-matching is expected by chance. No blind analysis quantifying the expected false-positive rate has been performed.
-
-### K₇ Manifold: A Specific Choice
-
-The K₇ construction (TCS with b₂=21, b₃=77) is unusual among G₂ manifolds. It is not proven that this is the unique manifold producing Standard Model physics. Whether K₇'s special properties explain physics or are coincidental remains an open question.
-
-For detailed discussion: [S2](publications/markdown/S2_K7_manifold_construction_v23.md), [Statistical Report](publications/references/GIFT_v23_Statistical_Validation.md), [S6](publications/markdown/S6_theoretical_extensions_v23.md)
-
----
-
 ## Navigation
 
 ### "Show me the numbers"
@@ -161,6 +127,32 @@ Full list: [Observable Reference](publications/references/GIFT_v23_Observable_Re
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
 Details: [S5: Experimental Validation](publications/markdown/S5_experimental_validation_v23.md)
+
+---
+
+## Limitations
+
+### What "Zero-Parameter" Means (and Doesn't Mean)
+
+The framework contains **no continuous adjustable parameters** fitted to data. However, it does make **discrete structural choices**:
+- Selecting E₈×E₈ as gauge group (among possible exceptional groups)
+- Selecting the specific K₇ manifold (among G₂ manifolds with different Betti numbers)
+- Selecting the TCS building blocks (quintic + CI(2,2,2))
+
+These choices are not arbitrary, each has mathematical motivation, but they constitute model selection. The framework predicts 39 observables *given* these choices; it does not explain *why* nature chose this particular geometry.
+
+### Statistical Claims: Context Required
+
+The statistical validation (p-values ~10⁻²⁶) tests against a **simplistic null hypothesis**: random rational numbers matching observations. This is a necessary but weak test. The validation does **not**:
+- Compare against competing physical models (other GUTs, string vacua)
+- Account for look-elsewhere effects across possible topological frameworks
+- Quantify model selection probability
+
+High precision (0.198% mean deviation) is necessary but not sufficient evidence for the framework's correctness.
+
+### K₇ Manifold: A Specific Choice
+
+The K₇ construction (TCS with b₂=21, b₃=77) is unusual among G₂ manifolds. It is not proven that this is the unique manifold producing Standard Model physics. Whether K₇'s special properties explain physics or are coincidental remains an open question.
 
 ---
 
