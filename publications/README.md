@@ -15,7 +15,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 **Output (derived without adjustment):**
 - 39 physical observables
-- 39 exact rational/integer relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector)
+- 54 exact rational/integer relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended)
 - Mean precision 0.198% across 6 orders of magnitude
 
 ---
@@ -38,7 +38,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 ## Formal Verification (Lean 4 + Coq)
 
-**39 exact relations are independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector).
+**54 exact relations are independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended).
 
 > **Note:** Formal proofs are maintained in a dedicated repository: [gift-framework/core](https://github.com/gift-framework/core)
 
@@ -50,8 +50,8 @@ core/Lean/
 │   ├── Algebra.lean       # E₈, G₂ structures
 │   ├── Topology.lean      # Betti numbers
 │   ├── Relations.lean     # Original 13 relations
-│   ├── Relations/         # Extension modules (26 new: gauge, neutrino, lepton, cosmology, YukawaDuality, IrrationalSector)
-│   └── Certificate.lean   # All 39 theorems
+│   ├── Relations/         # Extension modules (41 new: gauge, neutrino, lepton, cosmology, YukawaDuality, IrrationalSector, ExceptionalGroups, BaseDecomposition)
+│   └── Certificate.lean   # All 54 theorems
 ```
 
 **Status:** Lean 4.14.0 + Mathlib 4.14.0 | **0 sorry** | **0 domain axioms**
@@ -64,15 +64,15 @@ See [gift-framework/core/Lean](https://github.com/gift-framework/core/tree/main/
 core/COQ/
 ├── Algebra/               # E₈, G₂ structures
 ├── Topology/              # Betti numbers
-├── Relations/             # All 39 relations
-└── Certificate/           # All 39 theorems
+├── Relations/             # All 54 relations
+└── Certificate/           # All 54 theorems
 ```
 
 **Status:** Coq 8.18 | **0 Admitted** | **0 explicit axioms**
 
 See [gift-framework/core/COQ](https://github.com/gift-framework/core/tree/main/COQ) for build instructions.
 
-**Main theorem**: `all_39_relations_certified` proves all 39 relations from `is_zero_parameter(G)` in both systems.
+**Main theorem**: `all_54_relations_certified` proves all 54 relations from `is_zero_parameter(G)` in both systems.
 
 ---
 
@@ -196,7 +196,7 @@ Given these structural choices, all 39 observables follow uniquely.
 | Mean Deviation | 0.198% |
 | Median Deviation | 0.073% |
 | Observables < 0.5% | 37/39 (95%) |
-| **PROVEN (Lean + Coq)** | 39 |
+| **PROVEN (Lean + Coq)** | 54 |
 
 ### Falsification Protocol
 
@@ -252,7 +252,7 @@ For detailed discussion, see [GIFTPY_FOR_GEOMETERS](../docs/GIFTPY_FOR_GEOMETERS
 
 ---
 
-**Version**: 2.3.3
-**Last Updated**: 2025-12-05
+**Version**: 2.3.4
+**Last Updated**: 2025-12-08
 **Repository**: https://github.com/gift-framework/GIFT
 **Formal Proofs**: https://github.com/gift-framework/core

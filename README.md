@@ -15,8 +15,8 @@ A geometric framework deriving Standard Model parameters from topological invari
 |--------|-------|
 | Precision | 0.198% mean deviation across 39 observables |
 | Adjustable parameters | Zero (all structurally determined) |
-| Formally verified relations | 39 proven in Lean 4 + Coq (dual verification, zero axioms) |
-| Key exact results | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197° |
+| Formally verified relations | 54 proven in Lean 4 + Coq (dual verification, zero axioms) |
+| Key exact results | sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, τ = 3472/891, δ_CP = 197°, |W(E₈)| = 696729600 |
 
 The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)**
 
@@ -34,7 +34,7 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 
 ### "Show me the proofs"
 
-→ [gift-framework/core](https://github.com/gift-framework/core) Lean 4 + Coq formal verification (39 relations, zero axioms)
+→ [gift-framework/core](https://github.com/gift-framework/core) Lean 4 + Coq formal verification (54 relations, zero axioms)
 
 → [S4: Complete Derivations](publications/markdown/S4_complete_derivations_v23.md) Mathematical proofs
 
@@ -80,7 +80,7 @@ Whether this mathematical structure reflects fundamental reality or constitutes 
 | [S1](publications/markdown/S1_mathematical_architecture_v23.md) | E₈ exceptional Lie algebra, root systems, branching rules |
 | [S2](publications/markdown/S2_K7_manifold_construction_v23.md) | K₇ twisted connected sum, Betti numbers b₂=21, b₃=77 |
 | [S3](publications/markdown/S3_torsional_dynamics_v23.md) | Torsion tensor, geodesic flow, κ_T = 1/61 |
-| [S4](publications/markdown/S4_complete_derivations_v23.md) | Complete mathematical proofs for all 39 observables |
+| [S4](publications/markdown/S4_complete_derivations_v23.md) | Complete mathematical proofs for all 39 observables, 54 certified relations |
 | [S5](publications/markdown/S5_experimental_validation_v23.md) | Comparison with PDG 2024, falsification criteria |
 | [S6](publications/markdown/S6_theoretical_extensions_v23.md) | Speculative extensions (M-theory, AdS/CFT) |
 | [S7](publications/markdown/S7_dimensional_observables_v23.md) | Scale bridge from dimensionless ratios to GeV |
@@ -147,7 +147,7 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 - Selecting the specific K₇ manifold (among G₂ manifolds with different Betti numbers)
 - Selecting the TCS building blocks (quintic + CI(2,2,2))
 
-These choices are not arbitrary, each has mathematical motivation, but they constitute model selection. The framework predicts 39 observables *given* these choices; it does not explain *why* nature chose this particular geometry.
+These choices are not arbitrary, each has mathematical motivation, but they constitute model selection. The framework predicts 39 observables *given* these choices (with 54 certified relations); it does not explain *why* nature chose this particular geometry.
 
 ### Statistical Claims: Context Required
 

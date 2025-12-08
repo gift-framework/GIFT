@@ -5,6 +5,59 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.4] - 2025-12-08
+
+### Exceptional Groups & Base Decomposition - 54 Certified Relations
+
+This release integrates the **15 new relations** from [gift-framework/core v1.5.0](https://github.com/gift-framework/core), bringing the total to **54 certified relations** (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended decomposition).
+
+#### Added
+
+**5 Exceptional Groups Relations** (v1.5.0 of giftpy)
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| α_s² | 1/72 | Strong coupling squared exact rational | **PROVEN (Lean + Coq)** |
+| dim(F₄) | 52 | p₂² × sum(α²_B) | **PROVEN (Lean + Coq)** |
+| δ_penta | 25 | dim(F₄) - dim(J₃(𝕆)) = Weyl² | **PROVEN (Lean + Coq)** |
+| J₃(𝕆)₀ | 26 | dim(E₆) - dim(F₄) = dim(J₃(𝕆)) - 1 | **PROVEN (Lean + Coq)** |
+| \|W(E₈)\| | 696729600 | E₈ Weyl group topological factorization | **PROVEN (Lean + Coq)** |
+
+**6 Base Decomposition Relations**
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| κ_T⁻¹ | 61 | dim(F₄) + N_gen² | **PROVEN (Lean + Coq)** |
+| b₂ | 21 | ALPHA_SUM_B + rank(E₈) | **PROVEN (Lean + Coq)** |
+| b₃ | 77 | ALPHA_SUM_B × Weyl + 12 | **PROVEN (Lean + Coq)** |
+| H* | 99 | ALPHA_SUM_B × dim(K₇) + rank(E₈) | **PROVEN (Lean + Coq)** |
+| quotient_sum | 13 | 1 + 5 + 7 (gauge-holonomy-manifold) | **PROVEN (Lean + Coq)** |
+| Ω_DE_num | 98 | dim(K₇) × dim(G₂) | **PROVEN (Lean + Coq)** |
+
+**4 Extended Decomposition Relations**
+
+| Relation | Value | Formula | Status |
+|----------|-------|---------|--------|
+| τ_num base13 | [1,7,7,1] | Hierarchy parameter palindrome | **PROVEN (Lean + Coq)** |
+| n_observables | 39 | N_gen × ALPHA_SUM_B | **PROVEN (Lean + Coq)** |
+| E₆_dual | 78 | 2 × n_observables (visible + hidden) | **PROVEN (Lean + Coq)** |
+| H₀_topological | 70 | dim(K₇) × 10 | **PROVEN (Lean + Coq)** |
+
+**Key insight**: The Structure B sum (2 + 5 + 6 = 13 = ALPHA_SUM_B) provides a consistent base for decomposing all primary GIFT topological constants (b₂, b₃, H*). The E₈ Weyl group order |W(E₈)| = 696729600 = 2¹⁴ × 3⁵ × 5² × 7 factorizes into pure topological terms.
+
+**Tau Palindrome**: τ = 3472/891 has τ_num = [1,7,7,1]₁₃ in base 13, with central digits encoding dim(K₇) = 7.
+
+**New proof files**:
+- `ExceptionalGroups.lean` / `ExceptionalGroups.v`: F₄, E₆, E₈ connections
+- `BaseDecomposition.lean` / `BaseDecomposition.v`: All decomposition relations (45-54)
+
+#### Changed
+- Updated all documentation to reference 54 proven relations
+- README.md: Updated formally verified count to 54
+- giftpy version reference updated to v1.5.0
+
+---
+
 ## [2.3.3] - 2025-12-05
 
 ### Irrational Sector - 39 Certified Relations

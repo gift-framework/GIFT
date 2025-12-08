@@ -483,7 +483,7 @@ All quantities are topological invariants, not adjustable parameters.
 
 ### 23.1 Key Results
 
-- **39 PROVEN** relations (exact rational/integer values, 13 original + 12 topological + 10 Yukawa + 4 irrational)
+- **54 PROVEN** relations (exact rational/integer values, 13 original + 12 topological + 10 Yukawa + 4 irrational + 5 exceptional + 6 base decomp + 4 extended)
 - **Zero-parameter paradigm**: all quantities from fixed topology
 - **Mean deviation**: 0.198%
 - **χ²/dof**: 0.40 (excellent fit)
