@@ -835,7 +835,7 @@ $$221 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 
 | Status | Count | Description |
 |--------|-------|-------------|
-| **PROVEN (Lean + Coq)** | 39 | Exact rational/integer from topology (dual-verified) |
+| **PROVEN (Lean + Coq)** | 54 | Exact rational/integer from topology (dual-verified) |
 | **TOPOLOGICAL** | 0 | Promoted to PROVEN |
 | DERIVED | 0 | Promoted to PROVEN |
 | THEORETICAL | 0 | All observables now PROVEN |
