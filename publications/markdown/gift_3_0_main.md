@@ -9,7 +9,7 @@ We present a geometric framework deriving Standard Model parameters from topolog
 
 The framework contains no continuous adjustable parameters. All structural constants-metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891-derive from fixed algebraic and topological invariants. **165 relations are formally verified in Lean 4 and Coq**, including the complete Fibonacci embedding (F₃–F₁₂ map to framework constants), a Prime Atlas achieving 100% coverage of primes below 200, and connections to the Monster group through Monstrous Moonshine.
 
-Predictions for 39 observables spanning six orders of magnitude yield mean deviation 0.198% from experimental values. The mathematical structures underlying these predictions-Fibonacci sequences, Lucas numbers, exceptional Lie algebras, and the Monster group-possess independent existence in pure mathematics, lending physical grounding beyond mere numerical coincidence.
+Predictions for 39 observables spanning six orders of magnitude yield mean deviation 0.197% from experimental values. The mathematical structures underlying these predictions-Fibonacci sequences, Lucas numbers, exceptional Lie algebras, and the Monster group-possess independent existence in pure mathematics, lending physical grounding beyond mere numerical coincidence.
 
 Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20±0.5 (2030). Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
@@ -88,7 +88,7 @@ These are not arbitrary patterns discovered post-hoc. The Fibonacci sequence, Mo
 | **Derived Output** | **Count** | **Status** |
 |--------------------|-----------|------------|
 | Exact topological relations | 165+ | **PROVEN (Lean + Coq)** |
-| Observable predictions | 39 | Mean deviation 0.198% |
+| Observable predictions | 39 | Mean deviation 0.197% |
 
 ### 1.5 Result Hierarchy
 
@@ -435,7 +435,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{Weyl}} = \frac{\sqrt{17}}{32}
 | Metric | Value |
 |--------|-------|
 | Total observables | 39 |
-| Mean deviation | 0.198% |
+| Mean deviation | 0.197% |
 | Exact matches (<0.01%) | 5 |
 | Excellent (<0.1%) | 18 |
 | Range | 6 orders of magnitude |
@@ -684,7 +684,7 @@ The exact rationality of τ = 3472/891 suggests physical law may be fundamentall
 This work presents geometric determination of Standard Model parameters through G₂-holonomy manifolds:
 
 - **165+ relations formally verified** in Lean 4 + Coq
-- **39 observables** with mean deviation 0.198%
+- **39 observables** with mean deviation 0.197%
 - **Zero continuous parameters**
 - **Fibonacci embedding**: F₃–F₁₂ = framework constants
 - **Prime Atlas**: 100% coverage below 200

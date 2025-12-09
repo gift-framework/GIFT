@@ -75,4 +75,4 @@ GIFT/
 
 **Current**: v3.0.0 (2025-12-09)
 **Relations**: 165+ certified
-**Observables**: 39 with 0.198% mean deviation
+**Observables**: 39 with 0.197% mean deviation

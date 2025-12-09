@@ -76,7 +76,7 @@ The empirical Koide formula (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² =
 
 ### 3.3 What is Claimed
 
-The framework produces 39 observables spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, CKM matrix elements, electroweak scale parameters, and cosmological observables. The mean deviation from experimental values is 0.198%.
+The framework produces 39 observables spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, CKM matrix elements, electroweak scale parameters, and cosmological observables. The mean deviation from experimental values is 0.197%.
 
 All 165+ relations have been formally verified in both Lean 4 and Coq proof assistants, using only standard axioms (propext, Quot.sound in Lean; standard Coq axioms) with zero domain-specific axioms.
 
@@ -115,7 +115,7 @@ The framework makes specific predictions testable by near-term experiments:
 
 The GIFT framework explores whether Standard Model parameters might be topological invariants rather than free constants. The specific proposal involves E₈×E₈ gauge structure, G₂ holonomy on a 7-manifold K₇ with Betti numbers b₂ = 21 and b₃ = 77, and controlled torsion providing dynamics.
 
-The resulting 39 predictions match experiment to 0.198% mean precision. Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
+The resulting 39 predictions match experiment to 0.197% mean precision. Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
 
 The framework's value, independent of its physical correctness, lies in demonstrating that geometric principles can substantially constrain particle physics parameters. It provides a concrete example of how topology might replace tuning.
 

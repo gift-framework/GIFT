@@ -199,7 +199,7 @@ Check repository for updates on DOI availability.
 
 ## Version History
 
-- **v3.0.4** (2025-12-08): Current version with 0.198% precision, zero parameters, 39 observables, 165+ proven relations (giftpy v1.5.0)
+- **v3.0.4** (2025-12-08): Current version with 0.197% precision, zero parameters, 39 observables, 165+ proven relations (giftpy v1.5.0)
 - **v3.0.3** (2025-12-05): 165+ proven relations (+ 4 irrational sector), giftpy v1.4.0
 - **v3.0.1** (2025-12-04): 25 proven relations (12 topological extension), giftpy v1.1.0
 - **v3.0.0** (2025-12-09): Dual Lean 4 + Coq verification, 13 original proven relations

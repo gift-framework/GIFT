@@ -16,7 +16,7 @@ The GIFT framework has undergone comprehensive statistical validation to assess:
 4. Status promotion justifications
 
 **Key findings**:
-- Mean deviation: **0.198%** across 39 observables
+- Mean deviation: **0.197%** across 39 observables
 - **54 formally verified** exact relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended)
 - **0 PHENOMENOLOGICAL** predictions
 - No alternative minima found in tested parameter space
@@ -43,7 +43,7 @@ The statistical tests address a **specific null hypothesis**: that random ration
 
 ### Epistemic Status
 
-The validation demonstrates **internal consistency** and **non-random structure** but does not constitute proof of physical correctness. High precision (0.198%) is necessary but not sufficient evidence. A rigorous Bayesian model comparison against competing frameworks has not been performed.
+The validation demonstrates **internal consistency** and **non-random structure** but does not constitute proof of physical correctness. High precision (0.197%) is necessary but not sufficient evidence. A rigorous Bayesian model comparison against competing frameworks has not been performed.
 
 ---
 
@@ -98,7 +98,7 @@ where the sum runs over all observables with experimental uncertainties.
 | Metric | Value |
 |--------|-------|
 | Total observables | 39 |
-| Mean relative deviation | 0.198% |
+| Mean relative deviation | 0.197% |
 | Median relative deviation | 0.071% |
 | Standard deviation of deviations | 0.168% |
 | Maximum deviation | 0.787% |
@@ -346,7 +346,7 @@ The framework would be falsified by:
 
 The GIFT framework demonstrates internal consistency and non-random structure:
 
-1. **Precision**: Mean deviation 0.198% across 39 observables (against a random-coincidence null)
+1. **Precision**: Mean deviation 0.197% across 39 observables (against a random-coincidence null)
 
 2. **Formal Verification**: 54 relations verified in Lean + Coq, 0 PHENOMENOLOGICAL
 
@@ -362,7 +362,7 @@ The GIFT framework demonstrates internal consistency and non-random structure:
 
 | Aspect | Value |
 |--------|-------|
-| Mean deviation | 0.198% |
+| Mean deviation | 0.197% |
 | PROVEN relations | 39 |
 | PHENOMENOLOGICAL | 0 |
 | Exact rationals | 39 |

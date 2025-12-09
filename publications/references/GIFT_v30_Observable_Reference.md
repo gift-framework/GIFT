@@ -6,7 +6,7 @@
 **Version**: 3.0.0
 **Date**: 2025-12-09
 **Status**: Validated (Monte Carlo 10^5 samples) + **Lean 4 + Coq Formal Verification**
-**Mean Precision**: 0.198% across 39 observables
+**Mean Precision**: 0.197% across 39 observables
 **Lean+Coq-Verified Relations**: **165+** (zero domain axioms, zero sorry/Admitted)
 
 ## New in v3.0
@@ -935,7 +935,7 @@ All 54 relations verified in [gift-framework/core](https://github.com/gift-frame
 | Total observables | 39 |
 | PROVEN count | 39 |
 | Input parameters | 0 (zero-parameter paradigm) |
-| Mean deviation | 0.198% |
+| Mean deviation | 0.197% |
 | Median deviation | 0.073% |
 | Maximum deviation | 2.3%* |
 | Minimum deviation | 0.00% |

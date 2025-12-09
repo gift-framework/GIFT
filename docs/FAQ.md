@@ -32,7 +32,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.198% mean deviation across 39 observables)
+- Precision of experimental agreement (currently 0.197% mean deviation across 39 observables)
 - Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
@@ -133,7 +133,7 @@ See Supplement S1 for complete mathematical details.
 - 6 quark masses (m_u through m_t)
 - 3 lepton masses
 
-Mean deviation from experiment: 0.198%
+Mean deviation from experiment: 0.197%
 
 ### What about dimensional parameters like masses?
 
@@ -165,7 +165,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.198% across all 39 observables
+**Overall**: Mean 0.197% across all 39 observables
 
 See Supplement S5 for detailed statistical analysis.
 

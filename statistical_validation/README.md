@@ -10,7 +10,7 @@ This module implements statistical validation to assess whether the GIFT framewo
 
 ## The Problem
 
-The GIFT framework achieves remarkable precision: **0.198% mean deviation** across 39 observables in this validation. However, critics might argue this results from overfitting to experimental data or discovering post-hoc patterns.
+The GIFT framework achieves remarkable precision: **0.197% mean deviation** across 39 observables in this validation. However, critics might argue this results from overfitting to experimental data or discovering post-hoc patterns.
 
 ## The Solution
 
@@ -62,7 +62,7 @@ python statistical_validation/analyze_results.py
 
 With sufficient alternative configurations tested (>10,000), you should observe:
 
-1. **GIFT Configuration**: Mean deviation = 0.198%
+1. **GIFT Configuration**: Mean deviation = 0.197%
 2. **Alternative Configurations**: Mean deviation typically 2-10%
 3. **Statistical Significance**: >5σ separation
 4. **p-value**: < 10⁻¹⁴ (effectively ruling out coincidence)
@@ -158,7 +158,7 @@ If using this validation in publications:
 
 ```
 Advanced Statistical Validation demonstrates that the GIFT framework's
-0.198% mean deviation across 39 observables cannot be attributed to
+0.197% mean deviation across 39 observables cannot be attributed to
 overfitting or post-hoc patterns. Testing 10,000+ alternative G2
 manifold configurations shows >5σ separation, with p < 10^-14,
 effectively ruling out coincidence.
