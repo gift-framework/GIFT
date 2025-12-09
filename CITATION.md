@@ -1,6 +1,6 @@
 # Citation Guide
 
-This document provides formal citation formats for the GIFT Framework v2.3.
+This document provides formal citation formats for the GIFT Framework v3.0.
 
 ## Software Citation (Recommended)
 
@@ -8,11 +8,11 @@ This document provides formal citation formats for the GIFT Framework v2.3.
 
 ```bibtex
 @software{gift_framework_v23_2025,
-  title={GIFT Framework v2.3: Geometric Information Field Theory - Zero Parameter Paradigm},
+  title={GIFT Framework v3.0: Geometric Information Field Theory - Zero Parameter Paradigm},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.3.1},
+  version={3.0.0},
   license={MIT},
   note={39 observables, 0.128\% precision, all quantities structurally determined from E₈×E₈ topology}
 }
@@ -21,13 +21,13 @@ This document provides formal citation formats for the GIFT Framework v2.3.
 ### APA Style
 
 ```
-de La Fournière, B. (2025). GIFT Framework v2.3: Geometric Information Field Theory - Zero Parameter Paradigm (Version 2.3) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2025). GIFT Framework v3.0: Geometric Information Field Theory - Zero Parameter Paradigm (Version 2.3) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v2.3: Geometric Information Field Theory - Zero Parameter Paradigm." Version 2.3.1. GitHub, 2025. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.0: Geometric Information Field Theory - Zero Parameter Paradigm." Version 3.0.0. GitHub, 2025. https://github.com/gift-framework/GIFT.
 ```
 
 ## Theoretical Framework Citation
@@ -36,11 +36,11 @@ de La Fournière, Brieuc. "GIFT Framework v2.3: Geometric Information Field Theo
 
 ```bibtex
 @article{gift_framework_v23_theory_2025,
-  title={Geometric Information Field Theory v2.3: Topological Unification of Standard Model Parameters Through Torsional Dynamics},
+  title={Geometric Information Field Theory v3.0: Topological Unification of Standard Model Parameters Through Torsional Dynamics},
   author={{Brieuc de La Fournière}},
   year={2025},
   journal={arXiv preprint},
-  note={Mean deviation 0.128\% across 39 observables, zero continuous adjustable parameters, 54 proven exact relations},
+  note={Mean deviation 0.128\% across 39 observables, zero continuous adjustable parameters, 165+ proven exact relations},
   url={https://github.com/gift-framework/GIFT}
 }
 ```
@@ -51,12 +51,12 @@ de La Fournière, Brieuc. "GIFT Framework v2.3: Geometric Information Field Theo
 
 ```bibtex
 @techreport{gift_technical_v23_2025,
-  title={GIFT Framework v2.3 - Technical Supplements: Complete Mathematical Derivations},
+  title={GIFT Framework v3.0 - Technical Supplements: Complete Mathematical Derivations},
   author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
   type={Technical Supplement},
-  note={Seven detailed supplements (S1-S7) with 54 proven exact relations and all derivations},
+  note={Seven detailed supplements (S1-S7) with 165+ proven exact relations and all derivations},
   url={https://github.com/gift-framework/GIFT/tree/main/publications/supplements}
 }
 ```
@@ -72,8 +72,8 @@ When citing specific predictions or results, include the relevant section:
   title={Complete Neutrino Mixing Parameter Predictions from E₈×E₈ Topology},
   author={{GIFT Framework Team}},
   year={2025},
-  howpublished={GIFT Framework v2.3, Main Paper Section 8.4},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_3_main.md}
+  howpublished={GIFT Framework v3.0, Main Paper Section 8.4},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_3_0_main.md}
 }
 ```
 
@@ -84,9 +84,9 @@ When citing specific predictions or results, include the relevant section:
   title={Rigorously Proven Exact Relations in Fundamental Physics},
   author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2.3, Supplement S4},
-  note={54 proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, γ_GIFT = 511/884, θ₂₃ = 85/99, α⁻¹ base = 137, α⁻¹ complete = 267489/1952, Yukawa duality, |W(E₈)| = 696729600},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
+  howpublished={GIFT Framework v3.0, Supplement S4},
+  note={165+ proven exact relations including sin²θ_W = 3/13, κ_T = 1/61, det(g) = 65/32, γ_GIFT = 511/884, θ₂₃ = 85/99, α⁻¹ base = 137, α⁻¹ complete = 267489/1952, Yukawa duality, |W(E₈)| = 696729600},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v30.md}
 }
 ```
 
@@ -97,9 +97,9 @@ When citing specific predictions or results, include the relevant section:
   title={Exact Topological Formula for CP Violation Phase: δ_CP = 197°},
   author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2.3, Supplement S4},
+  howpublished={GIFT Framework v3.0, Supplement S4},
   note={Formula: δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°, exact},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v30.md}
 }
 ```
 
@@ -110,9 +110,9 @@ When citing specific predictions or results, include the relevant section:
   title={Topological Proof of Three Fermion Generations},
   author={{Brieuc de La Fournière}},
   year={2025},
-  howpublished={GIFT Framework v2.3, Supplement S4},
+  howpublished={GIFT Framework v3.0, Supplement S4},
   note={N_gen = 3 from Atiyah-Singer index theorem on K₇},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v30.md}
 }
 ```
 
@@ -123,9 +123,9 @@ When citing specific predictions or results, include the relevant section:
   title={Unified Cosmological Predictions: Dark Energy from Binary Information Architecture},
   author={{GIFT Framework Team}},
   year={2025},
-  howpublished={GIFT Framework v2.3, Main Paper Section 8.8},
+  howpublished={GIFT Framework v3.0, Main Paper Section 8.8},
   note={Ω_DE = ln(2)×98/99, precision 0.10\%},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_2_3_main.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/gift_3_0_main.md}
 }
 ```
 
@@ -140,7 +140,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={E₈ structure, K₇ manifold, G₂ holonomy, cohomology},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S1_mathematical_architecture_v23.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S1_mathematical_architecture_v30.md}
 }
 ```
 
@@ -152,8 +152,8 @@ When citing specific predictions or results, include the relevant section:
   author={{Brieuc de La Fournière}},
   year={2025},
   institution={GIFT Framework},
-  note={54 proven exact relations with proofs, all 39 observable derivations},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v23.md}
+  note={165+ proven exact relations with proofs, all 39 observable derivations},
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S4_complete_derivations_v30.md}
 }
 ```
 
@@ -166,7 +166,7 @@ When citing specific predictions or results, include the relevant section:
   year={2025},
   institution={GIFT Framework},
   note={Data comparison, statistical analysis, falsification protocol},
-  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S5_experimental_validation_v23.md}
+  url={https://github.com/gift-framework/GIFT/blob/main/publications/markdown/S5_experimental_validation_v30.md}
 }
 ```
 
@@ -180,17 +180,17 @@ When DOI becomes available, cite using:
 
 ```bibtex
 @software{gift_framework_v23_2025,
-  title={GIFT Framework v2.3: Geometric Information Field Theory},
+  title={GIFT Framework v3.0: Geometric Information Field Theory},
   author={{Brieuc de La Fournière}},
   year={2025},
   doi={10.5281/zenodo.XXXXXXX},  % TODO: Update with actual DOI when registered
   url={https://github.com/gift-framework/GIFT},
-  version={2.3.1}
+  version={3.0.0}
 }
 ```
 
 To register a DOI for this repository:
-1. Create a GitHub release (v2.3.1)
+1. Create a GitHub release (v3.0.1)
 2. Link repository to Zenodo via GitHub integration
 3. Generate DOI automatically through Zenodo
 4. Update this file with the assigned DOI
@@ -199,10 +199,10 @@ Check repository for updates on DOI availability.
 
 ## Version History
 
-- **v2.3.4** (2025-12-08): Current version with 0.198% precision, zero parameters, 39 observables, 54 proven relations (giftpy v1.5.0)
-- **v2.3.3** (2025-12-05): 39 proven relations (+ 4 irrational sector), giftpy v1.4.0
-- **v2.3.1** (2025-12-04): 25 proven relations (12 topological extension), giftpy v1.1.0
-- **v2.3.0** (2025-12-03): Dual Lean 4 + Coq verification, 13 original proven relations
+- **v3.0.4** (2025-12-08): Current version with 0.197% precision, zero parameters, 39 observables, 165+ proven relations (giftpy v1.5.0)
+- **v3.0.3** (2025-12-05): 165+ proven relations (+ 4 irrational sector), giftpy v1.4.0
+- **v3.0.1** (2025-12-04): 25 proven relations (12 topological extension), giftpy v1.1.0
+- **v3.0.0** (2025-12-09): Dual Lean 4 + Coq verification, 13 original proven relations
 - **v2.2.0** (2025-11-27): Zero-parameter paradigm, 39 observables
 - **v2.1.0** (2025-11-22): Legacy, see `legacy/legacy_v2.1/`
 - **v2.0.0** (2025-10-24): Legacy, see `legacy/legacy_v2.0/`
@@ -229,7 +229,7 @@ When using GIFT predictions in your research:
 
 1. **Cite framework**: Use software citation above
 2. **Cite specific results**: Use appropriate supplement citation
-3. **Specify version**: Always include version number (v2.3.3)
+3. **Specify version**: Always include version number (v3.0.3)
 4. **Note modifications**: If you modify predictions, clearly state changes
 5. **Link to repository**: Include GitHub URL for reproducibility
 
@@ -237,7 +237,7 @@ When using GIFT predictions in your research:
 
 > "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197° [2], obtained from the exact formula δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°."
 >
-> [1] Brieuc de La Fournière, "GIFT Framework v2.3: Geometric Information Field Theory," v2.3.1, 2025, https://github.com/gift-framework/GIFT
+> [1] Brieuc de La Fournière, "GIFT Framework v3.0: Geometric Information Field Theory," v3.0.1, 2025, https://github.com/gift-framework/GIFT
 >
 > [2] Brieuc de La Fournière, "GIFT Supplement S4: Complete Derivations," 2025.
 
@@ -258,7 +258,7 @@ When using computational validation results:
 
 ```bibtex
 @software{gift_validation_2025,
-  title={GIFT Framework v2.3: Statistical Validation},
+  title={GIFT Framework v3.0: Statistical Validation},
   author={{GIFT Framework Team}},
   year={2025},
   url={https://github.com/gift-framework/GIFT/tree/main/statistical_validation},
@@ -316,4 +316,4 @@ Thank you for citing GIFT in your work. Proper attribution helps build the scien
 
 **Repository**: https://github.com/gift-framework/GIFT
 
-**Version**: 2.3 (2025-12-03)
+**Version**: 2.3 (2025-12-09)

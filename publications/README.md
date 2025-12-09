@@ -16,7 +16,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 **Output (derived without adjustment):**
 - 39 physical observables
 - 54 exact rational/integer relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended)
-- Mean precision 0.198% across 6 orders of magnitude
+- Mean precision 0.197% across 6 orders of magnitude
 
 ---
 
@@ -32,7 +32,7 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 | det(g) | 65/32 | **PROVEN (Lean)** |
 | τ | 3472/891 | **PROVEN (Lean)** |
 
-39 observables total, mean deviation 0.198%, **zero continuous adjustable parameters**.
+39 observables total, mean deviation 0.197%, **zero continuous adjustable parameters**.
 
 ---
 
@@ -152,7 +152,7 @@ publications/
 
 ## Executive Summary
 
-The Geometric Information Field Theory (GIFT) framework, in its version 2.3, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.198% across six orders of magnitude.
+The Geometric Information Field Theory (GIFT) framework, in its version 2.3, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.197% across six orders of magnitude.
 
 ### The Zero-Parameter Paradigm
 
@@ -193,7 +193,7 @@ Given these structural choices, all 39 observables follow uniquely.
 | Metric | Value |
 |--------|-------|
 | Total Observables | 39 |
-| Mean Deviation | 0.198% |
+| Mean Deviation | 0.197% |
 | Median Deviation | 0.073% |
 | Observables < 0.5% | 37/39 (95%) |
 | **PROVEN (Lean + Coq)** | 54 |
@@ -217,11 +217,11 @@ Readers should understand these caveats before evaluating the framework:
 
 ### Model Selection vs Parameter Fitting
 
-"Zero continuous adjustable parameters" means no fitting to data. However, the framework makes **discrete structural choices** (E₈×E₈ gauge group, K₇ manifold with specific Betti numbers, TCS building blocks). These are mathematically motivated but still constitute model selection—the framework does not explain why nature chose this particular topology.
+"Zero continuous adjustable parameters" means no fitting to data. However, the framework makes **discrete structural choices** (E₈×E₈ gauge group, K₇ manifold with specific Betti numbers, TCS building blocks). These are mathematically motivated but still constitute model selection-the framework does not explain why nature chose this particular topology.
 
 ### Statistical Validation Scope
 
-The reported p-values (~10⁻²⁶) test against random rational coincidence—a necessary but weak null hypothesis. The validation **does not**:
+The reported p-values (~10⁻²⁶) test against random rational coincidence-a necessary but weak null hypothesis. The validation **does not**:
 - Compare against alternative physical models
 - Account for look-elsewhere effects
 - Quantify the probability of finding *some* topology matching observations

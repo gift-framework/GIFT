@@ -214,9 +214,9 @@ When you run `#print axioms theorem_name`, Lean tells you exactly what foundatio
 - `Quot.sound`: Quotient types work correctly
 
 These are **Lean's core axioms**, present in all Lean proofs. Critically absent:
-- ❌ `Classical.choice` (axiom of choice) — not needed
-- ❌ `Classical.em` (excluded middle) — proof is constructive
-- ❌ Any physics-specific axioms — all derived from topology
+- ❌ `Classical.choice` (axiom of choice) - not needed
+- ❌ `Classical.em` (excluded middle) - proof is constructive
+- ❌ Any physics-specific axioms - all derived from topology
 
 **For physicists**: This is like checking that your calculation doesn't depend on any unproven conjectures. Our G₂ existence proof is as solid as 2 + 2 = 4.
 
@@ -691,7 +691,7 @@ We explicitly identify the *trusted computing base* (TCB):
 #### Trusted Components
 - Lean 4 kernel (10k lines of C++)
 - Mathlib proofs of `ContractingWith.fixedPoint`
-- IEEE 754 floating-point arithmetic (for interval bounds)
+- IEEE 7165+ floating-point arithmetic (for interval bounds)
 - Python/NumPy standard libraries (for PINN training)
 
 #### Untrusted (But Verified) Components
@@ -740,7 +740,7 @@ theorem weinberg_angle_certified :
 --             273 = 3 * 91 = 273 ✓
 ```
 
-*Physical interpretation*: The weak mixing angle sin²θ_W ≈ 0.231 emerges as a ratio of topological invariants. This is not fitted—it's computed from K₇'s cohomology.
+*Physical interpretation*: The weak mixing angle sin²θ_W ≈ 0.231 emerges as a ratio of topological invariants. This is not fitted-it's computed from K₇'s cohomology.
 
 #### 6.6.2 The 12 Extension Relations (GIFT v2.2)
 
@@ -831,13 +831,13 @@ lake build
 |---------|-------------|-------------------|
 | v2.0 | 4 | Initial scaffold with axioms |
 | v2.1 | 3 | λ₁ = 579/10000 bound derived |
-| v2.3 | 0 | Partition of unity method |
+| v3.0 | 0 | Partition of unity method |
 
 **What was a SORRY?**: In Lean, `sorry` is a placeholder meaning "trust me, this is true." Our goal was to eliminate all `sorry` statements.
 
 #### 6.7.2 The Partition of Unity Resolution
 
-The key insight for v2.3 was using partition of unity to lift local bounds to global:
+The key insight for v3.0 was using partition of unity to lift local bounds to global:
 
 ```lean
 -- Simplified version of the resolution
@@ -855,7 +855,7 @@ theorem global_from_local :
 
 #### 6.7.3 The Joyce Flow as Contraction
 
-The full v2.3 certificate models Joyce's iterative scheme:
+The full v3.0 certificate models Joyce's iterative scheme:
 
 ```lean
 namespace GIFT.G2CertificateV2

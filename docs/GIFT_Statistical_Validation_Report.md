@@ -6,7 +6,7 @@ This report presents a comprehensive statistical validation of the GIFT (Geometr
 
 ## Validation Objectives
 
-The primary objective is to determine whether the GIFT framework's exceptional agreement with experimental data (mean deviation of 0.198% across 39 observables) results from:
+The primary objective is to determine whether the GIFT framework's exceptional agreement with experimental data (mean deviation of 0.197% across 39 observables) results from:
 - Genuine topological constraints (expected outcome)
 - Overfitting to experimental data (null hypothesis to be tested)
 
@@ -59,7 +59,7 @@ where δ_ref is the reference configuration deviation, μ_alt is the mean deviat
 ### Reference Configuration Performance
 
 The GIFT reference configuration (E8×E8/K7) achieves:
-- Mean relative deviation: 0.198%
+- Mean relative deviation: 0.197%
 - Standard deviation across observables: Not applicable (single configuration)
 
 ### Alternative Configurations Performance
@@ -86,7 +86,7 @@ The statistical analysis provides evidence against overfitting within the tested
 
 1. **Magnitude of Separation**: A 6.25σ separation indicates the reference configuration is highly atypical among tested alternatives.
 
-2. **Distribution Characteristics**: The alternative configurations show a distribution centered at 83.99% mean deviation, while the reference achieves 0.198%.
+2. **Distribution Characteristics**: The alternative configurations show a distribution centered at 83.99% mean deviation, while the reference achieves 0.197%.
 
 3. **Local Robustness**: The reference configuration maintains superior performance across variations in b₂ and b₃.
 

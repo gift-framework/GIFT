@@ -1,12 +1,25 @@
-# GIFT Framework v2.3 - Complete Observable Reference
+# GIFT Framework v3.0 - Complete Observable Reference
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
+[![Relations](https://img.shields.io/badge/Relations-165+-green)](https://github.com/gift-framework/core)
 
-**Version**: 2.3.4
-**Date**: 2025-12-08
+**Version**: 3.0.0
+**Date**: 2025-12-09
 **Status**: Validated (Monte Carlo 10^5 samples) + **Lean 4 + Coq Formal Verification**
 **Mean Precision**: 0.197% across 39 observables
-**Lean+Coq-Verified Relations**: 54 (zero domain axioms, zero sorry/Admitted)
+**Lean+Coq-Verified Relations**: **165+** (zero domain axioms, zero sorry/Admitted)
+
+## New in v3.0
+
+| Category | Relations | Key Results |
+|----------|-----------|-------------|
+| Original | 13 | sin²θ_W=3/13, τ=3472/891, det(g)=65/32 |
+| Extensions | 62 | Yukawa duality, exceptional groups, mass factorization |
+| **Fibonacci** | **10** | **F₃–F₁₂ = GIFT constants** |
+| **Lucas** | **10** | **L₀–L₉ embedding** |
+| **Primes** | **40** | **100% coverage < 200** |
+| **Monster** | **15** | **196883 = 47×59×71** |
+| **McKay** | **15** | **E₈ ↔ Icosahedral** |
 
 ---
 

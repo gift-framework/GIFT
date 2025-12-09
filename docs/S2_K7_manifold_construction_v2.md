@@ -1,4 +1,4 @@
-# Supplement S2: K₇ Manifold — Variational Construction and Certified Existence
+# Supplement S2: K₇ Manifold - Variational Construction and Certified Existence
 
 ## Constrained G₂ Geometry with Formal Verification
 

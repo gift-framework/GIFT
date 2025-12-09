@@ -4,7 +4,7 @@ Current experimental status of GIFT predictions, precision comparisons, and time
 
 ## Overview
 
-The GIFT framework v2.3 makes 39 predictions (27 dimensionless + 12 dimensional) with mean experimental deviation of 0.198%. This document tracks:
+The GIFT framework v2.3 makes 39 predictions (27 dimensionless + 12 dimensional) with mean experimental deviation of 0.197%. This document tracks:
 - Current experimental status for each prediction
 - Precision evolution over time
 - Planned experiments and timelines
@@ -36,7 +36,7 @@ The GIFT framework v2.3 makes 39 predictions (27 dimensionless + 12 dimensional)
 - Most CKM matrix elements: mean 0.11%
 - Most quark mass ratios
 
-**Overall**: 39 observables (27 dimensionless + 12 dimensional), mean deviation 0.198%
+**Overall**: 39 observables (27 dimensionless + 12 dimensional), mean deviation 0.197%
 
 ### By Physics Sector
 
@@ -168,11 +168,11 @@ All elements predicted with mean deviation 0.11%. Highlights:
 | v1.0 | ~20 | 4 | ~0.3% | Initial framework |
 | v2.0 | 34 | 3 | 0.13% | Rigorous proofs, complete neutrino sector, parameter reduction |
 | v2.1 | 46 | 3 | 0.13% | Torsional dynamics, scale bridge, 9 dimensional observables |
-| v2.2 | 39 | 0 | 0.198% | Zero-parameter paradigm, 13 proven relations, consolidated catalog |
-| v2.3 | 39 | 0 | 0.198% | Dual formal verification (Lean 4 + Coq), unified CI pipeline |
-| v2.3.1 | 39 | 0 | 0.198% | 25 proven relations (12 topological extension), giftpy v1.1.0 |
-| v2.3.3 | 39 | 0 | 0.198% | 39 proven relations (+ 10 Yukawa + 4 irrational), giftpy v1.4.0 |
-| v2.3.4 | 39 | 0 | 0.198% | 54 proven relations (+ 5 exceptional + 6 base decomp + 4 extended), giftpy v1.5.0 |
+| v2.2 | 39 | 0 | 0.197% | Zero-parameter paradigm, 13 proven relations, consolidated catalog |
+| v2.3 | 39 | 0 | 0.197% | Dual formal verification (Lean 4 + Coq), unified CI pipeline |
+| v2.3.1 | 39 | 0 | 0.197% | 25 proven relations (12 topological extension), giftpy v1.1.0 |
+| v2.3.3 | 39 | 0 | 0.197% | 39 proven relations (+ 10 Yukawa + 4 irrational), giftpy v1.4.0 |
+| v2.3.4 | 39 | 0 | 0.197% | 54 proven relations (+ 5 exceptional + 6 base decomp + 4 extended), giftpy v1.5.0 |
 
 ### Experimental Precision Trends
 
@@ -347,7 +347,7 @@ No sector shows systematic problems. All perform well.
 - No predictive power for these 19 numbers
 
 **GIFT v2.3.1**: Zero continuous adjustable parameters, 39 predictions
-- Mean deviation 0.198% without adjusting
+- Mean deviation 0.197% without adjusting
 - Genuine predictive power
 - Complete elimination of free parameters
 - All quantities structurally determined
@@ -433,7 +433,7 @@ Check repository for latest version.
 ## Summary
 
 The GIFT framework currently shows:
-- **Strong agreement**: 0.198% mean deviation across 39 observables
+- **Strong agreement**: 0.197% mean deviation across 39 observables
 - **Statistical consistency**: All sectors perform well
 - **Predictive power**: Zero-parameter paradigm vs Standard Model's 19
 - **Falsifiability**: Clear experimental tests, especially δ_CP

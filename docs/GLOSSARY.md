@@ -385,10 +385,10 @@ Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key
 ### Scale Bridge (v2.1)
 Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
 
-### Lean 4 (v2.3)
+### Lean 4 (v3.0)
 Theorem prover used for formal verification of GIFT exact relations. The [gift-framework/core](https://github.com/gift-framework/core) repository contains 17 modules proving all 13 exact relations with zero domain-specific axioms. Key theorem: `GIFT_framework_certified`.
 
 ---
 
-Last updated: v2.3 (2025-12-03)
+Last updated: v3.0 (2025-12-03)
 

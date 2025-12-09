@@ -32,14 +32,14 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.198% mean deviation across 39 observables)
+- Precision of experimental agreement (currently 0.197% mean deviation across 39 observables)
 - Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**GIFT v2.3**: Zero continuous adjustable parameters
+**GIFT v3.0**: Zero continuous adjustable parameters
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all 39 observables.
 
@@ -133,7 +133,7 @@ See Supplement S1 for complete mathematical details.
 - 6 quark masses (m_u through m_t)
 - 3 lepton masses
 
-Mean deviation from experiment: 0.198%
+Mean deviation from experiment: 0.197%
 
 ### What about dimensional parameters like masses?
 
@@ -165,7 +165,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.198% across all 39 observables
+**Overall**: Mean 0.197% across all 39 observables
 
 See Supplement S5 for detailed statistical analysis.
 
@@ -355,11 +355,11 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v2.3) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.0) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v23_2025,
-  title={GIFT Framework v2.3: Geometric Information Field Theory},
+  title={GIFT Framework v3.0: Geometric Information Field Theory},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},

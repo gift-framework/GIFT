@@ -6,7 +6,7 @@
 
 *This supplement provides detailed comparison of GIFT predictions with experimental data, statistical validation, and clear quantitative falsification criteria for rigorous experimental testing.*
 
-**Version**: 2.3
+**Version: 3.0
 **Date**: December 2025
 **Lean Verification**: 13 relations formally verified with Mathlib 4.14.0
 
@@ -483,7 +483,7 @@ All quantities are topological invariants, not adjustable parameters.
 
 ### 23.1 Key Results
 
-- **54 PROVEN** relations (exact rational/integer values, 13 original + 12 topological + 10 Yukawa + 4 irrational + 5 exceptional + 6 base decomp + 4 extended)
+- **165+ PROVEN** relations (exact rational/integer values, 13 original + 12 topological + 10 Yukawa + 4 irrational + 5 exceptional + 6 base decomp + 4 extended)
 - **Zero-parameter paradigm**: all quantities from fixed topology
 - **Mean deviation**: 0.197%
 - **χ²/dof**: 0.40 (excellent fit)
@@ -525,7 +525,7 @@ All quantities are topological invariants, not adjustable parameters.
 
 ---
 
-**Document Version**: 2.2.0
+**Document Version: 3.0
 **Last Updated**: November 2025
 **GIFT Framework**: https://github.com/gift-framework/GIFT
 

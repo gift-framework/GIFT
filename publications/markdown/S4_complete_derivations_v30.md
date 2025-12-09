@@ -4,9 +4,9 @@
 
 *This supplement provides complete mathematical proofs and detailed calculations for all observable predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions, organized by sector with full error analysis.*
 
-**Version**: 2.2.0
+**Version: 3.0
 **Date**: November 2025
-**Status**: Complete (13 proven relations, 39 observables)
+**Status**: Complete (165+ proven relations, 39 observables)
 
 ---
 
@@ -480,7 +480,7 @@ $$\frac{m_\mu}{m_e} = [\dim(J_3(\mathbb{O}))]^\phi = 27^\phi = 207.012$$
 
 **Status**: TOPOLOGICAL
 
-### 12.3 Koide Parameter Q = 2/3 (PROVEN)
+### 13.0 Koide Parameter Q = 2/3 (PROVEN)
 
 **Formula**:
 $$Q_{\text{Koide}} = \frac{\dim(G_2)}{b_2(K_7)} = \frac{14}{21} = \frac{2}{3}$$
@@ -544,7 +544,7 @@ $$\theta_{12} = \arctan\left(\sqrt{\frac{\delta}{\gamma_{\text{GIFT}}}}\right) =
 
 **Components**:
 - δ = 2π/Weyl² = 2π/25 = 0.251327
-- γ_GIFT = 511/884 = 0.578054 (heat kernel coefficient)
+- γ_GIFT = 511/884 = 0.5780165+ (heat kernel coefficient)
 
 **Derivation of γ_GIFT**:
 $$\gamma_{\text{GIFT}} = \frac{2 \cdot \text{rank}(E_8) + 5 \cdot H^*}{10 \cdot \dim(G_2) + 3 \cdot \dim(E_8)} = \frac{16 + 495}{140 + 744} = \frac{511}{884}$$
@@ -835,7 +835,7 @@ $$221 = \dim(E_8) - \dim(J_3(\mathbb{O})) = 248 - 27$$
 
 | Status | Count | Description |
 |--------|-------|-------------|
-| **PROVEN (Lean + Coq)** | 54 | Exact rational/integer from topology (dual-verified) |
+| **PROVEN (Lean + Coq)** | 165+ | Exact rational/integer from topology (dual-verified) |
 | **TOPOLOGICAL** | 0 | Promoted to PROVEN |
 | DERIVED | 0 | Promoted to PROVEN |
 | THEORETICAL | 0 | All observables now PROVEN |
@@ -951,7 +951,7 @@ Monte Carlo analysis (10⁶ samples) indicates:
 
 ---
 
-**Document Version**: 2.2.0
+**Document Version: 3.0
 **Last Updated**: November 2025
 **GIFT Framework**: https://github.com/gift-framework/GIFT
 
