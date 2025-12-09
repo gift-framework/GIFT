@@ -61,13 +61,13 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 ### Domain-specific guides
 
 **"I'm a geometer"**
-→ [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline
+→ [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) - G₂ metric construction pipeline
 
 **"I'm a physicist"**
-→ [Information Geometry for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters
+→ [Information Geometry for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) - Topological approach to SM parameters
 
 **"I'm interested in formalization"**
-→ [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations
+→ [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) - Machine-verified physical relations
 
 ---
 
@@ -171,7 +171,7 @@ These choices are mathematically motivated but constitute model selection. The f
 
 ### Why Not Numerology?
 
-The v3.0 structures—Fibonacci sequences, Monster group, McKay correspondence—possess **independent mathematical existence**:
+The v3.0 structures-Fibonacci sequences, Monster group, McKay correspondence-possess **independent mathematical existence**:
 - Fibonacci appears in phyllotaxis, shell spirals, golden rectangles
 - The Monster group is a theorem of group theory (Griess 1982)
 - McKay correspondence is established mathematics (McKay 1980)

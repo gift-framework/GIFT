@@ -1,4 +1,4 @@
-# PROMPT CLAUDE CODE — GIFT Paper for Foundations of Physics
+# PROMPT CLAUDE CODE - GIFT Paper for Foundations of Physics
 
 ## CONTEXT
 
@@ -9,17 +9,17 @@ The GIFT framework (Geometric Information Field Theory) derives Standard Model p
 ## AVAILABLE SOURCES
 
 In the repo you have access to:
-- `/mnt/project/gift_2_2_main.md` — Main paper (current version)
-- `/mnt/project/S1_mathematical_architecture.md` — Mathematical foundations
-- `/mnt/project/S2_K7_manifold_construction.md` — K₇ TCS construction
-- `/mnt/project/S3_torsional_dynamics.md` — Torsion analysis
-- `/mnt/project/S4_rigorous_proofs.md` — Proofs of exact relations
-- `/mnt/project/S5_complete_calculations.md` — Full calculations
-- `/mnt/project/S6_numerical_methods.md` — PINN methods
-- `/mnt/project/S7_phenomenology.md` — Phenomenological predictions
-- `/mnt/project/S8_falsification_protocol.md` — Falsifiability criteria
-- `/mnt/project/GLOSSARY.md` — Definitions
-- `/mnt/project/PHILOSOPHY.md` — Conceptual foundations
+- `/mnt/project/gift_2_2_main.md` - Main paper (current version)
+- `/mnt/project/S1_mathematical_architecture.md` - Mathematical foundations
+- `/mnt/project/S2_K7_manifold_construction.md` - K₇ TCS construction
+- `/mnt/project/S3_torsional_dynamics.md` - Torsion analysis
+- `/mnt/project/S4_rigorous_proofs.md` - Proofs of exact relations
+- `/mnt/project/S5_complete_calculations.md` - Full calculations
+- `/mnt/project/S6_numerical_methods.md` - PINN methods
+- `/mnt/project/S7_phenomenology.md` - Phenomenological predictions
+- `/mnt/project/S8_falsification_protocol.md` - Falsifiability criteria
+- `/mnt/project/GLOSSARY.md` - Definitions
+- `/mnt/project/PHILOSOPHY.md` - Conceptual foundations
 
 Also available: Lean 4 and Coq proof files, Python notebooks for E₈ roots and PINN.
 
@@ -30,7 +30,7 @@ Generate a LaTeX file using Springer's template structure:
 - Target: **20-25 pages** when compiled
 - Bibliography: BibTeX format
 
-## STRUCTURE — FOLLOW EXACTLY
+## STRUCTURE - FOLLOW EXACTLY
 ```
 1. ABSTRACT (250 words MAX)
    - One sentence: the parameter problem
@@ -165,7 +165,7 @@ ACKNOWLEDGMENTS
 REFERENCES (50-80 citations)
 ```
 
-## TONE — CRITICAL INSTRUCTIONS
+## TONE - CRITICAL INSTRUCTIONS
 
 ### ALWAYS USE:
 - "We propose...", "We explore...", "We investigate..."
@@ -290,9 +290,9 @@ Before completing, verify:
 ## OUTPUT
 
 Generate:
-1. `GIFT_FoP_submission.tex` — Main LaTeX file
-2. `GIFT_FoP_references.bib` — BibTeX bibliography
-3. `GIFT_FoP_tables.tex` — Tables (if separate)
+1. `GIFT_FoP_submission.tex` - Main LaTeX file
+2. `GIFT_FoP_references.bib` - BibTeX bibliography
+3. `GIFT_FoP_tables.tex` - Tables (if separate)
 
 The paper should read as a humble but rigorous proposal, inviting scrutiny rather than demanding acceptance. The goal is peer review, not immediate acclaim.
 

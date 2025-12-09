@@ -217,11 +217,11 @@ Readers should understand these caveats before evaluating the framework:
 
 ### Model Selection vs Parameter Fitting
 
-"Zero continuous adjustable parameters" means no fitting to data. However, the framework makes **discrete structural choices** (E₈×E₈ gauge group, K₇ manifold with specific Betti numbers, TCS building blocks). These are mathematically motivated but still constitute model selection—the framework does not explain why nature chose this particular topology.
+"Zero continuous adjustable parameters" means no fitting to data. However, the framework makes **discrete structural choices** (E₈×E₈ gauge group, K₇ manifold with specific Betti numbers, TCS building blocks). These are mathematically motivated but still constitute model selection-the framework does not explain why nature chose this particular topology.
 
 ### Statistical Validation Scope
 
-The reported p-values (~10⁻²⁶) test against random rational coincidence—a necessary but weak null hypothesis. The validation **does not**:
+The reported p-values (~10⁻²⁶) test against random rational coincidence-a necessary but weak null hypothesis. The validation **does not**:
 - Compare against alternative physical models
 - Account for look-elsewhere effects
 - Quantify the probability of finding *some* topology matching observations

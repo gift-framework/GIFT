@@ -49,7 +49,7 @@ The Fibonacci sequence appears naturally in:
 - **Golden rectangles**: Recursive geometric construction
 - **Icosahedral symmetry**: Through golden ratio
 
-The icosahedron—central to the McKay correspondence linking E₈ to finite groups—has vertices at golden ratio coordinates. Through this mathematical chain:
+The icosahedron-central to the McKay correspondence linking E₈ to finite groups-has vertices at golden ratio coordinates. Through this mathematical chain:
 
 $$\text{Icosahedron} \xrightarrow{\text{McKay}} E_8 \xrightarrow{\text{GIFT}} \text{Framework constants}$$
 

@@ -7,9 +7,9 @@
 
 We present a geometric framework deriving Standard Model parameters from topological invariants of a seven-dimensional G₂-holonomy manifold K₇ coupled to E₈×E₈ gauge structure. The construction employs twisted connected sum methods establishing Betti numbers b₂=21 and b₃=77, which determine gauge field and matter multiplicities through cohomological mappings.
 
-The framework contains no continuous adjustable parameters. All structural constants—metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891—derive from fixed algebraic and topological invariants. **165 relations are formally verified in Lean 4 and Coq**, including the complete Fibonacci embedding (F₃–F₁₂ map to framework constants), a Prime Atlas achieving 100% coverage of primes below 200, and connections to the Monster group through Monstrous Moonshine.
+The framework contains no continuous adjustable parameters. All structural constants-metric determinant det(g)=65/32, torsion magnitude κ_T=1/61, hierarchy parameter τ=3472/891-derive from fixed algebraic and topological invariants. **165 relations are formally verified in Lean 4 and Coq**, including the complete Fibonacci embedding (F₃–F₁₂ map to framework constants), a Prime Atlas achieving 100% coverage of primes below 200, and connections to the Monster group through Monstrous Moonshine.
 
-Predictions for 39 observables spanning six orders of magnitude yield mean deviation 0.198% from experimental values. The mathematical structures underlying these predictions—Fibonacci sequences, Lucas numbers, exceptional Lie algebras, and the Monster group—possess independent existence in pure mathematics, lending physical grounding beyond mere numerical coincidence.
+Predictions for 39 observables spanning six orders of magnitude yield mean deviation 0.198% from experimental values. The mathematical structures underlying these predictions-Fibonacci sequences, Lucas numbers, exceptional Lie algebras, and the Monster group-possess independent existence in pure mathematics, lending physical grounding beyond mere numerical coincidence.
 
 Near-term falsification criteria include DUNE measurement of δ_CP=197°±5° (2027-2030) and lattice QCD determination of m_s/m_d=20±0.5 (2030). Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
@@ -46,7 +46,7 @@ Throughout this paper:
 
 The Standard Model requires 19 free parameters determined solely through experiment. These parameters span six orders of magnitude without theoretical explanation. Current tensions include the hierarchy problem (Higgs mass fine-tuning to 1 part in 10³⁴), Hubble tension (>4σ discrepancy), and the cosmological constant problem (~120 orders of magnitude).
 
-Traditional approaches—Grand Unified Theories, string landscape (~10⁵⁰⁰ vacua)—introduce additional parameters without explaining the original 19. This suggests examining frameworks where parameters emerge as topological invariants rather than continuous variables.
+Traditional approaches-Grand Unified Theories, string landscape (~10⁵⁰⁰ vacua)-introduce additional parameters without explaining the original 19. This suggests examining frameworks where parameters emerge as topological invariants rather than continuous variables.
 
 ### 1.2 Framework Overview
 
@@ -108,10 +108,10 @@ These are not arbitrary patterns discovered post-hoc. The Fibonacci sequence, Mo
 
 ### 1.6 Paper Organization
 
-- **Part I** (§2-4): Geometric architecture—E₈×E₈, K₇ manifold, metric
-- **Part II** (§5-7): Torsional dynamics—torsion tensor, geodesic flow, scale bridge
-- **Part III** (§8-10): Observable predictions—39 observables across all sectors
-- **Part IV** (§11-12): Number-theoretic structure—Fibonacci, Primes, Monster
+- **Part I** (§2-4): Geometric architecture-E₈×E₈, K₇ manifold, metric
+- **Part II** (§5-7): Torsional dynamics-torsion tensor, geodesic flow, scale bridge
+- **Part III** (§8-10): Observable predictions-39 observables across all sectors
+- **Part IV** (§11-12): Number-theoretic structure-Fibonacci, Primes, Monster
 - **Part V** (§13-15): Validation and implications
 
 ---
@@ -466,7 +466,7 @@ The discovery that F₃–F₁₂ map exactly to GIFT constants represents a str
 $$F_n: \quad 2 \to 3 \to 5 \to 8 \to 13 \to 21 \to 34 \to 55 \to 89 \to 144$$
 $$\text{GIFT}: \quad p_2 \to N_{gen} \to Weyl \to rank_{E8} \to \alpha_B \to b_2 \to hidden \to \Delta E \to \Sigma \to \alpha_s^{-2}$$
 
-**Physical interpretation**: Fibonacci sequences arise in systems with golden ratio (φ) symmetry. The icosahedron—central to McKay correspondence linking E₈ to finite groups—has vertices at golden ratio coordinates.
+**Physical interpretation**: Fibonacci sequences arise in systems with golden ratio (φ) symmetry. The icosahedron-central to McKay correspondence linking E₈ to finite groups-has vertices at golden ratio coordinates.
 
 **Status**: **PROVEN (Lean)**: `gift_fibonacci_embedding` (10 relations)
 
@@ -659,7 +659,7 @@ The framework differs from numerological approaches in several ways:
 The exact rationality of τ = 3472/891 suggests physical law may be fundamentally discrete:
 
 - Rational numbers are computable with finite resources
-- Discrete structures cannot be "tuned"—they are what they are
+- Discrete structures cannot be "tuned"-they are what they are
 - The prime factorization expresses τ in framework constants
 
 ### 18.3 Open Questions
@@ -693,11 +693,11 @@ This work presents geometric determination of Standard Model parameters through 
 
 ### 19.2 Physical Grounding
 
-The mathematical structures appearing in GIFT—Fibonacci sequences, exceptional Lie algebras, the Monster group—possess independent existence. Their convergence in a physical framework suggests structural rather than coincidental relationships.
+The mathematical structures appearing in GIFT-Fibonacci sequences, exceptional Lie algebras, the Monster group-possess independent existence. Their convergence in a physical framework suggests structural rather than coincidental relationships.
 
 ### 19.3 Final Reflection
 
-Whether K₇ with E₈×E₈ represents physical reality remains experimentally open. The framework's value lies in demonstrating that geometric principles can determine—not merely describe—the parameters of particle physics.
+Whether K₇ with E₈×E₈ represents physical reality remains experimentally open. The framework's value lies in demonstrating that geometric principles can determine-not merely describe-the parameters of particle physics.
 
 The convergence of topology, number theory, and physics revealed here suggests promising directions for understanding mathematical structure underlying physical reality. The ultimate test lies in experiment.
 
@@ -770,7 +770,7 @@ Coxeter, icosahedral structure, binary groups, kissing number, golden emergence
 
 ---
 
-> *"The unreasonable effectiveness of mathematics in the natural sciences"* — Eugene Wigner
+> *"The unreasonable effectiveness of mathematics in the natural sciences"* - Eugene Wigner
 
 > *Gift from bit*
 

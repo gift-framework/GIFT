@@ -401,6 +401,6 @@ GIFT/McKay/
 
 ---
 
-> *"I don't know what it means, but whatever it is, it's important."* — John Conway on Monstrous Moonshine
+> *"I don't know what it means, but whatever it is, it's important."* - John Conway on Monstrous Moonshine
 
 ---

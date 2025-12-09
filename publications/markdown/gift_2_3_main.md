@@ -30,7 +30,7 @@ Throughout this paper, we use the following classifications:
 - **THEORETICAL**: Has theoretical justification, proof incomplete
 - **PHENOMENOLOGICAL**: Empirically accurate, theoretical derivation in progress
 
-> **Note on "PROVEN" status**: Throughout this document, "PROVEN" indicates that a relation has been formally verified by Lean 4 and Coq proof assistants as following from framework axioms. This certifies **mathematical correctness within the model**, not physical validity—which remains subject to experimental test.
+> **Note on "PROVEN" status**: Throughout this document, "PROVEN" indicates that a relation has been formally verified by Lean 4 and Coq proof assistants as following from framework axioms. This certifies **mathematical correctness within the model**, not physical validity-which remains subject to experimental test.
 
 ### Lean 4 Verification Summary
 
@@ -170,7 +170,7 @@ The framework eliminates **continuous** parameter fitting but makes **discrete s
 | K₇ manifold (b₂=21, b₃=77) | Other G₂ manifolds | TCS construction, generation count |
 | TCS building blocks | Other ACyl 3-folds | Produces required Betti numbers |
 
-These choices are mathematically motivated but constitute model selection. The framework does not explain *why* nature chose this particular topology—only what follows *if* it did.
+These choices are mathematically motivated but constitute model selection. The framework does not explain *why* nature chose this particular topology-only what follows *if* it did.
 
 #### Statistical Validation: Scope and Limits
 

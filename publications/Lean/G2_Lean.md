@@ -214,9 +214,9 @@ When you run `#print axioms theorem_name`, Lean tells you exactly what foundatio
 - `Quot.sound`: Quotient types work correctly
 
 These are **Lean's core axioms**, present in all Lean proofs. Critically absent:
-- ❌ `Classical.choice` (axiom of choice) — not needed
-- ❌ `Classical.em` (excluded middle) — proof is constructive
-- ❌ Any physics-specific axioms — all derived from topology
+- ❌ `Classical.choice` (axiom of choice) - not needed
+- ❌ `Classical.em` (excluded middle) - proof is constructive
+- ❌ Any physics-specific axioms - all derived from topology
 
 **For physicists**: This is like checking that your calculation doesn't depend on any unproven conjectures. Our G₂ existence proof is as solid as 2 + 2 = 4.
 
@@ -740,7 +740,7 @@ theorem weinberg_angle_certified :
 --             273 = 3 * 91 = 273 ✓
 ```
 
-*Physical interpretation*: The weak mixing angle sin²θ_W ≈ 0.231 emerges as a ratio of topological invariants. This is not fitted—it's computed from K₇'s cohomology.
+*Physical interpretation*: The weak mixing angle sin²θ_W ≈ 0.231 emerges as a ratio of topological invariants. This is not fitted-it's computed from K₇'s cohomology.
 
 #### 6.6.2 The 12 Extension Relations (GIFT v2.2)
 
