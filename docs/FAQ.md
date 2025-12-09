@@ -39,7 +39,7 @@ The framework is evaluated based on:
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**GIFT v2.3**: Zero continuous adjustable parameters
+**GIFT v3.0**: Zero continuous adjustable parameters
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all 39 observables.
 
@@ -355,11 +355,11 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v2.3) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.0) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v23_2025,
-  title={GIFT Framework v2.3: Geometric Information Field Theory},
+  title={GIFT Framework v3.0: Geometric Information Field Theory},
   author={{Brieuc de La Fournière}},
   year={2025},
   url={https://github.com/gift-framework/GIFT},

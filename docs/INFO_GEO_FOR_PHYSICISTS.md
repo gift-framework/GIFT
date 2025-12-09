@@ -78,7 +78,7 @@ The empirical Koide formula (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² =
 
 The framework produces 39 observables spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, CKM matrix elements, electroweak scale parameters, and cosmological observables. The mean deviation from experimental values is 0.198%.
 
-All 54 relations have been formally verified in both Lean 4 and Coq proof assistants, using only standard axioms (propext, Quot.sound in Lean; standard Coq axioms) with zero domain-specific axioms.
+All 165+ relations have been formally verified in both Lean 4 and Coq proof assistants, using only standard axioms (propext, Quot.sound in Lean; standard Coq axioms) with zero domain-specific axioms.
 
 ### 3.4 What is Not Claimed
 
@@ -121,12 +121,12 @@ The framework's value, independent of its physical correctness, lies in demonstr
 
 ## References
 
-- Main paper: [gift_2_3_main.md](../publications/markdown/gift_2_3_main.md)
-- Mathematical architecture: [S1](../publications/markdown/S1_mathematical_architecture_v23.md)
-- Experimental validation: [S5](../publications/markdown/S5_experimental_validation_v23.md)
+- Main paper: [gift_3_0_main.md](../publications/markdown/gift_3_0_main.md)
+- Mathematical architecture: [S1](../publications/markdown/S1_mathematical_architecture_v30.md)
+- Experimental validation: [S5](../publications/markdown/S5_experimental_validation_v30.md)
 - Formal verification: [gift-framework/core](https://github.com/gift-framework/core)
 - Philosophy: [PHILOSOPHY.md](PHILOSOPHY.md)
 
 ---
 
-*GIFT Framework v2.3*
+*GIFT Framework v3.0*
