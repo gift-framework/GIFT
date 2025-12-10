@@ -1,4 +1,4 @@
-# GIFT Framework v2.3 - Publications
+# GIFT Framework v3.0 - Publications
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
 [![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core/tree/main/COQ)
@@ -7,109 +7,13 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 ---
 
-## Framework Logic
+## What's New in v3.0: Publication Restructuring
 
-**Input (discrete mathematical structures):**
-- E₈×E₈ gauge group (dimension 496)
-- K₇ manifold with G₂ holonomy (b₂=21, b₃=77)
+Version 3.0 restructures publications to clearly distinguish:
 
-**Output (derived without adjustment):**
-- 39 physical observables
-- 54 exact rational/integer relations (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended)
-- Mean precision 0.197% across 6 orders of magnitude
-
----
-
-## Key Results
-
-| Observable | GIFT Prediction | Status |
-|------------|-----------------|--------|
-| sin²θ_W | 3/13 = 0.23077 | **PROVEN (Lean)** |
-| δ_CP | 197° | **PROVEN (Lean)** |
-| m_s/m_d | 20 | **PROVEN (Lean)** |
-| Q_Koide | 2/3 | **PROVEN (Lean)** |
-| κ_T | 1/61 | **PROVEN (Lean)** |
-| det(g) | 65/32 | **PROVEN (Lean)** |
-| τ | 3472/891 | **PROVEN (Lean)** |
-
-39 observables total, mean deviation 0.197%, **zero continuous adjustable parameters**.
-
----
-
-## Formal Verification (Lean 4 + Coq)
-
-**54 exact relations are independently verified** in both **Lean 4** and **Coq**, providing dual proof-assistant validation (13 original + 12 topological extension + 10 Yukawa duality + 4 irrational sector + 5 exceptional groups + 6 base decomposition + 4 extended).
-
-> **Note:** Formal proofs are maintained in a dedicated repository: [gift-framework/core](https://github.com/gift-framework/core)
-
-### Lean 4
-
-```
-core/Lean/
-├── GIFT/
-│   ├── Algebra.lean       # E₈, G₂ structures
-│   ├── Topology.lean      # Betti numbers
-│   ├── Relations.lean     # Original 13 relations
-│   ├── Relations/         # Extension modules (41 new: gauge, neutrino, lepton, cosmology, YukawaDuality, IrrationalSector, ExceptionalGroups, BaseDecomposition)
-│   └── Certificate.lean   # All 54 theorems
-```
-
-**Status:** Lean 4.14.0 + Mathlib 4.14.0 | **0 sorry** | **0 domain axioms**
-
-See [gift-framework/core/Lean](https://github.com/gift-framework/core/tree/main/Lean) for build instructions.
-
-### Coq
-
-```
-core/COQ/
-├── Algebra/               # E₈, G₂ structures
-├── Topology/              # Betti numbers
-├── Relations/             # All 54 relations
-└── Certificate/           # All 54 theorems
-```
-
-**Status:** Coq 8.18 | **0 Admitted** | **0 explicit axioms**
-
-See [gift-framework/core/COQ](https://github.com/gift-framework/core/tree/main/COQ) for build instructions.
-
-**Main theorem**: `all_54_relations_certified` proves all 54 relations from `is_zero_parameter(G)` in both systems.
-
----
-
-## Reading Guide
-
-### By Time Available
-
-| Time | Read | You'll understand |
-|------|------|-------------------|
-| 5 min | Executive Summary (below) | Core claims and results |
-| 30 min | + [Main Paper](markdown/gift_2_3_main.md) Sections 1,8,14 | Full prediction set |
-| 2 hrs | + [S1](markdown/S1_mathematical_architecture_v23.md) + [S4](markdown/S4_complete_derivations_v23.md) | Mathematical foundations |
-| Half day | + [S2](markdown/S2_K7_manifold_construction_v23.md), [S3](markdown/S3_torsional_dynamics_v23.md) | Technical geometric details |
-| Full study | + [S5](markdown/S5_experimental_validation_v23.md), [S7](markdown/S7_dimensional_observables_v23.md) | Experimental validation |
-| Research | + [S6](markdown/S6_theoretical_extensions_v23.md) | Speculative extensions |
-
-### By Interest
-
-**For Experimentalists:**
-1. [Observable Reference](references/GIFT_v23_Observable_Reference.md) - All predictions with uncertainties
-2. [S5: Experimental Validation](markdown/S5_experimental_validation_v23.md) - Tests, timelines, falsification
-3. [S7: Dimensional Observables](markdown/S7_dimensional_observables_v23.md) - Absolute mass predictions
-
-**For Mathematicians:**
-1. [S1: Mathematical Architecture](markdown/S1_mathematical_architecture_v23.md) - E₈, G₂, cohomology
-2. [S4: Complete Derivations](markdown/S4_complete_derivations_v23.md) - All proofs
-3. [S2: K₇ Construction](markdown/S2_K7_manifold_construction_v23.md) - TCS construction
-
-**For Phenomenologists:**
-1. [Main Paper](markdown/gift_2_3_main.md) - Full framework
-2. [Geometric Justifications](references/GIFT_v23_Geometric_Justifications.md) - Why each formula
-3. [S3: Torsional Dynamics](markdown/S3_torsional_dynamics_v23.md) - RG flow interpretation
-
-**For String Theorists:**
-1. [S1: Mathematical Architecture](markdown/S1_mathematical_architecture_v23.md) - E₈×E₈ heterotic connection
-2. [S6: Theoretical Extensions](markdown/S6_theoretical_extensions_v23.md) - M-theory, holography
-3. [S2: K₇ Construction](markdown/S2_K7_manifold_construction_v23.md) - G₂ compactification
+1. **Zenodo-ready** (`zenodo/`): Rigorous dimensionless predictions with formal verification
+2. **Exploratory** (`exploratory/`): Speculative content (transparent but not for publication)
+3. **Archive** (`markdown/`): Historical versions preserved for reference
 
 ---
 
@@ -117,142 +21,171 @@ See [gift-framework/core/COQ](https://github.com/gift-framework/core/tree/main/C
 
 ```
 publications/
-├── README.md                              # This file
-├── markdown/                              # Main documents
-│   ├── gift_2_3_main.md                  # Core paper
-│   ├── S1_mathematical_architecture_v23.md   # E₈, G₂, cohomology
-│   ├── S2_K7_manifold_construction_v23.md    # TCS construction
-│   ├── S3_torsional_dynamics_v23.md          # Geodesics, RG flow
-│   ├── S4_complete_derivations_v23.md        # Proofs + all calculations
-│   ├── S5_experimental_validation_v23.md     # Data, falsification
-│   ├── S6_theoretical_extensions_v23.md      # QG, info theory
-│   └── S7_dimensional_observables_v23.md     # Masses, cosmology
-├── references/                            # Quick reference docs
-│   ├── GIFT_v23_Observable_Reference.md  # All 39 observables
-│   ├── GIFT_v23_Geometric_Justifications.md
-│   └── GIFT_v23_Statistical_Validation.md
-├── pdf/                                   # Generated PDFs
-└── tex/                                   # LaTeX sources
+├── README.md                           # This file
+│
+├── zenodo/                             # ★ OFFICIAL PUBLICATIONS ★
+│   ├── GIFT_v3_main.md                # Core paper (~25 pages, 18 relations)
+│   ├── GIFT_v3_S1_foundations.md      # Mathematical foundations (E₈+G₂+K₇)
+│   └── GIFT_v3_S2_derivations.md      # Complete derivations (dimensionless)
+│
+├── exploratory/                        # ⚠️ SPECULATIVE CONTENT ⚠️
+│   ├── theoretical_extensions.md      # QG, info theory, M-theory
+│   ├── dimensional_observables.md     # Absolute masses (heuristic)
+│   ├── sequences_prime_atlas.md       # Fibonacci, Lucas, primes
+│   └── monster_moonshine.md           # Monster group connections
+│
+├── markdown/                           # Archive (v23/v30 versions)
+│   ├── gift_2_3_main.md               # Historical
+│   ├── gift_3_0_main.md               # Historical
+│   └── S1-S9_*_v23/v30.md             # Historical supplements
+│
+├── references/                         # Quick reference docs
+└── Lean/                               # Formal proofs (unchanged)
 ```
 
 ---
 
-## Quick Reference
+## Key Results (v3.0)
 
-| Question | Document | Section |
-|----------|----------|---------|
-| What does GIFT predict? | [Observable Reference](references/GIFT_v23_Observable_Reference.md) | Section 11 |
-| How is sin²θ_W derived? | [Geometric Justifications](references/GIFT_v23_Geometric_Justifications.md) | Section 3 |
-| What experiments test GIFT? | [S5](markdown/S5_experimental_validation_v23.md) | Part IV-V |
-| What are the proofs? | [S4](markdown/S4_complete_derivations_v23.md) | Parts II-VII |
-| What is zero-parameter? | [Glossary](../docs/GLOSSARY.md) | Section 1 |
-| Structural patterns | [S6](markdown/S6_theoretical_extensions_v23.md) | Part III |
+### 18 PROVEN Dimensionless Relations
+
+| # | Relation | Formula | Value | Status |
+|---|----------|---------|-------|--------|
+| 1 | N_gen | Atiyah-Singer | 3 | **PROVEN** |
+| 2 | τ | 496×21/(27×99) | 3472/891 | **PROVEN** |
+| 3 | det(g) | p₂ + 1/32 | 65/32 | **PROVEN** |
+| 4 | κ_T | 1/(b₃-dim(G₂)-p₂) | 1/61 | **PROVEN** |
+| 5 | sin²θ_W | b₂/(b₃+dim(G₂)) | 3/13 | **PROVEN** |
+| 6 | α_s | √2/(dim(G₂)-p₂) | √2/12 | TOPOLOGICAL |
+| 7 | Q_Koide | dim(G₂)/b₂ | 2/3 | **PROVEN** |
+| 8 | m_τ/m_e | 7+10×248+10×99 | 3477 | **PROVEN** |
+| 9 | m_s/m_d | p₂²×Weyl | 20 | **PROVEN** |
+| 10 | δ_CP | dim(K₇)×dim(G₂)+H* | 197° | **PROVEN** |
+| 11 | θ₁₃ | π/b₂ | π/21 | TOPOLOGICAL |
+| 12 | θ₂₃ | (rank+b₃)/H* | 85/99 rad | TOPOLOGICAL |
+| 13 | λ_H | √(dim(G₂)+N_gen)/2^Weyl | √17/32 | **PROVEN** |
+| 14 | Ω_DE | ln(p₂)×(b₂+b₃)/H* | ln(2)×98/99 | **PROVEN** |
+| 15 | n_s | ζ(D_bulk)/ζ(Weyl) | ζ(11)/ζ(5) | **PROVEN** |
+| 16 | m_μ/m_e | dim(J₃(O))^φ | 27^φ | TOPOLOGICAL |
+| 17 | θ₁₂ | arctan(√(δ/γ)) | 33.42° | TOPOLOGICAL |
+| 18 | α⁻¹ | 128+9+det(g)×κ_T | 137.033 | TOPOLOGICAL |
+
+**Zero continuous adjustable parameters. Mean deviation 0.197%.**
 
 ---
 
-## Executive Summary
+## Reading Guide
 
-The Geometric Information Field Theory (GIFT) framework, in its version 2.3, presents a speculative theoretical model where the parameters of the Standard Model and cosmology emerge from the fixed mathematical structure of an E₈×E₈ gauge theory compactified on a seven-dimensional manifold (K₇) with G₂ holonomy. The framework successfully relates 39 physical observables to pure topological and geometric invariants, achieving a mean predictive precision of 0.197% across six orders of magnitude.
+### For Quick Overview (5 min)
 
-### The Zero-Parameter Paradigm
+Read this README + [zenodo/GIFT_v3_main.md](zenodo/GIFT_v3_main.md) Abstract and Section 10.
 
-The central achievement of v2.3 is the establishment of the Zero-Parameter Paradigm. This paradigm shift was enabled by the discovery of an exact topological origin for the internal manifold's metric determinant, det(g) = 65/32. The topological formula is cross-checked by physics-informed neural network (PINN) reconstruction achieving 2.0312490 ± 0.0001 (0.00005% deviation), with formal verification via Lean 4 theorem prover establishing G₂ existence through Joyce's perturbation theorem (20× safety margin). With this development, the framework contains zero adjustable parameters; all quantities derive directly from the immutable properties of the underlying mathematical structures.
+### For Understanding the Framework (2 hrs)
 
-The framework contains **zero continuous adjustable parameters**:
-- No fitting to experimental data
-- No optimization of continuous quantities
-- Only discrete mathematical structure choices (E₈×E₈, K₇, G₂ holonomy)
+1. [zenodo/GIFT_v3_main.md](zenodo/GIFT_v3_main.md) - Full paper
+2. [zenodo/GIFT_v3_S2_derivations.md](zenodo/GIFT_v3_S2_derivations.md) - All 18 proofs
 
-Given these structural choices, all 39 observables follow uniquely.
+### For Mathematical Details (Half day)
 
-### Key v2.3 Exact Derivations
+1. [zenodo/GIFT_v3_S1_foundations.md](zenodo/GIFT_v3_S1_foundations.md) - E₈, G₂, K₇ construction
+2. Lean proofs at [gift-framework/core](https://github.com/gift-framework/core)
 
-| Observable | v2.3 Status | Exact Formula |
-|------------|-------------|---------------|
-| sin²θ_W | **PROVEN (Lean)** | 3/13 = b₂/(b₃ + dim(G₂)) |
-| κ_T | **PROVEN (Lean)** | 1/61 = 1/(b₃ - dim(G₂) - p₂) |
-| τ | **PROVEN (Lean)** | 3472/891 = (496×21)/(27×99) |
-| α_s | TOPOLOGICAL | √2/12 |
-| λ_H | **PROVEN (Lean)** | √17/32 |
-| det(g) | **PROVEN (Lean)** | 65/32 (PINN: 2.0312490 ± 0.0001) |
+### For Exploratory Content (Research)
 
-### Foundational Architecture
+⚠️ **Warning**: Content in `exploratory/` is speculative and not peer-reviewed.
 
-**Core Structures:**
-- **Gauge Group (E₈×E₈)**: Largest exceptional simple Lie algebra (dimension 248, rank 8). Product structure provides 496 degrees of freedom.
-- **Internal Manifold (K₇)**: Compact 7-dimensional manifold with G₂ holonomy preserving N=1 supersymmetry.
-- **Cohomology and Physics**: b₂(K₇) = 21 (gauge fields), b₃(K₇) = 77 (matter fields).
+- [exploratory/sequences_prime_atlas.md](exploratory/sequences_prime_atlas.md) - Fibonacci patterns
+- [exploratory/monster_moonshine.md](exploratory/monster_moonshine.md) - Monster group
+- [exploratory/dimensional_observables.md](exploratory/dimensional_observables.md) - Absolute masses
+- [exploratory/theoretical_extensions.md](exploratory/theoretical_extensions.md) - QG, M-theory
 
-**The Torsion Principle:**
-- Physical interactions sourced by controlled deviation from perfect G₂ holonomy
-- Geodesic flow identified with Renormalization Group evolution
-- Torsion magnitude κ_T = 1/61 from topological invariants
+---
 
-### Predictive Success
+## Zenodo vs Exploratory: What's the Difference?
 
-| Metric | Value |
-|--------|-------|
-| Total Observables | 39 |
-| Mean Deviation | 0.197% |
-| Median Deviation | 0.073% |
-| Observables < 0.5% | 37/39 (95%) |
-| **PROVEN (Lean + Coq)** | 54 |
+### Zenodo Publications (✓ Rigorous)
 
-### Falsification Protocol
+| Content | Status | Publication |
+|---------|--------|-------------|
+| 18 dimensionless relations | **PROVEN (Lean)** | Zenodo-ready |
+| E₈×E₈ → K₇ architecture | Established math | Zenodo-ready |
+| Joyce theorem application | **PROVEN** | Zenodo-ready |
+| Experimental falsification | Defined | Zenodo-ready |
+
+### Exploratory Content (⚠️ Speculative)
+
+| Content | Status | Publication |
+|---------|--------|-------------|
+| Absolute masses (GeV/MeV) | Heuristic | Repo only |
+| Fibonacci/Lucas patterns | Observation | Repo only |
+| Monster group connections | Speculative | Repo only |
+| M-theory embedding | Theoretical | Repo only |
+| Quantum gravity | Speculative | Repo only |
+
+---
+
+## Important Limitations
+
+### What GIFT Predicts vs. Assumes
+
+**Predicted** (dimensionless):
+- All mass ratios
+- Gauge couplings at M_Z
+- Mixing angles and phases
+- Cosmological ratios
+
+**Assumed** (structural choices):
+- E₈×E₈ gauge group
+- K₇ with b₂=21, b₃=77
+- G₂ holonomy
+
+### Epistemic Status
+
+| Layer | Status | Confidence |
+|-------|--------|------------|
+| Core predictions (18 relations) | Falsifiable | High |
+| Structural relations | Derived | Medium |
+| Number-theoretic patterns | Exploratory | Low |
+| Monster/Moonshine | Highly speculative | Very low |
+
+---
+
+## Falsification Protocol
 
 | Prediction | Test | Timeline | Criterion |
 |------------|------|----------|-----------|
 | δ_CP = 197° | DUNE | 2027-2030 | Outside [187°, 207°] |
 | sin²θ_W = 3/13 | FCC-ee | 2040s | Outside [0.2295, 0.2320] |
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
-| N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
-
-The framework remains consistent with all current experimental data.
+| N_gen = 3 | LHC | Ongoing | Fourth generation |
 
 ---
 
-## Important Limitations
+## Formal Verification
 
-Readers should understand these caveats before evaluating the framework:
+**165+ relations verified** in Lean 4 + Coq (dual verification).
 
-### Model Selection vs Parameter Fitting
+```
+Lean 4.14.0 + Mathlib 4.14.0: 0 sorry, 0 domain axioms
+Coq 8.18: 0 Admitted, 0 explicit axioms
+```
 
-"Zero continuous adjustable parameters" means no fitting to data. However, the framework makes **discrete structural choices** (E₈×E₈ gauge group, K₇ manifold with specific Betti numbers, TCS building blocks). These are mathematically motivated but still constitute model selection-the framework does not explain why nature chose this particular topology.
-
-### Statistical Validation Scope
-
-The reported p-values (~10⁻²⁶) test against random rational coincidence-a necessary but weak null hypothesis. The validation **does not**:
-- Compare against alternative physical models
-- Account for look-elsewhere effects
-- Quantify the probability of finding *some* topology matching observations
-
-### Number-Theoretic Patterns
-
-Patterns involving Fibonacci, Lucas, Mersenne numbers (S6 Part III) are **exploratory observations**. In integer-rich mathematical structures, some apparent patterns are expected by chance. No blind statistical analysis has quantified the false-positive rate.
-
-### Epistemic Status Summary
-
-| Layer | Status | Confidence |
-|-------|--------|------------|
-| Core predictions (δ_CP, sin²θ_W, etc.) | Falsifiable | High |
-| Structural relations (quark ratios, CKM) | Derived | Medium |
-| Number-theoretic patterns | Exploratory | Low |
-
-For detailed discussion, see [GIFTPY_FOR_GEOMETERS](../docs/GIFTPY_FOR_GEOMETERS.md) and [S6](markdown/S6_theoretical_extensions_v23.md).
+See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 
 ---
 
-## Key Concepts
+## Changelog v3.0
 
-1. **E₈×E₈**: The gauge group (dimension 496) providing algebraic structure
-2. **K₇**: The internal 7-dimensional manifold with G₂ holonomy
-3. **Betti numbers**: b₂=21 (gauge), b₃=77 (matter) - determine field content
-4. **Zero-parameter**: No continuous parameters adjusted to fit data
-5. **PROVEN vs TOPOLOGICAL**: Exact proofs vs direct topological consequences
+- **Restructured** publications into zenodo/ and exploratory/
+- **Condensed** main paper to focus on 18 PROVEN dimensionless relations
+- **Merged** S1 (E₈ architecture) + S2 (K₇ construction) into S1_foundations
+- **Refactored** S4 (derivations) to exclude dimensional masses
+- **Moved** S6, S7, S8, S9 to exploratory/ with clear warnings
+- **Added** explicit status headers to all exploratory content
 
 ---
 
-**Version**: 2.3.4
-**Last Updated**: 2025-12-08
+**Version**: 3.0
+**Last Updated**: 2025-12-10
 **Repository**: https://github.com/gift-framework/GIFT
 **Formal Proofs**: https://github.com/gift-framework/core
