@@ -12,9 +12,9 @@ We establish existence of a G₂ holonomy metric on a compact 7-manifold K₇ wi
 
 1. **Topological constraints**: Mayer-Vietoris analysis fixes the cohomological structure (b₂ = 21, b₃ = 77) as necessary conditions for any compatible G₂ structure.
 
-2. **Variational solution**: A physics-informed neural network finds a G₂ 3-form φ minimizing torsion subject to metric and topological constraints, achieving det(g) = 65/32 to 0.0001% precision and ||T|| = 0.00286.
+2. **Variational solution**: A physics-informed neural network finds a G₂ 3-form φ minimizing torsion subject to metric and topological constraints, achieving det(g) = 65/32 to 0.0001% precision and ||T|| = 0.00140.
 
-3. **Formal certification**: Lean 4 theorem prover verifies that Joyce's perturbation theorem applies, with 35× safety margin below the torsion threshold.
+3. **Formal certification**: Lean 4 theorem prover verifies that Joyce's perturbation theorem applies, with 20× safety margin below the torsion threshold.
 
 The Betti numbers b₂ = 21 and b₃ = 77 are fixed by the TCS construction (topological); the PINN reconstruction recovers b₂ exactly and b₃ within one mode via spectral analysis.
 
@@ -27,8 +27,8 @@ The Betti numbers b₂ = 21 and b₃ = 77 are fixed by the TCS construction (top
 | b₃(K₇) (spectral estimate) | 77 | 76 (Δ = 1 mode) | NUMERICAL |
 | det(g) (formula) | 65/32 | - | TOPOLOGICAL |
 | det(g) (PINN) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
-| ||T|| | < ε₀ | 0.00286 | CERTIFIED |
-| Joyce margin | > 1 | 35× | PROVEN |
+| ||T|| | < ε₀ | 0.00140 | CERTIFIED |
+| Joyce margin | > 1 | 20× | PROVEN |
 
 ---
 
@@ -288,7 +288,7 @@ Total: ~10,000 epochs (runs in 5-10 minutes on free cloud platforms like Colab).
 |----------|--------|----------|--------|
 | det(g) (topological) | 65/32 | - | TOPOLOGICAL |
 | det(g) (PINN) | 65/32 = 2.03125 | 2.0312490 ± 0.0001 | CERTIFIED |
-| ||T|| | < ε₀ | 0.00286 | CERTIFIED |
+| ||T|| | < ε₀ | 0.00140 | CERTIFIED |
 | λ_min(g) | > 0 | 1.078 | CERTIFIED |
 | b₂ (spectral) | 21 | 21 | NUMERICAL |
 | b₃ (topological) | 77 (TCS) | - | TOPOLOGICAL |
@@ -312,11 +312,11 @@ Interval arithmetic verification (50 decimal places precision):
 
 | Bound Type | Value | Method |
 |------------|-------|--------|
-| Torsion ||T|| | 0.00286 | Direct computation |
-| Joyce threshold ε₀ | 0.1 | Conservative bound |
-| **Safety margin** | **35×** | ε₀ / ||T|| |
+| Torsion ||T|| | 0.00140 | Direct computation |
+| Joyce threshold ε₀ | 0.0288 | Sobolev estimate |
+| **Safety margin** | **20×** | ε₀ / ||T|| |
 
-The torsion is 35× below the Joyce threshold, providing substantial margin for the perturbation theorem to apply.
+The torsion is 20× below the Joyce threshold, providing substantial margin for the perturbation theorem to apply.
 
 **Status**: CERTIFIED
 
@@ -614,13 +614,13 @@ The Banach fixed point theorem itself is **not axiomatized**: it comes from Math
 
 | Requirement | Threshold | Achieved | Margin |
 |-------------|-----------|----------|--------|
-| ||T(φ₀)|| < ε₀ | 0.1 | 0.00286 | 35× |
+| ||T(φ₀)|| < ε₀ | 0.0288 | 0.00140 | 20× |
 | g(φ₀) positive | Required | λ_min = 1.078 | Yes |
 | M compact | Required | K₇ compact | Yes |
 
 ### 8.2 Conclusion
 
-By Joyce's theorem, since ||T(φ_num)|| = 0.00286 < 0.1 = ε₀ with 35× margin, there exists an exact torsion-free G₂ structure φ_exact on K₇.
+By Joyce's theorem, since ||T(φ_num)|| = 0.00140 < 0.0288 = ε₀ with 20× margin, there exists an exact torsion-free G₂ structure φ_exact on K₇.
 
 **Status**: PROVEN (Lean-verified via Banach fixed point)
 
@@ -643,9 +643,9 @@ Under the hypotheses of Joyce's Theorem 11.6.1 (taken as an axiom in the Lean fo
 
 1. **Topological constraints** (Sections 1-3): Mayer-Vietoris analysis on TCS construction yields b₂ = 21, b₃ = 77 as necessary conditions. Status: TOPOLOGICAL.
 
-2. **Variational solution** (Sections 4-5): PINN finds φ_num satisfying det(g) = 65/32 ± 0.0001% and ||T|| = 0.00286. Status: CERTIFIED.
+2. **Variational solution** (Sections 4-5): PINN finds φ_num satisfying det(g) = 65/32 ± 0.0001% and ||T|| = 0.00140. Status: CERTIFIED.
 
-3. **Joyce application** (Sections 7-8): Since ||T|| < ε₀ with 35× margin, Joyce's theorem implies ∃ φ_exact torsion-free. Status: PROVEN.
+3. **Joyce application** (Sections 7-8): Since ||T|| < ε₀ with 20× margin, Joyce's theorem implies ∃ φ_exact torsion-free. Status: PROVEN.
 
 4. **Formal verification** (Section 7): Lean 4 kernel verifies all numerical bounds and theorem application. Status: PROVEN.
 
@@ -663,12 +663,12 @@ Under the hypotheses of Joyce's Theorem 11.6.1 (taken as an axiom in the Lean fo
 │                                                             │
 │  CERTIFIED (PINN + interval arithmetic):                   │
 │    - det(g) = 2.0312490 ± 0.0001 (matches 65/32)          │
-│    - ||T|| = 0.00286 < 0.1 = ε₀                           │
+│    - ||T|| = 0.00140 < 0.0288 = ε₀                        │
 │    - g positive definite (λ_min = 1.078)                  │
 │    - b₃ spectral estimate: 76 (Δ = 1 mode from 77)        │
 │                                                             │
 │  PROVEN (Lean 4.14.0 + Mathlib):                           │
-│    - Safety margin: 35×                                    │
+│    - Safety margin: 20×                                    │
 │    - Banach fixed point (no axioms for FP theorem)        │
 │    - Exists φ_tf : torsion_norm φ_tf = 0                  │
 │                                                             │
@@ -806,7 +806,7 @@ This supplement demonstrates G₂ metric existence on K₇ through variational m
 
 **Numerical cross-checks** (PINN reconstruction):
 - det(g) = 2.0312490 ± 0.0001 matches topological 65/32 [CERTIFIED]
-- ||T|| = 0.00286 with 35× margin below Joyce threshold [CERTIFIED]
+- ||T|| = 0.00140 with 20× margin below Joyce threshold [CERTIFIED]
 - b₂ spectral: 21 (exact match) [NUMERICAL]
 - b₃ spectral: 76 (Δ = 1 mode from topological 77) [NUMERICAL]
 
