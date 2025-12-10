@@ -290,21 +290,17 @@
         <aside class="sidebar">
             <header class="sidebar-header">
                 <div class="logo">K7 MANIFOLD BLUEPRINT</div>
-                <div class="version">Twisted Connected Sum Construction</div>
+                <div class="version">Variational Construction + Joyce Theorem</div>
             </header>
 
             <div class="info-box">
                 <div class="info-title">What is K7?</div>
                 <div class="info-text">
-                    K7 is a compact 7-dimensional manifold with G2 holonomy, constructed via the Twisted Connected Sum (TCS) method. It serves as the internal space in M-theory compactification, determining all physical observables in the GIFT framework.
+                    K7 is a compact 7-dimensional manifold with G2 holonomy. GIFT establishes its existence via variational methods: a physics-informed neural network finds a metric satisfying topological constraints from the TCS framework, then Joyce's theorem guarantees a nearby torsion-free solution.
                 </div>
             </div>
 
             <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-value">7</div>
-                    <div class="stat-label">Dimension</div>
-                </div>
                 <div class="stat-item">
                     <div class="stat-value">21</div>
                     <div class="stat-label">b2</div>
@@ -312,6 +308,10 @@
                 <div class="stat-item">
                     <div class="stat-value">77</div>
                     <div class="stat-label">b3</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">20×</div>
+                    <div class="stat-label">Joyce margin</div>
                 </div>
             </div>
 
@@ -366,196 +366,188 @@
             }
 
             const nodes = [
-                // Layer 0: Algebraic Building Blocks
-                { id: "k3_surface", label: "K3 Surface", sublabel: "b2 = 22", layer: 0, status: "algebraic", category: "input",
-                  formula: "K3: unique simply-connected compact complex surface with c1 = 0", 
-                  description: "4-dimensional Calabi-Yau manifold with b2 = 22 harmonic 2-forms",
-                  value: "b2(K3) = 22" },
+                // Layer 0: TCS Building Blocks (Conceptual)
+                { id: "m1_block", label: "M1 Building Block", sublabel: "b2=11, b3=40", layer: 0, status: "algebraic", category: "input",
+                  formula: "M1: ACyl G2 manifold asymptotic to S1 × Y3(1)", 
+                  description: "First building block for conceptual TCS construction with Calabi-Yau 3-fold Y3(1)",
+                  value: "b2(M1) = 11, b3(M1) = 40" },
                   
-                { id: "acyl_cy3_plus", label: "ACyl CY3 (+)", sublabel: "Z+ half", layer: 0, status: "algebraic", category: "input",
-                  formula: "Asymptotically Cylindrical Calabi-Yau 3-fold",
-                  description: "Non-compact CY3 with cylindrical end S1 x K3, contributes b3 = 20",
-                  value: "b3(Z+) = 20" },
+                { id: "m2_block", label: "M2 Building Block", sublabel: "b2=10, b3=37", layer: 0, status: "algebraic", category: "input",
+                  formula: "M2: ACyl G2 manifold asymptotic to S1 × Y3(2)",
+                  description: "Second building block for conceptual TCS construction with Calabi-Yau 3-fold Y3(2)",
+                  value: "b2(M2) = 10, b3(M2) = 37" },
                   
-                { id: "acyl_cy3_minus", label: "ACyl CY3 (-)", sublabel: "Z- half", layer: 0, status: "algebraic", category: "input",
-                  formula: "Asymptotically Cylindrical Calabi-Yau 3-fold",
-                  description: "Non-compact CY3 with cylindrical end S1 x K3, contributes b3 = 23",
-                  value: "b3(Z-) = 23" },
+                { id: "tcs_topology", label: "TCS Topology", sublabel: "K7 = M1 ∪ M2", layer: 0, status: "algebraic", category: "input",
+                  formula: "Twisted connected sum gluing",
+                  description: "Conceptual TCS construction providing topological constraints",
+                  value: "Compact, simply-connected" },
 
-                { id: "s1_circle", label: "S1 Circle", sublabel: "Gluing parameter", layer: 0, status: "algebraic", category: "input",
-                  formula: "S1 = U(1) compact dimension",
-                  description: "Circle for the cylindrical neck region, radius R",
-                  value: "dim = 1" },
+                // Layer 1: Mayer-Vietoris Analysis
+                { id: "mayer_vietoris", label: "Mayer-Vietoris", sublabel: "Long exact sequence", layer: 1, status: "topological", category: "construction",
+                  formula: "... → H^(k-1)(N) → H^k(K7) → H^k(M1) ⊕ H^k(M2) → ...",
+                  description: "Cohomological analysis determining Betti numbers from building blocks",
+                  value: "Exact sequence" },
 
-                // Layer 1: TCS Construction
-                { id: "cylinder_plus", label: "S1 x Z+", sublabel: "7-dim half", layer: 1, status: "topological", category: "construction",
-                  formula: "Product: S1 x ACyl_CY3(+)",
-                  description: "First 7-dimensional building block for TCS",
+                { id: "overlap_region", label: "Neck N", sublabel: "S1 × Y3", layer: 1, status: "topological", category: "construction",
+                  formula: "N ≅ S1 × Y3 (overlap)",
+                  description: "Cylindrical neck region where M1 and M2 overlap in TCS picture",
                   value: "dim = 1 + 6 = 7" },
 
-                { id: "cylinder_minus", label: "S1 x Z-", sublabel: "7-dim half", layer: 1, status: "topological", category: "construction",
-                  formula: "Product: S1 x ACyl_CY3(-)",
-                  description: "Second 7-dimensional building block for TCS",
-                  value: "dim = 1 + 6 = 7" },
+                // Layer 2: Topological Constraints
+                { id: "topo_constraints", label: "Topological Constraints", sublabel: "Input to variational", layer: 2, status: "topological", category: "construction",
+                  formula: "Fixed by Mayer-Vietoris on TCS",
+                  description: "b2, b3, det(g), κT are topological inputs, not free parameters",
+                  value: "Zero free parameters" },
 
-                { id: "neck_region", label: "Neck Region", sublabel: "S1 x S1 x K3", layer: 1, status: "topological", category: "construction",
-                  formula: "T2 x K3 (matching region)",
-                  description: "Where the two halves are glued with a hyper-Kahler rotation",
-                  value: "dim = 2 + 4 = 6" },
-
-                // Layer 2: Gluing & Matching
-                { id: "hk_rotation", label: "HK Rotation", sublabel: "Matching", layer: 2, status: "geometric", category: "construction",
-                  formula: "Hyper-Kahler rotation on K3 fiber",
-                  description: "Rotation of complex structures to match CY3 halves",
-                  value: "angle in SU(2)" },
-
-                { id: "tcs_gluing", label: "TCS Gluing", sublabel: "Joyce construction", layer: 2, status: "geometric", category: "construction",
-                  formula: "K7 = (S1 x Z+) #_T2xK3 (S1 x Z-)",
-                  description: "Twisted connected sum producing compact G2 manifold",
-                  value: "Compact 7-manifold" },
-
-                // Layer 3: Topological Invariants
+                // Layer 3: Topological Invariants (from Mayer-Vietoris)
                 { id: "b2_k7", label: "b2(K7)", sublabel: "= 21", layer: 3, status: "topological", category: "invariant",
-                  formula: "b2(K7) = b2(K3) - 1 = 22 - 1 = 21",
-                  description: "Second Betti number: counts harmonic 2-forms (gauge DOF)",
-                  value: "21" },
+                  formula: "b2(K7) = b2(M1) + b2(M2) = 11 + 10 = 21",
+                  description: "Second Betti number from Mayer-Vietoris: harmonic 2-forms (gauge DOF)",
+                  value: "21 (TOPOLOGICAL)" },
 
                 { id: "b3_k7", label: "b3(K7)", sublabel: "= 77", layer: 3, status: "topological", category: "invariant",
-                  formula: "b3(K7) = 34 + 43 = 77 (Mayer-Vietoris)",
-                  description: "Third Betti number: 34 kernel + 43 boundary contributions",
-                  value: "77" },
+                  formula: "b3(K7) = b3(M1) + b3(M2) = 40 + 37 = 77",
+                  description: "Third Betti number from Mayer-Vietoris, decomposes as 35 (local) + 42 (global)",
+                  value: "77 (TOPOLOGICAL)" },
 
-                { id: "euler_k7", label: "chi(K7)", sublabel: "= 0", layer: 3, status: "topological", category: "invariant",
-                  formula: "chi(K7) = 2(1 - b1 + b2 - b3/2) = 0",
-                  description: "Euler characteristic vanishes for G2 holonomy",
-                  value: "0" },
+                { id: "det_g_formula", label: "det(g) target", sublabel: "= 65/32", layer: 3, status: "topological", category: "invariant",
+                  formula: "det(g) = (H* - b2 - 13)/2^5 = (99-21-13)/32",
+                  description: "Metric determinant target from topological formula",
+                  value: "65/32 = 2.03125" },
 
-                { id: "pi1_k7", label: "pi1(K7)", sublabel: "= 0", layer: 3, status: "topological", category: "invariant",
-                  formula: "Fundamental group is trivial",
-                  description: "K7 is simply connected",
-                  value: "trivial" },
-
-                // Layer 4: G2 Structure
-                { id: "g2_holonomy", label: "Hol(g) = G2", sublabel: "dim = 14", layer: 4, status: "geometric", category: "structure",
-                  formula: "Holonomy group of Levi-Civita connection",
-                  description: "The metric has exactly G2 holonomy (not proper subgroup)",
-                  value: "dim(G2) = 14" },
-
-                { id: "phi_3form", label: "phi (3-form)", sublabel: "Calibration", layer: 4, status: "geometric", category: "structure",
-                  formula: "phi in Omega^3(K7), d(phi) = 0",
-                  description: "Closed and co-closed 3-form defining G2 structure",
-                  value: "Parallel" },
-
-                { id: "psi_4form", label: "*phi (4-form)", sublabel: "Hodge dual", layer: 4, status: "geometric", category: "structure",
-                  formula: "*phi in Omega^4(K7), d(*phi) = 0",
-                  description: "Hodge dual of phi, also parallel",
-                  value: "Parallel" },
-
-                { id: "torsion_free", label: "Torsion-Free", sublabel: "Nearly", layer: 4, status: "geometric", category: "structure",
-                  formula: "d(phi) = 0, d(*phi) = 0 (ideally)",
-                  description: "Joyce's perturbation: small controlled torsion kappa_T = 1/61",
-                  value: "kappa_T = 1/61" },
-
-                // Layer 5: Derived Parameters
-                { id: "h_star", label: "H*", sublabel: "= 99", layer: 5, status: "derived", category: "derived",
-                  formula: "H* = b2 + b3 + 1 = 21 + 77 + 1",
-                  description: "Total effective cohomological dimension",
-                  value: "99" },
-
-                { id: "kappa_t", label: "kappa_T", sublabel: "= 1/61", layer: 5, status: "derived", category: "derived",
-                  formula: "kappa_T = 1/(b3 - dim(G2) - p2) = 1/(77-14-2)",
+                { id: "kappa_t_formula", label: "κT target", sublabel: "= 1/61", layer: 3, status: "topological", category: "invariant",
+                  formula: "κT = 1/(b3 - dim(G2) - p2) = 1/(77-14-2)",
                   description: "Torsion magnitude from cohomological formula",
                   value: "1/61 = 0.01639" },
 
-                { id: "det_g", label: "det(g)", sublabel: "= 65/32", layer: 5, status: "derived", category: "derived",
-                  formula: "det(g) = p2 + 1/(b2 + dim(G2) - N_gen)",
-                  description: "Metric determinant from topological data",
-                  value: "65/32 = 2.03125" },
+                // Layer 4: Variational Problem
+                { id: "variational", label: "Variational Problem", sublabel: "PINN minimization", layer: 4, status: "geometric", category: "structure",
+                  formula: "min ||dφ||² + ||d*φ||² subject to det(g)=65/32",
+                  description: "Physics-informed neural network finds G2 structure satisfying constraints",
+                  value: "~200k parameters" },
 
-                { id: "p2_factor", label: "p2", sublabel: "= 2", layer: 5, status: "derived", category: "derived",
-                  formula: "p2 = dim(G2)/dim(K7) = 14/7",
-                  description: "Binary duality factor",
-                  value: "2" },
+                { id: "pinn_phi", label: "φ_PINN", sublabel: "Neural 3-form", layer: 4, status: "geometric", category: "structure",
+                  formula: "φ: R^7 → Λ^3 (neural network)",
+                  description: "G2 3-form parameterized by neural network with 35 output components",
+                  value: "C(7,3) = 35 dim" },
 
-                // Layer 6: Physical Outputs
-                { id: "n_gen", label: "N_gen", sublabel: "= 3", layer: 6, status: "physical", category: "physics",
+                { id: "pinn_metric", label: "g_PINN", sublabel: "Induced metric", layer: 4, status: "geometric", category: "structure",
+                  formula: "g_ij = (1/6) Σ φ_ikl φ_jkl",
+                  description: "Metric induced from G2 3-form, trained to achieve det(g)=65/32",
+                  value: "det = 2.031249" },
+
+                { id: "pinn_torsion", label: "||T||_PINN", sublabel: "= 0.00140", layer: 4, status: "geometric", category: "structure",
+                  formula: "T = d(φ) + d*(*φ)",
+                  description: "Torsion norm achieved by PINN, 20× below Joyce threshold",
+                  value: "0.00140" },
+
+                // Layer 5: Joyce Perturbation Theorem
+                { id: "joyce_threshold", label: "Joyce ε0", sublabel: "= 0.0288", layer: 5, status: "derived", category: "derived",
+                  formula: "ε0 from Sobolev constants (conservative estimate)",
+                  description: "Threshold for Joyce's perturbation theorem to apply",
+                  value: "0.0288" },
+
+                { id: "joyce_margin", label: "Safety Margin", sublabel: "= 20×", layer: 5, status: "derived", category: "derived",
+                  formula: "ε0 / ||T|| = 0.0288 / 0.00140 ≈ 20",
+                  description: "PINN torsion is 20× below Joyce threshold",
+                  value: "20× margin" },
+
+                { id: "joyce_existence", label: "Joyce Theorem", sublabel: "∃ φ_exact", layer: 5, status: "derived", category: "derived",
+                  formula: "||T(φ0)|| < ε0 ⟹ ∃ φ torsion-free",
+                  description: "Joyce's theorem guarantees existence of exact G2 structure nearby",
+                  value: "Existence proven" },
+
+                // Layer 6: Lean 4 Certification
+                { id: "lean_certificate", label: "Lean 4 Certificate", sublabel: "Machine-checked", layer: 6, status: "physical", category: "physics",
+                  formula: "theorem k7_admits_torsion_free_g2",
+                  description: "Formal proof in Lean 4 that K7 admits torsion-free G2 structure",
+                  value: "PROVEN" },
+
+                { id: "banach_fp", label: "Banach Fixed Point", sublabel: "Mathlib", layer: 6, status: "physical", category: "physics",
+                  formula: "ContractingWith K=0.9 JoyceFlow",
+                  description: "Joyce flow is contraction with fixed point = torsion-free metric",
+                  value: "No axioms" },
+
+                // Layer 7: Physical Outputs
+                { id: "n_gen", label: "N_gen", sublabel: "= 3", layer: 7, status: "physical", category: "physics",
                   formula: "N_gen = rank(E8) - Weyl = 8 - 5",
                   description: "Number of fermion generations from E8 structure",
                   value: "3 generations" },
 
-                { id: "gauge_dof", label: "Gauge DOF", sublabel: "= 21", layer: 6, status: "physical", category: "physics",
+                { id: "gauge_dof", label: "Gauge DOF", sublabel: "= 21", layer: 7, status: "physical", category: "physics",
                   formula: "= b2(K7) harmonic 2-forms",
-                  description: "Gauge field degrees of freedom in 4D",
+                  description: "Gauge field degrees of freedom: 12 SM + 9 hidden",
                   value: "21 modes" },
 
-                { id: "matter_dof", label: "Matter DOF", sublabel: "= 77", layer: 6, status: "physical", category: "physics",
-                  formula: "= b3(K7) harmonic 3-forms",
-                  description: "Matter field multiplicities from 3-form zero modes",
+                { id: "matter_dof", label: "Matter DOF", sublabel: "= 35 + 42", layer: 7, status: "physical", category: "physics",
+                  formula: "b3(K7) = 35 (Λ^3 fiber) + 42 (2×21 TCS)",
+                  description: "Matter fields: 35 local + 42 global = 77 total modes",
                   value: "77 modes" },
 
-                { id: "sin2_theta", label: "sin2(theta_W)", sublabel: "= 3/13", layer: 6, status: "physical", category: "physics",
-                  formula: "sin2(theta_W) = b2/(b3 + dim(G2)) = 21/91",
-                  description: "Weinberg angle from K7 topology",
-                  value: "0.23077" },
+                { id: "sin2_theta", label: "sin²θ_W", sublabel: "= 3/13", layer: 7, status: "physical", category: "physics",
+                  formula: "sin²θW = b2/(b3 + dim(G2)) = 21/91 = 3/13",
+                  description: "Weinberg angle from K7 topology (exp: 0.23122)",
+                  value: "0.23077 (0.2% error)" },
 
-                { id: "susy", label: "N=1 SUSY", sublabel: "4D preserved", layer: 6, status: "physical", category: "physics",
-                  formula: "G2 holonomy => N=1 in 4D",
-                  description: "Exactly one supersymmetry preserved (chiral)",
+                { id: "susy", label: "N=1 SUSY", sublabel: "4D preserved", layer: 7, status: "physical", category: "physics",
+                  formula: "G2 holonomy ⟹ N=1 in 4D",
+                  description: "Exactly one supersymmetry preserved (chiral) in low-energy limit",
                   value: "Minimal SUSY" },
             ];
 
             const edges = [
-                // From building blocks to products
-                { source: "k3_surface", target: "acyl_cy3_plus" },
-                { source: "k3_surface", target: "acyl_cy3_minus" },
-                { source: "s1_circle", target: "cylinder_plus" },
-                { source: "s1_circle", target: "cylinder_minus" },
-                { source: "acyl_cy3_plus", target: "cylinder_plus" },
-                { source: "acyl_cy3_minus", target: "cylinder_minus" },
+                // TCS Building Blocks → Mayer-Vietoris
+                { source: "m1_block", target: "mayer_vietoris" },
+                { source: "m2_block", target: "mayer_vietoris" },
+                { source: "tcs_topology", target: "mayer_vietoris" },
+                { source: "tcs_topology", target: "overlap_region" },
+                { source: "overlap_region", target: "mayer_vietoris" },
                 
-                // Neck construction
-                { source: "k3_surface", target: "neck_region" },
-                { source: "s1_circle", target: "neck_region" },
+                // Mayer-Vietoris → Betti numbers
+                { source: "mayer_vietoris", target: "b2_k7" },
+                { source: "mayer_vietoris", target: "b3_k7" },
+                { source: "m1_block", target: "b2_k7" },
+                { source: "m2_block", target: "b2_k7" },
+                { source: "m1_block", target: "b3_k7" },
+                { source: "m2_block", target: "b3_k7" },
                 
-                // Gluing process
-                { source: "cylinder_plus", target: "tcs_gluing" },
-                { source: "cylinder_minus", target: "tcs_gluing" },
-                { source: "neck_region", target: "hk_rotation" },
-                { source: "hk_rotation", target: "tcs_gluing" },
+                // Betti numbers → Topological formulas
+                { source: "b2_k7", target: "det_g_formula" },
+                { source: "b3_k7", target: "det_g_formula" },
+                { source: "b3_k7", target: "kappa_t_formula" },
                 
-                // Topological invariants from construction
-                { source: "tcs_gluing", target: "b2_k7" },
-                { source: "tcs_gluing", target: "b3_k7" },
-                { source: "k3_surface", target: "b2_k7" },
-                { source: "acyl_cy3_plus", target: "b3_k7" },
-                { source: "acyl_cy3_minus", target: "b3_k7" },
-                { source: "tcs_gluing", target: "euler_k7" },
-                { source: "tcs_gluing", target: "pi1_k7" },
+                // Topological constraints → Variational problem
+                { source: "b2_k7", target: "topo_constraints" },
+                { source: "b3_k7", target: "topo_constraints" },
+                { source: "det_g_formula", target: "topo_constraints" },
+                { source: "kappa_t_formula", target: "topo_constraints" },
                 
-                // G2 structure from TCS
-                { source: "tcs_gluing", target: "g2_holonomy" },
-                { source: "g2_holonomy", target: "phi_3form" },
-                { source: "g2_holonomy", target: "psi_4form" },
-                { source: "phi_3form", target: "torsion_free" },
-                { source: "psi_4form", target: "torsion_free" },
+                // Variational problem → PINN solution
+                { source: "topo_constraints", target: "variational" },
+                { source: "variational", target: "pinn_phi" },
+                { source: "pinn_phi", target: "pinn_metric" },
+                { source: "pinn_phi", target: "pinn_torsion" },
+                { source: "det_g_formula", target: "pinn_metric" },
                 
-                // Derived parameters
-                { source: "b2_k7", target: "h_star" },
-                { source: "b3_k7", target: "h_star" },
-                { source: "b3_k7", target: "kappa_t" },
-                { source: "g2_holonomy", target: "kappa_t" },
-                { source: "b2_k7", target: "det_g" },
-                { source: "g2_holonomy", target: "det_g" },
-                { source: "g2_holonomy", target: "p2_factor" },
+                // PINN torsion → Joyce theorem
+                { source: "pinn_torsion", target: "joyce_threshold" },
+                { source: "pinn_torsion", target: "joyce_margin" },
+                { source: "joyce_threshold", target: "joyce_margin" },
+                { source: "joyce_margin", target: "joyce_existence" },
                 
-                // Physical outputs
+                // Joyce → Lean certification
+                { source: "joyce_existence", target: "lean_certificate" },
+                { source: "joyce_margin", target: "lean_certificate" },
+                { source: "lean_certificate", target: "banach_fp" },
+                
+                // Topological invariants → Physical outputs
                 { source: "b2_k7", target: "gauge_dof" },
                 { source: "b3_k7", target: "matter_dof" },
                 { source: "b2_k7", target: "sin2_theta" },
                 { source: "b3_k7", target: "sin2_theta" },
-                { source: "g2_holonomy", target: "sin2_theta" },
-                { source: "g2_holonomy", target: "susy" },
-                { source: "h_star", target: "n_gen" },
+                { source: "joyce_existence", target: "susy" },
+                { source: "b2_k7", target: "n_gen" },
+                { source: "b3_k7", target: "n_gen" },
             ];
 
             const svg = d3.select("#graph");
