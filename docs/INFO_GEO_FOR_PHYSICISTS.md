@@ -2,7 +2,7 @@
 
 ## Abstract
 
-The Geometric Information Field Theory (GIFT) framework proposes that Standard Model parameters are not free constants requiring experimental determination, but rather topological invariants of an underlying geometric structure. Specifically, the framework derives 39 observables from the cohomology of a 7-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge architecture. This document presents the conceptual structure for theoretical physicists, focusing on how topology might eliminate the need for adjustable parameters.
+The Geometric Information Field Theory (GIFT) framework proposes that Standard Model parameters are not free constants requiring experimental determination, but rather topological invariants of an underlying geometric structure. Specifically, the framework derives 18 dimensionless predictions from the cohomology of a 7-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge architecture. This document presents the conceptual structure for theoretical physicists, focusing on how topology might eliminate the need for adjustable parameters.
 
 ## 1. The Parameter Problem
 
@@ -76,7 +76,7 @@ The empirical Koide formula (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² =
 
 ### 3.3 What is Claimed
 
-The framework produces 39 observables spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, CKM matrix elements, electroweak scale parameters, and cosmological observables. The mean deviation from experimental values is 0.197%.
+The framework produces 18 dimensionless predictions spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, and cosmological observables. The mean deviation from experimental values is 0.087%.
 
 All 165+ relations have been formally verified in both Lean 4 and Coq proof assistants, using only standard axioms (propext, Quot.sound in Lean; standard Coq axioms) with zero domain-specific axioms.
 
@@ -115,7 +115,7 @@ The framework makes specific predictions testable by near-term experiments:
 
 The GIFT framework explores whether Standard Model parameters might be topological invariants rather than free constants. The specific proposal involves E₈×E₈ gauge structure, G₂ holonomy on a 7-manifold K₇ with Betti numbers b₂ = 21 and b₃ = 77, and controlled torsion providing dynamics.
 
-The resulting 39 predictions match experiment to 0.197% mean precision. Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
+The resulting 18 dimensionless predictions match experiment to 0.087% mean precision. Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
 
 The framework's value, independent of its physical correctness, lies in demonstrating that geometric principles can substantially constrain particle physics parameters. It provides a concrete example of how topology might replace tuning.
 

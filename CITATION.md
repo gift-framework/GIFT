@@ -14,7 +14,7 @@ Citation formats for the GIFT Framework v3.0.
   url     = {https://github.com/gift-framework/GIFT},
   version = {3.0.0},
   license = {MIT},
-  note    = {18 dimensionless observables, 0.197\% precision, 165+ certified relations}
+  note    = {18 dimensionless predictions, 0.087\% mean deviation, 165+ certified relations}
 }
 ```
 
@@ -41,7 +41,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.0: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.0: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2025},
-  note   = {Mean deviation 0.197\% across 18 dimensionless observables, zero continuous adjustable parameters, 165+ proven exact relations},
+  note   = {Mean deviation 0.087\% across 18 dimensionless predictions, zero continuous adjustable parameters, 165+ proven exact relations},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -134,13 +134,13 @@ de La Fournière, Brieuc. "GIFT Framework v3.0: Geometric Information Field Theo
 ## Formal Verification
 
 ```bibtex
-@software{gift_core_v20,
+@software{gift_core_v30,
   title   = {GIFT Core: Formal Verification in Lean 4 + Coq},
   author  = {de La Fournière, Brieuc},
   year    = {2025},
   url     = {https://github.com/gift-framework/core},
-  version = {2.0.0},
-  note    = {165+ relations verified, zero axioms, K₇ metric pipeline}
+  version = {3.0.0},
+  note    = {165+ relations verified, zero axioms, K₇ metric pipeline, Joyce existence theorem}
 }
 ```
 
