@@ -36,21 +36,19 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 
 ### "Show me the numbers"
 
-→ [Observable Reference](publications/references/GIFT_v30_Observable_Reference.md) All 39 observables with formulas, values, deviations
-
 → [39 Observables CSV](publications/references/39_observables.csv) Machine-readable data
 
 ### "Show me the proofs"
 
 → [gift-framework/core](https://github.com/gift-framework/core) Lean 4 + Coq formal verification (165+ relations, zero axioms)
 
-→ [S4: Complete Derivations](publications/markdown/S4_complete_derivations_v30.md) Mathematical proofs
+→ [S2: Complete Derivations](publications/markdown/GIFT_v3_S2_derivations.md) All 18 dimensionless derivations
 
 ### "Show me the framework"
 
-→ [Main Paper](publications/markdown/gift_3_0_main.md) Complete theoretical framework
+→ [Main Paper](publications/markdown/GIFT_v3_main.md) Complete theoretical framework (v3.0)
 
-→ [Supplements S1-S9](publications/markdown/) Mathematical details by topic
+→ [S1: Foundations](publications/markdown/GIFT_v3_S1_foundations.md) E₈, G₂, K₇ mathematical foundations
 
 ### "Show me an introduction"
 
@@ -81,19 +79,25 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 
 ---
 
-## Supplements
+## Documentation
+
+### Core Documents
 
 | Document | Content |
 |----------|---------|
-| [S1](publications/markdown/S1_mathematical_architecture_v30.md) | E₈ exceptional Lie algebra, Exceptional Chain, McKay correspondence |
-| [S2](publications/markdown/S2_K7_manifold_construction_v30.md) | K₇ twisted connected sum, Betti numbers b₂=21, b₃=77 |
-| [S3](publications/markdown/S3_torsional_dynamics_v30.md) | Torsion tensor, geodesic flow, κ_T = 1/61 |
-| [S4](publications/markdown/S4_complete_derivations_v30.md) | Complete mathematical proofs, 165+ certified relations |
-| [S5](publications/markdown/S5_experimental_validation_v30.md) | Comparison with PDG 2024, falsification criteria |
-| [S6](publications/markdown/S6_theoretical_extensions_v30.md) | Speculative extensions (M-theory, AdS/CFT) |
-| [S7](publications/markdown/S7_dimensional_observables_v30.md) | Scale bridge from dimensionless ratios to GeV |
-| **[S8](publications/markdown/S8_sequences_prime_atlas_v30.md)** | **NEW: Fibonacci/Lucas embedding, Prime Atlas** |
-| **[S9](publications/markdown/S9_monster_moonshine_v30.md)** | **NEW: Monster group, Monstrous Moonshine** |
+| [Main Paper](publications/markdown/GIFT_v3_main.md) | Complete theoretical framework |
+| [S1: Foundations](publications/markdown/GIFT_v3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | All 18 dimensionless derivations |
+
+### Exploratory References
+
+| Document | Content |
+|----------|---------|
+| [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
+| [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
+| [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
+| [Dimensional](publications/references/dimensional_observables.md) | Absolute masses (heuristic) |
+| [Extensions](publications/references/theoretical_extensions.md) | M-theory, quantum gravity |
 
 ---
 
@@ -141,7 +145,7 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 | j-invariant | 744 = 3 × 248 = N_gen × dim(E₈) | **PROVEN** |
 | McKay | Coxeter(E₈) = 30 = icosahedron edges | **PROVEN** |
 
-Full list: [Observable Reference](publications/references/GIFT_v30_Observable_Reference.md) | Proofs: [gift-framework/core](https://github.com/gift-framework/core)
+Full list: [39 Observables CSV](publications/references/39_observables.csv) | Proofs: [gift-framework/core](https://github.com/gift-framework/core)
 
 ---
 
@@ -154,7 +158,7 @@ Full list: [Observable Reference](publications/references/GIFT_v30_Observable_Re
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S5: Experimental Validation](publications/markdown/S5_experimental_validation_v30.md)
+Details: [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) (Section 10: Falsification)
 
 ---
 
