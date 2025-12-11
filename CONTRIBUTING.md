@@ -4,7 +4,7 @@ Thank you for your interest in contributing to GIFT.
 
 ## Documentation Contributions
 
-This repository contains the theoretical documentation for GIFT v2.3. Contributions welcome:
+This repository contains the theoretical documentation for GIFT v3.0. Contributions welcome:
 
 - **Clarifications**: Improve explanations of concepts
 - **Corrections**: Fix errors in derivations or references
@@ -25,7 +25,7 @@ This repository contains the theoretical documentation for GIFT v2.3. Contributi
 
 ## Code Contributions
 
-For code contributions (K7 metric, formal proofs, validation), see [gift-framework/core](https://github.com/gift-framework/core).
+For code contributions (K₇ metric, formal proofs, giftpy), see [gift-framework/core](https://github.com/gift-framework/core).
 
 ## License
 
