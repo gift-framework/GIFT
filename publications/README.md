@@ -29,6 +29,7 @@ publications/
 │   └── GIFT_v3_S2_derivations.md      # Complete derivations (dimensionless)
 │
 ├── exploratory/                        # ⚠️ SPECULATIVE CONTENT ⚠️
+│   ├── yukawa_mixing.md               # Yukawa couplings + CKM/PMNS
 │   ├── theoretical_extensions.md      # QG, info theory, M-theory
 │   ├── dimensional_observables.md     # Absolute masses (heuristic)
 │   ├── sequences_prime_atlas.md       # Fibonacci, Lucas, primes
@@ -94,6 +95,7 @@ Read this README + [zenodo/GIFT_v3_main.md](zenodo/GIFT_v3_main.md) Abstract and
 
 ⚠️ **Warning**: Content in `exploratory/` is speculative and not peer-reviewed.
 
+- [exploratory/yukawa_mixing.md](exploratory/yukawa_mixing.md) - Yukawa couplings, CKM/PMNS matrices
 - [exploratory/sequences_prime_atlas.md](exploratory/sequences_prime_atlas.md) - Fibonacci patterns
 - [exploratory/monster_moonshine.md](exploratory/monster_moonshine.md) - Monster group
 - [exploratory/dimensional_observables.md](exploratory/dimensional_observables.md) - Absolute masses
@@ -116,6 +118,8 @@ Read this README + [zenodo/GIFT_v3_main.md](zenodo/GIFT_v3_main.md) Abstract and
 
 | Content | Status | Publication |
 |---------|--------|-------------|
+| Yukawa Lagrangian | Exploratory | Repo only |
+| CKM/PMNS from geometry | Exploratory | Repo only |
 | Absolute masses (GeV/MeV) | Heuristic | Repo only |
 | Fibonacci/Lucas patterns | Observation | Repo only |
 | Monster group connections | Speculative | Repo only |
