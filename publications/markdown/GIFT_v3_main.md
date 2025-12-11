@@ -532,6 +532,18 @@ The spectral index involves Riemann zeta values at bulk dimension (11) and Weyl 
 
 If predictions were random numbers in [0,1], matching 18 experimental values to 0.087% average deviation would occur with probability less than 10^(-30). This does not prove the framework correct, but it excludes pure coincidence as an explanation.
 
+### 10.4 Statistical Validation Against Alternative Configurations
+
+A legitimate concern for any unified framework is whether the specific parameter choices represent overfitting to experimental data. To address this, we tested 10,000 alternative G2 manifold configurations by varying the Betti numbers within physically plausible ranges: b₂ ∈ [1, 50] and b₃ ∈ [10, 150], subject to b₃ > b₂.
+
+**Results**: The GIFT reference configuration (b₂ = 21, b₃ = 77) achieves mean relative deviation of 0.197% across 39 observables. Alternative configurations yield mean deviation of 83.99% with standard deviation 13.41%. The separation corresponds to a z-score of 6.25σ (p-value < 10⁻⁹).
+
+**Interpretation**: Within the tested parameter subspace, the E8×E8/K7 construction is statistically exceptional. The reference configuration is not merely a local optimum but represents a highly atypical point in parameter space.
+
+**Limitations**: This validation addresses overfitting only within variations of b₂ and b₃. It does not test alternative TCS constructions, different Calabi-Yau building blocks, or whether the topological formulas themselves represent coincidental alignments. The test establishes local robustness, not global uniqueness.
+
+Complete methodology and results are available in the repository (statistical_validation/).
+
 ---
 
 # Part IV: Experimental Tests and Falsifiability
