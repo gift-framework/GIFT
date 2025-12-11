@@ -85,14 +85,6 @@ Dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) → St
 | [S1: Foundations](publications/markdown/GIFT_v3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
 | [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | All 18 dimensionless derivations |
 
-### Exploratory References
-
-| Document | Content |
-|----------|---------|
-| [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
-| [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
-| [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
-
 ### Speculative Extensions (docs/technical/)
 
 | Document | Content |
@@ -101,6 +93,14 @@ Dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) → St
 | [S6: Theoretical Extensions](docs/technical/S6_theoretical_extensions_v30.md) | M-theory, quantum gravity connections |
 | [S3: Torsional Dynamics](docs/technical/S3_torsional_dynamics_v30.md) | RG flow, non-zero torsion |
 | [GIFT Atlas](docs/technical/atlas/) | Complete constant/relation database |
+
+### Exploratory References
+
+| Document | Content |
+|----------|---------|
+| [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
+| [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
+| [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
 
 ---
 
