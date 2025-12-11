@@ -12,7 +12,7 @@ The framework contains no continuous adjustable parameters. All predictions deri
 
 The most significant prediction concerns the neutrino CP violation phase: delta_CP = 197 degrees. The DUNE experiment (2028-2030) will measure this quantity with precision of 5-10 degrees, providing a decisive test. A measurement outside the range 182-212 degrees would falsify the framework.
 
-Whether these agreements reflect genuine geometric determination of physical parameters or represent elaborate numerical coincidences remains an open question that experiment will resolve within this decade.
+Whether these agreements reflect genuine geometric determination of physical parameters or represent elaborate numerical coincidences remains an open question that awaits peer-review.
 
 ---
 
