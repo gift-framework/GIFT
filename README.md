@@ -3,8 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-3.0.1-green.svg)](CHANGELOG.md)
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
-[![Relations](https://img.shields.io/badge/Relations-165+-orange)](https://github.com/gift-framework/core)
-[![Precision](https://img.shields.io/badge/Mean_Deviation-0.087%25-brightgreen)](publications/markdown/GIFT_v3_S2_derivations.md)
+[![COQ Verified](https://img.shields.io/badge/COQ_4-Verified-orange)](https://github.com/gift-framework/core)
 
 A geometric framework deriving Standard Model parameters from topological invariants of E₈×E₈ gauge structure compactified on a G₂-holonomy manifold K₇.
 
