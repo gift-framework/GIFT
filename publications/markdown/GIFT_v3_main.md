@@ -540,7 +540,7 @@ Critically, this validation uses the **actual topological formulas** to compute 
 
 **Results**: The GIFT reference configuration achieves mean relative deviation of 0.087% across 18 dimensionless observables. Alternative configurations yield mean deviation of 18.46% with standard deviation 7.42%. The separation corresponds to a z-score of 2.48σ (p-value = 0.0066).
 
-**Interpretation**: Within the tested parameter subspace, the E8×E8/K7 construction performs significantly better than random alternatives (p < 0.01). The result is statistically significant, indicating that the (21, 77) point occupies a preferred position in parameter space. However, the separation is modest rather than extraordinary—some alternative configurations achieve comparable performance.
+**Interpretation**: Within the tested parameter subspace, the E8×E8/K7 construction performs significantly better than random alternatives (p < 0.01). The result is statistically significant, indicating that the (21, 77) point occupies a preferred position in parameter space. However, the separation is modest rather than extraordinary, some alternative configurations achieve comparable performance.
 
 **Limitations**: This validation addresses parameter variation only within a single construction family. It does not test alternative TCS constructions, different Calabi-Yau building blocks, or whether the topological formulas themselves represent coincidental alignments. Additionally, six of the 18 observables have formulas independent of b₂/b₃, which reduces the effective parameter sensitivity.
 
