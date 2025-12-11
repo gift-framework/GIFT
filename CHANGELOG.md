@@ -5,6 +5,44 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1] - 2025-12-11
+
+### Validation Synchronization & Documentation Update
+
+Synchronized publications with latest validation notebook results and added speculative extensions documentation.
+
+#### Changed
+
+**Precision Update (Validation Run 2025-12-11)**
+- Mean deviation: 0.197% → **0.087%** (improved calculation methodology)
+- All 18 dimensionless predictions verified against `notebooks/gift_v3_validation.json`
+- Individual deviation values updated to exact JSON results:
+  - sin²θ_W: 0.195% (was 0.20%)
+  - α_s: 0.042% (was 0.04%)
+  - Q_Koide: 0.0009% (was 0.001%)
+  - m_τ/m_e: 0.0043% (was 0.004%)
+  - θ₁₂: 0.030% (was 0.06%)
+  - λ_H: 0.119% (was 0.07%)
+  - n_s: 0.004% (was 0.00%)
+  - Ω_DE: 0.211% (was 0.21%)
+
+**Documentation Structure**
+- Added `docs/technical/` for speculative extensions:
+  - S3: Torsional dynamics (RG flow, non-zero torsion)
+  - S6: Theoretical extensions (M-theory, QG connections)
+  - S7: Dimensional observables (absolute masses, scale bridge)
+  - GIFT Atlas: Complete constant/relation database
+- README.md updated with new navigation section
+- STRUCTURE.md updated with docs/technical/ layout
+
+#### Files Modified
+- `publications/markdown/GIFT_v3_main.md`: Statistics and deviation values
+- `publications/markdown/GIFT_v3_S2_derivations.md`: All deviation tables
+- `README.md`: Overview metrics, navigation, documentation links
+- `STRUCTURE.md`: Directory layout, version info
+
+---
+
 ## [3.0.0] - 2025-12-09
 
 ### Major Release: Number-Theoretic Structure - 165+ Certified Relations
