@@ -1,0 +1,2647 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2025-12-11",
+    "description": "Unified GIFT Atlas - constants, relations, correspondences",
+    "total_relations": 210,
+    "total_observables": 39
+  },
+  "generated": "2025-12-11T10:15:39.954655",
+  "flat": {
+    "constants": [
+      {
+        "id": "dim_K7",
+        "category": "topology",
+        "value": 7,
+        "origin": "G2-holonomy manifold dimension",
+        "latex": "\\dim(K_7)",
+        "formula": ""
+      },
+      {
+        "id": "b2",
+        "category": "topology",
+        "value": 21,
+        "origin": "Second Betti number of K7",
+        "latex": "b_2(K_7)",
+        "formula": ""
+      },
+      {
+        "id": "b3",
+        "category": "topology",
+        "value": 77,
+        "origin": "Third Betti number of K7",
+        "latex": "b_3(K_7)",
+        "formula": ""
+      },
+      {
+        "id": "H_star",
+        "category": "topology",
+        "value": 99,
+        "origin": "Total Hodge number: b2 + b3 + 1",
+        "latex": "H^*",
+        "formula": ""
+      },
+      {
+        "id": "kappa_T_inv",
+        "category": "topology",
+        "value": 61,
+        "origin": "Inverse torsion coupling",
+        "latex": "\\kappa_T^{-1}",
+        "formula": ""
+      },
+      {
+        "id": "dim_E8",
+        "category": "algebra",
+        "value": 248,
+        "origin": "E8 Lie algebra dimension",
+        "latex": "\\dim(E_8)",
+        "formula": ""
+      },
+      {
+        "id": "rank_E8",
+        "category": "algebra",
+        "value": 8,
+        "origin": "E8 rank (Cartan subalgebra)",
+        "latex": "\\mathrm{rank}(E_8)",
+        "formula": ""
+      },
+      {
+        "id": "dim_E8xE8",
+        "category": "algebra",
+        "value": 496,
+        "origin": "Heterotic gauge algebra",
+        "latex": "\\dim(E_8 \\times E_8)",
+        "formula": ""
+      },
+      {
+        "id": "dim_E7",
+        "category": "algebra",
+        "value": 133,
+        "origin": "E7 Lie algebra dimension",
+        "latex": "\\dim(E_7)",
+        "formula": ""
+      },
+      {
+        "id": "dim_E6",
+        "category": "algebra",
+        "value": 78,
+        "origin": "E6 Lie algebra dimension",
+        "latex": "\\dim(E_6)",
+        "formula": ""
+      },
+      {
+        "id": "dim_F4",
+        "category": "algebra",
+        "value": 52,
+        "origin": "F4 Lie algebra dimension",
+        "latex": "\\dim(F_4)",
+        "formula": ""
+      },
+      {
+        "id": "dim_G2",
+        "category": "algebra",
+        "value": 14,
+        "origin": "G2 Lie algebra dimension (holonomy)",
+        "latex": "\\dim(G_2)",
+        "formula": ""
+      },
+      {
+        "id": "fund_E7",
+        "category": "algebra",
+        "value": 56,
+        "origin": "E7 fundamental representation",
+        "latex": "\\mathbf{56}_{E_7}",
+        "formula": ""
+      },
+      {
+        "id": "dim_J3O",
+        "category": "algebra",
+        "value": 27,
+        "origin": "Exceptional Jordan algebra dimension",
+        "latex": "\\dim(J_3(\\mathbb{O}))",
+        "formula": ""
+      },
+      {
+        "id": "N_gen",
+        "category": "physics",
+        "value": 3,
+        "origin": "Number of fermion generations",
+        "latex": "N_{\\mathrm{gen}}",
+        "formula": ""
+      },
+      {
+        "id": "D_bulk",
+        "category": "physics",
+        "value": 11,
+        "origin": "M-theory bulk spacetime dimension",
+        "latex": "D_{\\mathrm{bulk}}",
+        "formula": ""
+      },
+      {
+        "id": "p2",
+        "category": "physics",
+        "value": 2,
+        "origin": "Second Pontryagin class coefficient",
+        "latex": "p_2",
+        "formula": ""
+      },
+      {
+        "id": "Weyl_factor",
+        "category": "physics",
+        "value": 5,
+        "origin": "Weyl group contribution from |W(E8)|",
+        "latex": "W",
+        "formula": ""
+      },
+      {
+        "id": "lambda_H_num",
+        "category": "physics",
+        "value": 17,
+        "origin": "Higgs coupling numerator",
+        "latex": "\\lambda_H",
+        "formula": ""
+      },
+      {
+        "id": "visible_dim",
+        "category": "physics",
+        "value": 43,
+        "origin": "Visible sector dimension",
+        "latex": "d_{\\mathrm{vis}}",
+        "formula": ""
+      },
+      {
+        "id": "hidden_dim",
+        "category": "physics",
+        "value": 34,
+        "origin": "Hidden sector dimension",
+        "latex": "d_{\\mathrm{hid}}",
+        "formula": ""
+      },
+      {
+        "id": "alpha_sum_A",
+        "category": "physics",
+        "value": 12,
+        "origin": "Structure A anomaly sum",
+        "latex": "\\alpha_{A}",
+        "formula": ""
+      },
+      {
+        "id": "alpha_sum_B",
+        "category": "physics",
+        "value": 13,
+        "origin": "Structure B anomaly sum",
+        "latex": "\\alpha_{B}",
+        "formula": ""
+      },
+      {
+        "id": "dim_SM",
+        "category": "physics",
+        "value": 12,
+        "origin": "Standard Model gauge dimension",
+        "latex": "\\dim(\\mathrm{SM})",
+        "formula": ""
+      },
+      {
+        "id": "tau_num",
+        "category": "derived",
+        "value": 3472,
+        "origin": "Hierarchy parameter numerator",
+        "latex": "",
+        "formula": "496 * 21 / 3"
+      },
+      {
+        "id": "tau_den",
+        "category": "derived",
+        "value": 891,
+        "origin": "Hierarchy parameter denominator",
+        "latex": "",
+        "formula": "27 * 33"
+      },
+      {
+        "id": "m_tau_m_e",
+        "category": "derived",
+        "value": 3477,
+        "origin": "Tau/electron mass ratio",
+        "latex": "",
+        "formula": "7 + 10*248 + 10*99"
+      },
+      {
+        "id": "prime_8",
+        "category": "derived",
+        "value": 19,
+        "origin": "8th prime number",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "prime_9",
+        "category": "derived",
+        "value": 23,
+        "origin": "9th prime number",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "prime_11",
+        "category": "derived",
+        "value": 31,
+        "origin": "11th prime number",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F1",
+        "category": "sequence_fibonacci",
+        "value": 1,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F2",
+        "category": "sequence_fibonacci",
+        "value": 1,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F3",
+        "category": "sequence_fibonacci",
+        "value": 2,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F4",
+        "category": "sequence_fibonacci",
+        "value": 3,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F5",
+        "category": "sequence_fibonacci",
+        "value": 5,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F6",
+        "category": "sequence_fibonacci",
+        "value": 8,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F7",
+        "category": "sequence_fibonacci",
+        "value": 13,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F8",
+        "category": "sequence_fibonacci",
+        "value": 21,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F9",
+        "category": "sequence_fibonacci",
+        "value": 34,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F10",
+        "category": "sequence_fibonacci",
+        "value": 55,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F11",
+        "category": "sequence_fibonacci",
+        "value": 89,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F12",
+        "category": "sequence_fibonacci",
+        "value": 144,
+        "origin": "fibonacci",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L0",
+        "category": "sequence_lucas",
+        "value": 2,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L1",
+        "category": "sequence_lucas",
+        "value": 1,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L2",
+        "category": "sequence_lucas",
+        "value": 3,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L3",
+        "category": "sequence_lucas",
+        "value": 4,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L4",
+        "category": "sequence_lucas",
+        "value": 7,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L5",
+        "category": "sequence_lucas",
+        "value": 11,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L6",
+        "category": "sequence_lucas",
+        "value": 18,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L7",
+        "category": "sequence_lucas",
+        "value": 29,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "L8",
+        "category": "sequence_lucas",
+        "value": 47,
+        "origin": "lucas",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F0",
+        "category": "sequence_fermat",
+        "value": 3,
+        "origin": "fermat",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F1",
+        "category": "sequence_fermat",
+        "value": 5,
+        "origin": "fermat",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F2",
+        "category": "sequence_fermat",
+        "value": 17,
+        "origin": "fermat",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F3",
+        "category": "sequence_fermat",
+        "value": 257,
+        "origin": "fermat",
+        "latex": "",
+        "formula": ""
+      },
+      {
+        "id": "F4",
+        "category": "sequence_fermat",
+        "value": 65537,
+        "origin": "fermat",
+        "latex": "",
+        "formula": ""
+      }
+    ],
+    "observables": [
+      {
+        "id": 1,
+        "section": "gauge_couplings",
+        "name": "alpha_inv",
+        "formula": "(dim_E8 + rank_E8)/2 + H*/D_bulk + det(g)*kappa_T",
+        "predicted": 137.033,
+        "experimental": 137.036,
+        "uncertainty": 1e-06,
+        "deviation_pct": 0.002,
+        "status": "TOPOLOGICAL",
+        "unit": ""
+      },
+      {
+        "id": 2,
+        "section": "gauge_couplings",
+        "name": "sin2_theta_W",
+        "formula": "b2/(b3 + dim_G2)",
+        "predicted": 0.23077,
+        "experimental": 0.23122,
+        "uncertainty": 3e-05,
+        "deviation_pct": 0.195,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 3,
+        "section": "gauge_couplings",
+        "name": "alpha_s",
+        "formula": "sqrt(2)/(dim_G2 - p2)",
+        "predicted": 0.11785,
+        "experimental": 0.1179,
+        "uncertainty": 0.0009,
+        "deviation_pct": 0.042,
+        "status": "TOPOLOGICAL",
+        "unit": ""
+      },
+      {
+        "id": 4,
+        "section": "neutrino_mixing",
+        "name": "theta_12",
+        "formula": "arctan(sqrt(delta/gamma_GIFT))",
+        "predicted": 33.4,
+        "experimental": 33.41,
+        "uncertainty": 0.75,
+        "deviation_pct": 0.03,
+        "status": "TOPOLOGICAL",
+        "unit": "deg"
+      },
+      {
+        "id": 5,
+        "section": "neutrino_mixing",
+        "name": "theta_13",
+        "formula": "pi/b2",
+        "predicted": 8.571,
+        "experimental": 8.54,
+        "uncertainty": 0.12,
+        "deviation_pct": 0.36,
+        "status": "TOPOLOGICAL",
+        "unit": "deg"
+      },
+      {
+        "id": 6,
+        "section": "neutrino_mixing",
+        "name": "theta_23",
+        "formula": "(rank_E8 + b3)/H*",
+        "predicted": 49.19,
+        "experimental": 49.3,
+        "uncertainty": 1.0,
+        "deviation_pct": 0.22,
+        "status": "TOPOLOGICAL",
+        "unit": "deg"
+      },
+      {
+        "id": 7,
+        "section": "neutrino_mixing",
+        "name": "delta_CP",
+        "formula": "7*dim_G2 + H*",
+        "predicted": 197,
+        "experimental": 197,
+        "uncertainty": 24,
+        "deviation_pct": 0.0,
+        "status": "PROVEN",
+        "unit": "deg"
+      },
+      {
+        "id": 8,
+        "section": "lepton_masses",
+        "name": "Q_Koide",
+        "formula": "dim_G2/b2",
+        "predicted": 0.666667,
+        "experimental": 0.666661,
+        "uncertainty": 7e-06,
+        "deviation_pct": 0.001,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 9,
+        "section": "lepton_masses",
+        "name": "m_mu_m_e",
+        "formula": "27^phi",
+        "predicted": 207.012,
+        "experimental": 206.768,
+        "uncertainty": 0.001,
+        "deviation_pct": 0.118,
+        "status": "TOPOLOGICAL",
+        "unit": ""
+      },
+      {
+        "id": 10,
+        "section": "lepton_masses",
+        "name": "m_tau_m_e",
+        "formula": "dim_K7 + 10*dim_E8 + 10*H*",
+        "predicted": 3477,
+        "experimental": 3477.15,
+        "uncertainty": 0.01,
+        "deviation_pct": 0.004,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 11,
+        "section": "quark_ratios",
+        "name": "m_s_m_d",
+        "formula": "4 * Weyl",
+        "predicted": 20,
+        "experimental": 20.0,
+        "uncertainty": 1.0,
+        "deviation_pct": 0.0,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 35,
+        "section": "cosmology",
+        "name": "Omega_DE",
+        "formula": "ln(2) * (H* - 1)/H*",
+        "predicted": 0.6861,
+        "experimental": 0.6889,
+        "uncertainty": 0.0056,
+        "deviation_pct": 0.4,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 36,
+        "section": "cosmology",
+        "name": "n_s",
+        "formula": "zeta(11)/zeta(5)",
+        "predicted": 0.9649,
+        "experimental": 0.9649,
+        "uncertainty": 0.0042,
+        "deviation_pct": 0.0,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 37,
+        "section": "structural",
+        "name": "kappa_T",
+        "formula": "1/(b3 - dim_G2 - p2)",
+        "predicted": 0.01639,
+        "experimental": 0.0164,
+        "uncertainty": 0.0001,
+        "deviation_pct": 0.04,
+        "status": "TOPOLOGICAL",
+        "unit": ""
+      },
+      {
+        "id": 38,
+        "section": "structural",
+        "name": "tau",
+        "formula": "496*21/(27*99)",
+        "predicted": 3.8967,
+        "experimental": 3.897,
+        "uncertainty": 0.001,
+        "deviation_pct": 0.01,
+        "status": "PROVEN",
+        "unit": ""
+      },
+      {
+        "id": 39,
+        "section": "structural",
+        "name": "lambda_H",
+        "formula": "sqrt(dim_G2 + N_gen) / 2^Weyl",
+        "predicted": 0.1289,
+        "experimental": 0.126,
+        "uncertainty": 0.008,
+        "deviation_pct": 2.3,
+        "status": "PROVEN",
+        "unit": ""
+      }
+    ],
+    "relations": [
+      {
+        "id": 1,
+        "section": "core",
+        "name": "Fine structure constant",
+        "formula": "alpha_inv = (dim_E8 + rank_E8)/2 + H*/D_bulk",
+        "domain": "gauge",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 2,
+        "section": "core",
+        "name": "Weinberg angle",
+        "formula": "sin2_theta_W = b2/(b3 + dim_G2)",
+        "domain": "gauge",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 3,
+        "section": "core",
+        "name": "Strong coupling",
+        "formula": "alpha_s = sqrt(2)/(dim_G2 - p2)",
+        "domain": "gauge",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 7,
+        "section": "core",
+        "name": "CP phase",
+        "formula": "delta_CP = 7*dim_G2 + H* = 197",
+        "domain": "neutrino",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 8,
+        "section": "core",
+        "name": "Koide relation",
+        "formula": "Q = dim_G2/b2 = 2/3",
+        "domain": "lepton",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 76,
+        "section": "bernoulli",
+        "name": "Higgs/W mass ratio",
+        "formula": "m_H/m_W = 257/165 = F3/(N_gen * F10)",
+        "domain": "mass",
+        "status": "candidate",
+        "precision": "0.05%"
+      },
+      {
+        "id": 77,
+        "section": "bernoulli",
+        "name": "257 decomposition",
+        "formula": "257 = dim_E8 + rank_E8 + 1",
+        "domain": "algebra",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 78,
+        "section": "bernoulli",
+        "name": "E7-E6 gap",
+        "formula": "dim_E7 - dim_E6 = 55 = F10",
+        "domain": "algebra",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 79,
+        "section": "bernoulli",
+        "name": "E8-E7 gap",
+        "formula": "dim_E8 - dim_E7 = 115 = 5 * 23",
+        "domain": "algebra",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 80,
+        "section": "bernoulli",
+        "name": "G2 Bernoulli",
+        "formula": "denom(B6) = 42 = p2 * N_gen * dim_K7",
+        "domain": "bernoulli",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 85,
+        "section": "moonshine",
+        "name": "j-constant (E8)",
+        "formula": "744 = N_gen * dim_E8",
+        "domain": "moonshine",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 86,
+        "section": "moonshine",
+        "name": "Monster dimension",
+        "formula": "196883 = L8 * (b3 - L6) * (b3 - 6)",
+        "domain": "moonshine",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 87,
+        "section": "moonshine",
+        "name": "Monster primes",
+        "formula": "15/15 primes dividing |M| are GIFT",
+        "domain": "moonshine",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 88,
+        "section": "moonshine",
+        "name": "Baby Monster",
+        "formula": "4371 = m_tau_m_e + tau_den + N_gen",
+        "domain": "moonshine",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 89,
+        "section": "moonshine",
+        "name": "Mersenne M7",
+        "formula": "127 = 2^dim_K7 - 1",
+        "domain": "moonshine",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 95,
+        "section": "moonshine",
+        "name": "Golay code",
+        "formula": "|G24| = 2^12 = 2^(dim_G2 - p2)",
+        "domain": "codes",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 96,
+        "section": "moonshine",
+        "name": "Hamming (7,4)",
+        "formula": "dim_K7 = p2^2 + N_gen",
+        "domain": "codes",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 97,
+        "section": "moonshine",
+        "name": "E8 kissing",
+        "formula": "K8 = 240 = p2^4 * Weyl * N_gen",
+        "domain": "lattice",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 98,
+        "section": "moonshine",
+        "name": "Leech kissing",
+        "formula": "K24 = 196560 = K8 * 9 * 7 * 13",
+        "domain": "lattice",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 105,
+        "section": "moonshine",
+        "name": "Thompson = E8",
+        "formula": "dim(Th_V1) = dim_E8 = 248",
+        "domain": "sporadic",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 198,
+        "section": "prime_atlas",
+        "name": "Mersenne-Hodge",
+        "formula": "127 = H* + 4*dim_K7",
+        "domain": "primes",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 199,
+        "section": "prime_atlas",
+        "name": "Heegner 163",
+        "formula": "163 = dim_E8 - (rank_E8 + b3)",
+        "domain": "primes",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 200,
+        "section": "prime_atlas",
+        "name": "Hubble prime",
+        "formula": "181 = dim_E8 - 67",
+        "domain": "primes",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 202,
+        "section": "prime_atlas",
+        "name": "CP phase prime",
+        "formula": "197 = dim_E8 - 3*lambda_H = delta_CP",
+        "domain": "primes",
+        "status": "",
+        "precision": ""
+      },
+      {
+        "id": 210,
+        "section": "prime_atlas",
+        "name": "Three generators",
+        "formula": "b3, H*, dim_E8 generate all primes < 200",
+        "domain": "primes",
+        "status": "",
+        "precision": ""
+      }
+    ],
+    "sporadic_groups": [
+      {
+        "rank": 1,
+        "name": "Monster",
+        "symbol": "M",
+        "dim_V1": 196883,
+        "formula": "L8 * (b3 - L6) * (b3 - 6)",
+        "factors": "47 * 59 * 71",
+        "verified": true
+      },
+      {
+        "rank": 2,
+        "name": "Baby Monster",
+        "symbol": "B",
+        "dim_V1": 4371,
+        "formula": "m_tau_m_e + tau_den + N_gen",
+        "factors": "3477 + 891 + 3",
+        "verified": true
+      },
+      {
+        "rank": 3,
+        "name": "Fischer 24'",
+        "symbol": "Fi24'",
+        "dim_V1": 8671,
+        "formula": "rank_E8*1000 + D_bulk*kappa_T_inv",
+        "factors": "",
+        "verified": false
+      },
+      {
+        "rank": 4,
+        "name": "Fischer 23",
+        "symbol": "Fi23",
+        "dim_V1": 782,
+        "formula": "p2 * lambda_H * prime_9",
+        "factors": "2 * 17 * 23",
+        "verified": true
+      },
+      {
+        "rank": 5,
+        "name": "Fischer 22",
+        "symbol": "Fi22",
+        "dim_V1": 78,
+        "formula": "dim_E6",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 6,
+        "name": "Thompson",
+        "symbol": "Th",
+        "dim_V1": 248,
+        "formula": "dim_E8",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 7,
+        "name": "Lyons",
+        "symbol": "Ly",
+        "dim_V1": 2480,
+        "formula": "10 * dim_E8",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 8,
+        "name": "Held",
+        "symbol": "He",
+        "dim_V1": 51,
+        "formula": "N_gen * lambda_H",
+        "factors": "3 * 17",
+        "verified": true
+      },
+      {
+        "rank": 9,
+        "name": "Conway 1",
+        "symbol": "Co1",
+        "dim_V1": 276,
+        "formula": "alpha_s_denom * prime_9",
+        "factors": "12 * 23",
+        "verified": true
+      },
+      {
+        "rank": 10,
+        "name": "Conway 2",
+        "symbol": "Co2",
+        "dim_V1": 23,
+        "formula": "prime_9",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 11,
+        "name": "Conway 3",
+        "symbol": "Co3",
+        "dim_V1": 23,
+        "formula": "prime_9",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 12,
+        "name": "O'Nan",
+        "symbol": "ON",
+        "dim_V1": 342,
+        "formula": "p2 * N_gen^2 * prime_8",
+        "factors": "2 * 9 * 19",
+        "verified": true
+      },
+      {
+        "rank": 13,
+        "name": "Suzuki",
+        "symbol": "Suz",
+        "dim_V1": 143,
+        "formula": "D_bulk * alpha_sum_B",
+        "factors": "11 * 13",
+        "verified": true
+      },
+      {
+        "rank": 14,
+        "name": "Rudvalis",
+        "symbol": "Ru",
+        "dim_V1": 28,
+        "formula": "p2^2 * dim_K7",
+        "factors": "4 * 7",
+        "verified": true
+      },
+      {
+        "rank": 15,
+        "name": "Higman-Sims",
+        "symbol": "HS",
+        "dim_V1": 22,
+        "formula": "b2 + 1",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 16,
+        "name": "McLaughlin",
+        "symbol": "McL",
+        "dim_V1": 22,
+        "formula": "b2 + 1",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 17,
+        "name": "Janko 4",
+        "symbol": "J4",
+        "dim_V1": 1333,
+        "formula": "prime_11 * visible_dim",
+        "factors": "31 * 43",
+        "verified": true
+      },
+      {
+        "rank": 18,
+        "name": "Janko 3",
+        "symbol": "J3",
+        "dim_V1": 85,
+        "formula": "rank_E8 + b3",
+        "factors": "8 + 77",
+        "verified": true
+      },
+      {
+        "rank": 19,
+        "name": "Janko 2",
+        "symbol": "J2",
+        "dim_V1": 14,
+        "formula": "dim_G2",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 20,
+        "name": "Janko 1",
+        "symbol": "J1",
+        "dim_V1": 56,
+        "formula": "fund_E7",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 21,
+        "name": "Mathieu 24",
+        "symbol": "M24",
+        "dim_V1": 23,
+        "formula": "prime_9",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 22,
+        "name": "Mathieu 23",
+        "symbol": "M23",
+        "dim_V1": 22,
+        "formula": "b2 + 1",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 23,
+        "name": "Mathieu 22",
+        "symbol": "M22",
+        "dim_V1": 21,
+        "formula": "b2",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 24,
+        "name": "Mathieu 12",
+        "symbol": "M12",
+        "dim_V1": 11,
+        "formula": "D_bulk",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 25,
+        "name": "Mathieu 11",
+        "symbol": "M11",
+        "dim_V1": 10,
+        "formula": "D_bulk - 1",
+        "factors": "",
+        "verified": true
+      },
+      {
+        "rank": 26,
+        "name": "Tits",
+        "symbol": "2F4(2)'",
+        "dim_V1": 26,
+        "formula": "dim_J3O - 1",
+        "factors": "",
+        "verified": true
+      }
+    ],
+    "primes": [
+      {
+        "prime": 2,
+        "tier": "tier1",
+        "formula": "p2",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 3,
+        "tier": "tier1",
+        "formula": "N_gen",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 5,
+        "tier": "tier1",
+        "formula": "Weyl",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 7,
+        "tier": "tier1",
+        "formula": "dim_K7",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 11,
+        "tier": "tier1",
+        "formula": "D_bulk",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 13,
+        "tier": "tier1",
+        "formula": "alpha_sum_B",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 17,
+        "tier": "tier1",
+        "formula": "lambda_H",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 61,
+        "tier": "tier1",
+        "formula": "kappa_T_inv",
+        "generator": "Direct GIFT constants"
+      },
+      {
+        "prime": 37,
+        "tier": "tier2",
+        "formula": "b3 - 40",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 41,
+        "tier": "tier2",
+        "formula": "b3 - 36",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 53,
+        "tier": "tier2",
+        "formula": "b3 - 24",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 59,
+        "tier": "tier2",
+        "formula": "b3 - L6",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 67,
+        "tier": "tier2",
+        "formula": "b3 - 10",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 71,
+        "tier": "tier2",
+        "formula": "b3 - 6",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 73,
+        "tier": "tier2",
+        "formula": "b3 - 4",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 79,
+        "tier": "tier2",
+        "formula": "b3 + 2",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 83,
+        "tier": "tier2",
+        "formula": "b3 + 6",
+        "generator": "Generated via b3"
+      },
+      {
+        "prime": 97,
+        "tier": "tier3",
+        "formula": "H* - 2",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 101,
+        "tier": "tier3",
+        "formula": "H* + p2",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 103,
+        "tier": "tier3",
+        "formula": "H* + 4",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 107,
+        "tier": "tier3",
+        "formula": "H* + rank_E8",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 109,
+        "tier": "tier3",
+        "formula": "H* + 2*Weyl",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 113,
+        "tier": "tier3",
+        "formula": "H* + dim_G2",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 127,
+        "tier": "tier3",
+        "formula": "H* + 4*dim_K7 (Mersenne M7)",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 131,
+        "tier": "tier3",
+        "formula": "H* + 32",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 137,
+        "tier": "tier3",
+        "formula": "H* + 38",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 139,
+        "tier": "tier3",
+        "formula": "H* + 40",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 149,
+        "tier": "tier3",
+        "formula": "H* + 50",
+        "generator": "Generated via H*"
+      },
+      {
+        "prime": 151,
+        "tier": "tier4",
+        "formula": "dim_E8 - 97",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 157,
+        "tier": "tier4",
+        "formula": "dim_E8 - 91",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 163,
+        "tier": "tier4",
+        "formula": "dim_E8 - 85 (Heegner!)",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 167,
+        "tier": "tier4",
+        "formula": "dim_E8 - 81",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 173,
+        "tier": "tier4",
+        "formula": "dim_E8 - 75",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 179,
+        "tier": "tier4",
+        "formula": "dim_E8 - 69",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 181,
+        "tier": "tier4",
+        "formula": "dim_E8 - 67 (Hubble)",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 191,
+        "tier": "tier4",
+        "formula": "dim_E8 - 57",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 193,
+        "tier": "tier4",
+        "formula": "dim_E8 - F10",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 197,
+        "tier": "tier4",
+        "formula": "dim_E8 - 3*lambda_H (delta_CP!)",
+        "generator": "Generated via dim_E8"
+      },
+      {
+        "prime": 199,
+        "tier": "tier4",
+        "formula": "dim_E8 - 49",
+        "generator": "Generated via dim_E8"
+      }
+    ],
+    "correspondences": [
+      {
+        "type": "bernoulli",
+        "id": "G2",
+        "rank": 2,
+        "bernoulli_index": 6,
+        "primes": [
+          2,
+          3,
+          7
+        ],
+        "gift_interpretation": {
+          "2": "p2",
+          "3": "N_gen",
+          "7": "dim_K7"
+        }
+      },
+      {
+        "type": "bernoulli",
+        "id": "F4",
+        "rank": 4,
+        "bernoulli_index": 10,
+        "primes": [
+          2,
+          3,
+          5,
+          11
+        ],
+        "gift_interpretation": {
+          "2": "p2",
+          "3": "N_gen",
+          "5": "Weyl_factor",
+          "11": "D_bulk"
+        }
+      },
+      {
+        "type": "bernoulli",
+        "id": "E6",
+        "rank": 6,
+        "bernoulli_index": 14,
+        "primes": [
+          2,
+          3,
+          7,
+          43
+        ],
+        "gift_interpretation": {
+          "2": "p2",
+          "3": "N_gen",
+          "7": "dim_K7",
+          "43": "visible_dim"
+        }
+      },
+      {
+        "type": "bernoulli",
+        "id": "E7",
+        "rank": 7,
+        "bernoulli_index": 16,
+        "primes": [
+          2,
+          3,
+          5,
+          17,
+          257
+        ],
+        "gift_interpretation": {
+          "2": "p2",
+          "3": "N_gen (Fermat F0)",
+          "5": "Weyl (Fermat F1)",
+          "17": "lambda_H (Fermat F2)",
+          "257": "dim_E8 + rank_E8 + 1 (Fermat F3)"
+        }
+      },
+      {
+        "type": "bernoulli",
+        "id": "E8",
+        "rank": 8,
+        "bernoulli_index": 18,
+        "primes": [
+          2,
+          3,
+          7,
+          19
+        ],
+        "gift_interpretation": {
+          "2": "p2",
+          "3": "N_gen",
+          "7": "dim_K7",
+          "19": "prime_8 = prime(rank_E8)"
+        }
+      },
+      {
+        "type": "fibonacci",
+        "id": "F1",
+        "value": 1,
+        "gift": "dim_U1"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F3",
+        "value": 2,
+        "gift": "p2"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F4",
+        "value": 3,
+        "gift": "N_gen"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F5",
+        "value": 5,
+        "gift": "Weyl_factor"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F6",
+        "value": 8,
+        "gift": "rank_E8"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F7",
+        "value": 13,
+        "gift": "alpha_sum_B"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F8",
+        "value": 21,
+        "gift": "b2"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F9",
+        "value": 34,
+        "gift": "hidden_dim"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F10",
+        "value": 55,
+        "gift": "dim_E7 - dim_E6"
+      },
+      {
+        "type": "fibonacci",
+        "id": "F12",
+        "value": 144,
+        "gift": "(dim_G2 - p2)^2"
+      },
+      {
+        "type": "lucas",
+        "id": "L0",
+        "value": 2,
+        "gift": "p2"
+      },
+      {
+        "type": "lucas",
+        "id": "L2",
+        "value": 3,
+        "gift": "N_gen"
+      },
+      {
+        "type": "lucas",
+        "id": "L4",
+        "value": 7,
+        "gift": "dim_K7"
+      },
+      {
+        "type": "lucas",
+        "id": "L5",
+        "value": 11,
+        "gift": "D_bulk"
+      },
+      {
+        "type": "lucas",
+        "id": "L6",
+        "value": 18,
+        "gift": "duality_gap (61-43)"
+      },
+      {
+        "type": "lucas",
+        "id": "L8",
+        "value": 47,
+        "gift": "Monster factor"
+      },
+      {
+        "type": "fermat",
+        "id": "F0",
+        "value": 3,
+        "gift": "N_gen"
+      },
+      {
+        "type": "fermat",
+        "id": "F1",
+        "value": 5,
+        "gift": "Weyl_factor"
+      },
+      {
+        "type": "fermat",
+        "id": "F2",
+        "value": 17,
+        "gift": "lambda_H_num"
+      },
+      {
+        "type": "fermat",
+        "id": "F3",
+        "value": 257,
+        "gift": "dim_E8 + rank_E8 + 1"
+      }
+    ]
+  },
+  "nested": {
+    "metadata": {
+      "version": "1.0",
+      "date": "2025-12-11",
+      "description": "Unified GIFT Atlas - constants, relations, correspondences",
+      "total_relations": 210,
+      "total_observables": 39
+    },
+    "constants": {
+      "topology": {
+        "dim_K7": {
+          "value": 7,
+          "origin": "G2-holonomy manifold dimension",
+          "latex": "\\dim(K_7)"
+        },
+        "b2": {
+          "value": 21,
+          "origin": "Second Betti number of K7",
+          "latex": "b_2(K_7)"
+        },
+        "b3": {
+          "value": 77,
+          "origin": "Third Betti number of K7",
+          "latex": "b_3(K_7)"
+        },
+        "H_star": {
+          "value": 99,
+          "origin": "Total Hodge number: b2 + b3 + 1",
+          "latex": "H^*"
+        },
+        "kappa_T_inv": {
+          "value": 61,
+          "origin": "Inverse torsion coupling",
+          "latex": "\\kappa_T^{-1}"
+        }
+      },
+      "algebra": {
+        "dim_E8": {
+          "value": 248,
+          "origin": "E8 Lie algebra dimension",
+          "latex": "\\dim(E_8)"
+        },
+        "rank_E8": {
+          "value": 8,
+          "origin": "E8 rank (Cartan subalgebra)",
+          "latex": "\\mathrm{rank}(E_8)"
+        },
+        "dim_E8xE8": {
+          "value": 496,
+          "origin": "Heterotic gauge algebra",
+          "latex": "\\dim(E_8 \\times E_8)"
+        },
+        "dim_E7": {
+          "value": 133,
+          "origin": "E7 Lie algebra dimension",
+          "latex": "\\dim(E_7)"
+        },
+        "dim_E6": {
+          "value": 78,
+          "origin": "E6 Lie algebra dimension",
+          "latex": "\\dim(E_6)"
+        },
+        "dim_F4": {
+          "value": 52,
+          "origin": "F4 Lie algebra dimension",
+          "latex": "\\dim(F_4)"
+        },
+        "dim_G2": {
+          "value": 14,
+          "origin": "G2 Lie algebra dimension (holonomy)",
+          "latex": "\\dim(G_2)"
+        },
+        "fund_E7": {
+          "value": 56,
+          "origin": "E7 fundamental representation",
+          "latex": "\\mathbf{56}_{E_7}"
+        },
+        "dim_J3O": {
+          "value": 27,
+          "origin": "Exceptional Jordan algebra dimension",
+          "latex": "\\dim(J_3(\\mathbb{O}))"
+        }
+      },
+      "physics": {
+        "N_gen": {
+          "value": 3,
+          "origin": "Number of fermion generations",
+          "latex": "N_{\\mathrm{gen}}"
+        },
+        "D_bulk": {
+          "value": 11,
+          "origin": "M-theory bulk spacetime dimension",
+          "latex": "D_{\\mathrm{bulk}}"
+        },
+        "p2": {
+          "value": 2,
+          "origin": "Second Pontryagin class coefficient",
+          "latex": "p_2"
+        },
+        "Weyl_factor": {
+          "value": 5,
+          "origin": "Weyl group contribution from |W(E8)|",
+          "latex": "W"
+        },
+        "lambda_H_num": {
+          "value": 17,
+          "origin": "Higgs coupling numerator",
+          "latex": "\\lambda_H"
+        },
+        "visible_dim": {
+          "value": 43,
+          "origin": "Visible sector dimension",
+          "latex": "d_{\\mathrm{vis}}"
+        },
+        "hidden_dim": {
+          "value": 34,
+          "origin": "Hidden sector dimension",
+          "latex": "d_{\\mathrm{hid}}"
+        },
+        "alpha_sum_A": {
+          "value": 12,
+          "origin": "Structure A anomaly sum",
+          "latex": "\\alpha_{A}"
+        },
+        "alpha_sum_B": {
+          "value": 13,
+          "origin": "Structure B anomaly sum",
+          "latex": "\\alpha_{B}"
+        },
+        "dim_SM": {
+          "value": 12,
+          "origin": "Standard Model gauge dimension",
+          "latex": "\\dim(\\mathrm{SM})"
+        }
+      },
+      "sequences": {
+        "fibonacci": {
+          "F1": 1,
+          "F2": 1,
+          "F3": 2,
+          "F4": 3,
+          "F5": 5,
+          "F6": 8,
+          "F7": 13,
+          "F8": 21,
+          "F9": 34,
+          "F10": 55,
+          "F11": 89,
+          "F12": 144
+        },
+        "lucas": {
+          "L0": 2,
+          "L1": 1,
+          "L2": 3,
+          "L3": 4,
+          "L4": 7,
+          "L5": 11,
+          "L6": 18,
+          "L7": 29,
+          "L8": 47
+        },
+        "fermat": {
+          "F0": 3,
+          "F1": 5,
+          "F2": 17,
+          "F3": 257,
+          "F4": 65537
+        }
+      },
+      "derived": {
+        "tau_num": {
+          "value": 3472,
+          "origin": "Hierarchy parameter numerator",
+          "formula": "496 * 21 / 3"
+        },
+        "tau_den": {
+          "value": 891,
+          "origin": "Hierarchy parameter denominator",
+          "formula": "27 * 33"
+        },
+        "m_tau_m_e": {
+          "value": 3477,
+          "origin": "Tau/electron mass ratio",
+          "formula": "7 + 10*248 + 10*99"
+        },
+        "prime_8": {
+          "value": 19,
+          "origin": "8th prime number"
+        },
+        "prime_9": {
+          "value": 23,
+          "origin": "9th prime number"
+        },
+        "prime_11": {
+          "value": 31,
+          "origin": "11th prime number"
+        }
+      }
+    },
+    "observables": {
+      "gauge_couplings": [
+        {
+          "id": 1,
+          "name": "alpha_inv",
+          "formula": "(dim_E8 + rank_E8)/2 + H*/D_bulk + det(g)*kappa_T",
+          "predicted": 137.033,
+          "experimental": 137.036,
+          "uncertainty": 1e-06,
+          "deviation_pct": 0.002,
+          "status": "TOPOLOGICAL"
+        },
+        {
+          "id": 2,
+          "name": "sin2_theta_W",
+          "formula": "b2/(b3 + dim_G2)",
+          "predicted": 0.23077,
+          "experimental": 0.23122,
+          "uncertainty": 3e-05,
+          "deviation_pct": 0.195,
+          "status": "PROVEN"
+        },
+        {
+          "id": 3,
+          "name": "alpha_s",
+          "formula": "sqrt(2)/(dim_G2 - p2)",
+          "predicted": 0.11785,
+          "experimental": 0.1179,
+          "uncertainty": 0.0009,
+          "deviation_pct": 0.042,
+          "status": "TOPOLOGICAL"
+        }
+      ],
+      "neutrino_mixing": [
+        {
+          "id": 4,
+          "name": "theta_12",
+          "formula": "arctan(sqrt(delta/gamma_GIFT))",
+          "predicted": 33.4,
+          "unit": "deg",
+          "experimental": 33.41,
+          "uncertainty": 0.75,
+          "deviation_pct": 0.03,
+          "status": "TOPOLOGICAL"
+        },
+        {
+          "id": 5,
+          "name": "theta_13",
+          "formula": "pi/b2",
+          "predicted": 8.571,
+          "unit": "deg",
+          "experimental": 8.54,
+          "uncertainty": 0.12,
+          "deviation_pct": 0.36,
+          "status": "TOPOLOGICAL"
+        },
+        {
+          "id": 6,
+          "name": "theta_23",
+          "formula": "(rank_E8 + b3)/H*",
+          "predicted": 49.19,
+          "unit": "deg",
+          "experimental": 49.3,
+          "uncertainty": 1.0,
+          "deviation_pct": 0.22,
+          "status": "TOPOLOGICAL"
+        },
+        {
+          "id": 7,
+          "name": "delta_CP",
+          "formula": "7*dim_G2 + H*",
+          "predicted": 197,
+          "unit": "deg",
+          "experimental": 197,
+          "uncertainty": 24,
+          "deviation_pct": 0.0,
+          "status": "PROVEN"
+        }
+      ],
+      "lepton_masses": [
+        {
+          "id": 8,
+          "name": "Q_Koide",
+          "formula": "dim_G2/b2",
+          "predicted": 0.666667,
+          "experimental": 0.666661,
+          "uncertainty": 7e-06,
+          "deviation_pct": 0.001,
+          "status": "PROVEN"
+        },
+        {
+          "id": 9,
+          "name": "m_mu_m_e",
+          "formula": "27^phi",
+          "predicted": 207.012,
+          "experimental": 206.768,
+          "uncertainty": 0.001,
+          "deviation_pct": 0.118,
+          "status": "TOPOLOGICAL"
+        },
+        {
+          "id": 10,
+          "name": "m_tau_m_e",
+          "formula": "dim_K7 + 10*dim_E8 + 10*H*",
+          "predicted": 3477,
+          "experimental": 3477.15,
+          "uncertainty": 0.01,
+          "deviation_pct": 0.004,
+          "status": "PROVEN"
+        }
+      ],
+      "quark_ratios": [
+        {
+          "id": 11,
+          "name": "m_s_m_d",
+          "formula": "4 * Weyl",
+          "predicted": 20,
+          "experimental": 20.0,
+          "uncertainty": 1.0,
+          "deviation_pct": 0.0,
+          "status": "PROVEN"
+        }
+      ],
+      "cosmology": [
+        {
+          "id": 35,
+          "name": "Omega_DE",
+          "formula": "ln(2) * (H* - 1)/H*",
+          "predicted": 0.6861,
+          "experimental": 0.6889,
+          "uncertainty": 0.0056,
+          "deviation_pct": 0.4,
+          "status": "PROVEN"
+        },
+        {
+          "id": 36,
+          "name": "n_s",
+          "formula": "zeta(11)/zeta(5)",
+          "predicted": 0.9649,
+          "experimental": 0.9649,
+          "uncertainty": 0.0042,
+          "deviation_pct": 0.0,
+          "status": "PROVEN"
+        }
+      ],
+      "structural": [
+        {
+          "id": 37,
+          "name": "kappa_T",
+          "formula": "1/(b3 - dim_G2 - p2)",
+          "predicted": 0.01639,
+          "experimental": 0.0164,
+          "uncertainty": 0.0001,
+          "deviation_pct": 0.04,
+          "status": "TOPOLOGICAL"
+        },
+        {
+          "id": 38,
+          "name": "tau",
+          "formula": "496*21/(27*99)",
+          "predicted": 3.8967,
+          "experimental": 3.897,
+          "uncertainty": 0.001,
+          "deviation_pct": 0.01,
+          "status": "PROVEN"
+        },
+        {
+          "id": 39,
+          "name": "lambda_H",
+          "formula": "sqrt(dim_G2 + N_gen) / 2^Weyl",
+          "predicted": 0.1289,
+          "experimental": 0.126,
+          "uncertainty": 0.008,
+          "deviation_pct": 2.3,
+          "status": "PROVEN"
+        }
+      ]
+    },
+    "correspondences": {
+      "bernoulli": {
+        "description": "Prime factors in denom(B_2(r+1)) encode GIFT constants for Lie group of rank r",
+        "mappings": [
+          {
+            "group": "G2",
+            "rank": 2,
+            "bernoulli_index": 6,
+            "denom_primes": [
+              2,
+              3,
+              7
+            ],
+            "gift_interpretation": {
+              "2": "p2",
+              "3": "N_gen",
+              "7": "dim_K7"
+            }
+          },
+          {
+            "group": "F4",
+            "rank": 4,
+            "bernoulli_index": 10,
+            "denom_primes": [
+              2,
+              3,
+              5,
+              11
+            ],
+            "gift_interpretation": {
+              "2": "p2",
+              "3": "N_gen",
+              "5": "Weyl_factor",
+              "11": "D_bulk"
+            }
+          },
+          {
+            "group": "E6",
+            "rank": 6,
+            "bernoulli_index": 14,
+            "denom_primes": [
+              2,
+              3,
+              7,
+              43
+            ],
+            "gift_interpretation": {
+              "2": "p2",
+              "3": "N_gen",
+              "7": "dim_K7",
+              "43": "visible_dim"
+            }
+          },
+          {
+            "group": "E7",
+            "rank": 7,
+            "bernoulli_index": 16,
+            "denom_primes": [
+              2,
+              3,
+              5,
+              17,
+              257
+            ],
+            "gift_interpretation": {
+              "2": "p2",
+              "3": "N_gen (Fermat F0)",
+              "5": "Weyl (Fermat F1)",
+              "17": "lambda_H (Fermat F2)",
+              "257": "dim_E8 + rank_E8 + 1 (Fermat F3)"
+            }
+          },
+          {
+            "group": "E8",
+            "rank": 8,
+            "bernoulli_index": 18,
+            "denom_primes": [
+              2,
+              3,
+              7,
+              19
+            ],
+            "gift_interpretation": {
+              "2": "p2",
+              "3": "N_gen",
+              "7": "dim_K7",
+              "19": "prime_8 = prime(rank_E8)"
+            }
+          }
+        ]
+      },
+      "fibonacci": {
+        "description": "Fibonacci sequence embedded in GIFT constants",
+        "mappings": {
+          "F1": {
+            "value": 1,
+            "gift": "dim_U1"
+          },
+          "F3": {
+            "value": 2,
+            "gift": "p2"
+          },
+          "F4": {
+            "value": 3,
+            "gift": "N_gen"
+          },
+          "F5": {
+            "value": 5,
+            "gift": "Weyl_factor"
+          },
+          "F6": {
+            "value": 8,
+            "gift": "rank_E8"
+          },
+          "F7": {
+            "value": 13,
+            "gift": "alpha_sum_B"
+          },
+          "F8": {
+            "value": 21,
+            "gift": "b2"
+          },
+          "F9": {
+            "value": 34,
+            "gift": "hidden_dim"
+          },
+          "F10": {
+            "value": 55,
+            "gift": "dim_E7 - dim_E6"
+          },
+          "F12": {
+            "value": 144,
+            "gift": "(dim_G2 - p2)^2"
+          }
+        }
+      },
+      "lucas": {
+        "description": "Lucas sequence embedded in GIFT constants",
+        "mappings": {
+          "L0": {
+            "value": 2,
+            "gift": "p2"
+          },
+          "L2": {
+            "value": 3,
+            "gift": "N_gen"
+          },
+          "L4": {
+            "value": 7,
+            "gift": "dim_K7"
+          },
+          "L5": {
+            "value": 11,
+            "gift": "D_bulk"
+          },
+          "L6": {
+            "value": 18,
+            "gift": "duality_gap (61-43)"
+          },
+          "L8": {
+            "value": 47,
+            "gift": "Monster factor"
+          }
+        }
+      },
+      "fermat": {
+        "description": "All known Fermat primes in GIFT",
+        "mappings": {
+          "F0": {
+            "value": 3,
+            "gift": "N_gen"
+          },
+          "F1": {
+            "value": 5,
+            "gift": "Weyl_factor"
+          },
+          "F2": {
+            "value": 17,
+            "gift": "lambda_H_num"
+          },
+          "F3": {
+            "value": 257,
+            "gift": "dim_E8 + rank_E8 + 1"
+          }
+        }
+      }
+    },
+    "sporadic_groups": {
+      "description": "All 26 sporadic simple groups have GIFT-expressible minimal representation dimensions",
+      "groups": [
+        {
+          "name": "Monster",
+          "symbol": "M",
+          "dim_V1": 196883,
+          "formula": "L8 * (b3 - L6) * (b3 - 6)",
+          "factors": "47 * 59 * 71",
+          "verified": true
+        },
+        {
+          "name": "Baby Monster",
+          "symbol": "B",
+          "dim_V1": 4371,
+          "formula": "m_tau_m_e + tau_den + N_gen",
+          "factors": "3477 + 891 + 3",
+          "verified": true
+        },
+        {
+          "name": "Fischer 24'",
+          "symbol": "Fi24'",
+          "dim_V1": 8671,
+          "formula": "rank_E8*1000 + D_bulk*kappa_T_inv",
+          "verified": false
+        },
+        {
+          "name": "Fischer 23",
+          "symbol": "Fi23",
+          "dim_V1": 782,
+          "formula": "p2 * lambda_H * prime_9",
+          "factors": "2 * 17 * 23",
+          "verified": true
+        },
+        {
+          "name": "Fischer 22",
+          "symbol": "Fi22",
+          "dim_V1": 78,
+          "formula": "dim_E6",
+          "verified": true
+        },
+        {
+          "name": "Thompson",
+          "symbol": "Th",
+          "dim_V1": 248,
+          "formula": "dim_E8",
+          "verified": true
+        },
+        {
+          "name": "Lyons",
+          "symbol": "Ly",
+          "dim_V1": 2480,
+          "formula": "10 * dim_E8",
+          "verified": true
+        },
+        {
+          "name": "Held",
+          "symbol": "He",
+          "dim_V1": 51,
+          "formula": "N_gen * lambda_H",
+          "factors": "3 * 17",
+          "verified": true
+        },
+        {
+          "name": "Conway 1",
+          "symbol": "Co1",
+          "dim_V1": 276,
+          "formula": "alpha_s_denom * prime_9",
+          "factors": "12 * 23",
+          "verified": true
+        },
+        {
+          "name": "Conway 2",
+          "symbol": "Co2",
+          "dim_V1": 23,
+          "formula": "prime_9",
+          "verified": true
+        },
+        {
+          "name": "Conway 3",
+          "symbol": "Co3",
+          "dim_V1": 23,
+          "formula": "prime_9",
+          "verified": true
+        },
+        {
+          "name": "O'Nan",
+          "symbol": "ON",
+          "dim_V1": 342,
+          "formula": "p2 * N_gen^2 * prime_8",
+          "factors": "2 * 9 * 19",
+          "verified": true
+        },
+        {
+          "name": "Suzuki",
+          "symbol": "Suz",
+          "dim_V1": 143,
+          "formula": "D_bulk * alpha_sum_B",
+          "factors": "11 * 13",
+          "verified": true
+        },
+        {
+          "name": "Rudvalis",
+          "symbol": "Ru",
+          "dim_V1": 28,
+          "formula": "p2^2 * dim_K7",
+          "factors": "4 * 7",
+          "verified": true
+        },
+        {
+          "name": "Higman-Sims",
+          "symbol": "HS",
+          "dim_V1": 22,
+          "formula": "b2 + 1",
+          "verified": true
+        },
+        {
+          "name": "McLaughlin",
+          "symbol": "McL",
+          "dim_V1": 22,
+          "formula": "b2 + 1",
+          "verified": true
+        },
+        {
+          "name": "Janko 4",
+          "symbol": "J4",
+          "dim_V1": 1333,
+          "formula": "prime_11 * visible_dim",
+          "factors": "31 * 43",
+          "verified": true
+        },
+        {
+          "name": "Janko 3",
+          "symbol": "J3",
+          "dim_V1": 85,
+          "formula": "rank_E8 + b3",
+          "factors": "8 + 77",
+          "verified": true
+        },
+        {
+          "name": "Janko 2",
+          "symbol": "J2",
+          "dim_V1": 14,
+          "formula": "dim_G2",
+          "verified": true
+        },
+        {
+          "name": "Janko 1",
+          "symbol": "J1",
+          "dim_V1": 56,
+          "formula": "fund_E7",
+          "verified": true
+        },
+        {
+          "name": "Mathieu 24",
+          "symbol": "M24",
+          "dim_V1": 23,
+          "formula": "prime_9",
+          "verified": true
+        },
+        {
+          "name": "Mathieu 23",
+          "symbol": "M23",
+          "dim_V1": 22,
+          "formula": "b2 + 1",
+          "verified": true
+        },
+        {
+          "name": "Mathieu 22",
+          "symbol": "M22",
+          "dim_V1": 21,
+          "formula": "b2",
+          "verified": true
+        },
+        {
+          "name": "Mathieu 12",
+          "symbol": "M12",
+          "dim_V1": 11,
+          "formula": "D_bulk",
+          "verified": true
+        },
+        {
+          "name": "Mathieu 11",
+          "symbol": "M11",
+          "dim_V1": 10,
+          "formula": "D_bulk - 1",
+          "verified": true
+        },
+        {
+          "name": "Tits",
+          "symbol": "2F4(2)'",
+          "dim_V1": 26,
+          "formula": "dim_J3O - 1",
+          "verified": true
+        }
+      ],
+      "j_invariant": {
+        "constant_term": 744,
+        "formulas": [
+          "N_gen * dim_E8 = 3 * 248",
+          "dim_Leech * prime_11 = 24 * 31"
+        ],
+        "first_coefficient": 196884,
+        "note": "196884 = 196883 + 1 (McKay observation)"
+      },
+      "monster_primes": {
+        "description": "All 15 primes dividing |Monster| are GIFT constants",
+        "primes": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          59,
+          71
+        ]
+      }
+    },
+    "prime_atlas": {
+      "description": "100% of primes < 200 expressible via GIFT constants",
+      "total_primes": 46,
+      "coverage": "100%",
+      "generators": [
+        {
+          "name": "b3",
+          "value": 77,
+          "operation": "subtraction",
+          "range": "primes < 77"
+        },
+        {
+          "name": "H_star",
+          "value": 99,
+          "operation": "addition",
+          "range": "primes 100-150"
+        },
+        {
+          "name": "dim_E8",
+          "value": 248,
+          "operation": "subtraction",
+          "range": "primes 150-250"
+        }
+      ],
+      "tier1_direct": {
+        "description": "Direct GIFT constants",
+        "primes": {
+          "2": "p2",
+          "3": "N_gen",
+          "5": "Weyl",
+          "7": "dim_K7",
+          "11": "D_bulk",
+          "13": "alpha_sum_B",
+          "17": "lambda_H",
+          "61": "kappa_T_inv"
+        }
+      },
+      "tier2_b3": {
+        "description": "Generated via b3",
+        "primes": {
+          "37": "b3 - 40",
+          "41": "b3 - 36",
+          "53": "b3 - 24",
+          "59": "b3 - L6",
+          "67": "b3 - 10",
+          "71": "b3 - 6",
+          "73": "b3 - 4",
+          "79": "b3 + 2",
+          "83": "b3 + 6"
+        }
+      },
+      "tier3_H_star": {
+        "description": "Generated via H*",
+        "primes": {
+          "97": "H* - 2",
+          "101": "H* + p2",
+          "103": "H* + 4",
+          "107": "H* + rank_E8",
+          "109": "H* + 2*Weyl",
+          "113": "H* + dim_G2",
+          "127": "H* + 4*dim_K7 (Mersenne M7)",
+          "131": "H* + 32",
+          "137": "H* + 38",
+          "139": "H* + 40",
+          "149": "H* + 50"
+        }
+      },
+      "tier4_E8": {
+        "description": "Generated via dim_E8",
+        "primes": {
+          "151": "dim_E8 - 97",
+          "157": "dim_E8 - 91",
+          "163": "dim_E8 - 85 (Heegner!)",
+          "167": "dim_E8 - 81",
+          "173": "dim_E8 - 75",
+          "179": "dim_E8 - 69",
+          "181": "dim_E8 - 67 (Hubble)",
+          "191": "dim_E8 - 57",
+          "193": "dim_E8 - F10",
+          "197": "dim_E8 - 3*lambda_H (delta_CP!)",
+          "199": "dim_E8 - 49"
+        }
+      },
+      "special_primes": {
+        "heegner": {
+          "description": "All 9 Heegner numbers are GIFT-expressible",
+          "numbers": [
+            1,
+            2,
+            3,
+            7,
+            11,
+            19,
+            43,
+            67,
+            163
+          ]
+        },
+        "mersenne": {
+          "description": "Mersenne primes in GIFT",
+          "M2": {
+            "value": 3,
+            "gift": "N_gen"
+          },
+          "M3": {
+            "value": 7,
+            "gift": "dim_K7"
+          },
+          "M5": {
+            "value": 31,
+            "gift": "prime_11"
+          },
+          "M7": {
+            "value": 127,
+            "gift": "H* + 4*dim_K7"
+          }
+        }
+      }
+    },
+    "relations": {
+      "core": [
+        {
+          "id": 1,
+          "name": "Fine structure constant",
+          "formula": "alpha_inv = (dim_E8 + rank_E8)/2 + H*/D_bulk",
+          "domain": "gauge"
+        },
+        {
+          "id": 2,
+          "name": "Weinberg angle",
+          "formula": "sin2_theta_W = b2/(b3 + dim_G2)",
+          "domain": "gauge"
+        },
+        {
+          "id": 3,
+          "name": "Strong coupling",
+          "formula": "alpha_s = sqrt(2)/(dim_G2 - p2)",
+          "domain": "gauge"
+        },
+        {
+          "id": 7,
+          "name": "CP phase",
+          "formula": "delta_CP = 7*dim_G2 + H* = 197",
+          "domain": "neutrino"
+        },
+        {
+          "id": 8,
+          "name": "Koide relation",
+          "formula": "Q = dim_G2/b2 = 2/3",
+          "domain": "lepton"
+        }
+      ],
+      "bernoulli": [
+        {
+          "id": 76,
+          "name": "Higgs/W mass ratio",
+          "formula": "m_H/m_W = 257/165 = F3/(N_gen * F10)",
+          "domain": "mass",
+          "status": "candidate",
+          "precision": "0.05%"
+        },
+        {
+          "id": 77,
+          "name": "257 decomposition",
+          "formula": "257 = dim_E8 + rank_E8 + 1",
+          "domain": "algebra"
+        },
+        {
+          "id": 78,
+          "name": "E7-E6 gap",
+          "formula": "dim_E7 - dim_E6 = 55 = F10",
+          "domain": "algebra"
+        },
+        {
+          "id": 79,
+          "name": "E8-E7 gap",
+          "formula": "dim_E8 - dim_E7 = 115 = 5 * 23",
+          "domain": "algebra"
+        },
+        {
+          "id": 80,
+          "name": "G2 Bernoulli",
+          "formula": "denom(B6) = 42 = p2 * N_gen * dim_K7",
+          "domain": "bernoulli"
+        }
+      ],
+      "moonshine": [
+        {
+          "id": 85,
+          "name": "j-constant (E8)",
+          "formula": "744 = N_gen * dim_E8",
+          "domain": "moonshine"
+        },
+        {
+          "id": 86,
+          "name": "Monster dimension",
+          "formula": "196883 = L8 * (b3 - L6) * (b3 - 6)",
+          "domain": "moonshine"
+        },
+        {
+          "id": 87,
+          "name": "Monster primes",
+          "formula": "15/15 primes dividing |M| are GIFT",
+          "domain": "moonshine"
+        },
+        {
+          "id": 88,
+          "name": "Baby Monster",
+          "formula": "4371 = m_tau_m_e + tau_den + N_gen",
+          "domain": "moonshine"
+        },
+        {
+          "id": 89,
+          "name": "Mersenne M7",
+          "formula": "127 = 2^dim_K7 - 1",
+          "domain": "moonshine"
+        },
+        {
+          "id": 95,
+          "name": "Golay code",
+          "formula": "|G24| = 2^12 = 2^(dim_G2 - p2)",
+          "domain": "codes"
+        },
+        {
+          "id": 96,
+          "name": "Hamming (7,4)",
+          "formula": "dim_K7 = p2^2 + N_gen",
+          "domain": "codes"
+        },
+        {
+          "id": 97,
+          "name": "E8 kissing",
+          "formula": "K8 = 240 = p2^4 * Weyl * N_gen",
+          "domain": "lattice"
+        },
+        {
+          "id": 98,
+          "name": "Leech kissing",
+          "formula": "K24 = 196560 = K8 * 9 * 7 * 13",
+          "domain": "lattice"
+        },
+        {
+          "id": 105,
+          "name": "Thompson = E8",
+          "formula": "dim(Th_V1) = dim_E8 = 248",
+          "domain": "sporadic"
+        }
+      ],
+      "prime_atlas": [
+        {
+          "id": 198,
+          "name": "Mersenne-Hodge",
+          "formula": "127 = H* + 4*dim_K7",
+          "domain": "primes"
+        },
+        {
+          "id": 199,
+          "name": "Heegner 163",
+          "formula": "163 = dim_E8 - (rank_E8 + b3)",
+          "domain": "primes"
+        },
+        {
+          "id": 200,
+          "name": "Hubble prime",
+          "formula": "181 = dim_E8 - 67",
+          "domain": "primes"
+        },
+        {
+          "id": 202,
+          "name": "CP phase prime",
+          "formula": "197 = dim_E8 - 3*lambda_H = delta_CP",
+          "domain": "primes"
+        },
+        {
+          "id": 210,
+          "name": "Three generators",
+          "formula": "b3, H*, dim_E8 generate all primes < 200",
+          "domain": "primes"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "total_constants": 56,
+    "total_observables": 16,
+    "total_relations": 25,
+    "total_sporadic_groups": 26,
+    "total_primes": 39,
+    "total_correspondences": 25
+  }
+}

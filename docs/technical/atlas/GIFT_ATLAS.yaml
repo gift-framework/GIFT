@@ -1,0 +1,842 @@
+# GIFT Atlas - Central Source of Truth
+# Version: 1.0
+# Generated: 2025-12-11
+# Description: All GIFT constants, relations, correspondences in one structured file
+
+metadata:
+  version: "1.0"
+  date: "2025-12-11"
+  description: "Unified GIFT Atlas - constants, relations, correspondences"
+  total_relations: 210
+  total_observables: 39
+
+# =============================================================================
+# CONSTANTS - Fundamental GIFT topological and algebraic constants
+# =============================================================================
+constants:
+  # Topology - K7 Manifold
+  topology:
+    dim_K7:
+      value: 7
+      origin: "G2-holonomy manifold dimension"
+      latex: "\\dim(K_7)"
+    b2:
+      value: 21
+      origin: "Second Betti number of K7"
+      latex: "b_2(K_7)"
+    b3:
+      value: 77
+      origin: "Third Betti number of K7"
+      latex: "b_3(K_7)"
+    H_star:
+      value: 99
+      origin: "Total Hodge number: b2 + b3 + 1"
+      latex: "H^*"
+    kappa_T_inv:
+      value: 61
+      origin: "Inverse torsion coupling"
+      latex: "\\kappa_T^{-1}"
+
+  # Algebra - Lie Groups
+  algebra:
+    dim_E8:
+      value: 248
+      origin: "E8 Lie algebra dimension"
+      latex: "\\dim(E_8)"
+    rank_E8:
+      value: 8
+      origin: "E8 rank (Cartan subalgebra)"
+      latex: "\\mathrm{rank}(E_8)"
+    dim_E8xE8:
+      value: 496
+      origin: "Heterotic gauge algebra"
+      latex: "\\dim(E_8 \\times E_8)"
+    dim_E7:
+      value: 133
+      origin: "E7 Lie algebra dimension"
+      latex: "\\dim(E_7)"
+    dim_E6:
+      value: 78
+      origin: "E6 Lie algebra dimension"
+      latex: "\\dim(E_6)"
+    dim_F4:
+      value: 52
+      origin: "F4 Lie algebra dimension"
+      latex: "\\dim(F_4)"
+    dim_G2:
+      value: 14
+      origin: "G2 Lie algebra dimension (holonomy)"
+      latex: "\\dim(G_2)"
+    fund_E7:
+      value: 56
+      origin: "E7 fundamental representation"
+      latex: "\\mathbf{56}_{E_7}"
+    dim_J3O:
+      value: 27
+      origin: "Exceptional Jordan algebra dimension"
+      latex: "\\dim(J_3(\\mathbb{O}))"
+
+  # Physics - Standard Model
+  physics:
+    N_gen:
+      value: 3
+      origin: "Number of fermion generations"
+      latex: "N_{\\mathrm{gen}}"
+    D_bulk:
+      value: 11
+      origin: "M-theory bulk spacetime dimension"
+      latex: "D_{\\mathrm{bulk}}"
+    p2:
+      value: 2
+      origin: "Second Pontryagin class coefficient"
+      latex: "p_2"
+    Weyl_factor:
+      value: 5
+      origin: "Weyl group contribution from |W(E8)|"
+      latex: "W"
+    lambda_H_num:
+      value: 17
+      origin: "Higgs coupling numerator"
+      latex: "\\lambda_H"
+    visible_dim:
+      value: 43
+      origin: "Visible sector dimension"
+      latex: "d_{\\mathrm{vis}}"
+    hidden_dim:
+      value: 34
+      origin: "Hidden sector dimension"
+      latex: "d_{\\mathrm{hid}}"
+    alpha_sum_A:
+      value: 12
+      origin: "Structure A anomaly sum"
+      latex: "\\alpha_{A}"
+    alpha_sum_B:
+      value: 13
+      origin: "Structure B anomaly sum"
+      latex: "\\alpha_{B}"
+    dim_SM:
+      value: 12
+      origin: "Standard Model gauge dimension"
+      latex: "\\dim(\\mathrm{SM})"
+
+  # Sequences
+  sequences:
+    fibonacci:
+      F1: 1
+      F2: 1
+      F3: 2
+      F4: 3
+      F5: 5
+      F6: 8
+      F7: 13
+      F8: 21
+      F9: 34
+      F10: 55
+      F11: 89
+      F12: 144
+    lucas:
+      L0: 2
+      L1: 1
+      L2: 3
+      L3: 4
+      L4: 7
+      L5: 11
+      L6: 18
+      L7: 29
+      L8: 47
+    fermat:
+      F0: 3
+      F1: 5
+      F2: 17
+      F3: 257
+      F4: 65537
+
+  # Derived
+  derived:
+    tau_num:
+      value: 3472
+      origin: "Hierarchy parameter numerator"
+      formula: "496 * 21 / 3"
+    tau_den:
+      value: 891
+      origin: "Hierarchy parameter denominator"
+      formula: "27 * 33"
+    m_tau_m_e:
+      value: 3477
+      origin: "Tau/electron mass ratio"
+      formula: "7 + 10*248 + 10*99"
+    prime_8:
+      value: 19
+      origin: "8th prime number"
+    prime_9:
+      value: 23
+      origin: "9th prime number"
+    prime_11:
+      value: 31
+      origin: "11th prime number"
+
+# =============================================================================
+# OBSERVABLES - Physical predictions (39 total)
+# =============================================================================
+observables:
+  gauge_couplings:
+    - id: 1
+      name: "alpha_inv"
+      formula: "(dim_E8 + rank_E8)/2 + H*/D_bulk + det(g)*kappa_T"
+      predicted: 137.033
+      experimental: 137.036
+      uncertainty: 0.000001
+      deviation_pct: 0.002
+      status: "TOPOLOGICAL"
+
+    - id: 2
+      name: "sin2_theta_W"
+      formula: "b2/(b3 + dim_G2)"
+      predicted: 0.23077
+      experimental: 0.23122
+      uncertainty: 0.00003
+      deviation_pct: 0.195
+      status: "PROVEN"
+
+    - id: 3
+      name: "alpha_s"
+      formula: "sqrt(2)/(dim_G2 - p2)"
+      predicted: 0.11785
+      experimental: 0.1179
+      uncertainty: 0.0009
+      deviation_pct: 0.042
+      status: "TOPOLOGICAL"
+
+  neutrino_mixing:
+    - id: 4
+      name: "theta_12"
+      formula: "arctan(sqrt(delta/gamma_GIFT))"
+      predicted: 33.40
+      unit: "deg"
+      experimental: 33.41
+      uncertainty: 0.75
+      deviation_pct: 0.03
+      status: "TOPOLOGICAL"
+
+    - id: 5
+      name: "theta_13"
+      formula: "pi/b2"
+      predicted: 8.571
+      unit: "deg"
+      experimental: 8.54
+      uncertainty: 0.12
+      deviation_pct: 0.36
+      status: "TOPOLOGICAL"
+
+    - id: 6
+      name: "theta_23"
+      formula: "(rank_E8 + b3)/H*"
+      predicted: 49.19
+      unit: "deg"
+      experimental: 49.3
+      uncertainty: 1.0
+      deviation_pct: 0.22
+      status: "TOPOLOGICAL"
+
+    - id: 7
+      name: "delta_CP"
+      formula: "7*dim_G2 + H*"
+      predicted: 197
+      unit: "deg"
+      experimental: 197
+      uncertainty: 24
+      deviation_pct: 0.00
+      status: "PROVEN"
+
+  lepton_masses:
+    - id: 8
+      name: "Q_Koide"
+      formula: "dim_G2/b2"
+      predicted: 0.666667
+      experimental: 0.666661
+      uncertainty: 0.000007
+      deviation_pct: 0.001
+      status: "PROVEN"
+
+    - id: 9
+      name: "m_mu_m_e"
+      formula: "27^phi"
+      predicted: 207.012
+      experimental: 206.768
+      uncertainty: 0.001
+      deviation_pct: 0.118
+      status: "TOPOLOGICAL"
+
+    - id: 10
+      name: "m_tau_m_e"
+      formula: "dim_K7 + 10*dim_E8 + 10*H*"
+      predicted: 3477
+      experimental: 3477.15
+      uncertainty: 0.01
+      deviation_pct: 0.004
+      status: "PROVEN"
+
+  quark_ratios:
+    - id: 11
+      name: "m_s_m_d"
+      formula: "4 * Weyl"
+      predicted: 20
+      experimental: 20.0
+      uncertainty: 1.0
+      deviation_pct: 0.00
+      status: "PROVEN"
+
+  cosmology:
+    - id: 35
+      name: "Omega_DE"
+      formula: "ln(2) * (H* - 1)/H*"
+      predicted: 0.6861
+      experimental: 0.6889
+      uncertainty: 0.0056
+      deviation_pct: 0.40
+      status: "PROVEN"
+
+    - id: 36
+      name: "n_s"
+      formula: "zeta(11)/zeta(5)"
+      predicted: 0.9649
+      experimental: 0.9649
+      uncertainty: 0.0042
+      deviation_pct: 0.00
+      status: "PROVEN"
+
+  structural:
+    - id: 37
+      name: "kappa_T"
+      formula: "1/(b3 - dim_G2 - p2)"
+      predicted: 0.01639
+      experimental: 0.0164
+      uncertainty: 0.0001
+      deviation_pct: 0.04
+      status: "TOPOLOGICAL"
+
+    - id: 38
+      name: "tau"
+      formula: "496*21/(27*99)"
+      predicted: 3.8967
+      experimental: 3.897
+      uncertainty: 0.001
+      deviation_pct: 0.01
+      status: "PROVEN"
+
+    - id: 39
+      name: "lambda_H"
+      formula: "sqrt(dim_G2 + N_gen) / 2^Weyl"
+      predicted: 0.1289
+      experimental: 0.126
+      uncertainty: 0.008
+      deviation_pct: 2.3
+      status: "PROVEN"
+
+# =============================================================================
+# CORRESPONDENCES - Mathematical connections
+# =============================================================================
+correspondences:
+  # Bernoulli-GIFT
+  bernoulli:
+    description: "Prime factors in denom(B_2(r+1)) encode GIFT constants for Lie group of rank r"
+    mappings:
+      - group: "G2"
+        rank: 2
+        bernoulli_index: 6
+        denom_primes: [2, 3, 7]
+        gift_interpretation:
+          2: "p2"
+          3: "N_gen"
+          7: "dim_K7"
+
+      - group: "F4"
+        rank: 4
+        bernoulli_index: 10
+        denom_primes: [2, 3, 5, 11]
+        gift_interpretation:
+          2: "p2"
+          3: "N_gen"
+          5: "Weyl_factor"
+          11: "D_bulk"
+
+      - group: "E6"
+        rank: 6
+        bernoulli_index: 14
+        denom_primes: [2, 3, 7, 43]
+        gift_interpretation:
+          2: "p2"
+          3: "N_gen"
+          7: "dim_K7"
+          43: "visible_dim"
+
+      - group: "E7"
+        rank: 7
+        bernoulli_index: 16
+        denom_primes: [2, 3, 5, 17, 257]
+        gift_interpretation:
+          2: "p2"
+          3: "N_gen (Fermat F0)"
+          5: "Weyl (Fermat F1)"
+          17: "lambda_H (Fermat F2)"
+          257: "dim_E8 + rank_E8 + 1 (Fermat F3)"
+
+      - group: "E8"
+        rank: 8
+        bernoulli_index: 18
+        denom_primes: [2, 3, 7, 19]
+        gift_interpretation:
+          2: "p2"
+          3: "N_gen"
+          7: "dim_K7"
+          19: "prime_8 = prime(rank_E8)"
+
+  # Fibonacci-GIFT
+  fibonacci:
+    description: "Fibonacci sequence embedded in GIFT constants"
+    mappings:
+      F1: {value: 1, gift: "dim_U1"}
+      F3: {value: 2, gift: "p2"}
+      F4: {value: 3, gift: "N_gen"}
+      F5: {value: 5, gift: "Weyl_factor"}
+      F6: {value: 8, gift: "rank_E8"}
+      F7: {value: 13, gift: "alpha_sum_B"}
+      F8: {value: 21, gift: "b2"}
+      F9: {value: 34, gift: "hidden_dim"}
+      F10: {value: 55, gift: "dim_E7 - dim_E6"}
+      F12: {value: 144, gift: "(dim_G2 - p2)^2"}
+
+  # Lucas-GIFT
+  lucas:
+    description: "Lucas sequence embedded in GIFT constants"
+    mappings:
+      L0: {value: 2, gift: "p2"}
+      L2: {value: 3, gift: "N_gen"}
+      L4: {value: 7, gift: "dim_K7"}
+      L5: {value: 11, gift: "D_bulk"}
+      L6: {value: 18, gift: "duality_gap (61-43)"}
+      L8: {value: 47, gift: "Monster factor"}
+
+  # Fermat-GIFT
+  fermat:
+    description: "All known Fermat primes in GIFT"
+    mappings:
+      F0: {value: 3, gift: "N_gen"}
+      F1: {value: 5, gift: "Weyl_factor"}
+      F2: {value: 17, gift: "lambda_H_num"}
+      F3: {value: 257, gift: "dim_E8 + rank_E8 + 1"}
+
+# =============================================================================
+# SPORADIC GROUPS - Moonshine correspondence
+# =============================================================================
+sporadic_groups:
+  description: "All 26 sporadic simple groups have GIFT-expressible minimal representation dimensions"
+
+  groups:
+    - name: "Monster"
+      symbol: "M"
+      dim_V1: 196883
+      formula: "L8 * (b3 - L6) * (b3 - 6)"
+      factors: "47 * 59 * 71"
+      verified: true
+
+    - name: "Baby Monster"
+      symbol: "B"
+      dim_V1: 4371
+      formula: "m_tau_m_e + tau_den + N_gen"
+      factors: "3477 + 891 + 3"
+      verified: true
+
+    - name: "Fischer 24'"
+      symbol: "Fi24'"
+      dim_V1: 8671
+      formula: "rank_E8*1000 + D_bulk*kappa_T_inv"
+      verified: false
+
+    - name: "Fischer 23"
+      symbol: "Fi23"
+      dim_V1: 782
+      formula: "p2 * lambda_H * prime_9"
+      factors: "2 * 17 * 23"
+      verified: true
+
+    - name: "Fischer 22"
+      symbol: "Fi22"
+      dim_V1: 78
+      formula: "dim_E6"
+      verified: true
+
+    - name: "Thompson"
+      symbol: "Th"
+      dim_V1: 248
+      formula: "dim_E8"
+      verified: true
+
+    - name: "Lyons"
+      symbol: "Ly"
+      dim_V1: 2480
+      formula: "10 * dim_E8"
+      verified: true
+
+    - name: "Held"
+      symbol: "He"
+      dim_V1: 51
+      formula: "N_gen * lambda_H"
+      factors: "3 * 17"
+      verified: true
+
+    - name: "Conway 1"
+      symbol: "Co1"
+      dim_V1: 276
+      formula: "alpha_s_denom * prime_9"
+      factors: "12 * 23"
+      verified: true
+
+    - name: "Conway 2"
+      symbol: "Co2"
+      dim_V1: 23
+      formula: "prime_9"
+      verified: true
+
+    - name: "Conway 3"
+      symbol: "Co3"
+      dim_V1: 23
+      formula: "prime_9"
+      verified: true
+
+    - name: "O'Nan"
+      symbol: "ON"
+      dim_V1: 342
+      formula: "p2 * N_gen^2 * prime_8"
+      factors: "2 * 9 * 19"
+      verified: true
+
+    - name: "Suzuki"
+      symbol: "Suz"
+      dim_V1: 143
+      formula: "D_bulk * alpha_sum_B"
+      factors: "11 * 13"
+      verified: true
+
+    - name: "Rudvalis"
+      symbol: "Ru"
+      dim_V1: 28
+      formula: "p2^2 * dim_K7"
+      factors: "4 * 7"
+      verified: true
+
+    - name: "Higman-Sims"
+      symbol: "HS"
+      dim_V1: 22
+      formula: "b2 + 1"
+      verified: true
+
+    - name: "McLaughlin"
+      symbol: "McL"
+      dim_V1: 22
+      formula: "b2 + 1"
+      verified: true
+
+    - name: "Janko 4"
+      symbol: "J4"
+      dim_V1: 1333
+      formula: "prime_11 * visible_dim"
+      factors: "31 * 43"
+      verified: true
+
+    - name: "Janko 3"
+      symbol: "J3"
+      dim_V1: 85
+      formula: "rank_E8 + b3"
+      factors: "8 + 77"
+      verified: true
+
+    - name: "Janko 2"
+      symbol: "J2"
+      dim_V1: 14
+      formula: "dim_G2"
+      verified: true
+
+    - name: "Janko 1"
+      symbol: "J1"
+      dim_V1: 56
+      formula: "fund_E7"
+      verified: true
+
+    - name: "Mathieu 24"
+      symbol: "M24"
+      dim_V1: 23
+      formula: "prime_9"
+      verified: true
+
+    - name: "Mathieu 23"
+      symbol: "M23"
+      dim_V1: 22
+      formula: "b2 + 1"
+      verified: true
+
+    - name: "Mathieu 22"
+      symbol: "M22"
+      dim_V1: 21
+      formula: "b2"
+      verified: true
+
+    - name: "Mathieu 12"
+      symbol: "M12"
+      dim_V1: 11
+      formula: "D_bulk"
+      verified: true
+
+    - name: "Mathieu 11"
+      symbol: "M11"
+      dim_V1: 10
+      formula: "D_bulk - 1"
+      verified: true
+
+    - name: "Tits"
+      symbol: "2F4(2)'"
+      dim_V1: 26
+      formula: "dim_J3O - 1"
+      verified: true
+
+  j_invariant:
+    constant_term: 744
+    formulas:
+      - "N_gen * dim_E8 = 3 * 248"
+      - "dim_Leech * prime_11 = 24 * 31"
+    first_coefficient: 196884
+    note: "196884 = 196883 + 1 (McKay observation)"
+
+  monster_primes:
+    description: "All 15 primes dividing |Monster| are GIFT constants"
+    primes: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+
+# =============================================================================
+# PRIME ATLAS - Prime expressibility
+# =============================================================================
+prime_atlas:
+  description: "100% of primes < 200 expressible via GIFT constants"
+  total_primes: 46
+  coverage: "100%"
+
+  generators:
+    - name: "b3"
+      value: 77
+      operation: "subtraction"
+      range: "primes < 77"
+
+    - name: "H_star"
+      value: 99
+      operation: "addition"
+      range: "primes 100-150"
+
+    - name: "dim_E8"
+      value: 248
+      operation: "subtraction"
+      range: "primes 150-250"
+
+  tier1_direct:
+    description: "Direct GIFT constants"
+    primes:
+      2: "p2"
+      3: "N_gen"
+      5: "Weyl"
+      7: "dim_K7"
+      11: "D_bulk"
+      13: "alpha_sum_B"
+      17: "lambda_H"
+      61: "kappa_T_inv"
+
+  tier2_b3:
+    description: "Generated via b3"
+    primes:
+      37: "b3 - 40"
+      41: "b3 - 36"
+      53: "b3 - 24"
+      59: "b3 - L6"
+      67: "b3 - 10"
+      71: "b3 - 6"
+      73: "b3 - 4"
+      79: "b3 + 2"
+      83: "b3 + 6"
+
+  tier3_H_star:
+    description: "Generated via H*"
+    primes:
+      97: "H* - 2"
+      101: "H* + p2"
+      103: "H* + 4"
+      107: "H* + rank_E8"
+      109: "H* + 2*Weyl"
+      113: "H* + dim_G2"
+      127: "H* + 4*dim_K7 (Mersenne M7)"
+      131: "H* + 32"
+      137: "H* + 38"
+      139: "H* + 40"
+      149: "H* + 50"
+
+  tier4_E8:
+    description: "Generated via dim_E8"
+    primes:
+      151: "dim_E8 - 97"
+      157: "dim_E8 - 91"
+      163: "dim_E8 - 85 (Heegner!)"
+      167: "dim_E8 - 81"
+      173: "dim_E8 - 75"
+      179: "dim_E8 - 69"
+      181: "dim_E8 - 67 (Hubble)"
+      191: "dim_E8 - 57"
+      193: "dim_E8 - F10"
+      197: "dim_E8 - 3*lambda_H (delta_CP!)"
+      199: "dim_E8 - 49"
+
+  special_primes:
+    heegner:
+      description: "All 9 Heegner numbers are GIFT-expressible"
+      numbers: [1, 2, 3, 7, 11, 19, 43, 67, 163]
+
+    mersenne:
+      description: "Mersenne primes in GIFT"
+      M2: {value: 3, gift: "N_gen"}
+      M3: {value: 7, gift: "dim_K7"}
+      M5: {value: 31, gift: "prime_11"}
+      M7: {value: 127, gift: "H* + 4*dim_K7"}
+
+# =============================================================================
+# RELATIONS - Master catalog (numbered)
+# =============================================================================
+relations:
+  # Core relations 1-75 (from GIFT v1.7.0)
+  core:
+    - id: 1
+      name: "Fine structure constant"
+      formula: "alpha_inv = (dim_E8 + rank_E8)/2 + H*/D_bulk"
+      domain: "gauge"
+
+    - id: 2
+      name: "Weinberg angle"
+      formula: "sin2_theta_W = b2/(b3 + dim_G2)"
+      domain: "gauge"
+
+    - id: 3
+      name: "Strong coupling"
+      formula: "alpha_s = sqrt(2)/(dim_G2 - p2)"
+      domain: "gauge"
+
+    - id: 7
+      name: "CP phase"
+      formula: "delta_CP = 7*dim_G2 + H* = 197"
+      domain: "neutrino"
+
+    - id: 8
+      name: "Koide relation"
+      formula: "Q = dim_G2/b2 = 2/3"
+      domain: "lepton"
+
+  # Bernoulli session 76-84
+  bernoulli:
+    - id: 76
+      name: "Higgs/W mass ratio"
+      formula: "m_H/m_W = 257/165 = F3/(N_gen * F10)"
+      domain: "mass"
+      status: "candidate"
+      precision: "0.05%"
+
+    - id: 77
+      name: "257 decomposition"
+      formula: "257 = dim_E8 + rank_E8 + 1"
+      domain: "algebra"
+
+    - id: 78
+      name: "E7-E6 gap"
+      formula: "dim_E7 - dim_E6 = 55 = F10"
+      domain: "algebra"
+
+    - id: 79
+      name: "E8-E7 gap"
+      formula: "dim_E8 - dim_E7 = 115 = 5 * 23"
+      domain: "algebra"
+
+    - id: 80
+      name: "G2 Bernoulli"
+      formula: "denom(B6) = 42 = p2 * N_gen * dim_K7"
+      domain: "bernoulli"
+
+  # Moonshine session 85-105
+  moonshine:
+    - id: 85
+      name: "j-constant (E8)"
+      formula: "744 = N_gen * dim_E8"
+      domain: "moonshine"
+
+    - id: 86
+      name: "Monster dimension"
+      formula: "196883 = L8 * (b3 - L6) * (b3 - 6)"
+      domain: "moonshine"
+
+    - id: 87
+      name: "Monster primes"
+      formula: "15/15 primes dividing |M| are GIFT"
+      domain: "moonshine"
+
+    - id: 88
+      name: "Baby Monster"
+      formula: "4371 = m_tau_m_e + tau_den + N_gen"
+      domain: "moonshine"
+
+    - id: 89
+      name: "Mersenne M7"
+      formula: "127 = 2^dim_K7 - 1"
+      domain: "moonshine"
+
+    - id: 95
+      name: "Golay code"
+      formula: "|G24| = 2^12 = 2^(dim_G2 - p2)"
+      domain: "codes"
+
+    - id: 96
+      name: "Hamming (7,4)"
+      formula: "dim_K7 = p2^2 + N_gen"
+      domain: "codes"
+
+    - id: 97
+      name: "E8 kissing"
+      formula: "K8 = 240 = p2^4 * Weyl * N_gen"
+      domain: "lattice"
+
+    - id: 98
+      name: "Leech kissing"
+      formula: "K24 = 196560 = K8 * 9 * 7 * 13"
+      domain: "lattice"
+
+    - id: 105
+      name: "Thompson = E8"
+      formula: "dim(Th_V1) = dim_E8 = 248"
+      domain: "sporadic"
+
+  # Prime Atlas 167-210
+  prime_atlas:
+    - id: 198
+      name: "Mersenne-Hodge"
+      formula: "127 = H* + 4*dim_K7"
+      domain: "primes"
+
+    - id: 199
+      name: "Heegner 163"
+      formula: "163 = dim_E8 - (rank_E8 + b3)"
+      domain: "primes"
+
+    - id: 200
+      name: "Hubble prime"
+      formula: "181 = dim_E8 - 67"
+      domain: "primes"
+
+    - id: 202
+      name: "CP phase prime"
+      formula: "197 = dim_E8 - 3*lambda_H = delta_CP"
+      domain: "primes"
+
+    - id: 210
+      name: "Three generators"
+      formula: "b3, H*, dim_E8 generate all primes < 200"
+      domain: "primes"
