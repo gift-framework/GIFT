@@ -32,7 +32,16 @@ GIFT/
 │   ├── LEAN_FOR_PHYSICS.md         # Guide for formalization
 │   ├── figures/                     # Lean blueprints
 │   ├── legacy/                      # Archived v2.3/v3.0 supplements
-│   └── wip/                         # Work in progress
+│   ├── wip/                         # Work in progress
+│   └── technical/                   # Speculative extensions
+│       ├── S3_torsional_dynamics_v30.md    # RG flow, torsion
+│       ├── S6_theoretical_extensions_v30.md # M-theory, QG
+│       ├── S7_dimensional_observables_v30.md # Absolute masses
+│       ├── JOYCE_FORMALIZATION.md   # Lean formalization of Joyce thm
+│       └── atlas/                   # GIFT constant/relation database
+│           ├── GIFT_ATLAS.yaml      # Source definitions
+│           ├── generate_atlas.py    # Generator script
+│           └── generated/           # Auto-generated docs
 │
 ├── statistical_validation/          # Monte Carlo validation
 │
@@ -54,6 +63,7 @@ GIFT/
 | Formal verification | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Legacy supplements | `docs/legacy/` |
+| Speculative extensions | `docs/technical/` |
 
 ## Core Documents (v3.0)
 
@@ -70,8 +80,15 @@ GIFT/
 | yukawa_mixing.md | CKM/PMNS matrices, Yukawa couplings |
 | sequences_prime_atlas.md | Fibonacci embedding, Prime Atlas |
 | monster_moonshine.md | Monster group, j-invariant connections |
-| dimensional_observables.md | Absolute masses (heuristic) |
-| theoretical_extensions.md | M-theory, quantum gravity |
+
+## Speculative Extensions (docs/technical/)
+
+| Document | Content |
+|----------|---------|
+| S7_dimensional_observables_v30.md | Absolute masses, scale bridge (speculative) |
+| S6_theoretical_extensions_v30.md | M-theory, quantum gravity connections |
+| S3_torsional_dynamics_v30.md | RG flow, non-zero torsion |
+| atlas/ | Complete GIFT constant/relation database |
 
 ## Related Repositories
 
@@ -83,4 +100,4 @@ GIFT/
 
 **Current**: v3.0.0 (2025-12-11)
 **Relations**: 165+ certified
-**Observables**: 18 dimensionless (0.197% mean deviation)
+**Predictions**: 18 dimensionless (**0.087% mean deviation**)

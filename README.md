@@ -1,9 +1,10 @@
 # Geometric Information Field Theory v3.0
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.0.1-green.svg)](CHANGELOG.md)
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
 [![Relations](https://img.shields.io/badge/Relations-165+-orange)](https://github.com/gift-framework/core)
+[![Precision](https://img.shields.io/badge/Mean_Deviation-0.087%25-brightgreen)](publications/markdown/GIFT_v3_S2_derivations.md)
 
 A geometric framework deriving Standard Model parameters from topological invariants of E₈×E₈ gauge structure compactified on a G₂-holonomy manifold K₇.
 
@@ -13,7 +14,7 @@ A geometric framework deriving Standard Model parameters from topological invari
 
 | Metric | Value |
 |--------|-------|
-| Precision | 0.197% mean deviation across 39 observables |
+| Precision | **0.087% mean deviation** across 18 dimensionless predictions |
 | Adjustable parameters | Zero (all structurally determined) |
 | Formally verified relations | **165+ proven in Lean 4 + Coq** (zero axioms) |
 | Key exact results | sin²θ_W = 3/13, τ = 3472/891, det(g) = 65/32, Monster = 47×59×71 |
@@ -36,7 +37,7 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 
 ### "Show me the numbers"
 
-→ [39 Observables CSV](publications/references/39_observables.csv) Machine-readable data
+→ [18 Dimensionless Predictions](publications/markdown/GIFT_v3_S2_derivations.md) Complete derivations with 0.087% mean deviation
 
 ### "Show me the proofs"
 
@@ -67,6 +68,9 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 **"I'm interested in formalization"**
 → [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) - Machine-verified physical relations
 
+**"I want dimensional observables"**
+→ [docs/technical/](docs/technical/) - Speculative extensions for absolute masses, scale bridge, and torsional dynamics
+
 ---
 
 ## Interactive Visualizations
@@ -96,8 +100,15 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 | [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
 | [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
 | [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
-| [Dimensional](publications/references/dimensional_observables.md) | Absolute masses (heuristic) |
-| [Extensions](publications/references/theoretical_extensions.md) | M-theory, quantum gravity |
+
+### Speculative Extensions (docs/technical/)
+
+| Document | Content |
+|----------|---------|
+| [S7: Dimensional Observables](docs/technical/S7_dimensional_observables_v30.md) | Absolute masses, scale bridge (speculative) |
+| [S6: Theoretical Extensions](docs/technical/S6_theoretical_extensions_v30.md) | M-theory, quantum gravity connections |
+| [S3: Torsional Dynamics](docs/technical/S3_torsional_dynamics_v30.md) | RG flow, non-zero torsion |
+| [GIFT Atlas](docs/technical/atlas/) | Complete constant/relation database |
 
 ---
 
@@ -111,16 +122,16 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 
 ## Key Results
 
-### Precision by Sector
+### Precision by Sector (18 Dimensionless Predictions)
 
-| Sector | Observables | Mean Deviation | Highlight |
+| Sector | Predictions | Mean Deviation | Highlight |
 |--------|-------------|----------------|-----------|
-| Gauge | 3 | 0.06% | α_s = √2/12 |
-| Lepton | 4 | 0.04% | Q_Koide = 2/3 (exact) |
-| CKM | 6 | 0.08% | |
-| Neutrino | 4 | 0.13% | δ_CP = 197° (exact) |
-| Quark ratios | 10 | 0.18% | m_s/m_d = 20 (exact) |
-| Cosmology | 2 | 0.11% | Ω_DE = ln(2) × 98/99 |
+| Electroweak | 3 | 0.12% | sin²θ_W = 3/13 |
+| Lepton | 3 | 0.04% | Q_Koide = 2/3 (0.0009%) |
+| Quark | 1 | 0.00% | m_s/m_d = 20 (exact) |
+| Neutrino | 4 | 0.15% | δ_CP = 197° (exact) |
+| Cosmology | 3 | 0.07% | n_s = ζ(11)/ζ(5) (0.004%) |
+| Structural | 4 | exact | N_gen = 3, τ = 3472/891 |
 
 ### Selected Exact Relations (Lean 4 + Coq Verified)
 
@@ -145,7 +156,7 @@ The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) �
 | j-invariant | 744 = 3 × 248 = N_gen × dim(E₈) | **PROVEN** |
 | McKay | Coxeter(E₈) = 30 = icosahedron edges | **PROVEN** |
 
-Full list: [39 Observables CSV](publications/references/39_observables.csv) | Proofs: [gift-framework/core](https://github.com/gift-framework/core)
+Full derivations: [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | Proofs: [gift-framework/core](https://github.com/gift-framework/core)
 
 ---
 
