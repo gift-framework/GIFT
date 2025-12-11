@@ -696,7 +696,7 @@ The framework achieves mean deviation of 0.197% across 13 dimensionless predicti
 
 The framework's value will be determined by experiment. The DUNE measurement of delta_CP (2028-2030) provides a decisive test: the prediction delta_CP = 197 degrees will be confirmed or rejected at the 15-degree level. Beyond this, FCC-ee and precision lepton measurements will probe sin^2(theta_W) = 3/13 and Q_Koide = 2/3 to stringent accuracy.
 
-Whether GIFT represents successful geometric unification or elaborate numerical coincidence is a question that nature will answer. The framework demonstrates that topological principles can determine particle physics parameters with remarkable precision. Whether they do remains open for experiment to decide.
+Whether GIFT represents successful geometric unification or elaborate numerical coincidence is a question that nature will answer. The framework demonstrates that topological principles can determine particle physics parameters with remarkable precision. Whether they do remains open.
 
 ---
 
