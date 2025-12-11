@@ -534,15 +534,17 @@ If predictions were random numbers in [0,1], matching 18 experimental values to 
 
 ### 10.4 Statistical Validation Against Alternative Configurations
 
-A legitimate concern for any unified framework is whether the specific parameter choices represent overfitting to experimental data. To address this, we tested 10,000 alternative G2 manifold configurations by varying the Betti numbers within physically plausible ranges: b₂ ∈ [1, 50] and b₃ ∈ [10, 150], subject to b₃ > b₂.
+A legitimate concern for any unified framework is whether the specific parameter choices represent overfitting to experimental data. To address this, we tested 10,000 alternative G2 manifold configurations by varying the Betti numbers within physically plausible ranges: b₂ ∈ [1, 50] and b₃ ∈ [b₂+5, 150].
 
-**Results**: The GIFT reference configuration (b₂ = 21, b₃ = 77) achieves mean relative deviation of 0.197% across 39 observables. Alternative configurations yield mean deviation of 83.99% with standard deviation 13.41%. The separation corresponds to a z-score of 6.25σ (p-value < 10⁻⁹).
+Critically, this validation uses the **actual topological formulas** to compute predictions for each alternative configuration—not random perturbations. This provides an honest assessment of how special the (b₂=21, b₃=77) point is within the parameter space.
 
-**Interpretation**: Within the tested parameter subspace, the E8×E8/K7 construction is statistically exceptional. The reference configuration is not merely a local optimum but represents a highly atypical point in parameter space.
+**Results**: The GIFT reference configuration achieves mean relative deviation of 0.087% across 18 dimensionless observables. Alternative configurations yield mean deviation of 18.46% with standard deviation 7.42%. The separation corresponds to a z-score of 2.48σ (p-value = 0.0066).
 
-**Limitations**: This validation addresses overfitting only within variations of b₂ and b₃. It does not test alternative TCS constructions, different Calabi-Yau building blocks, or whether the topological formulas themselves represent coincidental alignments. The test establishes local robustness, not global uniqueness.
+**Interpretation**: Within the tested parameter subspace, the E8×E8/K7 construction performs significantly better than random alternatives (p < 0.01). The result is statistically significant, indicating that the (21, 77) point occupies a preferred position in parameter space. However, the separation is modest rather than extraordinary—some alternative configurations achieve comparable performance.
 
-Complete methodology and results are available in the repository (statistical_validation/).
+**Limitations**: This validation addresses parameter variation only within a single construction family. It does not test alternative TCS constructions, different Calabi-Yau building blocks, or whether the topological formulas themselves represent coincidental alignments. Additionally, six of the 18 observables have formulas independent of b₂/b₃, which reduces the effective parameter sensitivity.
+
+Complete methodology, scripts, and results are available in the repository (statistical_validation/).
 
 ---
 
