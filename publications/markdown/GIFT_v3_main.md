@@ -1,6 +1,8 @@
 # Geometric Information Field Theory: Topological Determination of Standard Model Parameters
 
-**Version 3.0**
+**Version**: 3.0
+**Author**: Brieuc de La Fournière
+Independent researcher
 
 ## Abstract
 
