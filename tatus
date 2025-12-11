@@ -1,0 +1,26 @@
+[33me2c4b0e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #166 from gift-framework/claude/update-framework-docs-01Q9HUAoKRhHeTxU35bHFZDX
+[33m907bf74[m style: Editorial cleanup - replace em dashes with context-appropriate punctuation
+[33m2bafd97[m Merge pull request #165 from gift-framework/claude/update-framework-docs-01Q9HUAoKRhHeTxU35bHFZDX
+[33m4015d71[m docs: Complete v1.4.0 sync - update remaining references to 39 relations
+[33m3ac6e85[m docs: Sync documentation with core v1.4.0 (39 certified relations)
+[33m27b0853[m Merge pull request #164 from gift-framework/claude/cleanup-legacy-files-012cbvLeCDQGnyZ8g23R4t5p
+[33mb2a679f[m chore: Clean up repository for documentation-only focus
+[33m82a063d[m Fix formatting issues in README.md
+[33m700a9f1[m Fix formatting of section headings in README
+[33m8311b36[m Fix formatting and update navigation section in README
+[33m0c1c450[m Revise README for GIFT v2.3 to enhance usability
+[33m43c488e[m updated readme
+[33ma66ade8[m Merge pull request #163 from gift-framework/claude/sync-gift-framework-core-019GkDs21VzFAD82oeDsxeoZ
+[33m2301f1f[m refactor: Move pipeline to legacy, use giftpy from PyPI
+[33m104b11b[m Merge pull request #162 from gift-framework/claude/sync-gift-framework-core-019GkDs21VzFAD82oeDsxeoZ
+[33m3494865[m feat: Sync Irrational Sector relations from core v1.4.0
+[33mdb82324[m Merge pull request #161 from gift-framework/claude/sync-core-updates-017Us8ir3UzureDVoSYPGwGb
+[33mec5eddc[m feat: Sync Yukawa Duality relations from core v1.3.0
+[33m703a509[m Move e8 to legacy, add docs files, remove audit report
+[33ma31a1cb[m Merge pull request #160 from gift-framework/claude/reorganize-docs-legacy-01NEZVabLoZaBwqEhuGmvyAo
+[33m1d75538[m refactor: Move G2_ML to legacy, update docs for giftpy v1.2.0
+[33ma0baa07[m Merge pull request #159 from gift-framework/claude/audit-repo-integration-017HbemqUb8PRbbLde5UXcu4
+[33m1de2bb7[m refactor: Consolidate v2.3 coherence and simplify CI
+[33mb6e53f3[m docs: Add comprehensive repository audit report
+[33me15623c[m Merge pull request #158 from gift-framework/claude/sync-framework-upgrade-01QsCBHVCzw7sSxkQqeMH2gA
+[33mb82924a[m sync: Update pipeline config for gift-framework/core v1.2.0
