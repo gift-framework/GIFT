@@ -4,7 +4,7 @@ Current experimental status of GIFT predictions, precision comparisons, and time
 
 ## Overview
 
-The GIFT framework v3.0 makes 23 predictions (10 structural + 13 dimensionless ratios) with mean experimental deviation of 0.197%. This document tracks:
+The GIFT framework v3.0 makes 18 dimensionless predictions with mean experimental deviation of 0.087%. This document tracks:
 - Current experimental status for each prediction
 - Precision evolution over time
 - Planned experiments and timelines
@@ -36,7 +36,7 @@ The GIFT framework v3.0 makes 23 predictions (10 structural + 13 dimensionless r
 - Most CKM matrix elements: mean 0.11%
 - Most quark mass ratios
 
-**Overall**: 39 observables (27 dimensionless + 12 dimensional), mean deviation 0.197%
+**Overall**: 18 dimensionless predictions, mean deviation 0.087% (v3.0 core set)
 
 ### By Physics Sector
 

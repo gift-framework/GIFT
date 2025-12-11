@@ -32,7 +32,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.197% mean deviation across 39 observables)
+- Precision of experimental agreement (currently 0.087% mean deviation across 18 dimensionless predictions)
 - Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
@@ -41,7 +41,7 @@ The framework is evaluated based on:
 **Standard Model**: 19 free parameters
 **GIFT v3.0**: Zero continuous adjustable parameters
 
-All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all 39 observables.
+All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all predictions.
 
 ### Can GIFT be falsified?
 
@@ -115,25 +115,21 @@ See Supplement S1 for complete mathematical details.
 
 ### What observables does GIFT predict?
 
-**39 observables (27 dimensionless + 12 dimensional)**:
+**18 dimensionless predictions** (v3.0 core set):
 
-*Dimensionless (27):*
 - 3 gauge couplings (α, sin²θ_W, α_s)
 - 1 generation number (N_gen = 3)
 - 4 neutrino mixing angles (θ₁₂, θ₁₃, θ₂₃, δ_CP)
-- 6 quark mass ratios
-- 3 lepton mass ratios
-- 4 CKM matrix elements
-- 1 Koide parameter
+- 2 lepton mass ratios (m_τ/m_e, m_μ/m_e)
+- 1 quark mass ratio (m_s/m_d)
+- 1 Koide parameter (Q = 2/3)
 - 2 cosmological parameters (Ω_DE, n_s)
-- Additional structural constants
+- 2 electroweak parameters (λ_H, hierarchy)
+- 2 topological constants (κ_T, det(g))
 
-*Dimensional (12):*
-- 3 electroweak scale parameters (v_EW, M_W, M_Z)
-- 6 quark masses (m_u through m_t)
-- 3 lepton masses
+Mean deviation from experiment: **0.087%**
 
-Mean deviation from experiment: 0.197%
+*Note: Extended dimensional predictions (masses, electroweak scale) are documented in legacy files (v2.3) with 0.197% mean deviation across 39 observables.*
 
 ### What about dimensional parameters like masses?
 
@@ -165,7 +161,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.197% across all 39 observables
+**Overall**: Mean 0.087% across 18 dimensionless predictions (v3.0)
 
 See Supplement S5 for detailed statistical analysis.
 
@@ -179,7 +175,7 @@ Subjectively, several stand out:
 
 **N_gen = 3**: Explains why three generations exist as topological necessity, not accident.
 
-**Zero-parameter paradigm**: All 39 observables derived from fixed topological structure with no continuous adjustable parameters.
+**Zero-parameter paradigm**: All predictions derived from fixed topological structure with no continuous adjustable parameters.
 
 ### What are the biggest tensions?
 
