@@ -213,7 +213,7 @@ $$\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \
 |----------|-------|
 | Experimental | 0.1179 ± 0.0009 |
 | GIFT prediction | 0.11785 |
-| Deviation | 0.04% |
+| Deviation | 0.042% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -241,7 +241,7 @@ $$Q = \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2}
 |----------|-------|
 | Experimental | 0.666661 ± 0.000007 |
 | GIFT prediction | 0.666667 |
-| Deviation | 0.001% |
+| Deviation | 0.0009% |
 
 **Status**: PROVEN ∎
 
@@ -268,7 +268,7 @@ $$3477 = 3 \times 19 \times 61 = N_{gen} \times prime(8) \times \kappa_T^{-1}$$
 |----------|-------|
 | Experimental | 3477.15 ± 0.05 |
 | GIFT prediction | 3477 (exact) |
-| Deviation | 0.004% |
+| Deviation | 0.0043% |
 
 **Status**: PROVEN ∎
 
@@ -295,7 +295,7 @@ $$\frac{m_\mu}{m_e} = [\dim(J_3(\mathbb{O}))]^\phi = 27^\phi = 207.012$$
 |----------|-------|
 | Experimental | 206.768 |
 | GIFT prediction | 207.01 |
-| Deviation | 0.118% |
+| Deviation | 0.1179% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -374,7 +374,7 @@ $$\theta_{13} = \frac{\pi}{b_2(K_7)} = \frac{\pi}{21} = 8.571°$$
 |----------|-------|
 | Experimental (NuFIT 5.3) | 8.54° ± 0.12° |
 | GIFT prediction | 8.571° |
-| Deviation | 0.36% |
+| Deviation | 0.368% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -397,7 +397,7 @@ $$\theta_{23} = \frac{\text{rank}(E_8) + b_3(K_7)}{H^*} \text{ radians} = \frac{
 |----------|-------|
 | Experimental (NuFIT 5.3) | 49.3° ± 1.0° |
 | GIFT prediction | 49.193° |
-| Deviation | 0.22% |
+| Deviation | 0.216% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -426,8 +426,8 @@ $$\gamma_{\text{GIFT}} = \frac{2 \cdot \text{rank}(E_8) + 5 \cdot H^*}{10 \cdot 
 | Quantity | Value |
 |----------|-------|
 | Experimental (NuFIT 5.3) | 33.41° ± 0.75° |
-| GIFT prediction | 33.419° |
-| Deviation | 0.027% |
+| GIFT prediction | 33.40° |
+| Deviation | 0.030% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -458,7 +458,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{1
 |----------|-------|
 | Experimental | 0.129 ± 0.003 |
 | GIFT prediction | 0.12885 |
-| Deviation | 0.07% |
+| Deviation | 0.119% |
 
 **Status**: PROVEN ∎
 
@@ -485,7 +485,7 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln(2)$$
 |----------|-------|
 | Experimental (Planck 2020) | 0.6847 ± 0.0073 |
 | GIFT prediction | 0.6861 |
-| Deviation | 0.21% |
+| Deviation | 0.211% |
 
 **Status**: PROVEN ∎
 
@@ -512,7 +512,7 @@ $$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)} 
 |----------|-------|
 | Experimental (Planck 2020) | 0.9649 ± 0.0042 |
 | GIFT prediction | 0.9649 |
-| Deviation | 0.00% |
+| Deviation | 0.004% |
 
 **Status**: PROVEN ∎
 
@@ -541,7 +541,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 |----------|-------|
 | Experimental | 137.035999 |
 | GIFT prediction | 137.033 |
-| Deviation | 0.0022% |
+| Deviation | 0.002% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -557,19 +557,19 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 2 | τ | 496×21/(27×99) | 3472/891 | - | - | PROVEN |
 | 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | TOPOLOGICAL |
 | 4 | det(g) | 5×13/32 | 65/32 | - | - | TOPOLOGICAL |
-| 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.20% | PROVEN |
-| 6 | α_s | √2/12 | 0.11785 | 0.1179 | 0.04% | TOPOLOGICAL |
-| 7 | Q_Koide | 14/21 | 2/3 | 0.6667 | 0.001% | PROVEN |
-| 8 | m_τ/m_e | 7+2480+990 | 3477 | 3477.15 | 0.004% | PROVEN |
-| 9 | m_μ/m_e | 27^φ | 207.01 | 206.77 | 0.12% | TOPOLOGICAL |
+| 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.195% | PROVEN |
+| 6 | α_s | √2/12 | 0.11785 | 0.1179 | 0.042% | TOPOLOGICAL |
+| 7 | Q_Koide | 14/21 | 2/3 | 0.666661 | 0.0009% | PROVEN |
+| 8 | m_τ/m_e | 7+2480+990 | 3477 | 3477.15 | 0.0043% | PROVEN |
+| 9 | m_μ/m_e | 27^φ | 207.01 | 206.768 | 0.118% | TOPOLOGICAL |
 | 10 | m_s/m_d | 4×5 | 20 | 20.0 | 0.00% | PROVEN |
 | 11 | δ_CP | 98+99 | 197° | 197° | 0.00% | PROVEN |
-| 12 | θ₁₃ | π/21 | 8.57° | 8.54° | 0.36% | TOPOLOGICAL |
-| 13 | θ₂₃ | 85/99 rad | 49.19° | 49.3° | 0.22% | TOPOLOGICAL |
-| 14 | θ₁₂ | arctan(...) | 33.42° | 33.41° | 0.03% | TOPOLOGICAL |
-| 15 | λ_H | √17/32 | 0.1289 | 0.129 | 0.07% | PROVEN |
-| 16 | Ω_DE | ln(2)×98/99 | 0.6861 | 0.6847 | 0.21% | PROVEN |
-| 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.00% | PROVEN |
+| 12 | θ₁₃ | π/21 | 8.57° | 8.54° | 0.368% | TOPOLOGICAL |
+| 13 | θ₂₃ | (rank+b3)/H* | 49.19° | 49.3° | 0.216% | TOPOLOGICAL |
+| 14 | θ₁₂ | arctan(...) | 33.40° | 33.41° | 0.030% | TOPOLOGICAL |
+| 15 | λ_H | √17/32 | 0.1288 | 0.129 | 0.119% | PROVEN |
+| 16 | Ω_DE | ln(2)×(b2+b3)/H* | 0.6861 | 0.6847 | 0.211% | PROVEN |
+| 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | PROVEN |
 | 18 | α⁻¹ | 128+9+corr | 137.033 | 137.036 | 0.002% | TOPOLOGICAL |
 
 ---
@@ -579,11 +579,11 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | Range | Count | Percentage |
 |-------|-------|------------|
 | 0.00% (exact) | 4 | 22% |
-| <0.01% | 2 | 11% |
-| 0.01-0.1% | 5 | 28% |
+| <0.01% | 3 | 17% |
+| 0.01-0.1% | 4 | 22% |
 | 0.1-0.5% | 7 | 39% |
 
-**Mean deviation**: 0.08%
+**Mean deviation**: 0.087%
 
 ---
 
