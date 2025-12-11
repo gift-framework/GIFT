@@ -19,16 +19,6 @@ A geometric framework deriving Standard Model parameters from topological invari
 | Formally verified relations | **165+ proven in Lean 4 + Coq** (zero axioms) |
 | Key exact results | sin²θ_W = 3/13, τ = 3472/891, det(g) = 65/32, Monster = 47×59×71 |
 
-### What's New in v3.0
-
-| Discovery | Description |
-|-----------|-------------|
-| **Fibonacci Embedding** | F₃–F₁₂ map exactly to framework constants (p₂→N_gen→Weyl→rank→α_B→b₂) |
-| **Prime Atlas** | 100% coverage of primes < 200 via 3 generators (b₃, H*, dim(E₈)) |
-| **Monster Group** | 196883 = 47×59×71, all factors GIFT-expressible |
-| **McKay Correspondence** | E₈ ↔ Binary Icosahedral → golden ratio emergence |
-| **Exceptional Chain** | E₆=6×13, E₇=7×19, E₈=8×31 |
-
 The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)**
 
 ---
