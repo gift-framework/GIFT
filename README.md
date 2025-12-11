@@ -19,7 +19,9 @@ A geometric framework deriving Standard Model parameters from topological invari
 | Formally verified relations | **165+ proven in Lean 4 + Coq** (zero axioms) |
 | Key exact results | sin²θ_W = 3/13, τ = 3472/891, det(g) = 65/32, Monster = 47×59×71 |
 
-The dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)**
+---
+
+Dimensional reduction chain: **E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)**
 
 ---
 
