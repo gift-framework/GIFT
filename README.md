@@ -40,6 +40,15 @@
 | [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | All 18 dimensionless derivations (0.087% mean) |
 | [S3: Dynamics](publications/markdown/GIFT_v3_S3_dynamics.md) | RG flow, torsional dynamics |
 
+## For Specific Audiences
+
+| Background | Start Here |
+|------------|------------|
+| Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
+| Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
+| Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
+| Philosophy | [Philosophy](docs/PHILOSOPHY.md) — Foundational perspective |
+
 ### Extended References
 
 | Document | Description |
@@ -50,17 +59,6 @@
 | [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
 | [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
 | [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
-
----
-
-## For Specific Audiences
-
-| Background | Start Here |
-|------------|------------|
-| Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
-| Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
-| Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
-| Philosophy | [Philosophy](docs/PHILOSOPHY.md) — Foundational perspective |
 
 ---
 
