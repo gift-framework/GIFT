@@ -157,6 +157,8 @@ Joyce margin & $> 1$ & $35\times$ & PROVEN \\
     \item \textbf{NUMERICAL}: Floating-point computation (indicative, not rigorous)
 \end{itemize}
 
+\textbf{Important distinction}: ``PROVEN'' refers to mathematical verification of exact identities between topological invariants. Whether these mathematical relations correspond to physical observables is a separate empirical question that the framework proposes but does not prove. The Lean/Coq proofs establish that \textit{if} the GIFT postulates hold, \textit{then} these numerical relations follow exactly.
+
 \tableofcontents
 \newpage
 
@@ -237,6 +239,8 @@ The Mayer-Vietoris sequence provides the primary tool for computing cohomology. 
 
 \subsection{Betti Number Derivation}
 
+For the specific TCS construction with gluing diffeomorphism $\phi$ chosen to ensure trivial kernel/cokernel contributions in the Mayer-Vietoris connecting morphisms, the Betti numbers decompose additively:
+
 \textbf{Result for $b_2$}: The sequence analysis yields:
 \[
 b_2(\Kseven) = b_2(M_1) + b_2(M_2) = 11 + 10 = 21
@@ -246,6 +250,8 @@ b_2(\Kseven) = b_2(M_1) + b_2(M_2) = 11 + 10 = 21
 \[
 b_3(\Kseven) = b_3(M_1) + b_3(M_2) = 40 + 37 = 77
 \]
+
+\textbf{Note}: This additive decomposition holds for the selected matching conditions. General TCS constructions may have correction terms from the gluing region; see Corti-Haskins-Nordstr\"om-Pacini (2015) for the complete analysis.
 
 \textbf{Status}: TOPOLOGICAL (exact)
 
@@ -1170,6 +1176,32 @@ class TestTopologicalConstants:
         assert tau == Fraction(3472, 891)
         assert float(tau) == pytest.approx(3.896747, rel=1e-5)
 \end{lstlisting}
+
+\subsection{Lean 4 Proof Reproducibility}
+
+\textbf{Repository}: The complete Lean 4 formalization is available at:
+\begin{itemize}
+    \item Repository: \texttt{github.com/gift-framework/core}
+    \item Branch: \texttt{main}
+    \item Build command: \texttt{cd Lean \&\& lake build}
+    \item Verification: \texttt{lake env lean --run GIFT/Certificate.lean}
+\end{itemize}
+
+\textbf{Scope}: Lean verifies the algebraic identities under the topological definitions ($b_2 = 21$, $b_3 = 77$, $\sin^2\theta_W = 3/13$, etc.). The physical correspondence between these mathematical identities and Standard Model observables remains a separate empirical hypothesis.
+
+\textbf{What is proven}:
+\begin{itemize}
+    \item Exact algebraic relations between topological constants
+    \item Derivation chain from $\E_8 \times \E_8$ and $\Kseven$ invariants
+    \item No numerical approximations in the core identities
+\end{itemize}
+
+\textbf{What is not proven}:
+\begin{itemize}
+    \item Physical validity of the $\Kseven$ compactification hypothesis
+    \item Uniqueness of the chosen manifold construction
+    \item Dynamic stability of the $\Gtwo$ structure
+\end{itemize}
 
 \section{Performance Benchmarks}
 

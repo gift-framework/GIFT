@@ -181,9 +181,9 @@ We present a geometric framework deriving Standard Model parameters from topolog
 
 The framework contains no continuous adjustable parameters. All structural constants (metric determinant $\det(g) = 65/32$, torsion magnitude $\kappa_T = 1/61$, hierarchy parameter $\tau = 3472/891$) derive from fixed algebraic and topological invariants. This eliminates parameter tuning by construction---discrete topological structures admit no continuous variation.
 
-Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128\% from experimental values. Sector-specific deviations include: gauge (0.06\%), leptons (0.04\%), CKM matrix (0.08\%), neutrinos (0.13\%), quarks (0.18\%), cosmology (0.11\%). Thirteen relations possess rigorous topological proofs, including three-generation structure ($N_{\mathrm{gen}} = 3$), Koide parameter ($Q = 2/3$), and Weinberg angle ($\sin^2\theta_W = 3/13$) as exact rationals.
+The framework predicts 23 parameters: 18 dimensionless ratios (gauge couplings, mixing angles, mass ratios) plus 5 structural constants ($p_2$, $\beta_0$, Weyl, $\det(g)$, $\kappa_T$) that determine all observables. Predictions for 39 observables spanning six orders of magnitude (2 MeV to 173 GeV) yield mean deviation 0.128\% from experimental values. Sector-specific deviations include: gauge (0.06\%), leptons (0.04\%), CKM matrix (0.08\%), neutrinos (0.13\%), quarks (0.18\%), cosmology (0.11\%). Thirteen relations possess rigorous topological proofs, including three-generation structure ($N_{\mathrm{gen}} = 3$), Koide parameter ($Q = 2/3$), and Weinberg angle ($\sin^2\theta_W = 3/13$) as exact rationals.
 
-Monte Carlo validation over $10^4$ parameter configurations finds no competitive alternative minima ($\chi^2_{\mathrm{optimal}} = 45.2$ vs.\ $\chi^2_{\mathrm{random}} = 15{,}420 \pm 3{,}140$ for 37 observables). Near-term falsification criteria include DUNE measurement of $\delta_{\CP} = 197° \pm 5°$ (2027--2030) and lattice QCD determination of $m_s/m_d = 20.000 \pm 0.5$ (2030).
+Monte Carlo validation over $10^4$ parameter configurations finds no competitive alternative minima ($\chi^2_{\mathrm{optimal}} = 45.2$ vs.\ $\chi^2_{\mathrm{random}} = 15{,}420 \pm 3{,}140$ for 37 observables). Near-term falsification criteria include DUNE measurement of $\delta_{\CP} = 197° \pm 5°$ (first physics $\sim$2031, precision $\sim$2033+) and lattice QCD determination of $m_s/m_d = 20.000 \pm 0.5$ (2030).
 
 Whether this mathematical structure reflects fundamental reality or constitutes an effective description remains open to experimental determination.
 
@@ -322,7 +322,7 @@ Direct topological predictions testable by near-term experiments:
 \toprule
 \textbf{Prediction} & \textbf{Formula} & \textbf{Test} & \textbf{Timeline} \\
 \midrule
-$\delta_{\CP} = 197°$ & $7 \times \dimE(\Gtwo) + H^*$ & DUNE & 2027--2030 \\
+$\delta_{\CP} = 197°$ & $7 \times \dimE(\Gtwo) + H^*$ & DUNE & $\sim$2031--2033+ \\
 $\sin^2\theta_W = 3/13$ & $b_2/(b_3 + \dimE(\Gtwo))$ & FCC-ee & 2040s \\
 $m_s/m_d = 20$ & $p_2^2 \times \Weyl$ & Lattice QCD & 2030 \\
 $Q_{\text{Koide}} = 2/3$ & $\dimE(\Gtwo)/b_2$ & Precision masses & Ongoing \\
@@ -1433,7 +1433,7 @@ $\tau$ & 3.89675 & [3.8965, 3.8970] & [3.8962, 3.8973] \\
 \begin{itemize}
     \item \textbf{Prediction}: $\delta_{\CP} = 197° \pm 5°$ (theoretical uncertainty)
     \item \textbf{Current}: $197° \pm 24°$ (T2K + NO$\nu$A)
-    \item \textbf{DUNE precision}: $\pm 5$--$7°$ by 2028
+    \item \textbf{DUNE precision}: $\pm 5$--$7°$ by $\sim$2033+ (first physics $\sim$2031)
     \item \textbf{Falsification criterion}: $|\delta_{\CP}^{\text{measured}} - 197°| > 15°$
 \end{itemize}
 
@@ -1658,7 +1658,7 @@ The introduction of torsion as the source of physical interactions offers unifie
 
 The framework makes specific predictions testable within the coming decade:
 \begin{itemize}
-    \item DUNE (2027--2028): $\delta_{\CP} = 197° \pm 5°$
+    \item DUNE (first physics $\sim$2031, precision $\sim$2033+): $\delta_{\CP} = 197° \pm 5°$
     \item Lattice QCD (2030): $m_s/m_d = 20.000 \pm 0.5$
     \item Atomic clocks: $|\dot{\alpha}/\alpha| < 10^{-16}$ yr$^{-1}$
 \end{itemize}
@@ -1783,13 +1783,68 @@ Natural units: $\hbar = c = 1$, masses in GeV unless otherwise specified.
 \textbf{Observable} & \textbf{Source} & \textbf{Year} \\
 \midrule
 Particle masses & PDG Review & 2024 \\
-Neutrino mixing & NuFIT 5.3 & 2024 \\
+Neutrino mixing & NuFIT 6.0 & 2025 \\
 CKM matrix & CKMfitter & 2024 \\
 Cosmological & Planck & 2020 \\
 Hubble constant & SH0ES + Planck & 2022 \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+% ============================================
+% APPENDIX C: METHODOLOGICAL CONCERNS
+% ============================================
+\section{Addressing Methodological Concerns}
+
+\subsection{On the Risk of Numerology}
+
+\textbf{Objection}: ``The formulas appear chosen because they work, not derived from first principles.''
+
+\textbf{Response}: Several features distinguish GIFT from numerological fitting:
+
+\begin{enumerate}
+    \item \textbf{Exact predictions cannot be fitted}: Relations like $N_{\text{gen}} = 3$, $Q_{\text{Koide}} = 2/3$, $m_s/m_d = 20$, and $\delta_{\CP} = 197°$ are exact integers or simple rationals. A fitting procedure would yield continuous values; exact matches to discrete experimental results are either correct or wrong.
+
+    \item \textbf{Cross-sector consistency}: The same small set of constants ($b_2$, $b_3$, $\dimE(\Gtwo)$, $\rk(\E_8)$, etc.) predicts observables across gauge, lepton, neutrino, and cosmological sectors. Fitting 18 observables with $\sim$10 constants leaves minimal freedom.
+
+    \item \textbf{Formula uniqueness}: For $\sin^2\theta_W = b_2/(b_3 + \dimE(\Gtwo))$, this is the unique ratio of available topological integers that (a) is dimensionless, (b) lies in $[0,1]$, and (c) uses the cohomological data. Alternative combinations either violate bounds or give wrong order of magnitude.
+\end{enumerate}
+
+\subsection{On the Scale Bridge}
+
+\textbf{Objection}: ``Mixing cohomological invariants with Lucas numbers and golden ratio appears ad hoc.''
+
+\textbf{Response}: The scale bridge admits a compact form:
+\[
+\frac{m_e}{M_{\Pl}} = \phi \times e^{-\dimE(F_4)}
+\]
+where $\dimE(F_4) = 52$ is the dimension of the $F_4$ exceptional algebra (automorphisms of $J_3(\mathbb{O})$). The appearance of $\phi$ ensures consistency with inter-generation ratios ($m_\mu/m_e = 27^\phi$). The Lucas number $L_8 = 47$ decomposes as $\alpha_{\text{sum}}^B + d_{\text{hidden}} = 13 + 34$, connecting to established GIFT constants. The exponent $52 = H^* - L_8$ is thus topologically determined.
+
+\subsection{On ``PROVEN'' Terminology}
+
+\textbf{Objection}: ``Mathematical proof is not physical proof.''
+
+\textbf{Response}: Correct. The term ``PROVEN'' in this framework means:
+\begin{itemize}
+    \item The algebraic identity is machine-verified (Lean 4 + Coq)
+    \item The derivation from topological definitions is exact
+    \item No approximations or numerical fitting are involved
+\end{itemize}
+
+Whether these mathematical identities correspond to physical reality is the empirical claim that experiments (DUNE, FCC-ee, etc.) will test.
+
+\subsection{On Missing Predictions}
+
+\textbf{Objection}: ``Quark masses and other parameters are not predicted.''
+
+\textbf{Response}: Acknowledged. The framework currently predicts:
+\begin{itemize}
+    \item All dimensionless ratios (S2): 18 relations
+    \item Scale bridge for electron mass (S3): 1 dimensional anchor
+    \item Derived masses via ratios (S3): leptons, $W$, $Z$, $H$
+\end{itemize}
+
+Absolute quark masses remain exploratory. This is a documented limitation, not a hidden deficiency.
 
 % ============================================
 % REFERENCES
@@ -1816,9 +1871,9 @@ Planck Collaboration (2018).
 \textit{Planck 2018 results. VI. Cosmological parameters}.
 Astronomy \& Astrophysics, 641, A6.
 
-\bibitem{nufit2024}
-Esteban, I., et al. (2024).
-\textit{NuFIT 5.3: Global analysis of neutrino oscillation data}.
+\bibitem{nufit2025}
+Esteban, I., et al. (2025).
+\textit{NuFIT 6.0: Global analysis of neutrino oscillation data}.
 \url{http://www.nu-fit.org}
 
 \bibitem{distler2010}
