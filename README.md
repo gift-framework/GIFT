@@ -31,7 +31,7 @@
 
 ## Documentation
 
-### Core (Peer-Review Ready)
+### Core
 
 | Document | Description |
 |----------|-------------|
