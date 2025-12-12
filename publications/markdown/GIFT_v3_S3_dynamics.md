@@ -645,9 +645,32 @@ $$3477 = 3 \times 19 \times 61 = N_{gen} \times \text{prime}(8) \times \kappa_T^
 
 ---
 
-## 16. Boson Masses
+## 16. Quark Sector Status
 
-### 16.1 W Boson Mass
+### 16.1 Current State
+
+The quark sector presents a qualitatively different challenge from leptons. While one ratio is established:
+
+$$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
+
+**Status**: PROVEN (see S2, Section 12)
+
+### 16.2 Open Problem
+
+Absolute quark masses and other ratios remain **open**. Although GIFT expressions matching experimental values can be constructed, no geometric derivation analogous to the lepton sector has been established.
+
+**Key differences from leptons**:
+- Quarks mix via CKM matrix (leptons via PMNS for neutrinos only)
+- Strong interactions affect running masses
+- No clear analog to the J₃(O) → 27^φ or K₇ → 3477 structures
+
+**Deferred**: Complete quark mass derivations require establishing a geometric principle comparable to the lepton sector's Jordan algebra connection.
+
+---
+
+## 17. Boson Masses
+
+### 17.1 W Boson Mass
 
 Using sin²θ_W = 3/13 (PROVEN):
 
@@ -660,14 +683,14 @@ $$M_W = \frac{v}{2} \cdot g_2 = 80.38 \text{ GeV}$$
 **Experimental**: 80.377 ± 0.012 GeV
 **Deviation**: 0.004%
 
-### 16.2 Z Boson Mass
+### 17.2 Z Boson Mass
 
 $$M_Z = \frac{M_W}{\cos\theta_W} = M_W \times \sqrt{\frac{13}{10}} = 91.19 \text{ GeV}$$
 
 **Experimental**: 91.188 GeV
 **Deviation**: 0.002%
 
-### 16.3 Higgs Mass
+### 17.3 Higgs Mass
 
 **From λ_H = √17/32** (PROVEN):
 
@@ -681,7 +704,7 @@ $$m_H = \sqrt{2\lambda_H} \cdot v = \sqrt{2 \times 0.12891} \times 246.22 = 125.
 **Experimental**: 125.25 ± 0.17 GeV
 **Deviation**: 0.13%
 
-### 16.4 Boson Summary
+### 17.4 Boson Summary
 
 | Particle | Formula | Mass (GIFT) | Mass (Exp) | Dev. |
 |----------|---------|-------------|------------|------|
@@ -691,20 +714,20 @@ $$m_H = \sqrt{2\lambda_H} \cdot v = \sqrt{2 \times 0.12891} \times 246.22 = 125.
 
 ---
 
-## 17. Neutrino Masses
+## 18. Neutrino Masses
 
-### 17.1 Hierarchy Prediction
+### 18.1 Hierarchy Prediction
 
 **Prediction**: Normal hierarchy (m₁ < m₂ < m₃)
 
-### 17.2 Mass Sum
+### 18.2 Mass Sum
 
 $$\Sigma m_\nu = 0.0587 \text{ eV}$$
 
 **Current bound**: Σm_ν < 0.12 eV (cosmological)
 **Status**: Consistent
 
-### 17.3 Individual Masses (Exploratory)
+### 18.3 Individual Masses (Exploratory)
 
 | Neutrino | Mass (eV) | Notes |
 |----------|-----------|-------|
@@ -718,9 +741,9 @@ $$\Sigma m_\nu = 0.0587 \text{ eV}$$
 
 # Part V: Cosmological Dynamics
 
-## 18. The Hubble Tension
+## 19. The Hubble Tension
 
-### 18.1 The Crisis
+### 19.1 The Crisis
 
 Two measurement classes give systematically different H₀ values:
 
@@ -731,7 +754,7 @@ Two measurement classes give systematically different H₀ values:
 
 **Discrepancy**: ~5σ statistical significance
 
-### 18.2 GIFT Resolution
+### 19.2 GIFT Resolution
 
 Both values emerge as **distinct topological projections** of K₇:
 
@@ -739,13 +762,13 @@ $$\boxed{H_0^{\text{CMB}} = b_3 - 2 \times \text{Weyl} = 77 - 10 = 67}$$
 
 $$\boxed{H_0^{\text{Local}} = b_3 - p_2^2 = 77 - 4 = 73}$$
 
-### 18.3 The Tension is Structural
+### 19.3 The Tension is Structural
 
 $$\Delta H_0 = H_0^{\text{Local}} - H_0^{\text{CMB}} = 73 - 67 = 6 = 2 \times N_{gen}$$
 
 **The Hubble tension equals twice the number of fermion generations!**
 
-### 18.4 Verification
+### 19.4 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -753,7 +776,7 @@ $$\Delta H_0 = H_0^{\text{Local}} - H_0^{\text{CMB}} = 73 - 67 = 6 = 2 \times N_
 | H₀(Local) | 73 | 73.0 ± 1.0 | 0.0% |
 | ΔH₀ | 6 | 5.6 ± 1.1 | 7% |
 
-### 18.5 Physical Interpretation: Dimensional Projection
+### 19.5 Physical Interpretation: Dimensional Projection
 
 The Hubble tension reflects a **dimensional projection duality**:
 
@@ -772,13 +795,13 @@ The Hubble tension reflects a **dimensional projection duality**:
 - Subtraction: p₂² = 4 (spatial dimensions of 4D spacetime)
 - The late universe sees only the compactified structure
 
-### 18.6 The Gap as Fermionic Decoupling
+### 19.6 The Gap as Fermionic Decoupling
 
 $$\Delta H_0 = (D_{bulk} - 1) - p_2^2 = 10 - 4 = 6 = 2 \times N_{gen}$$
 
 The 6 degrees of freedom "frozen" between early and late universe correspond to the **3 generations × 2 chiralities** of fermions that decouple during cosmological evolution. This provides a physical mechanism for the transition from early to late universe expansion rates.
 
-### 18.7 The Duality Diagram
+### 19.7 The Duality Diagram
 
 ```
                     K₇ (b₃ = 77)
@@ -795,13 +818,13 @@ The 6 degrees of freedom "frozen" between early and late universe correspond to 
 
 ---
 
-## 19. Dark Energy
+## 20. Dark Energy
 
-### 19.1 The Formula
+### 20.1 The Formula
 
 $$\Omega_{DE} = \ln(2) \times \frac{H^* - 1}{H^*} = \ln(2) \times \frac{98}{99}$$
 
-### 19.2 Calculation
+### 20.2 Calculation
 
 ```
 ln(2) = 0.693147...
@@ -809,7 +832,7 @@ ln(2) = 0.693147...
 Product = 0.6861
 ```
 
-### 19.3 Triple Origin of ln(2)
+### 20.3 Triple Origin of ln(2)
 
 $$\ln(p_2) = \ln(2)$$
 
@@ -817,7 +840,7 @@ $$\ln\left(\frac{\dim(E_8 \times E_8)}{\dim(E_8)}\right) = \ln\left(\frac{496}{2
 
 $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln\left(\frac{14}{7}\right) = \ln(2)$$
 
-### 19.4 Verification
+### 20.4 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -827,13 +850,13 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln\left(\frac{14}{7}\right) = \
 
 ---
 
-## 20. Dark Matter
+## 21. Dark Matter
 
-### 20.1 Dark Energy to Dark Matter Ratio
+### 21.1 Dark Energy to Dark Matter Ratio
 
 $$\frac{\Omega_{DE}}{\Omega_{DM}} = \frac{b_2}{\text{rank}_{E_8}} = \frac{21}{8} = 2.625$$
 
-### 20.2 Golden Ratio Connection
+### 21.2 Golden Ratio Connection
 
 $$\phi^2 = \phi + 1 = \frac{3 + \sqrt{5}}{2} \approx 2.618$$
 
@@ -842,7 +865,7 @@ The ratio b₂/rank_E₈ = 21/8 = 2.625 matches φ² to 0.27% because:
 - rank_E₈ = 8 = F₆ (Fibonacci)
 - Ratio of non-adjacent Fibonacci → power of φ
 
-### 20.3 Verification
+### 21.3 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -850,18 +873,18 @@ The ratio b₂/rank_E₈ = 21/8 = 2.625 matches φ² to 0.27% because:
 
 ---
 
-## 21. Age of the Universe
+## 22. Age of the Universe
 
-### 21.1 The Formula
+### 22.1 The Formula
 
 $$t_0 = \alpha_{sum} + \frac{4}{\text{Weyl}} = 13 + \frac{4}{5} = 13.8 \text{ Gyr}$$
 
-### 21.2 Components
+### 22.2 Components
 
 - **α_sum = 13**: The anomaly coefficient sum (= F₇ = α_sum_B)
 - **4/Weyl = 4/5 = 0.8**: A fractional correction from the Weyl factor
 
-### 21.3 Verification
+### 22.3 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -869,17 +892,17 @@ $$t_0 = \alpha_{sum} + \frac{4}{\text{Weyl}} = 13 + \frac{4}{5} = 13.8 \text{ Gy
 
 ---
 
-## 22. Spectral Index
+## 23. Spectral Index
 
-### 22.1 The Formula
+### 23.1 The Formula
 
 $$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)}$$
 
-### 22.2 Calculation
+### 23.2 Calculation
 
 $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
-### 22.3 Verification
+### 23.3 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -889,7 +912,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 ---
 
-## 23. Cosmological Summary
+## 24. Cosmological Summary
 
 | Parameter | GIFT Formula | GIFT Value | Experimental | Dev. |
 |-----------|--------------|------------|--------------|------|
@@ -905,16 +928,16 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 # Part VI: Summary and Limitations
 
-## 24. Key Results
+## 25. Key Results
 
-### 24.1 Torsional Dynamics
+### 25.1 Torsional Dynamics
 
 | Result | Value | Status |
 |--------|-------|--------|
 | Torsion magnitude | κ_T = **1/61** | **TOPOLOGICAL** |
 | DESI DR2 compatibility | κ_T² < 10⁻³ | **PASS** |
 
-### 24.2 Scale Bridge
+### 25.2 Scale Bridge
 
 | Result | Value | Status |
 |--------|-------|--------|
@@ -922,7 +945,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 | Full exponent | 51.519 | **<0.02% precision** |
 | m_e prediction | 0.5114 MeV | **0.09% deviation** |
 
-### 24.3 Mass Chain
+### 25.3 Mass Chain
 
 | Result | Formula | Status |
 |--------|---------|--------|
@@ -930,7 +953,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 | m_μ/m_e = 27^φ | dim(J₃(O))^φ | **TOPOLOGICAL** |
 | M_Z/M_W | √(13/10) | **PROVEN** |
 
-### 24.4 Cosmology
+### 25.4 Cosmology
 
 | Result | Formula | Status |
 |--------|---------|--------|
@@ -940,7 +963,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 ---
 
-## 25. Main Equations
+## 26. Main Equations
 
 **Torsional connection**:
 $$\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}$$
@@ -963,9 +986,9 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-## 26. Limitations and Open Questions
+## 27. Limitations and Open Questions
 
-### 26.1 What is PROVEN
+### 27.1 What is PROVEN
 
 - κ_T = 1/61 from cohomology
 - det(g) = 65/32 from topology
@@ -974,20 +997,20 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 - Lepton mass ratios
 - Cosmological parameters
 
-### 26.2 What is THEORETICAL
+### 27.2 What is THEORETICAL
 
 - RG flow identification λ = ln(μ)
 - Torsion component values (T_{ij,k})
 - Hubble tension interpretation
 - Full scale bridge formula (ln(φ) term)
 
-### 26.3 What is EXPLORATORY
+### 27.3 What is EXPLORATORY
 
 - Neutrino individual masses
 - Quark absolute masses (deferred)
 - Torsion flow conjecture
 
-### 26.4 Open Questions
+### 27.4 Open Questions
 
 1. **Selection principle**: Why this specific K₇ topology?
 2. **RG derivation**: First-principles connection to β-functions
@@ -1011,6 +1034,19 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 [6] Riess, A. et al. (2022), Local H₀ measurement
 
 [7] Particle Data Group (2024), Review of Particle Physics
+
+---
+
+## Navigation
+
+| Document | Content |
+|----------|---------|
+| **Main** | Overview and predictions catalog |
+| **S1** | E₈, G₂, K₇ construction details |
+| **S2** | Complete proofs of 18 relations |
+| **S3** | *This document* |
+
+**Prerequisites**: S1 (topology), S2 (dimensionless derivations)
 
 ---
 

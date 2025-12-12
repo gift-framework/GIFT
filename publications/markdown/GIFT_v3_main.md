@@ -648,7 +648,7 @@ A satisfactory theory should derive these formulas from a variational principle 
 
 ### 15.2 Dimensional Quantities
 
-The framework addresses dimensionless ratios but not absolute masses. Converting m_tau/m_e = 3477 to m_tau = 1.777 GeV requires an energy scale from outside the framework. Scale determination remains an open problem.
+The framework addresses dimensionless ratios but also proposes a scale bridge for absolute masses. Supplement S3 derives m_e = M_Pl × exp(-(H* - L₈ - ln(φ))) = φ × e^(-dim(F₄)) × M_Pl, achieving 0.09% precision. The exponent 52 = dim(F₄) emerges from pure topology. While promising, the physical origin of the ln(φ) term and the connection to RG flow require further development.
 
 ### 15.3 Running Couplings
 
@@ -802,8 +802,9 @@ The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark
 
 | Supplement | Content | Location |
 |------------|---------|----------|
-| S1: Foundations | E8, G2, K7 construction details | GIFT_v3_S1_foundations.md |
+| S1: Foundations | E₈, G₂, K₇ construction details | GIFT_v3_S1_foundations.md |
 | S2: Derivations | Complete proofs of 18 relations | GIFT_v3_S2_derivations.md |
+| S3: Dynamics | Scale bridge, torsion, cosmology | GIFT_v3_S3_dynamics.md |
 
 ---
 
