@@ -40,7 +40,7 @@
 | [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | All 18 dimensionless derivations (0.087% mean) |
 | [S3: Dynamics](publications/markdown/GIFT_v3_S3_dynamics.md) | RG flow, torsional dynamics |
 
-## For Specific Audiences
+### For Specific Audiences
 
 | Background | Start Here |
 |------------|------------|
