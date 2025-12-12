@@ -38,20 +38,15 @@
 | [Main Paper](publications/markdown/GIFT_v3_main.md) | Complete theoretical framework |
 | [S1: Foundations](publications/markdown/GIFT_v3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
 | [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | All 18 dimensionless derivations (0.087% mean) |
+| [S3: Dynamics](publications/markdown/GIFT_v3_S3_dynamics.md) | RG flow, torsional dynamics |
 
-### Technical Extensions (Speculative)
+### Extended References
 
 | Document | Description |
 |----------|-------------|
-| [S7: Dimensional Observables](docs/technical/S7_dimensional_observables_v30.md) | Absolute masses, scale bridge |
 | [S6: Theoretical Extensions](docs/technical/S6_theoretical_extensions_v30.md) | M-theory, quantum gravity connections |
-| [S3: Torsional Dynamics](docs/technical/S3_torsional_dynamics_v30.md) | RG flow, non-zero torsion |
+| [S7: Dimensional Observables](docs/technical/S7_dimensional_observables_v30.md) | Absolute masses, scale bridge |
 | [GIFT Atlas](docs/technical/atlas/) | Complete constant/relation database |
-
-### Exploratory References
-
-| Document | Description |
-|----------|-------------|
 | [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
 | [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
 | [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
