@@ -159,7 +159,7 @@ Their appearance suggests structural rather than coincidental relationships.
 | Platform | |
 |----------|---|
 | YouTube | [@giftheory](https://youtube.com/@giftheory) |
-| Substack | [giftheory.substack.com](https://substack.com/@giftheory) |
+| Substack | [giftheory.substack.com](https://giftheory.substack.com/) |
 | X | [@GIFTheory](https://x.com/GIFTheory) |
 
 | Archive | |
