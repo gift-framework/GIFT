@@ -764,7 +764,9 @@ Whether GIFT represents successful geometric unification or elaborate numerical 
 
 ## Acknowledgments
 
-The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark Haskins, and collaborators on G2 manifold construction. The Lean 4 verification relies on the Mathlib community's extensive formalization efforts. Experimental data come from the Particle Data Group, NuFIT collaboration, Planck collaboration, and DUNE technical design reports.
+The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark Haskins, and collaborators on G₂ manifold construction. The standard associative 3-form φ₀ originates from Harvey and Lawson's foundational work on calibrated geometries. The Lean 4 verification relies on the Mathlib community's extensive formalization efforts. Experimental data come from the Particle Data Group, NuFIT collaboration, Planck collaboration, and DUNE technical design reports.
+
+The octonion-Cayley connection and its role in G₂ structure benefited from insights in [de-johannes/FirstDistinction](https://github.com/de-johannes/FirstDistinction). The blueprint documentation workflow follows the approach developed by [math-inc/KakeyaFiniteFields](https://github.com/math-inc/KakeyaFiniteFields).
 
 ---
 
@@ -780,43 +782,47 @@ The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark
 
 [4] Wilson, R. "E8 and Standard Model plus gravity." arXiv:2401.xxxxx, 2024.
 
-**G2 Manifolds**
+**G2 Manifolds and Calibrated Geometry**
 
-[5] Joyce, D.D. *Compact Manifolds with Special Holonomy*. Oxford University Press, 2000.
+[5] Harvey, R., Lawson, H.B. "Calibrated geometries." Acta Math. 148, 47-157, 1982.
 
-[6] Joyce, D.D. "Riemannian holonomy groups and calibrated geometry." Oxford Graduate Texts, 2007.
+[6] Bryant, R.L. "Metrics with exceptional holonomy." Ann. of Math. 126, 525-576, 1987.
 
-[7] Kovalev, A. "Twisted connected sums and special Riemannian holonomy." J. Reine Angew. Math. 565, 2003.
+[7] Joyce, D.D. *Compact Manifolds with Special Holonomy*. Oxford University Press, 2000.
 
-[8] Corti, A., Haskins, M., Nordstrom, J., Pacini, T. "G2-manifolds and associative submanifolds." Duke Math. J. 164, 2015.
+[8] Joyce, D.D. "Riemannian holonomy groups and calibrated geometry." Oxford Graduate Texts, 2007.
 
-[9] Haskins, M. et al. "Extra-twisted connected sums." arXiv:2212.xxxxx, 2022.
+[9] Kovalev, A. "Twisted connected sums and special Riemannian holonomy." J. Reine Angew. Math. 565, 2003.
+
+[10] Corti, A., Haskins, M., Nordstrom, J., Pacini, T. "G2-manifolds and associative submanifolds." Duke Math. J. 164, 2015.
+
+[11] Haskins, M. et al. "Extra-twisted connected sums." arXiv:2212.xxxxx, 2022.
 
 **Neutrino Physics**
 
-[10] NuFIT 6.0 Collaboration. "Global analysis of neutrino oscillations." www.nu-fit.org, 2024.
+[12] NuFIT 6.0 Collaboration. "Global analysis of neutrino oscillations." www.nu-fit.org, 2024.
 
-[11] T2K and NOvA Collaborations. "Joint oscillation analysis." Nature, 2025.
+[13] T2K and NOvA Collaborations. "Joint oscillation analysis." Nature, 2025.
 
-[12] DUNE Collaboration. "Technical Design Report." arXiv:2002.03005, 2020.
+[14] DUNE Collaboration. "Technical Design Report." arXiv:2002.03005, 2020.
 
-[13] DUNE Collaboration. "Physics prospects." arXiv:2103.04797, 2021.
+[15] DUNE Collaboration. "Physics prospects." arXiv:2103.04797, 2021.
 
 **Koide Relation**
 
-[14] Koide, Y. "Fermion-boson two-body model of quarks and leptons." Lett. Nuovo Cim. 34, 1982.
+[16] Koide, Y. "Fermion-boson two-body model of quarks and leptons." Lett. Nuovo Cim. 34, 1982.
 
-[15] Foot, R. "Comment on the Koide relation." arXiv:hep-ph/9402242, 1994.
+[17] Foot, R. "Comment on the Koide relation." arXiv:hep-ph/9402242, 1994.
 
 **Electroweak Precision**
 
-[16] Particle Data Group. "Review of Particle Physics." Phys. Rev. D 110, 2024.
+[18] Particle Data Group. "Review of Particle Physics." Phys. Rev. D 110, 2024.
 
-[17] ALEPH, DELPHI, L3, OPAL, SLD Collaborations. "Precision electroweak measurements." Phys. Rept. 427, 2006.
+[19] ALEPH, DELPHI, L3, OPAL, SLD Collaborations. "Precision electroweak measurements." Phys. Rept. 427, 2006.
 
 **Cosmology**
 
-[18] Planck Collaboration. "Cosmological parameters." Astron. Astrophys. 641, 2020.
+[20] Planck Collaboration. "Cosmological parameters." Astron. Astrophys. 641, 2020.
 
 ---
 

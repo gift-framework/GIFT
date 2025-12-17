@@ -403,13 +403,39 @@ theorem det_g_equals_target :
 
 **Status**: PROVEN (327 lines, 0 sorry)
 
+### 11.5 The Derivation Chain
+
+The complete logical structure from algebra to physics:
+
+```
+Octonions (𝕆)
+     │
+     ▼
+G₂ = Aut(𝕆), dim = 14
+     │
+     ▼
+Standard form φ₀ (Harvey-Lawson 1982)
+     │
+     ▼
+Scaling c = (65/32)^{1/14}    ← GIFT constraint
+     │
+     ▼
+Metric g = c² × I₇
+     │
+     ▼
+det(g) = 65/32, T = 0         ← EXACT (not fitted)
+     │
+     ▼
+sin²θ_W = 3/13, Q = 2/3, ...  ← Predictions
+```
+
 ---
 
 ## 12. Analytical G₂ Metric Details
 
 ### 12.1 The Standard Form φ₀
 
-The associative 3-form preserved by G₂ ⊂ SO(7):
+The associative 3-form preserved by G₂ ⊂ SO(7), introduced by Harvey and Lawson (1982) in their foundational work on calibrated geometries:
 
 $$\varphi_0 = \sum_{(i,j,k) \in \mathcal{I}} \sigma_{ijk} \, e^{ijk}$$
 
@@ -481,10 +507,12 @@ This supplement establishes the mathematical foundations:
 ## References
 
 1. Adams, J.F. *Lectures on Exceptional Lie Groups*
-2. Joyce, D. *Compact Manifolds with Special Holonomy*
-3. Corti, Haskins, Nordström, Pacini. *G₂-manifolds and associative submanifolds*
-4. Kovalev, A. *Twisted connected sums and special Riemannian holonomy*
-5. Conway, J.H., Sloane, N.J.A. *Sphere Packings, Lattices and Groups*
+2. Harvey, R., Lawson, H.B. "Calibrated geometries." *Acta Math.* 148, 47-157 (1982)
+3. Bryant, R.L. "Metrics with exceptional holonomy." *Ann. of Math.* 126, 525-576 (1987)
+4. Joyce, D. *Compact Manifolds with Special Holonomy*
+5. Corti, Haskins, Nordström, Pacini. *G₂-manifolds and associative submanifolds*
+6. Kovalev, A. *Twisted connected sums and special Riemannian holonomy*
+7. Conway, J.H., Sloane, N.J.A. *Sphere Packings, Lattices and Groups*
 
 ---
 
