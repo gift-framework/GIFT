@@ -16,11 +16,8 @@ Exploratory and reference documents for the GIFT framework v3.1.
 
 | Document | Content | Status |
 |----------|---------|--------|
-| [yukawa_mixing.md](yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings | Exploratory |
-| [sequences_prime_atlas.md](sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas | Observation |
-| [monster_moonshine.md](monster_moonshine.md) | Monster group, j-invariant | Speculative |
-| [dimensional_observables.md](dimensional_observables.md) | Absolute masses (heuristic) | Heuristic |
-| [theoretical_extensions.md](theoretical_extensions.md) | M-theory, quantum gravity | Theoretical |
+| [SPECULATIVE_PHYSICS.md](SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity | Exploratory/Speculative |
+| [NUMBER_THEORETIC_STRUCTURES.md](NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine | Pattern Recognition |
 
 ---
 
@@ -29,10 +26,8 @@ Exploratory and reference documents for the GIFT framework v3.1.
 | Status | Meaning |
 |--------|---------|
 | **Exploratory** | Promising direction, needs verification |
-| **Observation** | Mathematical pattern, interpretation unclear |
 | **Speculative** | Interesting connection, highly tentative |
-| **Heuristic** | Approximate or phenomenological |
-| **Theoretical** | Theoretical speculation |
+| **Pattern Recognition** | Mathematical patterns, physical significance unclear |
 
 ---
 

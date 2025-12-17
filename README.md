@@ -50,16 +50,13 @@
 | Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
 | Philosophy | [Philosophy](docs/PHILOSOPHY.md) — Foundational perspective |
 
-### Extended References
+### Exploratory Extensions
 
 | Document | Description |
 |----------|-------------|
-| [S6: Theoretical Extensions](docs/technical/S6_theoretical_extensions_v30.md) | M-theory, quantum gravity connections |
-| [S7: Dimensional Observables](docs/technical/S7_dimensional_observables_v30.md) | Absolute masses, scale bridge |
+| [Speculative Physics](publications/references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity |
+| [Number-Theoretic Structures](publications/references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine |
 | [GIFT Atlas](docs/technical/atlas/) | Complete constant/relation database |
-| [Yukawa & Mixing](publications/references/yukawa_mixing.md) | CKM/PMNS matrices, Yukawa couplings |
-| [Sequences & Primes](publications/references/sequences_prime_atlas.md) | Fibonacci embedding, Prime Atlas |
-| [Monster & Moonshine](publications/references/monster_moonshine.md) | Monster group, j-invariant |
 
 ---
 
