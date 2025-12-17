@@ -8,19 +8,11 @@ Independent researcher
 
 ## Abstract
 
-The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇.
+The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the unique compact geometry realizing this structure.
 
-**Key result**: The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the unique compact geometry realizing this structure.
+18 dimensionless quantities achieve mean deviation 0.087% from experiment, including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
 
-**Predictions**: 18 dimensionless quantities achieve mean deviation 0.087% from experiment, including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3.
-
-**Statistical uniqueness**: Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
-
-**Falsification**: The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework.
-
-**Mathematical foundation**: The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4 with 180+ certified relations.
-
-Whether these agreements reflect genuine geometric unification or elaborate coincidence is a question experiment will answer.
+The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4 with 180+ certified relations. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
 ---
 
@@ -378,7 +370,7 @@ Supplement S3 explores dimensional quantities (electron mass, Hubble parameter) 
 
 ---
 
-## 5. The Weinberg Angle (Condensed)
+## 5. The Weinberg Angle
 
 **Formula**:
 $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 0.230769...$$
@@ -391,7 +383,7 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 
 
 ---
 
-## 6. The Koide Relation (Flagship Derivation)
+## 6. The Koide Relation
 
 The Koide formula has resisted explanation for 43 years. Wikipedia (2024) states: "no derivation from established physics has succeeded." GIFT provides the first derivation yielding Q = 2/3 as an algebraic identity, not a numerical fit.
 
@@ -453,7 +445,7 @@ If the Koide relation truly equals 2/3 exactly, improved measurements of lepton 
 
 ---
 
-## 7. CP Violation Phase (Condensed)
+## 7. CP Violation Phase
 
 **Formula**:
 $$\delta_{CP} = \dim(K_7) \times \dim(G_2) + H^* = 7 \times 14 + 99 = 197°$$
@@ -645,9 +637,9 @@ Complete methodology, scripts, and results are available in the repository (stat
 
 # Part IV: Experimental Tests and Falsifiability
 
-## 11. Near-Term Tests (2025-2030)
+## 11. Near-Term Tests
 
-### 11.1 The DUNE Test (Updated December 2025)
+### 11.1 The DUNE Test
 
 **Current status**: First neutrinos detected in prototype detector (August 2024)
 
@@ -675,7 +667,7 @@ Current value 20.0 +/- 1.0. Lattice simulations improving; target precision +/- 
 
 ---
 
-## 12. Medium-Term Tests (2030-2040)
+## 12. Medium-Term Tests
 
 **FCC-ee electroweak precision**:
 The Future Circular Collider electron-positron mode would measure sin^2(theta_W) with precision of 0.00001, a factor of four improvement over current values.
@@ -691,7 +683,7 @@ Improved tau mass measurements would test Q_Koide = 2/3 at higher precision.
 
 ---
 
-## 13. Long-Term Tests (2040+)
+## 13. Long-Term Tests
 
 **Direct geometric tests** would require:
 - Evidence for extra dimensions at accessible scales
@@ -747,8 +739,6 @@ The topological foundations rest on established mathematics. The TCS constructio
 - Variational principle on G₂ moduli space
 - Calibrated geometry constraints
 - K-theory classification
-
-This represents theoretical incompleteness, not mathematical error.
 
 ### 15.2 Dimensional Quantities
 
@@ -970,5 +960,5 @@ The octonion-Cayley connection and its role in G₂ structure benefited from ins
 ---
 
 *GIFT Framework*
-*Mean Deviation: 0.087%*
-*Decisive Test: DUNE 2034-2039*
+*v 3.1.0*
+
