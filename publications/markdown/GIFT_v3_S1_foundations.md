@@ -4,16 +4,15 @@
 
 ## E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Construction
 
-*Complete mathematical foundations for GIFT v3.1, merging E₈ architecture with K₇ manifold construction.*
+*Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
 
-**Version**: 3.1
 **Lean Verification**: 180+ relations, 0 sorry
 
 ---
 
 ## Abstract
 
-We present the mathematical architecture underlying GIFT v3.1. Part I develops E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds. Part III establishes K₇ manifold construction via twisted connected sum, which builds compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes that the resulting metric is exactly the scaled standard G₂ form, with analytically vanishing torsion. This supplement presents the analytical solution with formal Lean 4 verification.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops E8 exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G2 holonomy manifolds. Part III establishes K7 manifold construction via twisted connected sum, building compact G2 manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes that the resulting metric is exactly the scaled standard G2 form, with analytically vanishing torsion. All results are formally verified in Lean 4.
 
 ---
 
@@ -221,7 +220,7 @@ For the 3-form φ, torsion decomposes into four classes W₁ ⊕ W₇ ⊕ W₁�
 **Torsion-free condition**:
 $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 
-**GIFT interpretation (v3.1)**:
+**GIFT interpretation**:
 
 | Quantity | Meaning | Value |
 |----------|---------|-------|
@@ -550,7 +549,7 @@ This supplement establishes the mathematical foundations:
 - Betti numbers b₂ = 21, b₃ = 77 (exact)
 - Cohomological decomposition
 
-**Part IV - Analytical Solution (v3.1)**:
+**Part IV - Analytical Solution**:
 - Exact closed form: φ = (65/32)^{1/14} × φ₀
 - Metric: g = (65/32)^{1/7} × I₇
 - Torsion: T = 0 exactly
@@ -570,5 +569,5 @@ This supplement establishes the mathematical foundations:
 
 ---
 
-*GIFT Framework v3.1 - Supplement S1*
-*Mathematical Foundations: E₈ + G₂ + K₇*
+*GIFT Framework - Supplement S1*
+*Mathematical Foundations: E8 + G2 + K7*

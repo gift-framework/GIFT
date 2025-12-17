@@ -6,10 +6,9 @@
 
 *This supplement provides complete mathematical proofs for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions.*
 
-**Version**: 3.1
 **Status**: Complete (18 PROVEN relations)
 
-**Note (v3.1)**: All derivations in this supplement remain unchanged. The discovery of the analytical metric (see S1, Section 12) provides additional confidence: the topological constants that determine these relations produce an exactly solvable geometric structure.
+The topological constants that determine these relations produce an exactly solvable geometric structure (see S1, Section 12).
 
 ---
 
@@ -56,7 +55,7 @@ Before presenting derivations, we clarify the logical structure:
 
 ### 0.4 Torsion Independence
 
-**Critical v3.1 clarification**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
+**Important**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
 - Predictions are identical whether T = 0 (analytical) or T = κ_T (capacity)
 - The value κ_T = 1/61 is a topological bound, not a prediction ingredient
 
@@ -168,7 +167,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 - 61 = effective degrees of freedom available for torsional deformation
 - 61 = dim(F₄) + N_gen² = 52 + 9
 
-### Important Clarification (v3.1)
+### Clarification
 
 | Quantity | Definition | Value |
 |----------|------------|-------|
@@ -204,7 +203,7 @@ $$\det(g) = 2 + \frac{1}{32} = \frac{65}{32}$$
 *Step 4: Alternative derivation*
 $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
 
-**Verification (v3.1)**: The analytical metric g = (65/32)^{1/7} × I₇ has det(g) = [(65/32)^{1/7}]⁷ = 65/32 exactly, confirming the topological formula.
+**Verification**: The analytical metric g = (65/32)^{1/7} x I7 has det(g) = [(65/32)^{1/7}]^7 = 65/32 exactly, confirming the topological formula.
 
 **Status**: TOPOLOGICAL ∎
 
@@ -600,7 +599,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ## 21. The 18 PROVEN Dimensionless Relations
 
-**Note (v3.1)**: All predictions use only topological invariants (b₂, b₃, dim(G₂), etc.). None depend on the realized torsion value T.
+**Note**: All predictions use only topological invariants (b2, b3, dim(G2), etc.). None depend on the realized torsion value T.
 
 | # | Relation | Formula | Value | Exp. | Dev. | Status |
 |---|----------|---------|-------|------|------|--------|
@@ -650,5 +649,5 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ---
 
-*GIFT Framework v3.1 - Supplement S2*
+*GIFT Framework - Supplement S2*
 *Complete Derivations: 18 Dimensionless Relations*

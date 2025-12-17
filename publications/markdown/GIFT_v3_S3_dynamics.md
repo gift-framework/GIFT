@@ -4,14 +4,13 @@
 
 *This supplement bridges the static topological structure of S1-S2 to physical dynamics. It explores torsional geodesic flow, discusses the scale bridge from Planck to electroweak scales, and presents cosmological predictions.*
 
-**Version**: 3.1
 **Date**: December 2025
 
 ---
 
 ## Abstract
 
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Version 3.1 establishes that the base G₂ metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. The base G2 metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
 
 This supplement provides three essential bridges:
 
@@ -99,7 +98,7 @@ Equivalent to closure conditions:
 
 $$d\phi = 0, \quad d*\phi = 0$$
 
-**Exact Solution (v3.1)**
+**Exact Solution**
 
 The constant form φ = c × φ₀ satisfies:
 - dφ = 0, d*φ = 0 (trivially, for constant form)
@@ -146,7 +145,7 @@ $$61 = \text{prime}(18)$$
 ### 2.3 Critical Distinction: Capacity vs Realized Value
 
 ┌─────────────────────────────────────────────────────────────┐
-│  **IMPORTANT (v3.1)**                                       │
+│  **IMPORTANT**                                              │
 │                                                             │
 │  kappa_T = 1/61 is the CAPACITY, the maximum torsion that   │
 │  K₇ topology permits while preserving G₂ holonomy.         │
@@ -1044,7 +1043,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-## 27. Status Summary (v3.1)
+## 27. Status Summary
 
 ### 27.1 What is PROVEN (S2)
 
@@ -1118,5 +1117,5 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-*GIFT Framework v3.1 - Supplement S3*
+*GIFT Framework - Supplement S3*
 *Dynamics and Scale Bridge*
