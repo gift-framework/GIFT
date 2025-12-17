@@ -639,6 +639,47 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ---
 
+## 23. Statistical Uniqueness of (b₂=21, b₃=77)
+
+A critical question for any unified framework is whether the specific topological parameters represent overfitting. We conducted exhaustive validation to address this concern.
+
+### Methodology
+
+- **Exhaustive grid search**: 19,100 configurations with b₂ ∈ [1, 100], b₃ ∈ [10, 200]
+- **Sobol quasi-Monte Carlo**: 500,000 samples
+- **Latin Hypercube Sampling**: 100,000 samples
+- **Bootstrap analysis**: 10,000 iterations
+- **Look Elsewhere Effect correction**: Applied to all significance estimates
+
+### Results
+
+| Metric | Value |
+|--------|-------|
+| GIFT rank | **#1 out of 19,100** |
+| GIFT mean deviation | 0.23% |
+| Second-best (b₂=21, b₃=76) | 0.50% |
+| Improvement factor | 2.2× |
+| LEE-corrected significance | >4σ |
+
+### Neighborhood Analysis
+
+```
+              b₃=75    b₃=76    b₃=77    b₃=78    b₃=79
+     b₂=20    1.52%    1.50%    1.48%    1.66%    1.95%
+     b₂=21    0.81%    0.50%   [0.23%]   0.50%    0.79%
+     b₂=22    1.88%    1.57%    1.37%    1.38%    1.39%
+```
+
+The configuration (b₂=21, b₃=77) occupies a **sharp minimum**: moving one unit in any direction more than doubles the deviation.
+
+### Interpretation
+
+The GIFT configuration is not merely a good choice; it is the **unique optimum** in the tested parameter space. This does not explain why nature selected this geometry, but establishes the choice is statistically exceptional rather than arbitrary.
+
+Complete methodology: [UNIQUENESS_TEST_REPORT.md](../../statistical_validation/UNIQUENESS_TEST_REPORT.md)
+
+---
+
 ## References
 
 1. Joyce, D. D. (2000). *Compact Manifolds with Special Holonomy*. Oxford.

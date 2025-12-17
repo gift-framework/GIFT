@@ -1,0 +1,41 @@
+======================================================================
+GIFT FRAMEWORK: COMPREHENSIVE UNIQUENESS TEST REPORT
+======================================================================
+
+Date: 2025-12-17 17:38:00
+GIFT Configuration: b2=21, b3=77
+
+--- Sobol Quasi-Monte Carlo ---
+Samples tested: 19,100
+GIFT chi-squared: 7354344.96
+Best alternative chi-squared: 23626234.41
+GIFT uniqueness percentile: 100.0000%
+
+--- Latin Hypercube Sampling ---
+Samples tested: 18,976
+GIFT uniqueness percentile: 100.0000%
+
+--- Bootstrap Analysis ---
+Bootstrap iterations: 10,000
+95% CI for (min_alt - GIFT): [229064972.90, 521053502.08]
+P-value (alternative better): 0.000000
+
+--- Exhaustive Grid Search ---
+Total configurations: 10,260
+GIFT rank: 1 out of 10260
+GIFT percentile: 99.99%
+
+--- Look Elsewhere Effect Correction ---
+Number of trials: 10,800
+Local p-value: 0.000000
+Bonferroni global p-value: 0.000000
+Sidak global p-value: 0.000000
+Global significance (Sidak): inf sigma
+
+======================================================================
+CONCLUSION
+======================================================================
+
+The GIFT framework configuration (b2=21, b3=77) demonstrates
+statistically significant uniqueness at >5 sigma level,
+even after accounting for the Look Elsewhere Effect.

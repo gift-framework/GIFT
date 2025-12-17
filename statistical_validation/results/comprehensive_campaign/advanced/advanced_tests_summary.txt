@@ -1,0 +1,23 @@
+======================================================================
+ADVANCED STATISTICAL TESTS SUMMARY
+======================================================================
+
+Likelihood Ratio Test:
+  P-value: 0.000000
+
+Bayesian Model Comparison:
+  Log Bayes Factor: 8135953.93
+  Posterior P(GIFT): 1.000000
+
+Permutation Test:
+  P-value: 0.000000
+  Effect size: 0.07
+
+Cross-Validation Test:
+  P-value: 0.000000
+
+Information-Theoretic Analysis:
+  P-value: 0.000000
+
+Combined P-value (Fisher's method): 0.0000000000
+Combined significance: inf sigma

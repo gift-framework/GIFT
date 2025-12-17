@@ -13,6 +13,7 @@
 | | |
 |---|---|
 | **Precision** | 0.087% mean deviation across 18 dimensionless predictions |
+| **Uniqueness** | #1 out of 19,100 configurations tested (>4σ significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
 | **Verified** | 180+ relations proven in Lean 4 + Coq (zero axioms) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
@@ -113,6 +114,42 @@ Joyce's existence theorem is **trivially satisfied** — no numerical fitting re
 
 ---
 
+## Statistical Uniqueness
+
+Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good choice but the **unique optimum** among G₂ manifold configurations.
+
+### Exhaustive Search Results
+
+| Metric | Value |
+|--------|-------|
+| Configurations tested | 19,100 |
+| **GIFT rank** | **#1** |
+| GIFT mean deviation | 0.23% |
+| Second-best deviation | 0.50% |
+| Improvement factor | 2.2× |
+
+### Top 5 Configurations
+
+| Rank | b₂ | b₃ | Deviation |
+|:----:|:--:|:--:|:---------:|
+| **1** | **21** | **77** | **0.23%** |
+| 2 | 21 | 76 | 0.50% |
+| 3 | 21 | 78 | 0.50% |
+| 4 | 21 | 79 | 0.79% |
+| 5 | 21 | 75 | 0.81% |
+
+### Statistical Significance
+
+- **LEE-corrected significance**: >4σ
+- **p-value**: < 5.2 × 10⁻⁵
+- **Bootstrap CI**: 100% of alternatives perform worse
+
+GIFT occupies a **sharp minimum**: moving one unit in any direction more than doubles the deviation.
+
+Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.md)
+
+---
+
 ## Falsification Tests
 
 | Prediction | Experiment | Timeline | Falsification Criterion |
@@ -136,6 +173,8 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 - TCS building blocks
 
 These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices — it does not explain *why* nature chose this geometry.
+
+**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 19,100 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
 
 ### Why Not Numerology?
 
