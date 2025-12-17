@@ -66,7 +66,7 @@ The framework makes predictions that derive from the topological structure:
 
 3. **Algebraic relations**: Quantities involving irrational numbers that nonetheless derive from the geometric structure, such as alpha_s = sqrt(2)/12.
 
-For complete mathematical details of the E8 and G2 structures, see Supplement S1. For derivations of all dimensionless predictions, see Supplement S2.
+For complete mathematical details of the E8 and G2 structures, see Supplement S1. For derivations of all dimensionless predictions, see Supplement S2. For RG flow, torsional dynamics, and scale bridge, see Supplement S3.
 
 ### 1.4 Organization
 

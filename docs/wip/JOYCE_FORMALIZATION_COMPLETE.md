@@ -626,7 +626,7 @@ Certified Constants (Algebra.lean)
 ├── b2 = 21, b3 = 77, H_star = 99
 ├── dim_G2 = 14, dim_E8 = 248
 ├── det_g = 65/32, kappa_T = 1/61
-└── ...165+ relations
+└── ...180+ relations
 
         ↓ (used by)
 

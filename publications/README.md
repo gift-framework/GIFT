@@ -1,4 +1,4 @@
-# GIFT Framework v3.0 - Publications
+# GIFT Framework v3.1 - Publications
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
 [![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core/tree/main/COQ)
@@ -11,10 +11,11 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 ```
 publications/
-├── markdown/                    # Core documents (v3.0)
+├── markdown/                    # Core documents (v3.1)
 │   ├── GIFT_v3_main.md         # Main paper
 │   ├── GIFT_v3_S1_foundations.md   # E₈, G₂, K₇ foundations
-│   └── GIFT_v3_S2_derivations.md   # 18 dimensionless derivations
+│   ├── GIFT_v3_S2_derivations.md   # 18 dimensionless derivations
+│   └── GIFT_v3_S3_dynamics.md      # RG flow, torsional dynamics
 │
 ├── references/                  # Exploratory & reference docs
 │   ├── 39_observables.csv      # Machine-readable data
@@ -41,6 +42,9 @@ Mathematical foundations: E₈ exceptional algebra, G₂ holonomy, K₇ manifold
 
 ### [GIFT_v3_S2_derivations.md](markdown/GIFT_v3_S2_derivations.md)
 All 18 dimensionless derivations with complete proofs.
+
+### [GIFT_v3_S3_dynamics.md](markdown/GIFT_v3_S3_dynamics.md)
+RG flow, torsional dynamics, scale bridge.
 
 ---
 
@@ -91,5 +95,5 @@ Historical supplements (S1-S9 v2.3/v3.0) are archived in `../docs/legacy/`.
 
 ---
 
-**Version**: 3.0.0 (2025-12-11)
+**Version**: 3.1.1 (2025-12-17)
 **Repository**: https://github.com/gift-framework/GIFT
