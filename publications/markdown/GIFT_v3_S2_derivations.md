@@ -26,6 +26,42 @@
 
 ---
 
+# Part 0: Derivation Philosophy
+
+## 0. What "Derivation" Means in GIFT
+
+Before presenting derivations, we clarify the logical structure:
+
+### 0.1 Inputs vs Outputs
+
+**Inputs** (taken as given):
+- The octonion algebra 𝕆 and its automorphism group G₂ = Aut(𝕆)
+- The E₈×E₈ gauge structure
+- The K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)
+
+**Outputs** (derived from inputs):
+- The 18 dimensionless predictions
+
+### 0.2 What We Do NOT Claim
+
+- That 𝕆 → G₂ → K₇ is the unique geometry for physics
+- That the formulas are uniquely determined by geometric principles
+- That the selection rule for specific combinations (b₂/(b₃ + dim_G₂) vs b₂/b₃) is understood
+
+### 0.3 What We DO Claim
+
+- Given the inputs, the outputs follow by algebra
+- The outputs match experiment to 0.087% mean deviation
+- No continuous parameters are fitted
+
+### 0.4 Torsion Independence
+
+**Critical v3.1 clarification**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
+- Predictions are identical whether T = 0 (analytical) or T = κ_T (capacity)
+- The value κ_T = 1/61 is a topological bound, not a prediction ingredient
+
+---
+
 # Part I: Foundations
 
 ## 1. Status Classification
@@ -114,11 +150,11 @@ $$\tau = 3.8967452300785634...$$
 
 ---
 
-## 5. Relation #3: Torsion Magnitude κ_T = 1/61
+## 5. Relation #3: Torsion Capacity κ_T = 1/61
 
-**Statement**: The global torsion magnitude equals exactly 1/61.
+**Statement**: The topological torsion capacity equals exactly 1/61.
 
-**Classification**: TOPOLOGICAL
+**Classification**: TOPOLOGICAL (structural parameter, not physical prediction)
 
 ### Proof
 
@@ -129,15 +165,22 @@ $$61 = b_3(K_7) - \dim(G_2) - p_2 = 77 - 14 - 2 = 61$$
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 
 *Step 3: Geometric interpretation*
-- 61 = effective matter degrees of freedom
+- 61 = effective degrees of freedom available for torsional deformation
 - 61 = dim(F₄) + N_gen² = 52 + 9
 
-*Step 4: Numerical value*
-$$\kappa_T = 0.016393442622950...$$
+### Important Clarification (v3.1)
 
-**Note (v3.1)**: For the analytical constant form, the actual torsion is T = 0 < 1/61. The value κ_T = 1/61 represents the topological "capacity" for torsion, not the realized value on the exact solution.
+| Quantity | Definition | Value |
+|----------|------------|-------|
+| κ_T | Topological capacity | 1/61 (fixed) |
+| T_analytical | Realized torsion for φ = c × φ₀ | **0** (exact) |
+| T_physical | Effective torsion for interactions | **Open question** |
 
-**Status**: TOPOLOGICAL ∎
+**Role in predictions**: κ_T does NOT appear in any of the 18 dimensionless prediction formulas. It is a structural parameter characterizing K₇, not a physical observable.
+
+**Compatibility**: T_analytical = 0 satisfies Joyce's bound (‖T‖ < 0.0288) with infinite margin.
+
+**Status**: TOPOLOGICAL (structural, not predictive) ∎
 
 ---
 
@@ -557,11 +600,13 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ## 21. The 18 PROVEN Dimensionless Relations
 
+**Note (v3.1)**: All predictions use only topological invariants (b₂, b₃, dim(G₂), etc.). None depend on the realized torsion value T.
+
 | # | Relation | Formula | Value | Exp. | Dev. | Status |
 |---|----------|---------|-------|------|------|--------|
 | 1 | N_gen | Atiyah-Singer | 3 | 3 | exact | PROVEN |
 | 2 | τ | 496×21/(27×99) | 3472/891 | - | - | PROVEN |
-| 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | TOPOLOGICAL |
+| 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | STRUCTURAL* |
 | 4 | det(g) | 5×13/32 | 65/32 | - | - | TOPOLOGICAL |
 | 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.195% | PROVEN |
 | 6 | α_s | √2/12 | 0.11785 | 0.1179 | 0.042% | TOPOLOGICAL |
@@ -577,6 +622,8 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 16 | Ω_DE | ln(2)×(b2+b3)/H* | 0.6861 | 0.6847 | 0.211% | PROVEN |
 | 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | PROVEN |
 | 18 | α⁻¹ | 128+9+corr | 137.033 | 137.036 | 0.002% | TOPOLOGICAL |
+
+*κ_T is a structural parameter (capacity), not a physical prediction. It does not appear in other formulas.
 
 ---
 

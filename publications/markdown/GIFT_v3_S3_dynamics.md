@@ -2,7 +2,7 @@
 
 ## Torsional Flow, Dimensional Transmutation, and Cosmological Evolution
 
-*This supplement bridges the static topological structure of S1-S2 to physical dynamics. We derive torsional geodesic flow, establish the scale bridge from Planck to electroweak scales, and present cosmological predictions.*
+*This supplement bridges the static topological structure of S1-S2 to physical dynamics. It explores torsional geodesic flow, discusses the scale bridge from Planck to electroweak scales, and presents cosmological predictions.*
 
 **Version**: 3.1
 **Date**: December 2025
@@ -11,7 +11,7 @@
 
 ## Abstract
 
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Version 3.1 establishes that the base G₂ metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution—through moduli variation or quantum corrections—could generate the small effective torsion that enables physical interactions.
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Version 3.1 establishes that the base G₂ metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
 
 This supplement provides three essential bridges:
 
@@ -33,6 +33,33 @@ All results emerge from the topological structure established in S1.
 - [Part IV: Mass Chain](#part-iv-mass-chain)
 - [Part V: Cosmological Dynamics](#part-v-cosmological-dynamics)
 - [Part VI: Summary and Limitations](#part-vi-summary-and-limitations)
+
+---
+
+# Part 0: Scope and Epistemic Status
+
+## 0. What This Supplement Contains
+
+**Important**: This supplement explores THEORETICAL extensions of GIFT. Unlike S2 (which contains PROVEN dimensionless relations), the content here involves additional assumptions and interpretive frameworks.
+
+### Status Classification
+
+| Content | Status | Confidence |
+|---------|--------|------------|
+| Torsion capacity κ_T = 1/61 | TOPOLOGICAL | High |
+| T = 0 for analytical solution | PROVEN | Certain |
+| RG flow identification λ = ln(μ) | THEORETICAL | Moderate |
+| Scale bridge m_e formula | EXPLORATORY | Low-moderate |
+| Hubble tension resolution | SPECULATIVE | Low |
+
+### Reader Guidance
+
+- Sections 1-4 (torsion): Established G₂ geometry with GIFT interpretation
+- Sections 5-8 (RG flow): Theoretical proposal, not derived
+- Sections 9-13 (scale bridge): Working conjecture, 0.09% precision
+- Sections 19-24 (cosmology): Exploratory connections
+
+**The 18 dimensionless predictions (S2) do not depend on any content in this supplement.**
 
 ---
 
@@ -116,14 +143,27 @@ $$61 = b_3 - b_2 + \text{Weyl} = 77 - 21 + 5$$
 
 $$61 = \text{prime}(18)$$
 
-**Interpretation (v3.1)**:
-- The classical solution has T = 0
-- 61 represents the number of "matter modes" that could acquire torsional couplings through moduli dynamics
-- Physical interactions require κ_eff ≠ 0, but the exact form has κ = 0
+### 2.3 Critical Distinction: Capacity vs Realized Value
+
+┌─────────────────────────────────────────────────────────────┐
+│  **IMPORTANT (v3.1)**                                       │
+│                                                             │
+│  kappa_T = 1/61 is the CAPACITY, the maximum torsion that   │
+│  K₇ topology permits while preserving G₂ holonomy.         │
+│                                                             │
+│  T_analytical = 0 is the REALIZED value for the exact      │
+│  solution φ = (65/32)^{1/14} × φ₀.                         │
+│                                                             │
+│  The capacity 1/61 characterizes the manifold.             │
+│  The realized value 0 characterizes the specific metric.   │
+│                                                             │
+│  All 18 predictions use topology (via b₂, b₃, dim_G₂),     │
+│  NOT the realized torsion value.                           │
+└─────────────────────────────────────────────────────────────┘
 
 **Status**: TOPOLOGICAL (capacity, not realized value)
 
-### 2.3 Experimental Compatibility
+### 2.4 Experimental Compatibility
 
 **DESI DR2 (2025) constraints**:
 
@@ -376,6 +416,8 @@ The framework contains several natural scales:
 
 ## 10. The Master Formula
 
+**WARNING: EXPLORATORY CONTENT** - The scale bridge formula below achieves 0.09% precision but involves assumptions (Lucas number selection, ln(phi) appearance) that lack geometric derivation. This section represents a working conjecture, not a proven result.
+
 ### 10.1 The Scale Bridge
 
 $$\boxed{m_e = M_{Pl} \times \exp\left(-(H^* - L_8 - \ln(\phi))\right)}$$
@@ -544,7 +586,7 @@ The Lucas number at E₈ rank decomposes as the sum of two independent GIFT cons
 
 **Reason 3: Dimensional consistency**
 
-Using F₈ = 21 would give H* - F₈ = 99 - 21 = 78 = dim(E₆), yielding exp(-78) ≈ 10⁻³⁴ and m_e ≈ 10⁻¹² MeV—orders of magnitude too small.
+Using F8 = 21 would give H* - F8 = 99 - 21 = 78 = dim(E6), yielding exp(-78) = 10^-34 and m_e = 10^-12 MeV, orders of magnitude too small.
 
 **Reason 4: F₄ connection**
 
@@ -782,7 +824,7 @@ $$\boxed{H_0^{\text{Local}} = b_3 - p_2^2 = 77 - 4 = 73}$$
 
 $$\Delta H_0 = H_0^{\text{Local}} - H_0^{\text{CMB}} = 73 - 67 = 6 = 2 \times N_{gen}$$
 
-**The Hubble tension equals twice the number of fermion generations!**
+The Hubble tension equals twice the number of fermion generations.
 
 ### 19.4 Verification
 
@@ -1002,41 +1044,46 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-## 27. Limitations and Open Questions
+## 27. Status Summary (v3.1)
 
-### 27.1 What is PROVEN
+### 27.1 What is PROVEN (S2)
 
-**Algebraic/Topological (exact)**:
-- Analytical metric: φ = (65/32)^{1/14} × φ₀
-- det(g) = 65/32 from scaling
-- T = 0 for constant form
-- All 18 dimensionless ratios in S2
+| Result | Formula | Confidence |
+|--------|---------|------------|
+| 18 dimensionless predictions | See S2 | PROVEN/TOPOLOGICAL |
+| Analytical metric | φ = (65/32)^{1/14} × φ₀ | PROVEN (Lean 4) |
+| Torsion for analytical form | T = 0 exactly | PROVEN |
+| Torsion capacity | κ_T = 1/61 | TOPOLOGICAL |
 
-**From topology**:
-- κ_T = 1/61 (capacity, not realized)
-- Scale exponent integer part: 52 = H* - L₈
-- Lepton mass ratios
-- Cosmological parameters
+**These do not depend on S3 content.**
 
-### 27.2 What is THEORETICAL
+### 27.2 What is THEORETICAL (S3)
 
-- Mechanism for effective torsion (moduli? quantum?)
-- RG flow identification λ = ln(μ)
-- Hubble tension interpretation
-- Full scale bridge formula (ln(φ) term)
+| Result | Formula | Confidence |
+|--------|---------|------------|
+| RG flow identification | λ = ln(μ) | Plausible analogy |
+| Geodesic equation | ẍ = ½g^{kl}T_{ijl}ẋⁱẋʲ | Mathematical |
+| Velocity bounds | \|v\| < 0.7 | Consistent |
 
-### 27.3 What is EXPLORATORY
+**Requires additional assumptions beyond topology.**
 
-- Neutrino individual masses
-- Quark absolute masses (deferred)
-- Torsion flow conjecture
+### 27.3 What is EXPLORATORY (S3)
+
+| Result | Precision | Confidence |
+|--------|-----------|------------|
+| Scale bridge m_e formula | 0.09% | Low-moderate |
+| Lucas number selection | L₈ = 47 | Empirical |
+| Hubble dual values | 67, 73 | Speculative |
+| Age of universe | 13.8 Gyr | Speculative |
+
+**Working conjectures, not derived from first principles.**
 
 ### 27.4 Open Questions
 
-1. **Selection principle**: Why this specific K₇ topology?
-2. **RG derivation**: First-principles connection to β-functions
-3. **Torsion classes**: Which W_i components are non-zero?
-4. **Dark sector**: Physical interpretation of hidden E₈
+1. **Selection principle**: Why these specific formulas from topology?
+2. **Torsion mechanism**: How do physical interactions emerge from T = 0 base?
+3. **Scale bridge derivation**: Can ln(φ) appearance be explained geometrically?
+4. **Hidden E₈**: Physical interpretation of second factor
 
 ---
 
