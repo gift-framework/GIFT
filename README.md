@@ -1,7 +1,7 @@
-# Geometric Information Field Theory v3.0
+# Geometric Information Field Theory v3.1
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.0.1-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.1.0-green.svg)](CHANGELOG.md)
 [![Lean 4 + Coq](https://img.shields.io/badge/Formally_Verified-Lean_4_+_Coq-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -88,7 +88,20 @@
 | Q_Koide | 2/3 | dim(G₂)/b₂ |
 | **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
-### Number-Theoretic Structures (v3.0)
+### Analytical G₂ Metric (v3.1)
+
+The G₂ structure admits an **exact closed form**:
+
+| Property | Value | Status |
+|----------|-------|:------:|
+| Associative 3-form | φ = (65/32)^{1/14} × φ₀ | EXACT |
+| Metric | g = (65/32)^{1/7} × I₇ | EXACT |
+| Torsion | T = 0 (constant form) | EXACT |
+| det(g) | 65/32 | EXACT |
+
+Joyce's existence theorem is **trivially satisfied** — no numerical fitting required.
+
+### Number-Theoretic Structures
 
 | Structure | Result | Status |
 |-----------|--------|:------:|

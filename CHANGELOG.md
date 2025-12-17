@@ -5,6 +5,78 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2025-12-17
+
+### Analytical G₂ Metric — Exact Solution
+
+This release establishes that the G₂ metric admits an **exact analytical form** with zero torsion, elevating the framework from numerical agreement to algebraic derivation.
+
+#### Added
+
+**Analytical Metric (Core Result)**
+- Exact solution: φ = (65/32)^{1/14} × φ₀ (scaled standard associative 3-form)
+- Metric: g = (65/32)^{1/7} × I₇ (diagonal, exact)
+- Torsion: T = 0 exactly (constant form ⇒ dφ = d*φ = 0)
+- Joyce existence theorem trivially satisfied (infinite margin)
+
+**New Section 3.4** in Main paper: "The Analytical G₂ Metric"
+- Standard associative 3-form φ₀ with 7 non-zero terms
+- Scaling derivation from det(g) = 65/32 constraint
+- T = 0 proof for constant forms
+
+**Section 11.5** in S1: Derivation chain diagram
+```
+Octonions (𝕆) → G₂ = Aut(𝕆) → φ₀ (Harvey-Lawson) → scaling → predictions
+```
+
+**Section 16.1** in Main: "Related Work and Context"
+- Position GIFT in 2024-2025 research landscape
+- References: Singh et al., Crowley-Goette-Nordström (Inventiones 2025), Furey, Baez, Ferrara
+- "Gap diagram" showing GIFT as bridge between programs
+
+**CLAUDE.md**: Development guide with terminology standards
+- Academic terminology (no internal jargon B4, B5, etc.)
+- Blueprint workflow documentation
+- Writing guidelines for humble scientific tone
+
+**Extended References [21-25]**:
+- Singh et al. (2024) E₈⊗E₈ unification
+- Crowley-Goette-Nordström (2025) G₂ analytic invariant
+- Ferrara (2021) G₂ from Cayley-Dickson
+- Furey, Baez octonionic programs
+
+**Credits**:
+- Harvey & Lawson (1982) for calibrated geometries and φ₀
+- Bryant (1987) for exceptional holonomy foundations
+- de-johannes/FirstDistinction for octonion-Cayley insight
+- math-inc/KakeyaFiniteFields for blueprint workflow
+
+#### Changed
+
+**Paradigm Shift**
+- κ_T = 1/61 is now "torsion capacity" (not realized value on exact solution)
+- PINN serves as **validation**, not proof of existence
+- Joyce theorem is trivially satisfied (T = 0 < threshold)
+
+**Status Clarifications in S2**
+- #3 κ_T: Added note on capacity vs realized torsion
+- #4 det(g): Added verification via analytical metric
+
+**S3 Dynamics Updates**
+- Section 1.3: T = 0 exact, effective torsion requires moduli/quantum mechanisms
+- Section 2.2: 61 as capacity interpretation
+- Section 27: Reorganized PROVEN/THEORETICAL classifications
+
+#### Files Modified
+- `publications/markdown/GIFT_v3_main.md` (v3.0 → v3.1)
+- `publications/markdown/GIFT_v3_S1_foundations.md` (v3.0 → v3.1)
+- `publications/markdown/GIFT_v3_S2_derivations.md` (v3.0 → v3.1)
+- `publications/markdown/GIFT_v3_S3_dynamics.md` (v3.0 → v3.1)
+- `README.md`, `STRUCTURE.md` (version bump)
+- New: `CLAUDE.md`, `docs/GIFT_v31_UPDATE_PLAN.md`, `docs/GIFT_v3.1_LITERATURE_ANALYSIS.md`
+
+---
+
 ## [3.0.1] - 2025-12-11
 
 ### Validation Synchronization & Documentation Update

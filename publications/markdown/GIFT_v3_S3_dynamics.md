@@ -4,16 +4,18 @@
 
 *This supplement bridges the static topological structure of S1-S2 to physical dynamics. We derive torsional geodesic flow, establish the scale bridge from Planck to electroweak scales, and present cosmological predictions.*
 
-**Version**: 3.0
+**Version**: 3.1
 **Date**: December 2025
 
 ---
 
 ## Abstract
 
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. This supplement provides three essential bridges:
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Version 3.1 establishes that the base G₂ metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution—through moduli variation or quantum corrections—could generate the small effective torsion that enables physical interactions.
 
-1. **Torsional dynamics**: How the non-closure of the G₂ 3-form generates physical interactions through torsion κ_T = 1/61
+This supplement provides three essential bridges:
+
+1. **Torsional dynamics**: How departures from the T = 0 solution could generate physical interactions. The topological value κ_T = 1/61 represents the geometric "capacity" for torsion.
 
 2. **Scale bridge**: The formula m_e = M_Pl × exp(-(H* - L₈ - ln(φ))) derives the electron mass from Planck scale with <0.1% precision on the exponent
 
@@ -70,11 +72,20 @@ Equivalent to closure conditions:
 
 $$d\phi = 0, \quad d*\phi = 0$$
 
-**Physical interactions require departure from torsion-free condition**:
+**Exact Solution (v3.1)**
 
-$$|d\phi|^2 + |d*\phi|^2 = \kappa_T^2$$
+The constant form φ = c × φ₀ satisfies:
+- dφ = 0, d*φ = 0 (trivially, for constant form)
+- T = 0 exactly
 
-where κ_T is small but non-zero. A perfectly torsion-free manifold has no geometric coupling between sectors. Torsion provides the mechanism for particle interactions.
+**Physical Interactions Require Departure**
+
+The exact torsion-free solution cannot support physical interactions (no coupling between sectors). Two mechanisms could generate effective torsion:
+
+1. **Moduli variation**: Position-dependent deformation of the G₂ structure across the K₇ moduli space
+2. **Quantum corrections**: Loop effects that modify the classical torsion-free condition
+
+The topological value κ_T = 1/61 represents the geometric "capacity" for such deformations, not the classical solution's torsion.
 
 ---
 
@@ -97,7 +108,7 @@ $$\boxed{\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \f
 
 ### 2.2 The Number 61
 
-The inverse torsion 61 admits multiple decompositions:
+The inverse torsion capacity 61 admits multiple decompositions:
 
 $$61 = \dim(F_4) + N_{gen}^2 = 52 + 9$$
 
@@ -105,7 +116,12 @@ $$61 = b_3 - b_2 + \text{Weyl} = 77 - 21 + 5$$
 
 $$61 = \text{prime}(18)$$
 
-**Status**: TOPOLOGICAL (exact)
+**Interpretation (v3.1)**:
+- The classical solution has T = 0
+- 61 represents the number of "matter modes" that could acquire torsional couplings through moduli dynamics
+- Physical interactions require κ_eff ≠ 0, but the exact form has κ = 0
+
+**Status**: TOPOLOGICAL (capacity, not realized value)
 
 ### 2.3 Experimental Compatibility
 
@@ -990,17 +1006,22 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ### 27.1 What is PROVEN
 
-- κ_T = 1/61 from cohomology
-- det(g) = 65/32 from topology
+**Algebraic/Topological (exact)**:
+- Analytical metric: φ = (65/32)^{1/14} × φ₀
+- det(g) = 65/32 from scaling
+- T = 0 for constant form
+- All 18 dimensionless ratios in S2
+
+**From topology**:
+- κ_T = 1/61 (capacity, not realized)
 - Scale exponent integer part: 52 = H* - L₈
-- All dimensionless ratios in S2
 - Lepton mass ratios
 - Cosmological parameters
 
 ### 27.2 What is THEORETICAL
 
+- Mechanism for effective torsion (moduli? quantum?)
 - RG flow identification λ = ln(μ)
-- Torsion component values (T_{ij,k})
 - Hubble tension interpretation
 - Full scale bridge formula (ln(φ) term)
 
@@ -1050,5 +1071,5 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-*GIFT Framework v3.0 - Supplement S3*
+*GIFT Framework v3.1 - Supplement S3*
 *Dynamics and Scale Bridge*

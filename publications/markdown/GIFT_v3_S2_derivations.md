@@ -6,8 +6,10 @@
 
 *This supplement provides complete mathematical proofs for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions.*
 
-**Version**: 3.0
+**Version**: 3.1
 **Status**: Complete (18 PROVEN relations)
+
+**Note (v3.1)**: All derivations in this supplement remain unchanged. The discovery of the analytical metric (see S1, Section 12) provides additional confidence: the topological constants that determine these relations produce an exactly solvable geometric structure.
 
 ---
 
@@ -133,6 +135,8 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 *Step 4: Numerical value*
 $$\kappa_T = 0.016393442622950...$$
 
+**Note (v3.1)**: For the analytical constant form, the actual torsion is T = 0 < 1/61. The value κ_T = 1/61 represents the topological "capacity" for torsion, not the realized value on the exact solution.
+
 **Status**: TOPOLOGICAL ∎
 
 ---
@@ -156,6 +160,8 @@ $$\det(g) = 2 + \frac{1}{32} = \frac{65}{32}$$
 
 *Step 4: Alternative derivation*
 $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
+
+**Verification (v3.1)**: The analytical metric g = (65/32)^{1/7} × I₇ has det(g) = [(65/32)^{1/7}]⁷ = 65/32 exactly, confirming the topological formula.
 
 **Status**: TOPOLOGICAL ∎
 
@@ -597,5 +603,5 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ---
 
-*GIFT Framework v3.0 - Supplement S2*
+*GIFT Framework v3.1 - Supplement S2*
 *Complete Derivations: 18 Dimensionless Relations*

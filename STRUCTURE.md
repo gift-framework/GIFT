@@ -1,6 +1,6 @@
 # Repository Structure
 
-This repository contains the theoretical documentation for GIFT v3.0.
+This repository contains the theoretical documentation for GIFT v3.1.
 
 ## Directory Layout
 
@@ -8,10 +8,11 @@ This repository contains the theoretical documentation for GIFT v3.0.
 GIFT/
 ├── publications/                     # Theoretical documents
 │   ├── README.md                    # Overview and reading guide
-│   ├── markdown/                    # Core documents (v3.0)
+│   ├── markdown/                    # Core documents (v3.1)
 │   │   ├── GIFT_v3_main.md         # Main paper
 │   │   ├── GIFT_v3_S1_foundations.md   # E₈, G₂, K₇ foundations
-│   │   └── GIFT_v3_S2_derivations.md   # 18 dimensionless derivations
+│   │   ├── GIFT_v3_S2_derivations.md   # 18 dimensionless derivations
+│   │   └── GIFT_v3_S3_dynamics.md      # Torsional flow, scale bridge
 │   ├── references/                  # Exploratory & reference docs
 │   │   ├── 39_observables.csv      # Machine-readable observables
 │   │   ├── yukawa_mixing.md        # CKM/PMNS, Yukawa couplings
@@ -98,6 +99,7 @@ GIFT/
 
 ## Version
 
-**Current**: v3.0.0 (2025-12-11)
+**Current**: v3.1.0 (2025-12-17)
 **Relations**: 165+ certified
 **Predictions**: 18 dimensionless (**0.087% mean deviation**)
+**Key Result**: Analytical G₂ metric with T = 0 exactly
