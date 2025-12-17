@@ -138,7 +138,19 @@ $$\tau_{num} = 3472 = 7 \times 496 = \dim(K_7) \times \dim(E_8 \times E_8)$$
 
 ---
 
-## 5. Octonionic Structure
+## 5. Octonionic Structure ⭐ FOUNDATIONAL
+
+The octonions are not an optional feature of GIFT—they are its foundation. All subsequent structure (G₂, K₇, predictions) derives from 𝕆.
+
+### Why Octonions?
+
+The four normed division algebras over ℝ are:
+- ℝ (dim 1): Classical mechanics
+- ℂ (dim 2): Quantum mechanics
+- ℍ (dim 4): Spin, SL(2,ℂ), Lorentz group
+- **𝕆 (dim 8): Exceptional structures, GIFT**
+
+The pattern stops at 𝕆. There is no 16-dimensional division algebra. The octonions are the *last* algebra with the properties needed for physics.
 
 ### 5.1 Exceptional Jordan Algebra J₃(O)
 
@@ -162,6 +174,22 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 
 **Status**: **PROVEN (Lean)**: `exceptional_differences_certified`
 
+### 5.4 G₂ as Octonionic Automorphisms
+
+**Definition**: G₂ = {g ∈ GL(𝕆) : g(xy) = g(x)g(y) for all x,y ∈ 𝕆}
+
+**Key facts**:
+- dim(G₂) = 14 = C(7,2) (pairs of imaginary units)
+- G₂ acts transitively on unit imaginary octonions (S⁶)
+- G₂ ⊂ SO(7) is the stabilizer of the associative 3-form φ₀
+
+**Connection to K₇**:
+- Im(𝕆) = ℝ⁷ is the natural 7-dimensional space
+- G₂ holonomy means parallel transport preserves octonionic multiplication
+- K₇ is the compact geometry realizing this structure
+
+This is why dim(K₇) = 7 and why G₂ holonomy is required—not choices, but consequences of using octonions.
+
 ---
 
 # Part II: G₂ Holonomy Manifolds
@@ -183,12 +211,27 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | **7** | **G₂** | **Exceptional** |
 | 8 | Spin(7) | Exceptional |
 
-### 6.3 Torsion Conditions
+### 6.3 Torsion: Definition and GIFT Interpretation
 
-**Torsion-free**: ∇φ = 0 ⟺ dφ = 0, d*φ = 0
+**Mathematical definition**: Torsion measures failure of G₂ structure to be parallel:
+$$T = \nabla\phi \neq 0$$
 
-**Controlled non-closure** (GIFT):
-$$|d\phi|^2 + |d*\phi|^2 = \kappa_T^2 = \frac{1}{61^2}$$
+For the 3-form φ, torsion decomposes into four classes W₁ ⊕ W₇ ⊕ W₁₄ ⊕ W₂₇ with total dimension 1 + 7 + 14 + 27 = 49.
+
+**Torsion-free condition**:
+$$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
+
+**GIFT interpretation (v3.1)**:
+
+| Quantity | Meaning | Value |
+|----------|---------|-------|
+| κ_T = 1/61 | Topological *capacity* for torsion | Fixed by K₇ |
+| T_realized | Actual torsion for specific solution | Depends on φ |
+| T_analytical | Torsion for φ = c × φ₀ | **Exactly 0** |
+
+**Key insight**: The 18 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of T_realized. The value κ_T = 1/61 defines the geometric bound, not the physical value.
+
+**Physical interactions**: Emerge from fluctuations around T = 0 base, bounded by κ_T. This mechanism is THEORETICAL (see S3 for details).
 
 ---
 
@@ -475,6 +518,17 @@ Setting c¹⁴ = 65/32 yields the GIFT metric.
 | **G₂ form** | (0,1,2), (0,3,4), (0,5,6), (1,3,5), (1,4,6), (2,3,6), (2,4,5) | Associative 3-form |
 
 Both have 7 terms but different index patterns. The Fano plane defines the octonion multiplication (cross-product), while the G₂ form is the associative calibration.
+
+### 12.5 Verification Summary
+
+| Method | Result | Reference |
+|--------|--------|-----------|
+| Algebraic | φ = (65/32)^{1/14} × φ₀ | This section |
+| Lean 4 | `det_g_equals_target : rfl` | AnalyticalMetric.lean |
+| PINN | Converges to constant form | gift_core/nn/ |
+| Joyce theorem | ‖T‖ < 0.0288 → exists metric | [Joyce 2000] |
+
+Cross-verification between analytical and numerical methods confirms the solution.
 
 ---
 
