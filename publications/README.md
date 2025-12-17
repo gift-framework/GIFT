@@ -79,7 +79,7 @@ All 18 dimensionless derivations with complete proofs.
 
 ## Formal Verification
 
-**165+ relations verified** in Lean 4 + Coq (dual verification).
+**180+ relations verified** in Lean 4 + Coq (dual verification).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 

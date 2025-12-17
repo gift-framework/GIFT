@@ -14,7 +14,7 @@ Citation formats for the GIFT Framework v3.0.
   url     = {https://github.com/gift-framework/GIFT},
   version = {3.0.0},
   license = {MIT},
-  note    = {18 dimensionless predictions, 0.087\% mean deviation, 165+ certified relations}
+  note    = {18 dimensionless predictions, 0.087\% mean deviation, 180+ certified relations}
 }
 ```
 
@@ -41,7 +41,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.0: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.0: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2025},
-  note   = {Mean deviation 0.087\% across 18 dimensionless predictions, zero continuous adjustable parameters, 165+ proven exact relations},
+  note   = {Mean deviation 0.087\% across 18 dimensionless predictions, zero continuous adjustable parameters, 180+ proven exact relations},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -140,7 +140,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.0: Geometric Information Field Theo
   year    = {2025},
   url     = {https://github.com/gift-framework/core},
   version = {3.0.0},
-  note    = {165+ relations verified, zero axioms, K₇ metric pipeline, Joyce existence theorem}
+  note    = {180+ relations verified, zero axioms, K₇ metric pipeline, Joyce existence theorem}
 }
 ```
 
@@ -159,6 +159,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.0: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.1.0 | 2025-12-17 | Analytical G₂ metric, 180+ certified relations |
 | 3.0.0 | 2025-12-09 | Major release: 165+ certified relations, Fibonacci/Monster/McKay |
 | 2.3.x | 2025-12 | Dual Lean 4 + Coq verification |
 | 2.2.0 | 2025-11-27 | Zero-parameter paradigm |
@@ -192,4 +193,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.0.0 (2025-12-11)
+**Version**: 3.1.1 (2025-12-17)

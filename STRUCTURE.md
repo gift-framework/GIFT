@@ -99,7 +99,7 @@ GIFT/
 
 ## Version
 
-**Current**: v3.1.0 (2025-12-17)
-**Relations**: 165+ certified
+**Current**: v3.1.1 (2025-12-17)
+**Relations**: 180+ certified
 **Predictions**: 18 dimensionless (**0.087% mean deviation**)
 **Key Result**: Analytical G₂ metric with T = 0 exactly
