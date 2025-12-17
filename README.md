@@ -1,7 +1,7 @@
-# Geometric Information Field Theory v3.0
+# Geometric Information Field Theory v3.1
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.0.1-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.1.0-green.svg)](CHANGELOG.md)
 [![Lean 4 + Coq](https://img.shields.io/badge/Formally_Verified-Lean_4_+_Coq-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.

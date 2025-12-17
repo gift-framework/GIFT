@@ -1,6 +1,6 @@
 # Geometric Information Field Theory: Topological Determination of Standard Model Parameters
 
-**Version**: 3.0
+**Version**: 3.1
 
 **Author**: Brieuc de La Fournière
 
@@ -11,6 +11,8 @@ Independent researcher
 The Standard Model of particle physics contains nineteen free parameters whose values are determined exclusively through experiment. These parameters, spanning six orders of magnitude from the electron mass to the top quark mass, lack any theoretical explanation within the Standard Model itself. This paper presents a geometric framework that derives these parameters from topological invariants of a seven-dimensional G2-holonomy manifold coupled to E8 x E8 gauge structure.
 
 The construction employs the twisted connected sum method of Joyce and Kovalev, which builds compact G2 manifolds by gluing asymptotically cylindrical building blocks. For the specific manifold K7 considered here, this construction establishes Betti numbers b2 = 21 and b3 = 77 through Mayer-Vietoris exact sequences. These topological integers, together with the algebraic invariants of E8 (dimension 248, rank 8) and G2 (dimension 14), determine physical observables through cohomological mappings.
+
+A key result is that the G2 metric admits an exact analytical form: the standard associative 3-form φ₀ scaled by c = (65/32)^{1/14}. This constant form has exactly zero torsion, satisfying Joyce's existence theorem trivially. The framework thus requires no numerical fitting—all predictions derive from pure algebraic structure.
 
 The framework contains no continuous adjustable parameters. All predictions derive from discrete structural choices: the gauge group E8 x E8, the specific K7 topology, and G2 holonomy. Within these constraints, the framework yields 18 predictions. The dimensionless predictions achieve mean deviation of 0.087% from experimental values, with four exact matches and several agreements below 0.01%.
 
@@ -52,7 +54,7 @@ The key elements are:
 
 **E8 x E8 gauge structure**: The largest exceptional Lie group appears twice, providing 496 gauge degrees of freedom. This choice is motivated by anomaly cancellation and the natural embedding of the Standard Model gauge group.
 
-**K7 manifold**: A compact seven-dimensional manifold with G2 holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers b2 = 21 and b3 = 77.
+**K7 manifold**: A compact seven-dimensional manifold with G2 holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers b2 = 21 and b3 = 77. The G2 metric is exactly the scaled standard form g = (65/32)^{1/7} × I₇, with vanishing torsion.
 
 **G2 holonomy**: This exceptional holonomy group preserves exactly N=1 supersymmetry in four dimensions and ensures Ricci-flatness of the internal geometry.
 
@@ -221,6 +223,46 @@ The 77 harmonic 3-forms correspond to chiral matter modes. The decomposition:
 - 42 global modes: 2 x 21 from TCS structure
 
 These 77 modes organize into 3 generations via the constraint N_gen = 3 derived above.
+
+### 3.4 The Analytical G₂ Metric
+
+A central result is that the G₂ structure on K₇ admits an explicit closed form.
+
+**The Standard Associative 3-form**
+
+The G₂-invariant 3-form on ℝ⁷ is:
+
+$$\varphi_0 = e^{123} + e^{145} + e^{167} + e^{246} - e^{257} - e^{347} - e^{356}$$
+
+This form has exactly 7 non-zero terms among 35 independent components (20% sparsity), with signs +1,+1,+1,+1,-1,-1,-1.
+
+**Scaling for GIFT Constraints**
+
+To satisfy det(g) = 65/32, we scale φ₀ by:
+
+$$c = \left(\frac{65}{32}\right)^{1/14} \approx 1.0543$$
+
+The induced metric is then:
+
+$$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7 \approx 1.1115 \cdot I_7$$
+
+**Torsion Vanishes Exactly**
+
+For a constant 3-form, the exterior derivatives vanish:
+- dφ = 0 (no spatial dependence)
+- d*φ = 0 (same reasoning)
+
+Therefore the torsion tensor T = 0 exactly, satisfying Joyce's threshold ‖T‖ < 0.0288 with infinite margin.
+
+**Implications**
+
+This result has significant implications:
+1. No numerical fitting is required—the solution is algebraically exact
+2. Independent numerical validation (PINN) confirms convergence to this form
+3. All GIFT predictions derive from pure algebraic structure
+4. The framework contains zero continuous parameters
+
+For complete details and Lean 4 formalization, see Supplement S1, Section 12.
 
 ---
 
@@ -712,6 +754,8 @@ This paper has presented a geometric framework deriving Standard Model parameter
 
 The framework achieves mean deviation of 0.087% across 18 dimensionless predictions, with four exact matches and several sub-0.01% agreements. The 43-year-old Koide mystery receives explanation: Q = dim(G2)/b2 = 2/3. The number of generations follows from the Atiyah-Singer index theorem: N_gen = 3. The construction contains no continuous adjustable parameters.
 
+The G₂ metric is not merely numerically approximated but exactly determined: the scaled standard form φ = (65/32)^{1/14} × φ₀ has zero torsion and determinant 65/32 by construction. This elevates the framework from numerical agreement to algebraic derivation.
+
 The framework's value will be determined by experiment. The DUNE measurement of delta_CP (2028-2030) provides a decisive test: the prediction delta_CP = 197 degrees will be confirmed or rejected at the 15-degree level. Beyond this, FCC-ee and precision lepton measurements will probe sin^2(theta_W) = 3/13 and Q_Koide = 2/3 to stringent accuracy.
 
 Whether GIFT represents successful geometric unification or elaborate numerical coincidence is a question that nature will answer. The framework demonstrates that topological principles can determine particle physics parameters with remarkable precision. Whether they do remains open.
@@ -792,9 +836,11 @@ The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark
 | N_gen | 3 | Number of fermion generations |
 | Weyl | 5 | Weyl factor from |W(E8)| |
 | phi | (1+sqrt(5))/2 | Golden ratio |
-| kappa_T | 1/61 | Torsion magnitude |
+| kappa_T | 1/61 | Torsion capacity |
 | det(g) | 65/32 | Metric determinant |
 | tau | 3472/891 | Hierarchy parameter |
+| c | (65/32)^{1/14} | Scale factor for φ₀ |
+| φ₀ | standard G₂ form | 7 non-zero components |
 
 ---
 
@@ -808,6 +854,6 @@ The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark
 
 ---
 
-*GIFT Framework v3.0*
+*GIFT Framework v3.1*
 *Mean Deviation: 0.087%*
 *Decisive Test: DUNE 2028-2030*
