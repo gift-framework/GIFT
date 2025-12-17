@@ -1,6 +1,6 @@
 # GIFT Reference Documents
 
-Exploratory and reference documents for the GIFT framework v3.0.
+Exploratory and reference documents for the GIFT framework v3.1.
 
 ---
 
@@ -58,7 +58,8 @@ For the main framework documents, see [`../markdown/`](../markdown/):
 - [GIFT_v3_main.md](../markdown/GIFT_v3_main.md) - Main paper
 - [GIFT_v3_S1_foundations.md](../markdown/GIFT_v3_S1_foundations.md) - Foundations
 - [GIFT_v3_S2_derivations.md](../markdown/GIFT_v3_S2_derivations.md) - Derivations
+- [GIFT_v3_S3_dynamics.md](../markdown/GIFT_v3_S3_dynamics.md) - Dynamics
 
 ---
 
-*Part of GIFT Framework v3.0*
+*Part of GIFT Framework v3.1*

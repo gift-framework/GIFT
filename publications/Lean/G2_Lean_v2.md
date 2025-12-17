@@ -18,7 +18,7 @@ Our pipeline transforms numerical solutions into formally verified existence pro
 
 **Version 2.0 improvements** over v1.0:
 - **Dual verification**: Lean 4 + Coq (defense in depth against kernel bugs)
-- **Broader context**: The K₇ construction is embedded in a framework with 165+ certified relations connecting G₂ geometry to E₈, number theory, and exceptional groups (see [GIFT repository](https://github.com/gift-framework/core) for complete catalog)
+- **Broader context**: The K₇ construction is embedded in a framework with 180+ certified relations connecting G₂ geometry to E₈, number theory, and exceptional groups (see [GIFT repository](https://github.com/gift-framework/core) for complete catalog)
 - **Statistical validation**: 10,000 alternative configurations tested, showing 6.25σ separation
 - **Python package**: `pip install giftpy` for instant access to certified constants
 
@@ -74,7 +74,7 @@ We propose a three-phase pipeline that circumvents these technical barriers whil
 
 | Aspect | v1.0 (Dec 2025) | v2.0 (Dec 2025) | Improvement |
 |--------|-----------------|-----------------|-------------|
-| **Certified Relations** | 25 | **165+** | **6.6× increase** |
+| **Certified Relations** | 25 | **180+** | **6.6× increase** |
 | **Proof Systems** | Lean 4 only | **Lean 4 + Coq** | Dual verification |
 | **Domain Coverage** | G₂ topology | **+ E₈, Monster, McKay, Primes** | Deep structure |
 | **Number Theory** | Basic | **Fibonacci/Lucas embedding, Prime Atlas** | Complete |
@@ -86,7 +86,7 @@ We propose a three-phase pipeline that circumvents these technical barriers whil
 1. **Methodological**: PINN-to-proof pipeline for geometric PDEs, with explicit threat model and soundness guarantees (§5.4), dual-verified in two independent proof assistants.
 
 2. **Formal verification**: 
-   - **165+ relations** proven in both Lean 4 (Mathlib 4.14.0) and Coq (8.18)
+   - **180+ relations** proven in both Lean 4 (Mathlib 4.14.0) and Coq (8.18)
    - **Zero domain axioms** (only core: Lean's `propext`/`Quot.sound`, Coq's standard axioms)
    - **Constructive** existence proof for torsion-free structure
    - **Complete Fibonacci embedding**: F₃=2=p₂, F₄=3=N_gen, F₅=5=Weyl, ..., F₈=21=b₂, F₉=34=hidden_dim
@@ -111,7 +111,7 @@ We emphasize transparency about modeling choices:
 - ✓ Satisfaction of topological constraints (Hodge numbers, determinant condition)
 - ✓ Lipschitz bounds derived from PINN gradient analysis
 - ✓ Kernel-checked Lean 4 + Coq proofs with constructive fixed-point witness
-- ✓ **165+ exact mathematical relations** connecting G₂ geometry to E₈, Monster, number theory
+- ✓ **180+ exact mathematical relations** connecting G₂ geometry to E₈, Monster, number theory
 - ✓ **Statistical validation** showing 6.25σ separation from alternative configurations
 
 Our contribution is a *proof-of-concept* demonstrating feasibility of formal certification for ML-assisted geometry, now extended to a comprehensive web of connections across mathematics and theoretical physics.
@@ -128,7 +128,7 @@ This accessibility constraint also shaped technical choices (simplified geometry
 
 ### 1.5 Paper Organization
 
-§2 highlights what's new in v2.0. §3 provides a **Lean 4 primer for physicists**, a pedagogical introduction to theorem proving. §4 covers background on G₂ geometry and formal verification landscape. §5 details our three-phase pipeline. §6 walks through the Lean 4 + Coq implementation. §7 catalogs the 165+ certified relations. §8 explores deep structures (Fibonacci, primes, Monster). §9 presents validation and reproducibility. §10 discusses limitations and future work. An annex provides statistical validation details.
+§2 highlights what's new in v2.0. §3 provides a **Lean 4 primer for physicists**, a pedagogical introduction to theorem proving. §4 covers background on G₂ geometry and formal verification landscape. §5 details our three-phase pipeline. §6 walks through the Lean 4 + Coq implementation. §7 catalogs the 180+ certified relations. §8 explores deep structures (Fibonacci, primes, Monster). §9 presents validation and reproducibility. §10 discusses limitations and future work. An annex provides statistical validation details.
 
 ---
 
@@ -145,7 +145,7 @@ Version 2.0 represents a fundamental expansion from a focused G₂ formalization
 | **Prime Atlas** | 50+ | All primes < 200, Heegner numbers |
 | **Monster Group** | 15+ | Dimension, j-invariant, Moonshine |
 | **McKay** | 10+ | E₈ ↔ Icosahedron, golden ratio emergence |
-| **TOTAL** | **165+** | All dual-verified (Lean 4 + Coq) |
+| **TOTAL** | **180+** | All dual-verified (Lean 4 + Coq) |
 
 ### 2.2 Qualitative Breakthroughs
 
@@ -215,7 +215,7 @@ The McKay correspondence connects finite groups to exceptional Lie algebras. Our
 
 **5. Dual Verification (Lean 4 + Coq)**
 
-All 165+ relations are independently verified in:
+All 180+ relations are independently verified in:
 - **Lean 4.14.0** with Mathlib 4.14.0 (Zero sorry, zero domain axioms)
 - **Coq 8.18** (Zero Admitted, zero explicit axioms)
 
@@ -266,7 +266,7 @@ Lean/GIFT/
 ├── McKay/               # NEW in v2.0
 │   ├── Correspondence.lean    # E₈ ↔ 2I
 │   └── GoldenEmergence.lean   # φ via McKay chain
-└── Certificate.lean     # Master theorems (all_165+_certified)
+└── Certificate.lean     # Master theorems (all_180+_certified)
 ```
 
 Matching structure in `COQ/` with identical theorem statements.
@@ -302,7 +302,7 @@ print(COXETER_E8)  # 30 (icosahedron edges)
 
 ## 3. Lean 4 Primer for Physicists
 
-*This section makes formal verification accessible to theoretical physicists with no prior Lean experience. We progress from "Hello World" to understanding our 165+ certified relations.*
+*This section makes formal verification accessible to theoretical physicists with no prior Lean experience. We progress from "Hello World" to understanding our 180+ certified relations.*
 
 ### 3.1 Why Lean for Physics?
 
@@ -449,7 +449,7 @@ These are **Lean's core axioms**, present in all Lean proofs. Critically absent:
 - ❌ `Classical.em` (excluded middle): many proofs are constructive
 - ❌ Any physics-specific axioms: all derived from topology
 
-**For physicists**: This is like checking that your calculation doesn't depend on any unproven conjectures. Our G₂ existence proof and all 165+ relations are as solid as 2 + 2 = 4.
+**For physicists**: This is like checking that your calculation doesn't depend on any unproven conjectures. Our G₂ existence proof and all 180+ relations are as solid as 2 + 2 = 4.
 
 ### 3.7 From Physics Intuition to Formal Proof
 
@@ -723,22 +723,22 @@ cd COQ && make
 | Monster | 240 | 220 | Dimension, j-invariant |
 | McKay | 180 | 160 | Correspondence, golden |
 | Certificate | 420 | 380 | Master theorems |
-| **TOTAL** | **~3600** | **~3290** | **165+** |
+| **TOTAL** | **~3600** | **~3290** | **180+** |
 
 ---
 
 ## 7. The G₂ Construction in Broader Context
 
-### 7.1 The GIFT Framework (165+ Certified Relations)
+### 7.1 The GIFT Framework (180+ Certified Relations)
 
-The K₇ manifold constructed in this paper is part of a larger framework (GIFT - Geometric Information Field Theory) with **165+ formally verified mathematical relations** connecting:
+The K₇ manifold constructed in this paper is part of a larger framework (GIFT - Geometric Information Field Theory) with **180+ formally verified mathematical relations** connecting:
 
 - **G₂ topology**: b₂=21, b₃=77, κ_T=1/61, det(g)=65/32
 - **E₈ structure**: dim(E₈)=248, exceptional chain E₆→E₇→E₈
 - **Number theory**: Fibonacci embedding (F₃...F₁₂), Prime Atlas (<200), Heegner numbers
 - **Exceptional groups**: Monster dimension 196883=47×59×71, McKay correspondence
 
-**This paper focuses on the G₂ metric construction methodology**. For the complete catalog of 165+ relations, see:
+**This paper focuses on the G₂ metric construction methodology**. For the complete catalog of 180+ relations, see:
 - Repository: https://github.com/gift-framework/core
 - Python package: `pip install giftpy`
 - Full framework paper: GIFT v3.0 (forthcoming)
@@ -793,9 +793,9 @@ theorem k7_admits_torsion_free_g2 :
 -- Only Lean's core axioms, NO domain-specific axioms
 ```
 
-### 7.3 Broader Context (165+ Relations)
+### 7.3 Broader Context (180+ Relations)
 
-The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structure with 165+ certified relations. **Examples include**:
+The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structure with 180+ certified relations. **Examples include**:
 
 - **Fibonacci embedding**: F₈ = 21 = b₂ (remarkably, the Fibonacci sequence F₃...F₁₂ maps exactly to GIFT constants)
 - **Prime expressions**: 163 = dim(E₈) - 10×rank(E₈) - 5 (Heegner prime!)
@@ -847,7 +847,7 @@ git clone https://github.com/gift-framework/core
 cd core/Lean && lake build
 cd ../COQ && make
 ```
-Verifies all 165+ relations. **Requires**: Lean 4.14, Coq 8.18, 4GB RAM.
+Verifies all 180+ relations. **Requires**: Lean 4.14, Coq 8.18, 4GB RAM.
 
 **Level 2: Python Package**
 ```bash
@@ -1006,7 +1006,7 @@ $$J(\varphi) = \varphi - (d + d^*)^{-1} \left( \begin{array}{c} d\varphi \\ d\st
 
 We have presented a pipeline from physics-informed neural networks to formally verified existence theorems in differential geometry, applied to a model of G₂ structures, with **dual independent verification** in Lean 4 and Coq.
 
-**Version 2.0 represents a qualitative leap**, extending from 25 to **165+ certified mathematical relations**, establishing deep connections between:
+**Version 2.0 represents a qualitative leap**, extending from 25 to **180+ certified mathematical relations**, establishing deep connections between:
 - G₂ geometry and E₈ exceptional structure
 - Fibonacci/Lucas sequences (complete embedding)
 - Prime numbers (100% coverage < 200)
@@ -1018,7 +1018,7 @@ Our contributions include:
 
 1. **Methodological**: PINN-to-proof pipeline with explicit soundness guarantees, dual-verified in independent proof systems
 
-2. **Technical**: **165+ relations** proven in Lean 4 (Mathlib 4.14.0) and Coq (8.18), with **zero domain axioms**, constructive existence proof for torsion-free structure
+2. **Technical**: **180+ relations** proven in Lean 4 (Mathlib 4.14.0) and Coq (8.18), with **zero domain axioms**, constructive existence proof for torsion-free structure
 
 3. **Reproducible**: Open-source implementation (`pip install giftpy`), executable on free-tier cloud hardware (<1 hour)
 

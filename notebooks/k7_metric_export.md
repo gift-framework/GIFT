@@ -1,6 +1,6 @@
 # K₇ Metric Formalization
 
-**GIFT v3.0** | Generated: 2025-12-09
+**GIFT v3.1** | Generated: 2025-12-17
 
 ## Topological Constants
 
@@ -44,4 +44,4 @@ m_τ/m_e = 3477 = 3 × 19 × 61
 
 - **Lean 4**: `GIFT/Geometry.lean`, `GIFT/Certificate.lean`
 - **Coq**: `COQ/Geometry/K7.v`
-- **Relations certified**: 165+
+- **Relations certified**: 180+

@@ -19,4 +19,4 @@ For interactive visualizations, see Binder: https://mybinder.org/v2/gh/gift-fram
 
 ---
 
-Part of GIFT Framework v2.3
+Part of GIFT Framework v3.1

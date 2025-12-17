@@ -404,7 +404,7 @@ The GIFT framework opens several speculative directions:
 3. **Number theory**: Fibonacci-Lucas-Mersenne patterns (status unclear)
 4. **Speculative**: Emergence of time, consciousness, multiverse
 
-**Key distinction**: These extensions are exploratory. The core predictive success of GIFT (165+ proven relations, 39 observables) does not depend on resolving these speculative questions.
+**Key distinction**: These extensions are exploratory. The core predictive success of GIFT (180+ proven relations, 39 observables) does not depend on resolving these speculative questions.
 
 ---
 
