@@ -138,9 +138,9 @@ $$\tau_{num} = 3472 = 7 \times 496 = \dim(K_7) \times \dim(E_8 \times E_8)$$
 
 ---
 
-## 5. Octonionic Structure ⭐ FOUNDATIONAL
+## 5. Octonionic Structure (Foundational)
 
-The octonions are not an optional feature of GIFT—they are its foundation. All subsequent structure (G₂, K₇, predictions) derives from 𝕆.
+The octonions are not an optional feature of GIFT; they are its foundation. All subsequent structure (G₂, K₇, predictions) derives from 𝕆.
 
 ### Why Octonions?
 
@@ -188,7 +188,7 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 - G₂ holonomy means parallel transport preserves octonionic multiplication
 - K₇ is the compact geometry realizing this structure
 
-This is why dim(K₇) = 7 and why G₂ holonomy is required—not choices, but consequences of using octonions.
+This is why dim(K7) = 7 and why G2 holonomy is required: not choices, but consequences of using octonions.
 
 ---
 
@@ -411,7 +411,7 @@ For constant 3-form φ(x) = φ₀:
 
 Therefore T = 0 < ε₀ = 0.0288 with **infinite margin**.
 
-Joyce's perturbation theorem guarantees existence of a torsion-free G₂ structure. For the constant form, this is trivially satisfied—no perturbation analysis required.
+Joyce's perturbation theorem guarantees existence of a torsion-free G2 structure. For the constant form, this is trivially satisfied; no perturbation analysis required.
 
 ### 11.3 Independent Numerical Validation (PINN)
 

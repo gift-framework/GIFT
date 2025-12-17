@@ -10,7 +10,7 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇.
 
-**Key result**: The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices—the octonionic algebra 𝕆, its automorphism group G₂ = Aut(𝕆), and the unique compact geometry realizing this structure.
+**Key result**: The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the unique compact geometry realizing this structure.
 
 **Predictions**: 18 dimensionless quantities achieve mean deviation 0.087% from experiment, including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3.
 
@@ -26,11 +26,11 @@ Whether these agreements reflect genuine geometric unification or elaborate coin
 
 ### 1.1 The Standard Model Parameter Problem
 
-The Standard Model requires nineteen free parameters whose values must be determined experimentally—no theoretical explanation exists for any of them. Three gauge couplings, nine Yukawa couplings spanning a ratio of 300,000 between electron and top quark, four CKM parameters, four PMNS parameters, and the Higgs sector values: all must be measured, not derived.
+The Standard Model requires nineteen free parameters whose values must be determined experimentally. No theoretical explanation exists for any of them. Three gauge couplings, nine Yukawa couplings spanning a ratio of 300,000 between electron and top quark, four CKM parameters, four PMNS parameters, and the Higgs sector values: all must be measured, not derived.
 
 As Gell-Mann observed, such proliferation of unexplained parameters suggests a deeper theory awaits discovery. Dirac's observation of large numerical coincidences hinted that dimensionless ratios might hold particular significance.
 
-**GIFT takes this hint seriously**: the framework focuses exclusively on dimensionless quantities—ratios independent of unit conventions and energy scales. The contrast is stark:
+**GIFT takes this hint seriously**: the framework focuses exclusively on dimensionless quantities, ratios independent of unit conventions and energy scales. The contrast is stark:
 
 | Framework | Continuous Parameters |
 |-----------|----------------------|
@@ -40,7 +40,7 @@ As Gell-Mann observed, such proliferation of unexplained parameters suggests a d
 
 ### 1.2 Geometric Approaches to Fundamental Physics
 
-Kaluza-Klein theory showed electromagnetism can emerge from five-dimensional gravity. String theory extended this to ten or eleven dimensions—but faces the landscape problem: ~10⁵⁰⁰ distinct vacua, each with different physics.
+Kaluza-Klein theory showed electromagnetism can emerge from five-dimensional gravity. String theory extended this to ten or eleven dimensions, but faces the landscape problem: ~10^500 distinct vacua, each with different physics.
 
 G₂-holonomy manifolds provide a natural setting for unique predictions. Joyce's construction (2000) established existence of compact G₂ manifolds with controlled topology. The twisted connected sum (TCS) method enables systematic construction from Calabi-Yau building blocks.
 
@@ -67,7 +67,7 @@ E8 x E8 (496D gauge) -> AdS4 x K7 (11D bulk) -> Standard Model (4D effective)
 ┌─────────────────────────────────────────────────────────────┐
 │  **KEY INSIGHT: Why K₇?**                                   │
 │                                                             │
-│  K₇ is not "selected" from alternatives—it is the unique   │
+│  K7 is not "selected" from alternatives. It is the unique   │
 │  geometric realization of octonionic structure:            │
 │                                                             │
 │  𝕆 (octonions) → Im(𝕆) = ℝ⁷ → G₂ = Aut(𝕆) → K₇ with G₂    │
@@ -125,17 +125,17 @@ This "Exceptional Chain" theorem is verified in Lean 4; see Supplement S1, Secti
 
 ### The Octonionic Foundation
 
-This chain is not accidental—it reflects the unique algebraic structure of the octonions:
+This chain is not accidental. It reflects the unique algebraic structure of the octonions:
 
 | Algebra | Connection to 𝕆 |
 |---------|-----------------|
-| G₂ | Aut(𝕆) — automorphisms of octonions |
-| F₄ | Aut(J₃(𝕆)) — automorphisms of exceptional Jordan algebra |
+| G2 | Aut(O), automorphisms of octonions |
+| F4 | Aut(J3(O)), automorphisms of exceptional Jordan algebra |
 | E₆ | Collineations of octonionic projective plane |
 | E₇ | U-duality group of 4D N=8 supergravity |
 | E₈ | Contains all lower exceptionals; anomaly-free in 11D |
 
-The dimension 7 of Im(𝕆) determines dim(K₇) = 7. The 14 generators of G₂ appear directly in predictions (Q_Koide = 14/21). This is not numerology—it is the algebraic structure of the octonions manifesting geometrically.
+The dimension 7 of Im(O) determines dim(K7) = 7. The 14 generators of G2 appear directly in predictions (Q_Koide = 14/21). This is not numerology; it is the algebraic structure of the octonions manifesting geometrically.
 
 ### 2.2 The Product Structure E8 x E8
 
@@ -189,9 +189,9 @@ Physical motivations for G2 holonomy include:
 
 **Ricci-flatness**: G2 holonomy implies Ric(g) = 0, so the internal geometry solves the vacuum Einstein equations without requiring sources.
 
-**Exceptional structure**: G₂ is the automorphism group of the octonions. This is the *definition* of G₂, not a coincidence. The 7 imaginary octonion units span Im(𝕆) = ℝ⁷, and G₂ preserves the octonionic multiplication table. A G₂-holonomy manifold is therefore the natural geometric home for octonionic physics.
+**Exceptional structure**: G2 is the automorphism group of the octonions. This is the *definition* of G2, not a coincidence. The 7 imaginary octonion units span Im(O) = R^7, and G2 preserves the octonionic multiplication table. A G2-holonomy manifold is therefore the natural geometric home for octonionic physics.
 
-This answers the "selection principle" question: K₇ is not chosen from a landscape of alternatives. It is the unique compact 7-geometry whose holonomy respects octonionic structure—just as a circle is the unique 1-geometry with U(1) symmetry.
+This answers the "selection principle" question: K7 is not chosen from a landscape of alternatives. It is the unique compact 7-geometry whose holonomy respects octonionic structure, just as a circle is the unique 1-geometry with U(1) symmetry.
 
 Mathematical properties:
 
@@ -245,7 +245,7 @@ $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 **Torsion capacity** (not magnitude):
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
-**Important distinction (v3.1)**: This value represents the geometric *capacity* for torsion—the maximum departure from exact G₂ holonomy that K₇ topology permits. For the analytical solution φ = c × φ₀, the realized torsion is exactly T = 0 (see Section 3.4). The value κ_T = 1/61 bounds fluctuations; it does not appear directly in the 18 dimensionless predictions.
+**Important distinction (v3.1)**: This value represents the geometric *capacity* for torsion, the maximum departure from exact G2 holonomy that K7 topology permits. For the analytical solution φ = c × φ₀, the realized torsion is exactly T = 0 (see Section 3.4). The value κ_T = 1/61 bounds fluctuations; it does not appear directly in the 18 dimensionless predictions.
 
 The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance even when saturated at T = 0.
 
@@ -268,7 +268,7 @@ The 77 harmonic 3-forms correspond to chiral matter modes. The decomposition:
 
 These 77 modes organize into 3 generations via the constraint N_gen = 3 derived above.
 
-### 3.4 The Analytical G₂ Metric ⭐ CENTRAL RESULT
+### 3.4 The Analytical G₂ Metric (Central Result)
 
 The following discovery (v3.1) transforms GIFT from numerical fitting to algebraic derivation.
 
@@ -308,12 +308,12 @@ Therefore the torsion tensor T = 0 exactly, satisfying Joyce's threshold ‖T‖
 | Parameter count | Zero continuous | Zero continuous (confirmed) |
 | Verification | Numerical | Lean 4 theorem |
 
-The constant form φ = c × φ₀ is not an approximation—it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
+The constant form phi = c x phi_0 is not an approximation; it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
 
 **Implications**
 
 This result has significant implications:
-1. No numerical fitting is required—the solution is algebraically exact
+1. No numerical fitting is required: the solution is algebraically exact
 2. Independent numerical validation (PINN) confirms convergence to this form
 3. All GIFT predictions derive from pure algebraic structure
 4. The framework contains zero continuous parameters
@@ -347,7 +347,7 @@ Three classes of predictions emerge:
 
 ### 4.2 Epistemic Status
 
-The formulas presented here share epistemological status with Balmer's formula (1885) for hydrogen spectra—empirically successful descriptions whose theoretical derivation came later. Three factors distinguish GIFT predictions from numerology:
+The formulas presented here share epistemological status with Balmer's formula (1885) for hydrogen spectra: empirically successful descriptions whose theoretical derivation came later. Three factors distinguish GIFT predictions from numerology:
 
 **1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.087% mean deviation across 18 quantities has probability < 10⁻²⁰.
 
@@ -356,7 +356,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 - Q_Koide = 2/3 (not 0.6667...)
 - m_s/m_d = 20 (not 19.8...)
 
-These exact ratios cannot be "fitted"—they are correct or wrong.
+These exact ratios cannot be "fitted"; they are correct or wrong.
 
 **3. Falsifiability**: DUNE will test δ_CP = 197° to ±5° precision by 2039. A single clear contradiction refutes the entire framework.
 
@@ -385,11 +385,11 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 
 
 **Interpretation**: b₂ counts gauge moduli; b₃ + dim(G₂) counts matter + holonomy degrees of freedom. The ratio measures gauge-matter coupling geometrically.
 
-**Status**: PROVEN (Lean verified) — See S2 Section 7 for complete derivation.
+**Status**: PROVEN (Lean verified). See S2 Section 7 for complete derivation.
 
 ---
 
-## 6. The Koide Relation ⭐ FLAGSHIP DERIVATION
+## 6. The Koide Relation (Flagship Derivation)
 
 The Koide formula has resisted explanation for 43 years. Wikipedia (2024) states: "no derivation from established physics has succeeded." GIFT provides the first derivation yielding Q = 2/3 as an algebraic identity, not a numerical fit.
 
@@ -465,7 +465,7 @@ $$\delta_{CP} = \dim(K_7) \times \dim(G_2) + H^* = 7 \times 14 + 99 = 197°$$
 
 **Decisive test**: Measurement outside 182°–212° at 3σ refutes GIFT.
 
-**Status**: PROVEN (Lean verified) — See S2 Section 13 for complete derivation.
+**Status**: PROVEN (Lean verified). See S2 Section 13 for complete derivation.
 
 ---
 
@@ -583,7 +583,7 @@ If predictions were random numbers in [0,1], matching 18 experimental values to 
 
 A legitimate concern for any unified framework is whether the specific parameter choices represent overfitting to experimental data. To address this, we tested 10,000 alternative G2 manifold configurations by varying the Betti numbers within physically plausible ranges: b₂ ∈ [1, 50] and b₃ ∈ [b₂+5, 150].
 
-Critically, this validation uses the **actual topological formulas** to compute predictions for each alternative configuration—not random perturbations. This provides an honest assessment of how special the (b₂=21, b₃=77) point is within the parameter space.
+Critically, this validation uses the **actual topological formulas** to compute predictions for each alternative configuration, not random perturbations. This provides an honest assessment of how special the (b₂=21, b₃=77) point is within the parameter space.
 
 **Results**: The GIFT reference configuration achieves mean relative deviation of 0.087% across 18 dimensionless observables. Alternative configurations yield mean deviation of 18.46% with standard deviation 7.42%. The separation corresponds to a z-score of 2.48σ (p-value = 0.0066).
 
@@ -805,7 +805,7 @@ The v3.1 discovery that the G₂ metric is exactly φ = (65/32)^{1/14} × φ₀ 
 
 Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute δ_CP = 197° to ±5° precision.
 
-The deeper question—why octonionic geometry would determine particle physics parameters—remains open. But the empirical success of 18 predictions at 0.087% mean deviation, derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
+The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.087% mean deviation, derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
 
 The octonions, discovered in 1843 as a mathematical curiosity, may yet prove to be nature's preferred algebra.
 

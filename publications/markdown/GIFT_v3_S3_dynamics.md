@@ -2,7 +2,7 @@
 
 ## Torsional Flow, Dimensional Transmutation, and Cosmological Evolution
 
-*This supplement bridges the static topological structure of S1-S2 to physical dynamics. We derive torsional geodesic flow, establish the scale bridge from Planck to electroweak scales, and present cosmological predictions.*
+*This supplement bridges the static topological structure of S1-S2 to physical dynamics. It explores torsional geodesic flow, discusses the scale bridge from Planck to electroweak scales, and presents cosmological predictions.*
 
 **Version**: 3.1
 **Date**: December 2025
@@ -11,7 +11,7 @@
 
 ## Abstract
 
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Version 3.1 establishes that the base G₂ metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution—through moduli variation or quantum corrections—could generate the small effective torsion that enables physical interactions.
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Version 3.1 establishes that the base G₂ metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
 
 This supplement provides three essential bridges:
 
@@ -148,7 +148,7 @@ $$61 = \text{prime}(18)$$
 ┌─────────────────────────────────────────────────────────────┐
 │  **IMPORTANT (v3.1)**                                       │
 │                                                             │
-│  κ_T = 1/61 is the CAPACITY — the maximum torsion that     │
+│  kappa_T = 1/61 is the CAPACITY, the maximum torsion that   │
 │  K₇ topology permits while preserving G₂ holonomy.         │
 │                                                             │
 │  T_analytical = 0 is the REALIZED value for the exact      │
@@ -416,7 +416,7 @@ The framework contains several natural scales:
 
 ## 10. The Master Formula
 
-**⚠️ EXPLORATORY CONTENT**: The scale bridge formula below achieves 0.09% precision but involves assumptions (Lucas number selection, ln(φ) appearance) that lack geometric derivation. This section represents a working conjecture, not a proven result.
+**WARNING: EXPLORATORY CONTENT** - The scale bridge formula below achieves 0.09% precision but involves assumptions (Lucas number selection, ln(phi) appearance) that lack geometric derivation. This section represents a working conjecture, not a proven result.
 
 ### 10.1 The Scale Bridge
 
@@ -586,7 +586,7 @@ The Lucas number at E₈ rank decomposes as the sum of two independent GIFT cons
 
 **Reason 3: Dimensional consistency**
 
-Using F₈ = 21 would give H* - F₈ = 99 - 21 = 78 = dim(E₆), yielding exp(-78) ≈ 10⁻³⁴ and m_e ≈ 10⁻¹² MeV—orders of magnitude too small.
+Using F8 = 21 would give H* - F8 = 99 - 21 = 78 = dim(E6), yielding exp(-78) = 10^-34 and m_e = 10^-12 MeV, orders of magnitude too small.
 
 **Reason 4: F₄ connection**
 
@@ -824,7 +824,7 @@ $$\boxed{H_0^{\text{Local}} = b_3 - p_2^2 = 77 - 4 = 73}$$
 
 $$\Delta H_0 = H_0^{\text{Local}} - H_0^{\text{CMB}} = 73 - 67 = 6 = 2 \times N_{gen}$$
 
-**The Hubble tension equals twice the number of fermion generations!**
+The Hubble tension equals twice the number of fermion generations.
 
 ### 19.4 Verification
 
