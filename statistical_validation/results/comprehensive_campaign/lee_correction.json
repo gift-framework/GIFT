@@ -1,0 +1,8 @@
+{
+  "n_trials": 10800,
+  "local_p_value": 0.0,
+  "bonferroni_global_p": 0.0,
+  "sidak_global_p": 0.0,
+  "bonferroni_sigma": Infinity,
+  "sidak_sigma": Infinity
+}
