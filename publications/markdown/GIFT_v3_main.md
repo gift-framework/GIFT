@@ -720,6 +720,25 @@ String theory offers a rich mathematical structure but faces the landscape probl
 
 GIFT's distinctive features are discrete inputs, dimensionless focus, near-term falsifiability, and mathematical verifiability.
 
+### 16.1 Related Work and Context
+
+GIFT intersects three active research programs with recent publications (2024-2025):
+
+**Algebraic E₈×E₈ Unification**: Singh, Kaushik et al. (2024) [21] establish the branching structure of E₈×E₈ → Standard Model with 496 gauge DOF. Wilson (2024) [4] proves uniqueness of E₈ embedding. GIFT provides the geometric realization via G₂-holonomy compactification, yielding concrete numerical predictions.
+
+**Octonionic Approach**: Furey (2018-) [24], Baez (2020-) [25], and Ferrara (2021) [23] derive Standard Model gauge groups from division algebras. The key insight: G₂ = Aut(𝕆) connects octonion structure to holonomy. GIFT quantifies this relationship: b₂ = C(7,2) = 21 gauge moduli arise from the 7 imaginary octonion units.
+
+**G₂ Manifold Construction**: Crowley, Goette, and Nordström (Inventiones 2025) [22] prove the moduli space of G₂ metrics is disconnected, with analytic invariant ν̄ distinguishing components. This raises the selection question: which K₇ realizes physics? GIFT proposes that physical constraints select the specific manifold with (b₂=21, b₃=77).
+
+```
+E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM parameters
+     ↑                         ↑                         ↑
+  Singh 2024              Nordström 2025             Furey 2018
+
+                    GIFT provides the bridges
+                    with numerical predictions
+```
+
 ---
 
 ## 17. Future Directions
@@ -823,6 +842,18 @@ The octonion-Cayley connection and its role in G₂ structure benefited from ins
 **Cosmology**
 
 [20] Planck Collaboration. "Cosmological parameters." Astron. Astrophys. 641, 2020.
+
+**Related Programs (2024-2025)**
+
+[21] Singh, T.P., Kaushik, P. et al. "An E₈⊗E₈ Unification of the Standard Model with Pre-Gravitation." arXiv:2206.06911v3, 2024.
+
+[22] Crowley, D., Goette, S., Nordström, J. "An analytic invariant of G₂ manifolds." Inventiones Math., 2025.
+
+[23] Ferrara, M. "An exceptional G(2) extension of the Standard Model from the Cayley-Dickson process." Sci. Rep. 11, 22528, 2021.
+
+[24] Furey, C. "Division Algebras and the Standard Model." furey.space, 2018-2024.
+
+[25] Baez, J.C. "Octonions and the Standard Model." math.ucr.edu/home/baez/standard/, 2020-2025.
 
 ---
 
