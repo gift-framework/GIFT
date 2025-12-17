@@ -88,7 +88,20 @@
 | Q_Koide | 2/3 | dim(G₂)/b₂ |
 | **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
-### Number-Theoretic Structures (v3.0)
+### Analytical G₂ Metric (v3.1)
+
+The G₂ structure admits an **exact closed form**:
+
+| Property | Value | Status |
+|----------|-------|:------:|
+| Associative 3-form | φ = (65/32)^{1/14} × φ₀ | EXACT |
+| Metric | g = (65/32)^{1/7} × I₇ | EXACT |
+| Torsion | T = 0 (constant form) | EXACT |
+| det(g) | 65/32 | EXACT |
+
+Joyce's existence theorem is **trivially satisfied** — no numerical fitting required.
+
+### Number-Theoretic Structures
 
 | Structure | Result | Status |
 |-----------|--------|:------:|
