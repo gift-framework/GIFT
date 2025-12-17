@@ -245,7 +245,7 @@ $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 **Torsion capacity** (not magnitude):
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
-**Important distinction (v3.1)**: This value represents the geometric *capacity* for torsion, the maximum departure from exact G2 holonomy that K7 topology permits. For the analytical solution φ = c × φ₀, the realized torsion is exactly T = 0 (see Section 3.4). The value κ_T = 1/61 bounds fluctuations; it does not appear directly in the 18 dimensionless predictions.
+**Important distinction**: This value represents the geometric *capacity* for torsion, the maximum departure from exact G2 holonomy that K7 topology permits. For the analytical solution φ = c × φ₀, the realized torsion is exactly T = 0 (see Section 3.4). The value κ_T = 1/61 bounds fluctuations; it does not appear directly in the 18 dimensionless predictions.
 
 The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance even when saturated at T = 0.
 
@@ -270,7 +270,7 @@ These 77 modes organize into 3 generations via the constraint N_gen = 3 derived 
 
 ### 3.4 The Analytical G₂ Metric (Central Result)
 
-The following discovery (v3.1) transforms GIFT from numerical fitting to algebraic derivation.
+The G2 metric admits an exact closed form, which is central to the framework.
 
 **The Standard Associative 3-form**
 
@@ -300,13 +300,13 @@ Therefore the torsion tensor T = 0 exactly, satisfying Joyce's threshold ‖T‖
 
 **Why this matters**:
 
-| Aspect | Before v3.1 | After v3.1 |
-|--------|-------------|------------|
-| Metric source | PINN reconstruction | Exact algebraic form |
-| Torsion | κ_T = 1/61 (realized) | T = 0 (capacity = 1/61) |
-| Joyce threshold | 20× margin | Infinite margin |
-| Parameter count | Zero continuous | Zero continuous (confirmed) |
-| Verification | Numerical | Lean 4 theorem |
+| Property | Value |
+|----------|-------|
+| Metric source | Exact algebraic form |
+| Torsion | T = 0 (capacity = 1/61) |
+| Joyce threshold | Satisfied with infinite margin |
+| Parameter count | Zero continuous |
+| Verification | Lean 4 theorem + PINN cross-check |
 
 The constant form phi = c x phi_0 is not an approximation; it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
 
@@ -496,7 +496,7 @@ The hierarchy parameter τ = 3472/891 has prime factorization (2⁴ × 7 × 31)/
 
 The torsion inverse 61 = dim(F₄) + N_gen² = 52 + 9 links to exceptional algebra structure.
 
-**Note on torsion independence (v3.1)**: All 18 predictions derive from topological invariants (b₂, b₃, dim(G₂), etc.) and are independent of the realized torsion value T. The analytical metric has T = 0 exactly; the predictions would be identical for any T ≤ κ_T = 1/61.
+**Note on torsion independence**: All 18 predictions derive from topological invariants (b2, b3, dim(G2), etc.) and are independent of the realized torsion value T. The analytical metric has T = 0 exactly; the predictions would be identical for any T within the capacity bound.
 
 ---
 
@@ -801,7 +801,7 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 
 GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.087%, with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
 
-The v3.1 discovery that the G₂ metric is exactly φ = (65/32)^{1/14} × φ₀ with T = 0 elevates GIFT from numerical fitting to algebraic derivation.
+The G2 metric is exactly phi = (65/32)^{1/14} x phi_0 with T = 0, making all predictions algebraically exact rather than numerically fitted.
 
 Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute δ_CP = 197° to ±5° precision.
 
@@ -921,6 +921,6 @@ The octonion-Cayley connection and its role in G₂ structure benefited from ins
 
 ---
 
-*GIFT Framework v3.1*
+*GIFT Framework*
 *Mean Deviation: 0.087%*
-*Decisive Test: DUNE 2028-2030*
+*Decisive Test: DUNE 2034-2039*
