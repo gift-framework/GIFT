@@ -351,7 +351,7 @@ No sector shows systematic problems. All perform well.
 - Genuine predictive power
 - Complete elimination of free parameters
 - All quantities structurally determined
-- 165+ relations formally verified in Lean 4 + Coq
+- 180+ relations formally verified in Lean 4 + Coq
 
 **Other unification attempts**:
 - SU(5) GUT: Incorrect sin²θ_W prediction (~0.20 vs 0.23)

@@ -5,6 +5,30 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.1] - 2025-12-17
+
+### Core Sync — 180+ Relations
+
+Synchronized documentation with [gift-framework/core v3.1.4](https://github.com/gift-framework/core).
+
+#### Changed
+
+**Relation Count**: 165+ → **180+**
+- Core added 15+ new relations in v3.1.1 through v3.1.4
+- Lagrange identity for 7D cross product now PROVEN (was axiom)
+- AnalyticalMetric.lean formalizes exact G₂ metric
+
+**Files Updated**:
+- `README.md`, `STRUCTURE.md`, `CITATION.md`
+- `publications/markdown/GIFT_v3_main.md`
+- `publications/markdown/GIFT_v3_S1_foundations.md`
+- `publications/README.md`
+- `docs/INFO_GEO_FOR_PHYSICISTS.md`
+- `docs/EXPERIMENTAL_VALIDATION.md`
+- `docs/GIFT_v3.1_LITERATURE_ANALYSIS.md`
+
+---
+
 ## [3.1.0] - 2025-12-17
 
 ### Analytical G₂ Metric — Exact Solution

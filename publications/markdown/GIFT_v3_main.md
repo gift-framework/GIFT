@@ -673,7 +673,7 @@ Unlike many approaches to fundamental physics, GIFT makes sharp, testable predic
 
 ### 14.4 Mathematical Rigor
 
-The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. Over 165 relations have been verified in Lean 4, providing machine-checked confirmation of algebraic claims.
+The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. Over 180 relations have been verified in Lean 4, providing machine-checked confirmation of algebraic claims.
 
 ---
 

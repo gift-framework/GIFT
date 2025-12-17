@@ -1,7 +1,7 @@
 # Geometric Information Field Theory v3.1
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.1.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.1.1-green.svg)](CHANGELOG.md)
 [![Lean 4 + Coq](https://img.shields.io/badge/Formally_Verified-Lean_4_+_Coq-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -14,7 +14,7 @@
 |---|---|
 | **Precision** | 0.087% mean deviation across 18 dimensionless predictions |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 165+ relations proven in Lean 4 + Coq (zero axioms) |
+| **Verified** | 180+ relations proven in Lean 4 + Coq (zero axioms) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)

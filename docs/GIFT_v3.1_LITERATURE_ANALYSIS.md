@@ -132,7 +132,7 @@ GIFT s'inscrit dans **trois courants de recherche actifs** avec des publications
 | **Octonions** | Qualitatif (Furey, Baez) | + Quantitatif (b₂ = C(7,2)) |
 | **G₂ manifolds** | Construction (Nordström) | + Sélection physique |
 | **Prédictions** | Aucune numérique | 18 dimensionless, 0.087% |
-| **Vérification** | Prose mathématique | Lean 4 + Coq (175+ relations) |
+| **Vérification** | Prose mathématique | Lean 4 + Coq (180+ relations) |
 
 ### Le "gap" que GIFT remplit
 
