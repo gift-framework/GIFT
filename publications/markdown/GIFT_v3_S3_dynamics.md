@@ -208,9 +208,25 @@ The small but non-zero torsion enables:
 
 ## 4. Torsion Tensor Components
 
-### 4.1 Coordinate System
+### 4.1 Important Clarification
 
-The K₇ metric is expressed in coordinates (e, π, φ) with physical interpretation:
+┌─────────────────────────────────────────────────────────────┐
+│  **THEORETICAL EXPLORATION**                                │
+│                                                             │
+│  The analytical GIFT solution has T = 0 exactly.            │
+│                                                             │
+│  The values in this section explore what torsion components │
+│  WOULD look like if physical interactions arise from        │
+│  fluctuations around the T = 0 base, bounded by κ_T = 1/61. │
+│                                                             │
+│  These are theoretical explorations, NOT predictions.       │
+│  The 18 dimensionless predictions (S2) do not use these     │
+│  values.                                                    │
+└─────────────────────────────────────────────────────────────┘
+
+### 4.2 Coordinate System (Theoretical)
+
+If we parameterize fluctuations away from the exact solution using coordinates with physical interpretation:
 
 | Coordinate | Physical Sector | Range |
 |------------|-----------------|-------|
@@ -218,45 +234,26 @@ The K₇ metric is expressed in coordinates (e, π, φ) with physical interpreta
 | π | Hadronic/strong | [0.1, 3.0] |
 | φ | Electroweak/Higgs | [0.1, 1.5] |
 
-### 4.2 Component Structure
+### 4.3 Hypothetical Component Structure
 
-From numerical metric reconstruction:
+From exploratory PINN reconstruction of torsionful G₂ structures (NOT the GIFT analytical solution):
 
-| Component | Value | Physical Role |
-|-----------|-------|---------------|
-| T_{eφ,π} | ~5 | Mass hierarchies (large ratios) |
-| T_{πφ,e} | ~0.5 | CP violation phase |
-| T_{eπ,φ} | ~10⁻⁵ | Jarlskog invariant |
+| Component | Order of Magnitude | Would Encode |
+|-----------|-------------------|--------------|
+| T_{eφ,π} | O(Weyl) ~ 5 | Mass hierarchies |
+| T_{πφ,e} | O(1/p₂) ~ 0.5 | CP violation |
+| T_{eπ,φ} | O(κ_T/b₂b₃) ~ 10⁻⁵ | Jarlskog invariant |
 
-**Key insight**: The torsion hierarchy directly encodes the observed hierarchy of physical observables.
+**Status**: THEORETICAL EXPLORATION — not part of core GIFT predictions.
 
-### 4.3 Physical Interpretation
+### 4.4 Physical Picture (Speculative)
 
-**T_{eφ,π} ≈ -4.89 (large)**:
-- Drives geodesics in (e,φ) plane
-- Source of mass hierarchies like m_τ/m_e = 3477
-- Large torsion amplifies path lengths
+If physical interactions emerge from quantum fluctuations around T = 0:
+- The *capacity* κ_T = 1/61 bounds the fluctuation amplitude
+- The *hierarchy* of components (large/medium/tiny) could explain the hierarchy of observables
+- The *base solution* T = 0 ensures mathematical consistency
 
-**T_{πφ,e} ≈ -0.45 (moderate)**:
-- Torsional twist in (π,φ) sector
-- Source of CP violation δ_CP = 197°
-- Accumulated geometric phase
-
-**T_{eπ,φ} ≈ 3×10⁻⁵ (tiny)**:
-- Weak electromagnetic-hadronic coupling
-- Related to Jarlskog invariant J ≈ 3×10⁻⁵
-
-### 4.4 Topological Structure of Torsion Components
-
-The torsion components emerge from the K₇ metric pipeline (PINN reconstruction) and admit approximate topological expressions. The hierarchy T_{eφ,π} >> T_{πφ,e} >> T_{eπ,φ} mirrors the hierarchy of physical observables:
-
-| Component | Approximate Formula | Physical Correspondence |
-|-----------|---------------------|------------------------|
-| T_{eφ,π} ~ 5 | O(Weyl) | Large mass ratios (3477) |
-| T_{πφ,e} ~ 0.5 | O(1/p₂) | CP violation phase (197°) |
-| T_{eπ,φ} ~ 10⁻⁵ | O(κ_T/(b₃ × b₂)) | Jarlskog invariant (~10⁻⁵) |
-
-**Note**: Exact closed-form expressions relating T_{ij,k} to GIFT constants remain an open problem. The numerical values are determined by the PINN-reconstructed metric, with topological formulas providing order-of-magnitude constraints.
+This mechanism is CONJECTURAL. The 18 proven predictions use only topology, not these torsion component values.
 
 ---
 

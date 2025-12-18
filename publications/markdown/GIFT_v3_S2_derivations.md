@@ -399,7 +399,7 @@ $$\delta_{CP} = \dim(K_7) \cdot \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 1
 | GIFT prediction | 197° (exact) |
 | Deviation | 0.00% |
 
-**Note**: DUNE (2027-2028) will test to ±5°.
+**Note**: DUNE (2034-2039) will test to ±5° precision. Hyper-Kamiokande provides independent verification starting ~2034.
 
 **Status**: PROVEN ∎
 
@@ -613,7 +613,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 8 | m_τ/m_e | 7+2480+990 | 3477 | 3477.15 | 0.0043% | PROVEN |
 | 9 | m_μ/m_e | 27^φ | 207.01 | 206.768 | 0.118% | TOPOLOGICAL |
 | 10 | m_s/m_d | 4×5 | 20 | 20.0 | 0.00% | PROVEN |
-| 11 | δ_CP | 98+99 | 197° | 197° | 0.00% | PROVEN |
+| 11 | δ_CP | 7×14+99 | 197° | 197° | 0.00% | PROVEN |
 | 12 | θ₁₃ | π/21 | 8.57° | 8.54° | 0.368% | TOPOLOGICAL |
 | 13 | θ₂₃ | (rank+b3)/H* | 49.19° | 49.3° | 0.216% | TOPOLOGICAL |
 | 14 | θ₁₂ | arctan(...) | 33.40° | 33.41° | 0.030% | TOPOLOGICAL |

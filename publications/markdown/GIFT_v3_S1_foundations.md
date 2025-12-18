@@ -16,6 +16,67 @@ This supplement presents the mathematical architecture underlying GIFT. Part I d
 
 ---
 
+# Part 0: The Octonionic Foundation
+
+## 0. Why This Framework Exists
+
+GIFT is not built on arbitrary choices. It emerges from a single algebraic fact:
+
+**The octonions 𝕆 are the largest normed division algebra.**
+
+Everything follows:
+
+```
+𝕆 (octonions, dim 8)
+    │
+    ▼
+Im(𝕆) = ℝ⁷ (imaginary octonions)
+    │
+    ▼
+G₂ = Aut(𝕆) (automorphism group, dim 14)
+    │
+    ▼
+K₇ with G₂ holonomy (unique compact realization)
+    │
+    ▼
+Topological invariants (b₂ = 21, b₃ = 77)
+    │
+    ▼
+18 dimensionless predictions
+```
+
+### 0.1 The Division Algebra Chain
+
+| Algebra | Dim | Physics Role | Stops? |
+|---------|-----|--------------|--------|
+| ℝ | 1 | Classical mechanics | No |
+| ℂ | 2 | Quantum mechanics | No |
+| ℍ | 4 | Spin, Lorentz group | No |
+| **𝕆** | **8** | **Exceptional structures** | **Yes** |
+
+The pattern terminates at 𝕆. There is no 16-dimensional normed division algebra. The octonions are *the end of the line*.
+
+### 0.2 G₂ as Octonionic Automorphisms
+
+**Definition**: G₂ = {g ∈ GL(𝕆) : g(xy) = g(x)g(y) for all x,y ∈ 𝕆}
+
+| Property | Value | GIFT Role |
+|----------|-------|-----------|
+| dim(G₂) | 14 = C(7,2) | Q_Koide numerator |
+| Action | Transitive on S⁶ ⊂ Im(𝕆) | Connects all directions |
+| Embedding | G₂ ⊂ SO(7) | Preserves φ₀ |
+
+### 0.3 Why dim(K₇) = 7
+
+This is not a choice. It is a consequence:
+- Im(𝕆) has dimension 7
+- G₂ acts naturally on ℝ⁷
+- A compact 7-manifold with G₂ holonomy is the geometric realization
+
+**K₇ is to G₂ what the circle is to U(1).**
+
+---
+
 # Part I: E₈ Exceptional Lie Algebra
 
 ## 1. Root System and Dynkin Diagram
@@ -86,7 +147,7 @@ $$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim
 
 ### 3.1 The Pattern
 
-A remarkable pattern connects exceptional algebra dimensions to primes:
+A pattern connects exceptional algebra dimensions to primes:
 
 | Algebra | n | dim(E_n) | Prime | Index |
 |---------|---|----------|-------|-------|
@@ -137,19 +198,9 @@ $$\tau_{num} = 3472 = 7 \times 496 = \dim(K_7) \times \dim(E_8 \times E_8)$$
 
 ---
 
-## 5. Octonionic Structure (Foundational)
+## 5. Exceptional Algebras from Octonions
 
-The octonions are not an optional feature of GIFT; they are its foundation. All subsequent structure (G₂, K₇, predictions) derives from 𝕆.
-
-### Why Octonions?
-
-The four normed division algebras over ℝ are:
-- ℝ (dim 1): Classical mechanics
-- ℂ (dim 2): Quantum mechanics
-- ℍ (dim 4): Spin, SL(2,ℂ), Lorentz group
-- **𝕆 (dim 8): Exceptional structures, GIFT**
-
-The pattern stops at 𝕆. There is no 16-dimensional division algebra. The octonions are the *last* algebra with the properties needed for physics.
+The foundational role of octonions is established in Part 0. This section details the exceptional algebraic structures that emerge from 𝕆.
 
 ### 5.1 Exceptional Jordan Algebra J₃(O)
 
@@ -172,22 +223,6 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | dim(E₆) - dim(F₄) | 26 | dim(J₃(O)₀) |
 
 **Status**: **PROVEN (Lean)**: `exceptional_differences_certified`
-
-### 5.4 G₂ as Octonionic Automorphisms
-
-**Definition**: G₂ = {g ∈ GL(𝕆) : g(xy) = g(x)g(y) for all x,y ∈ 𝕆}
-
-**Key facts**:
-- dim(G₂) = 14 = C(7,2) (pairs of imaginary units)
-- G₂ acts transitively on unit imaginary octonions (S⁶)
-- G₂ ⊂ SO(7) is the stabilizer of the associative 3-form φ₀
-
-**Connection to K₇**:
-- Im(𝕆) = ℝ⁷ is the natural 7-dimensional space
-- G₂ holonomy means parallel transport preserves octonionic multiplication
-- K₇ is the compact geometry realizing this structure
-
-This is why dim(K7) = 7 and why G2 holonomy is required: not choices, but consequences of using octonions.
 
 ---
 

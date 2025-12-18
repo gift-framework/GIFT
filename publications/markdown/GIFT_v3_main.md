@@ -110,7 +110,7 @@ The octonionic construction provides insight into E8's exceptional nature. The o
 G2 (14) -> F4 (52) -> E6 (78) -> E7 (133) -> E8 (248)
 ```
 
-A remarkable pattern connects these dimensions to prime numbers:
+A pattern connects these dimensions to prime numbers:
 - dim(E6) = 78 = 6 x 13 = 6 x prime(6)
 - dim(E7) = 133 = 7 x 19 = 7 x prime(8)
 - dim(E8) = 248 = 8 x 31 = 8 x prime(11)
@@ -341,7 +341,23 @@ Three classes of predictions emerge:
 
 ### 4.2 Epistemic Status
 
-The formulas presented here share epistemological status with Balmer's formula (1885) for hydrogen spectra: empirically successful descriptions whose theoretical derivation came later. Three factors distinguish GIFT predictions from numerology:
+The formulas presented here share epistemological status with Balmer's formula (1885) for hydrogen spectra: empirically successful descriptions whose theoretical derivation came later.
+
+#### What GIFT Claims
+
+1. **Given** the octonionic algebra 𝕆, its automorphism group G₂, the E₈×E₈ gauge structure, and the K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)...
+2. **Then** the 18 dimensionless predictions follow by algebra
+3. **And** these match experiment to 0.087% mean deviation
+4. **With** zero continuous parameters fitted
+
+#### What GIFT Does NOT Claim
+
+1. That 𝕆 → G₂ → K₇ is the *unique* geometry for physics
+2. That the formulas are uniquely determined by geometric principles
+3. That the selection rule for specific combinations (e.g., b₂/(b₃ + dim_G₂) rather than b₂/b₃) is understood
+4. That dimensional quantities (masses in eV) have the same confidence as dimensionless ratios
+
+#### Three Factors Distinguishing GIFT from Numerology
 
 **1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.087% mean deviation across 18 quantities has probability < 10⁻²⁰.
 
@@ -354,7 +370,9 @@ These exact ratios cannot be "fitted"; they are correct or wrong.
 
 **3. Falsifiability**: DUNE will test δ_CP = 197° to ±5° precision by 2039. A single clear contradiction refutes the entire framework.
 
-**What remains open**: The principle selecting *these specific* algebraic combinations of topological invariants. Current status: the formulas work, the selection rule is unknown. This parallels Balmer → Bohr → Schrödinger: empirical success preceded theoretical derivation by decades.
+#### The Open Question
+
+The principle selecting *these specific* algebraic combinations of topological invariants remains unknown. Current status: the formulas work, the selection rule awaits discovery. This parallels Balmer → Bohr → Schrödinger: empirical success preceded theoretical derivation by decades.
 
 ### 4.3 Why Dimensionless Quantities
 
@@ -447,17 +465,53 @@ If the Koide relation truly equals 2/3 exactly, improved measurements of lepton 
 
 ## 7. CP Violation Phase
 
+### 7.1 The Formula
+
 **Formula**:
 $$\delta_{CP} = \dim(K_7) \times \dim(G_2) + H^* = 7 \times 14 + 99 = 197°$$
 
 **Comparison**: Current experimental range: 197° ± 24° (T2K + NOνA combined) → Deviation: **0.00%**
 
-**Falsification timeline** (updated December 2025):
-- Hyper-Kamiokande first results: ~2034 (5σ CPV discovery potential)
-- DUNE first results: ~2039 (5σ CPV discovery potential)
-- Combined precision: ±5° after 10 years operation
+### 7.2 Physical Interpretation
 
-**Decisive test**: Measurement outside 182°–212° at 3σ refutes GIFT.
+The formula decomposes into two contributions:
+
+| Term | Value | Origin | Interpretation |
+|------|-------|--------|----------------|
+| dim(K₇) × dim(G₂) | 7 × 14 = 98 | Local geometry | Fiber-holonomy coupling |
+| H* | 99 | Global cohomology | Topological phase accumulation |
+| **Total** | **197°** | | |
+
+**Why 98 + 99?** The near-equality of local (98) and global (99) contributions suggests a geometric balance between fiber structure and base topology. The slight asymmetry (99 > 98) may relate to CP violation being near-maximal within the allowed geometric range.
+
+**Alternative form**:
+$$\delta_{CP} = (b_2 + b_3) + H^* = 98 + 99 = 197°$$
+
+This reveals δ_CP as a sum over cohomological degrees.
+
+### 7.3 Falsification Timeline
+
+| Experiment | Timeline | Precision | Status |
+|------------|----------|-----------|--------|
+| T2K + NOνA | 2024 | ±24° | Current best |
+| Hyper-Kamiokande | 2034+ | ±10° | Under construction |
+| DUNE | 2034-2039 | ±5° | Under construction |
+| Combined (2040) | — | ±3° | Projected |
+
+**Decisive test criteria**:
+- Measurement δ_CP < 182° or δ_CP > 212° at 3σ → **GIFT refuted**
+- Measurement within 192°–202° at 3σ → **Strong confirmation**
+- Measurement within 182°–212° at 3σ → **Consistent, not decisive**
+
+### 7.4 Why This Prediction Matters
+
+Unlike sin²θ_W or Q_Koide which are already measured precisely, δ_CP has large experimental uncertainty (±24°). The GIFT prediction of exactly 197° is:
+
+1. **Sharp**: An integer value, not a fitted decimal
+2. **Central**: Falls in the middle of current allowed range
+3. **Testable**: DUNE will resolve to ±5° within 15 years
+
+A single experiment can confirm or refute this prediction definitively.
 
 **Status**: PROVEN (Lean verified). See S2 Section 13 for complete derivation.
 
@@ -512,7 +566,7 @@ The torsion inverse 61 = dim(F₄) + N_gen² = 52 + 9 links to exceptional algeb
 | m_tau/m_e | 7 + 10 x 248 + 10 x 99 | 3477 | 3477.15 +/- 0.05 | **0.0043%** |
 | m_mu/m_e | 27^phi | 207.01 | 206.768 | **0.118%** |
 
-The tau-electron mass ratio 3477 = 3 x 19 x 61 = N_gen x prime(8) x kappa_T^(-1) exhibits remarkable factorization into framework constants.
+The tau-electron mass ratio 3477 = 3 × 19 × 61 = N_gen × prime(8) × κ_T⁻¹ factorizes into framework constants.
 
 ### 9.3 Quark Sector
 
@@ -828,10 +882,11 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 
 ### 17.3 Experimental Priorities
 
-1. **DUNE (2028-2030)**: delta_CP measurement (decisive)
-2. **FCC-ee (2040+)**: sin^2(theta_W) precision
-3. **Tau factories**: Q_Koide to higher precision
-4. **Lattice QCD**: m_s/m_d convergence
+1. **DUNE (2034-2039)**: δ_CP measurement to ±5° (decisive)
+2. **Hyper-Kamiokande (2034+)**: Independent δ_CP measurement
+3. **FCC-ee (2040+)**: sin²θ_W precision
+4. **Tau factories**: Q_Koide to higher precision
+5. **Lattice QCD**: m_s/m_d convergence
 
 ---
 
