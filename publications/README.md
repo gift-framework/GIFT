@@ -19,11 +19,8 @@ publications/
 │
 ├── references/                  # Exploratory & reference docs
 │   ├── 39_observables.csv      # Machine-readable data
-│   ├── yukawa_mixing.md        # CKM/PMNS, Yukawa couplings
-│   ├── sequences_prime_atlas.md # Fibonacci, Prime Atlas
-│   ├── monster_moonshine.md    # Monster group, j-invariant
-│   ├── dimensional_observables.md # Absolute masses (heuristic)
-│   └── theoretical_extensions.md  # M-theory, QG
+│   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
+│   └── SPECULATIVE_PHYSICS.md  # Scale bridge, Yukawa, M-theory, QG
 │
 ├── Lean/                        # Lean formalization docs
 ├── tex/                         # LaTeX sources
@@ -63,7 +60,7 @@ RG flow, torsional dynamics, scale bridge.
 | 9 | m_s/m_d | 20 | **PROVEN** |
 | 10 | δ_CP | 197° | **PROVEN** |
 
-**Zero continuous adjustable parameters. Mean deviation 0.197%.**
+**Zero continuous adjustable parameters. Mean deviation 0.087%.**
 
 ---
 
@@ -73,11 +70,8 @@ RG flow, torsional dynamics, scale bridge.
 
 | Document | Content | Status |
 |----------|---------|--------|
-| [yukawa_mixing.md](references/yukawa_mixing.md) | CKM/PMNS matrices | Exploratory |
-| [sequences_prime_atlas.md](references/sequences_prime_atlas.md) | Fibonacci, primes | Observation |
-| [monster_moonshine.md](references/monster_moonshine.md) | Monster group | Speculative |
-| [dimensional_observables.md](references/dimensional_observables.md) | Absolute masses | Heuristic |
-| [theoretical_extensions.md](references/theoretical_extensions.md) | M-theory, QG | Theoretical |
+| [NUMBER_THEORETIC_STRUCTURES.md](references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine | Observation |
+| [SPECULATIVE_PHYSICS.md](references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, QG | Speculative |
 
 ---
 

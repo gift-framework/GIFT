@@ -1015,5 +1015,5 @@ The octonion-Cayley connection and its role in G₂ structure benefited from ins
 ---
 
 *GIFT Framework*
-*v 3.1.0*
+*v3.1.1*
 

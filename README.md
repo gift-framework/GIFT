@@ -213,7 +213,7 @@ Their appearance suggests structural rather than coincidental relationships.
 
 | Archive | |
 |---------|---|
-| Zenodo | [10.5281/zenodo.17901945](https://doi.org/10.5281/zenodo.17901945) |
+| Zenodo | [10.5281/zenodo.17751250](https://doi.org/10.5281/zenodo.17751250) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
@@ -221,12 +221,12 @@ Their appearance suggests structural rather than coincidental relationships.
 ## Citation
 
 ```bibtex
-@software{gift_framework_v30,
-  title   = {GIFT Framework v3.0: Geometric Information Field Theory},
+@software{gift_framework_v31,
+  title   = {GIFT Framework v3.1: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
   year    = {2025},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.0.0}
+  version = {3.1.1}
 }
 ```
 
