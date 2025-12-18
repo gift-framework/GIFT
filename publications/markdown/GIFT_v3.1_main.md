@@ -12,7 +12,7 @@ The Standard Model contains 19 free parameters whose values lack theoretical exp
 
 18 dimensionless quantities achieve mean deviation 0.087% from experiment, including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
 
-The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4 with 180+ certified relations. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
+The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
 ---
 
@@ -909,6 +909,14 @@ The octonions, discovered in 1843 as a mathematical curiosity, may yet prove to 
 The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark Haskins, and collaborators on G₂ manifold construction. The standard associative 3-form φ₀ originates from Harvey and Lawson's foundational work on calibrated geometries. The Lean 4 verification relies on the Mathlib community's extensive formalization efforts. Experimental data come from the Particle Data Group, NuFIT collaboration, Planck collaboration, and DUNE technical design reports.
 
 The octonion-Cayley connection and its role in G₂ structure benefited from insights in [de-johannes/FirstDistinction](https://github.com/de-johannes/FirstDistinction). The blueprint documentation workflow follows the approach developed by [math-inc/KakeyaFiniteFields](https://github.com/math-inc/KakeyaFiniteFields).
+
+---
+
+## Author's note
+
+This framework was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), and DeepSeek for specific mathematical insights. The formal verification in Lean 4, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows the transparent crediting approach advocated by Schmitt (2025) for AI-assisted mathematical research.
+
+Mathematical constants underlying these relationships represent timeless logical structures that preceded human discovery. The value of any theoretical proposal depends on mathematical coherence and empirical accuracy, not origin. Mathematics is evaluated on results, not résumés.
 
 ---
 
