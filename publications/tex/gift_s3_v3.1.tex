@@ -62,7 +62,7 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{GIFT Framework v3.0 --- Supplement S3}
+\fancyhead[L]{GIFT Framework v3.1 --- Supplement S3}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -96,13 +96,10 @@
 \newcommand{\rk}{\mathrm{rank}}
 \newcommand{\proven}{\textsc{Proven}}
 \newcommand{\topomark}{\textsc{Topological}}
-\newcommand{\derived}{\textsc{Derived}}
-\newcommand{\exploratory}{\textsc{Exploratory}}
 \newcommand{\theoretical}{\textsc{Theoretical}}
-\newcommand{\phenomenological}{\textsc{Phenomenological}}
-\newcommand{\GIFT}{\textrm{GIFT}}
+\newcommand{\exploratory}{\textsc{Exploratory}}
 \newcommand{\Pl}{\mathrm{Pl}}
-\newcommand{\CP}{\mathrm{CP}}
+\newcommand{\DE}{\mathrm{DE}}
 
 \pdfstringdefDisableCommands{%
   \def\Gtwo{G2}%
@@ -113,49 +110,92 @@
   \def\rk{rank}%
   \def\proven{Proven}%
   \def\topomark{Topological}%
-  \def\derived{Derived}%
-  \def\exploratory{Exploratory}%
   \def\theoretical{Theoretical}%
-  \def\phenomenological{Phenomenological}%
-  \def\GIFT{GIFT}%
+  \def\exploratory{Exploratory}%
   \def\Pl{Pl}%
-  \def\CP{CP}%
+  \def\DE{DE}%
 }
 
-% ============================================
-% TITLE
-% ============================================
 \title{%
-\LARGE\textbf{Supplement S3: Dynamics and Scale Bridge}\\[0.5em]
-\large Torsional Flow, Dimensional Transmutation,\\
-and Cosmological Evolution
+\LARGE\textbf{Supplement S3: Dynamics and Scale Bridge}\\[0.3em]
+\Large Torsional Flow, Dimensional Transmutation, and Cosmological Evolution
 }
 \author{}
 \date{}
 
 \begin{document}
+
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
 
-\noindent\textbf{Brieuc de La Fournière}\\
-Independent researcher
+\noindent\textbf{Version}: 3.1
 
-\vspace{0.5em}
+\noindent\textbf{Author}: Brieuc de La Fournière
 
-\noindent\textbf{Version}: 3.0\\
-\noindent\textbf{Date}: December 2025
+\noindent Independent researcher
 
-\vspace{1em}
+\vfill
 
 \begin{abstract}
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. This supplement provides three essential bridges: (1) Torsional dynamics through non-closure of the $\Gtwo$ 3-form with $\kappa_T = 1/61$; (2) The scale bridge formula $m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln(\phi)))$ deriving the electron mass from Planck scale with precision $<0.1\%$ on the exponent; (3) Cosmological evolution including Hubble tension resolution via dual topological projections $H_0 = \{67, 73\}$. All results emerge from the topological structure established in S1.
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. The base $\Gtwo$ metric is exactly the scaled standard form with $T = 0$. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
+
+This supplement provides three essential bridges:
+
+\begin{enumerate}
+\item \textbf{Torsional dynamics}: How departures from the $T = 0$ solution could generate physical interactions. The topological value $\kappa_T = 1/61$ represents the geometric ``capacity'' for torsion.
+
+\item \textbf{Scale bridge}: The formula $m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln(\phi)))$ derives the electron mass from Planck scale with $<0.1\%$ precision on the exponent
+
+\item \textbf{Cosmological evolution}: Hubble tension resolution via dual topological projections $H_0 = \{67, 73\}$
+\end{enumerate}
+
+All results emerge from the topological structure established in S1.
 \end{abstract}
 
+\vfill
 \noindent\rule{\textwidth}{0.2pt}
 
+\newpage
 \tableofcontents
 
 \newpage
+
+% ============================================
+\section*{Part 0: Scope and Epistemic Status}
+\addcontentsline{toc}{section}{Part 0: Scope and Epistemic Status}
+% ============================================
+
+\section{What This Supplement Contains}
+
+\textbf{Important}: This supplement explores \theoretical{} extensions of GIFT. Unlike S2 (which contains \proven{} dimensionless relations), the content here involves additional assumptions and interpretive frameworks.
+
+\subsection{Status Classification}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Content & Status & Confidence \\
+\midrule
+Torsion capacity $\kappa_T = 1/61$ & \topomark{} & High \\
+$T = 0$ for analytical solution & \proven{} & Certain \\
+RG flow identification $\lambda = \ln(\mu)$ & \theoretical{} & Moderate \\
+Scale bridge $m_e$ formula & \exploratory{} & Low-moderate \\
+Hubble tension resolution & \textsc{Speculative} & Low \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Reader Guidance}
+
+\begin{itemize}
+\item Sections 1-4 (torsion): Established $\Gtwo$ geometry with GIFT interpretation
+\item Sections 5-8 (RG flow): Theoretical proposal, not derived
+\item Sections 9-13 (scale bridge): Working conjecture, 0.09\% precision
+\item Sections 19-24 (cosmology): Exploratory connections
+\end{itemize}
+
+\textbf{The 18 dimensionless predictions (S2) do not depend on any content in this supplement.}
 
 % ============================================
 \section*{Part I: Torsional Geometry}
@@ -168,15 +208,11 @@ The GIFT framework's dimensionless predictions (S2) require dynamical completion
 
 In differential geometry, torsion measures the failure of infinitesimal parallelograms to close. For a connection $\nabla$ on manifold $M$, the torsion tensor $T$ is defined by:
 
-\[
-T(X, Y) = \nabla_X Y - \nabla_Y X - [X, Y]
-\]
+$$T(X, Y) = \nabla_X Y - \nabla_Y X - [X, Y]$$
 
 In components:
 
-\[
-T^k_{ij} = \Gamma^k_{ij} - \Gamma^k_{ji}
-\]
+$$T^k_{ij} = \Gamma^k_{ij} - \Gamma^k_{ji}$$
 
 \subsection{Torsion-Free vs Torsionful Connections}
 
@@ -198,43 +234,44 @@ The GIFT framework employs a torsionful connection arising from non-closure of t
 
 A 7-manifold $M$ has $\Gtwo$ holonomy if it admits a parallel 3-form $\varphi$:
 
-\[
-\nabla \varphi = 0
-\]
+$$\nabla \varphi = 0$$
 
 Equivalent to closure conditions:
 
-\[
-d\varphi = 0, \quad d{*}\varphi = 0
-\]
+$$d\varphi = 0, \quad d*\varphi = 0$$
 
-\textbf{Physical interactions require departure from torsion-free condition}:
+\textbf{Exact Solution}
 
-\[
-|d\varphi|^2 + |d{*}\varphi|^2 = \kappa_T^2
-\]
+The constant form $\varphi = c \times \varphi_0$ satisfies:
+\begin{itemize}
+\item $d\varphi = 0$, $d*\varphi = 0$ (trivially, for constant form)
+\item $T = 0$ exactly
+\end{itemize}
 
-where $\kappa_T$ is small but non-zero. A perfectly torsion-free manifold has no geometric coupling between sectors. Torsion provides the mechanism for particle interactions.
+\textbf{Physical Interactions Require Departure}
 
-\newpage
+The exact torsion-free solution cannot support physical interactions (no coupling between sectors). Two mechanisms could generate effective torsion:
 
-% ============================================
+\begin{enumerate}
+\item \textbf{Moduli variation}: Position-dependent deformation of the $\Gtwo$ structure across the $\Kseven$ moduli space
+\item \textbf{Quantum corrections}: Loop effects that modify the classical torsion-free condition
+\end{enumerate}
+
+The topological value $\kappa_T = 1/61$ represents the geometric ``capacity'' for such deformations, not the classical solution's torsion.
+
 \section{Torsion Magnitude $\kappa_T = 1/61$}
-% ============================================
 
 \subsection{Topological Derivation}
 
 \textbf{The magnitude $\kappa_T$ is derived from cohomological structure}:
 
-\[
-\boxed{\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}}
-\]
+$$\boxed{\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}}$$
 
 \textbf{Components}:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Term & Value & Origin \\
 \midrule
@@ -248,21 +285,31 @@ $p_2$ & 2 & Binary duality factor \\
 
 \subsection{The Number 61}
 
-The inverse torsion 61 admits multiple decompositions:
+The inverse torsion capacity 61 admits multiple decompositions:
 
-\[
-61 = \dimE(F_4) + N_{\mathrm{gen}}^2 = 52 + 9
-\]
+$$61 = \dimE(F_4) + N_{\mathrm{gen}}^2 = 52 + 9$$
 
-\[
-61 = b_3 - b_2 + \Weyl = 77 - 21 + 5
-\]
+$$61 = b_3 - b_2 + \Weyl = 77 - 21 + 5$$
 
-\[
-61 = \mathrm{prime}(18)
-\]
+$$61 = \text{prime}(18)$$
 
-\textbf{Status}: \topomark\ (exact)
+\subsection{Critical Distinction: Capacity vs Realized Value}
+
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}
+\textbf{IMPORTANT}
+
+$\kappa_T = 1/61$ is the CAPACITY, the maximum torsion that $\Kseven$ topology permits while preserving $\Gtwo$ holonomy.
+
+$T_{\text{analytical}} = 0$ is the REALIZED value for the exact solution $\varphi = (65/32)^{1/14} \times \varphi_0$.
+
+The capacity 1/61 characterizes the manifold. The realized value 0 characterizes the specific metric.
+
+All 18 predictions use topology (via $b_2$, $b_3$, $\dimE(\Gtwo)$), NOT the realized torsion value.
+\end{minipage}}
+\end{center}
+
+\textbf{Status}: \topomark{} (capacity, not realized value)
 
 \subsection{Experimental Compatibility}
 
@@ -272,7 +319,7 @@ The DESI collaboration's second data release provides cosmological constraints o
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lc}
+\begin{tabular}{ll}
 \toprule
 Quantity & Value \\
 \midrule
@@ -283,29 +330,23 @@ GIFT value & $\kappa_T^2 = (1/61)^2 = 1/3721 \approx 2.69 \times 10^{-4}$ \\
 \end{tabular}
 \end{table}
 
-\newpage
-
-% ============================================
 \section{Torsion Classes for $\Gtwo$ Manifolds}
-% ============================================
 
 \subsection{Irreducible Decomposition}
 
 On a 7-manifold with $\Gtwo$ structure, torsion decomposes into four irreducible representations:
 
-\[
-T \in W_1 \oplus W_7 \oplus W_{14} \oplus W_{27}
-\]
+$$T \in W_1 \oplus W_7 \oplus W_{14} \oplus W_{27}$$
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcp{7cm}}
+\begin{tabular}{lll}
 \toprule
 Class & Dimension & Characterization \\
 \midrule
 $W_1$ & 1 & $d\varphi \wedge \varphi \neq 0$ \\
-$W_7$ & 7 & ${*}d\varphi - \theta \wedge \varphi$ for 1-form $\theta$ \\
-$W_{14}$ & 14 & Traceless part of $d{*}\varphi$ \\
+$W_7$ & 7 & $*d\varphi - \theta \wedge \varphi$ for 1-form $\theta$ \\
+$W_{14}$ & 14 & Traceless part of $d*\varphi$ \\
 $W_{27}$ & 27 & Symmetric traceless \\
 \bottomrule
 \end{tabular}
@@ -315,7 +356,7 @@ $W_{27}$ & 27 & Symmetric traceless \\
 
 \subsection{GIFT Framework Torsion}
 
-\textbf{Torsion-free $\Gtwo$}: All classes vanish ($d\varphi = 0$, $d{*}\varphi = 0$)
+\textbf{Torsion-free $\Gtwo$}: All classes vanish ($d\varphi = 0$, $d*\varphi = 0$)
 
 \textbf{GIFT framework}: Controlled non-zero torsion with magnitude $\kappa_T = 1/61$.
 
@@ -326,19 +367,29 @@ The small but non-zero torsion enables:
 \item CP violation through torsional twist
 \end{itemize}
 
-\newpage
-
-% ============================================
 \section{Torsion Tensor Components}
-% ============================================
 
-\subsection{Coordinate System}
+\subsection{Important Clarification}
 
-The $\Kseven$ metric is expressed in coordinates $(e, \pi, \phi)$ with physical interpretation:
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}
+\textbf{THEORETICAL EXPLORATION}
+
+The analytical GIFT solution has $T = 0$ exactly.
+
+The values in this section explore what torsion components WOULD look like if physical interactions arise from fluctuations around the $T = 0$ base, bounded by $\kappa_T = 1/61$.
+
+These are theoretical explorations, NOT predictions. The 18 dimensionless predictions (S2) do not use these values.
+\end{minipage}}
+\end{center}
+
+\subsection{Coordinate System (Theoretical)}
+
+If we parameterize fluctuations away from the exact solution using coordinates with physical interpretation:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Coordinate & Physical Sector & Range \\
 \midrule
@@ -349,67 +400,35 @@ $\phi$ & Electroweak/Higgs & [0.1, 1.5] \\
 \end{tabular}
 \end{table}
 
-\subsection{Component Structure}
+\subsection{Hypothetical Component Structure}
 
-From numerical metric reconstruction:
+From exploratory PINN reconstruction of torsionful $\Gtwo$ structures (NOT the GIFT analytical solution):
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
-Component & Value & Physical Role \\
+Component & Order of Magnitude & Would Encode \\
 \midrule
-$T_{e\phi,\pi}$ & $\sim 5$ & Mass hierarchies (large ratios) \\
-$T_{\pi\phi,e}$ & $\sim 0.5$ & CP violation phase \\
-$T_{e\pi,\phi}$ & $\sim 10^{-5}$ & Jarlskog invariant \\
+$T_{e\phi,\pi}$ & $\mathcal{O}(\Weyl) \sim 5$ & Mass hierarchies \\
+$T_{\pi\phi,e}$ & $\mathcal{O}(1/p_2) \sim 0.5$ & CP violation \\
+$T_{e\pi,\phi}$ & $\mathcal{O}(\kappa_T/b_2b_3) \sim 10^{-5}$ & Jarlskog invariant \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Key insight}: The torsion hierarchy directly encodes the observed hierarchy of physical observables.
+\textbf{Status}: \theoretical{} EXPLORATION --- not part of core GIFT predictions.
 
-\subsection{Physical Interpretation}
+\subsection{Physical Picture (Speculative)}
 
-\textbf{$T_{e\phi,\pi} \approx -4.89$ (large)}:
+If physical interactions emerge from quantum fluctuations around $T = 0$:
 \begin{itemize}
-\item Drives geodesics in $(e,\phi)$ plane
-\item Source of mass hierarchies like $m_\tau/m_e = 3477$
-\item Large torsion amplifies path lengths
+\item The \textit{capacity} $\kappa_T = 1/61$ bounds the fluctuation amplitude
+\item The \textit{hierarchy} of components (large/medium/tiny) could explain the hierarchy of observables
+\item The \textit{base solution} $T = 0$ ensures mathematical consistency
 \end{itemize}
 
-\textbf{$T_{\pi\phi,e} \approx -0.45$ (moderate)}:
-\begin{itemize}
-\item Torsional twist in $(\pi,\phi)$ sector
-\item Source of CP violation $\delta_{\CP} = 197°$
-\item Accumulated geometric phase
-\end{itemize}
-
-\textbf{$T_{e\pi,\phi} \approx 3 \times 10^{-5}$ (tiny)}:
-\begin{itemize}
-\item Weak electromagnetic-hadronic coupling
-\item Related to Jarlskog invariant $J \approx 3 \times 10^{-5}$
-\end{itemize}
-
-\subsection{Topological Structure of Torsion Components}
-
-The torsion components emerge from the $\Kseven$ metric pipeline (PINN reconstruction) and admit approximate topological expressions. The hierarchy $T_{e\phi,\pi} \gg T_{\pi\phi,e} \gg T_{e\pi,\phi}$ mirrors the hierarchy of physical observables:
-
-\begin{table}[H]
-\centering
-\begin{tabular}{lcc}
-\toprule
-Component & Approximate Formula & Physical Correspondence \\
-\midrule
-$T_{e\phi,\pi} \sim 5$ & $O(\Weyl)$ & Large mass ratios (3477) \\
-$T_{\pi\phi,e} \sim 0.5$ & $O(1/p_2)$ & CP violation phase (197°) \\
-$T_{e\pi,\phi} \sim 10^{-5}$ & $O(\kappa_T/(b_3 \times b_2))$ & Jarlskog invariant ($\sim 10^{-5}$) \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\textbf{Note}: Exact closed-form expressions relating $T_{ij,k}$ to GIFT constants remain an open problem. The numerical values are determined by the PINN-reconstructed metric, with topological formulas providing order-of-magnitude constraints.
-
-\newpage
+This mechanism is CONJECTURAL. The 18 proven predictions use only topology, not these torsion component values.
 
 % ============================================
 \section*{Part II: Geodesic Flow and RG Connection}
@@ -422,37 +441,29 @@ $T_{e\pi,\phi} \sim 10^{-5}$ & $O(\kappa_T/(b_3 \times b_2))$ & Jarlskog invaria
 
 For curve $x^k(\lambda)$ on $\Kseven$:
 
-\[
-S = \int d\lambda \, \frac{1}{2} g_{ij} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}
-\]
+$$S = \int d\lambda \, \frac{1}{2} g_{ij} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}$$
 
 Standard Euler-Lagrange derivation yields:
 
-\[
-\ddot{x}^m + \Gamma^m_{ij} \dot{x}^i \dot{x}^j = 0
-\]
+$$\ddot{x}^m + \Gamma^m_{ij} \dot{x}^i \dot{x}^j = 0$$
 
 \subsection{Torsional Modification}
 
 For locally constant metric ($\partial_k g_{ij} \approx 0$):
 
-\[
-\boxed{\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}}
-\]
+$$\boxed{\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}}$$
 
 \textbf{Physical meaning}: Acceleration arises from torsion, not metric gradients.
 
 \subsection{Main Result}
 
-\[
-\boxed{\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}}
-\]
+$$\boxed{\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}}$$
 
 \subsection{Physical Interpretation}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Quantity & Geometric & Physical \\
 \midrule
@@ -465,17 +476,11 @@ $T_{ijl}$ & Torsion & Interaction strength \\
 \end{tabular}
 \end{table}
 
-\newpage
-
-% ============================================
 \section{RG Flow Connection}
-% ============================================
 
 \subsection{Identification $\lambda = \ln(\mu)$}
 
-\[
-\lambda = \ln\left(\frac{\mu}{\mu_0}\right)
-\]
+$$\lambda = \ln\left(\frac{\mu}{\mu_0}\right)$$
 
 connects geodesic flow to RG evolution.
 
@@ -491,11 +496,11 @@ connects geodesic flow to RG evolution.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 $\lambda$ range & Energy scale & Physics \\
 \midrule
-$\lambda \to +\infty$ & $\mu \to \infty$ (UV) & $\E_8 \times \E_8$ symmetry \\
+$\lambda \to +\infty$ & $\mu \to \infty$ (UV) & $\E_8\times\E_8$ symmetry \\
 $\lambda = 0$ & $\mu = \mu_0$ & Electroweak scale \\
 $\lambda \to -\infty$ & $\mu \to 0$ (IR) & Confinement \\
 \bottomrule
@@ -504,78 +509,56 @@ $\lambda \to -\infty$ & $\mu \to 0$ (IR) & Confinement \\
 
 \subsection{$\beta$-Functions as Velocities}
 
-\[
-\beta_i = \frac{dg_i}{d\ln\mu} = \frac{dx^i}{d\lambda}
-\]
+$$\beta_i = \frac{dg_i}{d\ln\mu} = \frac{dx^i}{d\lambda}$$
 
 \textbf{$\beta$-Function Evolution}:
 
-\[
-\frac{d\beta^k}{d\lambda} = \frac{1}{2} g^{kl} T_{ijl} \beta^i \beta^j
-\]
+$$\frac{d\beta^k}{d\lambda} = \frac{1}{2} g^{kl} T_{ijl} \beta^i \beta^j$$
 
 \textbf{Physical meaning}: Evolution of $\beta$-functions (two-loop and higher) is determined by torsion.
 
-\newpage
-
-% ============================================
 \section{Flow Velocity and Stability}
-% ============================================
 
 \subsection{Ultra-Slow Velocity Requirement}
 
 Experimental bounds on time variation of $\alpha$:
 
-\[
-\left|\frac{\dot{\alpha}}{\alpha}\right| < 10^{-17} \text{ yr}^{-1}
-\]
+$$\left|\frac{\dot{\alpha}}{\alpha}\right| < 10^{-17} \text{ yr}^{-1}$$
 
 \subsection{Velocity Bound Derivation}
 
-\[
-\frac{\dot{\alpha}}{\alpha} \sim H_0 \times |\Gamma| \times |v|^2
-\]
+$$\frac{\dot{\alpha}}{\alpha} \sim H_0 \times |\Gamma| \times |v|^2$$
 
 With:
 \begin{itemize}
 \item $H_0 \approx 3.0 \times 10^{-18}$ s$^{-1}$
-\item $|\Gamma| \sim \kappa_T/\det(g) = (1/61)/(65/32) = 32/(61 \times 65) \approx 0.008$
+\item $|\Gamma| \sim \kappa_T/\det(g) = (1/61)/(65/32) = 32/(61\times65) \approx 0.008$
 \item $|v|$ = flow velocity
 \end{itemize}
 
-\textbf{Note}: $\det(g) = 65/32$ is \textbf{\topomark} (see S1).
+\textbf{Note}: $\det(g) = 65/32$ is \textbf{\topomark{}} (see S1).
 
 \textbf{Constraint}: $|v| < 0.7$
 
 \subsection{Framework Value}
 
-\[
-|v| \approx 0.015
-\]
+$$|v| \approx 0.015$$
 
 This gives:
 
-\[
-\frac{\dot{\alpha}}{\alpha} \sim 3.0 \times 10^{-18} \times 0.008 \times (0.015)^2 \approx 10^{-24} \text{ s}^{-1}
-\]
+$$\frac{\dot{\alpha}}{\alpha} \sim 3.0 \times 10^{-18} \times 0.008 \times (0.015)^2 \approx 10^{-24} \text{ s}^{-1}$$
 
 Well within experimental bounds.
 
-\textbf{Status}: \phenomenological
+\textbf{Status}: \textsc{Phenomenological}
 
-\newpage
-
-% ============================================
 \section{Conservation Laws}
-% ============================================
 
 \subsection{Energy Conservation}
 
-\[
-E = g_{ij} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda} = \mathrm{const}
-\]
+$$E = g_{ij} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda} = \text{const}$$
 
-\textbf{Status}: \proven
+\textbf{Status}: \proven{}
 
 \subsection{Topological Charges}
 
@@ -585,8 +568,6 @@ Conserved along flow:
 \item Holonomy charges around non-contractible loops
 \item Cohomology class representatives
 \end{itemize}
-
-\newpage
 
 % ============================================
 \section*{Part III: The Scale Bridge}
@@ -614,7 +595,7 @@ The framework contains several natural scales:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Scale & Value & Origin \\
 \midrule
@@ -627,71 +608,57 @@ Electron mass & $m_e \sim 0.511$ MeV & Lightest charged fermion \\
 
 \textbf{Question}: Can the ratio $m_e/M_{\Pl}$ be derived from topology?
 
-\newpage
-
-% ============================================
 \section{The Master Formula}
-% ============================================
+
+\textbf{WARNING: \exploratory{} CONTENT} - The scale bridge formula below achieves 0.09\% precision but involves assumptions (Lucas number selection, $\ln(\phi)$ appearance) that lack geometric derivation. This section represents a working conjecture, not a proven result.
 
 \subsection{The Scale Bridge}
 
-\[
-\boxed{m_e = M_{\Pl} \times \exp\left(-(H^* - L_8 - \ln(\phi))\right)}
-\]
+$$\boxed{m_e = M_{\Pl} \times \exp\left(-(H^* - L_8 - \ln(\phi))\right)}$$
 
 \textbf{Components}:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcp{6cm}}
+\begin{tabular}{lll}
 \toprule
 Symbol & Value & Origin \\
 \midrule
 $M_{\Pl}$ & $1.22089 \times 10^{19}$ GeV & Reduced Planck mass \\
 $H^*$ & 99 & Hodge dimension = $b_2 + b_3 + 1$ \\
-$L_8$ & 47 & 8th Lucas number = Lucas($\rk_{\E_8}$) \\
-$\phi$ & 1.6180339... & Golden ratio $(1+\sqrt{5})/2$ \\
-$\ln(\phi)$ & 0.48121... & Natural log of golden ratio \\
+$L_8$ & 47 & 8th Lucas number = Lucas($\rk(\E_8)$) \\
+$\phi$ & $1.6180339\ldots$ & Golden ratio $(1+\sqrt{5})/2$ \\
+$\ln(\phi)$ & $0.48121\ldots$ & Natural log of golden ratio \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{The Exponent}
 
-\[
-\mathrm{exponent} = H^* - L_8 - \ln(\phi) = 99 - 47 - 0.48121 = 51.5188
-\]
+$$\text{exponent} = H^* - L_8 - \ln(\phi) = 99 - 47 - 0.48121 = 51.5188$$
 
 \subsection{The Ratio}
 
-\[
-\frac{m_e}{M_{\Pl}} = e^{-51.5188} = 4.185 \times 10^{-23}
-\]
+$$\frac{m_e}{M_{\Pl}} = e^{-51.5188} = 4.185 \times 10^{-23}$$
 
 \subsection{The Mass}
 
-\[
-m_e = 1.22089 \times 10^{19} \times 4.185 \times 10^{-23} = 5.11 \times 10^{-4} \text{ GeV}
-\]
+$$m_e = 1.22089 \times 10^{19} \times 4.185 \times 10^{-23} = 5.11 \times 10^{-4} \text{ GeV}$$
 
 \textbf{Experimental}: $m_e = 5.1099895 \times 10^{-4}$ GeV
 
-\newpage
-
-% ============================================
 \section{Numerical Verification}
-% ============================================
 
 \subsection{Precision Analysis}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & Required & GIFT & Difference \\
 \midrule
 Exponent & 51.528 & 51.519 & 0.009 \\
-\textbf{Relative error} & -- & -- & \textbf{0.02\%} \\
+\textbf{Relative error} & --- & --- & \textbf{0.02\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -702,7 +669,7 @@ Exponent & 51.528 & 51.519 & 0.009 \\
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & GIFT & Experimental & Deviation \\
 \midrule
@@ -715,7 +682,7 @@ The key result is that \textbf{the exponent is correct to $< 0.02\%$} from pure 
 
 \subsection{Python Verification}
 
-\begin{lstlisting}[language=python]
+\begin{lstlisting}[language=Python]
 import numpy as np
 
 phi = (1 + np.sqrt(5)) / 2
@@ -742,45 +709,39 @@ print(f"m_e (GIFT): {m_e_gift:.6e} GeV")  # 5.1145e-04
 \end{lstlisting}
 
 \textbf{Output}:
-\begin{lstlisting}
+\begin{verbatim}
 GIFT exponent: 51.518788
 Required: 51.519660
 Relative error: 0.0017%
 m_e (GIFT): 5.1145e-04 GeV
-\end{lstlisting}
+\end{verbatim}
 
-\newpage
-
-% ============================================
 \section{Physical Interpretation}
-% ============================================
 
 \subsection{The Three Components}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcp{7cm}}
+\begin{tabular}{lll}
 \toprule
 Component & Value & Physical Meaning \\
 \midrule
-$H^* = 99$ & +99 & Total cohomological information \\
-$L_8 = 47$ & -47 & Lucas ``projection'' to physical states \\
-$\ln(\phi) = 0.481$ & -0.481 & Golden ratio fine-tuning \\
+$H^* = 99$ & $+99$ & Total cohomological information \\
+$L_8 = 47$ & $-47$ & Lucas ``projection'' to physical states \\
+$\ln(\phi) = 0.481$ & $-0.481$ & Golden ratio fine-tuning \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Separation of Scales}
 
-\[
-\frac{m_e}{M_{\Pl}} = e^{-H^*} \times e^{L_8} \times \phi
-\]
+$$\frac{m_e}{M_{\Pl}} = e^{-H^*} \times e^{L_8} \times \phi$$
 
 This separates into:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcl}
+\begin{tabular}{lll}
 \toprule
 Factor & Value & Effect \\
 \midrule
@@ -801,7 +762,7 @@ $\phi$ & $\sim 1.618$ & Golden adjustment \\
 \item Represents ``all geometric information'' in $\Kseven$
 \end{itemize}
 
-\textbf{$L_8 = 47 = \mathrm{Lucas}(8) = \mathrm{Lucas}(\rk_{\E_8})$}:
+\textbf{$L_8 = 47 = \text{Lucas}(8) = \text{Lucas}(\rk(\E_8))$}:
 \begin{itemize}
 \item The Lucas number at $\E_8$ rank
 \item Connected to $\phi$: $L_n = \phi^n + (-\phi)^{-n}$
@@ -817,15 +778,11 @@ $\phi$ & $\sim 1.618$ & Golden adjustment \\
 
 The scale bridge admits a more transparent form. Rewriting:
 
-\[
-\frac{m_e}{M_{\Pl}} = e^{-H^*} \times e^{L_8} \times e^{\ln(\phi)} = \phi \times e^{-(H^* - L_8)}
-\]
+$$\frac{m_e}{M_{\Pl}} = e^{-H^*} \times e^{L_8} \times e^{\ln(\phi)} = \phi \times e^{-(H^* - L_8)}$$
 
 Since \textbf{$H^* - L_8 = 99 - 47 = 52 = \dimE(F_4)$}:
 
-\[
-\boxed{\frac{m_e}{M_{\Pl}} = \phi \times e^{-\dimE(F_4)}}
-\]
+$$\boxed{\frac{m_e}{M_{\Pl}} = \phi \times e^{-\dimE(F_4)}}$$
 
 The exponent is exactly the dimension of the exceptional Lie algebra $F_4$, which appears as the automorphism group of the exceptional Jordan algebra $J_3(\mathbb{O})$.
 
@@ -833,7 +790,7 @@ The exponent is exactly the dimension of the exceptional Lie algebra $F_4$, whic
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Ratio & Formula & Role of $\phi$ \\
 \midrule
@@ -859,31 +816,23 @@ The choice of Lucas numbers $L_n$ rather than Fibonacci numbers $F_n$ is structu
 
 Lucas and Fibonacci satisfy $L_n = F_{n-1} + F_{n+1}$. For $n = 8$:
 
-\[
-L_8 = F_7 + F_9 = 13 + 34 = 47
-\]
+$$L_8 = F_7 + F_9 = 13 + 34 = 47$$
 
-where \textbf{$F_7 = 13 = \alpha_{\mathrm{sum}}^B$} and \textbf{$F_9 = 34 = d_{\mathrm{hidden}}$} in GIFT. Thus:
+where \textbf{$F_7 = 13 = \alpha_{\text{sum}}^B$} and \textbf{$F_9 = 34 = d_{\text{hidden}}$} in GIFT. Thus:
 
-\[
-\boxed{L_8 = \alpha_{\mathrm{sum}}^B + d_{\mathrm{hidden}} = 13 + 34 = 47}
-\]
+$$\boxed{L_8 = \alpha_{\text{sum}}^B + d_{\text{hidden}} = 13 + 34 = 47}$$
 
 The Lucas number at $\E_8$ rank decomposes as the sum of two independent GIFT constants.
 
 \textbf{Reason 3: Dimensional consistency}
 
-Using $F_8 = 21$ would give $H^* - F_8 = 99 - 21 = 78 = \dimE(\E_6)$, yielding $\exp(-78) \approx 10^{-34}$ and $m_e \approx 10^{-12}$ MeV---orders of magnitude too small.
+Using $F_8 = 21$ would give $H^* - F_8 = 99 - 21 = 78 = \dimE(\E_6)$, yielding $\exp(-78) = 10^{-34}$ and $m_e = 10^{-12}$ MeV, orders of magnitude too small.
 
 \textbf{Reason 4: $F_4$ connection}
 
-The resulting exponent $52 = \dimE(F_4) = 4 \times 13 = p_2^2 \times \alpha_{\mathrm{sum}}^B$ connects the scale bridge to the automorphism algebra of $J_3(\mathbb{O})$, which itself appears in the muon ratio $m_\mu/m_e = 27^\phi$ through $\dimE(J_3(\mathbb{O})) = 27$.
+The resulting exponent $52 = \dimE(F_4) = 4 \times 13 = p_2^2 \times \alpha_{\text{sum}}^B$ connects the scale bridge to the automorphism algebra of $J_3(\mathbb{O})$, which itself appears in the muon ratio $m_\mu/m_e = 27^\phi$ through $\dimE(J_3(\mathbb{O})) = 27$.
 
-\newpage
-
-% ============================================
 \section{The Hierarchy Problem}
-% ============================================
 
 \subsection{The Traditional Problem}
 
@@ -893,9 +842,7 @@ Why is $m_e \ll M_{\Pl}$? The ratio $m_e/M_{\Pl} \sim 10^{-23}$ seems to require
 
 The hierarchy is \textbf{topological}, not fine-tuned:
 
-\[
-\frac{m_e}{M_{\Pl}} = \exp(-(H^* - L_8 - \ln\phi)) = \exp(-51.52)
-\]
+$$\frac{m_e}{M_{\Pl}} = \exp(-(H^* - L_8 - \ln\phi)) = \exp(-51.52)$$
 
 The large suppression arises because:
 \begin{itemize}
@@ -908,19 +855,15 @@ The large suppression arises because:
 
 \subsection{Why $\sim 10^{-23}$?}
 
-\[
-\exp(-52) \approx 10^{-22.6}
-\]
+$$\exp(-52) \approx 10^{-22.6}$$
 
 The hierarchy exponent \textbf{$52 = H^* - L_8 = 99 - 47$} is an integer determined by topology.
 
 \textbf{Alternative expressions for 52}:
 \begin{itemize}
-\item $52 = \dimE(F_4) = 4 \times 13 = p_2^2 \times \alpha_{\mathrm{sum}\_B}$
+\item $52 = \dimE(F_4) = 4 \times 13 = p_2^2 \times \alpha_{\text{sum}}^B$
 \item $52 = b_3 - \Weyl^2 = 77 - 25$
 \end{itemize}
-
-\newpage
 
 % ============================================
 \section*{Part IV: Mass Chain}
@@ -935,7 +878,7 @@ Given $m_e$ from the scale bridge, all other masses follow from GIFT ratios:
 
 \begin{lstlisting}
 M_Pl (fundamental scale)
-    | exp(-(H* - L_8 - ln(phi)))
+    | exp(-(H* - L8 - ln(phi)))
 m_e = 0.511 MeV
     | x 27^phi
 m_mu = 105.7 MeV
@@ -946,17 +889,11 @@ m_tau = 1777 MeV
 All SM masses
 \end{lstlisting}
 
-\newpage
-
-% ============================================
 \section{Lepton Masses}
-% ============================================
 
 \subsection{Electron Mass (From Scale Bridge)}
 
-\[
-m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln\phi)) = 0.5114 \text{ MeV}
-\]
+$$m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln\phi)) = 0.5114 \text{ MeV}$$
 
 \textbf{Experimental}: 0.51099895 MeV\\
 \textbf{Deviation}: 0.09\%
@@ -965,9 +902,7 @@ m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln\phi)) = 0.5114 \text{ MeV}
 
 \textbf{From ratio}: $m_\mu/m_e = 27^\phi$
 
-\[
-m_\mu = 27^\phi \times m_e = 207.012 \times 0.511 = 105.78 \text{ MeV}
-\]
+$$m_\mu = 27^\phi \times m_e = 207.012 \times 0.511 = 105.78 \text{ MeV}$$
 
 \textbf{Derivation of $27^\phi$}:
 \begin{itemize}
@@ -979,64 +914,53 @@ m_\mu = 27^\phi \times m_e = 207.012 \times 0.511 = 105.78 \text{ MeV}
 \textbf{Experimental}: 105.658 MeV\\
 \textbf{Deviation}: 0.12\%
 
-\textbf{Status}: \topomark
+\textbf{Status}: \topomark{}
 
 \subsection{Tau Mass}
 
-\textbf{From ratio}: $m_\tau/m_e = 3477$ (\proven\ - exact integer)
+\textbf{From ratio}: $m_\tau/m_e = 3477$ (\proven{} - exact integer)
 
-\[
-m_\tau = 3477 \times m_e = 3477 \times 0.511 = 1776.8 \text{ MeV}
-\]
+$$m_\tau = 3477 \times m_e = 3477 \times 0.511 = 1776.8 \text{ MeV}$$
 
 \textbf{Derivation of 3477}:
 
-\[
-\frac{m_\tau}{m_e} = \dimE(\Kseven) + 10 \times \dimE(\E_8) + 10 \times H^*
-\]
-\[
-= 7 + 10 \times 248 + 10 \times 99 = 7 + 2480 + 990 = 3477
-\]
+$$\frac{m_\tau}{m_e} = \dimE(\Kseven) + 10 \times \dimE(\E_8) + 10 \times H^*$$
+$$= 7 + 10 \times 248 + 10 \times 99 = 7 + 2480 + 990 = 3477$$
 
 \textbf{Prime factorization}:
 
-\[
-3477 = 3 \times 19 \times 61 = N_{\mathrm{gen}} \times \mathrm{prime}(8) \times \kappa_T^{-1}
-\]
+$$3477 = 3 \times 19 \times 61 = N_{\mathrm{gen}} \times \text{prime}(8) \times \kappa_T^{-1}$$
 
 \textbf{Experimental}: 1776.86 MeV\\
 \textbf{Deviation}: 0.004\%
 
-\textbf{Status}: \proven\ (Lean verified)
+\textbf{Status}: \proven{} (Lean verified)
 
 \subsection{Lepton Summary}
 
-\begin{longtable}{lccccc}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{llccccl}
 \toprule
 Particle & Ratio Formula & Ratio & Mass (GIFT) & Mass (Exp) & Dev. \\
 \midrule
-\endhead
 $e$ & 1 & 1 & 0.5114 MeV & 0.5110 MeV & 0.09\% \\
 $\mu$ & $27^\phi$ & 207.01 & 105.78 MeV & 105.66 MeV & 0.12\% \\
 $\tau$ & 3477 & 3477 & 1776.8 MeV & 1776.9 MeV & 0.004\% \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{table}
 
-\newpage
-
-% ============================================
 \section{Quark Sector Status}
-% ============================================
 
 \subsection{Current State}
 
 The quark sector presents a qualitatively different challenge from leptons. While one ratio is established:
 
-\[
-\frac{m_s}{m_d} = p_2^2 \times \Weyl = 4 \times 5 = 20
-\]
+$$\frac{m_s}{m_d} = p_2^2 \times \Weyl = 4 \times 5 = 20$$
 
-\textbf{Status}: \proven\ (see S2, Section 12)
+\textbf{Status}: \proven{} (see S2, Section 12)
 
 \subsection{Open Problem}
 
@@ -1051,45 +975,33 @@ Absolute quark masses and other ratios remain \textbf{open}. Although GIFT expre
 
 \textbf{Deferred}: Complete quark mass derivations require establishing a geometric principle comparable to the lepton sector's Jordan algebra connection.
 
-\newpage
-
-% ============================================
 \section{Boson Masses}
-% ============================================
 
-\subsection{$W$ Boson Mass}
+\subsection{W Boson Mass}
 
-Using $\sin^2\theta_W = 3/13$ (\proven):
+Using $\sin^2\theta_W = 3/13$ (\proven{}):
 
-\[
-\cos^2\theta_W = 1 - \frac{3}{13} = \frac{10}{13}
-\]
+$$\cos^2\theta_W = 1 - \frac{3}{13} = \frac{10}{13}$$
 
 From electroweak relations:
 
-\[
-M_W = \frac{v}{2} \cdot g_2 = 80.38 \text{ GeV}
-\]
+$$M_W = \frac{v}{2} \cdot g_2 = 80.38 \text{ GeV}$$
 
 \textbf{Experimental}: $80.377 \pm 0.012$ GeV\\
 \textbf{Deviation}: 0.004\%
 
-\subsection{$Z$ Boson Mass}
+\subsection{Z Boson Mass}
 
-\[
-M_Z = \frac{M_W}{\cos\theta_W} = M_W \times \sqrt{\frac{13}{10}} = 91.19 \text{ GeV}
-\]
+$$M_Z = \frac{M_W}{\cos\theta_W} = M_W \times \sqrt{\frac{13}{10}} = 91.19 \text{ GeV}$$
 
 \textbf{Experimental}: 91.188 GeV\\
 \textbf{Deviation}: 0.002\%
 
 \subsection{Higgs Mass}
 
-\textbf{From $\lambda_H = \sqrt{17}/32$} (\proven):
+\textbf{From $\lambda_H = \sqrt{17}/32$} (\proven{}):
 
-\[
-m_H = \sqrt{2\lambda_H} \cdot v = \sqrt{2 \times 0.12891} \times 246.22 = 125.09 \text{ GeV}
-\]
+$$m_H = \sqrt{2\lambda_H} \cdot v = \sqrt{2 \times 0.12891} \times 246.22 = 125.09 \text{ GeV}$$
 
 \textbf{Origin of 17}:
 \begin{itemize}
@@ -1103,22 +1015,20 @@ m_H = \sqrt{2\lambda_H} \cdot v = \sqrt{2 \times 0.12891} \times 246.22 = 125.09
 
 \subsection{Boson Summary}
 
-\begin{longtable}{lcccc}
+\begin{table}[H]
+\centering
+\begin{tabular}{llcccl}
 \toprule
 Particle & Formula & Mass (GIFT) & Mass (Exp) & Dev. \\
 \midrule
-\endhead
 $W$ & $v \times g_2/2$ & 80.38 GeV & 80.377 GeV & 0.004\% \\
 $Z$ & $M_W/\cos(\theta_W)$ & 91.19 GeV & 91.188 GeV & 0.002\% \\
 $H$ & $\sqrt{2\lambda_H} \times v$ & 125.09 GeV & 125.25 GeV & 0.13\% \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{table}
 
-\newpage
-
-% ============================================
 \section{Neutrino Masses}
-% ============================================
 
 \subsection{Hierarchy Prediction}
 
@@ -1126,9 +1036,7 @@ $H$ & $\sqrt{2\lambda_H} \times v$ & 125.09 GeV & 125.25 GeV & 0.13\% \\
 
 \subsection{Mass Sum}
 
-\[
-\Sigma m_\nu = 0.0587 \text{ eV}
-\]
+$$\Sigma m_\nu = 0.0587 \text{ eV}$$
 
 \textbf{Current bound}: $\Sigma m_\nu < 0.12$ eV (cosmological)\\
 \textbf{Status}: Consistent
@@ -1137,7 +1045,7 @@ $H$ & $\sqrt{2\lambda_H} \times v$ & 125.09 GeV & 125.25 GeV & 0.13\% \\
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Neutrino & Mass (eV) & Notes \\
 \midrule
@@ -1148,9 +1056,7 @@ $m_3$ & $\sim 0.05$ & Atmospheric splitting \\
 \end{tabular}
 \end{table}
 
-\textbf{Status}: \exploratory
-
-\newpage
+\textbf{Status}: \exploratory{}
 
 % ============================================
 \section*{Part V: Cosmological Dynamics}
@@ -1165,7 +1071,7 @@ Two measurement classes give systematically different $H_0$ values:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Method & Value (km/s/Mpc) & Era Probed \\
 \midrule
@@ -1181,27 +1087,21 @@ SH0ES Cepheids & $73.0 \pm 1.0$ & $z < 0.01$ (local) \\
 
 Both values emerge as \textbf{distinct topological projections} of $\Kseven$:
 
-\[
-\boxed{H_0^{\mathrm{CMB}} = b_3 - 2 \times \Weyl = 77 - 10 = 67}
-\]
+$$\boxed{H_0^{\text{CMB}} = b_3 - 2 \times \Weyl = 77 - 10 = 67}$$
 
-\[
-\boxed{H_0^{\mathrm{Local}} = b_3 - p_2^2 = 77 - 4 = 73}
-\]
+$$\boxed{H_0^{\text{Local}} = b_3 - p_2^2 = 77 - 4 = 73}$$
 
 \subsection{The Tension is Structural}
 
-\[
-\Delta H_0 = H_0^{\mathrm{Local}} - H_0^{\mathrm{CMB}} = 73 - 67 = 6 = 2 \times N_{\mathrm{gen}}
-\]
+$$\Delta H_0 = H_0^{\text{Local}} - H_0^{\text{CMB}} = 73 - 67 = 6 = 2 \times N_{\mathrm{gen}}$$
 
-\textbf{The Hubble tension equals twice the number of fermion generations!}
+The Hubble tension equals twice the number of fermion generations.
 
 \subsection{Verification}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & GIFT & Experimental & Deviation \\
 \midrule
@@ -1218,11 +1118,12 @@ The Hubble tension reflects a \textbf{dimensional projection duality}:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcp{5cm}}
+\small
+\begin{tabular}{lll}
 \toprule
 Measurement & Subtraction & Interpretation \\
 \midrule
-CMB ($z \sim 1100$) & $2 \times \Weyl = 10$ & $D_{\mathrm{bulk}} - 1$ = spatial dimensions of 11D bulk \\
+CMB ($z \sim 1100$) & $2 \times \Weyl = 10$ & $D_{\text{bulk}} - 1 =$ spatial dimensions of 11D bulk \\
 Local ($z < 0.01$) & $p_2^2 = 4$ & Spatial dimensions of effective 4D spacetime \\
 \bottomrule
 \end{tabular}
@@ -1231,7 +1132,7 @@ Local ($z < 0.01$) & $p_2^2 = 4$ & Spatial dimensions of effective 4D spacetime 
 \textbf{CMB/Early Universe} (Planck):
 \begin{itemize}
 \item Probes the primordial universe where the 11D geometry remains ``visible''
-\item Subtraction: $2 \times \Weyl = 10 = D_{\mathrm{bulk}} - 1$ (spatial dimensions of 11D bulk)
+\item Subtraction: $2 \times \Weyl = 10 = D_{\text{bulk}} - 1$ (spatial dimensions of 11D bulk)
 \item The early universe sees the full bulk structure
 \end{itemize}
 
@@ -1244,98 +1145,76 @@ Local ($z < 0.01$) & $p_2^2 = 4$ & Spatial dimensions of effective 4D spacetime 
 
 \subsection{The Gap as Fermionic Decoupling}
 
-\[
-\Delta H_0 = (D_{\mathrm{bulk}} - 1) - p_2^2 = 10 - 4 = 6 = 2 \times N_{\mathrm{gen}}
-\]
+$$\Delta H_0 = (D_{\text{bulk}} - 1) - p_2^2 = 10 - 4 = 6 = 2 \times N_{\mathrm{gen}}$$
 
 The 6 degrees of freedom ``frozen'' between early and late universe correspond to the \textbf{3 generations $\times$ 2 chiralities} of fermions that decouple during cosmological evolution. This provides a physical mechanism for the transition from early to late universe expansion rates.
 
 \subsection{The Duality Diagram}
 
 \begin{lstlisting}
-                    K_7 (b_3 = 77)
+                    K7 (b3 = 77)
                          |
           +--------------+--------------+
           |                             |
     Global averaging              Local sampling
           |                             |
-    H_0 = 77 - 10 = 67            H_0 = 77 - 4 = 73
+    H0 = 77 - 10 = 67            H0 = 77 - 4 = 73
     (Weyl structure)             (Prime structure)
           |                             |
        Planck                        SH0ES
 \end{lstlisting}
 
-\newpage
-
-% ============================================
 \section{Dark Energy}
-% ============================================
 
 \subsection{The Formula}
 
-\[
-\Omega_{\mathrm{DE}} = \ln(2) \times \frac{H^* - 1}{H^*} = \ln(2) \times \frac{98}{99}
-\]
+$$\Omega_{\DE} = \ln(2) \times \frac{H^* - 1}{H^*} = \ln(2) \times \frac{98}{99}$$
 
 \subsection{Calculation}
 
-\begin{lstlisting}
+\begin{verbatim}
 ln(2) = 0.693147...
 98/99 = 0.989899...
 Product = 0.6861
-\end{lstlisting}
+\end{verbatim}
 
 \subsection{Triple Origin of $\ln(2)$}
 
-\[
-\ln(p_2) = \ln(2)
-\]
+$$\ln(p_2) = \ln(2)$$
 
-\[
-\ln\left(\frac{\dimE(\E_8 \times \E_8)}{\dimE(\E_8)}\right) = \ln\left(\frac{496}{248}\right) = \ln(2)
-\]
+$$\ln\left(\frac{\dimE(\E_8 \times \E_8)}{\dimE(\E_8)}\right) = \ln\left(\frac{496}{248}\right) = \ln(2)$$
 
-\[
-\ln\left(\frac{\dimE(\Gtwo)}{\dimE(\Kseven)}\right) = \ln\left(\frac{14}{7}\right) = \ln(2)
-\]
+$$\ln\left(\frac{\dimE(\Gtwo)}{\dimE(\Kseven)}\right) = \ln\left(\frac{14}{7}\right) = \ln(2)$$
 
 \subsection{Verification}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & GIFT & Experimental & Deviation \\
 \midrule
-$\Omega_{\mathrm{DE}}$ & 0.6861 & $0.6847 \pm 0.007$ & \textbf{0.21\%} \\
+$\Omega_{\DE}$ & 0.6861 & $0.6847 \pm 0.007$ & \textbf{0.21\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Status}: \proven
+\textbf{Status}: \proven{}
 
-\newpage
-
-% ============================================
 \section{Dark Matter}
-% ============================================
 
 \subsection{Dark Energy to Dark Matter Ratio}
 
-\[
-\frac{\Omega_{\mathrm{DE}}}{\Omega_{\mathrm{DM}}} = \frac{b_2}{\rk_{\E_8}} = \frac{21}{8} = 2.625
-\]
+$$\frac{\Omega_{\DE}}{\Omega_{\text{DM}}} = \frac{b_2}{\rk(\E_8)} = \frac{21}{8} = 2.625$$
 
 \subsection{Golden Ratio Connection}
 
-\[
-\phi^2 = \phi + 1 = \frac{3 + \sqrt{5}}{2} \approx 2.618
-\]
+$$\phi^2 = \phi + 1 = \frac{3 + \sqrt{5}}{2} \approx 2.618$$
 
-The ratio $b_2/\rk_{\E_8} = 21/8 = 2.625$ matches $\phi^2$ to 0.27\% because:
+The ratio $b_2/\rk(\E_8) = 21/8 = 2.625$ matches $\phi^2$ to 0.27\% because:
 \begin{itemize}
 \item $b_2 = 21 = F_8$ (Fibonacci)
-\item $\rk_{\E_8} = 8 = F_6$ (Fibonacci)
+\item $\rk(\E_8) = 8 = F_6$ (Fibonacci)
 \item Ratio of non-adjacent Fibonacci $\to$ power of $\phi$
 \end{itemize}
 
@@ -1343,31 +1222,25 @@ The ratio $b_2/\rk_{\E_8} = 21/8 = 2.625$ matches $\phi^2$ to 0.27\% because:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & GIFT & Experimental & Deviation \\
 \midrule
-$\Omega_{\mathrm{DE}}/\Omega_{\mathrm{DM}}$ & 2.625 & $2.626 \pm 0.03$ & \textbf{0.05\%} \\
+$\Omega_{\DE}/\Omega_{\text{DM}}$ & 2.625 & $2.626 \pm 0.03$ & \textbf{0.05\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\newpage
-
-% ============================================
 \section{Age of the Universe}
-% ============================================
 
 \subsection{The Formula}
 
-\[
-t_0 = \alpha_{\mathrm{sum}} + \frac{4}{\Weyl} = 13 + \frac{4}{5} = 13.8 \text{ Gyr}
-\]
+$$t_0 = \alpha_{\text{sum}} + \frac{4}{\Weyl} = 13 + \frac{4}{5} = 13.8 \text{ Gyr}$$
 
 \subsection{Components}
 
 \begin{itemize}
-\item \textbf{$\alpha_{\mathrm{sum}} = 13$}: The anomaly coefficient sum (= $F_7 = \alpha_{\mathrm{sum}\_B}$)
+\item \textbf{$\alpha_{\text{sum}} = 13$}: The anomaly coefficient sum (= $F_7 = \alpha_{\text{sum}}^B$)
 \item \textbf{$4/\Weyl = 4/5 = 0.8$}: A fractional correction from the Weyl factor
 \end{itemize}
 
@@ -1375,7 +1248,7 @@ t_0 = \alpha_{\mathrm{sum}} + \frac{4}{\Weyl} = 13 + \frac{4}{5} = 13.8 \text{ G
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & GIFT & Experimental & Deviation \\
 \midrule
@@ -1384,29 +1257,21 @@ $t_0$ & 13.8 Gyr & $13.787 \pm 0.02$ Gyr & \textbf{0.09\%} \\
 \end{tabular}
 \end{table}
 
-\newpage
-
-% ============================================
 \section{Spectral Index}
-% ============================================
 
 \subsection{The Formula}
 
-\[
-n_s = \frac{\zeta(D_{\mathrm{bulk}})}{\zeta(\Weyl)} = \frac{\zeta(11)}{\zeta(5)}
-\]
+$$n_s = \frac{\zeta(D_{\text{bulk}})}{\zeta(\Weyl)} = \frac{\zeta(11)}{\zeta(5)}$$
 
 \subsection{Calculation}
 
-\[
-n_s = \frac{1.000494...}{1.036928...} = 0.9649
-\]
+$$n_s = \frac{1.000494\ldots}{1.036928\ldots} = 0.9649$$
 
 \subsection{Verification}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lccc}
+\begin{tabular}{llll}
 \toprule
 Quantity & GIFT & Experimental & Deviation \\
 \midrule
@@ -1415,30 +1280,27 @@ $n_s$ & 0.9649 & $0.9649 \pm 0.0042$ & \textbf{0.00\%} \\
 \end{tabular}
 \end{table}
 
-\textbf{Status}: \proven\ (exact match)
+\textbf{Status}: \proven{} (exact match)
 
-\newpage
-
-% ============================================
 \section{Cosmological Summary}
-% ============================================
 
-\begin{longtable}{lcccc}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lccccl}
 \toprule
 Parameter & GIFT Formula & GIFT Value & Experimental & Dev. \\
 \midrule
-\endhead
-$\Omega_{\mathrm{DE}}$ & $\ln(2) \times 98/99$ & 0.6861 & $0.685 \pm 0.007$ & 0.21\% \\
-$\Omega_{\mathrm{DE}}/\Omega_{\mathrm{DM}}$ & $b_2/\rk_{\E_8}$ & 2.625 & $2.626 \pm 0.03$ & 0.05\% \\
+$\Omega_{\DE}$ & $\ln(2) \times 98/99$ & 0.6861 & $0.685 \pm 0.007$ & 0.21\% \\
+$\Omega_{\DE}/\Omega_{\text{DM}}$ & $b_2/\rk(\E_8)$ & 2.625 & $2.626 \pm 0.03$ & 0.05\% \\
 $t_0$ & $13 + 4/5$ & 13.8 Gyr & $13.79 \pm 0.02$ & 0.09\% \\
 $n_s$ & $\zeta(11)/\zeta(5)$ & 0.9649 & $0.9649 \pm 0.004$ & 0.00\% \\
-$H_0$ (CMB) & $b_3 - 2 \times \Weyl$ & 67 & $67.4 \pm 0.5$ & 0.6\% \\
+$H_0$ (CMB) & $b_3 - 2\times\Weyl$ & 67 & $67.4 \pm 0.5$ & 0.6\% \\
 $H_0$ (Local) & $b_3 - p_2^2$ & 73 & $73.0 \pm 1.0$ & 0.0\% \\
 $\Delta H_0$ & $2 \times N_{\mathrm{gen}}$ & 6 & $5.6 \pm 1.1$ & 7\% \\
 \bottomrule
-\end{longtable}
-
-\newpage
+\end{tabular}
+\end{table}
 
 % ============================================
 \section*{Part VI: Summary and Limitations}
@@ -1451,11 +1313,11 @@ $\Delta H_0$ & $2 \times N_{\mathrm{gen}}$ & 6 & $5.6 \pm 1.1$ & 7\% \\
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Result & Value & Status \\
 \midrule
-Torsion magnitude & $\kappa_T = $ \textbf{1/61} & \textbf{\topomark} \\
+Torsion magnitude & $\kappa_T = $ \textbf{1/61} & \textbf{\topomark{}} \\
 DESI DR2 compatibility & $\kappa_T^2 < 10^{-3}$ & \textbf{PASS} \\
 \bottomrule
 \end{tabular}
@@ -1465,11 +1327,11 @@ DESI DR2 compatibility & $\kappa_T^2 < 10^{-3}$ & \textbf{PASS} \\
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Result & Value & Status \\
 \midrule
-Scale exponent & $H^* - L_8 = 52 = \dimE(F_4)$ & \textbf{\topomark} \\
+Scale exponent & $H^* - L_8 = 52 = \dimE(F_4)$ & \textbf{\topomark{}} \\
 Full exponent & 51.519 & \textbf{$<0.02\%$ precision} \\
 $m_e$ prediction & 0.5114 MeV & \textbf{0.09\% deviation} \\
 \bottomrule
@@ -1480,13 +1342,13 @@ $m_e$ prediction & 0.5114 MeV & \textbf{0.09\% deviation} \\
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Result & Formula & Status \\
 \midrule
-$m_\tau/m_e = 3477$ & $7 + 2480 + 990$ & \textbf{\proven} \\
-$m_\mu/m_e = 27^\phi$ & $\dimE(J_3(\mathbb{O}))^\phi$ & \textbf{\topomark} \\
-$M_Z/M_W$ & $\sqrt{13/10}$ & \textbf{\proven} \\
+$m_\tau/m_e = 3477$ & $7 + 2480 + 990$ & \textbf{\proven{}} \\
+$m_\mu/m_e = 27^\phi$ & $\dimE(J_3(\mathbb{O}))^\phi$ & \textbf{\topomark{}} \\
+$M_Z/M_W$ & $\sqrt{13/10}$ & \textbf{\proven{}} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1495,150 +1357,126 @@ $M_Z/M_W$ & $\sqrt{13/10}$ & \textbf{\proven} \\
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 \toprule
 Result & Formula & Status \\
 \midrule
-$\Omega_{\mathrm{DE}} = 0.686$ & $\ln(2) \times 98/99$ & \textbf{\proven} \\
-$n_s = 0.9649$ & $\zeta(11)/\zeta(5)$ & \textbf{\proven} \\
-$\Delta H_0 = 6$ & $2 \times N_{\mathrm{gen}}$ & \textbf{\theoretical} \\
+$\Omega_{\DE} = 0.686$ & $\ln(2) \times 98/99$ & \textbf{\proven{}} \\
+$n_s = 0.9649$ & $\zeta(11)/\zeta(5)$ & \textbf{\proven{}} \\
+$\Delta H_0 = 6$ & $2 \times N_{\mathrm{gen}}$ & \textbf{\theoretical{}} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\newpage
-
-% ============================================
 \section{Main Equations}
-% ============================================
 
 \textbf{Torsional connection}:
-\[
-\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}
-\]
+$$\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}$$
 
 \textbf{Geodesic equation}:
-\[
-\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}
-\]
+$$\frac{d^2 x^k}{d\lambda^2} = \frac{1}{2} g^{kl} T_{ijl} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda}$$
 
 \textbf{Scale bridge}:
-\[
-m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln(\phi)))
-\]
+$$m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln(\phi)))$$
 
 \textbf{Topological torsion}:
-\[
-\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{61}
-\]
+$$\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{61}$$
 
 \textbf{Dark energy}:
-\[
-\Omega_{\mathrm{DE}} = \ln(2) \times \frac{H^* - 1}{H^*} = 0.6861
-\]
+$$\Omega_{\DE} = \ln(2) \times \frac{H^* - 1}{H^*} = 0.6861$$
 
 \textbf{Hubble values}:
-\[
-H_0^{\mathrm{CMB}} = b_3 - 2 \times \Weyl = 67
-\]
-\[
-H_0^{\mathrm{Local}} = b_3 - p_2^2 = 73
-\]
+$$H_0^{\text{CMB}} = b_3 - 2 \times \Weyl = 67$$
+$$H_0^{\text{Local}} = b_3 - p_2^2 = 73$$
 
-\newpage
+\section*{Status Summary}
 
-% ============================================
-\section{Limitations and Open Questions}
-% ============================================
-
-\subsection{What is \proven}
-
-\begin{itemize}
-\item $\kappa_T = 1/61$ from cohomology
-\item $\det(g) = 65/32$ from topology
-\item Scale exponent integer part: $52 = H^* - L_8$
-\item All dimensionless ratios in S2
-\item Lepton mass ratios
-\item Cosmological parameters
-\end{itemize}
-
-\subsection{What is \theoretical}
-
-\begin{itemize}
-\item RG flow identification $\lambda = \ln(\mu)$
-\item Torsion component values ($T_{ij,k}$)
-\item Hubble tension interpretation
-\item Full scale bridge formula ($\ln(\phi)$ term)
-\end{itemize}
-
-\subsection{What is \exploratory}
-
-\begin{itemize}
-\item Neutrino individual masses
-\item Quark absolute masses (deferred)
-\item Torsion flow conjecture
-\end{itemize}
-
-\subsection{Open Questions}
-
-\begin{enumerate}
-\item \textbf{Selection principle}: Why this specific $\Kseven$ topology?
-\item \textbf{RG derivation}: First-principles connection to $\beta$-functions
-\item \textbf{Torsion classes}: Which $W_i$ components are non-zero?
-\item \textbf{Dark sector}: Physical interpretation of hidden $\E_8$
-\end{enumerate}
-
-\newpage
-
-% ============================================
-\section*{References}
-\addcontentsline{toc}{section}{References}
-% ============================================
-
-[1] Cartan, E., Sur les variétés à connexion affine, Ann. Sci. ENS \textbf{40}, 325 (1923)
-
-[2] Joyce, D.D., Compact Manifolds with Special Holonomy, Oxford University Press (2000)
-
-[3] Karigiannis, S., Flows of $\Gtwo$-structures, Q. J. Math. \textbf{60}, 487 (2009)
-
-[4] Planck Collaboration (2020), Cosmological parameters
-
-[5] DESI Collaboration (2025), DR2 cosmological constraints
-
-[6] Riess, A. et al. (2022), Local $H_0$ measurement
-
-[7] Particle Data Group (2024), Review of Particle Physics
-
-\newpage
-
-% ============================================
-\section*{Navigation}
-\addcontentsline{toc}{section}{Navigation}
-% ============================================
+\subsection*{What is \proven{} (S2)}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lp{8cm}}
+\begin{tabular}{lll}
 \toprule
-Document & Content \\
+Result & Formula & Confidence \\
 \midrule
-\textbf{Main} & Overview and predictions catalog \\
-\textbf{S1} & $\E_8$, $\Gtwo$, $\Kseven$ construction details \\
-\textbf{S2} & Complete proofs of 18 relations \\
-\textbf{S3} & \textit{This document} \\
+18 dimensionless predictions & See S2 & \proven{}/\topomark{} \\
+Analytical metric & $\varphi = (65/32)^{1/14} \times \varphi_0$ & \proven{} (Lean 4) \\
+Torsion for analytical form & $T = 0$ exactly & \proven{} \\
+Torsion capacity & $\kappa_T = 1/61$ & \topomark{} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Prerequisites}: S1 (topology), S2 (dimensionless derivations)
+\textbf{These do not depend on S3 content.}
+
+\subsection*{What is \theoretical{} (S3)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Result & Formula & Confidence \\
+\midrule
+RG flow identification & $\lambda = \ln(\mu)$ & Plausible analogy \\
+Geodesic equation & $\ddot{x} = \frac{1}{2}g^{kl}T_{ijl}\dot{x}^i\dot{x}^j$ & Mathematical \\
+Velocity bounds & $|v| < 0.7$ & Consistent \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Requires additional assumptions beyond topology.}
+
+\subsection*{What is \exploratory{} (S3)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Result & Precision & Confidence \\
+\midrule
+Scale bridge $m_e$ formula & 0.09\% & Low-moderate \\
+Lucas number selection & $L_8 = 47$ & Empirical \\
+Hubble dual values & 67, 73 & Speculative \\
+Age of universe & 13.8 Gyr & Speculative \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Working conjectures, not derived from first principles.}
+
+\subsection*{Open Questions}
+
+\begin{enumerate}
+\item \textbf{Selection principle}: Why these specific formulas from topology?
+\item \textbf{Torsion mechanism}: How do physical interactions emerge from $T = 0$ base?
+\item \textbf{Scale bridge derivation}: Can $\ln(\phi)$ appearance be explained geometrically?
+\item \textbf{Hidden $\E_8$}: Physical interpretation of second factor
+\end{enumerate}
+
+\begin{thebibliography}{99}
+
+\bibitem{cartan1923} Cartan, E., Sur les variétés à connexion affine, Ann. Sci. ENS \textbf{40}, 325 (1923)
+
+\bibitem{joyce2000} Joyce, D.D., Compact Manifolds with Special Holonomy, Oxford University Press (2000)
+
+\bibitem{karigiannis2009} Karigiannis, S., Flows of $\Gtwo$-structures, Q. J. Math. \textbf{60}, 487 (2009)
+
+\bibitem{planck2020} Planck Collaboration (2020), Cosmological parameters
+
+\bibitem{desi2025} DESI Collaboration (2025), DR2 cosmological constraints
+
+\bibitem{riess2022} Riess, A. et al. (2022), Local $H_0$ measurement
+
+\bibitem{pdg2024} Particle Data Group (2024), Review of Particle Physics
+
+\end{thebibliography}
+
 
 \vfill
-
-\begin{center}
-\rule{0.5\textwidth}{0.2pt}\\[1em]
-\textit{GIFT Framework v3.0 - Supplement S3}\\
+\noindent\rule{\textwidth}{0.2pt}
+\textit{GIFT Framework - Supplement S3}\\
 \textit{Dynamics and Scale Bridge}
-\end{center}
+
 
 \end{document}
 

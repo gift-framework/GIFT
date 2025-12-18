@@ -11,3 +11,6 @@ print(f'GIFT deviation: {data["reference_config"]["mean_deviation_percent"]}')
 print(f'Alt mean: {data["alternative_configs"]["mean_deviation_percent"]}')
 print(f'Alt std: {data["alternative_configs"]["std_deviation_percent"]}')
 print(f'Count: {data["alternative_configs"]["count"]}')
+
+
+
