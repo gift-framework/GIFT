@@ -22,19 +22,18 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 
 ## Main Documentation
 
-- [Main Paper](../publications/markdown/GIFT_v3_main.md) - Complete theoretical framework
-- [S1: Foundations](../publications/markdown/GIFT_v3_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
-- [S2: Derivations](../publications/markdown/GIFT_v3_S2_derivations.md) - 18 dimensionless derivations
-- [S3: Dynamics](../publications/markdown/GIFT_v3_S3_dynamics.md) - RG flow, torsional dynamics
+- [Main Paper](../publications/markdown/GIFT_v3.1_main.md) - Complete theoretical framework
+- [S1: Foundations](../publications/markdown/GIFT_v3.1_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
+- [S2: Derivations](../publications/markdown/GIFT_v3.1_S2_derivations.md) - 18 dimensionless derivations
+- [S3: Dynamics](../publications/markdown/GIFT_v3.1_S3_dynamics.md) - RG flow, torsional dynamics
 - [Observables CSV](../publications/references/39_observables.csv) - Machine-readable data
 
 ## Exploratory References
 
 | Document | Content |
 |----------|---------|
-| [Yukawa & Mixing](../publications/references/yukawa_mixing.md) | CKM/PMNS matrices |
-| [Sequences & Primes](../publications/references/sequences_prime_atlas.md) | Fibonacci, Prime Atlas |
-| [Monster & Moonshine](../publications/references/monster_moonshine.md) | Monster group, j-invariant |
+| [Number-Theoretic Structures](../publications/references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine |
+| [Speculative Physics](../publications/references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, QG |
 
 ## Legacy
 

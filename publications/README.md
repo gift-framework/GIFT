@@ -12,10 +12,10 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 ```
 publications/
 ├── markdown/                    # Core documents (v3.1)
-│   ├── GIFT_v3_main.md         # Main paper
-│   ├── GIFT_v3_S1_foundations.md   # E₈, G₂, K₇ foundations
-│   ├── GIFT_v3_S2_derivations.md   # 18 dimensionless derivations
-│   └── GIFT_v3_S3_dynamics.md      # RG flow, torsional dynamics
+│   ├── GIFT_v3.1_main.md         # Main paper
+│   ├── GIFT_v3.1_S1_foundations.md   # E₈, G₂, K₇ foundations
+│   ├── GIFT_v3.1_S2_derivations.md   # 18 dimensionless derivations
+│   └── GIFT_v3.1_S3_dynamics.md      # RG flow, torsional dynamics
 │
 ├── references/                  # Exploratory & reference docs
 │   ├── 39_observables.csv      # Machine-readable data
@@ -31,16 +31,16 @@ publications/
 
 ## Core Documents
 
-### [GIFT_v3_main.md](markdown/GIFT_v3_main.md)
+### [GIFT_v3.1_main.md](markdown/GIFT_v3.1_main.md)
 Complete theoretical framework - the main paper.
 
-### [GIFT_v3_S1_foundations.md](markdown/GIFT_v3_S1_foundations.md)
+### [GIFT_v3.1_S1_foundations.md](markdown/GIFT_v3.1_S1_foundations.md)
 Mathematical foundations: E₈ exceptional algebra, G₂ holonomy, K₇ manifold construction.
 
-### [GIFT_v3_S2_derivations.md](markdown/GIFT_v3_S2_derivations.md)
+### [GIFT_v3.1_S2_derivations.md](markdown/GIFT_v3.1_S2_derivations.md)
 All 18 dimensionless derivations with complete proofs.
 
-### [GIFT_v3_S3_dynamics.md](markdown/GIFT_v3_S3_dynamics.md)
+### [GIFT_v3.1_S3_dynamics.md](markdown/GIFT_v3.1_S3_dynamics.md)
 RG flow, torsional dynamics, scale bridge.
 
 ---

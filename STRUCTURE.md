@@ -9,10 +9,10 @@ GIFT/
 ├── publications/                     # Theoretical documents
 │   ├── README.md                    # Overview and reading guide
 │   ├── markdown/                    # Core documents (v3.1)
-│   │   ├── GIFT_v3_main.md         # Main paper
-│   │   ├── GIFT_v3_S1_foundations.md   # E₈, G₂, K₇ foundations
-│   │   ├── GIFT_v3_S2_derivations.md   # 18 dimensionless derivations
-│   │   └── GIFT_v3_S3_dynamics.md      # Torsional flow, scale bridge
+│   │   ├── GIFT_v3.1_main.md         # Main paper
+│   │   ├── GIFT_v3.1_S1_foundations.md   # E₈, G₂, K₇ foundations
+│   │   ├── GIFT_v3.1_S2_derivations.md   # 18 dimensionless derivations
+│   │   └── GIFT_v3.1_S3_dynamics.md      # Torsional flow, scale bridge
 │   ├── references/                  # Exploratory & reference docs
 │   │   ├── 39_observables.csv      # Machine-readable observables
 │   │   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
@@ -45,8 +45,8 @@ GIFT/
 | Looking for... | Go to |
 |----------------|-------|
 | Framework overview | `README.md` |
-| Complete theory | `publications/markdown/GIFT_v3_main.md` |
-| All derivations | `publications/markdown/GIFT_v3_S2_derivations.md` |
+| Complete theory | `publications/markdown/GIFT_v3.1_main.md` |
+| All derivations | `publications/markdown/GIFT_v3.1_S2_derivations.md` |
 | Observables data | `publications/references/39_observables.csv` |
 | Formal verification | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
@@ -56,10 +56,10 @@ GIFT/
 
 | Document | Content |
 |----------|---------|
-| GIFT_v3_main.md | Complete theoretical framework |
-| GIFT_v3_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
-| GIFT_v3_S2_derivations.md | 18 dimensionless derivations with proofs |
-| GIFT_v3_S3_dynamics.md | Torsional dynamics, scale bridge |
+| GIFT_v3.1_main.md | Complete theoretical framework |
+| GIFT_v3.1_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
+| GIFT_v3.1_S2_derivations.md | 18 dimensionless derivations with proofs |
+| GIFT_v3.1_S3_dynamics.md | Torsional dynamics, scale bridge |
 
 ## Exploratory References
 

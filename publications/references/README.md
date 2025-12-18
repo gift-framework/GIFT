@@ -50,10 +50,10 @@ Exploratory and reference documents for the GIFT framework v3.1.
 ## Core Documents
 
 For the main framework documents, see [`../markdown/`](../markdown/):
-- [GIFT_v3_main.md](../markdown/GIFT_v3_main.md) - Main paper
-- [GIFT_v3_S1_foundations.md](../markdown/GIFT_v3_S1_foundations.md) - Foundations
-- [GIFT_v3_S2_derivations.md](../markdown/GIFT_v3_S2_derivations.md) - Derivations
-- [GIFT_v3_S3_dynamics.md](../markdown/GIFT_v3_S3_dynamics.md) - Dynamics
+- [GIFT_v3.1_main.md](../markdown/GIFT_v3.1_main.md) - Main paper
+- [GIFT_v3.1_S1_foundations.md](../markdown/GIFT_v3.1_S1_foundations.md) - Foundations
+- [GIFT_v3.1_S2_derivations.md](../markdown/GIFT_v3.1_S2_derivations.md) - Derivations
+- [GIFT_v3.1_S3_dynamics.md](../markdown/GIFT_v3.1_S3_dynamics.md) - Dynamics
 
 ---
 

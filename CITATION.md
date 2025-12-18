@@ -58,7 +58,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.1: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2025},
   howpublished = {GIFT Framework v3.1},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3_main.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.1_main.md}
 }
 ```
 
@@ -70,7 +70,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.1: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2025},
   howpublished = {GIFT Framework v3.1, Supplement S1},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3_S1_foundations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.1_S1_foundations.md}
 }
 ```
 
@@ -82,7 +82,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.1: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2025},
   howpublished = {GIFT Framework v3.1, Supplement S2},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3_S2_derivations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.1_S2_derivations.md}
 }
 ```
 
@@ -99,7 +99,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.1: Geometric Information Field Theo
   year         = {2025},
   howpublished = {GIFT Framework v3.1},
   note         = {Formula: δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3_S2_derivations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.1_S2_derivations.md}
 }
 ```
 
@@ -112,7 +112,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.1: Geometric Information Field Theo
   year         = {2025},
   howpublished = {GIFT Framework v3.1},
   note         = {Formula: sin²θ_W = b₂/(b₃ + dim(G₂)) = 21/91 = 3/13},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3_S2_derivations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.1_S2_derivations.md}
 }
 ```
 
@@ -125,7 +125,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.1: Geometric Information Field Theo
   year         = {2025},
   howpublished = {GIFT Framework v3.1},
   note         = {N_gen = 3 from Atiyah-Singer index theorem on K₇},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3_S1_foundations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.1_S1_foundations.md}
 }
 ```
 
