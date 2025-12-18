@@ -26,7 +26,7 @@
 
 | Paper | Proofs | Video |
 |:-----:|:------:|:-----:|
-| [Main Paper](publications/markdown/GIFT_v3_main.md) | [Lean 4 + Coq](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
+| [Main Paper](publications/markdown/GIFT_v3.1_main.md) | [Lean 4 + Coq](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
 
 ---
 
@@ -36,10 +36,10 @@
 
 | Document | Description |
 |----------|-------------|
-| [Main Paper](publications/markdown/GIFT_v3_main.md) | Complete theoretical framework |
-| [S1: Foundations](publications/markdown/GIFT_v3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/markdown/GIFT_v3_S2_derivations.md) | All 18 dimensionless derivations (0.087% mean) |
-| [S3: Dynamics](publications/markdown/GIFT_v3_S3_dynamics.md) | RG flow, torsional dynamics |
+| [Main Paper](publications/markdown/GIFT_v3.1_main.md) | Complete theoretical framework |
+| [S1: Foundations](publications/markdown/GIFT_v3.1_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations](publications/markdown/GIFT_v3.1_S2_derivations.md) | All 18 dimensionless derivations (0.087% mean) |
+| [S3: Dynamics](publications/markdown/GIFT_v3.1_S3_dynamics.md) | RG flow, torsional dynamics |
 
 ### For Specific Audiences
 
@@ -156,7 +156,7 @@ Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S2 Section 10](publications/markdown/GIFT_v3_S2_derivations.md)
+Details: [S2 Section 10](publications/markdown/GIFT_v3.1_S2_derivations.md)
 
 ---
 
@@ -213,7 +213,7 @@ Their appearance suggests structural rather than coincidental relationships.
 
 | Archive | |
 |---------|---|
-| Zenodo | [10.5281/zenodo.17901945](https://doi.org/10.5281/zenodo.17901945) |
+| Zenodo | [10.5281/zenodo.17751250](https://doi.org/10.5281/zenodo.17751250) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
@@ -221,12 +221,12 @@ Their appearance suggests structural rather than coincidental relationships.
 ## Citation
 
 ```bibtex
-@software{gift_framework_v30,
-  title   = {GIFT Framework v3.0: Geometric Information Field Theory},
+@software{gift_framework_v31,
+  title   = {GIFT Framework v3.1: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
   year    = {2025},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.0.0}
+  version = {3.1.1}
 }
 ```
 
