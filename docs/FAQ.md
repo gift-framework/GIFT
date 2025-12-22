@@ -39,7 +39,7 @@ The framework is evaluated based on:
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**GIFT v3.0**: Zero continuous adjustable parameters
+**GIFT v3.1**: Zero continuous adjustable parameters
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all predictions.
 
@@ -115,7 +115,7 @@ See Supplement S1 for complete mathematical details.
 
 ### What observables does GIFT predict?
 
-**18 dimensionless predictions** (v3.0 core set):
+**18 dimensionless predictions** (v3.1 core set):
 
 - 3 gauge couplings (α, sin²θ_W, α_s)
 - 1 generation number (N_gen = 3)
@@ -161,7 +161,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.087% across 18 dimensionless predictions (v3.0)
+**Overall**: Mean 0.087% across 18 dimensionless predictions (v3.1)
 
 See Supplement S5 for detailed statistical analysis.
 
@@ -351,15 +351,15 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.0) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.1.7) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
-@software{gift_framework_v23_2025,
-  title={GIFT Framework v3.0: Geometric Information Field Theory},
-  author={{Brieuc de La Fournière}},
+@software{gift_framework_v31,
+  title={GIFT Framework v3.1: Geometric Information Field Theory},
+  author={de La Fournière, Brieuc},
   year={2025},
   url={https://github.com/gift-framework/GIFT},
-  version={2.2.0}
+  version={3.1.7}
 }
 ```
 
