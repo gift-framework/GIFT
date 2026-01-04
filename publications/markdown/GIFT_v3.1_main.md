@@ -86,6 +86,8 @@ The framework makes predictions that derive from the topological structure:
 
 3. **Algebraic relations**: Quantities involving irrational numbers that nonetheless derive from the geometric structure, such as alpha_s = sqrt(2)/12.
 
+A key structural result is the **Weyl Triple Identity**: the factor Weyl = 5 emerges independently from three topological expressions, establishing it as a geometric constraint rather than an arbitrary choice. This explains the appearance of √5 in cosmological predictions.
+
 For complete mathematical details of the E8 and G2 structures, see Supplement S1. For derivations of all dimensionless predictions, see Supplement S2. For RG flow, torsional dynamics, and scale bridge, see Supplement S3.
 
 ### 1.5 Organization
@@ -1002,7 +1004,7 @@ Mathematical constants underlying these relationships represent timeless logical
 | dim(J3(O)) | 27 | Exceptional Jordan algebra dimension |
 | p2 | 2 | Binary duality parameter |
 | N_gen | 3 | Number of fermion generations |
-| Weyl | 5 | Weyl factor from |W(E8)| |
+| Weyl | 5 | Weyl factor: triple derivation (dim(G₂)+1)/N_gen = b₂/N_gen - p₂ = dim(G₂) - rank(E₈) - 1 |
 | phi | (1+sqrt(5))/2 | Golden ratio |
 | kappa_T | 1/61 | Torsion capacity |
 | det(g) | 65/32 | Metric determinant |

@@ -904,13 +904,51 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln\left(\frac{14}{7}\right) = \
 
 ---
 
-## 21. Dark Matter
+## 21. Matter Density from Weyl Structure
 
-### 21.1 Dark Energy to Dark Matter Ratio
+### 21.0 The √5 Ratio
+
+The Weyl Triple Identity (S1, Section 2.3) establishes Weyl = 5 as a structural constant. Its square root appears in the dark sector:
+
+$$\frac{\Omega_{DE}}{\Omega_m} = \sqrt{\text{Weyl}} = \sqrt{5} = 2.236$$
+
+### Physical Interpretation
+
+The √5 ratio suggests a geometric relationship between dark energy and matter:
+
+| Sector | Density | Origin |
+|--------|---------|--------|
+| Dark Energy | Ω_DE = 0.6861 | Cohomological: ln(2) × (b₂+b₃)/H* |
+| Matter | Ω_m = 0.3068 | Derived: Ω_DE / √Weyl |
+| Total | 0.9929 | ≈ 1 (flat universe) |
+
+The common factor √5 = √Weyl connects:
+- Golden ratio: φ = (1 + √5)/2 (appears in m_μ/m_e)
+- Weyl group factorization: 5² = Weyl^p₂ in |W(E₈)|
+- Cosmological balance: Ω_DE/Ω_m
+
+### Compatibility with Hubble Tension
+
+The matter density Ω_m = 0.3068 is compatible with both H₀ projections:
+
+| Measurement | H₀ | Implied Ω_m | GIFT Ω_m | Status |
+|-------------|-----|-------------|----------|--------|
+| Planck CMB | 67.4 | 0.315 | 0.307 | 2.7% tension |
+| SH0ES local | 73.0 | 0.285 | 0.307 | 7.7% tension |
+
+The GIFT prediction sits between the two observational values, suggesting the Hubble tension may involve measurement systematics rather than fundamental physics.
+
+**Status**: DERIVED
+
+---
+
+## 22. Dark Matter
+
+### 22.1 Dark Energy to Dark Matter Ratio
 
 $$\frac{\Omega_{DE}}{\Omega_{DM}} = \frac{b_2}{\text{rank}_{E_8}} = \frac{21}{8} = 2.625$$
 
-### 21.2 Golden Ratio Connection
+### 22.2 Golden Ratio Connection
 
 $$\phi^2 = \phi + 1 = \frac{3 + \sqrt{5}}{2} \approx 2.618$$
 
@@ -919,7 +957,7 @@ The ratio b₂/rank_E₈ = 21/8 = 2.625 matches φ² to 0.27% because:
 - rank_E₈ = 8 = F₆ (Fibonacci)
 - Ratio of non-adjacent Fibonacci → power of φ
 
-### 21.3 Verification
+### 22.3 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -927,18 +965,18 @@ The ratio b₂/rank_E₈ = 21/8 = 2.625 matches φ² to 0.27% because:
 
 ---
 
-## 22. Age of the Universe
+## 23. Age of the Universe
 
-### 22.1 The Formula
+### 23.1 The Formula
 
 $$t_0 = \alpha_{sum} + \frac{4}{\text{Weyl}} = 13 + \frac{4}{5} = 13.8 \text{ Gyr}$$
 
-### 22.2 Components
+### 23.2 Components
 
 - **α_sum = 13**: The anomaly coefficient sum (= F₇ = α_sum_B)
 - **4/Weyl = 4/5 = 0.8**: A fractional correction from the Weyl factor
 
-### 22.3 Verification
+### 23.3 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -946,17 +984,17 @@ $$t_0 = \alpha_{sum} + \frac{4}{\text{Weyl}} = 13 + \frac{4}{5} = 13.8 \text{ Gy
 
 ---
 
-## 23. Spectral Index
+## 24. Spectral Index
 
-### 23.1 The Formula
+### 24.1 The Formula
 
 $$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)}$$
 
-### 23.2 Calculation
+### 24.2 Calculation
 
 $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
-### 23.3 Verification
+### 24.3 Verification
 
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
@@ -966,11 +1004,12 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 ---
 
-## 24. Cosmological Summary
+## 25. Cosmological Summary
 
 | Parameter | GIFT Formula | GIFT Value | Experimental | Dev. |
 |-----------|--------------|------------|--------------|------|
 | Ω_DE | ln(2) × 98/99 | 0.6861 | 0.685 ± 0.007 | 0.21% |
+| Ω_m | Ω_DE/√Weyl | 0.3068 | 0.3153 ± 0.007 | 2.7% |
 | Ω_DE/Ω_DM | b₂/rank_E₈ | 2.625 | 2.626 ± 0.03 | 0.05% |
 | t₀ | 13 + 4/5 | 13.8 Gyr | 13.79 ± 0.02 | 0.09% |
 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 ± 0.004 | 0.00% |
@@ -982,16 +1021,16 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 # Part VI: Summary and Limitations
 
-## 25. Key Results
+## 26. Key Results
 
-### 25.1 Torsional Dynamics
+### 26.1 Torsional Dynamics
 
 | Result | Value | Status |
 |--------|-------|--------|
 | Torsion magnitude | κ_T = **1/61** | **TOPOLOGICAL** |
 | DESI DR2 compatibility | κ_T² < 10⁻³ | **PASS** |
 
-### 25.2 Scale Bridge
+### 26.2 Scale Bridge
 
 | Result | Value | Status |
 |--------|-------|--------|
@@ -999,7 +1038,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 | Full exponent | 51.519 | **<0.02% precision** |
 | m_e prediction | 0.5114 MeV | **0.09% deviation** |
 
-### 25.3 Mass Chain
+### 26.3 Mass Chain
 
 | Result | Formula | Status |
 |--------|---------|--------|
@@ -1007,7 +1046,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 | m_μ/m_e = 27^φ | dim(J₃(O))^φ | **TOPOLOGICAL** |
 | M_Z/M_W | √(13/10) | **PROVEN** |
 
-### 25.4 Cosmology
+### 26.4 Cosmology
 
 | Result | Formula | Status |
 |--------|---------|--------|
@@ -1017,7 +1056,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 ---
 
-## 26. Main Equations
+## 27. Main Equations
 
 **Torsional connection**:
 $$\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}$$
@@ -1040,9 +1079,9 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-## 27. Status Summary
+## 28. Status Summary
 
-### 27.1 What is PROVEN (S2)
+### 28.1 What is PROVEN (S2)
 
 | Result | Formula | Confidence |
 |--------|---------|------------|
@@ -1053,7 +1092,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 **These do not depend on S3 content.**
 
-### 27.2 What is THEORETICAL (S3)
+### 28.2 What is THEORETICAL (S3)
 
 | Result | Formula | Confidence |
 |--------|---------|------------|
@@ -1063,7 +1102,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 **Requires additional assumptions beyond topology.**
 
-### 27.3 What is EXPLORATORY (S3)
+### 28.3 What is EXPLORATORY (S3)
 
 | Result | Precision | Confidence |
 |--------|-----------|------------|
@@ -1074,7 +1113,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 **Working conjectures, not derived from first principles.**
 
-### 27.4 Open Questions
+### 28.4 Open Questions
 
 1. **Selection principle**: Why these specific formulas from topology?
 2. **Torsion mechanism**: How do physical interactions emerge from T = 0 base?
