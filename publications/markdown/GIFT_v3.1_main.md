@@ -792,7 +792,7 @@ Unlike many approaches to fundamental physics, GIFT makes sharp, testable predic
 
 ### 14.4 Mathematical Rigor
 
-The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. Over 180 relations have been verified in Lean 4, providing machine-checked confirmation of algebraic claims.
+The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. 185 relations have been verified in Lean 4 (core v3.1.12), providing machine-checked confirmation of algebraic claims. The E₈ root system is fully proven (12/12 theorems), including `E8_basis_generates` now a theorem rather than axiom.
 
 ---
 
