@@ -143,6 +143,56 @@ $$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim
 
 ---
 
+## 2.3 Triple Derivation of Weyl = 5
+
+**Theorem**: The Weyl factor admits three independent derivations from topological invariants.
+
+### Derivation 1: G₂ Dimensional Ratio
+
+$$\text{Weyl} = \frac{\dim(G_2) + 1}{N_{gen}} = \frac{14 + 1}{3} = \frac{15}{3} = 5$$
+
+**Interpretation**: The holonomy dimension plus unity, distributed over generations.
+
+### Derivation 2: Betti Reduction
+
+$$\text{Weyl} = \frac{b_2}{N_{gen}} - p_2 = \frac{21}{3} - 2 = 7 - 2 = 5$$
+
+**Interpretation**: The per-generation Betti contribution minus binary duality.
+
+### Derivation 3: Exceptional Difference
+
+$$\text{Weyl} = \dim(G_2) - \text{rank}(E_8) - 1 = 14 - 8 - 1 = 5$$
+
+**Interpretation**: The gap between holonomy dimension and gauge rank, reduced by unity.
+
+### Unified Identity
+
+These three derivations establish the **Weyl Triple Identity**:
+
+$$\boxed{\frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) - \text{rank}(E_8) - 1 = 5}$$
+
+**Status**: PROVEN (algebraic identity from GIFT constants)
+
+### Verification
+
+| Expression | Computation | Result |
+|------------|-------------|--------|
+| (dim(G₂) + 1) / N_gen | (14 + 1) / 3 | 5 |
+| b₂/N_gen - p₂ | 21/3 - 2 | 5 |
+| dim(G₂) - rank(E₈) - 1 | 14 - 8 - 1 | 5 |
+
+### Significance
+
+The triple convergence indicates Weyl = 5 is not an arbitrary choice but a **structural constraint** of E₈×E₈/G₂/K₇ geometry. This explains:
+
+1. **det(g) = 65/32**: Via Weyl × (rank(E₈) + Weyl) / 2^Weyl = 5 × 13 / 32
+2. **|W(E₈)| factorization**: The factor 5² = Weyl^p₂ in prime decomposition
+3. **Cosmological ratio**: √Weyl = √5 appears in dark sector (see S3)
+
+**Status**: PROVEN (three independent derivations)
+
+---
+
 ## 3. Exceptional Chain
 
 ### 3.1 The Pattern
@@ -431,6 +481,8 @@ The G₂ metric on K₇ is exactly:
 $$\varphi = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
 $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 
+**Important clarification**: This metric representation holds in a local G₂-adapted orthonormal frame. The manifold K₇ constructed via TCS is curved and compact; "I₇" reflects the frame choice, not global flatness.
+
 | Property | Value | Status |
 |----------|-------|--------|
 | det(g) | 65/32 | EXACT |
@@ -460,6 +512,16 @@ Physics-Informed Neural Network provides independent numerical validation:
 The PINN converges to the standard form, validating the analytical solution.
 
 ### 11.4 Lean 4 Formalization
+
+**Scope of verification**: The Lean formalization verifies:
+1. Arithmetic identities (e.g., 14/21 = 2/3)
+2. Algebraic relations between GIFT constants
+3. Numerical bounds (e.g., torsion threshold)
+
+It does **not** formalize:
+- Existence of K₇ as a smooth G₂ manifold
+- Physical interpretation of topological invariants
+- Uniqueness of the TCS construction
 
 ```lean
 -- GIFT.Foundations.AnalyticalMetric
@@ -572,6 +634,7 @@ This supplement establishes the mathematical foundations:
 
 **Part I - E₈ Architecture**:
 - Weyl group factorization into GIFT constants
+- **Weyl Triple Identity**: Weyl = 5 from three independent derivations
 - Exceptional chain theorem
 - Octonionic structure
 
