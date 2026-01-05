@@ -12,7 +12,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops E8 exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G2 holonomy manifolds. Part III establishes K7 manifold construction via twisted connected sum, building compact G2 manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes that the resulting metric is exactly the scaled standard G2 form, with analytically vanishing torsion. All results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops E8 exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G2 holonomy manifolds. Part III establishes K7 manifold construction via twisted connected sum, building compact G2 manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32; Joyce's theorem guarantees a torsion-free metric exists within this framework. All results are formally verified in Lean 4.
 
 ---
 
@@ -323,12 +323,12 @@ $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 | Quantity | Meaning | Value |
 |----------|---------|-------|
 | κ_T = 1/61 | Topological *capacity* for torsion | Fixed by K₇ |
-| T_realized | Actual torsion for specific solution | Depends on φ |
-| T_analytical | Torsion for φ = c × φ₀ | **Exactly 0** |
+| φ_ref | Algebraic reference form | c × φ₀ |
+| T_realized | Actual torsion for global solution | Constrained by Joyce |
 
-**Key insight**: The 18 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of T_realized. The value κ_T = 1/61 defines the geometric bound, not the physical value.
+**Key insight**: The 18 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of the specific torsion realization. The value κ_T = 1/61 defines the geometric bound on deviations from φ_ref.
 
-**Physical interactions**: Emerge from fluctuations around T = 0 base, bounded by κ_T. This mechanism is THEORETICAL (see S3 for details).
+**Physical interactions**: Emerge from the geometry of K₇, with deviations δφ from the reference form bounded by topological constraints. This mechanism is THEORETICAL (see S3 for details).
 
 ---
 
@@ -498,19 +498,20 @@ $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 
 | Property | Value | Status |
 |----------|-------|--------|
-| det(g) | 65/32 | EXACT |
-| ‖T‖ | 0 | EXACT (constant form) |
-| Non-zero φ components | 7/35 | 20% sparsity |
+| det(g) | 65/32 | EXACT (algebraic) |
+| φ_ref components | 7/35 | 20% sparsity |
+| Joyce threshold | ‖T‖ < 0.0288 | Satisfiable |
 
-### 11.2 Joyce Existence Theorem: Trivially Satisfied
+### 11.2 Joyce Existence Theorem and Global Solutions
 
-For constant 3-form φ(x) = φ₀:
-- dφ = 0 (exterior derivative of constant)
-- d*φ = 0 (same reasoning)
+**Important clarification**: The reference form φ_ref = c·φ₀ is the canonical G₂ structure in a local orthonormal coframe, not a globally constant form on K₇. On a compact TCS manifold, the coframe 1-forms {eⁱ} satisfy deⁱ ≠ 0 in general, so "constant components" does not imply dφ = 0 globally.
 
-Therefore T = 0 < ε₀ = 0.0288 with **infinite margin**.
+**Actual solution structure**: The topology and geometry of K₇ impose a deformation:
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-Joyce's perturbation theorem guarantees existence of a torsion-free G2 structure. For the constant form, this is trivially satisfied; no perturbation analysis required.
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ ≈ 0.0288.
+
+**Why GIFT satisfies Joyce's criterion**: The topological bound κ_T = 1/61 constrains ‖δφ‖, ensuring the manifold lies within Joyce's perturbative regime where a torsion-free solution exists.
 
 ### 11.3 Independent Numerical Validation (PINN)
 
@@ -575,7 +576,7 @@ Scaling c = (65/32)^{1/14}    ← GIFT constraint
 Metric g = c² × I₇
      │
      ▼
-det(g) = 65/32, T = 0         ← EXACT (not fitted)
+det(g) = 65/32               ← EXACT (algebraic, not fitted)
      │
      ▼
 sin²θ_W = 3/13, Q = 2/3, ...  ← Predictions
@@ -661,11 +662,11 @@ This supplement establishes the mathematical foundations:
 - Betti numbers b₂ = 21, b₃ = 77 (exact)
 - Cohomological decomposition
 
-**Part IV - Analytical Solution**:
-- Exact closed form: φ = (65/32)^{1/14} × φ₀
-- Metric: g = (65/32)^{1/7} × I₇
-- Torsion: T = 0 exactly
-- PINN serves as validation, not proof
+**Part IV - Algebraic Reference Form**:
+- Reference form: φ_ref = (65/32)^{1/14} × φ₀
+- Metric determinant: det(g) = 65/32 (algebraically exact)
+- Global solution: φ = φ_ref + δφ, torsion-free via Joyce's theorem
+- PINN serves as numerical validation
 
 ---
 

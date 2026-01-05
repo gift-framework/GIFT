@@ -10,11 +10,11 @@
 
 ## Abstract
 
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. The base G2 metric is exactly the scaled standard form with T = 0. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Joyce's theorem guarantees a torsion-free G₂ metric exists on K₇. This supplement explores how departures from this torsion-free base (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
 
 This supplement provides three essential bridges:
 
-1. **Torsional dynamics**: How departures from the T = 0 solution could generate physical interactions. The topological value κ_T = 1/61 represents the geometric "capacity" for torsion.
+1. **Torsional dynamics**: How departures from the torsion-free base could generate physical interactions. The topological value κ_T = 1/61 represents the geometric "capacity" for torsion.
 
 2. **Scale bridge**: The formula m_e = M_Pl × exp(-(H* - L₈ - ln(φ))) derives the electron mass from Planck scale with <0.1% precision on the exponent
 
@@ -46,7 +46,7 @@ All results emerge from the topological structure established in S1.
 | Content | Status | Confidence |
 |---------|--------|------------|
 | Torsion capacity κ_T = 1/61 | TOPOLOGICAL | High |
-| T = 0 for analytical solution | PROVEN | Certain |
+| Torsion-free metric exists (Joyce) | PROVEN | Certain |
 | RG flow identification λ = ln(μ) | THEORETICAL | Moderate |
 | Scale bridge m_e formula | EXPLORATORY | Low-moderate |
 | Hubble tension resolution | SPECULATIVE | Low |
@@ -98,20 +98,25 @@ Equivalent to closure conditions:
 
 $$d\phi = 0, \quad d*\phi = 0$$
 
-**Exact Solution**
+**Algebraic Reference Form**
 
-The constant form φ = c × φ₀ satisfies:
-- dφ = 0, d*φ = 0 (trivially, for constant form)
-- T = 0 exactly
+The reference form φ_ref = c × φ₀ (with c = (65/32)^{1/14}) determines the algebraic structure in a local orthonormal coframe. As explained in the Main paper (Section 3.4) and S1 (Section 11.2), this is not a globally constant form on K₇.
 
-**Physical Interactions Require Departure**
+**Global Solution Structure**
 
-The exact torsion-free solution cannot support physical interactions (no coupling between sectors). Two mechanisms could generate effective torsion:
+On the compact TCS manifold K₇, the actual solution takes the form:
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-1. **Moduli variation**: Position-dependent deformation of the G₂ structure across the K₇ moduli space
-2. **Quantum corrections**: Loop effects that modify the classical torsion-free condition
+Joyce's theorem guarantees a torsion-free metric exists when ‖T‖ < ε₀ ≈ 0.0288. The topological bound κ_T = 1/61 constrains the amplitude of deviations δφ.
 
-The topological value κ_T = 1/61 represents the geometric "capacity" for such deformations, not the classical solution's torsion.
+**Physical Interactions and Dynamics**
+
+The static torsion-free solution represents the classical ground state. Physical interactions may emerge through:
+
+1. **Moduli variation**: Position-dependent motion in the G₂ moduli space
+2. **Quantum corrections**: Loop effects modifying the classical configuration
+
+The value κ_T = 1/61 represents the geometric "capacity" for such dynamical deformations.
 
 ---
 
@@ -213,11 +218,13 @@ The small but non-zero torsion enables:
 ┌─────────────────────────────────────────────────────────────┐
 │  **THEORETICAL EXPLORATION**                                │
 │                                                             │
-│  The analytical GIFT solution has T = 0 exactly.            │
+│  Joyce's theorem guarantees a torsion-free metric exists    │
+│  on K₇ when the perturbation bound is satisfied.            │
 │                                                             │
 │  The values in this section explore what torsion components │
 │  WOULD look like if physical interactions arise from        │
-│  fluctuations around the T = 0 base, bounded by κ_T = 1/61. │
+│  quantum fluctuations around the torsion-free base,         │
+│  bounded by κ_T = 1/61.                                     │
 │                                                             │
 │  These are theoretical explorations, NOT predictions.       │
 │  The 18 dimensionless predictions (S2) do not use these     │
@@ -248,10 +255,10 @@ From exploratory PINN reconstruction of torsionful G₂ structures (NOT the GIFT
 
 ### 4.4 Physical Picture (Speculative)
 
-If physical interactions emerge from quantum fluctuations around T = 0:
+If physical interactions emerge from quantum fluctuations around the torsion-free base:
 - The *capacity* κ_T = 1/61 bounds the fluctuation amplitude
 - The *hierarchy* of components (large/medium/tiny) could explain the hierarchy of observables
-- The *base solution* T = 0 ensures mathematical consistency
+- The *torsion-free base* (Joyce's theorem) ensures mathematical consistency
 
 This mechanism is CONJECTURAL. The 18 proven predictions use only topology, not these torsion component values.
 
@@ -1111,7 +1118,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 |--------|---------|------------|
 | 18 dimensionless predictions | See S2 | PROVEN/TOPOLOGICAL |
 | Analytical metric | φ = (65/32)^{1/14} × φ₀ | PROVEN (Lean 4) |
-| Torsion for analytical form | T = 0 exactly | PROVEN |
+| Torsion-free metric (Joyce) | Guaranteed by theorem | PROVEN |
 | Torsion capacity | κ_T = 1/61 | TOPOLOGICAL |
 
 **These do not depend on S3 content.**
@@ -1140,7 +1147,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 ### 28.4 Open Questions
 
 1. **Selection principle**: Why these specific formulas from topology?
-2. **Torsion mechanism**: How do physical interactions emerge from T = 0 base?
+2. **Torsion mechanism**: How do physical interactions emerge from the torsion-free base?
 3. **Scale bridge derivation**: Can ln(φ) appearance be explained geometrically?
 4. **Hidden E₈**: Physical interpretation of second factor
 

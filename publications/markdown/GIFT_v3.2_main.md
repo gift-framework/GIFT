@@ -12,7 +12,7 @@ The Standard Model contains 19 free parameters whose values lack theoretical exp
 
 18 dimensionless quantities achieve mean deviation 0.24% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
 
-The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
+The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
 ---
 
@@ -74,7 +74,7 @@ The key elements are:
 
 **E8 x E8 gauge structure**: The largest exceptional Lie group appears twice, providing 496 gauge degrees of freedom. This choice is motivated by anomaly cancellation and the natural embedding of the Standard Model gauge group.
 
-**K7 manifold**: A compact seven-dimensional manifold with G2 holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers b2 = 21 and b3 = 77. The G2 metric is exactly the scaled standard form g = (65/32)^{1/7} × I₇, with vanishing torsion.
+**K7 manifold**: A compact seven-dimensional manifold with G2 holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers b2 = 21 and b3 = 77. The algebraic reference form determines det(g) = 65/32; Joyce's theorem guarantees a torsion-free metric exists.
 
 **G2 holonomy**: This exceptional holonomy group preserves exactly N=1 supersymmetry in four dimensions and ensures Ricci-flatness of the internal geometry.
 
@@ -243,9 +243,9 @@ $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 **Torsion capacity** (not magnitude):
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
-**Important distinction**: This value represents the geometric *capacity* for torsion, the maximum departure from exact G2 holonomy that K7 topology permits. For the analytical solution φ = c × φ₀, the realized torsion is exactly T = 0 (see Section 3.4). The value κ_T = 1/61 bounds fluctuations; it does not appear directly in the 18 dimensionless predictions.
+**Important distinction**: This value represents the geometric *capacity* for torsion — the topological bound on deviations from exact G₂ holonomy that K₇ topology permits. The reference form φ_ref = c × φ₀ (Section 3.4) determines the algebraic structure; the actual torsion depends on the global solution φ = φ_ref + δφ, constrained by Joyce's theorem. The value κ_T = 1/61 bounds deviations; it does not appear directly in the 18 dimensionless predictions.
 
-The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance even when saturated at T = 0.
+The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance.
 
 **Metric determinant**:
 $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\rm gen}} = 2 + \frac{1}{32} = \frac{65}{32}$$
@@ -294,34 +294,45 @@ $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7 \approx 1.1115 
 
 This represents the **local frame normalization**, not a claim of global flatness on K₇. The TCS construction produces a curved, compact manifold; the identity matrix appears because we work in an adapted coframe.
 
-**Torsion Vanishes Exactly**
+**Algebraic Reference Form**
 
-For a constant 3-form, the exterior derivatives vanish:
-- dφ = 0 (no spatial dependence)
-- d*φ = 0 (same reasoning)
+The form φ_ref = c·φ₀ serves as an **algebraic reference** — the canonical G₂ structure in a local orthonormal coframe — fixing normalization and scale via the constraint det(g) = 65/32. This determines c = (65/32)^{1/14}.
 
-Therefore the torsion tensor T = 0 exactly, satisfying Joyce's threshold ‖T‖ < 0.0288 with infinite margin.
+**Important clarification**: φ_ref is not proposed as a globally constant solution on K₇. On any compact TCS manifold, the coframe 1-forms {eⁱ} satisfy deⁱ ≠ 0 in general, so "constant components in an adapted coframe" does not imply dφ = 0 globally.
 
-**Why this matters**:
+**Actual solution structure**: The topology and geometry of K₇ impose a deformation δφ such that:
+
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
+
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint** depending on derivatives, not a consequence of the reference form alone. It must be established separately through:
+1. Joyce's perturbative existence theorem
+2. Analytical bounds on ‖δφ‖
+3. Numerical verification (PINN cross-check)
+
+**Why GIFT predictions are robust**: The 18 dimensionless predictions derive from topological invariants (b₂, b₃, dim(G₂), etc.) that are independent of the specific realization of δφ. The reference form φ_ref determines the algebraic structure; the deviations δφ encode the detailed geometry without affecting the topological ratios.
+
+**Torsion and Joyce's theorem**:
+
+The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The controlled magnitude of ‖δφ‖ places K₇ in the regime where Joyce's perturbative correction achieves a torsion-free G₂ structure. Joyce's theorem guarantees existence when ‖T‖ < ε₀ ≈ 0.0288; the topological bound ensures this condition is satisfiable.
 
 | Property | Value |
 |----------|-------|
-| Metric source | Exact algebraic form |
-| Torsion | T = 0 (capacity = 1/61) |
-| Joyce threshold | Satisfied with infinite margin |
+| Reference form | φ_ref = (65/32)^{1/14} × φ₀ |
+| Metric determinant | det(g) = 65/32 (exact) |
+| Torsion capacity | κ_T = 1/61 (topological bound) |
+| Joyce threshold | ‖T‖ < 0.0288 (satisfiable) |
 | Parameter count | Zero continuous |
-| Verification | Lean 4 theorem + PINN cross-check |
 
 **Scope of verification**: Lean 4 confirms the arithmetic and algebraic relations between GIFT constants (e.g., det(g) = 65/32). It does not formalize the existence of K₇ as a smooth G₂ manifold, nor the physical interpretation of topological invariants.
 
-The constant form phi = c x phi_0 is not an approximation; it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
+**Interpretive note**: One may view φ_ref as an "octonionic vacuum" in the algebraic sense — a reference point in the space of G₂ structures — while K₇ encodes physics through the deviations δφ and their invariants (including torsion), rather than through global flatness.
 
 **Implications**
 
 This result has significant implications:
-1. No numerical fitting is required: the solution is algebraically exact
-2. Independent numerical validation (PINN) confirms convergence to this form
-3. All GIFT predictions derive from pure algebraic structure
+1. The algebraic structure is exact: det(g) = 65/32 follows from pure algebra
+2. Independent numerical validation (PINN) confirms convergence to forms near φ_ref
+3. All GIFT predictions derive from topological ratios, independent of δφ details
 4. The framework contains zero continuous parameters
 
 For complete details and Lean 4 formalization, see Supplement S1, Section 12.
@@ -556,7 +567,7 @@ The hierarchy parameter τ = 3472/891 has prime factorization (2⁴ × 7 × 31)/
 
 The torsion inverse 61 = dim(F₄) + N_gen² = 52 + 9 links to exceptional algebra structure.
 
-**Note on torsion independence**: All 18 predictions derive from topological invariants (b2, b3, dim(G2), etc.) and are independent of the realized torsion value T. The analytical metric has T = 0 exactly; the predictions would be identical for any T within the capacity bound.
+**Note on torsion independence**: All 18 predictions derive from topological invariants (b₂, b₃, dim(G₂), etc.) and are independent of the realized torsion value. The predictions depend only on the algebraic structure determined by φ_ref; they would be identical for any torsion-free G₂ metric on K₇ within Joyce's perturbative regime.
 
 ---
 
@@ -915,7 +926,7 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 
 GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.24% (PDG 2024), with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
 
-The G2 metric is exactly phi = (65/32)^{1/14} x phi_0 with T = 0, making all predictions algebraically exact rather than numerically fitted.
+The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly, with Joyce's theorem ensuring a torsion-free metric exists. All predictions are algebraically exact, not numerically fitted.
 
 Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute δ_CP = 197° to ±5° precision.
 

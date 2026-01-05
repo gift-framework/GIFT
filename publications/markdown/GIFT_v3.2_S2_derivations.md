@@ -56,7 +56,7 @@ Before presenting derivations, we clarify the logical structure:
 ### 0.4 Torsion Independence
 
 **Important**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
-- Predictions are identical whether T = 0 (analytical) or T = κ_T (capacity)
+- Predictions depend only on topology, not on the actual torsion value
 - The value κ_T = 1/61 is a topological bound, not a prediction ingredient
 
 ---
@@ -172,12 +172,12 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 | Quantity | Definition | Value |
 |----------|------------|-------|
 | κ_T | Topological capacity | 1/61 (fixed) |
-| T_analytical | Realized torsion for φ = c × φ₀ | **0** (exact) |
+| T_base | Torsion for torsion-free metric (Joyce) | **0** (by theorem) |
 | T_physical | Effective torsion for interactions | **Open question** |
 
 **Role in predictions**: κ_T appears in only one formula (α⁻¹, as a small correction term det(g)×κ_T ≈ 0.033). The other 17 predictions are independent of torsion capacity. It is primarily a structural parameter characterizing K₇, not a directly measured observable.
 
-**Compatibility**: T_analytical = 0 satisfies Joyce's bound (‖T‖ < 0.0288) with infinite margin.
+**Joyce's theorem**: Guarantees existence of a torsion-free metric on K₇ when perturbation bounds are satisfied.
 
 **Status**: TOPOLOGICAL (structural, not predictive) ∎
 
