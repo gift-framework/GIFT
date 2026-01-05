@@ -276,6 +276,8 @@ def test_betti_variations(n_configs: int = 10000, seed: int = 42) -> dict:
 
 def test_holonomy_variations() -> dict:
     """Test 2: Vary holonomy group (dim_G2)."""
+    ref_dev = compute_mean_deviation(compute_predictions(GIFT_REFERENCE))
+
     holonomies = [
         ('SU(2)', 3),
         ('SU(3)', 8),
@@ -286,6 +288,7 @@ def test_holonomy_variations() -> dict:
     ]
 
     results = []
+    better_count = 0
     for name, dim_g2 in holonomies:
         cfg = GIFTConfig(
             name=f"holonomy_{name}",
@@ -295,17 +298,22 @@ def test_holonomy_variations() -> dict:
         )
         preds = compute_predictions(cfg)
         dev = compute_mean_deviation(preds)
+        is_gift = dim_g2 == 14
         results.append({
             'holonomy': name,
             'dim_G2': dim_g2,
             'deviation': dev,
-            'is_gift': dim_g2 == 14
+            'is_gift': is_gift
         })
+        if dev < ref_dev and not is_gift:
+            better_count += 1
 
     return {
         'test_name': 'Holonomy variations',
+        'n_configs': len(results),
         'results': results,
-        'best': min(results, key=lambda x: x['deviation'])
+        'best': min(results, key=lambda x: x['deviation']),
+        'better_count': better_count
     }
 
 
@@ -314,6 +322,7 @@ def test_structural_variations() -> dict:
     ref_dev = compute_mean_deviation(compute_predictions(GIFT_REFERENCE))
 
     results = []
+    better_count = 0
     for p2 in range(1, 6):
         for weyl in range(2, 10):
             cfg = GIFTConfig(
@@ -323,12 +332,15 @@ def test_structural_variations() -> dict:
             )
             preds = compute_predictions(cfg)
             dev = compute_mean_deviation(preds)
+            is_gift = p2 == 2 and weyl == 5
             results.append({
                 'p2': p2,
                 'Weyl': weyl,
                 'deviation': dev,
-                'is_gift': p2 == 2 and weyl == 5
+                'is_gift': is_gift
             })
+            if dev < ref_dev and not is_gift:
+                better_count += 1
 
     best = min(results, key=lambda x: x['deviation'])
     return {
@@ -336,7 +348,9 @@ def test_structural_variations() -> dict:
         'n_configs': len(results),
         'ref_deviation': ref_dev,
         'best': best,
-        'gift_is_best': best['is_gift']
+        'gift_is_best': best['is_gift'],
+        'better_count': better_count,
+        'all_results': results
     }
 
 
@@ -522,8 +536,11 @@ def run_full_validation(verbose: bool = True) -> dict:
         results['tests']['combinatorial']['n_configs']
     )
 
+    # Count better configurations from ALL tests
     total_better = (
         results['tests']['betti']['better_count'] +
+        results['tests']['holonomy']['better_count'] +
+        results['tests']['structural']['better_count'] +
         results['tests']['combinatorial']['better_count']
     )
 
