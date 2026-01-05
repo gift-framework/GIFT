@@ -481,6 +481,8 @@ The G₂ metric on K₇ is exactly:
 $$\varphi = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
 $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 
+**Important clarification**: This metric representation holds in a local G₂-adapted orthonormal frame. The manifold K₇ constructed via TCS is curved and compact; "I₇" reflects the frame choice, not global flatness.
+
 | Property | Value | Status |
 |----------|-------|--------|
 | det(g) | 65/32 | EXACT |
@@ -510,6 +512,16 @@ Physics-Informed Neural Network provides independent numerical validation:
 The PINN converges to the standard form, validating the analytical solution.
 
 ### 11.4 Lean 4 Formalization
+
+**Scope of verification**: The Lean formalization verifies:
+1. Arithmetic identities (e.g., 14/21 = 2/3)
+2. Algebraic relations between GIFT constants
+3. Numerical bounds (e.g., torsion threshold)
+
+It does **not** formalize:
+- Existence of K₇ as a smooth G₂ manifold
+- Physical interpretation of topological invariants
+- Uniqueness of the TCS construction
 
 ```lean
 -- GIFT.Foundations.AnalyticalMetric
@@ -622,6 +634,7 @@ This supplement establishes the mathematical foundations:
 
 **Part I - E₈ Architecture**:
 - Weyl group factorization into GIFT constants
+- **Weyl Triple Identity**: Weyl = 5 from three independent derivations
 - Exceptional chain theorem
 - Octonionic structure
 

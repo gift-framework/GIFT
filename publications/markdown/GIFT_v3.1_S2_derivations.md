@@ -175,7 +175,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 | T_analytical | Realized torsion for φ = c × φ₀ | **0** (exact) |
 | T_physical | Effective torsion for interactions | **Open question** |
 
-**Role in predictions**: κ_T does NOT appear in any of the 18 dimensionless prediction formulas. It is a structural parameter characterizing K₇, not a physical observable.
+**Role in predictions**: κ_T appears in only one formula (α⁻¹, as a small correction term det(g)×κ_T ≈ 0.033). The other 17 predictions are independent of torsion capacity. It is primarily a structural parameter characterizing K₇, not a directly measured observable.
 
 **Compatibility**: T_analytical = 0 satisfies Joyce's bound (‖T‖ < 0.0288) with infinite margin.
 

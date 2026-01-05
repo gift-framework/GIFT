@@ -162,17 +162,17 @@ $$61 = \text{prime}(18)$$
 
 **Status**: TOPOLOGICAL (capacity, not realized value)
 
-### 2.4 Experimental Compatibility
+### 2.4 Compatibility with Cosmological Constraints
 
-**DESI DR2 (2025) constraints**:
-
-The DESI collaboration's second data release provides cosmological constraints on torsion-like modifications to gravity.
+Recent analyses using BAO data (including DESI DR2) to constrain Einstein-Cartan torsion models find bounds of order |T|² < 10⁻³ at 95% CL [Ref: specific torsion constraint papers, not "DESI collaboration" directly].
 
 | Quantity | Value |
 |----------|-------|
-| DESI bound | \|T\|² < 10⁻³ (95% CL) |
-| GIFT value | κ_T² = (1/61)² = 1/3721 ≈ 2.69 × 10⁻⁴ |
-| **Result** | **Well within bounds** |
+| Literature bound | |T|² < 10⁻³ (95% CL, Einstein-Cartan models) |
+| GIFT capacity | κ_T² = (1/61)² ≈ 2.69 × 10⁻⁴ |
+| **Status** | **Compatible** |
+
+**Caveat**: These bounds apply to specific torsion parameterizations. Direct comparison with GIFT's topological κ_T requires model-dependent assumptions.
 
 ---
 
@@ -797,6 +797,16 @@ $$\Sigma m_\nu = 0.0587 \text{ eV}$$
 
 ## 19. The Hubble Tension
 
+┌─────────────────────────────────────────────────────────────┐
+│  **SPECULATIVE CONTENT**                                    │
+│                                                             │
+│  The following interpretation of the Hubble tension as      │
+│  dual topological projections is exploratory. It is NOT     │
+│  part of the 18 PROVEN dimensionless predictions.           │
+│  Experimental validation would require independent          │
+│  confirmation of the proposed mechanism.                    │
+└─────────────────────────────────────────────────────────────┘
+
 ### 19.1 The Crisis
 
 Two measurement classes give systematically different H₀ values:
@@ -962,6 +972,20 @@ The ratio b₂/rank_E₈ = 21/8 = 2.625 matches φ² to 0.27% because:
 | Quantity | GIFT | Experimental | Deviation |
 |----------|------|--------------|-----------|
 | Ω_DE/Ω_DM | 2.625 | 2.626 ± 0.03 | **0.05%** |
+
+### 21.4 Connection between √5 and ln(2)
+
+Two distinct structures appear in cosmological predictions:
+
+| Observable | Structure | Origin |
+|------------|-----------|--------|
+| Ω_DE | ln(2) = ln(p₂) | Binary duality |
+| Ω_DE/Ω_DM ≈ φ² | φ² = (3+√5)/2 | Golden ratio from Weyl |
+
+The ratio Ω_DE/Ω_DM = 21/8 ≈ 2.625 ≈ φ² connects to √5 via:
+$$\phi^2 = \phi + 1 = \frac{3 + \sqrt{5}}{2}$$
+
+Thus √5 appears *indirectly* through the golden ratio in dark sector ratios, while ln(2) appears *directly* in absolute densities. Both structures derive from GIFT constants (Weyl = 5, p₂ = 2) but encode different geometric aspects: Weyl captures pentagonal/exceptional structure, while p₂ captures binary duality.
 
 ---
 

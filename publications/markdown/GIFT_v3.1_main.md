@@ -1,6 +1,6 @@
 # Geometric Information Field Theory: Topological Determination of Standard Model Parameters
 
-**Version**: 3.1
+**Version**: 3.2
 
 **Author**: Brieuc de La Fournière
 
@@ -171,6 +171,8 @@ The experimental status is unambiguous: no fourth generation has been observed a
 
 **Status**: PROVEN (Lean verified)
 
+**Note on Lean verification**: Lean 4 establishes arithmetic consistency and symbolic correctness of the derived relations. It verifies that given the topological inputs (b₂=21, b₃=77, dim(G₂)=14), the algebraic identities hold exactly. It does not constitute a proof of geometric existence or physical validity.
+
 ---
 
 ## 3. The K7 Manifold Construction
@@ -248,21 +250,23 @@ The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebr
 **Metric determinant**:
 $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\rm gen}} = 2 + \frac{1}{32} = \frac{65}{32}$$
 
-**Physical interpretation of b2 = 21**:
+**Heuristic interpretation of b₂ = 21**:
 
-The 21 harmonic 2-forms on K7 correspond to gauge field moduli. These decompose as:
-- 8 components for SU(3) color (gluons)
-- 3 components for SU(2) weak
-- 1 component for U(1) hypercharge
-- 9 components for hidden sector fields
+The 21 harmonic 2-forms on K₇ may be interpreted as gauge field moduli. A *suggestive* (not derived) decomposition:
+- 8 components ↔ SU(3) color
+- 3 components ↔ SU(2) weak
+- 1 component ↔ U(1) hypercharge
+- 9 components ↔ hidden sector
 
-**Physical interpretation of b3 = 77**:
+This mapping is motivational. The rigorous statement is simply: b₂(K₇) = 21 enters the topological formulas that match experiment.
 
-The 77 harmonic 3-forms correspond to chiral matter modes. The decomposition:
+**Heuristic interpretation of b₃ = 77**:
+
+The 77 harmonic 3-forms may be interpreted as chiral matter modes. A *suggestive* decomposition:
 - 35 local modes: C(7,3) = 35 forms on the fiber
-- 42 global modes: 2 x 21 from TCS structure
+- 42 global modes: 2 × 21 from TCS structure
 
-These 77 modes organize into 3 generations via the constraint N_gen = 3 derived above.
+Again, this interpretation is motivational. The rigorous statement is: b₃(K₇) = 77, and these 77 modes organize into 3 generations via the topological constraint N_gen = 3.
 
 ### 3.4 The Analytical G₂ Metric (Central Result)
 
@@ -282,9 +286,13 @@ To satisfy det(g) = 65/32, we scale φ₀ by:
 
 $$c = \left(\frac{65}{32}\right)^{1/14} \approx 1.0543$$
 
-The induced metric is then:
+**Induced metric in local orthonormal frame**:
+
+The associative 3-form φ induces a metric via the standard formula. In any local orthonormal coframe {e^i}, the scaled form φ = c·φ₀ yields:
 
 $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7 \approx 1.1115 \cdot I_7$$
+
+This represents the **local frame normalization**, not a claim of global flatness on K₇. The TCS construction produces a curved, compact manifold; the identity matrix appears because we work in an adapted coframe.
 
 **Torsion Vanishes Exactly**
 
@@ -303,6 +311,8 @@ Therefore the torsion tensor T = 0 exactly, satisfying Joyce's threshold ‖T‖
 | Joyce threshold | Satisfied with infinite margin |
 | Parameter count | Zero continuous |
 | Verification | Lean 4 theorem + PINN cross-check |
+
+**Scope of verification**: Lean 4 confirms the arithmetic and algebraic relations between GIFT constants (e.g., det(g) = 65/32). It does not formalize the existence of K₇ as a smooth G₂ manifold, nor the physical interpretation of topological invariants.
 
 The constant form phi = c x phi_0 is not an approximation; it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
 
@@ -609,8 +619,15 @@ The spectral index involves Riemann zeta values at bulk dimension (11) and Weyl 
 
 ### 10.1 Global Performance
 
+**Definition of mean deviation**:
+$$\bar{\delta} = \frac{1}{N} \sum_{i=1}^{N} \left| \frac{\text{GIFT}_i - \text{Exp}_i}{\text{Exp}_i} \right| \times 100\%$$
+
+where N = 18 dimensionless predictions (excluding structural integers without experimental comparison).
+
 - **Total predictions**: 18
-- **Mean deviation**: 0.087% across dimensionless ratios
+- **Mean deviation**: 0.087%
+- **Median deviation**: 0.06%
+- **Maximum deviation**: 0.368% (θ₁₃)
 - **Exact matches**: 4 (N_gen, delta_CP, m_s/m_d, n_s)
 - **Sub-0.01% deviation**: 3 (Q_Koide, m_tau/m_e, n_s)
 - **Sub-0.1% deviation**: 6
@@ -654,6 +671,8 @@ Critically, this validation uses the **actual topological formulas** to compute 
 | Second-best deviation | 0.50% (b₂=21, b₃=76) |
 | Improvement factor | **2.2×** |
 | GIFT percentile | **99.99%** |
+
+**Note**: The statistical scan uses a reduced set of 12 observables with direct topological formulas (excluding derived quantities like α⁻¹ that involve multiple terms). The headline figure 0.087% includes all 18 predictions. Both metrics confirm GIFT's optimality; the difference reflects scope, not inconsistency.
 
 **Top 5 configurations by mean deviation:**
 
@@ -1025,5 +1044,5 @@ Mathematical constants underlying these relationships represent timeless logical
 ---
 
 *GIFT Framework*
-*v3.1.1*
+*v3.2*
 
