@@ -1,6 +1,6 @@
 # GIFT Framework - Documentation
 
-Supporting documentation for the GIFT Framework v3.1.
+Supporting documentation for the GIFT Framework v3.2.
 
 ## Contents
 
@@ -22,10 +22,10 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 
 ## Main Documentation
 
-- [Main Paper](../publications/markdown/GIFT_v3.1_main.md) - Complete theoretical framework
-- [S1: Foundations](../publications/markdown/GIFT_v3.1_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
-- [S2: Derivations](../publications/markdown/GIFT_v3.1_S2_derivations.md) - 18 dimensionless derivations
-- [S3: Dynamics](../publications/markdown/GIFT_v3.1_S3_dynamics.md) - RG flow, torsional dynamics
+- [Main Paper](../publications/markdown/GIFT_v3.2_main.md) - Complete theoretical framework
+- [S1: Foundations](../publications/markdown/GIFT_v3.2_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
+- [S2: Derivations](../publications/markdown/GIFT_v3.2_S2_derivations.md) - 18 dimensionless derivations
+- [S3: Dynamics](../publications/markdown/GIFT_v3.2_S3_dynamics.md) - RG flow, torsional dynamics
 - [Observables CSV](../publications/references/39_observables.csv) - Machine-readable data
 
 ## Exploratory References
@@ -41,4 +41,4 @@ Historical supplements (v2.3/v3.0 drafts) archived in [`legacy/`](legacy/).
 
 ---
 
-Part of GIFT Framework v3.1 - MIT License
+Part of GIFT Framework v3.2 - MIT License

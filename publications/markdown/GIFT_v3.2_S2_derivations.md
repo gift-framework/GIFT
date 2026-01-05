@@ -50,7 +50,7 @@ Before presenting derivations, we clarify the logical structure:
 ### 0.3 What We DO Claim
 
 - Given the inputs, the outputs follow by algebra
-- The outputs match experiment to 0.087% mean deviation
+- The outputs match experiment to 0.24% mean deviation (PDG 2024)
 - No continuous parameters are fitted
 
 ### 0.4 Torsion Independence
@@ -686,7 +686,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 0.01-0.1% | 4 | 22% |
 | 0.1-0.5% | 7 | 39% |
 
-**Mean deviation**: 0.087%
+**Mean deviation**: 0.24% (PDG 2024)
 
 ---
 

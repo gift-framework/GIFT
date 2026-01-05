@@ -6,7 +6,7 @@
 
 *Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
 
-**Lean Verification**: 180+ relations, 0 sorry
+**Lean Verification**: 185 relations, 40 axioms (core v3.1.12)
 
 ---
 
@@ -102,6 +102,12 @@ E₈ root system in ℝ⁸ has 240 roots:
 $$\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1)$$
 
 **Verification**: 112 + 128 = 240 roots, all length √2.
+
+**Lean Status (v3.1.12)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
+- `D8_roots_card` = 112, `HalfInt_roots_card` = 128
+- `E8_roots_card` = 240, `E8_roots_decomposition`
+- `E8_inner_integral`, `E8_norm_sq_even`, `E8_sub_closed`
+- `E8_basis_generates`: Every lattice vector is integer combination of simple roots (THEOREM, was axiom)
 
 ### 1.3 Cartan Matrix
 
@@ -287,6 +293,13 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | dim(G₂) | 14 | Q_Koide numerator |
 | rank(G₂) | 2 | Lie rank |
 | Definition | Aut(O) | Octonion automorphisms |
+
+**Lean Status (v3.1.12)**: G₂ Cross Product **9/11** proven:
+- `epsilon_antisymm`, `epsilon_diag`, `cross_apply` ✓
+- `G2_cross_bilinear`, `G2_cross_antisymm`, `cross_self` ✓
+- `G2_cross_norm` (Lagrange identity ‖u×v‖² = ‖u‖²‖v‖² − ⟨u,v⟩²) ✓
+- `reflect_preserves_lattice` (Weyl reflection) ✓
+- Remaining: `cross_is_octonion_structure` (343-case timeout), `G2_equiv_characterizations`
 
 ### 6.2 Holonomy Classification (Berger)
 
@@ -637,6 +650,7 @@ This supplement establishes the mathematical foundations:
 - **Weyl Triple Identity**: Weyl = 5 from three independent derivations
 - Exceptional chain theorem
 - Octonionic structure
+- **Lean v3.1.12**: E₈ root system 12/12 complete, `E8_basis_generates` now THEOREM
 
 **Part II - G₂ Holonomy**:
 - Torsion conditions
