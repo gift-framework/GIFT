@@ -147,25 +147,25 @@ $$61 = b_3 - b_2 + \text{Weyl} = 77 - 21 + 5$$
 
 $$61 = \text{prime}(18)$$
 
-### 2.3 Critical Distinction: Capacity vs Realized Value
+### 2.3 Critical Distinction: Capacity vs Base Solution
 
 ┌─────────────────────────────────────────────────────────────┐
 │  **IMPORTANT**                                              │
 │                                                             │
-│  kappa_T = 1/61 is the CAPACITY, the maximum torsion that   │
-│  K₇ topology permits while preserving G₂ holonomy.         │
+│  κ_T = 1/61 is the CAPACITY, the maximum torsion that       │
+│  K₇ topology permits while preserving G₂ holonomy.          │
 │                                                             │
-│  T_analytical = 0 is the REALIZED value for the exact      │
-│  solution φ = (65/32)^{1/14} × φ₀.                         │
+│  Joyce's theorem guarantees a torsion-free metric exists    │
+│  on K₇ (i.e., T = 0 for that metric, by definition).        │
 │                                                             │
-│  The capacity 1/61 characterizes the manifold.             │
-│  The realized value 0 characterizes the specific metric.   │
+│  The capacity 1/61 characterizes the manifold's topology.   │
+│  The torsion-free solution exists by Joyce's theorem.       │
 │                                                             │
-│  All 18 predictions use topology (via b₂, b₃, dim_G₂),     │
-│  NOT the realized torsion value.                           │
+│  All 18 predictions use topology (via b₂, b₃, dim_G₂),      │
+│  NOT the realized torsion value.                            │
 └─────────────────────────────────────────────────────────────┘
 
-**Status**: TOPOLOGICAL (capacity, not realized value)
+**Status**: TOPOLOGICAL (capacity bounds deviations from torsion-free base)
 
 ### 2.4 Compatibility with Cosmological Constraints
 

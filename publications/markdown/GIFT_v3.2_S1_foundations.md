@@ -487,14 +487,14 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^{\text{
 
 ## 11. Formal Certification
 
-### 11.1 The Analytical Solution
+### 11.1 The Algebraic Reference Form
 
-The G₂ metric on K₇ is exactly:
+The algebraic reference form in a local G₂-adapted orthonormal coframe:
 
-$$\varphi = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
-$$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
+$$\varphi_{\text{ref}} = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
+$$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 
-**Important clarification**: This metric representation holds in a local G₂-adapted orthonormal frame. The manifold K₇ constructed via TCS is curved and compact; "I₇" reflects the frame choice, not global flatness.
+**Important clarification**: This representation holds in a local orthonormal frame. The manifold K₇ constructed via TCS is curved and compact; "I₇" reflects the frame choice, not global flatness. The reference form φ_ref determines det(g) = 65/32; the global torsion-free solution φ_TF exists by Joyce's theorem.
 
 | Property | Value | Status |
 |----------|-------|--------|
