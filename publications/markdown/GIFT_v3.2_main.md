@@ -1037,9 +1037,9 @@ Mathematical constants underlying these relationships represent timeless logical
 
 | Supplement | Content | Location |
 |------------|---------|----------|
-| S1: Foundations | E₈, G₂, K₇ construction details | GIFT_v3.1_S1_foundations.md |
-| S2: Derivations | Complete proofs of 18 relations | GIFT_v3.1_S2_derivations.md |
-| S3: Dynamics | Scale bridge, torsion, cosmology | GIFT_v3.1_S3_dynamics.md |
+| S1: Foundations | E₈, G₂, K₇ construction details | GIFT_v3.2_S1_foundations.md |
+| S2: Derivations | Complete proofs of 18 relations | GIFT_v3.2_S2_derivations.md |
+| S3: Dynamics | Scale bridge, torsion, cosmology | GIFT_v3.2_S3_dynamics.md |
 
 ---
 
