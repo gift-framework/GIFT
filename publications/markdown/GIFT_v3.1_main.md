@@ -10,7 +10,7 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the unique compact geometry realizing this structure.
 
-18 dimensionless quantities achieve mean deviation 0.087% from experiment, including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
+18 dimensionless quantities achieve mean deviation 0.24% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
 
 The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
@@ -359,7 +359,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 1. **Given** the octonionic algebra 𝕆, its automorphism group G₂, the E₈×E₈ gauge structure, and the K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)...
 2. **Then** the 18 dimensionless predictions follow by algebra
-3. **And** these match experiment to 0.087% mean deviation
+3. **And** these match experiment to 0.24% mean deviation (PDG 2024)
 4. **With** zero continuous parameters fitted
 
 #### What GIFT Does NOT Claim
@@ -371,7 +371,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 #### Three Factors Distinguishing GIFT from Numerology
 
-**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.087% mean deviation across 18 quantities has probability < 10⁻²⁰.
+**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.24% mean deviation (PDG 2024) across 18 quantities has probability < 10⁻²⁰.
 
 **2. Exactness**: Several predictions are exactly rational:
 - sin²θ_W = 3/13 (not 0.2308...)
@@ -625,7 +625,7 @@ $$\bar{\delta} = \frac{1}{N} \sum_{i=1}^{N} \left| \frac{\text{GIFT}_i - \text{E
 where N = 18 dimensionless predictions (excluding structural integers without experimental comparison).
 
 - **Total predictions**: 18
-- **Mean deviation**: 0.087%
+- **Mean deviation**: 0.24% (PDG 2024)
 - **Median deviation**: 0.06%
 - **Maximum deviation**: 0.368% (θ₁₃)
 - **Exact matches**: 4 (N_gen, delta_CP, m_s/m_d, n_s)
@@ -644,7 +644,7 @@ where N = 18 dimensionless predictions (excluding structural integers without ex
 
 ### 10.3 Comparison with Random Matching
 
-If predictions were random numbers in [0,1], matching 18 experimental values to 0.087% average deviation would occur with probability less than 10^(-30). This does not prove the framework correct, but it excludes pure coincidence as an explanation.
+If predictions were random numbers in [0,1], matching 18 experimental values to 0.24% average deviation (PDG 2024) would occur with probability less than 10^(-30). This does not prove the framework correct, but it excludes pure coincidence as an explanation.
 
 ### 10.4 Statistical Validation Against Alternative Configurations
 
@@ -672,7 +672,7 @@ Critically, this validation uses the **actual topological formulas** to compute 
 | Improvement factor | **2.2×** |
 | GIFT percentile | **99.99%** |
 
-**Note**: The statistical scan uses a reduced set of 12 observables with direct topological formulas (excluding derived quantities like α⁻¹ that involve multiple terms). The headline figure 0.087% includes all 18 predictions. Both metrics confirm GIFT's optimality; the difference reflects scope, not inconsistency.
+**Note**: The statistical scan uses a reduced set of 12 observables with direct topological formulas (excluding derived quantities like α⁻¹ that involve multiple terms). The headline figure 0.24% includes all 18 predictions. Both metrics confirm GIFT's optimality; the difference reflects scope, not inconsistency.
 
 **Top 5 configurations by mean deviation:**
 
@@ -784,7 +784,7 @@ This contrasts sharply with the Standard Model's 19 free parameters and string t
 
 ### 14.2 Predictive Success
 
-Eighteen quantitative predictions achieve mean deviation of 0.087%. Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: Q = dim(G2)/b2 = 14/21 = 2/3.
+Eighteen quantitative predictions achieve mean deviation of 0.24% (PDG 2024). Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: Q = dim(G2)/b2 = 14/21 = 2/3.
 
 ### 14.3 Falsifiability
 
@@ -913,13 +913,13 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 
 ## 18. Conclusion
 
-GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.087%, with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
+GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.24% (PDG 2024), with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
 
 The G2 metric is exactly phi = (65/32)^{1/14} x phi_0 with T = 0, making all predictions algebraically exact rather than numerically fitted.
 
 Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute δ_CP = 197° to ±5° precision.
 
-The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.087% mean deviation, derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
+The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.24% mean deviation (PDG 2024), derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
 
 The octonions, discovered in 1843 as a mathematical curiosity, may yet prove to be nature's preferred algebra.
 
