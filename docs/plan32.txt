@@ -1,0 +1,281 @@
+## 📋 Plan de modifications v3.2
+
+---
+
+# 📄 MAIN (GIFT_v3.1_main.md)
+
+### M1. Clarifier la métrique locale vs globale
+**Section** : §3.4 "The Analytical G₂ Metric (Central Result)"
+
+**Actuellement** (ligne ~287) :
+> "g = c² · I₇ = (65/32)^{1/7} · I₇ ≈ 1.1115 · I₇"
+
+**Problème** : Peut être lu comme "métrique plate globale sur K₇"
+
+**Proposition** :
+```markdown
+**Induced metric in local orthonormal frame**:
+
+The associative 3-form φ induces a metric via the standard formula. 
+In any local orthonormal coframe {e^i}, the scaled form φ = c·φ₀ yields:
+
+$$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
+
+This represents the **local frame normalization**, not a claim of global 
+flatness on K₇. The TCS construction produces a curved, compact manifold; 
+the identity matrix appears because we work in an adapted coframe.
+```
+
+---
+
+### M2. Disclaimer sur "PROVEN (Lean)"
+**Section** : §2.3 (après "Status: PROVEN (Lean verified)")
+
+**Ajouter** :
+```markdown
+**Note on Lean verification**: Lean 4 establishes arithmetic consistency 
+and symbolic correctness of the derived relations. It verifies that 
+given the topological inputs (b₂=21, b₃=77, dim(G₂)=14), the algebraic 
+identities hold exactly. It does not constitute a proof of geometric 
+existence or physical validity.
+```
+
+**Également** dans §3.4 après "Verification: Lean 4 theorem + PINN cross-check"
+
+---
+
+### M3. Définir explicitement les métriques statistiques
+**Section** : §10.1 "Global Performance"
+
+**Actuellement** :
+> "Mean deviation: 0.087% across dimensionless ratios"
+
+**Proposition** :
+```markdown
+### 10.1 Global Performance
+
+**Definition of mean deviation**:
+$$\bar{\delta} = \frac{1}{N} \sum_{i=1}^{N} \left| \frac{\text{GIFT}_i - \text{Exp}_i}{\text{Exp}_i} \right| \times 100\%$$
+
+where N = 18 dimensionless predictions (excluding structural integers 
+without experimental comparison).
+
+- **Mean deviation**: 0.087%
+- **Median deviation**: 0.06%
+- **Maximum deviation**: 0.368% (θ₁₃)
+```
+
+---
+
+### M4. Clarifier 0.087% vs 0.23% dans la validation
+**Section** : §10.4 "Statistical Validation"
+
+**Ajouter après "GIFT mean deviation: 0.23%"** :
+```markdown
+**Note**: The scan uses a reduced set of 12 observables with direct 
+topological formulas (excluding derived quantities like α⁻¹ that 
+involve multiple terms). The headline figure 0.087% includes all 18 
+predictions. Both metrics confirm GIFT's optimality; the difference 
+reflects scope, not inconsistency.
+```
+
+---
+
+### M5. Marquer les interprétations physiques comme heuristiques
+**Section** : §3.3 "Physical interpretation of b₂ = 21"
+
+**Actuellement** :
+> "The 21 harmonic 2-forms on K7 correspond to gauge field moduli. These decompose as: 8 + 3 + 1 + 9..."
+
+**Proposition** :
+```markdown
+**Heuristic interpretation of b₂ = 21**:
+
+The 21 harmonic 2-forms on K₇ may be interpreted as gauge field moduli. 
+A *suggestive* (not derived) decomposition:
+- 8 components ↔ SU(3) color
+- 3 components ↔ SU(2) weak  
+- 1 component ↔ U(1) hypercharge
+- 9 components ↔ hidden sector
+
+This mapping is motivational. The rigorous statement is simply: 
+b₂(K₇) = 21 enters the topological formulas that match experiment.
+```
+
+**Idem pour b₃ = 77**.
+
+---
+
+### M6. Version number
+**Header** :
+
+```markdown
+**Version**: 3.2
+```
+
+---
+
+# 📄 S1 (Foundations)
+
+### S1.1. Clarifier la métrique locale (même correction que M1)
+**Section** : §11.1 "The Analytical Solution"
+
+**Ajouter après la formule g = c² · I₇** :
+```markdown
+**Important clarification**: This metric representation holds in a local 
+G₂-adapted orthonormal frame. The manifold K₇ constructed via TCS is 
+curved and compact; "I₇" reflects the frame choice, not global flatness.
+```
+
+---
+
+### S1.2. Renforcer le disclaimer Lean
+**Section** : §11.4 "Lean 4 Formalization"
+
+**Ajouter avant le bloc de code** :
+```markdown
+**Scope of verification**: The Lean formalization verifies:
+1. Arithmetic identities (e.g., 14/21 = 2/3)
+2. Algebraic relations between GIFT constants
+3. Numerical bounds (e.g., torsion threshold)
+
+It does **not** formalize:
+- Existence of K₇ as a smooth G₂ manifold
+- Physical interpretation of topological invariants
+- Uniqueness of the TCS construction
+```
+
+---
+
+### S1.3. Weyl Triple Identity — ajouter au résumé
+**Section** : §13 "Summary"
+
+**Ajouter** :
+```markdown
+**Part I - E₈ Architecture**:
+- Weyl group factorization into GIFT constants
+- **Weyl Triple Identity**: Weyl = 5 from three independent derivations
+- Exceptional chain theorem
+- Octonionic structure
+```
+
+---
+
+# 📄 S2 (Derivations)
+
+### S2.1. Clarifier le statut de κ_T
+**Section** : §5 "Relation #3: Torsion Capacity κ_T = 1/61"
+
+**Actuellement le "Classification" dit** : `TOPOLOGICAL (structural parameter, not physical prediction)`
+
+**C'est bien**, mais ajouter :
+```markdown
+**Role in predictions**: κ_T appears in only one formula (α⁻¹, as a 
+small correction term det(g)×κ_T ≈ 0.033). The other 17 predictions 
+are independent of torsion capacity.
+```
+
+---
+
+### S2.2. Cohérence notation Weyl
+**Section** : §2 "Notation"
+
+**Vérifier que la définition correspond à S1** :
+```markdown
+| Weyl | 5 | Triple derivation: (dim(G₂)+1)/N_gen = b₂/N_gen - p₂ = dim(G₂) - rank(E₈) - 1 |
+```
+
+✅ Déjà fait dans le draft — juste vérifier la cohérence.
+
+---
+
+# 📄 S3 (Dynamics)
+
+### S3.1. Reformuler la référence DESI
+**Section** : §2.4 "Experimental Compatibility"
+
+**Actuellement** :
+> "DESI DR2 (2025) constraints: The DESI collaboration's second data release provides cosmological constraints on torsion-like modifications..."
+
+**Proposition** :
+```markdown
+### 2.4 Compatibility with Cosmological Constraints
+
+Recent analyses using BAO data (including DESI DR2) to constrain 
+Einstein-Cartan torsion models find bounds of order |T|² < 10⁻³ at 
+95% CL [Ref: specific paper, not "DESI collaboration"].
+
+| Quantity | Value |
+|----------|-------|
+| Literature bound | |T|² < 10⁻³ (95% CL, Einstein-Cartan models) |
+| GIFT capacity | κ_T² = (1/61)² ≈ 2.69 × 10⁻⁴ |
+| **Status** | **Compatible** |
+
+**Caveat**: These bounds apply to specific torsion parameterizations. 
+Direct comparison with GIFT's topological κ_T requires model-dependent 
+assumptions.
+```
+
+---
+
+### S3.2. Renforcer le statut SPECULATIVE de Hubble
+**Section** : §19 "The Hubble Tension"
+
+**Ajouter en tête de section** :
+```markdown
+┌─────────────────────────────────────────────────────────────┐
+│  **SPECULATIVE CONTENT**                                    │
+│                                                             │
+│  The following interpretation of the Hubble tension as      │
+│  dual topological projections is exploratory. It is NOT     │
+│  part of the 18 PROVEN dimensionless predictions.           │
+│  Experimental validation would require independent          │
+│  confirmation of the proposed mechanism.                    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### S3.3. Clarifier √5 vs ln(2) dans le dark sector
+**Section** : §20 ou §21
+
+**Le problème** : S1 mentionne "√Weyl = √5 appears in dark sector" mais S3 utilise ln(2) pour Ω_DE.
+
+**Proposition** — ajouter une note :
+```markdown
+### Connection between √5 and ln(2)
+
+Two distinct structures appear in cosmological predictions:
+
+| Observable | Structure | Origin |
+|------------|-----------|--------|
+| Ω_DE | ln(2) = ln(p₂) | Binary duality |
+| Ω_DE/Ω_DM ≈ φ² | φ² = (3+√5)/2 | Golden ratio from Weyl |
+
+The ratio Ω_DE/Ω_DM = 21/8 ≈ 2.625 ≈ φ² connects to √5 via:
+$$\phi^2 = \phi + 1 = \frac{3 + \sqrt{5}}{2}$$
+
+Thus √5 appears *indirectly* through the golden ratio in dark sector 
+ratios, while ln(2) appears *directly* in absolute densities.
+```
+
+---
+
+# 📊 Résumé du plan
+
+| Doc | ID | Modification | Priorité |
+|-----|-----|--------------|----------|
+| **Main** | M1 | Métrique locale vs globale | 🔴 Haute |
+| | M2 | Disclaimer Lean | 🔴 Haute |
+| | M3 | Définition mean deviation | 🟡 Moyenne |
+| | M4 | Clarifier 0.087% vs 0.23% | 🟡 Moyenne |
+| | M5 | Interprétations heuristiques | 🟡 Moyenne |
+| | M6 | Version 3.2 | 🟢 Basse |
+| **S1** | S1.1 | Métrique locale | 🔴 Haute |
+| | S1.2 | Scope Lean | 🔴 Haute |
+| | S1.3 | Weyl Triple au résumé | 🟢 Basse |
+| **S2** | S2.1 | Rôle κ_T dans prédictions | 🟢 Basse |
+| | S2.2 | Cohérence Weyl | 🟢 Basse |
+| **S3** | S3.1 | Reformuler DESI | 🔴 Haute |
+| | S3.2 | Banner SPECULATIVE Hubble | 🟡 Moyenne |
+| | S3.3 | Clarifier √5 vs ln(2) | 🟡 Moyenne |
