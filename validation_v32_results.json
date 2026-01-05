@@ -1,6 +1,6 @@
 {
   "version": "3.2",
-  "date": "2026-01-05 16:17:29",
+  "date": "2026-01-05 18:15:20",
   "reference": {
     "config": {
       "name": "GIFT_E8xE8_K7",
@@ -48,6 +48,7 @@
     },
     "holonomy": {
       "test_name": "Holonomy variations",
+      "n_configs": 6,
       "results": [
         {
           "holonomy": "SU(2)",
@@ -91,7 +92,8 @@
         "dim_G2": 14,
         "deviation": 0.239897840072962,
         "is_gift": true
-      }
+      },
+      "better_count": 0
     },
     "structural": {
       "test_name": "Structural variations (p2, Weyl)",
@@ -103,7 +105,250 @@
         "deviation": 0.239897840072962,
         "is_gift": true
       },
-      "gift_is_best": true
+      "gift_is_best": true,
+      "better_count": 0,
+      "all_results": [
+        {
+          "p2": 1,
+          "Weyl": 2,
+          "deviation": 28.880973256519727,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 3,
+          "deviation": 21.16261011609743,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 4,
+          "deviation": 15.56057982860679,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 5,
+          "deviation": 4.8888991618715885,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 6,
+          "deviation": 11.388644476470002,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 7,
+          "deviation": 15.861088682070308,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 8,
+          "deviation": 19.208601062280813,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 9,
+          "deviation": 20.003963820044348,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 2,
+          "deviation": 26.995790991213525,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 3,
+          "deviation": 18.335216809376167,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 4,
+          "deviation": 11.790975479576185,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 5,
+          "deviation": 0.239897840072962,
+          "is_gift": true
+        },
+        {
+          "p2": 2,
+          "Weyl": 6,
+          "deviation": 8.309994924885183,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 7,
+          "deviation": 14.352790900027543,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 8,
+          "deviation": 19.270655016864097,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 9,
+          "deviation": 21.636369533421597,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 2,
+          "deviation": 23.855631515660438,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 3,
+          "deviation": 18.08450283687702,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 4,
+          "deviation": 15.623174458629043,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 5,
+          "deviation": 6.459029972512352,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 6,
+          "deviation": 13.272844222429118,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 7,
+          "deviation": 18.059357446667796,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 8,
+          "deviation": 21.72094292819796,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 9,
+          "deviation": 22.830376037720285,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 2,
+          "deviation": 27.05996122373503,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 3,
+          "deviation": 22.10541544471557,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 4,
+          "deviation": 16.817453886784957,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 5,
+          "deviation": 6.459842050997204,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 6,
+          "deviation": 13.273656288713454,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 7,
+          "deviation": 18.060169501469296,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 8,
+          "deviation": 21.721755006682812,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 9,
+          "deviation": 22.831188116205137,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 2,
+          "deviation": 29.510550091731087,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 3,
+          "deviation": 22.10625555367349,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 4,
+          "deviation": 16.81829398141168,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 5,
+          "deviation": 6.460682132188431,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 6,
+          "deviation": 13.274496357283459,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 7,
+          "deviation": 18.061009558160507,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 8,
+          "deviation": 21.72259508787404,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 9,
+          "deviation": 22.832028197396365,
+          "is_gift": false
+        }
+      ]
     },
     "combinatorial": {
       "test_name": "Full combinatorial",
@@ -889,6 +1134,6 @@
     "total_better_than_gift": 0,
     "p_value": 0.0,
     "significance": "> 4\u03c3",
-    "elapsed_seconds": 160.1414716243744
+    "elapsed_seconds": 159.47468614578247
   }
 }
