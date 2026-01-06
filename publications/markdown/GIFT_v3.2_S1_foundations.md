@@ -161,7 +161,7 @@ $$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim
 | 5² | p₂ = 2 | 25 | Weyl^(binary) |
 | 7¹ | 1 | 7 | dim(K₇) |
 
-**Status**: **PROVEN (Lean)**: `weyl_E8_topological_factorization`
+**Status**: **PROVEN (Lean 4)**: `weyl_E8_topological_factorization`
 
 ---
 
@@ -239,7 +239,7 @@ where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
 - E₇: 7 × 19 = 133 ✓
 - E₈: 8 × 31 = 248 ✓
 
-**Status**: **PROVEN (Lean)**: `exceptional_chain_certified`
+**Status**: **PROVEN (Lean 4)**: `exceptional_chain_certified`
 
 ---
 
@@ -258,7 +258,7 @@ where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
 The hierarchy parameter numerator:
 $$\tau_{num} = 3472 = 7 \times 496 = \dim(K_7) \times \dim(E_8 \times E_8)$$
 
-**Status**: **PROVEN (Lean)**: `tau_num_E8xE8`
+**Status**: **PROVEN (Lean 4)**: `tau_num_E8xE8`
 
 ### 4.3 Binary Duality Parameter
 
@@ -294,7 +294,7 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | dim(F₄) - dim(J₃(O)) | 25 = 5² | Weyl² |
 | dim(E₆) - dim(F₄) | 26 | dim(J₃(O)₀) |
 
-**Status**: **PROVEN (Lean)**: `exceptional_differences_certified`
+**Status**: **PROVEN (Lean 4)**: `exceptional_differences_certified`
 
 ---
 
@@ -365,7 +365,7 @@ $$\kappa_T^{-1} = 61 = \dim(F_4) + N_{gen}^2 = 52 + 9$$
 Alternative:
 $$61 = \Pi(\alpha^2_B) + 1 = 2 \times 5 \times 6 + 1$$
 
-**Status**: **PROVEN (Lean)**: `kappa_T_inv_decomposition`
+**Status**: **PROVEN (Lean 4)**: `kappa_T_inv_decomposition`
 
 ---
 

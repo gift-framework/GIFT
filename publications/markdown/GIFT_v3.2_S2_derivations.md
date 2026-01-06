@@ -68,7 +68,7 @@ Before presenting derivations, we clarify the logical structure:
 | Status | Criterion |
 |--------|-----------|
 | **PROVEN** | Complete mathematical proof, exact result from topology |
-| **PROVEN (Lean)** | Verified by Lean 4 kernel with Mathlib (machine-checked) |
+| **PROVEN (Lean 4)** | Verified by Lean 4 kernel with Mathlib (machine-checked) |
 | **TOPOLOGICAL** | Direct consequence of manifold structure |
 
 ## 2. Notation
