@@ -975,7 +975,7 @@ Mathematical constants underlying these relationships represent timeless logical
 
 [3] Jackson, D.M. "Time, E8, and the Standard Model." arXiv:1706.00639, 2017.
 
-[4] Wilson, R. "E8 and Standard Model plus gravity." arXiv:2401.xxxxx, 2024.
+[4] Wilson, R. "E8 and Standard Model plus gravity." arXiv:2404.18938, 2024.
 
 **G2 Manifolds and Calibrated Geometry**
 
@@ -991,13 +991,13 @@ Mathematical constants underlying these relationships represent timeless logical
 
 [10] Corti, A., Haskins, M., Nordstrom, J., Pacini, T. "G2-manifolds and associative submanifolds." Duke Math. J. 164, 2015.
 
-[11] Haskins, M. et al. "Extra-twisted connected sums." arXiv:2212.xxxxx, 2022.
+[11] Haskins, M. et al. "Extra-twisted connected sum G₂-manifolds." arXiv:1809.09083, 2018.
 
 **Neutrino Physics**
 
 [12] NuFIT 6.0 Collaboration. "Global analysis of neutrino oscillations." www.nu-fit.org, 2024.
 
-[13] T2K and NOvA Collaborations. "Joint oscillation analysis." Nature, 2025.
+[13] T2K and NOvA Collaborations. "Joint oscillation analysis." Nature 638, 534-541, 2025. doi:10.1038/s41586-025-08706-0
 
 [14] DUNE Collaboration. "Technical Design Report." arXiv:2002.03005, 2020.
 
