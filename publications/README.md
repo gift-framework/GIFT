@@ -92,7 +92,7 @@ See [validation_v32.py](../statistical_validation/validation_v32.py) for methodo
 
 ## Formal Verification
 
-**185 relations verified** in Lean 4 + Coq (core v3.1.12).
+**185 relations verified** in Lean 4 + Coq (core v3.2.0).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 
