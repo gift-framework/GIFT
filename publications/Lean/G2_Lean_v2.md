@@ -741,7 +741,7 @@ The K₇ manifold constructed in this paper is part of a larger framework (GIFT 
 **This paper focuses on the G₂ metric construction methodology**. For the complete catalog of 180+ relations, see:
 - Repository: https://github.com/gift-framework/core
 - Python package: `pip install giftpy`
-- Full framework paper: GIFT v3.0 (forthcoming)
+- Full framework paper: GIFT v3.2
 
 ### 7.2 Key G₂-Related Relations
 
@@ -805,7 +805,7 @@ The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structur
 **For the complete catalog**, see:
 - **Repository**: https://github.com/gift-framework/core (Lean + Coq proofs)
 - **Python package**: `pip install giftpy` (programmatic access to all constants)
-- **Full framework**: GIFT v3.0 paper (forthcoming)
+- **Full framework**: GIFT v3.2 paper
 
 **This paper focuses on the methodology**: how to construct and certify a G₂ metric using PINNs and formal verification.
 

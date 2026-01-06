@@ -273,7 +273,7 @@ python run_uniqueness_campaign.py --comprehensive
 
 ## 8. References
 
-1. GIFT Framework v3.1 Main Paper
+1. GIFT Framework v3.2 Main Paper
 2. Kreuzer-Skarke Calabi-Yau Database
 3. Joyce, D. "Compact Manifolds with Special Holonomy"
 4. Corti et al. "G2-manifolds and Twisted Connected Sums"
