@@ -15,7 +15,7 @@
 | **Precision** | 0.24% mean deviation across 18 dimensionless predictions (PDG 2024) |
 | **Uniqueness** | #1 out of 54,327 configurations tested (>4σ significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 185 relations proven in Lean 4 + Coq (40 axioms, core v3.1.12) |
+| **Verified** | 185 relations proven in Lean 4 + Coq (40 axioms, core v3.2.0) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)

@@ -80,7 +80,7 @@ GIFT/
 ## Version
 
 **Current**: v3.2.0 (2026-01-05)
-**Relations**: 185 certified (core v3.1.12)
+**Relations**: 185 certified (core v3.2.0)
 **Predictions**: 18 dimensionless (**0.24% mean deviation, PDG 2024**)
 **Monte Carlo**: 54,327 configurations tested, 0 better than GIFT
 **Key Result**: Analytical G₂ metric with T = 0 exactly

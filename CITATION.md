@@ -134,12 +134,12 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 ## Formal Verification
 
 ```bibtex
-@software{gift_core_v3112,
+@software{gift_core_v320,
   title   = {GIFT Core: Formal Verification in Lean 4 + Coq},
   author  = {de La Fournière, Brieuc},
   year    = {2025},
   url     = {https://github.com/gift-framework/core},
-  version = {3.1.12},
+  version = {3.2.0},
   note    = {185 relations verified, 40 axioms, K₇ metric pipeline, Joyce existence theorem}
 }
 ```
