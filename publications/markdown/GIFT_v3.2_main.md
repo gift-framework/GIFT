@@ -169,7 +169,7 @@ This derivation admits alternative forms. The ratio b2/dim(K7) = 21/7 = 3 gives 
 
 The experimental status is unambiguous: no fourth generation has been observed at the LHC despite searches to the TeV scale.
 
-**Status**: PROVEN (Lean verified)
+**Status**: PROVEN (Lean 4)
 
 **Note on Lean verification**: Lean 4 establishes arithmetic consistency and symbolic correctness of the derived relations. It verifies that given the topological inputs (b₂=21, b₃=77, dim(G₂)=14), the algebraic identities hold exactly. It does not constitute a proof of geometric existence or physical validity.
 
@@ -420,7 +420,7 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 
 
 **Interpretation**: b₂ counts gauge moduli; b₃ + dim(G₂) counts matter + holonomy degrees of freedom. The ratio measures gauge-matter coupling geometrically.
 
-**Status**: PROVEN (Lean verified). See S2 Section 7 for complete derivation.
+**Status**: PROVEN (Lean 4). See S2 Section 7 for complete derivation.
 
 ---
 
@@ -482,7 +482,7 @@ GIFT is the only framework where Q = 2/3 follows from pure algebra with no fitti
 
 If the Koide relation truly equals 2/3 exactly, improved measurements of lepton masses should converge toward this value. Current experimental uncertainty is dominated by the tau mass. Future precision measurements at tau-charm factories could test whether deviations from 2/3 are real or reflect measurement limitations.
 
-**Status**: PROVEN (Lean verified)
+**Status**: PROVEN (Lean 4)
 
 ---
 
@@ -536,7 +536,7 @@ Unlike sin²θ_W or Q_Koide which are already measured precisely, δ_CP has larg
 
 A single experiment can confirm or refute this prediction definitively.
 
-**Status**: PROVEN (Lean verified). See S2 Section 13 for complete derivation.
+**Status**: PROVEN (Lean 4). See S2 Section 13 for complete derivation.
 
 ---
 

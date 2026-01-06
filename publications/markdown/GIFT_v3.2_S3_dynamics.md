@@ -694,7 +694,7 @@ $$3477 = 3 \times 19 \times 61 = N_{gen} \times \text{prime}(8) \times \kappa_T^
 **Experimental**: 1776.86 MeV
 **Deviation**: 0.004%
 
-**Status**: PROVEN (Lean verified)
+**Status**: PROVEN (Lean 4)
 
 ### 15.4 Lepton Summary
 
