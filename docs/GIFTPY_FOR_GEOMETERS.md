@@ -140,8 +140,8 @@ lean_proof = result.certificate.to_lean()
 
 **Code repository**: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 
-**Related documentation**: [S2: K₇ Manifold Construction](../publications/markdown/S2_K7_manifold_construction_v30.md)
+**Related documentation**: [S1: Foundations](../publications/markdown/GIFT_v3.2_S1_foundations.md)
 
 ---
 
-*GiftPy is part of the GIFT Framework. For the physics application, see the [main paper](../publications/markdown/gift_3_0_main.md).*
+*GiftPy is part of the GIFT Framework. For the physics application, see the [main paper](../publications/markdown/GIFT_v3.2_main.md).*
