@@ -243,4 +243,4 @@ The methodological contribution is independent of GIFT's physical correctness. F
 
 ---
 
-*GIFT Framework v3.1 - Formal Verification Documentation*
+*GIFT Framework v3.2 - Formal Verification Documentation*

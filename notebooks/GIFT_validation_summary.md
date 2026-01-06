@@ -1,6 +1,6 @@
-# GIFT v3.0 Framework Validation Summary
+# GIFT v3.2 Framework Validation Summary
 
-**Generated:** 2025-12-11
+**Generated:** 2026-01-05
 
 ## Overview
 
@@ -8,7 +8,7 @@ The GIFT framework yields **23 predictions**:
 - **10 structural integers** from TCS construction
 - **13 dimensionless ratios** with experimental comparison
 
-Mean deviation: 0.0873%
+Mean deviation: 0.24% (PDG 2024)
 
 ## 10 Structural Integers (Topological Constants)
 
@@ -53,7 +53,7 @@ Mean deviation: 0.0873%
 | Total predictions | 23 |
 | Structural integers | 10 |
 | Dimensionless ratios | 13 |
-| Mean deviation | 0.0873% |
+| Mean deviation | 0.24% (PDG 2024) |
 | Exact matches | 7 |
 
 ## References

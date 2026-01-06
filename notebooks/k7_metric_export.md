@@ -1,6 +1,6 @@
 # K₇ Metric Formalization
 
-**GIFT v3.1** | Generated: 2025-12-17
+**GIFT v3.2** | Generated: 2026-01-05
 
 ## Topological Constants
 
