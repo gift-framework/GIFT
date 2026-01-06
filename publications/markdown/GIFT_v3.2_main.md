@@ -193,7 +193,7 @@ This answers the "selection principle" question: K7 is not chosen from a landsca
 
 Mathematical properties:
 
-**Dimension**: dim(G₂) = 14 = C(7,2), counting pairs of imaginary octonion units. This number appears directly in predictions (Q_Koide = 14/21).
+**Dimension**: dim(G₂) = 14 = C(7,2) − 7, the number of pairs minus the number of units. This number appears directly in predictions (Q_Koide = 14/21).
 
 **Characterization**: G₂ holonomy is equivalent to existence of a parallel 3-form φ satisfying dφ = 0 and d*φ = 0, where * denotes Hodge duality.
 
@@ -825,6 +825,19 @@ The topological foundations rest on established mathematics. The TCS constructio
 - Variational principle on G₂ moduli space
 - Calibrated geometry constraints
 - K-theory classification
+
+**Observed pattern (v3.2)**: Formula constants exhibit a mod-7 regularity:
+
+| Divisible by 7 | ≡ 1 (mod 7) |
+|----------------|-------------|
+| b₂ = 21 | H* = 99 |
+| b₃ = 77 | rank(E₈) = 8 |
+| dim(G₂) = 14 | δ_CP = 1 |
+| 91 = b₃ + dim(G₂) | |
+
+One speculative interpretation: quantities divisible by 7 count local (fiber-level) degrees of freedom, while those ≡ 1 (mod 7) involve global (base-level) contributions including the cohomological unit b₀ = 1.
+
+This pattern, if not coincidental, might constrain which combinations of topological invariants appear in physical observables. No derivation of this selection principle currently exists.
 
 ### 15.2 Dimensional Quantities
 

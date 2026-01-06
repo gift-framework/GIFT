@@ -62,7 +62,7 @@ The pattern terminates at 𝕆. There is no 16-dimensional normed division algeb
 
 | Property | Value | GIFT Role |
 |----------|-------|-----------|
-| dim(G₂) | 14 = C(7,2) | Q_Koide numerator |
+| dim(G₂) | 14 = C(7,2) − C(7,1) = 21 − 7 | Q_Koide numerator |
 | Action | Transitive on S⁶ ⊂ Im(𝕆) | Connects all directions |
 | Embedding | G₂ ⊂ SO(7) | Preserves φ₀ |
 
@@ -74,6 +74,22 @@ This is not a choice. It is a consequence:
 - A compact 7-manifold with G₂ holonomy is the geometric realization
 
 **K₇ is to G₂ what the circle is to U(1).**
+
+### 0.4 The Fano Plane: Combinatorial Structure of Im(𝕆)
+
+The 7 imaginary octonion units form the **Fano plane** PG(2,2), the smallest projective plane:
+- 7 points (imaginary units e₁...e₇)
+- 7 lines (multiplication triples eᵢ × eⱼ = ±eₖ)
+- 3 points per line
+
+**Combinatorial counts**:
+- Point-line incidences: 7 × 3 = 21 = C(7,2) = b₂
+- Automorphism group: PSL(2,7) with |PSL(2,7)| = 168
+
+**Numerical observation**: The following identity holds:
+$$(b_3 + \dim(G_2)) + b_3 = 91 + 77 = 168 = |{\rm PSL}(2,7)| = {\rm rank}(E_8) \times b_2$$
+
+Whether this arithmetic coincidence reflects deeper geometric structure connecting gauge and matter sectors remains an open question.
 
 ---
 
