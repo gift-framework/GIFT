@@ -1,0 +1,1139 @@
+{
+  "version": "3.2",
+  "date": "2026-01-07 13:11:49",
+  "reference": {
+    "config": {
+      "name": "GIFT_E8xE8_K7",
+      "b2": 21,
+      "b3": 77,
+      "dim_G2": 14,
+      "dim_E8": 248,
+      "rank_E8": 8,
+      "dim_K7": 7,
+      "dim_J3O": 27,
+      "p2": 2,
+      "Weyl": 5,
+      "D_bulk": 11
+    },
+    "deviation": 0.239897840072962,
+    "predictions": {
+      "N_gen": 3,
+      "sin2_theta_W": 0.23076923076923078,
+      "alpha_s": 0.11785113019775793,
+      "Q_Koide": 0.6666666666666666,
+      "m_tau_m_e": 3477,
+      "m_mu_m_e": 207.0118567416035,
+      "m_s_m_d": 20,
+      "delta_CP": 197,
+      "theta_13": 8.571428571428571,
+      "theta_23": 49.19334604658583,
+      "theta_12": 33.400049930049136,
+      "lambda_H": 0.1288470508005519,
+      "Omega_DE": 0.6861456938876226,
+      "n_s": 0.9648639296628894,
+      "alpha_inv": 137.03329918032787,
+      "Omega_m": 0.31314795346998264
+    }
+  },
+  "tests": {
+    "betti": {
+      "test_name": "Betti variations (b2, b3)",
+      "n_configs": 10000,
+      "ref_deviation": 0.239897840072962,
+      "better_count": 0,
+      "better_percent": 0.0,
+      "mean_deviation": 18.949170248017573,
+      "min_deviation": 0.30458260421994043,
+      "max_deviation": 30.614404081455266
+    },
+    "holonomy": {
+      "test_name": "Holonomy variations",
+      "n_configs": 6,
+      "results": [
+        {
+          "holonomy": "SU(2)",
+          "dim_G2": 3,
+          "deviation": 15.823626257112796,
+          "is_gift": false
+        },
+        {
+          "holonomy": "SU(3)",
+          "dim_G2": 8,
+          "deviation": 10.591450821742859,
+          "is_gift": false
+        },
+        {
+          "holonomy": "G2",
+          "dim_G2": 14,
+          "deviation": 0.239897840072962,
+          "is_gift": true
+        },
+        {
+          "holonomy": "SU(4)",
+          "dim_G2": 15,
+          "deviation": 1.1392528114247955,
+          "is_gift": false
+        },
+        {
+          "holonomy": "Spin(7)",
+          "dim_G2": 21,
+          "deviation": 12.913967907937643,
+          "is_gift": false
+        },
+        {
+          "holonomy": "SO(7)",
+          "dim_G2": 21,
+          "deviation": 12.913967907937643,
+          "is_gift": false
+        }
+      ],
+      "best": {
+        "holonomy": "G2",
+        "dim_G2": 14,
+        "deviation": 0.239897840072962,
+        "is_gift": true
+      },
+      "better_count": 0
+    },
+    "structural": {
+      "test_name": "Structural variations (p2, Weyl)",
+      "n_configs": 40,
+      "ref_deviation": 0.239897840072962,
+      "best": {
+        "p2": 2,
+        "Weyl": 5,
+        "deviation": 0.239897840072962,
+        "is_gift": true
+      },
+      "gift_is_best": true,
+      "better_count": 0,
+      "all_results": [
+        {
+          "p2": 1,
+          "Weyl": 2,
+          "deviation": 28.880973256519727,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 3,
+          "deviation": 21.16261011609743,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 4,
+          "deviation": 15.56057982860679,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 5,
+          "deviation": 4.8888991618715885,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 6,
+          "deviation": 11.388644476470002,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 7,
+          "deviation": 15.861088682070308,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 8,
+          "deviation": 19.208601062280813,
+          "is_gift": false
+        },
+        {
+          "p2": 1,
+          "Weyl": 9,
+          "deviation": 20.003963820044348,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 2,
+          "deviation": 26.995790991213525,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 3,
+          "deviation": 18.335216809376167,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 4,
+          "deviation": 11.790975479576185,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 5,
+          "deviation": 0.239897840072962,
+          "is_gift": true
+        },
+        {
+          "p2": 2,
+          "Weyl": 6,
+          "deviation": 8.309994924885183,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 7,
+          "deviation": 14.352790900027543,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 8,
+          "deviation": 19.270655016864097,
+          "is_gift": false
+        },
+        {
+          "p2": 2,
+          "Weyl": 9,
+          "deviation": 21.636369533421597,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 2,
+          "deviation": 23.855631515660438,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 3,
+          "deviation": 18.08450283687702,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 4,
+          "deviation": 15.623174458629043,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 5,
+          "deviation": 6.459029972512352,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 6,
+          "deviation": 13.272844222429118,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 7,
+          "deviation": 18.059357446667796,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 8,
+          "deviation": 21.72094292819796,
+          "is_gift": false
+        },
+        {
+          "p2": 3,
+          "Weyl": 9,
+          "deviation": 22.830376037720285,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 2,
+          "deviation": 27.05996122373503,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 3,
+          "deviation": 22.10541544471557,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 4,
+          "deviation": 16.817453886784957,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 5,
+          "deviation": 6.459842050997204,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 6,
+          "deviation": 13.273656288713454,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 7,
+          "deviation": 18.060169501469296,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 8,
+          "deviation": 21.721755006682812,
+          "is_gift": false
+        },
+        {
+          "p2": 4,
+          "Weyl": 9,
+          "deviation": 22.831188116205137,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 2,
+          "deviation": 29.510550091731087,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 3,
+          "deviation": 22.10625555367349,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 4,
+          "deviation": 16.81829398141168,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 5,
+          "deviation": 6.460682132188431,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 6,
+          "deviation": 13.274496357283459,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 7,
+          "deviation": 18.061009558160507,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 8,
+          "deviation": 21.72259508787404,
+          "is_gift": false
+        },
+        {
+          "p2": 5,
+          "Weyl": 9,
+          "deviation": 22.832028197396365,
+          "is_gift": false
+        }
+      ]
+    },
+    "combinatorial": {
+      "test_name": "Full combinatorial",
+      "n_configs": 44281,
+      "ref_deviation": 0.239897840072962,
+      "better_count": 0,
+      "better_percent": 0.0,
+      "mean_deviation": 29.790280691416076,
+      "min_deviation": 0.6783096897859986,
+      "best_config": null
+    },
+    "local": {
+      "test_name": "Local sensitivity",
+      "center": {
+        "b2": 21,
+        "b3": 77
+      },
+      "range": {
+        "b2": 5,
+        "b3": 5
+      },
+      "best": {
+        "b2": 21,
+        "b3": 77,
+        "deviation": 0.239897840072962,
+        "is_gift": true
+      },
+      "gift_is_minimum": true,
+      "grid": [
+        [
+          {
+            "b2": 16,
+            "b3": 72,
+            "deviation": 6.2792882965047365,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 73,
+            "deviation": 6.265628855106361,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 74,
+            "deviation": 6.250780114892865,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 75,
+            "deviation": 6.234786251868066,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 76,
+            "deviation": 6.217689381554505,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 77,
+            "deviation": 6.19952967530031,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 78,
+            "deviation": 6.180345468877195,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 79,
+            "deviation": 6.160173363955963,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 80,
+            "deviation": 6.139048322995468,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 81,
+            "deviation": 6.18110632213817,
+            "is_gift": false
+          },
+          {
+            "b2": 16,
+            "b3": 82,
+            "deviation": 6.225999456038161,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 17,
+            "b3": 72,
+            "deviation": 4.845927608781044,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 73,
+            "deviation": 4.836893213556305,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 74,
+            "deviation": 4.826567974222177,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 75,
+            "deviation": 4.814999367419515,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 76,
+            "deviation": 4.8022326677256375,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 77,
+            "deviation": 4.788311071483283,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 78,
+            "deviation": 4.773275812445388,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 79,
+            "deviation": 4.757166269856702,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 80,
+            "deviation": 4.8041226336426694,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 81,
+            "deviation": 4.853801020701933,
+            "is_gift": false
+          },
+          {
+            "b2": 17,
+            "b3": 82,
+            "deviation": 4.9896511308201035,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 18,
+            "b3": 72,
+            "deviation": 3.521894224745596,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 73,
+            "deviation": 3.517446158509426,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 74,
+            "deviation": 3.511606857762759,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 75,
+            "deviation": 3.5044270547434264,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 76,
+            "deviation": 3.495955140199852,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 77,
+            "deviation": 3.48623729462049,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 78,
+            "deviation": 3.47531761081156,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 79,
+            "deviation": 3.5273407725808115,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 80,
+            "deviation": 3.581967183603102,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 81,
+            "deviation": 3.72269219155633,
+            "is_gift": false
+          },
+          {
+            "b2": 18,
+            "b3": 82,
+            "deviation": 3.8630317459436045,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 19,
+            "b3": 72,
+            "deviation": 2.290167811911016,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 73,
+            "deviation": 2.290269134231575,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 74,
+            "deviation": 2.2888799150300687,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 75,
+            "deviation": 2.2860541006504986,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 76,
+            "deviation": 2.281843158469297,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 77,
+            "deviation": 2.2762962154177298,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 78,
+            "deviation": 2.3335627514943753,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 79,
+            "deviation": 2.39330774243313,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 80,
+            "deviation": 2.5390738688527237,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 81,
+            "deviation": 2.684293970816252,
+            "is_gift": false
+          },
+          {
+            "b2": 19,
+            "b3": 82,
+            "deviation": 2.827851391717691,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 20,
+            "b3": 72,
+            "deviation": 1.2128383810378278,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 73,
+            "deviation": 1.1417383531257514,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 74,
+            "deviation": 1.1447649706614924,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 75,
+            "deviation": 1.1462598787042482,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 76,
+            "deviation": 1.146277584780602,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 77,
+            "deviation": 1.2089726915537382,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 78,
+            "deviation": 1.2740150546580826,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 79,
+            "deviation": 1.4249964496851595,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 80,
+            "deviation": 1.575263873927237,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 81,
+            "deviation": 1.7237508016660072,
+            "is_gift": false
+          },
+          {
+            "b2": 20,
+            "b3": 82,
+            "deviation": 1.8705091507108247,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 21,
+            "b3": 72,
+            "deviation": 0.8889964126657509,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 73,
+            "deviation": 0.7235819558997565,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 74,
+            "deviation": 0.5604043417209802,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 75,
+            "deviation": 0.39939291575625285,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 76,
+            "deviation": 0.30458260421994043,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 77,
+            "deviation": 0.239897840072962,
+            "is_gift": true
+          },
+          {
+            "b2": 21,
+            "b3": 78,
+            "deviation": 0.3757333490292848,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 79,
+            "deviation": 0.5247244462315799,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 80,
+            "deviation": 0.6783096897859986,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 81,
+            "deviation": 0.8300469157030372,
+            "is_gift": false
+          },
+          {
+            "b2": 21,
+            "b3": 82,
+            "deviation": 0.9799900973265099,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 22,
+            "b3": 72,
+            "deviation": 1.7133109048209745,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 73,
+            "deviation": 1.5440008187146663,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 74,
+            "deviation": 1.3770135211350647,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 75,
+            "deviation": 1.2763780881158238,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 76,
+            "deviation": 1.1816443216538774,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 77,
+            "deviation": 1.1763826727178521,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 78,
+            "deviation": 1.1736400694206808,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 79,
+            "deviation": 1.1723413371894627,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 80,
+            "deviation": 1.1724374531497272,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 81,
+            "deviation": 1.173881518045177,
+            "is_gift": false
+          },
+          {
+            "b2": 22,
+            "b3": 82,
+            "deviation": 1.2876340357884848,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 23,
+            "b3": 72,
+            "deviation": 2.533156043780415,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 73,
+            "deviation": 2.3599705885751447,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 74,
+            "deviation": 2.2532958632103965,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 75,
+            "deviation": 2.1526757168056854,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 76,
+            "deviation": 2.1417241837317316,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 77,
+            "deviation": 2.1333827020903215,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 78,
+            "deviation": 2.1266218982911385,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 79,
+            "deviation": 2.1213878551214282,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 80,
+            "deviation": 2.1176290074961406,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 81,
+            "deviation": 2.1152960172381325,
+            "is_gift": false
+          },
+          {
+            "b2": 23,
+            "b3": 82,
+            "deviation": 2.114341655723047,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 24,
+            "b3": 72,
+            "deviation": 3.30864753606207,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 73,
+            "deviation": 3.1957084646264318,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 74,
+            "deviation": 3.0889851227108203,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 75,
+            "deviation": 3.072136481738191,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 76,
+            "deviation": 3.0579945395921526,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 77,
+            "deviation": 3.0455772101255345,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 78,
+            "deviation": 3.034825351813909,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 79,
+            "deviation": 3.0256824225430434,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 80,
+            "deviation": 3.0180943400474587,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 81,
+            "deviation": 3.012009351193781,
+            "is_gift": false
+          },
+          {
+            "b2": 24,
+            "b3": 82,
+            "deviation": 3.007377909463461,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 25,
+            "b3": 72,
+            "deviation": 4.109120371251183,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 73,
+            "deviation": 3.996066012388972,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 74,
+            "deviation": 3.973102635071867,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 75,
+            "deviation": 3.9529486436955605,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 76,
+            "deviation": 3.9346707879418803,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 77,
+            "deviation": 3.918204345949809,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 78,
+            "deviation": 3.9034874630695438,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 79,
+            "deviation": 3.890460996563301,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 80,
+            "deviation": 3.879068370240146,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 81,
+            "deviation": 3.869255438293015,
+            "is_gift": false
+          },
+          {
+            "b2": 25,
+            "b3": 82,
+            "deviation": 3.860970357667124,
+            "is_gift": false
+          }
+        ],
+        [
+          {
+            "b2": 26,
+            "b3": 72,
+            "deviation": 4.8786440819459616,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 73,
+            "deviation": 4.849319264618055,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 74,
+            "deviation": 4.822931024478992,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 75,
+            "deviation": 4.798578525319518,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 76,
+            "deviation": 4.776191080564772,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 77,
+            "deviation": 4.75570116109423,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 78,
+            "deviation": 4.737044222658422,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 79,
+            "deviation": 4.720158544441352,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 80,
+            "deviation": 4.704985077939324,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 81,
+            "deviation": 4.6914673053968965,
+            "is_gift": false
+          },
+          {
+            "b2": 26,
+            "b3": 82,
+            "deviation": 4.679551107103606,
+            "is_gift": false
+          }
+        ]
+      ]
+    }
+  },
+  "summary": {
+    "total_configs_tested": 54327,
+    "total_better_than_gift": 0,
+    "p_value": 0.0,
+    "significance": "> 4\u03c3",
+    "elapsed_seconds": 159.40438079833984
+  }
+}
