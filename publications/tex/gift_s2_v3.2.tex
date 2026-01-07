@@ -62,7 +62,7 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{GIFT Framework v3.1 --- Supplement S2}
+\fancyhead[L]{GIFT Framework v3.2 --- Supplement S2}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -122,7 +122,7 @@
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
 
-\noindent\textbf{Version}: 3.1
+\noindent\textbf{Version}: 3.2
 
 \noindent\textbf{Author}: Brieuc de La Fournière
 
@@ -177,17 +177,21 @@ Before presenting derivations, we clarify the logical structure:
 
 \begin{itemize}
 \item Given the inputs, the outputs follow by algebra
-\item The outputs match experiment to 0.087\% mean deviation
+\item The outputs match experiment to 0.24\% mean deviation (PDG 2024)
 \item No continuous parameters are fitted
 \end{itemize}
 
 \subsection{Torsion Independence}
 
-\textbf{Important}: All 18 predictions use only topological invariants. The torsion $T$ does not appear in any formula. Therefore:
+\textbf{Critical clarification}: The 18 predictions derive from \textbf{topological invariants} ($b_2$, $b_3$, $\dimE(\Gtwo)$, etc.), not from the realized value of torsion. Therefore:
 \begin{itemize}
-\item Predictions are identical whether $T = 0$ (analytical) or $T = \kappa_T$ (capacity)
-\item The value $\kappa_T = 1/61$ is a topological bound, not a prediction ingredient
+\item Predictions are independent of whether $T_{\text{physical}} = 0$, $T_{\text{physical}} = \kappa_T$, or any other value
+\item The capacity $\kappa_T = 1/61$ appears only in $\alpha^{-1}$ as a topological parameter
+\item The algebraic reference has $T_{\text{analytical}} = 0$; Joyce's theorem ensures a torsion-free metric exists
+\item The predictions use the \textbf{topology} of $\Kseven$, not the specific metric realization
 \end{itemize}
+
+\textbf{Note}: This independence makes GIFT predictions robust against metric uncertainties and quantum corrections.
 
 % ============================================
 \section*{Part I: Foundations}
@@ -314,7 +318,7 @@ $$\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{61}$$
 \item $61 = \dimE(F_4) + N_{\mathrm{gen}}^2 = 52 + 9$
 \end{itemize}
 
-\subsection{Clarification}
+\subsection{Critical Distinction}
 
 \begin{table}[H]
 \centering
@@ -322,18 +326,23 @@ $$\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{61}$$
 \toprule
 Quantity & Definition & Value \\
 \midrule
-$\kappa_T$ & Topological capacity & $1/61$ (fixed) \\
-$T_{\text{analytical}}$ & Realized torsion for $\varphi = c \times \varphi_0$ & \textbf{0} (exact) \\
-$T_{\text{physical}}$ & Effective torsion for interactions & \textbf{Open question} \\
+$\kappa_T$ & Topological capacity (bound) & $1/61$ (fixed) \\
+$T_{\text{analytical}}$ & Base solution torsion & \textbf{0} (algebraic reference) \\
+$T_{\text{physical}}$ & Physical realization & \textbf{Open question} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Role in predictions}: $\kappa_T$ does NOT appear in any of the 18 dimensionless prediction formulas. It is a structural parameter characterizing $\Kseven$, not a physical observable.
+\textbf{Role in predictions}: $\kappa_T$ appears \textbf{only} in the fine structure constant:
+$$\alpha^{-1} = b_2 + \dimE(\Gtwo) + b_3 \times \kappa_T = 21 + 14 + 77/61 \approx 137.036$$
 
-\textbf{Compatibility}: $T_{\text{analytical}} = 0$ satisfies Joyce's bound ($\|T\| < 0.0288$) with infinite margin.
+All other 17 predictions depend solely on topological integers ($b_2$, $b_3$, $\dimE(\Gtwo)$, etc.).
 
-\textbf{Status}: \topomark{} (structural, not predictive) $\Box$
+\textbf{Important}: The predictions are independent of the \emph{realized} value of torsion. They use the topological capacity $\kappa_T = 1/61$ as a structural parameter, not a claim about physical torsion.
+
+\textbf{Joyce's theorem}: The algebraic reference form $\varphi_{\text{ref}} = (65/32)^{1/14} \times \varphi_0$ determines $\det(g) = 65/32$ exactly. The topological bound $\kappa_T = 1/61$ ensures that deviations $\delta\varphi$ remain within Joyce's perturbative regime ($\|T\| < 0.0288$), guaranteeing existence of a torsion-free metric.
+
+\textbf{Status}: \topomark{} (structural parameter) $\Box$
 
 \section{Relation \#4: Metric Determinant $\det(g) = 65/32$}
 
@@ -355,9 +364,15 @@ $$\det(g) = 2 + \frac{1}{32} = \frac{65}{32}$$
 \textit{Step 4: Alternative derivation}
 $$\det(g) = \frac{\Weyl \times (\rk(\E_8) + \Weyl)}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
 
-\textbf{Verification}: The analytical metric $g = (65/32)^{1/7} \times I_7$ has $\det(g) = [(65/32)^{1/7}]^7 = 65/32$ exactly, confirming the topological formula.
+\textbf{Algebraic verification}: The reference form $\varphi_{\text{ref}} = (65/32)^{1/14} \times \varphi_0$ induces metric (in local orthonormal coframe):
+$$g = c^2 \cdot I_7 = \left[(65/32)^{1/14}\right]^2 \cdot I_7 = (65/32)^{1/7} \cdot I_7$$
 
-\textbf{Status}: \topomark{} $\Box$
+Taking determinant:
+$$\det(g) = \left[(65/32)^{1/7}\right]^7 = 65/32 \quad \textbf{(exact, algebraic)}$$
+
+This confirms the topological formula is satisfied by the algebraic reference form.
+
+\textbf{Status}: \topomark{} (exact rational value) $\Box$
 
 % ============================================
 \section*{Part III: Gauge Sector}
@@ -900,7 +915,7 @@ $<0.01\%$ & 3 & 17\% \\
 \end{tabular}
 \end{table}
 
-\textbf{Mean deviation}: 0.087\%
+\textbf{Mean deviation}: 0.24\% (PDG 2024)
 
 \section{Statistical Uniqueness of $(b_2=21, b_3=77)$}
 

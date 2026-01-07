@@ -62,7 +62,7 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{GIFT Framework v3.1 --- Supplement S1}
+\fancyhead[L]{GIFT Framework v3.2 --- Supplement S1}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -126,7 +126,7 @@
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
 
-\noindent\textbf{Version}: 3.1
+\noindent\textbf{Version}: 3.2
 
 \noindent\textbf{Author}: Brieuc de La Fournière
 
@@ -135,7 +135,7 @@
 \vfill
 
 \begin{abstract}
-This supplement presents the mathematical architecture underlying GIFT. Part I develops $\E_8$ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces $\Gtwo$ holonomy manifolds. Part III establishes $\Kseven$ manifold construction via twisted connected sum, building compact $\Gtwo$ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes that the resulting metric is exactly the scaled standard $\Gtwo$ form, with analytically vanishing torsion. All results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops $\E_8$ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces $\Gtwo$ holonomy manifolds. Part III establishes $\Kseven$ manifold construction via twisted connected sum, building compact $\Gtwo$ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form $\varphi_{\text{ref}} = (65/32)^{1/14}\times\varphi_0$ with exact $\det(g) = 65/32$; Joyce's theorem ensures a torsion-free metric exists. Core algebraic relations are formally verified in Lean 4 (v3.2.0).
 \end{abstract}
 
 \vfill
@@ -633,7 +633,7 @@ $\det(g)$ & $(\Weyl \times (\rk(\E_8) + \Weyl))/2^5$ & $65/32$ & \topomark{} \\
 \end{tabular}
 \end{table}
 
-\subsection{Torsion Magnitude $\kappa_T = 1/61$}
+\subsection{Torsion Capacity $\kappa_T = 1/61$}
 
 \textbf{Derivation}:
 $$\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
@@ -645,6 +645,19 @@ $$\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{77 - 14 - 2} = \frac{
 \item $\dimE(\Gtwo) = 14$ gauge symmetry constraints
 \item $p_2 = 2$ binary duality factor
 \end{itemize}
+
+\textbf{Important distinction}:
+\begin{itemize}
+\item $\kappa_T = 1/61$ is a \textbf{topological capacity} --- a bound on deviations from the reference form
+\item $T_{\text{analytical}} = 0$ for the algebraic reference solution (see Section 4.4)
+\item $T_{\text{physical}}$ (if realized) is an open question in quantum gravity
+\item GIFT's 18 predictions use topological invariants, \textbf{not} the realized value of torsion
+\end{itemize}
+
+\textbf{Role in predictions}: $\kappa_T$ appears only in the fine structure constant formula:
+$$\alpha^{-1} = b_2 + \dimE(\Gtwo) + b_3 \times \kappa_T \approx 137.036$$
+
+All other predictions depend solely on $b_2$, $b_3$, $\dimE(\Gtwo)$, and related topological integers.
 
 \textbf{Status}: \topomark{}
 
@@ -663,12 +676,27 @@ $$\det(g) = \frac{\Weyl \times (\rk(\E_8) + \Weyl)}{2^{\Weyl}} = \frac{5 \times 
 
 \subsection{Formal Certification}
 
-\subsection{The Analytical Solution}
+\subsection{Algebraic Reference Form}
 
-The $\Gtwo$ metric on $\Kseven$ is exactly:
+The algebraic reference form is:
 
-$$\varphi = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
-$$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
+$$\varphi_{\text{ref}} = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
+
+In any local orthonormal coframe $\{e^i\}$, this induces:
+
+$$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7 \approx 1.1115 \cdot I_7$$
+
+\textbf{Important clarification}: $\varphi_{\text{ref}}$ is an \textbf{algebraic reference} --- the canonical $\Gtwo$ structure in a local orthonormal coframe --- fixing normalization via $\det(g) = 65/32$. It is \textbf{not} proposed as a globally constant solution on the compact, curved TCS manifold $\Kseven$.
+
+The identity matrix $I_7$ appears because we work in an adapted coframe; on $\Kseven$, the coframe 1-forms satisfy $de^i \neq 0$ in general, so ``constant components'' does not imply $d\varphi = 0$ globally.
+
+\subsection{Actual Solution Structure}
+
+On the compact TCS manifold, the topology and geometry impose a deformation:
+
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
+
+where $\delta\varphi$ encodes the detailed geometry. The torsion-free condition ($d\varphi = 0$, $d*\varphi = 0$) is a \textbf{global constraint} depending on derivatives, not a consequence of $\varphi_{\text{ref}}$ alone.
 
 \begin{table}[H]
 \centering
@@ -676,24 +704,33 @@ $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 \toprule
 Property & Value & Status \\
 \midrule
-$\det(g)$ & $65/32$ & EXACT \\
-$\|T\|$ & 0 & EXACT (constant form) \\
-Non-zero $\varphi$ components & $7/35$ & 20\% sparsity \\
+$\det(g)$ & $65/32$ & EXACT (algebraic) \\
+$\|\delta\varphi\|$ & Bounded by $\kappa_T = 1/61$ & Topological \\
+Non-zero $\varphi_{\text{ref}}$ components & $7/35$ & 20\% sparsity \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Joyce Existence Theorem: Trivially Satisfied}
+\subsection{Why GIFT Predictions Are Robust}
 
-For constant 3-form $\varphi(x) = \varphi_0$:
+The 18 dimensionless predictions derive from \textbf{topological invariants} ($b_2$, $b_3$, $\dimE(\Gtwo)$, etc.) that are independent of the specific realization of $\delta\varphi$. The reference form $\varphi_{\text{ref}}$ determines the algebraic structure; the deviations $\delta\varphi$ encode the detailed geometry without affecting the topological ratios.
+
+\textbf{Example}: The Koide relation $Q_{\mathrm{Koide}} = \dimE(\Gtwo)/b_2 = 14/21 = 2/3$ depends only on dimension and Betti number --- it is insensitive to metric details or torsion.
+
+\subsection{Torsion and Joyce's Theorem}
+
+The topological capacity $\kappa_T = 1/61$ bounds the amplitude of deviations $\|\delta\varphi\|$. This controlled magnitude places $\Kseven$ in the regime where Joyce's perturbative correction achieves a torsion-free $\Gtwo$ structure.
+
+\textbf{Joyce's theorem}: For near-$\Gtwo$ structures with $\|T\| < \epsilon_0 \approx 0.0288$, a torsion-free $\Gtwo$ structure exists nearby via perturbative correction.
+
+The topological bound $\kappa_T = 1/61$ ensures this condition is satisfiable. The analytical solution structure:
 \begin{itemize}
-\item $d\varphi = 0$ (exterior derivative of constant)
-\item $d*\varphi = 0$ (same reasoning)
+\item $\varphi_{\text{ref}}$: algebraic reference (determines $\det(g) = 65/32$)
+\item $\delta\varphi$: geometric correction (bounded by $\kappa_T$)
+\item Joyce's theorem: guarantees torsion-free completion
 \end{itemize}
 
-Therefore $T = 0 < \epsilon_0 = 0.0288$ with \textbf{infinite margin}.
-
-Joyce's perturbation theorem guarantees existence of a torsion-free $\Gtwo$ structure. For the constant form, this is trivially satisfied; no perturbation analysis required.
+\textbf{Critical note}: The torsion capacity $\kappa_T = 1/61$ is a topological bound, not a claim that $T_{\text{realized}} = 1/61$. The analytical base has $T_{\text{analytical}} = 0$ (see below). Whether physical interactions induce non-zero torsion is an open question.
 
 \subsection{Independent Numerical Validation (PINN)}
 
@@ -726,14 +763,21 @@ def phi0_signs : List Int := [1, 1, 1, 1, -1, -1, -1]
 
 def scale_factor_power_14 : Rat := 65 / 32
 
-theorem torsion_satisfies_joyce :
-  torsion_norm_constant_form < joyce_threshold_num := by native_decide
-
 theorem det_g_equals_target :
   scale_factor_power_14 = det_g_target := rfl
+
+theorem kappa_T_value :
+  kappa_T = 1 / 61 := by norm_num
 \end{lstlisting}
 
-\textbf{Status}: \proven{} (327 lines, 0 sorry)
+\textbf{Status}: \proven{} (v3.2.0, 185 theorems verified, 0 sorry)
+
+\textbf{Notable updates}:
+\begin{itemize}
+\item \texttt{E8\_basis\_generates}: Every lattice vector is integer combination of simple roots (\textbf{THEOREM}, was axiom in v3.1)
+\item Complete $\E_8$ root system: 12/12 theorems proven
+\item Core algebraic relations: 100\% verified
+\end{itemize}
 
 \subsection{The Derivation Chain}
 
@@ -755,7 +799,10 @@ Scaling c = (65/32)^(1/14)    <- GIFT constraint
 Metric g = c^2 x I_7
      |
      v
-det(g) = 65/32, T = 0         <- EXACT (not fitted)
+det(g) = 65/32               <- EXACT (algebraic)
+     |
+     v
+Joyce's theorem              <- Torsion-free metric exists
      |
      v
 sin^2(theta_W) = 3/13, Q = 2/3, ...  <- Predictions

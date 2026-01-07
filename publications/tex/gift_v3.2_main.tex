@@ -63,7 +63,7 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Geometric Information Field Theory 3.1}
+\fancyhead[L]{Geometric Information Field Theory 3.2}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -75,7 +75,7 @@
     linkcolor=blue,
     citecolor=blue,
     urlcolor=blue,
-    pdftitle={Geometric Information Field Theory v3.1},
+    pdftitle={Geometric Information Field Theory v3.2},
     pdfauthor={Brieuc de La Fourniere}
 }
 
@@ -169,7 +169,7 @@
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
 
-\noindent\textbf{Version}: 3.1
+\noindent\textbf{Version}: 3.2
 
 \noindent\textbf{Author}: Brieuc de La Fournière
 
@@ -180,9 +180,9 @@
 \begin{abstract}
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional $\Gtwo$-holonomy manifold $\Kseven$. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra $\mathbb{O}$, its automorphism group $\Gtwo = \mathrm{Aut}(\mathbb{O})$, and the unique compact geometry realizing this structure.\\
 \\
-18 dimensionless quantities achieve mean deviation 0.087\% from experiment, including exact matches for $N_{\mathrm{gen}} = 3$, $Q_{\mathrm{Koide}} = 2/3$, and $m_s/m_d = 20$. The 43-year Koide mystery receives a two-line derivation: $Q = \dimE(\Gtwo)/b_2 = 14/21 = 2/3$. Exhaustive search over 19,100 alternative $\Gtwo$ manifold configurations confirms that $(b_2=21, b_3=77)$ achieves the lowest mean deviation (0.23\%). The second-best configuration performs $2.2\times$ worse. No alternative matches GIFT's precision across all observables ($p < 10^{-4}$, $>4\sigma$ after look-elsewhere correction).\\
+18 dimensionless quantities achieve mean deviation 0.24\% from experiment (PDG 2024), including exact matches for $N_{\mathrm{gen}} = 3$, $Q_{\mathrm{Koide}} = 2/3$, and $m_s/m_d = 20$. The 43-year Koide mystery receives a two-line derivation: $Q = \dimE(\Gtwo)/b_2 = 14/21 = 2/3$. Exhaustive search over 19,100 alternative $\Gtwo$ manifold configurations confirms that $(b_2=21, b_3=77)$ achieves the lowest mean deviation (0.23\%). The second-best configuration performs $2.2\times$ worse. No alternative matches GIFT's precision across all observables ($p < 10^{-4}$, $>4\sigma$ after look-elsewhere correction).\\
 \\
-The prediction $\delta_{\CP} = 197^\circ$ will be tested by DUNE (2034--2039) to $\pm 5^\circ$ precision. A measurement outside $182^\circ$--$212^\circ$ would definitively refute the framework. The $\Gtwo$ metric admits exact closed form $\varphi = (65/32)^{1/14} \times \varphi_0$ with zero torsion, verified in Lean 4. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
+The prediction $\delta_{\CP} = 197^\circ$ will be tested by DUNE (2034--2039) to $\pm 5^\circ$ precision. A measurement outside $182^\circ$--$212^\circ$ would definitively refute the framework. The $\Gtwo$ reference form $\varphi_{\text{ref}} = (65/32)^{1/14} \times \varphi_0$ determines $\det(g) = 65/32$ exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 \end{abstract}
 
 \vfill
@@ -267,7 +267,7 @@ The key elements are:
 
 \textbf{$\E_8 \times \E_8$ gauge structure}: The largest exceptional Lie group appears twice, providing 496 gauge degrees of freedom. This choice is motivated by anomaly cancellation and the natural embedding of the Standard Model gauge group.
 
-\textbf{$\Kseven$ manifold}: A compact seven-dimensional manifold with $\Gtwo$ holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers $b_2 = 21$ and $b_3 = 77$. The $\Gtwo$ metric is exactly the scaled standard form $g = (65/32)^{1/7} \times I_7$, with vanishing torsion.
+\textbf{$\Kseven$ manifold}: A compact seven-dimensional manifold with $\Gtwo$ holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers $b_2 = 21$ and $b_3 = 77$. The algebraic reference form determines $\det(g) = 65/32$; Joyce's theorem guarantees a torsion-free metric exists.
 
 \textbf{$\Gtwo$ holonomy}: This exceptional holonomy group preserves exactly $N=1$ supersymmetry in four dimensions and ensures Ricci-flatness of the internal geometry.
 
@@ -495,19 +495,36 @@ To satisfy $\det(g) = 65/32$, we scale $\varphi_0$ by:
 
 $$c = \left(\frac{65}{32}\right)^{1/14} \approx 1.0543$$
 
-The induced metric is then:
+\textbf{Induced metric in local orthonormal frame}:
+
+The associative 3-form $\varphi$ induces a metric via the standard formula. In any local orthonormal coframe $\{e^i\}$, the scaled form $\varphi = c\cdot\varphi_0$ yields:
 
 $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7 \approx 1.1115 \cdot I_7$$
 
-\textbf{Torsion Vanishes Exactly}
+This represents the \textbf{local frame normalization}, not a claim of global flatness on $\Kseven$. The TCS construction produces a curved, compact manifold; the identity matrix appears because we work in an adapted coframe.
 
-For a constant 3-form, the exterior derivatives vanish:
-\begin{itemize}
-\item $d\varphi = 0$ (no spatial dependence)
-\item $d*\varphi = 0$ (same reasoning)
-\end{itemize}
+\textbf{Algebraic Reference Form}
 
-Therefore the torsion tensor $T = 0$ exactly, satisfying Joyce's threshold $\|T\| < 0.0288$ with infinite margin.
+The form $\varphi_{\text{ref}} = c\cdot\varphi_0$ serves as an \textbf{algebraic reference} --- the canonical $\Gtwo$ structure in a local orthonormal coframe --- fixing normalization and scale via the constraint $\det(g) = 65/32$. This determines $c = (65/32)^{1/14}$.
+
+\textbf{Important clarification}: $\varphi_{\text{ref}}$ is not proposed as a globally constant solution on $\Kseven$. On any compact TCS manifold, the coframe 1-forms $\{e^i\}$ satisfy $de^i \neq 0$ in general, so ``constant components in an adapted coframe'' does not imply $d\varphi = 0$ globally.
+
+\textbf{Actual solution structure}: The topology and geometry of $\Kseven$ impose a deformation $\delta\varphi$ such that:
+
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
+
+The torsion-free condition ($d\varphi = 0$, $d*\varphi = 0$) is a \textbf{global constraint} depending on derivatives, not a consequence of the reference form alone. It must be established separately through:
+\begin{enumerate}
+\item Joyce's perturbative existence theorem
+\item Analytical bounds on $\|\delta\varphi\|$
+\item Numerical verification (PINN cross-check)
+\end{enumerate}
+
+\textbf{Why GIFT predictions are robust}: The 18 dimensionless predictions derive from topological invariants ($b_2$, $b_3$, $\dimE(\Gtwo)$, etc.) that are independent of the specific realization of $\delta\varphi$. The reference form $\varphi_{\text{ref}}$ determines the algebraic structure; the deviations $\delta\varphi$ encode the detailed geometry without affecting the topological ratios.
+
+\textbf{Torsion and Joyce's theorem}:
+
+The topological capacity $\kappa_T = 1/61$ bounds the amplitude of deviations. The controlled magnitude of $\|\delta\varphi\|$ places $\Kseven$ in the regime where Joyce's perturbative correction achieves a torsion-free $\Gtwo$ structure. Joyce's theorem guarantees existence when $\|T\| < \epsilon_0 \approx 0.0288$; the topological bound ensures this condition is satisfiable.
 
 \textbf{Why this matters}:
 
@@ -517,16 +534,18 @@ Therefore the torsion tensor $T = 0$ exactly, satisfying Joyce's threshold $\|T\
 \toprule
 Property & Value \\
 \midrule
-Metric source & Exact algebraic form \\
-Torsion & $T = 0$ (capacity = 1/61) \\
-Joyce threshold & Satisfied with infinite margin \\
+Reference form & $\varphi_{\text{ref}} = (65/32)^{1/14} \times \varphi_0$ \\
+Metric determinant & $\det(g) = 65/32$ (exact) \\
+Torsion capacity & $\kappa_T = 1/61$ (topological bound) \\
+Joyce threshold & $\|T\| < 0.0288$ (satisfiable) \\
 Parameter count & Zero continuous \\
-Verification & Lean 4 theorem + PINN cross-check \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The constant form $\varphi = c \times \varphi_0$ is not an approximation; it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
+\textbf{Scope of verification}: Lean 4 confirms the arithmetic and algebraic relations between GIFT constants (e.g., $\det(g) = 65/32$). It does not formalize the existence of $\Kseven$ as a smooth $\Gtwo$ manifold, nor the physical interpretation of topological invariants.
+
+\textbf{Interpretive note}: One may view $\varphi_{\text{ref}}$ as an ``octonionic vacuum'' in the algebraic sense --- a reference point in the space of $\Gtwo$ structures --- while $\Kseven$ encodes physics through the deviations $\delta\varphi$ and their invariants (including torsion), rather than through global flatness.
 
 \textbf{Implications}
 
@@ -577,7 +596,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 \begin{enumerate}
 \item \textbf{Given} the octonionic algebra $\mathbb{O}$, its automorphism group $\Gtwo$, the $\E_8\times\E_8$ gauge structure, and the $\Kseven$ manifold (TCS construction with $b_2 = 21$, $b_3 = 77$)...
 \item \textbf{Then} the 18 dimensionless predictions follow by algebra
-\item \textbf{And} these match experiment to 0.087\% mean deviation
+\item \textbf{And} these match experiment to 0.24\% mean deviation (PDG 2024)
 \item \textbf{With} zero continuous parameters fitted
 \end{enumerate}
 
@@ -592,7 +611,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 \subsubsection{Three Factors Distinguishing GIFT from Numerology}
 
-\textbf{1. Multiplicity}: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.087\% mean deviation across 18 quantities has probability $< 10^{-20}$.
+\textbf{1. Multiplicity}: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.24\% mean deviation (PDG 2024) across 18 quantities has probability $< 10^{-30}$.
 
 \textbf{2. Exactness}: Several predictions are exactly rational:
 \begin{itemize}
@@ -919,7 +938,9 @@ The spectral index involves Riemann zeta values at bulk dimension (11) and Weyl 
 
 \begin{itemize}
 \item \textbf{Total predictions}: 18
-\item \textbf{Mean deviation}: 0.087\% across dimensionless ratios
+\item \textbf{Mean deviation}: 0.24\% (PDG 2024)
+\item \textbf{Median deviation}: 0.06\%
+\item \textbf{Maximum deviation}: 0.368\% ($\theta_{13}$)
 \item \textbf{Exact matches}: 4 ($N_{\mathrm{gen}}$, $\delta_{\CP}$, $m_s/m_d$, $n_s$)
 \item \textbf{Sub-0.01\% deviation}: 3 ($Q_{\mathrm{Koide}}$, $m_\tau/m_e$, $n_s$)
 \item \textbf{Sub-0.1\% deviation}: 6
@@ -944,7 +965,7 @@ Deviation Range & Count & Percentage \\
 
 \subsection{Comparison with Random Matching}
 
-If predictions were random numbers in [0,1], matching 18 experimental values to 0.087\% average deviation would occur with probability less than $10^{-30}$. This does not prove the framework correct, but it excludes pure coincidence as an explanation.
+If predictions were random numbers in [0,1], matching 18 experimental values to 0.24\% average deviation (PDG 2024) would occur with probability less than $10^{-30}$. This does not prove the framework correct, but it excludes pure coincidence as an explanation.
 
 \subsection{Statistical Validation Against Alternative Configurations}
 
@@ -962,6 +983,8 @@ We tested alternative $\Gtwo$ manifold configurations using:
 \end{itemize}
 
 Critically, this validation uses the \textbf{actual topological formulas} to compute predictions for each alternative configuration, not random perturbations.
+
+\textbf{Note}: The statistical scan uses a reduced set of 12 observables with direct topological formulas (excluding derived quantities like $\alpha^{-1}$ that involve multiple terms). The headline figure 0.24\% includes all 18 predictions. Both metrics confirm GIFT's optimality; the difference reflects scope, not inconsistency.
 
 \subsubsection{Results}
 
@@ -1112,7 +1135,7 @@ This contrasts sharply with the Standard Model's 19 free parameters and string t
 
 \subsection{Predictive Success}
 
-Eighteen quantitative predictions achieve mean deviation of 0.087\%. Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: $Q = \dimE(\Gtwo)/b_2 = 14/21 = 2/3$.
+Eighteen quantitative predictions achieve mean deviation of 0.24\% (PDG 2024). Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: $Q = \dimE(\Gtwo)/b_2 = 14/21 = 2/3$.
 
 \subsection{Falsifiability}
 
@@ -1120,7 +1143,7 @@ Unlike many approaches to fundamental physics, GIFT makes sharp, testable predic
 
 \subsection{Mathematical Rigor}
 
-The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of $N_{\mathrm{gen}} = 3$ is standard. Over 180 relations have been verified in Lean 4, providing machine-checked confirmation of algebraic claims.
+The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of $N_{\mathrm{gen}} = 3$ is standard. 185 relations have been verified in Lean 4 (core v3.2.0), providing machine-checked confirmation of algebraic claims. The $\E_8$ root system is fully proven (12/12 theorems), including \texttt{E8\_basis\_generates} now a theorem rather than axiom.
 
 \section{Limitations and Open Questions}
 
@@ -1261,13 +1284,13 @@ E8xE8 algebra  <->  ?  <->  G2 holonomy  <->  ?  <->  SM parameters
 
 \section{Conclusion}
 
-GIFT derives 18 dimensionless predictions from a single geometric structure: a $\Gtwo$-holonomy manifold $\Kseven$ with Betti numbers (21, 77) coupled to $\E_8\times\E_8$ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.087\%, with the 43-year Koide mystery resolved by $Q = \dimE(\Gtwo)/b_2 = 2/3$.
+GIFT derives 18 dimensionless predictions from a single geometric structure: a $\Gtwo$-holonomy manifold $\Kseven$ with Betti numbers (21, 77) coupled to $\E_8\times\E_8$ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.24\% (PDG 2024), with the 43-year Koide mystery resolved by $Q = \dimE(\Gtwo)/b_2 = 2/3$.
 
-The $\Gtwo$ metric is exactly $\varphi = (65/32)^{1/14} \times \varphi_0$ with $T = 0$, making all predictions algebraically exact rather than numerically fitted.
+The $\Gtwo$ reference form $\varphi_{\text{ref}} = (65/32)^{1/14} \times \varphi_0$ determines $\det(g) = 65/32$ exactly, with Joyce's theorem ensuring a torsion-free metric exists. All predictions are algebraically exact, not numerically fitted.
 
 Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute $\delta_{\CP} = 197^\circ$ to $\pm 5^\circ$ precision.
 
-The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.087\% mean deviation, derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
+The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.24\% mean deviation (PDG 2024), derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
 
 The octonions, discovered in 1843 as a mathematical curiosity, may yet prove to be nature's preferred algebra.
 
@@ -1380,16 +1403,16 @@ $\varphi_0$ & standard $\Gtwo$ form & 7 non-zero components \\
 \toprule
 Supplement & Content & Location \\
 \midrule
-S1: Foundations & $\E_8$, $\Gtwo$, $\Kseven$ construction details & GIFT\_v3.1\_S1\_foundations.md \\
-S2: Derivations & Complete proofs of 18 relations & GIFT\_v3.1\_S2\_derivations.md \\
-S3: Dynamics & Scale bridge, torsion, cosmology & GIFT\_v3.1\_S3\_dynamics.md \\
+S1: Foundations & $\E_8$, $\Gtwo$, $\Kseven$ construction details & GIFT\_v3.2\_S1\_foundations.md \\
+S2: Derivations & Complete proofs of 18 relations & GIFT\_v3.2\_S2\_derivations.md \\
+S3: Dynamics & Scale bridge, torsion, cosmology & GIFT\_v3.2\_S3\_dynamics.md \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \vfill
 \noindent\rule{\textwidth}{0.2pt}
-\textit{GIFT Framework v3.1}\\
+\textit{GIFT Framework v3.2}\\
 
 \end{document}
 

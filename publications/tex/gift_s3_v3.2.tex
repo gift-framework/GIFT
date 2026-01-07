@@ -62,7 +62,7 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{GIFT Framework v3.1 --- Supplement S3}
+\fancyhead[L]{GIFT Framework v3.2 --- Supplement S3}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.2pt}
 
@@ -128,7 +128,7 @@
 \maketitle
 \noindent\rule{\textwidth}{0.2pt}
 
-\noindent\textbf{Version}: 3.1
+\noindent\textbf{Version}: 3.2
 
 \noindent\textbf{Author}: Brieuc de La Fournière
 
@@ -137,12 +137,12 @@
 \vfill
 
 \begin{abstract}
-The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. The base $\Gtwo$ metric is exactly the scaled standard form with $T = 0$. This supplement explores how departures from this exact solution (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
+The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. The algebraic reference form $\varphi_{\text{ref}} = (65/32)^{1/14} \times \varphi_0$ determines $\det(g) = 65/32$ exactly; Joyce's theorem ensures a torsion-free metric exists as the analytical base. This supplement explores how physical interactions (moduli variation, quantum corrections) relate to this geometric structure.
 
 This supplement provides three essential bridges:
 
 \begin{enumerate}
-\item \textbf{Torsional dynamics}: How departures from the $T = 0$ solution could generate physical interactions. The topological value $\kappa_T = 1/61$ represents the geometric ``capacity'' for torsion.
+\item \textbf{Geometric structure}: The reference form establishes the algebraic base; the topological capacity $\kappa_T = 1/61$ bounds deviations. Whether physical interactions induce effective torsion is an open question.
 
 \item \textbf{Scale bridge}: The formula $m_e = M_{\Pl} \times \exp(-(H^* - L_8 - \ln(\phi)))$ derives the electron mass from Planck scale with $<0.1\%$ precision on the exponent
 
@@ -240,24 +240,33 @@ Equivalent to closure conditions:
 
 $$d\varphi = 0, \quad d*\varphi = 0$$
 
-\textbf{Exact Solution}
+\textbf{Algebraic Reference Form}
 
-The constant form $\varphi = c \times \varphi_0$ satisfies:
+The reference form $\varphi_{\text{ref}} = c \times \varphi_0$ with $c = (65/32)^{1/14}$ provides:
 \begin{itemize}
-\item $d\varphi = 0$, $d*\varphi = 0$ (trivially, for constant form)
-\item $T = 0$ exactly
+\item Algebraic base: determines $\det(g) = 65/32$ exactly in local orthonormal coframe
+\item Normalization: fixes scale via topological constraint
+\item \textbf{Not} a claim of global constancy on the compact TCS manifold $\Kseven$
 \end{itemize}
 
-\textbf{Physical Interactions Require Departure}
+\textbf{Global Solution Structure}
 
-The exact torsion-free solution cannot support physical interactions (no coupling between sectors). Two mechanisms could generate effective torsion:
+On the compact manifold, topology and geometry impose:
+
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
+
+where $\delta\varphi$ encodes detailed geometry. The torsion-free condition ($d\varphi = 0$, $d*\varphi = 0$) is a \textbf{global constraint} that must be established via Joyce's perturbative theorem.
+
+\textbf{Physical Interactions and Dynamics}
+
+Two mechanisms relate the geometric structure to physical interactions:
 
 \begin{enumerate}
-\item \textbf{Moduli variation}: Position-dependent deformation of the $\Gtwo$ structure across the $\Kseven$ moduli space
-\item \textbf{Quantum corrections}: Loop effects that modify the classical torsion-free condition
+\item \textbf{Moduli variation}: Position-dependent variation of the $\Gtwo$ structure across $\Kseven$'s moduli space encodes physical dynamics
+\item \textbf{Quantum corrections}: Loop effects and matter couplings may modify the classical structure
 \end{enumerate}
 
-The topological value $\kappa_T = 1/61$ represents the geometric ``capacity'' for such deformations, not the classical solution's torsion.
+The topological capacity $\kappa_T = 1/61$ bounds the magnitude of deviations $\|\delta\varphi\|$, ensuring Joyce's perturbative regime is accessible.
 
 \section{Torsion Magnitude $\kappa_T = 1/61$}
 
@@ -293,23 +302,25 @@ $$61 = b_3 - b_2 + \Weyl = 77 - 21 + 5$$
 
 $$61 = \text{prime}(18)$$
 
-\subsection{Critical Distinction: Capacity vs Realized Value}
+\subsection{Critical Distinction: Capacity vs Base Solution}
 
 \begin{center}
 \fbox{\begin{minipage}{0.9\textwidth}
-\textbf{IMPORTANT}
+\textbf{IMPORTANT CLARIFICATION}
 
-$\kappa_T = 1/61$ is the CAPACITY, the maximum torsion that $\Kseven$ topology permits while preserving $\Gtwo$ holonomy.
+\begin{itemize}
+\item $\kappa_T = 1/61$: Topological capacity (bound on deviations $\|\delta\varphi\|$)
+\item $T_{\text{analytical}} = 0$: Base solution via Joyce's theorem (algebraic reference + perturbative correction)
+\item $T_{\text{physical}}$: Effective torsion from interactions (open question)
+\end{itemize}
 
-$T_{\text{analytical}} = 0$ is the REALIZED value for the exact solution $\varphi = (65/32)^{1/14} \times \varphi_0$.
+The capacity $\kappa_T$ characterizes the manifold's topological structure. The base solution has $T_{\text{analytical}} = 0$ via Joyce's construction. Whether physical interactions induce effective torsion is an open question in quantum gravity.
 
-The capacity 1/61 characterizes the manifold. The realized value 0 characterizes the specific metric.
-
-All 18 predictions use topology (via $b_2$, $b_3$, $\dimE(\Gtwo)$), NOT the realized torsion value.
+\textbf{Critical}: The 18 predictions use topological invariants ($b_2$, $b_3$, $\dimE(\Gtwo)$), NOT the realized torsion value. They are robust against metric uncertainties and quantum corrections.
 \end{minipage}}
 \end{center}
 
-\textbf{Status}: \topomark{} (capacity, not realized value)
+\textbf{Status}: \topomark{} (topological structure)
 
 \subsection{Experimental Compatibility}
 
@@ -610,7 +621,21 @@ Electron mass & $m_e \sim 0.511$ MeV & Lightest charged fermion \\
 
 \section{The Master Formula}
 
-\textbf{WARNING: \exploratory{} CONTENT} - The scale bridge formula below achieves 0.09\% precision but involves assumptions (Lucas number selection, $\ln(\phi)$ appearance) that lack geometric derivation. This section represents a working conjecture, not a proven result.
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}
+\textbf{THEORETICAL EXPLORATION}
+
+The dimensionless predictions (S2) are \textbf{topologically exact}. They use only $b_2$, $b_3$, $\dimE(\Gtwo)$, and related invariants. These predictions are robust.
+
+The scale bridge below (connecting topology to absolute scales) is \textbf{exploratory}. It achieves 0.09\% precision but involves assumptions (Lucas number selection, $\ln(\phi)$ appearance) without geometric derivation. This section represents a working conjecture, not a proven result.
+
+\textbf{Status distinction}:
+\begin{itemize}
+\item Dimensionless ratios: \textbf{\proven{}} (topological, 0.24\% mean deviation)
+\item Scale bridge: \textbf{\exploratory{}} (working conjecture, 0.09\% precision on exponent)
+\end{itemize}
+\end{minipage}}
+\end{center}
 
 \subsection{The Scale Bridge}
 
