@@ -6,13 +6,13 @@
 
 *Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
 
-**Lean Verification**: 180+ relations, 0 sorry
+**Lean Verification**: 185 relations, 40 axioms (core v3.2.0)
 
 ---
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops E8 exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G2 holonomy manifolds. Part III establishes K7 manifold construction via twisted connected sum, building compact G2 manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes that the resulting metric is exactly the scaled standard G2 form, with analytically vanishing torsion. All results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops E8 exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G2 holonomy manifolds. Part III establishes K7 manifold construction via twisted connected sum, building compact G2 manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32; Joyce's theorem guarantees a torsion-free metric exists within this framework. All results are formally verified in Lean 4.
 
 ---
 
@@ -62,7 +62,7 @@ The pattern terminates at 𝕆. There is no 16-dimensional normed division algeb
 
 | Property | Value | GIFT Role |
 |----------|-------|-----------|
-| dim(G₂) | 14 = C(7,2) | Q_Koide numerator |
+| dim(G₂) | 14 = C(7,2) − C(7,1) = 21 − 7 | Q_Koide numerator |
 | Action | Transitive on S⁶ ⊂ Im(𝕆) | Connects all directions |
 | Embedding | G₂ ⊂ SO(7) | Preserves φ₀ |
 
@@ -74,6 +74,22 @@ This is not a choice. It is a consequence:
 - A compact 7-manifold with G₂ holonomy is the geometric realization
 
 **K₇ is to G₂ what the circle is to U(1).**
+
+### 0.4 The Fano Plane: Combinatorial Structure of Im(𝕆)
+
+The 7 imaginary octonion units form the **Fano plane** PG(2,2), the smallest projective plane:
+- 7 points (imaginary units e₁...e₇)
+- 7 lines (multiplication triples eᵢ × eⱼ = ±eₖ)
+- 3 points per line
+
+**Combinatorial counts**:
+- Point-line incidences: 7 × 3 = 21 = C(7,2) = b₂
+- Automorphism group: PSL(2,7) with |PSL(2,7)| = 168
+
+**Numerical observation**: The following identity holds:
+$$(b_3 + \dim(G_2)) + b_3 = 91 + 77 = 168 = |{\rm PSL}(2,7)| = {\rm rank}(E_8) \times b_2$$
+
+Whether this arithmetic coincidence reflects deeper geometric structure connecting gauge and matter sectors remains an open question.
 
 ---
 
@@ -102,6 +118,12 @@ E₈ root system in ℝ⁸ has 240 roots:
 $$\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1)$$
 
 **Verification**: 112 + 128 = 240 roots, all length √2.
+
+**Lean Status (v3.2.0)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
+- `D8_roots_card` = 112, `HalfInt_roots_card` = 128
+- `E8_roots_card` = 240, `E8_roots_decomposition`
+- `E8_inner_integral`, `E8_norm_sq_even`, `E8_sub_closed`
+- `E8_basis_generates`: Every lattice vector is integer combination of simple roots (THEOREM, was axiom)
 
 ### 1.3 Cartan Matrix
 
@@ -139,7 +161,57 @@ $$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim
 | 5² | p₂ = 2 | 25 | Weyl^(binary) |
 | 7¹ | 1 | 7 | dim(K₇) |
 
-**Status**: **PROVEN (Lean)**: `weyl_E8_topological_factorization`
+**Status**: **PROVEN (Lean 4)**: `weyl_E8_topological_factorization`
+
+---
+
+## 2.3 Triple Derivation of Weyl = 5
+
+**Theorem**: The Weyl factor admits three independent derivations from topological invariants.
+
+### Derivation 1: G₂ Dimensional Ratio
+
+$$\text{Weyl} = \frac{\dim(G_2) + 1}{N_{gen}} = \frac{14 + 1}{3} = \frac{15}{3} = 5$$
+
+**Interpretation**: The holonomy dimension plus unity, distributed over generations.
+
+### Derivation 2: Betti Reduction
+
+$$\text{Weyl} = \frac{b_2}{N_{gen}} - p_2 = \frac{21}{3} - 2 = 7 - 2 = 5$$
+
+**Interpretation**: The per-generation Betti contribution minus binary duality.
+
+### Derivation 3: Exceptional Difference
+
+$$\text{Weyl} = \dim(G_2) - \text{rank}(E_8) - 1 = 14 - 8 - 1 = 5$$
+
+**Interpretation**: The gap between holonomy dimension and gauge rank, reduced by unity.
+
+### Unified Identity
+
+These three derivations establish the **Weyl Triple Identity**:
+
+$$\boxed{\frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) - \text{rank}(E_8) - 1 = 5}$$
+
+**Status**: PROVEN (algebraic identity from GIFT constants)
+
+### Verification
+
+| Expression | Computation | Result |
+|------------|-------------|--------|
+| (dim(G₂) + 1) / N_gen | (14 + 1) / 3 | 5 |
+| b₂/N_gen - p₂ | 21/3 - 2 | 5 |
+| dim(G₂) - rank(E₈) - 1 | 14 - 8 - 1 | 5 |
+
+### Significance
+
+The triple convergence indicates Weyl = 5 is not an arbitrary choice but a **structural constraint** of E₈×E₈/G₂/K₇ geometry. This explains:
+
+1. **det(g) = 65/32**: Via Weyl × (rank(E₈) + Weyl) / 2^Weyl = 5 × 13 / 32
+2. **|W(E₈)| factorization**: The factor 5² = Weyl^p₂ in prime decomposition
+3. **Cosmological ratio**: √Weyl = √5 appears in dark sector (see S3)
+
+**Status**: PROVEN (three independent derivations)
 
 ---
 
@@ -167,7 +239,7 @@ where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
 - E₇: 7 × 19 = 133 ✓
 - E₈: 8 × 31 = 248 ✓
 
-**Status**: **PROVEN (Lean)**: `exceptional_chain_certified`
+**Status**: **PROVEN (Lean 4)**: `exceptional_chain_certified`
 
 ---
 
@@ -186,7 +258,7 @@ where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
 The hierarchy parameter numerator:
 $$\tau_{num} = 3472 = 7 \times 496 = \dim(K_7) \times \dim(E_8 \times E_8)$$
 
-**Status**: **PROVEN (Lean)**: `tau_num_E8xE8`
+**Status**: **PROVEN (Lean 4)**: `tau_num_E8xE8`
 
 ### 4.3 Binary Duality Parameter
 
@@ -222,7 +294,7 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | dim(F₄) - dim(J₃(O)) | 25 = 5² | Weyl² |
 | dim(E₆) - dim(F₄) | 26 | dim(J₃(O)₀) |
 
-**Status**: **PROVEN (Lean)**: `exceptional_differences_certified`
+**Status**: **PROVEN (Lean 4)**: `exceptional_differences_certified`
 
 ---
 
@@ -237,6 +309,13 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | dim(G₂) | 14 | Q_Koide numerator |
 | rank(G₂) | 2 | Lie rank |
 | Definition | Aut(O) | Octonion automorphisms |
+
+**Lean Status (v3.2.0)**: G₂ Cross Product **9/11** proven:
+- `epsilon_antisymm`, `epsilon_diag`, `cross_apply` ✓
+- `G2_cross_bilinear`, `G2_cross_antisymm`, `cross_self` ✓
+- `G2_cross_norm` (Lagrange identity ‖u×v‖² = ‖u‖²‖v‖² − ⟨u,v⟩²) ✓
+- `reflect_preserves_lattice` (Weyl reflection) ✓
+- Remaining: `cross_is_octonion_structure` (343-case timeout), `G2_equiv_characterizations`
 
 ### 6.2 Holonomy Classification (Berger)
 
@@ -260,12 +339,12 @@ $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 | Quantity | Meaning | Value |
 |----------|---------|-------|
 | κ_T = 1/61 | Topological *capacity* for torsion | Fixed by K₇ |
-| T_realized | Actual torsion for specific solution | Depends on φ |
-| T_analytical | Torsion for φ = c × φ₀ | **Exactly 0** |
+| φ_ref | Algebraic reference form | c × φ₀ |
+| T_realized | Actual torsion for global solution | Constrained by Joyce |
 
-**Key insight**: The 18 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of T_realized. The value κ_T = 1/61 defines the geometric bound, not the physical value.
+**Key insight**: The 18 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of the specific torsion realization. The value κ_T = 1/61 defines the geometric bound on deviations from φ_ref.
 
-**Physical interactions**: Emerge from fluctuations around T = 0 base, bounded by κ_T. This mechanism is THEORETICAL (see S3 for details).
+**Physical interactions**: Emerge from the geometry of K₇, with deviations δφ from the reference form bounded by topological constraints. This mechanism is THEORETICAL (see S3 for details).
 
 ---
 
@@ -286,7 +365,7 @@ $$\kappa_T^{-1} = 61 = \dim(F_4) + N_{gen}^2 = 52 + 9$$
 Alternative:
 $$61 = \Pi(\alpha^2_B) + 1 = 2 \times 5 \times 6 + 1$$
 
-**Status**: **PROVEN (Lean)**: `kappa_T_inv_decomposition`
+**Status**: **PROVEN (Lean 4)**: `kappa_T_inv_decomposition`
 
 ---
 
@@ -424,28 +503,31 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^{\text{
 
 ## 11. Formal Certification
 
-### 11.1 The Analytical Solution
+### 11.1 The Algebraic Reference Form
 
-The G₂ metric on K₇ is exactly:
+The algebraic reference form in a local G₂-adapted orthonormal coframe:
 
-$$\varphi = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
-$$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
+$$\varphi_{\text{ref}} = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
+$$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
+
+**Important clarification**: This representation holds in a local orthonormal frame. The manifold K₇ constructed via TCS is curved and compact; "I₇" reflects the frame choice, not global flatness. The reference form φ_ref determines det(g) = 65/32; the global torsion-free solution φ_TF exists by Joyce's theorem.
 
 | Property | Value | Status |
 |----------|-------|--------|
-| det(g) | 65/32 | EXACT |
-| ‖T‖ | 0 | EXACT (constant form) |
-| Non-zero φ components | 7/35 | 20% sparsity |
+| det(g) | 65/32 | EXACT (algebraic) |
+| φ_ref components | 7/35 | 20% sparsity |
+| Joyce threshold | ‖T‖ < 0.0288 | Satisfiable |
 
-### 11.2 Joyce Existence Theorem: Trivially Satisfied
+### 11.2 Joyce Existence Theorem and Global Solutions
 
-For constant 3-form φ(x) = φ₀:
-- dφ = 0 (exterior derivative of constant)
-- d*φ = 0 (same reasoning)
+**Important clarification**: The reference form φ_ref = c·φ₀ is the canonical G₂ structure in a local orthonormal coframe, not a globally constant form on K₇. On a compact TCS manifold, the coframe 1-forms {eⁱ} satisfy deⁱ ≠ 0 in general, so "constant components" does not imply dφ = 0 globally.
 
-Therefore T = 0 < ε₀ = 0.0288 with **infinite margin**.
+**Actual solution structure**: The topology and geometry of K₇ impose a deformation:
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-Joyce's perturbation theorem guarantees existence of a torsion-free G2 structure. For the constant form, this is trivially satisfied; no perturbation analysis required.
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ ≈ 0.0288.
+
+**Why GIFT satisfies Joyce's criterion**: The topological bound κ_T = 1/61 constrains ‖δφ‖, ensuring the manifold lies within Joyce's perturbative regime where a torsion-free solution exists.
 
 ### 11.3 Independent Numerical Validation (PINN)
 
@@ -460,6 +542,16 @@ Physics-Informed Neural Network provides independent numerical validation:
 The PINN converges to the standard form, validating the analytical solution.
 
 ### 11.4 Lean 4 Formalization
+
+**Scope of verification**: The Lean formalization verifies:
+1. Arithmetic identities (e.g., 14/21 = 2/3)
+2. Algebraic relations between GIFT constants
+3. Numerical bounds (e.g., torsion threshold)
+
+It does **not** formalize:
+- Existence of K₇ as a smooth G₂ manifold
+- Physical interpretation of topological invariants
+- Uniqueness of the TCS construction
 
 ```lean
 -- GIFT.Foundations.AnalyticalMetric
@@ -500,7 +592,7 @@ Scaling c = (65/32)^{1/14}    ← GIFT constraint
 Metric g = c² × I₇
      │
      ▼
-det(g) = 65/32, T = 0         ← EXACT (not fitted)
+det(g) = 65/32               ← EXACT (algebraic, not fitted)
      │
      ▼
 sin²θ_W = 3/13, Q = 2/3, ...  ← Predictions
@@ -572,8 +664,10 @@ This supplement establishes the mathematical foundations:
 
 **Part I - E₈ Architecture**:
 - Weyl group factorization into GIFT constants
+- **Weyl Triple Identity**: Weyl = 5 from three independent derivations
 - Exceptional chain theorem
 - Octonionic structure
+- **Lean v3.2.0**: E₈ root system 12/12 complete, `E8_basis_generates` now THEOREM
 
 **Part II - G₂ Holonomy**:
 - Torsion conditions
@@ -584,11 +678,11 @@ This supplement establishes the mathematical foundations:
 - Betti numbers b₂ = 21, b₃ = 77 (exact)
 - Cohomological decomposition
 
-**Part IV - Analytical Solution**:
-- Exact closed form: φ = (65/32)^{1/14} × φ₀
-- Metric: g = (65/32)^{1/7} × I₇
-- Torsion: T = 0 exactly
-- PINN serves as validation, not proof
+**Part IV - Algebraic Reference Form**:
+- Reference form: φ_ref = (65/32)^{1/14} × φ₀
+- Metric determinant: det(g) = 65/32 (algebraically exact)
+- Global solution: φ = φ_ref + δφ, torsion-free via Joyce's theorem
+- PINN serves as numerical validation
 
 ---
 

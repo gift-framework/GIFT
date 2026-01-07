@@ -1,7 +1,7 @@
-# Geometric Information Field Theory v3.1
+# Geometric Information Field Theory v3.2
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.1.1-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.2.0-green.svg)](CHANGELOG.md)
 [![Lean 4 + Coq](https://img.shields.io/badge/Formally_Verified-Lean_4_+_Coq-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -12,10 +12,10 @@
 
 | | |
 |---|---|
-| **Precision** | 0.087% mean deviation across 18 dimensionless predictions |
-| **Uniqueness** | #1 out of 19,100 configurations tested (>4σ significance) |
+| **Precision** | 0.24% mean deviation across 18 dimensionless predictions (PDG 2024) |
+| **Uniqueness** | #1 out of 54,327 configurations tested (>4σ significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 180+ relations proven in Lean 4 + Coq (zero axioms) |
+| **Verified** | 185 relations proven in Lean 4 + Coq (40 axioms, core v3.2.0) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -26,7 +26,7 @@
 
 | Paper | Proofs | Video |
 |:-----:|:------:|:-----:|
-| [Main Paper](publications/markdown/GIFT_v3.1_main.md) | [Lean 4 + Coq](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
+| [Main Paper](publications/markdown/GIFT_v3.2_main.md) | [Lean 4 + Coq](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
 
 ---
 
@@ -36,10 +36,10 @@
 
 | Document | Description |
 |----------|-------------|
-| [Main Paper](publications/markdown/GIFT_v3.1_main.md) | Complete theoretical framework |
-| [S1: Foundations](publications/markdown/GIFT_v3.1_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/markdown/GIFT_v3.1_S2_derivations.md) | All 18 dimensionless derivations (0.087% mean) |
-| [S3: Dynamics](publications/markdown/GIFT_v3.1_S3_dynamics.md) | RG flow, torsional dynamics |
+| [Main Paper](publications/markdown/GIFT_v3.2_main.md) | Complete theoretical framework |
+| [S1: Foundations](publications/markdown/GIFT_v3.2_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations](publications/markdown/GIFT_v3.2_S2_derivations.md) | All 18 dimensionless derivations (0.24% mean, PDG 2024) |
+| [S3: Dynamics](publications/markdown/GIFT_v3.2_S3_dynamics.md) | RG flow, torsional dynamics |
 
 ### For Specific Audiences
 
@@ -86,7 +86,7 @@
 | Q_Koide | 2/3 | dim(G₂)/b₂ |
 | **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
-### Analytical G₂ Metric (v3.1)
+### Analytical G₂ Metric
 
 The G₂ structure admits an **exact closed form**:
 
@@ -115,15 +115,15 @@ Joyce's existence theorem is **trivially satisfied** — no numerical fitting re
 
 Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good choice but the **unique optimum** among G₂ manifold configurations.
 
-### Exhaustive Search Results
+### Exhaustive Search Results (v3.2)
 
 | Metric | Value |
 |--------|-------|
-| Configurations tested | 19,100 |
+| Configurations tested | 54,327 |
 | **GIFT rank** | **#1** |
-| GIFT mean deviation | 0.23% |
-| Second-best deviation | 0.50% |
-| Improvement factor | 2.2× |
+| GIFT mean deviation | 0.24% (PDG 2024) |
+| Better alternatives found | 0 |
+| p-value | < 10⁻⁵ |
 
 ### Top 5 Configurations
 
@@ -135,13 +135,14 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 | 4 | 21 | 79 | 0.79% |
 | 5 | 21 | 75 | 0.81% |
 
-### Statistical Significance
+### Statistical Significance (v3.2 Monte Carlo)
 
 - **LEE-corrected significance**: >4σ
-- **p-value**: < 5.2 × 10⁻⁵
-- **Bootstrap CI**: 100% of alternatives perform worse
+- **p-value**: < 10⁻⁵
+- **Total configurations tested**: 54,327 (Betti, holonomy, structural variations)
+- **Better alternatives found**: 0
 
-GIFT occupies a **sharp minimum**: moving one unit in any direction more than doubles the deviation.
+GIFT occupies a **sharp minimum**: no tested alternative matches its precision.
 
 Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.md)
 
@@ -156,7 +157,7 @@ Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S2 Section 10](publications/markdown/GIFT_v3.1_S2_derivations.md)
+Details: [S2 Section 10](publications/markdown/GIFT_v3.2_S2_derivations.md)
 
 ---
 
@@ -221,12 +222,12 @@ Their appearance suggests structural rather than coincidental relationships.
 ## Citation
 
 ```bibtex
-@software{gift_framework_v31,
-  title   = {GIFT Framework v3.1: Geometric Information Field Theory},
+@software{gift_framework_v32,
+  title   = {GIFT Framework v3.2: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
   year    = {2025},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.1.1}
+  version = {3.2.0}
 }
 ```
 

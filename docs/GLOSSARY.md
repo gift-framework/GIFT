@@ -12,7 +12,7 @@ A compact 7-dimensional Riemannian manifold with G₂ holonomy. The subscript 7 
 
 ### Status Classifications
 Framework uses hierarchical classification for results:
-- **PROVEN (Lean)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
+- **PROVEN (Lean 4)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
 - **PROVEN**: Exact topological identity with rigorous mathematical proof
 - **TOPOLOGICAL**: Direct consequence of topological structure
 - **DERIVED**: Calculated from proven relations
@@ -140,7 +140,7 @@ Process by which gauge bosons acquire mass through spontaneous symmetry breaking
 Number of fermion generations. Experimentally: 3. GIFT predicts: rank(E₈) - rank(Weyl) = 3.
 
 ### δ_CP
-CP-violating phase in neutrino mixing. GIFT predicts: 197° from formula 7·dim(G₂) + ζ(3) + √5.
+CP-violating phase in neutrino mixing. GIFT predicts: 197° from formula dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°.
 
 ### θ₁₂, θ₁₃, θ₂₃
 Three neutrino mixing angles in PMNS matrix.
@@ -385,10 +385,10 @@ Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key
 ### Scale Bridge (v2.1)
 Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
 
-### Lean 4 (v3.0)
-Theorem prover used for formal verification of GIFT exact relations. The [gift-framework/core](https://github.com/gift-framework/core) repository contains 17 modules proving all 13 exact relations with zero domain-specific axioms. Key theorem: `GIFT_framework_certified`.
+### Lean 4 (v3.2)
+Theorem prover used for formal verification of GIFT exact relations. The [gift-framework/core](https://github.com/gift-framework/core) repository contains 185 certified relations including E₈ root system, G₂ cross product properties, Fibonacci/Lucas embeddings, Prime Atlas, and Monstrous Moonshine. Key theorem: `GIFT_framework_certified`.
 
 ---
 
-Last updated: v3.0 (2025-12-03)
+Last updated: v3.2.0 (2026-01-05)
 

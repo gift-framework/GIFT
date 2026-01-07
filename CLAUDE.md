@@ -12,10 +12,10 @@ This repository contains the **theoretical documentation** for GIFT (Geometric I
 GIFT/
 ├── publications/
 │   ├── markdown/           # Core documents
-│   │   ├── GIFT_v3.1_main.md        # Main paper (accessible, quasi-autonomous)
-│   │   ├── GIFT_v3.1_S1_foundations.md  # E₈, G₂, K₇ foundations
-│   │   ├── GIFT_v3.1_S2_derivations.md  # All dimensionless derivations
-│   │   └── GIFT_v3.1_S3_dynamics.md     # RG flow, torsional dynamics
+│   │   ├── GIFT_v3.2_main.md        # Main paper (accessible, quasi-autonomous)
+│   │   ├── GIFT_v3.2_S1_foundations.md  # E₈, G₂, K₇ foundations
+│   │   ├── GIFT_v3.2_S2_derivations.md  # All dimensionless derivations
+│   │   └── GIFT_v3.2_S3_dynamics.md     # RG flow, torsional dynamics
 │   ├── references/         # Extended topics (number theory, speculative physics)
 │   ├── tex/               # LaTeX sources
 │   └── pdf/               # Generated PDFs

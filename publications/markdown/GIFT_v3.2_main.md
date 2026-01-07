@@ -1,6 +1,6 @@
 # Geometric Information Field Theory: Topological Determination of Standard Model Parameters
 
-**Version**: 3.1
+**Version**: 3.2
 
 **Author**: Brieuc de La Fournière
 
@@ -10,9 +10,9 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the unique compact geometry realizing this structure.
 
-18 dimensionless quantities achieve mean deviation 0.087% from experiment, including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
+18 dimensionless quantities achieve mean deviation 0.24% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, and m_s/m_d = 20. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 19,100 alternative G₂ manifold configurations confirms that (b₂=21, b₃=77) achieves the lowest mean deviation (0.23%). The second-best configuration performs 2.2× worse. No alternative matches GIFT's precision across all observables (p < 10⁻⁴, >4σ after look-elsewhere correction).
 
-The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ metric admits exact closed form φ = (65/32)^{1/14} × φ₀ with zero torsion, verified in Lean 4. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
+The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
 ---
 
@@ -74,7 +74,7 @@ The key elements are:
 
 **E8 x E8 gauge structure**: The largest exceptional Lie group appears twice, providing 496 gauge degrees of freedom. This choice is motivated by anomaly cancellation and the natural embedding of the Standard Model gauge group.
 
-**K7 manifold**: A compact seven-dimensional manifold with G2 holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers b2 = 21 and b3 = 77. The G2 metric is exactly the scaled standard form g = (65/32)^{1/7} × I₇, with vanishing torsion.
+**K7 manifold**: A compact seven-dimensional manifold with G2 holonomy, constructed via twisted connected sum. The specific construction yields Betti numbers b2 = 21 and b3 = 77. The algebraic reference form determines det(g) = 65/32; Joyce's theorem guarantees a torsion-free metric exists.
 
 **G2 holonomy**: This exceptional holonomy group preserves exactly N=1 supersymmetry in four dimensions and ensures Ricci-flatness of the internal geometry.
 
@@ -85,6 +85,8 @@ The framework makes predictions that derive from the topological structure:
 2. **Exact rational relations**: Dimensionless ratios expressed as simple fractions of topological invariants, such as sin^2(theta_W) = 3/13.
 
 3. **Algebraic relations**: Quantities involving irrational numbers that nonetheless derive from the geometric structure, such as alpha_s = sqrt(2)/12.
+
+A key structural result is the **Weyl Triple Identity**: the factor Weyl = 5 emerges independently from three topological expressions, establishing it as a geometric constraint rather than an arbitrary choice. This explains the appearance of √5 in cosmological predictions.
 
 For complete mathematical details of the E8 and G2 structures, see Supplement S1. For derivations of all dimensionless predictions, see Supplement S2. For RG flow, torsional dynamics, and scale bridge, see Supplement S3.
 
@@ -167,7 +169,9 @@ This derivation admits alternative forms. The ratio b2/dim(K7) = 21/7 = 3 gives 
 
 The experimental status is unambiguous: no fourth generation has been observed at the LHC despite searches to the TeV scale.
 
-**Status**: PROVEN (Lean verified)
+**Status**: PROVEN (Lean 4)
+
+**Note on Lean verification**: Lean 4 establishes arithmetic consistency and symbolic correctness of the derived relations. It verifies that given the topological inputs (b₂=21, b₃=77, dim(G₂)=14), the algebraic identities hold exactly. It does not constitute a proof of geometric existence or physical validity.
 
 ---
 
@@ -189,7 +193,7 @@ This answers the "selection principle" question: K7 is not chosen from a landsca
 
 Mathematical properties:
 
-**Dimension**: dim(G₂) = 14 = C(7,2), counting pairs of imaginary octonion units. This number appears directly in predictions (Q_Koide = 14/21).
+**Dimension**: dim(G₂) = 14 = C(7,2) − 7, the number of pairs minus the number of units. This number appears directly in predictions (Q_Koide = 14/21).
 
 **Characterization**: G₂ holonomy is equivalent to existence of a parallel 3-form φ satisfying dφ = 0 and d*φ = 0, where * denotes Hodge duality.
 
@@ -239,28 +243,30 @@ $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 **Torsion capacity** (not magnitude):
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
-**Important distinction**: This value represents the geometric *capacity* for torsion, the maximum departure from exact G2 holonomy that K7 topology permits. For the analytical solution φ = c × φ₀, the realized torsion is exactly T = 0 (see Section 3.4). The value κ_T = 1/61 bounds fluctuations; it does not appear directly in the 18 dimensionless predictions.
+**Important distinction**: This value represents the geometric *capacity* for torsion — the topological bound on deviations from exact G₂ holonomy that K₇ topology permits. The reference form φ_ref = c × φ₀ (Section 3.4) determines the algebraic structure; the actual torsion depends on the global solution φ = φ_ref + δφ, constrained by Joyce's theorem. The value κ_T = 1/61 bounds deviations; it does not appear directly in the 18 dimensionless predictions.
 
-The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance even when saturated at T = 0.
+The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance.
 
 **Metric determinant**:
 $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\rm gen}} = 2 + \frac{1}{32} = \frac{65}{32}$$
 
-**Physical interpretation of b2 = 21**:
+**Heuristic interpretation of b₂ = 21**:
 
-The 21 harmonic 2-forms on K7 correspond to gauge field moduli. These decompose as:
-- 8 components for SU(3) color (gluons)
-- 3 components for SU(2) weak
-- 1 component for U(1) hypercharge
-- 9 components for hidden sector fields
+The 21 harmonic 2-forms on K₇ may be interpreted as gauge field moduli. A *suggestive* (not derived) decomposition:
+- 8 components ↔ SU(3) color
+- 3 components ↔ SU(2) weak
+- 1 component ↔ U(1) hypercharge
+- 9 components ↔ hidden sector
 
-**Physical interpretation of b3 = 77**:
+This mapping is motivational. The rigorous statement is simply: b₂(K₇) = 21 enters the topological formulas that match experiment.
 
-The 77 harmonic 3-forms correspond to chiral matter modes. The decomposition:
+**Heuristic interpretation of b₃ = 77**:
+
+The 77 harmonic 3-forms may be interpreted as chiral matter modes. A *suggestive* decomposition:
 - 35 local modes: C(7,3) = 35 forms on the fiber
-- 42 global modes: 2 x 21 from TCS structure
+- 42 global modes: 2 × 21 from TCS structure
 
-These 77 modes organize into 3 generations via the constraint N_gen = 3 derived above.
+Again, this interpretation is motivational. The rigorous statement is: b₃(K₇) = 77, and these 77 modes organize into 3 generations via the topological constraint N_gen = 3.
 
 ### 3.4 The Analytical G₂ Metric (Central Result)
 
@@ -280,36 +286,53 @@ To satisfy det(g) = 65/32, we scale φ₀ by:
 
 $$c = \left(\frac{65}{32}\right)^{1/14} \approx 1.0543$$
 
-The induced metric is then:
+**Induced metric in local orthonormal frame**:
+
+The associative 3-form φ induces a metric via the standard formula. In any local orthonormal coframe {e^i}, the scaled form φ = c·φ₀ yields:
 
 $$g = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7 \approx 1.1115 \cdot I_7$$
 
-**Torsion Vanishes Exactly**
+This represents the **local frame normalization**, not a claim of global flatness on K₇. The TCS construction produces a curved, compact manifold; the identity matrix appears because we work in an adapted coframe.
 
-For a constant 3-form, the exterior derivatives vanish:
-- dφ = 0 (no spatial dependence)
-- d*φ = 0 (same reasoning)
+**Algebraic Reference Form**
 
-Therefore the torsion tensor T = 0 exactly, satisfying Joyce's threshold ‖T‖ < 0.0288 with infinite margin.
+The form φ_ref = c·φ₀ serves as an **algebraic reference** — the canonical G₂ structure in a local orthonormal coframe — fixing normalization and scale via the constraint det(g) = 65/32. This determines c = (65/32)^{1/14}.
 
-**Why this matters**:
+**Important clarification**: φ_ref is not proposed as a globally constant solution on K₇. On any compact TCS manifold, the coframe 1-forms {eⁱ} satisfy deⁱ ≠ 0 in general, so "constant components in an adapted coframe" does not imply dφ = 0 globally.
+
+**Actual solution structure**: The topology and geometry of K₇ impose a deformation δφ such that:
+
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
+
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint** depending on derivatives, not a consequence of the reference form alone. It must be established separately through:
+1. Joyce's perturbative existence theorem
+2. Analytical bounds on ‖δφ‖
+3. Numerical verification (PINN cross-check)
+
+**Why GIFT predictions are robust**: The 18 dimensionless predictions derive from topological invariants (b₂, b₃, dim(G₂), etc.) that are independent of the specific realization of δφ. The reference form φ_ref determines the algebraic structure; the deviations δφ encode the detailed geometry without affecting the topological ratios.
+
+**Torsion and Joyce's theorem**:
+
+The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The controlled magnitude of ‖δφ‖ places K₇ in the regime where Joyce's perturbative correction achieves a torsion-free G₂ structure. Joyce's theorem guarantees existence when ‖T‖ < ε₀ ≈ 0.0288; the topological bound ensures this condition is satisfiable.
 
 | Property | Value |
 |----------|-------|
-| Metric source | Exact algebraic form |
-| Torsion | T = 0 (capacity = 1/61) |
-| Joyce threshold | Satisfied with infinite margin |
+| Reference form | φ_ref = (65/32)^{1/14} × φ₀ |
+| Metric determinant | det(g) = 65/32 (exact) |
+| Torsion capacity | κ_T = 1/61 (topological bound) |
+| Joyce threshold | ‖T‖ < 0.0288 (satisfiable) |
 | Parameter count | Zero continuous |
-| Verification | Lean 4 theorem + PINN cross-check |
 
-The constant form phi = c x phi_0 is not an approximation; it is the exact solution. Independent PINN validation confirms convergence to this form, providing cross-verification between analytical and numerical methods.
+**Scope of verification**: Lean 4 confirms the arithmetic and algebraic relations between GIFT constants (e.g., det(g) = 65/32). It does not formalize the existence of K₇ as a smooth G₂ manifold, nor the physical interpretation of topological invariants.
+
+**Interpretive note**: One may view φ_ref as an "octonionic vacuum" in the algebraic sense — a reference point in the space of G₂ structures — while K₇ encodes physics through the deviations δφ and their invariants (including torsion), rather than through global flatness.
 
 **Implications**
 
 This result has significant implications:
-1. No numerical fitting is required: the solution is algebraically exact
-2. Independent numerical validation (PINN) confirms convergence to this form
-3. All GIFT predictions derive from pure algebraic structure
+1. The algebraic structure is exact: det(g) = 65/32 follows from pure algebra
+2. Independent numerical validation (PINN) confirms convergence to forms near φ_ref
+3. All GIFT predictions derive from topological ratios, independent of δφ details
 4. The framework contains zero continuous parameters
 
 For complete details and Lean 4 formalization, see Supplement S1, Section 12.
@@ -347,7 +370,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 1. **Given** the octonionic algebra 𝕆, its automorphism group G₂, the E₈×E₈ gauge structure, and the K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)...
 2. **Then** the 18 dimensionless predictions follow by algebra
-3. **And** these match experiment to 0.087% mean deviation
+3. **And** these match experiment to 0.24% mean deviation (PDG 2024)
 4. **With** zero continuous parameters fitted
 
 #### What GIFT Does NOT Claim
@@ -359,7 +382,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 #### Three Factors Distinguishing GIFT from Numerology
 
-**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.087% mean deviation across 18 quantities has probability < 10⁻²⁰.
+**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.24% mean deviation (PDG 2024) across 18 quantities has probability < 10⁻²⁰.
 
 **2. Exactness**: Several predictions are exactly rational:
 - sin²θ_W = 3/13 (not 0.2308...)
@@ -397,7 +420,7 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 
 
 **Interpretation**: b₂ counts gauge moduli; b₃ + dim(G₂) counts matter + holonomy degrees of freedom. The ratio measures gauge-matter coupling geometrically.
 
-**Status**: PROVEN (Lean verified). See S2 Section 7 for complete derivation.
+**Status**: PROVEN (Lean 4). See S2 Section 7 for complete derivation.
 
 ---
 
@@ -459,7 +482,7 @@ GIFT is the only framework where Q = 2/3 follows from pure algebra with no fitti
 
 If the Koide relation truly equals 2/3 exactly, improved measurements of lepton masses should converge toward this value. Current experimental uncertainty is dominated by the tau mass. Future precision measurements at tau-charm factories could test whether deviations from 2/3 are real or reflect measurement limitations.
 
-**Status**: PROVEN (Lean verified)
+**Status**: PROVEN (Lean 4)
 
 ---
 
@@ -513,7 +536,7 @@ Unlike sin²θ_W or Q_Koide which are already measured precisely, δ_CP has larg
 
 A single experiment can confirm or refute this prediction definitively.
 
-**Status**: PROVEN (Lean verified). See S2 Section 13 for complete derivation.
+**Status**: PROVEN (Lean 4). See S2 Section 13 for complete derivation.
 
 ---
 
@@ -544,7 +567,7 @@ The hierarchy parameter τ = 3472/891 has prime factorization (2⁴ × 7 × 31)/
 
 The torsion inverse 61 = dim(F₄) + N_gen² = 52 + 9 links to exceptional algebra structure.
 
-**Note on torsion independence**: All 18 predictions derive from topological invariants (b2, b3, dim(G2), etc.) and are independent of the realized torsion value T. The analytical metric has T = 0 exactly; the predictions would be identical for any T within the capacity bound.
+**Note on torsion independence**: All 18 predictions derive from topological invariants (b₂, b₃, dim(G₂), etc.) and are independent of the realized torsion value. The predictions depend only on the algebraic structure determined by φ_ref; they would be identical for any torsion-free G₂ metric on K₇ within Joyce's perturbative regime.
 
 ---
 
@@ -607,8 +630,15 @@ The spectral index involves Riemann zeta values at bulk dimension (11) and Weyl 
 
 ### 10.1 Global Performance
 
+**Definition of mean deviation**:
+$$\bar{\delta} = \frac{1}{N} \sum_{i=1}^{N} \left| \frac{\text{GIFT}_i - \text{Exp}_i}{\text{Exp}_i} \right| \times 100\%$$
+
+where N = 18 dimensionless predictions (excluding structural integers without experimental comparison).
+
 - **Total predictions**: 18
-- **Mean deviation**: 0.087% across dimensionless ratios
+- **Mean deviation**: 0.24% (PDG 2024)
+- **Median deviation**: 0.06%
+- **Maximum deviation**: 0.368% (θ₁₃)
 - **Exact matches**: 4 (N_gen, delta_CP, m_s/m_d, n_s)
 - **Sub-0.01% deviation**: 3 (Q_Koide, m_tau/m_e, n_s)
 - **Sub-0.1% deviation**: 6
@@ -625,7 +655,7 @@ The spectral index involves Riemann zeta values at bulk dimension (11) and Weyl 
 
 ### 10.3 Comparison with Random Matching
 
-If predictions were random numbers in [0,1], matching 18 experimental values to 0.087% average deviation would occur with probability less than 10^(-30). This does not prove the framework correct, but it excludes pure coincidence as an explanation.
+If predictions were random numbers in [0,1], matching 18 experimental values to 0.24% average deviation (PDG 2024) would occur with probability less than 10^(-30). This does not prove the framework correct, but it excludes pure coincidence as an explanation.
 
 ### 10.4 Statistical Validation Against Alternative Configurations
 
@@ -652,6 +682,8 @@ Critically, this validation uses the **actual topological formulas** to compute 
 | Second-best deviation | 0.50% (b₂=21, b₃=76) |
 | Improvement factor | **2.2×** |
 | GIFT percentile | **99.99%** |
+
+**Note**: The statistical scan uses a reduced set of 12 observables with direct topological formulas (excluding derived quantities like α⁻¹ that involve multiple terms). The headline figure 0.24% includes all 18 predictions. Both metrics confirm GIFT's optimality; the difference reflects scope, not inconsistency.
 
 **Top 5 configurations by mean deviation:**
 
@@ -763,7 +795,7 @@ This contrasts sharply with the Standard Model's 19 free parameters and string t
 
 ### 14.2 Predictive Success
 
-Eighteen quantitative predictions achieve mean deviation of 0.087%. Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: Q = dim(G2)/b2 = 14/21 = 2/3.
+Eighteen quantitative predictions achieve mean deviation of 0.24% (PDG 2024). Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: Q = dim(G2)/b2 = 14/21 = 2/3.
 
 ### 14.3 Falsifiability
 
@@ -771,7 +803,7 @@ Unlike many approaches to fundamental physics, GIFT makes sharp, testable predic
 
 ### 14.4 Mathematical Rigor
 
-The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. Over 180 relations have been verified in Lean 4, providing machine-checked confirmation of algebraic claims.
+The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. 185 relations have been verified in Lean 4 (core v3.2.0), providing machine-checked confirmation of algebraic claims. The E₈ root system is fully proven (12/12 theorems), including `E8_basis_generates` now a theorem rather than axiom.
 
 ---
 
@@ -793,6 +825,19 @@ The topological foundations rest on established mathematics. The TCS constructio
 - Variational principle on G₂ moduli space
 - Calibrated geometry constraints
 - K-theory classification
+
+**Observed pattern (v3.2)**: Formula constants exhibit a mod-7 regularity:
+
+| Divisible by 7 | ≡ 1 (mod 7) |
+|----------------|-------------|
+| b₂ = 21 | H* = 99 |
+| b₃ = 77 | rank(E₈) = 8 |
+| dim(G₂) = 14 | δ_CP = 1 |
+| 91 = b₃ + dim(G₂) | |
+
+One speculative interpretation: quantities divisible by 7 count local (fiber-level) degrees of freedom, while those ≡ 1 (mod 7) involve global (base-level) contributions including the cohomological unit b₀ = 1.
+
+This pattern, if not coincidental, might constrain which combinations of topological invariants appear in physical observables. No derivation of this selection principle currently exists.
 
 ### 15.2 Dimensional Quantities
 
@@ -892,13 +937,13 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 
 ## 18. Conclusion
 
-GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.087%, with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
+GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.24% (PDG 2024), with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
 
-The G2 metric is exactly phi = (65/32)^{1/14} x phi_0 with T = 0, making all predictions algebraically exact rather than numerically fitted.
+The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly, with Joyce's theorem ensuring a torsion-free metric exists. All predictions are algebraically exact, not numerically fitted.
 
 Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute δ_CP = 197° to ±5° precision.
 
-The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.087% mean deviation, derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
+The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.24% mean deviation (PDG 2024), derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
 
 The octonions, discovered in 1843 as a mathematical curiosity, may yet prove to be nature's preferred algebra.
 
@@ -930,7 +975,7 @@ Mathematical constants underlying these relationships represent timeless logical
 
 [3] Jackson, D.M. "Time, E8, and the Standard Model." arXiv:1706.00639, 2017.
 
-[4] Wilson, R. "E8 and Standard Model plus gravity." arXiv:2401.xxxxx, 2024.
+[4] Wilson, R. "E8 and Standard Model plus gravity." arXiv:2404.18938, 2024.
 
 **G2 Manifolds and Calibrated Geometry**
 
@@ -946,13 +991,13 @@ Mathematical constants underlying these relationships represent timeless logical
 
 [10] Corti, A., Haskins, M., Nordstrom, J., Pacini, T. "G2-manifolds and associative submanifolds." Duke Math. J. 164, 2015.
 
-[11] Haskins, M. et al. "Extra-twisted connected sums." arXiv:2212.xxxxx, 2022.
+[11] Haskins, M. et al. "Extra-twisted connected sum G₂-manifolds." arXiv:1809.09083, 2018.
 
 **Neutrino Physics**
 
 [12] NuFIT 6.0 Collaboration. "Global analysis of neutrino oscillations." www.nu-fit.org, 2024.
 
-[13] T2K and NOvA Collaborations. "Joint oscillation analysis." Nature, 2025.
+[13] T2K and NOvA Collaborations. "Joint oscillation analysis." Nature 638, 534-541, 2025. doi:10.1038/s41586-025-08706-0
 
 [14] DUNE Collaboration. "Technical Design Report." arXiv:2002.03005, 2020.
 
@@ -1002,7 +1047,7 @@ Mathematical constants underlying these relationships represent timeless logical
 | dim(J3(O)) | 27 | Exceptional Jordan algebra dimension |
 | p2 | 2 | Binary duality parameter |
 | N_gen | 3 | Number of fermion generations |
-| Weyl | 5 | Weyl factor from |W(E8)| |
+| Weyl | 5 | Weyl factor: triple derivation (dim(G₂)+1)/N_gen = b₂/N_gen - p₂ = dim(G₂) - rank(E₈) - 1 |
 | phi | (1+sqrt(5))/2 | Golden ratio |
 | kappa_T | 1/61 | Torsion capacity |
 | det(g) | 65/32 | Metric determinant |
@@ -1016,12 +1061,12 @@ Mathematical constants underlying these relationships represent timeless logical
 
 | Supplement | Content | Location |
 |------------|---------|----------|
-| S1: Foundations | E₈, G₂, K₇ construction details | GIFT_v3.1_S1_foundations.md |
-| S2: Derivations | Complete proofs of 18 relations | GIFT_v3.1_S2_derivations.md |
-| S3: Dynamics | Scale bridge, torsion, cosmology | GIFT_v3.1_S3_dynamics.md |
+| S1: Foundations | E₈, G₂, K₇ construction details | GIFT_v3.2_S1_foundations.md |
+| S2: Derivations | Complete proofs of 18 relations | GIFT_v3.2_S2_derivations.md |
+| S3: Dynamics | Scale bridge, torsion, cosmology | GIFT_v3.2_S3_dynamics.md |
 
 ---
 
 *GIFT Framework*
-*v3.1.1*
+*v3.2*
 

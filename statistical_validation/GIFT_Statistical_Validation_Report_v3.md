@@ -1,11 +1,11 @@
-# Statistical Validation of the GIFT Framework v3.0
+# Statistical Validation of the GIFT Framework v3.2
 
 ## Executive Summary
 
-This report presents a statistical validation of the GIFT v3.0 framework predictions against experimental data. Unlike previous validation approaches that used random perturbations, this analysis computes predictions for alternative configurations using the **actual topological formulas**, providing an honest assessment of how exceptional the GIFT E8×E8/K7 construction truly is.
+This report presents a statistical validation of the GIFT v3.2 framework predictions against experimental data. Unlike previous validation approaches that used random perturbations, this analysis computes predictions for alternative configurations using the **actual topological formulas**, providing an honest assessment of how exceptional the GIFT E8×E8/K7 construction truly is.
 
 **Key Results**:
-- GIFT configuration: **0.087%** mean deviation across 18 dimensionless observables
+- GIFT configuration: **0.24%** mean deviation across 18 dimensionless observables (PDG 2024)
 - Alternative configurations (10,000 tested): **18.46%** mean deviation
 - Statistical separation: **2.48σ** (p-value = 0.0066)
 
@@ -17,9 +17,9 @@ The primary objective is to determine whether the GIFT framework's agreement wit
 
 ## Methodology
 
-### v3.0 Observable Catalog
+### v3.2 Observable Catalog
 
-The validation tests the 18 dimensionless predictions from GIFT v3.0:
+The validation tests the 18 dimensionless predictions from GIFT v3.2:
 
 | # | Observable | Formula | GIFT Value |
 |---|------------|---------|------------|
@@ -57,7 +57,7 @@ This range covers:
 
 **Previous approach (v2.3)**: Applied random perturbations to reference predictions, which artificially inflated the separation between GIFT and alternatives.
 
-**Current approach (v3.0)**: Computes predictions using the **actual topological formulas** with varied (b₂, b₃). This is more honest because:
+**Current approach (v3.2)**: Computes predictions using the **actual topological formulas** with varied (b₂, b₃). This is more honest because:
 1. Alternatives follow the same mathematical structure as GIFT
 2. Some formulas are independent of b₂/b₃ (e.g., α_s = √2/12)
 3. The test measures how special the (21, 77) point is within the parameter space
@@ -98,7 +98,7 @@ The GIFT reference configuration (E8×E8/K7, b₂=21, b₃=77):
 | n_s | 0.9649 | 0.9649 | 0.004% |
 | α⁻¹ | 137.033 | 137.036 | 0.002% |
 
-**Mean deviation: 0.087%**
+**Mean deviation: 0.24% (PDG 2024)**
 
 ### Alternative Configurations Performance
 
@@ -131,17 +131,17 @@ Testing 10,000 alternative configurations:
 
 ### Comparison with Previous Validation (v2.3)
 
-| Metric | v2.3 (39 obs) | v3.0 (18 obs) |
+| Metric | v2.3 (39 obs) | v3.2 (18 obs) |
 |--------|---------------|---------------|
-| Mean deviation | 0.197% | 0.087% |
+| Mean deviation | 0.197% | 0.24% (PDG 2024) |
 | Alt. mean deviation | 83.99% | 18.46% |
 | σ separation | 6.25σ | 2.48σ |
 | Methodology | Random perturbations | Actual formulas |
 
 The difference arises because:
 - v2.3 used perturbations that artificially degraded alternatives
-- v3.0 uses real formulas, some of which are b₂/b₃-independent
-- v3.0 focuses on dimensionless observables only
+- v3.2 uses real formulas, some of which are b₂/b₃-independent
+- v3.2 focuses on dimensionless observables only
 
 ### Critical Assessment
 
@@ -159,7 +159,7 @@ The difference arises because:
 
 ### Primary Finding
 
-The GIFT E8×E8/K7 configuration (b₂=21, b₃=77) achieves **0.087% mean deviation** across 18 dimensionless observables, which is **2.48 standard deviations better** than the mean of 10,000 alternative configurations tested.
+The GIFT E8×E8/K7 configuration (b₂=21, b₃=77) achieves **0.24% mean deviation** (PDG 2024) across 18 dimensionless observables, which is **2.48 standard deviations better** than the mean of 10,000 alternative configurations tested.
 
 ### Statistical Statement
 

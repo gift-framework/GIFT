@@ -235,12 +235,11 @@ The methodological contribution is independent of GIFT's physical correctness. F
 
 ## References
 
-- GIFT main paper: [gift_3_0_main.md](../publications/markdown/gift_3_0_main.md)
-- K₇ construction: [S2](../publications/markdown/S2_K7_manifold_construction_v30.md)
-- Complete derivations: [S4](../publications/markdown/S4_complete_derivations_v30.md)
-- Observable reference: [GIFT_v23_Observable_Reference.md](../publications/references/GIFT_v23_Observable_Reference.md)
+- GIFT main paper: [GIFT_v3.2_main.md](../publications/markdown/GIFT_v3.2_main.md)
+- Mathematical foundations: [GIFT_v3.2_S1_foundations.md](../publications/markdown/GIFT_v3.2_S1_foundations.md)
+- Complete derivations: [GIFT_v3.2_S2_derivations.md](../publications/markdown/GIFT_v3.2_S2_derivations.md)
 - Code repository: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 
 ---
 
-*GIFT Framework v3.1 - Formal Verification Documentation*
+*GIFT Framework v3.2 - Formal Verification Documentation*
