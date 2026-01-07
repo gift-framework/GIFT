@@ -56,7 +56,6 @@
 |----------|-------------|
 | [Speculative Physics](publications/references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity |
 | [Number-Theoretic Structures](publications/references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine |
-| [GIFT Atlas](docs/technical/atlas/) | Complete constant/relation database |
 
 ---
 
