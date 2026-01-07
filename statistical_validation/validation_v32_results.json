@@ -1,6 +1,6 @@
 {
   "version": "3.2",
-  "date": "2026-01-07 13:11:49",
+  "date": "2026-01-05 18:15:20",
   "reference": {
     "config": {
       "name": "GIFT_E8xE8_K7",
@@ -1134,6 +1134,6 @@
     "total_better_than_gift": 0,
     "p_value": 0.0,
     "significance": "> 4\u03c3",
-    "elapsed_seconds": 159.40438079833984
+    "elapsed_seconds": 159.47468614578247
   }
 }
