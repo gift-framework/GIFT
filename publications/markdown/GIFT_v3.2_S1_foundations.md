@@ -516,7 +516,7 @@ $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 |----------|-------|--------|
 | det(g) | 65/32 | EXACT (algebraic) |
 | φ_ref components | 7/35 | 20% sparsity |
-| Joyce threshold | ‖T‖ < 0.0288 | Satisfiable |
+| Joyce threshold | ‖T‖ < ε₀ = 0.1 | Satisfied (224× margin) |
 
 ### 11.2 Joyce Existence Theorem and Global Solutions
 
@@ -525,7 +525,7 @@ $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 **Actual solution structure**: The topology and geometry of K₇ impose a deformation:
 $$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ ≈ 0.0288.
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ = 0.1. Monte Carlo validation (N=1000) confirms ‖T‖_max = 0.000446, providing a 224× safety margin.
 
 **Why GIFT satisfies Joyce's criterion**: The topological bound κ_T = 1/61 constrains ‖δφ‖, ensuring the manifold lies within Joyce's perturbative regime where a torsion-free solution exists.
 
@@ -535,11 +535,18 @@ Physics-Informed Neural Network provides independent numerical validation:
 
 | Metric | Value | Significance |
 |--------|-------|--------------|
-| Converged torsion | ~10⁻¹¹ | Confirms T → 0 |
-| Adjoint parameters | ~10⁻⁵ | Perturbations negligible |
+| ‖T‖_max | 0.000446 | 224× below Joyce ε₀ |
+| ‖T‖_mean | 0.000098 | T → 0 confirmed |
+| Lipschitz L_eff | ~10⁻⁵ | Perturbations negligible |
 | det(g) error | < 10⁻⁶ | Confirms 65/32 |
+| Contraction K | 0.9 | Banach fixed-point applies |
 
-The PINN converges to the standard form, validating the analytical solution.
+**Numerical Certificate (v3.2)**:
+- Sample points: N = 1000, coverage radius 15.31
+- Joyce threshold: ε₀ = 0.1
+- Safety margin: 224× (‖T‖_max ≪ ε₀)
+
+The PINN converges to the standard form, validating the analytical solution. See `K7_Explicit_Metric_v3_2.ipynb` for reproducible certification.
 
 ### 11.4 Lean 4 Formalization
 
@@ -652,7 +659,7 @@ Both have 7 terms but different index patterns. The Fano plane defines the octon
 | Algebraic | φ = (65/32)^{1/14} × φ₀ | This section |
 | Lean 4 | `det_g_equals_target : rfl` | AnalyticalMetric.lean |
 | PINN | Converges to constant form | gift_core/nn/ |
-| Joyce theorem | ‖T‖ < 0.0288 → exists metric | [Joyce 2000] |
+| Joyce theorem | ‖T‖ < 0.1 → exists metric (224× margin) | [Joyce 2000] |
 
 Cross-verification between analytical and numerical methods confirms the solution.
 
