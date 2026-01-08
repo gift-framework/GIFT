@@ -665,34 +665,6 @@ Cross-verification between analytical and numerical methods confirms the solutio
 
 ---
 
-## 13. Summary
-
-This supplement establishes the mathematical foundations:
-
-**Part I - E₈ Architecture**:
-- Weyl group factorization into GIFT constants
-- **Weyl Triple Identity**: Weyl = 5 from three independent derivations
-- Exceptional chain theorem
-- Octonionic structure
-- **Lean v3.2.0**: E₈ root system 12/12 complete, `E8_basis_generates` now THEOREM
-
-**Part II - G₂ Holonomy**:
-- Torsion conditions
-- Derived constants (κ_T, det(g), sin²θ_W)
-
-**Part III - K₇ Construction**:
-- TCS framework
-- Betti numbers b₂ = 21, b₃ = 77 (exact)
-- Cohomological decomposition
-
-**Part IV - Algebraic Reference Form**:
-- Reference form: φ_ref = (65/32)^{1/14} × φ₀
-- Metric determinant: det(g) = 65/32 (algebraically exact)
-- Global solution: φ = φ_ref + δφ, torsion-free via Joyce's theorem
-- PINN serves as numerical validation
-
----
-
 ## References
 
 1. Adams, J.F. *Lectures on Exceptional Lie Groups*

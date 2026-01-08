@@ -1110,41 +1110,7 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ---
 
-## 28. Status Summary
-
-### 28.1 What is PROVEN (S2)
-
-| Result | Formula | Confidence |
-|--------|---------|------------|
-| 18 dimensionless predictions | See S2 | PROVEN/TOPOLOGICAL |
-| Analytical metric | φ = (65/32)^{1/14} × φ₀ | PROVEN (Lean 4) |
-| Torsion-free metric (Joyce) | Guaranteed by theorem | PROVEN |
-| Torsion capacity | κ_T = 1/61 | TOPOLOGICAL |
-
-**These do not depend on S3 content.**
-
-### 28.2 What is THEORETICAL (S3)
-
-| Result | Formula | Confidence |
-|--------|---------|------------|
-| RG flow identification | λ = ln(μ) | Plausible analogy |
-| Geodesic equation | ẍ = ½g^{kl}T_{ijl}ẋⁱẋʲ | Mathematical |
-| Velocity bounds | \|v\| < 0.7 | Consistent |
-
-**Requires additional assumptions beyond topology.**
-
-### 28.3 What is EXPLORATORY (S3)
-
-| Result | Precision | Confidence |
-|--------|-----------|------------|
-| Scale bridge m_e formula | 0.09% | Low-moderate |
-| Lucas number selection | L₈ = 47 | Empirical |
-| Hubble dual values | 67, 73 | Speculative |
-| Age of universe | 13.8 Gyr | Speculative |
-
-**Working conjectures, not derived from first principles.**
-
-### 28.4 Open Questions
+### 28 Open Questions
 
 1. **Selection principle**: Why these specific formulas from topology?
 2. **Torsion mechanism**: How do physical interactions emerge from the torsion-free base?
@@ -1168,19 +1134,6 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 [6] Riess, A. et al. (2022), Local H₀ measurement
 
 [7] Particle Data Group (2024), Review of Particle Physics
-
----
-
-## Navigation
-
-| Document | Content |
-|----------|---------|
-| **Main** | Overview and predictions catalog |
-| **S1** | E₈, G₂, K₇ construction details |
-| **S2** | Complete proofs of 18 relations |
-| **S3** | *This document* |
-
-**Prerequisites**: S1 (topology), S2 (dimensionless derivations)
 
 ---
 
