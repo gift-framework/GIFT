@@ -285,11 +285,14 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 
 | Prediction | Current | Target | Experiment | Year |
 |------------|---------|--------|------------|------|
-| **δ_CP = 197°** | ±24° | ±5° | DUNE | 2027-2030 |
+| **δ_CP = 197°** | ±24° | ±10° | DUNE (first results) | 2028-2030 |
+| **δ_CP = 197°** | ±10° | ±5° | DUNE (precision) | 2034-2039 |
 | **sin²θ_W = 3/13** | ±0.00004 | ±0.00001 | FCC-ee | 2040s |
 | **N_gen = 3** | 3 | 4th gen? | LHC/FCC | ongoing |
 | **m_s/m_d = 20** | ±1.0 | ±0.3 | Lattice QCD | 2030 |
 | **Q_Koide** | ±0.000007 | ±0.000001 | τ factories | 2030s |
+
+**Note**: DUNE timeline follows Snowmass 2021 projections. First beam ~2028; ±5° precision requires extended operation through late 2030s.
 
 ---
 

@@ -676,7 +676,7 @@ where N = 18 dimensionless predictions (excluding structural integers without ex
 
 ### 10.3 Comparison with Random Matching
 
-If predictions were random numbers in [0,1], matching 18 experimental values to 0.24% average deviation (PDG 2024) would occur with probability less than 10^(-30). This does not prove the framework correct, but it excludes pure coincidence as an explanation.
+Under a naïve null model where predictions are random numbers in [0,1], matching 18 experimental values to 0.24% average deviation would have probability less than 10⁻³⁰. However, this estimate ignores formula selection freedom and look-elsewhere effects. A more conservative Monte Carlo analysis (Section 10.4) addresses these concerns directly. The framework's performance remains statistically exceptional under conservative assumptions, though precise significance depends on the null model chosen.
 
 ### 10.4 Statistical Validation Against Alternative Configurations
 

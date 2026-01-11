@@ -91,7 +91,7 @@ The "formula selection problem" dissolves: each observable corresponds to a **un
 | sin²θ₁₂ | (b₀ + N_gen)/α_sum | 4/13 | Generational structure |
 | sin²θ₂₃ | (D_bulk - Weyl)/D_bulk | 6/11 | Bulk/capacity ratio |
 | sin²θ₁₃ | D_bulk/dim(E₈×E₈) | 11/496 | Bulk/gauge coupling |
-| δ_CP | dim(K₇) × dim(G₂) + H* | 197° | Testable by DUNE (2027) |
+| δ_CP | dim(K₇) × dim(G₂) + H* | 197° | Testable by DUNE (first results ~2028, precision 2034-2039) |
 
 ### 2.3 Quark Mass Hierarchy
 
