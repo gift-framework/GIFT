@@ -548,7 +548,7 @@ This separates into:
 - Natural logarithm of golden ratio
 - Appears because masses are φ-powers of GIFT constants (e.g., m_μ/m_e = 27^φ)
 
-### 12.4 Elegant Reformulation
+### 12.4 Alternative Formulation
 
 The scale bridge admits a more transparent form. Rewriting:
 

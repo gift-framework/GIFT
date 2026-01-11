@@ -26,7 +26,7 @@ See [validation_v32.py](validation_v32.py) for complete methodology.
 
 ## The Problem
 
-The GIFT framework achieves remarkable precision: **0.24% mean deviation** (PDG 2024) across 18 dimensionless observables. However, critics might argue this results from overfitting to experimental data or discovering post-hoc patterns.
+The GIFT framework achieves **0.24% mean deviation** (PDG 2024) across 18 dimensionless observables. However, critics might argue this results from overfitting to experimental data or discovering post-hoc patterns.
 
 ## The Solution
 

@@ -198,7 +198,7 @@ The configuration (b2=21, b3=77) corresponds to:
 - **b3 = 77:** Third Betti number (complex structure moduli)
 - **H* = 99:** Effective degrees of freedom (b2 + b3 + 1)
 
-These values arise from a **Twisted Connected Sum (TCS) construction** using two specific Calabi-Yau 3-folds from the Kreuzer-Skarke catalog. The fact that this specific construction yields optimal agreement with 16 experimental observables is remarkable.
+These values arise from a **Twisted Connected Sum (TCS) construction** using two specific Calabi-Yau 3-folds from the Kreuzer-Skarke catalog. This specific construction yields optimal agreement with 16 experimental observables within the tested parameter space.
 
 ### 5.2 Statistical Significance
 

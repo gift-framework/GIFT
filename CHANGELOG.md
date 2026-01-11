@@ -139,7 +139,7 @@ Octonions (𝕆) → G₂ = Aut(𝕆) → φ₀ (Harvey-Lawson) → scaling → 
 
 #### Changed
 
-**Paradigm Shift**
+**Conceptual Clarifications**
 - κ_T = 1/61 is now "torsion capacity" (not realized value on exact solution)
 - PINN serves as **validation**, not proof of existence
 - Joyce theorem is trivially satisfied (T = 0 < threshold)

@@ -310,7 +310,7 @@ The hierarchy parameter τ admits a purely geometric derivation from framework i
 
 $$\tau = \frac{\dim(E_8 \times E_8) \times b_2}{\dim(J_3(\mathbb{O})) \times H^*} = \frac{496 \times 21}{27 \times 99} = \frac{10416}{2673} = \frac{3472}{891}$$
 
-**Prime factorization** reveals deep structure:
+**Prime factorization**:
 - Numerator: 3472 = 2⁴ × 7 × 31 = dim(K₇) × dim(E₈×E₈)
 - Denominator: 891 = 3⁴ × 11 = N_gen⁴ × D_bulk
 
@@ -491,9 +491,9 @@ $$\chi(K_7) = \sum_{k=0}^{7} (-1)^k b_k = 1 - 0 + 21 - 77 + 77 - 21 + 0 - 1 = 0$
 **Effective cohomological dimension**:
 $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 
-### 9.4 The Magic Number 42 (v3.3)
+### 9.4 The Structural Constant 42 (v3.3)
 
-The number 42 appears throughout GIFT with deep topological significance:
+The number 42 appears throughout GIFT as a derived topological invariant:
 
 $$42 = 2 \times 3 \times 7 = p_2 \times N_{gen} \times \dim(K_7)$$
 
@@ -510,7 +510,7 @@ $$b_3 = 77 = C(7,3) + 42 = 35 + 2 \times b_2$$
 
 The 35 local modes correspond to Λ³(ℝ⁷) fiber forms; the 42 global modes arise from the TCS structure.
 
-**Status**: **PROVEN (Lean 4)**: `magic_42_gift_form`, `magic_42_from_b2`
+**Status**: **PROVEN (Lean 4)**: `structural_42_gift_form`, `structural_42_from_b2`
 
 ### 9.5 Third Betti Number Decomposition
 
