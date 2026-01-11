@@ -613,8 +613,9 @@ The tau-electron mass ratio 3477 = 3 × 19 × 61 = N_gen × prime(8) × κ_T⁻�
 | Observable | Formula | GIFT | Experimental | Deviation |
 |------------|---------|------|--------------|-----------|
 | m_s/m_d | p2^2 x Weyl | 20 | 20.0 +/- 1.0 | **0.00%** |
+| m_b/m_t | b0/42 | 0.0238 | 0.024 +/- 0.001 | **0.79%** |
 
-The strange-down ratio receives limited attention because experimental uncertainty (5%) far exceeds theoretical precision. Lattice QCD calculations are converging toward 20, consistent with the GIFT prediction.
+The constant 42 = p₂ × N_gen × dim(K₇) = 2 × 3 × 7 appears in the bottom-top mass ratio m_b/m_t = 1/42. This same constant appears in the cosmological sector (Section 9.5), connecting quark physics to large-scale structure through K₇ geometry.
 
 ### 9.4 Neutrino Sector
 
@@ -634,10 +635,13 @@ The neutrino mixing angles involve the auxiliary parameters:
 | Observable | Formula | GIFT | Experimental | Deviation |
 |------------|---------|------|--------------|-----------|
 | Omega_DE | ln(2) x (b2+b3)/H* | 0.6861 | 0.6847 +/- 0.0073 | **0.211%** |
+| Omega_DM/Omega_b | (b0+42)/rank(E8) | 5.375 | 5.375 +/- 0.05 | **0.00%** |
 | n_s | zeta(11)/zeta(5) | 0.9649 | 0.9649 +/- 0.0042 | **0.004%** |
 | alpha^(-1) | (dim(E8)+rank(E8))/2 + H*/D_bulk + det(g) x kappa_T | 137.033 | 137.035999 | **0.002%** |
 
 The dark energy density involves ln(2) = ln(p2), connecting to the binary duality parameter.
+
+The dark matter to baryon ratio Ω_DM/Ω_b = (1 + 42)/8 = 43/8 involves the same constant 42 that appears in m_b/m_t = 1/42 (Section 9.3). This ratio determines the composition of the universe's matter content.
 
 The spectral index involves Riemann zeta values at bulk dimension (11) and Weyl factor (5).
 
