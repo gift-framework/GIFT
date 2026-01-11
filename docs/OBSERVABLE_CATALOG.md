@@ -20,15 +20,17 @@
 
 ---
 
-## 1. Inevitability Scoring System
+## 1. Structural Inevitability Classification
 
-| Score | Criteria | Meaning |
-|-------|----------|---------|
-| ★★★★★ | ≥20 expressions | Maximally over-determined |
-| ★★★★☆ | 10-19 expressions | Highly inevitable |
-| ★★★☆☆ | 5-9 expressions | Strongly inevitable |
-| ★★☆☆☆ | 2-4 expressions | Moderately inevitable |
-| ★☆☆☆☆ | 1 expression | Unique (possible coincidence) |
+Each observable receives a **Structural Inevitability** classification based on the number of independent algebraic expressions that produce the same value:
+
+| Classification | Criteria | Interpretation |
+|----------------|----------|----------------|
+| **CANONICAL** | ≥20 expressions | Maximally over-determined; value emerges from algebraic web |
+| **ROBUST** | 10-19 expressions | Highly constrained; multiple independent derivations |
+| **SUPPORTED** | 5-9 expressions | Multiply derived; structural redundancy |
+| **DERIVED** | 2-4 expressions | At least dual derivation |
+| **SINGULAR** | 1 expression | Unique derivation (possible numerical coincidence) |
 
 ---
 
@@ -36,51 +38,51 @@
 
 ### 2.1 Structural (1)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 1 | **N_gen** | Atiyah-Singer index | **3** | 3 | 0.00% | 24+ | ★★★★★ |
+| 1 | **N_gen** | Atiyah-Singer index | **3** | 3 | 0.00% | 24+ | CANONICAL |
 
 ### 2.2 Electroweak Sector (4)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 2 | **sin²θ_W** | b₂/(b₃+dim_G₂) | 3/13 = 0.2308 | 0.23122 | 0.20% | 14 | ★★★★☆ |
-| 3 | **α_s(M_Z)** | √2/12 | 0.1179 | 0.1179 | 0.04% | 9 | ★★★☆☆ |
-| 4 | **λ_H** | √17/32 | 0.1288 | 0.129 | 0.12% | 4 | ★★☆☆☆ |
-| 5 | **α⁻¹(M_Z)** | 128+9+corr | 137.033 | 137.036 | 0.002% | 3 | ★★☆☆☆ |
+| 2 | **sin²θ_W** | b₂/(b₃+dim_G₂) | 3/13 = 0.2308 | 0.23122 | 0.20% | 14 | ROBUST |
+| 3 | **α_s(M_Z)** | √2/12 | 0.1179 | 0.1179 | 0.04% | 9 | SUPPORTED |
+| 4 | **λ_H** | √17/32 | 0.1288 | 0.129 | 0.12% | 4 | DERIVED |
+| 5 | **α⁻¹(M_Z)** | 128+9+corr | 137.033 | 137.036 | 0.002% | 3 | DERIVED |
 
 ### 2.3 Lepton Sector (3)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 6 | **Q_Koide** | dim_G₂/b₂ | 2/3 | 0.666661 | 0.001% | 20 | ★★★★★ |
-| 7 | **m_τ/m_e** | 7+10×248+10×99 | 3477 | 3477.15 | 0.004% | 3 | ★★☆☆☆ |
-| 8 | **m_μ/m_e** | 27^φ | 207.01 | 206.768 | 0.12% | 2 | ★★☆☆☆ |
+| 6 | **Q_Koide** | dim_G₂/b₂ | 2/3 | 0.666661 | 0.001% | 20 | CANONICAL |
+| 7 | **m_τ/m_e** | 7+10×248+10×99 | 3477 | 3477.15 | 0.004% | 3 | DERIVED |
+| 8 | **m_μ/m_e** | 27^φ | 207.01 | 206.768 | 0.12% | 2 | DERIVED |
 
 ### 2.4 Quark Sector (4)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 9 | **m_s/m_d** | p₂²×Weyl | 20 | 20.0 | 0.00% | 14 | ★★★★☆ |
-| 10 | **m_c/m_s** | (dim_E₈-p₂)/b₂ | 246/21=11.71 | 11.7 | 0.12% | 5 | ★★★☆☆ |
-| 11 | **m_b/m_t** | 1/χ(K₇) | 1/42=0.0238 | 0.024 | 0.79% | 21 | ★★★★★ |
-| 12 | **m_u/m_d** | (1+dim_E₆)/PSL₂₇ | 79/168=0.470 | 0.47 | 0.05% | 1 | ★☆☆☆☆ |
+| 9 | **m_s/m_d** | p₂²×Weyl | 20 | 20.0 | 0.00% | 14 | ROBUST |
+| 10 | **m_c/m_s** | (dim_E₈-p₂)/b₂ | 246/21=11.71 | 11.7 | 0.12% | 5 | SUPPORTED |
+| 11 | **m_b/m_t** | 1/χ(K₇) | 1/42=0.0238 | 0.024 | 0.79% | 21 | CANONICAL |
+| 12 | **m_u/m_d** | (1+dim_E₆)/PSL₂₇ | 79/168=0.470 | 0.47 | 0.05% | 1 | SINGULAR |
 
 ### 2.5 Neutrino/PMNS Sector (4)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 13 | **δ_CP** | dim_K₇×dim_G₂+H* | 197° | 197°±24° | 0.00% | 3 | ★★☆☆☆ |
-| 14 | **θ₁₃^PMNS** | π/b₂ | 8.57° | 8.54° | 0.37% | 3 | ★★☆☆☆ |
-| 15 | **θ₂₃^PMNS** | (rank_E₈+b₃)/H* | 49.19° | 49.3° | 0.22% | 2 | ★★☆☆☆ |
-| 16 | **θ₁₂^PMNS** | arctan(√(δ/γ)) | 33.40° | 33.41° | 0.03% | 2 | ★★☆☆☆ |
+| 13 | **δ_CP** | dim_K₇×dim_G₂+H* | 197° | 197°±24° | 0.00% | 3 | DERIVED |
+| 14 | **θ₁₃^PMNS** | π/b₂ | 8.57° | 8.54° | 0.37% | 3 | DERIVED |
+| 15 | **θ₂₃^PMNS** | (rank_E₈+b₃)/H* | 49.19° | 49.3° | 0.22% | 2 | DERIVED |
+| 16 | **θ₁₂^PMNS** | arctan(√(δ/γ)) | 33.40° | 33.41° | 0.03% | 2 | DERIVED |
 
 ### 2.6 Cosmological Sector (2)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 17 | **Ω_DE** | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 | 0.21% | 2 | ★★☆☆☆ |
-| 18 | **n_s** | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | 2 | ★★☆☆☆ |
+| 17 | **Ω_DE** | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 | 0.21% | 2 | DERIVED |
+| 18 | **n_s** | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | 2 | DERIVED |
 
 ---
 
@@ -88,43 +90,43 @@
 
 ### 3.1 PMNS sin² Form (3)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 19 | **sin²θ₁₂^PMNS** | (1+N_gen)/α_sum | 4/13=0.308 | 0.307 | 0.23% | 28 | ★★★★★ |
-| 20 | **sin²θ₂₃^PMNS** | (D_bulk-Weyl)/D_bulk | 6/11=0.545 | 0.546 | 0.10% | 15 | ★★★★☆ |
-| 21 | **sin²θ₁₃^PMNS** | D_bulk/dim_E₈₂ | 11/496=0.022 | 0.0220 | 0.81% | 5 | ★★★☆☆ |
+| 19 | **sin²θ₁₂^PMNS** | (1+N_gen)/α_sum | 4/13=0.308 | 0.307 | 0.23% | 28 | CANONICAL |
+| 20 | **sin²θ₂₃^PMNS** | (D_bulk-Weyl)/D_bulk | 6/11=0.545 | 0.546 | 0.10% | 15 | ROBUST |
+| 21 | **sin²θ₁₃^PMNS** | D_bulk/dim_E₈₂ | 11/496=0.022 | 0.0220 | 0.81% | 5 | SUPPORTED |
 
 ### 3.2 CKM Matrix (3)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 22 | **sin²θ₁₂^CKM** | 7/31 | 0.2258 | 0.2250 | 0.36% | 16 | ★★★★☆ |
-| 23 | **A_Wolfenstein** | (Weyl+dim_E₆)/H* | 83/99=0.838 | 0.836 | 0.29% | 4 | ★★☆☆☆ |
-| 24 | **sin²θ₂₃^CKM** | dim_K₇/PSL₂₇ | 1/24=0.042 | 0.0412 | 1.13% | 3 | ★★☆☆☆ |
+| 22 | **sin²θ₁₂^CKM** | 7/31 | 0.2258 | 0.2250 | 0.36% | 16 | ROBUST |
+| 23 | **A_Wolfenstein** | (Weyl+dim_E₆)/H* | 83/99=0.838 | 0.836 | 0.29% | 4 | DERIVED |
+| 24 | **sin²θ₂₃^CKM** | dim_K₇/PSL₂₇ | 1/24=0.042 | 0.0412 | 1.13% | 3 | DERIVED |
 
 ### 3.3 Boson Mass Ratios (3)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 25 | **m_H/m_t** | 8/11 | 0.7273 | 0.725 | 0.31% | 19 | ★★★★☆ |
-| 26 | **m_H/m_W** | 81/52 | 1.5577 | 1.558 | 0.02% | 1 | ★☆☆☆☆ |
-| 27 | **m_W/m_Z** | 23/26 | 0.8846 | 0.8815 | 0.35% | 7 | ★★★☆☆ |
+| 25 | **m_H/m_t** | 8/11 | 0.7273 | 0.725 | 0.31% | 19 | ROBUST |
+| 26 | **m_H/m_W** | 81/52 | 1.5577 | 1.558 | 0.02% | 1 | SINGULAR |
+| 27 | **m_W/m_Z** | 23/26 | 0.8846 | 0.8815 | 0.35% | 7 | SUPPORTED |
 
 ### 3.4 Lepton Ratios Extended (1)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 28 | **m_μ/m_τ** | 5/84 | 0.0595 | 0.0595 | 0.04% | 9 | ★★★☆☆ |
+| 28 | **m_μ/m_τ** | 5/84 | 0.0595 | 0.0595 | 0.04% | 9 | SUPPORTED |
 
 ### 3.5 Cosmological Extended (5)
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Score |
+| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|-------|
-| 29 | **Ω_DM/Ω_b** | (1+42)/rank_E₈ | 43/8=5.375 | 5.375 | 0.00% | 6 | ★★★☆☆ |
-| 30 | **Ω_b/Ω_m** | (dim_F₄-α_sum)/dim_E₈ | 39/248=0.157 | 0.157 | 0.16% | 7 | ★★★☆☆ |
-| 31 | **Ω_Λ/Ω_m** | (det_g_den-dim_K₇)/D_bulk | 25/11=2.27 | 2.27 | 0.12% | 6 | ★★★☆☆ |
-| 32 | **h (Hubble)** | (PSL₂₇-1)/dim_E₈ | 167/248=0.673 | 0.674 | 0.09% | 3 | ★★☆☆☆ |
-| 33 | **σ₈** | (p₂+det_g_den)/χ(K₇) | 34/42=0.810 | 0.811 | 0.18% | 4 | ★★☆☆☆ |
+| 29 | **Ω_DM/Ω_b** | (1+42)/rank_E₈ | 43/8=5.375 | 5.375 | 0.00% | 6 | SUPPORTED |
+| 30 | **Ω_b/Ω_m** | (dim_F₄-α_sum)/dim_E₈ | 39/248=0.157 | 0.157 | 0.16% | 7 | SUPPORTED |
+| 31 | **Ω_Λ/Ω_m** | (det_g_den-dim_K₇)/D_bulk | 25/11=2.27 | 2.27 | 0.12% | 6 | SUPPORTED |
+| 32 | **h (Hubble)** | (PSL₂₇-1)/dim_E₈ | 167/248=0.673 | 0.674 | 0.09% | 3 | DERIVED |
+| 33 | **σ₈** | (p₂+det_g_den)/χ(K₇) | 34/42=0.810 | 0.811 | 0.18% | 4 | DERIVED |
 
 ---
 
@@ -132,41 +134,41 @@
 
 ### 4.1 E₈ Structure (4)
 
-| # | Constant | Value | Definition | # Expr. | Score |
+| # | Constant | Value | Definition | # Expr. | Status |
 |---|----------|-------|------------|---------|-------|
-| 34 | **dim(E₈)** | 248 | E₈ Lie algebra dimension | 5+ | ★★★☆☆ |
-| 35 | **rank(E₈)** | 8 | Cartan subalgebra | 3+ | ★★☆☆☆ |
-| 36 | **dim(E₈×E₈)** | 496 | Product group | 2 | ★★☆☆☆ |
-| 37 | **\|W(E₈)\|** | 696,729,600 | Weyl group order | 1 | ★☆☆☆☆ |
+| 34 | **dim(E₈)** | 248 | E₈ Lie algebra dimension | 5+ | SUPPORTED |
+| 35 | **rank(E₈)** | 8 | Cartan subalgebra | 3+ | DERIVED |
+| 36 | **dim(E₈×E₈)** | 496 | Product group | 2 | DERIVED |
+| 37 | **\|W(E₈)\|** | 696,729,600 | Weyl group order | 1 | SINGULAR |
 
 ### 4.2 G₂ & K₇ Topology (6)
 
-| # | Constant | Value | Definition | # Expr. | Score |
+| # | Constant | Value | Definition | # Expr. | Status |
 |---|----------|-------|------------|---------|-------|
-| 38 | **dim(G₂)** | 14 | Holonomy group | 4+ | ★★☆☆☆ |
-| 39 | **dim(K₇)** | 7 | Compact manifold | 5+ | ★★★☆☆ |
-| 40 | **b₂(K₇)** | 21 | Second Betti (gauge moduli) | 3+ | ★★☆☆☆ |
-| 41 | **b₃(K₇)** | 77 | Third Betti (matter modes) | 3+ | ★★☆☆☆ |
-| 42 | **H*** | 99 | b₂+b₃+1 (total cohomology) | 5+ | ★★★☆☆ |
-| 43 | **χ(K₇)** | 42 | Euler characteristic | 3+ | ★★☆☆☆ |
+| 38 | **dim(G₂)** | 14 | Holonomy group | 4+ | DERIVED |
+| 39 | **dim(K₇)** | 7 | Compact manifold | 5+ | SUPPORTED |
+| 40 | **b₂(K₇)** | 21 | Second Betti (gauge moduli) | 3+ | DERIVED |
+| 41 | **b₃(K₇)** | 77 | Third Betti (matter modes) | 3+ | DERIVED |
+| 42 | **H*** | 99 | b₂+b₃+1 (total cohomology) | 5+ | SUPPORTED |
+| 43 | **χ(K₇)** | 42 | Euler characteristic | 3+ | DERIVED |
 
 ### 4.3 Exceptional Algebras (4)
 
-| # | Constant | Value | Definition | # Expr. | Score |
+| # | Constant | Value | Definition | # Expr. | Status |
 |---|----------|-------|------------|---------|-------|
-| 44 | **dim(J₃(O))** | 27 | Exceptional Jordan | 2+ | ★★☆☆☆ |
-| 45 | **dim(F₄)** | 52 | F₄ dimension | 3+ | ★★☆☆☆ |
-| 46 | **dim(E₆)** | 78 | E₆ dimension | 2+ | ★★☆☆☆ |
-| 47 | **dim(E₇)** | 133 | E₇ dimension | 1 | ★☆☆☆☆ |
+| 44 | **dim(J₃(O))** | 27 | Exceptional Jordan | 2+ | DERIVED |
+| 45 | **dim(F₄)** | 52 | F₄ dimension | 3+ | DERIVED |
+| 46 | **dim(E₆)** | 78 | E₆ dimension | 2+ | DERIVED |
+| 47 | **dim(E₇)** | 133 | E₇ dimension | 1 | SINGULAR |
 
 ### 4.4 Derived Constants (4)
 
-| # | Constant | Value | Definition | # Expr. | Score |
+| # | Constant | Value | Definition | # Expr. | Status |
 |---|----------|-------|------------|---------|-------|
-| 48 | **Weyl** | 5 | Triple identity factor | 4 | ★★☆☆☆ |
-| 49 | **det(g)** | 65/32 | K₇ metric determinant | 4+4 | ★★★☆☆ |
-| 50 | **κ_T⁻¹** | 61 | Inverse torsion capacity | 4 | ★★☆☆☆ |
-| 51 | **τ** | 3472/891 | Hierarchy parameter | 3 | ★★☆☆☆ |
+| 48 | **Weyl** | 5 | Triple identity factor | 4 | DERIVED |
+| 49 | **det(g)** | 65/32 | K₇ metric determinant | 4+4 | SUPPORTED |
+| 50 | **κ_T⁻¹** | 61 | Inverse torsion capacity | 4 | DERIVED |
+| 51 | **τ** | 3472/891 | Hierarchy parameter | 3 | DERIVED |
 
 ---
 
@@ -184,25 +186,25 @@
 
 ---
 
-## 6. Top 15 Most Inevitable
+## 6. Top 15 by Structural Inevitability
 
-| Rank | Observable | # Expressions | Score | Category |
+| Rank | Observable | # Expressions | Classification | Category |
 |------|------------|---------------|-------|----------|
-| 1 | sin²θ₁₂^PMNS | 28 | ★★★★★ | Neutrino |
-| 2 | N_gen | 24+ | ★★★★★ | Structural |
-| 3 | m_b/m_t | 21 | ★★★★★ | Quark |
-| 4 | Q_Koide | 20 | ★★★★★ | Lepton |
-| 5 | m_H/m_t | 19 | ★★★★☆ | Boson |
-| 6 | sin²θ₁₂^CKM | 16 | ★★★★☆ | CKM |
-| 7 | sin²θ₂₃^PMNS | 15 | ★★★★☆ | Neutrino |
-| 8 | sin²θ_W | 14 | ★★★★☆ | Electroweak |
-| 9 | m_s/m_d | 14 | ★★★★☆ | Quark |
-| 10 | α_s(M_Z) | 9 | ★★★☆☆ | Electroweak |
-| 11 | m_μ/m_τ | 9 | ★★★☆☆ | Lepton |
-| 12 | Ω_b/Ω_m | 7 | ★★★☆☆ | Cosmology |
-| 13 | m_W/m_Z | 7 | ★★★☆☆ | Boson |
-| 14 | Ω_DM/Ω_b | 6 | ★★★☆☆ | Cosmology |
-| 15 | Ω_Λ/Ω_m | 6 | ★★★☆☆ | Cosmology |
+| 1 | sin²θ₁₂^PMNS | 28 | CANONICAL | Neutrino |
+| 2 | N_gen | 24+ | CANONICAL | Structural |
+| 3 | m_b/m_t | 21 | CANONICAL | Quark |
+| 4 | Q_Koide | 20 | CANONICAL | Lepton |
+| 5 | m_H/m_t | 19 | ROBUST | Boson |
+| 6 | sin²θ₁₂^CKM | 16 | ROBUST | CKM |
+| 7 | sin²θ₂₃^PMNS | 15 | ROBUST | Neutrino |
+| 8 | sin²θ_W | 14 | ROBUST | Electroweak |
+| 9 | m_s/m_d | 14 | ROBUST | Quark |
+| 10 | α_s(M_Z) | 9 | SUPPORTED | Electroweak |
+| 11 | m_μ/m_τ | 9 | SUPPORTED | Lepton |
+| 12 | Ω_b/Ω_m | 7 | SUPPORTED | Cosmology |
+| 13 | m_W/m_Z | 7 | SUPPORTED | Boson |
+| 14 | Ω_DM/Ω_b | 6 | SUPPORTED | Cosmology |
+| 15 | Ω_Λ/Ω_m | 6 | SUPPORTED | Cosmology |
 
 ---
 
@@ -269,15 +271,15 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 | 0.5-1% | 4 | 12% | m_b/m_t, sin²θ₁₃^PMNS, ... |
 | >1% | 2 | 6% | sin²θ₂₃^CKM, Ω_m |
 
-### 9.2 By Inevitability Score
+### 9.2 By Structural Classification
 
-| Score | Count | % |
+| Classification | Count | % |
 |-------|-------|---|
-| ★★★★★ | 4 | 12% |
-| ★★★★☆ | 6 | 18% |
-| ★★★☆☆ | 13 | 39% |
-| ★★☆☆☆ | 8 | 24% |
-| ★☆☆☆☆ | 2 | 6% |
+| CANONICAL | 4 | 12% |
+| ROBUST | 6 | 18% |
+| SUPPORTED | 13 | 39% |
+| DERIVED | 8 | 24% |
+| SINGULAR | 2 | 6% |
 
 ---
 
