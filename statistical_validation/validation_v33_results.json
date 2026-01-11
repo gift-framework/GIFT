@@ -1,0 +1,20 @@
+{
+  "gift_mean_deviation": 1.3404666365690538,
+  "gift_chi2": 2803806024.5163436,
+  "alt_mean_deviation": 24.6653892739967,
+  "alt_std_deviation": 15.10747846624391,
+  "alt_min_deviation": 1.3404666365690538,
+  "z_score": -1.5439322114239487,
+  "sigma_separation": 1.5439322114239487,
+  "p_value": 0.0,
+  "p_value_corrected": 0.0,
+  "n_better": 0,
+  "gift_percentile": 100.0,
+  "metadata": {
+    "n_observables": 33,
+    "n_configs": 100000,
+    "elapsed_time": 3.0094847679138184,
+    "version": "3.3",
+    "timestamp": "2026-01-11 17:35:53"
+  }
+}
