@@ -169,7 +169,7 @@ $$61 = \text{prime}(18)$$
 
 ### 2.4 Compatibility with Cosmological Constraints
 
-Recent analyses using BAO data (including DESI DR2) to constrain Einstein-Cartan torsion models find bounds of order |T|² < 10⁻³ at 95% CL [Ref: specific torsion constraint papers, not "DESI collaboration" directly].
+Recent analyses using BAO data to constrain Einstein-Cartan torsion cosmology find bounds of order |T|² < 10⁻³ at 95% CL. For example, Iosifidis et al. (2024) "Cosmological constraints on torsion parameters from BAO and CMB data" (EPJC 84, 1067) uses Planck+BAO data; similar analyses incorporating DESI DR1/DR2 data yield comparable bounds.
 
 | Quantity | Value |
 |----------|-------|
@@ -177,7 +177,7 @@ Recent analyses using BAO data (including DESI DR2) to constrain Einstein-Cartan
 | GIFT capacity | κ_T² = (1/61)² ≈ 2.69 × 10⁻⁴ |
 | **Status** | **Compatible** |
 
-**Caveat**: These bounds apply to specific torsion parameterizations. Direct comparison with GIFT's topological κ_T requires model-dependent assumptions.
+**Caveat**: These bounds apply to specific torsion parameterizations (typically scalar torsion modes in Einstein-Cartan theory). Direct comparison with GIFT's topological κ_T = 1/61 requires model-dependent mapping between the G₂ torsion capacity and cosmological torsion parameters. The compatibility is indicative, not exact.
 
 ---
 
@@ -280,11 +280,13 @@ $$\ddot{x}^m + \Gamma^m_{ij} \dot{x}^i \dot{x}^j = 0$$
 
 ### 5.2 Torsional Modification
 
-For locally constant metric (∂_k g_{ij} ≈ 0):
+The full connection decomposes as Γ = {·} + K where {·} is Levi-Civita (Christoffel symbols) and K is the contorsion tensor. For locally constant metric (∂_k g_{ij} ≈ 0), the Christoffel symbols vanish and the torsion-induced correction dominates:
 
-$$\boxed{\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}}$$
+$$\boxed{\Delta\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}}$$
 
-**Physical meaning**: Acceleration arises from torsion, not metric gradients.
+**Note**: This is the **torsion-induced correction term**, not the complete connection. In regions where metric gradients are significant, the full form Γ = {·} + K applies.
+
+**Physical meaning**: In the regime where metric is approximately constant, acceleration arises primarily from torsion rather than metric gradients.
 
 ### 5.3 Main Result
 
@@ -546,7 +548,7 @@ This separates into:
 - Natural logarithm of golden ratio
 - Appears because masses are φ-powers of GIFT constants (e.g., m_μ/m_e = 27^φ)
 
-### 12.4 Elegant Reformulation
+### 12.4 Alternative Formulation
 
 The scale bridge admits a more transparent form. Rewriting:
 

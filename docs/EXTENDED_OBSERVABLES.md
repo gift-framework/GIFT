@@ -91,7 +91,7 @@ The "formula selection problem" dissolves: each observable corresponds to a **un
 | sin²θ₁₂ | (b₀ + N_gen)/α_sum | 4/13 | Generational structure |
 | sin²θ₂₃ | (D_bulk - Weyl)/D_bulk | 6/11 | Bulk/capacity ratio |
 | sin²θ₁₃ | D_bulk/dim(E₈×E₈) | 11/496 | Bulk/gauge coupling |
-| δ_CP | dim(K₇) × dim(G₂) + H* | 197° | Testable by DUNE (2027) |
+| δ_CP | dim(K₇) × dim(G₂) + H* | 197° | Testable by DUNE (first results ~2028, precision 2034-2039) |
 
 ### 2.3 Quark Mass Hierarchy
 
@@ -232,27 +232,27 @@ P(≥4 | λ=0.15) ≈ 2.1 × 10⁻⁶
 
 **Conclusion**: The pattern is NOT random coincidence.
 
-### 4.3 Inevitability by Observable
+### 4.3 Structural Classification by Observable
 
-| Observable | # Expressions | Status |
-|------------|---------------|--------|
-| sin²θ₁₂_PMNS | 28 | INEVITABLE |
-| m_b/m_t | 21 | INEVITABLE |
-| Q_Koide | 20 | INEVITABLE |
-| m_H/m_t | 19 | INEVITABLE |
-| sin²θ₁₂_CKM | 16 | INEVITABLE |
-| sin²θ₂₃_PMNS | 15 | INEVITABLE |
-| m_s/m_d | 14 | INEVITABLE |
-| sin²θ_W | 14 | INEVITABLE |
-| m_μ/m_τ | 9 | INEVITABLE |
-| α_s(M_Z) | 9 | INEVITABLE |
-| Ω_b/Ω_m | 7 | INEVITABLE |
-| m_W/m_Z | 7 | INEVITABLE |
-| Ω_Λ/Ω_m | 6 | INEVITABLE |
-| m_c/m_s | 5 | INEVITABLE |
-| sin²θ₁₃_PMNS | 5 | INEVITABLE |
-| m_u/m_d | 1 | Unique (caution) |
-| m_H/m_W | 1 | Unique (caution) |
+| Observable | # Expressions | Classification |
+|------------|---------------|----------------|
+| sin²θ₁₂_PMNS | 28 | CANONICAL |
+| m_b/m_t | 21 | CANONICAL |
+| Q_Koide | 20 | CANONICAL |
+| m_H/m_t | 19 | ROBUST |
+| sin²θ₁₂_CKM | 16 | ROBUST |
+| sin²θ₂₃_PMNS | 15 | ROBUST |
+| m_s/m_d | 14 | ROBUST |
+| sin²θ_W | 14 | ROBUST |
+| m_μ/m_τ | 9 | SUPPORTED |
+| α_s(M_Z) | 9 | SUPPORTED |
+| Ω_b/Ω_m | 7 | SUPPORTED |
+| m_W/m_Z | 7 | SUPPORTED |
+| Ω_Λ/Ω_m | 6 | SUPPORTED |
+| m_c/m_s | 5 | SUPPORTED |
+| sin²θ₁₃_PMNS | 5 | SUPPORTED |
+| m_u/m_d | 1 | SINGULAR |
+| m_H/m_W | 1 | SINGULAR |
 
 ---
 
