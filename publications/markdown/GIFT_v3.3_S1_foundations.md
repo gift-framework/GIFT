@@ -42,7 +42,7 @@ K₇ with G₂ holonomy (unique compact realization)
 Topological invariants (b₂ = 21, b₃ = 77)
     │
     ▼
-18 dimensionless predictions
+33 dimensionless predictions
 ```
 
 ### 0.1 The Division Algebra Chain
@@ -366,7 +366,7 @@ $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 | φ_ref | Algebraic reference form | c × φ₀ |
 | T_realized | Actual torsion for global solution | Constrained by Joyce |
 
-**Key insight**: The 18 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of the specific torsion realization. The value κ_T = 1/61 defines the geometric bound on deviations from φ_ref.
+**Key insight**: The 33 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of the specific torsion realization. The value κ_T = 1/61 defines the geometric bound on deviations from φ_ref.
 
 **Physical interactions**: Emerge from the geometry of K₇, with deviations δφ from the reference form bounded by topological constraints. This mechanism is THEORETICAL (see S3 for details).
 

@@ -58,7 +58,7 @@ All results emerge from the topological structure established in S1.
 - Sections 9-13 (scale bridge): Working conjecture, 0.09% precision
 - Sections 19-24 (cosmology): Exploratory connections
 
-**The 18 dimensionless predictions (S2) do not depend on any content in this supplement.**
+**The 33 dimensionless predictions (S2) do not depend on any content in this supplement.**
 
 ---
 
@@ -161,7 +161,7 @@ $$61 = \text{prime}(18)$$
 │  The capacity 1/61 characterizes the manifold's topology.   │
 │  The torsion-free solution exists by Joyce's theorem.       │
 │                                                             │
-│  All 18 predictions use topology (via b₂, b₃, dim_G₂),      │
+│  All 33 predictions use topology (via b₂, b₃, dim_G₂),      │
 │  NOT the realized torsion value.                            │
 └─────────────────────────────────────────────────────────────┘
 
@@ -227,7 +227,7 @@ The small but non-zero torsion enables:
 │  bounded by κ_T = 1/61.                                     │
 │                                                             │
 │  These are theoretical explorations, NOT predictions.       │
-│  The 18 dimensionless predictions (S2) do not use these     │
+│  The 33 dimensionless predictions (S2) do not use these     │
 │  values.                                                    │
 └─────────────────────────────────────────────────────────────┘
 
