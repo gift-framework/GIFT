@@ -4,7 +4,7 @@ Thank you for your interest in contributing to GIFT.
 
 ## Documentation Contributions
 
-This repository contains the theoretical documentation for GIFT v3.2. Contributions welcome:
+This repository contains the theoretical documentation for GIFT v3.3. Contributions welcome:
 
 - **Clarifications**: Improve explanations of concepts
 - **Corrections**: Fix errors in derivations or references

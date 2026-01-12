@@ -40,7 +40,7 @@ The "formula selection problem" dissolves: each observable corresponds to a **un
 | b₂ | 21 | Second Betti number | 0 |
 | dim(J₃(O)) | 27 | Exceptional Jordan algebra | 6 |
 | det(g)_den | 32 | Metric determinant denominator | 4 |
-| χ(K₇) | 42 | Euler characteristic | 0 |
+| 2b₂ | 42 | Structural invariant (note: χ(K₇)=0) | 0 |
 | dim(F₄) | 52 | F₄ dimension | 3 |
 | fund(E₇) | 56 | E₇ fundamental representation | 0 |
 | κ_T⁻¹ | 61 | Inverse torsion capacity | 5 |
@@ -99,9 +99,9 @@ The "formula selection problem" dissolves: each observable corresponds to a **un
 |-------|-----------------|------------------|
 | m_s/m_d = 20 | (α_sum + dim_J₃O)/p₂ | Anomaly + Jordan / duality |
 | m_c/m_s ≈ 82/7 | (dim_E₈ - p₂)/b₂ | Gauge dimension / moduli |
-| m_b/m_t = 1/42 | 1/χ(K₇) | **Inverse Euler characteristic** |
+| m_b/m_t = 1/42 | 1/(2b₂) | **Inverse structural invariant** |
 
-**Key insight**: m_b/m_t = 1/42 = 1/χ(K₇). The bottom/top mass hierarchy is literally the inverse Euler characteristic of the compact manifold.
+**Key insight**: m_b/m_t = 1/42 = 1/(2b₂). The bottom/top mass hierarchy is the inverse of the structural constant 2b₂. (Note: χ(K₇) = 0 for odd-dimensional manifolds; 42 = 2b₂ is a distinct invariant.)
 
 ### 2.4 Cosmological Parameters
 
@@ -155,7 +155,7 @@ Strong correspondences have multiple independent derivations:
 
 | # | Expression | Computation |
 |---|------------|-------------|
-| 1 | b₀/χ(K₇) | 1/42 |
+| 1 | b₀/(2b₂) | 1/42 |
 | 2 | (b₀+N_gen)/PSL₂₇ | 4/168 = 1/42 |
 | 3 | p₂/(dim_K₇+b₃) | 2/84 = 1/42 |
 | 4 | N_gen/(dim_J₃O+H*) | 3/126 = 1/42 |
@@ -204,7 +204,7 @@ Master identities connecting GIFT constants:
 | Weyl = 5 | 4 | Quadruple-determined |
 | PSL(2,7) = 168 | 4 | Quadruple-determined |
 | N_gen = 3 | 24+ | Highly over-determined |
-| 42 = χ(K₇) | 21 | Highly over-determined |
+| 42 = 2b₂ | 21 | Highly over-determined |
 
 Nature selects for **over-determined** quantities.
 

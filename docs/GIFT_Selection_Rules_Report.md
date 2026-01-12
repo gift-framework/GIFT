@@ -24,7 +24,7 @@ The Fano plane PG(2,2) is the smallest projective plane:
 | dim(K₇) | 7 | 1×7 | Internal dimension |
 | dim(G₂) | 14 | 2×7 | Holonomy group |
 | b₂ | 21 | 3×7 | Gauge moduli |
-| χ(K₇) | 42 | 6×7 | Euler characteristic |
+| 2b₂ | 42 | 6×7 | Structural invariant |
 | fund(E₇) | 56 | 8×7 | E₇ fundamental rep |
 | b₃ | 77 | 11×7 | Matter modes |
 | PSL(2,7) | 168 | 24×7 | Fano symmetry |
@@ -54,7 +54,7 @@ The first formula gives 0.231 (correct), the second gives 0.273 (wrong).
 
 **Old formula**: (b₂+p₂)/(b₂+N_gen) = 23/24 = 0.958 ❌
 
-**New formula**: (χ-Weyl)/χ = (42-5)/42 = 37/42 = 0.881 ✓
+**New formula**: (2b₂-Weyl)/(2b₂) = (42-5)/42 = 37/42 = 0.881 ✓
 
 | Metric | Value |
 |--------|-------|
@@ -62,7 +62,9 @@ The first formula gives 0.231 (correct), the second gives 0.273 (wrong).
 | Experimental | 0.8815 |
 | Deviation | **0.06%** |
 
-**Physical interpretation**: (Euler - pentagon) / Euler
+**Physical interpretation**: (2b₂ - Weyl) / 2b₂
+
+**Note**: The constant 42 = 2b₂ is a structural invariant, not the Euler characteristic. χ(K₇) = 0 for odd-dimensional manifolds.
 
 ### 2.2 θ₂₃ (previously 20% off)
 

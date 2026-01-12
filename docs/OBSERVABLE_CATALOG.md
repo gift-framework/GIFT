@@ -65,7 +65,7 @@ Each observable receives a **Structural Inevitability** classification based on 
 |---|------------|--------------|-------|------|------|---------|-------|
 | 9 | **m_s/m_d** | p₂²×Weyl | 20 | 20.0 | 0.00% | 14 | ROBUST |
 | 10 | **m_c/m_s** | (dim_E₈-p₂)/b₂ | 246/21=11.71 | 11.7 | 0.12% | 5 | SUPPORTED |
-| 11 | **m_b/m_t** | 1/χ(K₇) | 1/42=0.0238 | 0.024 | 0.79% | 21 | CANONICAL |
+| 11 | **m_b/m_t** | 1/(2b₂) | 1/42=0.0238 | 0.024 | 0.79% | 21 | CANONICAL |
 | 12 | **m_u/m_d** | (1+dim_E₆)/PSL₂₇ | 79/168=0.470 | 0.47 | 0.05% | 1 | SINGULAR |
 
 ### 2.5 Neutrino/PMNS Sector (4)
@@ -126,7 +126,7 @@ Each observable receives a **Structural Inevitability** classification based on 
 | 30 | **Ω_b/Ω_m** | (dim_F₄-α_sum)/dim_E₈ | 39/248=0.157 | 0.157 | 0.16% | 7 | SUPPORTED |
 | 31 | **Ω_Λ/Ω_m** | (det_g_den-dim_K₇)/D_bulk | 25/11=2.27 | 2.27 | 0.12% | 6 | SUPPORTED |
 | 32 | **h (Hubble)** | (PSL₂₇-1)/dim_E₈ | 167/248=0.673 | 0.674 | 0.09% | 3 | DERIVED |
-| 33 | **σ₈** | (p₂+det_g_den)/χ(K₇) | 34/42=0.810 | 0.811 | 0.18% | 4 | DERIVED |
+| 33 | **σ₈** | (p₂+det_g_den)/(2b₂) | 34/42=0.810 | 0.811 | 0.18% | 4 | DERIVED |
 
 ---
 
@@ -150,7 +150,7 @@ Each observable receives a **Structural Inevitability** classification based on 
 | 40 | **b₂(K₇)** | 21 | Second Betti (gauge moduli) | 3+ | DERIVED |
 | 41 | **b₃(K₇)** | 77 | Third Betti (matter modes) | 3+ | DERIVED |
 | 42 | **H*** | 99 | b₂+b₃+1 (total cohomology) | 5+ | SUPPORTED |
-| 43 | **χ(K₇)** | 42 | Euler characteristic | 3+ | DERIVED |
+| 43 | **2b₂** | 42 | Structural invariant (note: χ(K₇)=0) | 3+ | DERIVED |
 
 ### 4.3 Exceptional Algebras (4)
 
@@ -231,7 +231,7 @@ b₂      = N_gen × dim(K₇)        = 3 × 7   = 21
 b₃ + dim(G₂) = dim(K₇) × α_sum   = 7 × 13  = 91
 α_sum   = rank(E₈) + Weyl        = 8 + 5   = 13
 D_bulk  = rank(E₈) + N_gen       = 8 + 3   = 11
-χ(K₇)   = p₂ × b₂                = 2 × 21  = 42
+2b₂     = p₂ × b₂                = 2 × 21  = 42
 H*      = b₂ + b₃ + 1            = 21+77+1 = 99
 ```
 
@@ -248,7 +248,7 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 
 | mod 7 | Constants |
 |-------|-----------|
-| **0** | dim_K₇, dim_G₂, b₂, b₃, fund_E₇, PSL₂₇, χ(K₇) |
+| **0** | dim_K₇, dim_G₂, b₂, b₃, fund_E₇, PSL₂₇, 2b₂ |
 | **1** | H*, rank_E₈, dim_E₆ |
 | **2** | p₂, det_g_num |
 | **3** | N_gen, dim_E₈ |

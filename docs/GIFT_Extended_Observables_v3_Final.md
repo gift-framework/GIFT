@@ -49,7 +49,7 @@
 | b₂ | 21 | 2nd Betti | **0** | 3×7 |
 | dim(J₃(𝕆)) | 27 | Jordan alg | 6 | — |
 | det(g)_den | 32 | Metric den | 4 | 2⁵ |
-| χ(K₇) | 42 | Euler char | **0** | 6×7 |
+| 2b₂ | 42 | Structural inv | **0** | 6×7 |
 | dim(F₄) | 52 | F₄ dim | 3 | — |
 | fund(E₇) | 56 | E₇ fund rep | **0** | 8×7 |
 | κ_T | 61 | Torsion inv | 5 | prime |
@@ -152,7 +152,7 @@ This is **not numerology** — it's the octonionic Fano structure manifesting in
 | m_u/m_d | 0.47±0.07 | (b₀+dim_E₆)/PSL27 = **79/168** | 0.470 | 0.05% | 4 |
 | m_d/m_s | 0.050±0.005 | (D_bulk+dim_G₂)/dim_E₈² | 0.0504 | 0.81% | 3 |
 
-**The 42 connection**: m_b/m_t = 1/χ(K₇) = 1/42
+**The 42 connection**: m_b/m_t = 1/(2b₂) = 1/42
 
 ### 3.4 Lepton Mass Ratios
 
@@ -209,7 +209,7 @@ This is **not numerology** — it's the octonionic Fano structure manifesting in
 **Most remarkable result**:
 $$\frac{\Omega_{DM}}{\Omega_b} = \frac{b_0 + \chi(K_7)}{\text{rank}(E_8)} = \frac{1 + 42}{8} = \frac{43}{8} = 5.375$$
 
-The ratio of dark matter to baryonic matter **explicitly contains χ(K₇) = 42**.
+The ratio of dark matter to baryonic matter **explicitly contains 2b₂ = 42**.
 
 ### 4.3 Physical Interpretation
 
