@@ -6,7 +6,11 @@
 
 *This supplement provides complete mathematical proofs for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions.*
 
-**Status**: Complete (18 PROVEN relations)
+**Status**: Complete (18 PROVEN relations verified in Lean 4)
+
+**Note on 33 vs 18**: The main paper references 33 dimensionless predictions. Of these:
+- **18 core relations** (this supplement): PROVEN status — algebraic identities verified in Lean 4
+- **15 extended predictions** (cosmology, CKM, boson ratios): TOPOLOGICAL or HEURISTIC status — formulas use topological constants but lack full Lean verification
 
 The topological constants that determine these relations produce an exactly solvable geometric structure (see S1, Section 12).
 

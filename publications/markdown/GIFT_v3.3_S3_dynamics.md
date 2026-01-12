@@ -107,7 +107,7 @@ The reference form φ_ref = c × φ₀ (with c = (65/32)^{1/14}) determines the 
 On the compact TCS manifold K₇, the actual solution takes the form:
 $$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-Joyce's theorem guarantees a torsion-free metric exists when ‖T‖ < ε₀ = 0.1. PINN validation confirms ‖T‖_max = 4.5 × 10⁻⁷ (220,000× margin). The topological bound κ_T = 1/61 constrains the amplitude of deviations δφ.
+Joyce's theorem guarantees a torsion-free metric exists when ‖T‖ < ε₀ = 0.1. PINN validation confirms ‖T‖_max = 4.46 × 10⁻⁴ (224× margin). The topological bound κ_T = 1/61 constrains the amplitude of deviations δφ.
 
 **Physical Interactions and Dynamics**
 
