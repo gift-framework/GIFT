@@ -5,6 +5,54 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.0] - 2026-01-12
+
+### Extended Observable Catalog & Enhanced Monte Carlo Validation
+
+This release extends the observable catalog from 18 to 33 predictions and significantly expands Monte Carlo validation.
+
+#### Added
+
+**Extended Observable Catalog (33 predictions)**
+- 18 core relations (PROVEN in Lean 4)
+- 15 extended relations (TOPOLOGICAL/HEURISTIC status)
+- Mean deviation improved: 0.24% → **0.21%** (PDG 2024)
+
+**Enhanced Monte Carlo Validation**
+- Total configurations tested: 54,327 → **192,349**
+- p-value: < 10⁻⁵ → **< 5×10⁻⁶**
+- Significance: >4σ → **>4.5σ**
+
+**New v3.3 Corrections**
+- m_W/m_Z formula: 23/26 → **37/42** = (2b₂−Weyl)/(2b₂) — deviation 0.35% → 0.06%
+- Both Betti numbers now **DERIVED** from TCS building blocks, not input
+
+**File Renames (v3.2 → v3.3)**
+- `GIFT_v3.2_main.md` → `GIFT_v3.3_main.md`
+- `GIFT_v3.2_S1_foundations.md` → `GIFT_v3.3_S1_foundations.md`
+- `GIFT_v3.2_S2_derivations.md` → `GIFT_v3.3_S2_derivations.md`
+- `GIFT_v3.2_S3_dynamics.md` → `GIFT_v3.3_S3_dynamics.md`
+
+**New Documentation**
+- `docs/OBSERVABLE_CATALOG.md`: Complete 33-observable catalog
+- `docs/OBSERVABLE_REFERENCE.md`: Detailed reference for all predictions
+- `docs/STATISTICAL_EVIDENCE.md`: v3.3 statistical validation summary
+- `statistical_validation/validation_v33.py`: Enhanced validation script
+- `statistical_validation/GIFT_Statistical_Validation_Report_v33.md`: Full report
+
+#### Changed
+
+**Notation Clarification**
+- χ(K₇) = 0 (Euler characteristic for odd-dimensional manifolds)
+- The constant 42 = 2b₂ is a distinct structural invariant, NOT χ(K₇)
+
+**Documentation Updates**
+- All READMEs updated to v3.3
+- CITATION.md updated with v3.3 references
+- STRUCTURE.md updated with new file names
+
+---
+
 ## [3.2.0] - 2026-01-05
 
 ### PDG 2024 Update & Comprehensive Monte Carlo Validation

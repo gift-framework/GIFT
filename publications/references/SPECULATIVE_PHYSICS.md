@@ -470,5 +470,5 @@ If GIFT predictions hold with continued precision:
 
 ---
 
-*GIFT Framework v3.2 - Exploratory Content*
+*GIFT Framework v3.3 - Exploratory Content*
 *Status: EXPLORATORY/SPECULATIVE - Not part of core Zenodo publication*
