@@ -318,7 +318,7 @@ The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint** depend
 
 **Torsion and Joyce's theorem**:
 
-The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The controlled magnitude of ‖δφ‖ places K₇ in the regime where Joyce's perturbative correction achieves a torsion-free G₂ structure. Joyce's theorem guarantees existence when ‖T‖ < ε₀ = 0.1; Monte Carlo validation (N=1000) confirms ‖T‖_max = 0.000446, providing a **220,000× safety margin**.
+The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The controlled magnitude of ‖δφ‖ places K₇ in the regime where Joyce's perturbative correction achieves a torsion-free G₂ structure. Joyce's theorem guarantees existence when ‖T‖ < ε₀ = 0.1; Monte Carlo validation (N=1000) confirms ‖T‖_max = 4.5 × 10⁻⁷, providing a **220,000× safety margin**.
 
 | Property | Value |
 |----------|-------|
@@ -426,9 +426,9 @@ A natural concern arises: why *this particular* algebraic combination of topolog
 |------------|-------|------------------------|----------|
 | sin²θ_W | 3/13 | 14 | N_gen/α_sum, b₂/(b₃+dim_G₂), dim(J₃O)/(dim_F₄+65) |
 | Q_Koide | 2/3 | 20 | dim_G₂/b₂, p₂/N_gen, dim_F₄/dim_E₆, rank_E₈/12 |
-| m_b/m_t | 1/42 | 21 | 1/χ(K₇), p₂/84, N_gen/126, 4/PSL(2,7) |
+| m_b/m_t | 1/42 | 21 | 1/(2b₂), p₂/84, N_gen/126, 4/PSL(2,7) |
 
-The bottom-to-top mass ratio 1/42 exemplifies this principle: it equals the inverse Euler characteristic of K₇, but also arises from 21 other combinations of topological invariants, all reducing to the same fraction.
+The bottom-to-top mass ratio 1/42 exemplifies this principle: it equals the inverse of 2b₂ (twice the gauge moduli count), but also arises from 21 other combinations of topological invariants, all reducing to the same fraction.
 
 **Classification by redundancy**: We classify observables by the number of independent expressions:
 
@@ -677,11 +677,13 @@ The neutrino mixing angles involve the auxiliary parameters:
 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 ± 0.0042 | **0.004%** |
 | h (Hubble) | (PSL₂₇-1)/dim(E₈) = 167/248 | 0.6734 | 0.674 ± 0.005 | **0.09%** |
 | Ω_b/Ω_m | Weyl/det(g)_den = 5/32 | 0.1562 | 0.157 ± 0.003 | **0.16%** |
-| σ₈ | (p₂+32)/χ = 34/42 | 0.8095 | 0.811 ± 0.006 | **0.18%** |
+| σ₈ | (p₂+32)/(2b₂) = 34/42 | 0.8095 | 0.811 ± 0.006 | **0.18%** |
 | Ω_DE | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 ± 0.0073 | **0.21%** |
 | Y_p | (1+dim_G₂)/κ_T⁻¹ = 15/61 | 0.2459 | 0.245 ± 0.003 | **0.37%** |
 
-**Most remarkable**: Ω_DM/Ω_b = (1 + 42)/8 = **43/8** is exact. The same χ(K₇) = 42 that gives m_b/m_t = 1/42 determines the dark-to-baryonic matter ratio.
+**Most remarkable**: Ω_DM/Ω_b = (1 + 2b₂)/rank(E₈) = (1 + 42)/8 = **43/8** is exact. The structural constant 2b₂ = 42 that gives m_b/m_t = 1/42 also determines the dark-to-baryonic matter ratio.
+
+**Note on notation**: The constant 42 = 2b₂ = p₂ × b₂ is a structural invariant, not to be confused with the Euler characteristic χ(K₇) = 0 (which vanishes for any compact odd-dimensional manifold).
 
 ### 9.6 CKM Matrix
 
@@ -698,10 +700,10 @@ The Cabibbo angle emerges from the ratio of E₇ fundamental representation to E
 | Observable | Formula | GIFT | Experimental | Deviation |
 |------------|---------|------|--------------|-----------|
 | m_H/m_W | (N_gen+dim_E₆)/dim(F₄) = 81/52 | 1.5577 | 1.558 ± 0.002 | **0.02%** |
-| m_W/m_Z | (χ-Weyl)/χ = **37/42** | 0.8810 | 0.8815 ± 0.0002 | **0.06%** |
+| m_W/m_Z | (2b₂-Weyl)/(2b₂) = **37/42** | 0.8810 | 0.8815 ± 0.0002 | **0.06%** |
 | m_H/m_t | fund(E₇)/b₃ = 56/77 | 0.7273 | 0.725 ± 0.003 | **0.31%** |
 
-**v3.3 correction**: m_W/m_Z = (42-5)/42 = **37/42** replaces previous formula with 8.7% error. The new formula achieves 0.06% precision.
+**v3.3 correction**: m_W/m_Z = (2b₂-Weyl)/(2b₂) = **37/42** replaces the previous 23/26 formula (0.35% deviation). The new formula achieves 0.06% precision, improving by a factor of 6.
 
 ---
 

@@ -736,12 +736,14 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{1
 ### Relation: m_W/m_Z = 37/42 (v3.3 correction)
 
 *Formula*:
-$$\frac{m_W}{m_Z} = \frac{\chi(K_7) - \text{Weyl}}{\chi(K_7)} = \frac{42 - 5}{42} = \frac{37}{42}$$
+$$\frac{m_W}{m_Z} = \frac{2b_2 - \text{Weyl}}{2b_2} = \frac{42 - 5}{42} = \frac{37}{42}$$
 
 *Physical interpretation*:
-- χ(K₇) = 42 is the Euler characteristic
+- 2b₂ = 42 is the structural constant (= p₂ × b₂)
 - Weyl = 5 is the triple identity factor
-- The ratio involves (Euler − Weyl) / Euler
+- The ratio involves (structural_const − Weyl) / structural_const
+
+**Note**: The true Euler characteristic χ(K₇) = 0 for odd-dimensional manifolds. The constant 42 = 2b₂ is a distinct topological invariant.
 
 *Numerical value*: m_W/m_Z = 0.8810
 
@@ -1162,7 +1164,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 7 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477.2 | 0.004% | 3 | DERIVED |
 | 8 | m_μ/m_e | 27^φ | 207.01 | 206.77 | 0.12% | 2 | DERIVED |
 | 9 | m_s/m_d | p₂²×Weyl | 20 | 20.0 | 0.00% | 14 | ROBUST |
-| 10 | m_b/m_t | 1/χ(K₇) | 1/42 | 0.024 | 0.79% | 21 | CANONICAL |
+| 10 | m_b/m_t | 1/(2b₂) | 1/42 | 0.024 | 0.79% | 21 | CANONICAL |
 | 11 | m_u/m_d | (1+dim_E₆)/PSL₂₇ | 79/168 | 0.47 | 0.05% | 1 | SINGULAR |
 | 12 | δ_CP | dim_K₇×dim_G₂+H* | 197° | 197° | 0.00% | 3 | DERIVED |
 | 13 | θ₁₃ | π/b₂ | 8.57° | 8.54° | 0.37% | 3 | DERIVED |
@@ -1224,13 +1226,15 @@ Each prediction admits multiple algebraically independent expressions that reduc
 
 | # | Expression | Evaluation |
 |---|------------|------------|
-| 1 | b₀ / χ(K₇) | 1/42 |
+| 1 | b₀ / (2b₂) | 1/42 |
 | 2 | (b₀ + N_gen) / PSL(2,7) | 4/168 = 1/42 |
 | 3 | p₂ / (dim_K₇ + b₃) | 2/84 = 1/42 |
 | 4 | N_gen / (dim(J₃O) + H*) | 3/126 = 1/42 |
 | 5 | dim_K₇ / (dim_E₈ + dim(J₃O) + dim_K₇) | 7/294 = 1/42 |
 
-The ratio m_b/m_t = 1/42 = 1/χ(K₇) illustrates structural inevitability: the bottom-to-top mass hierarchy equals the inverse Euler characteristic of the internal manifold.
+The ratio m_b/m_t = 1/42 = 1/(2b₂) illustrates structural inevitability: the bottom-to-top mass hierarchy equals the inverse of the structural constant 2b₂ = p₂ × b₂.
+
+**Note**: The true Euler characteristic χ(K₇) = 0 for G₂ manifolds (odd-dimensional). The constant 42 is the structural invariant 2b₂.
 
 ### 24.5 The Algebraic Web
 

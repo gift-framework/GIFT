@@ -41,7 +41,7 @@ The Fano plane PG(2,2) is the smallest projective plane:
 |------------|---------|-------------|--------|
 | sin²θ_W | b₂/(b₃ + dim_G₂) | 21/91 = (3×7)/(13×7) | 3/13 ✓ |
 | Q_Koide | dim_G₂/b₂ | 14/21 = (2×7)/(3×7) | 2/3 ✓ |
-| m_b/m_t | 1/χ(K₇) | 1/42 = 1/(6×7) | 1/42 ✓ |
+| m_b/m_t | 1/(2b₂) | 1/42 = 1/(6×7) | 1/42 ✓ |
 
 **Physical interpretation**: Observables are **Fano-independent** — they don't depend on the specific 7-fold structure of the octonions.
 
@@ -53,7 +53,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 |---------------|-----------|------------------|
 | 8 × 21 | rank(E₈) × b₂ | gauge_rank × gauge_moduli |
 | 3 × 56 | N_gen × fund(E₇) | generations × matter_rep |
-| 4 × 42 | (1+N_gen) × χ | families × Euler |
+| 4 × 42 | (1+N_gen) × 2b₂ | families × structural_const |
 
 ---
 
