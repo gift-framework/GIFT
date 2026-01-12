@@ -8,9 +8,9 @@ Independent researcher
 
 ## Abstract
 
-The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the unique compact geometry realizing this structure.
+The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the natural compact geometry realizing this structure.
 
-33 dimensionless quantities achieve mean deviation 0.21% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations outperforming GIFT. E₈×E₈ outperforms all gauge groups by 10×; G₂ holonomy is essential (Calabi-Yau fails by 5×). Statistical significance: p < 5×10⁻⁶, >4.5σ.
+33 dimensionless quantities achieve mean deviation 0.21% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are PROVEN** (algebraic identities verified in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations outperforming GIFT. E₈×E₈ outperforms all gauge groups by 10×; G₂ holonomy is essential (Calabi-Yau fails by 5×). Statistical significance: p < 5×10⁻⁶, >4.5σ.
 
 The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
@@ -189,7 +189,7 @@ Physical motivations for G2 holonomy include:
 
 **Exceptional structure**: G2 is the automorphism group of the octonions. This is the *definition* of G2, not a coincidence. The 7 imaginary octonion units span Im(O) = R^7, and G2 preserves the octonionic multiplication table. A G2-holonomy manifold is therefore the natural geometric home for octonionic physics.
 
-This answers the "selection principle" question: K7 is not chosen from a landscape of alternatives. It is the unique compact 7-geometry whose holonomy respects octonionic structure, just as a circle is the unique 1-geometry with U(1) symmetry.
+This addresses the "selection principle" question: K7 is not chosen from a landscape of alternatives. It is the *minimal exceptional candidate* among compact 7-geometries whose holonomy respects octonionic structure. We do not claim uniqueness; we claim that this is the natural geometric setting suggested by the division algebra chain.
 
 Mathematical properties:
 
@@ -318,14 +318,14 @@ The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint** depend
 
 **Torsion and Joyce's theorem**:
 
-The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The controlled magnitude of ‖δφ‖ places K₇ in the regime where Joyce's perturbative correction achieves a torsion-free G₂ structure. Joyce's theorem guarantees existence when ‖T‖ < ε₀ = 0.1; Monte Carlo validation (N=1000) confirms ‖T‖_max = 4.5 × 10⁻⁷, providing a **220,000× safety margin**.
+The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The controlled magnitude of ‖δφ‖ places K₇ in the regime where Joyce's perturbative correction achieves a torsion-free G₂ structure. Joyce's theorem guarantees existence when ‖T‖ < ε₀ = 0.1; PINN validation (N=1000) confirms ‖T‖_max = 4.46 × 10⁻⁴, providing a **224× safety margin**.
 
 | Property | Value |
 |----------|-------|
 | Reference form | φ_ref = (65/32)^{1/14} × φ₀ |
 | Metric determinant | det(g) = 65/32 (exact) |
 | Torsion capacity | κ_T = 1/61 (topological bound) |
-| Joyce threshold | ‖T‖ < ε₀ = 0.1 (220,000× margin) |
+| Joyce threshold | ‖T‖ < ε₀ = 0.1 (224× margin) |
 | Parameter count | Zero continuous |
 
 **Scope of verification**: Lean 4 confirms the arithmetic and algebraic relations between GIFT constants (e.g., det(g) = 65/32). It does not formalize the existence of K₇ as a smooth G₂ manifold, nor the physical interpretation of topological invariants.

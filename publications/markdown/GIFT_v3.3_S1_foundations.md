@@ -36,14 +36,16 @@ Im(𝕆) = ℝ⁷ (imaginary octonions)
 G₂ = Aut(𝕆) (automorphism group, dim 14)
     │
     ▼
-K₇ with G₂ holonomy (unique compact realization)
+K₇ with G₂ holonomy (natural compact realization)
     │
     ▼
 Topological invariants (b₂ = 21, b₃ = 77)
     │
     ▼
-33 dimensionless predictions
+33 dimensionless predictions (18 PROVEN in Lean + 15 TOPOLOGICAL/HEURISTIC extensions)
 ```
+
+**Status classification**: 18 core relations have algebraic proofs verified in Lean 4 (status: PROVEN). 15 additional predictions use topological formulas without full Lean verification (status: TOPOLOGICAL or HEURISTIC). See S2 for complete derivations.
 
 ### 0.1 The Division Algebra Chain
 
@@ -583,7 +585,7 @@ $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 |----------|-------|--------|
 | det(g) | 65/32 | EXACT (algebraic) |
 | φ_ref components | 7/35 | 20% sparsity |
-| Joyce threshold | ‖T‖ < ε₀ = 0.1 | Satisfied (220,000× margin) |
+| Joyce threshold | ‖T‖ < ε₀ = 0.1 | Satisfied (224× margin) |
 
 ### 11.2 Joyce Existence Theorem and Global Solutions
 
@@ -592,7 +594,7 @@ $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 **Actual solution structure**: The topology and geometry of K₇ impose a deformation:
 $$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ = 0.1. Monte Carlo validation (N=1000) confirms ‖T‖_max = 4.5 × 10⁻⁷, providing a 220,000× safety margin.
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ = 0.1. PINN validation (N=1000) confirms ‖T‖_max = 4.46 × 10⁻⁴, providing a 224× safety margin.
 
 **Why GIFT satisfies Joyce's criterion**: The topological bound κ_T = 1/61 constrains ‖δφ‖, ensuring the manifold lies within Joyce's perturbative regime where a torsion-free solution exists.
 
@@ -602,8 +604,8 @@ Physics-Informed Neural Network provides independent numerical validation:
 
 | Metric | Value | Significance |
 |--------|-------|--------------|
-| ‖T‖_max | 4.5 × 10⁻⁷ | 220,000× below Joyce ε₀ |
-| ‖T‖_mean | ~10⁻⁸ | T → 0 confirmed |
+| ‖T‖_max | 4.46 × 10⁻⁴ | 224× below Joyce ε₀ |
+| ‖T‖_mean | 9.8 × 10⁻⁵ | T → 0 confirmed |
 | Lipschitz L_eff | ~10⁻⁵ | Perturbations negligible |
 | det(g) error | < 10⁻⁶ | Confirms 65/32 |
 | Contraction K | 0.9 | Banach fixed-point applies |
@@ -611,7 +613,7 @@ Physics-Informed Neural Network provides independent numerical validation:
 **Numerical Certificate (v3.3)**:
 - Sample points: N = 1000, coverage radius 15.31
 - Joyce threshold: ε₀ = 0.1
-- Safety margin: 220,000× (‖T‖_max ≪ ε₀)
+- Safety margin: 224× (‖T‖_max = 4.46 × 10⁻⁴ ≪ ε₀)
 
 The PINN converges to the standard form, validating the analytical solution. See `K7_Explicit_Metric_v3_2.ipynb` for reproducible certification.
 
@@ -726,7 +728,7 @@ Both have 7 terms but different index patterns. The Fano plane defines the octon
 | Algebraic | φ = (65/32)^{1/14} × φ₀ | This section |
 | Lean 4 | `det_g_equals_target : rfl` | AnalyticalMetric.lean |
 | PINN | Converges to constant form | gift_core/nn/ |
-| Joyce theorem | ‖T‖ < 0.1 → exists metric (220,000× margin) | [Joyce 2000] |
+| Joyce theorem | ‖T‖ < 0.1 → exists metric (224× margin) | [Joyce 2000] |
 
 Cross-verification between analytical and numerical methods confirms the solution.
 

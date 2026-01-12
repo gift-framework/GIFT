@@ -15,7 +15,7 @@
 | **P-value** | < 5 × 10⁻⁶ |
 | **Significance** | **> 4.5σ** |
 | **Observables validated** | 33 |
-| **Mean deviation (GIFT)** | 0.84% |
+| **Mean deviation (GIFT)** | 0.21% |
 | **Mean deviation (alternatives)** | 32.9% |
 
 ### Key Result
@@ -78,7 +78,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 
 | Rank | Gauge Group | Dimension | Mean Dev. |
 |------|-------------|-----------|-----------|
-| **1** | **E₈×E₈** | 496 | **0.84%** |
+| **1** | **E₈×E₈** | 496 | **0.21%** |
 | 2 | E₇×E₈ | 381 | 8.80% |
 | 3 | E₆×E₈ | 326 | 15.50% |
 | 4 | E₇×E₇ | 266 | 15.76% |
@@ -93,7 +93,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 
 | Rank | Holonomy | dim | SUSY | Mean Dev. |
 |------|----------|-----|------|-----------|
-| **1** | **G₂** | 14 | N=1 | **0.84%** |
+| **1** | **G₂** | 14 | N=1 | **0.21%** |
 | 2 | SU(4) | 15 | N=1 | 1.46% |
 | 3 | SU(3) | 8 | N=2 | 4.43% |
 | 4 | Spin(7) | 21 | N=0 | 5.41% |
@@ -200,7 +200,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 | Exact (< 0.01%) | 4 | 0.002% |
 | Excellent (< 0.1%) | 13 | 0.03% |
 | Good (< 1%) | 30 | 0.27% |
-| **All 33** | 33 | **0.84%** |
+| **All 33** | 33 | **0.21%** |
 
 ---
 
@@ -256,7 +256,7 @@ python3 validation_v33.py
 
 ### Primary Finding
 
-The GIFT configuration (E₈×E₈ gauge group, G₂ holonomy, b₂=21, b₃=77) achieves **0.84% mean deviation** across 33 observables, with **zero** configurations out of 192,349 tested performing better.
+The GIFT configuration (E₈×E₈ gauge group, G₂ holonomy, b₂=21, b₃=77) achieves **0.21% mean deviation** across 33 observables, with **zero** configurations out of 192,349 tested performing better.
 
 ### Statistical Statement
 

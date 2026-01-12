@@ -303,12 +303,12 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 | Category | Count | Mean Dev. |
 |----------|-------|-----------|
 | Core 18 | 18 | 0.24% |
-| Extended 15 | 15 | 0.29% |
-| **All Physical** | **33** | **0.26%** |
+| Extended 15 | 15 | 0.17% |
+| **All Physical** | **33** | **0.21%** |
 | Structural | 18 | — |
 | **Total Catalog** | **51** | — |
 
-**Key Result**: 33 physical observables, mean deviation 0.26%, 79% structurally inevitable (≥3 independent expressions).
+**Key Result**: 33 physical observables, mean deviation 0.21%, 79% structurally inevitable (≥3 independent expressions).
 
 ---
 
