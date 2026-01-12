@@ -41,7 +41,7 @@
 | b_2 | 21 | Second Betti number | **0** | 3x7 |
 | dim(J_3(O)) | 27 | Exceptional Jordan algebra | 6 | - |
 | det(g)_den | 32 | Metric determinant denominator | 4 | 2^5 |
-| chi(K_7) | 42 | Euler characteristic | **0** | 6x7 |
+| 2b_2 | 42 | Structural constant (= p₂ × b₂) | **0** | 6x7 |
 | dim(F_4) | 52 | F_4 dimension | 3 | - |
 | fund(E_7) | 56 | E_7 fundamental representation | **0** | 8x7 |
 | kappa_T^-1 | 61 | Inverse torsion capacity | 5 | prime |
@@ -61,7 +61,7 @@ b_2            = N_gen x dim(K_7)         = 3 x 7   = 21
 b_3 + dim(G_2) = dim(K_7) x alpha_sum     = 7 x 13  = 91
 alpha_sum      = rank(E_8) + Weyl         = 8 + 5   = 13
 D_bulk         = rank(E_8) + N_gen        = 8 + 3   = 11
-chi(K_7)       = p_2 x b_2                = 2 x 21  = 42
+2b_2           = p_2 x b_2                = 2 x 21  = 42  (structural constant)
 H*             = b_2 + b_3 + 1            = 21+77+1 = 99
 
 PSL(2,7) = 168 = rank(E_8) x b_2          = 8 x 21
@@ -116,7 +116,7 @@ Each observable receives a classification based on the number of independent alg
 |---|------------|--------------|-------|------|------|---------|--------|
 | 9 | **m_s/m_d** | (alpha_sum+dim_J3O)/p_2 | 40/2 = 20 | 20.0 | 0.00% | 14 | ROBUST |
 | 10 | **m_c/m_s** | (dim_E8-p_2)/b_2 | 246/21 = 11.71 | 11.7 | 0.12% | 5 | SUPPORTED |
-| 11 | **m_b/m_t** | 1/chi(K_7) | 1/42 = 0.0238 | 0.024 | 0.79% | 12 | ROBUST |
+| 11 | **m_b/m_t** | 1/(2b₂) | 1/42 = 0.0238 | 0.024 | 0.79% | 12 | ROBUST |
 | 12 | **m_u/m_d** | (1+dim_E6)/PSL_27 | 79/168 = 0.470 | 0.47 | 0.05% | 4 | DERIVED |
 
 ### 3.5 Neutrino/PMNS Sector
@@ -163,7 +163,7 @@ Each observable receives a classification based on the number of independent alg
 | 26 | **m_H/m_W** | (N_gen+dim_E6)/dim_F4 | 81/52 = 1.5577 | 1.558 | 0.02% | 3 | DERIVED |
 | 27 | **m_W/m_Z** | (chi-Weyl)/chi | 37/42 = 0.8810 | 0.8815 | 0.06% | 8 | SUPPORTED |
 
-**Note**: m_W/m_Z = 37/42 is a **v3.3 correction**. Previous formula gave 8.7% error.
+**Note**: m_W/m_Z = 37/42 is a **v3.3 correction**. Previous formula (23/26) had 0.35% deviation; new formula achieves 0.06%.
 
 ### 4.4 Lepton Ratios Extended
 
@@ -195,9 +195,11 @@ Each observable receives a classification based on the number of independent alg
 
 **Most remarkable result**:
 
-$$\frac{\Omega_{DM}}{\Omega_b} = \frac{b_0 + \chi(K_7)}{\text{rank}(E_8)} = \frac{1 + 42}{8} = \frac{43}{8} = 5.375$$
+$$\frac{\Omega_{DM}}{\Omega_b} = \frac{b_0 + 2b_2}{\text{rank}(E_8)} = \frac{1 + 42}{8} = \frac{43}{8} = 5.375$$
 
-The ratio of dark matter to baryonic matter **explicitly contains chi(K_7) = 42**.
+The ratio of dark matter to baryonic matter **explicitly contains the structural constant 2b₂ = 42**.
+
+**Note**: The Euler characteristic χ(K₇) = 0 for any compact odd-dimensional manifold like K₇. The value 42 = p₂ × b₂ is a distinct structural constant derived from Betti numbers.
 
 ---
 
@@ -221,7 +223,7 @@ The ratio of dark matter to baryonic matter **explicitly contains chi(K_7) = 42*
 | 46 | **b_2(K_7)** | 21 | Second Betti (gauge moduli) | 3+ | DERIVED |
 | 47 | **b_3(K_7)** | 77 | Third Betti (matter modes) | 3+ | DERIVED |
 | 48 | **H*** | 99 | b_2+b_3+1 (total cohomology) | 5+ | SUPPORTED |
-| 49 | **chi(K_7)** | 42 | Euler characteristic | 3+ | DERIVED |
+| 49 | **2b₂** | 42 | Structural constant (p₂ × b₂) | 3+ | DERIVED |
 
 ### 6.3 Exceptional Algebras
 
