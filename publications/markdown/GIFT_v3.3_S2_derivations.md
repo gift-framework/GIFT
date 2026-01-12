@@ -1115,7 +1115,7 @@ A critical question for any unified framework is whether the specific topologica
 
 | Rank | Group | Mean Dev. |
 |------|-------|-----------|
-| **1** | **E₈×E₈** | **0.84%** |
+| **1** | **E₈×E₈** | **0.21%** |
 | 2 | E₇×E₈ | 8.80% |
 | 3 | E₆×E₈ | 15.50% |
 
@@ -1125,7 +1125,7 @@ A critical question for any unified framework is whether the specific topologica
 
 | Rank | Holonomy | Mean Dev. |
 |------|----------|-----------|
-| **1** | **G₂** | **0.84%** |
+| **1** | **G₂** | **0.21%** |
 | 2 | SU(4) | 1.46% |
 | 3 | SU(3) | 4.43% |
 
@@ -1192,13 +1192,13 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 24 | sin²θ₂₃^CKM | dim_K₇/PSL₂₇ | 1/24 | 0.041 | 1.13% | 3 | DERIVED |
 | 25 | m_H/m_t | 8/11 | 0.7273 | 0.725 | 0.31% | 19 | ROBUST |
 | 26 | m_H/m_W | 81/52 | 1.5577 | 1.558 | 0.02% | 1 | SINGULAR |
-| 27 | m_W/m_Z | (χ−Weyl)/χ = 37/42 | 0.8810 | 0.8815 | **0.06%** | 8 | SUPPORTED |
+| 27 | m_W/m_Z | (2b₂−Weyl)/(2b₂) = 37/42 | 0.8810 | 0.8815 | **0.06%** | 8 | SUPPORTED |
 | 28 | m_μ/m_τ | 5/84 | 0.0595 | 0.0595 | 0.04% | 9 | SUPPORTED |
 | 29 | Ω_DM/Ω_b | (1+42)/rank_E₈ | 43/8 | 5.375 | 0.00% | 6 | SUPPORTED |
 | 30 | Ω_b/Ω_m | (dim_F₄−α_sum)/dim_E₈ | 39/248 | 0.157 | 0.16% | 7 | SUPPORTED |
 | 31 | Ω_Λ/Ω_m | (det_g_den−dim_K₇)/D_bulk | 25/11 | 2.27 | 0.12% | 6 | SUPPORTED |
 | 32 | h | (PSL₂₇−1)/dim_E₈ | 167/248 | 0.674 | 0.09% | 3 | DERIVED |
-| 33 | σ₈ | (p₂+det_g_den)/χ | 34/42 | 0.811 | 0.18% | 4 | DERIVED |
+| 33 | σ₈ | (p₂+det_g_den)/(2b₂) | 34/42 | 0.811 | 0.18% | 4 | DERIVED |
 
 ### 24.4 Illustrative Examples of Multiple Expressions
 

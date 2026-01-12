@@ -769,7 +769,7 @@ Critically, this validation uses the **actual topological formulas** to compute 
 
 | Rank | Gauge Group | Dimension | Mean Deviation |
 |------|-------------|-----------|----------------|
-| **1** | **E₈×E₈** | 496 | **0.84%** |
+| **1** | **E₈×E₈** | 496 | **0.21%** |
 | 2 | E₇×E₈ | 381 | 8.80% |
 | 3 | E₆×E₈ | 326 | 15.50% |
 | 4 | E₇×E₇ | 266 | 15.76% |
@@ -781,7 +781,7 @@ Critically, this validation uses the **actual topological formulas** to compute 
 
 | Rank | Holonomy | dim | SUSY | Mean Deviation |
 |------|----------|-----|------|----------------|
-| **1** | **G₂** | 14 | N=1 | **0.84%** |
+| **1** | **G₂** | 14 | N=1 | **0.21%** |
 | 2 | SU(4) | 15 | N=1 | 1.46% |
 | 3 | SU(3) | 8 | N=2 | 4.43% |
 | 4 | Spin(7) | 21 | N=0 | 5.41% |
@@ -796,12 +796,14 @@ Testing ±10 around (b₂=21, b₃=77) confirms GIFT is a **strict local minimum
 
 The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **unique optimum** across all 192,349 tested configurations. The probability that this agreement is coincidental is less than 1 in 200,000.
 
-#### Limitations
+#### Limitations and Look-Elsewhere Effect
 
-This validation addresses parameter variation within tested ranges. It does not test:
+This validation addresses parameter variation within tested ranges. It does **not** address:
 - Alternative TCS constructions with different Calabi-Yau building blocks
-- Whether the topological formulas themselves represent coincidental alignments
+- **Formula selection freedom**: The Monte Carlo tests variations of (b₂, b₃, gauge group, holonomy), but the **formulas themselves were fixed a priori**. The look-elsewhere effect from choosing which combinations of topological constants to use (e.g., b₂/(b₃+dim_G₂) vs b₂/b₃) is not quantified. The selection principle remains an open question.
 - Why nature selected these specific discrete choices
+
+**Epistemic honesty**: The statistical significance (p < 5×10⁻⁶) applies only to parameter variations, not to the space of possible formula structures.
 
 Complete methodology and reproducible scripts: `statistical_validation/validation_v33.py`. Full documentation: `docs/STATISTICAL_EVIDENCE.md`.
 
