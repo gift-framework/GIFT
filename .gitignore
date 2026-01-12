@@ -63,6 +63,9 @@ desktop.ini
 # Cached repositories (cloned by pipeline)
 .cache/
 
+# Cloned core repo for sync reference
+gift-core-sync/
+
 # Coverage and testing
 .coverage
 coverage.xml

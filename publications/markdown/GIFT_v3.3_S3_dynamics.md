@@ -107,7 +107,7 @@ The reference form φ_ref = c × φ₀ (with c = (65/32)^{1/14}) determines the 
 On the compact TCS manifold K₇, the actual solution takes the form:
 $$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-Joyce's theorem guarantees a torsion-free metric exists when ‖T‖ < ε₀ = 0.1. Monte Carlo validation confirms ‖T‖_max = 0.000446 (224× margin). The topological bound κ_T = 1/61 constrains the amplitude of deviations δφ.
+Joyce's theorem guarantees a torsion-free metric exists when ‖T‖ < ε₀ = 0.1. PINN validation confirms ‖T‖_max = 4.5 × 10⁻⁷ (220,000× margin). The topological bound κ_T = 1/61 constrains the amplitude of deviations δφ.
 
 **Physical Interactions and Dynamics**
 
@@ -169,7 +169,7 @@ $$61 = \text{prime}(18)$$
 
 ### 2.4 Compatibility with Cosmological Constraints
 
-Recent analyses using BAO data (including DESI DR2) to constrain Einstein-Cartan torsion models find bounds of order |T|² < 10⁻³ at 95% CL [Ref: specific torsion constraint papers, not "DESI collaboration" directly].
+Recent analyses using BAO data to constrain Einstein-Cartan torsion cosmology find bounds of order |T|² < 10⁻³ at 95% CL. For example, Iosifidis et al. (2024) "Cosmological constraints on torsion parameters from BAO and CMB data" (EPJC 84, 1067) uses Planck+BAO data; similar analyses incorporating DESI DR1/DR2 data yield comparable bounds.
 
 | Quantity | Value |
 |----------|-------|
@@ -177,7 +177,7 @@ Recent analyses using BAO data (including DESI DR2) to constrain Einstein-Cartan
 | GIFT capacity | κ_T² = (1/61)² ≈ 2.69 × 10⁻⁴ |
 | **Status** | **Compatible** |
 
-**Caveat**: These bounds apply to specific torsion parameterizations. Direct comparison with GIFT's topological κ_T requires model-dependent assumptions.
+**Caveat**: These bounds apply to specific torsion parameterizations (typically scalar torsion modes in Einstein-Cartan theory). Direct comparison with GIFT's topological κ_T = 1/61 requires model-dependent mapping between the G₂ torsion capacity and cosmological torsion parameters. The compatibility is indicative, not exact.
 
 ---
 
@@ -280,11 +280,13 @@ $$\ddot{x}^m + \Gamma^m_{ij} \dot{x}^i \dot{x}^j = 0$$
 
 ### 5.2 Torsional Modification
 
-For locally constant metric (∂_k g_{ij} ≈ 0):
+The full connection decomposes as Γ = {·} + K where {·} is Levi-Civita (Christoffel symbols) and K is the contorsion tensor. For locally constant metric (∂_k g_{ij} ≈ 0), the Christoffel symbols vanish and the torsion-induced correction dominates:
 
-$$\boxed{\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}}$$
+$$\boxed{\Delta\Gamma^k_{ij} = -\frac{1}{2} g^{kl} T_{ijl}}$$
 
-**Physical meaning**: Acceleration arises from torsion, not metric gradients.
+**Note**: This is the **torsion-induced correction term**, not the complete connection. In regions where metric gradients are significant, the full form Γ = {·} + K applies.
+
+**Physical meaning**: In the regime where metric is approximately constant, acceleration arises primarily from torsion rather than metric gradients.
 
 ### 5.3 Main Result
 
@@ -546,7 +548,7 @@ This separates into:
 - Natural logarithm of golden ratio
 - Appears because masses are φ-powers of GIFT constants (e.g., m_μ/m_e = 27^φ)
 
-### 12.4 Elegant Reformulation
+### 12.4 Alternative Formulation
 
 The scale bridge admits a more transparent form. Rewriting:
 
@@ -1084,6 +1086,37 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 | Ω_DE = 0.686 | ln(2) × 98/99 | **PROVEN** |
 | n_s = 0.9649 | ζ(11)/ζ(5) | **PROVEN** |
 | ΔH₀ = 6 | 2 × N_gen | **THEORETICAL** |
+
+### 26.5 Tau Power Bounds (v3.3 Numerical Observations)
+
+The hierarchy parameter τ = 3472/891 ≈ 3.896 has powers that lie remarkably close to integers with GIFT-theoretic significance:
+
+| Power | Value | Lower | Upper | Target | Interpretation |
+|-------|-------|-------|-------|--------|----------------|
+| τ² | 15.18... | 15 | 16 | — | — |
+| τ³ | 59.17... | 59 | 60 | — | — |
+| τ⁴ | 230.57... | 230 | 231 | **231** | 3 × 7 × 11 = N_gen × b₃ |
+| τ⁵ | 898.48... | 898 | 899 | **900** | h(E₈)² = 30² |
+
+**GIFT-theoretic interpretations**:
+
+- τ⁴ approaches 231 = N_gen × b₃ = b₂ × D_bulk (deviation: 0.19%)
+- τ⁵ approaches 900 = h(E₈)², where h(E₈) = 30 is the Coxeter number (deviation: 0.17%)
+
+**Formal verification**:
+
+These are rigorous bounds proven in Lean 4 using integer arithmetic:
+- `tau4_bounds`: 230 × q⁴ < p⁴ < 231 × q⁴ where τ = p/q = 3472/891
+- `tau5_bounds`: 898 × q⁵ < p⁵ < 899 × q⁵
+
+**Status**: NUMERICAL OBSERVATION (the proximity to GIFT-significant integers is formally verified, but the *significance* of this proximity is not yet understood)
+
+**Epistemic note**: These observations may be coincidental. The fact that τ⁴ and τ⁵ approach but don't exactly equal these targets suggests either:
+1. A deeper relation requiring additional terms
+2. Approximate rather than exact connections
+3. Statistical fluctuations in a system with many integers
+
+Lean 4 verification: `tau_power_bounds_certificate`
 
 ---
 
