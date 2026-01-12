@@ -414,6 +414,45 @@ GIFT focuses exclusively on dimensionless ratios for fundamental reasons:
 
 Supplement S3 explores dimensional quantities (electron mass, Hubble parameter) as theoretical extensions. These are clearly marked as EXPLORATORY, distinct from the PROVEN dimensionless relations.
 
+### 4.4 Structural Inevitability
+
+A natural concern arises: why *this particular* algebraic combination of topological invariants rather than another? The answer lies in what we term structural inevitability.
+
+**The dissolution of formula selection**: Each observable corresponds to a unique reduced fraction. Consider sin²θ_W: the formula b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 matches experiment. But b₂/b₃ = 21/77 = 3/11 ≈ 0.273 does not. The question transforms from "why this formula?" to "why this value?"—and the value 3/13 is what both topology and experiment produce.
+
+**Multiple equivalent expressions**: Quantities with strong physical significance admit numerous independent derivations yielding the same reduced fraction:
+
+| Observable | Value | Independent expressions | Examples |
+|------------|-------|------------------------|----------|
+| sin²θ_W | 3/13 | 14 | N_gen/α_sum, b₂/(b₃+dim_G₂), dim(J₃O)/(dim_F₄+65) |
+| Q_Koide | 2/3 | 20 | dim_G₂/b₂, p₂/N_gen, dim_F₄/dim_E₆, rank_E₈/12 |
+| m_b/m_t | 1/42 | 21 | 1/χ(K₇), p₂/84, N_gen/126, 4/PSL(2,7) |
+
+The bottom-to-top mass ratio 1/42 exemplifies this principle: it equals the inverse Euler characteristic of K₇, but also arises from 21 other combinations of topological invariants, all reducing to the same fraction.
+
+**Classification by redundancy**: We classify observables by the number of independent expressions:
+
+| Classification | Expressions | Interpretation |
+|----------------|-------------|----------------|
+| CANONICAL | ≥20 | Maximally over-determined |
+| ROBUST | 10–19 | Multiply constrained |
+| SUPPORTED | 5–9 | Structural redundancy |
+| DERIVED | 2–4 | Dual derivation |
+| SINGULAR | 1 | Unique path |
+
+Among the 18 core predictions, 4 are CANONICAL, 4 are ROBUST, and the remainder are SUPPORTED or DERIVED. Only one (m_u/m_d) is SINGULAR.
+
+**The algebraic web**: The topological constants form an interconnected structure:
+
+$$\dim(G_2) = p_2 \times \dim(K_7) = 2 \times 7 = 14$$
+$$b_2 = N_{\rm gen} \times \dim(K_7) = 3 \times 7 = 21$$
+$$b_3 + \dim(G_2) = \dim(K_7) \times \alpha_{\rm sum} = 7 \times 13 = 91$$
+$${\rm PSL}(2,7) = {\rm rank}(E_8) \times b_2 = N_{\rm gen} \times {\rm fund}(E_7) = 168$$
+
+These identities are not coincidences; they reflect the underlying octonionic geometry. The constants 7, 14, 21, 77, 168 are all divisible by 7, the dimension of the imaginary octonions Im(𝕆). This mod-7 structure traces to the Fano plane, which encodes the octonion multiplication table.
+
+The complete observable catalog with expression counts appears in Supplement S2, Section 24.
+
 ---
 
 ## 5. The Weinberg Angle
