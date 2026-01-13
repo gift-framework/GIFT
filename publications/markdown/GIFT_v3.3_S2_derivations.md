@@ -2,14 +2,14 @@
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
 
-## Mathematical Proofs for All 18 PROVEN Dimensionless Relations
+## Mathematical Proofs for All 18 VERIFIED Dimensionless Relations
 
 *This supplement provides complete mathematical proofs for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions.*
 
-**Status**: Complete (18 PROVEN relations verified in Lean 4)
+**Status**: Complete (18 VERIFIED relations verified in Lean 4)
 
 **Note on 33 vs 18**: The main paper references 33 dimensionless predictions. Of these:
-- **18 core relations** (this supplement): PROVEN status — algebraic identities verified in Lean 4
+- **18 core relations** (this supplement): VERIFIED status — algebraic identities verified in Lean 4
 - **15 extended predictions** (cosmology, CKM, boson ratios): TOPOLOGICAL or HEURISTIC status — formulas use topological constants but lack full Lean verification
 
 The topological constants that determine these relations produce an exactly solvable geometric structure (see S1, Section 12).
@@ -72,8 +72,8 @@ Before presenting derivations, we clarify the logical structure:
 
 | Status | Criterion |
 |--------|-----------|
-| **PROVEN** | Complete mathematical proof, exact result from topology |
-| **PROVEN (Lean 4)** | Verified by Lean 4 kernel with Mathlib (machine-checked) |
+| **VERIFIED** | Complete mathematical proof, exact result from topology |
+| **VERIFIED (Lean 4)** | Verified by Lean 4 kernel with Mathlib (machine-checked) |
 | **TOPOLOGICAL** | Direct consequence of manifold structure |
 
 ## 2. Notation
@@ -100,7 +100,7 @@ Before presenting derivations, we clarify the logical structure:
 
 **Statement**: The number of fermion generations is exactly 3.
 
-**Classification**: PROVEN (three independent derivations)
+**Classification**: VERIFIED (three independent derivations)
 
 ### Proof Method 1: Fundamental Topological Constraint
 
@@ -122,7 +122,7 @@ $$N_{\text{gen}} = \frac{168}{56} = 3$$
 
 $$\text{Index}(D_A) = \left( 77 - \frac{8}{3} \times 21 \right) \times \frac{1}{7} = 3$$
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -130,7 +130,7 @@ $$\text{Index}(D_A) = \left( 77 - \frac{8}{3} \times 21 \right) \times \frac{1}{
 
 **Statement**: The hierarchy parameter is exactly rational.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -150,7 +150,7 @@ $$\tau = \frac{2^4 \times 7 \times 31}{3^4 \times 11}$$
 *Step 5: Numerical value*
 $$\tau = 3.8967452300785634...$$
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -220,7 +220,7 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \f
 
 **Statement**: The weak mixing angle has exact rational form 3/13.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -239,7 +239,7 @@ $$\sin^2\theta_W = \frac{3}{13} = 0.230769...$$
 | GIFT prediction | 0.230769 |
 | Deviation | 0.195% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -278,7 +278,7 @@ $$\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \
 
 **Statement**: The Koide parameter equals exactly 2/3.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -296,7 +296,7 @@ $$Q = \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2}
 | GIFT prediction | 0.666667 |
 | Deviation | 0.0009% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -304,7 +304,7 @@ $$Q = \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2}
 
 **Statement**: The tau-electron mass ratio is exactly 3477.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -323,7 +323,7 @@ $$3477 = 3 \times 19 \times 61 = N_{gen} \times prime(8) \times \kappa_T^{-1}$$
 | GIFT prediction | 3477 (exact) |
 | Deviation | 0.0043% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -360,7 +360,7 @@ $$\frac{m_\mu}{m_e} = [\dim(J_3(\mathbb{O}))]^\phi = 27^\phi = 207.012$$
 
 **Statement**: The strange-down quark mass ratio is exactly 20.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -379,7 +379,7 @@ $$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
 | GIFT prediction | 20 (exact) |
 | Deviation | 0.00% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -555,7 +555,7 @@ $$\sin^2\theta_{23}^{CKM} = \frac{\dim(K_7)}{|PSL_2(7)|} = \frac{7}{168} = \frac
 
 **Statement**: The CP violation phase is exactly 197°.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -572,7 +572,7 @@ $$\delta_{CP} = \dim(K_7) \cdot \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 1
 
 **Note**: DUNE (2034-2039) will test to ±5° precision. Hyper-Kamiokande provides independent verification starting ~2034.
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -706,7 +706,7 @@ $$\sin^2\theta_{13}^{PMNS} = \frac{D_{bulk}}{\dim(E_8 \times E_8)} = \frac{11}{4
 
 **Statement**: The Higgs quartic coupling has explicit geometric origin.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -727,7 +727,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{1
 | GIFT prediction | 0.12885 |
 | Deviation | 0.119% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -735,7 +735,7 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{1
 
 **Statement**: The ratios of electroweak boson masses have topological origins.
 
-**Classification**: PROVEN (v3.3)
+**Classification**: VERIFIED (v3.3)
 
 ### Relation: m_W/m_Z = 37/42 (v3.3 correction)
 
@@ -787,7 +787,7 @@ $$\frac{m_H}{m_W} = \frac{N_{gen} + \dim(E_6)}{\dim(F_4)} = \frac{3 + 78}{52} = 
 | GIFT prediction | 1.5577 |
 | Deviation | **0.02%** |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -795,7 +795,7 @@ $$\frac{m_H}{m_W} = \frac{N_{gen} + \dim(E_6)}{\dim(F_4)} = \frac{3 + 78}{52} = 
 
 **Statement**: The dark energy density fraction.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -814,7 +814,7 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln(2)$$
 | GIFT prediction | 0.6861 |
 | Deviation | 0.211% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -822,7 +822,7 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln(2)$$
 
 **Statement**: The primordial scalar spectral index.
 
-**Classification**: PROVEN
+**Classification**: VERIFIED
 
 ### Proof
 
@@ -841,7 +841,7 @@ $$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)} 
 | GIFT prediction | 0.9649 |
 | Deviation | 0.004% |
 
-**Status**: PROVEN ∎
+**Status**: VERIFIED ∎
 
 ---
 
@@ -1045,29 +1045,29 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 # Part VIII: Summary Table
 
-## 21. The 18 PROVEN + 1 DERIVED Dimensionless Relations
+## 21. The 18 VERIFIED + 1 DERIVED Dimensionless Relations
 
 **Note**: All predictions use only topological invariants (b2, b3, dim(G2), etc.). None depend on the realized torsion value T. Relation #19 (Ω_m) is DERIVED from Ω_DE via the Weyl triple identity.
 
 | # | Relation | Formula | Value | Exp. | Dev. | Status |
 |---|----------|---------|-------|------|------|--------|
-| 1 | N_gen | Atiyah-Singer | 3 | 3 | exact | PROVEN |
-| 2 | τ | 496×21/(27×99) | 3472/891 | - | - | PROVEN |
+| 1 | N_gen | Atiyah-Singer | 3 | 3 | exact | VERIFIED |
+| 2 | τ | 496×21/(27×99) | 3472/891 | - | - | VERIFIED |
 | 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | STRUCTURAL* |
 | 4 | det(g) | 5×13/32 | 65/32 | - | - | TOPOLOGICAL |
-| 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.195% | PROVEN |
+| 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.195% | VERIFIED |
 | 6 | α_s | √2/12 | 0.11785 | 0.1179 | 0.042% | TOPOLOGICAL |
-| 7 | Q_Koide | 14/21 | 2/3 | 0.666661 | 0.0009% | PROVEN |
-| 8 | m_τ/m_e | 7+2480+990 | 3477 | 3477.15 | 0.0043% | PROVEN |
+| 7 | Q_Koide | 14/21 | 2/3 | 0.666661 | 0.0009% | VERIFIED |
+| 8 | m_τ/m_e | 7+2480+990 | 3477 | 3477.15 | 0.0043% | VERIFIED |
 | 9 | m_μ/m_e | 27^φ | 207.01 | 206.768 | 0.118% | TOPOLOGICAL |
-| 10 | m_s/m_d | 4×5 | 20 | 20.0 | 0.00% | PROVEN |
-| 11 | δ_CP | 7×14+99 | 197° | 197° | 0.00% | PROVEN |
+| 10 | m_s/m_d | 4×5 | 20 | 20.0 | 0.00% | VERIFIED |
+| 11 | δ_CP | 7×14+99 | 197° | 197° | 0.00% | VERIFIED |
 | 12 | θ₁₃ | π/21 | 8.57° | 8.54° | 0.368% | TOPOLOGICAL |
 | 13 | θ₂₃ | (rank+b3)/H* | 49.19° | 49.3° | 0.216% | TOPOLOGICAL |
 | 14 | θ₁₂ | arctan(...) | 33.40° | 33.41° | 0.030% | TOPOLOGICAL |
-| 15 | λ_H | √17/32 | 0.1288 | 0.129 | 0.119% | PROVEN |
-| 16 | Ω_DE | ln(2)×(b2+b3)/H* | 0.6861 | 0.6847 | 0.211% | PROVEN |
-| 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | PROVEN |
+| 15 | λ_H | √17/32 | 0.1288 | 0.129 | 0.119% | VERIFIED |
+| 16 | Ω_DE | ln(2)×(b2+b3)/H* | 0.6861 | 0.6847 | 0.211% | VERIFIED |
+| 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | VERIFIED |
 | 18 | α⁻¹ | 128+9+corr | 137.033 | 137.036 | 0.002% | TOPOLOGICAL |
 | 19 | Ω_m | Ω_DE/√Weyl | 0.3068 | 0.3153 | 2.7% | DERIVED |
 
@@ -1119,7 +1119,7 @@ A critical question for any unified framework is whether the specific topologica
 | 2 | E₇×E₈ | 8.80% |
 | 3 | E₆×E₈ | 15.50% |
 
-**E₈×E₈ outperforms all alternatives by 10×.**
+**E₈×E₈ achieves 10× better agreement than all tested alternatives.**
 
 ### Holonomy Ranking
 
@@ -1129,11 +1129,11 @@ A critical question for any unified framework is whether the specific topologica
 | 2 | SU(4) | 1.46% |
 | 3 | SU(3) | 4.43% |
 
-**G₂ is essential. Calabi-Yau (SU(3)) fails by 5×.**
+**G₂ achieves 5× better agreement than Calabi-Yau (SU(3)).**
 
 ### Interpretation
 
-The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **unique optimum** across all 192,349 tested configurations. Zero alternatives achieve lower deviation.
+The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **optimal configuration** among all 192,349 tested alternatives. Zero alternatives achieve lower deviation.
 
 Complete methodology: [docs/STATISTICAL_EVIDENCE.md](../../docs/STATISTICAL_EVIDENCE.md)
 
@@ -1141,7 +1141,7 @@ Complete methodology: [docs/STATISTICAL_EVIDENCE.md](../../docs/STATISTICAL_EVID
 
 # Part IX: Observable Catalog
 
-## 24. Structural Inevitability and Expression Counts
+## 24. Structural Redundancy and Expression Counts
 
 Each prediction admits multiple algebraically independent expressions that reduce to the same fraction. This multiplicity provides a measure of structural robustness: quantities arising from many paths through the topological invariants are less likely to represent numerical coincidence.
 
@@ -1236,7 +1236,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 4 | N_gen / (dim(J₃O) + H*) | 3/126 = 1/42 |
 | 5 | dim_K₇ / (dim_E₈ + dim(J₃O) + dim_K₇) | 7/294 = 1/42 |
 
-The ratio m_b/m_t = 1/42 = 1/(2b₂) illustrates structural inevitability: the bottom-to-top mass hierarchy equals the inverse of the structural constant 2b₂ = p₂ × b₂.
+The ratio m_b/m_t = 1/42 = 1/(2b₂) illustrates structural redundancy: the bottom-to-top mass hierarchy equals the inverse of the structural constant 2b₂ = p₂ × b₂.
 
 **Note**: The true Euler characteristic χ(K₇) = 0 for G₂ manifolds (odd-dimensional). The constant 42 is the structural invariant 2b₂.
 

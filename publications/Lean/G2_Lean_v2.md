@@ -48,7 +48,7 @@ The complete implementation (training code, Lean/Coq proofs, Colab notebook, Pyt
 8. [Validation and Reproducibility](#8-validation-and-reproducibility)
 9. [Discussion](#9-discussion)
 10. [Conclusion](#10-conclusion)
-12. [Annex: Statistical Validation](#annex-statistical-validation)
+11. [Annex: Statistical Validation](#annex-statistical-validation)
 
 ---
 
@@ -741,7 +741,7 @@ The K₇ manifold constructed in this paper is part of a larger framework (GIFT 
 **This paper focuses on the G₂ metric construction methodology**. For the complete catalog of 180+ relations, see:
 - Repository: https://github.com/gift-framework/core
 - Python package: `pip install giftpy`
-- Full framework paper: GIFT v3.2
+- Full framework paper: GIFT v3.3
 
 ### 7.2 Key G₂-Related Relations
 
@@ -805,7 +805,7 @@ The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structur
 **For the complete catalog**, see:
 - **Repository**: https://github.com/gift-framework/core (Lean + Coq proofs)
 - **Python package**: `pip install giftpy` (programmatic access to all constants)
-- **Full framework**: GIFT v3.2 paper
+- **Full framework**: GIFT v3.3 paper
 
 **This paper focuses on the methodology**: how to construct and certify a G₂ metric using PINNs and formal verification.
 
@@ -813,9 +813,9 @@ The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structur
 
 ---
 
-## 9. Validation and Reproducibility
+## 8. Validation and Reproducibility
 
-### 9.1 Numerical Cross-Validation
+### 8.1 Numerical Cross-Validation
 
 | Property | PINN Output | Formal Spec | Relative Error |
 |----------|-------------|-------------|----------------|
@@ -828,7 +828,41 @@ The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structur
 
 **Note on b₃ discrepancy**: PINN identifies 76 eigenmodes (eigenvalue < 0.01). Topology requires 77. Hypothesis: one mode in kernel (eigenvalue < 10⁻⁸). Does not affect formal proof (uses topological value).
 
-### 8.2 Convergence Diagnostics
+### 8.2 Robustness Analysis (v3.3 Update)
+
+**Multi-Scale Finite Difference Stability**
+
+To ensure numerical stability, we verify torsion bounds across multiple finite-difference step sizes:
+
+| FD Step (ε) | Mean ‖T‖ | Max ‖T‖ |
+|-------------|----------|---------|
+| 5×10⁻⁴ | 0.000110 | 0.000704 |
+| 1×10⁻³ | 0.000096 | 0.000393 |
+| 2×10⁻³ | 0.000080 | 0.000205 |
+
+**Stability metric**: Mean difference between ε=5×10⁻⁴ and ε=1×10⁻³ is 5.06×10⁻⁵, confirming numerical stability across scales.
+
+**High-Density Coverage Check**
+
+Extended validation with N=5000 Monte Carlo points provides component-level analysis:
+
+| Component | Max Value |
+|-----------|-----------|
+| ‖dφ‖_max | 0.000215 |
+| ‖dψ‖_max | 0.000406 |
+| ‖T‖_max | 0.000424 |
+
+**Conservative Worst-Case Bound**
+
+Taking the maximum across all FD scales and the high-density sample:
+
+$$\|T\|_{\text{conservative}} = \max(\|T\|_{\epsilon_1}, \|T\|_{\epsilon_2}, \|T\|_{\epsilon_3}, \|T\|_{\text{dense}}) = 0.000704$$
+
+**Joyce margin (conservative)**: 0.1 / 0.000704 = **142×**
+
+This conservative bound (142×) is stricter than the single-scale estimate (224×), providing additional confidence in the certification.
+
+### 8.3 Convergence Diagnostics
 
 | Metric | Value |
 |--------|-------|
@@ -840,7 +874,7 @@ The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structur
 
 Exponential decay confirms convergence.
 
-### 8.3 Reproducibility Protocol
+### 8.4 Reproducibility Protocol
 
 **Level 1: Lean + Coq Proofs Only**
 ```bash
@@ -866,7 +900,7 @@ python run_validation.py --n-configs 10000
 **Level 4: Full Pipeline**
 Execute Colab notebook `Banach_FP_Verification_Colab_trained.ipynb` with all phases (PINN training, certification, formal proof). **Total time**: <1 hour on free-tier hardware (Google Colab T4 GPU).
 
-### 8.4 Performance Benchmarks
+### 8.5 Performance Benchmarks
 
 | Component | Resource |
 |-----------|----------|
@@ -877,7 +911,7 @@ Execute Colab notebook `Banach_FP_Verification_Colab_trained.ipynb` with all pha
 | Statistical validation | CPU |
 | **Total (end-to-end)** | **<1 hour, free-tier** |
 
-### 8.5 Soundness Guarantees
+### 8.6 Soundness Guarantees
 
 **Trusted Computing Base:**
 - Lean 4 kernel (~10k lines C++)

@@ -253,7 +253,7 @@ This suggests physics may fundamentally be about information processing, with pa
 
 Results are classified by rigor level:
 
-- **PROVEN**: Rigorous mathematical proof (e.g., N_gen = 3)
+- **VERIFIED**: Rigorous mathematical proof (e.g., N_gen = 3)
 - **TOPOLOGICAL**: Direct consequence of manifold structure
 - **DERIVED**: Calculated from proven/topological results
 - **THEORETICAL**: Theoretical justification, proof incomplete

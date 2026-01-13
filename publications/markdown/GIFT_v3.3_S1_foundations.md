@@ -36,16 +36,16 @@ Im(𝕆) = ℝ⁷ (imaginary octonions)
 G₂ = Aut(𝕆) (automorphism group, dim 14)
     │
     ▼
-K₇ with G₂ holonomy (natural compact realization)
+K₇ with G₂ holonomy (proposed compact realization)
     │
     ▼
 Topological invariants (b₂ = 21, b₃ = 77)
     │
     ▼
-33 dimensionless predictions (18 PROVEN in Lean + 15 TOPOLOGICAL/HEURISTIC extensions)
+33 dimensionless predictions (18 VERIFIED in Lean + 15 TOPOLOGICAL/HEURISTIC extensions)
 ```
 
-**Status classification**: 18 core relations have algebraic proofs verified in Lean 4 (status: PROVEN). 15 additional predictions use topological formulas without full Lean verification (status: TOPOLOGICAL or HEURISTIC). See S2 for complete derivations.
+**Status classification**: 18 core relations have algebraic proofs verified in Lean 4 (status: VERIFIED). 15 additional predictions use topological formulas without full Lean verification (status: TOPOLOGICAL or HEURISTIC). See S2 for complete derivations.
 
 ### 0.1 The Division Algebra Chain
 
@@ -163,7 +163,7 @@ $$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim
 | 5² | p₂ = 2 | 25 | Weyl^(binary) |
 | 7¹ | 1 | 7 | dim(K₇) |
 
-**Status**: **PROVEN (Lean 4)**: `weyl_E8_topological_factorization`
+**Status**: **VERIFIED (Lean 4)**: `weyl_E8_topological_factorization`
 
 ---
 
@@ -195,7 +195,7 @@ These three derivations establish the **Weyl Triple Identity**:
 
 $$\boxed{\frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) - \text{rank}(E_8) - 1 = 5}$$
 
-**Status**: PROVEN (algebraic identity from GIFT constants)
+**Status**: VERIFIED (algebraic identity from GIFT constants)
 
 ### Verification
 
@@ -213,7 +213,7 @@ The triple convergence indicates Weyl = 5 is not an arbitrary choice but a **str
 2. **|W(E₈)| factorization**: The factor 5² = Weyl^p₂ in prime decomposition
 3. **Cosmological ratio**: √Weyl = √5 appears in dark sector (see S3)
 
-**Status**: PROVEN (three independent derivations)
+**Status**: VERIFIED (three independent derivations)
 
 ---
 
@@ -241,7 +241,7 @@ where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
 - E₇: 7 × 19 = 133 ✓
 - E₈: 8 × 31 = 248 ✓
 
-**Status**: **PROVEN (Lean 4)**: `exceptional_chain_certified`
+**Status**: **VERIFIED (Lean 4)**: `exceptional_chain_certified`
 
 ---
 
@@ -260,7 +260,7 @@ where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
 The hierarchy parameter numerator:
 $$\tau_{num} = 3472 = 7 \times 496 = \dim(K_7) \times \dim(E_8 \times E_8)$$
 
-**Status**: **PROVEN (Lean 4)**: `tau_num_E8xE8`
+**Status**: **VERIFIED (Lean 4)**: `tau_num_E8xE8`
 
 ### 4.3 Binary Duality Parameter
 
@@ -289,7 +289,7 @@ $$\dim(J_3(\mathbb{O})) = \frac{\dim(E_8) - \dim(E_6) - \dim(SU_3)}{6} = \frac{2
 
 This shows the Jordan algebra dimension is not arbitrary but **DERIVED** from the E-series structure.
 
-**Status**: **PROVEN (Lean 4)**: `j3o_e_series_certificate`
+**Status**: **VERIFIED (Lean 4)**: `j3o_e_series_certificate`
 
 ### 5.2 F₄ Connection
 
@@ -304,7 +304,7 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | dim(F₄) - dim(J₃(O)) | 25 = 5² | Weyl² |
 | dim(E₆) - dim(F₄) | 26 | dim(J₃(O)₀) |
 
-**Status**: **PROVEN (Lean 4)**: `exceptional_differences_certified`
+**Status**: **VERIFIED (Lean 4)**: `exceptional_differences_certified`
 
 ### 5.4 Structural Derivation of τ (v3.3)
 
@@ -320,7 +320,7 @@ $$\tau = \frac{\dim(E_8 \times E_8) \times b_2}{\dim(J_3(\mathbb{O})) \times H^*
 
 This anchors τ to topological and algebraic invariants, establishing it as a geometric constant rather than a free parameter.
 
-**Status**: **PROVEN (Lean 4)**: `tau_structural_certificate`
+**Status**: **VERIFIED (Lean 4)**: `tau_structural_certificate`
 
 ---
 
@@ -391,7 +391,7 @@ $$\kappa_T^{-1} = 61 = \dim(F_4) + N_{gen}^2 = 52 + 9$$
 Alternative:
 $$61 = \Pi(\alpha^2_B) + 1 = 2 \times 5 \times 6 + 1$$
 
-**Status**: **PROVEN (Lean 4)**: `kappa_T_inv_decomposition`
+**Status**: **VERIFIED (Lean 4)**: `kappa_T_inv_decomposition`
 
 ---
 
@@ -488,7 +488,7 @@ For a compact G₂-holonomy 7-manifold K₇, Poincaré duality gives b_k = b_{7-
 **Euler characteristic**: For any compact oriented odd-dimensional manifold, χ = 0:
 $$\chi(K_7) = \sum_{k=0}^{7} (-1)^k b_k = 1 - 0 + 21 - 77 + 77 - 21 + 0 - 1 = 0$$
 
-**Status**: **PROVEN (Lean 4)**: `euler_char_K7_is_zero`, `poincare_duality_K7`
+**Status**: **VERIFIED (Lean 4)**: `euler_char_K7_is_zero`, `poincare_duality_K7`
 
 **Effective cohomological dimension**:
 $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
@@ -512,7 +512,7 @@ $$b_3 = 77 = C(7,3) + 42 = 35 + 2 \times b_2$$
 
 The 35 local modes correspond to Λ³(ℝ⁷) fiber forms; the 42 global modes arise from the TCS structure.
 
-**Status**: **PROVEN (Lean 4)**: `structural_42_gift_form`, `structural_42_from_b2`
+**Status**: **VERIFIED (Lean 4)**: `structural_42_gift_form`, `structural_42_from_b2`
 
 ### 9.5 Third Betti Number Decomposition
 
@@ -646,7 +646,7 @@ theorem det_g_equals_target :
   scale_factor_power_14 = det_g_target := rfl
 ```
 
-**Status**: PROVEN (327 lines, 0 sorry)
+**Status**: VERIFIED (327 lines, 0 sorry)
 
 ### 11.5 The Derivation Chain
 

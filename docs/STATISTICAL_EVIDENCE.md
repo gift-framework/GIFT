@@ -72,7 +72,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 | Std deviation | 9.30% |
 | Z-score | **3.40** |
 
-**Conclusion**: The (b₂=21, b₃=77) point is **uniquely optimal** in Betti space.
+**Conclusion**: The (b₂=21, b₃=77) point is **optimal** in the tested Betti space.
 
 ### 2.2 Test 2: Gauge Group Comparison
 
@@ -87,7 +87,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 | 7 | SO(10)×SO(10) | 90 | 35.43% |
 | 8 | SU(5)×SU(5) | 48 | 41.78% |
 
-**Conclusion**: E₈×E₈ outperforms ALL alternatives by a factor of **10x**.
+**Conclusion**: E₈×E₈ achieves **10x** better agreement than all tested alternatives.
 
 ### 2.3 Test 3: Holonomy Group Comparison
 
@@ -98,7 +98,7 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 | 3 | SU(3) | 8 | N=2 | 4.43% |
 | 4 | Spin(7) | 21 | N=0 | 5.41% |
 
-**Conclusion**: G₂ holonomy is **essential**. Calabi-Yau (SU(3)) fails by 5x.
+**Conclusion**: G₂ holonomy achieves **5x** better agreement than Calabi-Yau (SU(3)).
 
 ### 2.4 Test 4: Full Combinatorial Search
 
@@ -208,9 +208,9 @@ $$N_{gen} = \frac{|PSL(2,7)|}{fund(E_7)} = \frac{168}{56} = 3$$
 
 ### 5.1 What This Validation Proves
 
-1. **Uniqueness in parameter space**: (b₂=21, b₃=77) is optimal among 192,349 tested configurations
-2. **Gauge group necessity**: E₈×E₈ outperforms all alternatives by 10x
-3. **Holonomy necessity**: G₂ is essential; Calabi-Yau fails
+1. **Optimality in parameter space**: (b₂=21, b₃=77) is optimal among 192,349 tested configurations
+2. **Gauge group performance**: E₈×E₈ achieves 10x better agreement than alternatives
+3. **Holonomy performance**: G₂ achieves significantly better agreement than Calabi-Yau
 
 ### 5.2 What This Validation Does NOT Prove
 
@@ -264,7 +264,7 @@ With p-value < 5×10⁻⁶, the probability that GIFT's predictive success is du
 
 ### Physical Interpretation
 
-The octonionic Fano plane structure (mod-7 selection) combined with E₈ exceptional algebra uniquely determines the Standard Model parameters to sub-percent precision.
+The octonionic Fano plane structure (mod-7 selection) combined with E₈ exceptional algebra yields the Standard Model parameters to sub-percent precision within the tested configuration space.
 
 ---
 

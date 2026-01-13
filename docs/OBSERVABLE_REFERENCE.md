@@ -17,7 +17,7 @@
 | **Total cataloged quantities** | **51** |
 | Mean deviation (all 33 physical) | 0.21% |
 | Exact matches (< 0.1%) | 14 (42%) |
-| Structurally inevitable (>=3 expr.) | 92% |
+| Multiply determined (>=3 expr.) | 92% |
 | Total equivalent expressions | 280+ |
 | Free parameters | 0 |
 
@@ -193,7 +193,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 5.2 The 42 in Cosmology
 
-**Most remarkable result**:
+**Notable result**:
 
 $$\frac{\Omega_{DM}}{\Omega_b} = \frac{b_0 + 2b_2}{\text{rank}(E_8)} = \frac{1 + 42}{8} = \frac{43}{8} = 5.375$$
 
@@ -326,11 +326,11 @@ Observables with only one GIFT expression (possible numerical coincidence):
 
 ### 10.1 Gauge Group Uniqueness
 
-E₈×E₈ is **uniquely optimal** among all physically motivated gauge groups.
+E₈×E₈ is **optimal** among all tested physically motivated gauge groups.
 
 | Rank | Gauge Group | Mean Dev | N_gen | Status |
 |------|-------------|----------|-------|--------|
-| **1** | **E₈×E₈** | **0.24%** | **3.000** | ✓ UNIQUE |
+| **1** | **E₈×E₈** | **0.24%** | **3.000** | ✓ OPTIMAL |
 | 2 | E₇×E₈ | 3.06% | 2.625 | ✗ |
 | 3 | E₆×E₈ | 5.72% | 2.250 | ✗ |
 | 4 | E₇×E₇ | 6.05% | 2.625 | ✗ |
@@ -351,7 +351,7 @@ Only E₈ (rank 8) gives exactly 3 generations.
 
 ### 10.2 Holonomy Uniqueness
 
-G₂ holonomy is **essential**. Calabi-Yau manifolds fail completely.
+G₂ holonomy achieves significantly better agreement. Calabi-Yau manifolds show poor results.
 
 | Rank | Holonomy | dim_K | SUSY | Mean Dev | Status |
 |------|----------|-------|------|----------|--------|

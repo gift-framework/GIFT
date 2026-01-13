@@ -12,7 +12,7 @@
 
 The GIFT framework's dimensionless predictions (S2) require dynamical completion to connect with absolute physical scales. Joyce's theorem guarantees a torsion-free G₂ metric exists on K₇. This supplement explores how departures from this torsion-free base (through moduli variation or quantum corrections) could generate the small effective torsion that enables physical interactions.
 
-This supplement provides three essential bridges:
+This supplement provides three proposed bridges:
 
 1. **Torsional dynamics**: How departures from the torsion-free base could generate physical interactions. The topological value κ_T = 1/61 represents the geometric "capacity" for torsion.
 
@@ -39,14 +39,14 @@ All results emerge from the topological structure established in S1.
 
 ## 0. What This Supplement Contains
 
-**Important**: This supplement explores THEORETICAL extensions of GIFT. Unlike S2 (which contains PROVEN dimensionless relations), the content here involves additional assumptions and interpretive frameworks.
+**Important**: This supplement explores THEORETICAL extensions of GIFT. Unlike S2 (which contains VERIFIED dimensionless relations), the content here involves additional assumptions and interpretive frameworks.
 
 ### Status Classification
 
 | Content | Status | Confidence |
 |---------|--------|------------|
 | Torsion capacity κ_T = 1/61 | TOPOLOGICAL | High |
-| Torsion-free metric exists (Joyce) | PROVEN | Certain |
+| Torsion-free metric exists (Joyce) | VERIFIED | Certain |
 | RG flow identification λ = ln(μ) | THEORETICAL | Moderate |
 | Scale bridge m_e formula | EXPLORATORY | Low-moderate |
 | Hubble tension resolution | SPECULATIVE | Low |
@@ -379,7 +379,7 @@ Well within experimental bounds.
 
 $$E = g_{ij} \frac{dx^i}{d\lambda} \frac{dx^j}{d\lambda} = \text{const}$$
 
-**Status**: PROVEN
+**Status**: VERIFIED
 
 ### 8.2 Topological Charges
 
@@ -680,7 +680,7 @@ $$m_\mu = 27^\phi \times m_e = 207.012 \times 0.511 = 105.78 \text{ MeV}$$
 
 ### 15.3 Tau Mass
 
-**From ratio**: m_τ/m_e = 3477 (PROVEN - exact integer)
+**From ratio**: m_τ/m_e = 3477 (VERIFIED - exact integer)
 
 $$m_\tau = 3477 \times m_e = 3477 \times 0.511 = 1776.8 \text{ MeV}$$
 
@@ -696,7 +696,7 @@ $$3477 = 3 \times 19 \times 61 = N_{gen} \times \text{prime}(8) \times \kappa_T^
 **Experimental**: 1776.86 MeV
 **Deviation**: 0.004%
 
-**Status**: PROVEN (Lean 4)
+**Status**: VERIFIED (Lean 4)
 
 ### 15.4 Lepton Summary
 
@@ -716,7 +716,7 @@ The quark sector presents a qualitatively different challenge from leptons. Whil
 
 $$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
 
-**Status**: PROVEN (see S2, Section 12)
+**Status**: VERIFIED (see S2, Section 12)
 
 ### 16.2 Open Problem
 
@@ -735,7 +735,7 @@ Absolute quark masses and other ratios remain **open**. Although GIFT expression
 
 ### 17.1 W Boson Mass
 
-Using sin²θ_W = 3/13 (PROVEN):
+Using sin²θ_W = 3/13 (VERIFIED):
 
 $$\cos^2\theta_W = 1 - \frac{3}{13} = \frac{10}{13}$$
 
@@ -755,7 +755,7 @@ $$M_Z = \frac{M_W}{\cos\theta_W} = M_W \times \sqrt{\frac{13}{10}} = 91.19 \text
 
 ### 17.3 Higgs Mass
 
-**From λ_H = √17/32** (PROVEN):
+**From λ_H = √17/32** (VERIFIED):
 
 $$m_H = \sqrt{2\lambda_H} \cdot v = \sqrt{2 \times 0.12891} \times 246.22 = 125.09 \text{ GeV}$$
 
@@ -811,7 +811,7 @@ $$\Sigma m_\nu = 0.0587 \text{ eV}$$
 │                                                             │
 │  The following interpretation of the Hubble tension as      │
 │  dual topological projections is exploratory. It is NOT     │
-│  part of the 18 PROVEN dimensionless predictions.           │
+│  part of the 18 VERIFIED dimensionless predictions.           │
 │  Experimental validation would require independent          │
 │  confirmation of the proposed mechanism.                    │
 └─────────────────────────────────────────────────────────────┘
@@ -919,7 +919,7 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln\left(\frac{14}{7}\right) = \
 |----------|------|--------------|-----------|
 | Ω_DE | 0.6861 | 0.6847 ± 0.007 | **0.21%** |
 
-**Status**: PROVEN
+**Status**: VERIFIED
 
 ---
 
@@ -1033,7 +1033,7 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 |----------|------|--------------|-----------|
 | n_s | 0.9649 | 0.9649 ± 0.0042 | **0.00%** |
 
-**Status**: PROVEN (exact match)
+**Status**: VERIFIED (exact match)
 
 ---
 
@@ -1075,16 +1075,16 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 
 | Result | Formula | Status |
 |--------|---------|--------|
-| m_τ/m_e = 3477 | 7 + 2480 + 990 | **PROVEN** |
+| m_τ/m_e = 3477 | 7 + 2480 + 990 | **VERIFIED** |
 | m_μ/m_e = 27^φ | dim(J₃(O))^φ | **TOPOLOGICAL** |
-| M_Z/M_W | √(13/10) | **PROVEN** |
+| M_Z/M_W | √(13/10) | **VERIFIED** |
 
 ### 26.4 Cosmology
 
 | Result | Formula | Status |
 |--------|---------|--------|
-| Ω_DE = 0.686 | ln(2) × 98/99 | **PROVEN** |
-| n_s = 0.9649 | ζ(11)/ζ(5) | **PROVEN** |
+| Ω_DE = 0.686 | ln(2) × 98/99 | **VERIFIED** |
+| n_s = 0.9649 | ζ(11)/ζ(5) | **VERIFIED** |
 | ΔH₀ = 6 | 2 × N_gen | **THEORETICAL** |
 
 ### 26.5 Tau Power Bounds (v3.3 Numerical Observations)
