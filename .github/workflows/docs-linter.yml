@@ -1,0 +1,74 @@
+name: Documentation Linter
+
+on:
+  push:
+    paths:
+      - 'publications/markdown/*.md'
+      - 'docs/*.md'
+      - '.github/scripts/docs_linter.py'
+  pull_request:
+    paths:
+      - 'publications/markdown/*.md'
+      - 'docs/*.md'
+  workflow_dispatch:
+
+jobs:
+  lint-docs:
+    runs-on: ubuntu-latest
+    name: Lint Documentation
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run documentation linter
+        run: python .github/scripts/docs_linter.py
+
+      - name: Upload lint report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: docs-lint-report
+          path: docs_lint_report.json
+          retention-days: 30
+
+      - name: Check markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          folder-path: 'publications/markdown/, docs/'
+          config-file: '.github/markdown-link-check-config.json'
+        continue-on-error: true
+
+  style-check:
+    runs-on: ubuntu-latest
+    name: Style Consistency
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check consistent notation
+        run: |
+          echo "Checking notation consistency..."
+
+          # Check for mixed notation styles
+          MIXED_SIN2=$(grep -rn "sin\^2" publications/markdown/ || true)
+          if [ -n "$MIXED_SIN2" ]; then
+            echo "WARNING: Found 'sin^2' notation, prefer 'sin²'"
+            echo "$MIXED_SIN2"
+          fi
+
+          # Check for proper subscript usage
+          WRONG_B2=$(grep -rn "b_2\|b\_2" publications/markdown/ | grep -v "b₂" || true)
+          if [ -n "$WRONG_B2" ]; then
+            echo "WARNING: Found 'b_2' or 'b\_2', prefer 'b₂'"
+            echo "$WRONG_B2"
+          fi
+
+          echo "Notation check complete"

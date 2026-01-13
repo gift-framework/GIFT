@@ -1,0 +1,43 @@
+name: Observable Calculator
+
+on:
+  push:
+    paths:
+      - 'publications/markdown/*.md'
+      - 'statistical_validation/*.py'
+      - '.github/scripts/observable_calculator.py'
+  pull_request:
+    paths:
+      - 'publications/markdown/*.md'
+      - 'statistical_validation/*.py'
+  workflow_dispatch:
+
+jobs:
+  calculate-observables:
+    runs-on: ubuntu-latest
+    name: Recalculate & Verify Observables
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install tabulate
+
+      - name: Run observable calculator
+        run: python .github/scripts/observable_calculator.py
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: observable-validation-report
+          path: observable_validation_report.json
+          retention-days: 30
