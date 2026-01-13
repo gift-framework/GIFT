@@ -10,7 +10,7 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the natural compact geometry realizing this structure.
 
-33 dimensionless quantities achieve mean deviation 0.21% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are PROVEN** (algebraic identities verified in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations outperforming GIFT. E₈×E₈ outperforms all gauge groups by 10×; G₂ holonomy is essential (Calabi-Yau fails by 5×). Statistical significance: p < 5×10⁻⁶, >4.5σ.
+33 dimensionless quantities achieve mean deviation 0.21% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are PROVEN** (algebraic identities verified in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations outperforming GIFT. E₈×E₈ outperforms all gauge groups by 12.8×; G₂ holonomy is essential (Calabi-Yau fails by 13×). Statistical significance: p < 5×10⁻⁶, >4.5σ.
 
 The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
@@ -767,26 +767,26 @@ Critically, this validation uses the **actual topological formulas** to compute 
 
 #### Gauge Group Comparison
 
-| Rank | Gauge Group | Dimension | Mean Deviation |
-|------|-------------|-----------|----------------|
-| **1** | **E₈×E₈** | 496 | **0.21%** |
-| 2 | E₇×E₈ | 381 | 8.80% |
-| 3 | E₆×E₈ | 326 | 15.50% |
-| 4 | E₇×E₇ | 266 | 15.76% |
-| 5 | SO(32) | 496 | 31.72% |
+| Rank | Gauge Group | Dimension | Mean Deviation | N_gen |
+|------|-------------|-----------|----------------|-------|
+| **1** | **E₈×E₈** | 496 | **0.24%** | **3.000** |
+| 2 | E₇×E₈ | 381 | 3.06% | 2.625 |
+| 3 | E₆×E₈ | 326 | 5.72% | 2.250 |
+| 4 | E₇×E₇ | 266 | 6.05% | 2.625 |
+| 5 | SO(32) | 496 | 6.82% | 6.000 |
 
-**E₈×E₈ outperforms all alternatives by a factor of 10×.**
+**E₈×E₈ outperforms all alternatives by a factor of 12.8×.** Only rank=8 gives N_gen = 3 exactly.
 
 #### Holonomy Comparison
 
 | Rank | Holonomy | dim | SUSY | Mean Deviation |
 |------|----------|-----|------|----------------|
-| **1** | **G₂** | 14 | N=1 | **0.21%** |
-| 2 | SU(4) | 15 | N=1 | 1.46% |
-| 3 | SU(3) | 8 | N=2 | 4.43% |
-| 4 | Spin(7) | 21 | N=0 | 5.41% |
+| **1** | **G₂** | 14 | N=1 | **0.24%** |
+| 2 | SU(4) | 15 | N=1 | 0.71% |
+| 3 | SU(3) | 8 | N=2 | 3.12% |
+| 4 | Spin(7) | 21 | N=0 | 3.56% |
 
-**G₂ holonomy is essential. Calabi-Yau (SU(3)) fails by 5×.**
+**G₂ holonomy is essential. Calabi-Yau (SU(3)) fails by 13×.**
 
 #### Local Sensitivity
 
