@@ -322,7 +322,70 @@ Observables with only one GIFT expression (possible numerical coincidence):
 
 ---
 
-## 10. Falsification Schedule
+## 10. Uniqueness Analysis
+
+### 10.1 Gauge Group Uniqueness
+
+E₈×E₈ is **uniquely optimal** among all physically motivated gauge groups.
+
+| Rank | Gauge Group | Mean Dev | N_gen | Status |
+|------|-------------|----------|-------|--------|
+| **1** | **E₈×E₈** | **0.26%** | **3.000** | ✓ UNIQUE |
+| 2 | E₇×E₈ | 4.09% | 2.625 | ✗ |
+| 3 | E₆×E₈ | 7.70% | 2.250 | ✗ |
+| 4 | E₇×E₇ | 8.14% | 2.625 | ✗ |
+| 5 | SO(32) | 9.20% | 6.000 | ✗ |
+| 6 | E₆×E₆ | 19.64% | 2.250 | ✗ |
+
+**Improvement factor**: E₈×E₈ is **15.9× better** than the next best (E₇×E₈).
+
+**Why rank=8 is special**:
+```
+N_gen = (rank × b₂) / (b₃ - b₂) = (rank × 21) / 56
+
+For N_gen = 3 exactly: rank = 168/21 = 8 ✓
+Note: 168 = |PSL(2,7)| = Fano plane symmetry order
+```
+
+Only E₈ (rank 8) gives exactly 3 generations.
+
+### 10.2 Holonomy Uniqueness
+
+G₂ holonomy is **essential**. Calabi-Yau manifolds fail completely.
+
+| Rank | Holonomy | dim_K | SUSY | Mean Dev | Status |
+|------|----------|-------|------|----------|--------|
+| **1** | **G₂** | 7 | N=1 | **0.26%** | ✓ |
+| 2 | SU(4) | 8 | N=1 | 0.90% | ✗ |
+| 3 | SU(3) | 6 | N=2 | 6.91% | ✗✗ |
+| 4 | Spin(7) | 8 | N=0 | 7.53% | ✗✗ |
+
+**Calabi-Yau penalty**: SU(3) holonomy fails by factor **27×**.
+
+### 10.3 The PSL(2,7) Connection
+
+```
+N_gen = |PSL(2,7)| / fund(E₇) = 168 / 56 = 3
+      = |Fano_symmetry| / E₇_fundamental
+```
+
+The number of generations equals Fano plane symmetry order / E₇ representation dimension.
+
+This is **not numerology** — it's the octonionic Fano structure manifesting in particle generations.
+
+### 10.4 Validation Script
+
+Full analysis available: `statistical_validation/gauge_group_uniqueness.py`
+
+```bash
+python statistical_validation/gauge_group_uniqueness.py
+```
+
+Results: `statistical_validation/results/gauge_group_uniqueness.json`
+
+---
+
+## 11. Falsification Schedule
 
 | Prediction | Current | Target | Experiment | Year |
 |------------|---------|--------|------------|------|
@@ -337,7 +400,7 @@ Observables with only one GIFT expression (possible numerical coincidence):
 
 ---
 
-## 11. The Balmer Analogy
+## 12. The Balmer Analogy
 
 | Aspect | Balmer (1885) | GIFT |
 |--------|---------------|------|
@@ -348,7 +411,7 @@ Observables with only one GIFT expression (possible numerical coincidence):
 
 ---
 
-## References
+## 13. References
 
 - Harvey, R., Lawson, H.B. "Calibrated geometries." Acta Math. 148 (1982)
 - Joyce, D.D. *Compact Manifolds with Special Holonomy*. Oxford (2000)
