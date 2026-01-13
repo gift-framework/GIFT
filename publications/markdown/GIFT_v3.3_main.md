@@ -8,11 +8,11 @@ Independent researcher
 
 ## Abstract
 
-The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework deriving these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and the natural compact geometry realizing this structure.
+The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework proposing derivations of these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and a proposed compact geometry realizing this structure.
 
-33 dimensionless quantities achieve mean deviation 0.21% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are PROVEN** (algebraic identities verified in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The 43-year Koide mystery receives a two-line derivation: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations outperforming GIFT. E₈×E₈ outperforms all gauge groups by 12.8×; G₂ holonomy is essential (Calabi-Yau fails by 13×). Statistical significance: p < 5×10⁻⁶, >4.5σ.
+33 dimensionless quantities achieve mean deviation 0.21% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations achieving lower deviation. E₈×E₈ achieves 12.8× better agreement than the next best gauge group; G₂ holonomy achieves 13× better agreement than Calabi-Yau (SU(3)). Statistical significance: p < 5×10⁻⁶, >4.5σ.
 
-The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would definitively refute the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
+The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would strongly disfavor the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
 ---
 
@@ -36,7 +36,7 @@ As Gell-Mann observed, such proliferation of unexplained parameters suggests a d
 
 Kaluza-Klein theory showed electromagnetism can emerge from five-dimensional gravity. String theory extended this to ten or eleven dimensions, but faces the landscape problem: ~10^500 distinct vacua, each with different physics.
 
-G₂-holonomy manifolds provide a natural setting for unique predictions. Joyce's construction (2000) established existence of compact G₂ manifolds with controlled topology. The twisted connected sum (TCS) method enables systematic construction from Calabi-Yau building blocks.
+G₂-holonomy manifolds provide a mathematical setting for specific predictions. Joyce's construction (2000) established existence of compact G₂ manifolds with controlled topology. The twisted connected sum (TCS) method enables systematic construction from Calabi-Yau building blocks.
 
 ### 1.3 Contemporary Context
 
@@ -61,7 +61,7 @@ E8 x E8 (496D gauge) -> AdS4 x K7 (11D bulk) -> Standard Model (4D effective)
 ┌─────────────────────────────────────────────────────────────┐
 │  **KEY INSIGHT: Why K₇?**                                   │
 │                                                             │
-│  K7 is not "selected" from alternatives. It is the unique   │
+│  K7 is not "selected" from alternatives. It is a canonical  │
 │  geometric realization of octonionic structure:            │
 │                                                             │
 │  𝕆 (octonions) → Im(𝕆) = ℝ⁷ → G₂ = Aut(𝕆) → K₇ with G₂    │
@@ -169,7 +169,7 @@ This derivation admits alternative forms. The ratio b2/dim(K7) = 21/7 = 3 gives 
 
 The experimental status is unambiguous: no fourth generation has been observed at the LHC despite searches to the TeV scale.
 
-**Status**: PROVEN (Lean 4)
+**Status**: VERIFIED (Lean 4)
 
 **Note on Lean verification**: Lean 4 establishes arithmetic consistency and symbolic correctness of the derived relations. It verifies that given the topological inputs (b₂=21, b₃=77, dim(G₂)=14), the algebraic identities hold exactly. It does not constitute a proof of geometric existence or physical validity.
 
@@ -189,7 +189,7 @@ Physical motivations for G2 holonomy include:
 
 **Exceptional structure**: G2 is the automorphism group of the octonions. This is the *definition* of G2, not a coincidence. The 7 imaginary octonion units span Im(O) = R^7, and G2 preserves the octonionic multiplication table. A G2-holonomy manifold is therefore the natural geometric home for octonionic physics.
 
-This addresses the "selection principle" question: K7 is not chosen from a landscape of alternatives. It is the *minimal exceptional candidate* among compact 7-geometries whose holonomy respects octonionic structure. We do not claim uniqueness; we claim that this is the natural geometric setting suggested by the division algebra chain.
+This addresses the "selection principle" question: K7 is not chosen from a landscape of alternatives. It is the *minimal exceptional candidate* among compact 7-geometries whose holonomy respects octonionic structure. We do not claim uniqueness; we claim that this is a geometric setting suggested by the division algebra chain.
 
 Mathematical properties:
 
@@ -396,7 +396,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 These exact ratios cannot be "fitted"; they are correct or wrong.
 
-**3. Falsifiability**: DUNE will test δ_CP = 197° to ±5° precision by 2039. A single clear contradiction refutes the entire framework.
+**3. Falsifiability**: DUNE will test δ_CP = 197° to ±5° precision by 2039. A single clear contradiction would strongly disfavor the framework.
 
 #### The Open Question
 
@@ -412,11 +412,11 @@ GIFT focuses exclusively on dimensionless ratios for fundamental reasons:
 
 **Epistemic clarity**: Dimensional predictions require additional assumptions (scale bridge, RG flow identification) that introduce theoretical uncertainty. The 18 dimensionless predictions stand on topology alone.
 
-Supplement S3 explores dimensional quantities (electron mass, Hubble parameter) as theoretical extensions. These are clearly marked as EXPLORATORY, distinct from the PROVEN dimensionless relations.
+Supplement S3 explores dimensional quantities (electron mass, Hubble parameter) as theoretical extensions. These are clearly marked as EXPLORATORY, distinct from the VERIFIED dimensionless relations.
 
-### 4.4 Structural Inevitability
+### 4.4 Structural Redundancy
 
-A natural concern arises: why *this particular* algebraic combination of topological invariants rather than another? The answer lies in what we term structural inevitability.
+A natural concern arises: why *this particular* algebraic combination of topological invariants rather than another? The answer lies in what we term structural redundancy.
 
 **The dissolution of formula selection**: Each observable corresponds to a unique reduced fraction. Consider sin²θ_W: the formula b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 matches experiment. But b₂/b₃ = 21/77 = 3/11 ≈ 0.273 does not. The question transforms from "why this formula?" to "why this value?"—and the value 3/13 is what both topology and experiment produce.
 
@@ -464,7 +464,7 @@ $$\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 
 
 **Interpretation**: b₂ counts gauge moduli; b₃ + dim(G₂) counts matter + holonomy degrees of freedom. The ratio measures gauge-matter coupling geometrically.
 
-**Status**: PROVEN (Lean 4). See S2 Section 7 for complete derivation.
+**Status**: VERIFIED (Lean 4). See S2 Section 7 for complete derivation.
 
 ---
 
@@ -520,13 +520,13 @@ This is the most precise agreement in the entire GIFT framework, matching experi
 | S₃ symmetry (various) | Q ≈ 2/3 fitted | Approximate |
 | **GIFT** | **Q = dim(G₂)/b₂ = 14/21 = 2/3** | **Algebraic identity** |
 
-GIFT is the only framework where Q = 2/3 follows from pure algebra with no fitting.
+In GIFT, Q = 2/3 follows from pure algebra with no fitting.
 
 ### 6.6 Implications
 
 If the Koide relation truly equals 2/3 exactly, improved measurements of lepton masses should converge toward this value. Current experimental uncertainty is dominated by the tau mass. Future precision measurements at tau-charm factories could test whether deviations from 2/3 are real or reflect measurement limitations.
 
-**Status**: PROVEN (Lean 4)
+**Status**: VERIFIED (Lean 4)
 
 ---
 
@@ -566,7 +566,7 @@ This reveals δ_CP as a sum over cohomological degrees.
 | Combined (2040) | — | ±3° | Projected |
 
 **Decisive test criteria**:
-- Measurement δ_CP < 182° or δ_CP > 212° at 3σ → **GIFT refuted**
+- Measurement δ_CP < 182° or δ_CP > 212° at 3σ → **GIFT strongly disfavored**
 - Measurement within 192°–202° at 3σ → **Strong confirmation**
 - Measurement within 182°–212° at 3σ → **Consistent, not decisive**
 
@@ -578,9 +578,9 @@ Unlike sin²θ_W or Q_Koide which are already measured precisely, δ_CP has larg
 2. **Central**: Falls in the middle of current allowed range
 3. **Testable**: DUNE will resolve to ±5° within 15 years
 
-A single experiment can confirm or refute this prediction definitively.
+A single experiment can provide strong evidence for or against this prediction.
 
-**Status**: PROVEN (Lean 4). See S2 Section 13 for complete derivation.
+**Status**: VERIFIED (Lean 4). See S2 Section 13 for complete derivation.
 
 ---
 
@@ -681,7 +681,7 @@ The neutrino mixing angles involve the auxiliary parameters:
 | Ω_DE | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 ± 0.0073 | **0.21%** |
 | Y_p | (1+dim_G₂)/κ_T⁻¹ = 15/61 | 0.2459 | 0.245 ± 0.003 | **0.37%** |
 
-**Most remarkable**: Ω_DM/Ω_b = (1 + 2b₂)/rank(E₈) = (1 + 42)/8 = **43/8** is exact. The structural constant 2b₂ = 42 that gives m_b/m_t = 1/42 also determines the dark-to-baryonic matter ratio.
+**Notable**: Ω_DM/Ω_b = (1 + 2b₂)/rank(E₈) = (1 + 42)/8 = **43/8** is exact. The structural constant 2b₂ = 42 that gives m_b/m_t = 1/42 also determines the dark-to-baryonic matter ratio.
 
 **Note on notation**: The constant 42 = 2b₂ = p₂ × b₂ is a structural invariant, not to be confused with the Euler characteristic χ(K₇) = 0 (which vanishes for any compact odd-dimensional manifold).
 
@@ -775,7 +775,7 @@ Critically, this validation uses the **actual topological formulas** to compute 
 | 4 | E₇×E₇ | 266 | 6.05% | 2.625 |
 | 5 | SO(32) | 496 | 6.82% | 6.000 |
 
-**E₈×E₈ outperforms all alternatives by a factor of 12.8×.** Only rank=8 gives N_gen = 3 exactly.
+**E₈×E₈ achieves 12.8× better agreement than all tested alternatives.** Only rank=8 gives N_gen = 3 exactly.
 
 #### Holonomy Comparison
 
@@ -786,7 +786,7 @@ Critically, this validation uses the **actual topological formulas** to compute 
 | 3 | SU(3) | 8 | N=2 | 3.12% |
 | 4 | Spin(7) | 21 | N=0 | 3.56% |
 
-**G₂ holonomy is essential. Calabi-Yau (SU(3)) fails by 13×.**
+**G₂ holonomy achieves 13× better agreement than Calabi-Yau (SU(3)).**
 
 #### Local Sensitivity
 
@@ -794,7 +794,7 @@ Testing ±10 around (b₂=21, b₃=77) confirms GIFT is a **strict local minimum
 
 #### Interpretation
 
-The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **unique optimum** across all 192,349 tested configurations. The probability that this agreement is coincidental is less than 1 in 200,000.
+The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **optimal configuration** among all 192,349 tested alternatives. The probability that this agreement is coincidental is less than 1 in 200,000.
 
 #### Limitations and Look-Elsewhere Effect
 
@@ -825,7 +825,7 @@ Complete methodology and reproducible scripts: `statistical_validation/validatio
 **GIFT prediction**: δ_CP = 197°
 
 **Falsification criteria**:
-- Measurement δ_CP < 182° or δ_CP > 212° at 3σ → GIFT refuted
+- Measurement δ_CP < 182° or δ_CP > 212° at 3σ → GIFT strongly disfavored
 - Measurement within 192°–202° at 3σ → Strong confirmation
 - Measurement within 182°–212° at 3σ → Consistent, not decisive
 
@@ -883,11 +883,11 @@ This contrasts sharply with the Standard Model's 19 free parameters and string t
 
 ### 14.2 Predictive Success
 
-Eighteen quantitative predictions achieve mean deviation of 0.24% (PDG 2024). Four predictions match experiment exactly. The Koide relation, unexplained for 43 years, receives a two-line derivation: Q = dim(G2)/b2 = 14/21 = 2/3.
+Eighteen quantitative predictions achieve mean deviation of 0.24% (PDG 2024). Four predictions match experiment exactly. The Koide relation admits a two-line expression: Q = dim(G2)/b2 = 14/21 = 2/3.
 
 ### 14.3 Falsifiability
 
-Unlike many approaches to fundamental physics, GIFT makes sharp, testable predictions. The delta_CP = 197 degrees prediction faces decisive test within five years. Framework rejection requires only one clear experimental contradiction.
+Unlike many approaches to fundamental physics, GIFT makes sharp, testable predictions. The delta_CP = 197 degrees prediction will be tested within fifteen years. A clear experimental contradiction would strongly disfavor the framework.
 
 ### 14.4 Mathematical Rigor
 
@@ -899,7 +899,7 @@ The topological foundations rest on established mathematics. The TCS constructio
 
 ### 15.1 Formula Derivation: Open vs Closed Questions
 
-**Closed questions** (answered by octonionic structure):
+**Questions addressed** (within the octonionic structure):
 - Why dimension 7? → dim(Im(𝕆)) = 7
 - Why G₂ holonomy? → G₂ = Aut(𝕆)
 - Why these Betti numbers? → TCS construction from Calabi-Yau blocks
@@ -960,7 +960,7 @@ G2 holonomy preserves N=1 supersymmetry, but supersymmetric partners have not be
 | Loop Quantum Gravity | 4D discrete | Yes | Cosmological |
 | Asymptotic Safety | 4D continuous | Yes | Qualitative |
 | E8 Theory (Lisi) | 4D + 8D | Unique | Mass ratios |
-| **GIFT** | **4D + 7D** | **Essentially unique** | **23 precise** |
+| **GIFT** | **4D + 7D** | **Strongly constrained** | **23 precise** |
 
 String theory offers a rich mathematical structure but faces the landscape problem. Loop quantum gravity makes discrete spacetime predictions but says little about particle physics. Asymptotic safety constrains gravity but not gauge couplings. Lisi's E8 proposal shares motivation with GIFT but encounters technical obstacles.
 
@@ -1025,11 +1025,11 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 
 ## 18. Conclusion
 
-GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.24% (PDG 2024), with the 43-year Koide mystery resolved by Q = dim(G₂)/b₂ = 2/3.
+GIFT derives 18 dimensionless predictions from a single geometric structure: a G₂-holonomy manifold K₇ with Betti numbers (21, 77) coupled to E₈×E₈ gauge symmetry. The framework contains zero continuous parameters. Mean deviation is 0.24% (PDG 2024), with the Koide relation expressed as Q = dim(G₂)/b₂ = 2/3.
 
 The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly, with Joyce's theorem ensuring a torsion-free metric exists. All predictions are algebraically exact, not numerically fitted.
 
-Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will answer. By 2039, DUNE will confirm or refute δ_CP = 197° to ±5° precision.
+Whether GIFT represents successful geometric unification or elaborate coincidence is a question experiment will address. By 2039, DUNE will test δ_CP = 197° to ±5° precision.
 
 The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 18 predictions at 0.24% mean deviation (PDG 2024), derived from zero adjustable parameters, suggests that topology and physics are more intimately connected than currently understood.
 

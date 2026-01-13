@@ -4,7 +4,7 @@
 
 **Date**: January 2026  
 **Configurations tested**: 67  
-**Result**: E₈×E₈ with G₂ holonomy and (b₂=21, b₃=77) is **uniquely optimal**
+**Result**: E₈×E₈ with G₂ holonomy and (b₂=21, b₃=77) is **optimal among tested configurations**
 
 ---
 
@@ -23,7 +23,7 @@
 | 7 | SO(10)×SO(10) | 25.63% | 4 | 9 |
 | 8 | SU(5)×SU(5) | 39.09% | 4 | 9 |
 
-**Conclusion**: E₈×E₈ outperforms ALL alternatives by a factor of ~2× in mean deviation.
+**Conclusion**: E₈×E₈ achieves ~2× better mean deviation than all tested alternatives.
 
 ### 1.2 Betti Number Sensitivity (E₈×E₈, G₂)
 
@@ -46,7 +46,7 @@
 | SU(4) | 8 | 9.78% | N=1 SUSY |
 | SU(3) | 6 | 130.32% | N=2 SUSY (CY3) |
 
-**Conclusion**: G₂ holonomy is essential. SU(3) (Calabi-Yau) fails completely.
+**Conclusion**: G₂ holonomy significantly outperforms SU(3) (Calabi-Yau) in this test.
 
 ---
 
@@ -121,7 +121,7 @@ gauge_quantity / (matter_quantity + holonomy_correction)
 b₂/b₃ = 21/77 = 3/11 ≈ 0.273 ✗ (sin²θ_W = 0.231)
 ```
 
-The "+14" correction in the denominator is essential.
+The "+14" correction in the denominator is required for agreement.
 
 ### 3.3 Pattern: Simple Fraction Reduction
 
@@ -171,13 +171,13 @@ Two observables don't fit well:
 
 ### Strengthened Claims
 
-1. **E₈×E₈ uniqueness**: No other gauge group achieves comparable precision
-2. **G₂ holonomy necessity**: SU(3) (Calabi-Yau) fails; G₂ is essential
-3. **N_gen = 3**: Emerges uniquely from rank=8 with (21, 77)
+1. **E₈×E₈ optimality**: No other tested gauge group achieves comparable precision
+2. **G₂ holonomy performance**: SU(3) (Calabi-Yau) shows poor agreement; G₂ achieves best results
+3. **N_gen = 3**: Emerges naturally from rank=8 with (21, 77)
 
 ### Suggested Additions
 
-1. Add this comparison to the main paper as evidence of uniqueness
+1. Add this comparison to the main paper as evidence of optimality
 2. Investigate the Fano plane / PSL(2,7) connection more deeply
 3. Find the correct formula for m_W/m_Z (likely involves cos²θ_W directly)
 

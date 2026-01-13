@@ -12,8 +12,8 @@ A compact 7-dimensional Riemannian manifold with G₂ holonomy. The subscript 7 
 
 ### Status Classifications
 Framework uses hierarchical classification for results:
-- **PROVEN (Lean 4)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
-- **PROVEN**: Exact topological identity with rigorous mathematical proof
+- **VERIFIED (Lean 4)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
+- **VERIFIED**: Exact topological identity with rigorous mathematical proof
 - **TOPOLOGICAL**: Direct consequence of topological structure
 - **DERIVED**: Calculated from proven relations
 - **THEORETICAL**: Has theoretical justification, proof incomplete
@@ -349,7 +349,7 @@ Mega-electron-volt, 10⁶ eV.
 
 ## Status Indicators in Documentation
 
-### [PROVEN]
+### [VERIFIED]
 Mathematical claim with rigorous proof provided.
 
 ### [TOPOLOGICAL]
