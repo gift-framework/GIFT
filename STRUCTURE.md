@@ -15,6 +15,7 @@ GIFT/
 │   │   └── GIFT_v3.3_S3_dynamics.md      # Torsional flow, scale bridge
 │   ├── references/                  # Exploratory & reference docs
 │   │   ├── 39_observables.csv      # Machine-readable observables
+│   │   ├── OBSERVABLE_REFERENCE.md # Complete observable catalog
 │   │   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
 │   │   └── SPECULATIVE_PHYSICS.md  # Scale bridge, Yukawa, M-theory, QG
 │   ├── tex/                         # LaTeX sources
@@ -32,8 +33,9 @@ GIFT/
 │   └── legacy/                      # Archived v2.3/v3.0 supplements
 │
 ├── statistical_validation/          # Monte Carlo validation
-│   ├── validation_v32.py           # v3.3 comprehensive validation
-│   └── validation_v32_results.json # v3.3 results
+│   ├── validation_v33.py           # v3.3 comprehensive validation
+│   ├── comprehensive_statistics_v33.py  # Advanced statistical tests
+│   └── validation_v33_results.json # v3.3 results
 │
 ├── README.md                        # Main repository overview
 ├── CHANGELOG.md                     # Version history
@@ -50,7 +52,7 @@ GIFT/
 | Complete theory | `publications/markdown/GIFT_v3.3_main.md` |
 | All derivations | `publications/markdown/GIFT_v3.3_S2_derivations.md` |
 | Observables data | `publications/references/39_observables.csv` |
-| Monte Carlo validation | `statistical_validation/validation_v32.py` |
+| Monte Carlo validation | `statistical_validation/validation_v33.py` |
 | Formal verification | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
 | Legacy supplements | `docs/legacy/` |
