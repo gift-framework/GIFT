@@ -53,10 +53,12 @@ python3 validation_v33.py
 
 ```
 statistical_validation/
-├── validation_v33.py           # Main validation script
-├── validation_v33_results.json # Complete results
-├── README.md                   # This file
-└── [legacy scripts]            # Previous versions
+├── validation_v33.py                    # Main validation script
+├── comprehensive_statistics_v33.py      # Advanced statistical tests
+├── validation_v33_results.json          # Complete results
+├── comprehensive_statistics_v33_results.json
+├── GIFT_Statistical_Validation_Report_v33.md  # Full report
+└── README.md                            # This file
 ```
 
 ## Full Documentation
