@@ -351,7 +351,7 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.3.0) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.3.7) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v33,

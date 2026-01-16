@@ -6,7 +6,7 @@
 
 *Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
 
-**Lean Verification**: 185 relations, 40 axioms (core v3.3.0)
+**Lean Verification**: 185 relations, 15 axioms (core v3.3.7)
 
 ---
 
@@ -121,7 +121,7 @@ $$\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1)$$
 
 **Verification**: 112 + 128 = 240 roots, all length √2.
 
-**Lean Status (v3.3.0)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
+**Lean Status (v3.3.7)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
 - `D8_roots_card` = 112, `HalfInt_roots_card` = 128
 - `E8_roots_card` = 240, `E8_roots_decomposition`
 - `E8_inner_integral`, `E8_norm_sq_even`, `E8_sub_closed`
@@ -336,7 +336,7 @@ This anchors τ to topological and algebraic invariants, establishing it as a ge
 | rank(G₂) | 2 | Lie rank |
 | Definition | Aut(O) | Octonion automorphisms |
 
-**Lean Status (v3.3.0)**: G₂ Cross Product **9/11** proven:
+**Lean Status (v3.3.7)**: G₂ Cross Product **9/11** proven:
 - `epsilon_antisymm`, `epsilon_diag`, `cross_apply` ✓
 - `G2_cross_bilinear`, `G2_cross_antisymm`, `cross_self` ✓
 - `G2_cross_norm` (Lagrange identity ‖u×v‖² = ‖u‖²‖v‖² − ⟨u,v⟩²) ✓

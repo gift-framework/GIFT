@@ -10,7 +10,7 @@ The GIFT framework v3.3 makes 33 dimensionless predictions with mean experimenta
 - Planned experiments and timelines
 - Criteria for validation or falsification
 
-**Last updated**: 2026-01-12 (v3.3.0)
+**Last updated**: 2026-01-16 (v3.3.7)
 
 ## Current Experimental Status Summary
 

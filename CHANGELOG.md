@@ -5,6 +5,25 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.7] - 2026-01-16
+
+### Synchronization with gift-framework/core v3.3.7
+
+This release synchronizes documentation with the current state of formal verification in [gift-framework/core](https://github.com/gift-framework/core).
+
+#### Changed
+
+**Axiom Count Update**
+- Updated axiom count from 40 to 15 across all documentation
+- Axiom breakdown: Tier 1 (Numerical) 0, Tier 2 (Algebraic) 2, Tier 3 (Geometric) 13
+- Tier 1 numerical axioms were converted to theorems via Taylor series proofs in core
+
+**Version References**
+- Updated core version references from v3.3.0 to v3.3.7
+- Files updated: README.md, CITATION.md, STRUCTURE.md, publications/README.md, GIFT_v3.3_S1_foundations.md, docs/FAQ.md, docs/GLOSSARY.md, docs/EXPERIMENTAL_VALIDATION.md
+
+---
+
 ## [3.3.0] - 2026-01-12
 
 ### Extended Observable Catalog & Enhanced Monte Carlo Validation

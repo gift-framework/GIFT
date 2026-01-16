@@ -390,5 +390,5 @@ Theorem prover used for formal verification of GIFT exact relations. The [gift-f
 
 ---
 
-Last updated: v3.3.0 (2026-01-12)
+Last updated: v3.3.7 (2026-01-16)
 

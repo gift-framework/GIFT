@@ -12,7 +12,7 @@ Citation formats for the GIFT Framework v3.3.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.0},
+  version = {3.3.7},
   license = {MIT},
   note    = {33 dimensionless predictions, 0.21\% mean deviation (PDG 2024), 185 certified relations}
 }
@@ -139,8 +139,8 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.3.0},
-  note    = {185 relations verified, 40 axioms, K₇ metric pipeline, Joyce existence theorem}
+  version = {3.3.7},
+  note    = {185 relations verified, 15 axioms, K₇ metric pipeline, Joyce existence theorem}
 }
 ```
 
@@ -194,4 +194,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.3.0 (2026-01-05)
+**Version**: 3.3.7 (2026-01-16)

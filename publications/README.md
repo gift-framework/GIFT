@@ -92,7 +92,7 @@ See [validation_v32.py](../statistical_validation/validation_v32.py) for methodo
 
 ## Formal Verification
 
-**185 relations verified** in Lean 4 + Coq (core v3.3.0).
+**185 relations verified** in Lean 4 + Coq (15 axioms, core v3.3.7).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 
@@ -104,5 +104,5 @@ Historical supplements (S1-S9 v2.3/v3.0) are archived in `../docs/legacy/`.
 
 ---
 
-**Version**: 3.3.0 (2026-01-12)
+**Version**: 3.3.7 (2026-01-16)
 **Repository**: https://github.com/gift-framework/GIFT
