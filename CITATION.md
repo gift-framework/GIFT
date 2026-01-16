@@ -1,6 +1,6 @@
 # Citation Guide
 
-Citation formats for the GIFT Framework v3.2.
+Citation formats for the GIFT Framework v3.3.
 
 ## Software Citation (Recommended)
 
@@ -8,26 +8,26 @@ Citation formats for the GIFT Framework v3.2.
 
 ```bibtex
 @software{gift_framework_v32,
-  title   = {GIFT Framework v3.2: Geometric Information Field Theory},
+  title   = {GIFT Framework v3.3: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
-  year    = {2025},
+  year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.2.0},
+  version = {3.3.7},
   license = {MIT},
-  note    = {18 dimensionless predictions, 0.24\% mean deviation (PDG 2024), 185 certified relations}
+  note    = {33 dimensionless predictions, 0.21\% mean deviation (PDG 2024), 185 certified relations}
 }
 ```
 
 ### APA Style
 
 ```
-de La Fournière, B. (2025). GIFT Framework v3.2: Geometric Information Field Theory (Version 3.2.0) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2025). GIFT Framework v3.3: Geometric Information Field Theory (Version 3.3.0) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theory." Version 3.2.0. GitHub, 2025. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theory." Version 3.3.0. GitHub, 2025. https://github.com/gift-framework/GIFT.
 ```
 
 ---
@@ -38,10 +38,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 
 ```bibtex
 @article{gift_theory_v32,
-  title  = {Geometric Information Field Theory v3.2: Topological Determination of Standard Model Parameters},
+  title  = {Geometric Information Field Theory v3.3: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
-  year   = {2025},
-  note   = {Mean deviation 0.24\% (PDG 2024) across 18 dimensionless predictions, zero continuous adjustable parameters, 185 proven exact relations},
+  year   = {2026},
+  note   = {Mean deviation 0.24\% (PDG 2024) across 33 dimensionless predictions, zero continuous adjustable parameters, 185 proven exact relations},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -56,9 +56,9 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @misc{gift_main_v32,
   title        = {Geometric Information Field Theory: Topological Determination of Standard Model Parameters},
   author       = {de La Fournière, Brieuc},
-  year         = {2025},
-  howpublished = {GIFT Framework v3.2},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.2_main.md}
+  year         = {2026},
+  howpublished = {GIFT Framework v3.3},
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.3_main.md}
 }
 ```
 
@@ -68,9 +68,9 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @misc{gift_s1_foundations,
   title        = {GIFT S1: Mathematical Foundations - E₈, G₂, K₇},
   author       = {de La Fournière, Brieuc},
-  year         = {2025},
-  howpublished = {GIFT Framework v3.2, Supplement S1},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.2_S1_foundations.md}
+  year         = {2026},
+  howpublished = {GIFT Framework v3.3, Supplement S1},
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.3_S1_foundations.md}
 }
 ```
 
@@ -80,9 +80,9 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @misc{gift_s2_derivations,
   title        = {GIFT S2: Complete Derivations - 18 Dimensionless Observables},
   author       = {de La Fournière, Brieuc},
-  year         = {2025},
-  howpublished = {GIFT Framework v3.2, Supplement S2},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.2_S2_derivations.md}
+  year         = {2026},
+  howpublished = {GIFT Framework v3.3, Supplement S2},
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.3_S2_derivations.md}
 }
 ```
 
@@ -96,10 +96,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @misc{gift_cp_violation,
   title        = {Exact Topological Formula for CP Violation Phase: δ_CP = 197°},
   author       = {de La Fournière, Brieuc},
-  year         = {2025},
-  howpublished = {GIFT Framework v3.2},
+  year         = {2026},
+  howpublished = {GIFT Framework v3.3},
   note         = {Formula: δ_CP = dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.2_S2_derivations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.3_S2_derivations.md}
 }
 ```
 
@@ -109,10 +109,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @misc{gift_weinberg_angle,
   title        = {Topological Derivation of Weinberg Angle: sin²θ_W = 3/13},
   author       = {de La Fournière, Brieuc},
-  year         = {2025},
-  howpublished = {GIFT Framework v3.2},
+  year         = {2026},
+  howpublished = {GIFT Framework v3.3},
   note         = {Formula: sin²θ_W = b₂/(b₃ + dim(G₂)) = 21/91 = 3/13},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.2_S2_derivations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.3_S2_derivations.md}
 }
 ```
 
@@ -122,10 +122,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @misc{gift_generation_number,
   title        = {Topological Proof of Three Fermion Generations},
   author       = {de La Fournière, Brieuc},
-  year         = {2025},
-  howpublished = {GIFT Framework v3.2},
+  year         = {2026},
+  howpublished = {GIFT Framework v3.3},
   note         = {N_gen = 3 from Atiyah-Singer index theorem on K₇},
-  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.2_S1_foundations.md}
+  url          = {https://github.com/gift-framework/GIFT/blob/main/publications/markdown/GIFT_v3.3_S1_foundations.md}
 }
 ```
 
@@ -137,10 +137,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 @software{gift_core_v320,
   title   = {GIFT Core: Formal Verification in Lean 4 + Coq},
   author  = {de La Fournière, Brieuc},
-  year    = {2025},
+  year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.2.0},
-  note    = {185 relations verified, 40 axioms, K₇ metric pipeline, Joyce existence theorem}
+  version = {3.3.7},
+  note    = {185 relations verified, 15 axioms, K₇ metric pipeline, Joyce existence theorem}
 }
 ```
 
@@ -159,7 +159,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.2: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| 3.2.0 | 2026-01-05 | PDG 2024 values, 54,327-config Monte Carlo validation |
+| 3.3.0 | 2026-01-05 | PDG 2024 values, 54,327-config Monte Carlo validation |
 | 3.1.0 | 2025-12-17 | Analytical G₂ metric, 185 certified relations |
 | 3.0.0 | 2025-12-09 | Major release: 165+ certified relations, Fibonacci/Monster/McKay |
 | 2.3.x | 2025-12 | Dual Lean 4 + Coq verification |
@@ -175,14 +175,14 @@ When using GIFT predictions:
 
 1. **Cite framework** - Use software citation above
 2. **Cite specific results** - Use appropriate document citation
-3. **Specify version** - Always include version number (v3.2)
+3. **Specify version** - Always include version number (v3.3)
 4. **Link repository** - Include GitHub URL for reproducibility
 
 ### Example
 
 > "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197° [2]."
 >
-> [1] de La Fournière, B. "GIFT Framework v3.2," 2025, https://github.com/gift-framework/GIFT
+> [1] de La Fournière, B. "GIFT Framework v3.3," 2025, https://github.com/gift-framework/GIFT
 >
 > [2] de La Fournière, B. "GIFT S2: Complete Derivations," 2025.
 
@@ -194,4 +194,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.2.0 (2026-01-05)
+**Version**: 3.3.7 (2026-01-16)

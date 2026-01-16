@@ -12,8 +12,8 @@ A compact 7-dimensional Riemannian manifold with G₂ holonomy. The subscript 7 
 
 ### Status Classifications
 Framework uses hierarchical classification for results:
-- **PROVEN (Lean 4)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
-- **PROVEN**: Exact topological identity with rigorous mathematical proof
+- **VERIFIED (Lean 4)**: Formally verified by Lean 4 kernel with Mathlib (machine-checked proofs, zero domain axioms, zero sorry)
+- **VERIFIED**: Exact topological identity with rigorous mathematical proof
 - **TOPOLOGICAL**: Direct consequence of topological structure
 - **DERIVED**: Calculated from proven relations
 - **THEORETICAL**: Has theoretical justification, proof incomplete
@@ -349,7 +349,7 @@ Mega-electron-volt, 10⁶ eV.
 
 ## Status Indicators in Documentation
 
-### [PROVEN]
+### [VERIFIED]
 Mathematical claim with rigorous proof provided.
 
 ### [TOPOLOGICAL]
@@ -385,10 +385,10 @@ Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key
 ### Scale Bridge (v2.1)
 Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
 
-### Lean 4 (v3.2)
+### Lean 4 (v3.3)
 Theorem prover used for formal verification of GIFT exact relations. The [gift-framework/core](https://github.com/gift-framework/core) repository contains 185 certified relations including E₈ root system, G₂ cross product properties, Fibonacci/Lucas embeddings, Prime Atlas, and Monstrous Moonshine. Key theorem: `GIFT_framework_certified`.
 
 ---
 
-Last updated: v3.2.0 (2026-01-05)
+Last updated: v3.3.7 (2026-01-16)
 

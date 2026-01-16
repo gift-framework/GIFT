@@ -1,4 +1,4 @@
-# GIFT Framework v3.2 - Publications
+# GIFT Framework v3.3 - Publications
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
 [![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core/tree/main/COQ)
@@ -11,11 +11,11 @@ Geometric Information Field Theory: Deriving Standard Model parameters from E₈
 
 ```
 publications/
-├── markdown/                    # Core documents (v3.2)
-│   ├── GIFT_v3.2_main.md         # Main paper
-│   ├── GIFT_v3.2_S1_foundations.md   # E₈, G₂, K₇ foundations
-│   ├── GIFT_v3.2_S2_derivations.md   # 18 dimensionless derivations
-│   └── GIFT_v3.2_S3_dynamics.md      # RG flow, torsional dynamics
+├── markdown/                    # Core documents (v3.3)
+│   ├── GIFT_v3.3_main.md         # Main paper
+│   ├── GIFT_v3.3_S1_foundations.md   # E₈, G₂, K₇ foundations
+│   ├── GIFT_v3.3_S2_derivations.md   # 33 dimensionless derivations
+│   └── GIFT_v3.3_S3_dynamics.md      # RG flow, torsional dynamics
 │
 ├── references/                  # Exploratory & reference docs
 │   ├── 39_observables.csv      # Machine-readable data
@@ -31,16 +31,16 @@ publications/
 
 ## Core Documents
 
-### [GIFT_v3.2_main.md](markdown/GIFT_v3.2_main.md)
+### [GIFT_v3.3_main.md](markdown/GIFT_v3.3_main.md)
 Complete theoretical framework - the main paper.
 
-### [GIFT_v3.2_S1_foundations.md](markdown/GIFT_v3.2_S1_foundations.md)
+### [GIFT_v3.3_S1_foundations.md](markdown/GIFT_v3.3_S1_foundations.md)
 Mathematical foundations: E₈ exceptional algebra, G₂ holonomy, K₇ manifold construction.
 
-### [GIFT_v3.2_S2_derivations.md](markdown/GIFT_v3.2_S2_derivations.md)
-All 18 dimensionless derivations with complete proofs.
+### [GIFT_v3.3_S2_derivations.md](markdown/GIFT_v3.3_S2_derivations.md)
+All 33 dimensionless derivations with complete proofs.
 
-### [GIFT_v3.2_S3_dynamics.md](markdown/GIFT_v3.2_S3_dynamics.md)
+### [GIFT_v3.3_S3_dynamics.md](markdown/GIFT_v3.3_S3_dynamics.md)
 RG flow, torsional dynamics, scale bridge.
 
 ---
@@ -60,17 +60,17 @@ RG flow, torsional dynamics, scale bridge.
 | 9 | m_s/m_d | 20 | **PROVEN** |
 | 10 | δ_CP | 197° | **PROVEN** |
 
-**Zero continuous adjustable parameters. Mean deviation 0.24% (PDG 2024).**
+**Zero continuous adjustable parameters. Mean deviation 0.21% (PDG 2024).**
 
 ---
 
-## Statistical Validation (v3.2)
+## Statistical Validation (v3.3)
 
-Comprehensive Monte Carlo validation across 54,327 configurations:
+Comprehensive Monte Carlo validation across 192,349 configurations:
 
 | Metric | Value |
 |--------|-------|
-| Configurations tested | 54,327 |
+| Configurations tested | 192,349 |
 | Better alternatives | 0 |
 | p-value | < 10⁻⁵ |
 | Significance | > 4σ |
@@ -92,7 +92,7 @@ See [validation_v32.py](../statistical_validation/validation_v32.py) for methodo
 
 ## Formal Verification
 
-**185 relations verified** in Lean 4 + Coq (core v3.2.0).
+**185 relations verified** in Lean 4 + Coq (15 axioms, core v3.3.7).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 
@@ -104,5 +104,5 @@ Historical supplements (S1-S9 v2.3/v3.0) are archived in `../docs/legacy/`.
 
 ---
 
-**Version**: 3.2.0 (2026-01-05)
+**Version**: 3.3.7 (2026-01-16)
 **Repository**: https://github.com/gift-framework/GIFT

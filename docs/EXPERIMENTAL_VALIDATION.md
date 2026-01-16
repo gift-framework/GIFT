@@ -4,13 +4,13 @@ Current experimental status of GIFT predictions, precision comparisons, and time
 
 ## Overview
 
-The GIFT framework v3.2 makes 18 dimensionless predictions with mean experimental deviation of 0.24% (PDG 2024). This document tracks:
+The GIFT framework v3.3 makes 33 dimensionless predictions with mean experimental deviation of 0.21% (PDG 2024). This document tracks:
 - Current experimental status for each prediction
 - Precision evolution over time
 - Planned experiments and timelines
 - Criteria for validation or falsification
 
-**Last updated**: 2026-01-05 (v3.2.0)
+**Last updated**: 2026-01-16 (v3.3.7)
 
 ## Current Experimental Status Summary
 
@@ -36,7 +36,7 @@ The GIFT framework v3.2 makes 18 dimensionless predictions with mean experimenta
 - Most CKM matrix elements: mean 0.11%
 - Most quark mass ratios
 
-**Overall**: 18 dimensionless predictions, mean deviation 0.24% (v3.2 core set, PDG 2024)
+**Overall**: 33 dimensionless predictions (18 core + 15 extended), mean deviation 0.21% (v3.3, PDG 2024)
 
 ### By Physics Sector
 
@@ -346,8 +346,8 @@ No sector shows systematic problems. All perform well.
 - Perfect fit by construction (parameters chosen to match)
 - No predictive power for these 19 numbers
 
-**GIFT v3.2**: Zero continuous adjustable parameters, 18 dimensionless predictions
-- Mean deviation 0.24% (PDG 2024) without adjusting
+**GIFT v3.3**: Zero continuous adjustable parameters, 33 dimensionless predictions
+- Mean deviation 0.21% (PDG 2024) without adjusting
 - Genuine predictive power
 - Complete elimination of free parameters
 - All quantities structurally determined

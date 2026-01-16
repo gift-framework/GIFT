@@ -1,16 +1,17 @@
 # GIFT Reference Documents
 
-Exploratory and reference documents for the GIFT framework v3.2.
+Exploratory and reference documents for the GIFT framework v3.3.
 
 ---
 
 ## Contents
 
-### Data
+### Data & Catalogs
 
 | File | Description |
 |------|-------------|
 | [39_observables.csv](39_observables.csv) | Machine-readable observable data |
+| [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities) |
 
 ### Exploratory References
 
@@ -50,11 +51,11 @@ Exploratory and reference documents for the GIFT framework v3.2.
 ## Core Documents
 
 For the main framework documents, see [`../markdown/`](../markdown/):
-- [GIFT_v3.2_main.md](../markdown/GIFT_v3.2_main.md) - Main paper
-- [GIFT_v3.2_S1_foundations.md](../markdown/GIFT_v3.2_S1_foundations.md) - Foundations
-- [GIFT_v3.2_S2_derivations.md](../markdown/GIFT_v3.2_S2_derivations.md) - Derivations
-- [GIFT_v3.2_S3_dynamics.md](../markdown/GIFT_v3.2_S3_dynamics.md) - Dynamics
+- [GIFT_v3.3_main.md](../markdown/GIFT_v3.3_main.md) - Main paper
+- [GIFT_v3.3_S1_foundations.md](../markdown/GIFT_v3.3_S1_foundations.md) - Foundations
+- [GIFT_v3.3_S2_derivations.md](../markdown/GIFT_v3.3_S2_derivations.md) - Derivations
+- [GIFT_v3.3_S3_dynamics.md](../markdown/GIFT_v3.3_S3_dynamics.md) - Dynamics
 
 ---
 
-*Part of GIFT Framework v3.2*
+*Part of GIFT Framework v3.3*

@@ -6,7 +6,7 @@ The Geometric Information Field Theory (GIFT) framework proposes that Standard M
 
 ## 1. The Parameter Problem
 
-The Standard Model describes electromagnetic, weak, and strong interactions with extraordinary precision, yet contains 19 free parameters: 3 gauge couplings, 9 fermion masses, 4 CKM parameters, and 3 additional constants (Higgs mass, Higgs VEV, QCD vacuum angle). These span six orders of magnitude with no theoretical explanation for their values.
+The Standard Model describes electromagnetic, weak, and strong interactions with high precision, yet contains 19 free parameters: 3 gauge couplings, 9 fermion masses, 4 CKM parameters, and 3 additional constants (Higgs mass, Higgs VEV, QCD vacuum angle). These span six orders of magnitude with no theoretical explanation for their values.
 
 Traditional unification approaches have not resolved this situation. Grand Unified Theories introduce additional parameters while attempting to explain the original 19. String theory's moduli space encompasses approximately 10⁵⁰⁰ vacua, transforming the parameter problem into a vacuum selection problem. The question persists: are these parameters truly free, or do they encode deeper structure?
 
@@ -121,12 +121,12 @@ The framework's value, independent of its physical correctness, lies in demonstr
 
 ## References
 
-- Main paper: [GIFT_v3.2_main.md](../publications/markdown/GIFT_v3.2_main.md)
-- Mathematical foundations: [GIFT_v3.2_S1_foundations.md](../publications/markdown/GIFT_v3.2_S1_foundations.md)
-- Complete derivations: [GIFT_v3.2_S2_derivations.md](../publications/markdown/GIFT_v3.2_S2_derivations.md)
+- Main paper: [GIFT_v3.3_main.md](../publications/markdown/GIFT_v3.3_main.md)
+- Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/markdown/GIFT_v3.3_S1_foundations.md)
+- Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/markdown/GIFT_v3.3_S2_derivations.md)
 - Formal verification: [gift-framework/core](https://github.com/gift-framework/core)
 - Philosophy: [PHILOSOPHY.md](PHILOSOPHY.md)
 
 ---
 
-*GIFT Framework v3.2*
+*GIFT Framework v3.3*

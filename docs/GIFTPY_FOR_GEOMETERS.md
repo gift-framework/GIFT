@@ -1,8 +1,8 @@
-# GiftPy: Computational Tools for G₂ Geometry
+# gift_core: Computational Tools for G₂ Geometry
 
 ## Abstract
 
-GiftPy provides a validated computational pipeline for constructing and analyzing G₂ holonomy metrics on twisted connected sum (TCS) manifolds. The package implements numerical methods for approximating G₂ structures, computing topological invariants, and certifying existence via Joyce's perturbation theorem. Originally developed for a physics application (the GIFT framework), the geometric tools are general and may be of independent interest to researchers studying exceptional holonomy.
+`gift_core` provides a validated computational pipeline for constructing and analyzing G₂ holonomy metrics on twisted connected sum (TCS) manifolds. The package implements numerical methods for approximating G₂ structures, computing topological invariants, and certifying existence via Joyce's perturbation theorem. Originally developed for a physics application (the GIFT framework), the geometric tools are general and may be of independent interest to researchers studying exceptional holonomy.
 
 ## 1. The Computational Challenge
 
@@ -10,7 +10,7 @@ G₂ holonomy metrics are notoriously difficult to compute explicitly. Joyce's f
 
 The challenge is threefold. First, the G₂ structure equations are a coupled system of nonlinear PDEs. Second, verifying torsion-freeness (dφ = 0, d*φ = 0) requires computing exterior derivatives of a 3-form defined over a 7-dimensional space. Third, extracting physical quantities such as Betti numbers, harmonic forms, and curvature tensors demands robust numerical methods with quantified error bounds.
 
-GiftPy addresses these challenges through a combination of physics-informed neural networks (PINNs), spectral methods for harmonic form extraction, and formal verification bridges to proof assistants.
+`gift_core` addresses these challenges through a combination of physics-informed neural networks (PINNs), spectral methods for harmonic form extraction, and formal verification bridges to proof assistants.
 
 ## 2. The Pipeline
 
@@ -67,7 +67,7 @@ Given the trained metric, the pipeline extracts topological invariants:
 
 ## 3. Formal Verification Bridge
 
-A distinctive feature of GiftPy is its connection to formal proof assistants. The numerical results feed into a Lean 4 certificate that establishes existence rigorously.
+A distinctive feature of `gift_core` is its connection to formal proof assistants. The numerical results feed into a Lean 4 certificate that establishes existence rigorously.
 
 **What is proven**: The Lean formalization verifies that Joyce's perturbation theorem (Theorem 11.6.1 in *Compact Manifolds with Special Holonomy*) applies to the numerical solution. Specifically:
 
@@ -86,7 +86,7 @@ The core argument: Joyce's theorem states that if a compact 7-manifold admits a 
 ### Installation
 
 ```bash
-pip install giftpy
+pip install gift-core
 ```
 
 Requirements: Python 3.10+, PyTorch 2.0+, NumPy, SciPy.
@@ -129,7 +129,7 @@ lean_proof = result.certificate.to_lean()
 
 **Moduli space**: The uniqueness of the G₂ metric within its moduli class is not addressed. Multiple metrics with the same topological invariants may exist.
 
-**Open invitation**: Extending GiftPy to other G₂ manifolds (Joyce orbifold resolutions, other TCS examples, or the newer constructions of Foscolo-Haskins-Nordström) would be valuable contributions to the field.
+**Open invitation**: Extending `gift_core` to other G₂ manifolds (Joyce orbifold resolutions, other TCS examples, or the newer constructions of Foscolo-Haskins-Nordström) would be valuable contributions to the field.
 
 ## References
 
@@ -140,8 +140,8 @@ lean_proof = result.certificate.to_lean()
 
 **Code repository**: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 
-**Related documentation**: [S1: Foundations](../publications/markdown/GIFT_v3.2_S1_foundations.md)
+**Related documentation**: [S1: Foundations](../publications/markdown/GIFT_v3.3_S1_foundations.md)
 
 ---
 
-*GiftPy is part of the GIFT Framework. For the physics application, see the [main paper](../publications/markdown/GIFT_v3.2_main.md).*
+*`gift_core` is part of the GIFT Framework v3.3. For the physics application, see the [main paper](../publications/markdown/GIFT_v3.3_main.md).*
