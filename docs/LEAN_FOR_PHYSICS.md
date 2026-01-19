@@ -60,7 +60,7 @@ The Lean formalization is organized as follows:
 | `GIFT.Relations.IrrationalSector` | Golden ratio bounds | Transcendental relations |
 | `GIFT.Relations.ExceptionalGroups` | F₄, E₆, E₈ connections | Exceptional group relations |
 | `GIFT.Relations.BaseDecomposition` | Topological decompositions | Structure B base relations |
-| `GIFT.Certificate` | Master theorem | `all_54_relations_certified` |
+| `GIFT.Certificate` | Master theorem | `all_75_relations_certified` |
 
 The Coq formalization maintains parallel structure with 21 modules.
 
@@ -117,7 +117,7 @@ The formalization does not establish:
 
 **Modules**: 17 files
 
-**Key theorem**: `all_54_relations_certified` in `GIFT.Certificate.MainTheorem`
+**Key theorem**: `all_75_relations_certified` in `GIFT.Certificate`
 
 **Verification statistics**:
 - 0 `sorry` (incomplete proof markers)

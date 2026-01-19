@@ -23,6 +23,7 @@ GIFT/
 │   └── Lean/                        # Lean formalization docs
 │
 ├── docs/                            # Supporting documentation
+│   ├── GIFT_FOR_EVERYONE.md        # Complete guide with everyday analogies
 │   ├── FAQ.md                       # Common questions
 │   ├── GLOSSARY.md                  # Technical terms
 │   ├── PHILOSOPHY.md                # Foundational perspective
@@ -49,6 +50,7 @@ GIFT/
 | Looking for... | Go to |
 |----------------|-------|
 | Framework overview | `README.md` |
+| Beginner-friendly guide | `docs/GIFT_FOR_EVERYONE.md` |
 | Complete theory | `publications/markdown/GIFT_v3.3_main.md` |
 | All derivations | `publications/markdown/GIFT_v3.3_S2_derivations.md` |
 | Observables data | `publications/references/39_observables.csv` |
