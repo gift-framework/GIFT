@@ -45,6 +45,7 @@
 
 | Background | Start Here |
 |------------|------------|
+| Everyone | [GIFT for Everyone](docs/GIFT_FOR_EVERYONE.md) — Complete guide with everyday analogies |
 | Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
 | Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
 | Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
