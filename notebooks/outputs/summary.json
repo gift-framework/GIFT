@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-01-20T20:04:45.952691",
+  "version": "2.0.0",
+  "n_manifolds": 15,
+  "n_points_max": 5000,
+  "scaling": {
+    "slope": -0.01690364851685095,
+    "r_squared": 0.2529322984680473,
+    "gift_prediction": 14.0
+  },
+  "constant": {
+    "mean": 14.349585146570416,
+    "std": 6.43826846546877
+  }
+}
