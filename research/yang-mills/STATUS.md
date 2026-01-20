@@ -1,19 +1,37 @@
 # Yang-Mills Project Status
 
-**Last Updated**: 2026-01-19
+**Last Updated**: 2026-01-20
 
 ## 🏆 KEY DISCOVERY
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════╗
 ║                                                                       ║
-║   λ₁ = 0.1406  ≈  h(K₇) = 14/99 = 0.1414                            ║
+║   GIFT Prediction: λ₁ = dim(G₂)/H* = 14/99 = 0.1414                  ║
 ║                                                                       ║
-║   The spectral gap EQUALS the Cheeger constant!                       ║
-║   (not h²/4 as in classical Cheeger inequality)                       ║
+║   Lean-verified: GIFT.Spectral.MassGapRatio (gift-framework/core)    ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝
 ```
+
+## ⚠️ CRITICAL FINDING (2026-01-20)
+
+**Graph Laplacian approach FAILED** for validating λ₁ = 14/H*:
+
+| Method | Result | Problem |
+|--------|--------|---------|
+| Graph Laplacian v1 | λ₁ ~ 10⁻⁸ | σ = 0.4 way too small |
+| Graph Laplacian v2 | λ₁ ≈ 0.17 constant | Doesn't depend on H*! |
+
+**Why it fails:**
+- Graph Laplacian on sampled points measures **graph connectivity**, not manifold geometry
+- λ₁ ≈ 0.17 for ALL manifolds (H* = 36 to 191) ← clearly wrong
+- Adaptive σ (k-NN) + Random Walk Laplacian didn't help
+
+**Solution: Rayleigh Quotient**
+- Direct variational characterization of λ₁
+- Uses actual metric tensor g_ij (not just distances)
+- New notebook: `Spectral_Gap_Rayleigh.ipynb`
 
 ## Results vs Masterplan Targets
 
@@ -101,11 +119,13 @@ If λ₁ = h = dim(G₂)/H* = 14/99, then:
 
 | File | Description |
 |------|-------------|
-| `notebooks/Yang_Mills_Mass_Gap_v1.ipynb` | Main analysis notebook |
-| `notebooks/outputs/yang_mills_results.json` | Numerical results |
-| `notebooks/outputs/yang_mills_spectrum.png` | Spectrum visualization |
-| `notebooks/outputs/g2_pinn_training.png` | Training curves |
-| `docs/WIP/yang-mills/` | Infrastructure code |
+| `notebooks/GIFT_PINN_Training.ipynb` | PINN for G₂ 3-form (det(g) = 65/32) |
+| `notebooks/Yang_Mills_Validation_v2.ipynb` | Graph Laplacian attempt (FAILED) |
+| `notebooks/Spectral_Gap_Rayleigh.ipynb` | **NEW** Rayleigh quotient approach |
+| `notebooks/Eguchi_Hanson_Spectral_Localization.ipynb` | Kimi's lemma verification |
+| `notebooks/outputs/validation_plots.png` | v2 results showing constant λ₁ |
+| `notebooks/outputs/full_results.csv` | Full numerical results |
+| `research/yang-mills/THEORETICAL_BACKGROUND.md` | Literature review |
 
 ---
 
@@ -154,6 +174,17 @@ Is λ₁ = dim(G₂)/H* = 14/(b₂+b₃+1) universal for ALL G₂ manifolds?
 ---
 
 ## Log
+
+### 2026-01-20 (Graph Laplacian Diagnosis)
+- **v2 results received** from A100: λ₁ ≈ 0.17 constant for ALL manifolds!
+- Diagnosis: Graph Laplacian measures graph connectivity, NOT manifold geometry
+- Even with adaptive σ (k-NN) and Random Walk normalization → same problem
+- **λ₁ × H* grows linearly with H*** (should be constant at 14)
+- Created `Spectral_Gap_Rayleigh.ipynb` with variational approach
+- Found Lean formalization in gift-framework/core: `GIFT.Spectral.MassGapRatio`
+  - λ₁ = 14/99, PINN measured 0.1406 (0.57% deviation)
+  - Cheeger bound: h²/4 = 49/9801 ≈ 0.005
+- **Next step**: Run Rayleigh quotient notebook to properly validate λ₁ = 14/H*
 
 ### 2026-01-19 (Session 3 - Universality Investigation)
 - Created G2_Universality_Investigation.ipynb
