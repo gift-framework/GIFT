@@ -38,6 +38,7 @@ This folder consolidates research on connecting GIFT's geometric framework to th
 | [BLIND_VALIDATION_RECAP.md](./BLIND_VALIDATION_RECAP.md) | Methodology: how circularity bias was eliminated |
 | [DEEP_STRUCTURE.md](./DEEP_STRUCTURE.md) | Mathematical insight: H* = 14 × 7 + 1 |
 | [UNIVERSALITY_CONJECTURE.md](./UNIVERSALITY_CONJECTURE.md) | Two formulas distinction (universal vs GIFT-specific) |
+| [THEORETICAL_BACKGROUND.md](./THEORETICAL_BACKGROUND.md) | Literature review: why λ₁ on G₂ is novel |
 | [STATUS.md](./STATUS.md) | Project status and numerical results log |
 
 ---
