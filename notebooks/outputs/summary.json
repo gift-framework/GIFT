@@ -1,15 +1,26 @@
 {
-  "timestamp": "2026-01-20T20:04:45.952691",
-  "version": "2.0.0",
-  "n_manifolds": 15,
-  "n_points_max": 5000,
+  "timestamp": "20260121_000053",
+  "n_manifolds": 8,
   "scaling": {
-    "slope": -0.01690364851685095,
-    "r_squared": 0.2529322984680473,
+    "slope": 0.0,
+    "intercept": 0.15726275742053986,
+    "r_squared": NaN,
     "gift_prediction": 14.0
   },
-  "constant": {
-    "mean": 14.349585146570416,
-    "std": 6.43826846546877
+  "universality": {
+    "mean_lambda_times_H": 14.861330576241016,
+    "std_lambda_times_H": 7.249211234323192,
+    "gift_target": 14.0
+  },
+  "eguchi_hanson": {
+    "mean_lambda1": 1.0,
+    "std_lambda1": 0.0,
+    "target": 0.25,
+    "epsilon_independent": true
+  },
+  "theoretical_insight": {
+    "neck_length_relation": "T\u00b2 ~ H* = b\u2082 + b\u2083 + 1",
+    "plus_one_origin": "h = 1 from parallel spinor",
+    "eta_invariant_role": "Spectral asymmetry correction"
   }
 }
