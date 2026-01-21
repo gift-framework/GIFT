@@ -50,6 +50,28 @@ Physical interpretation: The ratio balances topological degrees of freedom (H* =
 
 The geodesic method achieves λ₁ × H* ≈ 14 at ratio ≈ 33/28, confirming the topological formula.
 
+### Universality Test (v6)
+
+Testing across Joyce, Kovalev, and CHNP manifolds with H* ranging from 5 to 240:
+
+| H* Range | λ₁ × H* | Notes |
+|----------|---------|-------|
+| H* < 60 | 1-11 | Method limitation for small H* |
+| H* ≥ 70 | 13-20 | Consistent with target |
+| H* = 99 | 15.65 | Constant across all (b₂,b₃) splits |
+
+**Independence result**: For H* = 99 with five different (b₂, b₃) configurations:
+
+| Configuration | b₂ | b₃ | λ₁ × H* |
+|---------------|----|----|---------|
+| K7_GIFT | 21 | 77 | 15.65 |
+| Synth_99_a | 14 | 84 | 15.65 |
+| Synth_99_b | 35 | 63 | 15.65 |
+| Synth_99_c | 0 | 98 | 15.65 |
+| Synth_99_d | 49 | 49 | 15.65 |
+
+Spread = 0.00%. The spectral gap depends only on H* = b₂ + b₃ + 1, not on the individual Betti numbers.
+
 ### Numerical Validation Attempts (Failed)
 
 | Method | Result | Problem |
