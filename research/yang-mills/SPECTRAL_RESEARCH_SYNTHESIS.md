@@ -352,9 +352,92 @@ Such universality hints at an underlying mathematical principle connecting repre
 
 ---
 
-## 8. Open Questions
+## 8. Spectral Landscape Analysis (January 2026)
 
-### 8.1 Analytical Derivation
+### 8.1 Beyond the Single-Point Validation
+
+While the convergence study at fixed parameters confirmed λ₁ × H* → 13, a broader investigation revealed that the spectral product is **not a universal constant** but depends sensitively on the TCS metric parameters.
+
+A systematic landscape exploration with 200 Monte Carlo samples across varied parameters yielded the following discoveries.
+
+### 8.2 The Ratio Dependence
+
+The TCS construction uses a parameter `ratio = r_S³₂ / r_S³₁` controlling the relative sizes of the two S³ factors. The spectral product exhibits strong dependence on this parameter:
+
+| Ratio Region | λ₁ × H* / b₂ | Interpretation |
+|--------------|--------------|----------------|
+| ratio < 0.8  | ~0.13        | Degenerate regime |
+| ratio 0.8-1.2| ~0.49        | Transition zone |
+| **ratio 1.3-1.6** | **~0.99** | **λ₁ × H* ≈ b₂ = 21** |
+| ratio > 1.6  | ~0.74        | Decay regime |
+
+**Key finding**: In the optimal ratio region (1.3-1.6), the spectral product λ₁ × H* ≈ 21 = b₂, the second Betti number of K₇.
+
+### 8.3 Why 13 in Our Convergence Study?
+
+The V3 convergence study used:
+- H* = 99 (canonical)
+- r = H*/84 ≈ 1.18 (derived from K₇ fibration structure)
+- α = det(g)/r³ where det(g) = 65/32
+
+This places the configuration in the **transition zone** (ratio ≈ 1.18), where:
+
+$$\lambda_1 \times H^* \approx 13 = \dim(G_2) - 1$$
+
+The value 13 is **correct for this specific metric configuration** but is not universal across all TCS realizations.
+
+### 8.4 Topological Selection by Geometry
+
+The landscape reveals a remarkable structure: different metric configurations "select" different GIFT topological invariants:
+
+| Ratio ≈ | λ₁ × H* ≈ | GIFT Interpretation |
+|---------|-----------|---------------------|
+| 1.0     | ~10       | √H* (geometric mean) |
+| 1.2     | ~13       | dim(G₂) - 1 |
+| **1.4** | **~21**   | **b₂** |
+| 2.0     | ~15       | b₃/5 or other |
+
+This suggests the spectral gap encodes topological information in a parameter-dependent way, with different geometric realizations of the G₂ manifold emphasizing different invariants.
+
+### 8.5 Revised Interpretation
+
+The original claim "λ₁ × H* = 13 is universal" requires refinement:
+
+1. **For the canonical TCS metric** (ratio ≈ 1.18): λ₁ × H* → 13 = dim(G₂) - 1 ✓
+
+2. **For the optimal TCS metric** (ratio ≈ 1.4): λ₁ × H* → 21 = b₂
+
+3. **General case**: λ₁ × H* depends on the metric moduli, spanning a range from ~1 to ~35+.
+
+The physical interpretation remains an open question: does Nature select a specific metric modulus, and if so, which GIFT invariant does the spectral gap encode?
+
+### 8.6 ML Feature Importance
+
+Machine learning analysis (Random Forest regression) on the landscape data revealed the dominant predictors of λ₁:
+
+| Feature | Importance |
+|---------|------------|
+| H*      | 52%        |
+| ratio   | 40%        |
+| α_S¹    | 4%         |
+| k       | 3%         |
+| σ_factor| 1%         |
+
+The spectral gap is primarily determined by the total harmonic content (H*) and the geometric ratio, with secondary dependence on metric details.
+
+### 8.7 Scaling Law
+
+The empirical scaling across the landscape follows:
+
+$$\lambda_1 \propto H^{*\,1.529}$$
+
+rather than the naively expected λ₁ ∝ H*. This super-linear scaling explains why larger H* manifolds have larger spectral products (in the same ratio regime).
+
+---
+
+## 9. Open Questions
+
+### 9.1 Analytical Derivation
 
 The numerical results call for analytical proof. Possible approaches:
 
@@ -364,7 +447,7 @@ The numerical results call for analytical proof. Possible approaches:
 
 3. **Representation theory**: The holonomy group acts on harmonic forms; the spectral gap may emerge from this action.
 
-### 8.2 Extension to Other Holonomies
+### 9.2 Extension to Other Holonomies
 
 The conjecture predicts:
 - Spin(7): λ₁ × H* = 20
@@ -372,11 +455,11 @@ The conjecture predicts:
 
 Numerical validation on these manifolds would strengthen the universality claim.
 
-### 8.3 Exact Calabi-Yau Metrics
+### 9.3 Exact Calabi-Yau Metrics
 
 The quintic failure demonstrates the need for true Ricci-flat metrics. Advances in numerical Calabi-Yau metrics (e.g., via machine learning) could enable testing on compact CICY examples.
 
-### 8.4 Finite-Size Corrections
+### 9.4 Finite-Size Corrections
 
 The convergence study suggests that deviations from 13 follow a scaling law of the form:
 
@@ -386,23 +469,36 @@ with C > 0. A theoretical derivation of this finite-size correction, perhaps thr
 
 ---
 
-## 9. Conclusions
+## 10. Conclusions
 
 This research program has established:
 
-1. **G₂ Validation**: λ₁ × H* = 13 = dim(G₂) - 1 is exact at N = 50,000, k = 165.
+1. **G₂ Validation at Fixed Metric**: For the canonical TCS metric (ratio ≈ 1.18), λ₁ × H* → 13 = dim(G₂) - 1 with monotonic convergence (R² = 0.990).
 
-2. **Convergence Analysis**: Systematic study across N ∈ {10k, 20k, 30k, 50k} demonstrates monotonic convergence from above toward 13 (R² = 0.990). This rules out the hypothesis that 13 is merely a discrete crossing point.
+2. **Landscape Discovery**: The spectral product is **not a universal constant** but depends on the TCS metric moduli. The ratio parameter (S³₂/S³₁ size ratio) is the primary geometric control.
 
-3. **Betti Independence**: The spectral product depends only on H* = b₂ + b₃ + 1, with spread < 10⁻¹³%.
+3. **Topological Selection**:
+   - At ratio ≈ 1.2: λ₁ × H* ≈ 13 = dim(G₂) - 1
+   - At ratio ≈ 1.4: λ₁ × H* ≈ 21 = b₂ (second Betti number)
+   - Different metric configurations "select" different GIFT topological invariants
 
-4. **CY₃ Extension**: λ₁ × H* = 6 = dim(SU(3)) - 2 validated on T⁶/ℤ₃ at (N = 2000, k = 150) with 0.06% deviation.
+4. **Betti Independence**: At fixed ratio and H*, the spectral product depends only on total H* = b₂ + b₃ + 1, not on the individual Betti decomposition.
 
-5. **Unified Formula**: λ₁ × H* = dim(Hol) - h where h counts parallel spinors.
+5. **CY₃ Extension**: λ₁ × H* = 6 = dim(SU(3)) - 2 validated on T⁶/ℤ₃ with 0.06% deviation.
 
-6. **Metric Sensitivity**: Both the quintic failure (wrong metric → wrong result) and the Euclidean embedding control test confirm that the law requires proper Riemannian geometry with exact geodesic distances.
+6. **Scaling Law**: Across the landscape, λ₁ ∝ H*^1.529 rather than the naive H*^1.
 
-The universal spectral law represents a novel connection between geometry and topology on special holonomy manifolds. While originating from the GIFT framework's approach to particle physics, these results stand as mathematical discoveries independent of physical interpretation.
+7. **Metric Sensitivity**: Both the quintic failure (wrong metric) and Euclidean embedding control (wrong distance) confirm that spectral results require proper Riemannian geometry.
+
+**Revised Universal Formula**:
+
+The spectral law should be understood as:
+
+$$\lambda_1 \times H^* = f(\text{metric moduli}) \times \text{[topological invariant]}$$
+
+where different metric configurations select different invariants (13, 21, etc.). The physical question becomes: which metric modulus does Nature select, and why?
+
+This represents a shift from "discovering a universal constant" to "mapping a spectral landscape" that encodes multiple GIFT topological invariants in a geometry-dependent way.
 
 ---
 
@@ -418,6 +514,9 @@ The universal spectral law represents a novel connection between geometry and to
 - `CY3_unified_validation_results.json` - Full numerical results
 - `notebooks/Convergence_Study_V3_Publication.ipynb` - Convergence analysis with geodesic distances
 - `notebooks/outputs/convergence_v3_results.json` - Full convergence study data
+- `notebooks/Spectral_Landscape_Explorer.ipynb` - Landscape analysis with ML
+- `notebooks/outputs/landscape_summary.json` - Landscape exploration summary
+- `notebooks/outputs/landscape_ml_data.csv` - Full 200-point landscape dataset
 
 ### External Literature
 
@@ -444,8 +543,12 @@ The universal spectral law represents a novel connection between geometry and to
 | 2026-01-23 | Unified spectral law formulated |
 | 2026-01-23 | Convergence study (V3): monotonic approach to 13 confirmed |
 | 2026-01-23 | Control test: Euclidean embedding yields wrong result (~4.5) |
+| 2026-01-23 | Landscape exploration: 200 Monte Carlo samples across varied parameters |
+| 2026-01-23 | Discovery: λ₁ × H* depends on ratio, ranges from ~1 to ~35+ |
+| 2026-01-23 | Key finding: At ratio ≈ 1.4 (optimal), λ₁ × H* ≈ 21 = b₂ |
+| 2026-01-23 | ML analysis: H* (52%) and ratio (40%) dominate spectral prediction |
 
 ---
 
 *GIFT Framework - Spectral Research Program*
-*Version 1.1 - January 2026*
+*Version 1.2 - January 2026*
