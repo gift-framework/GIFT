@@ -5,6 +5,49 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.9] - 2026-01-24
+
+### Pell Equation and Analytical K₇ Structure
+
+Discovery of arithmetic constraints governing GIFT structure.
+
+#### Added
+
+**Publications**
+- `publications/markdown/GIFT_K7_Analytical_Structure.md` - Complete analytical framework
+
+**Notebooks**
+- `notebooks/GIFT_Spectral_Coxeter.ipynb` - Coxeter hypothesis validation
+
+#### Key Discovery: Pell Equation
+
+The pair (H*, dim(G₂)) = (99, 14) satisfies the Pell equation:
+
+```
+H*² − (dim(K₇)² + 1) × dim(G₂)² = 1
+99² − 50 × 14² = 9801 − 9800 = 1
+```
+
+This explains why H*/dim(G₂) ≈ √50 with 0.005% precision.
+
+#### Coxeter Hypothesis
+
+| Manifold Type | λ₁ × H* | Formula |
+|---------------|---------|---------|
+| Generic dim-7 | 6 | h(G₂) |
+| G₂ holonomy | 14 | dim(G₂) |
+| Flat T⁷ | 89.47 | H*/g_ii |
+
+#### Analytical K₇ Eigenvalue (Conjectural)
+
+```
+λ₁(K₇) = dim(G₂)/H* = 14/99 ≈ 0.1414
+```
+
+Verified on A100 GPU: T⁷ computations match analytical predictions exactly.
+
+---
+
 ## [3.3.8] - 2026-01-24
 
 ### Spectral Analysis of K₇ Manifold
