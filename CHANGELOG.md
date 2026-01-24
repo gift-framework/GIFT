@@ -5,6 +5,48 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.8] - 2026-01-24
+
+### Spectral Analysis of K₇ Manifold
+
+Numerical investigation of Laplace-Beltrami eigenvalues on 7-tori with G₂ metric.
+
+#### Added
+
+**Spectral Analysis Documentation**
+- `docs/SPECTRAL_ANALYSIS.md` - Academic summary of spectral methodology and results
+- `research/spectral/NOTES.md` - Working research notes and open questions
+
+**Jupyter Notebooks**
+- `notebooks/K7_Spectral_v3_Analytical.ipynb` - Laplace-Beltrami with G₂ metric
+- `notebooks/K7_Spectral_v4_Delta0_vs_Delta1.ipynb` - Hodge Laplacian comparison
+- `notebooks/K7_Spectral_v5_Synthesis.ipynb` - GPU-accelerated synthesis
+
+**Results**
+- `notebooks/outputs/K7_spectral_v3_results.json`
+- `notebooks/outputs/K7_spectral_v4_results.json`
+- `notebooks/outputs/K7_spectral_synthesis_results.json`
+
+#### Key Findings
+
+| Manifold | Metric | λ₁ × H* | Note |
+|----------|--------|---------|------|
+| T⁷ | Euclidean | 99.0 | Baseline (H*) |
+| T⁷ | G₂ constant | 89.47 | ≈ F₁₁ (Fibonacci) |
+| K₇ (predicted) | G₂ | 12.65 | 9.6% below target 14 |
+
+**Algebraic identities verified**:
+- F₁₁ = b₃ + dim(G₂) − p₂ = 77 + 14 − 2 = 89
+- Factor 6.39 = H*/(dim(G₂) × g_ii) exactly
+
+#### Notes
+
+- T⁷ with constant G₂ metric yields λ₁ × H* ≈ 89 (Fibonacci F₁₁)
+- The 10% gap between predicted K₇ (12.65) and target (14) remains open
+- Non-trivial K₇ topology (TCS construction) may account for the difference
+
+---
+
 ## [3.3.7] - 2026-01-16
 
 ### Synchronization with gift-framework/core v3.3.7
