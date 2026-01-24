@@ -240,4 +240,53 @@ Before committing documentation changes:
 
 ---
 
+## GPU Computing Tips (CuPy/CUDA)
+
+When writing notebooks for GPU execution (Colab A100), be aware of CuPy limitations:
+
+### CuPy Sparse Matrix Gotchas
+
+| SciPy | CuPy | Workaround |
+|-------|------|------------|
+| `M.tolil()` | ❌ Not implemented | Build COO/CSR directly |
+| `eigsh(..., which='SM')` | ❌ Only 'LM', 'LA', 'SA' | Use `which='SA'` for smallest eigenvalues |
+| `M[i,j] = x` on CSR | ❌ Inefficient/broken | Build from COO format |
+
+### Correct Pattern for Periodic BC Sparse Matrix
+
+```python
+# ❌ Wrong (CuPy incompatible)
+D2 = cp_diags([...], format='csr')
+D2 = D2.tolil()           # NotImplementedError!
+D2[0, N-1] = 1/h²
+D2 = D2.tocsr()
+
+# ✓ Correct (build COO directly)
+row, col, data = [], [], []
+for i in range(N):
+    row.append(i); col.append(i); data.append(-2/h²)
+    row.append(i); col.append((i+1) % N); data.append(1/h²)  # periodic
+    row.append(i); col.append((i-1) % N); data.append(1/h²)  # periodic
+D2 = cp_csr((cp.array(data), (cp.array(row), cp.array(col))), shape=(N, N))
+```
+
+### Eigenvalue Computation
+
+```python
+# ❌ Wrong for CuPy
+eigs = cp_eigsh(L, k=10, which='SM')  # ValueError!
+
+# ✓ Correct for CuPy (positive semi-definite matrices)
+eigs = cp_eigsh(L, k=10, which='SA')  # Smallest Algebraic
+```
+
+### Memory Management
+
+```python
+# Clear GPU memory between large computations
+cp.get_default_memory_pool().free_all_blocks()
+```
+
+---
+
 *GIFT Documentation Repository*
