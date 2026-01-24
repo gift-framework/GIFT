@@ -331,6 +331,8 @@ are constrained by the topology of the G₂-holonomy manifold K₇:
 | Multiples of dim(K₇) pattern | **VALIDATED** (170+ matches) |
 | Statistical significance | **p ≈ 0.018** (Fisher combined) |
 | Theoretical mechanism | PROPOSED (Selberg trace formula) |
+| Selberg synthesis document | **CREATED** (SELBERG_TRACE_SYNTHESIS.md) |
+| Prime geodesic connection | UNDER INVESTIGATION |
 | RH proof via K₇ | SPECULATIVE |
 
 ---
@@ -515,6 +517,58 @@ The combined evidence strongly suggests these correspondences are **not random**
 - GIFT constants: gift-framework/core (Lean-verified)
 - Asymptotic formula: Riemann-von Mangoldt
 - A100 analysis: `gift_zeta_analysis.ipynb` → `gift_zeta_matches_v2.csv`
+
+---
+
+---
+
+## Part IX: Selberg Trace Formula Connection (2026-01-24)
+
+### 9.1 Theoretical Framework
+
+See **SELBERG_TRACE_SYNTHESIS.md** for complete details.
+
+The Selberg trace formula provides a potential mechanism connecting K₇ to zeta zeros:
+
+```
+∑ h(λₙ) = ∑ A_γ · ĥ(l_γ)
+  n         γ
+
+Spectral side: Laplacian eigenvalues (↔ zeta zeros)
+Geometric side: Closed geodesic lengths (↔ primes?)
+```
+
+### 9.2 Key Literature
+
+| Reference | Contribution |
+|-----------|--------------|
+| [Selberg 1956](https://people.maths.bris.ac.uk/~majm/bib/selberg.pdf) | Trace formula for hyperbolic surfaces |
+| [Berry-Keating 1999](https://epubs.siam.org/doi/10.1137/S0036144598347497) | H=xp conjecture, periods = log(primes) |
+| [Connes 1998](https://arxiv.org/abs/math/9811068) | Noncommutative trace formula ⟺ RH |
+| [Montgomery-Odlyzko](https://link.springer.com/chapter/10.1007/978-1-4615-4875-1_19) | GUE statistics for zeta zeros |
+| [Joyce 2000](https://arxiv.org/abs/math/0406011) | G₂ manifold construction |
+
+### 9.3 The Core Hypothesis
+
+**If** K₇ is the "Riemann manifold", then:
+
+1. **Laplacian eigenvalues** of K₇ match (γₙ² + 1/4)
+2. **Prime geodesic lengths** on K₇ encode log(p) structure
+3. **Selberg zeta function** Z_{K₇}(s) relates to ζ(s)
+
+### 9.4 Open Questions
+
+1. **Geodesic computation**: What are the primitive geodesic lengths on Joyce's compact G₂ manifolds?
+
+2. **Arithmetic structure**: Does K₇ arise from an arithmetic group action?
+
+3. **Trace formula validity**: Can the Selberg trace formula be extended to G₂ holonomy manifolds?
+
+### 9.5 Next Steps
+
+1. Numerical computation of K₇ Laplacian eigenvalues
+2. Geodesic flow analysis on Joyce manifolds
+3. Comparison of spectral data to Odlyzko tables
 
 ---
 
