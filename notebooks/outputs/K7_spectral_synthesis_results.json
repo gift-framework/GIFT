@@ -1,0 +1,43 @@
+{
+  "version": "v5_synthesis",
+  "grid_size": 7,
+  "gpu_used": true,
+  "GIFT_constants": {
+    "dim_K7": 7,
+    "dim_G2": 14,
+    "b2": 21,
+    "b3": 77,
+    "H_star": 99,
+    "det_g": 2.03125,
+    "g_ii": 1.1065376538134328
+  },
+  "algebraic_identities": {
+    "H_star_equals_dimK7_times_dimG2_plus_1": true,
+    "b2_plus_b3_equals_dimK7_times_dimG2": true,
+    "det_g_from_Betti": true,
+    "F11_equals_b3_plus_dimG2_minus_p2": true
+  },
+  "factor_6_39": {
+    "exact_value": 6.39059009610607,
+    "formula": "H* / (dim(G2) * g_ii)",
+    "topological_part": 7.071428571428571,
+    "metric_part": 0.9037198115705554
+  },
+  "T7_results": {
+    "lambda1_calibrated": 0.9037198115705682,
+    "product": 89.46826134548625,
+    "fibonacci_F11": 89,
+    "deviation_from_F11_percent": 0.5261363432429829
+  },
+  "K7_prediction": {
+    "lambda1": 0.12779876123220157,
+    "product": 12.652077361987956,
+    "target_dimG2": 14,
+    "deviation_percent": 9.628018842943169
+  },
+  "conversion_formula": "lambda1_K7 = lambda1_T7 * dim(G2) / H*",
+  "physical_prediction": {
+    "lambda1_K7": 0.1414141414141414,
+    "mass_gap_MeV": 28.28282828282828
+  }
+}
