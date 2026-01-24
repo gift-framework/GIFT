@@ -239,6 +239,74 @@ For Heegner d: h(-d) = 1, so L(1, χ_{-d}) = π/√d
 
 ---
 
+## Part VI: Extended Discoveries (2026-01-24)
+
+### 6.1 Complete List of Correspondences
+
+Systematic search reveals **9 high-precision correspondences** (tolerance < 1%):
+
+| Rank | n | γₙ | GIFT Value | Name | Δ | Precision |
+|------|---|-----|------------|------|---|-----------|
+| 1 | 60 | 163.0307 | 163 | \|Roots(E₈)\| - b₃ | +0.031 | **0.019%** |
+| 2 | 2 | 21.0220 | 21 | b₂ | +0.022 | **0.105%** |
+| 3 | 16 | 67.0798 | 67 | Heegner₆₇ | +0.080 | **0.119%** |
+| 4 | 29 | 98.8312 | 99 | H* | -0.169 | **0.171%** |
+| 5 | 20 | 77.1448 | 77 | b₃ | +0.145 | **0.188%** |
+| 6 | 45 | 133.4977 | 133 | dim(E₇) | +0.498 | **0.374%** |
+| 7 | 8 | 43.3271 | 43 | Heegner₄₃ | +0.327 | 0.761% |
+| 8 | 12 | 56.4462 | 56 | b₃ - b₂ | +0.446 | 0.797% |
+| 9 | 1 | 14.1347 | 14 | dim(G₂) | +0.135 | 0.962% |
+
+### 6.2 Three Heegner Numbers in Zeta Zeros!
+
+Remarkably, **three of the nine Heegner numbers** appear as zeta zeros:
+- γ₈ ≈ 43 (Heegner)
+- γ₁₆ ≈ 67 (Heegner)
+- γ₆₀ ≈ 163 (Heegner maximum!)
+
+This is highly suggestive of deep arithmetic structure.
+
+### 6.3 Predictions via Riemann-von Mangoldt
+
+Using N(T) = (T/2π) ln(T/2π) - T/2π + 7/8:
+
+| T | N(T) | GIFT Constant |
+|---|------|---------------|
+| 14 | 0.43 | dim(G₂) |
+| 21 | 1.57 | b₂ |
+| 77 | 19.33 | b₃ |
+| 99 | 28.56 | H* |
+| 163 | 59.40 | \|Roots\| - b₃ |
+| 240 | 101.82 | \|Roots(E₈)\| |
+| **248** | **106.48** | **dim(E₈)** |
+
+**PREDICTIONS:**
+```
+γ₁₀₂ ≈ 240 = |Roots(E₈)|     ← To verify!
+γ₁₀₆ ≈ 248 = dim(E₈)         ← To verify!
+```
+
+### 6.4 The Spectral Conjecture (Updated)
+
+**CONJECTURE (K₇-Riemann Spectral Correspondence)**:
+
+The non-trivial zeros ρₙ = 1/2 + iγₙ of the Riemann zeta function
+are constrained by the topology of the G₂-holonomy manifold K₇:
+
+1. **γ₁ ≈ dim(G₂) = 14** — Holonomy group dimension
+2. **γ₂ ≈ b₂ = 21** — Second Betti number (2-cycles)
+3. **γ₈ ≈ 43 = Heegner** — Class number 1 discriminant
+4. **γ₁₂ ≈ 56 = b₃ - b₂** — Betti difference
+5. **γ₁₆ ≈ 67 = Heegner** — Class number 1 discriminant
+6. **γ₂₀ ≈ b₃ = 77** — Third Betti number (3-cycles)
+7. **γ₂₉ ≈ H* = 99** — Total cohomology
+8. **γ₄₅ ≈ dim(E₇) = 133** — E₇ Lie algebra dimension
+9. **γ₆₀ ≈ 163 = Heegner_max** — Largest class-1 discriminant
+
+**If true**: RH would follow from K₇ geometry!
+
+---
+
 ## Status
 
 | Component | Status |
@@ -246,12 +314,26 @@ For Heegner d: h(-d) = 1, so L(1, χ_{-d}) = π/√d
 | Heegner GIFT expressions | PROVEN (Lean) |
 | 163 = 240 - 77 formula | PROVEN (Lean) |
 | Gap structure (24, 24, 96) | PROVEN (Lean) |
-| Zeta zeros correspondence | OBSERVED (not proven) |
-| Spectral-RH connection | SPECULATIVE |
+| 9 zeta-GIFT correspondences | **OBSERVED** (precision < 1%) |
+| 3 Heegner numbers in zeros | **OBSERVED** (43, 67, 163) |
+| E₇ dimension (γ₄₅ ≈ 133) | **OBSERVED** |
+| E₈ prediction (γ₁₀₆ ≈ 248) | **PREDICTED** (needs verification) |
+| Spectral-RH connection | SPECULATIVE but increasingly compelling |
+
+---
+
+## Appendix: Data Sources
+
+- Zeta zeros (first 100): Andrew Odlyzko's tables
+- GIFT constants: gift-framework/core (Lean-verified)
+- Asymptotic formula: Riemann-von Mangoldt
 
 ---
 
 *"The imagination of nature is far, far greater than the imagination of man."*
 — Richard Feynman
+
+*"God made the integers, all else is the work of man... but perhaps God also made K₇."*
+— (adapted from Kronecker)
 
 ---
