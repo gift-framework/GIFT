@@ -198,32 +198,66 @@ g = 3  ─────┼──→ b₂ = 21
 
 ## 7. Why These Three Integers?
 
-### 7.1 The Number 7
+### 7.1 The Number 7: Imaginary Octonions
 
-- Dimension of G₂-holonomy manifolds
-- Maximum dimension for exceptional holonomy
-- Related to octonions: dim(O) − 1 = 7
+The octonions 𝕆 are the largest normed division algebra:
+$$\mathbb{R}(1) \to \mathbb{C}(2) \to \mathbb{H}(4) \to \mathbb{O}(8) \to \text{STOP}$$
 
-### 7.2 The Number 8
+The chain terminates at dimension 8. There is no 16-dimensional normed division algebra.
 
-- Rank of E₈, the largest exceptional Lie algebra
-- Dimension of octonions: dim(O) = 8
-- Appears as r = n + 1
+The octonions decompose as:
+$$\mathbb{O} = \mathbb{R} \oplus \text{Im}(\mathbb{O})$$
 
-### 7.3 The Number 3
+where dim(Im(𝕆)) = **7**. The manifold K₇ is the geometric realization of the imaginary octonions.
 
-- Number of fermion generations in the Standard Model
-- Appears in b₂ = 3n = 21
-- Related to SU(3) color
+### 7.2 The Number 8: Octonion Dimension and E₈ Rank
 
-### 7.4 The Trinity (7, 8, 3)
+- dim(𝕆) = 8 (the full octonion algebra)
+- rank(E₈) = 8 (Cartan subalgebra dimension)
+- G₂ = Aut(𝕆) ⊂ SO(7) (automorphism group of octonions)
 
-These three integers are not arbitrary. They reflect:
-- **7**: The unique dimension for G₂ geometry
-- **8**: The octonionic structure underlying E₈
-- **3**: The phenomenological generation count
+The number 8 appears because E₈ is the largest exceptional Lie algebra, and its structure emerges from octonionic geometry.
 
-Together, they encode the complete structure of GIFT.
+### 7.3 The Number 3: Topological Derivation
+
+The number of generations is **not an input** — it is derived from topology:
+
+$$(r + g) \times b_2 = g \times b_3$$
+
+Substituting r = 8, b₂ = 21, b₃ = 77:
+$$(8 + g) \times 21 = g \times 77$$
+$$168 + 21g = 77g$$
+$$168 = 56g$$
+$$g = 3$$
+
+**Three independent derivations confirm N_gen = 3:**
+1. Betti number balance (above)
+2. Atiyah-Singer index theorem
+3. Weyl triple identity
+
+### 7.4 The Fano Plane Connection
+
+The 7 imaginary octonion units form the **Fano plane** PG(2,2):
+- 7 points (imaginary units e₁...e₇)
+- 7 lines (multiplication triples)
+- **3 points per line** ← This is the generation structure!
+
+The combinatorics:
+- b₂ = 21 = 7 × 3 (points × lines per point)
+- |PSL(2,7)| = 168 = 8 × 21 = rank(E₈) × b₂
+
+### 7.5 The Unifying Constraint
+
+All three numbers satisfy the fundamental topological identity:
+
+$$\boxed{(r + g) \times b_2 = g \times b_3}$$
+
+This single equation, combined with:
+- n = dim(Im(𝕆)) = 7
+- r = dim(𝕆) = 8
+- b₂ = ng, b₃ = n(2n-3)
+
+uniquely determines the entire GIFT structure.
 
 ---
 
