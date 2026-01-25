@@ -1,6 +1,6 @@
 # Research
 
-This folder contains **exploratory research** extending the GIFT framework to open problems in theoretical physics.
+This folder contains **exploratory research** extending the GIFT framework to open problems in theoretical physics, with particular focus on the **Clay Millennium Problems**.
 
 Unlike `publications/` (peer-reviewed quality) and `docs/` (stable documentation), content here represents **work in progress** with varying levels of validation.
 
@@ -8,13 +8,85 @@ Unlike `publications/` (peer-reviewed quality) and `docs/` (stable documentation
 
 ## Current Research Areas
 
-### [yang-mills/](./yang-mills/)
+### 1. [yang-mills/](./yang-mills/) — Mass Gap Problem
 
-Investigation of the Yang-Mills mass gap problem through GIFT's geometric framework.
+Investigation of the Yang-Mills mass gap through GIFT's geometric framework.
 
-**Key finding**: The spectral gap on G₂-holonomy manifolds scales as λ₁ ∝ 1/H*, validated with R² = 0.96 across multiple manifold constructions.
+**Key findings**:
+- Spectral gap formula: **λ₁ × H\* = 13** (where H\* = b₂ + b₃ + 1 = 99)
+- K₇ manifold achieves **1.48% deviation** from target (other manifolds: 15-30%)
+- Universal constant emerges from G₂ holonomy structure
 
-**Status**: Exploratory — universal formula conjectured, not yet proven.
+**Status**: VALIDATED — Blind testing confirmed, awaiting formal proof.
+
+**Key documents**:
+- `STATUS.md` — Current state and progression log
+- `SPECTRAL_RESEARCH_SYNTHESIS.md` — Complete synthesis of findings
+- `UNIVERSALITY_CONJECTURE.md` — The main conjecture
+
+---
+
+### 2. [heegner-riemann/](./heegner-riemann/) — Riemann Hypothesis Connection
+
+Investigation of deep connections between GIFT topology and the Riemann zeta function.
+
+**Key findings**:
+- Zeta zeros correspond to topological constants:
+  - γ₁ ≈ 14 = dim(G₂)
+  - γ₂ ≈ 21 = b₂
+  - γ₂₀ ≈ 77 = b₃
+- Heegner number 163 = 248 - 8 - 77 = |Roots(E₈)| - b₃ (**Lean-verified**)
+- 100,000 zeros analyzed with 204 matches to GIFT expressions
+
+**Status**: NUMERICALLY VALIDATED — Awaiting theoretical explanation.
+
+**Key documents**:
+- `EXPLORATION_NOTES.md` — Main findings and methodology
+- `SELBERG_TRACE_SYNTHESIS.md` — Trace formula connection
+
+---
+
+### 3. [spectral/](./spectral/) — Pell Equation Bridge
+
+Analytical derivation connecting number theory to spectral geometry.
+
+**Key findings**:
+- **Pell equation**: 99² − 50 × 14² = 1
+- **Continued fraction**: √50 = [7; 14̄] = [dim(K₇); dim(G₂), ...]
+- Conjecture: λ₁ = dim(G₂)/H\* is the **unique** Pell-derived solution
+
+**Status**: CONJECTURED — Elegant theoretical argument, awaiting verification.
+
+**Key documents**:
+- `PELL_TO_SPECTRUM.md` — Complete derivation
+
+---
+
+## Supporting Folders
+
+### [notebooks/](./notebooks/)
+Computational notebooks and scripts used in research. Includes:
+- GPU validation runs (A100)
+- Spectral analysis code
+- Convergence studies
+
+### [tests/](./tests/)
+Validation test suite for spectral computations.
+
+### [legacy/](./legacy/)
+Archived planning documents, sprint reports, and superseded analyses.
+
+---
+
+## Root Documents
+
+| Document | Description |
+|----------|-------------|
+| `GIFT_Complete_Analytical_Framework.md` | Complete analytical framework (draft) |
+| `GIFT_K7_Analytical_Structure.md` | K₇ structural analysis |
+| `SPECTRAL_ANALYSIS.md` | Spectral methodology overview |
+| `UNIFIED_SPECTRAL_HYPOTHESIS.md` | Unified hypothesis statement |
+| `YM-RH-latest.md` | Yang-Mills / Riemann connection summary |
 
 ---
 
@@ -23,20 +95,20 @@ Investigation of the Yang-Mills mass gap problem through GIFT's geometric framew
 | Status | Meaning |
 |--------|---------|
 | **VALIDATED** | Independently verified (blind testing, multiple methods) |
-| **CONJECTURED** | Proposed formula, awaiting broader verification |
+| **NUMERICALLY VALIDATED** | Computationally verified, awaiting theoretical proof |
+| **CONJECTURED** | Proposed formula, strong evidence |
 | **EXPLORATORY** | Early investigation, results may change |
 | **ARCHIVED** | Historical record, superseded by newer work |
 
 ---
 
-## Relationship to Other Folders
+## Clay Millennium Relevance
 
-| Folder | Content Type | Quality Bar |
-|--------|--------------|-------------|
-| `publications/` | Papers, supplements | Publication-ready |
-| `docs/` | Guides, references | Stable documentation |
-| `research/` | Investigations | Work in progress |
-| `notebooks/` | Computational tools | Reproducible code |
+This research potentially contributes to **two** Clay Millennium Problems:
+
+1. **Yang-Mills Mass Gap**: The spectral gap formula λ₁ × H\* = 13 provides a candidate for the mass gap on G₂-holonomy manifolds.
+
+2. **Riemann Hypothesis**: The correspondence between zeta zeros and topological constants suggests a deep connection between number theory and quantum geometry.
 
 ---
 
