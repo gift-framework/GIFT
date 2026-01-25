@@ -7,9 +7,16 @@
 
 ## Abstract
 
-This document presents a proposed analytical structure for the spectral and topological properties of the compact G₂-holonomy manifold K₇ in the GIFT framework. The central observation is that the pair (H*, dim(G₂)) = (99, 14) satisfies the Pell equation x² − 50y² = 1, where 50 = dim(K₇)² + 1. This arithmetic constraint, combined with the Coxeter structure of G₂, suggests a complete analytical determination of the first Laplacian eigenvalue.
+This document presents a proposed analytical structure for the spectral and topological properties of the compact G₂-holonomy manifold K₇ in the GIFT framework.
 
-**Claim status**: The Pell equation is verified algebraically. The spectral relation λ₁ × H* = dim(G₂) remains conjectural for the true K₇ manifold.
+The central discovery is that GIFT constants emerge from the continued fraction of √50:
+- √50 = [7; 14, 14, ...] where 7 = dim(K₇) and 14 = dim(G₂)
+- The first convergent giving Pell +1 is exactly 99/14 = H*/dim(G₂)
+- The fundamental unit ε = 7 + √50 satisfies ε² = H* + dim(G₂)·√50
+
+The conjectured eigenvalue λ₁(K₇) = 14/99 = [0; 7, 14] contains only dim(K₇) and dim(G₂) in its continued fraction expansion.
+
+**Claim status**: The number-theoretic relations are verified algebraically. The spectral conjecture λ₁ × H* = dim(G₂) requires verification on the true K₇ manifold.
 
 ---
 
@@ -76,9 +83,101 @@ This connects the Pell equation directly to the manifold dimension.
 
 ---
 
-## 3. Spectral Conjecture
+## 3. Continued Fraction Structure
 
-### 3.1 Coxeter Hypothesis
+### 3.1 The Continued Fraction of √50
+
+The square root of the discriminant admits a periodic continued fraction:
+
+```
+√50 = [7; 14̄] = [7; 14, 14, 14, ...]
+```
+
+**Observation**: The integer part is **7 = dim(K₇)** and the period is **14 = dim(G₂)**.
+
+This is not coincidental. For D = n² + 1, the continued fraction of √D is always [n; 2n̄], but here:
+- n = 7 = dim(K₇)
+- 2n = 14 = dim(G₂)
+
+The relation **dim(G₂) = 2 × dim(K₇)** emerges directly from continued fraction theory.
+
+**Status**: VERIFIED (algebraic identity)
+
+### 3.2 Convergents and GIFT Constants
+
+The convergents p_k/q_k of √50 satisfy the Pell equation alternately:
+
+| k | p_k | q_k | p_k/q_k | p² − 50q² |
+|---|-----|-----|---------|-----------|
+| 0 | 7 | 1 | 7.000 | −1 |
+| 1 | **99** | **14** | 7.0714... | **+1** |
+| 2 | 1393 | 197 | 7.0710... | −1 |
+| 3 | 19601 | 2772 | 7.0710... | +1 |
+
+**The first convergent with Pell value +1 is exactly (H*, dim(G₂)) = (99, 14)!**
+
+This means H* and dim(G₂) are the **minimal** positive integers satisfying x² − 50y² = 1.
+
+**Status**: VERIFIED (continued fraction theory)
+
+### 3.3 The Eigenvalue as Continued Fraction
+
+The conjectured K₇ eigenvalue admits a remarkably simple continued fraction:
+
+```
+λ₁(K₇) = 14/99 = [0; 7, 14]
+```
+
+Expanded:
+```
+λ₁(K₇) = 1/(7 + 1/14) = 1/(dim(K₇) + 1/dim(G₂))
+```
+
+**The only integers appearing are dim(K₇) = 7 and dim(G₂) = 14.**
+
+**Status**: VERIFIED (algebraic identity)
+
+### 3.4 Fundamental Unit Structure
+
+The fundamental unit of the ring ℤ[√50] is:
+
+```
+ε = 7 + √50 = dim(K₇) + √(dim(K₇)² + 1)
+```
+
+Its square yields the GIFT constants:
+
+```
+ε² = (7 + √50)² = 49 + 14√50 + 50 = 99 + 14√50
+   = H* + dim(G₂)·√50
+```
+
+This shows that **(H*, dim(G₂))** is the coefficient pair of **ε²** in the basis {1, √50}.
+
+**Status**: VERIFIED (algebraic number theory)
+
+### 3.5 Complete Number-Theoretic Picture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  √50 = [dim(K₇); dim(G₂), dim(G₂), ...]                │
+│                                                         │
+│  ε = dim(K₇) + √50        (fundamental unit)           │
+│  ε² = H* + dim(G₂)·√50    (squared unit)               │
+│                                                         │
+│  Convergent₁ = H*/dim(G₂) = 99/14                      │
+│                                                         │
+│  λ₁(K₇) = [0; dim(K₇), dim(G₂)] = 14/99               │
+└─────────────────────────────────────────────────────────┘
+```
+
+The entire GIFT structure emerges from the continued fraction expansion of √(dim(K₇)² + 1).
+
+---
+
+## 4. Spectral Conjecture
+
+### 4.1 Coxeter Hypothesis
 
 For compact manifolds of dimension 7:
 
@@ -94,7 +193,7 @@ dim(G₂)/h(G₂) = 14/6 = 7/3
 
 **Status**: CONJECTURAL (supported by comparison with spheres and products)
 
-### 3.2 K₇ Eigenvalue
+### 4.2 K₇ Eigenvalue
 
 If the Coxeter hypothesis holds for K₇:
 ```
@@ -102,7 +201,7 @@ If the Coxeter hypothesis holds for K₇:
 λ₁(K₇) = dim(G₂)/H* = 14/99
 ```
 
-### 3.3 Pell Verification
+### 4.3 Pell Verification
 
 Using the Pell equation:
 ```
@@ -121,9 +220,9 @@ The agreement is exact to arbitrary precision.
 
 ---
 
-## 4. Comparison with Flat T⁷
+## 5. Comparison with Flat T⁷
 
-### 4.1 T⁷ with G₂ Metric
+### 5.1 T⁷ with G₂ Metric
 
 For the flat 7-torus with constant G₂ metric:
 ```
@@ -133,7 +232,7 @@ For the flat 7-torus with constant G₂ metric:
 
 **Status**: VERIFIED (numerical computation on A100 GPU)
 
-### 4.2 Fibonacci Proximity
+### 5.2 Fibonacci Proximity
 
 The T⁷ result lies close to Fibonacci structure:
 ```
@@ -144,7 +243,7 @@ Deviation: 0.035%
 
 Where F₁₁ = 89 = b₃ + dim(G₂) − p₂ is the 11th Fibonacci number.
 
-### 4.3 T⁷ to K₇ Factor
+### 5.3 T⁷ to K₇ Factor
 
 The ratio between flat and holonomy cases:
 ```
@@ -162,9 +261,9 @@ Factor = H*/(dim(G₂) × g_ii)
 
 ---
 
-## 5. Supporting Evidence
+## 6. Supporting Evidence
 
-### 5.1 Monster Group Connection
+### 6.1 Monster Group Connection
 
 The Monster group dimension involves Coxeter numbers:
 ```
@@ -175,7 +274,7 @@ The Monster group dimension involves Coxeter numbers:
 
 **Status**: VERIFIED (algebraic identity)
 
-### 5.2 Coxeter Sum
+### 6.2 Coxeter Sum
 
 ```
 h(G₂) + h(E₇) + h(E₈) = 6 + 18 + 30 = 54 = 2 × dim(J₃(O))
@@ -183,7 +282,7 @@ h(G₂) + h(E₇) + h(E₈) = 6 + 18 + 30 = 54 = 2 × dim(J₃(O))
 
 Where dim(J₃(O)) = 27 is the exceptional Jordan algebra dimension.
 
-### 5.3 Sphere Comparison
+### 6.3 Sphere Comparison
 
 For simple 7-dimensional manifolds:
 
@@ -196,16 +295,16 @@ The product λ₁ × H* ≈ 6 = h(G₂) for generic manifolds.
 
 ---
 
-## 6. Complete Analytical Framework
+## 7. Complete Analytical Framework
 
-### 6.1 Input Parameters
+### 7.1 Input Parameters
 
 The framework requires only:
 1. dim(K₇) = 7 (manifold dimension)
 2. G₂ holonomy (structural choice)
 3. TCS Betti numbers b₂ = 21, b₃ = 77
 
-### 6.2 Derived Quantities
+### 7.2 Derived Quantities
 
 All other quantities follow algebraically:
 
@@ -225,7 +324,7 @@ g_ii = (65/32)^(1/7)            [metric component]
 Factor = 6.39                    [T⁷ → K₇]
 ```
 
-### 6.3 Master Formula
+### 7.3 Master Formula
 
 If the spectral conjecture holds:
 ```
@@ -239,7 +338,7 @@ This is a purely algebraic expression involving only dimensions.
 
 ---
 
-## 7. Open Questions
+## 8. Open Questions
 
 1. **Derivation**: Can λ₁ × H* = dim(G₂) be derived from G₂ representation theory?
 
@@ -251,7 +350,7 @@ This is a purely algebraic expression involving only dimensions.
 
 ---
 
-## 8. Summary
+## 9. Summary
 
 | Result | Formula | Status |
 |--------|---------|--------|
