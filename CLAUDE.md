@@ -287,6 +287,28 @@ eigs = cp_eigsh(L, k=10, which='SA')  # Smallest Algebraic
 cp.get_default_memory_pool().free_all_blocks()
 ```
 
+### JSON Serialization with NumPy Types
+
+NumPy types (`numpy.bool_`, `numpy.int64`, `numpy.float64`) are not JSON-serializable:
+
+```python
+# ❌ Wrong (TypeError: Object of type bool_ is not JSON serializable)
+results = {'passed': deviation < 5}  # numpy.bool_
+json.dump(results, f)
+
+# ✓ Correct (explicit conversion to Python types)
+results = {'passed': bool(deviation < 5)}
+json.dump(results, f)
+```
+
+Common conversions:
+| NumPy Type | Python Conversion |
+|------------|-------------------|
+| `numpy.bool_` | `bool(x)` |
+| `numpy.int64` | `int(x)` |
+| `numpy.float64` | `float(x)` |
+| `numpy.ndarray` | `x.tolist()` |
+
 ---
 
 *GIFT Documentation Repository*
