@@ -5,6 +5,58 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.10] - 2026-01-25
+
+### Continued Fractions and TCS Spectral Computation
+
+Deep number-theoretic structure and GPU-accelerated K₇ computation.
+
+#### Added
+
+**Publications**
+- Updated `GIFT_K7_Analytical_Structure.md` with continued fraction discoveries
+
+**Notebooks**
+- `notebooks/GIFT_K7_TCS_Spectral.ipynb` - Full K₇ TCS computation on A100
+
+#### Key Discovery: Continued Fraction Structure
+
+The Pell discriminant √50 has continued fraction:
+
+```
+√50 = [7; 14̄] = [7; 14, 14, 14, ...]
+```
+
+where **7 = dim(K₇)** and **14 = dim(G₂)**.
+
+#### Convergents and GIFT Constants
+
+| k | p_k | q_k | p² − 50q² |
+|---|-----|-----|-----------|
+| 0 | 7   | 1   | −1        |
+| 1 | 99  | 14  | **+1**    |
+
+The first convergent with Pell +1 is exactly (H*, dim(G₂)).
+
+#### Eigenvalue as Continued Fraction
+
+```
+λ₁(K₇) = 14/99 = [0; 7, 14] = 1/(dim(K₇) + 1/dim(G₂))
+```
+
+Only dim(K₇) and dim(G₂) appear in the eigenvalue expansion.
+
+#### Fundamental Unit
+
+```
+ε = 7 + √50
+ε² = 99 + 14√50 = H* + dim(G₂)·√50
+```
+
+The GIFT constants emerge from ε².
+
+---
+
 ## [3.3.9] - 2026-01-24
 
 ### Pell Equation and Analytical K₇ Structure
