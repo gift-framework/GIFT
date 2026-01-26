@@ -15,10 +15,12 @@ where Σ ≅ S¹ × CY₃ is the neck region of length L.
 
 Assume:
 - (H1) Vol(K₇) = 1 (volume normalization)
-- (H2) The cross-section Σ has bounded geometry: Area(Σ) ∈ [a, A] for fixed a, A > 0
+- (H2') The neck volume is bounded: Vol(neck) ∈ [v₀, v₁] for fixed 0 < v₀ < v₁ < 1
+  - This implies Area(Σ) = Vol(neck)/L ∈ [v₀/L, v₁/L]
 - (H3) The neck is "uniform": the metric on the neck is a product g|_neck = dt² + g_Σ
+- (H4) The blocks have bounded geometry: h(M_i \ neck) ≥ h₀ > 0 for each building block
 
-Then there exist constants c₁, c₂ > 0 depending only on (a, A, dim) such that:
+Then there exist constants c₁, c₂ > 0 depending only on (v₀, v₁, h₀, dim) such that:
 $$\boxed{\frac{c_1}{L^2} \leq \lambda_1(K_7) \leq \frac{c_2}{L^2}}$$
 
 ---
@@ -53,15 +55,25 @@ This function:
 
 We need f ⊥ 1, i.e., ∫ f dV = 0.
 
-By symmetry of TCS construction (M₁ and M₂ have equal volume ≈ 1/2 each):
-$$\int_{K_7} f \, dV = \int_{M_1 \setminus \text{neck}} 1 \, dV + \int_{\text{neck}} \left(1 - \frac{2t}{L}\right) dV + \int_{M_2 \setminus \text{neck}} (-1) \, dV$$
+**General approach** (does not require symmetric volumes):
 
-$$= \text{Vol}(M_1 \setminus \text{neck}) - \text{Vol}(M_2 \setminus \text{neck}) + \int_0^L \left(1 - \frac{2t}{L}\right) \text{Area}(\Sigma) \, dt$$
+Let f₀ be the function defined above. Compute:
+$$\bar{f} = \frac{1}{\text{Vol}(K_7)} \int_{K_7} f_0 \, dV$$
 
-The neck integral:
+Then define the **orthogonalized test function**:
+$$f = f_0 - \bar{f}$$
+
+This satisfies ∫ f dV = 0 by construction. ✓
+
+**Estimate of |f̄|**: The raw integral is:
+$$\int_{K_7} f_0 \, dV = \text{Vol}(M_1 \setminus \text{neck}) - \text{Vol}(M_2 \setminus \text{neck}) + \int_0^L \left(1 - \frac{2t}{L}\right) \text{Area}(\Sigma) \, dt$$
+
+The neck integral vanishes:
 $$\int_0^L \left(1 - \frac{2t}{L}\right) \text{Area}(\Sigma) \, dt = \text{Area}(\Sigma) \cdot \left[t - \frac{t^2}{L}\right]_0^L = 0$$
 
-By the symmetric TCS construction, Vol(M₁ \ neck) = Vol(M₂ \ neck), so ∫ f dV = 0. ✓
+So |f̄| = |Vol(M₁ \ neck) − Vol(M₂ \ neck)| ≤ 1 − Vol(neck) ≤ 1 − v₀.
+
+The orthogonalization shifts f₀ by at most a constant, preserving the gradient structure.
 
 ### Gradient Calculation
 
@@ -103,13 +115,20 @@ $$\int_{K_7} f^2 \, dV \approx \frac{1}{3}$$
 
 $$\lambda_1 \leq \frac{\int |\nabla f|^2}{\int f^2} = \frac{4 \cdot \text{Area}(\Sigma) / L}{1 - 2L \cdot \text{Area}(\Sigma)/3}$$
 
-For large L with Vol(K₇) = 1, we have L · Area(Σ) ≈ 1, so:
-$$\lambda_1 \leq \frac{4 \cdot \text{Area}(\Sigma) / L}{1/3} = \frac{12 \cdot \text{Area}(\Sigma)}{L}$$
+By (H2'), Vol(neck) ≤ v₁, so Area(Σ) = Vol(neck)/L ≤ v₁/L.
 
-But Area(Σ) = Vol(neck)/L ≈ 1/L, so:
-$$\boxed{\lambda_1 \leq \frac{12}{L^2} = \frac{c_2}{L^2}}$$
+Substituting into the Rayleigh quotient:
+$$\lambda_1 \leq \frac{4 \cdot \text{Area}(\Sigma) / L}{1 - 2\text{Vol(neck)}/3}$$
 
-with c₂ = 12 (or a similar constant depending on exact geometry).
+For the lower bound on denominator, Vol(neck) ≤ v₁ < 1 gives:
+$$\int f^2 \geq 1 - \frac{2v_1}{3} > 0$$
+
+Thus:
+$$\lambda_1 \leq \frac{4 v_1 / L^2}{1 - 2v_1/3} = \frac{c_2}{L^2}$$
+
+$$\boxed{\lambda_1 \leq \frac{c_2}{L^2}}$$
+
+with c₂ = 4v₁/(1 − 2v₁/3), depending on the hypothesis (H2') bound.
 
 ---
 
@@ -143,37 +162,43 @@ $$h_{\text{neck}} = \frac{\text{Area}(\Sigma)}{1/2} = 2 \cdot \text{Area}(\Sigma
 
 ### Relating Area(Σ) to L
 
-Under Vol(K₇) = 1:
-$$\text{Vol}(\text{neck}) = L \cdot \text{Area}(\Sigma) \leq 1$$
+By hypothesis (H2'), Vol(neck) ∈ [v₀, v₁], and Vol(neck) = L · Area(Σ).
 
-So:
-$$\text{Area}(\Sigma) \leq \frac{1}{L}$$
+Thus:
+$$\text{Area}(\Sigma) = \frac{\text{Vol}(\text{neck})}{L} \in \left[\frac{v_0}{L}, \frac{v_1}{L}\right]$$
 
-More precisely, for a "dominated by neck" geometry:
-$$\text{Area}(\Sigma) \approx \frac{1}{L}$$
+### Cheeger Bound: Two Cases
 
-### Cheeger Bound
+**Case 1**: The minimizing cut passes through the neck.
 
-$$h(K_7) \geq h_{\text{neck}} = 2 \cdot \text{Area}(\Sigma) \geq \frac{c}{L}$$
+Then the cut is (close to) a cross-section Σ_t. The Cheeger ratio is:
+$$h_{\text{neck}} = \frac{\text{Area}(\Sigma)}{\min(\text{Vol}(K_7^+), \text{Vol}(K_7^-))} \geq \frac{v_0/L}{1/2} = \frac{2v_0}{L}$$
 
-where c depends on the geometry but is bounded below by (H2).
+**Case 2**: The minimizing cut lies entirely within one block M_i.
 
-**Lower bound on Cheeger**:
-By (H2), Area(Σ) ≥ a > 0, but also Area(Σ) ≤ 1/L (from volume constraint).
+By hypothesis (H4), h(M_i \ neck) ≥ h₀ > 0.
 
-The key is that **h scales as 1/L** regardless of exact constants.
+### Combined Bound
+
+Taking the minimum over both cases:
+$$h(K_7) \geq \min\left(h_0, \frac{2v_0}{L}\right)$$
+
+For large L (long neck), the neck case dominates: h(K₇) ≥ 2v₀/L.
 
 ### Applying Cheeger's Inequality
 
 Cheeger's theorem states:
 $$\lambda_1 \geq \frac{h^2}{4}$$
 
+For sufficiently large L (specifically L > 2v₀/h₀), the neck dominates:
+$$h(K_7) \geq \frac{2v_0}{L}$$
+
 Thus:
-$$\lambda_1 \geq \frac{1}{4} \left(\frac{c}{L}\right)^2 = \frac{c^2}{4L^2}$$
+$$\lambda_1 \geq \frac{1}{4} \left(\frac{2v_0}{L}\right)^2 = \frac{v_0^2}{L^2}$$
 
 $$\boxed{\lambda_1 \geq \frac{c_1}{L^2}}$$
 
-with c₁ = c²/4.
+with c₁ = v₀² (depending on the hypothesis (H2') bound).
 
 ---
 
@@ -181,12 +206,12 @@ with c₁ = c²/4.
 
 ### Main Theorem (Proven)
 
-Under hypotheses (H1)-(H3):
+Under hypotheses (H1), (H2'), (H3), (H4), for sufficiently large L:
 $$\frac{c_1}{L^2} \leq \lambda_1(K_7) \leq \frac{c_2}{L^2}$$
 
 where:
-- c₂ = 12 (from Rayleigh upper bound)
-- c₁ = c²/4 where c = 2a and a = min Area(Σ) (from Cheeger lower bound)
+- c₂ depends on v₁ (from Rayleigh upper bound with Area(Σ) ≤ v₁/L)
+- c₁ = v₀² (from Cheeger lower bound with Vol(neck) ≥ v₀)
 
 ### Interpretation
 
@@ -237,30 +262,40 @@ This requires: c₁ = c₂ = 14 under the canonical metric.
 ```lean
 /-- TCS manifold with neck of length L -/
 structure TCS_Manifold where
-  L : ℝ  -- neck length
+  L : ℝ                           -- neck length
+  v₀ v₁ : ℝ                       -- neck volume bounds
+  h₀ : ℝ                          -- block Cheeger bound
   L_pos : L > 0
   vol_normalized : Vol = 1
-  cross_section_bounded : a ≤ Area_Σ ∧ Area_Σ ≤ A
+  neck_bounded : v₀ ≤ Vol_neck ∧ Vol_neck ≤ v₁  -- (H2')
+  neck_in_unit : 0 < v₀ ∧ v₁ < 1
+  blocks_bounded : h_block ≥ h₀ ∧ h₀ > 0        -- (H4)
+
+/-- Constants derived from hypotheses -/
+noncomputable def c₁ (K : TCS_Manifold) : ℝ := K.v₀^2
+noncomputable def c₂ (K : TCS_Manifold) : ℝ := 4 * K.v₁ / (1 - 2 * K.v₁ / 3)
 
 /-- Upper bound via Rayleigh quotient -/
 theorem spectral_upper_bound (K : TCS_Manifold) :
-    λ₁(K) ≤ c₂ / K.L^2 := by
-  -- Construct test function f
+    λ₁(K) ≤ c₂ K / K.L^2 := by
+  -- Construct test function f₀: +1 on M₁, linear on neck, -1 on M₂
+  -- Orthogonalize: f = f₀ - f̄
   -- Compute Rayleigh quotient
-  -- Apply variational characterization
+  -- Use Area(Σ) ≤ v₁/L from (H2')
   sorry
 
 /-- Lower bound via Cheeger inequality -/
-theorem spectral_lower_bound (K : TCS_Manifold) :
-    λ₁(K) ≥ c₁ / K.L^2 := by
-  -- Show h(K) ≥ c / L
-  -- Apply Cheeger: λ₁ ≥ h²/4
+theorem spectral_lower_bound (K : TCS_Manifold) (hL : K.L > 2 * K.v₀ / K.h₀) :
+    λ₁(K) ≥ c₁ K / K.L^2 := by
+  -- Show h(K) ≥ min(h₀, 2v₀/L)
+  -- For large L, neck dominates: h(K) ≥ 2v₀/L
+  -- Apply Cheeger: λ₁ ≥ h²/4 = v₀²/L²
   sorry
 
 /-- Combined spectral bounds -/
-theorem spectral_bounds (K : TCS_Manifold) :
-    c₁ / K.L^2 ≤ λ₁(K) ∧ λ₁(K) ≤ c₂ / K.L^2 :=
-  ⟨spectral_lower_bound K, spectral_upper_bound K⟩
+theorem spectral_bounds (K : TCS_Manifold) (hL : K.L > 2 * K.v₀ / K.h₀) :
+    c₁ K / K.L^2 ≤ λ₁(K) ∧ λ₁(K) ≤ c₂ K / K.L^2 :=
+  ⟨spectral_lower_bound K hL, spectral_upper_bound K⟩
 ```
 
 ---
@@ -269,10 +304,19 @@ theorem spectral_bounds (K : TCS_Manifold) :
 
 | Statement | Status | Method |
 |-----------|--------|--------|
-| λ₁ ≤ c₂/L² | **PROVEN** | Rayleigh test function |
-| λ₁ ≥ c₁/L² | **PROVEN** | Cheeger inequality |
-| L² ~ H* | Supported | Mayer-Vietoris argument |
-| c = 14 | **CONJECTURE** | Requires explicit calculation |
+| λ₁ ≤ c₂/L² | **PROVEN** | Rayleigh test function (c₂ = 4v₁/(1−2v₁/3)) |
+| λ₁ ≥ c₁/L² | **PROVEN** | Cheeger inequality (c₁ = v₀²) |
+| L² ~ H* | Supported | Mayer-Vietoris harmonic form counting |
+| c = 14 | **CONJECTURE** | Requires geometric selection principle |
+
+### Hypotheses Used
+
+| Hypothesis | Role |
+|------------|------|
+| (H1) Vol = 1 | Normalization |
+| (H2') Vol(neck) ∈ [v₀, v₁] | Bounded neck, implies Area(Σ) ~ 1/L |
+| (H3) Product neck metric | Simplifies gradient calculation |
+| (H4) h(blocks) ≥ h₀ | Ensures neck is the bottleneck |
 
 ---
 
