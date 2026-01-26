@@ -27,8 +27,11 @@ where N ≅ Y × [0, L] is a cylindrical neck region with cross-section Y.
   $$g|_N = dt^2 + g_Y$$
   where t ∈ [0, L] is the longitudinal coordinate and g_Y is a metric on Y.
 
-- **(H4) Block Cheeger bound**: Each building block has bounded isoperimetric ratio:
-  $$h(M_i \setminus N) \geq h_0 > 0 \quad \text{for } i = 1, 2$$
+- **(H4) Block Cheeger bound (global version)**: For any hypersurface Γ ⊂ M_i \ N:
+  $$\frac{\text{Area}(\Gamma)}{\min(\text{Vol}(K^+), \text{Vol}(K^-))} \geq h_0 > 0$$
+  where K⁺, K⁻ are the two components of K \ Γ.
+
+  *(This follows from an intrinsic isoperimetric bound on M_i combined with (H5).)*
 
 - **(H5) Balanced blocks**: The block volumes satisfy
   $$\frac{1}{4} \leq \text{Vol}(M_i \setminus N) \leq \frac{3}{4} \quad \text{for } i = 1, 2$$
@@ -46,7 +49,9 @@ $$\boxed{\frac{c_1}{L^2} \leq \lambda_1(K) \leq \frac{c_2}{L^2}}$$
 
 with explicit bounds:
 - c₁ = v₀²
-- c₂ = 12v₁/(1 − 2v₁/3)
+- c₂ = 16v₁/(1 − v₁)  [robust bound, valid for any (H5)-compliant blocks]
+
+*Remark*: Under the stronger assumption Vol(M₁ \ N) = Vol(M₂ \ N) (symmetric blocks), the sharper bound c₂ = 4v₁/(1 − 2v₁/3) holds.
 
 ---
 
@@ -92,8 +97,10 @@ On M₂ \ N: f = −1 − f̄₀ ∈ [−3/2, −1/2], so f² ≥ 1/4
 Thus:
 $$\int_K f^2 \, dV \geq \int_{M_1 \setminus N} \frac{1}{4} \, dV + \int_{M_2 \setminus N} \frac{1}{4} \, dV \geq \frac{1}{4}(1 - v_1) > 0$$
 
-More precisely:
-$$\int_K f^2 \, dV = 1 - \frac{2}{3}\text{Vol}(N) \geq 1 - \frac{2v_1}{3}$$
+**Note**: The formula ∫f₀² = 1 − (2/3)Vol(N) holds for the *un-orthogonalized* function f₀.
+For f = f₀ − f̄₀, the safe lower bound is ∫f² ≥ (1/4)(1 − v₁), which we use for robustness.
+
+*(Under symmetric blocks where f̄₀ = 0, we have f = f₀ and the sharper bound applies.)*
 
 ∎
 
@@ -107,9 +114,12 @@ $$\int_K |\nabla f|^2 \, dV = \frac{4}{L^2} \cdot \text{Vol}(N) \leq \frac{4v_1}
 
 ### Step 5: Apply Rayleigh Quotient
 
-$$\lambda_1 \leq \frac{\int_K |\nabla f|^2}{\int_K f^2} \leq \frac{4v_1/L^2}{1 - 2v_1/3} = \frac{c_2}{L^2}$$
+Using the robust denominator bound:
+$$\lambda_1 \leq \frac{\int_K |\nabla f|^2}{\int_K f^2} \leq \frac{4v_1/L^2}{(1/4)(1 - v_1)} = \frac{16v_1}{(1-v_1)L^2} = \frac{c_2}{L^2}$$
 
-where c₂ = 4v₁/(1 − 2v₁/3). ∎
+where **c₂ = 16v₁/(1 − v₁)** (robust bound).
+
+*Remark*: Under symmetric blocks (f̄₀ = 0), the sharper bound c₂ = 4v₁/(1 − 2v₁/3) holds. ∎
 
 ---
 
@@ -174,32 +184,43 @@ $$\lambda_1(K) \geq \frac{h(K)^2}{4} \geq \frac{1}{4} \cdot \frac{4v_0^2}{L^2} =
 
 ### On Hypothesis (H6)
 
-The neck minimality condition (H6) is automatic for product metrics by the coarea formula:
+The neck minimality condition (H6) is automatic for product metrics via the **projection/area formula**:
 
 **Lemma:** Let (N, g) = (Y × [0, L], dt² + g_Y). If Γ ⊂ N is a hypersurface separating Y × {0} from Y × {L}, then Area(Γ) ≥ Area(Y).
 
-*Proof:*
-Let π : N → [0, L] be the projection. For almost every t ∈ [0, L], the slice Γ_t = Γ ∩ (Y × {t}) is a submanifold of Y × {t} ≅ Y.
+*Proof (via projection):*
 
-By the coarea formula:
-$$\text{Area}(\Gamma) = \int_0^L \int_{\Gamma_t} \frac{1}{|\nabla \pi|_\Gamma|} \, d\sigma_t \, dt \geq \int_0^L \text{Area}(\Gamma_t) \, dt$$
+Let π_Y : N → Y be the projection onto the cross-section.
 
-For Γ to separate the ends, it must intersect every slice Y × {t}. The minimum area slice is Y itself, so:
-$$\text{Area}(\Gamma) \geq \text{Area}(Y)$$
+**Step 1**: π_Y is 1-Lipschitz on (N, g = dt² + g_Y).
+
+For any tangent vector v = (v_Y, v_t) ∈ T_{(y,t)}N:
+$$|d\pi_Y(v)|_{g_Y} = |v_Y|_{g_Y} \leq \sqrt{|v_Y|^2 + |v_t|^2} = |v|_g$$
+
+**Step 2**: The tangential Jacobian satisfies J(π_Y|_Γ) ≤ 1 almost everywhere on Γ.
+
+**Step 3**: Since Γ separates Y × {0} from Y × {L}, every fiber {y} × [0, L] must intersect Γ at least once.
+
+Thus the multiplicity function N(y) := #(Γ ∩ ({y} × [0, L])) satisfies N(y) ≥ 1 for all y ∈ Y.
+
+**Step 4**: By the area formula:
+$$\text{Area}(\Gamma) = \int_\Gamma 1 \, d\sigma \geq \int_\Gamma J(\pi_Y|_\Gamma) \, d\sigma = \int_Y N(y) \, d\text{vol}_Y \geq \int_Y 1 \, d\text{vol}_Y = \text{Area}(Y)$$
 
 ∎
 
+**Note**: This argument works in any dimension. For N = Y^n × [0, L] with product metric, any (n−1+1 = n)-dimensional separating hypersurface has area ≥ Area(Y^n).
+
 ### On the Constants
 
-| Constant | Value | Meaning |
-|----------|-------|---------|
-| c₁ | v₀² | Lower bound coefficient |
-| c₂ | 4v₁/(1−2v₁/3) | Upper bound coefficient |
-| L₀ | 2v₀/h₀ | Threshold for neck dominance |
+| Constant | Value (robust) | Value (symmetric) | Meaning |
+|----------|----------------|-------------------|---------|
+| c₁ | v₀² | v₀² | Lower bound coefficient |
+| c₂ | 16v₁/(1−v₁) | 4v₁/(1−2v₁/3) | Upper bound coefficient |
+| L₀ | 2v₀/h₀ | 2v₀/h₀ | Threshold for neck dominance |
 
 For typical TCS with v₀ ≈ v₁ ≈ 1/2, h₀ ≈ 1:
 - c₁ ≈ 1/4
-- c₂ ≈ 3
+- c₂ ≈ 16 (robust) or ≈ 3 (symmetric)
 - L₀ ≈ 1
 
 ### Literature Support
@@ -246,16 +267,19 @@ structure ModelTCS where
   -- (H6) Neck minimality (automatic for product metric, stated for clarity)
   neck_minimal : ∀ Γ separating, Area(Γ ∩ N) ≥ Area(Y)
 
-/-- The spectral bounds theorem -/
+/-- Robust upper bound constant -/
+noncomputable def c₂_robust (K : ModelTCS) : ℝ := 16 * K.v₁ / (1 - K.v₁)
+
+/-- The spectral bounds theorem (robust version) -/
 theorem spectral_bounds (K : ModelTCS) (hL : K.L > 2 * K.v₀ / K.h₀) :
     K.v₀^2 / K.L^2 ≤ λ₁(K) ∧
-    λ₁(K) ≤ (4 * K.v₁ / (1 - 2 * K.v₁ / 3)) / K.L^2 := by
+    λ₁(K) ≤ c₂_robust K / K.L^2 := by
   constructor
   · -- Lower bound via Cheeger
     apply cheeger_lower_bound
     apply neck_cheeger_dominates hL
-  · -- Upper bound via Rayleigh
-    apply rayleigh_upper_bound
+  · -- Upper bound via Rayleigh with robust denominator bound
+    apply rayleigh_upper_bound_robust
     apply balanced_nondegeneracy K.block_balance
 ```
 
