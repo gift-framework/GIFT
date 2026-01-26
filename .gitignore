@@ -84,3 +84,4 @@ assets/agents/reports/*.json
 # Model checkpoints
 checkpoints/
 verification_result.json
+gift-core/
