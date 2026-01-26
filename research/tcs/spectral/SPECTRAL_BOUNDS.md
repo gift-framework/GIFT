@@ -222,44 +222,44 @@ The CGN bound is universal; Model Theorem is sharper for well-behaved TCS.
 
 ---
 
-## 8. Explicit Eigenvalue Calculation
+## 8. Neck-Dominated Eigenmodes (HEURISTIC)
 
-### On the Neck (K3 × T² × I)
+**⚠️ WARNING**: The following is a HEURISTIC argument, not a proof.
 
-Separation of variables:
+### On an Idealized Neck (Product K3 × T² × I)
+
+If the neck were exactly a product, separation of variables would give:
 ```
 Δ_{total} = Δ_{K3} + Δ_{T²} + ∂²/∂r²
 ```
 
-Eigenfunctions:
+### Why This Is NOT a Proof
+
+1. **TCS is glued, not a product**: The metric has transition regions
+2. **Boundary conditions are approximate**: We don't have Dirichlet BCs
+3. **Cross-section varies**: The K3 fiber isn't constant along the neck
+4. **Exponential tails**: ACyl decay creates corrections
+
+### What IS True (Asymptotically)
+
+**Conjecture (Neck-Stretching)**: As L → ∞, the lowest eigenmode concentrates on the neck and:
 ```
-f(x, θ, ψ, r) = f_{K3}(x) · e^{inθ} · e^{imψ} · h(r)
+λ₁(L) = π²/L² + O(e^{-δL})
 ```
 
-Eigenvalues:
-```
-λ = λ_{K3} + n² + m² + λ_r
-```
+This requires:
+- Spectral convergence under neck-stretching (Langlais-type)
+- Control of cross-section spectrum (gap >> π²/L²)
+- Matching at gluing regions
 
-### Ground State
+**Status**: PLAUSIBLE but not rigorously established in our context.
 
-For n = m = 0 and λ_{K3} = 0 (constant on K3):
-```
-λ = λ_r
-```
+### What This Means for GIFT
 
-The r-eigenvalue problem on [0, L] with boundary conditions gives:
-```
-λ_r ~ π²/L²
-```
-
-### First Excited State
-
-```
-λ₁ ≈ π²/L²
-```
-
-This is the dominant contribution for large L.
+The heuristic λ₁ ~ π²/L² is likely correct to leading order, but:
+- The O(1) coefficient might differ from π²
+- Higher corrections might matter
+- A rigorous proof requires analytic surgery methods
 
 ---
 
