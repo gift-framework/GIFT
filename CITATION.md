@@ -134,13 +134,13 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 ## Formal Verification
 
 ```bibtex
-@software{gift_core_v320,
-  title   = {GIFT Core: Formal Verification in Lean 4 + Coq},
+@software{gift_core_v3314,
+  title   = {GIFT Core: Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.3.7},
-  note    = {185 relations verified, 15 axioms, K₇ metric pipeline, Joyce existence theorem}
+  version = {3.3.14},
+  note    = {~330 relations verified, K₇ metric pipeline, Joyce existence theorem}
 }
 ```
 
@@ -159,10 +159,11 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.3.14 | 2026-01-28 | ~330 relations, Lean 4 only (Coq archived) |
 | 3.3.0 | 2026-01-05 | PDG 2024 values, 54,327-config Monte Carlo validation |
 | 3.1.0 | 2025-12-17 | Analytical G₂ metric, 185 certified relations |
 | 3.0.0 | 2025-12-09 | Major release: 165+ certified relations, Fibonacci/Monster/McKay |
-| 2.3.x | 2025-12 | Dual Lean 4 + Coq verification |
+| 2.3.x | 2025-12 | Dual Lean 4 + Coq verification (historical) |
 | 2.2.0 | 2025-11-27 | Zero-parameter paradigm |
 | 2.1.0 | 2025-11-22 | Torsional dynamics |
 | 2.0.0 | 2025-10-24 | Framework reorganization |

@@ -10,7 +10,7 @@ The GIFT framework v3.3 makes 33 dimensionless predictions with mean experimenta
 - Planned experiments and timelines
 - Criteria for validation or falsification
 
-**Last updated**: 2026-01-16 (v3.3.7)
+**Last updated**: 2026-01-28 (v3.3.14)
 
 ## Current Experimental Status Summary
 
@@ -169,7 +169,7 @@ All elements predicted with mean deviation 0.11%. Highlights:
 | v2.0 | 34 | 3 | 0.13% | Rigorous proofs, complete neutrino sector, parameter reduction |
 | v2.1 | 46 | 3 | 0.13% | Torsional dynamics, scale bridge, 9 dimensional observables |
 | v2.2 | 39 | 0 | 0.197% | Zero-parameter paradigm, 13 proven relations, consolidated catalog |
-| v2.3 | 39 | 0 | 0.197% | Dual formal verification (Lean 4 + Coq), unified CI pipeline |
+| v2.3 | 39 | 0 | 0.197% | Dual formal verification (Lean 4 + Coq), unified CI pipeline (historical) |
 | v2.3.1 | 39 | 0 | 0.197% | 25 proven relations (12 topological extension), giftpy v1.1.0 |
 | v2.3.3 | 39 | 0 | 0.197% | 39 proven relations (+ 10 Yukawa + 4 irrational), giftpy v1.4.0 |
 | v2.3.4 | 39 | 0 | 0.197% | 54 proven relations (+ 5 exceptional + 6 base decomp + 4 extended), giftpy v1.5.0 |
@@ -351,7 +351,7 @@ No sector shows systematic problems. All perform well.
 - Genuine predictive power
 - Complete elimination of free parameters
 - All quantities structurally determined
-- 185 relations formally verified in Lean 4 + Coq
+- ~330 relations formally verified in Lean 4
 
 **Other unification attempts**:
 - SU(5) GUT: Incorrect sin²θ_W prediction (~0.20 vs 0.23)
