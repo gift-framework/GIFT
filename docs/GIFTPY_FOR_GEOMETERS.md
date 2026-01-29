@@ -117,7 +117,7 @@ lean_proof = result.certificate.to_lean()
 | `gift_core.g2` | G₂ 3-form, holonomy, torsion computation |
 | `gift_core.harmonic` | Hodge Laplacian, spectral analysis |
 | `gift_core.nn` | PINN architecture and training |
-| `gift_core.verification` | Lean/Coq certificate generation |
+| `gift_core.verification` | Lean 4 certificate generation |
 
 ## 5. Limitations and Open Problems
 

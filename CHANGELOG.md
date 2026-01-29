@@ -5,6 +5,35 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.14] - 2026-01-29
+
+### Synchronization with gift-framework/core v3.3.14
+
+This release synchronizes documentation with the latest formal verification developments in [gift-framework/core](https://github.com/gift-framework/core).
+
+#### Changed
+
+**Major Updates**
+- Updated to core v3.3.14 (~330 certified relations, up from 185)
+- Removed all Coq references — Lean 4 is now the sole verification system (Coq archived)
+- Updated terminology to use academic standards (no internal jargon)
+
+**Core v3.3.8–v3.3.14 Highlights** (see [core CHANGELOG](https://github.com/gift-framework/core/blob/main/CHANGELOG.md) for details):
+- **v3.3.14**: Selection Principle (κ = π²/14), TCS building blocks (Quintic, CI(2,2,2)), refined spectral bounds
+- **v3.3.13**: Literature axioms (Langlais 2024, CGN 2024 spectral density formulas)
+- **v3.3.12**: TCS Spectral Bounds Model Theorem (λ₁ ~ 1/L²)
+- **v3.3.11**: Monster dimension via Coxeter numbers (196883 = (b₃−h_G₂)(b₃−h_E₇)(b₃−h_E₈))
+- **v3.3.10**: GIFT-Zeta correspondences, Monster-Zeta Moonshine
+- **v3.3.9**: Complete Spectral Theory module
+- **v3.3.8**: Yang-Mills Mass Gap module (λ₁ = 14/99)
+
+**Documentation Updates**
+- README.md, CITATION.md, STRUCTURE.md: Updated metrics and removed Coq badges
+- docs/*: Updated version references and Coq mentions
+- publications/README.md: Updated badge and metrics
+
+---
+
 ## [3.3.7] - 2026-01-16
 
 ### Synchronization with gift-framework/core v3.3.7
