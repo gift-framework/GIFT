@@ -187,7 +187,7 @@ for effective torsion that remain under investigation"
 
 | Status | Meaning |
 |--------|---------|
-| **PROVEN** | Formally verified in Lean 4 + Coq |
+| **PROVEN** | Formally verified in Lean 4 |
 | **TOPOLOGICAL** | Derived from topology, not fitted |
 | **THEORETICAL** | Proposed mechanism, not yet verified |
 | **SPECULATIVE** | Exploratory extension |
@@ -203,8 +203,8 @@ for effective torsion that remain under investigation"
 - Guides for different audiences
 
 ### gift-framework/core
-- Formal proofs (Lean 4 + Coq)
-- Python package `gift_core`
+- Formal proofs (Lean 4)
+- Python package `giftpy`
 - Blueprint documentation
 - CI/CD workflows
 

@@ -1003,9 +1003,9 @@ Individual atoms aren't wet. "Wetness" emerges when billions of atoms are togeth
 
 **The kitchen table version**: The ultra-strict math teacher.
 
-Lean 4 and Coq are computer programs that check every step of every proof. You can't cheat, can't make calculation errors, can't "skip" a step. If Lean accepts your proof, it's **mathematically certain**.
+Lean 4 is a computer program that checks every step of every proof. You can't cheat, can't make calculation errors, can't "skip" a step. If Lean accepts your proof, it's **mathematically certain**.
 
-**In GIFT**: 75 core relations verified in both Lean 4 and Coq with 0 "sorry" (holes). Zero domain-specific axioms.
+**In GIFT**: ~330 relations verified in Lean 4 with 0 "sorry" (holes). Zero domain-specific axioms.
 
 ---
 

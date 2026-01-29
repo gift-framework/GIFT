@@ -1,7 +1,6 @@
 # GIFT Framework v3.3 - Publications
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core/tree/main/Lean)
-[![Coq Verified](https://img.shields.io/badge/Coq_8.18-Verified-orange)](https://github.com/gift-framework/core/tree/main/COQ)
 
 Geometric Information Field Theory: Deriving Standard Model parameters from E₈×E₈ topology.
 
@@ -92,7 +91,7 @@ See [validation_v32.py](../statistical_validation/validation_v32.py) for methodo
 
 ## Formal Verification
 
-**185 relations verified** in Lean 4 + Coq (15 axioms, core v3.3.7).
+**~330 relations verified** in Lean 4 (core v3.3.14).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 
@@ -104,5 +103,5 @@ Historical supplements (S1-S9 v2.3/v3.0) are archived in `../docs/legacy/`.
 
 ---
 
-**Version**: 3.3.7 (2026-01-16)
+**Version**: 3.3.14 (2026-01-28)
 **Repository**: https://github.com/gift-framework/GIFT
