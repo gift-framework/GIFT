@@ -17,7 +17,7 @@
 
 ### 2. Explicit G₂ Metric Code
 
-**File:** `metric/g2_metric_final.py`
+**File:** `metric/g2_metric_final.py` (v3 — current)
 
 **Properties achieved:**
 - 100% positive definite (SPD guaranteed via log-Euclidean)
@@ -29,6 +29,8 @@
 - 7D metric evaluation is slow (numpy/scipy)
 - Transverse K3 modes not fully captured
 - ACyl corrections approximated
+
+**Note:** v1 and v2 archived to `archive/metrics/` (2026-01-29).
 
 ### 3. Theoretical Framework
 
@@ -151,9 +153,8 @@ research/tcs/
 │   └── IFT_TORSION_FREE.md
 ├── metric/
 │   ├── METRIC_EXTRACTION.md
-│   ├── g2_metric.py (v1 - deprecated)
-│   ├── g2_metric_v2.py (v2 - intermediate)
 │   └── g2_metric_final.py (v3 - current)
+│       [v1, v2 archived to research/archive/metrics/]
 ├── spectral/
 │   └── SPECTRAL_BOUNDS.md
 ├── selection/
