@@ -1,13 +1,57 @@
 # Heegner-Riemann Connection: Progress Summary
 
 **Last Updated**: 2026-01-29
-**Status**: NUMERICALLY VALIDATED | THEORY MISSING | HIGHLY SUGGESTIVE
+**Status**: NUMERICALLY VALIDATED | LEAN: PARTIAL | THEORY MISSING
 
 ---
 
 ## Core Discovery
 
-Riemann zeta zeros correspond to GIFT topological constants with remarkable precision:
+Riemann zeta zeros correspond to GIFT topological constants with remarkable precision.
+
+---
+
+## Rigorous Classification
+
+### ✅ PROVEN (Lean, zero axioms)
+
+| Claim | File | Method |
+|-------|------|--------|
+| 163 = 248 - 8 - 77 | `Heegner.lean` | `native_decide` |
+| All 9 Heegner numbers = GIFT | `Heegner.lean` | Relations 151-159 |
+| Gap structure (24, 24, 96) | `Heegner.lean` | Arithmetic |
+| dim(E₈) = 248 | `E8Mathlib.lean` | Coxeter |
+| b₃ = 77 | `BettiNumbers.lean` | Octonions |
+
+### 🔶 DERIVED (Lean, under documented axioms)
+
+| Claim | Axioms | Source |
+|-------|--------|--------|
+| γ(n) values | `gamma : ℕ+ → ℝ` (abstract) | `Zeta/Basic.lean` |
+| γ(n) approximations | 17 numerical axioms | Interval arithmetic |
+| Monotonicity | `gamma_mono` | Zeta property |
+| Zeta-spectral connection | `spectral_from_correspondence_bound` | Hypothesis |
+| **Total zeta axioms** | | **~18** |
+
+### 🔵 VALIDATED (numerical, not formal)
+
+| Claim | Method | Result |
+|-------|--------|--------|
+| 204 matches < 0.5% | 100K zeros analysis | p ≈ 0.018 |
+| 67 ultra-precise < 0.05% | Odlyzko data | Verified |
+| 84% of 7-multiples match | Pattern analysis | Striking |
+
+### ⬜ OPEN (no formal basis)
+
+| Claim | Status |
+|-------|--------|
+| WHY do zeros match? | No mechanism |
+| Selberg trace connection | Proposed, not proven |
+| RH implication | Speculative |
+
+---
+
+## Key Correspondences
 
 | Zero | Value | GIFT Constant | Deviation |
 |------|-------|---------------|-----------|
@@ -20,35 +64,11 @@ Riemann zeta zeros correspond to GIFT topological constants with remarkable prec
 
 ---
 
-## Statistical Validation
-
-| Metric | Result |
-|--------|--------|
-| Zeros analyzed | 100,000 |
-| GIFT matches (< 0.5%) | **204** |
-| Ultra-precise (< 0.05%) | **67** |
-| Ultra-precise (< 0.01%) | **12** |
-| Fisher combined p-value | **p ≈ 0.018** |
-
-**Interpretation**: Unlikely to be pure coincidence (2% significance level).
-
----
-
 ## Key Patterns
 
 1. **Three Heegner numbers in zeros**: γ₈≈43, γ₁₆≈67, γ₆₀≈163
 2. **Multiples of dim(K₇)=7**: 84% of n×7 values matched
 3. **E₈ cluster**: γ₁₀₂≈240, γ₁₀₆≈247, γ₁₀₇≈248
-
----
-
-## Lean-Verified
-
-| Claim | Status |
-|-------|--------|
-| 163 = 248 - 8 - 77 | **PROVEN** |
-| Heegner GIFT expressions (all 9) | **PROVEN** |
-| Gap structure (24, 24, 96) | **PROVEN** |
 
 ---
 
