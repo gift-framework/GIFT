@@ -1,8 +1,8 @@
 # Geometric Information Field Theory v3.3
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.7-green.svg)](CHANGELOG.md)
-[![Lean 4 + Coq](https://img.shields.io/badge/Formally_Verified-Lean_4_+_Coq-blue)](https://github.com/gift-framework/core)
+[![Version](https://img.shields.io/badge/Version-3.3.14-green.svg)](CHANGELOG.md)
+[![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
 
@@ -15,7 +15,7 @@
 | **Precision** | 0.21% mean deviation across 33 dimensionless predictions (PDG 2024) |
 | **Uniqueness** | #1 out of 192,349 configurations tested (>4.5σ significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 185 relations proven in Lean 4 + Coq (15 axioms, core v3.3.7) |
+| **Verified** | ~330 relations proven in Lean 4 (core v3.3.14) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -26,7 +26,7 @@
 
 | Paper | Proofs | Video |
 |:-----:|:------:|:-----:|
-| [Main Paper](publications/markdown/GIFT_v3.3_main.md) | [Lean 4 + Coq](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
+| [Main Paper](publications/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
 
 ---
 
@@ -73,7 +73,7 @@
 | Cosmology | 3 | 0.07% | n_s = ζ(11)/ζ(5) (0.004%) |
 | Structural | 4 | exact | N_gen = 3, τ = 3472/891 |
 
-### Exact Relations (Lean 4 + Coq Verified)
+### Exact Relations (Lean 4 Verified)
 
 | Relation | Value | Topological Origin |
 |----------|:-----:|-------------------|
@@ -200,7 +200,7 @@ Their appearance suggests structural rather than coincidental relationships.
 
 | Repository | Description |
 |------------|-------------|
-| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4 + Coq), K₇ metric pipeline |
+| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4), K₇ metric pipeline |
 
 ---
 
@@ -227,7 +227,7 @@ Their appearance suggests structural rather than coincidental relationships.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.7}
+  version = {3.3.14}
 }
 ```
 
