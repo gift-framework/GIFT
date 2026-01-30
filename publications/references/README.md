@@ -13,6 +13,12 @@ Exploratory and reference documents for the GIFT framework v3.3.
 | [39_observables.csv](39_observables.csv) | Machine-readable observable data |
 | [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities) |
 
+### Independent Validations
+
+| Document | Content | Status |
+|----------|---------|--------|
+| [INDEPENDENT_VALIDATIONS.md](INDEPENDENT_VALIDATIONS.md) | External research converging with GIFT | Active |
+
 ### Exploratory References
 
 | Document | Content | Status |
