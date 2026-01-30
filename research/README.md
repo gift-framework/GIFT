@@ -20,9 +20,11 @@ Investigation of the Yang-Mills mass gap through GIFT's geometric framework.
 **Status**: VALIDATED — Blind testing confirmed, awaiting formal proof.
 
 **Key documents**:
-- `STATUS.md` — Current state and progression log
-- `SPECTRAL_RESEARCH_SYNTHESIS.md` — Complete synthesis of findings
+- `PROGRESS.md` — Summary of current state
+- `STATUS.md` — Detailed progression log
 - `UNIVERSALITY_CONJECTURE.md` — The main conjecture
+
+**Limitations**: Lean formalization is axiom-heavy; mass gap argument has circular elements.
 
 ---
 
@@ -41,12 +43,31 @@ Investigation of deep connections between GIFT topology and the Riemann zeta fun
 **Status**: NUMERICALLY VALIDATED — Awaiting theoretical explanation.
 
 **Key documents**:
+- `PROGRESS.md` — Summary of current state
 - `EXPLORATION_NOTES.md` — Main findings and methodology
 - `SELBERG_TRACE_SYNTHESIS.md` — Trace formula connection
 
 ---
 
-### 3. [spectral/](./spectral/) — Pell Equation Bridge
+### 3. [tcs/](./tcs/) — TCS K7 Metric Construction
+
+Complete documentation of the Twisted Connected Sum construction for K₇.
+
+**Key findings**:
+- 8-phase pathway from ACyl CY3 to spectral bounds
+- Explicit G₂ metric code (`g2_metric_final.py`)
+- Selection constant candidate: κ = π²/14
+
+**Status**: DOCUMENTATION COMPLETE — κ is candidate, not validated.
+
+**Key documents**:
+- `PROGRESS.md` — Summary of current state
+- `SYNTHESIS.md` — Complete derivation chain
+- `GIFT_CONNECTIONS.md` — Link to physical predictions
+
+---
+
+### 5. [spectral/](./spectral/) — Pell Equation Bridge
 
 Analytical derivation connecting number theory to spectral geometry.
 
@@ -58,7 +79,7 @@ Analytical derivation connecting number theory to spectral geometry.
 **Status**: CONJECTURED — Elegant theoretical argument, awaiting verification.
 
 **Key documents**:
-- `PELL_TO_SPECTRUM.md` — Complete derivation
+- `PELL_TO_SPECTRUM.md` — Core conjecture (exploratory docs archived)
 
 ---
 
@@ -72,6 +93,12 @@ Computational notebooks and scripts used in research. Includes:
 
 ### [tests/](./tests/)
 Validation test suite for spectral computations.
+
+### [archive/](./archive/)
+**Cleaned up 2026-01-29**: Dead ends, old versions, and exploratory docs:
+- `notebooks/` — Old notebook versions (v1-v9)
+- `metrics/` — Superseded metric implementations (v1, v2)
+- `spectral-exploratory/` — 32 exploratory docs from spectral/
 
 ### [legacy/](./legacy/)
 Archived planning documents, sprint reports, and superseded analyses.
