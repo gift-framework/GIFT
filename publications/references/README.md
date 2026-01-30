@@ -18,6 +18,7 @@ Exploratory and reference documents for the GIFT framework v3.3.
 | Document | Content | Status |
 |----------|---------|--------|
 | [INDEPENDENT_VALIDATIONS.md](INDEPENDENT_VALIDATIONS.md) | External research converging with GIFT | Active |
+| [STATISTICAL_EVIDENCE.md](STATISTICAL_EVIDENCE.md) | 78+ relations, deviation analysis, duality patterns | Active |
 
 ### Exploratory References
 
