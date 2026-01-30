@@ -101,6 +101,71 @@ EXPERIMENTAL_V33 = {
 
 N_OBSERVABLES = len(EXPERIMENTAL_V33)
 
+# =============================================================================
+# OBSERVABLE CATEGORIES (for publication-style reporting)
+# =============================================================================
+# ALL predictions are DIMENSIONLESS by construction (ratios, angles, counts)
+# Categories follow standard physics paper conventions
+
+OBSERVABLE_CATEGORIES = {
+    # Structural (topology-derived integers)
+    'structural': {
+        'name': 'Structural',
+        'description': 'Topology-derived discrete values',
+        'observables': ['N_gen'],
+    },
+    # Electroweak couplings
+    'electroweak': {
+        'name': 'Electroweak',
+        'description': 'Gauge couplings and mixing',
+        'observables': ['sin2_theta_W', 'alpha_s', 'lambda_H', 'alpha_inv'],
+    },
+    # Lepton mass ratios
+    'lepton_masses': {
+        'name': 'Lepton Mass Ratios',
+        'description': 'Charged lepton mass ratios',
+        'observables': ['Q_Koide', 'm_tau_m_e', 'm_mu_m_e', 'm_mu_m_tau'],
+    },
+    # Quark mass ratios
+    'quark_masses': {
+        'name': 'Quark Mass Ratios',
+        'description': 'Quark mass ratios (running masses)',
+        'observables': ['m_s_m_d', 'm_c_m_s', 'm_b_m_t', 'm_u_m_d'],
+    },
+    # PMNS mixing
+    'pmns': {
+        'name': 'PMNS Mixing',
+        'description': 'Neutrino mixing angles and phase',
+        'observables': ['delta_CP', 'theta_13', 'theta_23', 'theta_12',
+                        'sin2_theta_12_PMNS', 'sin2_theta_23_PMNS', 'sin2_theta_13_PMNS'],
+    },
+    # CKM mixing
+    'ckm': {
+        'name': 'CKM Mixing',
+        'description': 'Quark mixing parameters',
+        'observables': ['sin2_theta_12_CKM', 'A_Wolfenstein', 'sin2_theta_23_CKM'],
+    },
+    # Boson mass ratios
+    'boson_ratios': {
+        'name': 'Boson Mass Ratios',
+        'description': 'Electroweak boson mass ratios',
+        'observables': ['m_H_m_t', 'm_H_m_W', 'm_W_m_Z'],
+    },
+    # Cosmological
+    'cosmological': {
+        'name': 'Cosmological',
+        'description': 'Cosmological parameters (Planck)',
+        'observables': ['Omega_DE', 'n_s', 'Omega_DM_Omega_b', 'h_Hubble',
+                        'Omega_b_Omega_m', 'sigma_8', 'Y_p'],
+    },
+}
+
+# Reverse mapping: observable -> category
+OBS_TO_CATEGORY = {}
+for cat_id, cat_data in OBSERVABLE_CATEGORIES.items():
+    for obs in cat_data['observables']:
+        OBS_TO_CATEGORY[obs] = cat_id
+
 
 # =============================================================================
 # CONFIGURATION CLASS
@@ -1287,6 +1352,130 @@ def print_tiered_report():
     return tiered
 
 
+def compute_category_analysis() -> dict:
+    """
+    Compute statistics by physics category (publication-style).
+
+    ALL observables are dimensionless. Categories are:
+    - Structural, Electroweak, Lepton masses, Quark masses
+    - PMNS mixing, CKM mixing, Boson ratios, Cosmological
+    """
+    ref_preds = compute_predictions(GIFT_REFERENCE)
+    ref_stats = compute_statistics(ref_preds)
+
+    category_results = {}
+
+    for cat_id, cat_data in OBSERVABLE_CATEGORIES.items():
+        obs_list = cat_data['observables']
+        n_obs = len(obs_list)
+
+        # Gather stats for this category
+        rel_devs = []
+        within_01 = 0
+        within_1 = 0
+        within_5 = 0
+
+        for obs in obs_list:
+            if obs not in ref_stats.rel_devs:
+                continue
+            rd = ref_stats.rel_devs[obs]
+            rel_devs.append(rd)
+
+            if rd < 0.1:
+                within_01 += 1
+            if rd < 1.0:
+                within_1 += 1
+            if rd < 5.0:
+                within_5 += 1
+
+        mean_dev = sum(rel_devs) / len(rel_devs) if rel_devs else 0
+        max_dev = max(rel_devs) if rel_devs else 0
+
+        category_results[cat_id] = {
+            'name': cat_data['name'],
+            'description': cat_data['description'],
+            'n_observables': n_obs,
+            'mean_rel_dev': mean_dev,
+            'max_rel_dev': max_dev,
+            'within_0_1_percent': within_01,
+            'within_1_percent': within_1,
+            'within_5_percent': within_5,
+            'observables': [
+                {
+                    'name': obs,
+                    'predicted': ref_preds.get(obs, float('nan')),
+                    'experimental': EXPERIMENTAL_V33[obs]['value'],
+                    'rel_dev': ref_stats.rel_devs.get(obs, float('nan')),
+                }
+                for obs in obs_list
+            ]
+        }
+
+    return category_results
+
+
+def print_category_report():
+    """Print publication-style category analysis."""
+    cat_results = compute_category_analysis()
+
+    print("\n" + "=" * 90)
+    print("CATEGORY ANALYSIS (Publication Style)")
+    print("All 33 observables are DIMENSIONLESS (ratios, angles, counts)")
+    print("=" * 90)
+
+    # Summary table
+    print("\n{:<20} {:>5} {:>12} {:>12} {:>10} {:>10} {:>10}".format(
+        "Category", "N", "Mean Dev.", "Max Dev.", "<0.1%", "<1%", "<5%"))
+    print("-" * 90)
+
+    total_within_01 = 0
+    total_within_1 = 0
+    total_within_5 = 0
+
+    for cat_id, data in cat_results.items():
+        print("{:<20} {:>5} {:>11.4f}% {:>11.4f}% {:>10} {:>10} {:>10}".format(
+            data['name'],
+            data['n_observables'],
+            data['mean_rel_dev'],
+            data['max_rel_dev'],
+            f"{data['within_0_1_percent']}/{data['n_observables']}",
+            f"{data['within_1_percent']}/{data['n_observables']}",
+            f"{data['within_5_percent']}/{data['n_observables']}",
+        ))
+        total_within_01 += data['within_0_1_percent']
+        total_within_1 += data['within_1_percent']
+        total_within_5 += data['within_5_percent']
+
+    print("-" * 90)
+    overall_mean = sum(d['mean_rel_dev'] * d['n_observables'] for d in cat_results.values()) / N_OBSERVABLES
+    print("{:<20} {:>5} {:>11.2f}% {:>12} {:>10} {:>10} {:>10}".format(
+        "TOTAL", N_OBSERVABLES, overall_mean, "",
+        f"{total_within_01}/{N_OBSERVABLES}",
+        f"{total_within_1}/{N_OBSERVABLES}",
+        f"{total_within_5}/{N_OBSERVABLES}",
+    ))
+
+    # Detailed per-category
+    print("\n" + "-" * 90)
+    print("DETAILED BY CATEGORY:")
+    print("-" * 90)
+
+    for cat_id, data in cat_results.items():
+        status = "OK" if data['max_rel_dev'] < 5 else "REVIEW"
+        print(f"\n{data['name']} ({data['n_observables']} obs) - Mean: {data['mean_rel_dev']:.4f}% [{status}]")
+
+        for obs in sorted(data['observables'], key=lambda x: x['rel_dev']):
+            marker = "" if obs['rel_dev'] < 1 else " *" if obs['rel_dev'] < 5 else " **"
+            print(f"  {obs['name']:<25} {obs['rel_dev']:>8.4f}%  "
+                  f"(pred={obs['predicted']:.6g}, exp={obs['experimental']:.6g}){marker}")
+
+    print("\n" + "=" * 90)
+    print("Legend: * = 1-5% deviation, ** = >5% deviation (needs review)")
+    print("=" * 90)
+
+    return cat_results
+
+
 def run_comparative_monte_carlo(n_configs: int = 50000, seed: int = SEED) -> dict:
     """
     Run Monte Carlo comparison excluding tension observables.
@@ -1357,18 +1546,20 @@ if __name__ == "__main__":
     results = run_rigorous_validation(verbose=True)
     print_observable_report()
 
-    # Tiered analysis
+    # Tiered analysis (by relative deviation)
     tiered = print_tiered_report()
     results['tiered_analysis'] = tiered
+
+    # Category analysis (publication-style)
+    cat_results = print_category_report()
+    results['category_analysis'] = cat_results
 
     # Comparative Monte Carlo on good observables
     print("\nRunning Monte Carlo on Tier 1+2 observables only...")
     mc_filtered = run_comparative_monte_carlo(50000)
     results['tests']['mc_tier12_only'] = mc_filtered
     print(f"  Observables tested: {mc_filtered['n_observables_tested']}")
-    print(f"  Excluded (tension): {mc_filtered['excluded_observables']}")
-    print(f"  GIFT chi2: {mc_filtered['gift_chi_squared']:.2f}")
-    print(f"  GIFT chi2/dof: {mc_filtered['gift_chi_squared_reduced']:.3f}")
+    print(f"  Excluded (>5% dev): {mc_filtered['excluded_observables']}")
     print(f"  Better configs: {mc_filtered['better_count']}/{mc_filtered['n_configs']}")
     print(f"  Result: {mc_filtered['interpretation']}")
 

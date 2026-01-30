@@ -1,6 +1,6 @@
 {
   "version": "3.3-rigorous",
-  "date": "2026-01-30 13:33:54",
+  "date": "2026-01-30 13:39:24",
   "methodology": "chi-squared with uncertainties",
   "reference": {
     "config": {
@@ -285,8 +285,8 @@
       "n_observables_tested": 28,
       "excluded_observables": 5,
       "n_configs": 50000,
-      "gift_chi_squared": 2803805367.2722154,
-      "gift_chi_squared_reduced": 103844643.23230428,
+      "gift_chi_squared": 2803805367.272216,
+      "gift_chi_squared_reduced": 103844643.23230429,
       "better_count": 0,
       "empirical_pvalue": 0.0,
       "ci_95": [
@@ -304,7 +304,7 @@
     "chi_squared_pvalue": 0.0,
     "gift_chi_squared": 2803805427.5348063,
     "gift_chi_squared_reduced": 87618919.6104627,
-    "elapsed_seconds": 4.982597589492798
+    "elapsed_seconds": 4.80839991569519
   },
   "tiered_analysis": {
     "tier1_excellent": {
@@ -605,6 +605,302 @@
       "within_1_percent": 0.8484848484848485,
       "within_5_percent": 0.9696969696969697,
       "overall_mean_rel_dev": 1.0133526174790874
+    }
+  },
+  "category_analysis": {
+    "structural": {
+      "name": "Structural",
+      "description": "Topology-derived discrete values",
+      "n_observables": 1,
+      "mean_rel_dev": 0.0,
+      "max_rel_dev": 0.0,
+      "within_0_1_percent": 1,
+      "within_1_percent": 1,
+      "within_5_percent": 1,
+      "observables": [
+        {
+          "name": "N_gen",
+          "predicted": 3.0,
+          "experimental": 3.0,
+          "rel_dev": 0.0
+        }
+      ]
+    },
+    "electroweak": {
+      "name": "Electroweak",
+      "description": "Gauge couplings and mixing",
+      "n_observables": 4,
+      "mean_rel_dev": 0.3623409328368113,
+      "max_rel_dev": 0.9021323127392021,
+      "within_0_1_percent": 1,
+      "within_1_percent": 4,
+      "within_5_percent": 4,
+      "observables": [
+        {
+          "name": "sin2_theta_W",
+          "predicted": 0.23076923076923078,
+          "experimental": 0.23122,
+          "rel_dev": 0.19495252606574986
+        },
+        {
+          "name": "alpha_s",
+          "predicted": 0.11693548387096774,
+          "experimental": 0.118,
+          "rel_dev": 0.9021323127392021
+        },
+        {
+          "name": "lambda_H",
+          "predicted": 0.1288470508005519,
+          "experimental": 0.1293,
+          "rel_dev": 0.35030873893898296
+        },
+        {
+          "name": "alpha_inv",
+          "predicted": 137.03329918032787,
+          "experimental": 137.035999,
+          "rel_dev": 0.0019701536033103558
+        }
+      ]
+    },
+    "lepton_masses": {
+      "name": "Lepton Mass Ratios",
+      "description": "Charged lepton mass ratios",
+      "n_observables": 4,
+      "mean_rel_dev": 0.05814496247480741,
+      "max_rel_dev": 0.11780034058875095,
+      "within_0_1_percent": 2,
+      "within_1_percent": 4,
+      "within_5_percent": 4,
+      "observables": [
+        {
+          "name": "Q_Koide",
+          "predicted": 0.6666666666666666,
+          "experimental": 0.666661,
+          "rel_dev": 0.0008500072250636509
+        },
+        {
+          "name": "m_tau_m_e",
+          "predicted": 3477.0,
+          "experimental": 3477.23,
+          "rel_dev": 0.006614460360689922
+        },
+        {
+          "name": "m_mu_m_e",
+          "predicted": 207.0118567416035,
+          "experimental": 206.768283,
+          "rel_dev": 0.11780034058875095
+        },
+        {
+          "name": "m_mu_m_tau",
+          "predicted": 0.05952380952380952,
+          "experimental": 0.05946,
+          "rel_dev": 0.1073150417247251
+        }
+      ]
+    },
+    "quark_masses": {
+      "name": "Quark Mass Ratios",
+      "description": "Quark mass ratios (running masses)",
+      "n_observables": 4,
+      "mean_rel_dev": 0.344513519890939,
+      "max_rel_dev": 1.2052953961667705,
+      "within_0_1_percent": 2,
+      "within_1_percent": 3,
+      "within_5_percent": 4,
+      "observables": [
+        {
+          "name": "m_s_m_d",
+          "predicted": 20.0,
+          "experimental": 20.0,
+          "rel_dev": 0.0
+        },
+        {
+          "name": "m_c_m_s",
+          "predicted": 11.714285714285714,
+          "experimental": 11.7,
+          "rel_dev": 0.12210012210012167
+        },
+        {
+          "name": "m_b_m_t",
+          "predicted": 0.023809523809523808,
+          "experimental": 0.0241,
+          "rel_dev": 1.2052953961667705
+        },
+        {
+          "name": "m_u_m_d",
+          "predicted": 0.47023809523809523,
+          "experimental": 0.47,
+          "rel_dev": 0.05065856129686372
+        }
+      ]
+    },
+    "pmns": {
+      "name": "PMNS Mixing",
+      "description": "Neutrino mixing angles and phase",
+      "n_observables": 7,
+      "mean_rel_dev": 3.781799230217493,
+      "max_rel_dev": 19.996292180635717,
+      "within_0_1_percent": 3,
+      "within_1_percent": 4,
+      "within_5_percent": 6,
+      "observables": [
+        {
+          "name": "delta_CP",
+          "predicted": 197.0,
+          "experimental": 197.0,
+          "rel_dev": 0.0
+        },
+        {
+          "name": "theta_13",
+          "predicted": 8.571428571428571,
+          "experimental": 8.54,
+          "rel_dev": 0.3680160588825765
+        },
+        {
+          "name": "theta_23",
+          "predicted": 59.158172045053405,
+          "experimental": 49.3,
+          "rel_dev": 19.996292180635717
+        },
+        {
+          "name": "theta_12",
+          "predicted": 33.400049930049136,
+          "experimental": 33.41,
+          "rel_dev": 0.029781711915178113
+        },
+        {
+          "name": "sin2_theta_12_PMNS",
+          "predicted": 0.3076923076923077,
+          "experimental": 0.304,
+          "rel_dev": 1.2145748987854332
+        },
+        {
+          "name": "sin2_theta_23_PMNS",
+          "predicted": 0.5454545454545454,
+          "experimental": 0.573,
+          "rel_dev": 4.8072346501665875
+        },
+        {
+          "name": "sin2_theta_13_PMNS",
+          "predicted": 0.02217741935483871,
+          "experimental": 0.02219,
+          "rel_dev": 0.05669511113695626
+        }
+      ]
+    },
+    "ckm": {
+      "name": "CKM Mixing",
+      "description": "Quark mixing parameters",
+      "n_observables": 3,
+      "mean_rel_dev": 0.7399558433010082,
+      "max_rel_dev": 1.4992540416269233,
+      "within_0_1_percent": 0,
+      "within_1_percent": 2,
+      "within_5_percent": 3,
+      "observables": [
+        {
+          "name": "sin2_theta_12_CKM",
+          "predicted": 0.22580645161290322,
+          "experimental": 0.22501,
+          "rel_dev": 0.35396276294530543
+        },
+        {
+          "name": "A_Wolfenstein",
+          "predicted": 0.8383838383838383,
+          "experimental": 0.826,
+          "rel_dev": 1.4992540416269233
+        },
+        {
+          "name": "sin2_theta_23_CKM",
+          "predicted": 0.041666666666666664,
+          "experimental": 0.04182,
+          "rel_dev": 0.3666507253307954
+        }
+      ]
+    },
+    "boson_ratios": {
+      "name": "Boson Mass Ratios",
+      "description": "Electroweak boson mass ratios",
+      "n_observables": 3,
+      "mean_rel_dev": 0.11820545738510892,
+      "max_rel_dev": 0.28581457152886613,
+      "within_0_1_percent": 2,
+      "within_1_percent": 3,
+      "within_5_percent": 3,
+      "observables": [
+        {
+          "name": "m_H_m_t",
+          "predicted": 0.7272727272727273,
+          "experimental": 0.7252,
+          "rel_dev": 0.28581457152886613
+        },
+        {
+          "name": "m_H_m_W",
+          "predicted": 1.5576923076923077,
+          "experimental": 1.5575,
+          "rel_dev": 0.012347203358433565
+        },
+        {
+          "name": "m_W_m_Z",
+          "predicted": 0.8809523809523809,
+          "experimental": 0.88145,
+          "rel_dev": 0.05645459726802706
+        }
+      ]
+    },
+    "cosmological": {
+      "name": "Cosmological",
+      "description": "Cosmological parameters (Planck)",
+      "n_observables": 7,
+      "mean_rel_dev": 0.19050860034555125,
+      "max_rel_dev": 0.47770700636942715,
+      "within_0_1_percent": 3,
+      "within_1_percent": 7,
+      "within_5_percent": 7,
+      "observables": [
+        {
+          "name": "Omega_DE",
+          "predicted": 0.6861456938876226,
+          "experimental": 0.6847,
+          "rel_dev": 0.21114267381665142
+        },
+        {
+          "name": "n_s",
+          "predicted": 0.9648639296628894,
+          "experimental": 0.9649,
+          "rel_dev": 0.003738246150960344
+        },
+        {
+          "name": "Omega_DM_Omega_b",
+          "predicted": 5.375,
+          "experimental": 5.375,
+          "rel_dev": 0.0
+        },
+        {
+          "name": "h_Hubble",
+          "predicted": 0.6733870967741935,
+          "experimental": 0.674,
+          "rel_dev": 0.09093519670720149
+        },
+        {
+          "name": "Omega_b_Omega_m",
+          "predicted": 0.15625,
+          "experimental": 0.157,
+          "rel_dev": 0.47770700636942715
+        },
+        {
+          "name": "sigma_8",
+          "predicted": 0.8095238095238095,
+          "experimental": 0.811,
+          "rel_dev": 0.18202102049204927
+        },
+        {
+          "name": "Y_p",
+          "predicted": 0.2459016393442623,
+          "experimental": 0.245,
+          "rel_dev": 0.3680160588825694
+        }
+      ]
     }
   }
 }
