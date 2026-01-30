@@ -61,7 +61,7 @@ $$\gamma_n = \lambda_n \times H^*$$
 
 where λₙ are eigenvalues of the Laplace-Beltrami operator on K₇ and H* = 99 is the effective cohomology dimension.
 
-**Implication for RH**: If true, since K₇ is a compact Riemannian manifold with self-adjoint Laplacian, all λₙ ∈ ℝ, therefore all γₙ ∈ ℝ, implying Re(s) = 1/2 for all zeros.
+**Motivation**: If Riemann zeros could be identified with the spectrum of a suitable self-adjoint operator, this would provide a spectral-theoretic framework compatible with RH (in the spirit of the Hilbert-Pólya conjecture). The spectral hypothesis proposes the K₇ Laplacian as a candidate operator.
 
 ### 1.3 Research Objective
 
@@ -317,6 +317,8 @@ where A and B are GIFT topological ratios.
 
 **Tested**: 1,980 combinations from 10 prefactors × 9 exponents × 15 correction factors.
 
+**Methodological note**: This is a discrete dictionary search, not continuous parameter fitting. All candidate values are derived from GIFT topological constants (ratios, products, roots). The search selects the best-performing combination but does not optimize continuous parameters. This is analogous to model selection rather than regression.
+
 ### 6.2 Top Performing Formulas
 
 | Rank | Formula | Prefactor | Exponent | Mean Error |
@@ -361,6 +363,16 @@ $$\gamma_n = \frac{b_3}{6} \times n^{\frac{\dim(G_2)}{b_2 + p_2}} = \frac{77}{6}
 - Prefactor: Third Betti number divided by G₂ Coxeter number
 - Exponent: G₂ dimension relative to (2-cycles + duality)
 
+### 6.6 Alternative: 100% Rational Topological Formula
+
+For those preferring rational exponents over the golden ratio:
+
+$$\gamma_n = \frac{H^*}{8} \times n^{\frac{b_3 - b_2}{b_3 + \dim(G_2)}} = \frac{99}{8} \times n^{\frac{56}{91}}$$
+
+**Mean error**: 2.21%
+
+This formula uses only Betti numbers and holonomy dimension—no transcendental constants. The exponent 56/91 ≈ 0.615 is within 0.5% of φ-1 ≈ 0.618.
+
 ---
 
 ## 7. Discussion
@@ -387,7 +399,7 @@ GIFT topology does NOT determine individual Riemann zeros. Instead:
 
 1. **Growth rate**: The exponent ≈ φ - 1 may encode holonomy structure
 2. **Scale**: The prefactor ≈ H*/8 sets the overall magnitude
-3. **Quantization**: Round(γₙ) → GIFT constants is meaningful (Pell equation evidence)
+3. **Quantization**: Round(γₙ) → GIFT constants may be meaningful (see Modified Pell conjecture in §9.2)
 
 ### 7.4 Statistical Significance
 
@@ -413,7 +425,7 @@ The correspondence is statistically significant but the physical mechanism remai
 ### 8.2 Positive Results
 
 1. **Growth rate predicted**: GIFT constants predict γₙ ~ n^0.618 with 2% accuracy
-2. **Pure topology works**: No fitted parameters, only topological ratios
+2. **Pure topology works**: Selection from discrete dictionary of topological ratios (no continuous fitting)
 3. **Golden ratio emergence**: φ - 1 appears naturally in the optimal exponent
 4. **Multiple valid formulas**: Several GIFT combinations achieve < 3% error
 
@@ -437,7 +449,7 @@ The Riemann zero growth rate is constrained by K₇ cohomology (H* = 99) and exh
 
 1. **Higher zeros**: Test formula on γ₁₀₀ - γ₁₀₀₀
 2. **Logarithmic corrections**: Try γₙ = A × n^B × (1 + C/ln(n))
-3. **Modified Pell**: Explore γ₂₉² - 49γ₁² + γ₂ + 1 ≈ 0 structure
+3. **Modified Pell conjecture**: The relation γ₂₉² - 49γ₁² + γ₂ + 1 ≈ 0 (residual ~0.1) suggests a Pell-like structure with discriminant 49 = dim(K₇)² replacing the integer Pell discriminant 50. This remains a hypothesis requiring further investigation.
 
 ### 9.3 Sub-1% Target
 
