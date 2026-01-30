@@ -431,9 +431,11 @@ The correspondence is statistically significant but the physical mechanism remai
 
 ### 8.3 Main Finding
 
-$$\gamma_n \approx \frac{H^*}{8} \times n^{\phi - 1}$$
+$$\gamma_n \approx \frac{H^*}{8} \times n^{\phi - 1} \quad \text{for } n \lesssim 50$$
 
-The Riemann zero growth rate is constrained by K₇ cohomology (H* = 99) and exhibits golden ratio scaling, achieving **2.06% mean accuracy** over the first 50 zeros.
+The Riemann zero growth rate in the **intermediate regime** (n ≲ 50) is constrained by K₇ cohomology (H* = 99) and exhibits golden ratio scaling, achieving **2.06% mean accuracy**.
+
+**Important caveat**: Extended testing (n = 100-1000) shows this formula degrades to 38% error for large n. The golden ratio exponent is a local effective value, not a universal constant. The true asymptotic γₙ ~ 2πn/ln(n) governs large-n behavior.
 
 ---
 
@@ -445,10 +447,23 @@ The Riemann zero growth rate is constrained by K₇ cohomology (H* = 99) and exh
 2. **Non-compact operators**: Study Berry-Keating on K₇-related spaces
 3. **Selberg trace formula**: Connect prime-zero duality to geodesics on K₇
 
-### 9.2 Computational
+### 9.2 Computational — COMPLETED
 
-1. **Higher zeros**: Test formula on γ₁₀₀ - γ₁₀₀₀
-2. **Logarithmic corrections**: Try γₙ = A × n^B × (1 + C/ln(n))
+**Extended range testing (n = 100-1000) was performed.** Results:
+
+| Range | Local exponent | φ-1 prediction error |
+|-------|---------------|---------------------|
+| 1-50 | 0.76 | **2%** |
+| 50-100 | 0.79 | 10% |
+| 100-200 | 0.81 | 21% |
+| 500-1000 | 0.84 | 38% |
+
+**Critical finding**: The exponent φ-1 ≈ 0.618 is a **local effective exponent** valid only for n ≲ 50. For larger n, the true asymptotic γₙ ~ 2πn/ln(n) dominates, and the effective exponent increases toward 1.
+
+**Hybrid formulas tested**: Power law with log corrections (types A×n^b×(1+C/ln(n)), A×n^b×ln(n)^c, A×n/(B+ln(n))) achieve ~11% error across n=1-1000, improving over pure power law (12.7%) but far from the 2% achieved for n < 50.
+
+**Interpretation**: GIFT topology constrains Riemann zero growth in an **intermediate regime only**. The golden ratio connection is regime-specific, not universal. This does not invalidate the small-n correspondence but correctly scopes its domain of applicability.
+
 3. **Modified Pell conjecture**: The relation γ₂₉² - 49γ₁² + γ₂ + 1 ≈ 0 (residual ~0.1) suggests a Pell-like structure with discriminant 49 = dim(K₇)² replacing the integer Pell discriminant 50. This remains a hypothesis requiring further investigation.
 
 ### 9.3 Sub-1% Target
