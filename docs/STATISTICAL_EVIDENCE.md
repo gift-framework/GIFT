@@ -64,9 +64,29 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 ---
 
-## 2. Per-Observable Results
+## 2. Results by Physics Category
 
-### 2.1 Tier 1: Excellent (< 0.1%) — 14 observables
+All 33 observables are **dimensionless** by construction (ratios, angles, counts).
+
+| Category | N | Mean Dev. | Max Dev. | <0.1% | <1% | <5% | Status |
+|----------|---|-----------|----------|-------|-----|-----|--------|
+| Structural | 1 | 0.00% | 0.00% | 1/1 | 1/1 | 1/1 | OK |
+| Electroweak | 4 | 0.36% | 0.90% | 1/4 | 4/4 | 4/4 | OK |
+| Lepton Mass Ratios | 4 | 0.06% | 0.12% | 2/4 | 4/4 | 4/4 | OK |
+| Quark Mass Ratios | 4 | 0.34% | 1.21% | 2/4 | 3/4 | 4/4 | OK |
+| **PMNS Mixing** | 7 | 3.78% | 20.0% | 3/7 | 4/7 | 6/7 | **REVIEW** |
+| CKM Mixing | 3 | 0.74% | 1.50% | 0/3 | 2/3 | 3/3 | OK |
+| Boson Mass Ratios | 3 | 0.12% | 0.29% | 2/3 | 3/3 | 3/3 | OK |
+| Cosmological | 7 | 0.19% | 0.48% | 3/7 | 7/7 | 7/7 | OK |
+| **TOTAL** | **33** | **1.01%** | — | 14/33 | 28/33 | 32/33 | — |
+
+**Summary**: 7/8 categories have <1% mean deviation. Only PMNS mixing needs θ₂₃ formula revision.
+
+---
+
+## 3. Per-Observable Results
+
+### 3.1 Tier 1: Excellent (< 0.1%) — 14 observables
 
 | Observable | Predicted | Experimental | Rel. Dev. |
 |------------|-----------|--------------|-----------|
@@ -87,7 +107,7 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 **Mean: 0.02%**
 
-### 2.2 Tier 2: Good (0.1% - 1%) — 14 observables
+### 3.2 Tier 2: Good (0.1% - 1%) — 14 observables
 
 | Observable | Predicted | Experimental | Rel. Dev. |
 |------------|-----------|--------------|-----------|
@@ -108,7 +128,7 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 **Mean: 0.31%**
 
-### 2.3 Tier 3: Moderate (1% - 5%) — 4 observables
+### 3.3 Tier 3: Moderate (1% - 5%) — 4 observables
 
 | Observable | Predicted | Experimental | Rel. Dev. |
 |------------|-----------|--------------|-----------|
@@ -119,7 +139,7 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 **Mean: 2.2%**
 
-### 2.4 Tier 4: Needs Refinement (> 5%) — 1 observable
+### 3.4 Tier 4: Needs Refinement (> 5%) — 1 observable
 
 | Observable | Predicted | Experimental | Rel. Dev. |
 |------------|-----------|--------------|-----------|
@@ -129,9 +149,9 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 ---
 
-## 3. Monte Carlo Validation
+## 4. Monte Carlo Validation
 
-### 3.1 Betti Number Variations (100,000 configs)
+### 4.1 Betti Number Variations (100,000 configs)
 
 | Metric | Value |
 |--------|-------|
@@ -141,7 +161,7 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 | Better than GIFT | **0** |
 | 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁵] |
 
-### 3.2 Gauge Group Comparison
+### 4.2 Gauge Group Comparison
 
 | Rank | Gauge Group | Mean Dev. |
 |------|-------------|-----------|
@@ -151,7 +171,7 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 E₈×E₈ achieves **8x better** agreement than alternatives.
 
-### 3.3 Holonomy Group Comparison
+### 4.3 Holonomy Group Comparison
 
 | Rank | Holonomy | dim | Mean Dev. |
 |------|----------|-----|-----------|
@@ -162,7 +182,7 @@ E₈×E₈ achieves **8x better** agreement than alternatives.
 
 G₂ achieves **4x better** agreement than Calabi-Yau (SU(3)).
 
-### 3.4 Local Optimality
+### 4.4 Local Optimality
 
 | Metric | Value |
 |--------|-------|
@@ -174,16 +194,16 @@ G₂ achieves **4x better** agreement than Calabi-Yau (SU(3)).
 
 ---
 
-## 4. Fano Selection Principle
+## 5. Fano Selection Principle
 
-### 4.1 The Fano Connection
+### 6.1 The Fano Connection
 
 The Fano plane PG(2,2) underlies octonion multiplication:
 - 7 points = imaginary octonions e₁...e₇
 - 7 lines = multiplication triples
 - Automorphism group: PSL(2,7), order 168
 
-### 4.2 Fano Independence
+### 6.2 Fano Independence
 
 Working formulas have factors of 7 that cancel:
 
@@ -195,27 +215,27 @@ Working formulas have factors of 7 that cancel:
 
 ---
 
-## 5. Honest Caveats
+## 6. Honest Caveats
 
-### 5.1 What This Validation Shows
+### 6.1 What This Validation Shows
 
 1. **Relative optimality**: GIFT (b₂=21, b₃=77) is optimal among 200,960 tested configurations
 2. **High agreement**: 97% of predictions within 5%, 85% within 1%
 3. **Single outlier**: Only θ₂₃^PMNS requires formula revision
 
-### 5.2 What This Validation Does NOT Show
+### 6.2 What This Validation Does NOT Show
 
 1. **Formula justification**: Statistical optimality doesn't explain why these formulas were chosen
 2. **Physical correctness**: Statistical agreement ≠ physical truth
 3. **Completeness**: Only TCS G₂-manifolds tested
 
-### 5.3 The θ₂₃ Problem
+### 6.3 The θ₂₃ Problem
 
 The θ₂₃^PMNS formula predicts 59° vs experimental 49° (20% deviation). This is a genuine disagreement requiring theoretical work, not a precision issue.
 
 ---
 
-## 6. Falsification Predictions
+## 7. Falsification Predictions
 
 | Prediction | GIFT Value | Current Exp. | Target | Experiment | Timeline |
 |------------|------------|--------------|--------|------------|----------|
@@ -226,7 +246,7 @@ The θ₂₃^PMNS formula predicts 59° vs experimental 49° (20% deviation). Th
 
 ---
 
-## 7. How to Reproduce
+## 8. How to Reproduce
 
 ```bash
 cd statistical_validation
@@ -241,7 +261,7 @@ python3 rigorous_validation_v33.py
 
 ---
 
-## 8. Conclusions
+## 9. Conclusions
 
 ### Primary Finding
 
