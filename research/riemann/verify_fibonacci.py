@@ -73,7 +73,7 @@ def verify_fibonacci_constraints():
 
     # Vérifier si c'est F₇/F₆
     print(f"\n   Note: 13/8 = F₇/F₆ (Fibonacci consécutifs)")
-    print(f"   Limite: F_{n+1}/F_n → φ = {PHI:.6f}")
+    print(f"   Limite: F_{{n+1}}/F_n → φ = {PHI:.6f}")
 
     # 2. Ratio β₅/β₈
     print("\n📊 2. Ratio β₅/β₈")
