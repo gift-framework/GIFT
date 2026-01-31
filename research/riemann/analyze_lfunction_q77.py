@@ -30,7 +30,8 @@ def load_lfunction_zeros(filepath: str) -> np.ndarray:
     Load L-function zeros from various formats.
 
     Supports:
-    - LMFDB format: one zero per line
+    - LMFDB JSON format (with "positive_zeros" key)
+    - Simple text: one zero per line
     - Comma-separated
     - Tab-separated
     """
@@ -39,7 +40,32 @@ def load_lfunction_zeros(filepath: str) -> np.ndarray:
 
     try:
         with open(filepath, 'r') as f:
-            for line in f:
+            content = f.read().strip()
+
+        # Skip comment lines at the top and find JSON
+        lines = content.split('\n')
+        json_start = 0
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith('{') or stripped.startswith('['):
+                json_start = i
+                break
+
+        # Try JSON format (LMFDB download)
+        json_content = '\n'.join(lines[json_start:])
+        if json_content.strip().startswith('{') or json_content.strip().startswith('['):
+            data = json.loads(json_content)
+
+            if isinstance(data, dict) and 'positive_zeros' in data:
+                # LMFDB format
+                zeros = [float(z) for z in data['positive_zeros']]
+                print(f"   Format: LMFDB JSON ({len(zeros)} positive zeros)")
+            elif isinstance(data, list):
+                zeros = [float(z) for z in data]
+                print(f"   Format: JSON array ({len(zeros)} zeros)")
+        else:
+            # Try line-by-line format
+            for line in content.split('\n'):
                 line = line.strip()
                 if not line or line.startswith('#') or line.startswith('//'):
                     continue
@@ -193,9 +219,13 @@ def main():
     # Potential file locations
     potential_files = [
         'zeta/L_q77_zeros.txt',
+        'zeta/L_q77_zeros.json',
+        'zeta/1-77-77.76-r0-0-0.json',  # LMFDB label
+        'zeta/1-77-77.76-r0-0-0.txt',
         'zeta/dirichlet_77.txt',
-        'zeta/L-function-1-77-1.1-c1-0-0.txt',  # LMFDB naming
+        'zeta/L-function-1-77-1.1-c1-0-0.txt',
         'L_q77_zeros.txt',
+        'L_q77_zeros.json',
     ]
 
     zeros = None
