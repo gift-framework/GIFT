@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "phase": "Phase 2 - Coefficient Drift Analysis",
+    "date": "2026-01",
+    "data_source": "Odlyzko tables (zeros1, zeros6)",
+    "total_zeros_analyzed": 2001052
+  },
+  "gift_reference": {
+    "lags": [5, 8, 13, 27],
+    "coefficients": {
+      "a_5": {"value": 0.1038961, "formula": "8/77", "origin": "rank(E8)/b3"},
+      "a_8": {"value": 0.1851852, "formula": "5/27", "origin": "Weyl/dim(J3O)"},
+      "a_13": {"value": 0.2580645, "formula": "64/248", "origin": "rank(E8)^2/dim(E8)"},
+      "a_27": {"value": 0.4415584, "formula": "34/77", "origin": "(27+7)/b3"},
+      "c": {"value": 13.0, "formula": "91/7", "origin": "(b3+14)/dim(K7)"}
+    }
+  },
+  "key_findings": {
+    "gift_regime": {
+      "description": "Regime where GIFT ratios are valid",
+      "gamma_range": [0, 75000],
+      "zero_index_range": [0, 100000],
+      "match_percentage": 2.0,
+      "verdict": "MATCH"
+    },
+    "transition_regime": {
+      "description": "Regime where coefficients drift",
+      "gamma_range": [75000, 500000],
+      "behavior": "continuous drift from GIFT values"
+    },
+    "asymptotic_regime": {
+      "description": "Regime with different coefficient structure",
+      "gamma_range": [500000, null],
+      "match_percentage": 127.1,
+      "verdict": "DIFFERENT",
+      "notable": "a_27 becomes negative"
+    }
+  },
+  "critical_point": {
+    "gamma_critical": 542655,
+    "description": "Point where a_27 changes sign",
+    "approximations": {
+      "gift_product": {
+        "formula": "1007 × b3 × dim(K7)",
+        "value": 542773,
+        "error_pct": 0.02
+      }
+    },
+    "factor_1007": {
+      "prime_factorization": "19 × 53",
+      "gift_expressions": [
+        {"formula": "H* × 10 + 17", "expansion": "99 × 10 + 17 = 1007"},
+        {"formula": "b3 × 13 + 6", "expansion": "77 × 13 + 6 = 1007"},
+        {"formula": "dim(E8) × 4 + 15", "expansion": "248 × 4 + 15 = 1007"}
+      ],
+      "interpretation": "No clean GIFT expression found"
+    }
+  },
+  "window_analysis": {
+    "parameters": {
+      "window_size": 50000,
+      "step_size": 50000,
+      "stable_start_ratio": 0.7
+    },
+    "results": [
+      {
+        "window": "zeros6[:100k]",
+        "gamma_mid": 37500,
+        "coefficients": {"a_5": 0.1038, "a_8": 0.1997, "a_13": 0.2594, "a_27": 0.4371, "c": 13.045},
+        "error_unfolded": 0.2648,
+        "gift_match_pct": 2.0
+      },
+      {
+        "window": "zeros6[100k:200k]",
+        "gamma_mid": 102500,
+        "coefficients": {"a_5": 0.2032, "a_8": 0.0817, "a_13": 0.2429, "a_27": 0.4721, "c": 12.233},
+        "error_unfolded": 0.2664,
+        "gift_match_pct": 34.0
+      },
+      {
+        "window": "zeros6[-100k:]",
+        "gamma_mid": 1050000,
+        "coefficients": {"a_5": 0.3232, "a_8": 0.3532, "a_13": 0.5400, "a_27": -0.2163, "c": 3.157},
+        "error_unfolded": 0.3166,
+        "gift_match_pct": 127.1
+      }
+    ]
+  },
+  "lag_comparison": {
+    "regime_small_gamma": {
+      "gamma_range": [0, 100000],
+      "best_lags": [5, 8, 13, 27],
+      "errors": {
+        "[5,8,13,27]": 0.2648,
+        "[1,2,3,4]": 0.2884,
+        "[3,5,8,13]": 0.2922
+      }
+    },
+    "regime_large_gamma": {
+      "gamma_range": [600000, 1100000],
+      "best_lags": [1, 2, 3, 4],
+      "errors": {
+        "[5,8,13,27]": 0.3166,
+        "[1,2,3,4]": 0.2942,
+        "[3,5,8,13]": 0.3117
+      }
+    }
+  },
+  "oscillation_analysis": {
+    "coefficient": "a_8",
+    "peaks_gamma": [988377, 1092948],
+    "troughs_gamma": [123714, 1066887],
+    "estimated_period": 104571,
+    "confidence": "LOW - only 2 cycles observed"
+  },
+  "interpretations": {
+    "conservative": "GIFT ratios are numerical coincidence in small-gamma regime",
+    "moderate": "GIFT describes IR fixed point, coefficients flow to UV fixed point",
+    "speculative": "First 100k zeros encode K7/E8/G2 geometry, transition marks phase change"
+  },
+  "open_questions": [
+    "Why gamma_critical ~ 542,655?",
+    "Is a_8 oscillation real?",
+    "What are asymptotic coefficient values?",
+    "Connection to GUE statistics?",
+    "Do L-functions show same behavior?"
+  ],
+  "recommendations": {
+    "high_priority": [
+      "Test L-functions with >10k zeros",
+      "Compare with GUE predictions"
+    ],
+    "medium_priority": [
+      "Extend analysis beyond 2M zeros",
+      "Fit coefficient evolution to analytic functions",
+      "Search literature for gamma ~ 542,655"
+    ]
+  }
+}
