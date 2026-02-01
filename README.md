@@ -200,7 +200,7 @@ Their appearance suggests structural rather than coincidental relationships.
 
 | Repository | Description |
 |------------|-------------|
-| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4), K₇ metric pipeline |
+| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4), K₇ metric pipeline, giftpy |
 
 ---
 

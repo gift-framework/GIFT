@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document describes the Lean 4 and Coq formalization of the GIFT framework, which derives Standard Model parameters from topological invariants. The formalization verifies 180+ exact relations connecting geometric data (Betti numbers, Lie algebra dimensions, cohomological invariants) to physical observables (mixing angles, mass ratios, coupling constants). The verification uses only standard axioms with zero domain-specific assumptions, demonstrating that machine-checked proofs can provide audit trails for theoretical physics claims.
+This document describes the Lean 4 formalization of the GIFT framework, which derives Standard Model parameters from topological invariants. The formalization verifies ~330 exact relations connecting geometric data (Betti numbers, Lie algebra dimensions, cohomological invariants) to physical observables (mixing angles, mass ratios, coupling constants). The verification uses only standard axioms with zero domain-specific assumptions, demonstrating that machine-checked proofs can provide audit trails for theoretical physics claims.
 
 ## 1. The Verification Challenge
 
@@ -36,11 +36,10 @@ The GIFT formalization focuses on the first three categories: algebraic data (E�
 
 ### 2.1 Scope
 
-The formalization covers 180+ exact relations verified in both Lean 4 (with Mathlib 4.14+) and Coq (version 8.18). Dual verification in independent proof assistants provides additional confidence: a bug in one system would not reproduce in the other.
+The formalization covers ~330 exact relations verified in Lean 4 (with Mathlib 4.27+).
 
 **Critical property**: The proofs use zero domain-specific axioms. The only axioms employed are:
-- Lean: `propext` (propositional extensionality), `Quot.sound` (quotient soundness) - both standard
-- Coq: Standard library axioms only
+- `propext` (propositional extensionality), `Quot.sound` (quotient soundness) - both standard Lean axioms
 
 No axiom asserts "the universe has E₈×E₈ gauge symmetry" or "there exists a G₂ manifold with these Betti numbers." The proofs show only that *given* such topological inputs, the physical relations follow by pure computation.
 
@@ -60,9 +59,10 @@ The Lean formalization is organized as follows:
 | `GIFT.Relations.IrrationalSector` | Golden ratio bounds | Transcendental relations |
 | `GIFT.Relations.ExceptionalGroups` | F₄, E₆, E₈ connections | Exceptional group relations |
 | `GIFT.Relations.BaseDecomposition` | Topological decompositions | Structure B base relations |
-| `GIFT.Certificate` | Master theorem | `all_75_relations_certified` |
-
-The Coq formalization maintains parallel structure with 21 modules.
+| `GIFT.Spectral` | Spectral theory, mass gap λ₁ = 14/99 | Spectral relations |
+| `GIFT.Zeta` | GIFT-Zeta correspondences | Zeta connections |
+| `GIFT.Moonshine` | Monster group connections | Moonshine relations |
+| `GIFT.Certificate` | Master theorem | `all_relations_certified` |
 
 ### 2.3 What is Actually Proven
 
@@ -124,27 +124,17 @@ The formalization does not establish:
 - 0 domain-specific axioms
 - Full CI pipeline ensures all proofs compile
 
-### 3.2 Coq Implementation
-
-**Version**: Coq 8.18
-
-**Modules**: 21 files
-
-**Parallel structure**: Each Lean theorem has a Coq counterpart
-
-**Verification statistics**:
-- 0 `Admitted` (incomplete proof markers)
-- 0 domain-specific axioms
-
-### 3.3 Verification Statistics
+### 3.2 Verification Statistics
 
 | Metric | Value |
 |--------|-------|
-| Total relations verified | 180+ |
-| Proof assistants | 2 (Lean 4, Coq) |
+| Total relations verified | ~330 |
+| Proof assistant | Lean 4 (Mathlib 4.27+) |
 | Domain axioms | 0 |
-| Incomplete proofs | 0 |
+| Incomplete proofs (`sorry`) | 0 |
 | CI status | Passing |
+
+*Note: Earlier versions (v2.3–v3.0) maintained parallel Coq verification. As of v3.3, Coq has been archived and Lean 4 is the sole verification system.*
 
 ## 4. Methodological Implications
 
@@ -183,23 +173,18 @@ All proofs are publicly available:
 ```
 core/
 ├── Lean/
-│   ├── GIFT/
-│   │   ├── Algebra.lean
-│   │   ├── Topology.lean
-│   │   ├── Relations/
-│   │   │   ├── GaugeSector.lean
-│   │   │   ├── NeutrinoSector.lean
-│   │   │   ├── LeptonSector.lean
-│   │   │   ├── YukawaDuality.lean
-│   │   │   └── ...
-│   │   └── Certificate.lean
-│   └── lakefile.lean
-└── Coq/
-    ├── GIFT/
-    │   ├── Algebra.v
-    │   ├── Topology.v
-    │   └── ...
-    └── _CoqProject
+│   └── GIFT/
+│       ├── Core.lean            # Constants (dim_E8, b2, b3, H*, ...)
+│       ├── Certificate.lean     # Master theorem (~330 relations)
+│       ├── Foundations/         # E8 roots, G2 cross product
+│       ├── Geometry/            # DG-ready differential geometry
+│       ├── Spectral/            # Spectral theory, mass gap
+│       ├── Zeta/                # GIFT-Zeta correspondences
+│       ├── Moonshine/           # Monster group connections
+│       ├── Relations/           # Physical predictions
+│       └── ...
+├── gift_core/                   # Python package (giftpy)
+└── blueprint/                   # Mathematical documentation
 ```
 
 ### 5.2 Verification
@@ -212,22 +197,15 @@ cd core/Lean
 lake build
 ```
 
-To verify the Coq proofs:
-
-```bash
-cd core/Coq
-make
-```
-
-Both should complete without errors on standard installations.
+This should complete without errors on a standard Lean 4 installation.
 
 ### 5.3 Continuous Integration
 
-The repository maintains CI pipelines that rebuild all proofs on each commit. Green build status indicates all theorems verify with current Mathlib/Coq versions.
+The repository maintains CI pipelines that rebuild all proofs on each commit. Green build status indicates all theorems verify with current Mathlib version.
 
 ## 6. Summary
 
-The GIFT formalization demonstrates that machine-verified proofs can apply to theoretical physics. The 180+ relations connecting E₈×E₈ and K₇ topology to Standard Model observables have been proven in both Lean 4 and Coq, using zero domain-specific axioms.
+The GIFT formalization demonstrates that machine-verified proofs can apply to theoretical physics. The ~330 relations connecting E₈×E₈ and K₇ topology to Standard Model observables have been proven in Lean 4, using zero domain-specific axioms.
 
 This establishes internal consistency: given the stated topological inputs, the physical relations follow by pure computation. Whether the inputs describe physical reality remains an empirical question, to be addressed by experiments like DUNE's measurement of δ_CP.
 

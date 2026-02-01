@@ -204,7 +204,7 @@ for effective torsion that remain under investigation"
 
 ### gift-framework/core
 - Formal proofs (Lean 4)
-- Python package `gift_core`
+- Python package `giftpy`
 - Blueprint documentation
 - CI/CD workflows
 

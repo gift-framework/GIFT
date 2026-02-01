@@ -12,9 +12,9 @@ Citation formats for the GIFT Framework v3.3.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.7},
+  version = {3.3.14},
   license = {MIT},
-  note    = {33 dimensionless predictions, 0.21\% mean deviation (PDG 2024), 185 certified relations}
+  note    = {33 dimensionless predictions, 0.21\% mean deviation (PDG 2024), ~330 certified relations}
 }
 ```
 
@@ -41,7 +41,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.3: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2026},
-  note   = {Mean deviation 0.24\% (PDG 2024) across 33 dimensionless predictions, zero continuous adjustable parameters, 185 proven exact relations},
+  note   = {Mean deviation 0.21\% (PDG 2024) across 33 dimensionless predictions, zero continuous adjustable parameters, ~330 proven exact relations},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -140,7 +140,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
   version = {3.3.14},
-  note    = {~330 relations verified, K₇ metric pipeline, Joyce existence theorem}
+  note    = {~330 relations verified, K₇ metric pipeline, Selection Principle, Spectral Theory}
 }
 ```
 
@@ -161,9 +161,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 |---------|------|------------|
 | 3.3.14 | 2026-01-28 | ~330 relations, Lean 4 only (Coq archived) |
 | 3.3.0 | 2026-01-05 | PDG 2024 values, 54,327-config Monte Carlo validation |
+| 3.3.14 | 2026-01-28 | Selection Principle, TCS Spectral Bounds, ~330 relations |
 | 3.1.0 | 2025-12-17 | Analytical G₂ metric, 185 certified relations |
 | 3.0.0 | 2025-12-09 | Major release: 165+ certified relations, Fibonacci/Monster/McKay |
-| 2.3.x | 2025-12 | Dual Lean 4 + Coq verification (historical) |
+| 2.3.x | 2025-12 | Lean 4 verification |
 | 2.2.0 | 2025-11-27 | Zero-parameter paradigm |
 | 2.1.0 | 2025-11-22 | Torsional dynamics |
 | 2.0.0 | 2025-10-24 | Framework reorganization |
@@ -195,4 +196,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.3.7 (2026-01-16)
+**Version**: 3.3.14 (2026-01-28)

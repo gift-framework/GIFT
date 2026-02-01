@@ -613,6 +613,8 @@ $$\boxed{L_8 = \alpha_{sum}^B + d_{hidden} = 13 + 34 = 47}$$
 
 The Lucas number at E₈ rank decomposes as the sum of two independent GIFT constants.
 
+**Structural interpretation**: The anomaly coefficient F₇ = 13 controls gauge structure (appearing in sin²θ_W = 3/13), while F₉ = 34 = b₃ − 2b₂ − 1 encodes the hidden sector degrees of freedom. Their sum L₈ mediates between the cohomological scale H* = 99 and the dimensional F₄ gap.
+
 **Reason 3: Dimensional consistency**
 
 Using F8 = 21 would give H* - F8 = 99 - 21 = 78 = dim(E6), yielding exp(-78) = 10^-34 and m_e = 10^-12 MeV, orders of magnitude too small.
@@ -1058,6 +1060,45 @@ $$n_s = \frac{1.000494...}{1.036928...} = 0.9649$$
 | n_s | 0.9649 | 0.9649 ± 0.0042 | **0.00%** |
 
 **Status**: VERIFIED (exact match)
+
+---
+
+## 24b. Numerical Observation: Riemann Zeros and Topology
+
+┌─────────────────────────────────────────────────────────────┐
+│  **EMPIRICAL OBSERVATION**                                   │
+│                                                              │
+│  The following patterns are numerical findings, not          │
+│  theoretical predictions. Physical significance unknown.     │
+└─────────────────────────────────────────────────────────────┘
+
+### 24b.1 Proximity to GIFT Constants
+
+The first Riemann zeta zeros show numerical proximity to GIFT topological invariants:
+
+| Zero | Value | Nearest integer | GIFT constant | Deviation |
+|------|-------|-----------------|---------------|-----------|
+| γ₁ | 14.135 | 14 | dim(G₂) | 0.96% |
+| γ₂ | 21.022 | 21 | b₂ | 0.10% |
+| γ₂₀ | 77.145 | 77 | b₃ | 0.19% |
+| γ₂₉ | 98.831 | 99 | H* | 0.17% |
+| γ₁₀₇ | 248.102 | 248 | dim(E₈) | 0.04% |
+
+### 24b.2 Spectral Hypothesis Barrier
+
+A direct spectral interpretation γₙ = λₙ × H* is **incompatible** with Weyl's law: for 7-dimensional compact manifolds, Laplacian eigenvalues grow as λₙ ~ n^{2/7}, while Riemann zeros grow as γₙ ~ n/ln(n).
+
+### 24b.3 Connection to n_s Formula
+
+The spectral index formula n_s = ζ(11)/ζ(5) already involves the zeta function. The proximity of early zeros to GIFT constants may reflect a deeper relationship between:
+
+- ζ(s) analytic structure
+- K₇ cohomological invariants
+- E₈ × E₈ gauge structure
+
+**Status**: OBSERVATION — no theoretical derivation exists.
+
+See [publications/references/NUMBER_THEORETIC_STRUCTURES.md](../references/NUMBER_THEORETIC_STRUCTURES.md) for extended discussion.
 
 ---
 

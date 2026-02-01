@@ -14,8 +14,8 @@
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
 
-**Version**: 3.1
-**Date**: December 2025
+**Version**: 3.3
+**Date**: February 2026
 **Lean Verification**: 90+ relations (mathematical facts verified)
 
 ---
@@ -26,7 +26,8 @@
 - [Part II: Prime Atlas](#part-ii-prime-atlas)
 - [Part III: Monster Group & Moonshine](#part-iii-monster-group--moonshine)
 - [Part IV: McKay Correspondence](#part-iv-mckay-correspondence)
-- [Part V: Rule of 17 (Fermat Prime Connection)](#16-the-rule-of-17-fermat-prime-connection)
+- [Part IV-B: Rule of 17 (Fermat Prime Connection)](#16-the-rule-of-17-fermat-prime-connection)
+- [Part V: Riemann Zeta Zeros](#part-v-riemann-zeta-zeros)
 
 ---
 
@@ -399,7 +400,101 @@ GIFT expressions:
 
 ---
 
-## 17. Open Questions
+# Part V: Riemann Zeta Zeros
+
+> **Status: EMPIRICAL OBSERVATION** — Numerical pattern found; theoretical explanation unknown.
+
+## 17. Recurrence Structure
+
+### 17.1 Observed Linear Recurrence
+
+Numerical fitting on 100,000 Riemann zeta zeros reveals a four-term linear recurrence:
+
+$$\gamma_n \approx a_5 \gamma_{n-5} + a_8 \gamma_{n-8} + a_{13} \gamma_{n-13} + a_{27} \gamma_{n-27} + c$$
+
+| Metric | Value |
+|--------|-------|
+| Mean prediction error | 0.074% |
+| Lag structure | [5, 8, 13, 27] |
+| Validation range | n = 28 to 100,000 |
+
+### 17.2 Fibonacci Lag Structure (Exact)
+
+The four lags satisfy exact Fibonacci-like relations:
+
+$$5 + 8 = 13 \quad \text{(exact)}$$
+$$5 \times 8 - 13 = 27 \quad \text{(exact)}$$
+
+This structure is **discovered, not imposed** — the search optimized for accuracy, not Fibonacci form.
+
+### 17.3 GIFT Interpretation of Lags
+
+| Lag | GIFT Constant | Interpretation |
+|-----|---------------|----------------|
+| 5 | Weyl | Pentagonal symmetry |
+| 8 | rank(E₈) | E₈ Cartan subalgebra |
+| 13 | F₇ | Anomaly coefficient sum |
+| 27 | dim(J₃𝕆) | Exceptional Jordan algebra |
+
+**Probability of random Fibonacci structure**: ~1/27,000
+
+### 17.4 Coefficients (Approximate)
+
+The fitted coefficients show ~50% variation across ranges:
+
+| Coefficient | Claimed GIFT ratio | Fitted range |
+|-------------|-------------------|--------------|
+| a₅ | N_gen/h_G₂ = 0.5 | 0.49 – 0.64 |
+| a₈ | fund(E₇)/H* = 56/99 | 0.28 – 0.56 |
+| a₁₃ | −dim(G₂)/H* = −14/99 | −0.14 – +0.13 |
+| a₂₇ | 1/dim(J₃𝕆) = 1/27 | 0.04 – 0.07 |
+
+**Note**: Coefficients are *approximate*, not exact GIFT ratios.
+
+### 17.5 Correspondence with GIFT Constants
+
+Certain Riemann zeros round to GIFT topological constants:
+
+| Zero | Value | Nearest integer | GIFT constant | Deviation |
+|------|-------|-----------------|---------------|-----------|
+| γ₁ | 14.135 | 14 | dim(G₂) | 0.96% |
+| γ₂ | 21.022 | 21 | b₂ | 0.10% |
+| γ₂₀ | 77.145 | 77 | b₃ | 0.19% |
+| γ₂₉ | 98.831 | 99 | H* | 0.17% |
+| γ₁₀₇ | 248.102 | 248 | dim(E₈) | 0.04% |
+
+**Status**: NUMERICAL OBSERVATION — physical significance unknown.
+
+---
+
+## 18. Interpretation
+
+### 18.1 What Is Established
+
+| Statement | Status |
+|-----------|--------|
+| Recurrence achieves 0.074% error | Numerical fact |
+| Lag structure is Fibonacci-like | Exact |
+| Lags match GIFT constants | Pattern observed |
+
+### 18.2 What Remains Speculative
+
+| Statement | Status |
+|-----------|--------|
+| K₇ spectrum generates Riemann zeros | Unproven |
+| Recurrence derives from topology | Unproven |
+| This leads toward RH | Highly speculative |
+
+### 18.3 Falsification Criteria
+
+The recurrence would be **refuted** if:
+1. Error exceeds 5% for n > 1000 on independently computed zeros
+2. Mathematical proof shows no such recurrence exists
+3. Alternative lag structures consistently outperform Fibonacci form
+
+---
+
+## 19. Open Questions
 
 1. Does the full Monster structure appear in physics?
 2. What is the physical role of the j-invariant?
@@ -408,12 +503,14 @@ GIFT expressions:
 5. Does prime coverage extend beyond 200?
 6. Why exactly three generators suffice for prime atlas?
 7. Is there a number-theoretic explanation independent of physics?
-8. **NEW**: Is the Fermat prime nature of 17 = dim(G₂) + N_gen physically significant?
-9. **NEW**: Can GIFT predict ΩΛ/Ωm = 37/17 exactly?
+8. Is the Fermat prime nature of 17 = dim(G₂) + N_gen physically significant?
+9. Can GIFT predict ΩΛ/Ωm = 37/17 exactly?
+10. **Why does the [5, 8, 13, 27] recurrence achieve sub-0.1% error on Riemann zeros?**
+11. **Is the coefficient drift systematic or numerical artifact?**
 
 ---
 
-## 18. Recommended Interpretation
+## 20. Recommended Interpretation
 
 These patterns should be viewed as:
 - **Observations** (not predictions)

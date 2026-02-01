@@ -1255,6 +1255,39 @@ The topological constants satisfy interconnected identities:
 
 These relations form a closed algebraic system. The mod-7 structure (dim(K₇) = 7 divides dim(G₂), b₂, b₃, PSL(2,7)) reflects the Fano plane underlying octonion multiplication.
 
+### 24.6 Fibonacci-Lucas Embedding
+
+The GIFT constants embed naturally into the Fibonacci (Fₙ) and Lucas (Lₙ) sequences:
+
+| n | Fₙ | GIFT Constant | Role |
+|---|-----|---------------|------|
+| 3 | 2 | p₂ | Pontryagin class |
+| 4 | 3 | N_gen | Fermion generations |
+| 5 | 5 | Weyl | Pentagonal symmetry |
+| 6 | 8 | rank(E₈) | Cartan subalgebra |
+| 7 | 13 | α²_B sum | Structure coefficient |
+| 8 | 21 | b₂ | Second Betti number |
+
+This sequence propagates via the recurrence:
+
+$$F_3 + F_4 = F_5 \quad \Rightarrow \quad p_2 + N_{gen} = \text{Weyl}$$
+
+Lucas numbers appear in the scale bridge (S3, Section 12):
+
+| Lₙ | Value | GIFT Role |
+|----|-------|-----------|
+| L₄ | 7 | dim(K₇) |
+| L₅ | 11 | D_bulk |
+| L₈ | 47 | Scale bridge exponent |
+
+The Lucas identity L₈ = F₇ + F₉ = 13 + 34 decomposes as:
+
+$$L_8 = \alpha_{sum}^B + d_{hidden} = 13 + 34 = 47$$
+
+This structure reflects the icosahedral geometry underlying the McKay correspondence E₈ ↔ 2I, where icosahedral coordinates involve the golden ratio φ = lim(Fₙ₊₁/Fₙ).
+
+**Status**: PATTERN (mathematical fact; physical significance unclear)
+
 ---
 
 ## References
