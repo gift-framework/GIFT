@@ -388,6 +388,30 @@ Conserved along flow:
 - Holonomy charges around non-contractible loops
 - Cohomology class representatives
 
+### 8.3 Spectral Gap and Confinement Scale
+
+The spectral gap λ₁ of the Laplace-Beltrami operator on K₇ provides a natural scale for the compactified geometry:
+
+$$\lambda_1 = \frac{\dim(G_2)}{H^*} = \frac{14}{99}$$
+
+For a compactification with characteristic radius R, the dimensionful spectral gap becomes:
+
+$$\Lambda_{\text{spec}} = \frac{\lambda_1}{R^2} = \frac{14}{99 R^2}$$
+
+This scale relates to the confinement scale in the effective 4D theory. If the compactification occurs at the TeV scale (R ~ 10⁻¹⁷ cm), then:
+
+$$\sqrt{\Lambda_{\text{spec}}} \sim \mathcal{O}(\text{GeV})$$
+
+This is consistent with QCD confinement scales. The spectral gap provides a geometric origin for the mass gap in Yang-Mills theory through dimensional reduction.
+
+**Numerical relation**: The identity dim(G₂)/√2 ≈ π² (to 0.3%) suggests the spectral gap may be expressed as:
+
+$$\lambda_1 \approx \frac{\pi^2 \sqrt{2}}{H^*}$$
+
+The appearance of π² is natural for Laplacian eigenvalues on compact domains.
+
+**Status**: THEORETICAL (geometric mechanism proposed; quantitative predictions require metric normalization)
+
 ---
 
 # Part III: The Scale Bridge

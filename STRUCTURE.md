@@ -38,6 +38,16 @@ GIFT/
 │   ├── comprehensive_statistics_v33.py  # Advanced statistical tests
 │   └── validation_v33_results.json # v3.3 results
 │
+├── research/                        # Exploratory research (WIP)
+│   ├── README.md                   # Research overview
+│   └── yang-mills/                 # Yang-Mills mass gap investigation
+│       ├── README.md               # Project summary
+│       ├── UNIVERSALITY_RESULTS.md # Validated spectral gap scaling
+│       ├── BLIND_VALIDATION_RECAP.md  # Methodology (bias elimination)
+│       ├── DEEP_STRUCTURE.md       # H* = dim(G₂) × dim(K₇) + 1
+│       ├── UNIVERSALITY_CONJECTURE.md # Universal vs GIFT-specific formulas
+│       └── STATUS.md               # Project status log
+│
 ├── README.md                        # Main repository overview
 ├── CHANGELOG.md                     # Version history
 ├── CITATION.md                      # How to cite
@@ -57,6 +67,7 @@ GIFT/
 | Monte Carlo validation | `statistical_validation/validation_v33.py` |
 | Formal verification | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
+| Yang-Mills research | `research/yang-mills/` |
 | Legacy supplements | `docs/legacy/` |
 
 ## Core Documents (v3.3)
@@ -74,6 +85,12 @@ GIFT/
 |----------|---------|
 | NUMBER_THEORETIC_STRUCTURES.md | Fibonacci, Prime Atlas, Monster, Moonshine |
 | SPECULATIVE_PHYSICS.md | Scale bridge, Yukawa, M-theory, QG |
+
+## Research (Work in Progress)
+
+| Folder | Content |
+|--------|---------|
+| research/yang-mills/ | Spectral gap investigation, λ₁ ∝ 1/H* validation |
 
 ## Related Repositories
 

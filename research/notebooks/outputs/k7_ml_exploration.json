@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "timestamp": "2026-01-25T17:32:53.638081",
+    "notebook": "K7_ML_Exploration.ipynb"
+  },
+  "training": {
+    "epochs": 500,
+    "final_loss": 0.5371136665344238,
+    "final_lambda1_H": 115.60848927497864
+  },
+  "metric_stats": {
+    "det_g_mean": 2.031249523162842,
+    "det_g_std": 7.731528626209183e-07,
+    "anisotropy_mean": 1.0,
+    "anisotropy_max": 1.0,
+    "deviation_mean": 1.5457759348557215e-07,
+    "deviation_max": 1.9399527141417782e-07
+  },
+  "regional_analysis": {
+    "neck_anisotropy": 1.0,
+    "bulk_anisotropy": 1.0
+  },
+  "insights": {
+    "tcs_adequate": true,
+    "mostly_isotropic": true,
+    "neck_differs": false
+  }
+}

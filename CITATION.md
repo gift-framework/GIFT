@@ -159,6 +159,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.3.14 | 2026-01-28 | ~330 relations, Lean 4 only (Coq archived) |
 | 3.3.0 | 2026-01-05 | PDG 2024 values, 54,327-config Monte Carlo validation |
 | 3.3.14 | 2026-01-28 | Selection Principle, TCS Spectral Bounds, ~330 relations |
 | 3.1.0 | 2025-12-17 | Analytical G₂ metric, 185 certified relations |

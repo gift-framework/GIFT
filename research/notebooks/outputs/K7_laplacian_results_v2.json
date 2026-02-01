@@ -1,0 +1,30 @@
+{
+  "config": {
+    "N": 3000,
+    "k": 15,
+    "H_star": 99,
+    "dim_G2": 14,
+    "scale_factor": 11.972529942074347,
+    "gpu_used": true,
+    "gift_core_loaded": false
+  },
+  "scalar_laplacian": {
+    "lambda1_raw": 0.30826215163755216,
+    "lambda1_scaled": 3.690677840488856,
+    "product": 365.37710620839675,
+    "deviation_from_13": 2710.593124679975,
+    "deviation_from_14": 2509.83647291712,
+    "time_seconds": 0.23023486137390137
+  },
+  "1form_laplacian": {
+    "lambda1_raw": 0.3044237633470405,
+    "lambda1_scaled": 3.6447226217513977,
+    "product": 360.82753955338836,
+    "deviation_from_13": 2675.5964581029875,
+    "deviation_from_14": 2477.3395682384885,
+    "time_seconds": 2.1502504348754883,
+    "n_edges": 26203
+  },
+  "winner": "Delta_1",
+  "best_target": 14
+}

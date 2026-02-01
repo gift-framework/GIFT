@@ -13,12 +13,20 @@ Exploratory and reference documents for the GIFT framework v3.3.
 | [39_observables.csv](39_observables.csv) | Machine-readable observable data |
 | [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities) |
 
+### Independent Validations
+
+| Document | Content | Status |
+|----------|---------|--------|
+| [INDEPENDENT_VALIDATIONS.md](INDEPENDENT_VALIDATIONS.md) | External research converging with GIFT | Active |
+| [STATISTICAL_EVIDENCE.md](STATISTICAL_EVIDENCE.md) | 78+ relations, deviation analysis, duality patterns | Active |
+
 ### Exploratory References
 
 | Document | Content | Status |
 |----------|---------|--------|
 | [SPECULATIVE_PHYSICS.md](SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity | Exploratory/Speculative |
 | [NUMBER_THEORETIC_STRUCTURES.md](NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine | Pattern Recognition |
+| [RIEMANN_FIRST_DERIVATION.md](RIEMANN_FIRST_DERIVATION.md) | Riemann zeros → Topology → Physics derivation | Speculative |
 
 ---
 
