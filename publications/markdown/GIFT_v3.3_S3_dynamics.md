@@ -122,7 +122,27 @@ The value κ_T = 1/61 represents the geometric "capacity" for such dynamical def
 
 ## 2. Torsion Magnitude κ_T = 1/61
 
-### 2.1 Topological Derivation
+### 2.1 The Variational Formulation
+
+The torsion-free condition for G₂ holonomy manifolds can be expressed as a variational principle:
+
+$$\boxed{\Theta_{G_2} := \|\nabla\phi\|^2 - \kappa_T \|\phi\|^2 = 0}$$
+
+where:
+- φ = associative 3-form (defines G₂ structure)
+- ∇φ = covariant derivative (measures torsion)
+- κ_T = 1/61 = topological torsion capacity
+- ‖·‖ = norm induced by the metric
+
+**Physical interpretation**: The condition Θ_G₂ = 0 states that the covariant variation of the G₂ structure is exactly balanced by its magnitude, scaled by the topological capacity. This is a variational equilibrium: the 3-form neither grows nor decays under parallel transport.
+
+**Euler-Lagrange formulation**: Treating Θ_G₂ as a Lagrangian, the Euler-Lagrange equations yield:
+
+$$\nabla^2 \phi_{ijk} = \kappa_T \phi_{ijk}$$
+
+This is an eigenvalue equation: the 3-form is an eigenform of the Laplacian with eigenvalue κ_T = 1/61.
+
+### 2.2 Topological Derivation
 
 **The magnitude κ_T is derived from cohomological structure**:
 
@@ -137,7 +157,7 @@ $$\boxed{\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \f
 | p₂ | 2 | Binary duality factor |
 | **61** | **77 - 14 - 2** | **Net torsion degrees of freedom** |
 
-### 2.2 The Number 61
+### 2.3 The Number 61
 
 The inverse torsion capacity 61 admits multiple decompositions:
 
@@ -147,7 +167,7 @@ $$61 = b_3 - b_2 + \text{Weyl} = 77 - 21 + 5$$
 
 $$61 = \text{prime}(18)$$
 
-### 2.3 Critical Distinction: Capacity vs Base Solution
+### 2.4 Critical Distinction: Capacity vs Base Solution
 
 ┌─────────────────────────────────────────────────────────────┐
 │  **IMPORTANT**                                              │
@@ -167,7 +187,7 @@ $$61 = \text{prime}(18)$$
 
 **Status**: TOPOLOGICAL (capacity bounds deviations from torsion-free base)
 
-### 2.4 Compatibility with Cosmological Constraints
+### 2.5 Compatibility with Cosmological Constraints
 
 Recent analyses using BAO data to constrain Einstein-Cartan torsion cosmology find bounds of order |T|² < 10⁻³ at 95% CL. For example, Iosifidis et al. (2024) "Cosmological constraints on torsion parameters from BAO and CMB data" (EPJC 84, 1067) uses Planck+BAO data; similar analyses incorporating DESI DR1/DR2 data yield comparable bounds.
 
@@ -208,6 +228,20 @@ The small but non-zero torsion enables:
 - Gauge interactions between sectors
 - Mass generation via geometric coupling
 - CP violation through torsional twist
+
+### 3.3 Moduli Space of Torsion-Free G₂ Structures
+
+The space of torsion-free G₂ structures on K₇ forms a moduli space $\mathcal{M}$:
+
+$$\dim(\mathcal{M}) = b_3(K_7) = 77$$
+
+Each point in $\mathcal{M}$ represents a different torsion-free metric satisfying Θ_G₂ = 0. The moduli space has dimension equal to the third Betti number—a fundamental topological invariant.
+
+**Perturbation analysis**: Small perturbations φ → φ + δφ satisfy the linearized condition:
+
+$$\langle \nabla\phi, \nabla\delta\phi \rangle = \kappa_T \langle \phi, \delta\phi \rangle$$
+
+This determines the allowed perturbation directions in the moduli space, constrained by the topological capacity κ_T = 1/61.
 
 ---
 

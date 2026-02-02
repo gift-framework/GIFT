@@ -5,6 +5,37 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.15] - 2026-02-02
+
+### Research Integration Release
+
+This release integrates theoretical developments from `/research/` into the main publications, providing rigorous foundations for the torsion-free condition and metric structure.
+
+#### Added
+
+**S1 Foundations — Spectral Structure**
+- Section 7.4: Continued fraction representation λ₁ = [0; 7, 14] with dim(K₇) and dim(G₂)
+- Section 7.5: Pell equation structure 99² − 50×14² = 1 connecting spectral gap to number theory
+- Three independent derivations of det(g) = 65/32 (Weyl, cohomological, H* formula)
+
+**S1 Foundations — Torsion Classes**
+- Complete decomposition W₁ ⊕ W₇ ⊕ W₁₄ ⊕ W₂₇ with dimension table
+- Total dimension 49 = 7² = dim(K₇)² interpretation
+
+**S3 Dynamics — Variational Formulation**
+- Section 2.1: Torsion functional Θ_G₂ := ‖∇φ‖² − κ_T‖φ‖² = 0
+- Euler-Lagrange eigenvalue equation ∇²φ = κ_T φ
+- Section 3.3: Moduli space of torsion-free G₂ structures (dim = b₃ = 77)
+- Perturbation analysis for moduli space directions
+
+#### Source Documents
+
+Integrated content from:
+- `research/K7_EXPLICIT_METRIC_ANALYTICAL.md` → S1 Sections 7.4–7.5, 10.3
+- `research/TORSION_FREE_CONDITION_ANALYSIS.md` → S3 Sections 2.1, 3.3
+
+---
+
 ## [3.3.14] - 2026-01-29
 
 ### Synchronization with gift-framework/core v3.3.14
