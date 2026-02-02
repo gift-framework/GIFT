@@ -109,29 +109,73 @@ V[n,n-27] = V[n-27,n] = β₂₇
 
 ---
 
+## Résultats Expérimentaux (2026-02-02)
+
+> **Voir**: `OPERATOR_H_RESULTS_2026-02-02.md` pour le rapport complet
+
+### Paramètres Optimaux Identifiés
+
+| Paramètre | Valeur | Note |
+|-----------|--------|------|
+| α_T | **0.1** | Cinétique faible |
+| α_V | **1.0** | Potentiel GIFT dominant |
+| β₅ | **1.0** | - |
+| β₈ | **4.5** | = 36/8 (contraint) |
+| β₁₃ | **2.769** | = 36/13 (contraint) |
+| β₂₇ | **0.037** | ≈ 1/27 = 1/dim(J₃(𝕆)) ← émerge! |
+
+### Métriques de Performance
+
+| Test | Résultat | Statut |
+|------|----------|--------|
+| Spectre H vs Zéros γₙ | **R² = 99.3%** | ✓ Fort |
+| Corrélation Pearson | **ρ = 99.65%** | ✓ Fort |
+| Erreur relative moyenne | **0.45%** | ✓ Excellent |
+| Contrainte G₂ | **0.00%** déviation | ✓ Exact |
+
+### Formule de Trace (connexion aux premiers)
+
+| Métrique | Valeur | Interprétation |
+|----------|--------|----------------|
+| Corr(Z, W) normalisés | **ρ = 97.1%** | Fort |
+| Corr(dZ/dt, dW/dt) | **ρ' = 99.7%** | Très fort |
+| Ratio Z/W constant? | CV = 106% | Non (relation non-linéaire) |
+
+**Conclusion préliminaire**: Les dérivées de Tr(e^{-tH}) et Σlog(p)/p^{t/2} sont quasi-identiques (ρ' = 99.7%), suggérant que H encode l'information sur les premiers de manière dynamique.
+
+### Avertissement
+
+Ces résultats sont **exploratoires et numériques**. Ils ne constituent pas une preuve et peuvent résulter de coïncidences statistiques ou d'artefacts méthodologiques. Voir le rapport complet pour les limitations.
+
+---
+
 ## Prochaines Étapes
 
-### Phase 1: Validation (1 semaine)
+### Phase 1: Validation ~~(1 semaine)~~ ✓ COMPLÉTÉE
 
-- [ ] Exécuter notebooks sur Colab A100 avec données Odlyzko (100k zeros)
-- [ ] Optimiser paramètres et documenter meilleure configuration
-- [ ] Tester stabilité sur différentes fenêtres de zéros
+- [x] Exécuter notebooks sur Colab A100 avec données Odlyzko (100k zeros)
+- [x] Optimiser paramètres et documenter meilleure configuration
+- [x] Tester formule de trace (connexion aux premiers)
+- [ ] Tester stabilité sur différentes fenêtres de zéros (en cours)
 
 ### Phase 2: Extension (2 semaines)
 
+- [ ] Test hors-échantillon : optimiser sur zéros 1-50k, tester sur 50k-100k
 - [ ] Étendre à 2M zéros (Odlyzko zeros6)
 - [ ] Analyser convergence des paramètres avec n
 - [ ] Tester sur autres L-functions (Dirichlet, courbes elliptiques)
+- [ ] Comparer avec opérateur aléatoire (contrôle négatif)
 
 ### Phase 3: Théorie (3 semaines)
 
 - [ ] Relier H au Laplacien de Hodge Δₚ sur K₇
-- [ ] Formule de trace: Tr(e^{-tH}) ↔ fonction ζ(s)
+- [ ] Formaliser la relation dlog(Z)/dt ≈ dlog(W)/dt
 - [ ] Formalisation Lean 4 des propriétés de H
 
 ### Phase 4: Publication
 
 - [ ] Rédiger note technique sur la construction de H
+- [ ] Peer review interne (prudence sur les claims)
 - [ ] Soumettre à arXiv (math-ph / hep-th)
 
 ---
