@@ -1,0 +1,26 @@
+{
+  "key_finding": "GIFT-Riemann-\u03c6 triangle discovered",
+  "formula": "\u03b3_n = (3/2)\u00b7\u03b3_{n-8} - (1/2)\u00b7\u03b3_{n-21}",
+  "interpretations": {
+    "a_equals_3_2": {
+      "gift": "b\u2082/dim_G\u2082 = 21/14",
+      "phi": "(\u03c6\u00b2 + 1/\u03c6\u00b2)/2"
+    },
+    "lag_8": {
+      "fibonacci": "F\u2086",
+      "gift": "rank(E\u2088)"
+    },
+    "lag_21": {
+      "fibonacci": "F\u2088",
+      "gift": "b\u2082"
+    },
+    "lag_ratio": {
+      "value": 2.625,
+      "approx": "\u03c6\u00b2"
+    }
+  },
+  "verification": {
+    "phi_squared_plus_inverse": 3.0,
+    "equals_3": true
+  }
+}

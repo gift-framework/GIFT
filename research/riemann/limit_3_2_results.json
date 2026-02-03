@@ -1,0 +1,22 @@
+{
+  "best_limit": "3/2",
+  "best_limit_value": 1.5,
+  "alternative": "2\u03c6/\u221a5",
+  "alternative_value": 1.4472135954999579,
+  "model_3_2": {
+    "beta": 3.834137594672917,
+    "rss": 0.0003360941317309404
+  },
+  "model_phi": {
+    "beta": 1.6440275449219885,
+    "rss": 0.012863686289117625
+  },
+  "rss_ratio": 38.274057993418424,
+  "interpretation": "Linear extrapolation: \u03b3_n = (3\u03b3_{n-8} - \u03b3_{n-21})/2",
+  "fibonacci_lags": [
+    8,
+    21
+  ],
+  "lag_ratio": 2.625,
+  "phi_squared": 2.618033988749895
+}

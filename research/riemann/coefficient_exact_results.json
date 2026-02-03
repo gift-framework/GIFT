@@ -1,0 +1,30 @@
+{
+  "a_observed": 1.476276870875073,
+  "b_observed": -0.47628527752730504,
+  "a_plus_b": 0.9999915933477681,
+  "a_exact_candidate": "2\u03c6/\u221a5",
+  "a_exact_value": 1.4472135954999579,
+  "b_exact_value": -0.44721359549995787,
+  "diff_a_exact_vs_observed": 0.029063275375115216,
+  "error_with_exact": 0.008320551523381696,
+  "error_with_fitted": 0.006495601544119783,
+  "c_optimal": 1.7625876430587464,
+  "continued_fraction_2phi_sqrt5": [
+    1,
+    2,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+  ],
+  "interpretation": "2\u03c6/\u221a5 = limit of 2\u00b7F_n\u00b7\u03c6/L_n = Fibonacci/Lucas ratio"
+}
