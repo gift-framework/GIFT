@@ -1,0 +1,39 @@
+{
+  "recurrence": {
+    "a": 1.4761904761904763,
+    "b": -0.47619047619047616,
+    "c": 1.7634476268636732,
+    "lags": [
+      8,
+      21
+    ],
+    "r_squared": 0.99999995731962,
+    "mean_error_pct": 0.024444423013343555
+  },
+  "gift_constants": {
+    "b2": 21,
+    "b3": 77,
+    "H_star": 99,
+    "dim_G2": 14,
+    "rank_E8": 8,
+    "p2": 2
+  },
+  "trace_formula_hypothesis": {
+    "proposed_geodesic_lengths": [
+      8,
+      14,
+      21,
+      77,
+      99
+    ],
+    "coefficient_interpretation": "31/21 = (b2 + rank_E8 + p2) / b2",
+    "density_connection": "7/8 term in Riemann-von Mangoldt ~ dim(K7)/rank(E8)"
+  },
+  "numerical_tests": {
+    "zero_sum_1000": 789669.300060408,
+    "mean_ratio_8": 1.0352796883429798,
+    "mean_ratio_21": 1.0875886126750447,
+    "phi_squared": 2.618033988749895,
+    "ratio_21_8": 2.625
+  }
+}
