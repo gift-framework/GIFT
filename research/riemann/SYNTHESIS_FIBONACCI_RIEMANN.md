@@ -170,3 +170,83 @@ Cette découverte suggère que la structure arithmétique des zéros de Riemann 
 ---
 
 *"Perhaps the zeros of zeta dance to the rhythm of Fibonacci, but settle on rational steps."*
+
+---
+
+## 7. MISE À JOUR: Connection GIFT complète
+
+### 7.1 Le coefficient comme trace de matrice
+
+```
+M = [[1,1],[1,0]]  (matrice Fibonacci)
+
+a = Trace(M²)/2 = 3/2 ✓
+```
+
+Les traces de M^k donnent les **nombres de Lucas**: L_n = φⁿ + ψⁿ
+
+### 7.2 Expressions multiples de 3/2
+
+| Expression | Valeur | Contexte |
+|------------|--------|----------|
+| b₂/dim(G₂) | 21/14 | Topologie GIFT |
+| (φ² + ψ²)/2 | 3/2 | Nombre d'or |
+| Trace(M²)/2 | 3/2 | Matrice Fibonacci |
+| (3×7)/(2×7) | 3/2 | "Le 7 s'annule" |
+
+### 7.3 sin²θ_W retrouvé
+
+```
+Lags (14, 55):  |b|/a = 0.2309 ≈ 3/13 = sin²θ_W
+
+où 14 = dim(G₂) et 55 = F₁₀
+```
+
+### 7.4 Le triangle GIFT-Riemann-φ
+
+```
+                         RIEMANN ZEROS
+                              │
+                      γ_n = a·γ_{n-8} + b·γ_{n-21}
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+                    ▼                   ▼
+               FIBONACCI              GIFT
+                    │                   │
+              8 = F₆                8 = rank(E₈)
+             21 = F₈               21 = b₂
+                    │                   │
+                    └────────┬──────────┘
+                             │
+                             ▼
+                      GOLDEN RATIO
+                             │
+                     a = Trace(M²)/2 = 3/2
+                     21/8 ≈ φ²
+```
+
+### 7.5 Hypothèse spectrale
+
+> Les zéros de Riemann possèdent une symétrie Fibonacci cachée,
+> liée à l'holonomie G₂, qui se manifeste par la récurrence
+>
+> γ_n = (Trace(M²)/2)·γ_{n-F₆} + (1 - Trace(M²)/2)·γ_{n-F₈}
+
+---
+
+## 8. Fichiers de l'investigation
+
+| Fichier | Description |
+|---------|-------------|
+| `null_model_analysis.py` | Test statistique (p=0.063) |
+| `fibonacci_deep_dive.py` | Lags Fibonacci optimaux |
+| `berry_keating_phi_connection.py` | Lien xp ↔ φ |
+| `sm_coefficient_search.py` | Constantes SM dans coefficients |
+| `gift_riemann_bridge.py` | Pont GIFT-Riemann |
+| `spectral_hypothesis.py` | Hypothèse trace/spectrale |
+| `test_limit_3_2.py` | Preuve limite = 3/2 |
+
+---
+
+*Dernière mise à jour: 2026-02-03*
