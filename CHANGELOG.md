@@ -5,6 +5,45 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.16] - 2026-02-03
+
+### Riemann Connection Validation Release
+
+This release adds rigorous statistical validation of the Riemann-GIFT connection and documents results with full transparency.
+
+#### Added
+
+**Ultra-Rigorous Riemann Validation** (`statistical_validation/riemann_rigorous_validation.py`)
+- 8 independent statistical tests: Sobol, rational uniqueness, lag search, fluctuation analysis, permutation, null distribution, bootstrap, R² decomposition
+- Tests 10,000 Sobol samples, 740,000 rational pairs, 595 lag pairs, 3,000 null sequences
+- Runtime: ~15 minutes on modern CPU
+
+**S3 Appendix A: Riemann Zeta Connection (Exploratory)**
+- Complete documentation of validation results with honest caveats
+- Status classification: EXPLORATORY / PRELIMINARY
+- Clear separation from the 33 validated dimensionless predictions
+
+#### Key Findings
+
+| Test | Result | Implication |
+|------|--------|-------------|
+| R² Decomposition | 99.9% from trend | High R² is density artifact |
+| Rational Uniqueness | 625 beat GIFT | 31/21 is not optimal |
+| Lag Space Search | Rank #213/595 | (8,21) are not special |
+| Bootstrap Stability | CV = 46% | Coefficients unstable |
+
+**What IS validated**:
+- Riemann distinct from random perturbations (14σ)
+- Coefficient closer to GIFT than 99.5% of null
+
+**Verdict**: WEAK EVIDENCE — treat as preliminary observation
+
+#### Documentation Updates
+- Updated `statistical_validation/README.md` with Riemann validation section
+- S3 Table of Contents updated to include Appendix A
+
+---
+
 ## [3.3.15] - 2026-02-02
 
 ### Research Integration Release

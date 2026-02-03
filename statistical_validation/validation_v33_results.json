@@ -1,6 +1,6 @@
 {
   "version": "3.3",
-  "date": "2026-01-12 14:17:36",
+  "date": "2026-02-03 22:42:34",
   "reference": {
     "config": {
       "name": "GIFT_E8xE8_K7",
@@ -276,6 +276,6 @@
     "significance": ">inf\u03c3",
     "gift_deviation": 0.8387718735098102,
     "mean_alternative_deviation": 32.94109196106723,
-    "elapsed_seconds": 574.3327548503876
+    "elapsed_seconds": 524.15078997612
   }
 }
