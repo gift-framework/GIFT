@@ -1,0 +1,28 @@
+{
+  "index_formula": "C = round(gamma_n)",
+  "significant_indices": [
+    1,
+    2,
+    4,
+    7,
+    9,
+    10,
+    12,
+    14,
+    15,
+    20,
+    29,
+    45,
+    107
+  ],
+  "107_mystery": {
+    "n": 107,
+    "target": 248,
+    "expression": "4 * dim(J3O) - 1 = 4*27 - 1"
+  },
+  "weinberg_routes": {
+    "exact_from_rounded": "round(g2)/(round(g20)+round(g1)) = 21/91 = 3/13",
+    "best_continuous": "g7/(g6+g48) with 0.004% error",
+    "index_meaning": "7=dim(K7), 6=h_G2, 48=7^2-1"
+  }
+}
