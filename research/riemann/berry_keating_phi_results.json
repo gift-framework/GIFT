@@ -1,0 +1,16 @@
+{
+  "hypothesis": "phi-Berry-Keating connection via Fibonacci discretization",
+  "key_formula": "\u03b3_n \u2248 \u03c6 \u00d7 \u03b3_{n-8} + \u03c8 \u00d7 \u03b3_{n-21}",
+  "r_squared": 1.0,
+  "lags_are_fibonacci": true,
+  "coefficients_are_phi_psi": true,
+  "phi": 1.618033988749895,
+  "psi": -0.6180339887498949,
+  "fibonacci_matrix_eigenvalues": [
+    1.618033988749895,
+    -0.6180339887498949
+  ],
+  "continued_fraction_1_ratio": 0.41488888888888886,
+  "gamma_phi_n_over_gamma_n": 1.4852871445574072,
+  "spectral_radius_L": 2.236065766169433
+}
