@@ -53,13 +53,43 @@ python3 validation_v33.py
 
 ```
 statistical_validation/
-├── validation_v33.py                    # Main validation script
+├── validation_v33.py                    # Main validation (33 observables)
 ├── comprehensive_statistics_v33.py      # Advanced statistical tests
+├── rigorous_validation_v33.py           # Chi-squared with uncertainties
+├── riemann_rigorous_validation.py       # Riemann-GIFT connection tests
 ├── validation_v33_results.json          # Complete results
 ├── comprehensive_statistics_v33_results.json
+├── riemann_validation_results.json      # Riemann validation results
 ├── GIFT_Statistical_Validation_Report_v33.md  # Full report
 └── README.md                            # This file
 ```
+
+## Riemann-GIFT Connection Validation
+
+A separate rigorous validation tests the claimed Riemann zeta zero connection.
+
+```bash
+# Run Riemann validation (~15 minutes)
+python3 riemann_rigorous_validation.py
+```
+
+**8 independent tests** were conducted:
+
+| Test | Result | Finding |
+|------|--------|---------|
+| Sobol Coefficient Search | PASS | 0/10000 beat GIFT |
+| Rational Uniqueness | FAIL | 625 rationals beat 31/21 |
+| Lag Space Search | FAIL | GIFT (8,21) ranks #213/595 |
+| Fluctuation Analysis | PASS | R²=0.67 on detrended |
+| Permutation Test | PASS | Original distinct (14σ) |
+| Null Distribution | FAIL | p=0.5 (typical) |
+| Bootstrap Stability | FAIL | CV=46% (unstable) |
+| R² Decomposition | PASS | 99.9% from trend |
+
+**Verdict**: 4 PASS / 4 FAIL — **WEAK EVIDENCE**
+
+The Riemann connection is documented in S3 Appendix A with honest caveats.
+The 33 dimensionless predictions do NOT depend on Riemann.
 
 ## Full Documentation
 
