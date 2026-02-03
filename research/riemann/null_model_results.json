@@ -1,0 +1,33 @@
+{
+  "analysis_date": "2026-02-03",
+  "gift_matches": 18,
+  "gift_constants_in_range": 25,
+  "tolerance": 0.01,
+  "null_model": {
+    "mean": 13.69,
+    "std": 2.52,
+    "min": 4,
+    "max": 23,
+    "n_trials": 10000
+  },
+  "p_value": 0.063,
+  "significant": false,
+  "verdict": "NON SIGNIFICATIF - cohérent avec le hasard",
+  "gift_lags_rank": 101,
+  "total_lag_combinations": 27405,
+  "top_10_lags": [
+    {"lags": [1, 7, 9, 28], "r_squared": 1.0},
+    {"lags": [1, 6, 8, 28], "r_squared": 1.0},
+    {"lags": [1, 6, 8, 27], "r_squared": 1.0},
+    {"lags": [1, 7, 10, 28], "r_squared": 1.0},
+    {"lags": [1, 6, 9, 28], "r_squared": 1.0},
+    {"lags": [1, 7, 9, 27], "r_squared": 1.0},
+    {"lags": [1, 5, 8, 28], "r_squared": 1.0},
+    {"lags": [1, 6, 8, 26], "r_squared": 1.0},
+    {"lags": [1, 5, 8, 27], "r_squared": 1.0},
+    {"lags": [1, 8, 10, 28], "r_squared": 1.0}
+  ],
+  "key_observation": "Lag 1 appears in ALL top 50 combinations - autocorrelation dominates",
+  "fibonacci_trace": true,
+  "frequent_differences": [3, 7, 6, 2, 20, 4, 19, 27, 21, 22]
+}
