@@ -32,6 +32,7 @@ All results emerge from the topological structure established in S1.
 - [Part IV: Mass Chain](#part-iv-mass-chain)
 - [Part V: Cosmological Dynamics](#part-v-cosmological-dynamics)
 - [Part VI: Summary and Limitations](#part-vi-summary-and-limitations)
+- [Appendix A: Riemann Zeta Connection (Exploratory)](#appendix-a-riemann-zeta-connection-exploratory)
 
 ---
 
@@ -1266,6 +1267,162 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 [6] Riess, A. et al. (2022), Local H₀ measurement
 
 [7] Particle Data Group (2024), Review of Particle Physics
+
+---
+
+# Appendix A: Riemann Zeta Connection (Exploratory)
+
+┌─────────────────────────────────────────────────────────────┐
+│  **EXPLORATORY / PRELIMINARY**                              │
+│                                                             │
+│  This appendix documents numerical observations linking     │
+│  GIFT topological constants to Riemann zeta zeros.          │
+│  Rigorous statistical validation reveals significant        │
+│  caveats that must be understood before interpretation.     │
+│                                                             │
+│  Status: NUMERICALLY OBSERVED, NOT THEORETICALLY DERIVED    │
+└─────────────────────────────────────────────────────────────┘
+
+## A.1 The Claimed Connection
+
+Research exploration suggested a recurrence relation for Riemann zeros:
+
+$$\gamma_n \approx \frac{31}{21} \gamma_{n-8} - \frac{10}{21} \gamma_{n-21} + c(N)$$
+
+Where the coefficients have topological interpretation:
+- 31 = b₂ + rank(E₈) + p₂ = 21 + 8 + 2
+- 21 = b₂ (second Betti number) = F₈ (Fibonacci)
+- 10 = rank(E₈) + p₂ = 8 + 2
+- Lags 8 = rank(E₈) = F₆, 21 = b₂ = F₈ (Fibonacci numbers)
+
+Initial fitting on 100,000 zeros yielded R² = 0.9999999995.
+
+## A.2 Rigorous Validation Results
+
+An ultra-rigorous validation battery was conducted with 8 independent tests.
+
+### A.2.1 Summary of Results
+
+| Test | Verdict | Key Finding |
+|------|---------|-------------|
+| Sobol Coefficient Search | ✓ PASS | 0/10000 random points beat GIFT |
+| Rational Uniqueness | ✗ FAIL | 625 other rationals beat 31/21 |
+| Lag Space Search | ✗ FAIL | GIFT (8,21) ranks #213 out of 595 |
+| Fluctuation Analysis | ✓ PASS | R² = 0.67 on detrended fluctuations |
+| Permutation Test | ✓ PASS | Original distinct from permuted (14σ) |
+| Null Distribution | ✗ FAIL | p = 0.5 (typical for monotone sequences) |
+| Bootstrap Stability | ✗ FAIL | Coefficient varies 46% across windows |
+| R² Decomposition | ✓ PASS | But 99.9% from trend, 0.1% arithmetic |
+
+**Overall Score**: 4 PASS / 4 FAIL
+
+### A.2.2 Critical Insight: R² Decomposition
+
+The reported R² = 0.9999999 is technically correct but **misleading**:
+
+$$R^2_{total} = R^2_{trend} + R^2_{arithmetic}$$
+
+| Component | Value | Interpretation |
+|-----------|-------|----------------|
+| R² from smooth trend N(T) ~ T log T | 99.9% | Generic to ANY monotone sequence |
+| R² from arithmetic structure | 0.1% | Potentially Riemann-specific |
+
+**Any linear recurrence on any smooth monotone sequence achieves R² > 0.9999.**
+
+### A.2.3 Coefficient Non-Uniqueness
+
+625 rational pairs (a, b) with denominators ≤ 40 achieve higher R² than (31/21, -10/21).
+
+Top alternatives:
+| Coefficients | R² | Note |
+|--------------|-----|------|
+| a = 48/31, b = -17/31 | 0.99999999959 | Better than GIFT |
+| a = 31/20, b = -11/20 | 0.99999999959 | Better than GIFT |
+| a = 17/11, b = -6/11 | 0.99999999958 | Better than GIFT |
+| **a = 31/21, b = -10/21** | **0.99999999948** | **GIFT claim** |
+
+### A.2.4 Lag Non-Optimality
+
+The GIFT lags (8, 21) rank **#213 out of 595** tested lag pairs.
+
+Top 5 lag pairs by R²:
+| Rank | Lags | R² | Fibonacci? |
+|------|------|-----|------------|
+| 1 | (1, 2) | 0.9999999998 | Yes |
+| 2 | (1, 3) | 0.9999999998 | Yes |
+| 3 | (1, 4) | 0.9999999998 | No |
+| ... | ... | ... | ... |
+| **213** | **(8, 21)** | **0.9999999996** | **Yes** |
+
+### A.2.5 Coefficient Instability
+
+Fitting across 10 windows of 10,000 zeros each:
+
+| Window | Coefficient a | Note |
+|--------|---------------|------|
+| 1 (zeros 1-10k) | 1.465 | Close to GIFT |
+| 2 (zeros 10k-20k) | 0.345 | Very different |
+| 3 (zeros 20k-30k) | 0.369 | Very different |
+| ... | ... | ... |
+| 10 (zeros 90k-100k) | 0.719 | Different |
+
+**Coefficient of variation: 46%** — highly unstable.
+
+The 95% bootstrap confidence interval for a is [0.50, 0.88], which **does not contain** the GIFT value 31/21 = 1.476.
+
+## A.3 What IS Validated
+
+Despite the failures above, some genuine signals exist:
+
+1. **Riemann IS distinct from random perturbations** (permutation test: 14σ)
+
+2. **Coefficient proximity to GIFT**: The empirically optimal a ≈ 1.46-1.56 is closer to GIFT's 31/21 = 1.476 than 99.5% of random monotone sequences
+
+3. **Structure in fluctuations**: R² = 0.67 on detrended zeros exceeds AR(1) baseline, suggesting SOME autocorrelation structure
+
+4. **Direct correspondences**: The numerical proximity γ₁ ≈ 14 = dim(G₂), γ₂ ≈ 21 = b₂, γ₁₀₇ ≈ 248 = dim(E₈) remains unexplained
+
+## A.4 Honest Assessment
+
+### A.4.1 The Recurrence Captures Density, Not Arithmetic
+
+The high R² primarily reflects the smooth growth N(T) ~ T/(2π) log(T/(2πe)), not deep arithmetic structure in zero spacings.
+
+### A.4.2 The GIFT Coefficients Are Not Unique
+
+While 31/21 has attractive topological decomposition, it is not the empirically optimal rational, and many alternatives work equally well.
+
+### A.4.3 The Phenomenon May Be Generic
+
+Similar recurrences with comparable R² can be fitted to:
+- GUE random matrix eigenvalues
+- Random monotone cumulative sums
+- Power-law sequences
+
+### A.4.4 Possible Interpretations
+
+| Interpretation | Likelihood | Implication |
+|----------------|------------|-------------|
+| Deep number-theoretic connection | Low | Would require theoretical derivation |
+| Statistical fluctuation | Medium | Many integers near zero values |
+| Partial structure | Medium | Some signal in noise |
+| Density artifact | High | R² captures N(T), not zeros |
+
+## A.5 Conclusion
+
+The Riemann-GIFT connection represents an **intriguing numerical observation** that does not withstand rigorous statistical scrutiny as a unique or optimal relationship.
+
+**What we can say**:
+- GIFT topological constants appear numerically close to certain Riemann zero values
+- The recurrence captures the smooth density function well
+- Riemann zeros show some distinction from random sequences
+
+**What we cannot say**:
+- That 31/21 is the unique or optimal coefficient
+- That lags (8, 21) are special
+- That there is deep arithmetic structure beyond the density
+
+**Recommendation**: Treat as preliminary observation pending theoretical derivation. The 33 dimensionless predictions (S2) do NOT depend on any Riemann connection.
 
 ---
 
