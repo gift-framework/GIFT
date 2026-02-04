@@ -2,9 +2,21 @@
 
 ## Physical Meaning of Secondary Structure in Riemann Zero Correlations
 
-**Status**: MAJOR EXPLORATORY FINDING
+**Status**: ⚠️ SUPERSEDED BY REAL L-FUNCTION DATA
 **Date**: February 2026
-**Classification**: Theoretical (pending verification with real L-function data)
+**Classification**: Historical (based on proxy data)
+
+---
+
+> **IMPORTANT UPDATE (Feb 4, 2026)**: This document is based on **proxy data** (windowed Riemann zeros). Real Dirichlet L-function validation showed:
+>
+> 1. **GIFT conductors DO outperform** (2.2× better, reversing the proxy result)
+> 2. **Additive sums** are optimal, not multiplicative products
+> 3. The core insight (compositional structure matters) remains valid
+>
+> See: `REAL_LFUNC_VALIDATION_RESULTS.md` for definitive results.
+
+---
 
 ---
 
