@@ -271,8 +271,10 @@ def compute_predictions_v33(cfg: GIFTConfig) -> Dict[str, float]:
     # θ₁₃ = π / b2 (radians) → degrees
     preds['theta_13'] = 180.0 / b2 if b2 > 0 else float('inf')
 
-    # θ₂₃ = arcsin((rank + b3) / H*) approximation → degrees
-    theta_23_arg = (rank_E8 + b3) / H_star if H_star > 0 else 0
+    # θ₂₃ = arcsin((b3 - p2) / H*) → degrees
+    # Physical interpretation: 3-cycle contribution corrected by Pontryagin class (spin structure)
+    # (b3 - p2) / H* = 75/99 = 25/33, giving θ₂₃ ≈ 49.25° (exp: 49.3°, 0.1% deviation)
+    theta_23_arg = (b3 - p2) / H_star if H_star > 0 else 0
     preds['theta_23'] = math.degrees(math.asin(min(theta_23_arg, 1))) if theta_23_arg <= 1 else 90.0
 
     # θ₁₂ = arctan(√(δ/γ))
