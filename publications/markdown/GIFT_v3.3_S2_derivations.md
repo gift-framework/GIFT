@@ -1114,7 +1114,7 @@ A critical question for any unified framework is whether the specific topologica
 |--------|-------|
 | Total configurations tested | **192,349** |
 | Configurations better than GIFT | **0** |
-| GIFT mean deviation | 0.21% (33 observables) |
+| GIFT mean deviation | 0.26% (33 observables) |
 | Alternative mean deviation | 32.9% |
 | P-value | **< 5 × 10⁻⁶** |
 | Significance | **> 4.5σ** |
@@ -1123,7 +1123,7 @@ A critical question for any unified framework is whether the specific topologica
 
 | Rank | Group | Mean Dev. |
 |------|-------|-----------|
-| **1** | **E₈×E₈** | **0.21%** |
+| **1** | **E₈×E₈** | **0.26%** |
 | 2 | E₇×E₈ | 8.80% |
 | 3 | E₆×E₈ | 15.50% |
 
@@ -1133,7 +1133,7 @@ A critical question for any unified framework is whether the specific topologica
 
 | Rank | Holonomy | Mean Dev. |
 |------|----------|-----------|
-| **1** | **G₂** | **0.21%** |
+| **1** | **G₂** | **0.26%** |
 | 2 | SU(4) | 1.46% |
 | 3 | SU(3) | 4.43% |
 

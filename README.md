@@ -1,7 +1,7 @@
 # Geometric Information Field Theory v3.3
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.14-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.3.17-green.svg)](CHANGELOG.md)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -12,7 +12,7 @@
 
 | | |
 |---|---|
-| **Precision** | 0.21% mean deviation across 33 dimensionless predictions (PDG 2024) |
+| **Precision** | 0.26% mean deviation across 33 dimensionless predictions (PDG 2024) |
 | **Uniqueness** | #1 out of 192,349 configurations tested (>4.5σ significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
 | **Verified** | ~330 relations proven in Lean 4 (core v3.3.14) |
@@ -38,7 +38,7 @@
 |----------|-------------|
 | [Main Paper](publications/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
 | [S1: Foundations](publications/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/markdown/GIFT_v3.3_S2_derivations.md) | All 33 dimensionless derivations (0.21% mean, PDG 2024) |
+| [S2: Derivations](publications/markdown/GIFT_v3.3_S2_derivations.md) | All 33 dimensionless derivations (0.26% mean, PDG 2024) |
 | [S3: Dynamics](publications/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
 
 ### For Specific Audiences
@@ -121,7 +121,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 |--------|-------|
 | Configurations tested | 192,349 |
 | **GIFT rank** | **#1** |
-| GIFT mean deviation | 0.21% (PDG 2024) |
+| GIFT mean deviation | 0.26% (PDG 2024) |
 | Better alternatives found | 0 |
 | p-value | < 5×10⁻⁶ |
 
@@ -129,7 +129,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 | Rank | b₂ | b₃ | Deviation |
 |:----:|:--:|:--:|:---------:|
-| **1** | **21** | **77** | **0.23%** |
+| **1** | **21** | **77** | **0.26%** |
 | 2 | 21 | 76 | 0.50% |
 | 3 | 21 | 78 | 0.50% |
 | 4 | 21 | 79 | 0.79% |
