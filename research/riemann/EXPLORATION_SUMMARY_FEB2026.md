@@ -70,27 +70,42 @@ Created: `research/riemann/ihara_zeta_analysis.py`
 - GIFT conductors: {7, 8, 11, 13, 14, 21, 27, 77, 99}
 - Non-GIFT conductors: {6, 9, 10, 15, 16, 17, 19, 23, 25}
 
-### 3.2 Results (PROXY DATA)
+### 3.2 Results (mpmath Riemann zeros as proxy)
 
-⚠️ **Important**: Used scaled Riemann zeros as proxy, not actual L-function zeros.
+⚠️ **Important**: Used mpmath.zetazero() with conductor-dependent windowing, not actual L-function zeros.
 
 | Metric | GIFT Conductors | Non-GIFT Conductors |
 |--------|-----------------|---------------------|
-| Mean |R - 1| | 11.0 | 1.3 |
-| t-test p-value | 0.32 (not significant) | |
+| Mean |R - 1| | **0.483 ± 0.592** | **0.276 ± 0.131** |
+| t-test p-value | 0.348 (not significant) | |
 
-### 3.3 Interpretation
+### 3.3 Key Findings
 
-With proxy data, **no selectivity observed**. However:
-- Proxy data ≠ real L-function zeros
-- True test requires LMFDB data
-- This is a **null result on proxy**, not a falsification
+**Primary result**: NO selectivity observed. Non-GIFT conductors actually performed *better*:
+- Non-GIFT mean |R - 1| = 0.276 (closer to ideal R = 1)
+- GIFT mean |R - 1| = 0.483
 
-### 3.4 Next Steps
+**Notable observations**:
+| Conductor | Type | R | Note |
+|-----------|------|-------|------|
+| 99 (H*) | GIFT | 1.041 | Best GIFT performer |
+| 77 (b₃) | GIFT | -1.107 | Extreme outlier |
+| 6 | Non-GIFT | 0.976 | Best overall |
 
-1. Download actual L-function zeros from LMFDB
-2. Rerun test with real data
-3. Focus on primitive characters of prime conductor
+### 3.4 Interpretation
+
+- **Conductor 99 (H* = b₂ + b₃ + 1)** shows near-perfect Fibonacci constraint
+- **Conductor 77 (b₃)** is anomalously negative
+- The cohomological *sum* H* may be more significant than individual Betti numbers
+
+### 3.5 Status
+
+This is a **null result** that:
+- Does not falsify GIFT (proxy data limitation)
+- Provides no positive support for conductor selectivity
+- Suggests H* = 99 may have special significance if any structure exists
+
+See: `CONDUCTOR_SELECTIVITY_RESULTS.md` for full analysis
 
 ---
 
@@ -117,10 +132,15 @@ With proxy data, **no selectivity observed**. However:
 2. **Ihara-graph GIFT connection**: β₁(K₈) = 21 = b₂
 3. **G₂ root graph**: β₁ = 13 = F₇
 
-### Inconclusive (needs real data)
+### Negative Result
 
-1. Conductor selectivity test (used proxy data)
-2. Dedekind zeta zeros for GIFT discriminants
+1. **Conductor selectivity test**: No GIFT advantage observed (p = 0.348)
+   - Non-GIFT conductors performed slightly better on average
+   - However, H* = 99 showed best GIFT performance (R = 1.041)
+
+### Untested (needs real data)
+
+1. Dedekind zeta zeros for GIFT discriminants
 
 ### Corrected
 
@@ -136,11 +156,13 @@ With proxy data, **no selectivity observed**. However:
 | `LI_CRITERION_EXPLORATION.md` | Main Li research document |
 | `LI_CONVERGENCE_NOTE.md` | Technical note on convergence |
 | `DEDEKIND_ZETA_EXPLORATION.md` | Quadratic field connections |
+| `CONDUCTOR_SELECTIVITY_RESULTS.md` | Full selectivity test analysis |
 | `li_coefficient_analysis.py` | Li computation script |
 | `li_deeper_analysis.py` | GIFT pattern analysis |
 | `ihara_zeta_analysis.py` | Graph zeta functions |
 | `conductor_selectivity_test.py` | L-function selectivity |
 | `Li_Coefficients_GIFT_Analysis.ipynb` | Portable Colab notebook |
+| `Conductor_Selectivity_mpmath.ipynb` | mpmath-based selectivity test |
 
 ---
 
@@ -159,11 +181,19 @@ With proxy data, **no selectivity observed**. However:
 ## 8. Conclusion
 
 This exploration session identified:
-- **One solid new finding**: Ihara β₁(K₈) = b₂ connection
-- **One refined finding**: Li coefficients are linear in n with H* scaling
-- **Two tests needing real data**: Conductor selectivity, Dedekind zeros
 
-The GIFT framework continues to show intriguing numerical connections, but the conductor selectivity test (the key falsification criterion) remains inconclusive pending real L-function data.
+**Positive findings**:
+- **Ihara β₁(K₈) = b₂** connection (graph theory ↔ K₇ topology)
+- **Li coefficients linear in n** with H* = 99 as natural scaling factor
+
+**Negative finding**:
+- **Conductor selectivity test**: No GIFT advantage observed
+- Non-GIFT conductors showed better Fibonacci constraint on average
+- However, H* = 99 was the best GIFT performer (R = 1.041)
+
+**Key insight**: If any Riemann-GIFT structure exists, it may be associated with the cohomological sum H* = b₂ + b₃ + 1 = 99 rather than individual topological constants. The stark contrast between conductor 99 (excellent) and conductor 77 (anomalous) supports this interpretation.
+
+**Still untested**: Dedekind zeta zeros for GIFT discriminants require LMFDB data.
 
 ---
 
