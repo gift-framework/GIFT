@@ -4,7 +4,7 @@ Numero,Observable,Formule,Valeur_Predite,Unite,Valeur_Experimentale,Incertitude_
 3,alpha_s(M_Z),sqrt(2)/(dim(G2) - p2) = sqrt(2)/12,0.117851,unitless,0.1179,0.0009,0.042,TOPOLOGICAL,Gauge Couplings
 4,theta_12,arctan(sqrt(delta/gamma_GIFT)),33.40,deg,33.41,0.75,0.030,TOPOLOGICAL,Neutrino Mixing
 5,theta_13,pi/b2(K7) = pi/21,8.571,deg,8.54,0.12,0.368,TOPOLOGICAL,Neutrino Mixing
-6,theta_23,"(rank(E8) + b3(K7))/H* = 85/99 rad",49.19,deg,49.3,1.0,0.216,TOPOLOGICAL,Neutrino Mixing
+6,theta_23,"arcsin((b3 - p2)/H*) = arcsin(75/99) = arcsin(25/33)",49.25,deg,49.3,1.0,0.10,TOPOLOGICAL,Neutrino Mixing
 7,delta_CP,7*dim(G2) + H* = 7*14 + 99 = 197,197,deg,197,24,0.000,PROVEN,Neutrino Mixing
 8,Q_Koide,dim(G2)/b2(K7) = 14/21 = 2/3,0.666667,unitless,0.666661,0.000007,0.001,PROVEN,Lepton Mass Relations
 9,m_mu/m_e,27^phi = 27^1.6180339,207.012,unitless,206.768,0.001,0.118,TOPOLOGICAL,Lepton Mass Relations
