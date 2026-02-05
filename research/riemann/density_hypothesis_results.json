@@ -1,0 +1,26 @@
+{
+  "density_prediction": {
+    "value": 1.6153846153846154,
+    "fraction": "21/13",
+    "derivation": "Asymptotic expansion of smooth f(n) = 2*pi*n/log(n)"
+  },
+  "fibonacci_value": {
+    "value": 1.4761904761904763,
+    "fraction": "31/21",
+    "source": "Empirical fit to actual Riemann zeros"
+  },
+  "gap": {
+    "value": 0.13919413919413914,
+    "fraction": "38/273",
+    "percent": 9.429280397022328
+  },
+  "actual_zeros": {
+    "a_actual_free": 1.4763691129219243,
+    "a_actual_constrained": 1.5480272324444266,
+    "a_31_21": 1.4761904761904763,
+    "a_21_13": 1.6153846153846154,
+    "gap": -0.13919413919413914
+  },
+  "verdict": "STRONGLY SUBSTANTIVE",
+  "conclusion": "The coefficient 31/21 does NOT come purely from density. It encodes structural information beyond the smooth approximation. The G2/Fibonacci connection is SUBSTANTIVE."
+}

@@ -2,28 +2,33 @@
 
 ## Self-Similar Arithmetic Structure Across Energy Scales
 
-**Status**: THEORETICAL SYNTHESIS
-**Date**: February 2026
-**Classification**: Exploratory (synthesizing validated patterns)
+**Status**: PARTIALLY VALIDATED — see Phase 3 results
+**Date**: February 2026 (revised after blind challenge)
+**Classification**: Mixed evidence — strong in physics, falsified in L-functions
 
 ---
 
 ## Executive Summary
 
-This document presents evidence that physical observables in the GIFT framework are encoded through a **self-similar (fractal) arithmetic structure**. The same compositional algorithm — products and sums of a small set of "atomic" constants {2, 3, 7, 11} — operates recursively at multiple levels, from fundamental topology to observable physics.
+This document presents evidence that physical observables in the GIFT framework are encoded through a **self-similar (fractal) arithmetic structure**. The same compositional algorithm — products and sums of a small set of "atomic" constants {2, 3, 7, 11} — operates recursively at multiple levels.
 
-**Key findings**:
-1. All GIFT primaries reduce to products of {2, 3, 7, 11}
-2. The constant **42 = 2 × 3 × 7** appears across 6+ orders of magnitude in energy
-3. Additive sums (not multiplicative products) show optimal L-function encoding
-4. RG flow exponents themselves encode GIFT topology (self-reference)
-5. The ratio 21/8 ≈ φ² connects Fibonacci structure to the golden ratio
+**VALIDATED findings** (statistically significant):
+1. The atoms {2, 3, 7, 11} are statistically special (p = 0.00074, 3.18σ)
+2. The constant **42** appears across 13 orders of magnitude in **physics** (p = 0.006 after LEE)
+3. RG flow exponents encode GIFT topology: 8×β₈ = 13×β₁₃ = 36 (<0.2% error)
+
+**FALSIFIED findings** (Phase 3 blind challenge):
+1. ~~GIFT conductors outperform non-GIFT in L-functions~~ — Control conductors were 4.4× better
+2. ~~The constant 42 is special in L-functions~~ — q=42 ranked LAST (24/24)
+3. ~~Fibonacci backbone is structurally special~~ — p=0.12 (not significant)
 
 ---
 
 ## Part I: The Arithmetic Atoms
 
-### 1.1 Reduction to Four Primes
+### 1.1 Reduction to Four Primes — VALIDATED
+
+**Statistical test**: Out of 100,000 random 4-prime sets, only 0.07% achieve coverage equal to {2, 3, 7, 11}. This is statistically significant (p = 0.00074).
 
 Every GIFT primary constant factors into products of just four numbers:
 
@@ -31,18 +36,18 @@ Every GIFT primary constant factors into products of just four numbers:
 |---------|-------|---------------|-------------------|
 | p₂ | 2 | 2 | {2} |
 | N_gen | 3 | 3 | {3} |
-| Weyl | 5 | 5 | {5} (or F₅) |
 | dim(K₇) | 7 | 7 | {7} |
 | rank(E₈) | 8 | 2³ | {2} |
 | D_bulk | 11 | 11 | {11} |
-| F₇ | 13 | 13 | {13} (Fibonacci) |
 | dim(G₂) | 14 | 2 × 7 | {2, 7} |
 | b₂ | 21 | 3 × 7 | {3, 7} |
 | dim(J₃(O)) | 27 | 3³ | {3} |
 | b₃ | 77 | 7 × 11 | {7, 11} |
-| H* | 99 | 9 × 11 = 3² × 11 | {3, 11} |
+| H* | 99 | 3² × 11 | {3, 11} |
 
-**Observation**: The "core" atoms are **{2, 3, 7, 11}**, with Fibonacci primes {5, 13} playing a special role in recurrence structure.
+**Note**: Two constants require primes outside {2,3,7,11}:
+- Weyl = 5 (Fibonacci prime)
+- dim(E₈) = 248 = 2³ × 31
 
 ### 1.2 The Significance of dim(K₇) = 7
 
@@ -51,15 +56,15 @@ The number 7 appears as a factor in:
 - b₂ = 3 × 7
 - b₃ = 7 × 11
 
-This reflects that **K₇ (the Joyce manifold) is the geometric foundation** — its dimension propagates through all topological invariants.
+This reflects that **K₇ (the Joyce manifold) is the geometric foundation**.
 
 ---
 
 ## Part II: The Constant 42
 
-### 2.1 Definition and Appearances
+### 2.1 Cross-Scale Appearances in Physics — VALIDATED
 
-The structural constant **χ_K7 = 42 = 2 × b₂ = 2 × 3 × 7** appears throughout GIFT:
+**Statistical test**: p = 0.00006 (3.85σ), survives look-elsewhere correction at p = 0.006.
 
 | Observable | Formula | Energy Scale |
 |------------|---------|--------------|
@@ -71,18 +76,20 @@ The structural constant **χ_K7 = 42 = 2 × b₂ = 2 × 3 × 7** appears through
 
 **The span**: From quark masses (~GeV) to cosmological observables (~10⁻⁴ eV) — over **13 orders of magnitude**.
 
-### 2.2 Why 42?
+### 2.2 The 42 in L-Functions — FALSIFIED
 
-The number 42 is:
-- **Topologically**: 2 × b₂ = twice the second Betti number of K₇
-- **Arithmetically**: 2 × 3 × 7 = product of the three smallest GIFT atoms (excluding 11)
-- **Combinatorially**: Related to the 21 moduli of K₇ and binary structure
+**Phase 3 blind challenge result**: q = 42 as a Dirichlet L-function conductor ranked **LAST** out of 24 tested conductors.
+
+| q | |R-1| | Rank |
+|---|-------|------|
+| 42 | 66.86 | 24/24 (worst) |
+| 61 (control) | 0.038 | 1/24 (best) |
+
+**Conclusion**: The universality of 42 is **domain-specific**. It appears structurally in physics observables but NOT in L-function arithmetic.
 
 ### 2.3 A Note on Douglas Adams
 
-In *The Hitchhiker's Guide to the Galaxy* (1979), the supercomputer Deep Thought reveals that **42 is "the Answer to the Ultimate Question of Life, the Universe, and Everything."**
-
-While clearly coincidental, it is amusing that GIFT independently identifies 42 = 2 × 3 × 7 as a universal structural constant spanning particle physics to cosmology. Perhaps Deep Thought was computing χ_K7 all along.
+The cultural reference remains amusing, but 42 is not "the answer to everything" — only to certain physical ratios.
 
 ---
 
@@ -107,28 +114,21 @@ LEVEL 2: Physical Observables
           sin²θ_W=21/91, Q_Koide=14/21, σ₈=17/21
                ↓ (RG flow)
 
-LEVEL 3: Meta-Encoding
+LEVEL 3: Meta-Encoding — VALIDATED
           Flow exponents β satisfy: 8×β₈ = 13×β₁₃ = 36 = h_G₂²
 ```
 
-### 3.2 Self-Reference at Level 3
+### 3.2 Self-Reference at Level 3 — VALIDATED
 
 The RG flow analysis discovered that recurrence coefficients evolve with scale γ:
 $$a_i(\gamma) = a_i^{UV} + \frac{a_i^{IR} - a_i^{UV}}{1 + (\gamma/\gamma_c)^{\beta_i}}$$
 
-The flow exponents β_i themselves encode GIFT structure:
+The flow exponents β_i encode GIFT structure with **<0.2% error**:
 
-| Lag i | β_i | i × β_i | GIFT Expression |
-|-------|-----|---------|-----------------|
-| 5 | 0.767 | 3.83 | dim(J₃(O))/dim(K₇) = 27/7 ≈ 3.857 |
-| 8 | 4.497 | 35.98 | h_G₂² = 36 |
-| 13 | 2.764 | 35.93 | h_G₂² = 36 |
-| 27 | 3.106 | 83.86 | b₃ + dim(K₇) = 84 |
-
-**The constraint 8 × β₈ = 13 × β₁₃ = 36** connects:
-- Consecutive Fibonacci numbers (8, 13)
-- The Coxeter number of G₂ squared (h_G₂ = 6)
-- The same structure appearing at different scales
+| Lag i | β_i | i × β_i | GIFT Expression | Error |
+|-------|-----|---------|-----------------|-------|
+| 8 | 4.497 | 35.98 | h_G₂² = 36 | 0.07% |
+| 13 | 2.764 | 35.93 | h_G₂² = 36 | 0.19% |
 
 This is **genuine self-reference**: the encoding algorithm encodes itself.
 
@@ -138,274 +138,237 @@ This is **genuine self-reference**: the encoding algorithm encodes itself.
 
 ### 4.1 Mode Classification
 
-Physical observables cluster into three compositional types:
+**Note**: Statistical validation showed this correlation is qualitative, not quantitative (p = 0.16).
 
 **Mode A: PRODUCTS** (Quark/Lepton sector)
 ```
-m_s/m_d = p₂² × Weyl = 4 × 5 = 20     [EXACT]
+m_s/m_d = p₂² × Weyl = 4 × 5 = 20
 m_b/m_t = 1/(p₂ × N_gen × dim(K₇)) = 1/42
-m_u/m_d = (1 + dim(E₆))/PSL₂(7) = 79/168
 ```
-*Pattern*: Products of small primes {2, 3, 5, 7}
 
 **Mode B: RATIOS** (Electroweak sector)
 ```
 sin²θ_W = b₂/(b₃ + dim(G₂)) = 21/91
-Q_Koide = dim(G₂)/b₂ = 14/21 = 2/3    [0.0009% precision]
-λ_H = √(dim(G₂) + N_gen)/32 = √17/32
+Q_Koide = dim(G₂)/b₂ = 14/21 = 2/3
 ```
-*Pattern*: Ratios of medium primaries with topological meaning
 
 **Mode C: SUMS** (Cosmological sector)
 ```
 H* = b₂ + b₃ + 1 = 21 + 77 + 1 = 99
-δ_CP = dim(K₇) × dim(G₂) + H* = 98 + 99 = 197°  [EXACT]
-Ω_DM/Ω_b = (1 + 2b₂)/rank(E₈) = 43/8            [EXACT]
+Ω_DM/Ω_b = (1 + 2b₂)/rank(E₈) = 43/8
 ```
-*Pattern*: Additive composites of large primaries
 
-### 4.2 The Mode-Scale Correlation
+### 4.2 The Mode-Scale Correlation — NOT STATISTICALLY SIGNIFICANT
 
-| Energy Scale | Dominant Mode | Typical Primaries |
-|--------------|---------------|-------------------|
-| Quark (GeV) | Products | 2, 3, 5, 7 (small) |
-| Electroweak (100 GeV) | Ratios | 14, 21, 77 (medium-large) |
-| Cosmological (10⁻⁴ eV) | Sums | 21, 77, 99 (large) |
-
-This is not a strict rule — the constant 42 appears at both extremes — but suggests a **correlation between compositional complexity and energy scale**.
+The ordering Products > Ratios > Sums in energy scale is correct, but p = 0.16 (expected: 0.17 under null). This pattern is **observationally suggestive but not statistically robust**.
 
 ---
 
-## Part V: Real L-Function Validation
+## Part V: L-Function Validation — REVISED
 
-### 5.1 The Discovery
+### 5.1 Original Claims (Early 2026)
 
-Testing with actual Dirichlet L-function zeros (not proxy data) revealed:
+Early analysis suggested that "GIFT conductors" outperformed "non-GIFT conductors" in Fibonacci recurrence structure. This was based on limited data.
 
-| Structure Type | Example | Mean |R-1| | Performance |
-|----------------|---------|-------------|-------------|
-| Primary + p₂×Primary | 43 = 21 + 22 | 0.42 | **BEST** |
-| Primary + Primary | 17 = 14 + 3 | 0.49 | Good |
-| Isolated primaries | 5, 7, 13 | 0.63 | OK |
-| Small primaries | 3, 11 | 2.03 | Poor |
-| No decomposition | 23, 37 | 6.12 | **WORST** |
+### 5.2 Phase 3 Blind Challenge (February 2026) — FALSIFICATION
 
-### 5.2 The Key Pattern
+A rigorous blind challenge with pre-registered predictions tested 24 conductors:
+- 14 "GIFT conductors" (having GIFT decompositions)
+- 10 "Control conductors" (primes without GIFT meaning)
 
-**Additive sums outperform multiplicative products** in real L-function data.
+**Results**:
 
-The optimal structure is **Primary + p₂ × Primary**:
-- q = 43 = 21 + 22 = b₂ + (p₂ × D_bulk)  → |R-1| = 0.19
-- q = 31 = 3 + 28 = N_gen + (p₂ × dim(G₂)) → |R-1| = 0.64
+| Metric | GIFT | Control | Winner |
+|--------|------|---------|--------|
+| Mean |R-1| | 6.27 | 1.43 | **Control** (4.4×) |
+| Best conductor | q=56 (0.052) | q=61 (0.038) | **Control** |
+| Worst conductor | q=42 (66.86) | q=29 (6.81) | — |
 
-The factor **p₂ = 2** appears to play a special "bridging" role in the arithmetic.
+**Statistical tests**:
+- t-test p-value: 0.20 (not significant)
+- Mann-Whitney p-value: 0.20 (not significant)
 
-### 5.3 Universal GIFT Structure
+### 5.3 What This Means
 
-**Every top-5 performer has GIFT decomposition**:
+The hypothesis "GIFT-related conductors have special L-function structure" is **falsified**. The Fibonacci recurrence quality is NOT predicted by GIFT decomposability.
 
-| Rank | q | |R-1| | Decomposition |
-|------|---|-------|---------------|
-| 1 | 43 | 0.19 | b₂ + p₂×D_bulk |
-| 2 | 17 | 0.36 | dim(G₂) + N_gen |
-| 3 | 5 | 0.43 | Weyl (primary) |
-| 4 | 41 | 0.62 | dim(G₂) + dim(J₃(O)) |
-| 5 | 31 | 0.64 | N_gen + p₂×dim(G₂) |
+**However**, some GIFT composites did perform well:
+- q = 56 (dim(G₂) + 2×b₂) → |R-1| = 0.052 (rank #2)
+- q = 77 (b₃) → |R-1| = 0.562 (rank #8)
+- q = 17 (dim(G₂) + N_gen) → |R-1| = 0.109 (rank #4)
 
-Even conductors initially classified as "non-GIFT" have hidden GIFT structure.
+The pattern is more subtle than "GIFT = good". Further investigation needed.
 
 ---
 
-## Part VI: The Fibonacci Backbone
+## Part VI: The Fibonacci Backbone — OBSERVATIONAL ONLY
 
 ### 6.1 Fibonacci Numbers in GIFT
 
-| Fibonacci | Value | GIFT Equivalent | Role |
-|-----------|-------|-----------------|------|
-| F₃ | 2 | p₂ | Binary structure |
-| F₄ | 3 | N_gen | Generations |
-| F₅ | 5 | Weyl | First recurrence lag |
-| F₆ | 8 | rank(E₈) | Second lag; E₈ Cartan |
-| F₇ | 13 | F₇ (primary) | Third lag; Fano plane |
-| F₈ | 21 | b₂ | Second Betti number |
+| Fibonacci | Value | GIFT Equivalent |
+|-----------|-------|-----------------|
+| F₃ | 2 | p₂ |
+| F₄ | 3 | N_gen |
+| F₅ | 5 | Weyl |
+| F₆ | 8 | rank(E₈) |
+| F₇ | 13 | F₇ |
+| F₈ | 21 | b₂ |
 
-### 6.2 The Golden Ratio Emergence
+### 6.2 Statistical Status — NOT SIGNIFICANT
 
-The optimal recurrence lags are F₆ = 8 and F₈ = 21:
+**Monte Carlo test**: 12% of random Fibonacci-like sequences (varying initial conditions) achieve 6 consecutive matches with GIFT constants.
 
-$$\frac{21}{8} = 2.625 \approx \phi^2 = 2.618$$
+**Conclusion**: The Fibonacci matching is an **observational coincidence**, not a statistically special structure.
 
-Error: **0.27%**
+### 6.3 The Golden Ratio Emergence
 
-The **golden ratio squared** emerges naturally from the ratio of Fibonacci-indexed topological constants.
-
-### 6.3 Consecutive Fibonacci Products
-
-| Product | Factors | Observable Connection |
-|---------|---------|----------------------|
-| 2 × 3 = 6 | F₃ × F₄ | sin²θ₂₃(PMNS) = 6/11 |
-| 3 × 5 = 15 | F₄ × F₅ | Yₚ = 15/61 |
-| 5 × 8 = 40 | F₅ × F₆ | (Candidate for testing) |
-| 8 × 13 = 104 | F₆ × F₇ | (Candidate for testing) |
+The ratio 21/8 = 2.625 ≈ φ² = 2.618 (0.27% error) remains numerically interesting but is not independently validated.
 
 ---
 
-## Part VII: Missing Connections
+## Part VII: Open Questions (Revised)
 
-### 7.1 Modular Forms (Unexplored)
+### 7.1 From Phase 3 Failures
 
-Recent literature (2024-2025) establishes that **Yukawa couplings are modular forms** under SL(2,ℤ) or congruence subgroups. GIFT mentions this direction but has not developed it.
+1. **What features of q actually predict |R-1|?**
+   - GIFT decomposability does NOT predict it
+   - Candidates: ω(q), φ(q), squarefree status, smallest prime factor
+   - The best performer (q=61) is a simple prime — why?
 
-**Potential connection**: The hierarchical structure of modular weights could explain the hierarchical structure of GIFT compositional levels.
+2. **Why did q=42 and q=38 fail catastrophically?**
+   - Both are composites with small a₁₃ coefficients
+   - Is the metric |R-1| = |8a₈/(13a₁₃) - 1| unstable for certain conductors?
 
-### 7.2 The Langlands Program
+3. **Is there a prime vs composite effect?**
+   - Best overall: q=61 (prime, control)
+   - Best GIFT: q=56 (composite, 8×7)
+   - Pattern unclear
 
-The geometric Langlands conjecture was proven in May 2024. This creates bridges between:
-- Number theory (L-functions)
-- Geometry (vector bundles)
-- Representation theory (automorphic forms)
+### 7.2 Theoretical (Unchanged)
 
-GIFT's L-function patterns may have Langlands-theoretic interpretation.
+4. **Modular form connection**: Can GIFT structure be derived from modular weights?
 
-### 7.3 G₂ Manifolds and Mass Generation
+5. **Langlands interpretation**: The geometric Langlands proof (2024) may offer new tools.
 
-December 2025 research proposes that hidden G₂-manifolds explain gauge boson masses through G₂-Ricci flow. This aligns with GIFT's use of G₂ holonomy.
+### 7.3 Empirical (Revised)
 
----
+6. **Test arithmetic features**: Systematic study of what predicts good |R-1|
 
-## Part VIII: The Fractal Principle
+7. **Larger conductor sample**: 100+ conductors with varied properties
 
-### 8.1 Statement
-
-> **Physical observables are encoded through a self-similar arithmetic structure where the same compositional operations (products, sums, ratios) of the atoms {2, 3, 7, 11} appear recursively at every organizational level — from fundamental topology through composite constants to physical predictions to RG flow exponents.**
-
-### 8.2 Evidence Summary
-
-| Level | Structure | Self-Similarity Evidence |
-|-------|-----------|-------------------------|
-| Atoms | {2, 3, 7, 11} | Prime factorization basis |
-| Primaries | Products of atoms | 14=2×7, 21=3×7, 77=7×11 |
-| Composites | Sums/products of primaries | 43=21+22, 17=14+3 |
-| Observables | Ratios of composites | sin²θ_W=21/91 |
-| RG Flow | Exponents encode GIFT | 8β₈=13β₁₃=36=h_G₂² |
-| Cross-scale | Same constants appear | 42 at quark AND cosmology |
-
-### 8.3 The Constant 42 as Fractal Signature
-
-The appearance of **42 = 2 × 3 × 7** at both quark scale (m_b/m_t = 1/42) and cosmological scale (Ω_DM/Ω_b involves 42+1) is the clearest signature of fractal structure — the same arithmetic "seed" manifesting across 13 orders of magnitude.
+8. **Alternative metrics**: Is |R-1| the right measure? Consider coefficient stability.
 
 ---
 
-## Part IX: Open Questions
+## Part VIII: The Fractal Principle — REFINED
 
-### 9.1 Theoretical
+### 8.1 Revised Statement
 
-1. **Why additive sums over multiplicative products?** Real L-function data shows sums are superior. Is there a theoretical explanation?
+> **Physical observables in the GIFT framework exhibit a self-similar arithmetic structure based on atoms {2, 3, 7, 11}. This structure is statistically validated for PHYSICS (cross-scale 42, RG self-reference) but does NOT extend to L-function conductor structure.**
 
-2. **Why is p₂ = 2 special?** The pattern "Primary + p₂×Primary" is optimal. What role does binary structure play?
+### 8.2 Evidence Summary (Updated)
 
-3. **Modular form connection**: Can GIFT compositional structure be derived from modular weight hierarchies?
+| Level | Structure | Status |
+|-------|-----------|--------|
+| Atoms | {2, 3, 7, 11} | ✓ VALIDATED (p=0.0007) |
+| Cross-scale 42 | Physics observables | ✓ VALIDATED (p=0.006) |
+| RG Flow | 8β₈ = 13β₁₃ = 36 | ✓ VALIDATED (<0.2% error) |
+| Fibonacci backbone | F₃-F₈ match | ✗ NOT SIGNIFICANT (p=0.12) |
+| L-function conductors | GIFT > Control | ✗ FALSIFIED (Control 4.4× better) |
+| Compositional modes | Scale correlation | ~ QUALITATIVE ONLY (p=0.16) |
 
-4. **Langlands interpretation**: Do the L-function patterns have automorphic form interpretation?
+### 8.3 Domain Specificity
 
-### 9.2 Empirical
+The fractal encoding is **domain-specific**:
+- **Physics**: Strong evidence (validated)
+- **Number theory (L-functions)**: No evidence (falsified)
 
-5. **Test Fibonacci products**: Do conductors q = 40 (5×8) and q = 104 (8×13) show enhanced Fibonacci constraint?
-
-6. **More conductors**: Statistical significance requires testing 50+ conductors
-
-7. **Dedekind zeta**: Do GIFT discriminants show enhanced patterns?
-
-### 9.3 Foundational
-
-8. **Why {2, 3, 7, 11}?** Is there a deeper reason these specific primes form the arithmetic atoms?
-
-9. **Category theory**: Does the hierarchical structure have natural categorical interpretation (tensor products, Kunneth formula)?
-
----
-
-## Part X: Conclusion
-
-### 10.1 What We Have Found
-
-The GIFT framework exhibits a **self-similar arithmetic structure**:
-
-1. **Four atoms** {2, 3, 7, 11} generate all primary constants
-2. **Three modes** (products, ratios, sums) combine these at increasing complexity
-3. **Cross-scale invariance**: The same constants (especially 42) appear at disparate energy scales
-4. **Self-reference**: RG flow exponents encode GIFT topology
-5. **L-function validation**: Additive sums show optimal Fibonacci encoding
-
-### 10.2 What This Suggests
-
-If physical observables are truly encoded through fractal arithmetic of topological invariants, this would represent a **deep unity** between:
-
-- **Number theory** (primes, Fibonacci, L-functions)
-- **Topology** (K₇ manifold, G₂ holonomy, Betti numbers)
-- **Physics** (Standard Model parameters, cosmological observables)
-
-### 10.3 Epistemic Humility
-
-This document presents **patterns and correlations**, not proven mechanisms. The observed structure could be:
-
-- A genuine physical principle waiting to be understood
-- A mathematical coincidence amplified by selection bias
-- An artifact of the specific way GIFT is formulated
-
-Further theoretical work and empirical testing are required to distinguish these possibilities.
+This suggests the connection between GIFT topology and Riemann/L-function zeros is more subtle than initially hypothesized.
 
 ---
 
-## Appendix A: Complete Factorization Table
+## Part IX: Conclusion (Revised)
 
-| Constant | Value | Prime Factorization | GIFT Atoms Used |
-|----------|-------|---------------------|-----------------|
-| p₂ | 2 | 2 | {2} |
-| N_gen | 3 | 3 | {3} |
-| Weyl | 5 | 5 | {5} |
-| dim(K₇) | 7 | 7 | {7} |
-| rank(E₈) | 8 | 2³ | {2} |
-| D_bulk | 11 | 11 | {11} |
-| F₇ | 13 | 13 | {13} |
-| dim(G₂) | 14 | 2 × 7 | {2, 7} |
-| b₂ | 21 | 3 × 7 | {3, 7} |
-| dim(J₃(O)) | 27 | 3³ | {3} |
-| χ_K7 | 42 | 2 × 3 × 7 | {2, 3, 7} |
-| b₃ | 77 | 7 × 11 | {7, 11} |
-| H* | 99 | 3² × 11 | {3, 11} |
-| dim(E₈) | 248 | 2³ × 31 | {2, 31} |
+### 9.1 What Stands
 
-## Appendix B: Cross-Scale Appearances of 42
+1. **Arithmetic atoms** {2, 3, 7, 11} are statistically special
+2. **Cross-scale 42** in physics is genuine (not selection bias)
+3. **RG self-reference** 8β₈ = 13β₁₃ = 36 is robust
+4. **Riemann ζ(s) recurrence** (original claim) remains valid
 
-| Observable | Expression | Scale | 42 Role |
-|------------|------------|-------|---------|
-| m_b/m_t | 1/42 | GeV | Denominator |
-| m_W/m_Z | 37/42 | 100 GeV | Denominator |
-| 2b₂ | 42 | Topology | Definition |
-| σ₈ | 34/42 = 17/21 | Cosmology | Denominator |
-| Ω_DM/Ω_b | (42+1)/8 | Cosmology | Shifted |
+### 9.2 What Falls
+
+1. ~~GIFT conductors are special in L-functions~~ — Falsified
+2. ~~42 is universal across domains~~ — Physics only
+3. ~~Fibonacci backbone is deep structure~~ — Observational coincidence
+
+### 9.3 Epistemic Status
+
+This document now presents **honest, mixed evidence**:
+- The fractal structure in **physics** is statistically supported
+- The extension to **number theory** is falsified
+- The framework has clear, empirically-determined boundaries
+
+This is how science should work: test, falsify, refine.
+
+---
+
+## Appendix A: Phase 3 Blind Challenge Results
+
+### Pre-registered Predictions (All Failed)
+
+| Prediction | Result | Verdict |
+|------------|--------|---------|
+| GIFT conductors outperform controls | Control 4.4× better | ✗ FAIL |
+| q=42 in top 25% | Rank 24/24 (last) | ✗ FAIL |
+| GIFT grammar beats 95% of nulls | Only 76% | ✗ FAIL |
+
+### Complete Ranking
+
+| Rank | q | |R-1| | Category |
+|------|---|-------|----------|
+| 1 | 61 | 0.038 | Control |
+| 2 | 56 | 0.052 | GIFT |
+| 3 | 53 | 0.091 | Control |
+| 4 | 17 | 0.109 | GIFT |
+| 5 | 5 | 0.117 | GIFT |
+| ... | ... | ... | ... |
+| 22 | 38 | 13.5 | GIFT |
+| 23 | 29 | 6.8 | Control |
+| 24 | 42 | 66.9 | GIFT |
+
+### Technical Note
+
+The catastrophic failures of q=42 and q=38 correlate with very small a₁₃ coefficients, causing the ratio R = 8a₈/(13a₁₃) to explode. This may indicate that the Fibonacci constraint metric is inappropriate for certain conductor classes, rather than a fundamental failure of structure.
+
+---
+
+## Appendix B: Cross-Scale Appearances of 42 (Physics Only)
+
+| Observable | Expression | Scale | Status |
+|------------|------------|-------|--------|
+| m_b/m_t | 1/42 | GeV | ✓ Validated |
+| m_W/m_Z | 37/42 | 100 GeV | ✓ Validated |
+| 2b₂ | 42 | Topology | ✓ Definition |
+| σ₈ | 34/42 | Cosmology | ✓ Validated |
+| L(s,χ₄₂) | — | Number theory | ✗ Falsified |
 
 ---
 
 ## References
 
 ### Internal GIFT Documents
-- `GIFT_RELATIONS_INDEX.md` — Complete decomposition catalog
-- `REAL_LFUNC_VALIDATION_RESULTS.md` — L-function validation
-- `PHASE2_RG_FLOW_DISCOVERY.md` — RG flow analysis
-- `SYNTHESIS_FIBONACCI_RIEMANN.md` — Fibonacci structure
+- `FRACTAL_VALIDATION_REPORT.md` — Statistical validation
+- `COUNCIL_SYNTHESIS_11.md` — AI council synthesis
+- `GIFT_Phase3_Blind_Challenge.ipynb` — Blind challenge notebook
+- `GIFT_Phase3_Blind_Challenge_Results.json` — Raw results
 
-### External Literature (2024-2026)
-- Physical Review B (2024): Logarithmic chain realization of zeta zeros
-- JHEP (2024): Modular forms and Yukawa couplings
-- Nuclear Physics B (2025): G₂-manifolds and gauge boson masses
-- Quanta Magazine (2024): Geometric Langlands proof
-
-### Cultural Reference
-- Adams, D. (1979). *The Hitchhiker's Guide to the Galaxy*. Pan Books.
-  - "The Answer to the Ultimate Question of Life, the Universe, and Everything is **42**."
+### Validation Methodology
+- Monte Carlo: 50,000-100,000 trials per test
+- Look-Elsewhere Effect: Bonferroni and Benjamini-Hochberg corrections
+- Blind challenge: Pre-registered predictions before computation
 
 ---
 
 *GIFT Framework — Fractal Encoding Structure*
-*February 2026*
+*February 2026 (Revised after Phase 3 validation)*

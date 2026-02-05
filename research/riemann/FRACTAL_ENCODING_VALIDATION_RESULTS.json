@@ -1,0 +1,129 @@
+{
+  "timestamp": "2026-02-04 19:54:34",
+  "version": "v1.0",
+  "test_a_arithmetic_atoms": {
+    "test_name": "arithmetic_atoms",
+    "gift_coverage": 0.8333333333333334,
+    "gift_generated": 10,
+    "n_constants": 12,
+    "n_random_sets": 100000,
+    "better_count": 0,
+    "equal_count": 74,
+    "p_value": 0.00074,
+    "mean_random_coverage": 0.17943166666666666,
+    "std_random_coverage": 0.13795419649490753,
+    "p_both_betti": 0.00878,
+    "verdict": "PASS"
+  },
+  "test_b_constant_42": {
+    "test_name": "constant_42",
+    "n_appearances": 6,
+    "n_scales": 4,
+    "n_random_trials": 50000,
+    "counts_exceeding": 3,
+    "p_value": 6e-05,
+    "p_cross_scale_null": 0.0102,
+    "expected_cross_scale": 0.01,
+    "lee_factor": 100,
+    "p_corrected": 0.006,
+    "verdict": "PASS"
+  },
+  "test_c_fibonacci": {
+    "test_name": "fibonacci_backbone",
+    "n_exact_matches": 6,
+    "n_random_sequences": 100000,
+    "better_or_equal": 12079,
+    "p_value": 0.12079,
+    "p_exact_sequence": 0.2208,
+    "verdict": "FAIL"
+  },
+  "test_d_rg_flow": {
+    "test_name": "rg_flow_self_reference",
+    "beta_8": 4.497,
+    "beta_13": 2.764,
+    "product_8": 35.976,
+    "product_13": 35.931999999999995,
+    "target": 36,
+    "error_8": 0.0006666666666666919,
+    "error_13": 0.0018888888888890262,
+    "n_bootstrap": 10000,
+    "p_agreement_1pct": 0.28,
+    "p_agreement_5pct": 0.9289,
+    "actual_agreement": 0.0012222222222223343,
+    "p_value_estimate": 1.2592592592593984e-06,
+    "verdict": "STRONG PASS"
+  },
+  "test_e_lfunction": {
+    "test_name": "lfunction_conductors",
+    "gift_conductors": {
+      "43": 0.19,
+      "17": 0.36,
+      "5": 0.43,
+      "41": 0.62,
+      "31": 0.64
+    },
+    "non_gift_conductors": {
+      "23": 6.12,
+      "37": 5.84,
+      "29": 4.21
+    },
+    "gift_mean": 0.44800000000000006,
+    "non_gift_mean": 5.390000000000001,
+    "improvement_factor": 12.03125,
+    "n_permutations": 10000,
+    "better_by_chance": 167,
+    "p_value": 0.0167,
+    "mann_whitney_p": 0.017857142857142856,
+    "verdict": "MARGINAL"
+  },
+  "test_f_compositional": {
+    "test_name": "compositional_modes",
+    "product_scale": 3.0,
+    "ratio_scale": 2.0,
+    "sum_scale": 0.5,
+    "correct_ordering": true,
+    "n_permutations": 10000,
+    "correct_by_chance": 1571,
+    "p_value": 0.1571,
+    "expected_null": 0.16666666666666666,
+    "verdict": "MARGINAL"
+  },
+  "lee_correction": {
+    "test_name": "lee_correction",
+    "n_tests": 6,
+    "uncorrected": {
+      "arithmetic_atoms": 0.00074,
+      "constant_42": 6e-05,
+      "fibonacci_backbone": 0.12079,
+      "rg_flow_self_reference": 1.0,
+      "lfunction_conductors": 0.0167,
+      "compositional_modes": 0.1571
+    },
+    "bonferroni": {
+      "arithmetic_atoms": 0.0044399999999999995,
+      "constant_42": 0.00036,
+      "fibonacci_backbone": 0.7247399999999999,
+      "rg_flow_self_reference": 1.0,
+      "lfunction_conductors": 0.1002,
+      "compositional_modes": 0.9425999999999999
+    },
+    "benjamini_hochberg": {
+      "constant_42": 0.00036,
+      "arithmetic_atoms": 0.0022199999999999998,
+      "lfunction_conductors": 0.0334,
+      "fibonacci_backbone": 0.18118499999999998,
+      "compositional_modes": 0.18851999999999997,
+      "rg_flow_self_reference": 1.0
+    },
+    "significant_bonferroni": 2,
+    "significant_bh": 3
+  },
+  "summary": {
+    "pass_count": 3,
+    "fail_count": 1,
+    "marginal_count": 2,
+    "overall_verdict": "MODERATE EVIDENCE",
+    "overall_text": "Significant support but some caveats",
+    "elapsed_seconds": 4.3576884269714355
+  }
+}
