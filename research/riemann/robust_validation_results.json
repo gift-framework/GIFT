@@ -1,0 +1,46 @@
+{
+  "monte_carlo": {
+    "n_random_triplets": 1000,
+    "rank_42_r2": 346,
+    "rank_77_r2": 325,
+    "percentile_42": 65.5,
+    "percentile_77": 67.7
+  },
+  "systematic_search": {
+    "rank_lag42": 108,
+    "rank_lag77": 75,
+    "total_tested": 125,
+    "top_10_lags": [
+      140,
+      139,
+      138,
+      137,
+      141,
+      142,
+      136,
+      143,
+      149,
+      148
+    ]
+  },
+  "permutation_test": {
+    "n_permutations": 100,
+    "z_score_2lag": 4075.070228944293,
+    "z_score_3lag": 3583.9168814211184,
+    "p_value_2lag": 0.0,
+    "p_value_3lag": 0.0
+  },
+  "bootstrap": {
+    "n_samples": 200,
+    "coef_cv_percent": 2.2351058135971797
+  },
+  "fibonacci_test": {
+    "fib_sigma": 0.3767757012159081,
+    "nonfib_sigma": 0.3505957468307433,
+    "advantage_percent": -7.467276663171747
+  },
+  "verdict": {
+    "tests_passed": 2,
+    "tests_total": 5
+  }
+}
