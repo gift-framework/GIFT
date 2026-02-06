@@ -870,27 +870,20 @@ print(f"  p-value:           {p_value:.2e} (none of {N_PERMS} permutations beat 
 # ---- Bootstrap CI ----
 print("\\nBootstrap confidence interval...")
 boot_captures = np.zeros(N_BOOT)
-n_data = len(delta_actual)
+block_size = 100  # must be > LAG_2 to preserve local structure
 
 for b in tqdm(range(N_BOOT), desc="  Bootstrap"):
-    idx = np.random.randint(0, N_ZEROS - s, size=N_ZEROS - s)
-    # Block bootstrap: resample contiguous blocks
-    block_size = 50
-    n_blocks = (N_ZEROS - s) // block_size
-    block_starts = np.random.randint(s, N_ZEROS - block_size, size=n_blocks)
+    # Block bootstrap: resample contiguous blocks with replacement
+    n_blocks = N_ZEROS // block_size + 1
+    block_starts = np.random.randint(0, N_ZEROS - block_size, size=n_blocks)
     d_boot = np.concatenate([delta_n[bs:bs+block_size] for bs in block_starts])
-    d_boot = d_boot[:N_ZEROS - s]
-    R_boot = d_boot[s-s:] - A_COEFF * d_boot[s-s-LAG_1:-LAG_1 if LAG_1 > 0 else len(d_boot)] - B_COEFF * d_boot[:-LAG_2 if LAG_2 > 0 else len(d_boot)]
-    minlen = min(len(d_boot) - s, len(d_boot) - LAG_1, len(d_boot) - LAG_2)
-    if minlen > 100:
-        d_sub = d_boot[:minlen+s]
-        R_b = d_sub[s:] - A_COEFF * d_sub[s-LAG_1:-LAG_1] - B_COEFF * d_sub[s-LAG_2:-LAG_2]
-        ml = min(len(R_b), len(d_sub[s:]))
-        boot_captures[b] = 1.0 - np.mean(np.abs(R_b[:ml])) / np.mean(np.abs(d_sub[s:s+ml]))
+    d_boot = d_boot[:N_ZEROS]
+    R_b = d_boot[s:] - A_COEFF * d_boot[s-LAG_1:-LAG_1] - B_COEFF * d_boot[s-LAG_2:-LAG_2]
+    boot_captures[b] = 1.0 - np.mean(np.abs(R_b)) / np.mean(np.abs(d_boot[s:]))
 
-ci_lo, ci_hi = np.percentile(boot_captures[boot_captures != 0], [2.5, 97.5])
+ci_lo, ci_hi = np.percentile(boot_captures, [2.5, 97.5])
 print(f"  95% CI: [{ci_lo*100:.4f}%, {ci_hi*100:.4f}%]")
-print(f"  Median: {np.median(boot_captures[boot_captures != 0])*100:.4f}%")
+print(f"  Median: {np.median(boot_captures)*100:.4f}%")
 
 # Plots
 fig, axes = plt.subplots(1, 2, figsize=(14, 5))
