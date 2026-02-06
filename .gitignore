@@ -60,6 +60,9 @@ desktop.ini
 .env
 .local
 
+# Cached data (auto-downloaded)
+riemann_zeros_*_genuine.npy
+
 # Cached repositories (cloned by pipeline)
 .cache/
 
