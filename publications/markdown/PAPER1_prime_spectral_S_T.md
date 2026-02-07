@@ -37,7 +37,8 @@ On the critical line s = ½ + it, the individual terms become
 The function S(T) = π⁻¹ arg ζ(½ + iT), which encodes the deviation of the
 zero-counting function N(T) from its smooth approximation, is therefore not
 directly computable from a convergent prime sum on the critical line. The
-classical approach (Riemann–von Mangoldt, Backlund, Turing, Trudgian [1–4])
+classical approach (Riemann–von Mangoldt, Backlund, Turing, Trudgian [1–4];
+see also Titchmarsh [13] and Edwards [19] for comprehensive treatments)
 bounds |S(T)| but does not provide an explicit, computable approximation
 in terms of primes.
 
@@ -63,8 +64,12 @@ relationship *quantitatively explicit* for individual zeros.
 Goldston [6] established mean-value results for S(T) using short Dirichlet
 polynomials. Selberg [7] proved the central limit theorem for S(T), showing
 that S(T) / √(½ log log T) converges in distribution to a standard Gaussian.
-Trudgian [8] gave the best current bound |S(T)| ≤ 0.112 log T for large T.
-Odlyzko [9] computed millions of zeros and studied their local statistics.
+Trudgian [4, 8] gave the best current bounds on S(T) and on the
+zero-counting error. Odlyzko [9] computed millions of zeros and studied
+their local statistics. Gonek, Hughes and Keating [14] developed hybrid
+Euler–Hadamard product methods combining prime sums with random matrix
+predictions. Harper [15] and Arguin et al. [18] obtained sharp conditional
+bounds for moments and maxima of the zeta function on the critical line.
 
 The question we address is different: rather than bounding S(T), we seek an
 *explicit, computable approximation* S_w(T) built from a finite prime sum,
@@ -486,20 +491,19 @@ threshold of 0.5.
 The mean error grows slowly (0.010 → 0.019) but remains far below 0.5.
 At n = 100,000, the safety margin to the counting threshold is **4.52×**.
 
-### 5.4 Connection to the Riemann Hypothesis
+### 5.4 Remark on the counting bound
 
-We note the following logical chain:
+We observe that the Riemann–von Mangoldt formula N(T) counts *all*
+non-trivial zeros with 0 < Im(ρ) ≤ T, regardless of their real part.
+It is a classical fact that establishing |N(T) − N_approx(T)| < ½
+rigorously for all T would be equivalent to the Riemann Hypothesis.
 
-1. N(T) counts *all* non-trivial zeros with 0 < Im(ρ) ≤ T, whether on the
-   critical line or not.
-2. If one could establish the *pointwise bound* |N(T) − N_approx(T)| < ½
-   for all T, this would imply N(T) = N₀(T) (the count on the critical
-   line), which is equivalent to RH.
-
-We emphasize that our result is **numerical verification, not a proof**.
-The gap between numerical evidence on [14, 75000] and a rigorous bound
-for all T is substantial (see Section 7 for a discussion of what a
-proof would require).
+Our numerical result — that this bound holds with a 4.5× safety margin
+over the first 100,000 zeros — is therefore consistent with RH, but we
+stress that this is a *finite verification*, not a proof. The gap between
+numerical evidence on a bounded interval and a rigorous asymptotic bound
+is substantial; see Section 7 for a discussion of what such a proof
+would require.
 
 ---
 
@@ -926,10 +930,10 @@ geodesics {ℓ_γ}. The structural parallel is:
 | m-th iterate of geodesic | m-th prime power |
 | Spectral fluctuation | S(T) |
 
-This suggests that the mollified Dirichlet polynomial plays the role of
-a "truncated geodesic sum" for a hypothetical compact 7-manifold whose
-spectrum encodes the Riemann zeros. We note this as a structural analogy
-rather than a theorem.
+This analogy — already implicit in the work of Berry and Keating [16]
+on the spectral interpretation of zeros — suggests viewing S_w(T) as a
+truncated "geodesic side" of a trace formula, with the mollifier playing
+the role of a smooth partition of unity on the length spectrum.
 
 ### 10.3 The role of prime powers m ≤ 3
 
@@ -943,7 +947,8 @@ all primes, which is below the approximation's noise floor.
 
 1. **Not a proof**: Our results are numerical, validated on a finite (though
    large) set of zeros. They do not constitute a proof of any bound on
-   S(T) − S_w(T).
+   S(T) − S_w(T). See Conrey [17] for a survey of the difficulties
+   inherent to any approach to RH.
 
 2. **Slow R² growth**: The variance explained is bounded near 94%.
    Achieving R² > 0.96 would require either a fundamentally better
@@ -974,6 +979,11 @@ all primes, which is below the approximation's noise floor.
 4. **Incorporation of the pole and trivial zeros** into the explicit
    formula, which could improve R² beyond the current 94% ceiling.
 
+5. **Geometric interpretation**: The structural parameters of the formula
+   (the number of contributing primes, the cutoff exponent, the prime-power
+   hierarchy) admit suggestive analogies with compact manifolds of special
+   holonomy, which we intend to explore in a separate work.
+
 ---
 
 ## References
@@ -1002,7 +1012,7 @@ all primes, which is below the approximation's noise floor.
 
 [8] Trudgian, T. (2014). An improved upper bound for the error in the
     zero-counting formula for the Riemann zeta-function. *Math. Comp.*
-    84, 1439–1450.
+    84(291), 1439–1450.
 
 [9] Odlyzko, A.M. (1987). On the distribution of spacings between zeros
     of the zeta function. *Math. Comp.* 48, 273–308.
@@ -1016,6 +1026,29 @@ all primes, which is below the approximation's noise floor.
 [12] Selberg, A. (1956). Harmonic analysis and discontinuous groups in
      weakly symmetric Riemannian spaces with applications to Dirichlet
      series. *J. Indian Math. Soc.* 20, 47–87.
+
+[13] Titchmarsh, E.C. (1986). *The Theory of the Riemann Zeta-Function*,
+     2nd ed. (revised by D.R. Heath-Brown). Oxford University Press.
+
+[14] Gonek, S.M., Hughes, C.P. & Keating, J.P. (2007). A hybrid
+     Euler–Hadamard product for the Riemann zeta function. *Duke Math. J.*
+     136(3), 507–549.
+
+[15] Harper, A.J. (2013). Sharp conditional bounds for moments of the
+     Riemann zeta function. Preprint, arXiv:1305.4618.
+
+[16] Berry, M.V. & Keating, J.P. (1999). The Riemann zeros and eigenvalue
+     asymptotics. *SIAM Review* 41(2), 236–266.
+
+[17] Conrey, J.B. (2003). The Riemann Hypothesis. *Notices of the AMS*
+     50(3), 341–353.
+
+[18] Arguin, L.-P., Belius, D. & Harper, A.J. (2017). Maxima of a
+     randomized Riemann zeta function, and branching random walks.
+     *Ann. Appl. Probab.* 27(1), 178–215.
+
+[19] Edwards, H.M. (1974). *Riemann's Zeta Function*. Academic Press
+     (reprinted by Dover, 2001).
 
 ---
 
@@ -1051,30 +1084,7 @@ on the critical line.
 
 ---
 
-## Appendix B. Geometric Interpretation (Speculative)
-
-The structural parameters of the formula admit a suggestive geometric
-interpretation in terms of compact 7-manifolds with G₂ holonomy.
-
-The function S_w(T) decomposes as a sum over the first 77 primes when
-evaluated at large T — matching the third Betti number b₃ = 77 of the
-Joyce manifold K₇ (a compact G₂ manifold constructed as a twisted
-connected sum, with b₂ = 21 and b₃ = 77). The R² contribution hierarchy
-(m = 1, 2, 3 carrying 92.8%, 6.1%, 1.1%) terminates at m = 3, mirroring
-the three generations of fermions in the Standard Model (which also emerge
-from G₂ compactifications).
-
-The adaptive cutoff θ₀ = 1.409 is numerically close to 99/70, where
-99 = b₂ + b₃ + 1 and 70 = 10 × dim(K₇). These integers satisfy the
-Pell equation 99² − 2 × 70² = 1, i.e. 99/70 is a convergent of √2.
-
-We record these observations without making claims about their significance.
-Whether they reflect a deep connection between the zeta function and
-G₂ geometry, or are numerical coincidences, remains an open question.
-
----
-
-## Appendix C. Reproducibility
+## Appendix B. Reproducibility
 
 ### C.1 Data
 
