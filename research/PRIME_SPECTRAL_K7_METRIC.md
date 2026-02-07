@@ -1,7 +1,7 @@
 # Prime-Spectral K₇ Metric: From Divergent Series to Parameter-Free Zero Counting
 
-**Status**: THEORETICAL (numerically validated on 100,000 Riemann zeros)
-**Date**: 2026-02-06
+**Status**: THEORETICAL (numerically validated on 2,001,052 Riemann zeros)
+**Date**: 2026-02-07
 **Context**: GIFT framework — Geometric Information Field Theory
 
 ---
@@ -590,6 +590,21 @@ as a strict train/test protocol. The rule: θ\* is calibrated on the
 This establishes that θ\* = 0.9941 is a **structural constant** of the
 prime-spectral decomposition on Re(s) = ½, not an artifact of fitting.
 
+**Protocol C (extreme out-of-sample, 2M zeros):**
+
+The hardest test: calibrate θ\* on 100K zeros, apply to 1,901,052
+unseen zeros spanning T ∈ [74,922, 1,132,491]:
+
+| | Train | θ\*(train) | Test | α(test) | R²(test) |
+|-|-------|-----------|------|---------|---------|
+| C1 | [0k, 100k) | 0.964 | [100k, 2001k) | **+1.019** | **0.919** |
+
+The test set is **19× larger** than the training set and spans a **15× larger
+T range**. Despite this, α stays within 2% of 1 and R² drops by only 2%.
+The slightly lower θ\*(train) = 0.964 (vs global 0.994) reflects the
+small-T bias of the training window, confirming the θ\*(T) drift
+documented in Section 7.3.
+
 ---
 
 ## 5. Step D: The N(T) Bridge — Perfect Zero Counting {#5-step-d}
@@ -862,19 +877,19 @@ individually.
 The optimal θ\* varies slightly with T. The **2M-zero extension**
 (Section 7.4) quantifies this drift precisely:
 
-| Window | T range | α at global θ\* = 0.9941 |
-|--------|---------|--------------------------|
-| [0k, 100k) | [14, 74921] | +0.987 |
-| [100k, 200k) | [74922, 139502] | +1.003 |
-| [200k, 500k) | [139503, 319387] | +1.006 |
-| [500k, 1000k) | [319388, 600270] | +1.008 |
-| [1000k, 1500k) | [600270, 869610] | +1.009 |
-| [1500k, 2001k) | [869611, 1132491] | +1.010 |
+| Window | T_mid | α at global θ\* = 0.9941 | α − 1 |
+|--------|-------|--------------------------|-------|
+| [0k, 100k) | ~37,500 | +0.9869 | −1.31% |
+| [100k, 200k) | ~107,000 | +1.0029 | +0.29% |
+| [200k, 500k) | ~229,000 | +1.0059 | +0.59% |
+| [500k, 1000k) | ~460,000 | +1.0082 | +0.82% |
+| [1000k, 1500k) | ~735,000 | +1.0093 | +0.93% |
+| [1500k, 2001k) | ~1,001,000 | +1.0097 | +0.97% |
 
 The drift is monotone and slow: α moves from −1.3% to +1.0% across a
-**15× range in T** (75K → 1.1M), for a total excursion of 2.3%. The
-global α = 1.006 confirms that the constant θ\* = 0.9941 remains an
-excellent approximation even 20× beyond the calibration range.
+**27× range in T_mid** (37K → 1.0M), for a total excursion of 2.3%.
+The global α = 1.0064 confirms that the constant θ\* = 0.9941 remains an
+excellent approximation even far beyond the calibration range.
 
 A refined formula:
 
@@ -896,24 +911,33 @@ the original 100K calibration.
 
 **Global metrics (2M zeros, α = 1 fixed):**
 
-| Metric | 100K zeros | 2M zeros | Change |
-|--------|-----------|----------|--------|
-| α (OLS, would-be) | +1.000 | **+1.006** | +0.6% |
-| R² (α = 1 fixed) | 0.937 | **0.922** | −1.5% |
-| E_rms | 0.058 | **0.053** | −9% (improved) |
+| Metric | 100K zeros | 2,001,052 zeros | Change |
+|--------|-----------|-----------------|--------|
+| α (OLS, would-be) | +1.0000 | **+1.0064** | +0.64% |
+| R² (α = 1 fixed) | 0.9372 | **0.9219** | −1.53% |
+| E_rms | 0.0580 | **0.0526** | −9.4% (improved) |
 | E_max | 0.778 | **0.778** | identical |
-| Localization | 98.0% | **97.2%** | −0.8% |
+| Localization | 98.0% | **97.20%** | −0.80% |
+
+**Hard out-of-sample** (train on 100K, test on remaining 1.9M):
+
+| | θ\*(train) | α(test) | R²(test) |
+|--|-----------|---------|---------|
+| Train: [0k, 100k) → Test: [100k, 2001k) | 0.9640 | **+1.0186** | **0.9190** |
+
+The test set is 19× larger than the training set. α drifts by only 1.9%
+from target, confirming the formula generalizes without recalibration.
 
 **Window-by-window stability** (6 non-overlapping ranges):
 
 | Window | T range | α | R² | Loc% |
 |--------|---------|---|-----|------|
-| [0k, 100k) | [14, 74921] | +0.987 | 0.939 | 98.1% |
-| [100k, 200k) | [74922, 139502] | +1.003 | 0.930 | 99.1% |
-| [200k, 500k) | [139503, 319387] | +1.006 | 0.925 | 99.0% |
-| [500k, 1000k) | [319388, 600270] | +1.008 | 0.921 | 98.9% |
-| [1000k, 1500k) | [600270, 869610] | +1.009 | 0.918 | 98.8% |
-| [1500k, 2001k) | [869611, 1132491] | +1.010 | 0.917 | 98.7% |
+| [0k, 100k) | [14, 74,921] | +0.9869 | 0.9394 | 98.09% |
+| [100k, 200k) | [74,922, 139,502] | +1.0029 | 0.9298 | 99.11% |
+| [200k, 500k) | [139,503, 319,387] | +1.0059 | 0.9249 | 98.98% |
+| [500k, 1000k) | [319,388, 600,270] | +1.0082 | 0.9208 | 98.85% |
+| [1000k, 1500k) | [600,270, 869,610] | +1.0093 | 0.9183 | 98.76% |
+| [1500k, 2001k) | [869,611, 1,132,491] | +1.0097 | 0.9165 | 98.72% |
 
 **Interpretation**:
 
@@ -960,28 +984,32 @@ $$
 |--------|---------------------|----------------------|----------------------|-----------------|
 | Free parameters | 2 (a, b) | 1 (α) | **0** | **0** |
 | R² at 100K | −226% | +88.7% | **+93.7%** | 93.9% (window) |
-| R² at 2M | — | — | — | **+92.2%** |
+| R² at 2M | — | — | — | **+92.19%** |
 | Stable across scales? | No (diverges) | Yes (±1%) | **Yes (±0.5%)** | **Yes (±1.3%)** |
 | N(T) counting (100K) | N/A | 100% (fitted) | **100% (no fit)** | — |
-| Zero localization | N/A | 97.0% | **98.0%** | **97.2%** |
-| α at 2M | — | — | — | **+1.006** |
+| Zero localization | N/A | 97.0% | **98.0%** | **97.20%** |
+| α at 2M | — | — | — | **+1.0064** |
 
 ### 8.3 Key Numbers
 
-| Quantity | Value | Meaning |
-|----------|-------|---------|
-| θ\* | 0.9941 | Cutoff exponent (X = T^θ) |
-| R² | 0.9372 | Variance explained (no fitting) |
-| E_rms | 0.058 | RMS prediction error on δₙ |
-| E_max | 0.778 | Worst-case error on δₙ |
-| N(T) max error | 0.156 | Max counting error (well below 0.5) |
-| Localization | 98.0% | Zeros uniquely placed in their interval |
-| Safety (P5) | 1.7x | 5th percentile safety margin |
-| Failure rate | 2.0% | Close zero pairs (gap < mean) |
-| λ₁ × H* (Pell bare) | 14.000 | Uncorrected Pell prediction |
-| λ₁ × H* (corrected) | 826/61 ≈ 13.541 | After 2κ_T conformal correction |
-| λ₁ × H* (numerical) | 13.557 ± 0.042 | Discrete Laplacian measurement |
-| Spectral gap residual | 0.12% | Down from 3.2% (27× improvement) |
+| Quantity | 100K value | 2M value | Meaning |
+|----------|-----------|----------|---------|
+| θ\* | 0.9941 | 0.9941 | Cutoff exponent (X = T^θ) |
+| R² | 0.9372 | **0.9219** | Variance explained (no fitting) |
+| α | 1.0000 | **1.0064** | Slope (1 = parameter-free) |
+| E_rms | 0.058 | **0.0526** | RMS prediction error on δₙ |
+| E_max | 0.778 | — | Worst-case error on δₙ |
+| N(T) max error | 0.156 | — | Max counting error (< 0.5) |
+| Localization | 98.0% | **97.20%** | Zeros uniquely placed in interval |
+| Safety (P5) | 1.7× | — | 5th percentile safety margin |
+| Failure rate | 2.0% | 2.8% | Close zero pairs (gap < mean) |
+| θ\*(train 100K) | — | **0.9640** | Train-set optimized θ\* |
+| α(test 1.9M) | — | **1.0186** | Out-of-sample slope (+1.9%) |
+| R²(test 1.9M) | — | **0.9190** | Out-of-sample R² |
+| λ₁ × H* (Pell bare) | 14.000 | — | Uncorrected Pell prediction |
+| λ₁ × H* (corrected) | 826/61 ≈ 13.541 | — | After 2κ_T conformal correction |
+| λ₁ × H* (numerical) | 13.557 ± 0.042 | — | Discrete Laplacian measurement |
+| Spectral gap residual | 0.12% | — | Down from 3.2% (27× improvement) |
 
 ---
 
