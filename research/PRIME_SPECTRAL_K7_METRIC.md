@@ -27,9 +27,10 @@ the K₇ metric of the GIFT framework.
 4. [Step C: Phase Diagram and Optimal Configuration](#4-step-c)
 5. [Step D: The N(T) Bridge — Perfect Zero Counting](#5-step-d)
 6. [Connection to K₇ Geometry](#6-k7-connection)
-7. [What Remains Open](#7-open-problems)
-8. [Numerical Results Summary](#8-results)
-9. [Reproducibility](#9-reproducibility)
+7. [GUE Repulsion: Understanding the 2% Gap](#7-gue)
+8. [What Remains Open](#8-open-problems)
+9. [Numerical Results Summary](#9-results)
+10. [Reproducibility](#10-reproducibility)
 
 ---
 
@@ -508,9 +509,120 @@ Relative fluctuation: 0.57%, well within the Joyce existence theorem bound
 
 ---
 
-## 7. What Remains Open {#7-open-problems}
+## 7. GUE Repulsion: Understanding the 2% Gap {#7-gue}
 
-### 7.1 The Rigorous Error Bound (The Bottleneck)
+### 7.1 Gap Distribution Follows GUE
+
+The normalized nearest-neighbor spacings s = gap / local_mean_gap were tested
+against the Wigner surmise (GUE) and the Poisson distribution:
+
+| Test | KS statistic D | p-value |
+|------|---------------|---------|
+| GUE (Wigner surmise) | 0.0866 | ~0 |
+| Poisson | 0.2982 | ~0 |
+
+GUE is **3.4x better** than Poisson. Neither is a perfect fit (KS p ≈ 0),
+but GUE captures the essential structure: **level repulsion** at small gaps.
+
+### 7.2 Super-Repulsion at Small Gaps
+
+Remarkably, the zeros repel **more strongly** than GUE predicts:
+
+| s threshold | Empirical | GUE prediction | Ratio |
+|-------------|-----------|---------------|-------|
+| s < 0.05 | 0.011% | 0.196% | **0.056** |
+| s < 0.10 | 0.079% | 0.782% | **0.101** |
+| s < 0.20 | 0.613% | 3.093% | **0.198** |
+| s < 0.50 | 9.58% | 17.83% | **0.538** |
+| s < 1.00 | 53.4% | 54.4% | 0.982 |
+
+At very small gaps (s < 0.1), the actual zeros show **10–18x fewer**
+close pairs than GUE predicts. This "super-repulsion" helps localization:
+fewer close pairs means fewer potential failures.
+
+### 7.3 The Failure Rate Is a GUE Prediction
+
+The localization failure rate can be predicted from GUE statistics alone.
+Modeling the residual ε as Gaussian with σ_E = 0.058, and the gap as
+GUE-distributed:
+
+$$
+P(\text{failure}) = \int_0^\infty P_{\text{GUE}}(s) \cdot
+\mathrm{erfc}\!\left(\frac{s \cdot \bar{g}}{2\sqrt{2}\,\sigma_E}\right) ds
+$$
+
+| | Value |
+|--|-------|
+| P(failure) empirical | **1.997%** |
+| P(failure) GUE theory | **1.851%** |
+| Ratio | **1.079** |
+
+The GUE theory predicts the failure rate to within **8%**. The 2% is not a
+defect of the method — it is the **theoretically expected** failure rate
+given our approximation quality R² = 0.937.
+
+### 7.4 Anatomy of the Failures
+
+| Statistic | Failed zeros | Localized zeros |
+|-----------|-------------|----------------|
+| Mean normalized gap | 0.329 | 0.743 |
+| Median normalized gap | 0.320 | 0.734 |
+| P5 normalized gap | 0.113 | 0.337 |
+
+- **89% of failures** have normalized gap s < 0.5
+- Enrichment at s < 0.2: **16x** (failures are concentrated at close pairs)
+- Safety margin (median) for failures: **0.69x** (they miss by ~30%)
+- **17.7% of failures** are "near misses" with margin > 0.9
+
+### 7.5 Second-Order Correction: No Help
+
+The quadratic correction from the Taylor expansion of θ:
+
+$$
+\delta_n^{(2)} = \delta_n^{(1)} - \frac{1}{2}\frac{\theta''(\gamma_n^{(0)})}{\theta'(\gamma_n^{(0)})} \left(\delta_n^{(1)}\right)^2
+$$
+
+produces **zero additional localizations**. The term is O(δ²/T) ≈ 10⁻⁵,
+entirely negligible. The bottleneck is the prime-sum approximation quality,
+not the linearization.
+
+### 7.6 Roadmap to Higher Localization Rates
+
+The controlling parameter is σ_E / mean_gap:
+
+| Target | σ_E/gap required | R² required | Factor improvement |
+|--------|-----------------|-------------|-------------------|
+| 98.0% (current) | 0.078 | 0.937 | 1.0x |
+| 99.0% | 0.063 | 0.959 | 1.2x |
+| 99.5% | 0.050 | 0.974 | 1.6x |
+| 99.9% | 0.020 | 0.996 | 3.9x |
+
+The only lever is **improving R²** — no post-processing trick (capping,
+second-order, neighbor-aware) can overcome the GUE-imposed floor.
+The path to better R² is: more primes, better mollifier, or a fundamentally
+different approximation to S(T).
+
+### 7.7 Preliminary 2M-Zero Results
+
+A concurrent notebook on 2,001,052 zeros (T up to 1,132,490) shows:
+
+| Metric | 100K zeros | 2M zeros |
+|--------|-----------|----------|
+| α (OLS) | 1.000 | 1.006 |
+| R² (α=1) | 0.937 | 0.922 |
+| Localization | 98.0% | 97.2% |
+| N(T) smooth-only correct | 97.1% | 94.7% |
+
+The formula generalizes to 2M zeros with graceful degradation:
+R² drops by 1.5 points and localization by 0.8 points. The slight
+drift in α (+0.006) confirms that θ\* has a weak T-dependence
+(θ\* increases from ~0.99 to ~1.07 at large T).
+
+---
+
+## 8. What Remains Open {#8-open-problems}
+
+### 8.1 The Rigorous Error Bound (The Bottleneck)
 
 The central open problem is to prove:
 
@@ -534,45 +646,36 @@ zeros, suggesting a substantial safety margin. But a proof requires:
    The rare failures (2% of zeros) correspond to close zero pairs where
    S(T) fluctuates rapidly.
 
-### 7.2 The 2% Localization Gap
+### 8.2 The θ\* Universality
 
-The 2000 unlocalized zeros (out of 100,000) correspond to close zero pairs.
-Two approaches to close this gap:
+The optimal θ\* varies with T:
 
-**(a) GUE repulsion statistics**: The Montgomery–Odlyzko law predicts that
-close zero pairs follow GUE statistics. The probability of a gap smaller
-than ε (in mean-spacing units) is ~ (πε)²/2. This could give a
-probabilistic localization bound for the failures.
+| Range | θ\*(local) |
+|-------|-----------|
+| T < 10K | 0.900 |
+| T ~ 30K | 0.986 |
+| T ~ 60K | 1.043 |
+| T ~ 1M | ~1.07 |
 
-**(b) Complementary method**: For close pairs, use a second-order expansion
-of the phase equation (including θ'' terms) to resolve the two zeros
-individually.
+A refined formula θ(T) = θ₀ + θ₁/log(T) could make α = 1 more uniformly.
+Determining θ₀ and θ₁ from properties of the mollifier and the prime
+distribution would strengthen the result.
 
-### 7.3 The θ\* Universality
+### 8.3 Improving R² Beyond 0.94
 
-The optimal θ\* varies slightly with T (0.90 at small T, 1.07 at large T).
-A refined formula:
+Three paths to higher R² (and hence better localization):
 
-$$
-\theta(T) = \theta_0 + \frac{\theta_1}{\log T}
-$$
-
-could make α = 1 more uniformly. Determining θ₀ and θ₁ theoretically
-(from properties of the mollifier and the prime distribution) would
-strengthen the result.
-
-### 7.4 Extension to 2M+ Zeros
-
-The Odlyzko tables provide 2,001,052 zeros. Running our analysis on this
-extended dataset would test whether the formula remains stable at
-T ~ 2,400,000 (the range of the 2M-th zero). This is a straightforward
-computational extension.
+1. **Adaptive θ(T)**: Use a T-dependent cutoff instead of a constant θ\*
+2. **Better mollifier**: Optimize the kernel shape (not just cosine) to
+   minimize the error at fixed prime count
+3. **Higher-order explicit formula**: Include the contribution of the
+   trivial zeros and the pole at s = 1, which our current formula ignores
 
 ---
 
-## 8. Numerical Results Summary {#8-results}
+## 9. Numerical Results Summary {#9-results}
 
-### 8.1 The Formula
+### 9.1 The Formula
 
 $$
 S(T) = -\frac{1}{\pi} \sum_{p \leq T} \sum_{m=1}^{3}
@@ -580,7 +683,7 @@ S(T) = -\frac{1}{\pi} \sum_{p \leq T} \sum_{m=1}^{3}
 \frac{\sin(T \cdot m \log p)}{m \, p^{m/2}}
 $$
 
-### 8.2 Comparison: Before and After
+### 9.2 Comparison: Before and After
 
 | Metric | Fibonacci recurrence | Sharp prime (α fitted) | Mollified prime (α = 1) |
 |--------|---------------------|----------------------|----------------------|
@@ -591,7 +694,7 @@ $$
 | Zero localization | N/A | 97.0% | **98.0%** |
 | Mean N(T) error | N/A | 0.055 | **0.016** |
 
-### 8.3 Key Numbers
+### 9.3 Key Numbers
 
 | Quantity | Value | Meaning |
 |----------|-------|---------|
@@ -606,36 +709,38 @@ $$
 
 ---
 
-## 9. Reproducibility {#9-reproducibility}
+## 10. Reproducibility {#10-reproducibility}
 
-### 9.1 Scripts
+### 10.1 Scripts
 
-All results are produced by three Python scripts in `notebooks/`:
+All results are produced by four Python scripts in `notebooks/`:
 
 | Script | Purpose | Runtime |
 |--------|---------|---------|
 | `prime_spectral_metric_verification.py` | Sharp-cutoff prime sum vs Fibonacci | ~25s |
 | `rigorous_prime_spectral.py` | Error bounds, localization, phase diagram | ~10s |
 | `mollifier_alpha_closure.py` | Mollifier sweep, θ\* optimization, final verification | ~137s |
+| `gue_repulsion_analysis.py` | GUE validation, failure anatomy, probabilistic bounds | ~6s |
 
-### 9.2 Data
+### 10.2 Data
 
 - **Zeros**: 100,000 genuine Riemann zeros from Odlyzko's tables
   (https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros1)
 - **Cached**: `riemann_zeros_100k_genuine.npy` (auto-downloaded on first run)
 
-### 9.3 Dependencies
+### 10.3 Dependencies
 
 - Python 3.10+
 - NumPy, SciPy (scipy.special.loggamma, scipy.special.lambertw)
 - No GPU required
 
-### 9.4 JSON Results
+### 10.4 JSON Results
 
 Detailed results are saved in `notebooks/riemann/`:
 - `prime_spectral_results.json`
 - `rigorous_prime_spectral_results.json`
 - `mollifier_results.json`
+- `gue_repulsion_results.json`
 
 ---
 
@@ -652,6 +757,10 @@ Detailed results are saved in `notebooks/riemann/`:
    Classical Theory*. Cambridge University Press.
 5. **Iwaniec, H. & Kowalski, E.** (2004). *Analytic Number Theory*.
    AMS Colloquium Publications, vol. 53.
+6. **Montgomery, H.L.** (1973). The pair correlation of zeros of the zeta function.
+   *Proc. Symp. Pure Math.* 24, 181–193.
+7. **Odlyzko, A.M.** (1987). On the distribution of spacings between zeros of the
+   zeta function. *Math. Comp.* 48, 273–308.
 
 ---
 
