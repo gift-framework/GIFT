@@ -1,6 +1,8 @@
 # A Parameter-Free Mollified Approximation to the Argument of the Riemann Zeta Function
 
-**Authors**: [To be completed]
+**Author**: Brieuc de La Fournière
+
+Independent researcher
 
 **Abstract.** We construct a mollified Dirichlet polynomial that approximates the
 function S(T) = π⁻¹ arg ζ(½ + iT) on the critical line. The approximation uses
