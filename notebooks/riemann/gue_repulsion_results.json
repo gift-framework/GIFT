@@ -1,0 +1,18 @@
+{
+  "gue_ks_stat": 0.08659921481396665,
+  "gue_ks_p": 0.0,
+  "poisson_ks_stat": 0.29818518873423205,
+  "poisson_ks_p": 0.0,
+  "failure_rate_empirical": 0.01997039940798816,
+  "failure_rate_gue_theory": 0.018511852575117765,
+  "sigma_E": 0.05831429138061307,
+  "mean_gap": 0.7490744184827048,
+  "localization": {
+    "1st_order": 0.9800296005920118,
+    "2nd_order": 0.9800296005920118,
+    "capped": 0.9816196323926478,
+    "combined": 0.9816196323926478,
+    "best_cap_fraction": 0.495
+  },
+  "NT_counting_correct": 1.0
+}
