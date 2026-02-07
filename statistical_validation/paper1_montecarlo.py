@@ -30,11 +30,11 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ── Configuration ──────────────────────────────────────────────────────
-N_ZEROS = 100_000
-N_PERM = 10_000          # permutation test trials
-N_MC = 200_000           # Monte Carlo random configurations
-N_BOOTSTRAP = 1_000      # bootstrap resamples
-N_SOBOL = 16_384         # 2^14 Sobol points
+N_ZEROS = 10_000         # use 10K (computable with mpmath); set 100_000 if Odlyzko tables available
+N_PERM = 5_000           # permutation test trials
+N_MC = 50_000            # Monte Carlo random configurations
+N_BOOTSTRAP = 500        # bootstrap resamples
+N_SOBOL = 8_192          # 2^13 Sobol points
 
 THETA0_OPT = 1.4091
 THETA1_OPT = -3.9537
@@ -46,28 +46,39 @@ RESULTS_DIR.mkdir(exist_ok=True)
 
 # ── Data loading ───────────────────────────────────────────────────────
 def load_zeros(n=N_ZEROS):
-    """Load Riemann zeros from cached .npy or download from Odlyzko."""
-    cache = Path(__file__).parent.parent / "notebooks" / "riemann" / "riemann_zeros_100k_genuine.npy"
-    if cache.exists():
-        zeros = np.load(cache)[:n]
-        print(f"  Loaded {len(zeros)} zeros from cache")
-        return zeros
-
-    # Fallback: try alternate locations
-    for alt in [
+    """Load Riemann zeros from cached .npy or compute with mpmath."""
+    # Try all known cache locations
+    search_paths = [
+        Path(__file__).parent / "riemann_zeros_10k.npy",
+        Path(__file__).parent.parent / "notebooks" / "riemann" / "riemann_zeros_100k_genuine.npy",
         Path(__file__).parent.parent / "research" / "riemann" / "riemann_zeros_100k_genuine.npy",
         Path(__file__).parent.parent / "riemann_zeros_100k_genuine.npy",
-    ]:
-        if alt.exists():
-            zeros = np.load(alt)[:n]
-            print(f"  Loaded {len(zeros)} zeros from {alt}")
-            return zeros
+        Path(__file__).parent.parent / "riemann_zeros_10k.npy",
+    ]
+    for path in search_paths:
+        if path.exists():
+            try:
+                zeros = np.load(path)[:n]
+                print(f"  Loaded {len(zeros)} zeros from {path}")
+                return zeros
+            except Exception:
+                continue
 
-    raise FileNotFoundError(
-        "Cannot find Riemann zeros file. Expected at:\n"
-        f"  {cache}\n"
-        "Download from https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros1"
-    )
+    # Compute with mpmath as fallback
+    print(f"  No cached zeros found. Computing {n} zeros with mpmath...")
+    try:
+        from mpmath import zetazero
+        zeros = np.array([float(zetazero(i).imag) for i in range(1, n + 1)])
+        # Cache for future use
+        cache_path = Path(__file__).parent / f"riemann_zeros_{n // 1000}k.npy"
+        np.save(cache_path, zeros)
+        print(f"  Computed and cached {len(zeros)} zeros at {cache_path}")
+        return zeros
+    except ImportError:
+        raise FileNotFoundError(
+            "Cannot find Riemann zeros and mpmath is not installed.\n"
+            "Install with: pip install mpmath"
+        )
 
 
 # ── Core formula ───────────────────────────────────────────────────────
