@@ -1138,16 +1138,20 @@ Two remaining paths to higher R² (and hence better localization):
 2. **Higher-order explicit formula**: Include the contribution of the
    trivial zeros and the pole at s = 1, which our current formula ignores
 
-### 11.3 Explicit Harmonic 3-Forms (Step 4)
+### 11.3 Explicit Harmonic 3-Forms (Step 4) — DONE
 
-The moduli coordinates Π_k(T) are now determined, but the **basis forms η_k**
-are specified abstractly (35 local from Λ³ℝ⁷, 42 global from TCS product modes).
-The next step is to construct explicit harmonic representatives via:
+The basis forms η_k are now explicitly constructed (Section 10, Step 4):
 
-1. **Local forms**: η_k = e^{ijk} for C(7,3) triples — these are already explicit
-2. **Global forms**: η_{35+a} = ω_a ∧ dψ₁ on M₁-side, using the Kähler forms of M₁
-3. **K3 matching**: the Donaldson matching condition Φ: H²(K3₁) → H²(K3₂)
-   constrains the gluing of M₁ and M₂ contributions
+- **G₂ decomposition**: Λ³(ℝ⁷) = Λ³₁ ⊕ Λ³₇ ⊕ Λ³₂₇ (1 + 7 + 27 = 35)
+- **E₈ root lattice**: K3 intersection form Λ_{K3} = 3H ⊕ 2(-E₈), signature (3,19)
+- **Sublattice embeddings**: N₁ (rank 11, quintic) and N₂ (rank 10, CI) with
+  N₁ ∩ N₂ = {0} and rank(N₁ + N₂) = 21 = b₂(K₇)
+- **Metric Jacobian**: ∂g_ij/∂Π_k computed for all 35 local forms
+- **Key discovery**: The 7 Fano-aligned forms have Tr(∂g/∂Π) = ±2.104
+  (volume-changing), while the 28 non-Fano forms are **exactly traceless**
+  (pure shape deformations). The volume/shape split is determined by the
+  octonion multiplication table.
+- **Full 7×7 metric** written explicitly with off-diagonal terms
 
 ### 11.4 PINN Metric Reconstruction (Step 5)
 
@@ -1219,7 +1223,7 @@ $$
 
 ### 13.1 Scripts
 
-All results are produced by nine Python scripts in `notebooks/`:
+All results are produced by ten Python scripts in `notebooks/`:
 
 | Script | Purpose | Runtime |
 |--------|---------|---------|
@@ -1232,6 +1236,7 @@ All results are produced by nine Python scripts in `notebooks/`:
 | `k7_geometry_connection.py` | K₇ metric perturbation, Pell, ACF, trace formula | ~249s |
 | `heat_kernel_extraction.py` | Spectral theta, spectral dimension, 77 periods | ~3s |
 | `moduli_reconstruction.py` | Mayer-Vietoris, H³ basis, metric from 3-form, torsion | ~0.1s |
+| `harmonic_forms_step4.py` | G₂ decomposition, E₈/K3 lattice, metric Jacobian | ~0.1s |
 
 ### 13.2 Data
 
@@ -1257,6 +1262,7 @@ Detailed results are saved in `notebooks/riemann/`:
 - `k7_geometry_results.json`
 - `heat_kernel_results.json`
 - `moduli_reconstruction_results.json`
+- `harmonic_forms_results.json`
 
 ---
 
