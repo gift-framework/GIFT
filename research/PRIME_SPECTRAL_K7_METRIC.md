@@ -1153,14 +1153,33 @@ The basis forms η_k are now explicitly constructed (Section 10, Step 4):
   octonion multiplication table.
 - **Full 7×7 metric** written explicitly with off-diagonal terms
 
-### 11.4 PINN Metric Reconstruction (Step 5)
+### 11.4 PINN Metric Reconstruction (Step 5) — READY
 
-A physics-informed neural network (PINN) could reconstruct the full
-g_ij(x¹, ..., x⁷) by:
+**Notebook**: `notebooks/K7_PINN_Step5_Reconstruction.ipynb` (Colab A100, self-contained)
 
-1. Parameterizing g as a neural network with G₂ equivariance
-2. Imposing the spectral constraints (77 period integrals match Π_k)
-3. Minimizing the torsion ‖∇φ‖ subject to these constraints
+A physics-informed neural network reconstructs the full metric field
+g_ij(x¹, ..., x⁷, T) using all outputs from Steps 1–4.
+
+**Architecture** — `G2MetricPINN` (~120K parameters):
+- Input: (x¹,...,x⁷, log T) ∈ ℝ⁸ with FourierFeatures(48 frequencies)
+- MLP: 96 → 256 → 256 → 256 → 128
+- Local head: 14 G₂ adjoint parameters → 35 Lie-derivative 3-form components
+- Global head: 42 TCS product modes (not constrained to G₂ adjoint)
+- Metric: g_ij = (1/6) Σ_{kl} φ_{ikl} φ_{jkl}
+
+**Loss function** (6 terms, 3 tiers):
+- Tier 1 (every batch): det(g) = 65/32, positive definiteness, torsion proxy, sparsity
+- Tier 2 (every 10 steps): 77 period integrals match Π_k(T) from Step 3
+- Tier 3 (every 50 steps): spectral gap λ₁ = 14/99 via CuPy Rayleigh quotient
+
+**Training** (3 phases, ~100 min on A100):
+- Phase 1 (warmup, 500 epochs): Tier 1 only, valid PD metric
+- Phase 2 (spectral, 2500 epochs): All tiers, λ₁ → 14/99
+- Phase 3 (fine-tune, 2000 epochs): All tiers at reduced LR
+
+**Target criteria**: det(g) < 1% deviation, torsion < 0.01, spectral gap < 15% deviation, period RMS < 0.005, condition number κ(g) < 1.1.
+
+**Outputs**: 8 PNG figures, 2 JSON result files, 4 NumPy arrays (metric, eigenvalues, 3-form, multiscale), 2 PyTorch checkpoints.
 
 ### 11.5 Hybrid Numerical Verification
 
@@ -1223,7 +1242,7 @@ $$
 
 ### 13.1 Scripts
 
-All results are produced by ten Python scripts in `notebooks/`:
+All results are produced by ten Python scripts and one GPU notebook in `notebooks/`:
 
 | Script | Purpose | Runtime |
 |--------|---------|---------|
@@ -1237,6 +1256,7 @@ All results are produced by ten Python scripts in `notebooks/`:
 | `heat_kernel_extraction.py` | Spectral theta, spectral dimension, 77 periods | ~3s |
 | `moduli_reconstruction.py` | Mayer-Vietoris, H³ basis, metric from 3-form, torsion | ~0.1s |
 | `harmonic_forms_step4.py` | G₂ decomposition, E₈/K3 lattice, metric Jacobian | ~0.1s |
+| `K7_PINN_Step5_Reconstruction.ipynb` | PINN metric g_ij(x,T), spectral gap, torsion (Colab A100) | ~100min |
 
 ### 13.2 Data
 
@@ -1248,7 +1268,8 @@ All results are produced by ten Python scripts in `notebooks/`:
 
 - Python 3.10+
 - NumPy, SciPy (scipy.special.loggamma, scipy.special.lambertw)
-- No GPU required
+- Steps 1–4: No GPU required
+- Step 5: PyTorch, CuPy, NVIDIA A100 GPU (Colab), ~80 min training
 
 ### 13.4 JSON Results
 
@@ -1289,3 +1310,4 @@ Detailed results are saved in `notebooks/riemann/`:
 *GIFT Framework — Research Branch*
 *Document generated from computational results validated on 100,000 Riemann zeros.*
 *Moduli reconstruction from prime-spectral periods on 77-dimensional G₂ moduli space.*
+*PINN metric reconstruction notebook ready for A100 execution (Step 5).*
