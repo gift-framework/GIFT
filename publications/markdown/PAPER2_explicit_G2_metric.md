@@ -1,24 +1,25 @@
-# An Explicit Metric with G₂ Holonomy on a Compact 7-Manifold via PINN Reconstruction
+# A Numerical Candidate for a Torsion-Free G₂ Structure on a Compact TCS 7-Manifold
 
 **Author**: Brieuc de La Fournière
 
 Independent researcher
 
-**Abstract.** We present the first explicit numerical metric tensor on a compact
-7-manifold K₇ with G₂ holonomy. The manifold is constructed as a twisted
-connected sum (TCS) of two asymptotically cylindrical Calabi–Yau threefolds,
-following Kovalev and Corti–Haskins–Nordström–Pacini, with Betti numbers
-b₂ = 21 and b₃ = 77. The metric is obtained in three stages: (i) an
-analytical target metric G_TARGET derived from the G₂ decomposition
-Λ³(ℝ⁷) = Λ¹₃ ⊕ Λ⁷₃ ⊕ Λ²⁷₃ and the Fano-plane structure of the octonions;
-(ii) a Cholesky-parameterized physics-informed neural network (PINN) that
-reconstructs the spatially varying field g(x) on the TCS neck S¹ × S³ × S³;
-(iii) verification against five independent criteria. The resulting 7×7 metric
-satisfies det(g) = 65/32 to 8 significant figures (4 × 10⁻⁸ % deviation),
-has torsion ‖∇φ‖ = 7.2 × 10⁻⁶ (14,000× below the Joyce existence bound),
-condition number κ = 1.0152, and matches 77 period integrals at 5 energy
-scales with RMS error 3.1 × 10⁻⁴. The Cholesky warm-start technique
-— initializing at the analytical target and learning only residual
+**Abstract.** We construct a numerical candidate for a Riemannian metric with
+holonomy contained in G₂ on a compact 7-manifold K₇ of twisted connected sum
+(TCS) type, with Betti numbers b₂ = 21 and b₃ = 77. The construction
+proceeds in three stages: (i) an analytical target metric derived from the
+G₂ representation-theoretic decomposition Λ³(ℝ⁷) = Λ¹₃ ⊕ Λ⁷₃ ⊕ Λ²⁷₃ and
+period integrals on the moduli space of G₂ structures; (ii) a
+Cholesky-parameterized physics-informed neural network (PINN) that
+reconstructs a spatially varying metric field g(x) on a local computational
+model of the TCS neck region; (iii) verification against five geometric
+criteria. The resulting 7×7 metric satisfies a prescribed determinant
+det(g) = 65/32 to 8 significant figures (4 × 10⁻⁸ % deviation), has
+torsion ‖dφ‖ + ‖d*φ‖ of order 10⁻⁶ (well within the perturbative regime
+of Joyce's existence theorem [Theorem 11.6.1, Joyce 2000]), condition
+number κ = 1.0152, and matches 77 target period integrals at 5 scales
+with RMS error 3.1 × 10⁻⁴. The Cholesky warm-start technique —
+initializing at the analytical target and learning only residual
 perturbations — may be of independent interest for other special-holonomy
 problems. All code and data are publicly available.
 
@@ -26,23 +27,26 @@ problems. All code and data are publicly available.
 
 ## 1. Introduction
 
-### 1.1 Compact G₂ manifolds: existence without explicitness
+### 1.1 Compact manifolds with holonomy contained in G₂
 
 A compact Riemannian 7-manifold (M⁷, g) has holonomy contained in the
 exceptional Lie group G₂ ⊂ SO(7) if and only if it admits a torsion-free
 G₂-structure, i.e., a closed and coclosed 3-form φ ∈ Ω³(M) [1, 2].
-Joyce [3, 4] proved the existence of compact G₂-holonomy manifolds by
-resolving singularities of T⁷/Γ orbifolds. Kovalev [5] introduced the
+(Full holonomy G₂, as opposed to a proper subgroup, requires additionally
+that M be simply connected and not a Riemannian product.)
+Joyce [3, 4] proved the existence of compact examples by resolving
+singularities of T⁷/Γ orbifolds. Kovalev [5] introduced the
 twisted connected sum (TCS) construction, gluing two asymptotically
 cylindrical (ACyl) Calabi–Yau threefolds along a common K3 fiber.
 Corti, Haskins, Nordström and Pacini [6] systematized the TCS method
-and produced millions of topological types.
+and produced many topological types.
 
-Despite this wealth of existence results, no explicit metric tensor g_ij(x)
-has been written down for any compact G₂-holonomy manifold. The
-perturbative analysis of Joyce and the gluing analysis of Kovalev–CHNP
-establish existence and control the metric to within a small error of an
-approximate solution, but do not yield pointwise numerical values.
+These existence results establish the metric to within a small (controlled)
+error of an approximate solution, but do not yield pointwise numerical
+values. To our knowledge, no explicit metric tensor g_ij(x) has been
+computed numerically for a compact G₂ manifold, though we note that
+substantial numerical work exists for *non-compact* examples
+(see e.g. Brandhuber et al. [15]).
 
 ### 1.2 The PINN approach
 
@@ -52,9 +56,15 @@ equations. They have been successfully applied to fluid dynamics [8],
 quantum mechanics [9], and general relativity [10], but not — to our
 knowledge — to special holonomy geometry.
 
-We apply PINNs to reconstruct the G₂ metric on K₇, a compact TCS manifold
-with b₂ = 21 and b₃ = 77 (the specific topological type studied in
-[11, 12]). The key technical innovation is a **Cholesky parameterization
+We apply PINNs to construct a candidate metric on a local model of the
+neck region of K₇, a compact TCS manifold with b₂ = 21 and b₃ = 77
+(the specific topological type studied in [11]). To be precise: we work
+on a 7-dimensional domain that serves as a computational proxy for the
+gluing region where the two ACyl Calabi–Yau building blocks meet; a
+complete global metric would require extending the solution into the
+bulk of each building block.
+
+The key technical contribution is a **Cholesky parameterization
 with analytical warm-start**: the network outputs a lower-triangular
 perturbation δL(x), and the metric is g(x) = (L₀ + δL(x))(L₀ + δL(x))ᵀ,
 where L₀ is the Cholesky factor of an analytically derived target. This
@@ -80,7 +90,7 @@ verify the output against standard geometric criteria.
 | det(g) = 65/32 | 2.03125 | 2.031250001 (4 × 10⁻⁸ %) |
 | Positive definite | All λᵢ > 0 | λ_min = 1.099 (Cholesky guarantee) |
 | Condition number | 1.01518 | 1.01518 (7 significant figures) |
-| Torsion ‖∇φ‖ | < 0.1 (Joyce) | 7.2 × 10⁻⁶ (14,000× below bound) |
+| Torsion ‖dφ‖+‖d*φ‖ | small | 7.2 × 10⁻⁶ |
 | Period integrals | RMS < 0.005 | 0.000311 (16× below threshold) |
 | Anisotropy | ‖g − G_TARGET‖_F → 0 | 1.76 × 10⁻⁷ (machine precision) |
 
@@ -98,7 +108,7 @@ limitations, and future directions.
 
 ## 2. The G₂ Structure and TCS Construction
 
-### 2.1 G₂ holonomy and the associative 3-form
+### 2.1 Holonomy contained in G₂ and the associative 3-form
 
 The exceptional Lie group G₂ is the automorphism group of the octonion
 algebra 𝕆. It acts on Im(𝕆) ≅ ℝ⁷ and preserves the standard associative
@@ -154,29 +164,46 @@ $$
 b_3(K_7) = b_3(M_1) + b_3(M_2) = 40 + 37 = 77
 $$
 
-Euler characteristic: χ(K₇) = 2(b₂ − b₃) = 2(21 − 77) + 2 = 0 ✓.
-Poincaré duality: bₖ = b_{7−k} ✓.
+Since K₇ is a compact orientable manifold of odd dimension, Poincaré
+duality (bₖ = b_{7−k}) implies χ(K₇) = 0. Explicitly:
+b₀ = b₇ = 1, b₁ = b₆ = 0, b₂ = b₅ = 21, b₃ = b₄ = 77, giving
+χ = 1 − 0 + 21 − 77 + 77 − 21 + 0 − 1 = 0.
 
-### 2.3 The moduli space of G₂ structures
+### 2.3 Pointwise representation theory
+
+At each point of a 7-manifold with G₂-structure, the space of 3-forms
+decomposes under G₂ as (cf. §2.1):
+
+$$
+\Lambda^3(\mathbb{R}^7) = \Lambda^3_1 \oplus \Lambda^3_7 \oplus \Lambda^3_{27},
+\qquad 1 + 7 + 27 = 35 = \binom{7}{3}.
+$$
+
+This is a *pointwise* statement in representation theory: at each point
+x ∈ K₇, a 3-form has 35 components that transform in these three
+irreducible G₂-representations. Among the 35 directions, the 7 that are
+aligned with the Fano-plane triples of the octonion multiplication table
+generate volume-changing deformations (Tr(∂g/∂Π) = ±2.10), while the
+remaining 28 in Λ³₂₇ are traceless (pure shape deformations). The vanishing
+trace for non-Fano modes is exact, following from the orthogonality of
+Λ³₂₇ to the trivial representation Λ³₁.
+
+### 2.4 Global moduli space
 
 The moduli space of torsion-free G₂ structures on K₇ is a smooth manifold
-of dimension b₃(K₇) = 77 [3, 4]. The 77 moduli decompose via the TCS
-structure:
+of dimension b₃(K₇) = 77 [3, 4]. This is a *global topological* statement,
+independent of the pointwise decomposition above. The 77 moduli reflect
+the space of closed and coclosed 3-forms modulo diffeomorphisms; their
+count is determined by the third Betti number via the period map.
 
-| Component | Dimension | Origin |
-|-----------|-----------|--------|
-| Local (fiber deformations) | 35 = C(7,3) | Λ³(ℝ⁷) at each point |
-| Global (M₁ side) | 21 | H²(M₁) ⊕ K3 contributions |
-| Global (M₂ side) | 21 | H²(M₂) ⊕ K3 contributions |
-| **Total** | **77 = b₃(K₇)** | |
+In the TCS construction, these global moduli receive contributions from
+both building blocks and the gluing data:
 
-Within the 35 local modes, the G₂ decomposition distinguishes:
-- **7 Fano-aligned modes**: volume-changing (Tr(∂g/∂Π) = ±2.10)
-- **28 non-Fano modes**: traceless (pure shape deformations)
-
-This 7 + 28 split reflects the octonion multiplication structure:
-the 7 Fano triples generate volume deformations, while the 28
-complementary 3-forms in Λ³₂₇ are traceless.
+| Contribution | Source |
+|-------------|--------|
+| H³(M₁) | 40 classes from the first ACyl CY threefold |
+| H³(M₂) | 37 classes from the second ACyl CY threefold |
+| **Total** | **b₃(K₇) = 77** |
 
 ---
 
@@ -206,16 +233,9 @@ $$
 + \frac{\partial\varphi_{ikl}}{\partial\Pi_k}\,\varphi_{jkl}\right)
 $$
 
-This Jacobian has a revealing structure:
-
-| Mode type | Count | Tr(∂g/∂Π) | Character |
-|-----------|-------|-----------|-----------|
-| Fano-aligned | 7 | ±2.10 | Volume-changing |
-| Non-Fano | 28 | 0 (exact) | Pure shape |
-
-The vanishing trace for non-Fano modes is exact (not approximate): it
-follows from the orthogonality of Λ³₂₇ to the trivial representation
-Λ³₁ in the G₂ decomposition.
+Evaluating this for the 35 pointwise modes (§2.3), the 7 Fano-aligned
+modes have Tr(∂g/∂Π) = ±2.10 (volume-changing), while all 28 non-Fano
+modes have exactly vanishing trace (pure shape deformations).
 
 ### 3.3 The target metric G_TARGET
 
@@ -259,12 +279,12 @@ satisfying simultaneously:
 
 1. det(g(x)) = 65/32 at every point
 2. g(x) > 0 (positive definite)
-3. ‖∇φ‖ ≈ 0 (torsion-free, where φ is reconstructed from g)
+3. dφ ≈ 0 and d*φ ≈ 0 (torsion-free, where φ is reconstructed from g)
 4. ∫_{Cₖ} φ = Πₖ for k = 1, ..., 77 at multiple scales
 5. Spatial average ⟨g⟩ ≈ G_TARGET
 
-This is a PDE-constrained optimization problem on the TCS neck
-M_neck ≅ S¹ × S³ × S³.
+This is a PDE-constrained optimization problem on a 7-dimensional
+computational domain modelling the TCS neck region (cf. §1.2).
 
 ### 4.2 Failed approaches and lessons
 
@@ -335,7 +355,7 @@ The loss has five terms:
 | L_det | (det(g) − 65/32)² | 100 | Topological constraint |
 | L_aniso | ‖⟨g⟩ − G_TARGET‖²_F | 500 | Analytical target |
 | L_period | Σ_T ‖⟨δφ⟩_T − Π(T)‖² / 5 | 1000 | 77 periods × 5 scales |
-| L_torsion | ‖∇φ‖² (finite differences) | 1 | G₂ holonomy condition |
+| L_torsion | ‖dφ‖² + ‖d*φ‖² (finite diff.) | 1 | Torsion-free condition |
 | L_sparse | ‖δL‖² | 0.01 | Regularization |
 
 The period loss averages over 5 energy scales (T = 100, 1000, 10000,
@@ -438,14 +458,27 @@ $$
 
 ### 5.5 Torsion
 
-| Quantity | Value | Joyce bound (ε₀ = 0.1) |
-|----------|-------|------------------------|
-| Mean ‖∇φ‖ | 3.3 × 10⁻⁶ | — |
-| Max ‖∇φ‖ | 7.2 × 10⁻⁶ | < 0.1 |
-| Safety margin | **14,000×** | — |
+The torsion of a G₂-structure φ is measured by the failure of φ to be
+closed and coclosed. Following Joyce [4, Theorem 11.6.1], if a
+compact 7-manifold admits a G₂-structure φ₀ with ‖dφ₀‖_{C⁰} + ‖d*φ₀‖_{C⁰}
+sufficiently small (below a constant ε₀ depending on the geometry), then
+there exists a nearby torsion-free G₂-structure φ̃ with Hol(g̃) ⊆ G₂.
 
-The torsion is four orders of magnitude below the Joyce existence bound,
-indicating an excellent approximation to a torsion-free G₂ structure.
+We evaluate the torsion of our candidate using finite-difference
+approximations of dφ and d*φ on the computational domain:
+
+| Quantity | Value |
+|----------|-------|
+| Mean ‖dφ‖ + ‖d*φ‖ | 3.3 × 10⁻⁶ |
+| Max ‖dφ‖ + ‖d*φ‖ | 7.2 × 10⁻⁶ |
+
+The absolute value of the torsion is small, but we emphasize two caveats:
+(i) Joyce's ε₀ depends on the manifold and the approximate solution, and
+we have not computed it for our specific setting; (ii) our computation
+covers only the neck region, not the full compact manifold. We therefore
+report the torsion as evidence that the candidate is a good *numerical*
+approximation to a torsion-free structure, without claiming to have
+verified the hypotheses of Joyce's theorem.
 
 ### 5.6 Scale invariance
 
@@ -480,19 +513,20 @@ Best fit at T = 10,000 (RMS = 3.11 × 10⁻⁴, 16× below threshold).
 
 ## 6. Discussion
 
-### 6.1 Significance
+### 6.1 Summary of contributions
 
-To our knowledge, this is:
+1. **A numerical candidate metric on a compact G₂ manifold.** Previous
+   work established existence (Joyce [3]) and gave constructions
+   (Kovalev [5], CHNP [6]), but — to our knowledge — explicit pointwise
+   numerical values of g_ij(x) have not been reported for the compact case.
+   We note that substantial numerical work exists for non-compact G₂
+   manifolds, and that our result covers only the TCS neck region
+   (see §6.3).
 
-1. **The first explicit metric on a compact G₂-holonomy manifold.** Previous
-   work established existence (Joyce [3]), gave constructions (Kovalev [5],
-   CHNP [6]), and bounded the metric's deviation from an approximate
-   solution, but did not produce numerical values of g_ij(x).
-
-2. **The first application of PINNs to special holonomy geometry.** The
-   Cholesky warm-start technique may be applicable to other settings where
-   an analytical approximation is available (e.g., Spin(7) manifolds,
-   Calabi–Yau metrics beyond the Kähler class).
+2. **PINNs applied to special holonomy geometry.** The Cholesky warm-start
+   technique may be applicable to other settings where an analytical
+   approximation is available (e.g., Spin(7) manifolds, Calabi–Yau metrics
+   beyond the Kähler class).
 
 ### 6.2 The Cholesky warm-start technique
 
@@ -519,11 +553,10 @@ has three advantages:
 
 ### 6.3 Limitations
 
-1. **Coordinate patch, not global**: Our metric is defined on the TCS neck
-   S¹ × S³ × S³, which is the "interesting" region where the two building
-   blocks are glued. A complete global metric would require extending the
-   solution into the bulk of M₁ and M₂, where it approaches the known
-   Calabi–Yau metrics.
+1. **Local model, not global**: Our metric is defined on a computational
+   model of the TCS neck region. A complete global metric would require
+   extending the solution into the bulk of M₁ and M₂, where it
+   approaches the known Calabi–Yau metrics.
 
 2. **Period data from GIFT**: The training targets (77 period integrals)
    are derived from the GIFT framework. While the metric itself is
@@ -541,9 +574,10 @@ has three advantages:
 
 ### 6.4 Future directions
 
-1. **Extension to the bulk**: Solve the G₂ torsion-free equation ∇φ = 0
-   as a boundary-value problem, using the TCS neck metric as a boundary
-   condition and the known ACyl CY metrics on M₁, M₂ as asymptotic data.
+1. **Extension to the bulk**: Solve the torsion-free equations dφ = 0,
+   d*φ = 0 as a boundary-value problem, using the neck-region metric as
+   a boundary condition and the known ACyl CY metrics on M₁, M₂ as
+   asymptotic data.
 
 2. **Other topological types**: Apply the same pipeline to other TCS
    manifolds from the CHNP classification, to understand how the metric
@@ -598,15 +632,21 @@ has three advantages:
      & Schäfer-Nameki, S. (2018). Infinitely many M2-instanton corrections
      to M-theory on G₂-manifolds. *JHEP* 2018, 101.
 
-[12] de La Fournière, B. (2026). GIFT: Geometric Information Field Theory
-     v3.3. Technical report, github.com/gift-framework.
+[12] de La Fournière, B. (2026). Geometric Information Field Theory v3.3.
+     Technical report. github.com/gift-framework. (Companion paper:
+     source of the analytical target and period data used here.)
 
 [13] de La Fournière, B. (2026). A parameter-free mollified approximation
-     to the argument of the Riemann zeta function. Preprint.
+     to the argument of the Riemann zeta function. Preprint. (Companion
+     paper: source of the adaptive cutoff X(T).)
 
 [14] Lotay, J.D. & Wei, Y. (2019). Laplacian flow for closed G₂ structures:
      Shi-type estimates, uniqueness and compactness. *Geom. Funct. Anal.*
      29, 1048–1110.
+
+[15] Brandhuber, A., Gomis, J., Gubser, S.S. & Gukov, S. (2001). Gauge
+     theory at large N and new G₂ holonomy metrics. *Nuclear Phys. B*
+     611, 179–204.
 
 ---
 
