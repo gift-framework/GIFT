@@ -1,9 +1,13 @@
 {
   "_metadata": {
     "title": "GIFT Framework Complete Atlas",
-    "version": "3.3.17",
-    "date": "2026-02-04",
+    "version": "3.3.18",
+    "date": "2026-02-08",
     "description": "Exhaustive reference for all topological constants, derived quantities, and predictions",
+    "changelog": {
+      "3.3.18": "Fixed chi_K7 description (was mislabeled as Euler characteristic; chi(K7)=0 for odd-dim manifolds). Clarified tau formula simplification. Synchronized with research folder cleanup.",
+      "3.3.17": "Corrected theta_23 from arcsin(85/99) to arcsin(25/33)"
+    },
     "sources": {
       "experimental": ["PDG 2024", "NuFIT 5.3", "Planck 2020", "CODATA 2022"],
       "theoretical": ["Joyce 2000", "Kovalev 2003", "Corti et al. 2015"]
@@ -128,8 +132,8 @@
         "value": 42,
         "formula": "p₂ × b₂",
         "components": "2 × 21",
-        "symbol": "χ(K₇)",
-        "description": "Euler characteristic of K₇"
+        "symbol": "p₂b₂",
+        "description": "Pontryagin-Betti structural constant (note: the Euler characteristic χ(K₇) = 0 for any compact odd-dimensional manifold; this is a distinct structural invariant)"
       },
       "fund_E7": {
         "value": 56,
@@ -775,7 +779,7 @@
       "name": "Topological coupling constant",
       "symbol": "τ",
       "formula": "dim(E₈×E₈) × b₂ / (dim(J₃(𝕆)) × H*)",
-      "formula_expanded": "496 × 21 / (27 × 99) = 10416/2673",
+      "formula_expanded": "496 × 21 / (27 × 99) = 10416/2673 = 3472/891",
       "value": 3.8967,
       "exact": "3472/891",
       "status": "VERIFIED"
@@ -846,6 +850,25 @@
     "DERIVED": "Follows from topological formulas via algebra",
     "HEURISTIC": "Uses topological constants in motivated combination",
     "STRUCTURAL": "Framework parameter, not a physical prediction",
-    "EXPLORATORY": "Preliminary investigation, not validated"
+    "EXPLORATORY": "Preliminary investigation, not validated",
+    "FALSIFIED": "Hypothesis tested and refuted"
+  },
+
+  "falsified_hypotheses": {
+    "_description": "Research directions explicitly tested and found not to hold. Documented for scientific integrity.",
+    "h_G2_squared_36": {
+      "hypothesis": "The constraint 8*beta_8 = 13*beta_13 = h_G2^2 = 36 emerges from optimization on Riemann zeros",
+      "date_falsified": "2026-02-03",
+      "result": "Optimal P ~ 20, not 36. The constraint has no special significance in the optimization landscape.",
+      "documented_in": "research/archive/dead-ends/PHASE2B_HONEST_RESULTS.md",
+      "what_survived": "Banded operator reproduces zeros with R^2 > 99%, but G2-specific structure not confirmed"
+    },
+    "fibonacci_riemann_fine_structure": {
+      "hypothesis": "gamma_n = (3/2)*gamma_{n-8} - (1/2)*gamma_{n-21} captures fine structure of Riemann zeros",
+      "date_falsified": "2026-02-03",
+      "result": "Captures trend only (via linear extrapolation), not fine structure. 2 PASS / 1 FAIL / 2 MARGINAL.",
+      "documented_in": "research/riemann/FALSIFICATION_VERDICT.md",
+      "what_survived": "Lag structure (8, 21) = (rank(E8), b2) has unique proximity to 3/2 among tested sequences"
+    }
   }
 }

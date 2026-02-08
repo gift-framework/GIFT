@@ -4,6 +4,9 @@ This folder contains **exploratory research** extending the GIFT framework to op
 
 Unlike `publications/` (peer-reviewed quality) and `docs/` (stable documentation), content here represents **work in progress** with varying levels of validation.
 
+For the full chronological history of this research, see [TIMELINE.md](./TIMELINE.md).
+For details on the 2026-02-08 cleanup, see [ARCHIVE_LOG.md](./ARCHIVE_LOG.md).
+
 ---
 
 ## Current Research Areas
@@ -13,9 +16,9 @@ Unlike `publications/` (peer-reviewed quality) and `docs/` (stable documentation
 Investigation of the Yang-Mills mass gap through GIFT's geometric framework.
 
 **Key findings**:
-- Spectral gap formula: **λ₁ × H\* = 13** (where H\* = b₂ + b₃ + 1 = 99)
-- K₇ manifold achieves **1.48% deviation** from target (other manifolds: 15-30%)
-- Universal constant emerges from G₂ holonomy structure
+- Spectral gap formula: **lambda_1 x H\* = 13** (where H\* = b2 + b3 + 1 = 99)
+- K7 manifold achieves **1.48% deviation** from target (other manifolds: 15-30%)
+- Universal constant emerges from G2 holonomy structure
 
 **Status**: VALIDATED — Blind testing confirmed, awaiting formal proof.
 
@@ -28,16 +31,33 @@ Investigation of the Yang-Mills mass gap through GIFT's geometric framework.
 
 ---
 
-### 2. [heegner-riemann/](./heegner-riemann/) — Riemann Hypothesis Connection
+### 2. [riemann/](./riemann/) — Deep Riemann Investigation
+
+Comprehensive investigation of Riemann zeta zeros and GIFT topology, including L-functions, Selberg trace formula, and fractal encoding.
+
+**Key findings**:
+- Fibonacci-Riemann recurrence captures trend but not fine structure
+- L-function compositional hierarchy validated on real LMFDB data
+- Selberg-Fibonacci derivation as analytical bridge
+- h_G2^2 = 36 hypothesis **falsified** (documented in `archive/dead-ends/`)
+
+**Status**: EXPLORATORY — Active research with mixed results.
+
+**Key documents**:
+- `EXPLORATION_SUMMARY_FEB2026.md` — Executive summary
+- `SELBERG_FIBONACCI_DERIVATION.md` — Key analytical result
+- `FALSIFICATION_VERDICT.md` — Fibonacci recurrence test battery
+- `RIEMANN_FIRST_DERIVATION.md` — Original derivation path
+
+---
+
+### 3. [heegner-riemann/](./heegner-riemann/) — Riemann Hypothesis Connection
 
 Investigation of deep connections between GIFT topology and the Riemann zeta function.
 
 **Key findings**:
-- Zeta zeros correspond to topological constants:
-  - γ₁ ≈ 14 = dim(G₂)
-  - γ₂ ≈ 21 = b₂
-  - γ₂₀ ≈ 77 = b₃
-- Heegner number 163 = 248 - 8 - 77 = |Roots(E₈)| - b₃ (**Lean-verified**)
+- Zeta zeros correspond to topological constants (gamma_1 ~ 14, gamma_2 ~ 21, gamma_20 ~ 77)
+- Heegner number 163 = 248 - 8 - 77 = |Roots(E8)| - b3 (**Lean-verified**)
 - 100,000 zeros analyzed with 204 matches to GIFT expressions
 
 **Status**: NUMERICALLY VALIDATED — Awaiting theoretical explanation.
@@ -49,19 +69,18 @@ Investigation of deep connections between GIFT topology and the Riemann zeta fun
 
 ---
 
-### 3. [tcs/](./tcs/) — TCS K7 Metric Construction
+### 4. [tcs/](./tcs/) — TCS K7 Metric Construction
 
-Complete documentation of the Twisted Connected Sum construction for K₇.
+Complete documentation of the Twisted Connected Sum construction for K7.
 
 **Key findings**:
 - 8-phase pathway from ACyl CY3 to spectral bounds
-- Explicit G₂ metric code (`g2_metric_final.py`)
-- Selection constant candidate: κ = π²/14
+- Explicit G2 metric code (`metric/g2_metric_final.py`)
+- Selection constant candidate: kappa = pi^2/14
 
-**Status**: DOCUMENTATION COMPLETE — κ is candidate, not validated.
+**Status**: DOCUMENTATION COMPLETE — kappa is candidate, not validated.
 
 **Key documents**:
-- `PROGRESS.md` — Summary of current state
 - `SYNTHESIS.md` — Complete derivation chain
 - `GIFT_CONNECTIONS.md` — Link to physical predictions
 
@@ -72,48 +91,58 @@ Complete documentation of the Twisted Connected Sum construction for K₇.
 Analytical derivation connecting number theory to spectral geometry.
 
 **Key findings**:
-- **Pell equation**: 99² − 50 × 14² = 1
-- **Continued fraction**: √50 = [7; 14̄] = [dim(K₇); dim(G₂), ...]
-- Conjecture: λ₁ = dim(G₂)/H\* is the **unique** Pell-derived solution
+- **Pell equation**: 99^2 - 50 x 14^2 = 1
+- **Continued fraction**: sqrt(50) = [7; 14, 14, ...] = [dim(K7); dim(G2), ...]
+- Conjecture: lambda_1 = dim(G2)/H\* is the **unique** Pell-derived solution
 
 **Status**: CONJECTURED — Elegant theoretical argument, awaiting verification.
 
-**Key documents**:
-- `PELL_TO_SPECTRUM.md` — Core conjecture (exploratory docs archived)
+---
+
+## Active Root Documents
+
+| Document | Description |
+|----------|-------------|
+| `K7_EXPLICIT_METRIC_SYNTHESIS.md` | Complete K7 metric synthesis (latest, Feb 7) |
+| `PRIME_SPECTRAL_K7_METRIC.md` | Prime spectral K7 analysis (latest, Feb 7) |
+| `OPERATOR_H_RESULTS_2026-02-02.md` | Banded operator computation results |
+| `LEAN_IMPLEMENTATION_PLAN.md` | Lean 4 formalization strategy |
+| `PHASE3_WEIL_ROADMAP.md` | Phase 3 Weil trace formula roadmap |
+| `RIEMANN_GIFT_CORRESPONDENCES.md` | Riemann-GIFT mathematical connections |
+| `SPECTRAL_ANALYSIS.md` | Spectral methodology overview |
+| `TORSION_FREE_CONDITION_ANALYSIS.md` | Torsion-free metric conditions |
+| `UNIFIED_SPECTRAL_HYPOTHESIS.md` | Unified spectral hypothesis |
+| `YM-RH-latest.md` | Yang-Mills / Riemann connection summary |
 
 ---
 
 ## Supporting Folders
 
 ### [notebooks/](./notebooks/)
-Computational notebooks and scripts used in research. Includes:
-- GPU validation runs (A100)
-- Spectral analysis code
-- Convergence studies
+Computational notebooks and scripts. Includes GPU validation runs (A100), spectral analysis, convergence studies.
+
+### [pattern_recognition/](./pattern_recognition/)
+Machine learning for pattern discovery in GIFT relations.
 
 ### [tests/](./tests/)
 Validation test suite for spectral computations.
 
-### [archive/](./archive/)
-**Cleaned up 2026-01-29**: Dead ends, old versions, and exploratory docs:
-- `notebooks/` — Old notebook versions (v1-v9)
-- `metrics/` — Superseded metric implementations (v1, v2)
-- `spectral-exploratory/` — 32 exploratory docs from spectral/
-
-### [legacy/](./legacy/)
-Archived planning documents, sprint reports, and superseded analyses.
-
 ---
 
-## Root Documents
+## Archive
 
-| Document | Description |
-|----------|-------------|
-| `GIFT_Complete_Analytical_Framework.md` | Complete analytical framework (draft) |
-| `GIFT_K7_Analytical_Structure.md` | K₇ structural analysis |
-| `SPECTRAL_ANALYSIS.md` | Spectral methodology overview |
-| `UNIFIED_SPECTRAL_HYPOTHESIS.md` | Unified hypothesis statement |
-| `YM-RH-latest.md` | Yang-Mills / Riemann connection summary |
+### [archive/](./archive/)
+All archived material, organized by category:
+- `dead-ends/` — Falsified hypotheses and abandoned approaches (2026-02-08)
+- `council-sessions/` — Raw AI review transcripts (2026-02-08)
+- `superseded/` — Earlier versions replaced by newer syntheses (2026-02-08)
+- `reference-papers/` — External reference PDFs and papers (2026-02-08)
+- `notebooks/` — Old notebook versions v1-v9 (2026-01-29)
+- `metrics/` — Superseded metric implementations (2026-01-29)
+- `spectral-exploratory/` — 32 exploratory docs from spectral/ (2026-01-29)
+
+### [legacy/](./legacy/)
+Archived planning documents, sprint reports, and superseded analyses from pre-v3.3.
 
 ---
 
@@ -125,6 +154,7 @@ Archived planning documents, sprint reports, and superseded analyses.
 | **NUMERICALLY VALIDATED** | Computationally verified, awaiting theoretical proof |
 | **CONJECTURED** | Proposed formula, strong evidence |
 | **EXPLORATORY** | Early investigation, results may change |
+| **FALSIFIED** | Hypothesis tested and refuted |
 | **ARCHIVED** | Historical record, superseded by newer work |
 
 ---
@@ -133,7 +163,7 @@ Archived planning documents, sprint reports, and superseded analyses.
 
 This research potentially contributes to **two** Clay Millennium Problems:
 
-1. **Yang-Mills Mass Gap**: The spectral gap formula λ₁ × H\* = 13 provides a candidate for the mass gap on G₂-holonomy manifolds.
+1. **Yang-Mills Mass Gap**: The spectral gap formula lambda_1 x H\* = 13 provides a candidate for the mass gap on G2-holonomy manifolds.
 
 2. **Riemann Hypothesis**: The correspondence between zeta zeros and topological constants suggests a deep connection between number theory and quantum geometry.
 

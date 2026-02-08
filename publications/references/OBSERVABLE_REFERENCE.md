@@ -1,8 +1,8 @@
 # GIFT Observable Reference
 
-**Version**: 3.3
+**Version**: 3.3.18
 **Status**: Reference documentation
-**Date**: January 2026
+**Date**: February 2026
 
 ---
 
@@ -125,7 +125,7 @@ Each observable receives a classification based on the number of independent alg
 |---|------------|--------------|-------|------|------|---------|--------|
 | 13 | **delta_CP** | dim_K7 x dim_G2 + H* | 197 deg | 197 deg +/- 24 deg | 0.00% | 3 | DERIVED |
 | 14 | **theta_13^PMNS** | pi/b_2 | 8.57 deg | 8.54 deg | 0.37% | 3 | DERIVED |
-| 15 | **theta_23^PMNS** | (rank_E8+b_3)/H* | 49.19 deg | 49.3 deg | 0.22% | 2 | DERIVED |
+| 15 | **theta_23^PMNS** | arcsin((b_3-p_2)/H*) = arcsin(25/33) | 49.25 deg | 49.3 deg | 0.10% | 2 | TOPOLOGICAL |
 | 16 | **theta_12^PMNS** | arctan(sqrt(delta/gamma)) | 33.40 deg | 33.41 deg | 0.03% | 2 | DERIVED |
 
 ### 3.6 Cosmological Sector
