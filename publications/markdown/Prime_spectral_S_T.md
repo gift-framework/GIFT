@@ -1049,7 +1049,7 @@ all primes, which is below the approximation's noise floor.
 
 ## Author's note
 
-This work was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), and DeepSeek for specific mathematical insights. The formal verification, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows the transparent crediting approach advocated by Schmitt (2025) for AI-assisted mathematical research. Mathematics is evaluated on results, not résumés.
+This work was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), Kimi, and DeepSeek. The formal verification, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows transparent crediting approach for AI-assisted mathematical research. Mathematics is evaluated on results, not résumés.
 
 ---
 
