@@ -1045,16 +1045,11 @@ all primes, which is below the approximation's noise floor.
 4. **Incorporation of the pole and trivial zeros** into the explicit
    formula, which could improve R² beyond the current 94% ceiling.
 
-5. **Geometric interpretation**: The structural parameters of the formula
-   (the number of contributing primes, the cutoff exponent, the prime-power
-   hierarchy) is used with compact manifolds of special
-   holonomy, which we explore in a separate work.
-
 ---
 
 ## Author's note
 
-This work was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), and DeepSeek for specific mathematical insights. The formal verification in Lean 4, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows the transparent crediting approach advocated by Schmitt (2025) for AI-assisted mathematical research. Mathematics is evaluated on results, not résumés.
+This work was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), and DeepSeek for specific mathematical insights. The formal verification, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows the transparent crediting approach advocated by Schmitt (2025) for AI-assisted mathematical research. Mathematics is evaluated on results, not résumés.
 
 ---
 
