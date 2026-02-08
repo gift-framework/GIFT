@@ -980,8 +980,14 @@ all primes, which is below the approximation's noise floor.
 
 5. **Geometric interpretation**: The structural parameters of the formula
    (the number of contributing primes, the cutoff exponent, the prime-power
-   hierarchy) admit suggestive analogies with compact manifolds of special
-   holonomy, which we intend to explore in a separate work.
+   hierarchy) is used with compact manifolds of special
+   holonomy, which we explore in a separate work.
+
+---
+
+## Author's note
+
+This work was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), and DeepSeek for specific mathematical insights. The formal verification in Lean 4, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows the transparent crediting approach advocated by Schmitt (2025) for AI-assisted mathematical research. Mathematics is evaluated on results, not résumés.
 
 ---
 
