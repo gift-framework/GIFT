@@ -6,7 +6,7 @@
 
 *Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
 
-**Lean Verification**: ~330 relations (core v3.3.14)
+**Lean Verification**: 290+ relations (core v3.3.17, zero `sorry`)
 
 ---
 
@@ -121,11 +121,11 @@ $$\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1)$$
 
 **Verification**: 112 + 128 = 240 roots, all length √2.
 
-**Lean Status (v3.3.14)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
+**Lean Status (v3.3.17)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
 - `D8_roots_card` = 112, `HalfInt_roots_card` = 128
 - `E8_roots_card` = 240, `E8_roots_decomposition`
 - `E8_inner_integral`, `E8_norm_sq_even`, `E8_sub_closed`
-- `E8_basis_generates`: Every lattice vector is integer combination of simple roots (THEOREM, was axiom)
+- `E8_basis_generates`: Every lattice vector is integer combination of simple roots (theorem)
 
 ### 1.3 Cartan Matrix
 
@@ -336,7 +336,7 @@ This anchors τ to topological and algebraic invariants, establishing it as a ge
 | rank(G₂) | 2 | Lie rank |
 | Definition | Aut(O) | Octonion automorphisms |
 
-**Lean Status (v3.3.14)**: G₂ Cross Product **9/11** proven:
+**Lean Status (v3.3.17)**: G₂ Cross Product **9/11** proven:
 - `epsilon_antisymm`, `epsilon_diag`, `cross_apply` ✓
 - `G2_cross_bilinear`, `G2_cross_antisymm`, `cross_self` ✓
 - `G2_cross_norm` (Lagrange identity ‖u×v‖² = ‖u‖²‖v‖² − ⟨u,v⟩²) ✓
@@ -410,12 +410,24 @@ $$61 = \Pi(\alpha^2_B) + 1 = 2 \times 5 \times 6 + 1$$
 
 The Laplace-Beltrami operator on K₇ admits a discrete spectrum with eigenvalues 0 = λ₀ < λ₁ ≤ λ₂ ≤ ... The first non-zero eigenvalue λ₁ (spectral gap) characterizes the geometry's rigidity.
 
-**Spectral gap formula**: For G₂-holonomy manifolds constructed via TCS, the spectral gap scales inversely with topological complexity:
+**Bare spectral ratio**: For G₂-holonomy manifolds constructed via TCS, the bare topological ratio scales inversely with cohomological dimension:
 
-$$\lambda_1 = \frac{\dim(G_2)}{H^*} = \frac{14}{b_2 + b_3 + 1}$$
+$$\lambda_1^{\text{bare}} = \frac{\dim(G_2)}{H^*} = \frac{14}{b_2 + b_3 + 1}$$
 
 For K₇ with b₂ = 21, b₃ = 77:
-$$\lambda_1 = \frac{14}{99} = 0.1414...$$
+$$\lambda_1^{\text{bare}} = \frac{14}{99} = 0.1414...$$
+
+**Physical spectral gap**: The Berger classification implies that G₂-holonomy manifolds admit exactly h = 1 parallel spinor. The corrected spectral-holonomy identity reads:
+
+$$\lambda_1 \times H^* = \dim(G_2) - h = 14 - 1 = 13$$
+
+giving the physical spectral gap:
+
+$$\boxed{\lambda_1 = \frac{13}{99} = 0.1313...}$$
+
+The correction 14/99 − 13/99 = 1/99 = h/H* is the parallel spinor contribution. The ratio 13/99 is irreducible (gcd(13, 99) = 1). Cross-holonomy validation: for SU(3) (Calabi-Yau 3-folds), h = 2 and dim(SU(3)) − h = 6, numerically confirmed on T⁶/ℤ₃.
+
+**Lean status**: `Spectral.PhysicalSpectralGap` (28 theorems, zero axioms). `Spectral.SelbergBridge` connects the spectral gap to the mollified Dirichlet polynomial S_w(T) via the Selberg trace formula.
 
 **Numerical observations**: The following near-identities hold to within 0.3%:
 
@@ -451,7 +463,7 @@ where $50 = \dim(K_7)^2 + 1 = 49 + 1$.
 
 $$\varepsilon = 7 + \sqrt{50}, \quad \varepsilon^2 = 99 + 14\sqrt{50}$$
 
-This connects the spectral structure to classical number theory.
+**Continued fraction bridge**: The discriminant $\sqrt{50}$ has periodic continued fraction $\sqrt{50} = [7; \overline{14}]$ with period 1, where the partial quotients are exactly dim(K₇) = 7 and dim(G₂) = 14. Combined with the selection principle κ = π²/14 (formalized in `Spectral.SelectionPrinciple`), this provides an arithmetic link between the Pell structure and the spectral gap.
 
 **Status**: TOPOLOGICAL (algebraic identity verified in Lean)
 
@@ -687,12 +699,18 @@ Physics-Informed Neural Network provides independent numerical validation:
 
 The PINN converges to the standard form, validating the analytical solution. See `K7_Explicit_Metric_v3_2.ipynb` for reproducible certification.
 
+**Robust statistical validation**: The det(g) = 65/32 prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3%, joint constraint p < 6 × 10⁻⁶). See `paper2_robust_results.json`.
+
 ### 11.4 Lean 4 Formalization
 
-**Scope of verification**: The Lean formalization verifies:
-1. Arithmetic identities (e.g., 14/21 = 2/3)
-2. Algebraic relations between GIFT constants
-3. Numerical bounds (e.g., torsion threshold)
+**Scope of verification**: The Lean formalization (core v3.3.17, 130+ files, zero `sorry`) verifies:
+1. Arithmetic identities and algebraic relations between GIFT constants
+2. Numerical bounds (e.g., torsion threshold)
+3. G₂ differential geometry: exterior algebra Λ*(ℝ⁷), Hodge star, ψ = ⋆φ (axiom-free `Geometry` module)
+4. Physical spectral gap: λ₁ = 13/99 from Berger classification (`Spectral.PhysicalSpectralGap`, 28 theorems, zero axioms)
+5. Selberg bridge: trace formula connecting S_w(T) to spectral gap (`Spectral.SelbergBridge`)
+6. Mollified Dirichlet polynomial S_w(T) over primes (axiom-free `MollifiedSum` module)
+7. Selection principle κ = π²/14 (`Spectral.SelectionPrinciple`)
 
 It does **not** formalize:
 - Existence of K₇ as a smooth G₂ manifold
@@ -716,7 +734,7 @@ theorem det_g_equals_target :
   scale_factor_power_14 = det_g_target := rfl
 ```
 
-**Status**: VERIFIED (327 lines, 0 sorry)
+**Status**: VERIFIED
 
 ### 11.5 The Derivation Chain
 

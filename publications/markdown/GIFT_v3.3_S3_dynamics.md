@@ -425,13 +425,13 @@ Conserved along flow:
 
 ### 8.3 Spectral Gap and Confinement Scale
 
-The spectral gap λ₁ of the Laplace-Beltrami operator on K₇ provides a natural scale for the compactified geometry:
+The spectral gap λ₁ of the Laplace-Beltrami operator on K₇ provides a natural scale for the compactified geometry. The bare topological ratio is dim(G₂)/H* = 14/99; accounting for the parallel spinor (h = 1 from Berger classification for G₂ holonomy), the physical spectral gap is:
 
-$$\lambda_1 = \frac{\dim(G_2)}{H^*} = \frac{14}{99}$$
+$$\lambda_1 = \frac{\dim(G_2) - h}{H^*} = \frac{13}{99}$$
 
 For a compactification with characteristic radius R, the dimensionful spectral gap becomes:
 
-$$\Lambda_{\text{spec}} = \frac{\lambda_1}{R^2} = \frac{14}{99 R^2}$$
+$$\Lambda_{\text{spec}} = \frac{\lambda_1}{R^2} = \frac{13}{99 R^2}$$
 
 This scale relates to the confinement scale in the effective 4D theory. If the compactification occurs at the TeV scale (R ~ 10⁻¹⁷ cm), then:
 
@@ -439,13 +439,13 @@ $$\sqrt{\Lambda_{\text{spec}}} \sim \mathcal{O}(\text{GeV})$$
 
 This is consistent with QCD confinement scales. The spectral gap provides a geometric origin for the mass gap in Yang-Mills theory through dimensional reduction.
 
-**Numerical relation**: The identity dim(G₂)/√2 ≈ π² (to 0.3%) suggests the spectral gap may be expressed as:
+**Selection principle**: The spectral gap satisfies
 
-$$\lambda_1 \approx \frac{\pi^2 \sqrt{2}}{H^*}$$
+$$\kappa = \frac{\pi^2}{\dim(G_2)} = \frac{\pi^2}{14}$$
 
-The appearance of π² is natural for Laplacian eigenvalues on compact domains.
+formalized in `Spectral.SelectionPrinciple` (Lean 4, zero axioms). The identity dim(G₂)/√2 ≈ π² (to 0.3%) connects this to the Laplacian eigenvalue expression λ₁ ≈ π²√2 / H*. The appearance of π² is natural for Laplacian eigenvalues on compact domains.
 
-**Status**: THEORETICAL (geometric mechanism proposed; quantitative predictions require metric normalization)
+**Status**: TOPOLOGICAL (selection principle formalized in Lean; dimensionful spectral gap requires metric normalization)
 
 ---
 
@@ -1245,10 +1245,11 @@ $$H_0^{Local} = b_3 - p_2^2 = 73$$
 
 ### 28 Open Questions
 
-1. **Selection principle**: Why these specific formulas from topology?
+1. **Selection principle**: Why these specific formulas from topology? The spectral selection κ = π²/14 is formalized, but the underlying geometric mechanism remains open.
 2. **Torsion mechanism**: How do physical interactions emerge from the torsion-free base?
 3. **Scale bridge derivation**: Can ln(φ) appearance be explained geometrically?
 4. **Hidden E₈**: Physical interpretation of second factor
+5. **Spectral universality**: Does the relation λ₁ × H* = dim(Hol) − h hold across holonomy families (Calabi-Yau, Spin(7))?
 
 ---
 
@@ -1421,6 +1422,8 @@ The Riemann-GIFT connection represents an **intriguing numerical observation** t
 - That 31/21 is the unique or optimal coefficient
 - That lags (8, 21) are special
 - That there is deep arithmetic structure beyond the density
+
+**Lean formalization**: The mollified Dirichlet polynomial $S_w(T) = \sum_{p \leq X} w(p)\, p^{-1/2} \cos(T \log p)$ is formalized constructively in the `MollifiedSum` module (zero axioms). The blueprint includes a Zeta chapter linking formalized sums to the observations above.
 
 **Recommendation**: Treat as preliminary observation pending theoretical derivation. The 33 dimensionless predictions (S2) do NOT depend on any Riemann connection.
 

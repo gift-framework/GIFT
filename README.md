@@ -15,7 +15,7 @@
 | **Precision** | 0.26% mean deviation across 33 dimensionless predictions (PDG 2024) |
 | **Uniqueness** | #1 out of 192,349 configurations tested (>4.5σ significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | ~330 relations proven in Lean 4 (core v3.3.14) |
+| **Verified** | 290+ relations proven in Lean 4 (core v3.3.17) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -227,7 +227,7 @@ Their appearance suggests structural rather than coincidental relationships.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.14}
+  version = {3.3.17}
 }
 ```
 

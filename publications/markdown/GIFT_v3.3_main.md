@@ -387,7 +387,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 #### Three Factors Distinguishing GIFT from Numerology
 
-**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.24% mean deviation (PDG 2024) across 18 quantities has probability < 10⁻²⁰.
+**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.26% mean deviation (PDG 2024) across 18 quantities has probability < 10⁻²⁰.
 
 **2. Exactness**: Several predictions are exactly rational:
 - sin²θ_W = 3/13 (not 0.2308...)
@@ -891,7 +891,7 @@ Unlike many approaches to fundamental physics, GIFT makes sharp, testable predic
 
 ### 14.4 Mathematical Rigor
 
-The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. ~330 relations have been verified in Lean 4 (core v3.3.14), providing machine-checked confirmation of algebraic claims. The E₈ root system is fully proven (12/12 theorems), including `E8_basis_generates` now a theorem rather than axiom. The spectral theory module establishes λ₁ = 14/99 as a topological prediction.
+The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. 290+ relations are formally verified in Lean 4 (core v3.3.17, 130+ files, zero `sorry`), providing machine-checked confirmation of algebraic claims. The E₈ root system is fully proven (12/12 theorems), including `E8_basis_generates` as a theorem rather than axiom. The G₂ differential geometry—exterior algebra Λ*(ℝ⁷), Hodge star, ψ = ⋆φ, and the torsion-free condition—is axiom-free. The physical spectral gap λ₁ = 13/99 is derived from the Berger classification (28 theorems, zero axioms), with selection principle κ = π²/14. The Selberg bridge connects the spectral gap to the mollified Dirichlet polynomial S_w(T), formalized constructively (zero axioms).
 
 ---
 
@@ -1009,9 +1009,10 @@ E₈×E₈ algebra  ←→  ?  ←→  G₂ holonomy  ←→  ?  ←→  SM para
 ### 17.2 Mathematical Extensions
 
 1. **Alternative K7**: Survey TCS constructions with different Betti numbers
-2. **Moduli dynamics**: Study variation over G2 parameter space
+2. **Moduli dynamics**: Study variation over G₂ parameter space
 3. **Calibrations**: Explore associative and coassociative submanifolds
 4. **K-theory**: Apply refined cohomological tools
+5. **Spectral universality**: Test λ₁ × H* = dim(Hol) − h across holonomy families (Calabi-Yau, Spin(7))
 
 ### 17.3 Experimental Priorities
 
