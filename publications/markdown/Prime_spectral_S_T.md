@@ -1,4 +1,4 @@
-# A Parameter-Free Mollified Approximation to the Argument of the Riemann Zeta Function
+# A Self-Normalized Mollified Approximation to the Argument of the Riemann Zeta Function
 
 **Author**: Brieuc de La Fournière
 
@@ -7,8 +7,9 @@ Independent researcher
 **Abstract.** We construct a mollified Dirichlet polynomial that approximates the
 function S(T) = π⁻¹ arg ζ(½ + iT) on the critical line. The approximation uses
 a cosine-squared kernel with an adaptive cutoff X(T) = T^{θ(T)}, where
-θ(T) = θ₀ + θ₁/log T is determined by the single constraint that the global
-amplitude equal unity (no fitted parameter). Over the first 100,000 non-trivial
+θ(T) = θ₀ + θ₁/log T is determined by the normalization constraint that the
+global regression amplitude equal unity (no fitted amplitude). Over the first
+100,000 non-trivial
 zeros of ζ(s), the formula explains 93.9% of the variance in the zero corrections
 δₙ = γₙ − γₙ⁽⁰⁾, achieves 100% correct zero counting with a safety margin of
 4.5×, and localizes 98.0% of zeros to their correct inter-Gram interval. The 2.0%
@@ -73,7 +74,7 @@ bounds for moments and maxima of the zeta function on the critical line.
 
 The question we address is different: rather than bounding S(T), we seek an
 *explicit, computable approximation* S_w(T) built from a finite prime sum,
-with no free parameters, that is accurate enough for zero counting and zero
+with no fitted amplitude, that is accurate enough for zero counting and zero
 localization.
 
 ### 1.4 Summary of results
@@ -82,12 +83,12 @@ We construct an approximation S_w(T) with the following properties:
 
 | Property | Value |
 |----------|-------|
-| Free parameters | 0 |
-| Structural parameters | 2 (θ₀, θ₁) |
+| Fitted amplitude parameters | 0 |
+| Internally calibrated structural parameters | 2 (θ₀, θ₁) |
 | Variance explained (R²) | 93.9% on 100K zeros |
 | Zero counting accuracy | 100.0% (max error 0.111) |
 | Zero localization rate | 98.0% (100K), 98.7–99.1% (2M per-window) |
-| Localization failure prediction | GUE-predicted to within 8% |
+| Localization failure prediction | Within 8% of simplified GUE model (§6.5) |
 | Out-of-sample (2M zeros, train/test) | R²_test = 0.919, α_test = 1.019 |
 | Monte Carlo uniqueness | p < 10⁻⁵ |
 
@@ -306,10 +307,18 @@ $$
 \theta^* = 0.9941, \quad \alpha = 1.000000, \quad R^2 = 0.937
 $$
 
-**The condition α = 1 determines a distinguished value θ* within the parameter range explored.** This is the central
-observation: once the mollifier kernel is chosen, the cutoff exponent is
-fixed by demanding that the approximation be *unbiased* (unit amplitude).
-There are no free parameters.
+**The normalization condition α = 1 determines a distinguished value θ* within the parameter range explored.** This is the central
+observation: once the mollifier kernel is chosen (a discrete modeling
+choice; see Section 3.3 for the kernel comparison), the cutoff exponent
+is fixed by demanding that the approximation be *unbiased* (unit
+amplitude). This self-normalization eliminates the global amplitude as a
+free parameter; the two structural parameters (θ₀, θ₁) in the adaptive
+variant (Section 4) are then determined by enforcing this normalization
+uniformly across height windows. We do not fit an amplitude α; instead,
+we choose the cutoff by enforcing the constraint α ≈ 1 and minimizing
+the per-window α-variance. The kernel choice itself remains a discrete
+modeling decision, analogous to choosing a test function in the Weil
+explicit formula framework (Section 10.1).
 
 ### 3.6 The constant-θ formula
 
@@ -388,9 +397,20 @@ The mollifier restores convergence as follows:
   consistent with the conditional convergence regime.
 
 In all cases, for fixed T the mollified sum is a finite sum and
-therefore well-defined. The non-trivial content of the convergence
-analysis concerns the *growth of S_w(T) as T → ∞*, which is
-controlled by the Selberg CLT (Section 7.5).
+therefore well-defined. We emphasize the distinction between the
+*mollified* sum S_w(T) (always a finite sum for fixed T, hence
+trivially convergent) and the *formal* un-mollified series
+S(T) = −π⁻¹ Σ_{p,m} sin(T m log p)/(m p^{m/2}), which diverges
+absolutely on Re(s) = ½. The mollifier transforms the latter into
+the former; conceptually, this is a form of Riesz summation (or,
+more precisely, a smooth Cesàro-type regularization) where the
+cosine-squared kernel assigns decreasing weights to terms near the
+truncation boundary, preventing the Gibbs-like artifacts of sharp
+truncation.
+
+The non-trivial content of the convergence analysis concerns the
+*growth of S_w(T) as T → ∞*, which is controlled by the Selberg
+CLT (Section 7.5).
 
 ---
 
@@ -478,9 +498,12 @@ S_w(T) = -\frac{1}{\pi} \sum_{p} \sum_{m=1}^{3}
 }
 $$
 
-This formula has **two structural parameters** (θ₀, θ₁) and **zero free
-parameters**: the pair (θ₀, θ₁) is fixed by the condition α = 1
-uniformly across height ranges.
+This formula has **two internally calibrated structural parameters** (θ₀, θ₁)
+and **no fitted amplitude**: the pair (θ₀, θ₁) is determined by the
+normalization constraint α = 1 uniformly across height ranges (see
+Section 3.5 for the precise calibration procedure). The optimization
+details (grid search followed by Nelder-Mead refinement) are given in
+Section 4.3.
 
 ### 4.6 The cutoff profile
 
@@ -540,15 +563,20 @@ At n = 100,000, the safety margin to the counting threshold is **4.52×**.
 
 We observe that the Riemann–von Mangoldt formula N(T) counts *all*
 non-trivial zeros with 0 < Im(ρ) ≤ T, regardless of their real part.
-It is a classical fact that establishing |N(T) − N_approx(T)| < ½
-rigorously for all T would be equivalent to the Riemann Hypothesis.
+A rigorous bound |N(T) − N_approx(T)| < ½ established on an interval
+[0, T_max] would constitute a Turing-style certification that the
+computed zeros are complete up to height T_max (i.e., that no zeros
+have been missed), extending classical Turing verification methods
+[3, 4] to a prime-spectral framework.
 
-Our numerical result (that this bound holds with a 4.5× safety margin
-over the first 100,000 zeros) is therefore consistent with RH, but we
-stress that this is a *finite verification*, not a proof. The gap between
-numerical evidence on a bounded interval and a rigorous asymptotic bound
-is substantial; see Section 7 for a discussion of what such a proof
-would require.
+We stress that this does *not* prove the Riemann Hypothesis: it
+verifies zero-counting completeness on a finite range, not an
+asymptotic bound for all T. The distinction is fundamental. Our
+numerical result (that this bound holds with a 4.5× safety margin
+over the first 100,000 zeros) provides strong evidence of
+completeness in this range, but the gap between a finite verification
+and a rigorous asymptotic bound is substantial; see Section 7 for a
+discussion of what a full proof would require.
 
 ---
 
@@ -616,8 +644,8 @@ localization.
 
 ### 6.5 Quantitative failure prediction from GUE
 
-Modeling the residual ε as Gaussian with σ_E = 0.058, the failure
-probability is:
+Under a simplified model (Gaussian residual with σ_E = 0.058,
+independent of the local spacing), the failure probability is:
 
 $$
 P(\text{fail}) = \int_0^\infty p_{\text{GUE}}(s) \cdot
@@ -630,8 +658,14 @@ $$
 | P(fail) GUE-predicted | **1.851%** |
 | Agreement | **within 8%** |
 
-The 2% failure rate is not a defect of the method; it is the
-*theoretically expected* rate given R² = 0.937 and GUE level statistics.
+The 2% failure rate is not a defect of the method; under this
+simplified model, it is the *expected* rate given R² = 0.937 and
+GUE level statistics. The prediction is robust to perturbations
+in σ_E: varying σ_E by ±10% (i.e., σ_E ∈ [0.052, 0.064]) yields
+P(fail) ∈ [1.4%, 2.4%], bracketing the empirical value of 2.0%.
+We note that the independence assumption (residual ε uncorrelated
+with the local spacing s) is itself an approximation; the observed
+agreement suggests it is adequate for this purpose.
 
 ### 6.6 Anatomy of failures
 
@@ -756,7 +790,9 @@ ingredients:
    transform decaying as O(ξ⁻²), giving controlled smoothing error.
 3. **Pointwise bound**: converting from the distributional result
    (Selberg CLT) to a pointwise bound for all T, which either requires
-   RH itself or restriction to a finite verified range.
+   the Riemann Hypothesis itself or restriction to a finite verified
+   range (yielding a Turing-style certification rather than a proof
+   of RH).
 
 The gap between our numerical evidence and a full proof is therefore
 substantial, but the hybrid approach (rigorous evaluation on a finite
@@ -861,9 +897,10 @@ To guard against over-fitting, we implement a strict train/test protocol:
   the test set is evaluated without any recalibration.
 - Data source: Odlyzko's high-precision tables (zeros6).
 
-**Remark on the three cutoff parameterizations.** This paper uses three
-related but distinct cutoff models, which we summarize here to avoid
-confusion:
+**Remark on the three cutoff parameterizations.** **(Reader's guide.)**
+This paper uses three related but distinct cutoff models across its
+sections. The following table serves as a quick reference; readers
+encountering different θ values should consult this summary:
 
 | Model | Parameters | Value(s) | Section | Context |
 |-------|-----------|----------|---------|---------|
@@ -928,7 +965,7 @@ Train/test split:
 
 3. **Localization is notably stable**: The per-window rate remains
    between 98.7% and 99.1% across all windows. The *highest* localization
-   (99.1%) occurs in the first out-of-sample window [10⁵, 2×10⁵),
+   (99.1%) occurs in the first out-of-sample window [10⁵, 2×10⁵)],
    suggesting the formula may slightly under-perform at small T where
    θ(T) is farthest from its asymptotic value.
 
@@ -980,7 +1017,17 @@ the prime side of the Weil explicit formula. The correspondence is:
 | Cutoff on support of ĥ | Adaptive X(T) = T^{θ(T)} |
 
 The condition α = 1 corresponds to the normalization of the test function
-in the explicit formula framework.
+in the explicit formula framework. More precisely, in the Weil formula
+∑_ρ h(ρ) = ĥ(0) log(1/2π) + ... − 2 ∑_{p,m} (log p / p^{m/2}) ĥ(m log p),
+the prime and spectral sides are in exact balance when h is properly
+normalized. Our constraint α = 1 enforces this balance empirically: it
+demands that the prime-side sum (our S_w) reproduce the spectral-side
+fluctuations (the δₙ corrections) with unit coefficient. In this sense,
+α = 1 is not merely a heuristic choice but reflects the structural
+normalization inherent in the explicit formula. The choice of the
+cosine-squared kernel (rather than, say, the Selberg kernel) remains a
+modeling decision; it is the analogue of choosing a test function h with
+specific Fourier-analytic properties.
 
 ### 10.2 Connection to the Selberg trace formula
 
@@ -1000,6 +1047,17 @@ This analogy, already implicit in the work of Berry and Keating [16]
 on the spectral interpretation of zeros, suggests viewing S_w(T) as a
 truncated "geodesic side" of a trace formula, with the mollifier playing
 the role of a smooth partition of unity on the length spectrum.
+
+The connection to the Berry-Keating framework can be made more precise.
+In their semiclassical analysis, the "classical period" of the
+hypothetical Hamiltonian whose eigenvalues are the zeta zeros scales
+as T_cl ~ log(T/2π). Our adaptive cutoff log X(T) = θ₀ log T + θ₁
+is therefore an affine function of the Heisenberg time (the inverse
+level spacing), with θ₀ ≈ 1.4 setting the number of "classical periods"
+included in the sum. The condition α = 1 can then be interpreted as a
+normalization of the spectral weight: we include exactly enough prime
+periods for the sum to have unit mean amplitude, analogous to
+normalizing the Gutzwiller trace formula by the mean density of states.
 
 ### 10.3 The role of prime powers m ≤ 3
 
@@ -1044,6 +1102,7 @@ all primes, which is below the approximation's noise floor.
 
 4. **Incorporation of the pole and trivial zeros** into the explicit
    formula, which could improve R² beyond the current 94% ceiling.
+
 
 ---
 
