@@ -18,9 +18,9 @@ det(g) = 65/32 to 8 significant figures (4 × 10⁻⁸ % deviation), has
 torsion ‖dφ‖ + ‖d*φ‖ of order 10⁻⁶ (well within the perturbative regime
 of Joyce's existence theorem [Theorem 11.6.1, Joyce 2000]), condition
 number κ = 1.0152, and matches 77 target period integrals at 5 scales
-with RMS error 3.1 × 10⁻⁴. The Cholesky warm-start technique —
-initializing at the analytical target and learning only residual
-perturbations — may be of independent interest for other special-holonomy
+with RMS error 3.1 × 10⁻⁴. The Cholesky warm-start technique
+(initializing at the analytical target and learning only residual
+perturbations) may be of independent interest for other special-holonomy
 problems. All code and data are publicly available.
 
 ---
@@ -53,8 +53,8 @@ substantial numerical work exists for *non-compact* examples
 Physics-informed neural networks (PINNs) [7] parameterize solutions to
 PDEs via neural networks whose loss function encodes the governing
 equations. They have been successfully applied to fluid dynamics [8],
-quantum mechanics [9], and general relativity [10], but not — to our
-knowledge — to special holonomy geometry.
+quantum mechanics [9], and general relativity [10], but not, to our
+knowledge, to special holonomy geometry.
 
 We apply PINNs to construct a candidate metric on a local model of the
 neck region of K₇, a compact TCS manifold with b₂ = 21 and b₃ = 77
@@ -77,9 +77,9 @@ The analytical target and the period integrals used as training data derive
 from the GIFT (Geometric Information Field Theory) framework [12], which
 proposes that physical constants arise from the topology of E₈ × E₈
 compactifications on G₂ manifolds. While the physical claims of GIFT are
-outside the scope of this paper, the mathematical objects it produces —
-the G₂ decomposition, the Mayer–Vietoris splitting of moduli, and the
-determinant formula det(g) = 65/32 — are independently verifiable
+outside the scope of this paper, the mathematical objects it produces
+(the G₂ decomposition, the Mayer–Vietoris splitting of moduli, and the
+determinant formula det(g) = 65/32) are independently verifiable
 statements in differential geometry. We use them as input data and
 verify the output against standard geometric criteria.
 
@@ -91,7 +91,7 @@ verify the output against standard geometric criteria.
 | Positive definite | All λᵢ > 0 | λ_min = 1.099 (Cholesky guarantee) |
 | Condition number | 1.01518 | 1.01518 (7 significant figures) |
 | Torsion ‖dφ‖+‖d*φ‖ | small | 7.2 × 10⁻⁶ |
-| Period integrals | RMS < 0.005 | 0.000311 (16× below threshold) |
+| Period integrals | RMS < 0.005 | 0.000311 (16-fold below threshold) |
 | Anisotropy | ‖g − G_TARGET‖_F → 0 | 1.76 × 10⁻⁷ (machine precision) |
 
 Training time: 2.9 minutes on a single A100 GPU. Model: 202,857 parameters.
@@ -153,7 +153,7 @@ glued along their common asymptotic cross-section S¹ × K3:
 |---------------|-------------|-----|-----|
 | M₁ | ACyl CY from quintic in ℂℙ⁴ | 11 | 40 |
 | M₂ | ACyl CY from CI(2,2,2) in ℂℙ⁶ | 10 | 37 |
-| K3 (gluing) | K3 surface, b₂ = 22 | — | — |
+| K3 (gluing) | K3 surface, b₂ = 22 | N/A | N/A |
 
 The Mayer–Vietoris sequence gives:
 
@@ -233,8 +233,8 @@ $$
 + \frac{\partial\varphi_{ikl}}{\partial\Pi_k}\,\varphi_{jkl}\right)
 $$
 
-Evaluating this for the 35 pointwise modes (§2.3), the 7 Fano-aligned
-modes have Tr(∂g/∂Π) = ±2.10 (volume-changing), while all 28 non-Fano
+Evaluating this for the 35 pointwise modes (§2.3), the 7 modes aligned with the Fano-plane triples
+have Tr(∂g/∂Π) = ±2.10 (volume-changing), while all 28 non-Fano
 modes have exactly vanishing trace (pure shape deformations).
 
 ### 3.3 The target metric G_TARGET
@@ -320,7 +320,7 @@ $$
 where L₀ = chol(G_TARGET) is the Cholesky factor of the analytical target,
 and δL(x) is a lower-triangular matrix output by the network.
 
-| Property | G₂ adjoint (v1/v2) | Cholesky (v3) |
+| Property | G₂ adjoint | Cholesky (this work) |
 |----------|-------------------|---------------|
 | Metric DOF per point | 6 (rank of Lie derivs) | **28** (full) |
 | Initialization | c²·I₇ (far from target) | **G_TARGET** (at target) |
@@ -427,7 +427,7 @@ g_mean =
 | g₅₅ | 1.103852 | 1.103852 | 1.4 × 10⁻⁸ |
 | g₆₆ | 1.102167 | 1.102167 | 2.7 × 10⁻⁷ |
 | g₂₃ (max off-diag) | +0.004613 | +0.004613 | 1.0 × 10⁻⁶ |
-| **‖g − G_TARGET‖_F** | — | — | **1.76 × 10⁻⁷** |
+| **‖g − G_TARGET‖_F** | N/A | N/A | **1.76 × 10⁻⁷** |
 
 Relative error: 4.4 × 10⁻⁸ (maximum elementwise error / maximum entry).
 
@@ -507,7 +507,7 @@ period data is supplied.
 | 40,000 | 0.000479 | 0.995 | 77 |
 | 75,000 | 0.000540 | 0.995 | 77 |
 
-Best fit at T = 10,000 (RMS = 3.11 × 10⁻⁴, 16× below threshold).
+Best fit at T = 10,000 (RMS = 3.11 × 10⁻⁴, 16-fold below threshold).
 
 ---
 
@@ -517,7 +517,7 @@ Best fit at T = 10,000 (RMS = 3.11 × 10⁻⁴, 16× below threshold).
 
 1. **A numerical candidate metric on a compact G₂ manifold.** Previous
    work established existence (Joyce [3]) and gave constructions
-   (Kovalev [5], CHNP [6]), but — to our knowledge — explicit pointwise
+   (Kovalev [5], Corti-Haskins-Nordström-Pacini (CHNP) [6]), but, to our knowledge, explicit pointwise
    numerical values of g_ij(x) have not been reported for the compact case.
    We note that substantial numerical work exists for non-compact G₂
    manifolds, and that our result covers only the TCS neck region
@@ -547,7 +547,7 @@ has three advantages:
    needs to learn corrections of order 10⁻⁷, not the full metric from
    scratch.
 3. **Full rank**: unlike Lie-algebraic parameterizations which may have
-   rank deficiencies (as demonstrated by our failed v1/v2 attempts), the
+   rank deficiencies (as demonstrated by our earlier attempts), the
    Cholesky approach has 28 independent degrees of freedom per point
    (the full dimension of Sym₇(ℝ)).
 
@@ -560,7 +560,7 @@ has three advantages:
 
 2. **Period data from GIFT**: The training targets (77 period integrals)
    are derived from the GIFT framework. While the metric itself is
-   independently verifiable (det, torsion, PD are geometric properties),
+   independently verifiable (det, torsion, positive definiteness are geometric properties),
    the specific values of the periods inherit any limitations of GIFT.
 
 3. **Determinant value**: The target det(g) = 65/32 is derived within GIFT

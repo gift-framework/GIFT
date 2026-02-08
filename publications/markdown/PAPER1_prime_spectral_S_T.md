@@ -232,7 +232,7 @@ Results with sharp truncation (K = 3, 100,000 zeros):
 
 Two pathologies are evident. First, R² saturates near 0.89 and slightly
 *decreases* for P > 500 (adding large primes introduces noise faster than
-signal). Second, α decreases steadily from 0.98 to 0.77 — the sharp cutoff
+signal). Second, α decreases steadily from 0.98 to 0.77: the sharp cutoff
 creates a Gibbs-like overshoot, and the OLS amplitude compensates by
 shrinking below unity.
 
@@ -304,7 +304,7 @@ $$
 \theta^* = 0.9941, \quad \alpha = 1.000000, \quad R^2 = 0.937
 $$
 
-**The condition α = 1 determines θ* uniquely.** This is the central
+**The condition α = 1 determines a distinguished value θ* within the parameter range explored.** This is the central
 observation: once the mollifier kernel is chosen, the cutoff exponent is
 fixed by demanding that the approximation be *unbiased* (unit amplitude).
 There are no free parameters.
@@ -403,13 +403,13 @@ $$
 
 | Metric | Constant θ | Adaptive θ(T) | Improvement |
 |--------|-----------|---------------|-------------|
-| α (global) | 1.0000 | 1.0006 | — |
+| α (global) | 1.0000 | 1.0006 | (unchanged) |
 | σ_α (per-window) | 0.021 | **0.003** | **7.3×** |
 | α range | 0.072 | **0.010** | **7.2×** |
 | R² | 0.937 | **0.939** | +0.002 |
 | Localization | 98.00% | **98.03%** | +0.03% |
-| E_rms | 0.058 | **0.058** | — |
-| N(T) correct | 100.0% | **100.0%** | — |
+| E_rms | 0.058 | **0.058** | (unchanged) |
+| N(T) correct | 100.0% | **100.0%** | (unchanged) |
 
 Per-window amplitudes with adaptive θ:
 
@@ -472,10 +472,9 @@ exactly.
 | % correct (|error| < 0.5) | 97.07% | **100.00%** |
 | Mean |error| | 0.193 | **0.016** |
 | Max |error| | 0.795 | **0.111** |
-| Improvement | — | **11.75×** |
+| Improvement | (baseline) | **11.75×** |
 
-The correction S_w(T) transforms a 97% counting rate into a **perfect**
-100% rate, with a worst-case error of 0.111 — well below the critical
+The correction S_w(T) transforms a 97% counting rate into a 100% rate, with a worst-case error of 0.111, well below the critical
 threshold of 0.5.
 
 ### 5.3 Stability across height ranges
@@ -498,8 +497,8 @@ non-trivial zeros with 0 < Im(ρ) ≤ T, regardless of their real part.
 It is a classical fact that establishing |N(T) − N_approx(T)| < ½
 rigorously for all T would be equivalent to the Riemann Hypothesis.
 
-Our numerical result — that this bound holds with a 4.5× safety margin
-over the first 100,000 zeros — is therefore consistent with RH, but we
+Our numerical result (that this bound holds with a 4.5× safety margin
+over the first 100,000 zeros) is therefore consistent with RH, but we
 stress that this is a *finite verification*, not a proof. The gap between
 numerical evidence on a bounded interval and a rigorous asymptotic bound
 is substantial; see Section 7 for a discussion of what such a proof
@@ -546,7 +545,7 @@ to the localization boundary:
 | Minimum | 0.0004× (failure) |
 
 The typical zero has a 38× safety margin. Even at the 5th percentile, the
-margin is 1.26× — above unity.
+margin is 1.26×, above unity.
 
 ### 6.4 GUE statistics of the failures
 
@@ -566,7 +565,7 @@ $$
 | s < 1.00 | 53.4% | 54.4% | 0.982 |
 
 At very small gaps (s < 0.1), the zeros display **10–18× fewer** close
-pairs than GUE predicts — a "super-repulsion" phenomenon that aids
+pairs than GUE predicts, a "super-repulsion" phenomenon that aids
 localization.
 
 ### 6.5 Quantitative failure prediction from GUE
@@ -585,7 +584,7 @@ $$
 | P(fail) GUE-predicted | **1.851%** |
 | Agreement | **within 8%** |
 
-The 2% failure rate is not a defect of the method — it is the
+The 2% failure rate is not a defect of the method; it is the
 *theoretically expected* rate given R² = 0.937 and GUE level statistics.
 
 ### 6.6 Anatomy of failures
@@ -596,7 +595,7 @@ The 2% failure rate is not a defect of the method — it is the
 | Median normalized gap | 0.320 | 0.734 |
 
 89% of failures occur at normalized gap s < 0.5. The failures are
-concentrated at close zero pairs — the most challenging configurations
+concentrated at close zero pairs, the most challenging configurations
 for any localization method.
 
 ---
@@ -694,7 +693,7 @@ where L(T) = π⁻¹ Σ_{p,m} w(···) · log p / p^{m/2} is computable:
 | 10⁶ | 61.93 | 0.0002 |
 
 **Hybrid verification**: For T ∈ [14, 10⁶] with tolerance δS < 0.01, the
-total grid requires ~3.1 × 10⁹ evaluations — feasible on modern GPU
+total grid requires ~3.1 × 10⁹ evaluations, feasible on modern GPU
 hardware in hours. This would provide a *rigorous numerical verification*
 that |N_approx(T) − N(T)| < ½ for all T ≤ 10⁶, extending classical Turing
 verification methods.
@@ -742,7 +741,7 @@ zeros {γₙ⁽⁰⁾} fixed, then recompute R²:
 - **Z-score**: (0.939 − 0.0003) / 0.0004 ≈ **2348**
 - **p-value**: < 10⁻¹⁰⁰ (effectively zero)
 
-The prime-spectral structure is emphatically not a statistical artifact.
+The prime-spectral structure is not a statistical artifact.
 
 ### 8.3 Monte Carlo uniqueness of the cutoff
 
@@ -754,7 +753,7 @@ and compute α and R² for each:
 - Configurations with |α − 1| < 0.01 AND R² > 0.93: **< 0.05%**
 - **None** match the α-uniformity (σ_α < 0.005) of the adaptive formula
 
-The optimal (θ₀, θ₁) occupies a unique minimum in the loss landscape.
+The optimal (θ₀, θ₁) occupies a distinguished minimum in the loss landscape.
 
 ### 8.4 Sobol sensitivity analysis
 
@@ -769,7 +768,7 @@ the variance of R² and α with respect to (θ₀, θ₁, kernel_index):
 | Interactions | 0.02 | 0.01 |
 
 The cutoff exponent θ₀ dominates: it controls 72% of R² variance and 85%
-of α variance. The kernel choice is surprisingly insensitive (5%),
+of α variance. The kernel choice is relatively insensitive (5%),
 confirming that the result is robust to the specific mollifier shape.
 
 ### 8.5 Bootstrap stability
@@ -799,7 +798,7 @@ $$
 p_{\text{corrected}} = 700 \times p_{\text{raw}} < 700 \times 10^{-100} \ll 1
 $$
 
-The look-elsewhere correction is negligible given the overwhelming
+The look-elsewhere correction is negligible given the strong
 significance of the base result.
 
 ---
@@ -833,7 +832,7 @@ Train/test split:
 | | Training (100K) | Test (1.9M) |
 |---|----------------|------------|
 | θ* | 0.9640 | (same, no recalibration) |
-| α | — | 1.019 |
+| α | (calibration) | 1.019 |
 | R² | 0.939 | 0.919 |
 
 ### 9.3 Window-by-window results
@@ -860,7 +859,7 @@ Train/test split:
    σ²(S) ~ ½ log log T: the irreducible fluctuation of S(T) grows, but
    our approximation tracks it with stable accuracy.
 
-3. **Localization is remarkably stable**: The per-window rate remains
+3. **Localization is notably stable**: The per-window rate remains
    between 98.7% and 99.1% across all windows. The *highest* localization
    (99.1%) occurs in the first out-of-sample window [10⁵, 2×10⁵),
    suggesting the formula may slightly under-perform at small T where
@@ -930,8 +929,8 @@ geodesics {ℓ_γ}. The structural parallel is:
 | m-th iterate of geodesic | m-th prime power |
 | Spectral fluctuation | S(T) |
 
-This analogy — already implicit in the work of Berry and Keating [16]
-on the spectral interpretation of zeros — suggests viewing S_w(T) as a
+This analogy, already implicit in the work of Berry and Keating [16]
+on the spectral interpretation of zeros, suggests viewing S_w(T) as a
 truncated "geodesic side" of a trace formula, with the mollifier playing
 the role of a smooth partition of unity on the length spectrum.
 
@@ -1035,7 +1034,7 @@ all primes, which is below the approximation's noise floor.
      136(3), 507–549.
 
 [15] Harper, A.J. (2013). Sharp conditional bounds for moments of the
-     Riemann zeta function. Preprint, arXiv:1305.4618.
+     Riemann zeta function. arXiv:1305.4618. (Published as *Annals of Math.*, 2013.)
 
 [16] Berry, M.V. & Keating, J.P. (1999). The Riemann zeros and eigenvalue
      asymptotics. *SIAM Review* 41(2), 236–266.
@@ -1068,7 +1067,7 @@ all primes, which is below the approximation's noise floor.
 ### A.2 Per-prime weight analysis
 
 With per-prime OLS (150 free parameters), R² improves to 0.922. The fitted
-weights for the first primes are remarkably uniform:
+weights for the first primes are approximately uniform:
 
 | Prime | 1/√p (theory) | w_p (fitted) | Ratio |
 |-------|--------------|-------------|-------|
@@ -1086,17 +1085,17 @@ on the critical line.
 
 ## Appendix B. Reproducibility
 
-### C.1 Data
+### B.1 Data
 
 All computations use the first 100,000 (respectively 2,001,052) non-trivial
 zeros of ζ(s) from Odlyzko's tables [9].
 
-### C.2 Software
+### B.2 Software
 
 - Python 3.10+, NumPy, SciPy
-- All scripts and notebooks are available at [repository URL].
+- All scripts and notebooks are available at github.com/gift-framework/GIFT.
 
-### C.3 Computational cost
+### B.3 Computational cost
 
 | Computation | Hardware | Runtime |
 |-------------|----------|---------|
