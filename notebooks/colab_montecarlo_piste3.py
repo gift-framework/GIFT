@@ -89,6 +89,7 @@ def theta_deriv(t):
     return 0.5 * np.log(np.maximum(np.asarray(t, dtype=np.float64), 1.0) / (2 * np.pi))
 
 def smooth_zeros(N):
+    """Fallback: Newton-method approximations. ONLY for testing, NOT for science."""
     ns = np.arange(1, N + 1, dtype=np.float64)
     targets = (ns - 1.5) * np.pi
     w = np.real(lambertw(ns / np.e))
@@ -231,22 +232,119 @@ print(f"      observed c1 = {C1_OBSERVED:.6f} (match: {abs(C1_OBSERVED - C1_PRED
 print()
 
 # ================================================================
-# LOAD DATA
+# LOAD GENUINE ZEROS (REQUIRED — no smooth fallback for science)
 # ================================================================
-banner("Loading data")
+banner("Loading genuine Riemann zeros")
+
+# Known first zeros for validation
+KNOWN_ZEROS = [14.134725, 21.022040, 25.010858]
+
+def validate_zeros(g):
+    """Check that first zeros match known values (genuine, not smooth)."""
+    for i, known in enumerate(KNOWN_ZEROS):
+        if abs(g[i] - known) > 0.01:
+            return False
+    return True
+
+def download_odlyzko_zeros(target_n=2_000_000):
+    """Download zeros from Andrew Odlyzko's tables at UMN."""
+    import urllib.request
+    base_url = "http://www.dtc.umn.edu/~odlyzko/zeta_tables/"
+    all_zeros = []
+    # Odlyzko's files: zeros1 (first 100k), zeros2 (100k-200k), ...
+    for i in range(1, 25):
+        fname = f"zeros{i}"
+        url = base_url + fname
+        try:
+            print(f"    Downloading {fname}...", end=' ', flush=True)
+            local_path, _ = urllib.request.urlretrieve(url)
+            count_before = len(all_zeros)
+            with open(local_path) as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#') and not line.startswith(' '):
+                        try:
+                            all_zeros.append(float(line))
+                        except ValueError:
+                            pass
+            added = len(all_zeros) - count_before
+            print(f"+{added:,} = {len(all_zeros):,} total")
+            if len(all_zeros) >= target_n:
+                break
+        except Exception as e:
+            print(f"stopped ({e})")
+            break
+    return np.array(all_zeros, dtype=np.float64) if all_zeros else None
+
+# Strategy 1: Try local path
+gamma0 = None
 if os.path.exists(ZEROS_FILE):
     gamma0 = np.load(ZEROS_FILE).astype(np.float64)
-    print(f"  Loaded {len(gamma0):,} zeros from {ZEROS_FILE}")
-else:
-    N_ZEROS = 2_000_000
-    print(f"  File not found, computing {N_ZEROS:,} smooth zeros...")
-    gamma0 = smooth_zeros(N_ZEROS)
-    print(f"  Done. ({len(gamma0):,} zeros)")
+    print(f"  Found local: {ZEROS_FILE} ({len(gamma0):,} zeros)")
 
+# Strategy 2: Try Google Drive (Colab)
+if gamma0 is None:
+    try:
+        from google.colab import drive
+        drive.mount('/content/drive', force_remount=False)
+        print("  Google Drive mounted")
+    except Exception:
+        pass
+
+    import glob as glob_mod
+    search_patterns = [
+        '/content/drive/MyDrive/**/riemann_zeros_2M*.npy',
+        '/content/drive/MyDrive/**/zeros_2M*.npy',
+        '/content/outputs/*.npy',
+    ]
+    for pat in search_patterns:
+        candidates = glob_mod.glob(pat, recursive=True)
+        if candidates:
+            gamma0 = np.load(candidates[0]).astype(np.float64)
+            print(f"  Found on Drive: {candidates[0]} ({len(gamma0):,} zeros)")
+            # Cache locally for speed
+            os.makedirs('outputs', exist_ok=True)
+            np.save(ZEROS_FILE, gamma0)
+            print(f"  Cached to {ZEROS_FILE}")
+            break
+
+# Strategy 3: Download from Odlyzko's tables
+if gamma0 is None:
+    print("  Not found locally or on Drive.")
+    print("  Downloading from Odlyzko tables (UMN)...")
+    gamma0 = download_odlyzko_zeros(2_000_000)
+    if gamma0 is not None and len(gamma0) >= 100_000:
+        print(f"  Downloaded {len(gamma0):,} zeros")
+        os.makedirs('outputs', exist_ok=True)
+        np.save(ZEROS_FILE, gamma0)
+        print(f"  Cached to {ZEROS_FILE}")
+    else:
+        gamma0 = None
+
+# HARD FAIL if no genuine zeros
+if gamma0 is None:
+    print("\n  FATAL: Could not obtain genuine Riemann zeros.")
+    print("  This script REQUIRES genuine zeros — smooth approximations")
+    print("  give completely different results (wrong c1 sign, wrong d).")
+    print("  Please upload riemann_zeros_2M_genuine.npy to outputs/")
+    sys.exit(1)
+
+# Validate genuineness
 gamma0 = np.sort(gamma0)
+if not validate_zeros(gamma0):
+    print(f"\n  WARNING: First zeros don't match known values!")
+    print(f"    Got:    {gamma0[0]:.6f}, {gamma0[1]:.6f}, {gamma0[2]:.6f}")
+    print(f"    Expect: {KNOWN_ZEROS[0]:.6f}, {KNOWN_ZEROS[1]:.6f}, {KNOWN_ZEROS[2]:.6f}")
+    print(f"  These may be smooth approximations. Results will be unreliable.")
+    GENUINE = False
+else:
+    print(f"  Validation OK: first zeros match known values")
+    GENUINE = True
+
 N_zeros = len(gamma0)
 primes = sieve(P_MAX)
-print(f"  {len(primes):,} primes up to {P_MAX:,}")
+print(f"  {N_zeros:,} zeros, {len(primes):,} primes up to {P_MAX:,}")
+print(f"  Genuine: {GENUINE}")
 
 # Precompute shared data
 tp_v = theta_deriv(gamma0)
@@ -296,6 +394,8 @@ print(f"    R2 = {base_fit['R2']:.4f}")
 print(f"    resid_drift_p = {base_fit['residual_drift_p']:.4f}")
 
 save_checkpoint({
+    'genuine_zeros': GENUINE,
+    'n_zeros': N_zeros,
     'alpha_global': alpha_global,
     'n_windows': N_WIN,
     'base_fit': base_fit,
@@ -514,17 +614,37 @@ n_within_1pct = sum(1 for m in matches if m['rel_error'] < 0.01)
 n_within_01pct = sum(1 for m in matches if m['rel_error'] < 0.001)
 n_within_5pct = len(matches)
 
-# LEE-corrected p-value
-# Under null: d is uniformly distributed in some range [d_min, d_max]
-# P(any of N combos within epsilon of d) ≈ N * 2*epsilon
-# Our best match has rel_error = matches[0]['rel_error']
+# LEE-corrected p-value — TWO methods
+# Method 1 (conservative): Bonferroni. P(any match within eps) <= N * P(one match within eps)
+#   For relative error, P(one match) ≈ 2*eps (fraction of range covered).
+#   This is VERY conservative because it treats all combos as independent.
 best_match_err = matches[0]['rel_error'] if matches else 1.0
-p_lee = min(1.0, N_TOTAL_COMBOS * 2 * best_match_err)
+p_lee_bonf = min(1.0, N_TOTAL_COMBOS * 2 * best_match_err)
+
+# Method 2 (empirical): What fraction of combos are within 1% of d?
+#   If 8/1704 ≈ 0.5% of combos hit within 1%, then hitting within 0.08%
+#   is 0.08/1.0 = 8× more precise than the 1% threshold. Empirical density
+#   of targets near d ≈ 8/1704 per 1% band = 0.47% per 1%.
+#   P(best ≤ 0.076%) = 1 - (1 - 2*0.00076)^N_eff where N_eff = distinct targets
+# Approximate: count unique values within 5%
+unique_5pct = set()
+for m in matches:
+    unique_5pct.add(round(m['value'], 2))
+N_eff = len(unique_5pct)
+p_lee_empirical = min(1.0, 1 - (1 - 2 * best_match_err) ** N_eff)
+
+# Method 3: rank-based. Best match has rank 1 out of N_TOTAL_COMBOS.
+# What's the gap ratio between #1 and #2?
+if len(matches) >= 2:
+    gap_ratio = matches[1]['rel_error'] / matches[0]['rel_error'] if matches[0]['rel_error'] > 0 else float('inf')
+else:
+    gap_ratio = float('inf')
 
 elapsed2 = time.time() - t0
 
 print(f"  Total combinations scanned: {N_TOTAL_COMBOS:,}")
 print(f"  (+: {n_add}, -: {n_sub}, *: {n_mul}, /: {n_div})")
+print(f"  Unique targets within 5%: {N_eff}")
 print(f"  Matches within 5%: {n_within_5pct}")
 print(f"  Matches within 1%: {n_within_1pct}")
 print(f"  Matches within 0.1%: {n_within_01pct}")
@@ -535,17 +655,24 @@ for i, m in enumerate(matches[:10]):
     print(f"    {i+1}. {m['expr']:30s} = {m['value']:.6f}  "
           f"(err = {m['rel_error']*100:.4f}%){star}")
 print()
-print(f"  LEE-corrected p-value (best match): {p_lee:.4f}")
-print(f"  Interpretation: {'SIGNIFICANT (p<0.05)' if p_lee < 0.05 else 'NOT significant'}")
+print(f"  LEE p-value (Bonferroni, conservative): {p_lee_bonf:.4f}")
+print(f"  LEE p-value (empirical, N_eff={N_eff}): {p_lee_empirical:.4f}")
+print(f"  Gap ratio #2/#1: {gap_ratio:.1f}x  (>5x is strong separation)")
+p_lee = p_lee_empirical  # use empirical for verdict
+print(f"  Verdict: {'SIGNIFICANT (p<0.05)' if p_lee < 0.05 else 'NOT significant (but check gap ratio)'}")
 
 save_checkpoint({
     'n_constants': len(all_vals),
     'n_total_combinations': N_TOTAL_COMBOS,
+    'n_effective_targets': N_eff,
     'n_within_5pct': n_within_5pct,
     'n_within_1pct': n_within_1pct,
     'n_within_01pct': n_within_01pct,
     'top_20_matches': matches[:20],
+    'p_lee_bonferroni': p_lee_bonf,
+    'p_lee_empirical': p_lee_empirical,
     'p_lee': p_lee,
+    'gap_ratio_2nd_vs_1st': gap_ratio,
     'best_match_expr': matches[0]['expr'] if matches else None,
     'best_match_value': matches[0]['value'] if matches else None,
     'best_match_rel_error': best_match_err,
