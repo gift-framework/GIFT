@@ -1,5 +1,7 @@
 # CLAUDE.md - Development Guide for GIFT Documentation
 
+> **Persistent context**: Read `../.claude-persistent-context.md` at session start for cross-session memory (key insights, ongoing experiments, decisions).
+
 This file provides development conventions for the GIFT theoretical documentation repository.
 
 ## Repository Purpose

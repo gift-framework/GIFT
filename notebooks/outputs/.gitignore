@@ -1,0 +1,6 @@
+# Large binary arrays (16 MB each) — regenerable from notebooks
+dp_*.npy
+riemann_zeros_*.npy
+
+# PyTorch checkpoints
+*.pt
