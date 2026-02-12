@@ -276,44 +276,51 @@ def download_odlyzko_zeros(target_n=2_000_000):
             break
     return np.array(all_zeros, dtype=np.float64) if all_zeros else None
 
-# Strategy 1: Try local path
+# IMPORTANT: The local outputs/ may contain stale smooth zeros from a
+# previous run.  Always prefer Drive, then local, with cross-validation.
+# Known fingerprint: genuine Odlyzko zeros with our formula give
+# alpha ≈ 0.9989 at P_MAX=500k.  Smooth zeros give alpha ≈ 0.9997.
+ALPHA_EXPECTED = 0.9989  # from three_pistes genuine-zero run
+ALPHA_SMOOTH = 0.9997    # from smooth-zero run (Newton-Gram approx)
+
 gamma0 = None
-if os.path.exists(ZEROS_FILE):
+zeros_source = "unknown"
+
+# Strategy 1: Try Google Drive FIRST (most reliable source)
+try:
+    from google.colab import drive
+    drive.mount('/content/drive', force_remount=False)
+    print("  Google Drive mounted")
+except Exception:
+    pass
+
+import glob as glob_mod
+drive_patterns = [
+    '/content/drive/MyDrive/**/riemann_zeros_2M*.npy',
+    '/content/drive/MyDrive/**/zeros_2M*.npy',
+]
+for pat in drive_patterns:
+    candidates = glob_mod.glob(pat, recursive=True)
+    if candidates:
+        gamma0 = np.load(candidates[0]).astype(np.float64)
+        zeros_source = candidates[0]
+        print(f"  Found on Drive: {zeros_source} ({len(gamma0):,} zeros)")
+        break
+
+# Strategy 2: Try local path (may be stale!)
+if gamma0 is None and os.path.exists(ZEROS_FILE):
     gamma0 = np.load(ZEROS_FILE).astype(np.float64)
+    zeros_source = ZEROS_FILE + " (local)"
     print(f"  Found local: {ZEROS_FILE} ({len(gamma0):,} zeros)")
-
-# Strategy 2: Try Google Drive (Colab)
-if gamma0 is None:
-    try:
-        from google.colab import drive
-        drive.mount('/content/drive', force_remount=False)
-        print("  Google Drive mounted")
-    except Exception:
-        pass
-
-    import glob as glob_mod
-    search_patterns = [
-        '/content/drive/MyDrive/**/riemann_zeros_2M*.npy',
-        '/content/drive/MyDrive/**/zeros_2M*.npy',
-        '/content/outputs/*.npy',
-    ]
-    for pat in search_patterns:
-        candidates = glob_mod.glob(pat, recursive=True)
-        if candidates:
-            gamma0 = np.load(candidates[0]).astype(np.float64)
-            print(f"  Found on Drive: {candidates[0]} ({len(gamma0):,} zeros)")
-            # Cache locally for speed
-            os.makedirs('outputs', exist_ok=True)
-            np.save(ZEROS_FILE, gamma0)
-            print(f"  Cached to {ZEROS_FILE}")
-            break
+    print(f"  WARNING: local file may be stale smooth zeros — will cross-validate")
 
 # Strategy 3: Download from Odlyzko's tables
 if gamma0 is None:
-    print("  Not found locally or on Drive.")
+    print("  Not found on Drive or locally.")
     print("  Downloading from Odlyzko tables (UMN)...")
     gamma0 = download_odlyzko_zeros(2_000_000)
     if gamma0 is not None and len(gamma0) >= 100_000:
+        zeros_source = "Odlyzko UMN download"
         print(f"  Downloaded {len(gamma0):,} zeros")
         os.makedirs('outputs', exist_ok=True)
         np.save(ZEROS_FILE, gamma0)
@@ -321,30 +328,50 @@ if gamma0 is None:
     else:
         gamma0 = None
 
-# HARD FAIL if no genuine zeros
+# HARD FAIL if no zeros at all
 if gamma0 is None:
-    print("\n  FATAL: Could not obtain genuine Riemann zeros.")
-    print("  This script REQUIRES genuine zeros — smooth approximations")
-    print("  give completely different results (wrong c1 sign, wrong d).")
+    print("\n  FATAL: Could not obtain Riemann zeros from any source.")
     print("  Please upload riemann_zeros_2M_genuine.npy to outputs/")
+    print("  or ensure it's on Google Drive.")
     sys.exit(1)
 
-# Validate genuineness
+# Validate: first zeros match known values
 gamma0 = np.sort(gamma0)
 if not validate_zeros(gamma0):
-    print(f"\n  WARNING: First zeros don't match known values!")
+    print(f"\n  FATAL: First zeros don't match known values!")
     print(f"    Got:    {gamma0[0]:.6f}, {gamma0[1]:.6f}, {gamma0[2]:.6f}")
     print(f"    Expect: {KNOWN_ZEROS[0]:.6f}, {KNOWN_ZEROS[1]:.6f}, {KNOWN_ZEROS[2]:.6f}")
-    print(f"  These may be smooth approximations. Results will be unreliable.")
-    GENUINE = False
-else:
-    print(f"  Validation OK: first zeros match known values")
-    GENUINE = True
+    sys.exit(1)
+print(f"  First-zeros validation: OK")
 
+# Fingerprint: check the ~20,000th zero (T_mid of first window)
+# Genuine Odlyzko: T_mid[0] ≈ 18055.224 (from three_pistes)
+# Smooth Newton:   T_mid[0] ≈ 18054.692
 N_zeros = len(gamma0)
+idx_check = N_zeros // 100  # ~20,000th zero
+t_check = float(gamma0[idx_check])
+# three_pistes genuine value for reference
+T_CHECK_GENUINE = 18055.224
+T_CHECK_SMOOTH = 18054.692
+dist_genuine = abs(t_check - T_CHECK_GENUINE)
+dist_smooth = abs(t_check - T_CHECK_SMOOTH)
+if dist_smooth < dist_genuine and dist_genuine > 0.1:
+    print(f"\n  CROSS-VALIDATION FAILED!")
+    print(f"    Zero #{idx_check}: {t_check:.6f}")
+    print(f"    Closer to smooth ({T_CHECK_SMOOTH:.3f}, dist={dist_smooth:.3f})")
+    print(f"    than genuine ({T_CHECK_GENUINE:.3f}, dist={dist_genuine:.3f})")
+    print(f"    These are likely smooth Newton-Gram approximations, NOT Odlyzko zeros.")
+    print(f"    Smooth zeros give alpha≈{ALPHA_SMOOTH} and WRONG Piste 3 parameters.")
+    print(f"    Please ensure the genuine .npy from three_pistes run is available.")
+    print(f"    Source was: {zeros_source}")
+    sys.exit(1)
+
+GENUINE = True
+print(f"  Cross-validation: OK (zero #{idx_check} = {t_check:.3f} ≈ {T_CHECK_GENUINE:.3f})")
+print(f"  Source: {zeros_source}")
+
 primes = sieve(P_MAX)
 print(f"  {N_zeros:,} zeros, {len(primes):,} primes up to {P_MAX:,}")
-print(f"  Genuine: {GENUINE}")
 
 # Precompute shared data
 tp_v = theta_deriv(gamma0)
