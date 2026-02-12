@@ -200,7 +200,7 @@ c_test = 0.01
 for T in T_points:
     L = np.log(T)
     D = L - 2.0
-    exact = float(theta_formA(np.array([T]), c_test) - theta_base(np.array([T])))
+    exact = float((theta_formA(np.array([T]), c_test) - theta_base(np.array([T])))[0])
     taylor1 = -phi * c_test / (D**2 * L)
     taylor2 = taylor1 - phi * c_test**2 / (D**3 * L**2)
     print(f"{T:>12.0f}  {exact:>14.10f}  {taylor1:>14.10f}  {taylor2:>14.10f}")
