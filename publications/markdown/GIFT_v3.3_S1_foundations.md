@@ -121,7 +121,7 @@ $$\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1)$$
 
 **Verification**: 112 + 128 = 240 roots, all length √2.
 
-**Lean Status (v3.3.17)**: E₈ Root System **12/12 COMPLETE** — All theorems proven:
+**Lean Status (v3.3.17)**: E₈ Root System **12/12 COMPLETE**. All theorems proven:
 - `D8_roots_card` = 112, `HalfInt_roots_card` = 128
 - `E8_roots_card` = 240, `E8_roots_decomposition`
 - `E8_inner_integral`, `E8_norm_sq_even`, `E8_sub_closed`
@@ -368,7 +368,7 @@ $$T \in W_1 \oplus W_7 \oplus W_{14} \oplus W_{27}$$
 
 **Total dimension**: 1 + 7 + 14 + 27 = 49 = 7² = dim(K₇)²
 
-The torsion-free condition requires all four classes to vanish simultaneously—a highly constrained state with 49 conditions.
+The torsion-free condition requires all four classes to vanish simultaneously, a highly constrained state with 49 conditions.
 
 **Torsion-free condition**:
 $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
@@ -442,11 +442,11 @@ These suggest a connection between the topological integer dim(G₂) = 14 and th
 
 ### 7.4 Continued Fraction Structure
 
-The spectral gap admits a remarkable continued fraction representation:
+The spectral gap admits a notable continued fraction representation:
 
 $$\lambda_1 = \frac{14}{99} = [0; 7, 14] = \cfrac{1}{7 + \cfrac{1}{14}}$$
 
-The only integers appearing are **7 = dim(K₇)** and **14 = dim(G₂)**—the two fundamental dimensions of GIFT geometry.
+The only integers appearing are **7 = dim(K₇)** and **14 = dim(G₂)**, the two fundamental dimensions of GIFT geometry.
 
 ### 7.5 Pell Equation Structure
 

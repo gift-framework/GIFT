@@ -236,7 +236,7 @@ The space of torsion-free G₂ structures on K₇ forms a moduli space $\mathcal
 
 $$\dim(\mathcal{M}) = b_3(K_7) = 77$$
 
-Each point in $\mathcal{M}$ represents a different torsion-free metric satisfying Θ_G₂ = 0. The moduli space has dimension equal to the third Betti number—a fundamental topological invariant.
+Each point in $\mathcal{M}$ represents a different torsion-free metric satisfying Θ_G₂ = 0. The moduli space has dimension equal to the third Betti number, a fundamental topological invariant.
 
 **Perturbation analysis**: Small perturbations φ → φ + δφ satisfy the linearized condition:
 
@@ -286,7 +286,7 @@ From exploratory PINN reconstruction of torsionful G₂ structures (NOT the GIFT
 | T_{πφ,e} | O(1/p₂) ~ 0.5 | CP violation |
 | T_{eπ,φ} | O(κ_T/b₂b₃) ~ 10⁻⁵ | Jarlskog invariant |
 
-**Status**: THEORETICAL EXPLORATION — not part of core GIFT predictions.
+**Status**: THEORETICAL EXPLORATION. Not part of core GIFT predictions.
 
 ### 4.4 Physical Picture (Speculative)
 
@@ -295,7 +295,7 @@ If physical interactions emerge from quantum fluctuations around the torsion-fre
 - The *hierarchy* of components (large/medium/tiny) could explain the hierarchy of observables
 - The *torsion-free base* (Joyce's theorem) ensures mathematical consistency
 
-This mechanism is CONJECTURAL. The 18 proven predictions use only topology, not these torsion component values.
+This mechanism is CONJECTURAL. The 18 VERIFIED predictions use only topology, not these torsion component values.
 
 ---
 
@@ -1131,7 +1131,7 @@ The spectral index formula n_s = ζ(11)/ζ(5) already involves the zeta function
 - K₇ cohomological invariants
 - E₈ × E₈ gauge structure
 
-**Status**: OBSERVATION — no theoretical derivation exists.
+**Status**: OBSERVATION. No theoretical derivation exists.
 
 See [publications/references/NUMBER_THEORETIC_STRUCTURES.md](../references/NUMBER_THEORETIC_STRUCTURES.md) for extended discussion.
 
@@ -1367,7 +1367,7 @@ Fitting across 10 windows of 10,000 zeros each:
 | ... | ... | ... |
 | 10 (zeros 90k-100k) | 0.719 | Different |
 
-**Coefficient of variation: 46%** — highly unstable.
+**Coefficient of variation: 46%**, highly unstable.
 
 The 95% bootstrap confidence interval for a is [0.50, 0.88], which **does not contain** the GIFT value 31/21 = 1.476.
 
@@ -1411,7 +1411,7 @@ Similar recurrences with comparable R² can be fitted to:
 
 ## A.5 Conclusion
 
-The Riemann-GIFT connection represents an **intriguing numerical observation** that does not withstand rigorous statistical scrutiny as a unique or optimal relationship.
+The Riemann-GIFT connection represents a **suggestive numerical observation** that does not withstand rigorous statistical scrutiny as a unique or optimal relationship.
 
 **What we can say**:
 - GIFT topological constants appear numerically close to certain Riemann zero values
