@@ -10,7 +10,7 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework proposing derivations of these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and a proposed compact geometry realizing this structure.
 
-33 dimensionless quantities achieve mean deviation 0.26% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations—varying Betti numbers, gauge groups, and holonomy types—finds zero configurations achieving lower deviation. E₈×E₈ achieves 12.8× better agreement than the next best gauge group; G₂ holonomy achieves 13× better agreement than Calabi-Yau (SU(3)). Statistical significance: p < 5×10⁻⁶, >4.5σ.
+33 dimensionless quantities achieve mean deviation 0.26% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations (varying Betti numbers, gauge groups, and holonomy types) finds zero configurations achieving lower deviation. E₈×E₈ achieves 12.8× better agreement than the next best gauge group; G₂ holonomy achieves 13× better agreement than Calabi-Yau (SU(3)). Statistical significance: p < 5×10⁻⁶, >4.5σ.
 
 The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would strongly disfavor the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
@@ -248,7 +248,7 @@ $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 **Torsion capacity** (not magnitude):
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
-**Important distinction**: This value represents the geometric *capacity* for torsion — the topological bound on deviations from exact G₂ holonomy that K₇ topology permits. The reference form φ_ref = c × φ₀ (Section 3.4) determines the algebraic structure; the actual torsion depends on the global solution φ = φ_ref + δφ, constrained by Joyce's theorem. The value κ_T = 1/61 bounds deviations; it does not appear directly in the 18 dimensionless predictions.
+**Important distinction**: This value represents the geometric *capacity* for torsion, i.e., the topological bound on deviations from exact G₂ holonomy that K₇ topology permits. The reference form φ_ref = c × φ₀ (Section 3.4) determines the algebraic structure; the actual torsion depends on the global solution φ = φ_ref + δφ, constrained by Joyce's theorem. The value κ_T = 1/61 bounds deviations; it does not appear directly in the 18 dimensionless predictions.
 
 The denominator 61 = dim(F₄) + N_gen² = 52 + 9 connects to exceptional algebras, suggesting the bound has physical significance.
 
@@ -301,7 +301,7 @@ This represents the **local frame normalization**, not a claim of global flatnes
 
 **Algebraic Reference Form**
 
-The form φ_ref = c·φ₀ serves as an **algebraic reference** — the canonical G₂ structure in a local orthonormal coframe — fixing normalization and scale via the constraint det(g) = 65/32. This determines c = (65/32)^{1/14}.
+The form φ_ref = c·φ₀ serves as an **algebraic reference**: the canonical G₂ structure in a local orthonormal coframe, fixing normalization and scale via the constraint det(g) = 65/32. This determines c = (65/32)^{1/14}.
 
 **Important clarification**: φ_ref is not proposed as a globally constant solution on K₇. On any compact TCS manifold, the coframe 1-forms {eⁱ} satisfy deⁱ ≠ 0 in general, so "constant components in an adapted coframe" does not imply dφ = 0 globally.
 
@@ -330,7 +330,7 @@ The topological capacity κ_T = 1/61 bounds the amplitude of deviations. The con
 
 **Scope of verification**: Lean 4 confirms the arithmetic and algebraic relations between GIFT constants (e.g., det(g) = 65/32). It does not formalize the existence of K₇ as a smooth G₂ manifold, nor the physical interpretation of topological invariants.
 
-**Interpretive note**: One may view φ_ref as an "octonionic vacuum" in the algebraic sense — a reference point in the space of G₂ structures — while K₇ encodes physics through the deviations δφ and their invariants (including torsion), rather than through global flatness.
+**Interpretive note**: One may view φ_ref as an "octonionic vacuum" in the algebraic sense (a reference point in the space of G₂ structures) while K₇ encodes physics through the deviations δφ and their invariants (including torsion), rather than through global flatness.
 
 **Implications**
 
@@ -418,7 +418,7 @@ Supplement S3 explores dimensional quantities (electron mass, Hubble parameter) 
 
 A natural concern arises: why *this particular* algebraic combination of topological invariants rather than another? The answer lies in what we term structural redundancy.
 
-**The dissolution of formula selection**: Each observable corresponds to a unique reduced fraction. Consider sin²θ_W: the formula b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 matches experiment. But b₂/b₃ = 21/77 = 3/11 ≈ 0.273 does not. The question transforms from "why this formula?" to "why this value?"—and the value 3/13 is what both topology and experiment produce.
+**The dissolution of formula selection**: Each observable corresponds to a unique reduced fraction. Consider sin²θ_W: the formula b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 matches experiment. But b₂/b₃ = 21/77 = 3/11 ≈ 0.273 does not. The question transforms from "why this formula?" to "why this value?", and the value 3/13 is what both topology and experiment produce.
 
 **Multiple equivalent expressions**: Quantities with strong physical significance admit numerous independent derivations yielding the same reduced fraction:
 
@@ -891,7 +891,7 @@ Unlike many approaches to fundamental physics, GIFT makes sharp, testable predic
 
 ### 14.4 Mathematical Rigor
 
-The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. 290+ relations are formally verified in Lean 4 (core v3.3.17, 130+ files, zero `sorry`), providing machine-checked confirmation of algebraic claims. The E₈ root system is fully proven (12/12 theorems), including `E8_basis_generates` as a theorem rather than axiom. The G₂ differential geometry—exterior algebra Λ*(ℝ⁷), Hodge star, ψ = ⋆φ, and the torsion-free condition—is axiom-free. The physical spectral gap λ₁ = 13/99 is derived from the Berger classification (28 theorems, zero axioms), with selection principle κ = π²/14. The Selberg bridge connects the spectral gap to the mollified Dirichlet polynomial S_w(T), formalized constructively (zero axioms).
+The topological foundations rest on established mathematics. The TCS construction follows Joyce, Kovalev, and collaborators. The index theorem derivation of N_gen = 3 is standard. 290+ relations are formally verified in Lean 4 (core v3.3.17, 130+ files, zero `sorry`), providing machine-checked confirmation of algebraic claims. The E₈ root system is fully proven (12/12 theorems), including `E8_basis_generates` as a theorem rather than axiom. The G₂ differential geometry (exterior algebra Λ*(ℝ⁷), Hodge star, ψ = ⋆φ, and the torsion-free condition) is axiom-free. The physical spectral gap λ₁ = 13/99 is derived from the Berger classification (28 theorems, zero axioms), with selection principle κ = π²/14. The Selberg bridge connects the spectral gap to the mollified Dirichlet polynomial S_w(T), formalized constructively (zero axioms).
 
 ---
 
