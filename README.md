@@ -26,7 +26,7 @@
 
 | Paper | Proofs | Video |
 |:-----:|:------:|:-----:|
-| [Main Paper](publications/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
+| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
 
 ---
 
@@ -36,10 +36,10 @@
 
 | Document | Description |
 |----------|-------------|
-| [Main Paper](publications/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
-| [S1: Foundations](publications/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/markdown/GIFT_v3.3_S2_derivations.md) | All 33 dimensionless derivations (0.26% mean, PDG 2024) |
-| [S3: Dynamics](publications/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
+| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
+| [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 dimensionless derivations (0.26% mean, PDG 2024) |
+| [S3: Dynamics](publications/papers/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
 
 ### For Specific Audiences
 
@@ -144,7 +144,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 GIFT occupies a **sharp minimum**: no tested alternative matches its precision.
 
-Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.md)
+Details: [Uniqueness Test Report](publications/validation/UNIQUENESS_TEST_REPORT.md)
 
 ---
 
@@ -157,7 +157,7 @@ Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S2 Section 10](publications/markdown/GIFT_v3.3_S2_derivations.md)
+Details: [S2 Section 10](publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 
 ---
 
@@ -201,6 +201,21 @@ Their appearance suggests structural rather than coincidental relationships.
 | Repository | Description |
 |------------|-------------|
 | [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4), K₇ metric pipeline, giftpy |
+
+---
+
+## Outreach
+
+Blog posts and vulgarization articles are available in [publications/outreach/](publications/outreach/).
+
+| Post | Topic |
+|------|-------|
+| [Gift from Bit](publications/outreach/gift_from_bit.md) | Why geometry might be the language of physics |
+| [13 Theorems, Zero Trust Required](publications/outreach/13_theorems_zero_trust_required.md) | Machine-verified proofs in Lean 4 |
+| [Joyce's Theorem, Now in Lean](publications/outreach/joyce_theorem_now_in_lean.md) | Formalizing G₂ holonomy existence |
+| [The Algebra That Waited](publications/outreach/the_algebra_that_waited.md) | E₈ and the structure of matter |
+
+All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 ---
 
