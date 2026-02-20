@@ -32,6 +32,10 @@ from functools import lru_cache
 PHI = (1 + math.sqrt(5)) / 2  # Golden ratio
 SEED = 42  # Reproducibility
 
+# Angles measured in degrees are "dimensional" (unit-dependent).
+# All other observables (ratios, sin², couplings, counts) are dimensionless.
+DIMENSIONAL_OBSERVABLES = {'delta_CP', 'theta_13', 'theta_23', 'theta_12'}
+
 
 @lru_cache(maxsize=32)
 def riemann_zeta(s: int, terms: int = 100000) -> float:
@@ -75,13 +79,13 @@ EXPERIMENTAL_V33 = {
     'theta_13': {'value': 8.54, 'sigma': 0.12, 'source': 'NuFIT 5.3'},
     'theta_23': {'value': 49.3, 'sigma': 1.3, 'source': 'NuFIT 5.3 (NO)'},
     'theta_12': {'value': 33.41, 'sigma': 0.75, 'source': 'NuFIT 5.3'},
-    'sin2_theta_12_PMNS': {'value': 0.304, 'sigma': 0.012, 'source': 'NuFIT 5.3'},
-    'sin2_theta_23_PMNS': {'value': 0.573, 'sigma': 0.020, 'source': 'NuFIT 5.3 (NO)'},
+    'sin2_theta_12_PMNS': {'value': 0.307, 'sigma': 0.013, 'source': 'NuFIT 5.3'},
+    'sin2_theta_23_PMNS': {'value': 0.546, 'sigma': 0.021, 'source': 'NuFIT 5.3'},
     'sin2_theta_13_PMNS': {'value': 0.02219, 'sigma': 0.00062, 'source': 'NuFIT 5.3'},
 
     # === CKM SECTOR ===
     'sin2_theta_12_CKM': {'value': 0.22501, 'sigma': 0.00068, 'source': 'PDG 2024'},
-    'A_Wolfenstein': {'value': 0.826, 'sigma': 0.015, 'source': 'PDG 2024'},
+    'A_Wolfenstein': {'value': 0.836, 'sigma': 0.015, 'source': 'PDG 2024'},
     'sin2_theta_23_CKM': {'value': 0.04182, 'sigma': 0.00085, 'source': 'PDG 2024'},
 
     # === BOSON MASS RATIOS ===
@@ -248,7 +252,8 @@ def compute_predictions(cfg: GIFTConfig) -> Dict[str, float]:
     # === ELECTROWEAK SECTOR ===
     denom = b3 + dim_G2
     preds['sin2_theta_W'] = b2 / denom if denom > 0 else float('inf')
-    preds['alpha_s'] = (fund_E7 - dim_J3O) / dim_E8 if dim_E8 > 0 else float('inf')
+    # α_s = √2 / (dim_G2 - p2)  [S2 derivation #6]
+    preds['alpha_s'] = math.sqrt(2) / (dim_G2 - p2) if (dim_G2 - p2) > 0 else float('inf')
     preds['lambda_H'] = math.sqrt(17) / 32
     det_g = p2 + 1 / 32
     kappa_T = 1 / kappa_T_inv if kappa_T_inv > 0 else 0
@@ -982,6 +987,14 @@ def run_rigorous_validation(verbose: bool = True) -> dict:
     ref_preds = compute_predictions(GIFT_REFERENCE)
     ref_stats = compute_chi_squared(ref_preds)
 
+    # Compute dimensionless / dimensional breakdown
+    dl_devs = {k: v for k, v in ref_stats.rel_devs.items()
+               if k not in DIMENSIONAL_OBSERVABLES}
+    da_devs = {k: v for k, v in ref_stats.rel_devs.items()
+               if k in DIMENSIONAL_OBSERVABLES}
+    mean_dl = sum(dl_devs.values()) / len(dl_devs) if dl_devs else 0
+    mean_da = sum(da_devs.values()) / len(da_devs) if da_devs else 0
+
     if verbose:
         print(f"Reference: GIFT E8xE8 / K7 (b2=21, b3=77)")
         print(f"Observables: {N_OBSERVABLES}")
@@ -991,6 +1004,27 @@ def run_rigorous_validation(verbose: bool = True) -> dict:
         print(f"Within 1-sigma: {ref_stats.n_within_1sigma}/{N_OBSERVABLES}")
         print(f"Within 2-sigma: {ref_stats.n_within_2sigma}/{N_OBSERVABLES}")
         print()
+        print(f"  Dimensionless ({len(dl_devs)} obs): {mean_dl:.4f}%")
+        print(f"  Dimensional   ({len(da_devs)} obs): {mean_da:.4f}%  [angles in degrees]")
+        print(f"  Total         ({N_OBSERVABLES} obs): {ref_stats.mean_rel_dev:.4f}%")
+        print()
+
+    deviation_breakdown = {
+        'dimensionless': {
+            'count': len(dl_devs),
+            'mean_deviation': mean_dl,
+            'observables': dl_devs,
+        },
+        'dimensional': {
+            'count': len(da_devs),
+            'mean_deviation': mean_da,
+            'observables': da_devs,
+        },
+        'total': {
+            'count': N_OBSERVABLES,
+            'mean_deviation': ref_stats.mean_rel_dev,
+        },
+    }
 
     results = {
         'version': '3.3-rigorous',
@@ -1005,6 +1039,7 @@ def run_rigorous_validation(verbose: bool = True) -> dict:
             'n_within_1sigma': ref_stats.n_within_1sigma,
             'n_within_2sigma': ref_stats.n_within_2sigma,
             'mean_rel_dev_percent': ref_stats.mean_rel_dev,
+            'deviation_breakdown': deviation_breakdown,
             'predictions': ref_preds,
             'pulls': ref_stats.pulls,
         },

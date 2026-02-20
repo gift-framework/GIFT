@@ -28,6 +28,7 @@ from dataclasses import dataclass, asdict, field
 from typing import Dict, List, Tuple, Optional
 from pathlib import Path
 import time
+from functools import lru_cache
 
 # =============================================================================
 # CONSTANTS
@@ -36,6 +37,7 @@ import time
 PHI = (1 + math.sqrt(5)) / 2  # Golden ratio
 
 
+@lru_cache(maxsize=32)
 def riemann_zeta(s: int, terms: int = 10000) -> float:
     """Compute Riemann zeta function ζ(s) by direct summation."""
     return sum(1.0 / n**s for n in range(1, terms + 1))
@@ -227,8 +229,8 @@ def compute_predictions_v33(cfg: GIFTConfig) -> Dict[str, float]:
     denom = b3 + dim_G2
     preds['sin2_theta_W'] = b2 / denom if denom > 0 else float('inf')
 
-    # α_s = (fund_E7 - dim_J3O) / dim_E8
-    preds['alpha_s'] = (fund_E7 - dim_J3O) / dim_E8 if dim_E8 > 0 else float('inf')
+    # α_s = √2 / (dim_G2 - p2)  [S2 derivation #6]
+    preds['alpha_s'] = math.sqrt(2) / (dim_G2 - p2) if (dim_G2 - p2) > 0 else float('inf')
 
     # λ_H = √17 / 32
     preds['lambda_H'] = math.sqrt(17) / 32
@@ -591,6 +593,56 @@ def test_local_sensitivity(b2_range: int = 10, b3_range: int = 10) -> dict:
 
 
 # =============================================================================
+# DIMENSIONLESS / DIMENSIONAL CLASSIFICATION
+# =============================================================================
+
+# Angles measured in degrees are "dimensional" (unit-dependent).
+# All other observables (ratios, sin², couplings, counts) are dimensionless.
+DIMENSIONAL_OBSERVABLES = {'delta_CP', 'theta_13', 'theta_23', 'theta_12'}
+
+
+def compute_deviation_breakdown(per_observable: Dict[str, float]) -> dict:
+    """
+    Compute mean deviation broken down by dimensionless / dimensional / total.
+
+    Dimensionless: pure ratios, sin², coupling constants, counts (29 obs)
+    Dimensional: angles in degrees (4 obs: δ_CP, θ₁₃, θ₂₃, θ₁₂)
+    """
+    dimensionless = {}
+    dimensional = {}
+
+    for obs, dev in per_observable.items():
+        if obs in DIMENSIONAL_OBSERVABLES:
+            dimensional[obs] = dev
+        else:
+            dimensionless[obs] = dev
+
+    mean_dimensionless = (sum(dimensionless.values()) / len(dimensionless)
+                          if dimensionless else 0)
+    mean_dimensional = (sum(dimensional.values()) / len(dimensional)
+                        if dimensional else 0)
+    mean_total = (sum(per_observable.values()) / len(per_observable)
+                  if per_observable else 0)
+
+    return {
+        'dimensionless': {
+            'count': len(dimensionless),
+            'mean_deviation': mean_dimensionless,
+            'observables': dimensionless,
+        },
+        'dimensional': {
+            'count': len(dimensional),
+            'mean_deviation': mean_dimensional,
+            'observables': dimensional,
+        },
+        'total': {
+            'count': len(per_observable),
+            'mean_deviation': mean_total,
+        },
+    }
+
+
+# =============================================================================
 # STATISTICAL ANALYSIS
 # =============================================================================
 
@@ -651,10 +703,18 @@ def run_full_validation(verbose: bool = True) -> dict:
     ref_preds = compute_predictions_v33(GIFT_REFERENCE)
     ref_dev, ref_details = compute_deviation(ref_preds)
 
+    # Compute dimensionless / dimensional breakdown
+    breakdown = compute_deviation_breakdown(ref_details)
+
     if verbose:
         print(f"Reference: GIFT E8×E8 / K7 (b2=21, b3=77, G2=14)")
         print(f"Observables tested: {len(ref_details)}")
-        print(f"Mean deviation: {ref_dev:.4f}%")
+        print()
+        dl = breakdown['dimensionless']
+        da = breakdown['dimensional']
+        print(f"  Dimensionless ({dl['count']} obs): {dl['mean_deviation']:.4f}%")
+        print(f"  Dimensional   ({da['count']} obs): {da['mean_deviation']:.4f}%  [angles in degrees]")
+        print(f"  Total         ({breakdown['total']['count']} obs): {breakdown['total']['mean_deviation']:.4f}%")
         print()
 
     results = {
@@ -665,6 +725,7 @@ def run_full_validation(verbose: bool = True) -> dict:
             'deviation': ref_dev,
             'predictions': ref_preds,
             'per_observable': ref_details,
+            'deviation_breakdown': breakdown,
         },
         'tests': {}
     }

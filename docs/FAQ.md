@@ -32,7 +32,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.26% mean deviation across 33 dimensionless predictions, PDG 2024)
+- Precision of experimental agreement (currently 0.21% mean deviation across 33 predictions, 0.22% dimensionless only, PDG 2024)
 - Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
@@ -127,7 +127,7 @@ See Supplement S1 for complete mathematical details.
 - 2 electroweak parameters (λ_H, hierarchy)
 - 2 topological constants (κ_T, det(g))
 
-Mean deviation from experiment: **0.26%** (PDG 2024)
+Mean deviation from experiment: **0.21%** total / **0.22%** dimensionless only (PDG 2024)
 
 *Note: Extended dimensional predictions (masses, electroweak scale) are documented in legacy files (v2.3) with 0.197% mean deviation across 39 observables.*
 
@@ -161,7 +161,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.26% across 33 dimensionless predictions (v3.3, PDG 2024)
+**Overall**: Mean 0.21% across 33 predictions (0.22% dimensionless only, v3.3, PDG 2024)
 
 See Supplement S5 for detailed statistical analysis.
 

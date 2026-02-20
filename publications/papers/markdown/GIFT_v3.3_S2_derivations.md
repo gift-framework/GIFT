@@ -55,7 +55,7 @@ Before presenting derivations, we clarify the logical structure:
 ### 0.3 What We DO Claim
 
 - Given the inputs, the outputs follow by algebra
-- The outputs match experiment to 0.24% mean deviation (PDG 2024)
+- The outputs match experiment to 0.21% mean deviation (0.22% dimensionless only, PDG 2024)
 - No continuous parameters are fitted
 
 ### 0.4 Torsion Independence
@@ -1092,7 +1092,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 0.01-0.1% | 4 | 22% |
 | 0.1-0.5% | 7 | 39% |
 
-**Mean deviation**: 0.24% (PDG 2024)
+**Mean deviation**: 0.21% total / 0.22% dimensionless only (PDG 2024)
 
 ---
 
@@ -1114,18 +1114,18 @@ A critical question for any unified framework is whether the specific topologica
 |--------|-------|
 | Total configurations tested | **192,349** |
 | Configurations better than GIFT | **0** |
-| GIFT mean deviation | 0.26% (33 observables) |
-| Alternative mean deviation | 32.9% |
-| P-value | **< 5 × 10⁻⁶** |
-| Significance | **> 4.5σ** |
+| GIFT mean deviation | 0.21% total / 0.22% dimensionless (33 observables) |
+| Alternative mean deviation | 30.4% |
+| Empirical p-value | **0 / 192,349** |
+| Local significance | **3.9σ** |
 
 ### Gauge Group Ranking
 
 | Rank | Group | Mean Dev. |
 |------|-------|-----------|
-| **1** | **E₈×E₈** | **0.26%** |
-| 2 | E₇×E₈ | 8.80% |
-| 3 | E₆×E₈ | 15.50% |
+| **1** | **E₈×E₈** | **0.21%** |
+| 2 | E₇×E₈ | 7.38% |
+| 3 | E₆×E₈ | 13.50% |
 
 **E₈×E₈ achieves 10× better agreement than all tested alternatives.**
 
@@ -1133,9 +1133,9 @@ A critical question for any unified framework is whether the specific topologica
 
 | Rank | Holonomy | Mean Dev. |
 |------|----------|-----------|
-| **1** | **G₂** | **0.26%** |
-| 2 | SU(4) | 1.46% |
-| 3 | SU(3) | 4.43% |
+| **1** | **G₂** | **0.21%** |
+| 2 | SU(4) | 1.07% |
+| 3 | SU(3) | 6.82% |
 
 **G₂ achieves 5× better agreement than Calabi-Yau (SU(3)).**
 

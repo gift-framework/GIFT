@@ -71,7 +71,7 @@ RG flow, torsional dynamics, scale bridge.
 | 9 | m_s/m_d | 20 | **PROVEN** |
 | 10 | δ_CP | 197° | **PROVEN** |
 
-**Zero continuous adjustable parameters. Mean deviation 0.26% (PDG 2024).**
+**Zero continuous adjustable parameters. Mean deviation 0.21% (0.22% dimensionless only, PDG 2024).**
 
 ---
 
@@ -83,8 +83,8 @@ Comprehensive Monte Carlo validation across 192,349 configurations:
 |--------|-------|
 | Configurations tested | 192,349 |
 | Better alternatives | 0 |
-| p-value | < 5×10⁻⁶ |
-| Significance | > 4.5σ |
+| Empirical p-value | 0 / 192,349 |
+| Local significance | 3.9σ |
 
 See [`validation/`](../validation/) for methodology and results.
 
