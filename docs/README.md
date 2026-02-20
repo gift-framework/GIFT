@@ -6,12 +6,12 @@ Supporting documentation for the GIFT Framework v3.3.
 
 | Document | Description |
 |----------|-------------|
+| [GIFT_FOR_EVERYONE.md](GIFT_FOR_EVERYONE.md) | Complete guide with everyday analogies |
 | [FAQ.md](FAQ.md) | Frequently asked questions |
 | [GLOSSARY.md](GLOSSARY.md) | Technical terms and definitions |
-| [PHILOSOPHY.md](PHILOSOPHY.md) | Philosophical perspectives on GIFT |
-| [EXPERIMENTAL_VALIDATION.md](EXPERIMENTAL_VALIDATION.md) | Current experimental status |
-| [Bibliography.md](Bibliography.md) | References and citations |
-| [COLLABORATION_GUIDE.md](COLLABORATION_GUIDE.md) | Guidelines for contributors |
+| [GIFTPY_FOR_GEOMETERS.md](GIFTPY_FOR_GEOMETERS.md) | Guide for geometers |
+| [INFO_GEO_FOR_PHYSICISTS.md](INFO_GEO_FOR_PHYSICISTS.md) | Guide for physicists |
+| [LEAN_FOR_PHYSICS.md](LEAN_FOR_PHYSICS.md) | Guide for formalization |
 
 ## Figures
 
@@ -22,10 +22,10 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 
 ## Main Documentation
 
-- [Main Paper](../publications/markdown/GIFT_v3.3_main.md) - Complete theoretical framework
-- [S1: Foundations](../publications/markdown/GIFT_v3.3_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
-- [S2: Derivations](../publications/markdown/GIFT_v3.3_S2_derivations.md) - 33 dimensionless derivations
-- [S3: Dynamics](../publications/markdown/GIFT_v3.3_S3_dynamics.md) - RG flow, torsional dynamics
+- [Main Paper](../publications/papers/markdown/GIFT_v3.3_main.md) - Complete theoretical framework
+- [S1: Foundations](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
+- [S2: Derivations](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md) - 33 dimensionless derivations
+- [S3: Dynamics](../publications/papers/markdown/GIFT_v3.3_S3_dynamics.md) - RG flow, torsional dynamics
 - [Observables CSV](../publications/references/39_observables.csv) - Machine-readable data
 
 ## Exploratory References

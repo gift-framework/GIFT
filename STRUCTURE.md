@@ -6,8 +6,6 @@ This repository contains the theoretical documentation for GIFT v3.3.
 
 ```
 GIFT/
-├── core/                              # Formal proofs (Lean 4), K₇ metric pipeline, giftpy
-│
 ├── publications/                      # Published content & validation
 │   ├── papers/                        # Scientific articles
 │   │   ├── markdown/                  # Core documents (v3.3)
@@ -17,16 +15,17 @@ GIFT/
 │   │   │   └── GIFT_v3.3_S3_dynamics.md      # Torsional flow, scale bridge
 │   │   ├── tex/                       # LaTeX sources
 │   │   ├── pdf/                       # Generated PDFs
-│   │   ├── FoP/                       # Foundations of Physics submission
-│   │   └── Lean/                      # G₂ Lean formalization paper
+│   │   └── FoP/                       # Foundations of Physics submission
 │   ├── outreach/                      # Vulgarization & blog posts
 │   │   └── (7 Substack posts)
 │   ├── references/                    # Data & reference catalogs
+│   │   ├── GIFT_ATLAS.json            # Canonical structured atlas (v3.3)
 │   │   ├── 39_observables.csv         # Machine-readable observables
 │   │   ├── OBSERVABLE_REFERENCE.md    # Complete observable catalog
 │   │   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
 │   │   ├── SPECULATIVE_PHYSICS.md     # Scale bridge, Yukawa, M-theory, QG
 │   │   ├── STATISTICAL_EVIDENCE.md    # Rigorous statistical analysis
+│   │   ├── INDEPENDENT_VALIDATIONS.md # External research converging with GIFT
 │   │   └── Bibliography.md            # References
 │   └── validation/                    # Monte Carlo validation
 │       ├── validation_v33.py          # v3.3 comprehensive validation
@@ -58,11 +57,9 @@ GIFT/
 │   ├── GIFT_FOR_EVERYONE.md           # Complete guide with everyday analogies
 │   ├── FAQ.md                         # Common questions
 │   ├── GLOSSARY.md                    # Technical terms
-│   ├── PHILOSOPHY.md                  # Foundational perspective
 │   ├── GIFTPY_FOR_GEOMETERS.md        # Guide for geometers
 │   ├── INFO_GEO_FOR_PHYSICISTS.md     # Guide for physicists
 │   ├── LEAN_FOR_PHYSICS.md            # Guide for formalization
-│   ├── EXPERIMENTAL_VALIDATION.md     # Current experimental status
 │   ├── figures/                       # Lean blueprints, diagrams
 │   ├── media/                         # Logos, images
 │   └── legacy/                        # Archived v2.2/v2.3/v3.0/v3.1 documents

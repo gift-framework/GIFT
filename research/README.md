@@ -103,16 +103,12 @@ Analytical derivation connecting number theory to spectral geometry.
 
 | Document | Description |
 |----------|-------------|
-| `K7_EXPLICIT_METRIC_SYNTHESIS.md` | Complete K7 metric synthesis (latest, Feb 7) |
-| `PRIME_SPECTRAL_K7_METRIC.md` | Prime spectral K7 analysis (latest, Feb 7) |
-| `OPERATOR_H_RESULTS_2026-02-02.md` | Banded operator computation results |
-| `LEAN_IMPLEMENTATION_PLAN.md` | Lean 4 formalization strategy |
-| `PHASE3_WEIL_ROADMAP.md` | Phase 3 Weil trace formula roadmap |
-| `RIEMANN_GIFT_CORRESPONDENCES.md` | Riemann-GIFT mathematical connections |
+| `K7_EXPLICIT_METRIC_SYNTHESIS.md` | Complete K7 metric synthesis |
+| `PRIME_SPECTRAL_K7_METRIC.md` | Prime spectral K7 analysis |
 | `SPECTRAL_ANALYSIS.md` | Spectral methodology overview |
-| `TORSION_FREE_CONDITION_ANALYSIS.md` | Torsion-free metric conditions |
 | `UNIFIED_SPECTRAL_HYPOTHESIS.md` | Unified spectral hypothesis |
 | `YM-RH-latest.md` | Yang-Mills / Riemann connection summary |
+| `Prime_spectral_S_T.md` | Prime spectral S-T analysis |
 
 ---
 

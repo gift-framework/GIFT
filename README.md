@@ -49,8 +49,6 @@
 | Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
 | Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
 | Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
-| Philosophy | [Philosophy](docs/PHILOSOPHY.md) — Foundational perspective |
-
 ### Exploratory Extensions
 
 | Document | Description |
@@ -144,7 +142,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 GIFT occupies a **sharp minimum**: no tested alternative matches its precision.
 
-Details: [Uniqueness Test Report](publications/validation/UNIQUENESS_TEST_REPORT.md)
+Details: [Validation Report](publications/validation/GIFT_Statistical_Validation_Report_v33.md)
 
 ---
 

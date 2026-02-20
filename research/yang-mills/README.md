@@ -1,7 +1,6 @@
 # Yang-Mills Mass Gap Research
 
 **Status**: Exploratory Research
-**Related**: [YANG_MILLS_MASTERPLAN.md](../../docs/YANG_MILLS_MASTERPLAN.md)
 
 ---
 
@@ -17,7 +16,7 @@ This folder consolidates research on connecting GIFT's geometric framework to th
 
 | Claim | Evidence | Reference |
 |-------|----------|-----------|
-| λ₁ ∝ 1/H* | R² = 0.96 across 9 manifolds | [UNIVERSALITY_RESULTS.md](./UNIVERSALITY_RESULTS.md) |
+| λ₁ ∝ 1/H* | R² = 0.96 across 9 manifolds | [UNIVERSALITY_CONJECTURE.md](./UNIVERSALITY_CONJECTURE.md) |
 | Split-independence | 0% spread at fixed H* | [BLIND_VALIDATION_RECAP.md](./BLIND_VALIDATION_RECAP.md) |
 | H* = dim(G₂) × dim(K₇) + 1 | Structural identity | [DEEP_STRUCTURE.md](./DEEP_STRUCTURE.md) |
 
@@ -34,7 +33,6 @@ This folder consolidates research on connecting GIFT's geometric framework to th
 
 | File | Description |
 |------|-------------|
-| [UNIVERSALITY_RESULTS.md](./UNIVERSALITY_RESULTS.md) | Final validation results with data tables |
 | [BLIND_VALIDATION_RECAP.md](./BLIND_VALIDATION_RECAP.md) | Methodology: how circularity bias was eliminated |
 | [DEEP_STRUCTURE.md](./DEEP_STRUCTURE.md) | Mathematical insight: H* = 14 × 7 + 1 |
 | [UNIVERSALITY_CONJECTURE.md](./UNIVERSALITY_CONJECTURE.md) | Two formulas distinction (universal vs GIFT-specific) |

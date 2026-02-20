@@ -52,15 +52,18 @@ python3 validation_v33.py
 ## Files
 
 ```
-statistical_validation/
+publications/validation/
 ├── validation_v33.py                    # Main validation (33 observables)
 ├── comprehensive_statistics_v33.py      # Advanced statistical tests
 ├── rigorous_validation_v33.py           # Chi-squared with uncertainties
 ├── riemann_rigorous_validation.py       # Riemann-GIFT connection tests
 ├── validation_v33_results.json          # Complete results
 ├── comprehensive_statistics_v33_results.json
-├── riemann_validation_results.json      # Riemann validation results
-├── GIFT_Statistical_Validation_Report_v33.md  # Full report
+├── rigorous_validation_v33_results.json # Rigorous validation results
+├── GIFT_Statistical_Validation_Report.md     # Full report
+├── GIFT_Statistical_Validation_Report_v33.md # v3.3 report
+├── VALIDATION_SUMMARY_v33.md            # v3.3 summary
+├── results/                             # Paper-specific results
 └── README.md                            # This file
 ```
 
@@ -93,7 +96,7 @@ The 33 dimensionless predictions do NOT depend on Riemann.
 
 ## Full Documentation
 
-See [docs/STATISTICAL_EVIDENCE.md](../docs/STATISTICAL_EVIDENCE.md) for:
+See [STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md) for:
 - Complete methodology
 - Per-observable breakdown
 - Theoretical selection principles

@@ -18,8 +18,7 @@ publications/
 │   │   └── GIFT_v3.3_S3_dynamics.md      # RG flow, torsional dynamics
 │   ├── tex/                       # LaTeX sources
 │   ├── pdf/                       # Generated PDFs
-│   ├── FoP/                       # Foundations of Physics submission
-│   └── Lean/                      # G₂ Lean formalization paper
+│   └── FoP/                       # Foundations of Physics submission
 │
 ├── outreach/                      # Blog posts & vulgarization
 │   └── (7 Substack posts)

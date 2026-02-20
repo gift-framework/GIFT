@@ -27,8 +27,6 @@ Exploratory and reference documents for the GIFT framework v3.3.
 |----------|---------|--------|
 | [SPECULATIVE_PHYSICS.md](SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity | Exploratory/Speculative |
 | [NUMBER_THEORETIC_STRUCTURES.md](NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine | Pattern Recognition |
-| [RIEMANN_FIRST_DERIVATION.md](RIEMANN_FIRST_DERIVATION.md) | Riemann zeros → Topology → Physics derivation | Speculative |
-| [RIEMANN_K7_SPECTRAL_INVESTIGATION.md](RIEMANN_K7_SPECTRAL_INVESTIGATION.md) | Computational record of Riemann-K7 spectral analysis | Exploratory |
 
 ---
 

@@ -13,26 +13,33 @@ This repository contains the **theoretical documentation** for GIFT (Geometric I
 ```
 GIFT/
 ├── publications/
-│   ├── markdown/           # Core documents
-│   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
-│   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
-│   │   ├── GIFT_v3.3_S2_derivations.md  # All dimensionless derivations
-│   │   └── GIFT_v3.3_S3_dynamics.md     # RG flow, torsional dynamics
+│   ├── papers/
+│   │   ├── markdown/       # Core documents (v3.3)
+│   │   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
+│   │   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
+│   │   │   ├── GIFT_v3.3_S2_derivations.md  # All 33 dimensionless derivations
+│   │   │   └── GIFT_v3.3_S3_dynamics.md     # RG flow, torsional dynamics
+│   │   ├── tex/            # LaTeX sources
+│   │   ├── pdf/            # Generated PDFs
+│   │   └── FoP/            # Foundations of Physics submission
 │   ├── references/         # Extended topics (number theory, speculative physics)
-│   ├── tex/               # LaTeX sources
-│   └── pdf/               # Generated PDFs
+│   ├── outreach/           # Vulgarization & blog posts
+│   └── validation/         # Monte Carlo validation code
+│
+├── research/               # Exploratory research (WIP)
 │
 ├── docs/
 │   ├── FAQ.md             # Common questions
 │   ├── GLOSSARY.md        # Technical terms
-│   ├── PHILOSOPHY.md      # Foundational perspective
+│   ├── GIFT_FOR_EVERYONE.md  # Complete guide with everyday analogies
 │   ├── GIFTPY_FOR_GEOMETERS.md
 │   ├── INFO_GEO_FOR_PHYSICISTS.md
 │   ├── LEAN_FOR_PHYSICS.md
+│   ├── figures/           # Lean blueprints, diagrams
+│   ├── media/             # Logos, images
 │   └── legacy/            # Archived v2.3/v3.0 supplements
 │
-├── statistical_validation/  # Monte Carlo validation code
-├── notebooks/              # Jupyter notebooks
+├── notebooks/              # Curated demo notebooks
 │
 ├── README.md              # Repository overview
 ├── STRUCTURE.md           # Directory layout
@@ -52,7 +59,7 @@ GIFT/
 
 ### Supplements
 - **S1 Foundations**: Complete mathematical construction (E₈ lattice, G₂ holonomy, K₇ topology)
-- **S2 Derivations**: All 18 dimensionless predictions with full derivations
+- **S2 Derivations**: All 33 dimensionless predictions with full derivations
 - **S3 Dynamics**: RG flow, torsional geometry, scale bridge (speculative)
 
 ### Extended References
