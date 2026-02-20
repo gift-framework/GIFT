@@ -13,7 +13,7 @@ This module implements comprehensive Monte Carlo validation to assess whether th
 | Local sensitivity | 441 | 0 |
 | **Total** | **192,349** | **0** |
 
-**Result**: p-value < 5×10⁻⁶, significance > 4.5σ
+**Result**: 0 / 192,349 better (3.9σ local significance)
 
 ## Quick Start
 
@@ -26,8 +26,8 @@ python3 validation_v33.py
 
 ## Key Findings
 
-1. **GIFT Mean Deviation**: 0.26% across 33 observables
-2. **Alternative Mean Deviation**: 32.9%
+1. **GIFT Mean Deviation**: 0.21% total / 0.22% dimensionless only (33 observables)
+2. **Alternative Mean Deviation**: 30.4%
 3. **Zero configurations** out of 192,349 beat GIFT
 4. **E₈×E₈ uniqueness**: Outperforms all gauge groups by 10x
 5. **G₂ necessity**: Calabi-Yau (SU(3)) fails by 5x

@@ -12,8 +12,8 @@
 
 | | |
 |---|---|
-| **Precision** | 0.26% mean deviation across 33 dimensionless predictions (PDG 2024) |
-| **Uniqueness** | #1 out of 192,349 configurations tested (>4.5σ significance) |
+| **Precision** | 0.21% mean deviation across 33 predictions (0.22% dimensionless only, PDG 2024) |
+| **Uniqueness** | #1 out of 192,349 configurations tested (3.9σ local significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
 | **Verified** | 290+ relations proven in Lean 4 (core v3.3.17) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
@@ -38,7 +38,7 @@
 |----------|-------------|
 | [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
 | [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 dimensionless derivations (0.26% mean, PDG 2024) |
+| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.21% mean, 0.22% dimensionless only, PDG 2024) |
 | [S3: Dynamics](publications/papers/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
 
 ### For Specific Audiences
@@ -119,15 +119,15 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 |--------|-------|
 | Configurations tested | 192,349 |
 | **GIFT rank** | **#1** |
-| GIFT mean deviation | 0.26% (PDG 2024) |
+| GIFT mean deviation | 0.21% total / 0.22% dimensionless (PDG 2024) |
 | Better alternatives found | 0 |
-| p-value | < 5×10⁻⁶ |
+| p-value (empirical) | 0 / 192,349 |
 
 ### Top 5 Configurations
 
 | Rank | b₂ | b₃ | Deviation |
 |:----:|:--:|:--:|:---------:|
-| **1** | **21** | **77** | **0.26%** |
+| **1** | **21** | **77** | **0.21%** |
 | 2 | 21 | 76 | 0.50% |
 | 3 | 21 | 78 | 0.50% |
 | 4 | 21 | 79 | 0.79% |
@@ -135,8 +135,8 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 ### Statistical Significance (v3.3 Monte Carlo)
 
-- **LEE-corrected significance**: >4.5σ
-- **p-value**: < 5×10⁻⁶
+- **Local significance**: 3.9σ (LEE-corrected: 1.1σ)
+- **Empirical p-value**: 0 / 192,349
 - **Total configurations tested**: 192,349 (Betti, holonomy, structural variations)
 - **Better alternatives found**: 0
 

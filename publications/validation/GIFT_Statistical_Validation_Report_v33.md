@@ -5,7 +5,7 @@
 This report presents a comprehensive statistical validation of the GIFT v3.3 framework against experimental data using **33 physical observables** and **100,000 alternative configurations**.
 
 **Key Results**:
-- GIFT configuration: **0.20%** mean deviation across 33 observables
+- GIFT configuration: **0.21%** mean deviation across 33 observables
 - Alternative configurations tested: **100,000**
 - Configurations better than GIFT: **0** (0.00%)
 - GIFT percentile: **100.0%**
@@ -34,7 +34,7 @@ Extended from v3.2's 18 observables to include:
 | Boson Ratios | 3 | 0.23% | TOPOLOGICAL |
 | Cosmology | 2 | 0.11% | PROVEN |
 | Cosmology Extended | 5 | 0.11% | TOPOLOGICAL |
-| **TOTAL** | **33** | **0.20%** | |
+| **TOTAL** | **33** | **0.21%** | |
 
 ### Configuration Generation
 
@@ -119,7 +119,7 @@ GIFT E₈×E₈/K₇ configuration (b₂=21, b₃=77):
 | h | 0.6734 | 0.674 | 0.091% | cosmology_ext |
 | σ₈ | 0.8095 | 0.811 | 0.182% | cosmology_ext |
 
-**Mean deviation: 0.20%**
+**Mean deviation: 0.21%**
 
 ---
 
@@ -132,7 +132,7 @@ Testing 100,000 alternative configurations:
 | Configurations tested | 100,000 |
 | Mean deviation | 23.97% |
 | Standard deviation | 15.31% |
-| Minimum deviation | 0.20% (= GIFT) |
+| Minimum deviation | 0.21% (= GIFT) |
 | Maximum deviation | 94.72% |
 
 ### Statistical Significance
@@ -161,7 +161,7 @@ Testing 100,000 alternative configurations:
 | Metric | v3.2 (18 obs) | v3.3 (33 obs) |
 |--------|---------------|---------------|
 | Observables | 18 | 33 |
-| Mean deviation | 0.24% | 0.20% |
+| Mean deviation | 0.24% | 0.21% |
 | Configs tested | 10,000 | 100,000 |
 | σ separation | 2.48σ | 1.55σ |
 | Configs better | ~66 | **0** |
@@ -209,7 +209,7 @@ python3 validation_v33.py
 
 ### Primary Finding
 
-The GIFT E₈×E₈/K₇ configuration achieves **0.20% mean deviation** across **33 observables**, outperforming **all 100,000 alternative configurations tested**.
+The GIFT E₈×E₈/K₇ configuration achieves **0.21% mean deviation** across **33 observables**, outperforming **all 100,000 alternative configurations tested**.
 
 ### Statistical Statement
 

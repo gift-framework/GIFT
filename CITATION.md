@@ -159,7 +159,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| 3.3.17 | 2026-02-04 | θ₂₃ formula correction, 0.26% mean deviation |
+| 3.3.17 | 2026-02-04 | θ₂₃ formula correction, α_s = √2/12, 0.21% mean deviation |
 | 3.3.14 | 2026-01-28 | Selection Principle, TCS Spectral Bounds, 290+ relations, Lean 4 only |
 | 3.3.0 | 2026-01-12 | 33 observables, PDG 2024 values, 192,349-config Monte Carlo |
 | 3.1.0 | 2025-12-17 | Analytical G₂ metric, 185 certified relations |

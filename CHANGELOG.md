@@ -24,9 +24,9 @@ Critical fix for the atmospheric mixing angle θ₂₃ formula, eliminating the 
 | Metric | Before | After |
 |--------|--------|-------|
 | θ₂₃ deviation | 20.0% | **0.10%** |
-| Mean deviation | 0.84% | **0.26%** |
+| Mean deviation | 0.84% | **0.21%** (0.22% dimensionless) |
 | Outliers (>5%) | 1 | **0** |
-| Sub-percent accuracy | 32/33 | **33/33** |
+| Sub-percent accuracy | 32/33 | **32/33** |
 
 #### Updated Files
 - `publications/validation/validation_v33.py` — Formula implementation
@@ -170,8 +170,8 @@ This release extends the observable catalog from 18 to 33 predictions and signif
 
 **Enhanced Monte Carlo Validation**
 - Total configurations tested: 54,327 → **192,349**
-- p-value: < 10⁻⁵ → **< 5×10⁻⁶**
-- Significance: >4σ → **>4.5σ**
+- Empirical p-value: 0 / 192,349
+- Local significance: **3.9σ** (LEE-corrected: 1.1σ)
 
 **New v3.3 Corrections**
 - m_W/m_Z formula: 23/26 → **37/42** = (2b₂−Weyl)/(2b₂) — deviation 0.35% → 0.06%

@@ -10,7 +10,7 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework proposing derivations of these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and a proposed compact geometry realizing this structure.
 
-33 dimensionless quantities achieve mean deviation 0.26% from experiment (PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations (varying Betti numbers, gauge groups, and holonomy types) finds zero configurations achieving lower deviation. E₈×E₈ achieves 12.8× better agreement than the next best gauge group; G₂ holonomy achieves 13× better agreement than Calabi-Yau (SU(3)). Statistical significance: p < 5×10⁻⁶, >4.5σ.
+33 quantities achieve mean deviation 0.21% from experiment (0.22% for the 29 dimensionless observables, PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations (varying Betti numbers, gauge groups, and holonomy types) finds zero configurations achieving lower deviation. E₈×E₈ achieves 35× better agreement than the next best gauge group; G₂ holonomy achieves 5× better agreement than Calabi-Yau (SU(3)). Local significance: 3.9σ.
 
 The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would strongly disfavor the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
@@ -387,7 +387,7 @@ The formulas presented here share epistemological status with Balmer's formula (
 
 #### Three Factors Distinguishing GIFT from Numerology
 
-**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.26% mean deviation (PDG 2024) across 18 quantities has probability < 10⁻²⁰.
+**1. Multiplicity**: 18 independent predictions, not cherry-picked coincidences. Random matching at 0.21% mean deviation (PDG 2024) across 18 quantities has probability < 10⁻²⁰.
 
 **2. Exactness**: Several predictions are exactly rational:
 - sin²θ_W = 3/13 (not 0.2308...)
@@ -717,7 +717,7 @@ $$\bar{\delta} = \frac{1}{N} \sum_{i=1}^{N} \left| \frac{\text{GIFT}_i - \text{E
 where N = 33 dimensionless predictions (18 core + 15 extended).
 
 - **Total predictions**: 33
-- **Mean deviation**: 0.26% (PDG 2024 / Planck 2020)
+- **Mean deviation**: 0.21% total / 0.22% dimensionless only (PDG 2024 / Planck 2020)
 - **Median deviation**: 0.10%
 - **Maximum deviation**: 1.13% (sin²θ₂₃^CKM)
 - **Exact matches**: 4 (N_gen, m_s/m_d, δ_CP, Ω_DM/Ω_b)
@@ -737,7 +737,7 @@ where N = 33 dimensionless predictions (18 core + 15 extended).
 
 ### 10.3 Comparison with Random Matching
 
-Under a naïve null model where predictions are random numbers in [0,1], matching 33 experimental values to 0.26% average deviation would have probability less than 10⁻⁵⁰. However, this estimate ignores formula selection freedom and look-elsewhere effects. A more conservative Monte Carlo analysis (Section 10.4) addresses these concerns directly by testing 192,349 alternative configurations. The framework's performance remains statistically exceptional (p < 5×10⁻⁶) under conservative assumptions.
+Under a naïve null model where predictions are random numbers in [0,1], matching 33 experimental values to 0.21% average deviation would have probability less than 10⁻⁵⁰. However, this estimate ignores formula selection freedom and look-elsewhere effects. A more conservative Monte Carlo analysis (Section 10.4) addresses these concerns directly by testing 192,349 alternative configurations. Zero alternatives achieve lower deviation (3.9σ local significance).
 
 ### 10.4 Statistical Validation Against Alternative Configurations
 
@@ -760,10 +760,10 @@ Critically, this validation uses the **actual topological formulas** to compute 
 |--------|-------|
 | Total configurations tested | **192,349** |
 | Configurations better than GIFT | **0** |
-| GIFT mean deviation | **0.26%** (33 observables) |
-| Alternative mean deviation | **32.9%** |
-| P-value | **< 5 × 10⁻⁶** |
-| Significance | **> 4.5σ** |
+| GIFT mean deviation | **0.21%** total / **0.22%** dimensionless (33 observables) |
+| Alternative mean deviation | **30.4%** |
+| Empirical p-value | **0 / 192,349** |
+| Local significance | **3.9σ** |
 
 #### Gauge Group Comparison
 
