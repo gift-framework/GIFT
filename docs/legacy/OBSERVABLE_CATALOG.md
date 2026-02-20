@@ -314,8 +314,8 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 
 ## References
 
-- [GIFT_v3.3_main.md](../publications/markdown/GIFT_v3.3_main.md)
-- [GIFT_v3.3_S2_derivations.md](../publications/markdown/GIFT_v3.3_S2_derivations.md)
+- [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md)
+- [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 - [EXTENDED_OBSERVABLES.md](EXTENDED_OBSERVABLES.md)
 - PDG 2024, Planck 2020
 

@@ -15,7 +15,7 @@
 | **Cosmological parameters** | 11 |
 | **Structural constants** | 18 |
 | **Total cataloged quantities** | **51** |
-| Mean deviation (all 33 physical) | 0.21% |
+| Mean deviation (all 33 physical) | 0.26% |
 | Exact matches (< 0.1%) | 14 (42%) |
 | Multiply determined (>=3 expr.) | 92% |
 | Total equivalent expressions | 280+ |
@@ -308,7 +308,7 @@ The structure is **real**, not coincidental.
 | Boson masses | 3 | 0.13% | m_H/m_W (0.02%) |
 | CKM | 4 | 0.59% | A_Wolf (0.29%) |
 | Cosmology | 11 | 0.16% | Omega_DM/Omega_b (0.00%) |
-| **Total** | **33** | **0.21%** | - |
+| **Total** | **33** | **0.26%** | - |
 
 ### 8.3 By Structural Classification
 
@@ -428,7 +428,7 @@ Results: `statistical_validation/results/gift_reference_data.json`
 - Koide, Y. "Fermion-boson two-body model." Lett. Nuovo Cim. 34 (1982)
 - Particle Data Group (2024), Review of Particle Physics
 - Planck Collaboration (2020), Cosmological parameters
-- GIFT Publications: [GIFT_v3.3_main.md](../publications/markdown/GIFT_v3.3_main.md), [GIFT_v3.3_S2_derivations.md](../publications/markdown/GIFT_v3.3_S2_derivations.md)
+- GIFT Publications: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md), [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 
 ---
 

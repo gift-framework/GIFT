@@ -170,7 +170,7 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 
 These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices — it does not explain *why* nature chose this geometry.
 
-**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 19,100 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
+**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 192,349 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
 
 ### Why Not Numerology?
 
@@ -212,6 +212,9 @@ Blog posts and vulgarization articles are available in [publications/outreach/](
 | [13 Theorems, Zero Trust Required](publications/outreach/13_theorems_zero_trust_required.md) | Machine-verified proofs in Lean 4 |
 | [Joyce's Theorem, Now in Lean](publications/outreach/joyce_theorem_now_in_lean.md) | Formalizing G₂ holonomy existence |
 | [The Algebra That Waited](publications/outreach/the_algebra_that_waited.md) | E₈ and the structure of matter |
+| [On What Comes First](publications/outreach/on_what_comes_first.md) | Philosophy of mathematical primacy |
+| [Lice of the Universe](publications/outreach/LICE_OF_THE_UNIVERSE.md) | The fine-tuning problem |
+| [Roberto Carlos' Geometry](publications/outreach/ROBERTO_CARLOS_GEOMETRY.md) | Geometry and physics for everyone |
 
 All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 

@@ -140,8 +140,8 @@ lean_proof = result.certificate.to_lean()
 
 **Code repository**: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 
-**Related documentation**: [S1: Foundations](../publications/markdown/GIFT_v3.3_S1_foundations.md)
+**Related documentation**: [S1: Foundations](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
 
 ---
 
-*`gift_core` is part of the GIFT Framework v3.3. For the physics application, see the [main paper](../publications/markdown/GIFT_v3.3_main.md).*
+*`gift_core` is part of the GIFT Framework v3.3. For the physics application, see the [main paper](../publications/papers/markdown/GIFT_v3.3_main.md).*

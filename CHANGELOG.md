@@ -29,10 +29,10 @@ Critical fix for the atmospheric mixing angle θ₂₃ formula, eliminating the 
 | Sub-percent accuracy | 32/33 | **33/33** |
 
 #### Updated Files
-- `statistical_validation/validation_v33.py` — Formula implementation
-- `statistical_validation/VALIDATION_SUMMARY_v33.md` — Updated statistics
-- `publications/markdown/GIFT_v3.3_main.md` — Tables and statistics
-- `publications/markdown/GIFT_v3.3_S2_derivations.md` — Derivation and tables
+- `publications/validation/validation_v33.py` — Formula implementation
+- `publications/validation/VALIDATION_SUMMARY_v33.md` — Updated statistics
+- `publications/papers/markdown/GIFT_v3.3_main.md` — Tables and statistics
+- `publications/papers/markdown/GIFT_v3.3_S2_derivations.md` — Derivation and tables
 - `README.md` — Overview statistics
 
 ---
@@ -964,49 +964,6 @@ See `TEST_COVERAGE_ANALYSIS.md` for comprehensive test gap analysis.
 
 ---
 
-## [Unreleased] - Future Work
-
-### Added
-
-**v2.1 Documentation Structure**
-- `publications/v2.0/` and `publications/v2.1/` - Versioned publication directories
-- `publications/v2.1/GIFT_v21_Geometric_Justifications.md` - Detailed geometric derivation documentation
-- `publications/v2.1/GIFT_v21_Observable_Reference.md` - Complete observable catalog with formulas
-- `publications/v2.1/GIFT_v21_Statistical_Validation.md` - Statistical validation methodology
-
-**Comprehensive Test Infrastructure**
-- `tests/` - Main pytest test suite with unit, integration, regression, and notebook tests
-- `giftpy_tests/` - Framework-specific tests (observables, constants, framework)
-- `publications/tests/TEST_SYNTHESIS.md` - Comprehensive test synthesis document
-- `tests/unit/test_statistical_validation.py` - Sobol sensitivity analysis tests (6 tests)
-- `tests/unit/test_mathematical_properties.py` - Mathematical invariant tests
-- `tests/regression/test_observable_values.py` - Observable regression tests
-
-**Other Additions**
-- `docs/PHILOSOPHY.md` - Philosophical essay on mathematical primacy and epistemic humility
-- `.gitignore` - Standard ignore patterns for Python, Jupyter, and IDE files
-- GitHub workflows for link validation
-- `G2_ML/VERSIONS.md` - Comprehensive version index for all G2 ML framework versions
-- `G2_ML/FUTURE_WORK.md` - Planned enhancements replacing obsolete completion plan
-- `G2_ML/0.X/README.md` - Documentation for 8 previously undocumented versions
-- `legacy_v1/README.md` - Guide to accessing archived v1.0 content via git history
-- ARCHIVED warnings to historical G2 ML documentation (versions <0.7)
-
-### Changed
-- Publications reorganized into versioned directories (`v2.0/`, `v2.1/`)
-- Updated `STRUCTURE.md` to include complete repository structure
-- Updated `CLAUDE.md` to v1.1.0 reflecting test infrastructure and v2.1 structure
-- Corrected `postBuild` Binder setup script with accurate file paths
-- `G2_ML/STATUS.md` - Updated with actual implementation status (93% complete)
-- `README.md` - Updated documentation paths to point to `publications/v2.1/`
-- Version references harmonized across all documentation (v2.0.0 stable, v2.1 in development)
-
-### Fixed
-- Resolved phantom references to non-existent `legacy_v1/` directory
-- Corrected G2_ML framework status claims (Yukawa now documented as complete in v0.8)
-- Fixed inconsistencies between README.md and G2_ML/STATUS.md regarding implementation status
-- Fixed test tolerances to match actual framework formulas
-
 ## [2.0.0] - 2025-10-24
 
 ### Major Release - Complete Framework Reorganization
@@ -1128,40 +1085,8 @@ First public version of the GIFT framework demonstrating geometric derivation of
 
 ---
 
-## Future Development
-
-### Planned for v2.1 (Unreleased, in development)
-
-**Enhancements Under Investigation**
-- Temporal framework integration (21·e⁸ structure)
-- Dimensional observable predictions (masses, VEV)
-- Enhanced computational tools for parameter exploration
-- Additional experimental comparison data from 2025 results
-
-**Research Directions**
-- Connection to quantum error correction codes
-- Relationship to holographic entropy bounds
-- Implications for quantum gravity
-- Extensions to grand unification scale
-
-### Experimental Milestones
-
-**2025-2027**
-- Belle II: Improved CKM measurements
-- T2K/NOvA: Enhanced neutrino oscillation parameters
-- LHCb: Precision CP violation measurements
-
-**2028-2030**
-- DUNE: Definitive neutrino mass hierarchy
-- FCC studies: High-energy parameter evolution
-- CMB-S4: Cosmological parameter refinements
-
-These experimental results will provide critical tests of the framework's predictions.
-
----
-
 For detailed information about specific changes, see the relevant sections in:
-- Main paper: `publications/gift_main.md`
-- Supplements: `publications/supplements/`
+- Main paper: `publications/papers/markdown/GIFT_v3.3_main.md`
+- Supplements: `publications/papers/markdown/`
 - Documentation: `docs/`
 

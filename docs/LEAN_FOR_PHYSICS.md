@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document describes the Lean 4 formalization of the GIFT framework, which derives Standard Model parameters from topological invariants. The formalization verifies ~330 exact relations connecting geometric data (Betti numbers, Lie algebra dimensions, cohomological invariants) to physical observables (mixing angles, mass ratios, coupling constants). The verification uses only standard axioms with zero domain-specific assumptions, demonstrating that machine-checked proofs can provide audit trails for theoretical physics claims.
+This document describes the Lean 4 formalization of the GIFT framework, which derives Standard Model parameters from topological invariants. The formalization verifies 290+ exact relations connecting geometric data (Betti numbers, Lie algebra dimensions, cohomological invariants) to physical observables (mixing angles, mass ratios, coupling constants). The verification uses only standard axioms with zero domain-specific assumptions, demonstrating that machine-checked proofs can provide audit trails for theoretical physics claims.
 
 ## 1. The Verification Challenge
 
@@ -36,7 +36,7 @@ The GIFT formalization focuses on the first three categories: algebraic data (E�
 
 ### 2.1 Scope
 
-The formalization covers ~330 exact relations verified in Lean 4 (with Mathlib 4.27+).
+The formalization covers 290+ exact relations verified in Lean 4 (with Mathlib 4.27+).
 
 **Critical property**: The proofs use zero domain-specific axioms. The only axioms employed are:
 - `propext` (propositional extensionality), `Quot.sound` (quotient soundness) - both standard Lean axioms
@@ -128,7 +128,7 @@ The formalization does not establish:
 
 | Metric | Value |
 |--------|-------|
-| Total relations verified | ~330 |
+| Total relations verified | 290+ |
 | Proof assistant | Lean 4 (Mathlib 4.27+) |
 | Domain axioms | 0 |
 | Incomplete proofs (`sorry`) | 0 |
@@ -175,7 +175,7 @@ core/
 ├── Lean/
 │   └── GIFT/
 │       ├── Core.lean            # Constants (dim_E8, b2, b3, H*, ...)
-│       ├── Certificate.lean     # Master theorem (~330 relations)
+│       ├── Certificate.lean     # Master theorem (290+ relations)
 │       ├── Foundations/         # E8 roots, G2 cross product
 │       ├── Geometry/            # DG-ready differential geometry
 │       ├── Spectral/            # Spectral theory, mass gap
@@ -205,7 +205,7 @@ The repository maintains CI pipelines that rebuild all proofs on each commit. Gr
 
 ## 6. Summary
 
-The GIFT formalization demonstrates that machine-verified proofs can apply to theoretical physics. The ~330 relations connecting E₈×E₈ and K₇ topology to Standard Model observables have been proven in Lean 4, using zero domain-specific axioms.
+The GIFT formalization demonstrates that machine-verified proofs can apply to theoretical physics. The 290+ relations connecting E₈×E₈ and K₇ topology to Standard Model observables have been proven in Lean 4, using zero domain-specific axioms.
 
 This establishes internal consistency: given the stated topological inputs, the physical relations follow by pure computation. Whether the inputs describe physical reality remains an empirical question, to be addressed by experiments like DUNE's measurement of δ_CP.
 
@@ -213,9 +213,9 @@ The methodological contribution is independent of GIFT's physical correctness. F
 
 ## References
 
-- GIFT main paper: [GIFT_v3.3_main.md](../publications/markdown/GIFT_v3.3_main.md)
-- Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/markdown/GIFT_v3.3_S1_foundations.md)
-- Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/markdown/GIFT_v3.3_S2_derivations.md)
+- GIFT main paper: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md)
+- Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
+- Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 - Code repository: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 
 ---
