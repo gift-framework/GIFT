@@ -269,7 +269,8 @@ def compute_predictions(cfg: GIFTConfig) -> Dict[str, float]:
     # === PMNS SECTOR ===
     preds['delta_CP'] = float(dim_K7 * dim_G2 + H_star)
     preds['theta_13'] = 180.0 / b2 if b2 > 0 else float('inf')
-    theta_23_arg = (rank_E8 + b3) / H_star if H_star > 0 else 0
+    # v3.3.17 correction: (b3 - p2) / H* = 75/99 = 25/33, giving θ₂₃ ≈ 49.25°
+    theta_23_arg = (b3 - p2) / H_star if H_star > 0 else 0
     preds['theta_23'] = math.degrees(math.asin(min(theta_23_arg, 1))) if theta_23_arg <= 1 else 90.0
 
     delta = 2 * math.pi / (Weyl ** 2) if Weyl > 0 else 0

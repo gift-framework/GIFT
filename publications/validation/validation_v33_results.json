@@ -1,6 +1,6 @@
 {
   "version": "3.3",
-  "date": "2026-02-03 22:42:34",
+  "date": "2026-02-20 15:34:14",
   "reference": {
     "config": {
       "name": "GIFT_E8xE8_K7",
@@ -17,7 +17,7 @@
       "Weyl": 5,
       "D_bulk": 11
     },
-    "deviation": 0.8387718735098102,
+    "deviation": 0.2358388310620245,
     "predictions": {
       "N_gen": 3,
       "sin2_theta_W": 0.23076923076923078,
@@ -34,7 +34,7 @@
       "m_u_m_d": 0.47023809523809523,
       "delta_CP": 197,
       "theta_13": 8.571428571428571,
-      "theta_23": 59.158172045053405,
+      "theta_23": 49.25094562252961,
       "theta_12": 33.400049930049136,
       "sin2_theta_12_PMNS": 0.3076923076923077,
       "sin2_theta_23_PMNS": 0.5454545454545454,
@@ -69,7 +69,7 @@
       "m_u_m_d": 0.05065856129686372,
       "delta_CP": 0.0,
       "theta_13": 0.3680160588825765,
-      "theta_23": 19.996292180635717,
+      "theta_23": 0.0995017798587906,
       "theta_12": 0.029781711915178113,
       "sin2_theta_12_PMNS": 0.22550739163117728,
       "sin2_theta_23_PMNS": 0.09990009990011478,
@@ -93,16 +93,16 @@
     "betti": {
       "test_name": "Betti variations (b2, b3)",
       "n_configs": 100000,
-      "ref_deviation": 0.8387718735098102,
+      "ref_deviation": 0.2358388310620245,
       "better_count": 0,
       "equal_count": 6,
       "better_percent": 0.0,
-      "mean_deviation": 32.94109196106723,
-      "std_deviation": 9.443294987417254,
-      "min_deviation": 0.8387718735098102,
-      "max_deviation": 50.053827085463595,
+      "mean_deviation": 32.89520651400152,
+      "std_deviation": 9.505942684303793,
+      "min_deviation": 0.2358388310620245,
+      "max_deviation": 48.73844199725903,
       "best_alternative": null,
-      "z_score": 3.399482927339689
+      "z_score": 3.4356790028690813
     },
     "gauge": {
       "test_name": "Gauge group comparison",
@@ -112,83 +112,83 @@
           "gauge_group": "E8xE8",
           "dim": 496,
           "rank": 8,
-          "deviation": 0.8387718735098102,
+          "deviation": 0.2358388310620245,
           "is_gift": true,
-          "exact_matches": 14,
-          "good_matches": 31
+          "exact_matches": 15,
+          "good_matches": 32
         },
         {
           "gauge_group": "E7xE8",
           "dim": 381,
           "rank": 7,
-          "deviation": 8.79604910722252,
+          "deviation": 8.261400436605758,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 17
+          "exact_matches": 7,
+          "good_matches": 18
         },
         {
           "gauge_group": "E6xE8",
           "dim": 326,
           "rank": 6,
-          "deviation": 15.502512337783497,
+          "deviation": 15.034088094259435,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 17
+          "exact_matches": 7,
+          "good_matches": 18
         },
         {
           "gauge_group": "E7xE7",
           "dim": 266,
           "rank": 7,
-          "deviation": 16.869334599187958,
+          "deviation": 16.334685928571197,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 17
+          "exact_matches": 7,
+          "good_matches": 18
         },
         {
           "gauge_group": "SO(32)",
           "dim": 496,
           "rank": 16,
-          "deviation": 24.433922007992344,
+          "deviation": 23.167650577764416,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 18
+          "exact_matches": 7,
+          "good_matches": 19
         },
         {
           "gauge_group": "E6xE6",
           "dim": 156,
           "rank": 6,
-          "deviation": 24.776089467944146,
+          "deviation": 24.30766522442008,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 17
+          "exact_matches": 7,
+          "good_matches": 18
         },
         {
           "gauge_group": "SO(10)xSO(10)",
           "dim": 90,
           "rank": 5,
-          "deviation": 30.85146925876749,
+          "deviation": 30.447406898591588,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 17
+          "exact_matches": 7,
+          "good_matches": 18
         },
         {
           "gauge_group": "SU(5)xSU(5)",
           "dim": 48,
           "rank": 4,
-          "deviation": 37.323165912270156,
+          "deviation": 36.98177157980075,
           "is_gift": false,
-          "exact_matches": 6,
-          "good_matches": 17
+          "exact_matches": 7,
+          "good_matches": 18
         }
       ],
       "best": {
         "gauge_group": "E8xE8",
         "dim": 496,
         "rank": 8,
-        "deviation": 0.8387718735098102,
+        "deviation": 0.2358388310620245,
         "is_gift": true,
-        "exact_matches": 14,
-        "good_matches": 31
+        "exact_matches": 15,
+        "good_matches": 32
       },
       "e8xe8_rank": 1
     },
@@ -200,28 +200,28 @@
           "holonomy": "G2",
           "dim": 14,
           "susy": "N=1",
-          "deviation": 0.8387718735098102,
+          "deviation": 0.2358388310620245,
           "is_gift": true
         },
         {
           "holonomy": "SU(4)",
           "dim": 15,
           "susy": "N=1",
-          "deviation": 1.4642375600264284,
+          "deviation": 0.8613045175786428,
           "is_gift": false
         },
         {
           "holonomy": "SU(3)",
           "dim": 8,
           "susy": "N=2",
-          "deviation": 4.4262626708518615,
+          "deviation": 3.8233296284040756,
           "is_gift": false
         },
         {
           "holonomy": "Spin(7)",
           "dim": 21,
           "susy": "N=0",
-          "deviation": 5.411131570250032,
+          "deviation": 4.808198527802247,
           "is_gift": false
         }
       ],
@@ -229,7 +229,7 @@
         "holonomy": "G2",
         "dim": 14,
         "susy": "N=1",
-        "deviation": 0.8387718735098102,
+        "deviation": 0.2358388310620245,
         "is_gift": true
       },
       "g2_is_best": true
@@ -237,12 +237,12 @@
     "combinatorial": {
       "test_name": "Full combinatorial",
       "n_configs": 91896,
-      "ref_deviation": 0.8387718735098102,
+      "ref_deviation": 0.2358388310620245,
       "better_count": 0,
       "better_percent": 0.0,
-      "mean_deviation": 38.00869658408032,
-      "std_deviation": 7.912519383988191,
-      "min_deviation": 3.341170334651939,
+      "mean_deviation": 37.88669667056514,
+      "std_deviation": 7.946206609617376,
+      "min_deviation": 2.7131322592699405,
       "best_alternative": null
     },
     "local": {
@@ -261,7 +261,7 @@
         "b3": 77,
         "delta_b2": 0,
         "delta_b3": 0,
-        "deviation": 0.8387718735098102,
+        "deviation": 0.2358388310620245,
         "is_gift": true
       },
       "gift_is_local_minimum": true,
@@ -274,8 +274,8 @@
     "p_value": 0.0,
     "sigma_level": Infinity,
     "significance": ">inf\u03c3",
-    "gift_deviation": 0.8387718735098102,
-    "mean_alternative_deviation": 32.94109196106723,
-    "elapsed_seconds": 524.15078997612
+    "gift_deviation": 0.2358388310620245,
+    "mean_alternative_deviation": 32.89520651400152,
+    "elapsed_seconds": 411.0869781970978
   }
 }
