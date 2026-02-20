@@ -78,7 +78,7 @@ The empirical Koide formula (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² =
 
 The framework produces 18 dimensionless predictions spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, and cosmological observables. The mean deviation from experimental values is 0.24% (PDG 2024).
 
-All ~330 relations have been formally verified in Lean 4 proof assistant, using only standard axioms (propext, Quot.sound in Lean) with zero domain-specific axioms.
+All 290+ relations have been formally verified in Lean 4 proof assistant, using only standard axioms (propext, Quot.sound in Lean) with zero domain-specific axioms.
 
 ### 3.4 What is Not Claimed
 
@@ -121,9 +121,9 @@ The framework's value, independent of its physical correctness, lies in demonstr
 
 ## References
 
-- Main paper: [GIFT_v3.3_main.md](../publications/markdown/GIFT_v3.3_main.md)
-- Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/markdown/GIFT_v3.3_S1_foundations.md)
-- Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/markdown/GIFT_v3.3_S2_derivations.md)
+- Main paper: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md)
+- Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
+- Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 - Formal verification: [gift-framework/core](https://github.com/gift-framework/core)
 - Philosophy: [PHILOSOPHY.md](PHILOSOPHY.md)
 

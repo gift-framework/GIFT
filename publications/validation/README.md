@@ -26,7 +26,7 @@ python3 validation_v33.py
 
 ## Key Findings
 
-1. **GIFT Mean Deviation**: 0.21% across 33 observables
+1. **GIFT Mean Deviation**: 0.26% across 33 observables
 2. **Alternative Mean Deviation**: 32.9%
 3. **Zero configurations** out of 192,349 beat GIFT
 4. **E₈×E₈ uniqueness**: Outperforms all gauge groups by 10x
@@ -60,7 +60,6 @@ publications/validation/
 ├── validation_v33_results.json          # Complete results
 ├── comprehensive_statistics_v33_results.json
 ├── rigorous_validation_v33_results.json # Rigorous validation results
-├── GIFT_Statistical_Validation_Report.md     # Full report
 ├── GIFT_Statistical_Validation_Report_v33.md # v3.3 report
 ├── VALIDATION_SUMMARY_v33.md            # v3.3 summary
 ├── results/                             # Paper-specific results

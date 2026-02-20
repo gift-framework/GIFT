@@ -32,7 +32,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.21% mean deviation across 33 dimensionless predictions, PDG 2024)
+- Precision of experimental agreement (currently 0.26% mean deviation across 33 dimensionless predictions, PDG 2024)
 - Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
@@ -127,7 +127,7 @@ See Supplement S1 for complete mathematical details.
 - 2 electroweak parameters (λ_H, hierarchy)
 - 2 topological constants (κ_T, det(g))
 
-Mean deviation from experiment: **0.21%** (PDG 2024)
+Mean deviation from experiment: **0.26%** (PDG 2024)
 
 *Note: Extended dimensional predictions (masses, electroweak scale) are documented in legacy files (v2.3) with 0.197% mean deviation across 39 observables.*
 
@@ -161,7 +161,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.21% across 33 dimensionless predictions (v3.3, PDG 2024)
+**Overall**: Mean 0.26% across 33 dimensionless predictions (v3.3, PDG 2024)
 
 See Supplement S5 for detailed statistical analysis.
 
@@ -208,7 +208,7 @@ Honest assessment requires reporting both successes and areas needing refinement
 - Precision tests of exact relations
 - Cosmological observations: Dark energy density
 
-See `docs/EXPERIMENTAL_VALIDATION.md` for detailed timeline.
+See the [Main Paper](../publications/papers/markdown/GIFT_v3.3_main.md) for detailed falsification criteria.
 
 ### What would definitively falsify GIFT?
 
@@ -343,7 +343,7 @@ See `CONTRIBUTING.md` for detailed guidelines. Contributions welcome in:
 
 Depends on background:
 
-**General science literacy**: Start with README.md, then publications/README.md
+**General science literacy**: Start with README.md, then [GIFT for Everyone](GIFT_FOR_EVERYONE.md)
 **Undergraduate physics**: Main paper Section 1-4, then notebook
 **Graduate student**: Main paper fully, then Supplements S1 & S4
 **Professional physicist**: Main paper, Supplement S4 (proofs), Supplement S5 (falsification)
@@ -351,7 +351,7 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.3.14) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.3.17) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v33,
