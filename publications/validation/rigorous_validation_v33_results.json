@@ -1,6 +1,6 @@
 {
   "version": "3.3-rigorous",
-  "date": "2026-01-30 13:39:24",
+  "date": "2026-02-20 15:50:07",
   "methodology": "chi-squared with uncertainties",
   "reference": {
     "config": {
@@ -18,13 +18,13 @@
       "Weyl": 5,
       "D_bulk": 11
     },
-    "chi_squared": 2803805427.5348063,
-    "chi_squared_reduced": 87618919.6104627,
-    "mean_pull": 1609.7204813535068,
+    "chi_squared": 2803805370.0311675,
+    "chi_squared_reduced": 87618917.81347398,
+    "mean_pull": 1609.4918305920248,
     "max_pull": 52950.81339206792,
-    "n_within_1sigma": 23,
-    "n_within_2sigma": 26,
-    "mean_rel_dev_percent": 1.0133526174790874,
+    "n_within_1sigma": 24,
+    "n_within_2sigma": 27,
+    "mean_rel_dev_percent": 0.41041957503130194,
     "predictions": {
       "N_gen": 3.0,
       "sin2_theta_W": 0.23076923076923078,
@@ -41,7 +41,7 @@
       "m_u_m_d": 0.47023809523809523,
       "delta_CP": 197.0,
       "theta_13": 8.571428571428571,
-      "theta_23": 59.158172045053405,
+      "theta_23": 49.25094562252961,
       "theta_12": 33.400049930049136,
       "sin2_theta_12_PMNS": 0.3076923076923077,
       "sin2_theta_23_PMNS": 0.5454545454545454,
@@ -76,7 +76,7 @@
       "m_u_m_d": 0.005952380952381486,
       "delta_CP": 0.0,
       "theta_13": 0.2619047619047669,
-      "theta_23": 7.583209265425698,
+      "theta_23": 0.03773413651567982,
       "theta_12": 0.013266759934481342,
       "sin2_theta_12_PMNS": 0.30769230769230976,
       "sin2_theta_23_PMNS": 1.377272727272727,
@@ -101,11 +101,11 @@
       "test_name": "Monte Carlo Betti variations",
       "n_configs": 100000,
       "seed": 42,
-      "gift_chi_squared": 2803805427.5348063,
-      "gift_chi_squared_reduced": 87618919.6104627,
-      "gift_mean_pull": 1609.7204813535068,
-      "gift_n_within_1sigma": 23,
-      "gift_n_within_2sigma": 26,
+      "gift_chi_squared": 2803805370.0311675,
+      "gift_chi_squared_reduced": 87618917.81347398,
+      "gift_mean_pull": 1609.4918305920248,
+      "gift_n_within_1sigma": 24,
+      "gift_n_within_2sigma": 27,
       "n_observables": 33,
       "better_count": 0,
       "empirical_pvalue": 0.0,
@@ -114,8 +114,8 @@
       "chi_sq_pvalue": 0.0,
       "lee_trials_factor": 4059,
       "lee_corrected_pvalue": 0.0,
-      "mean_alt_chi_sq": 8834816501.864305,
-      "std_alt_chi_sq": 11395672946.652117,
+      "mean_alt_chi_sq": 8834816463.297739,
+      "std_alt_chi_sq": 11395672818.816608,
       "percentile": 100.0
     },
     "gauge": {
@@ -123,74 +123,74 @@
       "results": [
         {
           "gauge_group": "E8xE8",
-          "chi_squared": 2803805427.5348063,
-          "chi_squared_reduced": 87618919.6104627,
-          "mean_pull": 1609.7204813535068,
-          "n_within_1sigma": 23,
-          "n_within_2sigma": 26,
+          "chi_squared": 2803805370.0311675,
+          "chi_squared_reduced": 87618917.81347398,
+          "mean_pull": 1609.4918305920248,
+          "n_within_1sigma": 24,
+          "n_within_2sigma": 27,
           "is_gift": true
         },
         {
           "gauge_group": "E7xE8",
-          "chi_squared": 2940218795.3419833,
-          "chi_squared_reduced": 91881837.35443698,
-          "mean_pull": 2023.568579350573,
-          "n_within_1sigma": 13,
-          "n_within_2sigma": 15,
+          "chi_squared": 2940218750.0685873,
+          "chi_squared_reduced": 91881835.93964335,
+          "mean_pull": 2023.3658241239468,
+          "n_within_1sigma": 14,
+          "n_within_2sigma": 16,
           "is_gift": false
         },
         {
           "gauge_group": "E6xE8",
-          "chi_squared": 3100960503.096586,
-          "chi_squared_reduced": 96905015.72176832,
-          "mean_pull": 2256.330913458779,
-          "n_within_1sigma": 13,
-          "n_within_2sigma": 14,
+          "chi_squared": 3100960468.2893863,
+          "chi_squared_reduced": 96905014.63404332,
+          "mean_pull": 2256.1532725725806,
+          "n_within_1sigma": 14,
+          "n_within_2sigma": 15,
           "is_gift": false
         },
         {
           "gauge_group": "E7xE7",
-          "chi_squared": 3334855007.329862,
-          "chi_squared_reduced": 104214218.97905819,
-          "mean_pull": 2379.797510699871,
+          "chi_squared": 3334854962.056466,
+          "chi_squared_reduced": 104214217.56426457,
+          "mean_pull": 2379.594755473245,
+          "n_within_1sigma": 14,
+          "n_within_2sigma": 16,
+          "is_gift": false
+        },
+        {
+          "gauge_group": "E6xE6",
+          "chi_squared": 3968727386.9589534,
+          "chi_squared_reduced": 124022730.8424673,
+          "mean_pull": 2801.923159447371,
+          "n_within_1sigma": 14,
+          "n_within_2sigma": 15,
+          "is_gift": false
+        },
+        {
+          "gauge_group": "SO(10)xSO(10)",
+          "chi_squared": 4477066093.306959,
+          "chi_squared_reduced": 139908315.41584247,
+          "mean_pull": 3121.3914654862565,
+          "n_within_1sigma": 14,
+          "n_within_2sigma": 15,
+          "is_gift": false
+        },
+        {
+          "gauge_group": "SU(5)xSU(5)",
+          "chi_squared": 4874274285.842588,
+          "chi_squared_reduced": 152321071.4325809,
+          "mean_pull": 3432.809001426882,
           "n_within_1sigma": 13,
           "n_within_2sigma": 15,
           "is_gift": false
         },
         {
-          "gauge_group": "E6xE6",
-          "chi_squared": 3968727421.7661533,
-          "chi_squared_reduced": 124022731.93019229,
-          "mean_pull": 2802.1008003335687,
-          "n_within_1sigma": 13,
-          "n_within_2sigma": 14,
-          "is_gift": false
-        },
-        {
-          "gauge_group": "SO(10)xSO(10)",
-          "chi_squared": 4477066119.258642,
-          "chi_squared_reduced": 139908316.22683257,
-          "mean_pull": 3121.5446983659235,
-          "n_within_1sigma": 13,
-          "n_within_2sigma": 14,
-          "is_gift": false
-        },
-        {
-          "gauge_group": "SU(5)xSU(5)",
-          "chi_squared": 4874274304.418583,
-          "chi_squared_reduced": 152321072.01308072,
-          "mean_pull": 3432.9384686621956,
-          "n_within_1sigma": 12,
-          "n_within_2sigma": 14,
-          "is_gift": false
-        },
-        {
           "gauge_group": "SO(32)",
-          "chi_squared": 5336369471.39445,
-          "chi_squared_reduced": 166761545.98107657,
-          "mean_pull": 3458.3177961504966,
-          "n_within_1sigma": 13,
-          "n_within_2sigma": 14,
+          "chi_squared": 5336369219.074275,
+          "chi_squared_reduced": 166761538.0960711,
+          "mean_pull": 3457.8375870619566,
+          "n_within_1sigma": 14,
+          "n_within_2sigma": 15,
           "is_gift": false
         }
       ],
@@ -203,33 +203,33 @@
         {
           "holonomy": "G2",
           "dim": 14,
-          "chi_squared": 2803805427.5348063,
-          "chi_squared_reduced": 87618919.6104627,
-          "mean_pull": 1609.7204813535068,
+          "chi_squared": 2803805370.0311675,
+          "chi_squared_reduced": 87618917.81347398,
+          "mean_pull": 1609.4918305920248,
           "is_gift": true
         },
         {
           "holonomy": "SU(4)",
           "dim": 15,
-          "chi_squared": 2850092756.7789397,
-          "chi_squared_reduced": 89065398.64934187,
-          "mean_pull": 1817.1863910545967,
+          "chi_squared": 2850092699.275301,
+          "chi_squared_reduced": 89065396.85235316,
+          "mean_pull": 1816.9577402931145,
           "is_gift": false
         },
         {
           "holonomy": "SU(3)",
           "dim": 8,
-          "chi_squared": 4469926562.564334,
-          "chi_squared_reduced": 139685205.08013543,
-          "mean_pull": 2863.6872911163214,
+          "chi_squared": 4469926505.060695,
+          "chi_squared_reduced": 139685203.2831467,
+          "mean_pull": 2863.4586403548387,
           "is_gift": false
         },
         {
           "holonomy": "Spin(7)",
           "dim": 21,
-          "chi_squared": 5071627660.371682,
-          "chi_squared_reduced": 158488364.38661507,
-          "mean_pull": 3065.3773487714057,
+          "chi_squared": 5071627602.868043,
+          "chi_squared_reduced": 158488362.58962634,
+          "mean_pull": 3065.148698009923,
           "is_gift": false
         }
       ],
@@ -246,11 +246,11 @@
       "n_neighbors": 960,
       "better_neighbors": 0,
       "is_strict_local_minimum": true,
-      "gift_chi_squared": 2803805427.5348063,
+      "gift_chi_squared": 2803805370.0311675,
       "best_neighbor": {
         "b2": 21,
         "b3": 76,
-        "chi_squared": 2803843888.934165,
+        "chi_squared": 2803843833.3325953,
         "is_better": false
       }
     },
@@ -262,31 +262,31 @@
       "empirical_pvalue": 0.0,
       "ci_95_lower": 0.0,
       "ci_95_upper": 3.688811415258897e-05,
-      "gift_chi_squared": 2803805427.5348063,
-      "mean_alt_chi_sq": 10144999813.247652
+      "gift_chi_squared": 2803805370.0311675,
+      "mean_alt_chi_sq": 10144999761.740255
     },
     "bootstrap": {
       "test_name": "Bootstrap chi-squared",
       "n_bootstrap": 10000,
-      "mean_chi_sq": 2768758147.3795724,
-      "std_chi_sq": 2763745504.1085577,
+      "mean_chi_sq": 2768758089.9391875,
+      "std_chi_sq": 2763745504.896993,
       "ci_95": [
-        151.767436323155,
-        8411399171.221993
+        92.29980031347918,
+        8411399125.763178
       ],
       "ci_68": [
-        16692.34779791916,
-        5607594025.164709
+        16636.450584875045,
+        5607593978.795095
       ],
-      "median_chi_sq": 2803789171.055299
+      "median_chi_sq": 2803789094.733077
     },
     "mc_tier12_only": {
       "test_name": "Monte Carlo (Tier 1+2 only)",
-      "n_observables_tested": 28,
-      "excluded_observables": 5,
+      "n_observables_tested": 29,
+      "excluded_observables": 4,
       "n_configs": 50000,
-      "gift_chi_squared": 2803805367.272216,
-      "gift_chi_squared_reduced": 103844643.23230429,
+      "gift_chi_squared": 2803805367.2736397,
+      "gift_chi_squared_reduced": 100135905.97405855,
       "better_count": 0,
       "empirical_pvalue": 0.0,
       "ci_95": [
@@ -302,14 +302,14 @@
     "raw_pvalue": 0.0,
     "conservative_pvalue_lee": 0.0,
     "chi_squared_pvalue": 0.0,
-    "gift_chi_squared": 2803805427.5348063,
-    "gift_chi_squared_reduced": 87618919.6104627,
-    "elapsed_seconds": 4.80839991569519
+    "gift_chi_squared": 2803805370.0311675,
+    "gift_chi_squared_reduced": 87618917.81347398,
+    "elapsed_seconds": 4.015975475311279
   },
   "tiered_analysis": {
     "tier1_excellent": {
       "description": "Predictions within 0.1%",
-      "count": 14,
+      "count": 15,
       "observables": [
         {
           "observable": "N_gen",
@@ -422,9 +422,17 @@
           "sigma": 0.005,
           "rel_dev_percent": 0.09093519670720149,
           "pull": 0.12258064516130762
+        },
+        {
+          "observable": "theta_23",
+          "predicted": 49.25094562252961,
+          "experimental": 49.3,
+          "sigma": 1.3,
+          "rel_dev_percent": 0.0995017798587906,
+          "pull": 0.03773413651567982
         }
       ],
-      "mean_rel_dev": 0.022146089215906033
+      "mean_rel_dev": 0.027303135258765005
     },
     "tier2_good": {
       "description": "Predictions within 0.1% - 1%",
@@ -586,25 +594,16 @@
     },
     "tier4_poor": {
       "description": "Predictions beyond 5%",
-      "count": 1,
-      "observables": [
-        {
-          "observable": "theta_23",
-          "predicted": 59.158172045053405,
-          "experimental": 49.3,
-          "sigma": 1.3,
-          "rel_dev_percent": 19.996292180635717,
-          "pull": 7.583209265425698
-        }
-      ],
-      "mean_rel_dev": 19.996292180635717
+      "count": 0,
+      "observables": [],
+      "mean_rel_dev": 0
     },
     "summary": {
       "total_observables": 33,
-      "within_0_1_percent": 0.42424242424242425,
-      "within_1_percent": 0.8484848484848485,
-      "within_5_percent": 0.9696969696969697,
-      "overall_mean_rel_dev": 1.0133526174790874
+      "within_0_1_percent": 0.45454545454545453,
+      "within_1_percent": 0.8787878787878788,
+      "within_5_percent": 1.0,
+      "overall_mean_rel_dev": 0.41041957503130194
     }
   },
   "category_analysis": {
@@ -738,11 +737,11 @@
       "name": "PMNS Mixing",
       "description": "Neutrino mixing angles and phase",
       "n_observables": 7,
-      "mean_rel_dev": 3.781799230217493,
-      "max_rel_dev": 19.996292180635717,
-      "within_0_1_percent": 3,
-      "within_1_percent": 4,
-      "within_5_percent": 6,
+      "mean_rel_dev": 0.9394006015350745,
+      "max_rel_dev": 4.8072346501665875,
+      "within_0_1_percent": 4,
+      "within_1_percent": 5,
+      "within_5_percent": 7,
       "observables": [
         {
           "name": "delta_CP",
@@ -758,9 +757,9 @@
         },
         {
           "name": "theta_23",
-          "predicted": 59.158172045053405,
+          "predicted": 49.25094562252961,
           "experimental": 49.3,
-          "rel_dev": 19.996292180635717
+          "rel_dev": 0.0995017798587906
         },
         {
           "name": "theta_12",

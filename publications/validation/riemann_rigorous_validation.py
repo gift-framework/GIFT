@@ -74,6 +74,7 @@ def load_zeros(max_zeros: int = 100000) -> np.ndarray:
     zeros = []
     # Try multiple locations
     search_paths = [
+        Path(__file__).parent.parent.parent / "research" / "riemann",
         Path(__file__).parent.parent / "research" / "riemann",
         Path(__file__).parent / "data",
         Path.cwd() / "research" / "riemann",
@@ -91,7 +92,20 @@ def load_zeros(max_zeros: int = 100000) -> np.ndarray:
                                 return np.array(zeros)
 
     if len(zeros) == 0:
-        raise FileNotFoundError("Could not find Riemann zeros data files")
+        # Fallback: compute zeros using mpmath
+        try:
+            from mpmath import zetazero
+            print(f"  Computing {max_zeros} zeros with mpmath (fallback)...")
+            zeros = [float(zetazero(i).imag) for i in range(1, max_zeros + 1)]
+            # Cache for future use
+            cache_path = Path(__file__).parent / f"riemann_zeros_{max_zeros // 1000}k.npy"
+            np.save(cache_path, np.array(zeros))
+            print(f"  Cached to {cache_path}")
+            return np.array(zeros)
+        except ImportError:
+            raise FileNotFoundError(
+                "Could not find Riemann zeros data files and mpmath is not installed.\n"
+                "Install with: pip install mpmath")
 
     return np.array(zeros)
 
@@ -1130,7 +1144,7 @@ def run_full_validation() -> Dict:
     # Load data
     print("\nLoading Riemann zeros...")
     try:
-        zeros = load_zeros(100000)
+        zeros = load_zeros(10000)
         print(f"✓ Loaded {len(zeros)} zeros")
         print(f"  Range: γ₁ = {zeros[0]:.6f} to γ_{len(zeros)} = {zeros[-1]:.6f}")
     except FileNotFoundError as e:

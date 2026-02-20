@@ -30,10 +30,31 @@ import time
 # Import base validation
 from validation_v33 import (
     EXPERIMENTAL_V33, GIFT_REFERENCE, GIFTConfig,
-    compute_predictions, evaluate_configuration,
-    generate_alternative_configurations, riemann_zeta,
-    PHI, ZETA_5, ZETA_11
+    compute_predictions_v33, compute_deviation, riemann_zeta,
+    PHI
 )
+
+# Adapter: match legacy names used in this module
+compute_predictions = compute_predictions_v33
+
+
+def evaluate_configuration(cfg: GIFTConfig) -> dict:
+    """Evaluate a configuration, returning mean_deviation and details."""
+    preds = compute_predictions_v33(cfg)
+    mean_dev, details = compute_deviation(preds)
+    return {'mean_deviation': mean_dev, 'details': details, 'predictions': preds}
+
+
+def generate_alternative_configurations(n: int, seed: int = 42) -> list:
+    """Generate n random alternative GIFTConfig instances."""
+    import random as _rnd
+    _rnd.seed(seed)
+    configs = []
+    for i in range(n):
+        b2 = _rnd.randint(5, 100)
+        b3 = _rnd.randint(max(b2 + 5, 40), 200)
+        configs.append(GIFTConfig(name=f"alt_{i}", b2=b2, b3=b3))
+    return configs
 
 # =============================================================================
 # STATISTICAL UTILITIES
@@ -248,7 +269,7 @@ def sobol_sensitivity_analysis(
     def evaluate(b2: int, b3: int) -> float:
         cfg = GIFTConfig(name=f"sobol_{b2}_{b3}", b2=b2, b3=b3,
                         dim_G2=14, dim_E8=248, rank_E8=8, dim_K7=7,
-                        dim_J3O=27, dim_F4=52, dim_E6=78, dim_E8x2=496,
+                        dim_J3O=27, dim_F4=52, dim_E6=78,
                         p2=2, Weyl=5, D_bulk=11)
         result = evaluate_configuration(cfg)
         return result['mean_deviation']
