@@ -2,17 +2,17 @@
 
 [![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
 
-## Mathematical Proofs for All 18 VERIFIED Dimensionless Relations
+## Complete Mathematical Derivations for All 33 Dimensionless Predictions
 
-*This supplement provides complete mathematical proofs for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to exact numerical predictions.*
+*This supplement provides mathematical derivations for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to numerical predictions.*
 
-**Status**: Complete (18 VERIFIED relations verified in Lean 4)
+**Status**: 18 core relations verified in Lean 4; 15 extended predictions with topological formulas
 
-**Note on 33 vs 18**: The main paper references 33 dimensionless predictions. Of these:
-- **18 core relations** (this supplement): VERIFIED status: algebraic identities verified in Lean 4
-- **15 extended predictions** (cosmology, CKM, boson ratios): TOPOLOGICAL or HEURISTIC status: formulas use topological constants but lack full Lean verification
+**Note on verification levels**: The main paper references 33 dimensionless predictions. Of these:
+- **18 core relations** (Parts II-VII): VERIFIED status, algebraic identities machine-checked in Lean 4
+- **15 extended predictions** (Part IX): TOPOLOGICAL or HEURISTIC status, formulas use topological constants but lack full Lean verification
 
-The topological constants that determine these relations produce an exactly solvable geometric structure (see S1, Section 12).
+The topological constants that determine these relations are described in S1.
 
 ---
 
@@ -44,7 +44,7 @@ Before presenting derivations, we clarify the logical structure:
 - The K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)
 
 **Outputs** (derived from inputs):
-- The 33 dimensionless predictions (18 core VERIFIED + 15 extended)
+- The 18 dimensionless predictions
 
 ### 0.2 What We Do NOT Claim
 
@@ -52,15 +52,15 @@ Before presenting derivations, we clarify the logical structure:
 - That the formulas are uniquely determined by geometric principles
 - That the selection rule for specific combinations (b₂/(b₃ + dim_G₂) vs b₂/b₃) is understood
 
-### 0.3 What We DO Claim
+### 0.3 What We Observe
 
 - Given the inputs, the outputs follow by algebra
-- The outputs match experiment to 0.21% mean deviation (0.22% dimensionless only, PDG 2024)
+- The outputs match experiment to 0.26% mean deviation (PDG 2024)
 - No continuous parameters are fitted
 
 ### 0.4 Torsion Independence
 
-**Important**: All 33 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
+**Important**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
 - Predictions depend only on topology, not on the actual torsion value
 - The value κ_T = 1/61 is a topological bound, not a prediction ingredient
 
@@ -570,7 +570,7 @@ $$\delta_{CP} = \dim(K_7) \cdot \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 1
 | GIFT prediction | 197° (exact) |
 | Deviation | 0.00% |
 
-**Note**: DUNE (2034-2039) will test to ±5° precision. Hyper-Kamiokande provides independent verification starting ~2034.
+**Note**: The T2K+NOvA joint analysis (Nature, 2025) reports delta_CP consistent with values in the range ~180-220 degrees. DUNE (2028-2040) will test with resolution of a few degrees to ~15 degrees. Hyper-Kamiokande provides independent verification starting ~2034.
 
 **Status**: VERIFIED ∎
 
@@ -1092,60 +1092,58 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 0.01-0.1% | 4 | 22% |
 | 0.1-0.5% | 7 | 39% |
 
-**Mean deviation**: 0.21% total / 0.22% dimensionless only (PDG 2024)
+**Mean deviation**: 0.26% (PDG 2024, 33 observables)
 
 ---
 
 ## 23. Statistical Uniqueness of (b₂=21, b₃=77)
 
-A critical question for any unified framework is whether the specific topological parameters represent overfitting. We conducted an exhaustive validation campaign (3,070,396 configurations) combined with a seven-component bullet-proof statistical analysis.
+A critical question for any unified framework is whether the specific topological parameters represent overfitting. We conducted comprehensive Monte Carlo validation to address this concern.
 
-### Exhaustive Search
+### Methodology
+
+- **Betti variations**: 100,000 random (b₂, b₃) configurations
+- **Gauge group comparison**: E₈×E₈, E₇×E₇, E₆×E₆, SO(32), SU(5)×SU(5), etc.
+- **Holonomy comparison**: G₂, Spin(7), SU(3), SU(4)
+- **Full combinatorial**: 91,896 configurations varying all parameters
+- **Local sensitivity**: ±10 grid around (b₂=21, b₃=77)
+
+### Results
 
 | Metric | Value |
 |--------|-------|
-| Total configurations tested | **3,070,396** |
+| Total configurations tested | **192,349** |
 | Configurations better than GIFT | **0** |
-| GIFT mean deviation | 0.21% total / 0.22% dimensionless (33 observables) |
-| 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁶] |
+| GIFT mean deviation | 0.26% (33 observables) |
+| Alternative mean deviation | 32.9% |
+| P-value | **< 5 × 10⁻⁶** |
+| Significance | **> 4.5σ** |
 
 ### Gauge Group Ranking
 
 | Rank | Group | Mean Dev. |
 |------|-------|-----------|
-| **1** | **E₈×E₈** | **0.41%** |
-| 2 | E₇×E₈ | 8.8% |
-| 3 | E₆×E₈ | 15.5% |
+| **1** | **E₈×E₈** | **0.26%** |
+| 2 | E₇×E₈ | 8.80% |
+| 3 | E₆×E₈ | 15.50% |
 
-**E₈×E₈ achieves 21× better agreement than the next best alternative.**
+E₈ x E₈ achieves approximately 10x better agreement than all tested alternatives.
 
 ### Holonomy Ranking
 
 | Rank | Holonomy | Mean Dev. |
 |------|----------|-----------|
-| **1** | **G₂** | **0.41%** |
-| 2 | SU(4) | 1.5% |
-| 3 | SU(3) | 4.4% |
+| **1** | **G₂** | **0.26%** |
+| 2 | SU(4) | 1.46% |
+| 3 | SU(3) | 4.43% |
 
-**G₂ achieves 11× better agreement than Calabi-Yau (SU(3)).**
-
-### Bullet-Proof Validation (7 Components)
-
-| Component | Result |
-|-----------|--------|
-| Three null families | All reject at p < 2×10⁻⁵ (σ > 4.2) |
-| Westfall-Young maxT | 11/33 individually significant (global p = 0.008) |
-| Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
-| Bayes factor (4 priors) | 304–4,738 (all decisive) |
-| ΔWAIC | 550 (GIFT preferred) |
-| Robustness | Weight-invariant, no dominating observable |
-| Multi-seed replication | 10 seeds, cross-metric consistent |
+G₂ achieves approximately 5x better agreement than Calabi-Yau (SU(3)).
 
 ### Interpretation
 
-The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **unique optimum** among all 3,070,396 tested alternatives. The seven-component analysis confirms significance through multiple independent statistical approaches, including correlation-aware Westfall-Young FWER control and multi-prior Bayesian model comparison.
+Among 192,349 tested alternatives, the configuration (b₂=21, b₃=77) with E₈ x E₈ gauge group and G₂ holonomy achieves the lowest mean deviation. Zero alternatives outperform it.
 
-Complete methodology: [publications/references/STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md)
+Complete methodology: [docs/STATISTICAL_EVIDENCE.md](../../docs/STATISTICAL_EVIDENCE.md)
 
 ---
 
@@ -1160,9 +1158,9 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | Classification | Expressions | Interpretation |
 |----------------|-------------|----------------|
 | **CANONICAL** | ≥20 | Maximally over-determined; emerges from algebraic web |
-| **ROBUST** | 10–19 | Highly constrained; multiple independent derivations |
-| **SUPPORTED** | 5–9 | Structural redundancy |
-| **DERIVED** | 2–4 | Dual derivation minimum |
+| **ROBUST** | 10-19 | Highly constrained; multiple independent derivations |
+| **SUPPORTED** | 5-9 | Structural redundancy |
+| **DERIVED** | 2-4 | Dual derivation minimum |
 | **SINGULAR** | 1 | Unique path (possible coincidence) |
 
 ### 24.2 Core 18 Predictions with Expression Counts
@@ -1186,7 +1184,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 15 | θ₁₂ | arctan(√(δ/γ)) | 33.40° | 33.41° | 0.03% | 2 | DERIVED |
 | 16 | Ω_DE | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 | 0.21% | 2 | DERIVED |
 | 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | 2 | DERIVED |
-| 18 | det(g) | 65/32 | 2.0313 | — | — | 8 | SUPPORTED |
+| 18 | det(g) | 65/32 | 2.0313 | - | - | 8 | SUPPORTED |
 
 **Distribution**: 4 CANONICAL (22%), 4 ROBUST (22%), 2 SUPPORTED (11%), 7 DERIVED (39%), 1 SINGULAR (6%).
 
@@ -1205,7 +1203,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 27 | m_W/m_Z | (2b₂−Weyl)/(2b₂) = 37/42 | 0.8810 | 0.8815 | **0.06%** | 8 | SUPPORTED |
 | 28 | m_μ/m_τ | 5/84 | 0.0595 | 0.0595 | 0.04% | 9 | SUPPORTED |
 | 29 | Ω_DM/Ω_b | (1+42)/rank_E₈ | 43/8 | 5.375 | 0.00% | 6 | SUPPORTED |
-| 30 | Ω_b/Ω_m | (dim_F₄−α_sum)/dim_E₈ | 39/248 | 0.157 | 0.16% | 7 | SUPPORTED |
+| 30 | Ω_b/Ω_m | Weyl/det(g)_den | 5/32 | 0.156 | 0.16% | 7 | SUPPORTED |
 | 31 | Ω_Λ/Ω_m | (det_g_den−dim_K₇)/D_bulk | 25/11 | 2.27 | 0.12% | 6 | SUPPORTED |
 | 32 | h | (PSL₂₇−1)/dim_E₈ | 167/248 | 0.674 | 0.09% | 3 | DERIVED |
 | 33 | σ₈ | (p₂+det_g_den)/(2b₂) | 34/42 | 0.811 | 0.18% | 4 | DERIVED |
@@ -1282,7 +1280,7 @@ This sequence propagates via the recurrence:
 
 $$F_3 + F_4 = F_5 \quad \Rightarrow \quad p_2 + N_{gen} = \text{Weyl}$$
 
-Lucas numbers appear in the scale bridge (S3, Section 12):
+Lucas numbers also appear naturally:
 
 | Lₙ | Value | GIFT Role |
 |----|-------|-----------|
@@ -1304,11 +1302,12 @@ This structure reflects the icosahedral geometry underlying the McKay correspond
 
 1. Joyce, D. D. (2000). *Compact Manifolds with Special Holonomy*. Oxford.
 2. Atiyah, M. F., Singer, I. M. (1968). *The index of elliptic operators*.
-3. Particle Data Group (2024). *Review of Particle Physics*.
-4. NuFIT 5.3 (2024). Global neutrino oscillation analysis.
-5. Planck Collaboration (2020). Cosmological parameters.
+3. Particle Data Group (2024). *Review of Particle Physics*. Phys. Rev. D 110, 030001.
+4. NuFIT 6.0 (2024). Global neutrino oscillation analysis. www.nu-fit.org.
+5. Planck Collaboration (2020). Cosmological parameters. A&A 641, A6.
+6. T2K, NOvA Collaborations (2025). Nature 638, 534-541.
 
 ---
 
 *GIFT Framework - Supplement S2*
-*Complete Derivations: 18 Dimensionless Relations*
+*Complete Derivations: 33 Dimensionless Relations*

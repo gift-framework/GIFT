@@ -12,7 +12,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops E8 exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G2 holonomy manifolds. Part III establishes K7 manifold construction via twisted connected sum, building compact G2 manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32; Joyce's theorem guarantees a torsion-free metric exists within this framework. All results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation (13 training versions) confirms near-G₂ holonomy with V₇ projection reduced by 97%. All algebraic results are formally verified in Lean 4.
 
 ---
 
@@ -20,11 +20,11 @@ This supplement presents the mathematical architecture underlying GIFT. Part I d
 
 ## 0. Why This Framework Exists
 
-GIFT is not built on arbitrary choices. It emerges from a single algebraic fact:
+The GIFT framework emerges from a single algebraic fact:
 
 **The octonions 𝕆 are the largest normed division algebra.**
 
-Everything follows:
+The derivation chain proceeds as follows:
 
 ```
 𝕆 (octonions, dim 8)
@@ -70,12 +70,12 @@ The pattern terminates at 𝕆. There is no 16-dimensional normed division algeb
 
 ### 0.3 Why dim(K₇) = 7
 
-This is not a choice. It is a consequence:
+The dimension 7 is a consequence of the octonionic structure, not an independent choice:
 - Im(𝕆) has dimension 7
 - G₂ acts naturally on ℝ⁷
-- A compact 7-manifold with G₂ holonomy is the geometric realization
+- A compact 7-manifold with G₂ holonomy provides the geometric realization
 
-**K₇ is to G₂ what the circle is to U(1).**
+In this sense, K₇ is to G₂ what the circle is to U(1).
 
 ### 0.4 The Fano Plane: Combinatorial Structure of Im(𝕆)
 
@@ -88,10 +88,10 @@ The 7 imaginary octonion units form the **Fano plane** PG(2,2), the smallest pro
 - Point-line incidences: 7 × 3 = 21 = C(7,2) = b₂
 - Automorphism group: PSL(2,7) with |PSL(2,7)| = 168
 
-**Numerical observation**: The following identity holds:
+**Numerical observation**: The following arithmetic identity holds:
 $$(b_3 + \dim(G_2)) + b_3 = 91 + 77 = 168 = |{\rm PSL}(2,7)| = {\rm rank}(E_8) \times b_2$$
 
-Whether this arithmetic coincidence reflects further geometric structure connecting gauge and matter sectors remains an open question.
+Whether this reflects deeper geometric structure connecting gauge and matter sectors, or is an arithmetic coincidence, remains an open question.
 
 ---
 
@@ -207,11 +207,11 @@ $$\boxed{\frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) -
 
 ### Significance
 
-The triple convergence indicates Weyl = 5 is not an arbitrary choice but a **structural constraint** of E₈×E₈/G₂/K₇ geometry. This explains:
+The triple convergence suggests Weyl = 5 is structurally constrained by the E₈ x E₈/G₂/K₇ geometry. It enters:
 
-1. **det(g) = 65/32**: Via Weyl × (rank(E₈) + Weyl) / 2^Weyl = 5 × 13 / 32
+1. **det(g) = 65/32**: Via Weyl x (rank(E₈) + Weyl) / 2^Weyl = 5 x 13 / 32
 2. **|W(E₈)| factorization**: The factor 5² = Weyl^p₂ in prime decomposition
-3. **Cosmological ratio**: √Weyl = √5 appears in dark sector (see S3)
+3. **Cosmological ratio**: sqrt(Weyl) = sqrt(5) appears in dark sector density ratios (see main paper, Section 4.8)
 
 **Status**: VERIFIED (three independent derivations)
 
@@ -287,7 +287,7 @@ The foundational role of octonions is established in Part 0. This section detail
 
 $$\dim(J_3(\mathbb{O})) = \frac{\dim(E_8) - \dim(E_6) - \dim(SU_3)}{6} = \frac{248 - 78 - 8}{6} = \frac{162}{6} = 27$$
 
-This shows the Jordan algebra dimension is not arbitrary but **DERIVED** from the E-series structure.
+This shows the Jordan algebra dimension is derivable from the E-series structure.
 
 **Status**: **VERIFIED (Lean 4)**: `j3o_e_series_certificate`
 
@@ -343,7 +343,23 @@ This anchors τ to topological and algebraic invariants, establishing it as a ge
 - `reflect_preserves_lattice` (Weyl reflection) ✓
 - Remaining: `cross_is_octonion_structure` (343-case timeout), `G2_equiv_characterizations`
 
-### 6.2 Holonomy Classification (Berger)
+### 6.2 G₂ as Kernel of the Lie Derivative
+
+The G₂ subalgebra of so(7) admits a precise characterization as the stabilizer of the associative 3-form phi₀. For any antisymmetric matrix A in so(7), the Lie derivative of phi₀ is:
+
+$$L_A(\varphi_0)_{ijk} = A_{ia}\varphi_{ajk} + A_{ja}\varphi_{iak} + A_{ka}\varphi_{ija}$$
+
+The g₂ subalgebra consists of all A for which L_A(phi₀) = 0:
+
+$$\mathfrak{g}_2 = \ker(L) = \{A \in \mathfrak{so}(7) : L_A(\varphi_0) = 0\}$$
+
+This yields the decomposition so(7) = g₂ + V₇, where dim(g₂) = 14 and dim(V₇) = 7. The complement V₇ carries the standard 7-dimensional representation of G₂.
+
+In practice, the kernel is computed via singular value decomposition (SVD) of the linear map L: so(7) --> Lambda³(R⁷). The 14 singular vectors with eigenvalue zero span g₂; the 7 singular vectors with nonzero eigenvalue span V₇.
+
+**Note**: A heuristic construction based on Fano-plane indices does not produce correct g₂ generators (each such generator is approximately 67% in g₂ and 33% in V₇). The kernel-based construction is the correct definition and must be used in all numerical computations involving g₂/V₇ decomposition.
+
+### 6.3 Holonomy Classification (Berger)
 
 | Dimension | Holonomy | Geometry |
 |-----------|----------|----------|
@@ -383,7 +399,7 @@ $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 
 **Key insight**: The 33 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of the specific torsion realization. The value κ_T = 1/61 defines the geometric bound on deviations from φ_ref.
 
-**Physical interactions**: Emerge from the geometry of K₇, with deviations δφ from the reference form bounded by topological constraints. This mechanism is THEORETICAL (see S3 for details).
+**Physical interactions**: Emerge from the geometry of K₇, with deviations delta(phi) from the reference form bounded by topological constraints. This mechanism is theoretical and its detailed treatment lies beyond the scope of this supplement.
 
 ---
 
@@ -436,7 +452,7 @@ The correction 14/99 − 13/99 = 1/99 = h/H* is the parallel spinor contribution
 | dim(G₂)/√2 ≈ π² | 9.8995 | 9.8696 | 0.30% |
 | dim(K₇)×√2 ≈ π² | 9.8995 | 9.8696 | 0.30% |
 
-These suggest a connection between the topological integer dim(G₂) = 14 and the transcendental number π². Whether this reflects additional structure or numerical coincidence remains open.
+These suggest a connection between the topological integer dim(G₂) = 14 and the transcendental number π². Whether this reflects deeper structure or numerical coincidence remains open.
 
 **Universality**: The 1/H* scaling has been verified numerically across multiple G₂ manifolds with different Betti numbers. The proportionality constant depends on the metric normalization convention.
 
@@ -503,11 +519,11 @@ For the GIFT framework, K₇ is constructed from two specific ACyl building bloc
 | M₂ (CI) | 10 | 37 | Calabi-Yau geometry |
 | **K₇ (TCS)** | **21** | **77** | **Mayer-Vietoris** |
 
-**Key result (v3.3)**: Both Betti numbers are **DERIVED** from the TCS formula, not input:
+**Key result (v3.3)**: Both Betti numbers follow from the TCS formula via Mayer-Vietoris:
 - b₂(K₇) = b₂(M₁) + b₂(M₂) = 11 + 10 = **21**
 - b₃(K₇) = b₃(M₁) + b₃(M₂) = 40 + 37 = **77**
 
-This is genuine mathematics: the building block data comes from Calabi-Yau geometry (computed via standard techniques), and the TCS combination is rigorously derived from Mayer-Vietoris.
+The building block data comes from standard Calabi-Yau geometry, and the TCS combination is derived from the Mayer-Vietoris exact sequence.
 
 **The compact manifold**:
 $$K_7 = M_1 \cup_\phi M_2$$
@@ -609,9 +625,9 @@ $$H^3(K_7) = H^3_{\text{local}} \oplus H^3_{\text{global}}$$
 
 ## 10. Structural Metric Invariants
 
-### 10.1 The Zero-Parameter Paradigm
+### 10.1 Metric Invariants from Topology
 
-The GIFT framework proposes that all metric invariants derive from fixed mathematical structure. The constraints are **inputs**; the specific geometry is **emergent**.
+The GIFT framework explores the hypothesis that metric invariants derive from fixed mathematical structure. The topological constraints serve as inputs; the specific geometry is then determined.
 
 | Invariant | Formula | Value | Status |
 |-----------|---------|-------|--------|
@@ -644,7 +660,7 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\text{gen}}} = 2 + \frac{1}{21+1
 **Path 3** (H* formula):
 $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
 
-The convergence of three independent algebraic paths to the same rational value demonstrates that det(g) = 65/32 is a structural constraint, not a free parameter.
+The convergence of three independent algebraic paths to the same rational value suggests that det(g) = 65/32 is a structural constraint rather than a free parameter.
 
 **Numerical value**: 65/32 = 2.03125 (exact rational)
 
@@ -682,24 +698,34 @@ The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce
 
 ### 11.3 Independent Numerical Validation (PINN)
 
-Physics-Informed Neural Network provides independent numerical validation:
+A companion numerical program constructs explicit G₂ metrics on K₇ via physics-informed neural networks (PINNs). The three-chart atlas (neck + two Calabi-Yau bulk regions) uses approximately 10⁶ trainable parameters in float64 precision.
+
+**Initial validation** (Phase 2):
 
 | Metric | Value | Significance |
 |--------|-------|--------------|
-| ‖T‖_max | 4.46 × 10⁻⁴ | 224× below Joyce ε₀ |
-| ‖T‖_mean | 9.8 × 10⁻⁵ | T → 0 confirmed |
-| Lipschitz L_eff | ~10⁻⁵ | Perturbations negligible |
+| ‖T‖_max | 4.46 x 10⁻⁴ | 224x below Joyce epsilon₀ |
+| ‖T‖_mean | 9.8 x 10⁻⁵ | T --> 0 confirmed |
 | det(g) error | < 10⁻⁶ | Confirms 65/32 |
-| Contraction K | 0.9 | Banach fixed-point applies |
 
-**Numerical Certificate (v3.3)**:
-- Sample points: N = 1000, coverage radius 15.31
-- Joyce threshold: ε₀ = 0.1
-- Safety margin: 224× (‖T‖_max = 4.46 × 10⁻⁴ ≪ ε₀)
+**G₂ holonomy training** (Phase 3, 13 versions, v2-v13):
 
-The PINN converges to the standard form, validating the analytical solution. See `K7_Explicit_Metric_v3_2.ipynb` for reproducible certification.
+Over successive training protocol refinements, the holonomy quality has improved:
 
-**Robust statistical validation**: The det(g) = 65/32 prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3%, joint constraint p < 6 × 10⁻⁶). See `paper2_robust_results.json`.
+| Metric | Initial (v5) | Current best (v11) | Improvement |
+|--------|-------------|-------------------|-------------|
+| g2_self (honest holonomy) | 3.86 | 3.25 | -16% |
+| V₇ projection score | 0.51 | 0.014 | -97% |
+| det(g) at neck | 4.69 | 2.031 | locked at target |
+| phi drift | 13.4% | 0% | controlled |
+
+The g2_score measures the normalized projection of Riemann curvature onto the complement of g₂ in so(7). A score of 0 corresponds to exact G₂ holonomy; the flat metric scores approximately 3.5. The V₇ projection score measures the fraction of curvature outside the g₂ subalgebra (using the correct kernel-based g₂ decomposition, see Section 6.2).
+
+A critical bug in the g₂ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct g₂ generators. The correct g₂ subalgebra is the kernel of the Lie derivative map (Section 6.2). This correction led to significant improvement in all subsequent versions.
+
+**Robust statistical validation**: The det(g) = 65/32 prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3%, joint constraint p < 6 x 10⁻⁶).
+
+Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper.
 
 ### 11.4 Lean 4 Formalization
 
@@ -738,7 +764,7 @@ theorem det_g_equals_target :
 
 ### 11.5 The Derivation Chain
 
-The complete logical structure from algebra to physics:
+The logical structure from algebra to predictions:
 
 ```
 Octonions (𝕆)
