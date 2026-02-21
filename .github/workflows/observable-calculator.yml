@@ -3,13 +3,13 @@ name: Observable Calculator
 on:
   push:
     paths:
-      - 'publications/markdown/*.md'
-      - 'statistical_validation/*.py'
+      - 'publications/papers/markdown/*.md'
+      - 'publications/validation/*.py'
       - '.github/scripts/observable_calculator.py'
   pull_request:
     paths:
-      - 'publications/markdown/*.md'
-      - 'statistical_validation/*.py'
+      - 'publications/papers/markdown/*.md'
+      - 'publications/validation/*.py'
   workflow_dispatch:
 
 jobs:

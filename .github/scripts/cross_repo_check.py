@@ -408,7 +408,7 @@ def main():
 
     # Paths
     repo_root = Path(__file__).parent.parent.parent
-    docs_dir = repo_root / 'publications' / 'markdown'
+    docs_dir = repo_root / 'publications' / 'papers' / 'markdown'
     core_dir = args.core_path
 
     if not docs_dir.exists():
