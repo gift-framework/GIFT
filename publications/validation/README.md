@@ -4,33 +4,43 @@ This module implements comprehensive Monte Carlo validation to assess whether th
 
 ## v3.3 Validation Results
 
-| Test | Configurations | Better than GIFT |
-|------|----------------|------------------|
-| Betti variations (b₂, b₃) | 100,000 | 0 |
-| Gauge group comparison | 8 | 0 |
-| Holonomy comparison | 4 | 0 |
-| Full combinatorial | 91,896 | 0 |
-| Local sensitivity | 441 | 0 |
-| **Total** | **192,349** | **0** |
+### Exhaustive Search (3,070,396 configs)
 
-**Result**: 0 / 192,349 better (3.9σ local significance)
+| Metric | Value |
+|--------|-------|
+| Configurations tested | 3,070,396 |
+| Better than GIFT | 0 |
+| 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁶] |
+
+### Bullet-Proof Analysis (7 components)
+
+| Component | Result |
+|-----------|--------|
+| Three null families | All p < 2×10⁻⁵ (σ > 4.2) |
+| Westfall-Young maxT | 11/33 significant (global p = 0.008) |
+| Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
+| Bayes factor (4 priors) | 304–4,738 (decisive) |
+| ΔWAIC | 550 (GIFT preferred) |
+| Robustness | Weight-invariant, no dominating observable |
+| Multi-seed replication | 10 seeds, cross-metric consistent |
 
 ## Quick Start
 
 ```bash
-# Run v3.3 validation (takes ~10 minutes)
-python3 validation_v33.py
+# Bullet-proof validation (7 components, ~15 seconds)
+python3 bulletproof_validation_v33.py
 
-# Results saved to validation_v33_results.json
+# Exhaustive search (3M+ configs, ~5 minutes)
+python3 exhaustive_validation_v33.py
 ```
 
 ## Key Findings
 
 1. **GIFT Mean Deviation**: 0.21% total / 0.22% dimensionless only (33 observables)
-2. **Alternative Mean Deviation**: 30.4%
-3. **Zero configurations** out of 192,349 beat GIFT
-4. **E₈×E₈ uniqueness**: Outperforms all gauge groups by 10x
-5. **G₂ necessity**: Calabi-Yau (SU(3)) fails by 5x
+2. **Zero configurations** out of 3,070,396 beat GIFT
+3. **E₈×E₈ uniqueness**: Outperforms all gauge groups by 21×
+4. **G₂ necessity**: Calabi-Yau (SU(3)) fails by 11×
+5. **Westfall-Young maxT**: 11/33 individually significant after correlation-aware FWER
 
 ## Observables Tested (33)
 
@@ -53,13 +63,13 @@ python3 validation_v33.py
 
 ```
 publications/validation/
-├── validation_v33.py                    # Main validation (33 observables)
+├── bulletproof_validation_v33.py        # 7-component bullet-proof validation
+├── exhaustive_validation_v33.py         # Exhaustive search (3M+ configs)
+├── validation_v33.py                    # Core module (formulas, experimental data)
 ├── comprehensive_statistics_v33.py      # Advanced statistical tests
-├── rigorous_validation_v33.py           # Chi-squared with uncertainties
 ├── riemann_rigorous_validation.py       # Riemann-GIFT connection tests
-├── validation_v33_results.json          # Complete results
-├── comprehensive_statistics_v33_results.json
-├── rigorous_validation_v33_results.json # Rigorous validation results
+├── bulletproof_validation_v33_results.json  # Bullet-proof results
+├── validation_v33_results.json          # Core results
 ├── GIFT_Statistical_Validation_Report_v33.md # v3.3 report
 ├── VALIDATION_SUMMARY_v33.md            # v3.3 summary
 ├── results/                             # Paper-specific results
@@ -109,4 +119,4 @@ See [STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md) for:
 
 ---
 
-**Version**: 3.3.0 (2026-01-12)
+**Version**: 3.3.18 (2026-02-21)

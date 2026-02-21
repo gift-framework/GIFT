@@ -133,16 +133,19 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 | 4 | 21 | 79 | 0.79% |
 | 5 | 21 | 75 | 0.81% |
 
-### Statistical Significance (v3.3 Monte Carlo)
+### Statistical Significance (Bullet-Proof Validation)
 
-- **Local significance**: 3.9σ (LEE-corrected: 1.1σ)
-- **Empirical p-value**: 0 / 3,070,396
-- **Total configurations tested**: 3,070,396 (Betti grid, holonomy, gauge groups, full discrete lattice, known G₂ manifolds)
-- **Better alternatives found**: 0
+| Test | Result |
+|------|--------|
+| Null model p-value | < 2×10⁻⁵ (σ > 4.2), three independent null families |
+| Westfall-Young maxT | 11/33 individually significant (global p = 0.008) |
+| Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
+| Bayes factor | 304–4,738 across four priors (all decisive) |
+| Exhaustive search | 0/3,070,396 configs better |
 
-GIFT occupies a **sharp minimum**: no tested alternative matches its precision.
+Seven-component analysis: pre-registration, three null families, multiple-testing corrections (Bonferroni/Holm/BH/Westfall-Young), cross-sector prediction, robustness/noise sensitivity, multi-seed replication, Bayesian (BF + PPC + WAIC).
 
-Details: [Validation Report](publications/validation/GIFT_Statistical_Validation_Report_v33.md)
+Details: [Statistical Evidence](publications/references/STATISTICAL_EVIDENCE.md)
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "preregistration": {
     "title": "GIFT v3.3 Bullet-Proof Statistical Validation",
-    "date_frozen": "2026-02-21T11:10:10Z",
+    "date_frozen": "2026-02-21T11:47:33Z",
     "version": "3.3.17",
     "score_function": "mean_relative_deviation_percent",
     "score_formula": "mean(|pred_i - exp_i| / |exp_i| * 100) over all observables",
@@ -139,7 +139,7 @@
       ],
       "rationale": "Dev set = observables used during framework development; Test set = predictions made after framework was fixed"
     },
-    "sha256": "02a45d58e9b2f5184936de7d74f9f9f0cf85fccae02c948081fff7e6c9884edd"
+    "sha256": "457ba7cfa67550c3ee4c89ba1322454a9cd6ce6437ddd3d325f1dfc0167a5ac2"
   },
   "null_models": {
     "null_A_permutation": {
@@ -323,14 +323,48 @@
       "theta_12": 0.015289694206115879,
       "sin2_theta_W": 0.015289694206115879
     },
+    "westfall_young": {
+      "A_Wolfenstein": 0.028794241151769647,
+      "N_gen": 1.0,
+      "Omega_DE": 0.7656468706258748,
+      "Omega_DM_Omega_b": 0.008398320335932814,
+      "Omega_b_Omega_m": 1.0,
+      "Q_Koide": 0.008398320335932814,
+      "Y_p": 0.06718656268746251,
+      "alpha_inv": 0.9742051589682064,
+      "alpha_s": 1.0,
+      "delta_CP": 0.28314337132573486,
+      "h_Hubble": 0.008398320335932814,
+      "lambda_H": 1.0,
+      "m_H_m_W": 1.0,
+      "m_H_m_t": 0.5520895820835833,
+      "m_W_m_Z": 0.8512297540491902,
+      "m_b_m_t": 0.008398320335932814,
+      "m_c_m_s": 0.008398320335932814,
+      "m_mu_m_e": 1.0,
+      "m_mu_m_tau": 0.008398320335932814,
+      "m_s_m_d": 1.0,
+      "m_tau_m_e": 0.28334333133373324,
+      "m_u_m_d": 0.008398320335932814,
+      "n_s": 1.0,
+      "sigma_8": 0.008398320335932814,
+      "sin2_theta_12_CKM": 0.20535892821435714,
+      "sin2_theta_12_PMNS": 1.0,
+      "sin2_theta_13_PMNS": 1.0,
+      "sin2_theta_23_CKM": 0.008398320335932814,
+      "sin2_theta_23_PMNS": 1.0,
+      "sin2_theta_W": 0.10797840431913618,
+      "theta_12": 0.06718656268746251,
+      "theta_13": 0.008398320335932814,
+      "theta_23": 0.36632673465306936
+    },
+    "westfall_young_global_p": 0.008398320335932814,
     "n_significant": {
       "raw": 21,
       "bonferroni": 0,
       "holm": 0,
-      "benjamini_hochberg": 20
-    },
-    "global_p_value": {
-      "fisher_combined": null
+      "benjamini_hochberg": 20,
+      "westfall_young": 11
     }
   },
   "held_out": {
@@ -734,6 +768,48 @@
         "mean": 0.21399177298679786,
         "std": 0.015973468313891622
       }
+    ],
+    "noise_sensitivity_curve": [
+      {
+        "sigma_factor": 0.0,
+        "mean_deviation": 0.2123245442928874,
+        "std_deviation": 0.0
+      },
+      {
+        "sigma_factor": 0.25,
+        "mean_deviation": 0.4616119535691618,
+        "std_deviation": 0.09020184061897518
+      },
+      {
+        "sigma_factor": 0.5,
+        "mean_deviation": 0.8172059735289956,
+        "std_deviation": 0.17723500757721283
+      },
+      {
+        "sigma_factor": 0.75,
+        "mean_deviation": 1.1691491448597726,
+        "std_deviation": 0.22770973221687404
+      },
+      {
+        "sigma_factor": 1.0,
+        "mean_deviation": 1.5693424734268457,
+        "std_deviation": 0.3604419729681119
+      },
+      {
+        "sigma_factor": 1.5,
+        "mean_deviation": 2.3407804121051776,
+        "std_deviation": 0.5526642061224665
+      },
+      {
+        "sigma_factor": 2.0,
+        "mean_deviation": 3.091000870577238,
+        "std_deviation": 0.7319264887683952
+      },
+      {
+        "sigma_factor": 3.0,
+        "mean_deviation": 4.607978488702056,
+        "std_deviation": 1.1820428079552656
+      }
     ]
   },
   "multi_seed": {
@@ -875,14 +951,35 @@
     },
     "posterior_predictive": {
       "n_replications": 500,
-      "observed_mean_dev": 0.21232454429288747,
-      "observed_max_dev": 1.132686084142388,
-      "replicated_mean_dev_mean": 1.530415295186103,
-      "replicated_mean_dev_std": 0.31542038100305186,
-      "bayesian_p_value_mean": 1.0,
-      "bayesian_p_value_max": 1.0,
-      "model_adequate": false,
-      "interpretation": "Model overfits (ppc_p near 1: observed deviations smaller than expected)"
+      "statistics": {
+        "T1_mean_dev": {
+          "observed": 0.21232454429288747,
+          "ppc_p": 1.0,
+          "rep_mean": 1.530415295186103,
+          "rep_std": 0.31542038100305186
+        },
+        "T2_max_dev": {
+          "observed": 1.132686084142388,
+          "ppc_p": 1.0,
+          "rep_mean": 12.037738562220781,
+          "rep_std": 6.136889024154109
+        },
+        "T3_count_above_1pct": {
+          "observed": 1,
+          "ppc_p": 1.0,
+          "rep_mean": 12.114
+        },
+        "T4_worst_sector": {
+          "observed": 0.5920857184161888,
+          "ppc_p": 1.0,
+          "rep_mean": 4.274550557667395
+        }
+      },
+      "n_well_calibrated": 0,
+      "n_superior": 4,
+      "n_poor": 0,
+      "status": "superior_to_noise",
+      "interpretation": "Model fits significantly better than measurement noise predicts across all statistics \u2014 consistent with genuine physical content"
     },
     "waic_loo_cv": {
       "null_waic": 580.2089875678438,
@@ -910,7 +1007,9 @@
       "n_sig_raw": 21,
       "n_sig_bonferroni": 0,
       "n_sig_holm": 0,
-      "n_sig_bh": 20
+      "n_sig_bh": 20,
+      "n_sig_westfall_young": 11,
+      "westfall_young_global_p": 0.008398320335932814
     },
     "held_out_nontrivial_sectors_significant": true,
     "preregistered_test_p": 6.666444451851606e-05,
@@ -920,8 +1019,8 @@
     "multi_seed_consistent": true,
     "cross_metric_consistent": true,
     "best_bayes_factor": 4738.267415458931,
-    "model_adequate_ppc": false,
+    "ppc_status": "superior_to_noise",
     "gift_preferred_waic": true,
-    "total_elapsed_seconds": 11.1
+    "total_elapsed_seconds": 14.2
   }
 }

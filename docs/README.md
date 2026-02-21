@@ -26,7 +26,7 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 - [S1: Foundations](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
 - [S2: Derivations](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md) - 33 dimensionless derivations
 - [S3: Dynamics](../publications/papers/markdown/GIFT_v3.3_S3_dynamics.md) - RG flow, torsional dynamics
-- [Observables CSV](../publications/references/39_observables.csv) - Machine-readable data
+- [Observables CSV](../publications/references/observables.csv) - Machine-readable data
 
 ## Exploratory References
 

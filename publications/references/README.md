@@ -11,7 +11,7 @@ Exploratory and reference documents for the GIFT framework v3.3.
 | File | Description |
 |------|-------------|
 | [GIFT_ATLAS.json](GIFT_ATLAS.json) | Structured atlas of all constants, predictions, and metadata (v3.3.18) |
-| [39_observables.csv](39_observables.csv) | Machine-readable observable data (39 entries) |
+| [observables.csv](observables.csv) | Machine-readable observable data (predictions + experimental values) |
 | [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities, v3.3.18) |
 
 ### Independent Validations
@@ -71,7 +71,7 @@ For the main framework documents, see [`../markdown/`](../markdown/):
 The **GIFT_ATLAS.json** is the canonical structured reference. When discrepancies exist between files:
 1. `GIFT_ATLAS.json` takes precedence for formulas and predicted values
 2. `OBSERVABLE_REFERENCE.md` has the broadest scope (51 quantities vs 33 in the atlas)
-3. `39_observables.csv` includes dimensional predictions not in the atlas
+3. `observables.csv` includes dimensional predictions not in the atlas
 
 **Known scope differences**:
 - The atlas covers 33 dimensionless predictions

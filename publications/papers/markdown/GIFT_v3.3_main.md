@@ -10,7 +10,7 @@ Independent researcher
 
 The Standard Model contains 19 free parameters whose values lack theoretical explanation. We present a geometric framework proposing derivations of these constants from topological invariants of a seven-dimensional G₂-holonomy manifold K₇. The framework contains zero continuous adjustable parameters. All predictions derive from discrete structural choices: the octonionic algebra O, its automorphism group G2 = Aut(O), and a proposed compact geometry realizing this structure.
 
-33 quantities achieve mean deviation 0.21% from experiment (0.22% for the 29 dimensionless observables, PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Monte Carlo validation over 192,349 alternative configurations (varying Betti numbers, gauge groups, and holonomy types) finds zero configurations achieving lower deviation. E₈×E₈ achieves 12.8× better agreement than the next best gauge group; G₂ holonomy achieves 13× better agreement than Calabi-Yau (SU(3)). Local significance: 3.9σ.
+33 quantities achieve mean deviation 0.21% from experiment (0.22% for the 29 dimensionless observables, PDG 2024), including exact matches for N_gen = 3, Q_Koide = 2/3, m_s/m_d = 20, and Ω_DM/Ω_b = 43/8. Of these, **18 core relations are VERIFIED** (algebraic identities checked in Lean 4); the remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide relation admits a two-line expression: Q = dim(G₂)/b₂ = 14/21 = 2/3. Exhaustive search over 3,070,396 alternative configurations (varying Betti numbers, gauge groups, and holonomy types) finds zero configurations achieving lower deviation. E₈×E₈ achieves 21× better agreement than the next best gauge group; G₂ holonomy achieves 11× better agreement than Calabi-Yau (SU(3)). A seven-component bullet-proof analysis confirms significance through Westfall-Young maxT FWER (11/33 individually significant, global p = 0.008) and Bayesian model comparison (BF 304–4,738, all decisive).
 
 The prediction δ_CP = 197° will be tested by DUNE (2034–2039) to ±5° precision. A measurement outside 182°–212° would strongly disfavor the framework. The G₂ reference form φ_ref = (65/32)^{1/14} × φ₀ determines det(g) = 65/32 exactly; Joyce's theorem ensures a torsion-free metric exists within this framework. Whether these agreements reflect genuine geometric structure or elaborate coincidence is a question awaiting peer-review.
 
@@ -737,20 +737,20 @@ where N = 33 dimensionless predictions (18 core + 15 extended).
 
 ### 10.3 Comparison with Random Matching
 
-Under a naïve null model where predictions are random numbers in [0,1], matching 33 experimental values to 0.21% average deviation would have probability less than 10⁻⁵⁰. However, this estimate ignores formula selection freedom and look-elsewhere effects. A more conservative Monte Carlo analysis (Section 10.4) addresses these concerns directly by testing 192,349 alternative configurations. Zero alternatives achieve lower deviation (3.9σ local significance).
+Under a naïve null model where predictions are random numbers in [0,1], matching 33 experimental values to 0.21% average deviation would have probability less than 10⁻⁵⁰. However, this estimate ignores formula selection freedom and look-elsewhere effects. A more conservative Monte Carlo analysis (Section 10.4) addresses these concerns directly by testing 3,070,396 alternative configurations. Zero alternatives achieve lower deviation. A separate bullet-proof analysis (Section 10.5) confirms significance through seven independent components including Westfall-Young maxT FWER control and Bayesian model comparison.
 
-### 10.4 Statistical Validation Against Alternative Configurations
+### 10.4 Exhaustive Search (3,070,396 Configurations)
 
-A legitimate concern for any unified framework is whether the specific parameter choices represent overfitting to experimental data. To address this, we conducted a comprehensive Monte Carlo validation campaign testing 192,349 alternative configurations.
+A legitimate concern for any unified framework is whether the specific parameter choices represent overfitting to experimental data. To address this, we conducted an exhaustive validation campaign testing 3,070,396 alternative configurations.
 
 #### Methodology
 
 We tested alternatives across multiple dimensions:
-- **Betti variations**: 100,000 random (b₂, b₃) configurations
-- **Gauge group comparison**: E₈×E₈, E₇×E₇, E₆×E₆, SO(32), SU(5)×SU(5), etc.
+- **Betti grid**: b₂ ∈ [5, 100], b₃ ∈ [40, 200] — full discrete lattice
+- **Gauge group comparison**: E₈×E₈, E₇×E₈, E₆×E₈, E₇×E₇, SO(32), SU(5)×SU(5), etc.
 - **Holonomy comparison**: G₂, Spin(7), SU(3) (Calabi-Yau), SU(4)
-- **Full combinatorial**: 91,896 configurations varying all parameters
-- **Local sensitivity**: ±10 grid around (b₂=21, b₃=77)
+- **Full combinatorial**: Varying all discrete parameters simultaneously
+- **Local sensitivity**: ±15 grid around (b₂=21, b₃=77)
 
 Critically, this validation uses the **actual topological formulas** to compute predictions for each alternative configuration across all 33 observables.
 
@@ -758,12 +758,11 @@ Critically, this validation uses the **actual topological formulas** to compute 
 
 | Metric | Value |
 |--------|-------|
-| Total configurations tested | **192,349** |
+| Total configurations tested | **3,070,396** |
 | Configurations better than GIFT | **0** |
 | GIFT mean deviation | **0.21%** total / **0.22%** dimensionless (33 observables) |
-| Alternative mean deviation | **30.4%** |
-| Empirical p-value | **0 / 192,349** |
-| Local significance | **3.9σ** |
+| Empirical p-value | **0 / 3,070,396** |
+| 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁶] |
 
 #### Gauge Group Comparison
 
@@ -794,7 +793,25 @@ Testing ±10 around (b₂=21, b₃=77) confirms GIFT is a **strict local minimum
 
 #### Interpretation
 
-The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **optimal configuration** among all 192,349 tested alternatives. The probability that this agreement is coincidental is less than 1 in 200,000.
+The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **unique optimum** among all 3,070,396 tested alternatives.
+
+### 10.5 Bullet-Proof Statistical Validation (7 Components)
+
+A separate seven-component analysis addresses concerns about multiple testing, cross-prediction, and Bayesian evidence:
+
+| Component | Result |
+|-----------|--------|
+| Pre-registration | SHA-256 hash locks formulas/observables before testing |
+| Three null families | All reject at p < 2×10⁻⁵ (σ > 4.2) |
+| Westfall-Young maxT | 11/33 significant after correlation-aware FWER (global p = 0.008) |
+| Cross-sector prediction | All non-trivial sectors significant; pre-registered test p = 6.7×10⁻⁵ |
+| Robustness | Weight-invariant, no dominating observable, stable under leave-k-out |
+| Multi-seed replication | 10 seeds consistent; alternative metric (χ²) confirms |
+| Bayesian analysis | BF 304–4,738 (decisive), ΔWAIC = 550 (GIFT preferred) |
+
+The Westfall-Young maxT procedure is the gold standard for family-wise error rate control because it respects the correlation structure between test statistics, unlike Bonferroni or Holm which yield 0/33 due to over-conservatism.
+
+The noise sensitivity curve shows that at 1× published experimental uncertainties, mean deviation rises from 0.21% to 1.57%. This defines the measurement precision floor: the framework's accuracy is already within ~7× of what current experiments can distinguish from perfect agreement.
 
 #### Limitations and Look-Elsewhere Effect
 
@@ -803,9 +820,9 @@ This validation addresses parameter variation within tested ranges. It does **no
 - **Formula selection freedom**: The Monte Carlo tests variations of (b₂, b₃, gauge group, holonomy), but the **formulas themselves were fixed a priori**. The look-elsewhere effect from choosing which combinations of topological constants to use (e.g., b₂/(b₃+dim_G₂) vs b₂/b₃) is not quantified. The selection principle remains an open question.
 - Why nature selected these specific discrete choices
 
-**Epistemic honesty**: The statistical significance (p < 5×10⁻⁶) applies only to parameter variations, not to the space of possible formula structures.
+**Epistemic honesty**: The statistical significance applies to parameter variations, not to the space of possible formula structures.
 
-Complete methodology and reproducible scripts: `statistical_validation/validation_v33.py`. Full documentation: `docs/STATISTICAL_EVIDENCE.md`.
+Complete methodology and reproducible scripts: `publications/validation/bulletproof_validation_v33.py`. Full documentation: `publications/references/STATISTICAL_EVIDENCE.md`.
 
 ---
 

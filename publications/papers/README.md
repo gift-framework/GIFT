@@ -24,7 +24,7 @@ publications/
 │   └── (7 Substack posts)
 │
 ├── references/                    # Data & reference catalogs
-│   ├── 39_observables.csv         # Machine-readable data
+│   ├── observables.csv            # Machine-readable data
 │   ├── OBSERVABLE_REFERENCE.md    # Complete observable catalog
 │   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
 │   ├── SPECULATIVE_PHYSICS.md     # Scale bridge, Yukawa, M-theory, QG
@@ -77,16 +77,17 @@ RG flow, torsional dynamics, scale bridge.
 
 ## Statistical Validation (v3.3)
 
-Comprehensive Monte Carlo validation across 192,349 configurations:
+Exhaustive search (3,070,396 configs) + seven-component bullet-proof analysis:
 
 | Metric | Value |
 |--------|-------|
-| Configurations tested | 192,349 |
+| Configurations tested | 3,070,396 |
 | Better alternatives | 0 |
-| Empirical p-value | 0 / 192,349 |
-| Local significance | 3.9σ |
+| Null model p-value | < 2×10⁻⁵ (σ > 4.2) |
+| Westfall-Young maxT | 11/33 significant (global p = 0.008) |
+| Bayes factor | 304–4,738 (decisive) |
 
-See [`validation/`](../validation/) for methodology and results.
+See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../references/STATISTICAL_EVIDENCE.md) for methodology.
 
 ---
 

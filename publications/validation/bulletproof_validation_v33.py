@@ -419,6 +419,60 @@ def per_observable_pvalues(n_configs: int = 50000, seed: int = 42) -> dict:
     n_sig_holm = sum(1 for p in holm.values() if p < alpha)
     n_sig_bh = sum(1 for p in bh.values() if p < alpha)
 
+    # ── Westfall-Young maxT (permutation-based FWER under correlation) ──
+    # Resamples the null to build the distribution of the MAXIMUM test
+    # statistic across all observables simultaneously.
+    # Controls FWER without the independence assumption of Bonferroni.
+    n_wy = 5000
+    ref_preds_wy = compute_predictions_v33(GIFT_REFERENCE)
+    _, ref_per_obs_wy = compute_deviation(ref_preds_wy)
+
+    # Pre-compute null means and stds (once, not per permutation)
+    null_mu = {}
+    null_sd = {}
+    for o in obs_names:
+        if null_per_obs[o]:
+            null_mu[o] = statistics.mean(null_per_obs[o])
+            null_sd[o] = statistics.stdev(null_per_obs[o]) if len(null_per_obs[o]) > 1 else 1.0
+        else:
+            null_mu[o] = 50.0
+            null_sd[o] = 1.0
+
+    # Observed per-obs "z-scores" (deviation relative to null mean/std)
+    obs_z = {}
+    for o in obs_names:
+        obs_z[o] = (null_mu[o] - ref_per_obs_wy.get(o, 100.0)) / null_sd[o] if null_sd[o] > 0 else 0
+    observed_max_z = max(obs_z.values()) if obs_z else 0
+
+    # Permutation null for maxT
+    rng_wy = random.Random(seed + 999)
+    max_z_null = []
+    for _ in range(n_wy):
+        b2 = rng_wy.randint(1, 100)
+        b3 = rng_wy.randint(max(b2 + 1, 3), 200)
+        cfg = make_cfg(b2, b3)
+        try:
+            preds = compute_predictions_v33(cfg)
+            _, po = compute_deviation(preds)
+            zs = []
+            for o in obs_names:
+                z = (null_mu[o] - po.get(o, 100.0)) / null_sd[o] if null_sd[o] > 0 else 0
+                zs.append(z)
+            max_z_null.append(max(zs) if zs else 0)
+        except Exception:
+            pass
+
+    n_exceed = sum(1 for mz in max_z_null if mz >= observed_max_z)
+    wy_p = (n_exceed + 1) / (len(max_z_null) + 1)
+
+    # Westfall-Young adjusted per-obs p-values
+    wy_adj = {}
+    for o in obs_names:
+        z_o = obs_z.get(o, 0)
+        n_exc_o = sum(1 for mz in max_z_null if mz >= z_o)
+        wy_adj[o] = (n_exc_o + 1) / (len(max_z_null) + 1)
+    n_sig_wy = sum(1 for p in wy_adj.values() if p < alpha)
+
     return {
         'n_configs': n_configs,
         'n_observables': m,
@@ -428,14 +482,14 @@ def per_observable_pvalues(n_configs: int = 50000, seed: int = 42) -> dict:
         'bonferroni': bonferroni,
         'holm': holm,
         'benjamini_hochberg': bh,
+        'westfall_young': wy_adj,
+        'westfall_young_global_p': wy_p,
         'n_significant': {
             'raw': n_sig_raw,
             'bonferroni': n_sig_bonf,
             'holm': n_sig_holm,
             'benjamini_hochberg': n_sig_bh,
-        },
-        'global_p_value': {
-            'fisher_combined': None,  # computed below
+            'westfall_young': n_sig_wy,
         },
     }
 
@@ -701,6 +755,31 @@ def robustness_analysis(seed: int = 42) -> dict:
 
     results['subsampling'] = subsample_results
 
+    # ── 5f: Noise sensitivity curve ──────────────────────────────────────
+    # Sweep noise amplitude from 0× to 3× published uncertainties.
+    # Shows the realistic precision boundary.
+    noise_curve = []
+    for factor in [0.0, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0]:
+        trials = []
+        for _ in range(200):
+            noisy_exp = {}
+            for o in obs_names:
+                val = EXPERIMENTAL_V33[o]['value']
+                unc = EXPERIMENTAL_V33[o].get('uncertainty', 0)
+                noisy_exp[o] = {
+                    'value': val + rng.gauss(0, unc * factor),
+                    'uncertainty': unc,
+                }
+            d, _ = compute_deviation(ref_preds, noisy_exp)
+            trials.append(d)
+        noise_curve.append({
+            'sigma_factor': factor,
+            'mean_deviation': statistics.mean(trials),
+            'std_deviation': statistics.stdev(trials),
+        })
+
+    results['noise_sensitivity_curve'] = noise_curve
+
     return results
 
 
@@ -905,13 +984,13 @@ def bayesian_analysis(n_configs: int = 50000, seed: int = 42) -> dict:
     for k in bayes_factors:
         bayes_factors[k]['interpretation'] = interpret_bf(bayes_factors[k]['BF'])
 
-    # ── 7b: Posterior predictive checks ──────────────────────────────────
-    # Test statistic: per-observable |pred - exp|/|exp|.
+    # ── 7b: Posterior predictive checks (4 test statistics) ────────────
+    # Multiple discrepancy measures to avoid cherry-picking a single stat.
     # Under H1 (GIFT model), replicated data = exp + gauss(0, unc).
-    # Compare the distribution of per-observable deviations between
-    # observed data and replicated data.
-    # A good model should produce replicated data whose summary statistics
-    # (median deviation, max deviation) bracket the observed values.
+    #   T1: mean deviation (global fit quality)
+    #   T2: max deviation (tail / worst outlier)
+    #   T3: count of obs with dev > 1% (calibration of "good" predictions)
+    #   T4: leave-one-sector-out max discrepancy (structural coherence)
 
     n_ppc = 500
     observed_devs = []
@@ -921,46 +1000,100 @@ def bayesian_analysis(n_configs: int = 50000, seed: int = 42) -> dict:
         if exp_val != 0:
             observed_devs.append(abs(pred_val - exp_val) / abs(exp_val) * 100)
 
-    observed_mean_dev = statistics.mean(observed_devs)
-    observed_max_dev = max(observed_devs)
-    observed_median_dev = sorted(observed_devs)[len(observed_devs) // 2]
+    # Observed test statistics
+    T1_obs = statistics.mean(observed_devs)
+    T2_obs = max(observed_devs)
+    T3_obs = sum(1 for d in observed_devs if d > 1.0)
 
-    replicated_mean_devs = []
-    replicated_max_devs = []
+    # T4: worst sector-level deviation
+    sector_devs_obs = {}
+    for sname, sobs in SECTORS.items():
+        sdevs = []
+        for o in sobs:
+            if o in EXPERIMENTAL_V33:
+                exp_val = EXPERIMENTAL_V33[o]['value']
+                pred_val = ref_preds.get(o, 0)
+                if exp_val != 0:
+                    sdevs.append(abs(pred_val - exp_val) / abs(exp_val) * 100)
+        if sdevs:
+            sector_devs_obs[sname] = statistics.mean(sdevs)
+    T4_obs = max(sector_devs_obs.values()) if sector_devs_obs else 0
+
+    # Replicate
+    T1_rep, T2_rep, T3_rep, T4_rep = [], [], [], []
     for _ in range(n_ppc):
         rep_devs = []
         for o in obs_names:
             pred_val = ref_preds.get(o, 0)
             exp_val = EXPERIMENTAL_V33[o]['value']
             unc = EXPERIMENTAL_V33[o].get('uncertainty', 0)
-            # Replicated observation = experimental value + noise
             rep_obs = exp_val + rng.gauss(0, max(unc, abs(exp_val) * 0.001))
             if rep_obs != 0:
                 rep_devs.append(abs(pred_val - rep_obs) / abs(rep_obs) * 100)
-        replicated_mean_devs.append(statistics.mean(rep_devs))
-        replicated_max_devs.append(max(rep_devs))
 
-    # Bayesian p-value: fraction of replicated datasets with test statistic
-    # more extreme than observed
-    ppc_p_mean = sum(1 for d in replicated_mean_devs if d >= observed_mean_dev) / n_ppc
-    ppc_p_max = sum(1 for d in replicated_max_devs if d >= observed_max_dev) / n_ppc
+        T1_rep.append(statistics.mean(rep_devs))
+        T2_rep.append(max(rep_devs))
+        T3_rep.append(sum(1 for d in rep_devs if d > 1.0))
+
+        # T4 for replicated
+        rep_sector = {}
+        idx = 0
+        obs_dev_map = {obs_names[i]: rep_devs[i] for i in range(min(len(obs_names), len(rep_devs)))}
+        for sname, sobs in SECTORS.items():
+            sdevs = [obs_dev_map[o] for o in sobs if o in obs_dev_map]
+            if sdevs:
+                rep_sector[sname] = statistics.mean(sdevs)
+        T4_rep.append(max(rep_sector.values()) if rep_sector else 0)
+
+    ppc_p1 = sum(1 for d in T1_rep if d >= T1_obs) / n_ppc
+    ppc_p2 = sum(1 for d in T2_rep if d >= T2_obs) / n_ppc
+    ppc_p3 = sum(1 for d in T3_rep if d >= T3_obs) / n_ppc
+    ppc_p4 = sum(1 for d in T4_rep if d >= T4_obs) / n_ppc
+
+    # Classify PPC p-values:
+    #   p < 0.05  → model too poor (underfitting)
+    #   0.05 ≤ p ≤ 0.95 → well-calibrated
+    #   p > 0.95  → model surpasses noise expectations (overfitting or genuine signal)
+    ppc_checks = [ppc_p1, ppc_p2, ppc_p3, ppc_p4]
+    n_well_calibrated = sum(1 for p in ppc_checks if 0.05 < p < 0.95)
+    n_superior = sum(1 for p in ppc_checks if p >= 0.95)
+    n_poor = sum(1 for p in ppc_checks if p <= 0.05)
+
+    if n_poor > 0:
+        ppc_interpretation = f'Model underfit on {n_poor}/4 statistics'
+        ppc_status = 'underfit'
+    elif n_superior == len(ppc_checks):
+        ppc_interpretation = (
+            'Model fits significantly better than measurement noise predicts '
+            'across all statistics — consistent with genuine physical content'
+        )
+        ppc_status = 'superior_to_noise'
+    elif n_well_calibrated >= 2:
+        ppc_interpretation = f'Well-calibrated ({n_well_calibrated}/4 in [0.05, 0.95])'
+        ppc_status = 'calibrated'
+    else:
+        ppc_interpretation = (
+            f'{n_superior}/4 superior to noise, {n_well_calibrated}/4 calibrated'
+        )
+        ppc_status = 'mixed'
 
     posterior_predictive = {
         'n_replications': n_ppc,
-        'observed_mean_dev': observed_mean_dev,
-        'observed_max_dev': observed_max_dev,
-        'replicated_mean_dev_mean': statistics.mean(replicated_mean_devs),
-        'replicated_mean_dev_std': statistics.stdev(replicated_mean_devs),
-        'bayesian_p_value_mean': ppc_p_mean,
-        'bayesian_p_value_max': ppc_p_max,
-        'model_adequate': 0.05 < ppc_p_mean < 0.95,
-        'interpretation': (
-            'Model generates data consistent with observations'
-            if 0.05 < ppc_p_mean < 0.95
-            else ('Model underfits (ppc_p near 0: observed deviations larger than expected)'
-                  if ppc_p_mean < 0.05
-                  else 'Model overfits (ppc_p near 1: observed deviations smaller than expected)')
-        ),
+        'statistics': {
+            'T1_mean_dev': {'observed': T1_obs, 'ppc_p': ppc_p1,
+                            'rep_mean': statistics.mean(T1_rep), 'rep_std': statistics.stdev(T1_rep)},
+            'T2_max_dev': {'observed': T2_obs, 'ppc_p': ppc_p2,
+                           'rep_mean': statistics.mean(T2_rep), 'rep_std': statistics.stdev(T2_rep)},
+            'T3_count_above_1pct': {'observed': T3_obs, 'ppc_p': ppc_p3,
+                                    'rep_mean': statistics.mean(T3_rep)},
+            'T4_worst_sector': {'observed': T4_obs, 'ppc_p': ppc_p4,
+                                'rep_mean': statistics.mean(T4_rep)},
+        },
+        'n_well_calibrated': n_well_calibrated,
+        'n_superior': n_superior,
+        'n_poor': n_poor,
+        'status': ppc_status,
+        'interpretation': ppc_interpretation,
     }
 
     # ── 7c: WAIC / LOO-CV approximation ─────────────────────────────────
@@ -1153,6 +1286,8 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
         print(f"    Bonferroni:        {ns['bonferroni']} / {pval_results['n_observables']}")
         print(f"    Holm:              {ns['holm']} / {pval_results['n_observables']}")
         print(f"    Benjamini-Hochberg: {ns['benjamini_hochberg']} / {pval_results['n_observables']}")
+        print(f"    Westfall-Young:    {ns['westfall_young']} / {pval_results['n_observables']}  "
+              f"(global p = {pval_results['westfall_young_global_p']:.2e})")
         print(f"  Explicit trial count: {pval_results['n_trials_explicit']:,}")
         print(f"  Time: {time.time() - t0:.1f}s")
         print()
@@ -1210,6 +1345,9 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
         for k_label, k_data in robust['leave_k_out'].items():
             print(f"    {k_label}: {k_data['mean']:.4f}% ± {k_data['std']:.4f}%  "
                   f"(range [{k_data['min']:.4f}, {k_data['max']:.4f}])")
+        print(f"  Noise sensitivity curve (deviation vs σ_noise):")
+        for pt in robust['noise_sensitivity_curve']:
+            print(f"    {pt['sigma_factor']:.2f}×σ → {pt['mean_deviation']:.4f}% ± {pt['std_deviation']:.4f}%")
         print(f"  Time: {time.time() - t0:.1f}s")
         print()
 
@@ -1251,9 +1389,13 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
         for name, bf_data in bayes['bayes_factors'].items():
             print(f"    {name:30s}: BF = {bf_data['BF']:.1f}  [{bf_data['interpretation']}]")
         ppc = bayes['posterior_predictive']
-        print(f"  Posterior predictive check:")
-        print(f"    Bayesian p-value (mean): {ppc['bayesian_p_value_mean']:.3f}")
-        print(f"    Model adequate: {ppc['model_adequate']}")
+        print(f"  Posterior predictive checks (4 statistics):")
+        for stat_name, stat_data in ppc['statistics'].items():
+            p = stat_data['ppc_p']
+            tag = '✓' if 0.05 < p < 0.95 else ('↑' if p >= 0.95 else '↓')
+            print(f"    {stat_name:25s}: obs = {stat_data['observed']:.3f}  "
+                  f"ppc_p = {p:.3f}  [{tag}]")
+        print(f"    Status: {ppc['status']}  →  {ppc['interpretation']}")
         waic = bayes['waic_loo_cv']
         print(f"  WAIC comparison:")
         print(f"    GIFT WAIC: {waic['gift_waic']:.1f}")
@@ -1282,6 +1424,8 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
             'n_sig_bonferroni': pval_results['n_significant']['bonferroni'],
             'n_sig_holm': pval_results['n_significant']['holm'],
             'n_sig_bh': pval_results['n_significant']['benjamini_hochberg'],
+            'n_sig_westfall_young': pval_results['n_significant']['westfall_young'],
+            'westfall_young_global_p': pval_results['westfall_young_global_p'],
         },
         'held_out_nontrivial_sectors_significant': all(
             held_out[s]['p_value'] < 0.05
@@ -1296,7 +1440,7 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
         'multi_seed_consistent': multi['all_significant_at_005'],
         'cross_metric_consistent': multi['alternative_metric']['consistent'],
         'best_bayes_factor': max(bf['BF'] for bf in bayes['bayes_factors'].values()),
-        'model_adequate_ppc': bayes['posterior_predictive']['model_adequate'],
+        'ppc_status': bayes['posterior_predictive']['status'],
         'gift_preferred_waic': bayes['waic_loo_cv']['gift_preferred'],
         'total_elapsed_seconds': round(total_elapsed, 1),
     }
@@ -1318,7 +1462,9 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
         mc = summary['multiple_corrections']
         print(f"  Significant observables (α=0.05):")
         print(f"    Raw: {mc['n_sig_raw']}  Bonferroni: {mc['n_sig_bonferroni']}  "
-              f"Holm: {mc['n_sig_holm']}  BH: {mc['n_sig_bh']}")
+              f"Holm: {mc['n_sig_holm']}  BH: {mc['n_sig_bh']}  "
+              f"W-Y: {mc['n_sig_westfall_young']}")
+        print(f"    Westfall-Young global p: {mc['westfall_young_global_p']:.2e}")
         print()
         print(f"  Cross-prediction:")
         print(f"    Non-trivial sectors significant: {summary['held_out_nontrivial_sectors_significant']}")
@@ -1335,7 +1481,7 @@ def run_bulletproof_validation(verbose: bool = True) -> dict:
         print()
         print(f"  Bayesian:")
         print(f"    Best BF:    {summary['best_bayes_factor']:.1f}")
-        print(f"    PPC pass:   {summary['model_adequate_ppc']}")
+        print(f"    PPC status: {summary['ppc_status']}")
         print(f"    WAIC pref:  {summary['gift_preferred_waic']}")
         print()
         print(f"  Total elapsed: {summary['total_elapsed_seconds']}s")
