@@ -818,7 +818,6 @@ The author declares no competing interests.
 [36] G. Kane, *String Theory and the Real World* (2017)
 [37] J. Distler, S. Garibaldi, Commun. Math. Phys. 298, 419 (2010)
 [38] J.C. Baez, "Octonions and the Standard Model," math.ucr.edu/home/baez/standard/ (2020-2025)
-[39] Springer Nature, "Artificial intelligence (AI) policy," www.springernature.com/gp/policies (2024)
 
 ---
 
