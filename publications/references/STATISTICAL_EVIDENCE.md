@@ -1,8 +1,8 @@
 # GIFT Statistical Evidence
 
-**Version**: 3.3 (Rigorous Analysis)
-**Validation Date**: January 2026
-**Script**: `statistical_validation/rigorous_validation_v33.py`
+**Version**: 3.3.17 (Rigorous Analysis, θ₂₃ corrected)
+**Validation Date**: February 2026
+**Script**: `statistical_validation/rigorous_validation_v33.py`, `statistical_validation/exhaustive_validation_v33.py`
 
 ---
 
@@ -13,25 +13,25 @@
 | Tier | Observables | Threshold | Interpretation |
 |------|-------------|-----------|----------------|
 | Excellent | 14/33 (42%) | < 0.1% | Precision match |
-| Good | 28/33 (85%) | < 1% | Strong agreement |
-| Acceptable | 32/33 (97%) | < 5% | Within tolerance |
-| Needs work | 1/33 (3%) | > 5% | θ₂₃ only |
+| Good | 29/33 (88%) | < 1% | Strong agreement |
+| Acceptable | 33/33 (100%) | < 5% | Within tolerance |
+| Needs work | 0/33 (0%) | > 5% | None (θ₂₃ corrected in v3.3.17) |
 
 ### Key Metrics
 
 | Metric | Value |
 |--------|-------|
-| **Mean deviation** | **1.01%** |
-| **Configs tested** | 200,960 |
+| **Mean deviation** | **0.41%** |
+| **Configs tested** | 3,070,396 |
 | **Better than GIFT** | **0** |
 | **p-value** | < 10⁻⁵ |
 
 ### Interpretation
 
-- **97% of predictions** agree with experiment within 5%
-- **85% of predictions** agree within 1%
-- **Only 1 observable** (θ₂₃^PMNS) requires formula refinement
-- GIFT is **uniquely optimal** among all tested configurations
+- **100% of predictions** agree with experiment within 5%
+- **88% of predictions** agree within 1%
+- **No observables** require formula refinement (θ₂₃ corrected in v3.3.17)
+- GIFT is **uniquely optimal** among all 3,070,396 tested configurations
 
 ---
 
@@ -60,7 +60,7 @@ The relative deviation shows these are excellent predictions (~0.1%), while pull
 
 - **Clopper-Pearson CI**: Conservative exact confidence intervals
 - **LEE correction**: Look-Elsewhere Effect adjustment
-- **Monte Carlo**: 200,960 random configurations tested
+- **Monte Carlo**: 3,070,396 configurations tested (exhaustive search)
 
 ---
 
@@ -74,13 +74,13 @@ All 33 observables are **dimensionless** by construction (ratios, angles, counts
 | Electroweak | 4 | 0.36% | 0.90% | 1/4 | 4/4 | 4/4 | OK |
 | Lepton Mass Ratios | 4 | 0.06% | 0.12% | 2/4 | 4/4 | 4/4 | OK |
 | Quark Mass Ratios | 4 | 0.34% | 1.21% | 2/4 | 3/4 | 4/4 | OK |
-| **PMNS Mixing** | 7 | 3.78% | 20.0% | 3/7 | 4/7 | 6/7 | **REVIEW** |
+| PMNS Mixing | 7 | 0.94% | 4.81% | 3/7 | 5/7 | 7/7 | OK |
 | CKM Mixing | 3 | 0.74% | 1.50% | 0/3 | 2/3 | 3/3 | OK |
 | Boson Mass Ratios | 3 | 0.12% | 0.29% | 2/3 | 3/3 | 3/3 | OK |
 | Cosmological | 7 | 0.19% | 0.48% | 3/7 | 7/7 | 7/7 | OK |
-| **TOTAL** | **33** | **1.01%** | — | 14/33 | 28/33 | 32/33 | — |
+| **TOTAL** | **33** | **0.41%** | — | 14/33 | 29/33 | 33/33 | — |
 
-**Summary**: 7/8 categories have <1% mean deviation. Only PMNS mixing needs θ₂₃ formula revision.
+**Summary**: 8/8 categories have <5% mean deviation. θ₂₃ formula was corrected in v3.3.17 (arcsin((b₃−p₂)/H*) = 49.25°).
 
 ---
 
@@ -107,10 +107,11 @@ All 33 observables are **dimensionless** by construction (ratios, angles, counts
 
 **Mean: 0.02%**
 
-### 3.2 Tier 2: Good (0.1% - 1%) — 14 observables
+### 3.2 Tier 2: Good (0.1% - 1%) — 15 observables
 
 | Observable | Predicted | Experimental | Rel. Dev. |
 |------------|-----------|--------------|-----------|
+| θ₂₃^PMNS | 49.25° | 49.3° ± 1.3° | 0.10% |
 | m_μ/m_τ | 0.0595 | 0.0595 | 0.11% |
 | m_μ/m_e | 207.01 | 206.77 | 0.12% |
 | m_c/m_s | 11.71 | 11.7 ± 0.4 | 0.12% |
@@ -126,7 +127,7 @@ All 33 observables are **dimensionless** by construction (ratios, angles, counts
 | Ω_b/Ω_m | 0.156 | 0.157 ± 0.004 | 0.48% |
 | α_s | 0.117 | 0.118 ± 0.0009 | 0.90% |
 
-**Mean: 0.31%**
+**Mean: 0.30%**
 
 ### 3.3 Tier 3: Moderate (1% - 5%) — 4 observables
 
@@ -139,13 +140,9 @@ All 33 observables are **dimensionless** by construction (ratios, angles, counts
 
 **Mean: 2.2%**
 
-### 3.4 Tier 4: Needs Refinement (> 5%) — 1 observable
+### 3.4 Tier 4: Needs Refinement (> 5%) — 0 observables
 
-| Observable | Predicted | Experimental | Rel. Dev. |
-|------------|-----------|--------------|-----------|
-| θ₂₃^PMNS | 59.2° | 49.3° ± 1.3° | **20.0%** |
-
-**Note**: The θ₂₃ formula requires revision. This is the only observable with significant disagreement.
+No observables in this tier. The θ₂₃ formula was corrected in v3.3.17: arcsin((b₃−p₂)/H*) = arcsin(25/33) = 49.25° (0.10% deviation, moved to Tier 2).
 
 ---
 
@@ -165,22 +162,22 @@ All 33 observables are **dimensionless** by construction (ratios, angles, counts
 
 | Rank | Gauge Group | Mean Dev. |
 |------|-------------|-----------|
-| **1** | **E₈×E₈** | **1.01%** |
+| **1** | **E₈×E₈** | **0.41%** |
 | 2 | E₇×E₈ | 8.8% |
 | 3 | E₆×E₈ | 15.5% |
 
-E₈×E₈ achieves **8x better** agreement than alternatives.
+E₈×E₈ achieves **21× better** agreement than the next best alternative.
 
 ### 4.3 Holonomy Group Comparison
 
 | Rank | Holonomy | dim | Mean Dev. |
 |------|----------|-----|-----------|
-| **1** | **G₂** | 14 | **1.01%** |
+| **1** | **G₂** | 14 | **0.41%** |
 | 2 | SU(4) | 15 | 1.5% |
 | 3 | SU(3) | 8 | 4.4% |
 | 4 | Spin(7) | 21 | 5.4% |
 
-G₂ achieves **4x better** agreement than Calabi-Yau (SU(3)).
+G₂ achieves **11× better** agreement than Calabi-Yau (SU(3)).
 
 ### 4.4 Local Optimality
 
@@ -219,9 +216,9 @@ Working formulas have factors of 7 that cancel:
 
 ### 6.1 What This Validation Shows
 
-1. **Relative optimality**: GIFT (b₂=21, b₃=77) is optimal among 200,960 tested configurations
-2. **High agreement**: 97% of predictions within 5%, 85% within 1%
-3. **Single outlier**: Only θ₂₃^PMNS requires formula revision
+1. **Relative optimality**: GIFT (b₂=21, b₃=77) is optimal among 3,070,396 tested configurations
+2. **High agreement**: 100% of predictions within 5%, 88% within 1%
+3. **No outliers**: All observables within 5% (θ₂₃ corrected in v3.3.17)
 
 ### 6.2 What This Validation Does NOT Show
 
@@ -229,9 +226,9 @@ Working formulas have factors of 7 that cancel:
 2. **Physical correctness**: Statistical agreement ≠ physical truth
 3. **Completeness**: Only TCS G₂-manifolds tested
 
-### 6.3 The θ₂₃ Problem
+### 6.3 The θ₂₃ Correction (v3.3.17)
 
-The θ₂₃^PMNS formula predicts 59° vs experimental 49° (20% deviation). This is a genuine disagreement requiring theoretical work, not a precision issue.
+The θ₂₃^PMNS formula was corrected in v3.3.17. The old formula (arcsin((rank(E₈)+b₃)/H*) = 59.2°) had 20% deviation. The new formula (arcsin((b₃−p₂)/H*) = arcsin(25/33) = 49.25°) achieves 0.10% deviation. See CHANGELOG.md for details.
 
 ---
 
@@ -265,25 +262,25 @@ python3 rigorous_validation_v33.py
 
 ### Primary Finding
 
-GIFT achieves **1.01% mean deviation** across 33 observables using physics-standard relative deviation metric. Among 200,960 tested configurations, **zero** perform better.
+GIFT achieves **0.41% mean deviation** across 33 observables using physics-standard relative deviation metric. Among 3,070,396 tested configurations, **zero** perform better.
 
 ### Statistical Summary
 
 | Metric | Value |
 |--------|-------|
 | Within 0.1% | 42% (14/33) |
-| Within 1% | **85%** (28/33) |
-| Within 5% | **97%** (32/33) |
-| Mean deviation | **1.01%** |
-| Configs tested | 200,960 |
+| Within 1% | **88%** (29/33) |
+| Within 5% | **100%** (33/33) |
+| Mean deviation | **0.41%** |
+| Configs tested | 3,070,396 |
 | Better than GIFT | 0 |
 | p-value | < 10⁻⁵ |
 
 ### Honest Assessment
 
-The GIFT framework achieves remarkable agreement with experiment:
-- **85% of predictions** match within 1%
-- **Only 1 observable** (θ₂₃) needs formula revision
+The GIFT framework achieves notable agreement with experiment:
+- **88% of predictions** match within 1%
+- **No observables** require formula revision (θ₂₃ corrected in v3.3.17)
 - GIFT is **uniquely optimal** in the tested parameter space
 
 ---
@@ -298,5 +295,5 @@ The GIFT framework achieves remarkable agreement with experiment:
 
 ---
 
-*GIFT Framework v3.3 — Rigorous Statistical Evidence*
-*Validation: January 2026 | 200,960 configurations | Mean deviation: 1.01%*
+*GIFT Framework v3.3.17 — Rigorous Statistical Evidence*
+*Validation: February 2026 | 3,070,396 configurations | Mean deviation: 0.41%*

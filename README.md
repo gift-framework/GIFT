@@ -13,7 +13,7 @@
 | | |
 |---|---|
 | **Precision** | 0.21% mean deviation across 33 predictions (0.22% dimensionless only, PDG 2024) |
-| **Uniqueness** | #1 out of 192,349 configurations tested (3.9σ local significance) |
+| **Uniqueness** | #1 out of 3,070,396 configurations tested (3.9σ local significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
 | **Verified** | 290+ relations proven in Lean 4 (core v3.3.17) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
@@ -117,11 +117,11 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 | Metric | Value |
 |--------|-------|
-| Configurations tested | 192,349 |
+| Configurations tested | 3,070,396 |
 | **GIFT rank** | **#1** |
 | GIFT mean deviation | 0.21% total / 0.22% dimensionless (PDG 2024) |
 | Better alternatives found | 0 |
-| p-value (empirical) | 0 / 192,349 |
+| p-value (empirical) | 0 / 3,070,396 |
 
 ### Top 5 Configurations
 
@@ -136,8 +136,8 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 ### Statistical Significance (v3.3 Monte Carlo)
 
 - **Local significance**: 3.9σ (LEE-corrected: 1.1σ)
-- **Empirical p-value**: 0 / 192,349
-- **Total configurations tested**: 192,349 (Betti, holonomy, structural variations)
+- **Empirical p-value**: 0 / 3,070,396
+- **Total configurations tested**: 3,070,396 (Betti grid, holonomy, gauge groups, full discrete lattice, known G₂ manifolds)
 - **Better alternatives found**: 0
 
 GIFT occupies a **sharp minimum**: no tested alternative matches its precision.
@@ -170,7 +170,7 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 
 These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices — it does not explain *why* nature chose this geometry.
 
-**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 192,349 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
+**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,070,396 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
 
 ### Why Not Numerology?
 
