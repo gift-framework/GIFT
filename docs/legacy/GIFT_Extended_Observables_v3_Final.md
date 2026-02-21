@@ -37,29 +37,29 @@
 
 | Symbol | Value | Definition | mod 7 | Factor |
 |--------|-------|------------|-------|--------|
-| b₀ | 1 | Zeroth Betti | 1 | — |
-| p₂ | 2 | Duality | 2 | — |
-| N_gen | 3 | Generations | 3 | — |
-| Weyl | 5 | Weyl factor | 5 | — |
+| b₀ | 1 | Zeroth Betti | 1 |, |
+| p₂ | 2 | Duality | 2 |, |
+| N_gen | 3 | Generations | 3 |, |
+| Weyl | 5 | Weyl factor | 5 |, |
 | dim(K₇) | 7 | Compact dim | **0** | 7 |
-| rank(E₈) | 8 | E₈ rank | 1 | — |
-| D_bulk | 11 | Bulk dim | 4 | — |
-| α_sum | 13 | Anomaly | 6 | — |
+| rank(E₈) | 8 | E₈ rank | 1 |, |
+| D_bulk | 11 | Bulk dim | 4 |, |
+| α_sum | 13 | Anomaly | 6 |, |
 | dim(G₂) | 14 | Holonomy | **0** | 2×7 |
 | b₂ | 21 | 2nd Betti | **0** | 3×7 |
-| dim(J₃(𝕆)) | 27 | Jordan alg | 6 | — |
+| dim(J₃(𝕆)) | 27 | Jordan alg | 6 |, |
 | det(g)_den | 32 | Metric den | 4 | 2⁵ |
 | 2b₂ | 42 | Structural inv | **0** | 6×7 |
-| dim(F₄) | 52 | F₄ dim | 3 | — |
+| dim(F₄) | 52 | F₄ dim | 3 |, |
 | fund(E₇) | 56 | E₇ fund rep | **0** | 8×7 |
 | κ_T | 61 | Torsion inv | 5 | prime |
 | det(g)_num | 65 | Metric num | 2 | 5×13 |
 | b₃ | 77 | 3rd Betti | **0** | 11×7 |
-| dim(E₆) | 78 | E₆ dim | 1 | — |
+| dim(E₆) | 78 | E₆ dim | 1 |, |
 | H* | 99 | Total cohom | 1 | 9×11 |
 | PSL(2,7) | 168 | Fano sym | **0** | 24×7 |
-| dim(E₈) | 248 | E₈ dim | 3 | — |
-| dim(E₈×E₈) | 496 | Gauge dim | 6 | — |
+| dim(E₈) | 248 | E₈ dim | 3 |, |
+| dim(E₈×E₈) | 496 | Gauge dim | 6 |, |
 
 ### 1.2 The Fano Structure
 
@@ -114,7 +114,7 @@ N_gen = |PSL(2,7)| / fund(E₇) = 168 / 56 = 3
 
 The number of generations = Fano plane symmetry order / E₇ representation dimension.
 
-This is **not numerology** — it's the octonionic Fano structure manifesting in particle generations.
+This is **not numerology**, it's the octonionic Fano structure manifesting in particle generations.
 
 ---
 
@@ -138,7 +138,7 @@ This is **not numerology** — it's the octonionic Fano structure manifesting in
 | sin²θ₁₂ | 0.307±0.013 | (b₀+N_gen)/α_sum = **4/13** | 0.3077 | 0.23% | 21 |
 | sin²θ₂₃ | 0.546±0.021 | (D_bulk-Weyl)/D_bulk = **6/11** | 0.5455 | 0.10% | 13 |
 | sin²θ₁₃ | 0.0220±0.0007 | D_bulk/dim_E₈² = **11/496** | 0.0222 | 0.81% | 5 |
-| δ_CP | 197°±25° | Topological | 197° | exact | — |
+| δ_CP | 197°±25° | Topological | 197° | exact |, |
 
 **Physical interpretation**: PMNS angles encode bulk/gauge geometry relationships.
 
@@ -159,7 +159,7 @@ This is **not numerology** — it's the octonionic Fano structure manifesting in
 | Observable | Experimental | GIFT | Value | Dev | # Expr |
 |------------|--------------|------|-------|-----|--------|
 | m_μ/m_τ | 0.0595±0.0003 | (b₂-D_bulk)/PSL27 = **10/168** | 0.0595 | 0.04% | 9 |
-| m_e/m_μ | 0.00484 | (existing) | — | — | — |
+| m_e/m_μ | 0.00484 | (existing) | (|) |, |
 
 ### 3.5 Boson Mass Ratios
 
@@ -297,7 +297,7 @@ Observables should be **Fano-invariant**: independent of the specific 7-fold str
 | Boson masses | 3 | 0.13% | m_H/m_W (0.02%) |
 | CKM | 4 | 0.59% | A_Wolf (0.29%) |
 | Cosmology | 11 | 0.16% | Ω_DM/Ω_b (0.00%) |
-| **Total** | **33** | **0.21%** | — |
+| **Total** | **33** | **0.21%** |, |
 
 ### 7.2 Deviation Distribution
 

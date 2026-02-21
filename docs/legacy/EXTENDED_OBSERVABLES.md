@@ -302,4 +302,4 @@ Discrepancy: 0.86%. Possible interpretations:
 
 ---
 
-*GIFT Framework v3.3 — Extended Observables & Structural Inevitability*
+*GIFT Framework v3.3: Extended Observables & Structural Inevitability*

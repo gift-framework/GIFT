@@ -821,7 +821,7 @@ The K₇ topology (b₂=21, b₃=77) is embedded in a rich mathematical structur
 |----------|-------------|-------------|----------------|
 | det(g) | 2.031250 | 65/32 = 2.03125 | < 10⁻⁶ |
 | ‖T‖_max | 0.000446 | < 0.1 (Joyce) | 224× margin |
-| ‖T‖_mean | 0.000098 | — | — |
+| ‖T‖_mean | 0.000098 | (|) |
 | b₂ | 21 (spectral) | 21 (topological) | Exact |
 | b₃ | 76 (spectral) | 77 (topological) | Δ = 1 |
 | Lipschitz L | ~10⁻⁵ (empirical) | < 1 | Conservative |

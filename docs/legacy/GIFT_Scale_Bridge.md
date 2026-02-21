@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-The "scale bridge" problem — deriving absolute masses from GIFT's dimensionless ratios — is solved by a single topological formula:
+The "scale bridge" problem (deriving absolute masses from GIFT's dimensionless ratios) is solved by a single topological formula:
 
 $$\boxed{m_e = M_{Pl} \times \exp\left(-(H^* - L_8 - \ln(\phi))\right)}$$
 

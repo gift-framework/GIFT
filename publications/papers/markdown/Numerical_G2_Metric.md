@@ -21,14 +21,14 @@ to 9 significant digits. Spectral analysis via Monte Carlo Galerkin
 establishes baseline eigenvalue structure on T⁷ and demonstrates that
 local G₂ constraints alone cannot determine global spectral properties.
 We then introduce a 3-chart atlas prototype inspired by the Twisted
-Connected Sum (TCS) construction, enforcing overlap consistency —
-including a non-trivial Kovalev twist — via Schwarz-type iteration.
+Connected Sum (TCS) construction, enforcing overlap consistency
+(including a non-trivial Kovalev twist) via Schwarz-type iteration.
 The atlas achieves machine-precision interface matching and produces
 a qualitatively different low-lying Laplace spectrum compared to the
 single-chart torus baseline.
 
-The Cholesky warm-start technique — initializing the metric at an
-analytical target and learning only residual perturbations — may be of
+The Cholesky warm-start technique, initializing the metric at an
+analytical target and learning only residual perturbations, may be of
 independent interest for other special-holonomy problems. We discuss
 in detail why local geometry alone cannot encode global topology,
 and why a multi-chart approach is necessary.
@@ -73,7 +73,7 @@ cylindrical (ACyl) Calabi-Yau threefolds along a common K3 fiber.
 Corti, Haskins, Nordström and Pacini (CHNP) [6] systematized the TCS
 method and produced a large family of topological types.
 
-These existence theorems guarantee that the metric exists — but they do
+These existence theorems guarantee that the metric exists, but they do
 not compute it. To date, **no explicit numerical metric tensor g_ij(x)
 has been reported for any compact G₂ manifold**, though substantial work
 exists for non-compact examples (e.g. Brandhuber et al. [15], cohomogeneity-one
@@ -100,8 +100,8 @@ domain with no standard coordinate system.
 
 ### 1.3 Our approach
 
-We apply physics-informed neural networks (PINNs) [7] — neural networks
-whose loss function encodes the governing equations — to construct G₂
+We apply physics-informed neural networks (PINNs) [7], neural networks
+whose loss function encodes the governing equations, to construct G₂
 metrics. The key technical innovation is a **Cholesky parameterization
 with analytical warm-start**: the network outputs a small lower-triangular
 perturbation δL(x) around the Cholesky factor of an analytically derived
@@ -114,7 +114,7 @@ the learning problem to small residual corrections.
 
 We proceed through four stages of increasing topological complexity:
 
-1. **T⁷ (flat torus)**: Validate the PINN methodology — achieve
+1. **T⁷ (flat torus)**: Validate the PINN methodology, achieve
    machine-precision torsion-free G₂-structure constraints.
 2. **Multi-seed identifiability**: Verify convergence robustness across
    5 independent random initializations.
@@ -145,7 +145,7 @@ TCS manifold [5, 6] and are independent of GIFT. The determinant
 constraint det(g) = 65/32 and the anisotropy parameter κ_T = 1/61 are
 derived within GIFT; alternative choices could be used without affecting
 the methodology. The PINN framework presented here is **independent of
-these specific target values** — it is a general-purpose tool for
+these specific target values**: it is a general-purpose tool for
 computing torsion-free G₂ metrics under any prescribed constraints.
 
 GIFT also makes a spectral prediction λ₁ × H* = 14 (where
@@ -162,7 +162,7 @@ The exceptional Lie group G₂ is the automorphism group of the octonion
 algebra O. This is the unique simple Lie group of dimension 14 and rank 2.
 It acts naturally on Im(O) ≅ ℝ⁷.
 
-The **octonion multiplication table** is encoded by the Fano plane — the
+The **octonion multiplication table** is encoded by the Fano plane: the
 unique projective plane of order 2, with 7 points and 7 lines, each line
 containing exactly 3 points. The 7 lines are:
 
@@ -238,7 +238,7 @@ The 7 modes in Λ³₇ are aligned with the 7 Fano-plane triples. They
 change the trace of the metric Jacobian: Tr(∂g/∂Π) = ±2.10. The 27
 modes in Λ³₂₇ are traceless: they deform the shape of the metric
 without changing its volume. The 1-dimensional Λ³₁ is the trivial
-representation — rescaling φ.
+representation, rescaling φ.
 
 ### 2.5 The Joyce existence theorem
 
@@ -278,7 +278,7 @@ systematic classification of such pairs):
 |---------------|------|-----|-----|
 | M₁ | ACyl CY₃ | 11 | 40 |
 | M₂ | ACyl CY₃ | 10 | 37 |
-| K3 | Gluing fiber, b₂(K3) = 22 | — | — |
+| K3 | Gluing fiber, b₂(K3) = 22 | (|) |
 
 **Model assumption.** The specific decomposition b₂ = 11 + 10 and
 b₃ = 40 + 37 is one choice among potentially many TCS realizations
@@ -328,8 +328,8 @@ intersection form is:
 $$\Lambda_{K3} = 3H \oplus 2(-E_8)$$
 
 where H is the hyperbolic lattice and E₈ is the positive-definite E₈
-root lattice. The appearance of E₈ — the same exceptional Lie algebra
-that appears in string theory compactifications — is not a coincidence:
+root lattice. The appearance of E₈: the same exceptional Lie algebra
+that appears in string theory compactifications, is not a coincidence:
 it constrains the global moduli and connects the metric to exceptional
 algebraic structure.
 
@@ -442,7 +442,7 @@ Input: x ∈ ℝ⁷ (coordinates on the domain)
 Total parameters: 182,926
 ```
 
-### 4.5 The perturbation scale — a cautionary tale
+### 4.5 The perturbation scale: a cautionary tale
 
 The perturbation scale multiplying the network's output is critical.
 With a scale of 0.01 (as in an earlier version of the code), the
@@ -451,7 +451,7 @@ quadratic contribution to the metric is:
 $$g = (L_0 + 0.01 \cdot \delta L)^T(L_0 + 0.01 \cdot \delta L) = L_0^T L_0 + 0.01 \cdot (\text{cross terms}) + 10^{-4} \cdot \delta L^T \delta L$$
 
 The gradient of the loss with respect to the network parameters is
-scaled by (0.01)² = 10⁻⁴. The PINN converges at epoch 0 — not because
+scaled by (0.01)² = 10⁻⁴. The PINN converges at epoch 0: not because
 it learned the metric, but because it *could not change it*. All
 losses (determinant, torsion) are satisfied trivially by the background
 L₀, and the network's contribution is invisible.
@@ -497,7 +497,7 @@ $$\varphi = \sum_{(i,j,k) \in \text{Fano}} e^i \wedge e^j \wedge e^k$$
 where the sum runs over the 7 positively oriented Fano triples
 {(1,2,4), (2,3,5), (3,4,6), (4,5,7), (5,6,1), (6,7,2), (7,1,3)}.
 This produces a 3-form that is by construction pointwise equivalent
-to the standard φ₀ — it defines a G₂-structure compatible with g.
+to the standard φ₀: it defines a G₂-structure compatible with g.
 
 **Step 3: Exterior derivative via automatic differentiation.** The
 components of dφ are computed via PyTorch's automatic differentiation
@@ -570,7 +570,7 @@ On an A100 GPU, after 5500 epochs (~45 minutes):
 | Positive definite | Yes | All eigenvalues > 0 |
 | Condition number | ~1.000 | Extremely well-conditioned |
 
-The determinant is matched to 15 significant figures — the limit of
+The determinant is matched to 15 significant figures: the limit of
 64-bit floating-point arithmetic. The residual torsion (in the L² norm
 of §4.7) is small, consistent with the small-torsion regime required by
 Joyce-style existence results [3, 4] (the precise threshold depends on
@@ -731,7 +731,7 @@ principle in differential geometry:
 On the flat torus T⁷ (Hol = {1} ⊂ G₂), the optimal metric IS the isotropic
 g = c × I₇. No local loss function can force topological anisotropy.
 The gap between the analytical TCS (11.5%) and the real K₇ (100%) is
-the **topology gap** — it can only be crossed by changing the underlying
+the **topology gap**: it can only be crossed by changing the underlying
 manifold.
 
 This is why the atlas construction (Stage 4) is necessary: to go from
@@ -774,9 +774,9 @@ The 7-dimensional coordinate system is:
 - x₆ = ψ ∈ [0, 1]: outer S¹ fiber
 
 The three domains are:
-- **Bulk_L**: t ∈ [0.00, 0.40] — left building block M₁
-- **Neck**: t ∈ [0.25, 0.75] — central gluing region
-- **Bulk_R**: t ∈ [0.60, 1.00] — right building block M₂
+- **Bulk_L**: t ∈ [0.00, 0.40], left building block M₁
+- **Neck**: t ∈ [0.25, 0.75], central gluing region
+- **Bulk_R**: t ∈ [0.60, 1.00], right building block M₂
 
 Overlaps of width 0.15 in t ensure continuity:
 - **Left overlap**: t ∈ [0.25, 0.40] (Bulk_L ∩ Neck, direct matching)
@@ -786,7 +786,7 @@ Overlaps of width 0.15 in t ensure continuity:
 
 The key topological ingredient distinguishing K₇ from T⁷ is the
 **Kovalev twist** Φ. At the right interface, the coordinate transformation
-between the neck and Bulk_R is not the identity — it exchanges the roles
+between the neck and Bulk_R is not the identity: it exchanges the roles
 of the inner S¹ and outer S¹:
 
 $$\Phi: (t, \theta, u_1, u_2, u_3, u_4, \psi) \mapsto (1-t, \psi, u_1, u_2, u_3, u_4, \theta)$$
@@ -859,8 +859,8 @@ architecture: 564,678 parameters (187,022 neck + 188,828 per bulk).
 | Chart | det(g) | det error | Condition | Pos. def. | Torsion |
 |-------|--------|-----------|-----------|-----------|---------|
 | Neck | 2.031254 | 0.0002% | 1.0000003 | Yes | 1.35 × 10⁻⁷ |
-| Bulk_L | 2.031250 | 1.4 × 10⁻⁶ % | 1.0000010 | Yes | — |
-| Bulk_R | 2.031248 | 7.6 × 10⁻⁵ % | 1.0000013 | Yes | — |
+| Bulk_L | 2.031250 | 1.4 × 10⁻⁶ % | 1.0000010 | Yes |, |
+| Bulk_R | 2.031248 | 7.6 × 10⁻⁵ % | 1.0000013 | Yes |, |
 
 All three charts satisfy the determinant constraint to better than
 0.001% and are positive definite with condition numbers indistinguishable
@@ -876,8 +876,8 @@ After a single Schwarz alternating iteration:
 | Right (Neck ↔ Bulk_R, through Kovalev twist) | 6.17 × 10⁻¹² |
 
 The interfaces are matched to **machine precision**. The Cholesky-level
-matching at both overlaps — including the topologically non-trivial
-right overlap through the Kovalev twist — is 12 orders of magnitude
+matching at both overlaps, including the topologically non-trivial
+right overlap through the Kovalev twist, is 12 orders of magnitude
 below any reasonable threshold.
 
 #### Global assessment
@@ -938,8 +938,8 @@ than 2%, and doubling MC samples from 25,000 to 50,000 changes λ₁ by
 less than 0.5%, suggesting the qualitative spectral features (band
 structure, degeneracy patterns) are robust even if individual
 eigenvalues carry ~5% numerical uncertainty. The qualitative change
-in spectral structure — from a degenerate torus spectrum to a rich,
-non-degenerate pattern — is the significant result; precise eigenvalue
+in spectral structure, from a degenerate torus spectrum to a rich,
+non-degenerate pattern, is the significant result; precise eigenvalue
 convergence requires adapted basis functions (see §9.4).
 
 #### Interpretation
@@ -982,13 +982,13 @@ from:
    clear demonstration that local geometry cannot encode global topology.
 
 5. **Multi-chart atlas with machine-precision interfaces.** The 3-chart
-   atlas achieves interface matching at 10⁻¹² — machine precision —
+   atlas achieves interface matching at 10⁻¹² (machine precision)
    including through the topologically non-trivial Kovalev twist.
 
 6. **Spectral topology effect.** The atlas spectrum is qualitatively
    different from the torus spectrum: an isolated low-lying mode appears
    at λ₁ ≈ 9, the 14-fold degeneracy is lifted, and λ₁ × H* drops
-   from 3456 to 898 — a 3.8× reduction attributable to the Kovalev
+   from 3456 to 898: a 3.8× reduction attributable to the Kovalev
    twist topology.
 
 7. **Cholesky warm-start technique.** The combination of Cholesky
@@ -1005,7 +1005,7 @@ from:
 | G₂ topology (not metric) | ML for Sasakian/G₂ invariants | Aggarwal et al. [19] |
 | G₂ flow numerics | Cohomogeneity-one solitons | Duke Math+ 2024 [16] |
 | G₂ spectral estimates | Neck-stretching spectral theory | Langlais [20] |
-| **G₂ metric (this work)** | **det to 10⁻¹⁵, torsion 10⁻⁸** | — |
+| **G₂ metric (this work)** | **det to 10⁻¹⁵, torsion 10⁻⁸** |, |
 
 ### 9.3 Limitations
 
@@ -1041,15 +1041,15 @@ complexity increases:
 | K₇ (GIFT prediction) | Full compact G₂ | 14 |
 
 The 3.8× reduction from T⁷ to the atlas is attributable to the Kovalev
-twist — the single topological ingredient that distinguishes the atlas
+twist: the single topological ingredient that distinguishes the atlas
 from a periodic torus.
 
 The remaining gap (898 vs 14) indicates that the current atlas does not
 yet capture the full topology of K₇. This is expected: the 1D
 parametrization along t models the TCS neck structure but not the full
 K3 and S¹ topology of the building blocks. Future work with richer
-atlases — more charts, higher-dimensional overlap regions, and adapted
-basis functions — should clarify whether and how the spectral gap
+atlases, more charts, higher-dimensional overlap regions, and adapted
+basis functions, should clarify whether and how the spectral gap
 continues to decrease.
 
 The progression 3456 → 898 constitutes evidence that the PINN approach
@@ -1077,7 +1077,7 @@ The key results are:
    criteria.
 
 3. **The spectrum responds to topology.** The spectral gap drops from
-   λ₁ × H* = 3456 on T⁷ to 898 on the atlas — a 3.8× reduction from
+   λ₁ × H* = 3456 on T⁷ to 898 on the atlas: a 3.8× reduction from
    a single topological ingredient (the Kovalev twist). An isolated
    low-lying mode at λ₁ ≈ 9, absent on T⁷, emerges from the atlas
    geometry.
@@ -1091,7 +1091,7 @@ The key results are:
 This is, to our knowledge, the first application of physics-informed
 neural networks to exceptional holonomy geometry. The progression
 T⁷ → 3-chart atlas → full K₇ provides a concrete roadmap toward
-numerical spectral geometry on compact G₂ manifolds — a domain that
+numerical spectral geometry on compact G₂ manifolds: a domain that
 has been theoretically rich but computationally inaccessible for
 three decades.
 

@@ -29,11 +29,11 @@ Critical fix for the atmospheric mixing angle θ₂₃ formula, eliminating the 
 | Sub-percent accuracy | 32/33 | **32/33** |
 
 #### Updated Files
-- `publications/validation/validation_v33.py` — Formula implementation
-- `publications/validation/VALIDATION_SUMMARY_v33.md` — Updated statistics
-- `publications/papers/markdown/GIFT_v3.3_main.md` — Tables and statistics
-- `publications/papers/markdown/GIFT_v3.3_S2_derivations.md` — Derivation and tables
-- `README.md` — Overview statistics
+- `publications/validation/validation_v33.py`: Formula implementation
+- `publications/validation/VALIDATION_SUMMARY_v33.md`: Updated statistics
+- `publications/papers/markdown/GIFT_v3.3_main.md`: Tables and statistics
+- `publications/papers/markdown/GIFT_v3.3_S2_derivations.md`: Derivation and tables
+- `README.md`: Overview statistics
 
 ---
 
@@ -68,7 +68,7 @@ This release adds rigorous statistical validation of the Riemann-GIFT connection
 - Riemann distinct from random perturbations (14σ)
 - Coefficient closer to GIFT than 99.5% of null
 
-**Verdict**: WEAK EVIDENCE — treat as preliminary observation
+**Verdict**: WEAK EVIDENCE, treat as preliminary observation
 
 #### Documentation Updates
 - Updated `statistical_validation/README.md` with Riemann validation section
@@ -84,16 +84,16 @@ This release integrates theoretical developments from `/research/` into the main
 
 #### Added
 
-**S1 Foundations — Spectral Structure**
+**S1 Foundations: Spectral Structure**
 - Section 7.4: Continued fraction representation λ₁ = [0; 7, 14] with dim(K₇) and dim(G₂)
 - Section 7.5: Pell equation structure 99² − 50×14² = 1 connecting spectral gap to number theory
 - Three independent derivations of det(g) = 65/32 (Weyl, cohomological, H* formula)
 
-**S1 Foundations — Torsion Classes**
+**S1 Foundations: Torsion Classes**
 - Complete decomposition W₁ ⊕ W₇ ⊕ W₁₄ ⊕ W₂₇ with dimension table
 - Total dimension 49 = 7² = dim(K₇)² interpretation
 
-**S3 Dynamics — Variational Formulation**
+**S3 Dynamics: Variational Formulation**
 - Section 2.1: Torsion functional Θ_G₂ := ‖∇φ‖² − κ_T‖φ‖² = 0
 - Euler-Lagrange eigenvalue equation ∇²φ = κ_T φ
 - Section 3.3: Moduli space of torsion-free G₂ structures (dim = b₃ = 77)
@@ -117,7 +117,7 @@ This release synchronizes documentation with the latest formal verification deve
 
 **Major Updates**
 - Updated to core v3.3.14 (~330 certified relations, up from 185)
-- Removed all Coq references — Lean 4 is now the sole verification system (Coq archived)
+- Removed all Coq references: Lean 4 is now the sole verification system (Coq archived)
 - Updated terminology to use academic standards (no internal jargon)
 
 **Core v3.3.8–v3.3.14 Highlights** (see [core CHANGELOG](https://github.com/gift-framework/core/blob/main/CHANGELOG.md) for details):
@@ -174,7 +174,7 @@ This release extends the observable catalog from 18 to 33 predictions and signif
 - Local significance: **3.9σ** (LEE-corrected: 1.1σ)
 
 **New v3.3 Corrections**
-- m_W/m_Z formula: 23/26 → **37/42** = (2b₂−Weyl)/(2b₂) — deviation 0.35% → 0.06%
+- m_W/m_Z formula: 23/26 → **37/42** = (2b₂−Weyl)/(2b₂), deviation 0.35% → 0.06%
 - Both Betti numbers now **DERIVED** from TCS building blocks, not input
 
 **File Renames (v3.2 → v3.3)**
@@ -267,7 +267,7 @@ Result: Zero configurations achieve lower mean deviation than GIFT.
 
 ## [3.1.1] - 2025-12-17
 
-### Core Sync — 180+ Relations
+### Core Sync, 180+ Relations
 
 Synchronized documentation with [gift-framework/core v3.1.4](https://github.com/gift-framework/core).
 
@@ -291,7 +291,7 @@ Synchronized documentation with [gift-framework/core v3.1.4](https://github.com/
 
 ## [3.1.0] - 2025-12-17
 
-### Analytical G₂ Metric — Exact Solution
+### Analytical G₂ Metric: Exact Solution
 
 This release establishes that the G₂ metric admits an **exact analytical form** with zero torsion, elevating the framework from numerical agreement to algebraic derivation.
 

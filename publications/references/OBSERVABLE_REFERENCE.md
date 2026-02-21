@@ -381,7 +381,7 @@ N_gen = |PSL(2,7)| / fund(E₇) = 168 / 56 = 3
 
 The number of generations equals Fano plane symmetry order / E₇ representation dimension.
 
-This is **not numerology** — it's the octonionic Fano structure manifesting in particle generations.
+This is **not numerology**, it's the octonionic Fano structure manifesting in particle generations.
 
 ### 10.4 Validation Script
 

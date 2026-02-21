@@ -196,7 +196,7 @@ The Riemann-GIFT connection was rigorously tested with 8 independent statistical
 | Lag space search | FAIL (#213/595) |
 | Bootstrap stability | FAIL (CV=46%) |
 
-**Verdict**: 4 PASS / 4 FAIL — **WEAK EVIDENCE**
+**Verdict**: 4 PASS / 4 FAIL, **WEAK EVIDENCE**
 
 The 33 dimensionless predictions do NOT depend on the Riemann connection.
 

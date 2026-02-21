@@ -7,9 +7,9 @@
 ## How to Use This Guide
 
 Each concept has:
-- **The fancy word** — what physicists and mathematicians say
-- **The kitchen table version** — what it actually means
-- **In GIFT** — why it matters for the framework
+- **The fancy word**, what physicists and mathematicians say
+- **The kitchen table version**, what it actually means
+- **In GIFT**, why it matters for the framework
 
 Whether you're a curious student, a science enthusiast, or just someone who wondered "why is the universe the way it is?", this guide is for you.
 
@@ -40,13 +40,13 @@ Whether you're a curious student, a science enthusiast, or just someone who wond
 
 # Introduction: What is GIFT?
 
-**GIFT** (Geometric Information Field Theory) proposes that the fundamental constants of physics — numbers like 1/137, the masses of particles, the strengths of forces — are not arbitrary. They emerge from the **shape** of hidden dimensions in the universe.
+**GIFT** (Geometric Information Field Theory) proposes that the fundamental constants of physics (numbers like 1/137, the masses of particles, the strengths of forces) are not arbitrary. They emerge from the **shape** of hidden dimensions in the universe.
 
 **The core idea in one sentence**: The universe has 7 hidden dimensions curled up in a specific shape called K₇, and the properties of this shape mathematically determine everything we measure.
 
 **Why should you care?**
 
-The Standard Model of physics has **19 free parameters** — numbers we measure but can't explain. Why is the electron 1836 times lighter than the proton? Why are there exactly 3 families of particles? Why is the fine structure constant 1/137?
+The Standard Model of physics has **19 free parameters**, numbers we measure but can't explain. Why is the electron 1836 times lighter than the proton? Why are there exactly 3 families of particles? Why is the fine structure constant 1/137?
 
 GIFT proposes answers: **zero free parameters**. Everything comes from geometry.
 
@@ -117,7 +117,7 @@ After octonions, **there's nothing more**. Mathematically proven (Hurwitz theore
 
 **The kitchen table version**: The defective Lego kit. You can keep doubling: 16, 32, 64... But starting at 16, the "Legos" no longer fit together properly. You can have pieces that, multiplied together, give zero even if neither is zero. It's broken.
 
-**In GIFT**: This explains why nature stops at octonions. No choice — it's the last "proper" algebra.
+**In GIFT**: This explains why nature stops at octonions. No choice, it's the last "proper" algebra.
 
 ---
 
@@ -170,7 +170,7 @@ A mathematical group is like a club where:
 
 ---
 
-### U(1) — The Circle Group
+### U(1): The Circle Group
 
 **The fancy word**: Unitary group of dimension 1, isomorphic to the circle.
 
@@ -182,7 +182,7 @@ A mathematical group is like a club where:
 
 ---
 
-### SU(2) — The Quantum Rotations Group
+### SU(2): The Quantum Rotations Group
 
 **The fancy word**: Special unitary group of dimension 2, double cover of SO(3).
 
@@ -200,7 +200,7 @@ SU(2) captures this weirdness: it has "twice as many" elements as ordinary rotat
 
 ---
 
-### SU(3) — The Color Group
+### SU(3): The Color Group
 
 **The fancy word**: Special unitary group of dimension 3, dimension 8.
 
@@ -216,7 +216,7 @@ SU(3) describes all the ways to **mix these colors** together, like a sophistica
 
 ---
 
-### G₂ — The Guardian of Octonions
+### G₂: The Guardian of Octonions
 
 **The fancy word**: Smallest exceptional Lie group, dimension 14, automorphisms of octonions.
 
@@ -226,13 +226,13 @@ Imagine a crystal ball with patterns inside. G₂ is the set of all transformati
 
 **Why 14?** Octonions have 7 imaginary units. The transformations preserving them form a 14-dimensional space. It's a mathematical fact, not a choice.
 
-**The 5 exceptional groups**: G₂, F₄, E₆, E₇, E₈ — these are the "outsiders" in the classification of Lie groups. They don't belong to any infinite family.
+**The 5 exceptional groups**: G₂, F₄, E₆, E₇, E₈: these are the "outsiders" in the classification of Lie groups. They don't belong to any infinite family.
 
 **In GIFT**: G₂ is EVERYWHERE. dim(G₂) = 14 appears in Koide (14/21 = 2/3), in δ_CP (7×14+99), etc.
 
 ---
 
-### F₄ — The Intermediate Group
+### F₄: The Intermediate Group
 
 **The fancy word**: Exceptional Lie group of dimension 52.
 
@@ -242,7 +242,7 @@ Imagine a crystal ball with patterns inside. G₂ is the set of all transformati
 
 ---
 
-### E₆ — The Grand Unification Group
+### E₆: The Grand Unification Group
 
 **The fancy word**: Exceptional Lie group of dimension 78.
 
@@ -256,7 +256,7 @@ E₆ contains SO(10) which contains SU(5) which contains U(1)×SU(2)×SU(3). It'
 
 ---
 
-### E₇ — The Mystery Group
+### E₇: The Mystery Group
 
 **The fancy word**: Exceptional Lie group of dimension 133.
 
@@ -266,7 +266,7 @@ E₆ contains SO(10) which contains SU(5) which contains U(1)×SU(2)×SU(3). It'
 
 ---
 
-### E₈ — The Titan of Symmetries
+### E₈: The Titan of Symmetries
 
 **The fancy word**: Largest exceptional Lie group, dimension 248.
 
@@ -343,7 +343,7 @@ A manifold is the same: **globally** it can have a complicated shape, but **loca
 
 The surface of the Earth is compact: you can walk a long time, but you'll eventually return to your starting point.
 
-**In GIFT**: K₇ is compact — the 7 dimensions are "folded" on themselves, not infinite.
+**In GIFT**: K₇ is compact: the 7 dimensions are "folded" on themselves, not infinite.
 
 ---
 
@@ -355,7 +355,7 @@ The surface of the Earth is compact: you can walk a long time, but you'll eventu
 
 From far away, a garden hose looks like a line (1 dimension).
 
-Up close, you see it's a tube — each point on the "line" is actually a little circle (1 + 1 = 2 dimensions).
+Up close, you see it's a tube: each point on the "line" is actually a little circle (1 + 1 = 2 dimensions).
 
 The universe might be the same:
 - From far away (our scale): 3 dimensions of space + 1 of time
@@ -436,7 +436,7 @@ At each point of the base, there's a "fiber" attached. The whole thing forms the
 
 **The classic**: Coffee mug = donut. Both have exactly 1 hole (the mug handle = the donut hole). You can deform one into the other without cutting or gluing.
 
-**In GIFT**: Physical constants are topological — they come from the "number of holes," not distances. That's why they're stable and universal.
+**In GIFT**: Physical constants are topological: they come from the "number of holes," not distances. That's why they're stable and universal.
 
 ---
 
@@ -505,7 +505,7 @@ It's like the difference between:
 
 Santa Claus leaves the North Pole with his compass pointing South. He goes to the equator, turns right, goes around the Earth, returns to the North Pole.
 
-**Result**: His compass has rotated 90°! Nobody touched it — it's the **curvature of the Earth** that did it.
+**Result**: His compass has rotated 90°! Nobody touched it, it's the **curvature of the Earth** that did it.
 
 Holonomy measures "how much things rotate when you make a loop."
 
@@ -646,7 +646,7 @@ Nobody knew why these precise ratios. GIFT says:
 
 Neutrinos pass through matter as if it didn't exist. Billions pass through you every second without you knowing.
 
-They "oscillate" between three types (electron, muon, tau) while traveling — it's like they change costumes in flight.
+They "oscillate" between three types (electron, muon, tau) while traveling, it's like they change costumes in flight.
 
 **In GIFT**: Neutrino mixing angles (θ₁₂, θ₁₃, θ₂₃) and CP phase (δ = 197°) are derived from topology.
 
@@ -658,7 +658,7 @@ They "oscillate" between three types (electron, muon, tau) while traveling — i
 
 **The kitchen table version**: The prisoners.
 
-Quarks are **always** locked up in groups of 2 or 3. You can never see one alone — that's "confinement."
+Quarks are **always** locked up in groups of 2 or 3. You can never see one alone, that's "confinement."
 
 **The 6 types**:
 - Up, Down (light, in protons/neutrons)
@@ -701,7 +701,7 @@ The photon IS light. It carries the electromagnetic force between charged partic
 
 **The kitchen table version**: The nuclear superglue.
 
-Gluons "glue" quarks together. But unlike photons, gluons **carry the charge themselves** (color) — so they interact with each other!
+Gluons "glue" quarks together. But unlike photons, gluons **carry the charge themselves** (color), so they interact with each other!
 
 **Why 8?** That's the dimension of SU(3). And 8 = dim(𝕆), the dimension of octonions!
 
@@ -779,7 +779,7 @@ It's the strongest force (hence the name). It glues quarks in protons/neutrons, 
 
 **The kitchen table version**: The cosmic trampoline.
 
-Imagine spacetime as a trampoline. Masses "push down" on the trampoline, creating dips. Other objects roll toward these dips — that's gravity!
+Imagine spacetime as a trampoline. Masses "push down" on the trampoline, creating dips. Other objects roll toward these dips, that's gravity!
 
 - **Carrier (hypothetical)**: Graviton (spin 2)
 - **Range**: Infinite
@@ -794,7 +794,7 @@ Imagine spacetime as a trampoline. Masses "push down" on the trampoline, creatin
 
 **The kitchen table version**: The cocktail before mixing.
 
-At very high energy, electromagnetism and the weak force are indistinguishable — like vodka and orange juice in the glass before mixing.
+At very high energy, electromagnetism and the weak force are indistinguishable, like vodka and orange juice in the glass before mixing.
 
 As it cools, the "cocktail" separates: you get EM (photon) and weak (W, Z).
 
@@ -855,7 +855,7 @@ Where 128 = 2⁷ (linked to the 7 dimensions of K₇) and 9 = 99/11 (ratio of to
 
 **The kitchen table version**: The electroweak cocktail recipe.
 
-At very high energy, electromagnetism and the weak force are **the same force** — like orange juice and vodka before being mixed.
+At very high energy, electromagnetism and the weak force are **the same force**, like orange juice and vodka before being mixed.
 
 sin²θ_W ≈ 0.231 means "about 23% weak force, 77% electromagnetism" in the final mix.
 
@@ -863,7 +863,7 @@ sin²θ_W ≈ 0.231 means "about 23% weak force, 77% electromagnetism" in the fi
 
 It's the number of "2D bubbles" (21) divided by the total (77 + 14 = 91).
 
-**In GIFT**: The cocktail recipe isn't arbitrary — it's dictated by the shape of the cosmic shaker (K₇).
+**In GIFT**: The cocktail recipe isn't arbitrary, it's dictated by the shape of the cosmic shaker (K₇).
 
 ---
 
@@ -906,7 +906,7 @@ Why not 2? Or 47?
 
 It's like asking "Why does a cube have 6 faces?" The answer isn't "just because," it's "because it's a cube." The shape imposes the number.
 
-**In GIFT**: The number of families isn't an accident — it's a geometric consequence.
+**In GIFT**: The number of families isn't an accident, it's a geometric consequence.
 
 ---
 
@@ -1057,7 +1057,7 @@ DUNE will send neutrinos 1300 km and study their oscillations with unprecedented
 
 **The kitchen table version**: The universe's baby photo.
 
-The Planck satellite took the most detailed "photo" of the Big Bang's fossil radiation — the oldest light in the universe.
+The Planck satellite took the most detailed "photo" of the Big Bang's fossil radiation: the oldest light in the universe.
 
 **In GIFT**: Planck measured Ω_DE, n_s, etc. that GIFT predicts.
 
@@ -1176,6 +1176,6 @@ Physicist and mathematician, M-theory, only physicist with a Fields Medal (1990)
 
 ---
 
-*GIFT Framework v3.3 — For Everyone*
+*GIFT Framework v3.3: For Everyone*
 
 *"If you understood this, you've understood more than 99% of people!"*

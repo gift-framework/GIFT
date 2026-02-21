@@ -217,7 +217,7 @@ Ces observables n'ont qu'une seule expression GIFT connue :
 | m_u/m_d | (1+dim_E₆)/PSL₂₇ | 79/168 | ⚠️ Possible coincidence |
 | m_H/m_W | 81/52 | 1.5577 | ⚠️ Possible coincidence |
 | dim(E₇) | 133 | 133 | Definition |
-| \|W(E₈)\| | 696,729,600 | — | Definition |
+| \|W(E₈)\| | 696,729,600 |, | Definition |
 
 ---
 
@@ -305,8 +305,8 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 | Core 18 | 18 | 0.24% |
 | Extended 15 | 15 | 0.17% |
 | **All Physical** | **33** | **0.21%** |
-| Structural | 18 | — |
-| **Total Catalog** | **51** | — |
+| Structural | 18 |, |
+| **Total Catalog** | **51** |, |
 
 **Key Result**: 33 physical observables, mean deviation 0.21%, 79% structurally inevitable (≥3 independent expressions).
 
@@ -321,4 +321,4 @@ PSL(2,7) = 7 × 6 × 4             (Fano)    = 168
 
 ---
 
-*GIFT Framework v3.3 — Complete Observable Catalog*
+*GIFT Framework v3.3: Complete Observable Catalog*

@@ -29,6 +29,9 @@ jobs:
       - name: Run documentation linter
         run: python .github/scripts/docs_linter.py
 
+      - name: Check for em dashes
+        run: python .github/scripts/fix_em_dashes.py --check
+
       - name: Upload lint report
         uses: actions/upload-artifact@v4
         if: always()
