@@ -1,0 +1,780 @@
+{
+  "n_observables": 18,
+  "total_time_s": 106.0,
+  "results": [
+    {
+      "observable": "N_gen",
+      "obs_class": "A",
+      "experimental": 3.0,
+      "uncertainty": 0.0,
+      "n_enumerated": 3,
+      "t_enum_s": 0.82,
+      "t_score_s": 0.0,
+      "gift_scores": {
+        "predicted": 3.0,
+        "err": 0.0,
+        "comp": 1.0,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 0.5,
+        "formula_str": "N_gen"
+      },
+      "frontier_size": 2,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 1,
+        "rank_by_complexity": 3,
+        "total_formulas": 3,
+        "percentile_error": 0.3333333333333333,
+        "percentile_composite": 0.3333333333333333,
+        "on_pareto": true
+      },
+      "null_random": {
+        "n_valid": 642,
+        "n_total": 1000,
+        "mean_error": 150.81406608204634,
+        "p_value": 0.06853582554517133
+      },
+      "t_null_random_s": 0.01,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 79.23666666666665,
+        "p_value": 0.055
+      },
+      "t_null_shuffled_s": 0.0
+    },
+    {
+      "observable": "alpha_inv",
+      "obs_class": "C",
+      "experimental": 137.036,
+      "uncertainty": 1e-06,
+      "n_enumerated": 620,
+      "t_enum_s": 1.11,
+      "t_score_s": 0.03,
+      "gift_scores": {
+        "predicted": 137.03329918032787,
+        "err": 2700.8196721283184,
+        "comp": 22.5,
+        "unnat": 0.0,
+        "frag": 1.0,
+        "redund": 0.0,
+        "total": 2712.3696721283186,
+        "formula_str": "(((dim_E8 + rank_E8) / 2) + ((H_star / D_bulk) + (det_g_num / (det_g_den * kappa_T_inv))))"
+      },
+      "frontier_size": 6,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 1,
+        "rank_by_complexity": 621,
+        "total_formulas": 620,
+        "percentile_error": 0.0016129032258064516,
+        "percentile_composite": 0.0016129032258064516,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 778,
+        "n_total": 1000,
+        "mean_error": 5891192282.847445,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.05,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 240977084.5385379,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.04
+    },
+    {
+      "observable": "sin2_theta_W",
+      "obs_class": "B",
+      "experimental": 0.23122,
+      "uncertainty": 3e-05,
+      "n_enumerated": 247,
+      "t_enum_s": 1.04,
+      "t_score_s": 0.03,
+      "gift_scores": {
+        "predicted": 0.23076923076923078,
+        "err": 15.025641025640894,
+        "comp": 5.5,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 17.775641025640894,
+        "formula_str": "(b2 / (b3 + dim_G2))"
+      },
+      "frontier_size": 5,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 1,
+        "rank_by_complexity": 108,
+        "total_formulas": 247,
+        "percentile_error": 0.004048582995951417,
+        "percentile_composite": 0.004048582995951417,
+        "on_pareto": true
+      },
+      "null_random": {
+        "n_valid": 748,
+        "n_total": 1000,
+        "mean_error": 60610092.048570625,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.04,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 106083.5603468472,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.02
+    },
+    {
+      "observable": "alpha_s",
+      "obs_class": "B",
+      "experimental": 0.1179,
+      "uncertainty": 0.0009,
+      "n_enumerated": 217,
+      "t_enum_s": 1.2,
+      "t_score_s": 0.01,
+      "gift_scores": {
+        "predicted": 0.11785113019775792,
+        "err": 0.05429978026898362,
+        "comp": 9.5,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 4.804299780268984,
+        "formula_str": "(sqrt2 / (dim_G2 - p2))"
+      },
+      "frontier_size": 3,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 8,
+        "rank_by_complexity": 218,
+        "total_formulas": 217,
+        "percentile_error": 0.004608294930875576,
+        "percentile_composite": 0.03686635944700461,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 748,
+        "n_total": 1000,
+        "mean_error": 2020446.8020064512,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.04,
+      "null_shuffled": {
+        "n_valid": 472,
+        "n_total": 1000,
+        "mean_error": 115.50174527694472,
+        "p_value": 0.01059322033898305
+      },
+      "t_null_shuffled_s": 0.12
+    },
+    {
+      "observable": "theta_12",
+      "obs_class": "D",
+      "experimental": 33.41,
+      "uncertainty": 0.75,
+      "n_enumerated": 910,
+      "t_enum_s": 3.64,
+      "t_score_s": 0.11,
+      "gift_scores": {
+        "predicted": 33.40004993004913,
+        "err": 0.013266759934490816,
+        "comp": 52.0,
+        "unnat": 4.0,
+        "frag": 0.5,
+        "redund": 0.0,
+        "total": 34.163266759934494,
+        "formula_str": "(arctan(sqrt((((2 * pi) / (Weyl * Weyl)) / (((2 * rank_E8) + (5 * H_star)) / ((10 * dim_G2) + (3 * dim_E8)))))) * (180 / pi))"
+      },
+      "frontier_size": 7,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 911,
+        "rank_by_complexity": 911,
+        "total_formulas": 910,
+        "percentile_error": 0.001098901098901099,
+        "percentile_composite": 1.001098901098901,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 723,
+        "n_total": 1000,
+        "mean_error": 3637.295194379837,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.14,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 34.82410287446938,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 2.23
+    },
+    {
+      "observable": "theta_13",
+      "obs_class": "D",
+      "experimental": 8.54,
+      "uncertainty": 0.12,
+      "n_enumerated": 1240,
+      "t_enum_s": 3.11,
+      "t_score_s": 0.14,
+      "gift_scores": {
+        "predicted": 8.571428571428571,
+        "err": 0.2619047619047669,
+        "comp": 4.0,
+        "unnat": 2.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 6.261904761904766,
+        "formula_str": "(180 / b2)"
+      },
+      "frontier_size": 4,
+      "ranking": {
+        "rank_by_error": 10,
+        "rank_by_composite": 89,
+        "rank_by_complexity": 21,
+        "total_formulas": 1240,
+        "percentile_error": 0.008064516129032258,
+        "percentile_composite": 0.0717741935483871,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 723,
+        "n_total": 1000,
+        "mean_error": 22680.363412075254,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.12,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 148.147482061652,
+        "p_value": 0.034
+      },
+      "t_null_shuffled_s": 0.01
+    },
+    {
+      "observable": "theta_23",
+      "obs_class": "D",
+      "experimental": 49.3,
+      "uncertainty": 1.0,
+      "n_enumerated": 701,
+      "t_enum_s": 3.17,
+      "t_score_s": 0.08,
+      "gift_scores": {
+        "predicted": 49.25094562252961,
+        "err": 0.04905437747038377,
+        "comp": 20.0,
+        "unnat": 2.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 14.049054377470384,
+        "formula_str": "(arcsin(((b3 - p2) / H_star)) * (180 / pi))"
+      },
+      "frontier_size": 4,
+      "ranking": {
+        "rank_by_error": 3,
+        "rank_by_composite": 235,
+        "rank_by_complexity": 702,
+        "total_formulas": 701,
+        "percentile_error": 0.0042796005706134095,
+        "percentile_composite": 0.33523537803138376,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 723,
+        "n_total": 1000,
+        "mean_error": 2734.5536068256274,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.12,
+      "null_shuffled": {
+        "n_valid": 206,
+        "n_total": 1000,
+        "mean_error": 30.981002047363315,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.99
+    },
+    {
+      "observable": "delta_CP",
+      "obs_class": "D",
+      "experimental": 197.0,
+      "uncertainty": 24.0,
+      "n_enumerated": 1001,
+      "t_enum_s": 3.38,
+      "t_score_s": 0.07,
+      "gift_scores": {
+        "predicted": 197.0,
+        "err": 0.0,
+        "comp": 5.5,
+        "unnat": 2.0,
+        "frag": 1.0,
+        "redund": 0.0,
+        "total": 7.05,
+        "formula_str": "((7 * dim_G2) + H_star)"
+      },
+      "frontier_size": 4,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 880,
+        "rank_by_complexity": 352,
+        "total_formulas": 1001,
+        "percentile_error": 0.000999000999000999,
+        "percentile_composite": 0.8791208791208791,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 723,
+        "n_total": 1000,
+        "mean_error": 117.98614335790569,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.12,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 72.94704166666668,
+        "p_value": 0.002
+      },
+      "t_null_shuffled_s": 0.01
+    },
+    {
+      "observable": "Q_Koide",
+      "obs_class": "B",
+      "experimental": 0.666661,
+      "uncertainty": 7e-06,
+      "n_enumerated": 302,
+      "t_enum_s": 0.98,
+      "t_score_s": 0.02,
+      "gift_scores": {
+        "predicted": 0.6666666666666666,
+        "err": 0.8095238095259408,
+        "comp": 3.5,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 2.559523809525941,
+        "formula_str": "(dim_G2 / b2)"
+      },
+      "frontier_size": 3,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 1,
+        "rank_by_complexity": 9,
+        "total_formulas": 302,
+        "percentile_error": 0.0033112582781456954,
+        "percentile_composite": 0.0033112582781456954,
+        "on_pareto": true
+      },
+      "null_random": {
+        "n_valid": 748,
+        "n_total": 1000,
+        "mean_error": 259707506.22358346,
+        "p_value": 0.001336898395721925
+      },
+      "t_null_random_s": 0.04,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 3082171.655887149,
+        "p_value": 0.003
+      },
+      "t_null_shuffled_s": 0.01
+    },
+    {
+      "observable": "m_mu_over_m_e",
+      "obs_class": "C",
+      "experimental": 206.768,
+      "uncertainty": 0.001,
+      "n_enumerated": 503,
+      "t_enum_s": 0.98,
+      "t_score_s": 0.02,
+      "gift_scores": {
+        "predicted": 207.01185674160348,
+        "err": 243.85674160348003,
+        "comp": 14.5,
+        "unnat": 10.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 271.10674160348003,
+        "formula_str": "exp((phi * log(dim_J3O)))"
+      },
+      "frontier_size": 6,
+      "ranking": {
+        "rank_by_error": 2,
+        "rank_by_composite": 2,
+        "rank_by_complexity": 504,
+        "total_formulas": 503,
+        "percentile_error": 0.003976143141153081,
+        "percentile_composite": 0.003976143141153081,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 778,
+        "n_total": 1000,
+        "mean_error": 5938573.411451146,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.04,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 25797425.39094703,
+        "p_value": 0.045
+      },
+      "t_null_shuffled_s": 0.09
+    },
+    {
+      "observable": "m_tau_over_m_e",
+      "obs_class": "A",
+      "experimental": 3477.15,
+      "uncertainty": 0.01,
+      "n_enumerated": 0,
+      "t_enum_s": 0.79,
+      "t_score_s": 0.0,
+      "gift_scores": {
+        "predicted": 3477.0,
+        "err": 15.000000000009095,
+        "comp": 10.0,
+        "unnat": 4.0,
+        "frag": 0.5,
+        "redund": 0.0,
+        "total": 28.150000000009094,
+        "formula_str": "(dim_K7 + ((10 * dim_E8) + (10 * H_star)))"
+      },
+      "frontier_size": 0,
+      "ranking": {
+        "rank_by_error": 0,
+        "rank_by_composite": 0,
+        "rank_by_complexity": 0,
+        "total_formulas": 0,
+        "percentile_error": 0.0,
+        "percentile_composite": 0.0,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 642,
+        "n_total": 1000,
+        "mean_error": 358677.7058320145,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.01,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 505311.83,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.01
+    },
+    {
+      "observable": "m_s_over_m_d",
+      "obs_class": "A",
+      "experimental": 20.0,
+      "uncertainty": 1.0,
+      "n_enumerated": 21,
+      "t_enum_s": 1.0,
+      "t_score_s": 0.0,
+      "gift_scores": {
+        "predicted": 20.0,
+        "err": 0.0,
+        "comp": 9.0,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 4.5,
+        "formula_str": "((p2 * p2) * Weyl)"
+      },
+      "frontier_size": 2,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 6,
+        "rank_by_complexity": 22,
+        "total_formulas": 21,
+        "percentile_error": 0.047619047619047616,
+        "percentile_composite": 0.2857142857142857,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 642,
+        "n_total": 1000,
+        "mean_error": 455.3297509113886,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.01,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 9359218.913,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.01
+    },
+    {
+      "observable": "m_c_over_m_s",
+      "obs_class": "C",
+      "experimental": 11.7,
+      "uncertainty": 0.3,
+      "n_enumerated": 678,
+      "t_enum_s": 0.95,
+      "t_score_s": 0.04,
+      "gift_scores": {
+        "predicted": 11.714285714285714,
+        "err": 0.04761904761904745,
+        "comp": 6.5,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 3.2976190476190474,
+        "formula_str": "((dim_E8 - p2) / b2)"
+      },
+      "frontier_size": 5,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 19,
+        "rank_by_complexity": 679,
+        "total_formulas": 678,
+        "percentile_error": 0.0014749262536873156,
+        "percentile_composite": 0.028023598820058997,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 778,
+        "n_total": 1000,
+        "mean_error": 19432.73236683216,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.03,
+      "null_shuffled": {
+        "n_valid": 483,
+        "n_total": 1000,
+        "mean_error": 97.78498293669114,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.01
+    },
+    {
+      "observable": "Omega_DE",
+      "obs_class": "B",
+      "experimental": 0.6889,
+      "uncertainty": 0.0056,
+      "n_enumerated": 320,
+      "t_enum_s": 1.02,
+      "t_score_s": 0.02,
+      "gift_scores": {
+        "predicted": 0.6861456938876226,
+        "err": 0.49184037721024454,
+        "comp": 10.5,
+        "unnat": 7.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 19.741840377210245,
+        "formula_str": "(ln2 * ((H_star - 1) / H_star))"
+      },
+      "frontier_size": 6,
+      "ranking": {
+        "rank_by_error": 3,
+        "rank_by_composite": 69,
+        "rank_by_complexity": 321,
+        "total_formulas": 320,
+        "percentile_error": 0.009375,
+        "percentile_composite": 0.215625,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 748,
+        "n_total": 1000,
+        "mean_error": 324631.3384995352,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.02,
+      "null_shuffled": {
+        "n_valid": 970,
+        "n_total": 1000,
+        "mean_error": 2736.931578654344,
+        "p_value": 0.005154639175257732
+      },
+      "t_null_shuffled_s": 0.07
+    },
+    {
+      "observable": "n_s",
+      "obs_class": "E",
+      "experimental": 0.9649,
+      "uncertainty": 0.0042,
+      "n_enumerated": 4864,
+      "t_enum_s": 30.46,
+      "t_score_s": 1.5,
+      "gift_scores": {
+        "predicted": 0.9648639296628597,
+        "err": 0.00858817550958555,
+        "comp": 14.5,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 7.258588175509585,
+        "formula_str": "(zeta11 / zeta5)"
+      },
+      "frontier_size": 5,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 78,
+        "rank_by_complexity": 3662,
+        "total_formulas": 4864,
+        "percentile_error": 0.00020559210526315788,
+        "percentile_composite": 0.016036184210526317,
+        "on_pareto": true
+      },
+      "null_random": {
+        "n_valid": 809,
+        "n_total": 1000,
+        "mean_error": 3.7829902008991243e+214,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.09,
+      "null_shuffled": {
+        "n_valid": 0,
+        "n_total": 1000,
+        "mean_error": Infinity,
+        "p_value": 1.0
+      },
+      "t_null_shuffled_s": 0.0
+    },
+    {
+      "observable": "kappa_T",
+      "obs_class": "B",
+      "experimental": 0.0164,
+      "uncertainty": 0.0001,
+      "n_enumerated": 174,
+      "t_enum_s": 0.98,
+      "t_score_s": 0.01,
+      "gift_scores": {
+        "predicted": 0.01639344262295082,
+        "err": 0.06557377049180857,
+        "comp": 7.0,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 3.5655737704918087,
+        "formula_str": "1/((b3 - (dim_G2 + p2)))"
+      },
+      "frontier_size": 2,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 4,
+        "rank_by_complexity": 175,
+        "total_formulas": 174,
+        "percentile_error": 0.005747126436781609,
+        "percentile_composite": 0.022988505747126436,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 748,
+        "n_total": 1000,
+        "mean_error": 18184943.714460984,
+        "p_value": 0.001336898395721925
+      },
+      "t_null_random_s": 0.04,
+      "null_shuffled": {
+        "n_valid": 277,
+        "n_total": 1000,
+        "mean_error": 360.4995642303478,
+        "p_value": 0.007220216606498195
+      },
+      "t_null_shuffled_s": 0.02
+    },
+    {
+      "observable": "tau",
+      "obs_class": "C",
+      "experimental": 3.897,
+      "uncertainty": 0.001,
+      "n_enumerated": 602,
+      "t_enum_s": 0.95,
+      "t_score_s": 0.04,
+      "gift_scores": {
+        "predicted": 3.8967452300785634,
+        "err": 0.2547699214363597,
+        "comp": 10.5,
+        "unnat": 0.0,
+        "frag": 0.0,
+        "redund": 0.0,
+        "total": 5.50476992143636,
+        "formula_str": "((dim_E8xE8 * b2) / (dim_J3O * H_star))"
+      },
+      "frontier_size": 3,
+      "ranking": {
+        "rank_by_error": 1,
+        "rank_by_composite": 2,
+        "rank_by_complexity": 603,
+        "total_formulas": 602,
+        "percentile_error": 0.0016611295681063123,
+        "percentile_composite": 0.0033222591362126247,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 778,
+        "n_total": 1000,
+        "mean_error": 5829770.859891736,
+        "p_value": 0.0
+      },
+      "t_null_random_s": 0.03,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 603420.5982289123,
+        "p_value": 0.0
+      },
+      "t_null_shuffled_s": 0.02
+    },
+    {
+      "observable": "lambda_H",
+      "obs_class": "B",
+      "experimental": 0.126,
+      "uncertainty": 0.008,
+      "n_enumerated": 217,
+      "t_enum_s": 0.93,
+      "t_score_s": 0.01,
+      "gift_scores": {
+        "predicted": 0.1288470508005519,
+        "err": 0.3558813500689865,
+        "comp": 19.0,
+        "unnat": 0.0,
+        "frag": 1.0,
+        "redund": 0.0,
+        "total": 10.155881350068988,
+        "formula_str": "(sqrt((dim_G2 + N_gen)) / ((((2 * 2) * 2) * 2) * 2))"
+      },
+      "frontier_size": 3,
+      "ranking": {
+        "rank_by_error": 7,
+        "rank_by_composite": 202,
+        "rank_by_complexity": 218,
+        "total_formulas": 217,
+        "percentile_error": 0.03225806451612903,
+        "percentile_composite": 0.9308755760368663,
+        "on_pareto": false
+      },
+      "null_random": {
+        "n_valid": 748,
+        "n_total": 1000,
+        "mean_error": 227299.35897572574,
+        "p_value": 0.00267379679144385
+      },
+      "t_null_random_s": 0.03,
+      "null_shuffled": {
+        "n_valid": 1000,
+        "n_total": 1000,
+        "mean_error": 46.4569672077708,
+        "p_value": 0.011
+      },
+      "t_null_shuffled_s": 0.09
+    }
+  ]
+}
