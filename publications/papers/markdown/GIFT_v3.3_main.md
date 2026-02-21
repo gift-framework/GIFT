@@ -750,12 +750,17 @@ Only experiment, particularly DUNE, can discriminate. The deeper question, why o
 **The ultimate arbiter is experiment.**
 
 ---
-
 ## Acknowledgments
 
-The mathematical foundations draw on Joyce, Kovalev, Haskins, Nordstrom, and collaborators on G₂ geometry. Harvey and Lawson's calibrated geometry provides the standard G₂ form. Lean 4 verification uses Mathlib. Experimental data from PDG, NuFIT, T2K, NOvA, Planck, and DUNE collaborations.
+The mathematical foundations draw on work by Dominic Joyce, Alexei Kovalev, Mark Haskins, and collaborators on G₂ manifold construction. The standard associative 3-form φ₀ originates from Harvey and Lawson's foundational work on calibrated geometries. The Lean 4 verification relies on the Mathlib community's extensive formalization efforts. Experimental data come from the Particle Data Group, NuFIT collaboration, Planck collaboration, and DUNE technical design reports.
 
-**AI Disclosure**: This work was developed through collaboration with Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), and DeepSeek for specific mathematical insights. In accordance with Springer Nature policy on AI-assisted writing, the author takes full responsibility for all content; AI tools are not listed as authors [39]. All scientific conclusions are the author's responsibility.
+The octonion-Cayley connection and its role in G₂ structure benefited from insights in [de-johannes/FirstDistinction](https://github.com/de-johannes/FirstDistinction). The blueprint documentation workflow follows the approach developed by [math-inc/KakeyaFiniteFields](https://github.com/math-inc/KakeyaFiniteFields).
+
+---
+
+## Author's note
+
+This framework was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), for specific mathematical insights. The formal verification in Lean 4, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows transparent crediting approach for AI-assisted mathematical research. Mathematical constants underlying these relationships represent timeless logical structures that preceded human discovery. The value of any theoretical proposal depends on mathematical coherence and empirical accuracy, not origin. Mathematics is evaluated on results, not résumés.
 
 ---
 
