@@ -26,6 +26,7 @@
 - [Part II: Prime Atlas](#part-ii-prime-atlas)
 - [Part III: Monster Group & Moonshine](#part-iii-monster-group--moonshine)
 - [Part IV: McKay Correspondence](#part-iv-mckay-correspondence)
+- [Part V: Rule of 17 (Fermat Prime Connection)](#16-the-rule-of-17-fermat-prime-connection)
 
 ---
 
@@ -362,7 +363,43 @@ The McKay correspondence is established mathematics. The connection to GIFT phys
 
 ---
 
-## 16. Open Questions
+## 16. The Rule of 17 (Fermat Prime Connection)
+
+> **Status: CONVERGENT** — Independent derivation by Theodorsson (2026) matches GIFT structure.
+
+### 16.1 Fermat Prime Observation
+
+17 is the third Fermat prime: 17 = 2^(2²) + 1
+
+In GIFT: 17 = dim(G₂) + N_gen = 14 + 3
+
+### 16.2 Fine Structure Constant Structure
+
+| Framework | Formula | Result |
+|-----------|---------|--------|
+| Theodorsson | 8 × 17 + 1 | 137 |
+| GIFT | 8×(17-1) + 9 + corr | 137.033 |
+
+**Key Identity**: 128 = 8 × 16 = 8 × (17 - 1)
+
+Therefore:
+$$\alpha^{-1}_{GIFT} = 8 \times 17 + 1 + \text{(torsion correction)}$$
+
+The structures are algebraically equivalent.
+
+### 16.3 Cosmological Ratio 37/17
+
+Theodorsson: ΩΛ/Ωm = 37/17 ≈ 2.176
+
+GIFT expressions:
+- 17 = dim(G₂) + N_gen
+- 37 = b₃ - 2×b₂ + p₂ = 77 - 42 + 2
+
+**Status**: Pattern observed, physical significance under investigation.
+
+---
+
+## 17. Open Questions
 
 1. Does the full Monster structure appear in physics?
 2. What is the physical role of the j-invariant?
@@ -371,10 +408,12 @@ The McKay correspondence is established mathematics. The connection to GIFT phys
 5. Does prime coverage extend beyond 200?
 6. Why exactly three generators suffice for prime atlas?
 7. Is there a number-theoretic explanation independent of physics?
+8. **NEW**: Is the Fermat prime nature of 17 = dim(G₂) + N_gen physically significant?
+9. **NEW**: Can GIFT predict ΩΛ/Ωm = 37/17 exactly?
 
 ---
 
-## 17. Recommended Interpretation
+## 18. Recommended Interpretation
 
 These patterns should be viewed as:
 - **Observations** (not predictions)

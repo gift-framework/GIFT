@@ -60,6 +60,9 @@ desktop.ini
 .env
 .local
 
+# Cached data (auto-downloaded)
+riemann_zeros_*_genuine.npy
+
 # Cached repositories (cloned by pipeline)
 .cache/
 
@@ -84,3 +87,8 @@ assets/agents/reports/*.json
 # Model checkpoints
 checkpoints/
 verification_result.json
+gift-core/
+core/
+outputs/zeros6
+outputs/zeros6.gz
+outputs/odlyzko_zeros_2M.npy

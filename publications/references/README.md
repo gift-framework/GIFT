@@ -10,8 +10,16 @@ Exploratory and reference documents for the GIFT framework v3.3.
 
 | File | Description |
 |------|-------------|
-| [39_observables.csv](39_observables.csv) | Machine-readable observable data |
-| [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities) |
+| [GIFT_ATLAS.json](GIFT_ATLAS.json) | Structured atlas of all constants, predictions, and metadata (v3.3.18) |
+| [observables.csv](observables.csv) | Machine-readable observable data (predictions + experimental values) |
+| [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities, v3.3.18) |
+
+### Independent Validations
+
+| Document | Content | Status |
+|----------|---------|--------|
+| [INDEPENDENT_VALIDATIONS.md](INDEPENDENT_VALIDATIONS.md) | External research converging with GIFT | Active |
+| [STATISTICAL_EVIDENCE.md](STATISTICAL_EVIDENCE.md) | 78+ relations, deviation analysis, duality patterns | Active |
 
 ### Exploratory References
 
@@ -58,4 +66,18 @@ For the main framework documents, see [`../markdown/`](../markdown/):
 
 ---
 
-*Part of GIFT Framework v3.3*
+## Canonical Source of Truth
+
+The **GIFT_ATLAS.json** is the canonical structured reference. When discrepancies exist between files:
+1. `GIFT_ATLAS.json` takes precedence for formulas and predicted values
+2. `OBSERVABLE_REFERENCE.md` has the broadest scope (51 quantities vs 33 in the atlas)
+3. `observables.csv` includes dimensional predictions not in the atlas
+
+**Known scope differences**:
+- The atlas covers 33 dimensionless predictions
+- The CSV covers 39 observables (includes dimensional masses and CKM elements)
+- The reference covers 51 quantities (includes structural constants)
+
+---
+
+*Part of GIFT Framework v3.3.18*

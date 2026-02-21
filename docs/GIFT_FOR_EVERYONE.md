@@ -1005,7 +1005,7 @@ Individual atoms aren't wet. "Wetness" emerges when billions of atoms are togeth
 
 Lean 4 is a computer program that checks every step of every proof. You can't cheat, can't make calculation errors, can't "skip" a step. If Lean accepts your proof, it's **mathematically certain**.
 
-**In GIFT**: ~330 relations verified in Lean 4 with 0 "sorry" (holes). Zero domain-specific axioms.
+**In GIFT**: 290+ relations verified in Lean 4 with 0 "sorry" (holes). Zero domain-specific axioms.
 
 ---
 

@@ -1,5 +1,7 @@
 # CLAUDE.md - Development Guide for GIFT Documentation
 
+> **Persistent context**: Read `../.claude-persistent-context.md` at session start for cross-session memory (key insights, ongoing experiments, decisions).
+
 This file provides development conventions for the GIFT theoretical documentation repository.
 
 ## Repository Purpose
@@ -11,26 +13,33 @@ This repository contains the **theoretical documentation** for GIFT (Geometric I
 ```
 GIFT/
 ├── publications/
-│   ├── markdown/           # Core documents
-│   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
-│   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
-│   │   ├── GIFT_v3.3_S2_derivations.md  # All dimensionless derivations
-│   │   └── GIFT_v3.3_S3_dynamics.md     # RG flow, torsional dynamics
+│   ├── papers/
+│   │   ├── markdown/       # Core documents (v3.3)
+│   │   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
+│   │   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
+│   │   │   ├── GIFT_v3.3_S2_derivations.md  # All 33 dimensionless derivations
+│   │   │   └── GIFT_v3.3_S3_dynamics.md     # RG flow, torsional dynamics
+│   │   ├── tex/            # LaTeX sources
+│   │   ├── pdf/            # Generated PDFs
+│   │   └── FoP/            # Foundations of Physics submission
 │   ├── references/         # Extended topics (number theory, speculative physics)
-│   ├── tex/               # LaTeX sources
-│   └── pdf/               # Generated PDFs
+│   ├── outreach/           # Vulgarization & blog posts
+│   └── validation/         # Monte Carlo validation code
+│
+├── research/               # Exploratory research (WIP)
 │
 ├── docs/
 │   ├── FAQ.md             # Common questions
 │   ├── GLOSSARY.md        # Technical terms
-│   ├── PHILOSOPHY.md      # Foundational perspective
+│   ├── GIFT_FOR_EVERYONE.md  # Complete guide with everyday analogies
 │   ├── GIFTPY_FOR_GEOMETERS.md
 │   ├── INFO_GEO_FOR_PHYSICISTS.md
 │   ├── LEAN_FOR_PHYSICS.md
+│   ├── figures/           # Lean blueprints, diagrams
+│   ├── media/             # Logos, images
 │   └── legacy/            # Archived v2.3/v3.0 supplements
 │
-├── statistical_validation/  # Monte Carlo validation code
-├── notebooks/              # Jupyter notebooks
+├── notebooks/              # Curated demo notebooks
 │
 ├── README.md              # Repository overview
 ├── STRUCTURE.md           # Directory layout
@@ -50,7 +59,7 @@ GIFT/
 
 ### Supplements
 - **S1 Foundations**: Complete mathematical construction (E₈ lattice, G₂ holonomy, K₇ topology)
-- **S2 Derivations**: All 18 dimensionless predictions with full derivations
+- **S2 Derivations**: All 33 dimensionless predictions with full derivations
 - **S3 Dynamics**: RG flow, torsional geometry, scale bridge (speculative)
 
 ### Extended References
@@ -237,6 +246,77 @@ Before committing documentation changes:
 | Core Repository | https://github.com/gift-framework/core |
 | Blueprint | https://gift-framework.github.io/core/ |
 | PyPI Package | https://pypi.org/project/gift-core/ |
+
+---
+
+## GPU Computing Tips (CuPy/CUDA)
+
+When writing notebooks for GPU execution (Colab A100), be aware of CuPy limitations:
+
+### CuPy Sparse Matrix Gotchas
+
+| SciPy | CuPy | Workaround |
+|-------|------|------------|
+| `M.tolil()` | ❌ Not implemented | Build COO/CSR directly |
+| `eigsh(..., which='SM')` | ❌ Only 'LM', 'LA', 'SA' | Use `which='SA'` for smallest eigenvalues |
+| `M[i,j] = x` on CSR | ❌ Inefficient/broken | Build from COO format |
+
+### Correct Pattern for Periodic BC Sparse Matrix
+
+```python
+# ❌ Wrong (CuPy incompatible)
+D2 = cp_diags([...], format='csr')
+D2 = D2.tolil()           # NotImplementedError!
+D2[0, N-1] = 1/h²
+D2 = D2.tocsr()
+
+# ✓ Correct (build COO directly)
+row, col, data = [], [], []
+for i in range(N):
+    row.append(i); col.append(i); data.append(-2/h²)
+    row.append(i); col.append((i+1) % N); data.append(1/h²)  # periodic
+    row.append(i); col.append((i-1) % N); data.append(1/h²)  # periodic
+D2 = cp_csr((cp.array(data), (cp.array(row), cp.array(col))), shape=(N, N))
+```
+
+### Eigenvalue Computation
+
+```python
+# ❌ Wrong for CuPy
+eigs = cp_eigsh(L, k=10, which='SM')  # ValueError!
+
+# ✓ Correct for CuPy (positive semi-definite matrices)
+eigs = cp_eigsh(L, k=10, which='SA')  # Smallest Algebraic
+```
+
+### Memory Management
+
+```python
+# Clear GPU memory between large computations
+cp.get_default_memory_pool().free_all_blocks()
+```
+
+### JSON Serialization with NumPy Types
+
+NumPy types (`numpy.bool_`, `numpy.int64`, `numpy.float64`) are not JSON-serializable:
+
+```python
+# ❌ Wrong (TypeError: Object of type bool_ is not JSON serializable)
+results = {'passed': deviation < 5}  # numpy.bool_
+json.dump(results, f)
+
+# ✓ Correct (explicit conversion to Python types)
+results = {'passed': bool(deviation < 5)}
+json.dump(results, f)
+```
+
+Common conversions:
+| NumPy Type | Python Conversion |
+|------------|-------------------|
+| `numpy.bool_` | `bool(x)` |
+| `numpy.int64` | `int(x)` |
+| `numpy.float64` | `float(x)` |
+| `numpy.ndarray` | `x.tolist()` |
 
 ---
 

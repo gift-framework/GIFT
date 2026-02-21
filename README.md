@@ -1,7 +1,7 @@
 # Geometric Information Field Theory v3.3
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.14-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.3.17-green.svg)](CHANGELOG.md)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -12,10 +12,10 @@
 
 | | |
 |---|---|
-| **Precision** | 0.21% mean deviation across 33 dimensionless predictions (PDG 2024) |
-| **Uniqueness** | #1 out of 192,349 configurations tested (>4.5σ significance) |
+| **Precision** | 0.21% mean deviation across 33 predictions (0.22% dimensionless only, PDG 2024) |
+| **Uniqueness** | #1 out of 3,070,396 configurations tested (3.9σ local significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | ~330 relations proven in Lean 4 (core v3.3.14) |
+| **Verified** | 290+ relations proven in Lean 4 (core v3.3.17) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -26,7 +26,7 @@
 
 | Paper | Proofs | Video |
 |:-----:|:------:|:-----:|
-| [Main Paper](publications/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
+| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
 
 ---
 
@@ -36,10 +36,10 @@
 
 | Document | Description |
 |----------|-------------|
-| [Main Paper](publications/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
-| [S1: Foundations](publications/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/markdown/GIFT_v3.3_S2_derivations.md) | All 33 dimensionless derivations (0.21% mean, PDG 2024) |
-| [S3: Dynamics](publications/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
+| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
+| [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.21% mean, 0.22% dimensionless only, PDG 2024) |
+| [S3: Dynamics](publications/papers/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
 
 ### For Specific Audiences
 
@@ -49,8 +49,6 @@
 | Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
 | Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
 | Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
-| Philosophy | [Philosophy](docs/PHILOSOPHY.md) — Foundational perspective |
-
 ### Exploratory Extensions
 
 | Document | Description |
@@ -119,32 +117,35 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 | Metric | Value |
 |--------|-------|
-| Configurations tested | 192,349 |
+| Configurations tested | 3,070,396 |
 | **GIFT rank** | **#1** |
-| GIFT mean deviation | 0.21% (PDG 2024) |
+| GIFT mean deviation | 0.21% total / 0.22% dimensionless (PDG 2024) |
 | Better alternatives found | 0 |
-| p-value | < 5×10⁻⁶ |
+| p-value (empirical) | 0 / 3,070,396 |
 
 ### Top 5 Configurations
 
 | Rank | b₂ | b₃ | Deviation |
 |:----:|:--:|:--:|:---------:|
-| **1** | **21** | **77** | **0.23%** |
+| **1** | **21** | **77** | **0.21%** |
 | 2 | 21 | 76 | 0.50% |
 | 3 | 21 | 78 | 0.50% |
 | 4 | 21 | 79 | 0.79% |
 | 5 | 21 | 75 | 0.81% |
 
-### Statistical Significance (v3.3 Monte Carlo)
+### Statistical Significance (Bullet-Proof Validation)
 
-- **LEE-corrected significance**: >4.5σ
-- **p-value**: < 5×10⁻⁶
-- **Total configurations tested**: 192,349 (Betti, holonomy, structural variations)
-- **Better alternatives found**: 0
+| Test | Result |
+|------|--------|
+| Null model p-value | < 2×10⁻⁵ (σ > 4.2), three independent null families |
+| Westfall-Young maxT | 11/33 individually significant (global p = 0.008) |
+| Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
+| Bayes factor | 304–4,738 across four priors (all decisive) |
+| Exhaustive search | 0/3,070,396 configs better |
 
-GIFT occupies a **sharp minimum**: no tested alternative matches its precision.
+Seven-component analysis: pre-registration, three null families, multiple-testing corrections (Bonferroni/Holm/BH/Westfall-Young), cross-sector prediction, robustness/noise sensitivity, multi-seed replication, Bayesian (BF + PPC + WAIC).
 
-Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.md)
+Details: [Statistical Evidence](publications/references/STATISTICAL_EVIDENCE.md)
 
 ---
 
@@ -157,7 +158,7 @@ Details: [Uniqueness Test Report](statistical_validation/UNIQUENESS_TEST_REPORT.
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S2 Section 10](publications/markdown/GIFT_v3.3_S2_derivations.md)
+Details: [S2 Section 10](publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 
 ---
 
@@ -172,7 +173,7 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 
 These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices — it does not explain *why* nature chose this geometry.
 
-**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 19,100 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
+**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,070,396 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
 
 ### Why Not Numerology?
 
@@ -204,6 +205,24 @@ Their appearance suggests structural rather than coincidental relationships.
 
 ---
 
+## Outreach
+
+Blog posts and vulgarization articles are available in [publications/outreach/](publications/outreach/).
+
+| Post | Topic |
+|------|-------|
+| [Gift from Bit](publications/outreach/gift_from_bit.md) | Why geometry might be the language of physics |
+| [13 Theorems, Zero Trust Required](publications/outreach/13_theorems_zero_trust_required.md) | Machine-verified proofs in Lean 4 |
+| [Joyce's Theorem, Now in Lean](publications/outreach/joyce_theorem_now_in_lean.md) | Formalizing G₂ holonomy existence |
+| [The Algebra That Waited](publications/outreach/the_algebra_that_waited.md) | E₈ and the structure of matter |
+| [On What Comes First](publications/outreach/on_what_comes_first.md) | Philosophy of mathematical primacy |
+| [Lice of the Universe](publications/outreach/LICE_OF_THE_UNIVERSE.md) | The fine-tuning problem |
+| [Roberto Carlos' Geometry](publications/outreach/ROBERTO_CARLOS_GEOMETRY.md) | Geometry and physics for everyone |
+
+All posts on [giftheory.substack.com](https://giftheory.substack.com/).
+
+---
+
 ## Connect
 
 | Platform | |
@@ -227,7 +246,7 @@ Their appearance suggests structural rather than coincidental relationships.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.14}
+  version = {3.3.17}
 }
 ```
 

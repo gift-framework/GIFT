@@ -1,0 +1,517 @@
+{
+  "metadata": {
+    "det_target": 2.03125,
+    "kappa_target": 1.01518,
+    "det_actual": 2.031246450116707,
+    "kappa_actual": 1.0151737479686438,
+    "eigenvalues_actual": [
+      1.0992666719639201,
+      1.1000448257702358,
+      1.101248303301815,
+      1.1033447308540614,
+      1.112458925038243,
+      1.113589875677093,
+      1.1159466673946306
+    ],
+    "eigenvalues_target": [
+      1.09926643,
+      1.10004584,
+      1.10124313,
+      1.10334338,
+      1.11246355,
+      1.11358841,
+      1.11595127
+    ],
+    "measurement_noise": 5e-06,
+    "topological_constants": {
+      "b2": 21,
+      "b3": 77,
+      "dim_G2": 14,
+      "dim_K7": 7
+    },
+    "date": "2026-02-20 15:51:02",
+    "script": "paper2_robust_validation.py"
+  },
+  "test_1_permutation": {
+    "det_deviation_original_pct": 0.00017476348519861719,
+    "kappa_original": 1.0151737479686438,
+    "offdiag_shuffle": {
+      "n_permutations": 50000,
+      "det_dev_null_mean": 0.00018339057405435404,
+      "det_dev_null_std": 1.3375572927006908e-05,
+      "det_dev_null_min": 0.00012470034245272752,
+      "p_value_det": 0.25734,
+      "z_score_det": 0.6449883607092233,
+      "p_value_kappa": 2e-05
+    },
+    "rowcol_permutation": {
+      "det_invariant": true,
+      "note": "det is invariant under simultaneous row/col permutation (mathematical identity: det(P^T G P) = det(G))"
+    },
+    "passed": true,
+    "runtime_s": 1.1914989948272705
+  },
+  "test_2_monte_carlo": {
+    "n_matrices": 200000,
+    "n_batches": 4,
+    "batch_params": [
+      {
+        "diag_range": [
+          1.09,
+          1.12
+        ],
+        "off_scale": 0.005
+      },
+      {
+        "diag_range": [
+          1.05,
+          1.15
+        ],
+        "off_scale": 0.01
+      },
+      {
+        "diag_range": [
+          1.0,
+          1.2
+        ],
+        "off_scale": 0.02
+      },
+      {
+        "diag_range": [
+          1.08,
+          1.13
+        ],
+        "off_scale": 0.002
+      }
+    ],
+    "det_distribution": {
+      "mean": 1.9796300868664625,
+      "std": 0.16006612110919538,
+      "range": [
+        1.136521355520763,
+        3.088619596510306
+      ]
+    },
+    "kappa_distribution": {
+      "mean": 1.075370485795677,
+      "std": 0.05653002388152637
+    },
+    "det_hits": {
+      "0.1%": {
+        "count": 3523,
+        "fraction": 0.017615
+      },
+      "0.01%": {
+        "count": 390,
+        "fraction": 0.00195
+      },
+      "0.001%": {
+        "count": 40,
+        "fraction": 0.0002
+      }
+    },
+    "joint_constraints": {
+      "det_0.1pct_AND_kappa_0.1pct": {
+        "count": 8,
+        "fraction": 4e-05
+      },
+      "det_AND_kappa_AND_spread": {
+        "count": 1,
+        "fraction": 5e-06
+      }
+    },
+    "passed": true,
+    "runtime_s": 10.370168447494507
+  },
+  "test_3_joint_constraints": {
+    "n_trials": 500000,
+    "individual_probabilities": {
+      "p_det_0.01pct": 0.003436,
+      "p_kappa_0.01pct": 0.00075,
+      "p_eigenvalues_0.1pct": 0.0
+    },
+    "joint_probabilities": {
+      "p_det_AND_kappa": 2e-06,
+      "p_all_three": 0.0,
+      "p_all_upper_bound": 6e-06
+    },
+    "independence_estimate": {
+      "p_independent": 0.0,
+      "note": "If constraints were independent, joint probability would be product of individual probabilities"
+    },
+    "counts": {
+      "det": 1718,
+      "kappa": 375,
+      "eigenvalues": 0,
+      "det_AND_kappa": 1,
+      "all_three": 0
+    },
+    "passed": true,
+    "runtime_s": 17.875622749328613
+  },
+  "test_4_bayesian_rational": {
+    "n_rationals": 20077,
+    "q_max": 256,
+    "det_actual": 2.031246450116707,
+    "measurement_sigma": 4.549883293096911e-06,
+    "posterior_65_32": 0.7631040230807895,
+    "posterior_rank_65_32": 1,
+    "top_10_rationals": [
+      {
+        "p": 65,
+        "q": 32,
+        "value": 2.03125,
+        "posterior": 0.7631040230807895,
+        "distance": 3.5498832930969115e-06
+      },
+      {
+        "p": 518,
+        "q": 255,
+        "value": 2.0313725490196077,
+        "posterior": 1.6684268651692484e-167,
+        "distance": 0.0001260989029008286
+      },
+      {
+        "p": 457,
+        "q": 225,
+        "value": 2.031111111111111,
+        "posterior": 7.633819240500573e-193,
+        "distance": 0.0001353390055958137
+      },
+      {
+        "p": 453,
+        "q": 223,
+        "value": 2.031390134529148,
+        "posterior": 2.866327561194646e-217,
+        "distance": 0.00014368441244094754
+      },
+      {
+        "p": 392,
+        "q": 193,
+        "value": 2.0310880829015545,
+        "posterior": 8.647124572947098e-264,
+        "distance": 0.0001583672151523885
+      },
+      {
+        "p": 388,
+        "q": 191,
+        "value": 2.031413612565445,
+        "posterior": 8.023308050967302e-294,
+        "distance": 0.00016716244873826724
+      },
+      {
+        "p": 329,
+        "q": 180,
+        "value": 1.8277777777777777,
+        "posterior": 0.0,
+        "distance": 0.20346867233892918
+      },
+      {
+        "p": 342,
+        "q": 187,
+        "value": 1.8288770053475936,
+        "posterior": 0.0,
+        "distance": 0.20236944476911334
+      },
+      {
+        "p": 139,
+        "q": 76,
+        "value": 1.8289473684210527,
+        "posterior": 0.0,
+        "distance": 0.20229908169565425
+      },
+      {
+        "p": 353,
+        "q": 193,
+        "value": 1.8290155440414508,
+        "posterior": 0.0,
+        "distance": 0.20223090607525607
+      }
+    ],
+    "bayes_factor_vs_continuous": {
+      "BF": 3.221262061959936,
+      "log10_BF": 0.5080260577701629,
+      "interpretation": "substantial"
+    },
+    "passed": true,
+    "runtime_s": 0.039041996002197266
+  },
+  "test_5_g2_structure": {
+    "dim_lambda3": 35,
+    "dim_check": true,
+    "g_from_phi0_is_identity": true,
+    "rescaling_factor_c": 1.0519209351531287,
+    "det_rescaled_matches": true,
+    "trace_decomposition": {
+      "fano_traces": [
+        2.000001000146412,
+        2.000001000146412,
+        2.000001000146412,
+        2.000001000146412,
+        2.000001000146412,
+        2.000001000146412,
+        2.000001000146412
+      ],
+      "fano_all_nonzero": true,
+      "non_fano_max_trace": 9.99866855977416e-07,
+      "non_fano_all_zero": true
+    },
+    "fano_plane": {
+      "n_triples": 7,
+      "vertex_regular": true,
+      "pair_balanced": true
+    },
+    "topological_consistency": {
+      "b2": 21,
+      "b3": 77,
+      "euler_char": -110,
+      "euler_zero": false,
+      "moduli_dim_equals_b3": true
+    },
+    "passed": true,
+    "runtime_s": 0.005906343460083008
+  },
+  "test_6_eigenvalue_spacing": {
+    "eigenvalues": [
+      1.0992666719639201,
+      1.1000448257702358,
+      1.101248303301815,
+      1.1033447308540614,
+      1.112458925038243,
+      1.113589875677093,
+      1.1159466673946306
+    ],
+    "spacings": [
+      0.000778153806315629,
+      0.0012034775315792334,
+      0.0020964275522463716,
+      0.00911419418418169,
+      0.0011309506388499369,
+      0.002356791717537554
+    ],
+    "normalized_spacings": [
+      0.2799115177991941,
+      0.43290570548842516,
+      0.754110836884234,
+      3.2784880147153044,
+      0.4068168880074215,
+      0.8477670371054208
+    ],
+    "mean_spacing": 0.002779999238451736,
+    "spacing_statistics": {
+      "variance_actual": 1.0778555923582942,
+      "variance_GOE": 0.27323954473516276,
+      "variance_Poisson": 1.0,
+      "closer_to": "Poisson"
+    },
+    "eigenvalue_ratios": [
+      1.0007078844707675,
+      1.0010940259009324,
+      1.001903682889645,
+      1.0082605136267127,
+      1.001016622378944,
+      1.0021163911140127
+    ],
+    "condition_number": 1.0151737479686438,
+    "trace": 7.745899999999998,
+    "determinant": 2.0312464501167047,
+    "random_comparison": {
+      "n_random": 50000,
+      "percentile_of_variance": 99.476
+    },
+    "passed": true,
+    "runtime_s": 2.7916040420532227
+  },
+  "test_7_bootstrap_bca": {
+    "n_bootstrap": 10000,
+    "n_valid": 10000,
+    "noise_level": 5e-06,
+    "det": {
+      "original": 2.031246450116707,
+      "mean": 2.031246699765638,
+      "std": 2.4169923972031415e-05,
+      "ci95_bca": [
+        2.031198664620657,
+        2.0312929344933597
+      ],
+      "stable_sig_figs": 4,
+      "contains_target": true
+    },
+    "kappa": {
+      "original": 1.0151737479686438,
+      "mean": 1.015173838755466,
+      "std": 6.48577597669033e-06,
+      "ci95_bca": [
+        1.015161001919407,
+        1.0151863643939985
+      ]
+    },
+    "eigenvalues": {
+      "mean": [
+        1.0992666211576136,
+        1.1000448292259073,
+        1.1012483891943017,
+        1.1033448164114243,
+        1.1124589334385062,
+        1.1135898308006413,
+        1.1159467155932372
+      ],
+      "std": [
+        4.995870696027835e-06,
+        4.962847652891815e-06,
+        4.962455299805915e-06,
+        5.056285185017047e-06,
+        5.044417262773833e-06,
+        5.0327852554073906e-06,
+        5.0005881130969425e-06
+      ],
+      "max_shift_from_target": 5.259194301610037e-06
+    },
+    "frobenius_noise": {
+      "mean": 2.6200758215879997e-05,
+      "std": 3.5400919005859503e-06
+    },
+    "passed": true,
+    "runtime_s": 0.15769267082214355
+  },
+  "test_8_look_elsewhere": {
+    "n_rationals": 20077,
+    "q_max": 256,
+    "det_actual": 2.031246450116707,
+    "catch_basin_probabilities": {
+      "1%": 1.0,
+      "0.1%": 1.0,
+      "0.01%": 1.0,
+      "0.001%": 0.8017659222858332,
+      "paper": 3.2070636891433285e-05
+    },
+    "closest_rationals": [
+      {
+        "p": 65,
+        "q": 32,
+        "value": 2.03125,
+        "distance": 3.5498832930969115e-06,
+        "relative_distance_pct": 0.00017476348519861719
+      },
+      {
+        "p": 518,
+        "q": 255,
+        "value": 2.0313725490196077,
+        "distance": 0.0001260989029008286,
+        "relative_distance_pct": 0.0062075714748477395
+      },
+      {
+        "p": 457,
+        "q": 225,
+        "value": 2.031111111111111,
+        "distance": 0.0001353390055958137,
+        "relative_distance_pct": 0.006663298962594766
+      },
+      {
+        "p": 453,
+        "q": 223,
+        "value": 2.031390134529148,
+        "distance": 0.00014368441244094754,
+        "relative_distance_pct": 0.007073206175349073
+      },
+      {
+        "p": 392,
+        "q": 193,
+        "value": 2.0310880829015545,
+        "distance": 0.0001583672151523885,
+        "relative_distance_pct": 0.007797161358268107
+      },
+      {
+        "p": 388,
+        "q": 191,
+        "value": 2.031413612565445,
+        "distance": 0.00016716244873826724,
+        "relative_distance_pct": 0.008228873120878619
+      },
+      {
+        "p": 327,
+        "q": 161,
+        "value": 2.031055900621118,
+        "distance": 0.00019054949558894307,
+        "relative_distance_pct": 0.009381794736947962
+      },
+      {
+        "p": 323,
+        "q": 159,
+        "value": 2.0314465408805034,
+        "distance": 0.00020009076379645663,
+        "relative_distance_pct": 0.00984966917759647
+      },
+      {
+        "p": 262,
+        "q": 129,
+        "value": 2.0310077519379846,
+        "distance": 0.00023869817872235188,
+        "relative_distance_pct": 0.01175269658594786
+      },
+      {
+        "p": 258,
+        "q": 127,
+        "value": 2.031496062992126,
+        "distance": 0.0002496128754190252,
+        "relative_distance_pct": 0.012287145417913257
+      }
+    ],
+    "rank_65_32": 1,
+    "correction": {
+      "p_single_paper_tol": 3.2070636891433285e-05,
+      "p_sidak": 0.47475607326765445,
+      "p_bonferroni": 0.643882176869306,
+      "still_significant": false
+    },
+    "naturalness_near_det": [
+      {
+        "p": 51,
+        "q": 25,
+        "value": 2.04,
+        "complexity": 76
+      },
+      {
+        "p": 53,
+        "q": 26,
+        "value": 2.0384615384615383,
+        "complexity": 79
+      },
+      {
+        "p": 55,
+        "q": 27,
+        "value": 2.037037037037037,
+        "complexity": 82
+      },
+      {
+        "p": 57,
+        "q": 28,
+        "value": 2.0357142857142856,
+        "complexity": 85
+      },
+      {
+        "p": 59,
+        "q": 29,
+        "value": 2.0344827586206895,
+        "complexity": 88
+      }
+    ],
+    "passed": true,
+    "runtime_s": 0.05445051193237305
+  },
+  "summary": {
+    "tests_passed": 8,
+    "tests_total": 8,
+    "overall_verdict": "VALIDATED",
+    "per_test": {
+      "test_1_permutation": true,
+      "test_2_monte_carlo": true,
+      "test_3_joint_constraints": true,
+      "test_4_bayesian_rational": true,
+      "test_5_g2_structure": true,
+      "test_6_eigenvalue_spacing": true,
+      "test_7_bootstrap_bca": true,
+      "test_8_look_elsewhere": true
+    }
+  }
+}

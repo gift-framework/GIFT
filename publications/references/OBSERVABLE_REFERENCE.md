@@ -1,8 +1,8 @@
 # GIFT Observable Reference
 
-**Version**: 3.3
+**Version**: 3.3.18
 **Status**: Reference documentation
-**Date**: January 2026
+**Date**: February 2026
 
 ---
 
@@ -15,7 +15,7 @@
 | **Cosmological parameters** | 11 |
 | **Structural constants** | 18 |
 | **Total cataloged quantities** | **51** |
-| Mean deviation (all 33 physical) | 0.21% |
+| Mean deviation (all 33) | 0.21% (0.22% dimensionless only) |
 | Exact matches (< 0.1%) | 14 (42%) |
 | Multiply determined (>=3 expr.) | 92% |
 | Total equivalent expressions | 280+ |
@@ -83,6 +83,16 @@ Each observable receives a classification based on the number of independent alg
 | **DERIVED** | 2-4 expressions | At least dual derivation |
 | **SINGULAR** | 1 expression | Unique derivation (possible numerical coincidence) |
 
+**Cross-reference with GIFT_ATLAS.json status labels:**
+
+| This document | Atlas equivalent | Mapping rationale |
+|---------------|-----------------|-------------------|
+| CANONICAL | VERIFIED | Lean-proven, maximally over-determined |
+| ROBUST | VERIFIED | Multiple independent derivations confirm |
+| SUPPORTED | TOPOLOGICAL | Direct topological consequence |
+| DERIVED | TOPOLOGICAL | Algebraic consequence of topological invariants |
+| SINGULAR | TOPOLOGICAL | Single derivation, but topologically grounded |
+
 ---
 
 ## 3. Core 18 Dimensionless Predictions
@@ -98,7 +108,7 @@ Each observable receives a classification based on the number of independent alg
 | # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 2 | **sin^2 theta_W** | b_2/(b_3+dim_G_2) | 3/13 = 0.2308 | 0.23122 | 0.20% | 19 | ROBUST |
-| 3 | **alpha_s(M_Z)** | (fund_E7-dim_J3O)/dim_E8 | 29/248 = 0.1169 | 0.1179 | 0.82% | 9 | SUPPORTED |
+| 3 | **alpha_s(M_Z)** | sqrt(2)/(dim_G2 - p_2) | sqrt(2)/12 = 0.1179 | 0.1179 | 0.042% | 9 | TOPOLOGICAL |
 | 4 | **lambda_H** | sqrt(17)/32 | 0.1288 | 0.129 | 0.12% | 4 | DERIVED |
 | 5 | **alpha^-1(M_Z)** | 128+9+corr | 137.033 | 137.036 | 0.002% | 3 | DERIVED |
 
@@ -114,7 +124,7 @@ Each observable receives a classification based on the number of independent alg
 
 | # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
-| 9 | **m_s/m_d** | (alpha_sum+dim_J3O)/p_2 | 40/2 = 20 | 20.0 | 0.00% | 14 | ROBUST |
+| 9 | **m_s/m_d** | p_2^2 x Weyl | 4 x 5 = 20 | 20.0 | 0.00% | 14 | VERIFIED |
 | 10 | **m_c/m_s** | (dim_E8-p_2)/b_2 | 246/21 = 11.71 | 11.7 | 0.12% | 5 | SUPPORTED |
 | 11 | **m_b/m_t** | 1/(2b₂) | 1/42 = 0.0238 | 0.024 | 0.79% | 12 | ROBUST |
 | 12 | **m_u/m_d** | (1+dim_E6)/PSL_27 | 79/168 = 0.470 | 0.47 | 0.05% | 4 | DERIVED |
@@ -125,7 +135,7 @@ Each observable receives a classification based on the number of independent alg
 |---|------------|--------------|-------|------|------|---------|--------|
 | 13 | **delta_CP** | dim_K7 x dim_G2 + H* | 197 deg | 197 deg +/- 24 deg | 0.00% | 3 | DERIVED |
 | 14 | **theta_13^PMNS** | pi/b_2 | 8.57 deg | 8.54 deg | 0.37% | 3 | DERIVED |
-| 15 | **theta_23^PMNS** | (rank_E8+b_3)/H* | 49.19 deg | 49.3 deg | 0.22% | 2 | DERIVED |
+| 15 | **theta_23^PMNS** | arcsin((b_3-p_2)/H*) = arcsin(25/33) | 49.25 deg | 49.3 deg | 0.10% | 2 | TOPOLOGICAL |
 | 16 | **theta_12^PMNS** | arctan(sqrt(delta/gamma)) | 33.40 deg | 33.41 deg | 0.03% | 2 | DERIVED |
 
 ### 3.6 Cosmological Sector
@@ -418,7 +428,7 @@ Results: `statistical_validation/results/gift_reference_data.json`
 - Koide, Y. "Fermion-boson two-body model." Lett. Nuovo Cim. 34 (1982)
 - Particle Data Group (2024), Review of Particle Physics
 - Planck Collaboration (2020), Cosmological parameters
-- GIFT Publications: [GIFT_v3.3_main.md](../publications/markdown/GIFT_v3.3_main.md), [GIFT_v3.3_S2_derivations.md](../publications/markdown/GIFT_v3.3_S2_derivations.md)
+- GIFT Publications: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md), [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 
 ---
 

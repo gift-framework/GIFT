@@ -386,7 +386,7 @@ Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key
 Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
 
 ### Lean 4 (v3.3)
-Theorem prover used for formal verification of GIFT exact relations. The [gift-framework/core](https://github.com/gift-framework/core) repository contains ~330 certified relations including E₈ root system, G₂ cross product properties, Fibonacci/Lucas embeddings, Prime Atlas, Monstrous Moonshine, Spectral Theory, TCS Bounds, and GIFT-Zeta correspondences. Key theorem: `GIFT_framework_certified`.
+Theorem prover used for formal verification of GIFT exact relations. The [gift-framework/core](https://github.com/gift-framework/core) repository contains 290+ certified relations including E₈ root system, G₂ cross product properties, Fibonacci/Lucas embeddings, Prime Atlas, Monstrous Moonshine, Spectral Theory, TCS Bounds, and GIFT-Zeta correspondences. Key theorem: `GIFT_framework_certified`.
 
 ---
 

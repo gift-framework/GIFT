@@ -1,0 +1,850 @@
+{
+  "_metadata": {
+    "title": "GIFT Framework Complete Atlas",
+    "version": "3.3.18",
+    "date": "2026-02-08",
+    "description": "Exhaustive reference for all topological constants, derived quantities, and predictions",
+    "sources": {
+      "experimental": ["PDG 2024", "NuFIT 5.3", "Planck 2020", "CODATA 2022"],
+      "theoretical": ["Joyce 2000", "Kovalev 2003", "Corti et al. 2015"]
+    }
+  },
+
+  "topological_constants": {
+    "_description": "Fundamental topological invariants (input parameters)",
+
+    "manifold_K7": {
+      "b2": {
+        "value": 21,
+        "name": "Second Betti number",
+        "symbol": "b₂(K₇)",
+        "description": "Number of independent 2-cycles in K₇"
+      },
+      "b3": {
+        "value": 77,
+        "name": "Third Betti number",
+        "symbol": "b₃(K₇)",
+        "description": "Number of independent 3-cycles in K₇"
+      },
+      "dim_K7": {
+        "value": 7,
+        "name": "K₇ dimension",
+        "symbol": "dim(K₇)",
+        "description": "Dimension of the compact G₂-holonomy manifold"
+      },
+      "p2": {
+        "value": 2,
+        "name": "Pontryagin class contribution",
+        "symbol": "p₂",
+        "description": "Second Pontryagin class / spin structure correction"
+      }
+    },
+
+    "holonomy_G2": {
+      "dim_G2": {
+        "value": 14,
+        "name": "G₂ dimension",
+        "symbol": "dim(G₂)",
+        "description": "Dimension of the exceptional holonomy group G₂ = Aut(𝕆)"
+      }
+    },
+
+    "gauge_E8": {
+      "dim_E8": {
+        "value": 248,
+        "name": "E₈ dimension",
+        "symbol": "dim(E₈)",
+        "description": "Dimension of the E₈ Lie algebra"
+      },
+      "rank_E8": {
+        "value": 8,
+        "name": "E₈ rank",
+        "symbol": "rank(E₈)",
+        "description": "Rank of E₈ (Cartan subalgebra dimension)"
+      },
+      "dim_E8xE8": {
+        "value": 496,
+        "name": "E₈×E₈ dimension",
+        "symbol": "dim(E₈×E₈)",
+        "description": "Total gauge group dimension = 2 × 248"
+      }
+    },
+
+    "exceptional_algebras": {
+      "dim_E6": {
+        "value": 78,
+        "name": "E₆ dimension",
+        "symbol": "dim(E₆)",
+        "description": "Dimension of E₆ Lie algebra"
+      },
+      "dim_E7": {
+        "value": 133,
+        "name": "E₇ dimension",
+        "symbol": "dim(E₇)",
+        "description": "Dimension of E₇ Lie algebra"
+      },
+      "dim_F4": {
+        "value": 52,
+        "name": "F₄ dimension",
+        "symbol": "dim(F₄)",
+        "description": "Dimension of F₄ Lie algebra"
+      },
+      "dim_G2_algebra": {
+        "value": 14,
+        "name": "G₂ algebra dimension",
+        "symbol": "dim(G₂)",
+        "description": "Dimension of G₂ Lie algebra (same as holonomy)"
+      },
+      "dim_J3O": {
+        "value": 27,
+        "name": "Jordan algebra dimension",
+        "symbol": "dim(J₃(𝕆))",
+        "description": "Dimension of exceptional Jordan algebra of 3×3 Hermitian octonionic matrices"
+      }
+    },
+
+    "m_theory": {
+      "D_bulk": {
+        "value": 11,
+        "name": "Bulk dimension",
+        "symbol": "D_bulk",
+        "description": "M-theory spacetime dimension"
+      }
+    }
+  },
+
+  "derived_constants": {
+    "_description": "Quantities derived from fundamental topological constants",
+
+    "cohomological": {
+      "H_star": {
+        "value": 99,
+        "formula": "b₂ + b₃ + 1",
+        "components": "21 + 77 + 1",
+        "symbol": "H*",
+        "description": "Effective total cohomology"
+      },
+      "chi_K7": {
+        "value": 42,
+        "formula": "p₂ × b₂",
+        "components": "2 × 21",
+        "symbol": "p₂b₂",
+        "description": "Pontryagin-Betti structural constant (note: the Euler characteristic χ(K₇) = 0 for any compact odd-dimensional manifold; this is a distinct structural invariant)"
+      },
+      "fund_E7": {
+        "value": 56,
+        "formula": "b₃ − b₂",
+        "components": "77 − 21",
+        "symbol": "fund(E₇)",
+        "description": "E₇ fundamental representation dimension"
+      }
+    },
+
+    "structural": {
+      "N_gen": {
+        "value": 3,
+        "formula": "rank(E₈) − Weyl",
+        "components": "8 − 5",
+        "symbol": "N_gen",
+        "description": "Number of fermion generations"
+      },
+      "Weyl": {
+        "value": 5,
+        "formula": "rank(E₈) − N_gen",
+        "components": "8 − 3",
+        "symbol": "Weyl",
+        "description": "Weyl factor (triple derivation: see docs)"
+      },
+      "alpha_sum": {
+        "value": 13,
+        "formula": "rank(E₈) + Weyl",
+        "components": "8 + 5",
+        "symbol": "α_sum",
+        "description": "Anomaly coefficient sum"
+      },
+      "PSL_27": {
+        "value": 168,
+        "formula": "rank(E₈) × b₂",
+        "components": "8 × 21",
+        "symbol": "|PSL(2,7)|",
+        "description": "Order of PSL(2,7) simple group"
+      },
+      "kappa_T_inv": {
+        "value": 61,
+        "formula": "b₃ − dim(G₂) − p₂",
+        "components": "77 − 14 − 2",
+        "symbol": "κ_T⁻¹",
+        "description": "Inverse torsion capacity"
+      }
+    },
+
+    "metric": {
+      "det_g": {
+        "value": 2.03125,
+        "exact": "65/32",
+        "formula": "Weyl × α_sum / 32",
+        "components": "5 × 13 / 32",
+        "symbol": "det(g)",
+        "description": "G₂ metric determinant"
+      },
+      "phi_ref_factor": {
+        "value": 1.0529,
+        "exact": "(65/32)^(1/14)",
+        "formula": "det(g)^(1/dim(G₂))",
+        "symbol": "c",
+        "description": "Reference form scaling factor: φ_ref = c × φ₀"
+      }
+    },
+
+    "number_theoretic": {
+      "golden_ratio": {
+        "value": 1.6180339887,
+        "exact": "(1 + √5) / 2",
+        "symbol": "φ",
+        "description": "Golden ratio"
+      },
+      "L8_lucas": {
+        "value": 47,
+        "sequence": "Lucas: 2, 1, 3, 4, 7, 11, 18, 29, 47, ...",
+        "symbol": "L₈",
+        "description": "8th Lucas number"
+      },
+      "F12_fibonacci": {
+        "value": 144,
+        "symbol": "F₁₂",
+        "description": "12th Fibonacci number"
+      },
+      "Monster_dim": {
+        "value": 196883,
+        "formula": "L₈ × (b₃ − 18) × (b₃ − 6)",
+        "components": "47 × 59 × 71",
+        "symbol": "dim(M)",
+        "description": "Monster group smallest faithful representation"
+      },
+      "j_minus_744": {
+        "value": 196884,
+        "formula": "N_gen × dim(E₈) + Monster_dim",
+        "description": "j-invariant leading coefficient minus 744"
+      }
+    }
+  },
+
+  "predictions": {
+    "_description": "All 33 dimensionless predictions with formulas and experimental comparison",
+    "_statistics": {
+      "total": 33,
+      "mean_deviation_percent": 0.21,
+      "exact_matches": 14,
+      "sub_percent": 32,
+      "outliers": 0
+    },
+
+    "structural": {
+      "N_gen": {
+        "id": 1,
+        "name": "Number of generations",
+        "symbol": "N_gen",
+        "formula": "rank(E₈) − Weyl",
+        "formula_expanded": "8 − 5",
+        "predicted": 3,
+        "predicted_exact": "3",
+        "experimental": 3.0,
+        "uncertainty": 0.0,
+        "deviation_percent": 0.00,
+        "source": "Exact",
+        "status": "VERIFIED",
+        "sector": "Structural"
+      }
+    },
+
+    "electroweak": {
+      "sin2_theta_W": {
+        "id": 2,
+        "name": "Weak mixing angle",
+        "symbol": "sin²θ_W",
+        "formula": "b₂ / (b₃ + dim(G₂))",
+        "formula_expanded": "21 / (77 + 14) = 21/91",
+        "predicted": 0.23077,
+        "predicted_exact": "3/13",
+        "experimental": 0.23122,
+        "uncertainty": 0.00004,
+        "deviation_percent": 0.195,
+        "source": "PDG 2024",
+        "status": "VERIFIED",
+        "sector": "Electroweak"
+      },
+      "alpha_s": {
+        "id": 3,
+        "name": "Strong coupling",
+        "symbol": "α_s(M_Z)",
+        "formula": "√2 / (dim(G₂) − p₂)",
+        "formula_expanded": "√2 / (14 − 2) = √2/12",
+        "predicted": 0.11785,
+        "predicted_exact": "√2/12",
+        "experimental": 0.1179,
+        "uncertainty": 0.0009,
+        "deviation_percent": 0.042,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Electroweak"
+      },
+      "lambda_H": {
+        "id": 4,
+        "name": "Higgs quartic coupling",
+        "symbol": "λ_H",
+        "formula": "√(dim(G₂) + N_gen) / 2^Weyl",
+        "formula_expanded": "√17 / 32",
+        "predicted": 0.12885,
+        "predicted_exact": "√17/32",
+        "experimental": 0.1293,
+        "uncertainty": 0.0002,
+        "deviation_percent": 0.35,
+        "source": "SM m_H=125.20",
+        "status": "VERIFIED",
+        "sector": "Electroweak"
+      },
+      "alpha_inv": {
+        "id": 5,
+        "name": "Fine structure constant inverse",
+        "symbol": "α⁻¹",
+        "formula": "128 + 9 + det(g) × κ_T",
+        "formula_expanded": "128 + 9 + (65/32) × (1/61)",
+        "predicted": 137.0333,
+        "predicted_exact": "137 + 65/(32×61)",
+        "experimental": 137.035999,
+        "uncertainty": 0.000021,
+        "deviation_percent": 0.002,
+        "source": "CODATA 2022",
+        "status": "TOPOLOGICAL",
+        "sector": "Electroweak"
+      }
+    },
+
+    "lepton": {
+      "Q_Koide": {
+        "id": 6,
+        "name": "Koide ratio",
+        "symbol": "Q",
+        "formula": "dim(G₂) / b₂",
+        "formula_expanded": "14 / 21",
+        "predicted": 0.666667,
+        "predicted_exact": "2/3",
+        "experimental": 0.666661,
+        "uncertainty": 0.000007,
+        "deviation_percent": 0.001,
+        "source": "From PDG masses",
+        "status": "VERIFIED",
+        "sector": "Lepton"
+      },
+      "m_tau_m_e": {
+        "id": 7,
+        "name": "Tau-electron mass ratio",
+        "symbol": "m_τ/m_e",
+        "formula": "dim(K₇) + 10 × dim(E₈) + 10 × H*",
+        "formula_expanded": "7 + 2480 + 990",
+        "predicted": 3477,
+        "predicted_exact": "3477",
+        "experimental": 3477.23,
+        "uncertainty": 0.02,
+        "deviation_percent": 0.007,
+        "source": "PDG 2024",
+        "status": "VERIFIED",
+        "sector": "Lepton"
+      },
+      "m_mu_m_e": {
+        "id": 8,
+        "name": "Muon-electron mass ratio",
+        "symbol": "m_μ/m_e",
+        "formula": "dim(J₃(𝕆))^φ",
+        "formula_expanded": "27^1.618...",
+        "predicted": 207.012,
+        "predicted_exact": "27^φ",
+        "experimental": 206.7682830,
+        "uncertainty": 0.0000046,
+        "deviation_percent": 0.118,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Lepton"
+      },
+      "m_mu_m_tau": {
+        "id": 9,
+        "name": "Muon-tau mass ratio",
+        "symbol": "m_μ/m_τ",
+        "formula": "(b₂ − D_bulk) / |PSL(2,7)|",
+        "formula_expanded": "(21 − 11) / 168 = 10/168",
+        "predicted": 0.05952,
+        "predicted_exact": "5/84",
+        "experimental": 0.05946,
+        "uncertainty": 0.00001,
+        "deviation_percent": 0.107,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Lepton"
+      }
+    },
+
+    "quark": {
+      "m_s_m_d": {
+        "id": 10,
+        "name": "Strange-down mass ratio",
+        "symbol": "m_s/m_d",
+        "formula": "p₂² × Weyl",
+        "formula_expanded": "4 × 5 = 20",
+        "predicted": 20,
+        "predicted_exact": "20",
+        "experimental": 20.0,
+        "uncertainty": 1.0,
+        "deviation_percent": 0.00,
+        "source": "PDG 2024 / FLAG",
+        "status": "VERIFIED",
+        "sector": "Quark"
+      },
+      "m_c_m_s": {
+        "id": 11,
+        "name": "Charm-strange mass ratio",
+        "symbol": "m_c/m_s",
+        "formula": "(dim(E₈) − p₂) / b₂",
+        "formula_expanded": "(248 − 2) / 21 = 246/21",
+        "predicted": 11.714,
+        "predicted_exact": "82/7",
+        "experimental": 11.7,
+        "uncertainty": 0.3,
+        "deviation_percent": 0.12,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Quark"
+      },
+      "m_b_m_t": {
+        "id": 12,
+        "name": "Bottom-top mass ratio",
+        "symbol": "m_b/m_t",
+        "formula": "b₀ / (p₂ × N_gen × dim(K₇))",
+        "formula_expanded": "1 / (2 × 3 × 7) = 1/42",
+        "predicted": 0.02381,
+        "predicted_exact": "1/42",
+        "experimental": 0.024,
+        "uncertainty": 0.001,
+        "deviation_percent": 0.79,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Quark"
+      },
+      "m_u_m_d": {
+        "id": 13,
+        "name": "Up-down mass ratio",
+        "symbol": "m_u/m_d",
+        "formula": "(1 + dim(E₆)) / |PSL(2,7)|",
+        "formula_expanded": "(1 + 78) / 168 = 79/168",
+        "predicted": 0.47024,
+        "predicted_exact": "79/168",
+        "experimental": 0.47,
+        "uncertainty": 0.03,
+        "deviation_percent": 0.05,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Quark"
+      }
+    },
+
+    "pmns": {
+      "delta_CP": {
+        "id": 14,
+        "name": "CP violation phase",
+        "symbol": "δ_CP",
+        "formula": "dim(K₇) × dim(G₂) + H*",
+        "formula_expanded": "7 × 14 + 99 = 98 + 99",
+        "predicted": 197,
+        "predicted_exact": "197°",
+        "experimental": 197.0,
+        "uncertainty": 24.0,
+        "deviation_percent": 0.00,
+        "unit": "degrees",
+        "source": "NuFIT 5.3",
+        "status": "VERIFIED",
+        "sector": "PMNS"
+      },
+      "theta_13": {
+        "id": 15,
+        "name": "Reactor mixing angle",
+        "symbol": "θ₁₃",
+        "formula": "180° / b₂",
+        "formula_expanded": "180 / 21",
+        "predicted": 8.571,
+        "predicted_exact": "180/21 °",
+        "experimental": 8.54,
+        "uncertainty": 0.12,
+        "deviation_percent": 0.368,
+        "unit": "degrees",
+        "source": "NuFIT 5.3",
+        "status": "TOPOLOGICAL",
+        "sector": "PMNS"
+      },
+      "theta_23": {
+        "id": 16,
+        "name": "Atmospheric mixing angle",
+        "symbol": "θ₂₃",
+        "formula": "arcsin((b₃ − p₂) / H*)",
+        "formula_expanded": "arcsin(75/99) = arcsin(25/33)",
+        "predicted": 49.251,
+        "predicted_exact": "arcsin(25/33)",
+        "experimental": 49.3,
+        "uncertainty": 1.0,
+        "deviation_percent": 0.10,
+        "unit": "degrees",
+        "source": "NuFIT 5.3",
+        "status": "TOPOLOGICAL",
+        "sector": "PMNS"
+      },
+      "theta_12": {
+        "id": 17,
+        "name": "Solar mixing angle",
+        "symbol": "θ₁₂",
+        "formula": "arctan(√(δ / γ_GIFT))",
+        "formula_expanded": "arctan(√((2π/25) / (511/884)))",
+        "predicted": 33.40,
+        "predicted_exact": "arctan(√(2π×884/(25×511)))",
+        "experimental": 33.41,
+        "uncertainty": 0.75,
+        "deviation_percent": 0.030,
+        "unit": "degrees",
+        "source": "NuFIT 5.3",
+        "status": "TOPOLOGICAL",
+        "sector": "PMNS",
+        "auxiliary": {
+          "delta": "2π / Weyl² = 2π/25",
+          "gamma_GIFT": "(2×rank + 5×H*) / (10×dim(G₂) + 3×dim(E₈)) = 511/884"
+        }
+      },
+      "sin2_theta_12_PMNS": {
+        "id": 18,
+        "name": "Solar mixing sin²",
+        "symbol": "sin²θ₁₂^PMNS",
+        "formula": "(1 + N_gen) / α_sum",
+        "formula_expanded": "(1 + 3) / 13 = 4/13",
+        "predicted": 0.30769,
+        "predicted_exact": "4/13",
+        "experimental": 0.307,
+        "uncertainty": 0.013,
+        "deviation_percent": 0.226,
+        "source": "NuFIT 5.3",
+        "status": "TOPOLOGICAL",
+        "sector": "PMNS"
+      },
+      "sin2_theta_23_PMNS": {
+        "id": 19,
+        "name": "Atmospheric mixing sin²",
+        "symbol": "sin²θ₂₃^PMNS",
+        "formula": "(D_bulk − Weyl) / D_bulk",
+        "formula_expanded": "(11 − 5) / 11 = 6/11",
+        "predicted": 0.54545,
+        "predicted_exact": "6/11",
+        "experimental": 0.546,
+        "uncertainty": 0.021,
+        "deviation_percent": 0.100,
+        "source": "NuFIT 5.3",
+        "status": "TOPOLOGICAL",
+        "sector": "PMNS"
+      },
+      "sin2_theta_13_PMNS": {
+        "id": 20,
+        "name": "Reactor mixing sin²",
+        "symbol": "sin²θ₁₃^PMNS",
+        "formula": "D_bulk / dim(E₈×E₈)",
+        "formula_expanded": "11 / 496",
+        "predicted": 0.02218,
+        "predicted_exact": "11/496",
+        "experimental": 0.0220,
+        "uncertainty": 0.0007,
+        "deviation_percent": 0.806,
+        "source": "NuFIT 5.3",
+        "status": "TOPOLOGICAL",
+        "sector": "PMNS"
+      }
+    },
+
+    "ckm": {
+      "sin2_theta_12_CKM": {
+        "id": 21,
+        "name": "Cabibbo angle sin²",
+        "symbol": "sin²θ₁₂^CKM",
+        "formula": "fund(E₇) / dim(E₈)",
+        "formula_expanded": "56 / 248",
+        "predicted": 0.22581,
+        "predicted_exact": "7/31",
+        "experimental": 0.2250,
+        "uncertainty": 0.0006,
+        "deviation_percent": 0.358,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "CKM"
+      },
+      "A_Wolfenstein": {
+        "id": 22,
+        "name": "Wolfenstein A parameter",
+        "symbol": "A",
+        "formula": "(Weyl + dim(E₆)) / H*",
+        "formula_expanded": "(5 + 78) / 99 = 83/99",
+        "predicted": 0.83838,
+        "predicted_exact": "83/99",
+        "experimental": 0.836,
+        "uncertainty": 0.015,
+        "deviation_percent": 0.285,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "CKM"
+      },
+      "sin2_theta_23_CKM": {
+        "id": 23,
+        "name": "CKM 23-mixing sin²",
+        "symbol": "sin²θ₂₃^CKM",
+        "formula": "dim(K₇) / |PSL(2,7)|",
+        "formula_expanded": "7 / 168 = 1/24",
+        "predicted": 0.04167,
+        "predicted_exact": "1/24",
+        "experimental": 0.0412,
+        "uncertainty": 0.0008,
+        "deviation_percent": 1.133,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "CKM"
+      }
+    },
+
+    "boson_ratios": {
+      "m_H_m_t": {
+        "id": 24,
+        "name": "Higgs-top mass ratio",
+        "symbol": "m_H/m_t",
+        "formula": "fund(E₇) / b₃",
+        "formula_expanded": "56 / 77 = 8/11",
+        "predicted": 0.72727,
+        "predicted_exact": "8/11",
+        "experimental": 0.725,
+        "uncertainty": 0.003,
+        "deviation_percent": 0.313,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Boson"
+      },
+      "m_H_m_W": {
+        "id": 25,
+        "name": "Higgs-W mass ratio",
+        "symbol": "m_H/m_W",
+        "formula": "(N_gen + dim(E₆)) / dim(F₄)",
+        "formula_expanded": "(3 + 78) / 52 = 81/52",
+        "predicted": 1.55769,
+        "predicted_exact": "81/52",
+        "experimental": 1.558,
+        "uncertainty": 0.002,
+        "deviation_percent": 0.020,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Boson"
+      },
+      "m_W_m_Z": {
+        "id": 26,
+        "name": "W-Z mass ratio",
+        "symbol": "m_W/m_Z",
+        "formula": "(χ(K₇) − Weyl) / χ(K₇)",
+        "formula_expanded": "(42 − 5) / 42 = 37/42",
+        "predicted": 0.88095,
+        "predicted_exact": "37/42",
+        "experimental": 0.8815,
+        "uncertainty": 0.0002,
+        "deviation_percent": 0.062,
+        "source": "PDG 2024",
+        "status": "TOPOLOGICAL",
+        "sector": "Boson"
+      }
+    },
+
+    "cosmology": {
+      "Omega_DE": {
+        "id": 27,
+        "name": "Dark energy density",
+        "symbol": "Ω_DE",
+        "formula": "ln(2) × (b₂ + b₃) / H*",
+        "formula_expanded": "ln(2) × 98 / 99",
+        "predicted": 0.68614,
+        "predicted_exact": "ln(2) × 98/99",
+        "experimental": 0.6847,
+        "uncertainty": 0.0073,
+        "deviation_percent": 0.211,
+        "source": "Planck 2020",
+        "status": "VERIFIED",
+        "sector": "Cosmology"
+      },
+      "n_s": {
+        "id": 28,
+        "name": "Spectral index",
+        "symbol": "n_s",
+        "formula": "ζ(D_bulk) / ζ(Weyl)",
+        "formula_expanded": "ζ(11) / ζ(5)",
+        "predicted": 0.96494,
+        "predicted_exact": "ζ(11)/ζ(5)",
+        "experimental": 0.9649,
+        "uncertainty": 0.0042,
+        "deviation_percent": 0.004,
+        "source": "Planck 2020",
+        "status": "VERIFIED",
+        "sector": "Cosmology"
+      },
+      "Omega_DM_Omega_b": {
+        "id": 29,
+        "name": "Dark matter to baryon ratio",
+        "symbol": "Ω_DM/Ω_b",
+        "formula": "(1 + χ(K₇)) / rank(E₈)",
+        "formula_expanded": "(1 + 42) / 8 = 43/8",
+        "predicted": 5.375,
+        "predicted_exact": "43/8",
+        "experimental": 5.375,
+        "uncertainty": 0.1,
+        "deviation_percent": 0.00,
+        "source": "Planck 2020",
+        "status": "VERIFIED",
+        "sector": "Cosmology"
+      },
+      "h_Hubble": {
+        "id": 30,
+        "name": "Hubble parameter (reduced)",
+        "symbol": "h",
+        "formula": "(|PSL(2,7)| − 1) / dim(E₈)",
+        "formula_expanded": "(168 − 1) / 248 = 167/248",
+        "predicted": 0.67339,
+        "predicted_exact": "167/248",
+        "experimental": 0.674,
+        "uncertainty": 0.005,
+        "deviation_percent": 0.091,
+        "source": "Planck 2020",
+        "status": "TOPOLOGICAL",
+        "sector": "Cosmology"
+      },
+      "Omega_b_Omega_m": {
+        "id": 31,
+        "name": "Baryon to matter ratio",
+        "symbol": "Ω_b/Ω_m",
+        "formula": "Weyl / det(g)_den",
+        "formula_expanded": "5 / 32",
+        "predicted": 0.15625,
+        "predicted_exact": "5/32",
+        "experimental": 0.157,
+        "uncertainty": 0.003,
+        "deviation_percent": 0.478,
+        "source": "Planck 2020",
+        "status": "TOPOLOGICAL",
+        "sector": "Cosmology"
+      },
+      "sigma_8": {
+        "id": 32,
+        "name": "Matter fluctuation amplitude",
+        "symbol": "σ₈",
+        "formula": "(p₂ + 32) / χ(K₇)",
+        "formula_expanded": "(2 + 32) / 42 = 34/42",
+        "predicted": 0.80952,
+        "predicted_exact": "17/21",
+        "experimental": 0.811,
+        "uncertainty": 0.006,
+        "deviation_percent": 0.182,
+        "source": "Planck 2020",
+        "status": "TOPOLOGICAL",
+        "sector": "Cosmology"
+      },
+      "Y_p": {
+        "id": 33,
+        "name": "Primordial helium abundance",
+        "symbol": "Y_p",
+        "formula": "(1 + dim(G₂)) / κ_T⁻¹",
+        "formula_expanded": "(1 + 14) / 61 = 15/61",
+        "predicted": 0.24590,
+        "predicted_exact": "15/61",
+        "experimental": 0.245,
+        "uncertainty": 0.003,
+        "deviation_percent": 0.368,
+        "source": "Planck 2020",
+        "status": "TOPOLOGICAL",
+        "sector": "Cosmology"
+      }
+    }
+  },
+
+  "structural_relations": {
+    "_description": "Additional structural parameters (not direct predictions)",
+
+    "tau": {
+      "name": "Topological coupling constant",
+      "symbol": "τ",
+      "formula": "dim(E₈×E₈) × b₂ / (dim(J₃(𝕆)) × H*)",
+      "formula_expanded": "496 × 21 / (27 × 99) = 10416/2673 = 3472/891",
+      "value": 3.8967,
+      "exact": "3472/891",
+      "status": "VERIFIED"
+    },
+    "kappa_T": {
+      "name": "Torsion capacity",
+      "symbol": "κ_T",
+      "formula": "1 / (b₃ − dim(G₂) − p₂)",
+      "formula_expanded": "1 / (77 − 14 − 2) = 1/61",
+      "value": 0.016393,
+      "exact": "1/61",
+      "status": "STRUCTURAL",
+      "note": "Geometric capacity bound, not appearing in other formulas"
+    },
+    "det_g": {
+      "name": "G₂ metric determinant",
+      "symbol": "det(g)",
+      "formula": "Weyl × α_sum / 32",
+      "formula_expanded": "5 × 13 / 32 = 65/32",
+      "value": 2.03125,
+      "exact": "65/32",
+      "status": "VERIFIED"
+    }
+  },
+
+  "gauge_groups": {
+    "_description": "Comparison of gauge group choices",
+    "E8xE8": {"dim": 496, "rank": 8, "mean_deviation": 0.21, "status": "OPTIMAL"},
+    "E7xE8": {"dim": 381, "rank": 7, "mean_deviation": 8.80, "status": "REJECTED"},
+    "E6xE8": {"dim": 326, "rank": 6, "mean_deviation": 15.50, "status": "REJECTED"},
+    "E7xE7": {"dim": 266, "rank": 7, "mean_deviation": 6.05, "status": "REJECTED"},
+    "E6xE6": {"dim": 156, "rank": 6, "mean_deviation": 12.30, "status": "REJECTED"},
+    "SO32": {"dim": 496, "rank": 16, "mean_deviation": 6.82, "status": "REJECTED"},
+    "SO10xSO10": {"dim": 90, "rank": 5, "mean_deviation": 18.50, "status": "REJECTED"},
+    "SU5xSU5": {"dim": 48, "rank": 4, "mean_deviation": 24.43, "status": "REJECTED"}
+  },
+
+  "holonomy_groups": {
+    "_description": "Comparison of holonomy group choices",
+    "G2": {"dim": 14, "susy": "N=1", "mean_deviation": 0.21, "status": "OPTIMAL"},
+    "Spin7": {"dim": 21, "susy": "N=0", "mean_deviation": 3.20, "status": "REJECTED"},
+    "SU4": {"dim": 15, "susy": "N=1", "mean_deviation": 1.46, "status": "REJECTED"},
+    "SU3": {"dim": 8, "susy": "N=2", "mean_deviation": 4.43, "status": "REJECTED"}
+  },
+
+  "experimental_sources": {
+    "PDG_2024": {
+      "url": "https://pdg.lbl.gov/",
+      "description": "Particle Data Group 2024 Review"
+    },
+    "NuFIT_5.3": {
+      "url": "http://www.nu-fit.org/",
+      "description": "Global neutrino oscillation analysis v5.3 (2024)"
+    },
+    "Planck_2020": {
+      "url": "https://www.cosmos.esa.int/web/planck",
+      "description": "Planck 2020 cosmological parameters"
+    },
+    "CODATA_2022": {
+      "url": "https://physics.nist.gov/cuu/Constants/",
+      "description": "CODATA 2022 recommended values"
+    }
+  },
+
+  "status_definitions": {
+    "VERIFIED": "Algebraically proven in Lean 4 formal verification",
+    "TOPOLOGICAL": "Direct consequence of topological invariants",
+    "DERIVED": "Follows from topological formulas via algebra",
+    "HEURISTIC": "Uses topological constants in motivated combination",
+    "STRUCTURAL": "Framework parameter, not a physical prediction",
+    "EXPLORATORY": "Preliminary investigation, not validated"
+  }
+}

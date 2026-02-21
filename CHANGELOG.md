@@ -5,6 +5,108 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.17] - 2026-02-04
+
+### θ₂₃ Formula Correction Release
+
+Critical fix for the atmospheric mixing angle θ₂₃ formula, eliminating the only outlier in the framework.
+
+#### Changed
+
+**θ₂₃ Formula Update**
+- **Old**: θ₂₃ = arcsin((rank(E₈) + b₃)/H*) = arcsin(85/99) = 59.16° → 20% deviation
+- **New**: θ₂₃ = arcsin((b₃ − p₂)/H*) = arcsin(25/33) = 49.25° → **0.10% deviation**
+
+**Physical interpretation**: The τ-μ mixing couples through the 3-cycle topology of K₇ (b₃), corrected by the Pontryagin class (p₂) which captures the spin structure distinguishing fermionic generations.
+
+#### Impact on Framework Statistics
+
+| Metric | Before | After |
+|--------|--------|-------|
+| θ₂₃ deviation | 20.0% | **0.10%** |
+| Mean deviation | 0.84% | **0.21%** (0.22% dimensionless) |
+| Outliers (>5%) | 1 | **0** |
+| Sub-percent accuracy | 32/33 | **32/33** |
+
+#### Updated Files
+- `publications/validation/validation_v33.py` — Formula implementation
+- `publications/validation/VALIDATION_SUMMARY_v33.md` — Updated statistics
+- `publications/papers/markdown/GIFT_v3.3_main.md` — Tables and statistics
+- `publications/papers/markdown/GIFT_v3.3_S2_derivations.md` — Derivation and tables
+- `README.md` — Overview statistics
+
+---
+
+## [3.3.16] - 2026-02-03
+
+### Riemann Connection Validation Release
+
+This release adds rigorous statistical validation of the Riemann-GIFT connection and documents results with full transparency.
+
+#### Added
+
+**Ultra-Rigorous Riemann Validation** (`statistical_validation/riemann_rigorous_validation.py`)
+- 8 independent statistical tests: Sobol, rational uniqueness, lag search, fluctuation analysis, permutation, null distribution, bootstrap, R² decomposition
+- Tests 10,000 Sobol samples, 740,000 rational pairs, 595 lag pairs, 3,000 null sequences
+- Runtime: ~15 minutes on modern CPU
+
+**S3 Appendix A: Riemann Zeta Connection (Exploratory)**
+- Complete documentation of validation results with honest caveats
+- Status classification: EXPLORATORY / PRELIMINARY
+- Clear separation from the 33 validated dimensionless predictions
+
+#### Key Findings
+
+| Test | Result | Implication |
+|------|--------|-------------|
+| R² Decomposition | 99.9% from trend | High R² is density artifact |
+| Rational Uniqueness | 625 beat GIFT | 31/21 is not optimal |
+| Lag Space Search | Rank #213/595 | (8,21) are not special |
+| Bootstrap Stability | CV = 46% | Coefficients unstable |
+
+**What IS validated**:
+- Riemann distinct from random perturbations (14σ)
+- Coefficient closer to GIFT than 99.5% of null
+
+**Verdict**: WEAK EVIDENCE — treat as preliminary observation
+
+#### Documentation Updates
+- Updated `statistical_validation/README.md` with Riemann validation section
+- S3 Table of Contents updated to include Appendix A
+
+---
+
+## [3.3.15] - 2026-02-02
+
+### Research Integration Release
+
+This release integrates theoretical developments from `/research/` into the main publications, providing rigorous foundations for the torsion-free condition and metric structure.
+
+#### Added
+
+**S1 Foundations — Spectral Structure**
+- Section 7.4: Continued fraction representation λ₁ = [0; 7, 14] with dim(K₇) and dim(G₂)
+- Section 7.5: Pell equation structure 99² − 50×14² = 1 connecting spectral gap to number theory
+- Three independent derivations of det(g) = 65/32 (Weyl, cohomological, H* formula)
+
+**S1 Foundations — Torsion Classes**
+- Complete decomposition W₁ ⊕ W₇ ⊕ W₁₄ ⊕ W₂₇ with dimension table
+- Total dimension 49 = 7² = dim(K₇)² interpretation
+
+**S3 Dynamics — Variational Formulation**
+- Section 2.1: Torsion functional Θ_G₂ := ‖∇φ‖² − κ_T‖φ‖² = 0
+- Euler-Lagrange eigenvalue equation ∇²φ = κ_T φ
+- Section 3.3: Moduli space of torsion-free G₂ structures (dim = b₃ = 77)
+- Perturbation analysis for moduli space directions
+
+#### Source Documents
+
+Integrated content from:
+- `research/K7_EXPLICIT_METRIC_ANALYTICAL.md` → S1 Sections 7.4–7.5, 10.3
+- `research/TORSION_FREE_CONDITION_ANALYSIS.md` → S3 Sections 2.1, 3.3
+
+---
+
 ## [3.3.14] - 2026-01-29
 
 ### Synchronization with gift-framework/core v3.3.14
@@ -62,14 +164,14 @@ This release extends the observable catalog from 18 to 33 predictions and signif
 #### Added
 
 **Extended Observable Catalog (33 predictions)**
-- 18 core relations (PROVEN in Lean 4)
+- 18 core relations (VERIFIED in Lean 4)
 - 15 extended relations (TOPOLOGICAL/HEURISTIC status)
 - Mean deviation improved: 0.24% → **0.21%** (PDG 2024)
 
 **Enhanced Monte Carlo Validation**
 - Total configurations tested: 54,327 → **192,349**
-- p-value: < 10⁻⁵ → **< 5×10⁻⁶**
-- Significance: >4σ → **>4.5σ**
+- Empirical p-value: 0 / 192,349
+- Local significance: **3.9σ** (LEE-corrected: 1.1σ)
 
 **New v3.3 Corrections**
 - m_W/m_Z formula: 23/26 → **37/42** = (2b₂−Weyl)/(2b₂) — deviation 0.35% → 0.06%
@@ -862,49 +964,6 @@ See `TEST_COVERAGE_ANALYSIS.md` for comprehensive test gap analysis.
 
 ---
 
-## [Unreleased] - Future Work
-
-### Added
-
-**v2.1 Documentation Structure**
-- `publications/v2.0/` and `publications/v2.1/` - Versioned publication directories
-- `publications/v2.1/GIFT_v21_Geometric_Justifications.md` - Detailed geometric derivation documentation
-- `publications/v2.1/GIFT_v21_Observable_Reference.md` - Complete observable catalog with formulas
-- `publications/v2.1/GIFT_v21_Statistical_Validation.md` - Statistical validation methodology
-
-**Comprehensive Test Infrastructure**
-- `tests/` - Main pytest test suite with unit, integration, regression, and notebook tests
-- `giftpy_tests/` - Framework-specific tests (observables, constants, framework)
-- `publications/tests/TEST_SYNTHESIS.md` - Comprehensive test synthesis document
-- `tests/unit/test_statistical_validation.py` - Sobol sensitivity analysis tests (6 tests)
-- `tests/unit/test_mathematical_properties.py` - Mathematical invariant tests
-- `tests/regression/test_observable_values.py` - Observable regression tests
-
-**Other Additions**
-- `docs/PHILOSOPHY.md` - Philosophical essay on mathematical primacy and epistemic humility
-- `.gitignore` - Standard ignore patterns for Python, Jupyter, and IDE files
-- GitHub workflows for link validation
-- `G2_ML/VERSIONS.md` - Comprehensive version index for all G2 ML framework versions
-- `G2_ML/FUTURE_WORK.md` - Planned enhancements replacing obsolete completion plan
-- `G2_ML/0.X/README.md` - Documentation for 8 previously undocumented versions
-- `legacy_v1/README.md` - Guide to accessing archived v1.0 content via git history
-- ARCHIVED warnings to historical G2 ML documentation (versions <0.7)
-
-### Changed
-- Publications reorganized into versioned directories (`v2.0/`, `v2.1/`)
-- Updated `STRUCTURE.md` to include complete repository structure
-- Updated `CLAUDE.md` to v1.1.0 reflecting test infrastructure and v2.1 structure
-- Corrected `postBuild` Binder setup script with accurate file paths
-- `G2_ML/STATUS.md` - Updated with actual implementation status (93% complete)
-- `README.md` - Updated documentation paths to point to `publications/v2.1/`
-- Version references harmonized across all documentation (v2.0.0 stable, v2.1 in development)
-
-### Fixed
-- Resolved phantom references to non-existent `legacy_v1/` directory
-- Corrected G2_ML framework status claims (Yukawa now documented as complete in v0.8)
-- Fixed inconsistencies between README.md and G2_ML/STATUS.md regarding implementation status
-- Fixed test tolerances to match actual framework formulas
-
 ## [2.0.0] - 2025-10-24
 
 ### Major Release - Complete Framework Reorganization
@@ -1026,40 +1085,8 @@ First public version of the GIFT framework demonstrating geometric derivation of
 
 ---
 
-## Future Development
-
-### Planned for v2.1 (Unreleased, in development)
-
-**Enhancements Under Investigation**
-- Temporal framework integration (21·e⁸ structure)
-- Dimensional observable predictions (masses, VEV)
-- Enhanced computational tools for parameter exploration
-- Additional experimental comparison data from 2025 results
-
-**Research Directions**
-- Connection to quantum error correction codes
-- Relationship to holographic entropy bounds
-- Implications for quantum gravity
-- Extensions to grand unification scale
-
-### Experimental Milestones
-
-**2025-2027**
-- Belle II: Improved CKM measurements
-- T2K/NOvA: Enhanced neutrino oscillation parameters
-- LHCb: Precision CP violation measurements
-
-**2028-2030**
-- DUNE: Definitive neutrino mass hierarchy
-- FCC studies: High-energy parameter evolution
-- CMB-S4: Cosmological parameter refinements
-
-These experimental results will provide critical tests of the framework's predictions.
-
----
-
 For detailed information about specific changes, see the relevant sections in:
-- Main paper: `publications/gift_main.md`
-- Supplements: `publications/supplements/`
+- Main paper: `publications/papers/markdown/GIFT_v3.3_main.md`
+- Supplements: `publications/papers/markdown/`
 - Documentation: `docs/`
 
