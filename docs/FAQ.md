@@ -281,7 +281,7 @@ Current framework treats parameters at characteristic scales (typically M_Z). Ex
 - Two-loop corrections where relevant
 - Threshold corrections at various scales
 
-Future refinements may achieve higher precision through more sophisticated RG treatment. See Supplement S3 for details on torsional dynamics and RG connections.
+Future refinements may achieve higher precision through more sophisticated RG treatment. See [Speculative Physics](../publications/references/SPECULATIVE_PHYSICS.md) for exploratory details on RG flow and scale bridge.
 
 ## Philosophical Questions
 
@@ -351,7 +351,7 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.3.17) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.3.19) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v33,

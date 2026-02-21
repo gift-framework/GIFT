@@ -438,7 +438,7 @@ $$\frac{m_b}{m_t} = \frac{b_0}{42} = \frac{1}{42} = 0.02381...$$
 | GIFT prediction | 0.02381 |
 | Deviation | 0.79% |
 
-*Geometric interpretation*: The same constant 42 appears in the cosmological ratio Ω_DM/Ω_b = (1 + 42)/8 = 43/8 (Section 18b), connecting quark physics to cosmological structure through the K₇ geometry.
+*Geometric interpretation*: The same constant 42 appears in the cosmological ratio Ω_DM/Ω_b = (1 + 42)/8 = 43/8 (Section 19b), connecting quark physics to cosmological structure through the K₇ geometry.
 
 **Status**: TOPOLOGICAL ∎
 
@@ -1143,7 +1143,7 @@ G₂ achieves approximately 5x better agreement than Calabi-Yau (SU(3)).
 
 Among 192,349 tested alternatives, the configuration (b₂=21, b₃=77) with E₈ x E₈ gauge group and G₂ holonomy achieves the lowest mean deviation. Zero alternatives outperform it.
 
-Complete methodology: [docs/STATISTICAL_EVIDENCE.md](../../docs/STATISTICAL_EVIDENCE.md)
+Complete methodology: [STATISTICAL_EVIDENCE.md](../../references/STATISTICAL_EVIDENCE.md)
 
 ---
 

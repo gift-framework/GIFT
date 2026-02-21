@@ -15,10 +15,9 @@ publications/
 │   │   ├── GIFT_v3.3_main.md         # Main paper
 │   │   ├── GIFT_v3.3_S1_foundations.md   # E₈, G₂, K₇ foundations
 │   │   ├── GIFT_v3.3_S2_derivations.md   # 33 dimensionless derivations
-│   │   └── GIFT_v3.3_S3_dynamics.md      # RG flow, torsional dynamics
+│   │   └── Numerical_G2_Metric.md        # PINN-based G₂ metric construction
 │   ├── tex/                       # LaTeX sources
-│   ├── pdf/                       # Generated PDFs
-│   └── FoP/                       # Foundations of Physics submission
+│   └── pdf/                       # Generated PDFs
 │
 ├── outreach/                      # Blog posts & vulgarization
 │   └── (7 Substack posts)
@@ -51,8 +50,8 @@ Mathematical foundations: E₈ exceptional algebra, G₂ holonomy, K₇ manifold
 ### [GIFT_v3.3_S2_derivations.md](markdown/GIFT_v3.3_S2_derivations.md)
 All 33 dimensionless derivations with complete proofs.
 
-### [GIFT_v3.3_S3_dynamics.md](markdown/GIFT_v3.3_S3_dynamics.md)
-RG flow, torsional dynamics, scale bridge.
+### [Numerical_G2_Metric.md](markdown/Numerical_G2_Metric.md)
+PINN-based G₂ metric construction (companion numerical paper).
 
 ---
 
@@ -102,7 +101,7 @@ See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../reference
 
 ## Formal Verification
 
-**~290 relations verified** in Lean 4 (core v3.3.17).
+**~290 relations verified** in Lean 4 (core v3.3.19).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 
@@ -114,5 +113,5 @@ Historical supplements (S1-S9 v2.2/v3.0) are archived in `../../docs/legacy/`.
 
 ---
 
-**Version**: 3.3.17 (2026-02-14)
+**Version**: 3.3.19 (2026-02-21)
 **Repository**: https://github.com/gift-framework/GIFT

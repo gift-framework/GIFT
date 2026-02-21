@@ -12,22 +12,22 @@ Citation formats for the GIFT Framework v3.3.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.17},
+  version = {3.3.19},
   license = {MIT},
-  note    = {33 dimensionless predictions, 0.26\% mean deviation (PDG 2024), 290+ certified relations}
+  note    = {33 dimensionless predictions, 0.21\% mean deviation (PDG 2024), 290+ certified relations}
 }
 ```
 
 ### APA Style
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.3: Geometric Information Field Theory (Version 3.3.17) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2026). GIFT Framework v3.3: Geometric Information Field Theory (Version 3.3.19) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theory." Version 3.3.17. GitHub, 2026. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theory." Version 3.3.19. GitHub, 2026. https://github.com/gift-framework/GIFT.
 ```
 
 ---
@@ -134,13 +134,13 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 ## Formal Verification
 
 ```bibtex
-@software{gift_core_v3317,
+@software{gift_core_v3319,
   title   = {GIFT Core: Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.3.17},
-  note    = {290+ relations verified, K₇ metric pipeline, Selection Principle, Spectral Theory}
+  version = {3.3.19},
+  note    = {250+ relations verified, K₇ metric pipeline, Selection Principle, Spectral Theory}
 }
 ```
 
@@ -159,6 +159,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.3.19 | 2026-02-21 | S3 removal, cross-ref cleanup, sync with core v3.3.19 |
 | 3.3.18 | 2026-02-21 | Bullet-proof validation: Westfall-Young maxT, multi-stat PPC, noise curve, 3M+ exhaustive |
 | 3.3.17 | 2026-02-04 | θ₂₃ formula correction, α_s = √2/12, 0.21% mean deviation |
 | 3.3.14 | 2026-01-28 | Selection Principle, TCS Spectral Bounds, 290+ relations, Lean 4 only |
@@ -197,4 +198,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.3.17 (2026-02-04)
+**Version**: 3.3.19 (2026-02-21)
