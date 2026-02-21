@@ -402,7 +402,7 @@ def main():
     # Paths
     repo_root = Path(__file__).parent.parent.parent
     docs_dirs = [
-        repo_root / 'publications' / 'markdown',
+        repo_root / 'publications' / 'papers' / 'markdown',
         repo_root / 'docs'
     ]
 

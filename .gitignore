@@ -82,6 +82,11 @@ tests/test_results.xml
 # Generated figures
 visualizations/outputs/
 
+# CI-generated reports
+docs_lint_report.json
+observable_validation_report.json
+cross_repo_report.json
+
 # Agent reports
 assets/agents/reports/*.json
 # Model checkpoints

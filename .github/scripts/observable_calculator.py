@@ -367,7 +367,7 @@ def main():
 
     # Paths
     repo_root = Path(__file__).parent.parent.parent
-    docs_dir = repo_root / 'publications' / 'markdown'
+    docs_dir = repo_root / 'publications' / 'papers' / 'markdown'
 
     if not docs_dir.exists():
         print(f"ERROR: Documentation directory not found: {docs_dir}")

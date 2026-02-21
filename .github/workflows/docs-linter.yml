@@ -3,12 +3,12 @@ name: Documentation Linter
 on:
   push:
     paths:
-      - 'publications/markdown/*.md'
+      - 'publications/papers/markdown/*.md'
       - 'docs/*.md'
       - '.github/scripts/docs_linter.py'
   pull_request:
     paths:
-      - 'publications/markdown/*.md'
+      - 'publications/papers/markdown/*.md'
       - 'docs/*.md'
   workflow_dispatch:
 
@@ -41,7 +41,7 @@ jobs:
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           use-quiet-mode: 'yes'
-          folder-path: 'publications/markdown/, docs/'
+          folder-path: 'publications/papers/markdown/, docs/'
           config-file: '.github/markdown-link-check-config.json'
         continue-on-error: true
 
@@ -58,14 +58,14 @@ jobs:
           echo "Checking notation consistency..."
 
           # Check for mixed notation styles
-          MIXED_SIN2=$(grep -rn "sin\^2" publications/markdown/ || true)
+          MIXED_SIN2=$(grep -rn "sin\^2" publications/papers/markdown/ || true)
           if [ -n "$MIXED_SIN2" ]; then
             echo "WARNING: Found 'sin^2' notation, prefer 'sin²'"
             echo "$MIXED_SIN2"
           fi
 
           # Check for proper subscript usage
-          WRONG_B2=$(grep -rn "b_2\|b\_2" publications/markdown/ | grep -v "b₂" || true)
+          WRONG_B2=$(grep -rn "b_2\|b\_2" publications/papers/markdown/ | grep -v "b₂" || true)
           if [ -n "$WRONG_B2" ]; then
             echo "WARNING: Found 'b_2' or 'b\_2', prefer 'b₂'"
             echo "$WRONG_B2"
