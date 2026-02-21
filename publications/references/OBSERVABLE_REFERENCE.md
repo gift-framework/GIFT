@@ -385,13 +385,13 @@ This is **not numerology** — it's the octonionic Fano structure manifesting in
 
 ### 10.4 Validation Script
 
-Full analysis available: `statistical_validation/generate_reference_data.py`
+Full analysis available: `publications/validation/generate_reference_data.py`
 
 ```bash
-python statistical_validation/generate_reference_data.py
+python publications/validation/generate_reference_data.py
 ```
 
-Results: `statistical_validation/results/gift_reference_data.json`
+Results: `publications/validation/results/gift_reference_data.json`
 
 ---
 

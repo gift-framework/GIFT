@@ -100,7 +100,7 @@ python3 riemann_rigorous_validation.py
 
 **Verdict**: 4 PASS / 4 FAIL — **WEAK EVIDENCE**
 
-The Riemann connection is documented in S3 Appendix A with honest caveats.
+The Riemann connection is documented in [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md) with honest caveats.
 The 33 dimensionless predictions do NOT depend on Riemann.
 
 ## Full Documentation

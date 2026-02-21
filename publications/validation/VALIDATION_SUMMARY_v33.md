@@ -16,7 +16,7 @@
 | **Dimensionless** (S2, 29 pure ratios) | 29 | 0.22% | ✓ VALIDATED |
 | **Dimensional** (S2, 4 angles in degrees) | 4 | 0.12% | ✓ VALIDATED |
 | **S2 Total** | 33 | 0.21% | ✓ VALIDATED |
-| **Scale bridge** (S3, 3 masses in MeV) | 3 | 0.07% | ✓ EXPLORATORY |
+| **Scale bridge** (3 masses in MeV) | 3 | 0.07% | ✓ EXPLORATORY |
 | **Grand Total** | 36 | 0.20% | ✓ VALIDATED |
 
 ---
@@ -113,7 +113,7 @@ All 33 predictions are topologically derived ratios or pure numbers.
 
 ---
 
-## Part II: Dimensional Predictions (S3)
+## Part II: Dimensional Predictions (Scale Bridge)
 
 These require the scale bridge formula to convert topology to physical units.
 
@@ -200,7 +200,7 @@ The Riemann-GIFT connection was rigorously tested with 8 independent statistical
 
 The 33 dimensionless predictions do NOT depend on the Riemann connection.
 
-See S3 Appendix A for full details.
+See [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md) for full details.
 
 ---
 

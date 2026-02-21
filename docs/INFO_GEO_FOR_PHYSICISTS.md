@@ -125,7 +125,6 @@ The framework's value, independent of its physical correctness, lies in demonstr
 - Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
 - Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 - Formal verification: [gift-framework/core](https://github.com/gift-framework/core)
-- Philosophy: [PHILOSOPHY.md](PHILOSOPHY.md)
 
 ---
 

@@ -12,10 +12,9 @@ GIFT/
 │   │   │   ├── GIFT_v3.3_main.md         # Main paper
 │   │   │   ├── GIFT_v3.3_S1_foundations.md   # E₈, G₂, K₇ foundations
 │   │   │   ├── GIFT_v3.3_S2_derivations.md   # 33 dimensionless derivations
-│   │   │   └── GIFT_v3.3_S3_dynamics.md      # Torsional flow, scale bridge
+│   │   │   └── Numerical_G2_Metric.md        # PINN-based G₂ metric construction
 │   │   ├── tex/                       # LaTeX sources
-│   │   ├── pdf/                       # Generated PDFs
-│   │   └── FoP/                       # Foundations of Physics submission
+│   │   └── pdf/                       # Generated PDFs
 │   ├── outreach/                      # Vulgarization & blog posts
 │   │   └── (7 Substack posts)
 │   ├── references/                    # Data & reference catalogs
@@ -95,7 +94,7 @@ GIFT/
 | GIFT_v3.3_main.md | Complete theoretical framework |
 | GIFT_v3.3_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
 | GIFT_v3.3_S2_derivations.md | 33 dimensionless derivations with proofs |
-| GIFT_v3.3_S3_dynamics.md | Torsional dynamics, scale bridge |
+| Numerical_G2_Metric.md | PINN-based G₂ metric construction |
 
 ## Exploratory References
 
@@ -120,8 +119,8 @@ GIFT/
 
 ## Version
 
-**Current**: v3.3.17 (2026-02-14)
-**Relations**: ~290 certified (core v3.3.17)
+**Current**: v3.3.19 (2026-02-21)
+**Relations**: ~290 certified (core v3.3.19)
 **Predictions**: 33 predictions (**0.21% mean deviation, 0.22% dimensionless only, PDG 2024**)
 **Validation**: 3,070,396 configs exhaustive + 7-component bullet-proof (Westfall-Young, Bayesian, PPC)
 **Key Result**: Analytical G₂ metric with T = 0 exactly

@@ -18,7 +18,7 @@ GIFT/
 │   │   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
 │   │   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
 │   │   │   ├── GIFT_v3.3_S2_derivations.md  # All 33 dimensionless derivations
-│   │   │   └── GIFT_v3.3_S3_dynamics.md     # RG flow, torsional dynamics
+│   │   │   └── Numerical_G2_Metric.md       # PINN-based G₂ metric construction
 │   │   ├── tex/            # LaTeX sources
 │   │   ├── pdf/            # Generated PDFs
 │   │   └── FoP/            # Foundations of Physics submission
@@ -60,7 +60,7 @@ GIFT/
 ### Supplements
 - **S1 Foundations**: Complete mathematical construction (E₈ lattice, G₂ holonomy, K₇ topology)
 - **S2 Derivations**: All 33 dimensionless predictions with full derivations
-- **S3 Dynamics**: RG flow, torsional geometry, scale bridge (speculative)
+- **Numerical G₂ Metric**: PINN-based G₂ metric construction (companion numerical paper)
 
 ### Extended References
 - Exploratory topics (Monster, sequences, Yukawa)

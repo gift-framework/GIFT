@@ -1,7 +1,7 @@
 # Geometric Information Field Theory v3.3
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.17-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.3.19-green.svg)](CHANGELOG.md)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -15,7 +15,7 @@
 | **Precision** | 0.21% mean deviation across 33 predictions (0.22% dimensionless only, PDG 2024) |
 | **Uniqueness** | #1 out of 3,070,396 configurations tested (3.9σ local significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 290+ relations proven in Lean 4 (core v3.3.17) |
+| **Verified** | 290+ relations proven in Lean 4 (core v3.3.19) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -39,7 +39,7 @@
 | [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
 | [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
 | [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.21% mean, 0.22% dimensionless only, PDG 2024) |
-| [S3: Dynamics](publications/papers/markdown/GIFT_v3.3_S3_dynamics.md) | RG flow, torsional dynamics |
+| [Numerical G₂ Metric](publications/papers/markdown/Numerical_G2_Metric.md) | PINN-based G₂ metric construction |
 
 ### For Specific Audiences
 
@@ -246,7 +246,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.17}
+  version = {3.3.19}
 }
 ```
 
