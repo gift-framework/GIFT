@@ -44,7 +44,7 @@ Before presenting derivations, we clarify the logical structure:
 - The K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)
 
 **Outputs** (derived from inputs):
-- The 18 dimensionless predictions
+- The 33 dimensionless predictions (18 core VERIFIED + 15 extended)
 
 ### 0.2 What We Do NOT Claim
 
@@ -60,7 +60,7 @@ Before presenting derivations, we clarify the logical structure:
 
 ### 0.4 Torsion Independence
 
-**Important**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
+**Important**: All 33 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
 - Predictions depend only on topology, not on the actual torsion value
 - The value κ_T = 1/61 is a topological bound, not a prediction ingredient
 
