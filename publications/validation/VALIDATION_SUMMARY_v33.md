@@ -1,11 +1,11 @@
-# GIFT v3.3.17 Complete Validation Summary
+# GIFT v3.3.18 Complete Validation Summary
 
-**Date**: 2026-02-04
+**Date**: 2026-02-21
 **Status**: VALIDATED
-**Total configurations tested**: 192,349
-**Configurations better than GIFT**: 0
-**Empirical p-value**: 0 / 192,349
-**Local significance**: 3.9σ
+**Exhaustive search**: 3,070,396 configurations, 0 better
+**Null model p-value**: < 2×10⁻⁵ (σ > 4.2)
+**Westfall-Young maxT**: 11/33 significant (global p = 0.008)
+**Bayes factor**: 304–4,738 (decisive)
 
 ---
 
@@ -152,32 +152,34 @@ Where:
 | Sub-percent matches | 36 |
 | Outliers (>5%) | 0 |
 
-### III.2 Monte Carlo Validation
+### III.2 Exhaustive Search
 
-| Test | Configurations | Better than GIFT |
-|------|----------------|------------------|
-| Betti variations | 100,000 | 0 |
-| Gauge groups | 8 | 0 |
-| Holonomy groups | 4 | 0 |
-| Full combinatorial | 91,896 | 0 |
-| Local sensitivity | 441 | 0 |
-| **Total** | **192,349** | **0** |
+| Metric | Value |
+|--------|-------|
+| Configurations tested | 3,070,396 |
+| Better than GIFT | 0 |
+| 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁶] |
 
-### III.3 Statistical Significance
+### III.3 Bullet-Proof Validation (7 Components)
 
-- **Empirical p-value**: 0 / 192,349
-- **Local significance**: 3.9σ (LEE-corrected: 1.1σ)
-- **Effect size** (Cohen's d): 3.18 (large)
-- **Bayes Factor**: 3,690 (decisive evidence)
+| Component | Result |
+|-----------|--------|
+| Three null families | All p < 2×10⁻⁵ (σ > 4.2) |
+| Westfall-Young maxT | 11/33 significant (global p = 0.008) |
+| Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
+| Bayes factor (4 priors) | 304–4,738 (all decisive) |
+| ΔWAIC | 550 (GIFT preferred) |
+| Robustness | Weight-invariant, no dominating observable |
+| Multi-seed replication | 10 seeds, cross-metric consistent |
 
 ### III.4 Uniqueness Tests
 
 | Configuration | Deviation | Rank |
 |---------------|-----------|------|
 | E₈×E₈ + G₂ + (b₂=21, b₃=77) | 0.21% | **#1** |
-| E₇×E₈ | 7.38% | #2 |
-| SU(4) holonomy | 1.07% | #3 |
-| SO(32) | 24.43% | #5 |
+| E₇×E₈ | 8.8% | #2 |
+| SU(4) holonomy | 1.5% | #3 |
+| SU(3) (Calabi-Yau) | 4.4% | #4 |
 
 ---
 
@@ -208,12 +210,14 @@ The GIFT framework's 33 dimensionless predictions achieve:
 - **Mean deviation**: 0.21% total / 0.22% dimensionless only
 - **4 exact matches** (0.00% deviation), 4 near-exact (<0.01%)
 - **32/33 sub-percent accuracy** (1 outlier at 1.13%)
-- **0 configurations** out of 192,349 tested perform better
-- **Empirical p-value**: 0 / 192,349 (3.9σ local significance)
+- **0 configurations** out of 3,070,396 tested perform better
+- **Null model p < 2×10⁻⁵** across three independent null families (σ > 4.2)
+- **Westfall-Young maxT**: 11/33 individually significant (global p = 0.008)
+- **Bayes factors**: 304–4,738 across four prior specifications (all decisive)
 
 The configuration (E₈×E₈, G₂, b₂=21, b₃=77) is the **unique optimal choice** among all tested alternatives.
 
 ---
 
-*GIFT Statistical Validation v3.3.17*
-*Generated: 2026-02-04*
+*GIFT Statistical Validation v3.3.18*
+*Generated: 2026-02-21*

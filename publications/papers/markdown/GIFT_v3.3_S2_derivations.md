@@ -44,7 +44,7 @@ Before presenting derivations, we clarify the logical structure:
 - The K₇ manifold (TCS construction with b₂ = 21, b₃ = 77)
 
 **Outputs** (derived from inputs):
-- The 18 dimensionless predictions
+- The 33 dimensionless predictions (18 core VERIFIED + 15 extended)
 
 ### 0.2 What We Do NOT Claim
 
@@ -60,7 +60,7 @@ Before presenting derivations, we clarify the logical structure:
 
 ### 0.4 Torsion Independence
 
-**Important**: All 18 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
+**Important**: All 33 predictions use only topological invariants. The torsion T does not appear in any formula. Therefore:
 - Predictions depend only on topology, not on the actual torsion value
 - The value κ_T = 1/61 is a topological bound, not a prediction ingredient
 
@@ -1098,52 +1098,54 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ## 23. Statistical Uniqueness of (b₂=21, b₃=77)
 
-A critical question for any unified framework is whether the specific topological parameters represent overfitting. We conducted comprehensive Monte Carlo validation to address this concern.
+A critical question for any unified framework is whether the specific topological parameters represent overfitting. We conducted an exhaustive validation campaign (3,070,396 configurations) combined with a seven-component bullet-proof statistical analysis.
 
-### Methodology
-
-- **Betti variations**: 100,000 random (b₂, b₃) configurations
-- **Gauge group comparison**: E₈×E₈, E₇×E₇, E₆×E₆, SO(32), SU(5)×SU(5), etc.
-- **Holonomy comparison**: G₂, Spin(7), SU(3), SU(4)
-- **Full combinatorial**: 91,896 configurations varying all parameters
-- **Local sensitivity**: ±10 grid around (b₂=21, b₃=77)
-
-### Results
+### Exhaustive Search
 
 | Metric | Value |
 |--------|-------|
-| Total configurations tested | **192,349** |
+| Total configurations tested | **3,070,396** |
 | Configurations better than GIFT | **0** |
 | GIFT mean deviation | 0.21% total / 0.22% dimensionless (33 observables) |
-| Alternative mean deviation | 30.4% |
-| Empirical p-value | **0 / 192,349** |
-| Local significance | **3.9σ** |
+| 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁶] |
 
 ### Gauge Group Ranking
 
 | Rank | Group | Mean Dev. |
 |------|-------|-----------|
-| **1** | **E₈×E₈** | **0.21%** |
-| 2 | E₇×E₈ | 7.38% |
-| 3 | E₆×E₈ | 13.50% |
+| **1** | **E₈×E₈** | **0.41%** |
+| 2 | E₇×E₈ | 8.8% |
+| 3 | E₆×E₈ | 15.5% |
 
-**E₈×E₈ achieves 10× better agreement than all tested alternatives.**
+**E₈×E₈ achieves 21× better agreement than the next best alternative.**
 
 ### Holonomy Ranking
 
 | Rank | Holonomy | Mean Dev. |
 |------|----------|-----------|
-| **1** | **G₂** | **0.21%** |
-| 2 | SU(4) | 1.07% |
-| 3 | SU(3) | 6.82% |
+| **1** | **G₂** | **0.41%** |
+| 2 | SU(4) | 1.5% |
+| 3 | SU(3) | 4.4% |
 
-**G₂ achieves 5× better agreement than Calabi-Yau (SU(3)).**
+**G₂ achieves 11× better agreement than Calabi-Yau (SU(3)).**
+
+### Bullet-Proof Validation (7 Components)
+
+| Component | Result |
+|-----------|--------|
+| Three null families | All reject at p < 2×10⁻⁵ (σ > 4.2) |
+| Westfall-Young maxT | 11/33 individually significant (global p = 0.008) |
+| Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
+| Bayes factor (4 priors) | 304–4,738 (all decisive) |
+| ΔWAIC | 550 (GIFT preferred) |
+| Robustness | Weight-invariant, no dominating observable |
+| Multi-seed replication | 10 seeds, cross-metric consistent |
 
 ### Interpretation
 
-The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **optimal configuration** among all 192,349 tested alternatives. Zero alternatives achieve lower deviation.
+The configuration (b₂=21, b₃=77) with E₈×E₈ gauge group and G₂ holonomy is the **unique optimum** among all 3,070,396 tested alternatives. The seven-component analysis confirms significance through multiple independent statistical approaches, including correlation-aware Westfall-Young FWER control and multi-prior Bayesian model comparison.
 
-Complete methodology: [docs/STATISTICAL_EVIDENCE.md](../../docs/STATISTICAL_EVIDENCE.md)
+Complete methodology: [publications/references/STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md)
 
 ---
 

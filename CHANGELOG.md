@@ -164,7 +164,7 @@ This release extends the observable catalog from 18 to 33 predictions and signif
 #### Added
 
 **Extended Observable Catalog (33 predictions)**
-- 18 core relations (PROVEN in Lean 4)
+- 18 core relations (VERIFIED in Lean 4)
 - 15 extended relations (TOPOLOGICAL/HEURISTIC status)
 - Mean deviation improved: 0.24% → **0.21%** (PDG 2024)
 

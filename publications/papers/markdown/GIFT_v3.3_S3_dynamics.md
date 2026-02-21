@@ -295,7 +295,7 @@ If physical interactions emerge from quantum fluctuations around the torsion-fre
 - The *hierarchy* of components (large/medium/tiny) could explain the hierarchy of observables
 - The *torsion-free base* (Joyce's theorem) ensures mathematical consistency
 
-This mechanism is CONJECTURAL. The 18 VERIFIED predictions use only topology, not these torsion component values.
+This mechanism is CONJECTURAL. The 33 dimensionless predictions (18 VERIFIED + 15 TOPOLOGICAL/HEURISTIC) use only topology, not these torsion component values.
 
 ---
 
@@ -872,7 +872,7 @@ $$\Sigma m_\nu = 0.0587 \text{ eV}$$
 │                                                             │
 │  The following interpretation of the Hubble tension as      │
 │  dual topological projections is exploratory. It is NOT     │
-│  part of the 18 VERIFIED dimensionless predictions.           │
+│  part of the 33 dimensionless predictions.                    │
 │  Experimental validation would require independent          │
 │  confirmation of the proposed mechanism.                    │
 └─────────────────────────────────────────────────────────────┘
@@ -1125,7 +1125,7 @@ A direct spectral interpretation γₙ = λₙ × H* is **incompatible** with We
 
 ### 24b.3 Connection to n_s Formula
 
-The spectral index formula n_s = ζ(11)/ζ(5) already involves the zeta function. The proximity of early zeros to GIFT constants may reflect a deeper relationship between:
+The spectral index formula n_s = ζ(11)/ζ(5) already involves the zeta function. The proximity of early zeros to GIFT constants may reflect a further relationship between:
 
 - ζ(s) analytic structure
 - K₇ cohomological invariants
@@ -1212,7 +1212,7 @@ These are rigorous bounds proven in Lean 4 using integer arithmetic:
 **Status**: NUMERICAL OBSERVATION (the proximity to GIFT-significant integers is formally verified, but the *significance* of this proximity is not yet understood)
 
 **Epistemic note**: These observations may be coincidental. The fact that τ⁴ and τ⁵ approach but don't exactly equal these targets suggests either:
-1. A deeper relation requiring additional terms
+1. A further relation requiring additional terms
 2. Approximate rather than exact connections
 3. Statistical fluctuations in a system with many integers
 

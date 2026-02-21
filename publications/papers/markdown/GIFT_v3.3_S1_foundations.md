@@ -91,7 +91,7 @@ The 7 imaginary octonion units form the **Fano plane** PG(2,2), the smallest pro
 **Numerical observation**: The following identity holds:
 $$(b_3 + \dim(G_2)) + b_3 = 91 + 77 = 168 = |{\rm PSL}(2,7)| = {\rm rank}(E_8) \times b_2$$
 
-Whether this arithmetic coincidence reflects deeper geometric structure connecting gauge and matter sectors remains an open question.
+Whether this arithmetic coincidence reflects further geometric structure connecting gauge and matter sectors remains an open question.
 
 ---
 
@@ -436,7 +436,7 @@ The correction 14/99 − 13/99 = 1/99 = h/H* is the parallel spinor contribution
 | dim(G₂)/√2 ≈ π² | 9.8995 | 9.8696 | 0.30% |
 | dim(K₇)×√2 ≈ π² | 9.8995 | 9.8696 | 0.30% |
 
-These suggest a connection between the topological integer dim(G₂) = 14 and the transcendental number π². Whether this reflects deeper structure or numerical coincidence remains open.
+These suggest a connection between the topological integer dim(G₂) = 14 and the transcendental number π². Whether this reflects additional structure or numerical coincidence remains open.
 
 **Universality**: The 1/H* scaling has been verified numerically across multiple G₂ manifolds with different Betti numbers. The proportionality constant depends on the metric normalization convention.
 

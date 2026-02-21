@@ -23,16 +23,16 @@ Extended from v3.2's 18 observables to include:
 
 | Category | Count | Mean Dev. | Status |
 |----------|-------|-----------|--------|
-| Structural | 1 | 0.00% | PROVEN |
-| Electroweak | 4 | 0.15% | PROVEN/TOPOLOGICAL |
-| Lepton | 3 | 0.04% | PROVEN |
+| Structural | 1 | 0.00% | VERIFIED |
+| Electroweak | 4 | 0.15% | VERIFIED/TOPOLOGICAL |
+| Lepton | 3 | 0.04% | VERIFIED |
 | Lepton Extended | 1 | 0.04% | TOPOLOGICAL |
-| Quark | 4 | 0.24% | PROVEN/TOPOLOGICAL |
-| Neutrino (angles) | 4 | 0.15% | PROVEN/TOPOLOGICAL |
+| Quark | 4 | 0.24% | VERIFIED/TOPOLOGICAL |
+| Neutrino (angles) | 4 | 0.15% | VERIFIED/TOPOLOGICAL |
 | Neutrino Extended (sin²) | 3 | 0.38% | TOPOLOGICAL |
 | CKM Matrix | 3 | 0.59% | TOPOLOGICAL |
 | Boson Ratios | 3 | 0.23% | TOPOLOGICAL |
-| Cosmology | 2 | 0.11% | PROVEN |
+| Cosmology | 2 | 0.11% | VERIFIED |
 | Cosmology Extended | 5 | 0.11% | TOPOLOGICAL |
 | **TOTAL** | **33** | **0.21%** | |
 
@@ -100,7 +100,7 @@ GIFT E₈×E₈/K₇ configuration (b₂=21, b₃=77):
 | m_u/m_d | 0.4702 | 0.47 | 0.051% | quark |
 | δ_CP | 197° | 197° | 0.000% | neutrino |
 | θ₁₃ | 8.57° | 8.54° | 0.368% | neutrino |
-| θ₂₃ | 49.19° | 49.3° | 0.216% | neutrino |
+| θ₂₃ | 49.25° | 49.3° | 0.10% | neutrino |
 | θ₁₂ | 33.40° | 33.41° | 0.030% | neutrino |
 | sin²θ₁₂^PMNS | 0.3077 | 0.307 | 0.226% | neutrino_ext |
 | sin²θ₂₃^PMNS | 0.5455 | 0.546 | 0.100% | neutrino_ext |
@@ -110,7 +110,7 @@ GIFT E₈×E₈/K₇ configuration (b₂=21, b₃=77):
 | sin²θ₂₃^CKM | 0.0417 | 0.0412 | 1.133% | ckm |
 | m_H/m_t | 0.7273 | 0.725 | 0.313% | boson |
 | m_H/m_W | 1.5577 | 1.558 | 0.020% | boson |
-| m_W/m_Z | 0.8846 | 0.8815 | 0.353% | boson |
+| m_W/m_Z | 0.8810 | 0.8815 | 0.057% | boson |
 | Ω_DE | 0.6861 | 0.6847 | 0.211% | cosmology |
 | n_s | 0.9649 | 0.9649 | 0.004% | cosmology |
 | Ω_DM/Ω_b | 5.375 | 5.375 | 0.000% | cosmology_ext |
