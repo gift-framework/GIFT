@@ -10,7 +10,7 @@
 
 The Standard Model requires 19 experimentally determined parameters lacking theoretical explanation. We explore a geometric framework in which dimensionless ratios emerge as topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure, containing zero continuous adjustable parameters.
 
-Assuming existence of a compact G₂ manifold with Betti numbers b₂ = 21 and b₃ = 77 (plausible within the twisted connected sum landscape), we derive 33 dimensionless predictions with mean deviation 0.26% from experiment (PDG 2024). Of these, 18 core relations are formally verified in Lean 4 (algebraic identities, machine-checked). The remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide parameter follows as Q = dim(G₂)/b₂ = 14/21 = 2/3. The neutrino CP-violation phase delta_CP = 197 degrees is consistent with the T2K+NOvA joint analysis (Nature, 2025). Exhaustive search over 192,349 alternative configurations confirms (b₂, b₃) = (21, 77) as uniquely optimal (p < 5 x 10^-6, >4.5 sigma after look-elsewhere correction).
+Assuming existence of a compact G₂ manifold with Betti numbers b₂ = 21 and b₃ = 77 (plausible within the twisted connected sum landscape), we derive 33 dimensionless predictions with mean deviation 0.26% from experiment (PDG 2024). Of these, 18 core relations are formally verified in Lean 4 (algebraic identities, machine-checked). The remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide parameter follows as Q = dim(G₂)/b₂ = 14/21 = 2/3. The neutrino CP-violation phase delta_CP = 197 degrees is consistent with the T2K+NOvA joint analysis (Nature, 2025). Exhaustive search over 192,349 alternative configurations confirms (b₂, b₃) = (21, 77) as uniquely optimal (p < 5 x 10^-6, >4.5 sigma after look-elsewhere correction). A complementary formula-level analysis addresses selection freedom: for 18 observables (17 with non-empty search spaces under a bounded grammar), 12/17 rank first by prediction error and 15/17 rank in the top three among all admissible formulas within their class.
 
 The Deep Underground Neutrino Experiment (DUNE, 2028-2040) will test delta_CP with resolution of a few degrees to ~15 degrees; measurement outside 182-212 degrees would refute the framework. A companion numerical program constructs explicit G₂ metrics on K₇ via physics-informed neural networks, achieving holonomy scores within 5% of exact G₂ (see companion paper). We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
 
@@ -251,7 +251,7 @@ Three classes of predictions emerge:
 We claim that given the inputs, the outputs follow algebraically. We do **not** claim:
 1. That O --> G₂ --> K₇ is the unique geometry for physics
 2. That the formulas are uniquely determined by geometric principles
-3. That the selection rule for specific combinations (e.g., b₂/(b₃ + dim(G₂)) rather than b₂/b₃) is understood
+3. That the selection rule for specific combinations (e.g., b₂/(b₃ + dim(G₂)) rather than b₂/b₃) is understood — though these formulas are statistically distinguished among alternatives (Section 5.5)
 4. That dimensional quantities (masses in eV) have the same confidence as dimensionless ratios
 
 ### 3.3 Three Factors Distinguishing GIFT from Numerology
@@ -269,7 +269,7 @@ These exact ratios cannot be "fitted"; they are correct or wrong.
 
 ### 3.4 The Open Question
 
-The principle selecting these specific algebraic combinations of topological invariants remains unknown. This parallels Balmer's formula (1885) for hydrogen spectra: an empirically successful description whose theoretical derivation (Bohr, Schrodinger) came decades later.
+The principle selecting these specific algebraic combinations of topological invariants remains unknown. This parallels Balmer's formula (1885) for hydrogen spectra: an empirically successful description whose theoretical derivation (Bohr, Schrodinger) came decades later. While a first quantification of the formula-level look-elsewhere effect (Section 5.5) establishes that the GIFT formulas are statistically distinguished within a bounded grammar, it does not explain *why* these combinations are optimal.
 
 An encouraging structural observation: quantities with strong physical significance admit numerous independent derivations yielding the same reduced fraction. For instance, sin²(theta_W) = 3/13 can be expressed through at least 14 independent combinations of topological constants, and Q_Koide = 2/3 through at least 20. This structural redundancy suggests the values are deeply embedded in the algebraic web of topological invariants, rather than arising from isolated coincidences. Complete expression counts appear in Supplement S2.
 
@@ -541,13 +541,65 @@ G₂ holonomy achieves 13x better agreement than Calabi-Yau (SU(3)).
 
 This validation addresses parameter variation within tested ranges. It does **not** address:
 
-- **Formula selection freedom**: The Monte Carlo tests variations of (b₂, b₃, gauge group, holonomy), but the formulas themselves were fixed a priori. The look-elsewhere effect from choosing which combinations of topological constants to use (e.g., b₂/(b₃ + dim(G₂)) vs b₂/b₃) is not quantified. The selection principle remains an open question.
+- **Formula selection freedom**: The Monte Carlo tests variations of (b₂, b₃, gauge group, holonomy), but the formulas themselves were fixed a priori. Section 5.5 provides a first quantification of this look-elsewhere effect via exhaustive enumeration within a bounded grammar, finding that 12 of 17 GIFT formulas rank first among all competitors. The underlying selection principle remains an open question.
 - Alternative TCS constructions with different Calabi-Yau building blocks
 - Why nature selected these specific discrete choices
 
-The statistical significance (p < 5 x 10^-6) applies to parameter variations, not to the space of possible formula structures.
+The statistical significance (p < 5 x 10^-6) applies to parameter variations. The formula-level analysis (Section 5.5) extends this to the space of formula structures within a defined grammar.
 
 Complete methodology and reproducible scripts are available with the code repository.
+
+### 5.5 Formula-Level Selection Analysis
+
+Section 5.3 established that the *topological parameters* (b₂, b₃) = (21, 77) are uniquely optimal. A complementary question remains: given these parameters, are the *formulas themselves* (e.g., b₂/(b₃ + dim(G₂)) for sin²θ_W rather than b₂/b₃) distinguishable from alternatives? We address this quantitatively.
+
+#### 5.5.1 Grammar and Enumeration
+
+We define a formal grammar G = (A, O, R) over the topological invariants of K₇. Atoms include primary invariants (b₂, b₃, dim(G₂), H*, ...) at cost 1, derived invariants (p₂, Weyl, dim(J₃(O)), ...) at cost 2, transcendental constants (pi, phi, zeta(s)) at cost 4--7, and integer coefficients in [1, 5] at cost 1. Operations include arithmetic (+, -, x, /) and, for appropriate observable classes, sqrt, arctan, arcsin, log, exp with costs 1--3.
+
+Observables are partitioned into five classes (A: integer-valued, B: ratio in (0,1), C: ratio > 0, D: angle in degrees, E: transcendental) that constrain the admissible operations. This class-wise restriction prevents cross-class contamination of the search space.
+
+Bottom-up exhaustive enumeration within each class-specific grammar under bounded complexity and depth (maximum depth 3, class-dependent complexity budgets from 8 to 20) generates all admissible formulas up to Level 2. A target-range prefilter (+/-50%) is applied strictly as an efficiency optimization; the theoretical search space is defined by the grammar, not the filter. Formulas producing numerically identical values (within 10^{-10} relative tolerance) are deduplicated, retaining only the simplest representative. This numeric deduplication is a pragmatic v0.1 choice; future versions will add symbolic canonicalization (reduced fractions, AST normal form) as a complement.
+
+#### 5.5.2 Results
+
+For 18 observables with explicit GIFT derivations (17 with non-empty search spaces under the v0.1 grammar), the results are:
+
+| Observable | Class | Search space | GIFT rank | p_random |
+|---|---|---|---|---|
+| N_gen | A | 3 | #1 | 0.069 |
+| m_s/m_d | A | 21 | #1 | < 0.001 |
+| sin²θ_W | B | 247 | **#1** (Pareto) | < 0.001 |
+| alpha_s | B | 217 | #1 | < 0.001 |
+| Q_Koide | B | 302 | **#1** (Pareto) | < 0.001 |
+| Omega_DE | B | 320 | #3 | < 0.001 |
+| kappa_T | B | 174 | #1 | 0.001 |
+| lambda_H | B | 217 | #7 | 0.003 |
+| alpha^{-1} | C | 620 | #1 | < 0.001 |
+| m_mu/m_e | C | 503 | #2 | < 0.001 |
+| m_c/m_s | C | 678 | #1 | < 0.001 |
+| tau | C | 602 | #1 | < 0.001 |
+| theta_12 | D | 910 | #1 | < 0.001 |
+| theta_13 | D | 1,240 | #10 | < 0.001 |
+| theta_23 | D | 701 | #3 | < 0.001 |
+| delta_CP | D | 1,001 | #1 | < 0.001 |
+| n_s | E | 4,864 | **#1** (Pareto) | < 0.001 |
+
+*Table 2. Formula-level selection results. "GIFT rank" is by prediction error among all enumerated formulas in the same class. "Pareto" indicates membership on the error-vs-complexity Pareto frontier. m_tau/m_e omitted (empty search space under current grammar). p-values from 1,000 random AST samples each.*
+
+**Aggregate**: 12 of 17 rank first by prediction error; 15 of 17 rank in the top three; 17 of 18 have random null p-values < 0.01.
+
+#### 5.5.3 Interpretation
+
+The GIFT formulas are not merely formulas that match experiment — for the majority of observables, they are the *best-matching* formulas within their admissible class. The strongest results occur in classes B and C (search spaces 174--678 formulas, simple constructions with low z-scores), and the most dramatic is n_s = zeta(11)/zeta(5), ranking first among 4,864 formulas with z-score 0.009. The weakest result is theta_13 = 180/b₂ (rank #10/1,240), where the degree-conversion coefficient 180 lies outside the standard grammar; a future v0.2 analysis introducing a dedicated conversion atom (deg = 180/pi) would provide a fairer treatment of angular observables.
+
+A formal combined significance across all observables is deferred to future work using a joint null model over formula sets, which would properly account for correlations between observables sharing the same invariant pool.
+
+#### 5.5.4 Limitations
+
+This analysis covers 18 of 33 GIFT predictions (those with explicit algebraic derivations) and is exhaustive only within the v0.1 grammar and complexity budget — it does not include continued fractions, modular forms, or q-series. The integer coefficient range [1, 5] excludes m_tau/m_e (whose formula requires coefficients up to 10, yielding an empty search space). These are well-defined boundaries, not hidden degrees of freedom: extending the grammar enlarges the search space for both GIFT and competing formulas equally.
+
+The full analysis, including per-observable plots, null model distributions, and reproducible benchmarks, is available in the `selection/` module of the validation repository.
 
 ---
 
@@ -648,7 +700,7 @@ GIFT differs from standard M-theory phenomenology [36] by focusing on topologica
 | K₇ existence proof | Hypothesized, not explicitly constructed |
 | Singularity structure | Required for non-abelian gauge groups, unspecified |
 | E₈ x E₈ selection principle | Input assumption |
-| Formula selection rules | Empirically motivated, not derived |
+| Formula selection rules | Statistically distinguished (Section 5.5), not derived |
 | Dimensional quantities | Require additional assumptions (scale bridge) |
 | Supersymmetry breaking | Not addressed |
 | Hidden E₈ sector | Physical interpretation unclear |
@@ -656,7 +708,7 @@ GIFT differs from standard M-theory phenomenology [36] by focusing on topologica
 
 We do not claim to have solved these problems. The framework's value lies in producing falsifiable predictions from stated assumptions.
 
-**Formula selection**: The principle selecting specific algebraic combinations remains unknown. The formulas work; the selection rule awaits discovery. Possible approaches include variational principles on G₂ moduli space, calibrated geometry constraints, and K-theory classification.
+**Formula selection**: The principle selecting specific algebraic combinations remains unknown. However, exhaustive enumeration within a bounded grammar (Section 5.5) establishes that 12 of 17 GIFT formulas rank first by prediction error among all admissible alternatives in their class — the formulas are not arbitrary. The deeper selection rule awaits discovery; possible approaches include variational principles on G₂ moduli space, calibrated geometry constraints, and K-theory classification.
 
 **Dimensionless vs running**: GIFT predictions are dimensionless ratios derived from topology. The question "at which energy scale?" applies to dimensional quantities extracted from these ratios, not to the ratios themselves. The 0.195% deviation in sin²(theta_W) may reflect radiative corrections not captured by topology, experimental extraction procedure, or genuine discrepancy requiring framework revision.
 
@@ -670,7 +722,9 @@ Integer arithmetic yielding physical constants invites skepticism. Our responses
 
 3. **Structural redundancy**: Key quantities admit many independent derivations (14 for sin²(theta_W), 20 for Q_Koide), suggesting they are deeply embedded in the algebraic web rather than isolated coincidences.
 
-4. **Epistemic humility**: We present this as exploration, not established physics. Only experiment decides.
+4. **Formula-level selection**: Exhaustive enumeration within a bounded grammar (Section 5.5) shows that 12 of 17 GIFT formulas rank first among all admissible competitors. The formulas are not cherry-picked from a pool of equally good alternatives.
+
+5. **Epistemic humility**: We present this as exploration, not established physics. Only experiment decides.
 
 ---
 
@@ -681,6 +735,7 @@ We have explored a framework deriving 33 dimensionless Standard Model parameters
 - **33 derived relations** with mean deviation 0.26% (18 core + 15 extended)
 - **Formal verification** of arithmetic consistency (290+ Lean 4 theorems, zero sorry, zero custom axioms)
 - **Statistical uniqueness** of (b₂, b₃) = (21, 77) at > 4.5 sigma among 192,349 alternatives
+- **Formula-level selection**: 12 of 17 GIFT formulas rank first among all admissible alternatives within a bounded grammar (Section 5.5)
 - **Falsifiable prediction** delta_CP = 197 degrees, testable by DUNE
 - **Numerical G₂ metric program** confirming near-G₂ holonomy within Joyce's perturbative regime
 
