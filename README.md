@@ -16,7 +16,7 @@
 | **Uniqueness** | #1 out of 3,070,396 configurations tested (3.9σ local significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
 | **Verified** | 290+ relations proven in Lean 4 (core v3.3.19) |
-| **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 · Monster = 47×59×71 |
+| **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
 
