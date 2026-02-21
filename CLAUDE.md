@@ -159,9 +159,9 @@ blueprint/
 
 ### Status Indicators
 
-- `\leanok` — Fully proven in Lean
-- No marker — Statement only (axiom or pending)
-- `\uses{}` — Dependency tracking
+- `\leanok`: Fully proven in Lean
+- No marker: Statement only (axiom or pending)
+- `\uses{}`: Dependency tracking
 
 ### Viewing Blueprint
 

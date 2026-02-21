@@ -29,7 +29,7 @@
 
 # Part I: Scale Bridge & Dimensional Observables
 
-> **Status: HEURISTIC** — Formulas work numerically but lack complete topological justification.
+> **Status: HEURISTIC**: Formulas work numerically but lack complete topological justification.
 
 ## 1. The Dimensional Transmutation Problem
 
@@ -162,7 +162,7 @@ $$\Sigma m_\nu = 0.0587 \text{ eV}$$
 
 # Part II: Yukawa Couplings & Mixing Matrices
 
-> **Status: EXPLORATORY** — Extends PROVEN results with theoretical construction.
+> **Status: EXPLORATORY**: Extends PROVEN results with theoretical construction.
 
 ## 7. The Yukawa Integral
 
@@ -307,7 +307,7 @@ $$\theta^{quark} \sim \kappa_T \times \theta^{lepton}$$
 
 # Part III: M-Theory & Quantum Gravity
 
-> **Status: SPECULATIVE** — Theoretical connections, not testable predictions.
+> **Status: SPECULATIVE**: Theoretical connections, not testable predictions.
 
 ## 12. M-Theory Embedding
 
@@ -376,7 +376,7 @@ This would connect the Barbero-Immirzi parameter to K₇ topology.
 
 # Part IV: Information-Theoretic Aspects
 
-> **Status: SPECULATIVE** — Conceptual framework, not rigorous.
+> **Status: SPECULATIVE**: Conceptual framework, not rigorous.
 
 ## 15. E₈ as Error-Correcting Code
 

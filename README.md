@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/badge/Version-3.3.19-green.svg)](CHANGELOG.md)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
-**Standard Model parameters from pure geometry** — E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
+**Standard Model parameters from pure geometry**: E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
 
 ---
 
@@ -45,10 +45,10 @@
 
 | Background | Start Here |
 |------------|------------|
-| Everyone | [GIFT for Everyone](docs/GIFT_FOR_EVERYONE.md) — Complete guide with everyday analogies |
-| Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
-| Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
-| Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
+| Everyone | [GIFT for Everyone](docs/GIFT_FOR_EVERYONE.md): Complete guide with everyday analogies |
+| Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md): G₂ metric construction pipeline |
+| Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md): Topological approach to SM parameters |
+| Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md): Machine-verified physical relations |
 ### Exploratory Extensions
 
 | Document | Description |
@@ -95,7 +95,7 @@ The G₂ structure admits an **exact closed form**:
 | Torsion | T = 0 (constant form) | EXACT |
 | det(g) | 65/32 | EXACT |
 
-Joyce's existence theorem is **trivially satisfied** — no numerical fitting required.
+Joyce's existence theorem is **trivially satisfied**: no numerical fitting required.
 
 ### Number-Theoretic Structures
 
@@ -171,7 +171,7 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 - K₇ manifold with (b₂=21, b₃=77)
 - TCS building blocks
 
-These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices — it does not explain *why* nature chose this geometry.
+These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices: it does not explain *why* nature chose this geometry.
 
 **However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,070,396 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
 
@@ -256,7 +256,7 @@ See [CITATION.md](CITATION.md) for additional formats.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE)
+MIT License, see [LICENSE](LICENSE)
 
 ---
 

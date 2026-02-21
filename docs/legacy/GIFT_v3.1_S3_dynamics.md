@@ -244,7 +244,7 @@ From exploratory PINN reconstruction of torsionful G₂ structures (NOT the GIFT
 | T_{πφ,e} | O(1/p₂) ~ 0.5 | CP violation |
 | T_{eπ,φ} | O(κ_T/b₂b₃) ~ 10⁻⁵ | Jarlskog invariant |
 
-**Status**: THEORETICAL EXPLORATION — not part of core GIFT predictions.
+**Status**: THEORETICAL EXPLORATION: not part of core GIFT predictions.
 
 ### 4.4 Physical Picture (Speculative)
 

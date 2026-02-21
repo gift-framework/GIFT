@@ -496,7 +496,7 @@ This reveals δ_CP as a sum over cohomological degrees.
 | T2K + NOνA | 2024 | ±24° | Current best |
 | Hyper-Kamiokande | 2034+ | ±10° | Under construction |
 | DUNE | 2034-2039 | ±5° | Under construction |
-| Combined (2040) | — | ±3° | Projected |
+| Combined (2040) |, | ±3° | Projected |
 
 **Decisive test criteria**:
 - Measurement δ_CP < 182° or δ_CP > 212° at 3σ → **GIFT refuted**

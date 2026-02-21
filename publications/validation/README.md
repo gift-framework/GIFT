@@ -98,7 +98,7 @@ python3 riemann_rigorous_validation.py
 | Bootstrap Stability | FAIL | CV=46% (unstable) |
 | R² Decomposition | PASS | 99.9% from trend |
 
-**Verdict**: 4 PASS / 4 FAIL — **WEAK EVIDENCE**
+**Verdict**: 4 PASS / 4 FAIL, **WEAK EVIDENCE**
 
 The Riemann connection is documented in [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md) with honest caveats.
 The 33 dimensionless predictions do NOT depend on Riemann.

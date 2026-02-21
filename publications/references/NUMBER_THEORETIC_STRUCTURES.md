@@ -32,7 +32,7 @@
 
 # Part I: Fibonacci-Lucas Embedding
 
-> **Status: PATTERN** — Mathematical observation, physical meaning unknown.
+> **Status: PATTERN**: Mathematical observation, physical meaning unknown.
 
 ## 1. The Fibonacci Observation
 
@@ -123,7 +123,7 @@ Connection to GIFT topology: **Unknown**.
 
 # Part II: Prime Atlas
 
-> **Status: OBSERVATION** — Complete coverage verified, significance unclear.
+> **Status: OBSERVATION**: Complete coverage verified, significance unclear.
 
 ## 5. Three-Generator Structure
 
@@ -229,7 +229,7 @@ All 9 Heegner numbers {1, 2, 3, 7, 11, 19, 43, 67, 163} are GIFT-expressible:
 
 # Part III: Monster Group & Moonshine
 
-> **Status: HIGHLY SPECULATIVE** — Mathematical facts verified, physical meaning unknown.
+> **Status: HIGHLY SPECULATIVE**: Mathematical facts verified, physical meaning unknown.
 
 ## 9. Introduction to the Monster
 
@@ -292,7 +292,7 @@ This is Borcherds' celebrated Monstrous Moonshine theorem (Fields Medal 1998).
 
 # Part IV: McKay Correspondence
 
-> **Status: ESTABLISHED MATHEMATICS** — The correspondence itself is proven; GIFT connection is observational.
+> **Status: ESTABLISHED MATHEMATICS**: The correspondence itself is proven; GIFT connection is observational.
 
 ## 12. E₈ ↔ Binary Icosahedral
 
@@ -365,7 +365,7 @@ The McKay correspondence is established mathematics. The connection to GIFT phys
 
 ## 16. The Rule of 17 (Fermat Prime Connection)
 
-> **Status: CONVERGENT** — Independent derivation by Theodorsson (2026) matches GIFT structure.
+> **Status: CONVERGENT**: Independent derivation by Theodorsson (2026) matches GIFT structure.
 
 ### 16.1 Fermat Prime Observation
 

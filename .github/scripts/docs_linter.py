@@ -60,6 +60,9 @@ VALID_STATUSES = {
     'EXPERIMENTAL',
 }
 
+# Em dash (prohibited)
+EM_DASH = '\u2014'  # —
+
 # Notation preferences (warn on non-preferred)
 NOTATION_PREFERENCES = {
     r'sin\^2': ('sin²', 'Prefer Unicode superscript: sin² instead of sin^2'),
@@ -325,6 +328,34 @@ def check_cross_references(docs_dir: Path) -> List[LintIssue]:
     return issues
 
 
+def check_em_dashes(content: str, filename: str) -> List[LintIssue]:
+    """Check for em dashes (prohibited in this repo)."""
+    issues = []
+    lines = content.split('\n')
+    in_code_block = False
+
+    for line_num, line in enumerate(lines, 1):
+        if line.strip().startswith('```'):
+            in_code_block = not in_code_block
+            continue
+        if in_code_block:
+            continue
+
+        for match in re.finditer(EM_DASH, line):
+            issues.append(LintIssue(
+                file=filename,
+                line=line_num,
+                column=match.start() + 1,
+                severity='error',
+                category='em-dash',
+                message='Em dash found. Replace with comma, parentheses, or colon. '
+                        'Run: python .github/scripts/fix_em_dashes.py',
+                context=line.strip()
+            ))
+
+    return issues
+
+
 def check_markdown_structure(content: str, filename: str) -> List[LintIssue]:
     """Check markdown structural issues."""
     issues = []
@@ -388,6 +419,7 @@ def lint_file(filepath: Path) -> List[LintIssue]:
     issues.extend(check_evolutionary_language(content, filename))
     issues.extend(check_notation_consistency(content, filename))
     issues.extend(check_status_classifications(content, filename))
+    issues.extend(check_em_dashes(content, filename))
     issues.extend(check_markdown_structure(content, filename))
 
     return issues

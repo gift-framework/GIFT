@@ -61,7 +61,7 @@ Yet Koide found that these masses satisfy a peculiar relation:
 
 Q = (mₑ + mμ + mτ) / (√mₑ + √mμ + √mτ)² = 0.666661 ± 0.000007
 
-The value is remarkably close to 2/3. Not approximately close—close to six decimal places.
+The value is remarkably close to 2/3. Not approximately close, close to six decimal places.
 The Silence
 
 For over four decades, no one has explained why.
@@ -70,7 +70,7 @@ The relation has been called “mystical,” “numerological,” and “probabl
 
 Koide himself proposed models involving preon substructure. Others explored supersymmetric explanations, flavor symmetries, texture zeros. None achieved consensus. The relation remained an orphan: too precise to ignore, too isolated to integrate.
 
-The Koide puzzle became one of those uncomfortable facts that physicists acknowledge but cannot explain. It appears in review articles with phrases like “intriguing but unexplained” and “awaiting theoretical understanding”—too precise to dismiss as noise, yet disconnected from any known theoretical principle.
+The Koide puzzle became one of those uncomfortable facts that physicists acknowledge but cannot explain. It appears in review articles with phrases like “intriguing but unexplained” and “awaiting theoretical understanding”, too precise to dismiss as noise, yet disconnected from any known theoretical principle.
 
 Forty-three years of waiting.
 Part IV: A Proposal

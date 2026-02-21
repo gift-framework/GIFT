@@ -251,7 +251,7 @@ Three classes of predictions emerge:
 We claim that given the inputs, the outputs follow algebraically. We do **not** claim:
 1. That O --> G₂ --> K₇ is the unique geometry for physics
 2. That the formulas are uniquely determined by geometric principles
-3. That the selection rule for specific combinations (e.g., b₂/(b₃ + dim(G₂)) rather than b₂/b₃) is understood — though these formulas are statistically distinguished among alternatives (Section 5.5)
+3. That the selection rule for specific combinations (e.g., b₂/(b₃ + dim(G₂)) rather than b₂/b₃) is understood, though these formulas are statistically distinguished among alternatives (Section 5.5)
 4. That dimensional quantities (masses in eV) have the same confidence as dimensionless ratios
 
 ### 3.3 Three Factors Distinguishing GIFT from Numerology
@@ -591,13 +591,13 @@ For 18 observables with explicit GIFT derivations (17 with non-empty search spac
 
 #### 5.5.3 Interpretation
 
-The GIFT formulas are not merely formulas that match experiment — for the majority of observables, they are the *best-matching* formulas within their admissible class. The strongest results occur in classes B and C (search spaces 174--678 formulas, simple constructions with low z-scores), and the most dramatic is n_s = zeta(11)/zeta(5), ranking first among 4,864 formulas with z-score 0.009. The weakest result is theta_13 = 180/b₂ (rank #10/1,240), where the degree-conversion coefficient 180 lies outside the standard grammar; a future v0.2 analysis introducing a dedicated conversion atom (deg = 180/pi) would provide a fairer treatment of angular observables.
+The GIFT formulas are not merely formulas that match experiment: for the majority of observables, they are the *best-matching* formulas within their admissible class. The strongest results occur in classes B and C (search spaces 174--678 formulas, simple constructions with low z-scores), and the most dramatic is n_s = zeta(11)/zeta(5), ranking first among 4,864 formulas with z-score 0.009. The weakest result is theta_13 = 180/b₂ (rank #10/1,240), where the degree-conversion coefficient 180 lies outside the standard grammar; a future v0.2 analysis introducing a dedicated conversion atom (deg = 180/pi) would provide a fairer treatment of angular observables.
 
 A formal combined significance across all observables is deferred to future work using a joint null model over formula sets, which would properly account for correlations between observables sharing the same invariant pool.
 
 #### 5.5.4 Limitations
 
-This analysis covers 18 of 33 GIFT predictions (those with explicit algebraic derivations) and is exhaustive only within the v0.1 grammar and complexity budget — it does not include continued fractions, modular forms, or q-series. The integer coefficient range [1, 5] excludes m_tau/m_e (whose formula requires coefficients up to 10, yielding an empty search space). These are well-defined boundaries, not hidden degrees of freedom: extending the grammar enlarges the search space for both GIFT and competing formulas equally.
+This analysis covers 18 of 33 GIFT predictions (those with explicit algebraic derivations) and is exhaustive only within the v0.1 grammar and complexity budget: it does not include continued fractions, modular forms, or q-series. The integer coefficient range [1, 5] excludes m_tau/m_e (whose formula requires coefficients up to 10, yielding an empty search space). These are well-defined boundaries, not hidden degrees of freedom: extending the grammar enlarges the search space for both GIFT and competing formulas equally.
 
 The full analysis, including per-observable plots, null model distributions, and reproducible benchmarks, is available in the `selection/` module of the validation repository.
 
@@ -708,7 +708,7 @@ GIFT differs from standard M-theory phenomenology [36] by focusing on topologica
 
 We do not claim to have solved these problems. The framework's value lies in producing falsifiable predictions from stated assumptions.
 
-**Formula selection**: The principle selecting specific algebraic combinations remains unknown. However, exhaustive enumeration within a bounded grammar (Section 5.5) establishes that 12 of 17 GIFT formulas rank first by prediction error among all admissible alternatives in their class — the formulas are not arbitrary. The deeper selection rule awaits discovery; possible approaches include variational principles on G₂ moduli space, calibrated geometry constraints, and K-theory classification.
+**Formula selection**: The principle selecting specific algebraic combinations remains unknown. However, exhaustive enumeration within a bounded grammar (Section 5.5) establishes that 12 of 17 GIFT formulas rank first by prediction error among all admissible alternatives in their class: the formulas are not arbitrary. The deeper selection rule awaits discovery; possible approaches include variational principles on G₂ moduli space, calibrated geometry constraints, and K-theory classification.
 
 **Dimensionless vs running**: GIFT predictions are dimensionless ratios derived from topology. The question "at which energy scale?" applies to dimensional quantities extracted from these ratios, not to the ratios themselves. The 0.195% deviation in sin²(theta_W) may reflect radiative corrections not captured by topology, experimental extraction procedure, or genuine discrepancy requiring framework revision.
 

@@ -173,7 +173,7 @@ The v3.3 validation with more observables and more configurations produces a **s
 
 1. **Parameter space only**: Test varies (b₂, b₃) but not other structural parameters (dim_G₂, rank_E₈, etc.)
 
-2. **Formula selection**: Does not test whether the formulas themselves are coincidental—only whether GIFT's parameter values are special given those formulas
+2. **Formula selection**: Does not test whether the formulas themselves are coincidental: only whether GIFT's parameter values are special given those formulas
 
 3. **Fixed observables**: Some predictions (α_s, m_H/m_t, m_W/m_Z, etc.) have fixed formulas independent of b₂/b₃
 
@@ -217,7 +217,7 @@ With p-value < 10⁻⁵ and 100.0% percentile ranking, the GIFT configuration is
 
 ### Implications
 
-1. The (b₂=21, b₃=77) point is not just preferred—it is **uniquely optimal**
+1. The (b₂=21, b₃=77) point is not just preferred: it is **uniquely optimal**
 2. Agreement with experiment across 33 observables is **not coincidental**
 3. The framework demonstrates genuine predictive constraint from topology
 

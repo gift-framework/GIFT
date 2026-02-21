@@ -139,7 +139,7 @@ All non-trivial sectors achieve p < 0.05, confirming cross-sector prediction hol
 |-----|---|-----------|
 | Development (16 obs.) | 16 | 0.10% |
 | Test (17 obs.) | 17 | 0.32% |
-| **Test p-value** | — | **6.7×10⁻⁵** (σ = 4.0) |
+| **Test p-value** |, | **6.7×10⁻⁵** (σ = 4.0) |
 
 The held-out test set achieves σ = 4.0, confirming that GIFT's accuracy is not an artifact of fitting to a particular subset.
 
@@ -186,7 +186,7 @@ Sweeping Gaussian noise of amplitude σ_factor × σ_exp over 200 trials per poi
 | 2.00× | 3.09% | 0.73% |
 | 3.00× | 4.61% | 1.18% |
 
-**Interpretation**: At 1× published experimental uncertainties, the mean deviation rises from 0.21% to 1.57%. This is the physical precision floor — the framework's 0.21% agreement is already within a factor of ~7 of what measurement noise alone would produce. Improving the framework's predictions further would require experimental measurements to become more precise.
+**Interpretation**: At 1× published experimental uncertainties, the mean deviation rises from 0.21% to 1.57%. This is the physical precision floor: the framework's 0.21% agreement is already within a factor of ~7 of what measurement noise alone would produce. Improving the framework's predictions further would require experimental measurements to become more precise.
 
 ### 5.4 Noise Monte Carlo
 
@@ -235,7 +235,7 @@ All four priors yield decisive evidence (BF > 100) for GIFT over the null. The s
 | T₃: Count > 1% | 1 | 12.1 | 1.000 | ↑ Superior |
 | T₄: Worst sector | 0.59% | 4.28% | 1.000 | ↑ Superior |
 
-**Status**: `superior_to_noise` — The framework fits significantly better than measurement noise predicts across all four test statistics. Replicated datasets (adding noise at published uncertainty levels) consistently show 5–12× larger deviations than GIFT achieves. This is consistent with genuine physical content rather than numerical coincidence.
+**Status**: `superior_to_noise`: The framework fits significantly better than measurement noise predicts across all four test statistics. Replicated datasets (adding noise at published uncertainty levels) consistently show 5–12× larger deviations than GIFT achieves. This is consistent with genuine physical content rather than numerical coincidence.
 
 **Note**: PPC p ≈ 1.0 does not indicate model misfit. In the PPC framework, p near 0 indicates systematic underfitting, p near 0.5 indicates perfect calibration to the noise model, and p near 1 indicates the model surpasses noise expectations. The result confirms that GIFT's precision exceeds what measurement uncertainties alone would predict.
 
@@ -244,7 +244,7 @@ All four priors yield decisive evidence (BF > 100) for GIFT over the null. The s
 | Model | WAIC | Interpretation |
 |-------|------|---------------|
 | GIFT | 29.9 | Preferred |
-| Null | 580.2 | — |
+| Null | 580.2 |, |
 | **ΔWAIC** | **550.3** | **Strongly favors GIFT** |
 
 ---
@@ -296,7 +296,7 @@ G₂ achieves **11× better** agreement than Calabi-Yau (SU(3)).
 | CKM Mixing | 3 | 0.74% | 1.50% | 0/3 | 2/3 | 3/3 |
 | Boson Mass Ratios | 3 | 0.12% | 0.29% | 2/3 | 3/3 | 3/3 |
 | Cosmological | 7 | 0.19% | 0.48% | 3/7 | 7/7 | 7/7 |
-| **TOTAL** | **33** | **0.41%** | — | 14/33 | 29/33 | 33/33 |
+| **TOTAL** | **33** | **0.41%** |, | 14/33 | 29/33 | 33/33 |
 
 ---
 
@@ -323,7 +323,7 @@ The posterior predictive checks show PPC p = 1.0 across all four test statistics
 - Published experimental uncertainties are conservative
 - There are correlations between observables not captured by the noise model
 
-This is a strength of the framework, not a weakness — but it means the PPC cannot distinguish between these explanations.
+This is a strength of the framework, not a weakness, but it means the PPC cannot distinguish between these explanations.
 
 ### 10.4 Noise Sensitivity as Physical Limit
 
@@ -410,5 +410,5 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.3.18 — Bullet-Proof Statistical Evidence*
+*GIFT Framework v3.3.18: Bullet-Proof Statistical Evidence*
 *Validation: February 2026 | 7-component analysis | Mean deviation: 0.21%*
