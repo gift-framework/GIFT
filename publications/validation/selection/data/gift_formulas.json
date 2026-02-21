@@ -1,0 +1,406 @@
+{
+  "description": "GIFT formula ASTs for dimensionless observables. Each entry maps an observable name to its AST (ASTNode.to_json format) and metadata.",
+  "formulas": {
+    "N_gen": {
+      "obs_id": 0,
+      "obs_class": "A",
+      "ast": {"kind": "atom", "value": "N_gen"},
+      "formula_str": "N_gen",
+      "predicted": 3.0,
+      "experimental": 3.0,
+      "uncertainty": 0.0
+    },
+    "alpha_inv": {
+      "obs_id": 1,
+      "obs_class": "C",
+      "ast": {
+        "kind": "op", "value": "add",
+        "children": [
+          {"kind": "op", "value": "div", "children": [
+            {"kind": "op", "value": "add", "children": [
+              {"kind": "atom", "value": "dim_E8"},
+              {"kind": "atom", "value": "rank_E8"}
+            ]},
+            {"kind": "int", "value": 2}
+          ]},
+          {"kind": "op", "value": "add", "children": [
+            {"kind": "op", "value": "div", "children": [
+              {"kind": "atom", "value": "H_star"},
+              {"kind": "atom", "value": "D_bulk"}
+            ]},
+            {"kind": "op", "value": "div", "children": [
+              {"kind": "atom", "value": "det_g_num"},
+              {"kind": "op", "value": "mul", "children": [
+                {"kind": "atom", "value": "det_g_den"},
+                {"kind": "atom", "value": "kappa_T_inv"}
+              ]}
+            ]}
+          ]}
+        ]
+      },
+      "formula_str": "(dim_E8 + rank_E8)/2 + H_star/D_bulk + det_g_num/(det_g_den * kappa_T_inv)",
+      "predicted": 137.0333,
+      "experimental": 137.036,
+      "uncertainty": 0.000001
+    },
+    "sin2_theta_W": {
+      "obs_id": 2,
+      "obs_class": "B",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "atom", "value": "b2"},
+          {"kind": "op", "value": "add", "children": [
+            {"kind": "atom", "value": "b3"},
+            {"kind": "atom", "value": "dim_G2"}
+          ]}
+        ]
+      },
+      "formula_str": "(b2 / (b3 + dim_G2))",
+      "predicted": 0.230769,
+      "experimental": 0.23122,
+      "uncertainty": 0.00003
+    },
+    "alpha_s": {
+      "obs_id": 3,
+      "obs_class": "B",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "transcendental", "value": "sqrt2"},
+          {"kind": "op", "value": "sub", "children": [
+            {"kind": "atom", "value": "dim_G2"},
+            {"kind": "atom", "value": "p2"}
+          ]}
+        ]
+      },
+      "formula_str": "(sqrt2 / (dim_G2 - p2))",
+      "predicted": 0.117851,
+      "experimental": 0.1179,
+      "uncertainty": 0.0009
+    },
+    "theta_12": {
+      "obs_id": 4,
+      "obs_class": "D",
+      "ast": {
+        "kind": "op", "value": "mul",
+        "children": [
+          {"kind": "op", "value": "arctan", "children": [
+            {"kind": "op", "value": "sqrt", "children": [
+              {"kind": "op", "value": "div", "children": [
+                {"kind": "op", "value": "div", "children": [
+                  {"kind": "op", "value": "mul", "children": [
+                    {"kind": "int", "value": 2},
+                    {"kind": "transcendental", "value": "pi"}
+                  ]},
+                  {"kind": "op", "value": "mul", "children": [
+                    {"kind": "atom", "value": "Weyl"},
+                    {"kind": "atom", "value": "Weyl"}
+                  ]}
+                ]},
+                {"kind": "op", "value": "div", "children": [
+                  {"kind": "op", "value": "add", "children": [
+                    {"kind": "op", "value": "mul", "children": [
+                      {"kind": "int", "value": 2},
+                      {"kind": "atom", "value": "rank_E8"}
+                    ]},
+                    {"kind": "op", "value": "mul", "children": [
+                      {"kind": "int", "value": 5},
+                      {"kind": "atom", "value": "H_star"}
+                    ]}
+                  ]},
+                  {"kind": "op", "value": "add", "children": [
+                    {"kind": "op", "value": "mul", "children": [
+                      {"kind": "int", "value": 10},
+                      {"kind": "atom", "value": "dim_G2"}
+                    ]},
+                    {"kind": "op", "value": "mul", "children": [
+                      {"kind": "int", "value": 3},
+                      {"kind": "atom", "value": "dim_E8"}
+                    ]}
+                  ]}
+                ]}
+              ]}
+            ]}
+          ]},
+          {"kind": "op", "value": "div", "children": [
+            {"kind": "int", "value": 180},
+            {"kind": "transcendental", "value": "pi"}
+          ]}
+        ]
+      },
+      "formula_str": "arctan(sqrt((2*pi/Weyl^2) / ((2*rank_E8+5*H_star)/(10*dim_G2+3*dim_E8)))) * 180/pi",
+      "note": "Uses coefficients 10 > MAX_COEFF; outside standard enumeration grammar",
+      "predicted": 33.40,
+      "experimental": 33.41,
+      "uncertainty": 0.75
+    },
+    "theta_13": {
+      "obs_id": 5,
+      "obs_class": "D",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "int", "value": 180},
+          {"kind": "atom", "value": "b2"}
+        ]
+      },
+      "formula_str": "180 / b2",
+      "note": "Equivalent to (pi/b2) * (180/pi) = 180/b2; uses coefficient 180",
+      "predicted": 8.571,
+      "experimental": 8.54,
+      "uncertainty": 0.12
+    },
+    "theta_23": {
+      "obs_id": 6,
+      "obs_class": "D",
+      "ast": {
+        "kind": "op", "value": "mul",
+        "children": [
+          {"kind": "op", "value": "arcsin", "children": [
+            {"kind": "op", "value": "div", "children": [
+              {"kind": "op", "value": "sub", "children": [
+                {"kind": "atom", "value": "b3"},
+                {"kind": "atom", "value": "p2"}
+              ]},
+              {"kind": "atom", "value": "H_star"}
+            ]}
+          ]},
+          {"kind": "op", "value": "div", "children": [
+            {"kind": "int", "value": 180},
+            {"kind": "transcendental", "value": "pi"}
+          ]}
+        ]
+      },
+      "formula_str": "arcsin((b3 - p2) / H_star) * 180/pi",
+      "note": "Uses coefficient 180 for radian-to-degree conversion",
+      "predicted": 49.25,
+      "experimental": 49.3,
+      "uncertainty": 1.0
+    },
+    "delta_CP": {
+      "obs_id": 7,
+      "obs_class": "D",
+      "ast": {
+        "kind": "op", "value": "add",
+        "children": [
+          {"kind": "op", "value": "mul", "children": [
+            {"kind": "int", "value": 7},
+            {"kind": "atom", "value": "dim_G2"}
+          ]},
+          {"kind": "atom", "value": "H_star"}
+        ]
+      },
+      "formula_str": "(7 * dim_G2 + H_star)",
+      "predicted": 197.0,
+      "experimental": 197.0,
+      "uncertainty": 24.0
+    },
+    "Q_Koide": {
+      "obs_id": 8,
+      "obs_class": "B",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "atom", "value": "dim_G2"},
+          {"kind": "atom", "value": "b2"}
+        ]
+      },
+      "formula_str": "(dim_G2 / b2)",
+      "predicted": 0.666667,
+      "experimental": 0.666661,
+      "uncertainty": 0.000007
+    },
+    "m_mu_over_m_e": {
+      "obs_id": 9,
+      "obs_class": "C",
+      "ast": {
+        "kind": "op", "value": "exp",
+        "children": [
+          {"kind": "op", "value": "mul", "children": [
+            {"kind": "transcendental", "value": "phi"},
+            {"kind": "op", "value": "log", "children": [
+              {"kind": "atom", "value": "dim_J3O"}
+            ]}
+          ]}
+        ]
+      },
+      "formula_str": "exp(phi * log(dim_J3O)) = 27^phi",
+      "note": "Uses transcendental phi and exp/log; outside class C enumeration grammar",
+      "predicted": 207.012,
+      "experimental": 206.768,
+      "uncertainty": 0.001
+    },
+    "m_tau_over_m_e": {
+      "obs_id": 10,
+      "obs_class": "A",
+      "ast": {
+        "kind": "op", "value": "add",
+        "children": [
+          {"kind": "atom", "value": "dim_K7"},
+          {"kind": "op", "value": "add", "children": [
+            {"kind": "op", "value": "mul", "children": [
+              {"kind": "int", "value": 10},
+              {"kind": "atom", "value": "dim_E8"}
+            ]},
+            {"kind": "op", "value": "mul", "children": [
+              {"kind": "int", "value": 10},
+              {"kind": "atom", "value": "H_star"}
+            ]}
+          ]}
+        ]
+      },
+      "formula_str": "(dim_K7 + (10 * dim_E8 + 10 * H_star))",
+      "note": "Uses coefficient 10 > MAX_COEFF; outside standard enumeration grammar",
+      "predicted": 3477.0,
+      "experimental": 3477.15,
+      "uncertainty": 0.01
+    },
+    "m_s_over_m_d": {
+      "obs_id": 11,
+      "obs_class": "A",
+      "ast": {
+        "kind": "op", "value": "mul",
+        "children": [
+          {"kind": "op", "value": "mul", "children": [
+            {"kind": "atom", "value": "p2"},
+            {"kind": "atom", "value": "p2"}
+          ]},
+          {"kind": "atom", "value": "Weyl"}
+        ]
+      },
+      "formula_str": "((p2 * p2) * Weyl)",
+      "predicted": 20.0,
+      "experimental": 20.0,
+      "uncertainty": 1.0
+    },
+    "m_c_over_m_s": {
+      "obs_id": 12,
+      "obs_class": "C",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "op", "value": "sub", "children": [
+            {"kind": "atom", "value": "dim_E8"},
+            {"kind": "atom", "value": "p2"}
+          ]},
+          {"kind": "atom", "value": "b2"}
+        ]
+      },
+      "formula_str": "((dim_E8 - p2) / b2)",
+      "predicted": 11.714,
+      "experimental": 11.7,
+      "uncertainty": 0.3
+    },
+    "Omega_DE": {
+      "obs_id": 35,
+      "obs_class": "B",
+      "ast": {
+        "kind": "op", "value": "mul",
+        "children": [
+          {"kind": "transcendental", "value": "ln2"},
+          {"kind": "op", "value": "div", "children": [
+            {"kind": "op", "value": "sub", "children": [
+              {"kind": "atom", "value": "H_star"},
+              {"kind": "int", "value": 1}
+            ]},
+            {"kind": "atom", "value": "H_star"}
+          ]}
+        ]
+      },
+      "formula_str": "(ln2 * ((H_star - 1) / H_star))",
+      "predicted": 0.6861,
+      "experimental": 0.6889,
+      "uncertainty": 0.0056
+    },
+    "n_s": {
+      "obs_id": 36,
+      "obs_class": "E",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "transcendental", "value": "zeta11"},
+          {"kind": "transcendental", "value": "zeta5"}
+        ]
+      },
+      "formula_str": "(zeta11 / zeta5)",
+      "predicted": 0.9649,
+      "experimental": 0.9649,
+      "uncertainty": 0.0042
+    },
+    "kappa_T": {
+      "obs_id": 37,
+      "obs_class": "B",
+      "ast": {
+        "kind": "op", "value": "inv",
+        "children": [
+          {"kind": "op", "value": "sub", "children": [
+            {"kind": "atom", "value": "b3"},
+            {"kind": "op", "value": "add", "children": [
+              {"kind": "atom", "value": "dim_G2"},
+              {"kind": "atom", "value": "p2"}
+            ]}
+          ]}
+        ]
+      },
+      "formula_str": "1/(b3 - (dim_G2 + p2))",
+      "predicted": 0.01639,
+      "experimental": 0.0164,
+      "uncertainty": 0.0001
+    },
+    "tau": {
+      "obs_id": 38,
+      "obs_class": "C",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "op", "value": "mul", "children": [
+            {"kind": "atom", "value": "dim_E8xE8"},
+            {"kind": "atom", "value": "b2"}
+          ]},
+          {"kind": "op", "value": "mul", "children": [
+            {"kind": "atom", "value": "dim_J3O"},
+            {"kind": "atom", "value": "H_star"}
+          ]}
+        ]
+      },
+      "formula_str": "((dim_E8xE8 * b2) / (dim_J3O * H_star))",
+      "predicted": 3.8967,
+      "experimental": 3.897,
+      "uncertainty": 0.001
+    },
+    "lambda_H": {
+      "obs_id": 39,
+      "obs_class": "B",
+      "ast": {
+        "kind": "op", "value": "div",
+        "children": [
+          {"kind": "op", "value": "sqrt", "children": [
+            {"kind": "op", "value": "add", "children": [
+              {"kind": "atom", "value": "dim_G2"},
+              {"kind": "atom", "value": "N_gen"}
+            ]}
+          ]},
+          {"kind": "op", "value": "mul", "children": [
+            {"kind": "op", "value": "mul", "children": [
+              {"kind": "op", "value": "mul", "children": [
+                {"kind": "op", "value": "mul", "children": [
+                  {"kind": "int", "value": 2},
+                  {"kind": "int", "value": 2}
+                ]},
+                {"kind": "int", "value": 2}
+              ]},
+              {"kind": "int", "value": 2}
+            ]},
+            {"kind": "int", "value": 2}
+          ]}
+        ]
+      },
+      "formula_str": "sqrt(dim_G2 + N_gen) / 2^5",
+      "note": "2^Weyl = 2^5 = 32, represented as nested mul(2,2,...)",
+      "predicted": 0.1288,
+      "experimental": 0.126,
+      "uncertainty": 0.008
+    }
+  }
+}
