@@ -10,6 +10,7 @@ on:
     paths:
       - 'publications/papers/markdown/*.md'
       - 'publications/validation/*.py'
+      - '.github/scripts/observable_calculator.py'
   workflow_dispatch:
 
 jobs:

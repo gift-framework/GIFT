@@ -58,6 +58,9 @@ VALID_STATUSES = {
     'CONSISTENT',
     'COMPLETE',
     'EXPERIMENTAL',
+    'VERIFIED',
+    'VERIFIED (Lean 4)',
+    'STRUCTURAL',
 }
 
 # Em dash (prohibited)

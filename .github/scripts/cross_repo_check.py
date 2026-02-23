@@ -32,38 +32,33 @@ def parse_lean_constants(lean_dir: Path) -> Dict[str, any]:
     Looks for patterns like:
     - def dim_E8 : ℕ := 248
     - abbrev b2 := 21
+
+    Only matches simple literal assignments (not expressions like `2 * dim_E8`).
     """
     constants = {}
 
-    core_file = lean_dir / 'GIFT' / 'Core.lean'
-    if core_file.exists():
-        content = core_file.read_text(encoding='utf-8')
+    # Pattern: def name : Type := <integer-only> (no operators after)
+    # The value must be a standalone integer, not part of an expression.
+    def_pattern = r'def\s+(\w+)\s*:\s*[ℕℤℚℝ\w]+\s*:=\s*(\d+)\s*$'
+    abbrev_pattern = r'abbrev\s+(\w+)\s*(?::\s*[ℕℤℚℝ\w]+)?\s*:=\s*(\d+)\s*$'
 
-        # Pattern: def name : Type := value
-        def_pattern = r'def\s+(\w+)\s*:\s*[ℕℤℚℝ\w]+\s*:=\s*(\d+)'
-        for match in re.finditer(def_pattern, content):
-            name = match.group(1)
-            value = int(match.group(2))
-            constants[name] = value
+    lean_files = [
+        lean_dir / 'GIFT' / 'Core.lean',
+        lean_dir / 'GIFT' / 'Algebraic' / 'BettiNumbers.lean',
+        lean_dir / 'GIFT' / 'Algebraic' / 'GIFTConstants.lean',
+    ]
 
-        # Pattern: abbrev name := value (often for simple aliases)
-        abbrev_pattern = r'abbrev\s+(\w+)\s*:=\s*(\d+)'
-        for match in re.finditer(abbrev_pattern, content):
-            name = match.group(1)
-            value = int(match.group(2))
-            constants[name] = value
+    for lean_file in lean_files:
+        if not lean_file.exists():
+            continue
+        content = lean_file.read_text(encoding='utf-8')
 
-    # Also parse BettiNumbers.lean for derived values
-    betti_file = lean_dir / 'GIFT' / 'Algebraic' / 'BettiNumbers.lean'
-    if betti_file.exists():
-        content = betti_file.read_text(encoding='utf-8')
-
-        def_pattern = r'def\s+(\w+)\s*:\s*[ℕℤℚℝ\w]+\s*:=\s*(\d+)'
-        for match in re.finditer(def_pattern, content):
-            name = match.group(1)
-            value = int(match.group(2))
-            if name not in constants:
-                constants[name] = value
+        for pattern in [def_pattern, abbrev_pattern]:
+            for match in re.finditer(pattern, content, re.MULTILINE):
+                name = match.group(1)
+                value = int(match.group(2))
+                if name not in constants:
+                    constants[name] = value
 
     return constants
 
@@ -95,7 +90,8 @@ def parse_lean_theorems(lean_dir: Path) -> Set[str]:
 
 def parse_python_constants(core_dir: Path) -> Dict[str, any]:
     """
-    Parse constants from gift_core/constants.py
+    Parse constants from gift_core/constants.py.
+    Handles literal integers, Fractions, and simple computed expressions.
     """
     constants = {}
 
@@ -120,6 +116,19 @@ def parse_python_constants(core_dir: Path) -> Dict[str, any]:
         denom = int(match.group(3))
         constants[name] = Fraction(num, denom)
 
+    # Second pass: resolve simple additive expressions (e.g., H_STAR = B2 + B3 + 1)
+    expr_pattern = r'^(\w+)\s*=\s*(\w+)\s*\+\s*(\w+)\s*\+\s*(\d+)\s*(?:#.*)?$'
+    for match in re.finditer(expr_pattern, content, re.MULTILINE):
+        name = match.group(1)
+        ref1 = match.group(2)
+        ref2 = match.group(3)
+        literal = int(match.group(4))
+        if ref1 in constants and ref2 in constants:
+            val1 = constants[ref1]
+            val2 = constants[ref2]
+            if isinstance(val1, int) and isinstance(val2, int):
+                constants[name] = val1 + val2 + literal
+
     return constants
 
 
@@ -131,41 +140,143 @@ def parse_docs_constants(docs_dir: Path) -> Dict[str, Dict]:
     """
     Extract constants from markdown documentation.
     Returns dict of {name: {'value': x, 'source': file}}
+
+    Uses targeted regex patterns per constant to avoid false positives
+    from unrelated tables (e.g., Weyl group decomposition).
     """
     constants = {}
+
+    # Targeted patterns: each maps a canonical name to regexes that
+    # specifically match how that constant appears in notation tables.
+    # Pattern format: regex -> group index for the value.
+    targeted_patterns = {
+        'B2': [
+            r'\|\s*b[₂2]\s*(?:\([^)]*\))?\s*\|\s*(\d+)\s*\|',
+        ],
+        'B3': [
+            r'\|\s*b[₃3]\s*(?:\([^)]*\))?\s*\|\s*(\d+)\s*\|',
+        ],
+        'DIM_E8': [
+            r'\|\s*dim\s*\(\s*E[₈8]\s*\)\s*\|\s*(\d+)\s*\|',
+        ],
+        'DIM_G2': [
+            r'\|\s*dim\s*\(\s*G[₂2]\s*\)\s*\|\s*(\d+)\s*\|',
+        ],
+        'RANK_E8': [
+            r'\|\s*rank\s*\(\s*E[₈8]\s*\)\s*\|\s*(\d+)\s*\|',
+        ],
+        'H_STAR': [
+            r'\|\s*H\*\s*\|\s*(\d+)\s*\|',
+        ],
+        'N_GEN': [
+            r'\|\s*N[_\s]*gen\s*\|\s*(\d+)\s*\|',
+        ],
+        'DIM_K7': [
+            r'\|\s*dim\s*\(\s*K[₇7]\s*\)\s*\|\s*(\d+)\s*\|',
+        ],
+        'DIM_J3O': [
+            r'\|\s*dim\s*\(\s*J[₃3]\s*\(\s*O\s*\)\s*\)\s*\|\s*(\d+)\s*\|',
+            r'\|\s*dim\s*\(\s*J[₃3]\s*\(\s*𝕆\s*\)\s*\)\s*\|\s*(\d+)\s*\|',
+        ],
+        'P2': [
+            r'\|\s*p[₂2]\s*\|\s*(\d+)\s*\|',
+        ],
+        'WEYL_FACTOR': [
+            # Match "Weyl" as a standalone symbol column, not inside decomposition tables
+            r'\|\s*Weyl(?:_factor)?\s*\|\s*(\d+)\s*\|',
+        ],
+    }
 
     for md_file in docs_dir.glob('*.md'):
         content = md_file.read_text(encoding='utf-8')
 
-        # Pattern: | symbol | value |
-        table_pattern = r'\|\s*([^|]+)\s*\|\s*(\d+)\s*\|'
-        for match in re.finditer(table_pattern, content):
-            symbol = match.group(1).strip()
-            value = int(match.group(2))
-
-            # Normalize symbol
-            norm_name = normalize_constant_name(symbol)
-            if norm_name:
-                if norm_name not in constants:
-                    constants[norm_name] = {
-                        'value': value,
+        for canonical_name, patterns in targeted_patterns.items():
+            if canonical_name in constants:
+                continue
+            for pattern in patterns:
+                match = re.search(pattern, content, re.IGNORECASE)
+                if match:
+                    constants[canonical_name] = {
+                        'value': int(match.group(1)),
                         'source': md_file.name,
-                        'raw_name': symbol
+                        'raw_name': canonical_name
                     }
+                    break
 
-        # Pattern: exact fractions like "3/13"
-        fraction_pattern = r'(\w+)\s*=\s*(\d+)/(\d+)'
-        for match in re.finditer(fraction_pattern, content):
-            name = match.group(1)
-            num = int(match.group(2))
-            denom = int(match.group(3))
-            norm_name = normalize_constant_name(name)
-            if norm_name and norm_name not in constants:
-                constants[norm_name] = {
-                    'value': Fraction(num, denom),
-                    'source': md_file.name,
-                    'raw_name': name
-                }
+        # Pattern: exact fractions in specific formats
+        # sin²θ_W = 3/13
+        sin2_patterns = [
+            r'\|\s*sin[²2]\s*θ[_]?[Ww]\s*\|\s*(\d+/\d+)\s*\|',
+            r'sin[²2]\s*θ[_]?[Ww]\s*=\s*(\d+/\d+)',
+        ]
+        if 'SIN2_THETA_W' not in constants:
+            for pattern in sin2_patterns:
+                match = re.search(pattern, content)
+                if match:
+                    val = match.group(1)
+                    num, denom = val.split('/')
+                    constants['SIN2_THETA_W'] = {
+                        'value': Fraction(int(num), int(denom)),
+                        'source': md_file.name,
+                        'raw_name': 'sin²θ_W'
+                    }
+                    break
+
+        # κ_T = 1/61
+        kappa_patterns = [
+            r'\|\s*κ[_]?T\s*\|\s*(\d+/\d+)\s*\|',
+            r'κ[_]?T\s*=\s*(\d+/\d+)',
+        ]
+        if 'KAPPA_T' not in constants:
+            for pattern in kappa_patterns:
+                match = re.search(pattern, content)
+                if match:
+                    val = match.group(1)
+                    num, denom = val.split('/')
+                    constants['KAPPA_T'] = {
+                        'value': Fraction(int(num), int(denom)),
+                        'source': md_file.name,
+                        'raw_name': 'κ_T'
+                    }
+                    break
+
+        # det(g) = 65/32
+        det_patterns = [
+            r'\|\s*det\s*\(\s*g\s*\)\s*\|\s*(\d+/\d+)\s*\|',
+            r'det\s*\(\s*g\s*\)\s*=\s*(\d+/\d+)',
+        ]
+        if 'DET_G' not in constants:
+            for pattern in det_patterns:
+                match = re.search(pattern, content)
+                if match:
+                    val = match.group(1)
+                    num, denom = val.split('/')
+                    constants['DET_G'] = {
+                        'value': Fraction(int(num), int(denom)),
+                        'source': md_file.name,
+                        'raw_name': 'det(g)'
+                    }
+                    break
+
+        # τ = 3472/891
+        tau_patterns = [
+            r'\|\s*τ\s*\|[^|]*\|\s*(\d+/\d+)\s*\|',
+            r'\|\s*tau\s*\|[^|]*\|\s*(\d+/\d+)\s*\|',
+            r'(?:^|\s)τ\s*=\s*(\d+/\d+)',
+            r'(?:^|\s)tau\s*=\s*(\d+/\d+)',
+        ]
+        if 'TAU' not in constants:
+            for pattern in tau_patterns:
+                match = re.search(pattern, content)
+                if match:
+                    val = match.group(1)
+                    num, denom = val.split('/')
+                    constants['TAU'] = {
+                        'value': Fraction(int(num), int(denom)),
+                        'source': md_file.name,
+                        'raw_name': 'τ'
+                    }
+                    break
 
     return constants
 
@@ -303,7 +414,10 @@ def run_consistency_check(docs_dir: Path, core_dir: Path) -> Tuple[List[Consiste
     docs_constants = parse_docs_constants(docs_dir)
 
     # Merge core constants (Python takes precedence as it's more complete)
-    core_constants = {**lean_constants}
+    # Normalize all keys to uppercase for uniform comparison
+    core_constants = {}
+    for name, value in lean_constants.items():
+        core_constants[name.upper()] = value
     for name, value in py_constants.items():
         core_constants[name.upper()] = value
 

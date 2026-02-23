@@ -8,6 +8,10 @@ on:
       - '.github/scripts/cross_repo_check.py'
   pull_request:
     branches: [main]
+    paths:
+      - 'publications/papers/markdown/*.md'
+      - '.github/scripts/cross_repo_check.py'
+      - '.github/workflows/cross-repo-consistency.yml'
   # Triggered by repository_dispatch from gift-framework/core
   repository_dispatch:
     types: [core-updated]
