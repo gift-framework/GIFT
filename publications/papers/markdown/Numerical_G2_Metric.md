@@ -861,8 +861,8 @@ architecture: 564,678 parameters (187,022 neck + 188,828 per bulk).
 | Chart | det(g) | det error | Condition | Pos. def. | Torsion |
 |-------|--------|-----------|-----------|-----------|---------|
 | Neck | 2.031254 | 0.0002% | 1.0000003 | Yes | 1.35 × 10⁻⁷ |
-| Bulk_L | 2.031250 | 1.4 × 10⁻⁶ % | 1.0000010 | Yes | — |
-| Bulk_R | 2.031248 | 7.6 × 10⁻⁵ % | 1.0000013 | Yes | — |
+| Bulk_L | 2.031250 | 1.4 × 10⁻⁶ % | 1.0000010 | Yes | n/a |
+| Bulk_R | 2.031248 | 7.6 × 10⁻⁵ % | 1.0000013 | Yes | n/a |
 
 All three charts satisfy the determinant constraint to better than
 0.001% and are positive definite with condition numbers indistinguishable
@@ -900,7 +900,7 @@ eigenvalue structure from the T⁷ computation:
 ```
 Atlas eigenvalue spectrum (first 20 modes):
 
- λ₁  =    9.07    ← isolated mode (NEW — absent on T⁷)
+ λ₁  =    9.07    ← isolated mode (NEW, absent on T⁷)
  λ₂  =   34.42 ┐
  λ₃  =   34.97 │
  λ₄  =   35.00 ├── cluster of ~7 modes around 35
@@ -1007,7 +1007,7 @@ from:
 Subsequent to the Version A1 results above, approximately 40 training
 versions (A1–A44) investigated the torsion floor. The critical discovery
 (A28) was that the PINN naturally converges to near-flat metrics where
-torsion vanishes trivially — the "flat attractor." All earlier
+torsion vanishes trivially (the "flat attractor"). All earlier
 curvature-based holonomy scores were artifacts of finite-difference noise
 on an essentially flat solution.
 
@@ -1017,7 +1017,7 @@ floor is **∇φ = 0.010**, confirmed by five independent approaches:
 
 | Experiment | Method | ∇φ | vs baseline |
 |------------|--------|-----|-------------|
-| A36 | Cholesky interpolation (fresh init) | 0.0100 | — (baseline) |
+| A36 | Cholesky interpolation (fresh init) | 0.0100 | baseline |
 | A37 | Optimized Cholesky (warm-start) | 0.0100 | 0% |
 | A38 | PINN δg on Cholesky baseline | 0.0100 | 0% |
 | A41 | Joyce iteration (φ₁ = φ₀ + dη) | 0.0113 | +13% (worse) |
@@ -1026,7 +1026,7 @@ floor is **∇φ = 0.010**, confirmed by five independent approaches:
 **A41 (Joyce iteration)**: A neural network learns a 2-form η such that
 φ₁ = φ₀ + dη satisfies closure automatically (Poincaré lemma: d²η = 0).
 Only the coclosure d⋆φ₁ = 0 is optimized. The coclosure drops by a factor
-of 51.5 million (3 passes), but ∇φ is unchanged — the network converges
+of 51.5 million (3 passes), but ∇φ is unchanged: the network converges
 to the trivial solution η → 0. The coclosure was already near-optimal at
 the torsion floor; driving it further to zero does not reduce the full
 torsion norm.
@@ -1053,7 +1053,7 @@ for both methods, between Kovalev's adiabatic prediction (L^{−1}) and
 exponential decay.
 
 **Interpretation**: The torsion floor is **geometric**, not parametric.
-It arises from the 1D seam structure of the TCS interpolation — the
+It arises from the 1D seam structure of the TCS interpolation: the
 fact that two distinct Calabi-Yau metrics must be joined across a
 finite-width neck. No choice of parametrization, optimization strategy,
 or perturbation mode can eliminate it. Reducing the floor requires
@@ -1069,7 +1069,7 @@ correction à la Joyce on the interpolated metric.
 | G₂ topology (not metric) | ML for Sasakian/G₂ invariants | Aggarwal et al. [19] |
 | G₂ flow numerics | Cohomogeneity-one solitons | Duke Math+ 2024 [16] |
 | G₂ spectral estimates | Neck-stretching spectral theory | Langlais [20] |
-| **G₂ metric (this work)** | **det to 10⁻¹⁵, torsion 10⁻⁸** | — |
+| **G₂ metric (this work)** | **det to 10⁻¹⁵, torsion 10⁻⁸** | this work |
 
 ### 9.4 Limitations
 

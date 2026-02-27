@@ -1304,7 +1304,7 @@ $$L_8 = \alpha_{sum}^B + d_{hidden} = 13 + 34 = 47$$
 
 This structure reflects the icosahedral geometry underlying the McKay correspondence E₈ ↔ 2I, where icosahedral coordinates involve the golden ratio φ = lim(Fₙ₊₁/Fₙ).
 
-**Status**: PATTERN (mathematical fact; physical significance unclear)
+**Status**: EXPLORATORY (mathematical fact; physical significance unclear)
 
 ---
 

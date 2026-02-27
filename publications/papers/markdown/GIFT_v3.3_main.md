@@ -615,7 +615,7 @@ Joyce's theorem [20] guarantees existence of a torsion-free G₂ metric when the
 
 A three-chart atlas of physics-informed neural networks (PINNs) models the G₂ metric on K₇ across the TCS neck and two Calabi-Yau bulk regions. The key technical innovation is a Cholesky parametrization with analytical warm-start: the network outputs a small perturbation δL(x) around the Cholesky factor of a target metric, guaranteeing positive-definiteness and symmetry by construction while reducing the learning problem to 28 independent parameters per point (the full dimension of Sym⁺₇(ℝ)).
 
-The metric is encoded in 28 numbers per point — a 38,231× compression from the approximately 10⁶ trainable network parameters.
+The metric is encoded in 28 numbers per point (a 38,231x compression from the approximately 10⁶ trainable network parameters).
 
 ### 6.3 Key Results
 
