@@ -122,6 +122,8 @@ $$N_{\text{gen}} = \frac{168}{56} = 3$$
 
 $$\text{Index}(D_A) = \left( 77 - \frac{8}{3} \times 21 \right) \times \frac{1}{7} = 3$$
 
+**Note**: Method 2 presents the index-theoretic formula schematically. The full intermediate computation (characteristic classes, Chern character of the gauge bundle) is deferred to future work.
+
 **Status**: VERIFIED ∎
 
 ---
@@ -222,7 +224,7 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \f
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Step 1: Define ratio from Betti numbers*
 $$\sin^2\theta_W = \frac{b_2(K_7)}{b_3(K_7) + \dim(G_2)} = \frac{21}{77 + 14} = \frac{21}{91}$$
@@ -249,7 +251,7 @@ $$\sin^2\theta_W = \frac{3}{13} = 0.230769...$$
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \frac{\sqrt{2}}{12}$$
@@ -280,7 +282,7 @@ $$\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{14 - 2} = \
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$Q_{\text{Koide}} = \frac{\dim(G_2)}{b_2(K_7)} = \frac{14}{21} = \frac{2}{3}$$
@@ -306,7 +308,7 @@ $$Q = \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2}
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{m_\tau}{m_e} = \dim(K_7) + 10 \cdot \dim(E_8) + 10 \cdot H^*$$
@@ -333,7 +335,7 @@ $$3477 = 3 \times 19 \times 61 = N_{gen} \times prime(8) \times \kappa_T^{-1}$$
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{m_\mu}{m_e} = [\dim(J_3(\mathbb{O}))]^\phi = 27^\phi = 207.012$$
@@ -362,7 +364,7 @@ $$\frac{m_\mu}{m_e} = [\dim(J_3(\mathbb{O}))]^\phi = 27^\phi = 207.012$$
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
@@ -389,7 +391,7 @@ $$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{m_c}{m_s} = \frac{\dim(E_8) - p_2}{b_2(K_7)} = \frac{248 - 2}{21} = \frac{246}{21} = 11.714...$$
@@ -416,7 +418,7 @@ $$\frac{m_c}{m_s} = \frac{\dim(E_8) - p_2}{b_2(K_7)} = \frac{248 - 2}{21} = \fra
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Step 1: Define the structural constant*
 $$42 = p_2 \times N_{gen} \times \dim(K_7) = 2 \times 3 \times 7$$
@@ -450,7 +452,7 @@ $$\frac{m_b}{m_t} = \frac{b_0}{42} = \frac{1}{42} = 0.02381...$$
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{m_u}{m_d} = \frac{b_0 + \dim(E_6)}{|PSL_2(7)|} = \frac{1 + 78}{168} = \frac{79}{168} = 0.4702...$$
@@ -479,7 +481,7 @@ $$\frac{m_u}{m_d} = \frac{b_0 + \dim(E_6)}{|PSL_2(7)|} = \frac{1 + 78}{168} = \f
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\sin^2\theta_{12}^{CKM} = \frac{\dim(\text{fund}_{E_7})}{\dim(E_8)} = \frac{56}{248} = \frac{7}{31} = 0.2258...$$
@@ -506,7 +508,7 @@ $$\sin^2\theta_{12}^{CKM} = \frac{\dim(\text{fund}_{E_7})}{\dim(E_8)} = \frac{56
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$A_{\text{Wolf}} = \frac{\text{Weyl} + \dim(E_6)}{H^*} = \frac{5 + 78}{99} = \frac{83}{99} = 0.8384...$$
@@ -532,7 +534,7 @@ $$A_{\text{Wolf}} = \frac{\text{Weyl} + \dim(E_6)}{H^*} = \frac{5 + 78}{99} = \f
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\sin^2\theta_{23}^{CKM} = \frac{\dim(K_7)}{|PSL_2(7)|} = \frac{7}{168} = \frac{1}{24} = 0.04167...$$
@@ -557,7 +559,7 @@ $$\sin^2\theta_{23}^{CKM} = \frac{\dim(K_7)}{|PSL_2(7)|} = \frac{7}{168} = \frac
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\delta_{CP} = \dim(K_7) \cdot \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 197°$$
@@ -582,7 +584,7 @@ $$\delta_{CP} = \dim(K_7) \cdot \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 1
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\theta_{13} = \frac{\pi}{b_2(K_7)} = \frac{\pi}{21} = 8.571°$$
@@ -605,7 +607,7 @@ $$\theta_{13} = \frac{\pi}{b_2(K_7)} = \frac{\pi}{21} = 8.571°$$
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\theta_{23} = \arcsin\left(\frac{b_3 - p_2}{H^*}\right) = \arcsin\left(\frac{75}{99}\right) = \arcsin\left(\frac{25}{33}\right) = 49.251°$$
@@ -636,10 +638,10 @@ The atmospheric mixing angle θ₂₃ governs τ-μ flavor mixing. The formula (
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
-$$\theta_{12} = \arctan\left(\sqrt{\frac{\delta}{\gamma_{\text{GIFT}}}}\right) = 33.419°$$
+$$\theta_{12} = \arctan\left(\sqrt{\frac{\delta}{\gamma_{\text{GIFT}}}}\right) = 33.40°$$
 
 *Components*:
 - δ = 2π/Weyl² = 2π/25
@@ -647,6 +649,8 @@ $$\theta_{12} = \arctan\left(\sqrt{\frac{\delta}{\gamma_{\text{GIFT}}}}\right) =
 
 *Derivation of γ_GIFT*:
 $$\gamma_{\text{GIFT}} = \frac{2 \cdot \text{rank}(E_8) + 5 \cdot H^*}{10 \cdot \dim(G_2) + 3 \cdot \dim(E_8)} = \frac{511}{884}$$
+
+**Note**: The integer coefficients (2, 5, 10, 3) in γ_GIFT are not yet derived from first principles. This prediction has the highest complexity cost (52) in the selection analysis.
 
 *Experimental comparison*:
 
@@ -716,7 +720,7 @@ $$\sin^2\theta_{13}^{PMNS} = \frac{D_{bulk}}{\dim(E_8 \times E_8)} = \frac{11}{4
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{14 + 3}}{2^5} = \frac{\sqrt{17}}{32}$$
@@ -769,6 +773,8 @@ $$\frac{m_W}{m_Z} = \frac{2b_2 - \text{Weyl}}{2b_2} = \frac{42 - 5}{42} = \frac{
 
 **Note**: This corrects the previous formula (23/26 = 0.885) which had 0.35% deviation.
 
+**Consistency note**: The tree-level Standard Model relation m_W/m_Z = cos θ_W gives √(1 − 3/13) = √(10/13) ≈ 0.8771, while the direct GIFT prediction is 37/42 ≈ 0.8810 (0.45% discrepancy). This reflects that the two predictions correspond to different renormalization schemes: sin²θ_W = 3/13 matches the MS-bar value at M_Z, while m_W/m_Z = 37/42 matches the pole mass ratio. Radiative corrections bridge the two.
+
 ### Relation: m_H/m_t = 56/77
 
 *Formula*:
@@ -805,7 +811,7 @@ $$\frac{m_H}{m_W} = \frac{N_{gen} + \dim(E_6)}{\dim(F_4)} = \frac{3 + 78}{52} = 
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\Omega_{DE} = \ln(p_2) \cdot \frac{b_2 + b_3}{H^*} = \ln(2) \cdot \frac{98}{99} = 0.686146$$
@@ -832,7 +838,7 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln(2)$$
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Formula*:
 $$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)} = 0.9649$$
@@ -859,7 +865,7 @@ $$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)} 
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{\Omega_{DM}}{\Omega_b} = \frac{b_0 + 42}{\text{rank}(E_8)} = \frac{1 + 42}{8} = \frac{43}{8} = 5.375$$
@@ -886,7 +892,7 @@ $$\frac{\Omega_{DM}}{\Omega_b} = \frac{b_0 + 42}{\text{rank}(E_8)} = \frac{1 + 4
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$h = \frac{|PSL_2(7)| - b_0}{\dim(E_8)} = \frac{168 - 1}{248} = \frac{167}{248} = 0.6734...$$
@@ -909,7 +915,7 @@ $$h = \frac{|PSL_2(7)| - b_0}{\dim(E_8)} = \frac{168 - 1}{248} = \frac{167}{248}
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\frac{\Omega_b}{\Omega_m} = \frac{\text{Weyl}}{\det(g)_{den}} = \frac{5}{32} = 0.15625$$
@@ -932,7 +938,7 @@ $$\frac{\Omega_b}{\Omega_m} = \frac{\text{Weyl}}{\det(g)_{den}} = \frac{5}{32} =
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\sigma_8 = \frac{p_2 + \det(g)_{den}}{42} = \frac{2 + 32}{42} = \frac{34}{42} = \frac{17}{21} = 0.8095...$$
@@ -955,7 +961,7 @@ $$\sigma_8 = \frac{p_2 + \det(g)_{den}}{42} = \frac{2 + 32}{42} = \frac{34}{42} 
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$Y_p = \frac{b_0 + \dim(G_2)}{\kappa_T^{-1}} = \frac{1 + 14}{61} = \frac{15}{61} = 0.2459...$$
@@ -978,7 +984,7 @@ $$Y_p = \frac{b_0 + \dim(G_2)}{\kappa_T^{-1}} = \frac{1 + 14}{61} = \frac{15}{61
 
 **Classification**: DERIVED (from Weyl triple identity + Ω_DE)
 
-### Proof
+### Derivation
 
 *Step 1: Establish √Weyl as structural*
 
@@ -999,9 +1005,9 @@ $$\Omega_m = \frac{\Omega_{DE}}{\sqrt{\text{Weyl}}} = \frac{\ln(2) \times 98/99}
 
 *Step 4: Verify closure*
 
-$$\Omega_{total} = \Omega_{DE} + \Omega_m = 0.6861 + 0.3068 = 0.9929 \approx 1$$
+$$\Omega_{total} = \Omega_{DE} + \Omega_m = 0.6861 + 0.3068 = 0.9929$$
 
-Consistent with flat universe (Ω_total = 1).
+Ω_total = 0.993, a 0.7% deficit from exact closure. This tension (comparable to the 2.7% deviation in Ω_m itself) represents the framework's least precise cosmological prediction. DESI and Euclid will test Ω_m to sub-percent precision by 2028.
 
 *Experimental comparison*:
 
@@ -1028,7 +1034,7 @@ The √5 ratio between dark energy and matter densities emerges from the same st
 
 **Classification**: TOPOLOGICAL
 
-### Proof
+### Derivation
 
 *Formula*:
 $$\alpha^{-1}(M_Z) = \frac{\dim(E_8) + \text{rank}(E_8)}{2} + \frac{H^*}{D_{bulk}} + \det(g) \cdot \kappa_T$$
@@ -1061,7 +1067,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 |---|----------|---------|-------|------|------|--------|
 | 1 | N_gen | Atiyah-Singer | 3 | 3 | exact | VERIFIED |
 | 2 | τ | 496×21/(27×99) | 3472/891 | - | - | VERIFIED |
-| 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | STRUCTURAL* |
+| 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | TOPOLOGICAL |
 | 4 | det(g) | 5×13/32 | 65/32 | - | - | TOPOLOGICAL |
 | 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.195% | VERIFIED |
 | 6 | α_s | √2/12 | 0.11785 | 0.1179 | 0.042% | TOPOLOGICAL |
@@ -1079,7 +1085,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 18 | α⁻¹ | 128+9+corr | 137.033 | 137.036 | 0.002% | TOPOLOGICAL |
 | 19 | Ω_m | Ω_DE/√Weyl | 0.3068 | 0.3153 | 2.7% | DERIVED |
 
-*κ_T is a structural parameter (capacity), not a physical prediction. It does not appear in other formulas.
+*κ_T is a topological parameter (capacity), not a physical prediction. It does not appear in other formulas.
 
 ---
 
@@ -1145,13 +1151,17 @@ Among 192,349 tested alternatives, the configuration (b₂=21, b₃=77) with E�
 
 Complete methodology: [STATISTICAL_EVIDENCE.md](../../references/STATISTICAL_EVIDENCE.md)
 
+### Formula-Level Selection (Cross-Reference)
+
+The Monte Carlo analysis above addresses parameter selection (b₂, b₃). A complementary formula-level analysis (main paper Section 5.5; pilot benchmark in SELECTION_REPORT.md) addresses formula selection: for 5 representative observables (Q_Koide, sin²θ_W, N_gen, δ_CP, n_s), all 5 GIFT formulas rank #1 by precision AND sit on the Pareto frontier. Mean enrichment factor: 2.0× (GIFT values appear more often than average in the algebraic web). Joint probability < 10⁻³⁰ under random formula null.
+
 ---
 
 # Part IX: Observable Catalog
 
 ## 24. Structural Redundancy and Expression Counts
 
-Each prediction admits multiple algebraically independent expressions that reduce to the same fraction. This multiplicity provides a measure of structural robustness: quantities arising from many paths through the topological invariants are less likely to represent numerical coincidence.
+Each prediction admits multiple algebraically distinct representations that reduce to the same fraction. This multiplicity provides a measure of structural robustness: quantities arising from many paths through the topological invariants are less likely to represent numerical coincidence.
 
 ### 24.1 Classification Scheme
 
@@ -1210,7 +1220,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 
 ### 24.4 Illustrative Examples of Multiple Expressions
 
-**sin²θ_W = 3/13** (14 independent expressions):
+**sin²θ_W = 3/13** (14 algebraically distinct representations):
 
 | # | Expression | Evaluation |
 |---|------------|------------|
@@ -1224,7 +1234,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 
 (Expression 7 illustrates that not all combinations work; only those reducing to 3/13 are valid.)
 
-**Q_Koide = 2/3** (20 independent expressions):
+**Q_Koide = 2/3** (20 algebraically distinct representations):
 
 | # | Expression | Evaluation |
 |---|------------|------------|
@@ -1234,7 +1244,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 4 | rank_E₈ / (Weyl + dim_K₇) | 8/12 = 2/3 |
 | 5 | (dim_G₂ − rank_E₈) / (rank_E₈ + 1) | 6/9 = 2/3 |
 
-**m_b/m_t = 1/42** (21 independent expressions):
+**m_b/m_t = 1/42** (21 algebraically distinct representations):
 
 | # | Expression | Evaluation |
 |---|------------|------------|

@@ -2,7 +2,7 @@
 
 **Brieuc de La Fourniere**
 
-*Independent researcher, Paris*
+*Independent researcher, Beaune, France*
 
 ---
 
@@ -10,9 +10,9 @@
 
 The Standard Model requires 19 experimentally determined parameters lacking theoretical explanation. We explore a geometric framework in which dimensionless ratios emerge as topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure, containing zero continuous adjustable parameters.
 
-Assuming existence of a compact G₂ manifold with Betti numbers b₂ = 21 and b₃ = 77 (plausible within the twisted connected sum landscape), we derive 33 dimensionless predictions with mean deviation 0.26% from experiment (PDG 2024). Of these, 18 core relations are formally verified in Lean 4 (algebraic identities, machine-checked). The remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide parameter follows as Q = dim(G₂)/b₂ = 14/21 = 2/3. The neutrino CP-violation phase delta_CP = 197 degrees is consistent with the T2K+NOvA joint analysis (Nature, 2025). Exhaustive search over 192,349 alternative configurations confirms (b₂, b₃) = (21, 77) as uniquely optimal (p < 5 x 10^-6, >4.5 sigma after look-elsewhere correction). A complementary formula-level analysis addresses selection freedom: for 18 observables (17 with non-empty search spaces under a bounded grammar), 12/17 rank first by prediction error and 15/17 rank in the top three among all admissible formulas within their class.
+Assuming existence of a compact G₂ manifold with Betti numbers b₂ = 21 and b₃ = 77 (plausible within the twisted connected sum landscape), we derive 33 dimensionless predictions with mean deviation 0.26% from experiment (PDG 2024). Of these, 18 core relations are formally verified in Lean 4 (algebraic identities, machine-checked). The remaining 15 are extensions with status TOPOLOGICAL or HEURISTIC. The Koide parameter follows as Q = dim(G₂)/b₂ = 14/21 = 2/3. The neutrino CP-violation phase delta_CP = 197 degrees is consistent with the T2K+NOvA joint analysis (Nature, 2025). Exhaustive search over 192,349 alternative configurations confirms (b₂, b₃) = (21, 77) as uniquely optimal (p < 5 x 10^-6, >4.5 sigma after look-elsewhere correction). A complementary formula-level analysis addresses selection freedom: for 18 observables (17 with non-empty search spaces under a bounded grammar), 12/17 rank first by prediction error and 15/17 rank in the top three among all admissible formulas within their class. A focused benchmark on 5 representative observables confirms all rank #1 by precision AND sit on the Pareto frontier (optimal error-complexity tradeoff).
 
-The Deep Underground Neutrino Experiment (DUNE, 2028-2040) will test delta_CP with resolution of a few degrees to ~15 degrees; measurement outside 182-212 degrees would refute the framework. A companion numerical program constructs explicit G₂ metrics on K₇ via physics-informed neural networks, achieving holonomy scores within 5% of exact G₂ (see companion paper). We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
+The Deep Underground Neutrino Experiment (DUNE, 2028-2040) will test delta_CP with resolution of a few degrees to ~15 degrees; measurement outside 182-212 degrees would refute the framework. A companion numerical program constructs explicit G₂ metrics on K₇ via physics-informed neural networks, achieving machine-precision determinant constraint (det g = 65/32), torsion floor ∇φ = 0.010, and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance (see companion paper, DOI: 10.5281/zenodo.18643069). We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
 
 **Keywords**: G₂ holonomy, exceptional Lie algebras, Standard Model parameters, topological field theory, falsifiability, formal verification
 
@@ -567,7 +567,7 @@ For 18 observables with explicit GIFT derivations (17 with non-empty search spac
 
 | Observable | Class | Search space | GIFT rank | p_random |
 |---|---|---|---|---|
-| N_gen | A | 3 | #1 | 0.069 |
+| N_gen | A | 3 | **#1** (Pareto) | 0.069 |
 | m_s/m_d | A | 21 | #1 | < 0.001 |
 | sin²θ_W | B | 247 | **#1** (Pareto) | < 0.001 |
 | alpha_s | B | 217 | #1 | < 0.001 |
@@ -613,20 +613,23 @@ Joyce's theorem [20] guarantees existence of a torsion-free G₂ metric when the
 
 ### 6.2 PINN Atlas Construction
 
-A three-chart atlas of physics-informed neural networks (PINNs) models the G₂ metric on K₇ across the TCS neck and two Calabi-Yau bulk regions. The architecture comprises approximately 10^6 trainable parameters in float64 precision, with:
+A three-chart atlas of physics-informed neural networks (PINNs) models the G₂ metric on K₇ across the TCS neck and two Calabi-Yau bulk regions. The key technical innovation is a Cholesky parametrization with analytical warm-start: the network outputs a small perturbation δL(x) around the Cholesky factor of a target metric, guaranteeing positive-definiteness and symmetry by construction while reducing the learning problem to 28 independent parameters per point (the full dimension of Sym⁺₇(ℝ)).
 
-- A Cholesky parametrization ensuring positive-definiteness of the metric
-- The topological constraint det(g) = 65/32 enforced via quadratic penalty
-- First-order torsion losses (covariant constancy of the associative 3-form)
-- Curvature-based holonomy losses measuring deviation from exact G₂
-
-The G₂ holonomy quality is measured by g2_score, defined as the normalized projection of Riemann curvature onto the complement of g₂ in so(7). A score of 0 corresponds to exact G₂ holonomy; the flat metric scores approximately 3.5.
+The metric is encoded in 28 numbers per point — a 38,231× compression from the approximately 10⁶ trainable network parameters.
 
 ### 6.3 Key Results
 
-Over 13 successive versions of the training protocol, the holonomy score has improved from 3.86 (honest metric, initial) to 3.25 (current best), while the V7 projection score (fraction of curvature outside g₂) decreased from 0.51 to 0.014, a 97% reduction. The metric determinant remains locked at 2.031, matching the target 65/32 = 2.03125. A critical bug in the g₂ basis construction was discovered and corrected during this process: the correct g₂ subalgebra is the kernel of the Lie derivative map, not the Fano-plane heuristic used in earlier versions.
+The numerical program has progressed through approximately 40 training versions (A1–A38+), with a critical turning point at version A28: the discovery that the PINN naturally converges to near-flat metrics (the "flat attractor"). All earlier curvature-based holonomy scores were artifacts of finite-difference noise on an essentially flat solution. This discovery led to a fundamental methodological shift: abandoning finite-difference curvature in favor of autograd-only torsion computation, and introducing explicit anti-flat barriers to escape trivial solutions.
 
-These results confirm that (1) the torsion-free condition is well within Joyce's perturbative regime, (2) the topological constraints are geometrically compatible with near-G₂ holonomy, and (3) the G₂ metric program, while not yet converged to exact holonomy, shows sustained improvement.
+**Validated results (February 2026)**:
+
+- **Torsion floor**: ∇φ = 0.010 (confirmed by three independent approaches: A36 Cholesky interpolation, A37 optimized Cholesky, A38 PINN δg on Cholesky baseline)
+- **Determinant constraint**: det(g) = 65/32 satisfied to machine precision
+- **Spectral fingerprint**: Eigenvalue degeneracy pattern [1, 10, 9, 30] at 5.8σ significance
+- **V7 fraction**: V7_frac = 0.325 (first reproducible value below 1/3, A37)
+- **PINN contribution**: The neural network adds curvature orthogonally to torsion, demonstrating that curvature and torsion improvements are compatible
+
+**Honest assessment**: The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required to obtain solutions with non-trivial curvature. The torsion floor ∇φ ≈ 0.010 has been confirmed as **geometric** (not parametric) by five independent approaches: three optimization strategies converge to the same value (A36–A38), Joyce's classical iteration (φ₁ = φ₀ + dη, coclosure reduced by ×51.5M) leaves ∇φ unchanged (A41), and direct φ-interpolation via Hitchin's metric formula produces results identical to Cholesky interpolation to 4 decimal places (A44). The floor arises from the 1D seam structure of TCS interpolation and scales as ∇φ ∼ L^{−1.69} with neck length. Reducing it further requires modifying the geometry itself (longer neck or elliptic correction), not better optimization.
 
 Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper [30].
 
@@ -737,7 +740,7 @@ We have explored a framework deriving 33 dimensionless Standard Model parameters
 - **Statistical uniqueness** of (b₂, b₃) = (21, 77) at > 4.5 sigma among 192,349 alternatives
 - **Formula-level selection**: 12 of 17 GIFT formulas rank first among all admissible alternatives within a bounded grammar (Section 5.5)
 - **Falsifiable prediction** delta_CP = 197 degrees, testable by DUNE
-- **Numerical G₂ metric program** confirming near-G₂ holonomy within Joyce's perturbative regime
+- **Numerical G₂ metric program** achieving torsion floor ∇φ = 0.010 and spectral fingerprint [1, 10, 9, 30] at 5.8σ
 
 **We do not claim this framework is correct.** It may represent:
 
@@ -809,7 +812,7 @@ The author declares no competing interests.
 [27] NuFIT 6.0, www.nu-fit.org (2024)
 [28] L. de Moura, S. Ullrich, CADE 28, 625 (2021)
 [29] mathlib Community, github.com/leanprover-community/mathlib4
-[30] B. de La Fourniere, "Explicit G₂ Metrics on K₇ via PINN Atlas" (2026, companion paper)
+[30] B. de La Fournière, "A PINN Framework for Torsion-Free G₂ Structures: From Flat-Torus Validation to a Multi-Chart TCS Atlas" (2026). DOI: 10.5281/zenodo.18643069
 [31] DUNE Collaboration, FERMILAB-TM-2696 (2020)
 [32] DUNE Collaboration, arXiv:2103.04797 (2021)
 [33] E. Witten, Nucl. Phys. B 471, 135 (1996)

@@ -12,7 +12,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation (13 training versions) confirms near-G₂ holonomy with V₇ projection reduced by 97%. All algebraic results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation (approximately 40 training versions) achieves a validated torsion floor of ∇φ = 0.010 and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
 
 ---
 
@@ -366,7 +366,7 @@ In practice, the kernel is computed via singular value decomposition (SVD) of th
 | **7** | **G₂** | **Exceptional** |
 | 8 | Spin(7) | Exceptional |
 
-### 6.3 Torsion: Definition and GIFT Interpretation
+### 6.4 Torsion: Definition and GIFT Interpretation
 
 **Mathematical definition**: Torsion measures failure of G₂ structure to be parallel:
 $$T = \nabla\phi \neq 0$$
@@ -441,6 +441,8 @@ giving the physical spectral gap:
 
 $$\boxed{\lambda_1 = \frac{13}{99} = 0.1313...}$$
 
+**Important**: The eigenvalue λ₁ = π²/L² depends on the metric scale (moduli). The ratio 13/99 is the topological proportionality constant; the actual spectral gap requires specifying moduli. The degeneracies [1, 10, 9, 30] are topological invariants independent of moduli.
+
 The correction 14/99 − 13/99 = 1/99 = h/H* is the parallel spinor contribution. The ratio 13/99 is irreducible (gcd(13, 99) = 1). Cross-holonomy validation: for SU(3) (Calabi-Yau 3-folds), h = 2 and dim(SU(3)) − h = 6, numerically confirmed on T⁶/ℤ₃.
 
 **Lean status**: `Spectral.PhysicalSpectralGap` (28 theorems, zero axioms). `Spectral.SelbergBridge` connects the spectral gap to the mollified Dirichlet polynomial S_w(T) via the Selberg trace formula.
@@ -458,9 +460,9 @@ These suggest a connection between the topological integer dim(G₂) = 14 and th
 
 ### 7.4 Continued Fraction Structure
 
-The spectral gap admits a notable continued fraction representation:
+The bare topological ratio 14/99 = dim(G₂)/H* admits a notable continued fraction representation:
 
-$$\lambda_1 = \frac{14}{99} = [0; 7, 14] = \cfrac{1}{7 + \cfrac{1}{14}}$$
+$$\frac{14}{99} = [0; 7, 14] = \cfrac{1}{7 + \cfrac{1}{14}}$$
 
 The only integers appearing are **7 = dim(K₇)** and **14 = dim(G₂)**, the two fundamental dimensions of GIFT geometry.
 
@@ -708,20 +710,20 @@ A companion numerical program constructs explicit G₂ metrics on K₇ via physi
 | ‖T‖_mean | 9.8 x 10⁻⁵ | T --> 0 confirmed |
 | det(g) error | < 10⁻⁶ | Confirms 65/32 |
 
-**G₂ holonomy training** (Phase 3, 13 versions, v2-v13):
+**G₂ metric program** (approximately 40 versions, A1–A38+):
 
-Over successive training protocol refinements, the holonomy quality has improved:
+**Note (February 2026)**: The v2–v13 holonomy scores reported in earlier versions of this document were computed before the flat-attractor discovery (A28), which revealed that the atlas metrics had converged to near-flat solutions where all FD curvature was noise. The table below is retained for historical reference only.
 
-| Metric | Initial (v5) | Current best (v11) | Improvement |
+| Metric | Initial (v5) | v11 (pre-A28) | Improvement |
 |--------|-------------|-------------------|-------------|
 | g2_self (honest holonomy) | 3.86 | 3.25 | -16% |
 | V₇ projection score | 0.51 | 0.014 | -97% |
 | det(g) at neck | 4.69 | 2.031 | locked at target |
 | phi drift | 13.4% | 0% | controlled |
 
-The g2_score measures the normalized projection of Riemann curvature onto the complement of g₂ in so(7). A score of 0 corresponds to exact G₂ holonomy; the flat metric scores approximately 3.5. The V₇ projection score measures the fraction of curvature outside the g₂ subalgebra (using the correct kernel-based g₂ decomposition, see Section 6.2).
+**Updated validated results**: Torsion floor ∇φ = 0.010 (confirmed by three independent approaches: A36/A37/A38). Spectral fingerprint [1, 10, 9, 30] at 5.8σ. V7_frac = 0.325. The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required for non-trivial curvature.
 
-A critical bug in the g₂ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct g₂ generators. The correct g₂ subalgebra is the kernel of the Lie derivative map (Section 6.2). This correction led to significant improvement in all subsequent versions.
+A critical bug in the g₂ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct g₂ generators. The correct g₂ subalgebra is the kernel of the Lie derivative map (Section 6.2).
 
 **Robust statistical validation**: The det(g) = 65/32 prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3%, joint constraint p < 6 x 10⁻⁶).
 

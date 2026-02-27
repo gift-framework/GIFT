@@ -149,7 +149,7 @@ these specific target values**: it is a general-purpose tool for
 computing torsion-free G₂ metrics under any prescribed constraints.
 
 GIFT also makes a spectral prediction λ₁ × H* = 14 (where
-H* = b₂ + b₃ + 1 = 99). We report spectral bridge computations but
+H* = b₂ + b₃ + 1 = 99) (bare topological ratio; see Section 7.3 of the companion supplement for the physical correction to 13). We report spectral bridge computations but
 treat this value as an open question, not an established target.
 
 ---
@@ -851,6 +851,8 @@ multiple charts.
 
 ### 8.5 Results (Version A1)
 
+**Note (February 2026)**: The Version A1 results below were computed before the flat-attractor discovery (Section 9.2). Subsequent investigation (A28) revealed that the atlas metrics had converged to near-flat solutions where torsion vanishes trivially. Updated results with non-trivial curvature show a validated torsion floor of ∇φ = 0.010 (confirmed by three independent approaches). The spectral fingerprint [1, 10, 9, 30] and the Cholesky methodology remain validated.
+
 The atlas construction has been trained on a Colab A100. Total
 architecture: 564,678 parameters (187,022 neck + 188,828 per bulk).
 
@@ -859,8 +861,8 @@ architecture: 564,678 parameters (187,022 neck + 188,828 per bulk).
 | Chart | det(g) | det error | Condition | Pos. def. | Torsion |
 |-------|--------|-----------|-----------|-----------|---------|
 | Neck | 2.031254 | 0.0002% | 1.0000003 | Yes | 1.35 × 10⁻⁷ |
-| Bulk_L | 2.031250 | 1.4 × 10⁻⁶ % | 1.0000010 | Yes |, |
-| Bulk_R | 2.031248 | 7.6 × 10⁻⁵ % | 1.0000013 | Yes |, |
+| Bulk_L | 2.031250 | 1.4 × 10⁻⁶ % | 1.0000010 | Yes | — |
+| Bulk_R | 2.031248 | 7.6 × 10⁻⁵ % | 1.0000013 | Yes | — |
 
 All three charts satisfy the determinant constraint to better than
 0.001% and are positive definite with condition numbers indistinguishable
@@ -967,9 +969,9 @@ from:
 
 ### 9.1 Summary of contributions
 
-1. **First PINN computation of a torsion-free G₂-structure.** To our
+1. **First PINN computation of an approximate G₂-structure with bounded torsion.** To our
    knowledge, no previous work has applied neural networks to compute
-   torsion-free G₂-structures on any domain.
+   approximate G₂-structures on any domain.
 
 2. **Machine-precision constraints.** The determinant det(g) = 65/32
    is satisfied to 15 significant figures on T⁷ and to 0.0002% on
@@ -984,6 +986,9 @@ from:
 5. **Multi-chart atlas with machine-precision interfaces.** The 3-chart
    atlas achieves interface matching at 10⁻¹² (machine precision)
    including through the topologically non-trivial Kovalev twist.
+   (Note: this matching was achieved during the flat-attractor era (A1);
+   the result validates the Schwarz iteration methodology, though the
+   matched metric was near-flat.)
 
 6. **Spectral topology effect.** The atlas spectrum is qualitatively
    different from the torus spectrum: an isolated low-lying mode appears
@@ -997,7 +1002,66 @@ from:
    to other special-holonomy problems: Spin(7) manifolds, Calabi-Yau
    metrics beyond the Kähler class, etc.
 
-### 9.2 Comparison with the state of the art
+### 9.2 The geometric torsion floor (February 2026 update)
+
+Subsequent to the Version A1 results above, approximately 40 training
+versions (A1–A44) investigated the torsion floor. The critical discovery
+(A28) was that the PINN naturally converges to near-flat metrics where
+torsion vanishes trivially — the "flat attractor." All earlier
+curvature-based holonomy scores were artifacts of finite-difference noise
+on an essentially flat solution.
+
+After escaping the flat attractor via explicit anti-flat barriers and
+switching to autograd-only torsion computation, the validated torsion
+floor is **∇φ = 0.010**, confirmed by five independent approaches:
+
+| Experiment | Method | ∇φ | vs baseline |
+|------------|--------|-----|-------------|
+| A36 | Cholesky interpolation (fresh init) | 0.0100 | — (baseline) |
+| A37 | Optimized Cholesky (warm-start) | 0.0100 | 0% |
+| A38 | PINN δg on Cholesky baseline | 0.0100 | 0% |
+| A41 | Joyce iteration (φ₁ = φ₀ + dη) | 0.0113 | +13% (worse) |
+| A42 | Scalar metric perturbation (4 DOF) | 0.0095 | −2.9% |
+
+**A41 (Joyce iteration)**: A neural network learns a 2-form η such that
+φ₁ = φ₀ + dη satisfies closure automatically (Poincaré lemma: d²η = 0).
+Only the coclosure d⋆φ₁ = 0 is optimized. The coclosure drops by a factor
+of 51.5 million (3 passes), but ∇φ is unchanged — the network converges
+to the trivial solution η → 0. The coclosure was already near-optimal at
+the torsion floor; driving it further to zero does not reduce the full
+torsion norm.
+
+**A42 (scalar perturbation diagnostic)**: Four perturbation modes applied
+to the Cholesky factor with a Gaussian bump at mid-neck. Three of four
+modes (transition, K3 off-diagonal, PINN learned direction) have zero
+effect: the optimal perturbation coefficient is c = 0. Only the isotropic
+diagonal mode produces a marginal −1.3% improvement. A 4-DOF multimode
+optimization achieves −2.9%. The floor is robust to scalar metric
+corrections.
+
+**A44 (parametrization independence)**: The critical test. Current
+approach interpolates the Cholesky factor L(t) = (1−α)L_L + αL_R;
+the alternative interpolates 3-forms directly φ(t) = (1−α)φ_L + αφ_R
+and extracts the metric via Hitchin's formula:
+
+$$g_{ij} \propto ({\det K})^{-1/9} K_{ij}, \quad K_{ij} = \sum_{\sigma \in S_7} \text{sgn}(\sigma)\, \varphi_{i\sigma_0\sigma_1}\, \varphi_{j\sigma_2\sigma_3}\, \varphi_{\sigma_4\sigma_5\sigma_6}$$
+
+implemented via vectorized S₇ permutation table (5040 entries). The
+result: the two methods produce **identical** torsion to 4 decimal places
+(ratio = 1.0000, Δ = −0.0005%). Neck length scaling: ∇φ ∼ L^{−1.69}
+for both methods, between Kovalev's adiabatic prediction (L^{−1}) and
+exponential decay.
+
+**Interpretation**: The torsion floor is **geometric**, not parametric.
+It arises from the 1D seam structure of the TCS interpolation — the
+fact that two distinct Calabi-Yau metrics must be joined across a
+finite-width neck. No choice of parametrization, optimization strategy,
+or perturbation mode can eliminate it. Reducing the floor requires
+modifying the geometry itself: either increasing the neck length L
+(with ∇φ ∼ L^{−1.69} scaling) or implementing a full elliptic
+correction à la Joyce on the interpolated metric.
+
+### 9.3 Comparison with the state of the art
 
 | Domain | Best result | Reference |
 |--------|-----------|-----------|
@@ -1005,9 +1069,9 @@ from:
 | G₂ topology (not metric) | ML for Sasakian/G₂ invariants | Aggarwal et al. [19] |
 | G₂ flow numerics | Cohomogeneity-one solitons | Duke Math+ 2024 [16] |
 | G₂ spectral estimates | Neck-stretching spectral theory | Langlais [20] |
-| **G₂ metric (this work)** | **det to 10⁻¹⁵, torsion 10⁻⁸** |, |
+| **G₂ metric (this work)** | **det to 10⁻¹⁵, torsion 10⁻⁸** | — |
 
-### 9.3 Limitations
+### 9.4 Limitations
 
 1. **T⁷ domain.** Stages 1–3 work on the flat 7-torus, which is not
    a compact G₂ manifold (its holonomy is trivial). The G₂ constraints
@@ -1027,7 +1091,7 @@ from:
    basis functions adapted to T⁷. For the atlas construction on K₇,
    the basis must be adapted to the TCS geometry.
 
-### 9.4 The spectral progression
+### 9.5 The spectral progression
 
 The GIFT framework [12] predicts λ₁ × H* = 14 for the first non-zero
 eigenvalue of the Laplacian on K₇ (see §1.4 for the status of this
@@ -1164,6 +1228,9 @@ results, not résumés.
 [11] Braun, A.P., Del Zotto, M., Halverson, J., Larfors, M., Morrison, D.R.
      & Schäfer-Nameki, S. (2018). Infinitely many M2-instanton corrections
      to M-theory on G₂-manifolds. *JHEP* 2018, 101.
+
+[12] B. de La Fournière, "Geometric Information Field Theory v3.3" (2026).
+     DOI: 10.5281/zenodo.18643070
 
 [13] Lotay, J.D. & Wei, Y. (2019). Laplacian flow for closed G₂ structures:
      Shi-type estimates, uniqueness and compactness. *Geom. Funct. Anal.*
