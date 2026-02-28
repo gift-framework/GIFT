@@ -22,8 +22,7 @@ following results.
 **Part I (Stages 1--4, from v1).** The atlas achieves machine-precision
 interface matching (10⁻¹²) including through a non-trivial Kovalev
 twist, and produces a qualitatively different Laplace spectrum compared
-to the torus baseline: λ₁ × H* drops from 3456 to 898 with the
-appearance of an isolated low-lying mode absent on T⁷.
+to the torus baseline, with Kovalev-twist-induced mode splitting.
 
 **Part II (Stages 5--8, new in v2).** Post-atlas analysis reveals that
 the PINN metric compresses to **28 numbers** --- a single 7×7 symmetric
@@ -647,7 +646,7 @@ Total architecture: 564,678 parameters. After training on a Colab A100:
 | Left (direct) | 2.16 × 10⁻¹² |
 | Right (through Kovalev twist) | 6.17 × 10⁻¹² |
 
-**Spectral bridge:**
+**Spectral bridge (preliminary):**
 
 ```
 Atlas spectrum (first modes):
@@ -656,17 +655,12 @@ Atlas spectrum (first modes):
  λ₉  =   80.71    ← isolated mode
 ```
 
-| Property | T⁷ | Atlas | Change |
-|----------|-----|-------|--------|
-| λ₁ × H* | 3456 | **898** | **3.8× reduction** |
-| Band 1 degeneracy | 14 | 1 (isolated) | Lifted |
-
-The Kovalev twist lifts the 14-fold degeneracy and introduces an
-isolated low-lying mode. The qualitative spectral change is the
-significant result; see §13.4 for a discussion of the remaining gap.
-
-As we show in Stage 7, there is a deeper explanation for the remaining
-gap between 898 and 14.
+The Kovalev twist lifts the T⁷ 14-fold degeneracy and introduces an
+isolated low-lying mode. **Caveat**: as revealed in Stage 7 (§11),
+the atlas metric is essentially flat, making these absolute eigenvalues
+properties of the piecewise-constant background, not of a curved G₂
+metric. The qualitative *mode splitting* induced by the Kovalev twist
+remains meaningful; the absolute values do not.
 
 ---
 
@@ -680,10 +674,10 @@ and fiber directions. After training:
 
 $$\kappa_T = 0.01639344 = \frac{1}{61} \text{ to 7 significant figures}$$
 
-The torsion simultaneously improved by a factor of 1,420 (from 4,188×
-to 5,943,880× below Joyce's threshold). The topological ratio is the
-torsion-minimizing value --- the anisotropy and torsion objectives are
-aligned, not competing.
+The anisotropy and torsion objectives are aligned, not competing:
+κ_T = 1/61 is the torsion-minimizing value. (The torsion on the flat
+atlas is trivially small regardless of κ_T; see §11. The alignment is
+confirmed on the non-flat metric in Stage 8.)
 
 ### 9.2 Metric compression
 
@@ -726,6 +720,13 @@ determined by the K3 geometry [5].
 ---
 
 ## 10. Stage 6: Spectral Fingerprints
+
+> **Note**: All spectral measurements in this section were performed
+> on the piecewise-constant atlas metric, before the flat attractor
+> (§11) was discovered. The absolute eigenvalue values are properties
+> of this flat background. The *degeneracy pattern* [1, 10, 9, 30],
+> however, arises from the global topology (Kovalev twist structure)
+> and remains valid (see §11.4).
 
 ### 10.1 Kovalev symmetrization
 
@@ -1234,18 +1235,16 @@ the new official baseline for all subsequent experiments.
    corrections with fixed collocation points produced spuriously low
    training errors (§12.7). Fresh-point validation is essential.
 
-### 13.4 The spectral progression
+### 13.4 Spectral status
 
-| Stage | Domain | λ₁ × H* |
-|-------|--------|---------|
-| T⁷ (single chart) | Flat torus | 3456 |
-| K₇ atlas (3 charts) | TCS-inspired model | 898 |
-| K₇ (GIFT prediction [12]) | Full compact G₂ | 14 |
-
-The remaining gap (898 vs 14) stems from: (a) incomplete topological
-encoding in the atlas, and (b) the atlas metric being flat (§11). The
-spectrum of the non-trivially curved metrics (Stage 8) has not yet been
-investigated.
+The spectral fingerprints of §10 --- in particular the degeneracy
+pattern [1, 10, 9, 30] at 5.8σ --- were computed on the
+piecewise-constant (flat) atlas metric. The absolute eigenvalue
+λ₁ × H* = 898 is a property of this flat background, not of a
+curved G₂ metric, and should not be compared directly to the GIFT
+prediction of 14 [12]. The spectrum of the non-trivially curved
+metrics (Stage 8, with optimized G₀*) has not yet been investigated.
+This remains an open question (§13.5).
 
 ### 13.5 Open questions
 
