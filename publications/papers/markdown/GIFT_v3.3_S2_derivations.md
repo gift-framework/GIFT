@@ -102,7 +102,7 @@ Before presenting derivations, we clarify the logical structure:
 
 **Classification**: VERIFIED (three independent derivations)
 
-### Proof Method 1: Fundamental Topological Constraint
+### Derivation Method 1: Fundamental Topological Constraint
 
 *Theorem*: For G₂ holonomy manifold K₇ with E₈ gauge structure:
 
@@ -118,7 +118,7 @@ $$N_{\text{gen}} = \frac{168}{56} = 3$$
 - LHS: (8 + 3) × 21 = 231
 - RHS: 3 × 77 = 231 ✓
 
-### Proof Method 2: Atiyah-Singer Index Theorem
+### Derivation Method 2: Atiyah-Singer Index Theorem
 
 $$\text{Index}(D_A) = \left( 77 - \frac{8}{3} \times 21 \right) \times \frac{1}{7} = 3$$
 
@@ -134,7 +134,7 @@ $$\text{Index}(D_A) = \left( 77 - \frac{8}{3} \times 21 \right) \times \frac{1}{
 
 **Classification**: VERIFIED
 
-### Proof
+### Derivation
 
 *Step 1: Definition from topological integers*
 $$\tau := \frac{\dim(E_8 \times E_8) \cdot b_2(K_7)}{\dim(J_3(\mathbb{O})) \cdot H^*}$$
@@ -162,7 +162,7 @@ $$\tau = 3.8967452300785634...$$
 
 **Classification**: TOPOLOGICAL (structural parameter, not physical prediction)
 
-### Proof
+### Derivation
 
 *Step 1: Define from cohomology*
 $$61 = b_3(K_7) - \dim(G_2) - p_2 = 77 - 14 - 2 = 61$$
@@ -192,11 +192,11 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 
 ## 6. Relation #4: Metric Determinant det(g) = 65/32
 
-**Statement**: The K₇ metric determinant is exactly 65/32.
+**Statement**: We impose det(g) = 65/32 as a framework normalization fixing the overall volume scale of the G₂ metric. This is not claimed to be a topological invariant.
 
-**Classification**: TOPOLOGICAL
+**Classification**: MODEL NORMALIZATION
 
-### Proof
+### Derivation
 
 *Step 1: Define from topological structure*
 $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}}$$
@@ -210,9 +210,9 @@ $$\det(g) = 2 + \frac{1}{32} = \frac{65}{32}$$
 *Step 4: Alternative derivation*
 $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
 
-**Verification**: The analytical metric g = (65/32)^{1/7} x I7 has det(g) = [(65/32)^{1/7}]^7 = 65/32 exactly, confirming the topological formula.
+**Verification**: The analytical metric g = (65/32)^{1/7} x I7 has det(g) = [(65/32)^{1/7}]^7 = 65/32 exactly, consistent with the normalization.
 
-**Status**: TOPOLOGICAL ∎
+**Status**: MODEL NORMALIZATION ∎
 
 ---
 
@@ -1068,7 +1068,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 1 | N_gen | Atiyah-Singer | 3 | 3 | exact | VERIFIED |
 | 2 | τ | 496×21/(27×99) | 3472/891 | - | - | VERIFIED |
 | 3 | κ_T | 1/(77-14-2) | 1/61 | - | - | TOPOLOGICAL |
-| 4 | det(g) | 5×13/32 | 65/32 | - | - | TOPOLOGICAL |
+| 4 | det(g) | 5×13/32 | 65/32 | - | - | MODEL NORM. |
 | 5 | sin²θ_W | 21/91 | 3/13 | 0.23122 | 0.195% | VERIFIED |
 | 6 | α_s | √2/12 | 0.11785 | 0.1179 | 0.042% | TOPOLOGICAL |
 | 7 | Q_Koide | 14/21 | 2/3 | 0.666661 | 0.0009% | VERIFIED |
@@ -1194,7 +1194,7 @@ Each prediction admits multiple algebraically distinct representations that redu
 | 15 | θ₁₂ | arctan(√(δ/γ)) | 33.40° | 33.41° | 0.03% | 2 | DERIVED |
 | 16 | Ω_DE | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 | 0.21% | 2 | DERIVED |
 | 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | 2 | DERIVED |
-| 18 | det(g) | 65/32 | 2.0313 | - | - | 8 | SUPPORTED |
+| 18 | det(g) | 65/32 | 2.0313 | - | - | 8 | MODEL NORM. |
 
 **Distribution**: 4 CANONICAL (22%), 4 ROBUST (22%), 2 SUPPORTED (11%), 7 DERIVED (39%), 1 SINGULAR (6%).
 
@@ -1315,7 +1315,7 @@ This structure reflects the icosahedral geometry underlying the McKay correspond
 3. Particle Data Group (2024). *Review of Particle Physics*. Phys. Rev. D 110, 030001.
 4. NuFIT 6.0 (2024). Global neutrino oscillation analysis. www.nu-fit.org.
 5. Planck Collaboration (2020). Cosmological parameters. A&A 641, A6.
-6. T2K, NOvA Collaborations (2025). Nature 638, 534-541.
+6. T2K, NOvA Collaborations (2025). Nature 646(8086), 818-824. DOI: 10.1038/s41586-025-09599-3
 
 ---
 

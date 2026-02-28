@@ -634,7 +634,7 @@ The GIFT framework explores the hypothesis that metric invariants derive from fi
 | Invariant | Formula | Value | Status |
 |-----------|---------|-------|--------|
 | κ_T | 1/(b₃ - dim(G₂) - p₂) | 1/61 | TOPOLOGICAL |
-| det(g) | (Weyl × (rank(E₈) + Weyl))/2⁵ | 65/32 | TOPOLOGICAL |
+| det(g) | (Weyl × (rank(E₈) + Weyl))/2⁵ | 65/32 | MODEL NORMALIZATION |
 
 ### 10.2 Torsion Magnitude κ_T = 1/61
 
@@ -651,7 +651,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 
 ### 10.3 Metric Determinant det(g) = 65/32
 
-The metric determinant admits three independent derivations from topological invariants, providing strong evidence for its structural necessity.
+The metric determinant normalization admits three equivalent algebraic formulations from topological constants.
 
 **Path 1** (Weyl formula):
 $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^{\text{Weyl}}} = \frac{5 \times 13}{32} = \frac{65}{32}$$
@@ -662,11 +662,11 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\text{gen}}} = 2 + \frac{1}{21+1
 **Path 3** (H* formula):
 $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
 
-The convergence of three independent algebraic paths to the same rational value suggests that det(g) = 65/32 is a structural constraint rather than a free parameter.
+The Weyl factor Weyl = 5 admits three equivalent algebraic formulations from the same topological constants, suggesting structural coherence rather than independent derivation. The value det(g) = 65/32 is imposed as a model normalization (not a topological invariant).
 
 **Numerical value**: 65/32 = 2.03125 (exact rational)
 
-**Status**: TOPOLOGICAL (exact rational value, three independent derivations)
+**Status**: MODEL NORMALIZATION (exact rational value, three equivalent algebraic formulations)
 
 ---
 

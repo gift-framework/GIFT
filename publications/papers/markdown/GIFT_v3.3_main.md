@@ -10,7 +10,7 @@
 
 The Standard Model's 19 free parameters lack theoretical explanation. We explore a geometric framework in which these parameters emerge as algebraic combinations of topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈ x E₈ gauge structure, with zero continuous adjustable parameters.
 
-The framework rests on three elements: (i) a compact G₂ manifold with Betti numbers b₂ = 21, b₃ = 77 (plausible within the twisted connected sum landscape); (ii) a dynamical mechanism in which torsion of the G₂ 3-form drives geodesic flow on K₇, identified with renormalization group evolution; and (iii) scale determination through topological exponents, yielding the electron mass at 0.09% and the electroweak scale at 0.4% (status: THEORETICAL). From these inputs, 33 dimensionless predictions follow with mean deviation 0.26% from experiment (PDG 2024), including the Koide parameter Q = 2/3, the neutrino CP phase delta_CP = 197 degrees (consistent with T2K+NOvA, Nature 2025), and the dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8. Of the 33, 18 core relations are formally verified in Lean 4.
+The framework rests on three elements: (i) a compact G₂ manifold with Betti numbers b₂ = 21, b₃ = 77 (plausible within the twisted connected sum landscape); (ii) a dynamical mechanism in which torsion of the G₂ 3-form drives geodesic flow on K₇, identified with renormalization group evolution; and (iii) scale determination through topological exponents, yielding the electron mass at 0.09% and the electroweak scale at 0.4% (status: THEORETICAL). From these inputs, 33 dimensionless predictions follow with mean deviation 0.26% from experiment (PDG 2024), including the Koide parameter Q = 2/3, the neutrino CP phase delta_CP = 197 degrees (consistent with T2K+NOvA, Nature 2025), and the dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8. Of the 33, 18 core relations are algebraically verified in Lean 4 (machine-checked arithmetic identities, not physical derivations).
 
 Statistical analysis confirms uniqueness at multiple levels: (b₂, b₃) = (21, 77) outperforms all 192,349 tested alternatives (p < 5 x 10^{-6}), remains the unique optimum under leave-one-out cross-validation (28/28), and joint null models reject accidental matching at p < 10^{-5} without independence assumptions. The Deep Underground Neutrino Experiment (DUNE, 2028-2040) provides a decisive test: measurement of delta_CP outside 182-212 degrees would refute the framework. We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
 
@@ -347,12 +347,25 @@ These exact ratios cannot be "fitted"; they are correct or wrong.
 
 The principle selecting these specific algebraic combinations of topological invariants remains unknown. This parallels Balmer's formula (1885) for hydrogen spectra: an empirically successful description whose theoretical derivation (Bohr, Schrodinger) came decades later. While a first quantification of the formula-level look-elsewhere effect (Section 7.5) establishes that the GIFT formulas are statistically distinguished within a bounded grammar, it does not explain *why* these combinations are optimal.
 
-An encouraging structural observation: quantities with strong physical significance admit numerous independent derivations yielding the same reduced fraction. For instance, sin²(theta_W) = 3/13 can be expressed through at least 14 independent combinations of topological constants, and Q_Koide = 2/3 through at least 20. This structural redundancy suggests the values are deeply embedded in the algebraic web of topological invariants, rather than arising from isolated coincidences. Complete expression counts appear in Supplement S2.
+An encouraging structural observation: quantities with strong physical significance admit multiple equivalent algebraic formulations from the same topological constants. For instance, sin²(theta_W) = 3/13 can be expressed through at least 14 combinations, and Q_Koide = 2/3 through at least 20. This structural coherence suggests the values are embedded in the algebraic web of topological invariants, though the number of expressions depends on the grammar used for enumeration (Section 7.5). Complete expression counts appear in Supplement S2.
 
 ### 4.5 Why Dimensionless Quantities
 
 GIFT focuses on dimensionless ratios because they depend on topology alone: the ratio sin²(theta_W) = 3/13 is the same whether masses are measured in eV, GeV, or Planck units. The torsional geodesic framework (Section 3) provides the mechanism connecting topology to scale-dependent physics by identifying geodesic flow with RG evolution, but dimensional predictions carry additional theoretical uncertainty (Section 6). The 33 dimensionless predictions stand on topology; the dynamical framework (Section 3) provides the mechanism, and the scale determination (Section 6) extends the reach to dimensional quantities.
 
+### 4.6 Data Conventions
+
+All experimental comparisons use the following conventions:
+
+- **Electroweak mixing angle**: sin²(theta_W) in the MS-bar scheme at the Z pole (PDG 2024 global fit: 0.23122 +/- 0.00004). The GIFT ratio 3/13 = 0.230769 is compared to this running value.
+- **Quark masses**: MS-bar masses at mu = 2 GeV for light quarks (u, d, s) and at mu = m_Q for heavy quarks (c, b, t), following PDG 2024 conventions.
+- **Lepton masses**: Pole masses (PDG 2024).
+- **CKM parameters**: Standard PDG parametrization with Wolfenstein convention for A, lambda.
+- **PMNS parameters**: NuFIT 6.0 global fit with Super-Kamiokande atmospheric data (normal ordering).
+- **Cosmological parameters**: Planck 2020 (TT,TE,EE+lowE+lensing), except H₀ which uses the Planck best-fit value h = 0.674.
+- **Strong coupling**: alpha_s(M_Z) in the MS-bar scheme (PDG 2024: 0.1179 +/- 0.0009).
+
+Where GIFT predicts exact rationals (sin²(theta_W) = 3/13, Q_Koide = 2/3), deviations from experiment may reflect radiative corrections, scheme dependence, or genuine discrepancy.
 
 ---
 
@@ -502,7 +515,7 @@ The dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8 is exact. The structur
 | 12 | lambda_H | sqrt(17)/32 | 0.1289 | 0.129 | 0.12% | VERIFIED |
 | 13 | tau | 496 x 21/(27 x 99) | 3472/891 | - | - | VERIFIED |
 | 14 | kappa_T | 1/(77-14-2) | 1/61 | - | - | VERIFIED |
-| 15 | det(g) | 2 + 1/32 | 65/32 | - | - | VERIFIED |
+| 15 | det(g) | 2 + 1/32 | 65/32 | - | - | MODEL NORM. |
 | 16 | m_b/m_t | 1/(2b₂) | 1/42 | 0.024 | 0.79% | VERIFIED |
 | 17 | Omega_DE | ln(2) x 98/99 | 0.6861 | 0.6847 | 0.21% | VERIFIED |
 | 18 | n_s | zeta(11)/zeta(5) | 0.9649 | 0.9649 | 0.004% | VERIFIED |
@@ -730,7 +743,7 @@ Complete methodology and reproducible scripts are available with the code reposi
 
 ### 7.5 Formula-Level Selection Analysis
 
-Section 7.3 established that the *topological parameters* (b₂, b₃) = (21, 77) are uniquely optimal. A complementary question remains: given these parameters, are the *formulas themselves* (e.g., b₂/(b₃ + dim(G₂)) for sin²θ_W rather than b₂/b₃) distinguishable from alternatives, or could many formulas of comparable complexity achieve similar precision? We address this quantitatively through exhaustive enumeration, Pareto analysis, and two independent null models.
+Section 7.3 established that the *topological parameters* (b₂, b₃) = (21, 77) are optimal among all tested configurations. A complementary question remains: given these parameters, are the *formulas themselves* (e.g., b₂/(b₃ + dim(G₂)) for sin²θ_W rather than b₂/b₃) distinguishable from alternatives, or could many formulas of comparable complexity achieve similar precision? We address this quantitatively through exhaustive enumeration, Pareto analysis, and two independent null models.
 
 #### 7.5.1 Grammar Specification
 
@@ -831,7 +844,7 @@ The case of N_gen is instructive. Its random AST p-value (0.051) is borderline b
 
 #### 7.5.6 Structural Redundancy
 
-A distinctive feature of GIFT is that many observables admit multiple algebraically independent derivations converging on the same numerical value. Within the enumerated search space:
+A distinctive feature of GIFT is that many observables admit multiple equivalent algebraic formulations converging on the same numerical value. Within the enumerated search space (grammar-dependent; expanding the grammar would change these counts):
 
 | Observable | Independent expressions | Enrichment factor |
 |:-----------|:----------------------:|:-----------------:|
@@ -990,7 +1003,7 @@ Integer arithmetic yielding physical constants invites skepticism. Our responses
 
 2. **Statistical analysis**: The configuration (21, 77) is the unique optimum among 192,349 tested, not an arbitrary choice.
 
-3. **Structural redundancy**: Key quantities admit many independent derivations (14 for sin²(theta_W), 20 for Q_Koide), suggesting they are deeply embedded in the algebraic web rather than isolated coincidences.
+3. **Structural coherence**: Key quantities admit multiple equivalent algebraic formulations (14 for sin²(theta_W), 20 for Q_Koide) within the enumerated grammar, suggesting structural coherence rather than isolated coincidences.
 
 4. **Formula-level selection**: Exhaustive enumeration within a bounded grammar (Section 7.5) shows GIFT formulas rank first or near-first. A joint null model yields p < 1.5 x 10^{-5} without independence assumptions; permutation tests yield p < 6 x 10^{-6}; leave-one-out cross-validation confirms (21, 77) as the unique optimum in 28/28 cases.
 
@@ -1080,7 +1093,7 @@ The author declares no competing interests.
 [23] R. Harvey, H.B. Lawson, Acta Math. 148, 47 (1982)
 [24] B.S. Acharya, Class. Quant. Grav. 19, 5619 (2002)
 [25] B.S. Acharya, E. Witten, arXiv:hep-th/0109152 (2001)
-[26] T2K, NOvA Collaborations, Nature 638, 534-541 (2025)
+[26] T2K, NOvA Collaborations, Nature 646(8086), 818-824 (2025). DOI: 10.1038/s41586-025-09599-3
 [27] NuFIT 6.0, www.nu-fit.org (2024)
 [28] L. de Moura, S. Ullrich, CADE 28, 625 (2021)
 [29] mathlib Community, github.com/leanprover-community/mathlib4
