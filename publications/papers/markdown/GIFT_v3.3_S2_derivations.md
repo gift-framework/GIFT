@@ -1153,7 +1153,7 @@ Complete methodology: [STATISTICAL_EVIDENCE.md](../../references/STATISTICAL_EVI
 
 ### Formula-Level Selection (Cross-Reference)
 
-The Monte Carlo analysis above addresses parameter selection (b₂, b₃). A complementary formula-level analysis (main paper Section 5.5; pilot benchmark in SELECTION_REPORT.md) addresses formula selection: for 5 representative observables (Q_Koide, sin²θ_W, N_gen, δ_CP, n_s), all 5 GIFT formulas rank #1 by precision AND sit on the Pareto frontier. Mean enrichment factor: 2.0× (GIFT values appear more often than average in the algebraic web). Joint probability < 10⁻³⁰ under random formula null.
+The Monte Carlo analysis above addresses parameter selection (b₂, b₃). A complementary formula-level analysis (main paper Section 7.5; pilot benchmark in SELECTION_REPORT.md) addresses formula selection: for 5 representative observables (Q_Koide, sin²θ_W, N_gen, δ_CP, n_s), all 5 GIFT formulas rank #1 by precision AND sit on the Pareto frontier. Mean enrichment factor: 2.0× (GIFT values appear more often than average in the algebraic web). Joint probability < 10⁻³⁰ under random formula null.
 
 ---
 

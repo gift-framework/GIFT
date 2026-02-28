@@ -211,7 +211,7 @@ The triple convergence suggests Weyl = 5 is structurally constrained by the E₈
 
 1. **det(g) = 65/32**: Via Weyl x (rank(E₈) + Weyl) / 2^Weyl = 5 x 13 / 32
 2. **|W(E₈)| factorization**: The factor 5² = Weyl^p₂ in prime decomposition
-3. **Cosmological ratio**: sqrt(Weyl) = sqrt(5) appears in dark sector density ratios (see main paper, Section 4.8)
+3. **Cosmological ratio**: sqrt(Weyl) = sqrt(5) appears in dark sector density ratios (see main paper, Section 5.8)
 
 **Status**: VERIFIED (three independent derivations)
 
@@ -399,7 +399,7 @@ $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 
 **Key insight**: The 33 dimensionless predictions use only topological invariants (b₂, b₃, dim(G₂)) and are independent of the specific torsion realization. The value κ_T = 1/61 defines the geometric bound on deviations from φ_ref.
 
-**Physical interactions**: Emerge from the geometry of K₇, with deviations delta(phi) from the reference form bounded by topological constraints. This mechanism is theoretical and its detailed treatment lies beyond the scope of this supplement.
+**Physical interactions**: Emerge from the geometry of K₇, with deviations delta(phi) from the reference form bounded by topological constraints. The complete dynamical framework connecting torsion to renormalization group flow via torsional geodesic equations is developed in the main paper (Section 3). There, the identification of geodesic flow parameter lambda = ln(mu/mu₀) with RG scale maps the torsion hierarchy directly onto physical observables: mass hierarchies, CP violation, and coupling evolution.
 
 ---
 
@@ -861,6 +861,8 @@ Cross-verification between analytical and numerical methods confirms the solutio
 7. Conway, J.H., Sloane, N.J.A. *Sphere Packings, Lattices and Groups*
 
 ---
+
+**Cross-references**: The torsion classes and geodesic framework introduced in Sections 6.4 and 10.2 are fully developed in the main paper (Section 3). Complete derivation proofs for all 18 verified relations appear in Supplement S2: Complete Derivations.
 
 *GIFT Framework - Supplement S1*
 *Mathematical Foundations: E8 + G2 + K7*

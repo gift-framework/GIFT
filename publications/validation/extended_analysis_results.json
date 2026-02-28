@@ -1,0 +1,410 @@
+{
+  "joint_null_model": {
+    "n_trials": 200000,
+    "gift_mean_dev": 0.19268960262047488,
+    "null_median_dev": 11256.349667820916,
+    "null_mean_dev": 14185.58921409089,
+    "n_beat": 0,
+    "p_joint": 0.0,
+    "p_upper_95CL": 1.5e-05,
+    "elapsed_s": 7.4
+  },
+  "permutation_test": {
+    "n_trials": 500000,
+    "global": {
+      "n_beat": 0,
+      "p_value": 0.0,
+      "p_upper_95CL": 6e-06
+    },
+    "within_class": {
+      "n_beat": 0,
+      "p_value": 0.0,
+      "p_upper_95CL": 6e-06
+    },
+    "elapsed_s": 17.0
+  },
+  "leave_one_out": {
+    "full_optimal": {
+      "b2": 21,
+      "b3": 77,
+      "dev": 0.1927950116950676
+    },
+    "gift_dev": 0.1927950116950676,
+    "gift_is_global_optimum": true,
+    "n_still_optimal": 28,
+    "n_total": 28,
+    "stability_fraction": 1.0,
+    "loo_details": [
+      {
+        "removed": "N_gen",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1999,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "sin2_theta_W",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1927,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "alpha_s",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1984,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "Q_Koide",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1999,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_tau_over_m_e",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1998,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_mu_over_m_e",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1956,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_s_over_m_d",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1999,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "delta_CP",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1999,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "theta_12",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1988,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "theta_13",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1863,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "theta_23",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1963,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "lambda_H",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1955,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_b_over_m_t",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1705,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "Omega_DE",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1921,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "n_s",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1998,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_H_over_m_W",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1992,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_W_over_m_Z",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1976,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_H_over_m_t",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1883,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "sin2_theta_12_CKM",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1867,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "A_Wolfenstein",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1894,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "sin2_theta_23_CKM",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.158,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "Omega_DM_over_Omega_b",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1999,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "h_Hubble",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1966,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "Omega_b_over_Omega_m",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1822,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "sigma_8",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1932,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "Y_p",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1863,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "alpha_inv",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1999,
+        "gift_still_optimal": true
+      },
+      {
+        "removed": "m_c_over_m_s",
+        "optimal_b2": 21,
+        "optimal_b3": 77,
+        "optimal_dev": 0.1954,
+        "gift_still_optimal": true
+      }
+    ],
+    "elapsed_s": 0.3
+  },
+  "extended_grammar": {
+    "n_tested": 18,
+    "total_formulas": 76888,
+    "n_rank1": 8,
+    "n_top3": 10,
+    "pct_rank1": 44.4,
+    "pct_top3": 55.6,
+    "details": [
+      {
+        "observable": "N_gen",
+        "obs_class": "A",
+        "gift_value": 3.0,
+        "exp_value": 3.0,
+        "gift_error_pct": 0.0,
+        "search_space": 3,
+        "gift_rank": 1
+      },
+      {
+        "observable": "alpha_inv",
+        "obs_class": "C",
+        "gift_value": 137.033299,
+        "exp_value": 137.036,
+        "gift_error_pct": 0.002,
+        "search_space": 6340,
+        "gift_rank": 1
+      },
+      {
+        "observable": "sin2_theta_W",
+        "obs_class": "B",
+        "gift_value": 0.230769,
+        "exp_value": 0.23122,
+        "gift_error_pct": 0.195,
+        "search_space": 2170,
+        "gift_rank": 3
+      },
+      {
+        "observable": "alpha_s",
+        "obs_class": "B",
+        "gift_value": 0.117851,
+        "exp_value": 0.1179,
+        "gift_error_pct": 0.0415,
+        "search_space": 2079,
+        "gift_rank": 5
+      },
+      {
+        "observable": "theta_12",
+        "obs_class": "D",
+        "gift_value": 33.40005,
+        "exp_value": 33.41,
+        "gift_error_pct": 0.0298,
+        "search_space": 7347,
+        "gift_rank": 5
+      },
+      {
+        "observable": "theta_13",
+        "obs_class": "D",
+        "gift_value": 8.571429,
+        "exp_value": 8.54,
+        "gift_error_pct": 0.368,
+        "search_space": 6221,
+        "gift_rank": 53
+      },
+      {
+        "observable": "theta_23",
+        "obs_class": "D",
+        "gift_value": 49.250946,
+        "exp_value": 49.3,
+        "gift_error_pct": 0.0995,
+        "search_space": 10102,
+        "gift_rank": 15
+      },
+      {
+        "observable": "delta_CP",
+        "obs_class": "D",
+        "gift_value": 197.0,
+        "exp_value": 197.0,
+        "gift_error_pct": 0.0,
+        "search_space": 7315,
+        "gift_rank": 1
+      },
+      {
+        "observable": "Q_Koide",
+        "obs_class": "B",
+        "gift_value": 0.666667,
+        "exp_value": 0.666661,
+        "gift_error_pct": 0.0009,
+        "search_space": 2173,
+        "gift_rank": 1
+      },
+      {
+        "observable": "m_mu_over_m_e",
+        "obs_class": "C",
+        "gift_value": 207.011857,
+        "exp_value": 206.768,
+        "gift_error_pct": 0.1179,
+        "search_space": 4695,
+        "gift_rank": 6
+      },
+      {
+        "observable": "m_tau_over_m_e",
+        "obs_class": "A",
+        "gift_value": 3477.0,
+        "exp_value": 3477.15,
+        "gift_error_pct": 0.0043,
+        "search_space": 1,
+        "gift_rank": 1
+      },
+      {
+        "observable": "m_s_over_m_d",
+        "obs_class": "A",
+        "gift_value": 20.0,
+        "exp_value": 20.0,
+        "gift_error_pct": 0.0,
+        "search_space": 21,
+        "gift_rank": 1
+      },
+      {
+        "observable": "m_c_over_m_s",
+        "obs_class": "C",
+        "gift_value": 11.714286,
+        "exp_value": 11.7,
+        "gift_error_pct": 0.1221,
+        "search_space": 4954,
+        "gift_rank": 9
+      },
+      {
+        "observable": "Omega_DE",
+        "obs_class": "B",
+        "gift_value": 0.686146,
+        "exp_value": 0.6889,
+        "gift_error_pct": 0.3998,
+        "search_space": 2232,
+        "gift_rank": 10
+      },
+      {
+        "observable": "n_s",
+        "obs_class": "E",
+        "gift_value": 0.964864,
+        "exp_value": 0.9649,
+        "gift_error_pct": 0.0037,
+        "search_space": 14142,
+        "gift_rank": 1
+      },
+      {
+        "observable": "kappa_T",
+        "obs_class": "B",
+        "gift_value": 0.016393,
+        "exp_value": 0.0164,
+        "gift_error_pct": 0.04,
+        "search_space": 1608,
+        "gift_rank": 3
+      },
+      {
+        "observable": "tau",
+        "obs_class": "C",
+        "gift_value": 3.896745,
+        "exp_value": 3.897,
+        "gift_error_pct": 0.0065,
+        "search_space": 3404,
+        "gift_rank": 1
+      },
+      {
+        "observable": "lambda_H",
+        "obs_class": "B",
+        "gift_value": 0.128847,
+        "exp_value": 0.126,
+        "gift_error_pct": 2.2596,
+        "search_space": 2081,
+        "gift_rank": 76
+      }
+    ],
+    "elapsed_s": 297.7
+  }
+}
