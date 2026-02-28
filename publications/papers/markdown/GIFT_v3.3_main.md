@@ -10,7 +10,7 @@
 
 The Standard Model's 19 free parameters lack theoretical explanation. We explore a geometric framework in which these parameters emerge as algebraic combinations of topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈ x E₈ gauge structure, with zero continuous adjustable parameters.
 
-The framework rests on three elements: (i) a compact G₂ manifold with Betti numbers b₂ = 21, b₃ = 77 (plausible within the twisted connected sum landscape); (ii) a dynamical mechanism in which torsion of the G₂ 3-form drives geodesic flow on K₇, identified with renormalization group evolution; and (iii) scale determination through topological exponents, yielding the electron mass at 0.09% and the electroweak scale at 0.4% (status: THEORETICAL). From these inputs, 33 dimensionless predictions follow with mean deviation 0.26% from experiment (PDG 2024), including the Koide parameter Q = 2/3, the neutrino CP phase delta_CP = 197 degrees (consistent with T2K+NOvA, Nature 2025), and the dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8. Of the 33, 18 core relations are algebraically verified in Lean 4.
+The framework rests on three elements: (i) a compact G₂ manifold with Betti numbers b₂ = 21, b₃ = 77 (plausible within the twisted connected sum landscape); (ii) a dynamical mechanism in which torsion of the G₂ 3-form drives geodesic flow on K₇, identified with renormalization group evolution; and (iii) scale determination through topological exponents, yielding the electron mass at 0.09% and the electroweak scale at 0.4% (status: THEORETICAL). From these inputs, 33 dimensionless predictions follow with mean deviation 0.26% from experiment (PDG 2024), including the Koide parameter Q = 2/3, the neutrino CP phase delta_CP = 197 degrees, and the dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8. Of the 33, 18 core relations are algebraically verified in Lean 4.
 
 Statistical analysis confirms uniqueness at multiple levels: (b₂, b₃) = (21, 77) outperforms all 192,349 tested alternatives (p < 5 x 10^{-6}), remains the unique optimum under leave-one-out cross-validation (28/28), and joint null models reject accidental matching at p < 10^{-5} without independence assumptions. The Deep Underground Neutrino Experiment (DUNE, 2028-2040) provides a decisive test: measurement of delta_CP outside 182-212 degrees would refute the framework. We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
 
@@ -1095,15 +1095,14 @@ The author declares no competing interests.
 [27] NuFIT 6.0, www.nu-fit.org (2024)
 [28] L. de Moura, S. Ullrich, CADE 28, 625 (2021)
 [29] mathlib Community, github.com/leanprover-community/mathlib4
-[30] B. de La Fournière, "A PINN Framework for Torsion-Free G₂ Structures: From Flat-Torus Validation to a Multi-Chart TCS Atlas" (2026). DOI: 10.5281/zenodo.18643069
-[31] DUNE Collaboration, FERMILAB-TM-2696 (2020)
-[32] DUNE Collaboration, arXiv:2103.04797 (2021)
-[33] E. Witten, Nucl. Phys. B 471, 135 (1996)
-[34] B.S. Acharya et al., Phys. Rev. D 76, 126010 (2007)
-[35] M. Atiyah, E. Witten, Adv. Theor. Math. Phys. 6, 1 (2002)
-[36] G. Kane, *String Theory and the Real World* (2017)
-[37] J. Distler, S. Garibaldi, Commun. Math. Phys. 298, 419 (2010)
-[38] J.C. Baez, "Octonions and the Standard Model," math.ucr.edu/home/baez/standard/ (2020-2025)
+[30] DUNE Collaboration, FERMILAB-TM-2696 (2020)
+[31] DUNE Collaboration, arXiv:2103.04797 (2021)
+[32] E. Witten, Nucl. Phys. B 471, 135 (1996)
+[33] B.S. Acharya et al., Phys. Rev. D 76, 126010 (2007)
+[34] M. Atiyah, E. Witten, Adv. Theor. Math. Phys. 6, 1 (2002)
+[35] G. Kane, *String Theory and the Real World* (2017)
+[36] J. Distler, S. Garibaldi, Commun. Math. Phys. 298, 419 (2010)
+[37] J.C. Baez, "Octonions and the Standard Model," math.ucr.edu/home/baez/standard/ (2020-2025)
 
 ---
 
