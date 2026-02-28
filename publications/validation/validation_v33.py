@@ -13,7 +13,7 @@ Tests 33 observables:
 - 18 core dimensionless predictions
 - 15 extended predictions (PMNS sin², CKM, bosons, cosmology)
 
-Uses PDG 2024 / NuFIT 5.3 / Planck 2020 experimental values.
+Uses PDG 2024 / NuFIT 6.0 / Planck 2020 experimental values.
 
 Author: GIFT Framework
 Date: January 2026
@@ -70,13 +70,13 @@ EXPERIMENTAL_V33 = {
     'm_u_m_d': {'value': 0.47, 'uncertainty': 0.03, 'source': 'PDG 2024'},
 
     # === PMNS SECTOR ===
-    'delta_CP': {'value': 197.0, 'uncertainty': 24.0, 'source': 'NuFIT 5.3'},
-    'theta_13': {'value': 8.54, 'uncertainty': 0.12, 'source': 'NuFIT 5.3'},
-    'theta_23': {'value': 49.3, 'uncertainty': 1.0, 'source': 'NuFIT 5.3'},
-    'theta_12': {'value': 33.41, 'uncertainty': 0.75, 'source': 'NuFIT 5.3'},
-    'sin2_theta_12_PMNS': {'value': 0.307, 'uncertainty': 0.013, 'source': 'NuFIT 5.3'},
-    'sin2_theta_23_PMNS': {'value': 0.546, 'uncertainty': 0.021, 'source': 'NuFIT 5.3'},
-    'sin2_theta_13_PMNS': {'value': 0.0220, 'uncertainty': 0.0007, 'source': 'NuFIT 5.3'},
+    'delta_CP': {'value': 177.0, 'uncertainty': 20.0, 'source': 'NuFIT 6.0 (NO, IC19)'},
+    'theta_13': {'value': 8.52, 'uncertainty': 0.11, 'source': 'NuFIT 6.0 (NO, IC19)'},
+    'theta_23': {'value': 48.5, 'uncertainty': 0.9, 'source': 'NuFIT 6.0 (NO, IC19)'},
+    'theta_12': {'value': 33.68, 'uncertainty': 0.72, 'source': 'NuFIT 6.0 (NO, IC19)'},
+    'sin2_theta_12_PMNS': {'value': 0.307, 'uncertainty': 0.012, 'source': 'NuFIT 6.0 (NO, IC19)'},
+    'sin2_theta_23_PMNS': {'value': 0.561, 'uncertainty': 0.015, 'source': 'NuFIT 6.0 (NO, IC19)'},
+    'sin2_theta_13_PMNS': {'value': 0.02195, 'uncertainty': 0.00058, 'source': 'NuFIT 6.0 (NO, IC19)'},
 
     # === CKM SECTOR ===
     'sin2_theta_12_CKM': {'value': 0.2250, 'uncertainty': 0.0006, 'source': 'PDG 2024'},

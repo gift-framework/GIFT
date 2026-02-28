@@ -1,6 +1,6 @@
 {
   "version": "3.3",
-  "date": "2026-02-20 17:35:35",
+  "date": "2026-02-28 17:27:55",
   "reference": {
     "config": {
       "name": "GIFT_E8xE8_K7",
@@ -17,7 +17,7 @@
       "Weyl": 5,
       "D_bulk": 11
     },
-    "deviation": 0.2123245442928874,
+    "deviation": 0.7179626499536131,
     "predictions": {
       "N_gen": 3,
       "sin2_theta_W": 0.23076923076923078,
@@ -46,7 +46,7 @@
       "m_H_m_W": 1.5576923076923077,
       "m_W_m_Z": 0.8809523809523809,
       "Omega_DE": 0.6861456938876226,
-      "n_s": 0.9648639296628894,
+      "n_s": 0.9648639296628596,
       "Omega_DM_Omega_b": 5.375,
       "h_Hubble": 0.6733870967741935,
       "Omega_b_Omega_m": 0.15625,
@@ -67,13 +67,13 @@
       "m_c_m_s": 0.12210012210012167,
       "m_b_m_t": 0.7936507936508013,
       "m_u_m_d": 0.05065856129686372,
-      "delta_CP": 0.0,
-      "theta_13": 0.3680160588825765,
-      "theta_23": 0.0995017798587906,
-      "theta_12": 0.029781711915178113,
+      "delta_CP": 11.299435028248588,
+      "theta_13": 0.6036217303822958,
+      "theta_23": 1.5483414897517802,
+      "theta_12": 0.8312056708754875,
       "sin2_theta_12_PMNS": 0.22550739163117728,
-      "sin2_theta_23_PMNS": 0.09990009990011478,
-      "sin2_theta_13_PMNS": 0.8064516129032367,
+      "sin2_theta_23_PMNS": 2.7710257656781887,
+      "sin2_theta_13_PMNS": 1.0360790653244194,
       "sin2_theta_12_CKM": 0.35842293906809514,
       "A_Wolfenstein": 0.28514813203808337,
       "sin2_theta_23_CKM": 1.132686084142388,
@@ -81,7 +81,7 @@
       "m_H_m_W": 0.01974918534610668,
       "m_W_m_Z": 0.06212354482348486,
       "Omega_DE": 0.21114267381665142,
-      "n_s": 0.003738246150960344,
+      "n_s": 0.0037382461540439774,
       "Omega_DM_Omega_b": 0.0,
       "h_Hubble": 0.09093519670720149,
       "Omega_b_Omega_m": 0.47770700636942715,
@@ -91,7 +91,7 @@
     "deviation_breakdown": {
       "dimensionless": {
         "count": 29,
-        "mean_deviation": 0.22446242796581864,
+        "mean_deviation": 0.3244883975590028,
         "observables": {
           "N_gen": 0.0,
           "sin2_theta_W": 0.19495252606574986,
@@ -107,8 +107,8 @@
           "m_b_m_t": 0.7936507936508013,
           "m_u_m_d": 0.05065856129686372,
           "sin2_theta_12_PMNS": 0.22550739163117728,
-          "sin2_theta_23_PMNS": 0.09990009990011478,
-          "sin2_theta_13_PMNS": 0.8064516129032367,
+          "sin2_theta_23_PMNS": 2.7710257656781887,
+          "sin2_theta_13_PMNS": 1.0360790653244194,
           "sin2_theta_12_CKM": 0.35842293906809514,
           "A_Wolfenstein": 0.28514813203808337,
           "sin2_theta_23_CKM": 1.132686084142388,
@@ -116,7 +116,7 @@
           "m_H_m_W": 0.01974918534610668,
           "m_W_m_Z": 0.06212354482348486,
           "Omega_DE": 0.21114267381665142,
-          "n_s": 0.003738246150960344,
+          "n_s": 0.0037382461540439774,
           "Omega_DM_Omega_b": 0.0,
           "h_Hubble": 0.09093519670720149,
           "Omega_b_Omega_m": 0.47770700636942715,
@@ -126,17 +126,17 @@
       },
       "dimensional": {
         "count": 4,
-        "mean_deviation": 0.1243248876641363,
+        "mean_deviation": 3.570650979814538,
         "observables": {
-          "delta_CP": 0.0,
-          "theta_13": 0.3680160588825765,
-          "theta_23": 0.0995017798587906,
-          "theta_12": 0.029781711915178113
+          "delta_CP": 11.299435028248588,
+          "theta_13": 0.6036217303822958,
+          "theta_23": 1.5483414897517802,
+          "theta_12": 0.8312056708754875
         }
       },
       "total": {
         "count": 33,
-        "mean_deviation": 0.2123245442928874
+        "mean_deviation": 0.7179626499536131
       }
     }
   },
@@ -144,16 +144,16 @@
     "betti": {
       "test_name": "Betti variations (b2, b3)",
       "n_configs": 100000,
-      "ref_deviation": 0.2123245442928874,
+      "ref_deviation": 0.7179626499536131,
       "better_count": 0,
       "equal_count": 6,
       "better_percent": 0.0,
-      "mean_deviation": 30.51123548650637,
-      "std_deviation": 9.390353954568068,
-      "min_deviation": 0.2123245442928874,
-      "max_deviation": 45.71196202299715,
+      "mean_deviation": 31.01576546867204,
+      "std_deviation": 9.432728711972269,
+      "min_deviation": 0.7179626499536131,
+      "max_deviation": 46.20446941608341,
       "best_alternative": null,
-      "z_score": 3.226599453950738
+      "z_score": 3.2119870870730813
     },
     "gauge": {
       "test_name": "Gauge group comparison",
@@ -163,83 +163,83 @@
           "gauge_group": "E8xE8",
           "dim": 496,
           "rank": 8,
-          "deviation": 0.2123245442928874,
+          "deviation": 0.7179626499536131,
           "is_gift": true,
-          "exact_matches": 15,
-          "good_matches": 32
+          "exact_matches": 11,
+          "good_matches": 28
         },
         {
           "gauge_group": "E7xE8",
           "dim": 381,
           "rank": 7,
-          "deviation": 7.3758660466436,
+          "deviation": 7.8816137941349815,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 19
+          "exact_matches": 4,
+          "good_matches": 16
         },
         {
           "gauge_group": "E6xE8",
           "dim": 326,
           "rank": 6,
-          "deviation": 13.499284791044083,
+          "deviation": 14.005482162959908,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 19
+          "exact_matches": 4,
+          "good_matches": 16
         },
         {
           "gauge_group": "E7xE7",
           "dim": 266,
           "rank": 7,
-          "deviation": 13.769297048763475,
+          "deviation": 14.276508162403717,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 19
+          "exact_matches": 4,
+          "good_matches": 16
         },
         {
           "gauge_group": "E6xE6",
           "dim": 156,
           "rank": 6,
-          "deviation": 21.2811852501582,
+          "deviation": 21.772517914177623,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 19
+          "exact_matches": 4,
+          "good_matches": 16
         },
         {
           "gauge_group": "SO(32)",
           "dim": 496,
           "rank": 16,
-          "deviation": 21.642653447248904,
+          "deviation": 22.083477301884976,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 20
+          "exact_matches": 4,
+          "good_matches": 17
         },
         {
           "gauge_group": "SO(10)xSO(10)",
           "dim": 90,
           "rank": 5,
-          "deviation": 27.4209269243297,
+          "deviation": 27.91008276422602,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 19
+          "exact_matches": 4,
+          "good_matches": 16
         },
         {
           "gauge_group": "SU(5)xSU(5)",
           "dim": 48,
           "rank": 4,
-          "deviation": 33.95529160553886,
+          "deviation": 34.44279427662815,
           "is_gift": false,
-          "exact_matches": 7,
-          "good_matches": 19
+          "exact_matches": 4,
+          "good_matches": 16
         }
       ],
       "best": {
         "gauge_group": "E8xE8",
         "dim": 496,
         "rank": 8,
-        "deviation": 0.2123245442928874,
+        "deviation": 0.7179626499536131,
         "is_gift": true,
-        "exact_matches": 15,
-        "good_matches": 32
+        "exact_matches": 11,
+        "good_matches": 28
       },
       "e8xe8_rank": 1
     },
@@ -251,28 +251,28 @@
           "holonomy": "G2",
           "dim": 14,
           "susy": "N=1",
-          "deviation": 0.2123245442928874,
+          "deviation": 0.7179626499536131,
           "is_gift": true
         },
         {
           "holonomy": "SU(4)",
           "dim": 15,
           "susy": "N=1",
-          "deviation": 1.0705963826758054,
+          "deviation": 1.5634194538606319,
           "is_gift": false
         },
         {
           "holonomy": "Spin(7)",
           "dim": 21,
           "susy": "N=0",
-          "deviation": 5.899703178919069,
+          "deviation": 6.441202519950041,
           "is_gift": false
         },
         {
           "holonomy": "SU(3)",
           "dim": 8,
           "susy": "N=2",
-          "deviation": 6.818649203814544,
+          "deviation": 6.711805473414339,
           "is_gift": false
         }
       ],
@@ -280,7 +280,7 @@
         "holonomy": "G2",
         "dim": 14,
         "susy": "N=1",
-        "deviation": 0.2123245442928874,
+        "deviation": 0.7179626499536131,
         "is_gift": true
       },
       "g2_is_best": true
@@ -288,12 +288,12 @@
     "combinatorial": {
       "test_name": "Full combinatorial",
       "n_configs": 91896,
-      "ref_deviation": 0.2123245442928874,
+      "ref_deviation": 0.7179626499536131,
       "better_count": 0,
       "better_percent": 0.0,
-      "mean_deviation": 36.6386254812391,
-      "std_deviation": 7.852349320508791,
-      "min_deviation": 2.873548269039635,
+      "mean_deviation": 37.02150738225675,
+      "std_deviation": 7.888052408893851,
+      "min_deviation": 3.348250004983577,
       "best_alternative": null
     },
     "local": {
@@ -312,7 +312,7 @@
         "b3": 77,
         "delta_b2": 0,
         "delta_b3": 0,
-        "deviation": 0.2123245442928874,
+        "deviation": 0.7179626499536131,
         "is_gift": true
       },
       "gift_is_local_minimum": true,
@@ -325,8 +325,8 @@
     "p_value": 0.0,
     "sigma_level": Infinity,
     "significance": ">inf\u03c3",
-    "gift_deviation": 0.2123245442928874,
-    "mean_alternative_deviation": 30.51123548650637,
-    "elapsed_seconds": 2.9123594760894775
+    "gift_deviation": 0.7179626499536131,
+    "mean_alternative_deviation": 31.01576546867204,
+    "elapsed_seconds": 3.2013702392578125
   }
 }

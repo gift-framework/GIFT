@@ -4,10 +4,10 @@
     "n_total": 14949,
     "n_better": 0,
     "n_equal": 1,
-    "gift_dev": 0.2123245442928874,
-    "mean_alt": 30.280782146881617,
-    "std_alt": 9.969073203977759,
-    "min_alt": 0.2123245442928874,
+    "gift_dev": 0.7179626499536131,
+    "mean_alt": 30.75496412590718,
+    "std_alt": 9.99384906162122,
+    "min_alt": 0.7179626499536131,
     "percentile": 100.0,
     "best_alt": null,
     "elapsed_s": 0.2
@@ -26,8 +26,8 @@
     ],
     "n_total": 119592,
     "n_better": 0,
-    "gift_dev": 0.2123245442928874,
-    "mean_alt": 32.54422878140948,
+    "gift_dev": 0.7179626499536131,
+    "mean_alt": 32.91920637747211,
     "percentile": 100.0,
     "best_alt": null,
     "elapsed_s": 1.7
@@ -48,22 +48,22 @@
     ],
     "n_total": 149490,
     "n_better": 0,
-    "gift_dev": 0.2123245442928874,
-    "mean_alt": 38.957521586467166,
+    "gift_dev": 0.7179626499536131,
+    "mean_alt": 39.42713310457676,
     "percentile": 100.0,
     "best_alt": null,
-    "elapsed_s": 2.3
+    "elapsed_s": 2.4
   },
   "phase4": {
     "phase": "Phase 4: Full discrete lattice",
     "betti_step": 3,
     "n_total": 2786335,
     "n_better": 0,
-    "gift_dev": 0.2123245442928874,
-    "mean_alt": 41.590448951461454,
+    "gift_dev": 0.7179626499536131,
+    "mean_alt": 41.85391074175491,
     "percentile": 100.0,
     "best_alt": null,
-    "elapsed_s": 42.8
+    "elapsed_s": 48.9
   },
   "phase5": {
     "phase": "Phase 5: Known G2-manifolds",
@@ -73,210 +73,210 @@
         "manifold": "Kovalev_TCS_7",
         "b2": 21,
         "b3": 77,
-        "deviation": 0.2123245442928874,
+        "deviation": 0.7179626499536131,
         "is_gift": true
       },
       {
         "manifold": "CHNP_ex4",
         "b2": 20,
         "b3": 76,
-        "deviation": 2.039143330454191,
+        "deviation": 2.4413412903371507,
         "is_gift": false
       },
       {
         "manifold": "HM_3",
         "b2": 20,
         "b3": 78,
-        "deviation": 2.1095108759523993,
+        "deviation": 2.622443566943222,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_8",
         "b2": 22,
         "b3": 81,
-        "deviation": 2.1664500761972714,
+        "deviation": 2.672581304779763,
         "is_gift": false
       },
       {
         "manifold": "HM_4",
         "b2": 22,
         "b3": 83,
-        "deviation": 2.590623222735692,
+        "deviation": 3.10046253028703,
         "is_gift": false
       },
       {
         "manifold": "CHNP_ex5",
         "b2": 23,
         "b3": 84,
-        "deviation": 4.001154768026327,
+        "deviation": 4.514156934069419,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_6",
         "b2": 19,
         "b3": 72,
-        "deviation": 4.419486936821442,
+        "deviation": 4.655427739325182,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_9",
         "b2": 24,
         "b3": 89,
-        "deviation": 6.012026737849652,
-        "is_gift": false
-      },
-      {
-        "manifold": "HM_5",
-        "b2": 24,
-        "b3": 91,
-        "deviation": 6.360546900913576,
+        "deviation": 6.535586804063933,
         "is_gift": false
       },
       {
         "manifold": "CHNP_ex3",
         "b2": 18,
         "b3": 71,
-        "deviation": 6.64049463635939,
+        "deviation": 6.812183945888032,
+        "is_gift": false
+      },
+      {
+        "manifold": "HM_5",
+        "b2": 24,
+        "b3": 91,
+        "deviation": 6.887794584621508,
         "is_gift": false
       },
       {
         "manifold": "CHNP_ex6",
         "b2": 25,
         "b3": 90,
-        "deviation": 7.381718795487601,
+        "deviation": 7.9084416994485895,
         "is_gift": false
       },
       {
         "manifold": "Nordstrom_3",
         "b2": 17,
         "b3": 69,
-        "deviation": 9.188488070015193,
+        "deviation": 9.263152965875504,
         "is_gift": false
       },
       {
         "manifold": "CHNP_ex7",
         "b2": 27,
         "b3": 95,
-        "deviation": 10.34408192872627,
+        "deviation": 10.860705987096122,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_5",
         "b2": 16,
         "b3": 68,
-        "deviation": 11.835254794845916,
+        "deviation": 11.84582796915826,
         "is_gift": false
       },
       {
         "manifold": "HM_2",
         "b2": 16,
         "b3": 65,
-        "deviation": 12.27189737154521,
+        "deviation": 12.183873565700747,
         "is_gift": false
       },
       {
         "manifold": "CHNP_ex2",
         "b2": 15,
         "b3": 67,
-        "deviation": 14.753116103657504,
+        "deviation": 14.699701048546007,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_4",
         "b2": 14,
         "b3": 63,
-        "deviation": 18.482837065158048,
+        "deviation": 18.30117032258517,
         "is_gift": false
       },
       {
         "manifold": "Nordstrom_2",
         "b2": 13,
         "b3": 58,
-        "deviation": 22.887989127803703,
+        "deviation": 22.716409536108564,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_3",
         "b2": 12,
         "b3": 59,
-        "deviation": 26.702805533418633,
+        "deviation": 26.53348884051215,
         "is_gift": false
       },
       {
         "manifold": "Joyce_J6",
         "b2": 12,
         "b3": 43,
-        "deviation": 30.277542296295245,
+        "deviation": 30.032807797679162,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_2",
         "b2": 11,
         "b3": 53,
-        "deviation": 32.62577323374472,
+        "deviation": 32.468104366961455,
         "is_gift": false
       },
       {
         "manifold": "HM_1",
         "b2": 11,
         "b3": 49,
-        "deviation": 33.644383019614324,
+        "deviation": 33.49174446054981,
         "is_gift": false
       },
       {
         "manifold": "CHNP_ex1",
         "b2": 10,
         "b3": 52,
-        "deviation": 35.53311873714234,
+        "deviation": 35.36584710724151,
         "is_gift": false
       },
       {
         "manifold": "Joyce_J5",
         "b2": 9,
         "b3": 44,
-        "deviation": 38.220872881533495,
+        "deviation": 38.06625169772372,
         "is_gift": false
       },
       {
         "manifold": "Kovalev_TCS_1",
         "b2": 9,
         "b3": 44,
-        "deviation": 38.220872881533495,
+        "deviation": 38.06625169772372,
         "is_gift": false
       },
       {
         "manifold": "Nordstrom_1",
         "b2": 8,
         "b3": 41,
-        "deviation": 39.55452093913867,
+        "deviation": 39.40630740426167,
         "is_gift": false
       },
       {
         "manifold": "Joyce_J4",
         "b2": 5,
         "b3": 47,
-        "deviation": 41.62877075569094,
+        "deviation": 41.48285488242305,
         "is_gift": false
       },
       {
         "manifold": "Joyce_J3",
         "b2": 2,
         "b3": 59,
-        "deviation": 42.165046783827165,
+        "deviation": 42.01386022284243,
         "is_gift": false
       },
       {
         "manifold": "Joyce_J2",
         "b2": 1,
         "b3": 51,
-        "deviation": 45.19142724120197,
+        "deviation": 45.05513120747597,
         "is_gift": false
       },
       {
         "manifold": "Joyce_J1",
         "b2": 0,
         "b3": 43,
-        "deviation": 47.791026247996584,
+        "deviation": 47.66969929857599,
         "is_gift": false
       }
     ],
@@ -286,8 +286,8 @@
   },
   "phase6": {
     "kolmogorov_smirnov": {
-      "D_statistic": 0.9877181208053691,
-      "p_value": 1.958834859779791e-43,
+      "D_statistic": 0.9864429530201342,
+      "p_value": 2.5291670983058656e-43,
       "gift_region_size": 49,
       "interpretation": "Distributions significantly different"
     },
@@ -299,161 +299,161 @@
     },
     "leave_one_out": {
       "n_tests": 33,
-      "mean_deviation": 0.21232454429288744,
-      "std_deviation": 0.008312277868484534,
-      "max_deviation": 0.21895968630204016,
-      "min_deviation": 0.18356324617259057,
-      "full_deviation": 0.2123245442928874,
+      "mean_deviation": 0.7179626499536131,
+      "std_deviation": 0.061964644852239244,
+      "max_deviation": 0.7403989827646635,
+      "min_deviation": 0.38729163813189516,
+      "full_deviation": 0.7179626499536131,
       "most_impactful": {
         "excluded": "Omega_DM_Omega_b",
-        "deviation": 0.21895968630204016
+        "deviation": 0.7403989827646635
       },
       "least_impactful": {
-        "excluded": "sin2_theta_23_CKM",
-        "deviation": 0.18356324617259057
+        "excluded": "delta_CP",
+        "deviation": 0.38729163813189516
       },
       "all": [
         {
-          "excluded": "sin2_theta_23_CKM",
-          "deviation": 0.18356324617259057
-        },
-        {
-          "excluded": "sin2_theta_13_PMNS",
-          "deviation": 0.193758073398814
-        },
-        {
-          "excluded": "m_b_m_t",
-          "deviation": 0.19415809900045267
-        },
-        {
-          "excluded": "Omega_b_Omega_m",
-          "deviation": 0.20403134235299558
-        },
-        {
-          "excluded": "theta_13",
-          "deviation": 0.20745918446195966
-        },
-        {
-          "excluded": "Y_p",
-          "deviation": 0.20745918446195988
-        },
-        {
-          "excluded": "sin2_theta_12_CKM",
-          "deviation": 0.20775896945616218
-        },
-        {
-          "excluded": "lambda_H",
-          "deviation": 0.208012538210197
-        },
-        {
-          "excluded": "m_H_m_t",
-          "deviation": 0.2091634480575259
-        },
-        {
-          "excluded": "A_Wolfenstein",
-          "deviation": 0.21004880717585006
-        },
-        {
-          "excluded": "sin2_theta_12_PMNS",
-          "deviation": 0.2119125803135659
-        },
-        {
-          "excluded": "Omega_DE",
-          "deviation": 0.2123614777452698
-        },
-        {
-          "excluded": "sin2_theta_W",
-          "deviation": 0.21286741986248553
-        },
-        {
-          "excluded": "sigma_8",
-          "deviation": 0.2132715294116636
-        },
-        {
-          "excluded": "alpha_s",
-          "deviation": 0.21501715975961272
-        },
-        {
-          "excluded": "m_c_m_s",
-          "deviation": 0.21514405748641136
-        },
-        {
-          "excluded": "m_mu_m_e",
-          "deviation": 0.2152784256586417
-        },
-        {
-          "excluded": "m_mu_m_tau",
-          "deviation": 0.2156060912481425
+          "excluded": "delta_CP",
+          "deviation": 0.38729163813189516
         },
         {
           "excluded": "sin2_theta_23_PMNS",
-          "deviation": 0.21583780818016157
+          "deviation": 0.6538044275872201
         },
         {
           "excluded": "theta_23",
-          "deviation": 0.21585025568145294
+          "deviation": 0.6920133112099204
         },
         {
-          "excluded": "h_Hubble",
-          "deviation": 0.2161179614049401
+          "excluded": "sin2_theta_23_CKM",
+          "deviation": 0.7050025426352139
         },
         {
-          "excluded": "m_W_m_Z",
-          "deviation": 0.2170183255263063
-        },
-        {
-          "excluded": "m_u_m_d",
-          "deviation": 0.21737660626151317
+          "excluded": "sin2_theta_13_PMNS",
+          "deviation": 0.7080215119732755
         },
         {
           "excluded": "theta_12",
-          "deviation": 0.21802900780469087
+          "deviation": 0.7144238055498046
+        },
+        {
+          "excluded": "m_b_m_t",
+          "deviation": 0.715597395463076
+        },
+        {
+          "excluded": "theta_13",
+          "deviation": 0.7215358036902167
+        },
+        {
+          "excluded": "Omega_b_Omega_m",
+          "deviation": 0.7254706388156189
+        },
+        {
+          "excluded": "Y_p",
+          "deviation": 0.7288984809245832
+        },
+        {
+          "excluded": "sin2_theta_12_CKM",
+          "deviation": 0.7291982659187856
+        },
+        {
+          "excluded": "lambda_H",
+          "deviation": 0.7294518346728203
+        },
+        {
+          "excluded": "m_H_m_t",
+          "deviation": 0.7306027445201493
+        },
+        {
+          "excluded": "A_Wolfenstein",
+          "deviation": 0.7314881036384734
+        },
+        {
+          "excluded": "sin2_theta_12_PMNS",
+          "deviation": 0.7333518767761892
+        },
+        {
+          "excluded": "Omega_DE",
+          "deviation": 0.7338007742078931
+        },
+        {
+          "excluded": "sin2_theta_W",
+          "deviation": 0.7343067163251088
+        },
+        {
+          "excluded": "sigma_8",
+          "deviation": 0.7347108258742869
+        },
+        {
+          "excluded": "alpha_s",
+          "deviation": 0.7364564562222361
+        },
+        {
+          "excluded": "m_c_m_s",
+          "deviation": 0.7365833539490347
+        },
+        {
+          "excluded": "m_mu_m_e",
+          "deviation": 0.7367177221212651
+        },
+        {
+          "excluded": "m_mu_m_tau",
+          "deviation": 0.7370453877107659
+        },
+        {
+          "excluded": "h_Hubble",
+          "deviation": 0.7375572578675634
+        },
+        {
+          "excluded": "m_W_m_Z",
+          "deviation": 0.7384576219889296
+        },
+        {
+          "excluded": "m_u_m_d",
+          "deviation": 0.7388159027241366
         },
         {
           "excluded": "m_H_m_W",
-          "deviation": 0.21834252425997436
+          "deviation": 0.7397818207225977
         },
         {
           "excluded": "m_tau_m_e",
-          "deviation": 0.21875298441576863
+          "deviation": 0.740192280878392
         },
         {
           "excluded": "n_s",
-          "deviation": 0.21884286610982268
+          "deviation": 0.7402821625723497
         },
         {
           "excluded": "alpha_inv",
-          "deviation": 0.21889811900193673
+          "deviation": 0.7403374154645601
         },
         {
           "excluded": "Q_Koide",
-          "deviation": 0.21893312357625694
+          "deviation": 0.7403724200388803
         },
         {
           "excluded": "N_gen",
-          "deviation": 0.21895968630204016
+          "deviation": 0.7403989827646635
         },
         {
           "excluded": "m_s_m_d",
-          "deviation": 0.21895968630204016
-        },
-        {
-          "excluded": "delta_CP",
-          "deviation": 0.21895968630204016
+          "deviation": 0.7403989827646635
         },
         {
           "excluded": "Omega_DM_Omega_b",
-          "deviation": 0.21895968630204016
+          "deviation": 0.7403989827646635
         }
       ]
     },
     "robustness_perturbation": {
       "n_trials": 100,
       "perturbation": "\u00b150% uncertainties + gaussian scatter",
-      "mean_deviation": 1.5678297088363258,
-      "std_deviation": 0.4665012855843559,
-      "min_deviation": 0.6123322523204582,
-      "max_deviation": 3.714089709841137,
+      "mean_deviation": 1.6943455379620094,
+      "std_deviation": 0.5187100805419287,
+      "min_deviation": 0.7110193141917954,
+      "max_deviation": 3.9894197863884107,
       "always_below_1pct": false
     },
     "pareto_optimality": {
@@ -464,30 +464,30 @@
     },
     "distribution": {
       "n": 14949,
-      "mean": 30.280782146881617,
-      "median": 32.592492216672724,
-      "std": 9.969073203977759,
-      "q1": 23.57427095434393,
-      "q3": 38.06579802032338,
-      "p1": 5.161563819155874,
-      "p5": 11.28070248619405,
-      "p99": 47.18336579853706,
-      "gift_dev": 0.2123245442928874,
-      "gift_sigma_below_mean": 3.0161738195072254
+      "mean": 30.75496412590718,
+      "median": 33.107533375557274,
+      "std": 9.99384906162122,
+      "q1": 24.033383575916087,
+      "q3": 38.62092300495072,
+      "p1": 5.513344443686613,
+      "p5": 11.679821386552343,
+      "p99": 47.52806997249101,
+      "gift_dev": 0.7179626499536131,
+      "gift_sigma_below_mean": 3.0055488421676158
     },
-    "elapsed_s": 0.8
+    "elapsed_s": 0.9
   },
   "summary": {
     "total_unique_configs": 3070396,
     "total_better_than_gift": 0,
     "p_value": 0.0,
-    "gift_deviation_pct": 0.2123245442928874,
+    "gift_deviation_pct": 0.7179626499536131,
     "gift_is_unique_optimum": true,
     "gift_is_pareto_optimal": true,
     "gift_rank_exhaustive_betti": 1,
     "gift_rank_known_manifolds": 1,
     "loo_stable": true,
     "robust_to_perturbation": false,
-    "elapsed_seconds": 48.9
+    "elapsed_seconds": 55.3
   }
 }
