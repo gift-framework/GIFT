@@ -42,13 +42,13 @@ spatial gradients --- that escapes the flat attractor (curvature increased
 by a factor of 10²²) and, combined with a TCS warm-start
 parametrization, achieves a validated torsion floor ∇φ = 0.010 with
 genuine curvature. A scaling law ∇φ(L) = 1.47 × 10⁻³/L² is
-established and confirmed across 8 independent methods, showing the
-floor is geometric. Exhaustive 1D optimization --- including Joyce
-iteration, fiber-dependent metrics, and Kaluza-Klein gauge fields ---
-closes the 1D metric program: no 1D metric deformation can reduce
-torsion below this floor. The remaining torsion is 71%
-fiber-connection (irreducible within any 1D metric) and 29%
-t-derivative. We characterize the residual torsion as intrinsic to the
+established and confirmed across 8 independent methods, closing the
+1D metric program. Bulk metric optimization --- block-diagonal
+rescaling of the background G₀ with optimal (a_t, a_f) =
+(2.47, 1.60) --- then reduces the torsion by a further **42%**,
+yielding a new scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² validated across
+20 seeds (CV < 1%). The torsion budget shifts from 71/29 to **65/35**
+(t-derivative / fiber-connection) with the optimized metric. We characterize the residual torsion as intrinsic to the
 interpolation path through G₂ structure space (g₂-valued, not
 V₇-valued), and systematically compare interpolation strategies
 (Cholesky vs log-Euclidean geodesic), identifying Cholesky
@@ -152,9 +152,11 @@ We proceed through eight stages of increasing complexity:
    encode building-block Betti numbers at 5.8σ significance.
 7. **Flat attractor diagnosis**: Reveal that the atlas metric is
    essentially flat --- a general PINN failure mode.
-8. **Curvature recovery and 1D closure**: Develop techniques to force
-   genuine curvature while controlling torsion, characterize the torsion
-   scaling law ∇φ ~ L⁻², and close the 1D metric optimization program.
+8. **Curvature recovery, 1D closure, and bulk optimization**: Develop
+   techniques to force genuine curvature while controlling torsion,
+   characterize the torsion scaling law ∇φ ~ L⁻², close the 1D metric
+   optimization program, and optimize the bulk metric G₀ for a further
+   42% torsion reduction.
 
 Stages 1--4 appeared in v1 of this paper [21]; Stages 5--8 are new.
 
@@ -1021,6 +1023,8 @@ approachable --- but not from within any small subspace of corrections.
 | True TCS + L-BFGS | 0.010 | ---| Same floor |
 | Fiber-dependent g(t,θ) | 0.010 | ---| NULL (zero gradient) |
 | KK gauge field g₀ᵢ(t) | 0.010 | ---| NULL (10 inits → baseline) |
+| SO(7)/G₂ coset rotation | 0.010 | ---| NULL (marginal 0.25%) |
+| **Bulk G₀ optimization** | **0.006** | 1.7×10⁻⁴ | **42% reduction** (a_t=2.47, a_f=1.60) |
 
 \* Torsion in the flat atlas is small because the metric is flat, not
 because the G₂ structure is non-trivially torsion-free. See §11.
@@ -1084,8 +1088,66 @@ textbook Sturm-Liouville theory: λ₁·L² = π²⟨g^{tt}⟩, with ratios
 **The 1D metric program is CLOSED.** No choice of parametrization,
 optimization strategy, perturbation mode, fiber dependence, or
 off-diagonal component can reduce the torsion below the geometric
-floor. The only remaining path to attack the 71% fiber-connection
-torsion is fiber-dependent φ(t,θ) via a Joyce η correction.
+floor.
+
+### 12.11 Bulk metric optimization
+
+The 1D closure (§12.10) established that for a *fixed* bulk metric
+G₀, the torsion floor is geometric. But G₀ itself --- the 7×7 matrix
+defining the left and right building blocks --- was isotropic
+(G₀ ≈ 1.10 × I₇ with small K3 off-diagonals from the lattice
+structure). A natural question is whether *rescaling* G₀ can reduce
+torsion.
+
+**Block-diagonal rescaling.** We parametrize a scaling matrix
+S = diag(a_t, a_f, 1, 1, 1, 1, a_f) acting as G₀* = S · G₀ · S,
+where a_t scales the seam direction and a_f scales the two fiber
+directions (θ, ψ). The K3 directions are held fixed. This preserves
+the G₂ structure while allowing anisotropic stretching of the bulk
+metric.
+
+A systematic optimization campaign (grid search + L-BFGS refinement
++ 4-parameter fine-tuning with K3 perturbations) finds optimal
+parameters:
+
+| Parameter | Value |
+|-----------|-------|
+| a_t | 2.47 |
+| a_f | 1.60 |
+| ε_K3 | 1.5 × 10⁻³ |
+| ε_fiber | 1.0 × 10⁻⁵ |
+
+**Results.** The optimized G₀* reduces the torsion scaling law
+coefficient by **42.3%**:
+
+$$\boxed{\nabla\varphi(L) = 8.462 \times 10^{-4} / L^2 \quad \text{(optimized } G_0^*\text{)}}$$
+
+compared to 1.4666 × 10⁻³/L² for the isotropic G₀. The G₀*
+eigenvalues split into three groups: {1.08, 1.10, 1.10, 1.10} (K3
+block), {2.90, 2.90} (fiber pair), and {6.79} (seam), reflecting the
+block-diagonal structure.
+
+**Torsion budget shift.** With the optimized G₀*, the torsion
+decomposes as **65% t-derivative** and **35% fiber-connection**
+(compared to 71/29 for the isotropic G₀). The seam direction now
+carries more relative torsion because the fiber directions have been
+stretched to better accommodate the Kovalev twist.
+
+**SO(7)/G₂ coset rotation.** Before optimizing G₀, we tested whether
+a smooth SO(7)/G₂ rotation of the 3-form along the seam could reduce
+fiber-connection torsion. The coset rotation yielded a marginal 0.25%
+fiber torsion improvement with no effect on total ∇φ, confirming that
+the residual torsion is not removable by frame rotations.
+
+**Validation (20 seeds).** The new baseline was validated with:
+- Torsion reproducibility: mean = 8.586 × 10⁻⁴, CV = 0.94%
+- Scaling law: ∇φ · L² = 8.462 × 10⁻⁴ across L ∈ {0.5, 1, 2, 5}
+  (spread 0.02%)
+- Curvature: Kretschner scalar 1.7 × 10⁻⁸ to 2.4 × 10⁻³ (non-flat)
+- Spectrum: λ₁·L² = π²⟨g^{tt}⟩, ratios 1:4:9:16:25 (Sturm-Liouville)
+
+The G₀* matrix and optimized Chebyshev seam profile (40 nodes) define
+the new official baseline for all subsequent experiments.
 
 ---
 
@@ -1132,6 +1194,11 @@ torsion is fiber-dependent φ(t,θ) via a Joyce η correction.
     confirmed across 8 independent methods. The 1D metric optimization
     program is closed.
 
+12. **Bulk metric optimization.** Block-diagonal rescaling of G₀
+    reduces torsion by 42% to ∇φ(L) = 8.46 × 10⁻⁴/L², validated
+    across 20 seeds (CV < 1%). The torsion budget shifts from 71/29
+    to 65/35 (t/fiber).
+
 ### 13.2 Comparison with the state of the art
 
 | Domain | Best result | Reference |
@@ -1140,7 +1207,7 @@ torsion is fiber-dependent φ(t,θ) via a Joyce η correction.
 | G₂ topology (not metric) | ML for Sasakian/G₂ invariants | Aggarwal et al. [19] |
 | G₂ flow numerics | Cohomogeneity-one solitons | [16] |
 | G₂ spectral estimates | Neck-stretching theory | Langlais [20] |
-| **G₂ metric (this work)** | **28 numbers, 5.8σ spectral fingerprint, ∇φ = 0.010, scaling law ∇φ ~ L⁻²** | ---|
+| **G₂ metric (this work)** | **28 numbers, 5.8σ spectral fingerprint, ∇φ ~ 8.5 × 10⁻⁴/L² (42% below isotropic baseline)** | ---|
 
 ### 13.3 Limitations
 
@@ -1151,8 +1218,10 @@ torsion is fiber-dependent φ(t,θ) via a Joyce η correction.
 2. **Analytical warm-start.** The PINN starts from an analytical target,
    inheriting its structure.
 
-3. **Residual torsion.** ∇φ = 0.010 is not yet within the small-torsion
-   regime of Joyce's theorem for the non-trivially curved metric.
+3. **Residual torsion.** ∇φ(L) = 8.46 × 10⁻⁴/L² (after bulk
+   optimization) is not yet within the small-torsion regime of Joyce's
+   theorem, though the L⁻² scaling shows it is achievable with longer
+   neck lengths.
 
 4. **Spectral bridge limitations.** The Galerkin basis (Fourier on T⁷)
    is not adapted to K₇ geometry.
@@ -1181,8 +1250,8 @@ investigated.
 ### 13.5 Open questions
 
 1. **Can torsion reach the Joyce threshold?** The scaling law
-   ∇φ = 1.47 × 10⁻³/L² shows this is achievable with longer neck
-   lengths.
+   ∇φ = 8.46 × 10⁻⁴/L² shows this is achievable with longer neck
+   lengths. At L = 10, ∇φ = 8.5 × 10⁻⁶.
 
 2. **What is the spectrum of the curved metric?** Does the fingerprint
    [1, 10, 9, 30] survive when genuine curvature is present?
@@ -1194,8 +1263,12 @@ investigated.
    Cholesky is 2× better. No quotient geometry improvement found
    (§12.7).
 
-5. **Fiber-dependent φ(t,θ) via Joyce η correction.** The only
-   remaining path to attack the 71% fiber-connection torsion.
+5. **Fiber-dependent φ(t,θ) via Joyce η correction.** The remaining
+   path to attack the 35% fiber-connection torsion (65% after bulk
+   optimization).
+
+6. **Further G₀ optimization.** Can the 4-parameter block-diagonal
+   scaling be improved by a full 28-parameter optimization of G₀*?
 
 ---
 
@@ -1222,8 +1295,11 @@ attractor (curvature × 10²²). TCS warm-start with optimized Cholesky
 interpolation achieves ∇φ = 0.010 with genuine curvature, governed by
 the scaling law ∇φ(L) = 1.47 × 10⁻³/L². Exhaustive 1D optimization
 across 8 independent methods confirms this floor is geometric, closing
-the 1D metric program. The remaining torsion is 71% fiber-connection
-(irreducible within any 1D metric) and 29% t-derivative. Cholesky
+the 1D metric program. Bulk metric optimization --- block-diagonal
+rescaling of G₀ with optimal (a_t, a_f) = (2.47, 1.60) --- then
+reduces the torsion by a further 42%, yielding ∇φ(L) = 8.46 × 10⁻⁴/L²
+validated across 20 seeds (CV < 1%). The torsion budget shifts from
+71/29 to 65/35 (t/fiber) with the optimized metric. Cholesky
 interpolation outperforms the log-Euclidean geodesic by 2×.
 
 This is, to our knowledge, the first application of physics-informed
@@ -1370,6 +1446,9 @@ results, not résumés.
 | Scaling law calibration | `notebooks/run_a46_*`, `notebooks/run_a47_*` |
 | Fiber-dependent metric | `notebooks/run_a48_*` |
 | KK gauge field | `notebooks/run_a49_*` |
+| SO(7)/G₂ coset rotation | `notebooks/run_a50_*` |
+| Bulk G₀ optimization | `notebooks/run_a51_*` |
+| Global baseline lock | `notebooks/run_a52_*` |
 | Repository | github.com/gift-framework |
 
 **Hardware**: NVIDIA A100-SXM4 (Google Colab) for Stages 1--6;
@@ -1387,6 +1466,7 @@ NVIDIA RTX 2050 (4 GB VRAM, local) for Stages 7--8.
 | §11 | **New**: Flat attractor diagnosis |
 | §12 | **New**: Curvature recovery and interpolation comparison |
 | §12.10 | **New**: Exhaustive 1D optimization, scaling law, 1D program closed |
+| §12.11 | **New**: Bulk G₀ optimization (42% reduction, A51--A52) |
 | §13--14 | Expanded discussion, rewritten conclusion |
 
 ---
