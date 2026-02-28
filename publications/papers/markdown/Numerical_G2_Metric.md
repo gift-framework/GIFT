@@ -103,7 +103,11 @@ has been reported for any compact G₂ manifold**, though substantial work
 exists for non-compact examples (e.g. Brandhuber et al. [15],
 cohomogeneity-one solitons [16]). This stands in contrast to Calabi-Yau
 metrics, where machine-learning methods have achieved machine-precision
-results (cymyc [17], Donaldson's algorithm [18]).
+results (cymyc [17], Donaldson's algorithm [18]). Concurrent work by
+Heyes, Hirst, Sa Earp and Silva [22] has independently applied neural
+networks to approximate G₂-structures on contact Calabi-Yau
+7-manifolds, with cross-citation of our preliminary results [21],
+establishing methodological convergence in this emerging field.
 
 ### 1.2 Why G₂ is harder than Calabi-Yau
 
@@ -1212,6 +1216,7 @@ the new official baseline for all subsequent experiments.
 |--------|-----------|-----------|
 | CY metrics (Kähler) | Machine precision on quintic | cymyc [17] |
 | G₂ topology (not metric) | ML for Sasakian/G₂ invariants | Aggarwal et al. [19] |
+| G₂ structure (contact CY₇) | NN-learned 3-form on CY link in S⁹ | Heyes et al. [22] |
 | G₂ flow numerics | Cohomogeneity-one solitons | [16] |
 | G₂ spectral estimates | Neck-stretching theory | Langlais [20] |
 | **G₂ metric (this work)** | **28 numbers, 5.8σ spectral fingerprint, ∇φ ~ 8.5 × 10⁻⁴/L² (42% below isotropic baseline)** | ---|
@@ -1415,6 +1420,10 @@ results, not résumés.
 
 [21] de La Fournière, B. (2026). A PINN Framework for Torsion-Free G₂
      Structures (v1). Zenodo. DOI: 10.5281/zenodo.18643069.
+
+[22] Heyes, E., Hirst, E., Sa Earp, H.N. & Silva, T.S.R. (2026). Neural
+     and numerical methods for G₂-structures on contact Calabi-Yau
+     7-manifolds. arXiv:2602.12438.
 
 ---
 
