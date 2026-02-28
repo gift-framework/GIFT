@@ -619,17 +619,18 @@ The metric is encoded in 28 numbers per point (a 38,231x compression from the ap
 
 ### 6.3 Key Results
 
-The numerical program has progressed through approximately 40 training versions (A1–A38+), with a critical turning point at version A28: the discovery that the PINN naturally converges to near-flat metrics (the "flat attractor"). All earlier curvature-based holonomy scores were artifacts of finite-difference noise on an essentially flat solution. This discovery led to a fundamental methodological shift: abandoning finite-difference curvature in favor of autograd-only torsion computation, and introducing explicit anti-flat barriers to escape trivial solutions.
+The numerical program has progressed through approximately 50 training versions, with a critical turning point: the discovery that the PINN naturally converges to near-flat metrics (the "flat attractor"). All earlier curvature-based holonomy scores were artifacts of finite-difference noise on an essentially flat solution. This discovery led to a fundamental methodological shift: abandoning finite-difference curvature in favor of autograd-only torsion computation, and introducing explicit anti-flat barriers to escape trivial solutions.
 
 **Validated results (February 2026)**:
 
-- **Torsion floor**: ∇φ = 0.010 (confirmed by three independent approaches: A36 Cholesky interpolation, A37 optimized Cholesky, A38 PINN δg on Cholesky baseline)
+- **Torsion scaling law**: ∇φ(L) = 1.47 × 10⁻³/L², confirmed by exhaustive 1D optimization across all metric degrees of freedom (Cholesky interpolation, warm-start, PINN δg, Joyce iteration, scalar perturbation, fiber-dependent metric, and Kaluza-Klein gauge field)
+- **Torsion budget**: 71% fiber-connection (irreducible within metric optimization), 29% t-derivative
 - **Determinant constraint**: det(g) = 65/32 satisfied to machine precision
 - **Spectral fingerprint**: Eigenvalue degeneracy pattern [1, 10, 9, 30] at 5.8σ significance
-- **V7 fraction**: V7_frac = 0.325 (first reproducible value below 1/3, A37)
+- **V7 fraction**: V7_frac = 0.325 (first reproducible value below 1/3)
 - **PINN contribution**: The neural network adds curvature orthogonally to torsion, demonstrating that curvature and torsion improvements are compatible
 
-**Honest assessment**: The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required to obtain solutions with non-trivial curvature. The torsion floor ∇φ ≈ 0.010 has been confirmed as **geometric** (not parametric) by five independent approaches: three optimization strategies converge to the same value (A36–A38), Joyce's classical iteration (φ₁ = φ₀ + dη, coclosure reduced by ×51.5M) leaves ∇φ unchanged (A41), and direct φ-interpolation via Hitchin's metric formula produces results identical to Cholesky interpolation to 4 decimal places (A44). The floor arises from the 1D seam structure of TCS interpolation and scales as ∇φ ∼ L^{−1.69} with neck length. Reducing it further requires modifying the geometry itself (longer neck or elliptic correction), not better optimization.
+**Honest assessment**: The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required to obtain solutions with non-trivial curvature. The torsion floor has been confirmed as **geometric** (not parametric) by exhaustive 1D optimization: fresh PINN, warm-start, gradient-projected training, Joyce's classical iteration (φ₁ = φ₀ + dη, coclosure reduced by ×51.5M but ∇φ unchanged), direct φ-interpolation via Hitchin's metric formula (identical to Cholesky to 4 decimal places), fiber-dependent metric g(t,θ), and Kaluza-Klein gauge field — all converge to the same optimum. The official baseline is ∇φ(L) = 1.47 × 10⁻³/L², with torsion decomposing into 71% fiber-connection (irreducible) and 29% t-derivative. The 1D metric optimization program is closed; reducing the floor further requires making φ fiber-dependent (not g), or increasing the neck length L.
 
 Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper [30].
 

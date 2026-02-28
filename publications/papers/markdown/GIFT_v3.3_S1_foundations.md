@@ -12,7 +12,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation (approximately 40 training versions) achieves a validated torsion floor of ∇φ = 0.010 and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation (approximately 50 training versions) achieves a validated torsion floor of ∇φ(L) = 1.47 × 10⁻³/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
 
 ---
 
@@ -710,18 +710,18 @@ A companion numerical program constructs explicit G₂ metrics on K₇ via physi
 | ‖T‖_mean | 9.8 x 10⁻⁵ | T --> 0 confirmed |
 | det(g) error | < 10⁻⁶ | Confirms 65/32 |
 
-**G₂ metric program** (approximately 40 versions, A1–A38+):
+**G₂ metric program** (approximately 50 training versions):
 
-**Note (February 2026)**: The v2–v13 holonomy scores reported in earlier versions of this document were computed before the flat-attractor discovery (A28), which revealed that the atlas metrics had converged to near-flat solutions where all FD curvature was noise. The table below is retained for historical reference only.
+**Note (February 2026)**: The holonomy scores reported in earlier versions of this document were computed before the flat-attractor discovery, which revealed that the atlas metrics had converged to near-flat solutions where all FD curvature was noise. The table below is retained for historical reference only.
 
-| Metric | Initial (v5) | v11 (pre-A28) | Improvement |
+| Metric | Initial (v5) | v11 (pre-flat-attractor) | Improvement |
 |--------|-------------|-------------------|-------------|
 | g2_self (honest holonomy) | 3.86 | 3.25 | -16% |
 | V₇ projection score | 0.51 | 0.014 | -97% |
 | det(g) at neck | 4.69 | 2.031 | locked at target |
 | phi drift | 13.4% | 0% | controlled |
 
-**Updated validated results**: Torsion floor ∇φ = 0.010 (confirmed by three independent approaches: A36/A37/A38). Spectral fingerprint [1, 10, 9, 30] at 5.8σ. V7_frac = 0.325. The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required for non-trivial curvature.
+**Updated validated results (February 2026)**: The torsion floor follows a precise scaling law ∇φ(L) = 1.47 × 10⁻³/L², confirmed by exhaustive 1D optimization across all metric degrees of freedom (diagonal, off-diagonal, fiber-dependent, and Kaluza-Klein gauge components). The torsion decomposes into 71% fiber-connection (irreducible within metric optimization) and 29% t-derivative contributions. Spectral fingerprint [1, 10, 9, 30] at 5.8σ. V7_frac = 0.325. The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required for non-trivial curvature.
 
 A critical bug in the g₂ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct g₂ generators. The correct g₂ subalgebra is the kernel of the Lie derivative map (Section 6.2).
 

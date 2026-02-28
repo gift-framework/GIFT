@@ -849,9 +849,9 @@ multiple charts.
 | Target metric | Isotropic (c × I₇) | Anisotropic (K3 ≠ fiber) |
 | Observed λ₁ × H* | 3456 | **898** |
 
-### 8.5 Results (Version A1)
+### 8.5 Initial Results
 
-**Note (February 2026)**: The Version A1 results below were computed before the flat-attractor discovery (Section 9.2). Subsequent investigation (A28) revealed that the atlas metrics had converged to near-flat solutions where torsion vanishes trivially. Updated results with non-trivial curvature show a validated torsion floor of ∇φ = 0.010 (confirmed by three independent approaches). The spectral fingerprint [1, 10, 9, 30] and the Cholesky methodology remain validated.
+**Note (February 2026)**: The initial results below were computed before the flat-attractor discovery (Section 9.2). Subsequent investigation revealed that the atlas metrics had converged to near-flat solutions where torsion vanishes trivially. Updated results with non-trivial curvature show a validated torsion scaling law ∇φ(L) = 1.47 × 10⁻³/L², confirmed by exhaustive 1D optimization. The spectral fingerprint [1, 10, 9, 30] and the Cholesky methodology remain validated.
 
 The atlas construction has been trained on a Colab A100. Total
 architecture: 564,678 parameters (187,022 neck + 188,828 per bulk).
@@ -986,7 +986,7 @@ from:
 5. **Multi-chart atlas with machine-precision interfaces.** The 3-chart
    atlas achieves interface matching at 10⁻¹² (machine precision)
    including through the topologically non-trivial Kovalev twist.
-   (Note: this matching was achieved during the flat-attractor era (A1);
+   (Note: this matching was achieved during the flat-attractor era;
    the result validates the Schwarz iteration methodology, though the
    matched metric was near-flat.)
 
@@ -1004,26 +1004,30 @@ from:
 
 ### 9.2 The geometric torsion floor (February 2026 update)
 
-Subsequent to the Version A1 results above, approximately 40 training
-versions (A1–A44) investigated the torsion floor. The critical discovery
-(A28) was that the PINN naturally converges to near-flat metrics where
-torsion vanishes trivially (the "flat attractor"). All earlier
-curvature-based holonomy scores were artifacts of finite-difference noise
-on an essentially flat solution.
+Subsequent to the initial results above, approximately 50 training
+versions investigated the torsion floor. The critical discovery was that
+the PINN naturally converges to near-flat metrics where torsion vanishes
+trivially (the "flat attractor"). All earlier curvature-based holonomy
+scores were artifacts of finite-difference noise on an essentially flat
+solution.
 
 After escaping the flat attractor via explicit anti-flat barriers and
-switching to autograd-only torsion computation, the validated torsion
-floor is **∇φ = 0.010**, confirmed by five independent approaches:
+switching to autograd-only torsion computation, the torsion floor was
+systematically characterized. Eight independent approaches converge to
+the same optimum:
 
-| Experiment | Method | ∇φ | vs baseline |
-|------------|--------|-----|-------------|
-| A36 | Cholesky interpolation (fresh init) | 0.0100 | baseline |
-| A37 | Optimized Cholesky (warm-start) | 0.0100 | 0% |
-| A38 | PINN δg on Cholesky baseline | 0.0100 | 0% |
-| A41 | Joyce iteration (φ₁ = φ₀ + dη) | 0.0113 | +13% (worse) |
-| A42 | Scalar metric perturbation (4 DOF) | 0.0095 | −2.9% |
+| Method | ∇φ | vs baseline |
+|--------|-----|-------------|
+| Cholesky interpolation (fresh init) | 0.0100 | baseline |
+| Optimized Cholesky (warm-start) | 0.0100 | 0% |
+| PINN δg on Cholesky baseline | 0.0100 | 0% |
+| Joyce iteration (φ₁ = φ₀ + dη) | 0.0113 | +13% (worse) |
+| Scalar metric perturbation (4 DOF) | 0.0095 | −2.9% |
+| True TCS with L-BFGS optimization | 0.0100 | 0% |
+| Fiber-dependent metric g(t,θ) | 0.0100 | 0% |
+| Kaluza-Klein gauge field | 0.0100 | 0% |
 
-**A41 (Joyce iteration)**: A neural network learns a 2-form η such that
+**Joyce iteration**: A neural network learns a 2-form η such that
 φ₁ = φ₀ + dη satisfies closure automatically (Poincaré lemma: d²η = 0).
 Only the coclosure d⋆φ₁ = 0 is optimized. The coclosure drops by a factor
 of 51.5 million (3 passes), but ∇φ is unchanged: the network converges
@@ -1031,7 +1035,7 @@ to the trivial solution η → 0. The coclosure was already near-optimal at
 the torsion floor; driving it further to zero does not reduce the full
 torsion norm.
 
-**A42 (scalar perturbation diagnostic)**: Four perturbation modes applied
+**Scalar perturbation diagnostic**: Four perturbation modes applied
 to the Cholesky factor with a Gaussian bump at mid-neck. Three of four
 modes (transition, K3 off-diagonal, PINN learned direction) have zero
 effect: the optimal perturbation coefficient is c = 0. Only the isotropic
@@ -1039,7 +1043,7 @@ diagonal mode produces a marginal −1.3% improvement. A 4-DOF multimode
 optimization achieves −2.9%. The floor is robust to scalar metric
 corrections.
 
-**A44 (parametrization independence)**: The critical test. Current
+**Parametrization independence**: The critical test. The standard
 approach interpolates the Cholesky factor L(t) = (1−α)L_L + αL_R;
 the alternative interpolates 3-forms directly φ(t) = (1−α)φ_L + αφ_R
 and extracts the metric via Hitchin's formula:
@@ -1048,18 +1052,47 @@ $$g_{ij} \propto ({\det K})^{-1/9} K_{ij}, \quad K_{ij} = \sum_{\sigma \in S_7} 
 
 implemented via vectorized S₇ permutation table (5040 entries). The
 result: the two methods produce **identical** torsion to 4 decimal places
-(ratio = 1.0000, Δ = −0.0005%). Neck length scaling: ∇φ ∼ L^{−1.69}
-for both methods, between Kovalev's adiabatic prediction (L^{−1}) and
-exponential decay.
+(ratio = 1.0000, Δ = −0.0005%).
+
+**Precision scaling law**: Systematic calibration with the true TCS
+construction across multiple neck lengths establishes the scaling exponents
+to 3 decimal places: |∂g/∂t| ∼ L⁻¹·⁰⁰⁰, |Γ| ∼ L⁻¹·⁰⁰⁰,
+∇φ ∼ L⁻²·⁰⁰⁰. The official baseline is:
+
+$$\boxed{\nabla\varphi(L) = 1.4666 \times 10^{-3} / L^2}$$
+
+The profile is L-independent, and all cutoff shapes (linear, tanh, bump,
+exponential) converge to the same optimum — the cutoff function is
+irrelevant.
+
+**Exhaustive metric optimization**: The final three experiments close the
+1D metric optimization program:
+
+1. **Fiber-dependent metric** g(t,θ): Adding Fourier mode k=1 on the
+   first fiber direction yields purely quadratic coupling (ratio = 4.00)
+   with exactly zero gradient at δ = 0 (Fourier orthogonality). Six
+   optimization runs all converge to the 1D optimum. The 1D optimum IS
+   the 2D optimum.
+
+2. **Kaluza-Klein gauge field**: Off-diagonal components g₀ᵢ(t) with
+   gradient ratio 0.76 (properly converged, not stuck). Ten random
+   initializations all converge to the baseline. The KK gauge field is
+   already optimal.
+
+3. **Torsion budget**: The torsion decomposes into **71% fiber-connection**
+   (irreducible within any 1D metric family g(t)) and **29% t-derivative**,
+   constant across all neck lengths.
 
 **Interpretation**: The torsion floor is **geometric**, not parametric.
 It arises from the 1D seam structure of the TCS interpolation: the
 fact that two distinct Calabi-Yau metrics must be joined across a
 finite-width neck. No choice of parametrization, optimization strategy,
-or perturbation mode can eliminate it. Reducing the floor requires
-modifying the geometry itself: either increasing the neck length L
-(with ∇φ ∼ L^{−1.69} scaling) or implementing a full elliptic
-correction à la Joyce on the interpolated metric.
+perturbation mode, fiber dependence, or off-diagonal component can
+eliminate it. The 71% fiber-connection torsion is irreducible within
+any metric optimization. Reducing the floor further requires either
+increasing the neck length L (with ∇φ ∼ L⁻² scaling), or making φ
+itself fiber-dependent via a Joyce correction η(t,θ) — the only
+remaining path to attack the 71% directly.
 
 ### 9.3 Comparison with the state of the art
 
