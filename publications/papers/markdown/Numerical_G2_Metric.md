@@ -1062,7 +1062,7 @@ to 3 decimal places: |∂g/∂t| ∼ L⁻¹·⁰⁰⁰, |Γ| ∼ L⁻¹·⁰⁰�
 $$\boxed{\nabla\varphi(L) = 1.4666 \times 10^{-3} / L^2}$$
 
 The profile is L-independent, and all cutoff shapes (linear, tanh, bump,
-exponential) converge to the same optimum — the cutoff function is
+exponential) converge to the same optimum; the cutoff function is
 irrelevant.
 
 **Exhaustive metric optimization**: The final three experiments close the
@@ -1091,7 +1091,7 @@ perturbation mode, fiber dependence, or off-diagonal component can
 eliminate it. The 71% fiber-connection torsion is irreducible within
 any metric optimization. Reducing the floor further requires either
 increasing the neck length L (with ∇φ ∼ L⁻² scaling), or making φ
-itself fiber-dependent via a Joyce correction η(t,θ) — the only
+itself fiber-dependent via a Joyce correction η(t,θ), the only
 remaining path to attack the 71% directly.
 
 ### 9.3 Comparison with the state of the art
