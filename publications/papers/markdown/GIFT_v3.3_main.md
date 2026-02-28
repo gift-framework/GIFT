@@ -846,13 +846,13 @@ The case of N_gen is instructive. Its random AST p-value (0.051) is borderline b
 
 A distinctive feature of GIFT is that many observables admit multiple equivalent algebraic formulations converging on the same numerical value. Within the enumerated search space (grammar-dependent; expanding the grammar would change these counts):
 
-| Observable | Independent expressions | Enrichment factor |
-|:-----------|:----------------------:|:-----------------:|
-| Q_Koide    | 9                      | 2.5x              |
-| N_gen      | 9                      | 4.5x              |
-| delta_CP   | 13                     | 2.1x              |
-| sin²θ_W   | 3                      | 0.8x              |
-| n_s        | unique                 | n/a               |
+| Observable | Enrichment factor | Independent expressions |
+|:-----------|:-----------------:|:----------------------:|
+| Q_Koide    | 2.5x              | 9                      |
+| N_gen      | 4.5x              | 9                      |
+| delta_CP   | 2.1x              | 13                     |
+| sin²θ_W   | 0.8x              | 3                      |
+| n_s        | n/a               | unique                 |
 
 The value 2/3 (Q_Koide) arises from dim(G₂)/b₂, p₂/N_gen, and dim(F₄)/dim(E₆), among others: three algebraically independent paths through the invariant web. The value 197 (delta_CP) appears as 2H*-1, dim(G₂)² + 1, dim(E₈) - dim(F₄) + 1, and ten further expressions. This multiplicity implies that the formula web is overdetermined, reducing the effective degrees of freedom.
 
