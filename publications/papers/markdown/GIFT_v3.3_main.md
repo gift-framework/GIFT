@@ -148,7 +148,7 @@ Both Betti numbers are derived from the building blocks via Mayer-Vietoris, not 
 
 While we do not cite a specific construction achieving exactly these values with all required properties, such manifolds are plausible within the TCS/ETCS landscape.
 
-The effective cohomological dimension:
+The cohomological sum:
 
 $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 
@@ -192,7 +192,7 @@ This is **not** claimed to be a topological invariant; it is a defining constrai
 
 #### 2.4.3 Torsion-Free Existence
 
-The torsion capacity, a topological parameter characterizing the manifold's structure:
+The torsion parameter, characterizing the manifold's structure:
 
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
 
@@ -330,7 +330,7 @@ We claim that given the inputs, the outputs follow algebraically. We do **not** 
 3. That the selection rule for specific combinations (e.g., b₂/(b₃ + dim(G₂)) rather than b₂/b₃) is understood, though these formulas are statistically distinguished among alternatives (Section 7.5)
 4. That dimensional quantities (masses in eV) have the same confidence as dimensionless ratios
 
-### 4.3 Three Factors Distinguishing GIFT from Numerology
+### 4.3 Structural Properties of the Framework
 
 **Multiplicity**: 33 independent predictions, not cherry-picked coincidences. Random matching at 0.26% mean deviation across 33 quantities has probability < 10^-20 under a naive null model.
 
@@ -409,7 +409,7 @@ The derivation requires only two topological invariants: dim(G₂) = 14 (holonom
 | S₃ symmetry (various) | Q ~ 2/3 fitted | Approximate |
 | **GIFT** | **Q = dim(G₂)/b₂ = 14/21 = 2/3** | **Algebraic identity** |
 
-Deviation: **0.0009%**. This is the most precise agreement in the framework.
+Deviation: 0.0009%, the smallest among all 33 predictions.
 
 #### 5.2.2 Tau-Electron Mass Ratio
 
@@ -427,7 +427,7 @@ where phi = (1+sqrt(5))/2. Experimental: 206.768. Deviation: **0.118%**.
 
 ### 5.3 Quark Sector
 
-$$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
+$$\frac{m_s}{m_d} = p_2^2 \times \text{w} = 4 \times 5 = 20$$
 
 Experimental (PDG 2024): 20.0 +/- 1.0. Deviation: **0.00%**.
 
@@ -457,11 +457,11 @@ The formula decomposes into a local contribution (7 x 14 = 98, fiber-holonomy co
 | theta_13 | pi/b₂ | 8.57 deg | 8.54 +/- 0.12 deg | 0.37% |
 | theta_23 | arcsin((b₃ - p₂)/H*) | 49.25 deg | 49.3 +/- 1.0 deg | 0.10% |
 
-The auxiliary parameters: delta = 2*pi/Weyl² = 2*pi/25 and gamma_GIFT = (2 x rank(E₈) + 5 x H*)/(10 x dim(G₂) + 3 x dim(E₈)) = 511/884.
+The auxiliary parameters: delta = 2*pi/w² = 2*pi/25 and gamma_GIFT = (2 x rank(E₈) + 5 x H*)/(10 x dim(G₂) + 3 x dim(E₈)) = 511/884.
 
 ### 5.5 Higgs Sector
 
-$$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{\rm gen}}}{2^{\rm Weyl}} = \frac{\sqrt{17}}{32} = 0.1289$$
+$$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{\rm gen}}}{2^w} = \frac{\sqrt{17}}{32} = 0.1289$$
 
 Experimental: 0.129 +/- 0.003. Deviation: **0.12%**.
 
@@ -470,7 +470,7 @@ Experimental: 0.129 +/- 0.003. Deviation: **0.12%**.
 | Observable | Formula | GIFT | Experimental | Dev. |
 |------------|---------|------|--------------|------|
 | m_H/m_W | (N_gen + dim(E₆))/dim(F₄) = 81/52 | 1.5577 | 1.558 +/- 0.002 | 0.02% |
-| m_W/m_Z | (2b₂ - Weyl)/(2b₂) = 37/42 | 0.8810 | 0.8815 +/- 0.0002 | 0.06% |
+| m_W/m_Z | (2b₂ - w)/(2b₂) = 37/42 | 0.8810 | 0.8815 +/- 0.0002 | 0.06% |
 | m_H/m_t | fund(E₇)/b₃ = 56/77 | 0.7273 | 0.725 +/- 0.003 | 0.31% |
 
 ### 5.7 CKM Matrix
@@ -478,7 +478,7 @@ Experimental: 0.129 +/- 0.003. Deviation: **0.12%**.
 | Observable | Formula | GIFT | Experimental | Dev. |
 |------------|---------|------|--------------|------|
 | sin²(theta_12_CKM) | fund(E₇)/dim(E₈) = 56/248 | 0.2258 | 0.2250 +/- 0.0006 | 0.36% |
-| A_Wolfenstein | (Weyl + dim(E₆))/H* = 83/99 | 0.838 | 0.836 +/- 0.015 | 0.29% |
+| A_Wolfenstein | (w + dim(E₆))/H* = 83/99 | 0.838 | 0.836 +/- 0.015 | 0.29% |
 | sin²(theta_23_CKM) | dim(K₇)/PSL(2,7) = 7/168 | 0.0417 | 0.0412 +/- 0.0008 | 1.13% |
 
 The Cabibbo angle emerges from the ratio of the E₇ fundamental representation to E₈ dimension.
@@ -490,7 +490,7 @@ The Cabibbo angle emerges from the ratio of the E₇ fundamental representation 
 | Omega_DM/Omega_b | (1 + 2b₂)/rank(E₈) = 43/8 | 5.375 | 5.375 +/- 0.1 | 0.00% |
 | n_s | zeta(11)/zeta(5) | 0.9649 | 0.9649 +/- 0.0042 | 0.004% |
 | h (Hubble) | (PSL(2,7) - 1)/dim(E₈) = 167/248 | 0.6734 | 0.674 +/- 0.005 | 0.09% |
-| Omega_b/Omega_m | Weyl/det(g)_den = 5/32 | 0.1562 | 0.157 +/- 0.003 | 0.16% |
+| Omega_b/Omega_m | w/det(g)_den = 5/32 | 0.1562 | 0.157 +/- 0.003 | 0.16% |
 | sigma_8 | (p₂ + 32)/(2b₂) = 34/42 | 0.8095 | 0.811 +/- 0.006 | 0.18% |
 | Omega_DE | ln(2) x (b₂ + b₃)/H* | 0.6861 | 0.6847 +/- 0.0073 | 0.21% |
 | Y_p | (1 + dim(G₂))/kappa_T^-1 = 15/61 | 0.2459 | 0.245 +/- 0.003 | 0.37% |
@@ -503,20 +503,20 @@ The dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8 is exact. The structur
 |---|-----------|---------|-------|------|------|--------|
 | 1 | N_gen | Index constraint | 3 | 3 | exact | VERIFIED |
 | 2 | sin²(theta_W) | b₂/(b₃ + dim(G₂)) | 3/13 | 0.23122 | 0.195% | VERIFIED |
-| 3 | alpha_s | sqrt(2)/12 | 0.11785 | 0.1179 | 0.04% | VERIFIED |
+| 3 | alpha_s | sqrt(2)/12 | 0.11785 | 0.1179 | 0.04% | TOPOLOGICAL |
 | 4 | Q_Koide | dim(G₂)/b₂ | 2/3 | 0.666661 | 0.0009% | VERIFIED |
 | 5 | m_tau/m_e | 7 + 2480 + 990 | 3477 | 3477.15 | 0.004% | VERIFIED |
-| 6 | m_mu/m_e | 27^phi | 207.01 | 206.768 | 0.12% | VERIFIED |
-| 7 | m_s/m_d | p₂² x Weyl | 20 | 20.0 | 0.00% | VERIFIED |
+| 6 | m_mu/m_e | 27^phi | 207.01 | 206.768 | 0.12% | TOPOLOGICAL |
+| 7 | m_s/m_d | p₂² x w | 20 | 20.0 | 0.00% | VERIFIED |
 | 8 | delta_CP | 7 x 14 + 99 | 197 deg | ~197 deg | compat. | VERIFIED |
-| 9 | theta_12 | arctan(sqrt(delta/gamma)) | 33.40 deg | 33.41 deg | 0.03% | VERIFIED |
-| 10 | theta_13 | pi/b₂ | 8.57 deg | 8.54 deg | 0.37% | VERIFIED |
-| 11 | theta_23 | arcsin((b₃-p₂)/H*) | 49.25 deg | 49.3 deg | 0.10% | VERIFIED |
+| 9 | theta_12 | arctan(sqrt(delta/gamma)) | 33.40 deg | 33.41 deg | 0.03% | TOPOLOGICAL |
+| 10 | theta_13 | pi/b₂ | 8.57 deg | 8.54 deg | 0.37% | TOPOLOGICAL |
+| 11 | theta_23 | arcsin((b₃-p₂)/H*) | 49.25 deg | 49.3 deg | 0.10% | TOPOLOGICAL |
 | 12 | lambda_H | sqrt(17)/32 | 0.1289 | 0.129 | 0.12% | VERIFIED |
 | 13 | tau | 496 x 21/(27 x 99) | 3472/891 | - | - | VERIFIED |
 | 14 | kappa_T | 1/(77-14-2) | 1/61 | - | - | VERIFIED |
 | 15 | det(g) | 2 + 1/32 | 65/32 | - | - | MODEL NORM. |
-| 16 | m_b/m_t | 1/(2b₂) | 1/42 | 0.024 | 0.79% | VERIFIED |
+| 16 | m_b/m_t | 1/(2b₂) | 1/42 | 0.024 | 0.79% | TOPOLOGICAL |
 | 17 | Omega_DE | ln(2) x 98/99 | 0.6861 | 0.6847 | 0.21% | VERIFIED |
 | 18 | n_s | zeta(11)/zeta(5) | 0.9649 | 0.9649 | 0.004% | VERIFIED |
 | 19 | m_H/m_W | 81/52 | 1.5577 | 1.558 | 0.02% | TOPOLOGICAL |
@@ -532,8 +532,8 @@ The dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8 is exact. The structur
 | 29 | Y_p | 15/61 | 0.2459 | 0.245 | 0.37% | HEURISTIC |
 | 30-33 | (Additional extensions) | See S2 | - | - | <1% | HEURISTIC |
 
-**18 core relations**: Algebraic identities verified in Lean 4 (status: VERIFIED).
-**15 extended predictions**: Topological formulas without full Lean verification (status: TOPOLOGICAL or HEURISTIC).
+**18 core relations**: 11 algebraic identities verified in Lean 4 (VERIFIED), 6 topological formulas (TOPOLOGICAL), 1 model normalization (MODEL NORM.).
+**15 extended predictions**: Topological formulas without full Lean verification (TOPOLOGICAL or HEURISTIC).
 
 **Global performance** (33 predictions):
 - Mean deviation: **0.26%** (PDG 2024 / Planck 2020)
@@ -562,7 +562,7 @@ The electron mass is determined by:
 
 $$\boxed{m_e = M_{Pl} \times \exp\left(-(H^* - L_8 - \ln\phi)\right)}$$
 
-where H* = 99 (effective cohomological dimension), L₈ = 47 (8th Lucas number, L_n = φ^n + (-φ)^{-n} evaluated at n = rank(E₈)), and φ = (1+√5)/2 (golden ratio).
+where H* = 99 (cohomological sum, b₂ + b₃ + 1), L₈ = 47 (8th Lucas number, L_n = φ^n + (-φ)^{-n} evaluated at n = rank(E₈)), and φ = (1+√5)/2 (golden ratio).
 
 The exponent evaluates to:
 
@@ -705,27 +705,25 @@ Critically, this validation uses the actual topological formulas to compute pred
 | P-value | < 5 x 10^-6 |
 | Significance | > 4.5 sigma |
 
-**Gauge group comparison**:
+**Gauge group comparison** (mean deviation over 33 observables):
 
 | Rank | Gauge Group | Dimension | Mean Dev. | N_gen |
 |------|-------------|-----------|-----------|-------|
-| 1 | **E₈ x E₈** | 496 | **0.24%** | **3.000** |
-| 2 | E₇ x E₈ | 381 | 3.06% | 2.625 |
-| 3 | E₆ x E₈ | 326 | 5.72% | 2.250 |
-| 4 | SO(32) | 496 | 6.82% | 6.000 |
+| 1 | **E₈ x E₈** | 496 | **0.26%** | **3.000** |
+| 2 | E₇ x E₈ | 381 | 8.80% | 2.625 |
+| 3 | E₆ x E₈ | 326 | 15.50% | 2.250 |
 
-E₈ x E₈ achieves 12.8x better agreement than all tested alternatives. Only rank 8 gives N_gen = 3 exactly.
+E₈ x E₈ achieves approximately 10x better agreement than all tested alternatives. Only rank 8 gives N_gen = 3 exactly.
 
-**Holonomy comparison**:
+**Holonomy comparison** (mean deviation over 33 observables):
 
 | Rank | Holonomy | dim | Mean Dev. |
 |------|----------|-----|-----------|
-| 1 | **G₂** | 14 | **0.24%** |
-| 2 | SU(4) | 15 | 0.71% |
-| 3 | SU(3) | 8 | 3.12% |
-| 4 | Spin(7) | 21 | 3.56% |
+| 1 | **G₂** | 14 | **0.26%** |
+| 2 | SU(4) | 15 | 1.46% |
+| 3 | SU(3) | 8 | 4.43% |
 
-G₂ holonomy achieves 13x better agreement than Calabi-Yau (SU(3)).
+G₂ holonomy achieves approximately 5x better agreement than Calabi-Yau (SU(3)).
 
 **Local sensitivity**: Testing +/-10 around (b₂=21, b₃=77) confirms GIFT is a strict local minimum: zero configurations in the neighborhood achieve lower deviation.
 
@@ -752,7 +750,7 @@ We define a bounded symbolic grammar G = (A, O, C) over the topological invarian
 **Alphabet A.** Three tiers of atoms, ordered by interpretive cost:
 
 - *Primary invariants* (cost 1): b₀ = 1, b₂ = 21, b₃ = 77, dim(G₂) = 14, dim(K₇) = 7, dim(E₈) = 248, rank(E₈) = 8, N_gen = 3, H* = 99.
-- *Derived invariants* (cost 2): p₂ = 2, Weyl = 5, kappa_T^{-1} = 61, dim(J₃(O)) = 27, dim(F₄) = 52, dim(E₆) = 78, dim(E₇) = 133, fund(E₇) = 56, |PSL(2,7)| = 168.
+- *Derived invariants* (cost 2): p₂ = 2, w = 5, kappa_T^{-1} = 61, dim(J₃(O)) = 27, dim(F₄) = 52, dim(E₆) = 78, dim(E₇) = 133, fund(E₇) = 56, |PSL(2,7)| = 168.
 - *Transcendental constants* (cost 4--7): pi, sqrt(2), phi, ln 2, zeta(3), zeta(5), zeta(11).
 
 Explicit integers in [1, 10] are admitted at cost 1. No free continuous parameters enter the grammar.
@@ -834,7 +832,7 @@ Combined via Fisher's method (chi² = -2 Sum ln p_i, with 2k degrees of freedom)
 
 Both combined p-values reject the null hypothesis at significance levels far beyond conventional thresholds.
 
-The case of N_gen is instructive. Its random AST p-value (0.051) is borderline because the integer 3 is easily accessible in any formula grammar. However, the shuffled invariant p-value (< 10^{-4}) is the strongest of all five observables: among all possible two-atom subtractions from the invariant set, only rank(E₈) - Weyl = 8 - 5 yields exactly 3. The value is common; the derivation is unique.
+The case of N_gen is instructive. Its random AST p-value (0.051) is borderline because the integer 3 is easily accessible in any formula grammar. However, the shuffled invariant p-value (< 10^{-4}) is the strongest of all five observables: among all possible two-atom subtractions from the invariant set, only rank(E₈) - w = 8 - 5 yields exactly 3. The value is common; the derivation is unique.
 
 **Joint null model (formula-set level)**: To eliminate the Fisher independence assumption entirely, we directly test whether a random *set* of formulas can simultaneously match all observables. For each of 200,000 Monte Carlo trials, one random formula value is drawn per observable from the class-appropriate distribution, and the mean deviation across all 28 testable observables is computed. Zero trials achieve a mean deviation at or below the GIFT value of 0.19%, yielding p < 1.5 x 10^{-5} (95% CL upper bound). This joint p-value requires no independence assumption and supersedes the Fisher combination.
 
@@ -899,14 +897,14 @@ The numerical program has progressed through approximately 50 training versions,
 
 **Validated results (February 2026)**:
 
-- **Torsion scaling law**: ∇φ(L) = 1.47 × 10⁻³/L², confirmed by exhaustive 1D optimization across all metric degrees of freedom (Cholesky interpolation, warm-start, PINN δg, Joyce iteration, scalar perturbation, fiber-dependent metric, and Kaluza-Klein gauge field)
-- **Torsion budget**: 71% fiber-connection (irreducible within metric optimization), 29% t-derivative
+- **Torsion scaling law**: ∇φ(L) = 8.46 × 10⁻⁴/L² after bulk metric optimization (42% improvement over the 1D baseline of 1.47 × 10⁻³/L²)
+- **Torsion budget**: 65% t-derivative, 35% fiber-connection (after G₀ optimization)
 - **Determinant constraint**: det(g) = 65/32 satisfied to machine precision
 - **Spectral fingerprint**: Eigenvalue degeneracy pattern [1, 10, 9, 30] at 5.8σ significance
 - **V7 fraction**: V7_frac = 0.325 (first reproducible value below 1/3)
 - **PINN contribution**: The neural network adds curvature orthogonally to torsion, demonstrating that curvature and torsion improvements are compatible
 
-**Honest assessment**: The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required to obtain solutions with non-trivial curvature. The torsion floor has been confirmed as **geometric** (not parametric) by exhaustive 1D optimization: fresh PINN, warm-start, gradient-projected training, Joyce's classical iteration (φ₁ = φ₀ + dη, coclosure reduced by ×51.5M but ∇φ unchanged), direct φ-interpolation via Hitchin's metric formula (identical to Cholesky to 4 decimal places), fiber-dependent metric g(t,θ), and Kaluza-Klein gauge field: all converge to the same optimum. The official baseline is ∇φ(L) = 1.47 × 10⁻³/L², with torsion decomposing into 71% fiber-connection (irreducible) and 29% t-derivative. The 1D metric optimization program is closed. Reducing the floor further requires making φ fiber-dependent (not g), or increasing the neck length L.
+**Honest assessment**: The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required to obtain solutions with non-trivial curvature. The torsion floor for any fixed bulk metric G₀ has been confirmed as geometric (not parametric) by exhaustive 1D optimization across 8 independent methods, all converging to ∇φ(L) = 1.47 × 10⁻³/L². The 1D metric optimization program is closed. Subsequent bulk metric optimization (block-diagonal rescaling of G₀) reduces this to ∇φ(L) = 8.46 × 10⁻⁴/L², with torsion budget shifting from 71/29 (fiber-connection/t-derivative) to 65/35 (t-derivative/fiber-connection). Reducing the floor further requires fiber-dependent φ(t,θ) or longer neck length L.
 
 Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper [30].
 
@@ -964,11 +962,11 @@ GIFT differs from standard M-theory phenomenology [36] by focusing on topologica
 
 | Criterion | GIFT | String Landscape | Lisi E₈ |
 |-----------|------|------------------|---------|
-| Falsifiable | Yes | No | No |
+| Falsifiable predictions | Yes (delta_CP) | Limited | Limited |
 | Continuous parameters | 0 | ~10^500 | 0 |
 | Discrete formula choices | 33 (statistically constrained, Section 7.5) | N/A | Fixed |
-| Formal verification | Yes | No | No |
-| Precise predictions | 33 | Qualitative | Mass ratios |
+| Formal verification | Yes (Lean 4) | No | No |
+| Precise predictions | 33 at 0.26% | Qualitative | Mass ratios |
 
 **Distler-Garibaldi obstruction** [37]: Lisi's E₈ theory attempted direct particle embedding, which is mathematically impossible. GIFT uses E₈ x E₈ as algebraic scaffolding; particles emerge from cohomology, not representation decomposition.
 
@@ -1025,7 +1023,7 @@ We have explored a framework deriving 33 dimensionless Standard Model parameters
 - **Torsional dynamics** connecting topology to RG flow via geodesic equations on K₇ (Section 3)
 - **Scale determination**: Electron mass at 0.09% and electroweak scale at 0.4% from topological exponents (Section 6, status: THEORETICAL)
 - **Falsifiable prediction** delta_CP = 197 degrees, testable by DUNE
-- **Numerical G₂ metric program** achieving torsion floor ∇φ = 0.010 and spectral fingerprint [1, 10, 9, 30] at 5.8σ
+- **Numerical G₂ metric program** with torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ
 
 **We do not claim this framework is correct.** It may represent:
 
@@ -1126,7 +1124,7 @@ The author declares no competing interests.
 | Symbol | Formula | Value |
 |--------|---------|-------|
 | p₂ | dim(G₂)/dim(K₇) | 2 |
-| Weyl | From W(E₈) factorization | 5 |
+| w | Pentagonal index: (dim(G₂)+1)/N_gen | 5 |
 | N_gen | Index theorem | 3 |
 | H* | b₂ + b₃ + 1 | 99 |
 | tau | (496 x 21)/(27 x 99) | 3472/891 |

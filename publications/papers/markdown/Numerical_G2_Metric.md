@@ -382,7 +382,7 @@ methodology.**
 
 $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61} \approx 0.01639$$
 
-where p₂ = 2 is the Pontryagin class contribution. **This relation
+where p₂ = dim(G₂)/dim(K₇) = 2 is the dimensional ratio. **This relation
 is derived within the GIFT framework [12]; see §1.4 for its status.**
 
 ---

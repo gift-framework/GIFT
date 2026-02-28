@@ -1,7 +1,5 @@
 # Supplement S2: Complete Derivations (Dimensionless)
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
-
 ## Complete Mathematical Derivations for All 33 Dimensionless Predictions
 
 *This supplement provides mathematical derivations for all dimensionless predictions in the GIFT framework. Each derivation proceeds from topological definitions to numerical predictions.*
@@ -86,11 +84,11 @@ Before presenting derivations, we clarify the logical structure:
 | dim(K₇) | 7 | Internal manifold dimension |
 | b₂(K₇) | 21 | Second Betti number |
 | b₃(K₇) | 77 | Third Betti number |
-| H* | 99 | Effective cohomology = b₂ + b₃ + 1 |
+| H* | 99 | Cohomological sum = b₂ + b₃ + 1 |
 | dim(J₃(O)) | 27 | Exceptional Jordan algebra dimension |
 | N_gen | 3 | Number of fermion generations |
-| p₂ | 2 | Binary duality parameter |
-| Weyl | 5 | Weyl factor: (dim(G₂)+1)/N_gen = b₂/N_gen - p₂ = dim(G₂) - rank(E₈) - 1 |
+| p₂ | 2 | Dimensional ratio: dim(G₂)/dim(K₇) |
+| w | 5 | Pentagonal index: (dim(G₂)+1)/N_gen = b₂/N_gen - p₂ = dim(G₂) - rank(E₈) - 1 |
 
 ---
 
@@ -156,9 +154,9 @@ $$\tau = 3.8967452300785634...$$
 
 ---
 
-## 5. Relation #3: Torsion Capacity κ_T = 1/61
+## 5. Relation #3: Torsion Parameter κ_T = 1/61
 
-**Statement**: The topological torsion capacity equals exactly 1/61.
+**Statement**: The topological torsion parameter equals exactly 1/61.
 
 **Classification**: TOPOLOGICAL (structural parameter, not physical prediction)
 
@@ -182,7 +180,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 | T_base | Torsion for torsion-free metric (Joyce) | **0** (by theorem) |
 | T_physical | Effective torsion for interactions | **Open question** |
 
-**Role in predictions**: κ_T appears in only one formula (α⁻¹, as a small correction term det(g)×κ_T ≈ 0.033). The other 17 predictions are independent of torsion capacity. It is primarily a structural parameter characterizing K₇, not a directly measured observable.
+**Role in predictions**: κ_T appears in only one formula (α⁻¹, as a small correction term det(g)×κ_T ≈ 0.033). The other 17 predictions are independent of torsion parameter. It is primarily a structural parameter characterizing K₇, not a directly measured observable.
 
 **Joyce's theorem**: Guarantees existence of a torsion-free metric on K₇ when perturbation bounds are satisfied.
 
@@ -208,7 +206,7 @@ $$b_2 + \dim(G_2) - N_{gen} = 21 + 14 - 3 = 32$$
 $$\det(g) = 2 + \frac{1}{32} = \frac{65}{32}$$
 
 *Step 4: Alternative derivation*
-$$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
+$$\det(g) = \frac{w \times (\text{rank}(E_8) + w)}{2^5} = \frac{5 \times 13}{32} = \frac{65}{32}$$
 
 **Verification**: The analytical metric g = (65/32)^{1/7} x I7 has det(g) = [(65/32)^{1/7}]^7 = 65/32 exactly, consistent with the normalization.
 
@@ -367,11 +365,11 @@ $$\frac{m_\mu}{m_e} = [\dim(J_3(\mathbb{O}))]^\phi = 27^\phi = 207.012$$
 ### Derivation
 
 *Formula*:
-$$\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20$$
+$$\frac{m_s}{m_d} = p_2^2 \times w = 4 \times 5 = 20$$
 
 *Geometric interpretation*:
 - p₂² = 4: Binary structure squared
-- Weyl = 5: Pentagonal symmetry
+- w = 5: Pentagonal symmetry
 
 *Experimental comparison*:
 
@@ -511,7 +509,7 @@ $$\sin^2\theta_{12}^{CKM} = \frac{\dim(\text{fund}_{E_7})}{\dim(E_8)} = \frac{56
 ### Derivation
 
 *Formula*:
-$$A_{\text{Wolf}} = \frac{\text{Weyl} + \dim(E_6)}{H^*} = \frac{5 + 78}{99} = \frac{83}{99} = 0.8384...$$
+$$A_{\text{Wolf}} = \frac{w + \dim(E_6)}{H^*} = \frac{5 + 78}{99} = \frac{83}{99} = 0.8384...$$
 
 *Alternative expression*:
 - (b₃ + p₂ × N_gen)/H* = (77 + 6)/99 = 83/99
@@ -593,7 +591,7 @@ $$\theta_{13} = \frac{\pi}{b_2(K_7)} = \frac{\pi}{21} = 8.571°$$
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (NuFIT 5.3) | 8.54° ± 0.12° |
+| Experimental (NuFIT 6.0) | 8.54° ± 0.12° |
 | GIFT prediction | 8.571° |
 | Deviation | 0.368% |
 
@@ -614,17 +612,17 @@ $$\theta_{23} = \arcsin\left(\frac{b_3 - p_2}{H^*}\right) = \arcsin\left(\frac{7
 
 *Components*:
 - b₃ = 77: Third Betti number (3-cycles of K₇)
-- p₂ = 2: Pontryagin class contribution (spin structure correction)
+- p₂ = 2: dimensional ratio dim(G₂)/dim(K₇)
 - H* = 99: Effective cohomology (b₂ + b₃ + 1)
 
 *Physical interpretation*:
-The atmospheric mixing angle θ₂₃ governs τ-μ flavor mixing. The formula (b₃ - p₂)/H* represents the relative weight of spin-corrected 3-cycles in the total cohomology. This captures how the τ-μ sector couples through the 3-cycle topology of K₇, with the Pontryagin correction accounting for the spin structure that distinguishes fermionic generations.
+The atmospheric mixing angle θ₂₃ governs τ-μ flavor mixing. The formula (b₃ - p₂)/H* represents the relative weight of spin-corrected 3-cycles in the total cohomology. This captures how the τ-μ sector couples through the 3-cycle topology of K₇, with the p₂ correction accounting for the dimensional ratio that distinguishes fermionic generations.
 
 *Experimental comparison*:
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (NuFIT 5.3) | 49.3° ± 1.0° |
+| Experimental (NuFIT 6.0) | 49.3° ± 1.0° |
 | GIFT prediction | 49.251° |
 | Deviation | 0.10% |
 
@@ -644,7 +642,7 @@ The atmospheric mixing angle θ₂₃ governs τ-μ flavor mixing. The formula (
 $$\theta_{12} = \arctan\left(\sqrt{\frac{\delta}{\gamma_{\text{GIFT}}}}\right) = 33.40°$$
 
 *Components*:
-- δ = 2π/Weyl² = 2π/25
+- δ = 2π/w² = 2π/25
 - γ_GIFT = 511/884
 
 *Derivation of γ_GIFT*:
@@ -656,7 +654,7 @@ $$\gamma_{\text{GIFT}} = \frac{2 \cdot \text{rank}(E_8) + 5 \cdot H^*}{10 \cdot 
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (NuFIT 5.3) | 33.41° ± 0.75° |
+| Experimental (NuFIT 6.0) | 33.41° ± 0.75° |
 | GIFT prediction | 33.40° |
 | Deviation | 0.030% |
 
@@ -686,7 +684,7 @@ $$\sin^2\theta_{12}^{PMNS} = \frac{b_0 + N_{gen}}{\alpha_{sum}} = \frac{1 + 3}{1
 ### Relation #14c: sin²θ₂₃(PMNS) = 6/11
 
 **Formula**:
-$$\sin^2\theta_{23}^{PMNS} = \frac{D_{bulk} - \text{Weyl}}{D_{bulk}} = \frac{11 - 5}{11} = \frac{6}{11} = 0.5455...$$
+$$\sin^2\theta_{23}^{PMNS} = \frac{D_{bulk} - w}{D_{bulk}} = \frac{11 - 5}{11} = \frac{6}{11} = 0.5455...$$
 
 *Alternative expression*:
 - 42/b₃ = 42/77 = 6/11 (after reduction)
@@ -723,7 +721,7 @@ $$\sin^2\theta_{13}^{PMNS} = \frac{D_{bulk}}{\dim(E_8 \times E_8)} = \frac{11}{4
 ### Derivation
 
 *Formula*:
-$$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{14 + 3}}{2^5} = \frac{\sqrt{17}}{32}$$
+$$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{w}} = \frac{\sqrt{14 + 3}}{2^5} = \frac{\sqrt{17}}{32}$$
 
 *Properties of 17*:
 - 17 is prime
@@ -752,12 +750,12 @@ $$\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{2^{\text{Weyl}}} = \frac{\sqrt{1
 ### Relation: m_W/m_Z = 37/42 (v3.3 correction)
 
 *Formula*:
-$$\frac{m_W}{m_Z} = \frac{2b_2 - \text{Weyl}}{2b_2} = \frac{42 - 5}{42} = \frac{37}{42}$$
+$$\frac{m_W}{m_Z} = \frac{2b_2 - w}{2b_2} = \frac{42 - 5}{42} = \frac{37}{42}$$
 
 *Physical interpretation*:
 - 2b₂ = 42 is the structural constant (= p₂ × b₂)
-- Weyl = 5 is the triple identity factor
-- The ratio involves (structural_const − Weyl) / structural_const
+- w = 5 is the triple identity factor
+- The ratio involves (structural_const − w) / structural_const
 
 **Note**: The true Euler characteristic χ(K₇) = 0 for odd-dimensional manifolds. The constant 42 = 2b₂ is a distinct topological invariant.
 
@@ -770,8 +768,6 @@ $$\frac{m_W}{m_Z} = \frac{2b_2 - \text{Weyl}}{2b_2} = \frac{42 - 5}{42} = \frac{
 | Experimental | 0.8815 ± 0.0002 |
 | GIFT prediction | 0.8810 |
 | Deviation | **0.06%** |
-
-**Note**: This corrects the previous formula (23/26 = 0.885) which had 0.35% deviation.
 
 **Consistency note**: The tree-level Standard Model relation m_W/m_Z = cos θ_W gives √(1 − 3/13) = √(10/13) ≈ 0.8771, while the direct GIFT prediction is 37/42 ≈ 0.8810 (0.45% discrepancy). This reflects that the two predictions correspond to different renormalization schemes: sin²θ_W = 3/13 matches the MS-bar value at M_Z, while m_W/m_Z = 37/42 matches the pole mass ratio. Radiative corrections bridge the two.
 
@@ -841,11 +837,11 @@ $$\ln\left(\frac{\dim(G_2)}{\dim(K_7)}\right) = \ln(2)$$
 ### Derivation
 
 *Formula*:
-$$n_s = \frac{\zeta(D_{bulk})}{\zeta(\text{Weyl})} = \frac{\zeta(11)}{\zeta(5)} = 0.9649$$
+$$n_s = \frac{\zeta(D_{bulk})}{\zeta(w)} = \frac{\zeta(11)}{\zeta(5)} = 0.9649$$
 
 *Components*:
 - ζ(11): From 11D bulk spacetime
-- ζ(5): From Weyl factor
+- ζ(5): From pentagonal index
 
 *Experimental comparison*:
 
@@ -918,7 +914,7 @@ $$h = \frac{|PSL_2(7)| - b_0}{\dim(E_8)} = \frac{168 - 1}{248} = \frac{167}{248}
 ### Derivation
 
 *Formula*:
-$$\frac{\Omega_b}{\Omega_m} = \frac{\text{Weyl}}{\det(g)_{den}} = \frac{5}{32} = 0.15625$$
+$$\frac{\Omega_b}{\Omega_m} = \frac{w}{\det(g)_{den}} = \frac{5}{32} = 0.15625$$
 
 *Experimental comparison*:
 
@@ -980,28 +976,28 @@ $$Y_p = \frac{b_0 + \dim(G_2)}{\kappa_T^{-1}} = \frac{1 + 14}{61} = \frac{15}{61
 
 ## 20. Relation #17b: Matter Density Ω_m
 
-**Statement**: The matter density fraction derives from dark energy via √Weyl.
+**Statement**: The matter density fraction derives from dark energy via √w.
 
-**Classification**: DERIVED (from Weyl triple identity + Ω_DE)
+**Classification**: DERIVED (from pentagonal triple identity + Ω_DE)
 
 ### Derivation
 
-*Step 1: Establish √Weyl as structural*
+*Step 1: Establish √w as structural*
 
-From the Weyl Triple Identity (S1, Section 2.3):
-$$\text{Weyl} = \frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) - \text{rank}(E_8) - 1 = 5$$
+From the pentagonal triple identity (S1, Section 2.3):
+$$w = \frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) - \text{rank}(E_8) - 1 = 5$$
 
-Therefore √Weyl = √5 is a derived quantity.
+Therefore √w = √5 is a derived quantity.
 
 *Step 2: Matter-dark energy ratio*
 
 The cosmological density ratio:
-$$\frac{\Omega_{DE}}{\Omega_m} = \sqrt{\text{Weyl}} = \sqrt{5}$$
+$$\frac{\Omega_{DE}}{\Omega_m} = \sqrt{w} = \sqrt{5}$$
 
 *Step 3: Compute Ω_m*
 
 Using Ω_DE = ln(2) × (b₂ + b₃)/H* = 0.6861 (Relation #16):
-$$\Omega_m = \frac{\Omega_{DE}}{\sqrt{\text{Weyl}}} = \frac{\ln(2) \times 98/99}{\sqrt{5}} = \frac{0.6861}{2.236} = 0.3068$$
+$$\Omega_m = \frac{\Omega_{DE}}{\sqrt{w}} = \frac{\ln(2) \times 98/99}{\sqrt{5}} = \frac{0.6861}{2.236} = 0.3068$$
 
 *Step 4: Verify closure*
 
@@ -1019,7 +1015,7 @@ $$\Omega_{total} = \Omega_{DE} + \Omega_m = 0.6861 + 0.3068 = 0.9929$$
 
 ### Interpretation
 
-The √5 ratio between dark energy and matter densities emerges from the same structural constant (Weyl = 5) that determines:
+The √5 ratio between dark energy and matter densities emerges from the same structural constant (w = 5) that determines:
 - det(g) = 65/32 (metric determinant)
 - |W(E₈)| factorization (group theory)
 - N_gen³ coefficient in |W(E₈)| (topology)
@@ -1059,9 +1055,9 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 # Part VIII: Summary Table
 
-## 21. The 18 VERIFIED + 1 DERIVED Dimensionless Relations
+## 21. The 18 Core Dimensionless Relations
 
-**Note**: All predictions use only topological invariants (b2, b3, dim(G2), etc.). None depend on the realized torsion value T. Relation #19 (Ω_m) is DERIVED from Ω_DE via the Weyl triple identity.
+**Note**: All predictions use only topological invariants (b₂, b₃, dim(G₂), etc.). None depend on the realized torsion value T. The 33 predictions decompose as 18 core (this table) + 15 extended (Part IX). Relation #19 (Ω_m) is listed here as DERIVED from Ω_DE via the pentagonal triple identity.
 
 | # | Relation | Formula | Value | Exp. | Dev. | Status |
 |---|----------|---------|-------|------|------|--------|
@@ -1083,9 +1079,9 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 16 | Ω_DE | ln(2)×(b2+b3)/H* | 0.6861 | 0.6847 | 0.211% | VERIFIED |
 | 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | VERIFIED |
 | 18 | α⁻¹ | 128+9+corr | 137.033 | 137.036 | 0.002% | TOPOLOGICAL |
-| 19 | Ω_m | Ω_DE/√Weyl | 0.3068 | 0.3153 | 2.7% | DERIVED |
+| 19 | Ω_m | Ω_DE/√w | 0.3068 | 0.3153 | 2.7% | DERIVED |
 
-*κ_T is a topological parameter (capacity), not a physical prediction. It does not appear in other formulas.
+*κ_T is a topological parameter, not a directly measured observable. It appears as a small correction in α⁻¹ (relation #18) via det(g) × κ_T ≈ 0.033.
 
 ---
 
@@ -1104,56 +1100,9 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ## 23. Statistical Uniqueness of (b₂=21, b₃=77)
 
-A critical question for any unified framework is whether the specific topological parameters represent overfitting. We conducted comprehensive Monte Carlo validation to address this concern.
+The comprehensive Monte Carlo validation (192,349 configurations tested, zero outperforming GIFT) is presented in the main paper, Section 7. Key results: E₈×E₈ achieves approximately 10× better agreement than alternatives; G₂ holonomy approximately 5× better than Calabi-Yau; significance > 4.5σ.
 
-### Methodology
-
-- **Betti variations**: 100,000 random (b₂, b₃) configurations
-- **Gauge group comparison**: E₈×E₈, E₇×E₇, E₆×E₆, SO(32), SU(5)×SU(5), etc.
-- **Holonomy comparison**: G₂, Spin(7), SU(3), SU(4)
-- **Full combinatorial**: 91,896 configurations varying all parameters
-- **Local sensitivity**: ±10 grid around (b₂=21, b₃=77)
-
-### Results
-
-| Metric | Value |
-|--------|-------|
-| Total configurations tested | **192,349** |
-| Configurations better than GIFT | **0** |
-| GIFT mean deviation | 0.26% (33 observables) |
-| Alternative mean deviation | 32.9% |
-| P-value | **< 5 × 10⁻⁶** |
-| Significance | **> 4.5σ** |
-
-### Gauge Group Ranking
-
-| Rank | Group | Mean Dev. |
-|------|-------|-----------|
-| **1** | **E₈×E₈** | **0.26%** |
-| 2 | E₇×E₈ | 8.80% |
-| 3 | E₆×E₈ | 15.50% |
-
-E₈ x E₈ achieves approximately 10x better agreement than all tested alternatives.
-
-### Holonomy Ranking
-
-| Rank | Holonomy | Mean Dev. |
-|------|----------|-----------|
-| **1** | **G₂** | **0.26%** |
-| 2 | SU(4) | 1.46% |
-| 3 | SU(3) | 4.43% |
-
-G₂ achieves approximately 5x better agreement than Calabi-Yau (SU(3)).
-
-### Interpretation
-
-Among 192,349 tested alternatives, the configuration (b₂=21, b₃=77) with E₈ x E₈ gauge group and G₂ holonomy achieves the lowest mean deviation. Zero alternatives outperform it.
-
-Complete methodology: [STATISTICAL_EVIDENCE.md](../../references/STATISTICAL_EVIDENCE.md)
-
-### Formula-Level Selection (Cross-Reference)
-
-The Monte Carlo analysis above addresses parameter selection (b₂, b₃). A complementary formula-level analysis (main paper Section 7.5; pilot benchmark in SELECTION_REPORT.md) addresses formula selection: for 5 representative observables (Q_Koide, sin²θ_W, N_gen, δ_CP, n_s), all 5 GIFT formulas rank #1 by precision AND sit on the Pareto frontier. Mean enrichment factor: 2.0× (GIFT values appear more often than average in the algebraic web). Joint probability < 10⁻³⁰ under random formula null.
+Formula-level selection analysis (main paper Section 7.5) shows GIFT formulas rank first or near-first among all bounded-grammar alternatives, with joint null-model p < 1.5 × 10⁻⁵.
 
 ---
 
@@ -1185,7 +1134,7 @@ Each prediction admits multiple algebraically distinct representations that redu
 | 6 | Q_Koide | dim_G₂/b₂ | 2/3 | 0.6667 | 0.001% | 20 | CANONICAL |
 | 7 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477.2 | 0.004% | 3 | DERIVED |
 | 8 | m_μ/m_e | 27^φ | 207.01 | 206.77 | 0.12% | 2 | DERIVED |
-| 9 | m_s/m_d | p₂²×Weyl | 20 | 20.0 | 0.00% | 14 | ROBUST |
+| 9 | m_s/m_d | p₂²×w | 20 | 20.0 | 0.00% | 14 | ROBUST |
 | 10 | m_b/m_t | 1/(2b₂) | 1/42 | 0.024 | 0.79% | 21 | CANONICAL |
 | 11 | m_u/m_d | (1+dim_E₆)/PSL₂₇ | 79/168 | 0.47 | 0.05% | 1 | SINGULAR |
 | 12 | δ_CP | dim_K₇×dim_G₂+H* | 197° | 197° | 0.00% | 3 | DERIVED |
@@ -1203,17 +1152,17 @@ Each prediction admits multiple algebraically distinct representations that redu
 | # | Observable | Formula | Value | Exp. | Dev. | Expr. | Class |
 |---|------------|---------|-------|------|------|-------|-------|
 | 19 | sin²θ₁₂^PMNS | (1+N_gen)/α_sum | 4/13 | 0.307 | 0.23% | 28 | CANONICAL |
-| 20 | sin²θ₂₃^PMNS | (D_bulk−Weyl)/D_bulk | 6/11 | 0.546 | 0.10% | 15 | ROBUST |
+| 20 | sin²θ₂₃^PMNS | (D_bulk−w)/D_bulk | 6/11 | 0.546 | 0.10% | 15 | ROBUST |
 | 21 | sin²θ₁₃^PMNS | D_bulk/dim_E₈₂ | 11/496 | 0.022 | 0.81% | 5 | SUPPORTED |
 | 22 | sin²θ₁₂^CKM | 7/31 | 0.2258 | 0.225 | 0.36% | 16 | ROBUST |
-| 23 | A_Wolf | (Weyl+dim_E₆)/H* | 83/99 | 0.836 | 0.29% | 4 | DERIVED |
+| 23 | A_Wolf | (w+dim_E₆)/H* | 83/99 | 0.836 | 0.29% | 4 | DERIVED |
 | 24 | sin²θ₂₃^CKM | dim_K₇/PSL₂₇ | 1/24 | 0.041 | 1.13% | 3 | DERIVED |
 | 25 | m_H/m_t | 8/11 | 0.7273 | 0.725 | 0.31% | 19 | ROBUST |
 | 26 | m_H/m_W | 81/52 | 1.5577 | 1.558 | 0.02% | 1 | SINGULAR |
-| 27 | m_W/m_Z | (2b₂−Weyl)/(2b₂) = 37/42 | 0.8810 | 0.8815 | **0.06%** | 8 | SUPPORTED |
+| 27 | m_W/m_Z | (2b₂−w)/(2b₂) = 37/42 | 0.8810 | 0.8815 | **0.06%** | 8 | SUPPORTED |
 | 28 | m_μ/m_τ | 5/84 | 0.0595 | 0.0595 | 0.04% | 9 | SUPPORTED |
 | 29 | Ω_DM/Ω_b | (1+42)/rank_E₈ | 43/8 | 5.375 | 0.00% | 6 | SUPPORTED |
-| 30 | Ω_b/Ω_m | Weyl/det(g)_den | 5/32 | 0.156 | 0.16% | 7 | SUPPORTED |
+| 30 | Ω_b/Ω_m | w/det(g)_den | 5/32 | 0.156 | 0.16% | 7 | SUPPORTED |
 | 31 | Ω_Λ/Ω_m | (det_g_den−dim_K₇)/D_bulk | 25/11 | 2.27 | 0.12% | 6 | SUPPORTED |
 | 32 | h | (PSL₂₇−1)/dim_E₈ | 167/248 | 0.674 | 0.09% | 3 | DERIVED |
 | 33 | σ₈ | (p₂+det_g_den)/(2b₂) | 34/42 | 0.811 | 0.18% | 4 | DERIVED |
@@ -1241,7 +1190,7 @@ Each prediction admits multiple algebraically distinct representations that redu
 | 1 | p₂ / N_gen | 2/3 |
 | 2 | dim_G₂ / b₂ | 14/21 = 2/3 |
 | 3 | dim_F₄ / dim_E₆ | 52/78 = 2/3 |
-| 4 | rank_E₈ / (Weyl + dim_K₇) | 8/12 = 2/3 |
+| 4 | rank_E₈ / (w + dim_K₇) | 8/12 = 2/3 |
 | 5 | (dim_G₂ − rank_E₈) / (rank_E₈ + 1) | 6/9 = 2/3 |
 
 **m_b/m_t = 1/42** (21 algebraically distinct representations):
@@ -1269,7 +1218,7 @@ The topological constants satisfy interconnected identities:
 | Matter-holonomy | b₃ + dim(G₂) = 91 | dim(K₇) × α_sum = 7 × 13 |
 | Fano order | PSL(2,7) = 168 | rank(E₈) × b₂ = 8 × 21 |
 | Fano order | PSL(2,7) = 168 | N_gen × fund(E₇) = 3 × 56 |
-| Anomaly sum | α_sum = 13 | rank(E₈) + Weyl = 8 + 5 |
+| Anomaly sum | α_sum = 13 | rank(E₈) + w = 8 + 5 |
 
 These relations form a closed algebraic system. The mod-7 structure (dim(K₇) = 7 divides dim(G₂), b₂, b₃, PSL(2,7)) reflects the Fano plane underlying octonion multiplication.
 
@@ -1279,16 +1228,16 @@ The GIFT constants embed naturally into the Fibonacci (Fₙ) and Lucas (Lₙ) se
 
 | n | Fₙ | GIFT Constant | Role |
 |---|-----|---------------|------|
-| 3 | 2 | p₂ | Pontryagin class |
+| 3 | 2 | p₂ | Dimensional ratio |
 | 4 | 3 | N_gen | Fermion generations |
-| 5 | 5 | Weyl | Pentagonal symmetry |
+| 5 | 5 | w | Pentagonal symmetry |
 | 6 | 8 | rank(E₈) | Cartan subalgebra |
 | 7 | 13 | α²_B sum | Structure coefficient |
 | 8 | 21 | b₂ | Second Betti number |
 
 This sequence propagates via the recurrence:
 
-$$F_3 + F_4 = F_5 \quad \Rightarrow \quad p_2 + N_{gen} = \text{Weyl}$$
+$$F_3 + F_4 = F_5 \quad \Rightarrow \quad p_2 + N_{gen} = w$$
 
 Lucas numbers also appear naturally:
 

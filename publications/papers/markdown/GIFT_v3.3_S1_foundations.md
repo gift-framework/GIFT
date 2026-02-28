@@ -1,7 +1,5 @@
 # Supplement S1: Mathematical Foundations
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
-
 ## E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Construction
 
 *Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
@@ -12,7 +10,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation (approximately 50 training versions) achieves a validated torsion floor of ∇φ(L) = 1.47 × 10⁻³/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the exceptional chain identity. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation achieves a torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
 
 ---
 
@@ -24,39 +22,11 @@ The GIFT framework emerges from a single algebraic fact:
 
 **The octonions 𝕆 are the largest normed division algebra.**
 
-The derivation chain proceeds as follows:
-
-```
-𝕆 (octonions, dim 8)
-    │
-    ▼
-Im(𝕆) = ℝ⁷ (imaginary octonions)
-    │
-    ▼
-G₂ = Aut(𝕆) (automorphism group, dim 14)
-    │
-    ▼
-K₇ with G₂ holonomy (proposed compact realization)
-    │
-    ▼
-Topological invariants (b₂ = 21, b₃ = 77)
-    │
-    ▼
-33 dimensionless predictions (18 VERIFIED in Lean + 15 TOPOLOGICAL/HEURISTIC extensions)
-```
-
-**Status classification**: 18 core relations have algebraic proofs verified in Lean 4 (status: VERIFIED). 15 additional predictions use topological formulas without full Lean verification (status: TOPOLOGICAL or HEURISTIC). See S2 for complete derivations.
+The derivation chain 𝕆 → G₂ → K₇ → predictions is described in the main paper (Section 1.3). This supplement develops the mathematical foundations for each step.
 
 ### 0.1 The Division Algebra Chain
 
-| Algebra | Dim | Physics Role | Stops? |
-|---------|-----|--------------|--------|
-| ℝ | 1 | Classical mechanics | No |
-| ℂ | 2 | Quantum mechanics | No |
-| ℍ | 4 | Spin, Lorentz group | No |
-| **𝕆** | **8** | **Exceptional structures** | **Yes** |
-
-The pattern terminates at 𝕆. There is no 16-dimensional normed division algebra. The octonions are *the end of the line*.
+The Hurwitz theorem establishes that no normed division algebra of dimension greater than 8 exists. The chain ℝ → ℂ → ℍ → 𝕆 terminates at the octonions (see main paper, Section 2.1 for the complete table). This non-extendability forces the exceptional structures: G₂ = Aut(𝕆), dim = 14.
 
 ### 0.2 G₂ as Octonionic Automorphisms
 
@@ -150,48 +120,48 @@ $$A_{E_8} = \begin{pmatrix}
 
 $$|W(E_8)| = 696,729,600 = 2^{14} \times 3^5 \times 5^2 \times 7$$
 
-### 2.2 Topological Factorization Theorem
+### 2.2 Prime Factorization Identity
 
-**Theorem**: The Weyl group order factorizes entirely into GIFT constants:
+**Identity**: The Weyl group order factorizes entirely into GIFT constants:
 
-$$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim(K_7)$$
+$$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{w} \times w^{p_2} \times \dim(K_7)$$
 
 | Factor | Exponent | Value | GIFT Origin |
 |--------|----------|-------|-------------|
 | 2¹⁴ | dim(G₂) = 14 | 16384 | p₂^(holonomy dim) |
-| 3⁵ | Weyl = 5 | 243 | N_gen^(Weyl factor) |
-| 5² | p₂ = 2 | 25 | Weyl^(binary) |
+| 3⁵ | w = 5 | 243 | N_gen^w |
+| 5² | p₂ = 2 | 25 | w^(binary) |
 | 7¹ | 1 | 7 | dim(K₇) |
 
 **Status**: **VERIFIED (Lean 4)**: `weyl_E8_topological_factorization`
 
 ---
 
-## 2.3 Triple Derivation of Weyl = 5
+## 2.3 Triple Derivation of w = 5
 
-**Theorem**: The Weyl factor admits three independent derivations from topological invariants.
+**Identity**: The pentagonal index w admits three independent derivations from topological invariants.
 
 ### Derivation 1: G₂ Dimensional Ratio
 
-$$\text{Weyl} = \frac{\dim(G_2) + 1}{N_{gen}} = \frac{14 + 1}{3} = \frac{15}{3} = 5$$
+$$w = \frac{\dim(G_2) + 1}{N_{gen}} = \frac{14 + 1}{3} = \frac{15}{3} = 5$$
 
 **Interpretation**: The holonomy dimension plus unity, distributed over generations.
 
 ### Derivation 2: Betti Reduction
 
-$$\text{Weyl} = \frac{b_2}{N_{gen}} - p_2 = \frac{21}{3} - 2 = 7 - 2 = 5$$
+$$w = \frac{b_2}{N_{gen}} - p_2 = \frac{21}{3} - 2 = 7 - 2 = 5$$
 
-**Interpretation**: The per-generation Betti contribution minus binary duality.
+**Interpretation**: The per-generation Betti contribution minus the dimensional ratio p₂.
 
 ### Derivation 3: Exceptional Difference
 
-$$\text{Weyl} = \dim(G_2) - \text{rank}(E_8) - 1 = 14 - 8 - 1 = 5$$
+$$w = \dim(G_2) - \text{rank}(E_8) - 1 = 14 - 8 - 1 = 5$$
 
 **Interpretation**: The gap between holonomy dimension and gauge rank, reduced by unity.
 
 ### Unified Identity
 
-These three derivations establish the **Weyl Triple Identity**:
+These three derivations establish the **pentagonal triple identity**:
 
 $$\boxed{\frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) - \text{rank}(E_8) - 1 = 5}$$
 
@@ -207,11 +177,11 @@ $$\boxed{\frac{\dim(G_2) + 1}{N_{gen}} = \frac{b_2}{N_{gen}} - p_2 = \dim(G_2) -
 
 ### Significance
 
-The triple convergence suggests Weyl = 5 is structurally constrained by the E₈ x E₈/G₂/K₇ geometry. It enters:
+The triple convergence suggests w = 5 is structurally constrained by the E₈ x E₈/G₂/K₇ geometry. It enters:
 
-1. **det(g) = 65/32**: Via Weyl x (rank(E₈) + Weyl) / 2^Weyl = 5 x 13 / 32
-2. **|W(E₈)| factorization**: The factor 5² = Weyl^p₂ in prime decomposition
-3. **Cosmological ratio**: sqrt(Weyl) = sqrt(5) appears in dark sector density ratios (see main paper, Section 5.8)
+1. **det(g) = 65/32**: Via w × (rank(E₈) + w) / 2^w = 5 × 13 / 32
+2. **|W(E₈)| factorization**: The factor 5² = w^p₂ in prime decomposition
+3. **Cosmological ratio**: √w = √5 appears in dark sector density ratios (see main paper, Section 5.8)
 
 **Status**: VERIFIED (three independent derivations)
 
@@ -229,9 +199,9 @@ A pattern connects exceptional algebra dimensions to primes:
 | E₇ | 7 | 133 | 19 | prime(8) = prime(rank(E₈)) |
 | E₈ | 8 | 248 | 31 | prime(11) = prime(D_bulk) |
 
-### 3.2 Exceptional Chain Theorem
+### 3.2 Exceptional Chain Identity
 
-**Theorem**: For n ∈ {6, 7, 8}:
+**Identity**: For n ∈ {6, 7, 8}:
 $$\dim(E_n) = n \times prime(g(n))$$
 
 where g(6) = 6, g(7) = rank(E₈) = 8, g(8) = D_bulk = 11.
@@ -301,7 +271,7 @@ $$\dim(F_4) = 52 = p_2^2 \times \alpha_{sum}^B = 4 \times 13$$
 | Difference | Value | GIFT |
 |------------|-------|------|
 | dim(E₈) - dim(J₃(O)) | 221 = 13 × 17 | α_B × λ_H_num |
-| dim(F₄) - dim(J₃(O)) | 25 = 5² | Weyl² |
+| dim(F₄) - dim(J₃(O)) | 25 = 5² | w² |
 | dim(E₆) - dim(F₄) | 26 | dim(J₃(O)₀) |
 
 **Status**: **VERIFIED (Lean 4)**: `exceptional_differences_certified`
@@ -393,7 +363,7 @@ $$\nabla\phi = 0 \Leftrightarrow d\phi = 0 \text{ and } d*\phi = 0$$
 
 | Quantity | Meaning | Value |
 |----------|---------|-------|
-| κ_T = 1/61 | Topological *capacity* for torsion | Fixed by K₇ |
+| κ_T = 1/61 | Torsion parameter | Fixed by K₇ |
 | φ_ref | Algebraic reference form | c × φ₀ |
 | T_realized | Actual torsion for global solution | Constrained by Joyce |
 
@@ -582,7 +552,7 @@ $$\chi(K_7) = \sum_{k=0}^{7} (-1)^k b_k = 1 - 0 + 21 - 77 + 77 - 21 + 0 - 1 = 0$
 
 **Status**: **VERIFIED (Lean 4)**: `euler_char_K7_is_zero`, `poincare_duality_K7`
 
-**Effective cohomological dimension**:
+**Cohomological sum**:
 $$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
 
 ### 9.4 The Structural Constant 42 (v3.3)
@@ -634,7 +604,7 @@ The GIFT framework explores the hypothesis that metric invariants derive from fi
 | Invariant | Formula | Value | Status |
 |-----------|---------|-------|--------|
 | κ_T | 1/(b₃ - dim(G₂) - p₂) | 1/61 | TOPOLOGICAL |
-| det(g) | (Weyl × (rank(E₈) + Weyl))/2⁵ | 65/32 | MODEL NORMALIZATION |
+| det(g) | (w × (rank(E₈) + w))/2⁵ | 65/32 | MODEL NORMALIZATION |
 
 ### 10.2 Torsion Magnitude κ_T = 1/61
 
@@ -645,7 +615,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 - 61 = effective matter degrees of freedom
 - b₃ = 77 total fermion modes
 - dim(G₂) = 14 gauge symmetry constraints
-- p₂ = 2 binary duality factor
+- p₂ = 2 dimensional ratio dim(G₂)/dim(K₇)
 
 **Status**: TOPOLOGICAL
 
@@ -653,8 +623,8 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{
 
 The metric determinant normalization admits three equivalent algebraic formulations from topological constants.
 
-**Path 1** (Weyl formula):
-$$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^{\text{Weyl}}} = \frac{5 \times 13}{32} = \frac{65}{32}$$
+**Path 1** (pentagonal formula):
+$$\det(g) = \frac{w \times (\text{rank}(E_8) + w)}{2^{w}} = \frac{5 \times 13}{32} = \frac{65}{32}$$
 
 **Path 2** (Cohomological):
 $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\text{gen}}} = 2 + \frac{1}{21+14-3} = 2 + \frac{1}{32} = \frac{65}{32}$$
@@ -662,7 +632,7 @@ $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{\text{gen}}} = 2 + \frac{1}{21+1
 **Path 3** (H* formula):
 $$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
 
-The Weyl factor Weyl = 5 admits three equivalent algebraic formulations from the same topological constants, suggesting structural coherence rather than independent derivation. The value det(g) = 65/32 is imposed as a model normalization (not a topological invariant).
+The pentagonal index w = 5 admits three equivalent algebraic formulations from the same topological constants, suggesting structural coherence rather than independent derivation. The value det(g) = 65/32 is imposed as a model normalization (not a topological invariant).
 
 **Numerical value**: 65/32 = 2.03125 (exact rational)
 
@@ -721,7 +691,7 @@ A companion numerical program constructs explicit G₂ metrics on K₇ via physi
 | det(g) at neck | 4.69 | 2.031 | locked at target |
 | phi drift | 13.4% | 0% | controlled |
 
-**Updated validated results (February 2026)**: The torsion floor follows a precise scaling law ∇φ(L) = 1.47 × 10⁻³/L², confirmed by exhaustive 1D optimization across all metric degrees of freedom (diagonal, off-diagonal, fiber-dependent, and Kaluza-Klein gauge components). The torsion decomposes into 71% fiber-connection (irreducible within metric optimization) and 29% t-derivative contributions. Spectral fingerprint [1, 10, 9, 30] at 5.8σ. V7_frac = 0.325. The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required for non-trivial curvature.
+**Updated validated results (February 2026)**: Exhaustive 1D metric optimization establishes a scaling law ∇φ(L) = 1.47 × 10⁻³/L² (per fixed bulk metric G₀). Subsequent bulk metric optimization (block-diagonal rescaling of G₀) reduces this to ∇φ(L) = 8.46 × 10⁻⁴/L², a 42% improvement. The torsion decomposes into 65% t-derivative and 35% fiber-connection contributions. Spectral fingerprint [1, 10, 9, 30] at 5.8σ. Full details in the companion numerical paper [30].
 
 A critical bug in the g₂ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct g₂ generators. The correct g₂ subalgebra is the kernel of the Lie derivative map (Section 6.2).
 

@@ -117,7 +117,7 @@ and antisymmetry properties (verified)."
 | b₂ | 21 | Second Betti number of K₇ |
 | b₃ | 77 | Third Betti number of K₇ |
 | H* | 99 | b₂ + b₃ + 1 |
-| p₂ | 2 | Pontryagin class contribution |
+| p₂ | 2 | Dimensional ratio dim(G₂)/dim(K₇) |
 | dim(J₃(O)) | 27 | Exceptional Jordan algebra dimension |
 
 ### Physical Predictions
@@ -128,7 +128,7 @@ and antisymmetry properties (verified)."
 | κ_T | 1/61 | 1/(b₃ − dim(G₂) − p₂) |
 | det(g) | 65/32 | G₂ metric determinant |
 | τ | 3472/891 | (dim(E₈×E₈) × b₂)/(dim(J₃(O)) × H*) |
-| N_gen | 3 | rank(E₈) − Weyl = b₂/dim(K₇) |
+| N_gen | 3 | rank(E₈) − w = b₂/dim(K₇) |
 
 ---
 
