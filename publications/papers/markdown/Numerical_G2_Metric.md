@@ -1030,6 +1030,11 @@ approachable --- but not from within any small subspace of corrections.
 \* Torsion in the flat atlas is small because the metric is flat, not
 because the G₂ structure is non-trivially torsion-free. See §11.
 
+† All ∇φ values are at the reference configuration (neck length
+L ≈ 0.38). Values scale as L⁻²; the scaling law coefficients are
+C = 1.4666 × 10⁻³ (isotropic G₀) and C = 8.462 × 10⁻⁴ (optimized
+G₀*). See §12.10--12.11.
+
 ### 12.10 Exhaustive 1D metric optimization
 
 The results of §12.5--12.9 left open whether the torsion floor
@@ -1086,19 +1091,20 @@ fiber-connection** (irreducible within any 1D metric family g(t)) and
 textbook Sturm-Liouville theory: λ₁·L² = π²⟨g^{tt}⟩, with ratios
 1 : 4 : 9 : 16 : 25.
 
-**The 1D metric program is CLOSED.** No choice of parametrization,
-optimization strategy, perturbation mode, fiber dependence, or
-off-diagonal component can reduce the torsion below the geometric
-floor.
+**The 1D metric program is CLOSED.** For any fixed bulk metric G₀,
+no choice of parametrization, optimization strategy, perturbation
+mode, fiber dependence, or off-diagonal component can reduce the
+torsion below the geometric floor set by G₀.
 
 ### 12.11 Bulk metric optimization
 
-The 1D closure (§12.10) established that for a *fixed* bulk metric
-G₀, the torsion floor is geometric. But G₀ itself --- the 7×7 matrix
-defining the left and right building blocks --- was isotropic
-(G₀ ≈ 1.10 × I₇ with small K3 off-diagonals from the lattice
-structure). A natural question is whether *rescaling* G₀ can reduce
-torsion.
+The 1D closure (§12.10) exhausts all degrees of freedom in the
+*interpolation* g(t) between two fixed endpoints G₀ and J^T G₀ J.
+A distinct question is whether the *endpoints themselves* can be
+improved. The bulk metric G₀ --- the 7×7 matrix defining the left
+and right building blocks --- was isotropic (G₀ ≈ 1.10 × I₇ with
+small K3 off-diagonals from the lattice structure). Changing G₀
+changes the torsion floor that the 1D program converges to.
 
 **Block-diagonal rescaling.** We parametrize a scaling matrix
 S = diag(a_t, a_f, 1, 1, 1, 1, a_f) acting as G₀* = S · G₀ · S,
@@ -1266,8 +1272,11 @@ This remains an open question (§13.5).
    path to attack the 35% fiber-connection torsion (65% after bulk
    optimization).
 
-6. **Further G₀ optimization.** Can the 4-parameter block-diagonal
-   scaling be improved by a full 28-parameter optimization of G₀*?
+6. **Further G₀ optimization.** The 4-parameter block-diagonal scaling
+   already captures 42% of the available improvement. Can the remaining
+   degrees of freedom in the full 28-parameter G₀* yield further gains?
+   (This is orthogonal to the 1D closure: the 1D program is closed
+   *for each fixed G₀*, but the choice of G₀ itself remains open.)
 
 ---
 
