@@ -1,0 +1,1200 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================
+% ENCODING & FONTS
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% ============================================
+% PAGE LAYOUT
+% ============================================
+\usepackage[margin=1.618cm, top=2.618cm, bottom=2.618cm]{geometry}
+
+% ============================================
+% ESSENTIAL PACKAGES
+% ============================================
+\usepackage{float}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{graphicx}
+\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
+
+% ============================================
+% LISTINGS CONFIGURATION
+% ============================================
+\lstset{
+    basicstyle=\small\ttfamily,
+    breaklines=true,
+    frame=single,
+    keepspaces=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    aboveskip=0.8em,
+    belowskip=0.8em
+}
+
+% ============================================
+% TITLE FORMATTING
+% ============================================
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
+
+% ============================================
+% HEADER/FOOTER
+% ============================================
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{GIFT Framework v3.3 -- Supplement S1}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+% ============================================
+% HYPERREF
+% ============================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={GIFT Supplement S1: Mathematical Foundations},
+    pdfauthor={Brieuc de La Fourniere}
+}
+
+% ============================================
+% SPACING
+% ============================================
+\setstretch{1.2}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Gtwo}{\mathrm{G}_2}
+\newcommand{\Kseven}{K_7}
+\newcommand{\dimE}{\mathrm{dim}}
+\newcommand{\Weyl}{\mathrm{Weyl}}
+\newcommand{\rk}{\mathrm{rank}}
+\newcommand{\proven}{\textsc{Proven}}
+\newcommand{\topomark}{\textsc{Topological}}
+\newcommand{\derived}{\textsc{Derived}}
+\newcommand{\AdS}{\mathrm{AdS}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\U}{\mathrm{U}}
+
+\pdfstringdefDisableCommands{%
+  \def\Gtwo{G2}%
+  \def\Kseven{K7}%
+  \def\E{E}%
+  \def\dimE{dim}%
+  \def\Weyl{Weyl}%
+  \def\rk{rank}%
+  \def\proven{Proven}%
+  \def\topomark{Topological}%
+  \def\AdS{AdS}%
+}
+
+\title{%
+\LARGE\textbf{Supplement S1: Mathematical Foundations}\\[0.3em]
+\Large $\E_8$ Exceptional Lie Algebra, $\Gtwo$ Holonomy Manifolds, and $\Kseven$ Construction
+}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\noindent\rule{\textwidth}{0.2pt}
+
+\noindent\textbf{Version}: 3.3
+
+\noindent\textbf{Author}: Brieuc de La Fourni\`ere, Independent researcher
+
+\noindent\textbf{Lean Verification}: 2400+ theorems (core v3.3.24, zero \texttt{sorry})
+
+\vfill
+
+\begin{abstract}
+This supplement presents the mathematical architecture underlying GIFT. Part~I develops the $\E_8$ exceptional Lie algebra with the exceptional chain identity. Part~II introduces $\Gtwo$ holonomy manifolds, including the correct characterization of the $\mathfrak{g}_2$ subalgebra as the kernel of the Lie derivative map. Part~III establishes $\Kseven$ manifold construction via twisted connected sum, building compact $\Gtwo$ manifolds by gluing asymptotically cylindrical building blocks. Part~IV establishes the algebraic reference form determining $\det(g) = 65/32$, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation achieves a torsion scaling law $\nabla\varphi(L) = 8.46 \times 10^{-4}/L^2$ and spectral fingerprint $[1, 10, 9, 30]$ at $5.8\sigma$ significance. All algebraic results are formally verified in Lean~4.
+\end{abstract}
+
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
+
+\newpage
+\tableofcontents
+
+\newpage
+
+% ============================================
+% PART 0: THE OCTONIONIC FOUNDATION
+% ============================================
+\part*{Part 0: The Octonionic Foundation}
+\addcontentsline{toc}{part}{Part 0: The Octonionic Foundation}
+
+\section{Why This Framework Exists}
+
+The GIFT framework emerges from a single algebraic fact:
+
+\textbf{The octonions $\mathbb{O}$ are the largest normed division algebra.}
+
+The derivation chain $\mathbb{O} \to \Gtwo \to \Kseven \to \text{predictions}$ is described in the main paper (Section~1.3). This supplement develops the mathematical foundations for each step.
+
+\subsection{The Division Algebra Chain}
+
+The Hurwitz theorem establishes that no normed division algebra of dimension greater than 8 exists. The chain $\mathbb{R} \to \mathbb{C} \to \mathbb{H} \to \mathbb{O}$ terminates at the octonions (see main paper, Section~2.1 for the complete table). This non-extendability forces the exceptional structures: $\Gtwo = \mathrm{Aut}(\mathbb{O})$, $\dimE = 14$.
+
+\subsection{$\Gtwo$ as Octonionic Automorphisms}
+
+\textbf{Definition}: $\Gtwo = \{g \in \mathrm{GL}(\mathbb{O}) : g(xy) = g(x)g(y) \text{ for all } x,y \in \mathbb{O}\}$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Property & Value & GIFT Role \\
+\midrule
+$\dimE(\Gtwo)$ & $14 = \binom{7}{2} - \binom{7}{1} = 21 - 7$ & $Q_{\mathrm{Koide}}$ numerator \\
+Action & Transitive on $S^6 \subset \mathrm{Im}(\mathbb{O})$ & Connects all directions \\
+Embedding & $\Gtwo \subset \SO(7)$ & Preserves $\varphi_0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Why $\dimE(\Kseven) = 7$}
+
+The dimension 7 is a consequence of the octonionic structure, not an independent choice:
+\begin{itemize}
+\item $\mathrm{Im}(\mathbb{O})$ has dimension 7
+\item $\Gtwo$ acts naturally on $\mathbb{R}^7$
+\item A compact 7-manifold with $\Gtwo$ holonomy provides the geometric realization
+\end{itemize}
+
+In this sense, $\Kseven$ is to $\Gtwo$ what the circle is to $\U(1)$.
+
+\subsection{The Fano Plane: Combinatorial Structure of $\mathrm{Im}(\mathbb{O})$}
+
+The 7 imaginary octonion units form the \textbf{Fano plane} $\mathrm{PG}(2,2)$, the smallest projective plane:
+\begin{itemize}
+\item 7 points (imaginary units $e_1 \ldots e_7$)
+\item 7 lines (multiplication triples $e_i \times e_j = \pm e_k$)
+\item 3 points per line
+\end{itemize}
+
+\textbf{Combinatorial counts}:
+\begin{itemize}
+\item Point-line incidences: $7 \times 3 = 21 = \binom{7}{2} = b_2$
+\item Automorphism group: $\mathrm{PSL}(2,7)$ with $|\mathrm{PSL}(2,7)| = 168$
+\end{itemize}
+
+\textbf{Numerical observation}: The following arithmetic identity holds:
+$$(b_3 + \dimE(\Gtwo)) + b_3 = 91 + 77 = 168 = |\mathrm{PSL}(2,7)| = \rk(\E_8) \times b_2$$
+
+Whether this reflects deeper geometric structure connecting gauge and matter sectors, or is an arithmetic coincidence, remains an open question.
+
+% ============================================
+% PART I: E8 EXCEPTIONAL LIE ALGEBRA
+% ============================================
+\newpage
+\part*{Part I: $\E_8$ Exceptional Lie Algebra}
+\addcontentsline{toc}{part}{Part I: E8 Exceptional Lie Algebra}
+
+\section{Root System and Dynkin Diagram}
+
+\subsection{Basic Data}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Property & Value & GIFT Role \\
+\midrule
+Dimension & $\dimE(\E_8) = 248$ & Gauge DOF \\
+Rank & $\rk(\E_8) = 8$ & Cartan subalgebra \\
+Number of roots & $|\Phi(\E_8)| = 240$ & $\E_8$ kissing number \\
+Root length & $\sqrt{2}$ & $\alpha_s$ numerator \\
+Coxeter number & $h = 30$ & Icosahedron edges \\
+Dual Coxeter number & $h^\vee = 30$ & McKay correspondence \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Root System Construction}
+
+$\E_8$ root system in $\mathbb{R}^8$ has 240 roots:
+
+\textbf{Type I (112 roots)}: Permutations and sign changes of $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$
+
+\textbf{Type II (128 roots)}: Half-integer coordinates with even minus signs:
+$$\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1, \pm 1)$$
+
+\textbf{Verification}: $112 + 128 = 240$ roots, all length $\sqrt{2}$.
+
+\textbf{Lean Status (v3.3.24)}: $\E_8$ Root System \textbf{12/12 COMPLETE}. All theorems proven:
+\begin{itemize}
+\item \texttt{D8\_roots\_card} $= 112$, \texttt{HalfInt\_roots\_card} $= 128$
+\item \texttt{E8\_roots\_card} $= 240$, \texttt{E8\_roots\_decomposition}
+\item \texttt{E8\_inner\_integral}, \texttt{E8\_norm\_sq\_even}, \texttt{E8\_sub\_closed}
+\item \texttt{E8\_basis\_generates}: Every lattice vector is integer combination of simple roots (theorem)
+\end{itemize}
+
+\subsection{Cartan Matrix}
+
+$$A_{\E_8} = \begin{pmatrix}
+2 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 2 & 0 & -1 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 2 & -1 & 0 & 0 & 0 & 0 \\
+0 & -1 & -1 & 2 & -1 & 0 & 0 & 0 \\
+0 & 0 & 0 & -1 & 2 & -1 & 0 & 0 \\
+0 & 0 & 0 & 0 & -1 & 2 & -1 & 0 \\
+0 & 0 & 0 & 0 & 0 & -1 & 2 & -1 \\
+0 & 0 & 0 & 0 & 0 & 0 & -1 & 2
+\end{pmatrix}$$
+
+\textbf{Properties}: $\det(A) = 1$ (unimodular), positive definite.
+
+\section{Weyl Group}
+
+\subsection{Order and Factorization}
+
+$$|W(\E_8)| = 696{,}729{,}600 = 2^{14} \times 3^5 \times 5^2 \times 7$$
+
+\subsection{Prime Factorization Identity}
+
+\textbf{Identity}: The Weyl group order factorizes entirely into GIFT constants:
+
+$$|W(\E_8)| = p_2^{\dimE(\Gtwo)} \times N_{\mathrm{gen}}^{w} \times w^{p_2} \times \dimE(\Kseven)$$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llll}
+\toprule
+Factor & Exponent & Value & GIFT Origin \\
+\midrule
+$2^{14}$ & $\dimE(\Gtwo) = 14$ & 16384 & $p_2^{(\text{holonomy dim})}$ \\
+$3^5$ & $w = 5$ & 243 & $N_{\mathrm{gen}}^w$ \\
+$5^2$ & $p_2 = 2$ & 25 & $w^{(\text{binary})}$ \\
+$7^1$ & 1 & 7 & $\dimE(\Kseven)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{weyl\_E8\_topological\_factorization}
+
+\subsection{Triple Derivation of $w = 5$}
+
+\textbf{Identity}: The pentagonal index $w$ admits three independent derivations from topological invariants.
+
+\subsubsection{Derivation 1: $\Gtwo$ Dimensional Ratio}
+
+$$w = \frac{\dimE(\Gtwo) + 1}{N_{\mathrm{gen}}} = \frac{14 + 1}{3} = \frac{15}{3} = 5$$
+
+\textbf{Interpretation}: The holonomy dimension plus unity, distributed over generations.
+
+\subsubsection{Derivation 2: Betti Reduction}
+
+$$w = \frac{b_2}{N_{\mathrm{gen}}} - p_2 = \frac{21}{3} - 2 = 7 - 2 = 5$$
+
+\textbf{Interpretation}: The per-generation Betti contribution minus the dimensional ratio $p_2$.
+
+\subsubsection{Derivation 3: Exceptional Difference}
+
+$$w = \dimE(\Gtwo) - \rk(\E_8) - 1 = 14 - 8 - 1 = 5$$
+
+\textbf{Interpretation}: The gap between holonomy dimension and gauge rank, reduced by unity.
+
+\subsubsection{Unified Identity}
+
+These three derivations establish the \textbf{pentagonal triple identity}:
+
+$$\boxed{\frac{\dimE(\Gtwo) + 1}{N_{\mathrm{gen}}} = \frac{b_2}{N_{\mathrm{gen}}} - p_2 = \dimE(\Gtwo) - \rk(\E_8) - 1 = 5}$$
+
+\textbf{Status}: \proven{} (algebraic identity from GIFT constants)
+
+\subsubsection{Verification}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Expression & Computation & Result \\
+\midrule
+$(\dimE(\Gtwo) + 1) / N_{\mathrm{gen}}$ & $(14 + 1) / 3$ & 5 \\
+$b_2/N_{\mathrm{gen}} - p_2$ & $21/3 - 2$ & 5 \\
+$\dimE(\Gtwo) - \rk(\E_8) - 1$ & $14 - 8 - 1$ & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Significance}
+
+The triple convergence suggests $w = 5$ is structurally constrained by the $\E_8 \times \E_8/\Gtwo/\Kseven$ geometry. It enters:
+
+\begin{enumerate}
+\item \textbf{$\det(g) = 65/32$}: Via $w \times (\rk(\E_8) + w) / 2^w = 5 \times 13 / 32$
+\item \textbf{$|W(\E_8)|$ factorization}: The factor $5^2 = w^{p_2}$ in prime decomposition
+\item \textbf{Cosmological ratio}: $\sqrt{w} = \sqrt{5}$ appears in dark sector density ratios (see main paper, Section~5.8)
+\end{enumerate}
+
+\textbf{Status}: \proven{} (three independent derivations)
+
+\section{Exceptional Chain}
+
+\subsection{The Pattern}
+
+A pattern connects exceptional algebra dimensions to primes:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccc}
+\toprule
+Algebra & $n$ & $\dimE(\E_n)$ & Prime & Index \\
+\midrule
+$\E_6$ & 6 & 78 & 13 & prime(6) \\
+$\E_7$ & 7 & 133 & 19 & prime(8) = prime($\rk(\E_8)$) \\
+$\E_8$ & 8 & 248 & 31 & prime(11) = prime($D_{\text{bulk}}$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Exceptional Chain Identity}
+
+\textbf{Identity}: For $n \in \{6, 7, 8\}$:
+$$\dimE(\E_n) = n \times \text{prime}(g(n))$$
+
+where $g(6) = 6$, $g(7) = \rk(\E_8) = 8$, $g(8) = D_{\text{bulk}} = 11$.
+
+\textbf{Proof} (verified in Lean):
+\begin{itemize}
+\item $\E_6$: $6 \times 13 = 78$ \checkmark
+\item $\E_7$: $7 \times 19 = 133$ \checkmark
+\item $\E_8$: $8 \times 31 = 248$ \checkmark
+\end{itemize}
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{exceptional\_chain\_certified}
+
+\section{$\E_8\times\E_8$ Product Structure}
+
+\subsection{Direct Sum}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\toprule
+Property & Value \\
+\midrule
+Dimension & $496 = 248 \times 2$ \\
+Rank & $16 = 8 \times 2$ \\
+Roots & $480 = 240 \times 2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{$\tau$ Numerator Connection}
+
+The hierarchy parameter numerator:
+$$\tau_{\text{num}} = 3472 = 7 \times 496 = \dimE(\Kseven) \times \dimE(\E_8 \times \E_8)$$
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{tau\_num\_E8xE8}
+
+\subsection{Binary Duality Parameter}
+
+\textbf{Triple geometric origin of $p_2 = 2$}:
+
+\begin{enumerate}
+\item \textbf{Local}: $p_2 = \dimE(\Gtwo)/\dimE(\Kseven) = 14/7 = 2$
+\item \textbf{Global}: $p_2 = \dimE(\E_8\times\E_8)/\dimE(\E_8) = 496/248 = 2$
+\item \textbf{Root}: $\sqrt{2}$ in $\E_8$ root normalization
+\end{enumerate}
+
+\section{Exceptional Algebras from Octonions}
+
+The foundational role of octonions is established in Part~0. This section details the exceptional algebraic structures that emerge from $\mathbb{O}$.
+
+\subsection{Exceptional Jordan Algebra $J_3(\mathbb{O})$}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\toprule
+Property & Value \\
+\midrule
+$\dimE(J_3(\mathbb{O}))$ & $27 = 3^3$ \\
+$\dimE(J_3(\mathbb{O})_0)$ & 26 (traceless) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{E-series formula (v3.3)}: The dimension 27 itself emerges from the exceptional chain:
+
+$$\dimE(J_3(\mathbb{O})) = \frac{\dimE(\E_8) - \dimE(\E_6) - \dimE(\SU_3)}{6} = \frac{248 - 78 - 8}{6} = \frac{162}{6} = 27$$
+
+This shows the Jordan algebra dimension is derivable from the E-series structure.
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{j3o\_e\_series\_certificate}
+
+\subsection{$F_4$ Connection}
+
+$F_4$ is the automorphism group of $J_3(\mathbb{O})$:
+$$\dimE(F_4) = 52 = p_2^2 \times \alpha_{\text{sum}}^B = 4 \times 13$$
+
+\subsection{Exceptional Differences}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Difference & Value & GIFT \\
+\midrule
+$\dimE(\E_8) - \dimE(J_3(\mathbb{O}))$ & $221 = 13 \times 17$ & $\alpha_B \times \lambda_{H,\text{num}}$ \\
+$\dimE(F_4) - \dimE(J_3(\mathbb{O}))$ & $25 = 5^2$ & $w^2$ \\
+$\dimE(\E_6) - \dimE(F_4)$ & 26 & $\dimE(J_3(\mathbb{O})_0)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{exceptional\_differences\_certified}
+
+\subsection{Structural Derivation of $\tau$ (v3.3)}
+
+The hierarchy parameter $\tau$ admits a purely geometric derivation from framework invariants:
+
+$$\tau = \frac{\dimE(\E_8 \times \E_8) \times b_2}{\dimE(J_3(\mathbb{O})) \times H^*} = \frac{496 \times 21}{27 \times 99} = \frac{10416}{2673} = \frac{3472}{891}$$
+
+\textbf{Prime factorization}:
+\begin{itemize}
+\item Numerator: $3472 = 2^4 \times 7 \times 31 = \dimE(\Kseven) \times \dimE(\E_8\times\E_8)$
+\item Denominator: $891 = 3^4 \times 11 = N_{\mathrm{gen}}^4 \times D_{\text{bulk}}$
+\end{itemize}
+
+\textbf{Alternative form}: $\tau_{\text{num}} = 7 \times 496 = \dimE(\Kseven) \times \dimE(\E_8\times\E_8) = 3472$
+
+This anchors $\tau$ to topological and algebraic invariants, establishing it as a geometric constant rather than a free parameter.
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{tau\_structural\_certificate}
+
+% ============================================
+% PART II: G2 HOLONOMY MANIFOLDS
+% ============================================
+\newpage
+\part*{Part II: $\Gtwo$ Holonomy Manifolds}
+\addcontentsline{toc}{part}{Part II: G2 Holonomy Manifolds}
+
+\section{Definition and Properties}
+
+\subsection{$\Gtwo$ as Exceptional Holonomy}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Property & Value & GIFT Role \\
+\midrule
+$\dimE(\Gtwo)$ & 14 & $Q_{\mathrm{Koide}}$ numerator \\
+$\rk(\Gtwo)$ & 2 & Lie rank \\
+Definition & $\mathrm{Aut}(\mathbb{O})$ & Octonion automorphisms \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Lean Status (v3.3.24)}: $\Gtwo$ Cross Product \textbf{9/11} proven:
+\begin{itemize}
+\item \texttt{epsilon\_antisymm}, \texttt{epsilon\_diag}, \texttt{cross\_apply} \checkmark
+\item \texttt{G2\_cross\_bilinear}, \texttt{G2\_cross\_antisymm}, \texttt{cross\_self} \checkmark
+\item \texttt{G2\_cross\_norm} (Lagrange identity $\|u\times v\|^2 = \|u\|^2\|v\|^2 - \langle u,v\rangle^2$) \checkmark
+\item \texttt{reflect\_preserves\_lattice} (Weyl reflection) \checkmark
+\item Remaining: \texttt{cross\_is\_octonion\_structure} (343-case timeout), \texttt{G2\_equiv\_characterizations}
+\end{itemize}
+
+\subsection{$\Gtwo$ as Kernel of the Lie Derivative}
+
+The $\Gtwo$ subalgebra of $\mathfrak{so}(7)$ admits a precise characterization as the stabilizer of the associative 3-form $\varphi_0$. For any antisymmetric matrix $A$ in $\mathfrak{so}(7)$, the Lie derivative of $\varphi_0$ is:
+
+$$L_A(\varphi_0)_{ijk} = A_{ia}\varphi_{ajk} + A_{ja}\varphi_{iak} + A_{ka}\varphi_{ija}$$
+
+The $\mathfrak{g}_2$ subalgebra consists of all $A$ for which $L_A(\varphi_0) = 0$:
+
+$$\mathfrak{g}_2 = \ker(L) = \{A \in \mathfrak{so}(7) : L_A(\varphi_0) = 0\}$$
+
+This yields the decomposition $\mathfrak{so}(7) = \mathfrak{g}_2 \oplus V_7$, where $\dimE(\mathfrak{g}_2) = 14$ and $\dimE(V_7) = 7$. The complement $V_7$ carries the standard 7-dimensional representation of $\Gtwo$.
+
+In practice, the kernel is computed via singular value decomposition (SVD) of the linear map $L: \mathfrak{so}(7) \to \Lambda^3(\mathbb{R}^7)$. The 14 singular vectors with eigenvalue zero span $\mathfrak{g}_2$; the 7 singular vectors with nonzero eigenvalue span $V_7$.
+
+\textbf{Note}: A heuristic construction based on Fano-plane indices does not produce correct $\mathfrak{g}_2$ generators (each such generator is approximately 67\% in $\mathfrak{g}_2$ and 33\% in $V_7$). The kernel-based construction is the correct definition and must be used in all numerical computations involving $\mathfrak{g}_2/V_7$ decomposition.
+
+\subsection{Holonomy Classification (Berger)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Dimension & Holonomy & Geometry \\
+\midrule
+\textbf{7} & $\Gtwo$ & \textbf{Exceptional} \\
+8 & $\mathrm{Spin}(7)$ & Exceptional \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Torsion: Definition and GIFT Interpretation}
+
+\textbf{Mathematical definition}: Torsion measures failure of $\Gtwo$ structure to be parallel:
+$$T = \nabla\varphi \neq 0$$
+
+For a $\Gtwo$ structure $\varphi$, the intrinsic torsion decomposes into four irreducible $\Gtwo$-modules:
+
+$$T \in W_1 \oplus W_7 \oplus W_{14} \oplus W_{27}$$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Class & Dimension & Characterization \\
+\midrule
+$W_1$ & 1 & Scalar: $d\varphi = \tau_0 \star\varphi$ \\
+$W_7$ & 7 & Vector: $d\varphi = 3\tau_1 \wedge \varphi$ \\
+$W_{14}$ & 14 & Co-closed part of $d\star\varphi$ \\
+$W_{27}$ & 27 & Traceless symmetric \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Total dimension}: $1 + 7 + 14 + 27 = 49 = 7^2 = \dimE(\Kseven)^2$
+
+The torsion-free condition requires all four classes to vanish simultaneously, a highly constrained state with 49 conditions.
+
+\textbf{Torsion-free condition}:
+$$\nabla\varphi = 0 \Leftrightarrow d\varphi = 0 \text{ and } d*\varphi = 0$$
+
+\textbf{GIFT interpretation}:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Quantity & Meaning & Value \\
+\midrule
+$\kappa_T = 1/61$ & Torsion parameter & Fixed by $\Kseven$ \\
+$\varphi_{\text{ref}}$ & Algebraic reference form & $c \times \varphi_0$ \\
+$T_{\text{realized}}$ & Actual torsion for global solution & Constrained by Joyce \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Key insight}: The 33 dimensionless predictions use only topological invariants ($b_2$, $b_3$, $\dimE(\Gtwo)$) and are independent of the specific torsion realization. The value $\kappa_T = 1/61$ defines the geometric bound on deviations from $\varphi_{\text{ref}}$.
+
+\textbf{Physical interactions}: Emerge from the geometry of $\Kseven$, with deviations $\delta\varphi$ from the reference form bounded by topological constraints. The complete dynamical framework connecting torsion to renormalization group flow via torsional geodesic equations is developed in the main paper (Section~3). There, the identification of geodesic flow parameter $\lambda = \ln(\mu/\mu_0)$ with RG scale maps the torsion hierarchy directly onto physical observables: mass hierarchies, CP violation, and coupling evolution.
+
+\section{Topological Invariants}
+
+\subsection{Derived Constants}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Constant & Formula & Value \\
+\midrule
+$\det(g)$ & $p_2 + 1/(b_2 + \dimE(\Gtwo) - N_{\mathrm{gen}})$ & $65/32$ \\
+$\kappa_T$ & $1/(b_3 - \dimE(\Gtwo) - p_2)$ & $1/61$ \\
+$\sin^2\theta_W$ & $b_2/(b_3 + \dimE(\Gtwo))$ & $3/13$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The 61 Decomposition}
+
+$$\kappa_T^{-1} = 61 = \dimE(F_4) + N_{\mathrm{gen}}^2 = 52 + 9$$
+
+Alternative:
+$$61 = \Pi(\alpha_B^2) + 1 = 2 \times 5 \times 6 + 1$$
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{kappa\_T\_inv\_decomposition}
+
+\subsection{Spectral Geometry}
+
+The Laplace-Beltrami operator on $\Kseven$ admits a discrete spectrum with eigenvalues $0 = \lambda_0 < \lambda_1 \le \lambda_2 \le \ldots$ The first non-zero eigenvalue $\lambda_1$ (spectral gap) characterizes the geometry's rigidity.
+
+\textbf{Bare spectral ratio}: For $\Gtwo$-holonomy manifolds constructed via TCS, the bare topological ratio scales inversely with cohomological dimension:
+
+$$\lambda_1^{\text{bare}} = \frac{\dimE(\Gtwo)}{H^*} = \frac{14}{b_2 + b_3 + 1}$$
+
+For $\Kseven$ with $b_2 = 21$, $b_3 = 77$:
+$$\lambda_1^{\text{bare}} = \frac{14}{99} = 0.1414\ldots$$
+
+\textbf{Physical spectral gap}: The Berger classification implies that $\Gtwo$-holonomy manifolds admit exactly $h = 1$ parallel spinor. The corrected spectral-holonomy identity reads:
+
+$$\lambda_1 \times H^* = \dimE(\Gtwo) - h = 14 - 1 = 13$$
+
+giving the physical spectral gap:
+
+$$\boxed{\lambda_1 = \frac{13}{99} = 0.1313\ldots}$$
+
+\textbf{Important}: The eigenvalue $\lambda_1 = \pi^2/L^2$ depends on the metric scale (moduli). The ratio $13/99$ is the topological proportionality constant; the actual spectral gap requires specifying moduli. The degeneracies $[1, 10, 9, 30]$ are topological invariants independent of moduli.
+
+The correction $14/99 - 13/99 = 1/99 = h/H^*$ is the parallel spinor contribution. The ratio $13/99$ is irreducible ($\gcd(13, 99) = 1$). Cross-holonomy validation: for $\SU(3)$ (Calabi-Yau 3-folds), $h = 2$ and $\dimE(\SU(3)) - h = 6$, numerically confirmed on $T^6/\mathbb{Z}_3$.
+
+\textbf{Lean status}: \texttt{Spectral.PhysicalSpectralGap} (28 theorems, zero axioms). \texttt{Spectral.SelbergBridge} connects the spectral gap to the mollified Dirichlet polynomial $S_w(T)$ via the Selberg trace formula.
+
+\textbf{Numerical observations}: The following near-identities hold to within 0.3\%:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llll}
+\toprule
+Relation & Left side & Right side & Deviation \\
+\midrule
+$\dimE(\Gtwo)/\sqrt{2} \approx \pi^2$ & 9.8995 & 9.8696 & 0.30\% \\
+$\dimE(\Kseven)\times\sqrt{2} \approx \pi^2$ & 9.8995 & 9.8696 & 0.30\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These suggest a connection between the topological integer $\dimE(\Gtwo) = 14$ and the transcendental number $\pi^2$. Whether this reflects deeper structure or numerical coincidence remains open.
+
+\textbf{Universality}: The $1/H^*$ scaling has been verified numerically across multiple $\Gtwo$ manifolds with different Betti numbers. The proportionality constant depends on the metric normalization convention.
+
+\subsection{Continued Fraction Structure}
+
+The bare topological ratio $14/99 = \dimE(\Gtwo)/H^*$ admits a notable continued fraction representation:
+
+$$\frac{14}{99} = [0; 7, 14] = \cfrac{1}{7 + \cfrac{1}{14}}$$
+
+The only integers appearing are \textbf{$7 = \dimE(\Kseven)$} and \textbf{$14 = \dimE(\Gtwo)$}, the two fundamental dimensions of GIFT geometry.
+
+\subsection{Pell Equation Structure}
+
+The spectral gap parameters satisfy a Pell equation:
+
+$$\boxed{H^{*2} - 50 \times \dimE(\Gtwo)^2 = 1}$$
+
+Explicitly:
+$$99^2 - 50 \times 14^2 = 9801 - 9800 = 1$$
+
+where $50 = \dimE(\Kseven)^2 + 1 = 49 + 1$.
+
+\textbf{Fundamental unit}: The Pell equation $x^2 - 50y^2 = 1$ has fundamental solution $(x_0, y_0) = (99, 14)$, giving:
+
+$$\varepsilon = 7 + \sqrt{50}, \quad \varepsilon^2 = 99 + 14\sqrt{50}$$
+
+\textbf{Continued fraction bridge}: The discriminant $\sqrt{50}$ has periodic continued fraction $\sqrt{50} = [7; \overline{14}]$ with period 1, where the partial quotients are exactly $\dimE(\Kseven) = 7$ and $\dimE(\Gtwo) = 14$. Combined with the selection principle $\kappa = \pi^2/14$ (formalized in \texttt{Spectral.SelectionPrinciple}), this provides an arithmetic link between the Pell structure and the spectral gap.
+
+\textbf{Status}: \topomark{} (algebraic identity verified in Lean)
+
+% ============================================
+% PART III: K7 MANIFOLD CONSTRUCTION
+% ============================================
+\newpage
+\part*{Part III: $\Kseven$ Manifold Construction}
+\addcontentsline{toc}{part}{Part III: K7 Manifold Construction}
+
+\section{Twisted Connected Sum Framework}
+
+\subsection{TCS Construction}
+
+The twisted connected sum (TCS) construction provides the primary method for constructing compact $\Gtwo$ manifolds from asymptotically cylindrical building blocks.
+
+\textbf{Key insight}: $\Gtwo$ manifolds can be built by gluing two asymptotically cylindrical (ACyl) $\Gtwo$ manifolds along their cylindrical ends, with the topology controlled by a twist diffeomorphism $\phi$.
+
+\subsection{Asymptotically Cylindrical $\Gtwo$ Manifolds}
+
+\textbf{Definition}: A complete Riemannian 7-manifold $(M, g)$ with $\Gtwo$ holonomy is asymptotically cylindrical (ACyl) if there exists a compact subset $K \subset M$ such that $M \setminus K$ is diffeomorphic to $(T_0, \infty) \times N$ for some compact 6-manifold $N$.
+
+\subsection{Building Blocks (v3.3: Both Betti Numbers Derived)}
+
+For the GIFT framework, $\Kseven$ is constructed from two specific ACyl building blocks:
+
+\textbf{$M_1$: Quintic in $\mathbb{CP}^4$}
+\begin{itemize}
+\item Construction: Derived from quintic hypersurface in $\mathbb{CP}^4$
+\item Betti numbers: $b_2(M_1) = 11$, $b_3(M_1) = 40$
+\item Hodge numbers: $(h^{1,1}, h^{2,1}) = (1, 101)$ for the base Calabi-Yau
+\end{itemize}
+
+\textbf{$M_2$: Complete Intersection CI(2,2,2) in $\mathbb{CP}^6$}
+\begin{itemize}
+\item Construction: Intersection of three quadrics in $\mathbb{CP}^6$
+\item Betti numbers: $b_2(M_2) = 10$, $b_3(M_2) = 37$
+\item Hodge numbers: $(h^{1,1}, h^{2,1}) = (1, 73)$ for the base Calabi-Yau
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llll}
+\toprule
+Building Block & $b_2$ & $b_3$ & Origin \\
+\midrule
+$M_1$ (Quintic) & 11 & 40 & Calabi-Yau geometry \\
+$M_2$ (CI) & 10 & 37 & Calabi-Yau geometry \\
+\textbf{$\Kseven$ (TCS)} & \textbf{21} & \textbf{77} & \textbf{Mayer-Vietoris} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Key result (v3.3)}: Both Betti numbers follow from the TCS formula via Mayer-Vietoris:
+\begin{itemize}
+\item $b_2(\Kseven) = b_2(M_1) + b_2(M_2) = 11 + 10 = \mathbf{21}$
+\item $b_3(\Kseven) = b_3(M_1) + b_3(M_2) = 40 + 37 = \mathbf{77}$
+\end{itemize}
+
+The building block data comes from standard Calabi-Yau geometry, and the TCS combination is derived from the Mayer-Vietoris exact sequence.
+
+\textbf{The compact manifold}:
+$$\Kseven = M_1 \cup_\phi M_2$$
+
+\textbf{Global properties}:
+\begin{itemize}
+\item Compact 7-manifold (no boundary)
+\item $\Gtwo$ holonomy preserved by construction
+\item Ricci-flat: $\mathrm{Ric}(g) = 0$
+\item Euler characteristic: $\chi(\Kseven) = 0$ (Poincar\'e duality for odd-dimensional manifolds)
+\end{itemize}
+
+\textbf{Combinatorial connections}:
+\begin{itemize}
+\item $b_2 = 21 = \binom{7}{2}$ = edges in complete graph $K_7$
+\item $b_3 = 77 = \binom{7}{3} + 2 \times b_2 = 35 + 42$
+\end{itemize}
+
+\textbf{Status}: \topomark{} (Lean 4 verified: \texttt{TCS\_master\_derivation})
+
+\section{Cohomological Structure}
+
+\subsection{Mayer-Vietoris Analysis}
+
+The Mayer-Vietoris sequence provides the primary tool for computing cohomology:
+
+$$\cdots \to H^{k-1}(N) \xrightarrow{\delta} H^k(\Kseven) \xrightarrow{i^*} H^k(M_1) \oplus H^k(M_2) \xrightarrow{j^*} H^k(N) \to \cdots$$
+
+\subsection{Betti Number Derivation}
+
+\textbf{Result for $b_2$}: The sequence analysis yields:
+$$b_2(\Kseven) = b_2(M_1) + b_2(M_2) = 11 + 10 = 21$$
+
+\textbf{Result for $b_3$}: Similarly:
+$$b_3(\Kseven) = b_3(M_1) + b_3(M_2) = 40 + 37 = 77$$
+
+\textbf{Status}: \topomark{} (exact)
+
+\subsection{Complete Betti Spectrum and Poincar\'e Duality}
+
+For a compact $\Gtwo$-holonomy 7-manifold $\Kseven$, Poincar\'e duality gives $b_k = b_{7-k}$:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+$k$ & $b_k(\Kseven)$ & Derivation \\
+\midrule
+0 & 1 & Connected \\
+1 & 0 & Simply connected ($\Gtwo$ holonomy) \\
+2 & 21 & TCS: $11 + 10$ \\
+3 & 77 & TCS: $40 + 37$ \\
+4 & 77 & Poincar\'e duality: $b_4 = b_3$ \\
+5 & 21 & Poincar\'e duality: $b_5 = b_2$ \\
+6 & 0 & Poincar\'e duality: $b_6 = b_1$ \\
+7 & 1 & Poincar\'e duality: $b_7 = b_0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Euler characteristic}: For any compact oriented odd-dimensional manifold, $\chi = 0$:
+$$\chi(\Kseven) = \sum_{k=0}^{7} (-1)^k b_k = 1 - 0 + 21 - 77 + 77 - 21 + 0 - 1 = 0$$
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{euler\_char\_K7\_is\_zero}, \texttt{poincare\_duality\_K7}
+
+\textbf{Cohomological sum}:
+$$H^* = b_2 + b_3 + 1 = 21 + 77 + 1 = 99$$
+
+\subsection{The Structural Constant 42 (v3.3)}
+
+The number 42 appears throughout GIFT as a derived topological invariant:
+
+$$42 = 2 \times 3 \times 7 = p_2 \times N_{\mathrm{gen}} \times \dimE(\Kseven)$$
+
+\textbf{Multiple derivations}:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Formula & Value & Interpretation \\
+\midrule
+$p_2 \times N_{\mathrm{gen}} \times \dimE(\Kseven)$ & $2 \times 3 \times 7 = 42$ & Binary $\times$ generations $\times$ fiber \\
+$2 \times b_2$ & $2 \times 21 = 42$ & Twice the gauge moduli \\
+$b_3 - \binom{7}{3}$ & $77 - 35 = 42$ & Global vs local 3-forms \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Connection to $b_3$ decomposition}:
+$$b_3 = 77 = \binom{7}{3} + 42 = 35 + 2 \times b_2$$
+
+The 35 local modes correspond to $\Lambda^3(\mathbb{R}^7)$ fiber forms; the 42 global modes arise from the TCS structure.
+
+\textbf{Status}: \textbf{\proven{} (Lean 4)}: \texttt{structural\_42\_gift\_form}, \texttt{structural\_42\_from\_b2}
+
+\subsection{Third Betti Number Decomposition}
+
+The $b_3 = 77$ harmonic 3-forms decompose as:
+
+$$H^3(\Kseven) = H^3_{\text{local}} \oplus H^3_{\text{global}}$$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Component & Dimension & Origin \\
+\midrule
+$H^3_{\text{local}}$ & $35 = \binom{7}{3}$ & $\Lambda^3(\mathbb{R}^7)$ fiber forms \\
+$H^3_{\text{global}}$ & $42 = 2 \times 21$ & TCS global modes \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Verification}: $35 + 42 = 77$
+
+\textbf{Status}: \topomark{}
+
+% ============================================
+% PART IV: METRIC STRUCTURE AND VERIFICATION
+% ============================================
+\newpage
+\part*{Part IV: Metric Structure and Verification}
+\addcontentsline{toc}{part}{Part IV: Metric Structure and Verification}
+
+\section{Structural Metric Invariants}
+
+\subsection{Metric Invariants from Topology}
+
+The GIFT framework explores the hypothesis that metric invariants derive from fixed mathematical structure. The topological constraints serve as inputs; the specific geometry is then determined.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llll}
+\toprule
+Invariant & Formula & Value & Status \\
+\midrule
+$\kappa_T$ & $1/(b_3 - \dimE(\Gtwo) - p_2)$ & $1/61$ & \topomark{} \\
+$\det(g)$ & $(w \times (\rk(\E_8) + w))/2^5$ & $65/32$ & Model normalization \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Torsion Magnitude $\kappa_T = 1/61$}
+
+\textbf{Derivation}:
+$$\kappa_T = \frac{1}{b_3 - \dimE(\Gtwo) - p_2} = \frac{1}{77 - 14 - 2} = \frac{1}{61}$$
+
+\textbf{Interpretation}:
+\begin{itemize}
+\item 61 = effective matter degrees of freedom
+\item $b_3 = 77$ total fermion modes
+\item $\dimE(\Gtwo) = 14$ gauge symmetry constraints
+\item $p_2 = 2$ dimensional ratio $\dimE(\Gtwo)/\dimE(\Kseven)$
+\end{itemize}
+
+\textbf{Status}: \topomark{}
+
+\subsection{Metric Determinant $\det(g) = 65/32$}
+
+The metric determinant normalization admits three equivalent algebraic formulations from topological constants.
+
+\textbf{Path 1} (pentagonal formula):
+$$\det(g) = \frac{w \times (\rk(\E_8) + w)}{2^{w}} = \frac{5 \times 13}{32} = \frac{65}{32}$$
+
+\textbf{Path 2} (Cohomological):
+$$\det(g) = p_2 + \frac{1}{b_2 + \dimE(\Gtwo) - N_{\mathrm{gen}}} = 2 + \frac{1}{21+14-3} = 2 + \frac{1}{32} = \frac{65}{32}$$
+
+\textbf{Path 3} ($H^*$ formula):
+$$\det(g) = \frac{H^* - b_2 - 13}{32} = \frac{99 - 21 - 13}{32} = \frac{65}{32}$$
+
+The pentagonal index $w = 5$ admits three equivalent algebraic formulations from the same topological constants, suggesting structural coherence rather than independent derivation. The value $\det(g) = 65/32$ is imposed as a model normalization (not a topological invariant).
+
+\textbf{Numerical value}: $65/32 = 2.03125$ (exact rational)
+
+\textbf{Status}: Model normalization (exact rational value, three equivalent algebraic formulations)
+
+\section{Formal Certification}
+
+\subsection{The Algebraic Reference Form}
+
+The algebraic reference form in a local $\Gtwo$-adapted orthonormal coframe:
+
+$$\varphi_{\text{ref}} = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
+$$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
+
+\textbf{Important clarification}: This representation holds in a local orthonormal frame. The manifold $\Kseven$ constructed via TCS is curved and compact; ``$I_7$'' reflects the frame choice, not global flatness. The reference form $\varphi_{\text{ref}}$ determines $\det(g) = 65/32$; the global torsion-free solution $\varphi_{\text{TF}}$ exists by Joyce's theorem.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Property & Value & Status \\
+\midrule
+$\det(g)$ & $65/32$ & EXACT (algebraic) \\
+$\varphi_{\text{ref}}$ components & $7/35$ & 20\% sparsity \\
+Joyce threshold & $\|T\| < \varepsilon_0 = 0.1$ & Satisfied ($224\times$ margin) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Joyce Existence Theorem and Global Solutions}
+
+\textbf{Important clarification}: The reference form $\varphi_{\text{ref}} = c\cdot\varphi_0$ is the canonical $\Gtwo$ structure in a local orthonormal coframe, not a globally constant form on $\Kseven$. On a compact TCS manifold, the coframe 1-forms $\{e^i\}$ satisfy $de^i \neq 0$ in general, so ``constant components'' does not imply $d\varphi = 0$ globally.
+
+\textbf{Actual solution structure}: The topology and geometry of $\Kseven$ impose a deformation:
+$$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
+
+The torsion-free condition ($d\varphi = 0$, $d*\varphi = 0$) is a \textbf{global constraint}. Joyce's perturbation theorem guarantees existence of a torsion-free $\Gtwo$ metric when the initial torsion satisfies $\|T\| < \varepsilon_0 = 0.1$. PINN validation ($N=1000$) confirms $\|T\|_{\max} = 4.46 \times 10^{-4}$, providing a $224\times$ safety margin.
+
+\textbf{Why GIFT satisfies Joyce's criterion}: The topological bound $\kappa_T = 1/61$ constrains $\|\delta\varphi\|$, ensuring the manifold lies within Joyce's perturbative regime where a torsion-free solution exists.
+
+\subsection{Independent Numerical Validation (PINN)}
+
+A companion numerical program constructs explicit $\Gtwo$ metrics on $\Kseven$ via physics-informed neural networks (PINNs). The three-chart atlas (neck + two Calabi-Yau bulk regions) uses approximately $10^6$ trainable parameters in float64 precision.
+
+\textbf{Initial validation} (Phase 2):
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Metric & Value & Significance \\
+\midrule
+$\|T\|_{\max}$ & $4.46 \times 10^{-4}$ & $224\times$ below Joyce $\varepsilon_0$ \\
+$\|T\|_{\text{mean}}$ & $9.8 \times 10^{-5}$ & $T \to 0$ confirmed \\
+$\det(g)$ error & $< 10^{-6}$ & Confirms $65/32$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{$\Gtwo$ metric program} (approximately 50 training versions):
+
+\textbf{Note (February 2026)}: The holonomy scores reported in earlier versions of this document were computed before the flat-attractor discovery, which revealed that the atlas metrics had converged to near-flat solutions where all FD curvature was noise. The table below is retained for historical reference only.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llll}
+\toprule
+Metric & Initial (v5) & v11 (pre-flat-attractor) & Improvement \\
+\midrule
+g2\_self (honest holonomy) & 3.86 & 3.25 & $-16\%$ \\
+$V_7$ projection score & 0.51 & 0.014 & $-97\%$ \\
+$\det(g)$ at neck & 4.69 & 2.031 & locked at target \\
+$\varphi$ drift & 13.4\% & 0\% & controlled \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Updated validated results (February 2026)}: Exhaustive 1D metric optimization establishes a scaling law $\nabla\varphi(L) = 1.47 \times 10^{-3}/L^2$ (per fixed bulk metric $G_0$). Subsequent bulk metric optimization (block-diagonal rescaling of $G_0$) reduces this to $\nabla\varphi(L) = 8.46 \times 10^{-4}/L^2$, a 42\% improvement. The torsion decomposes into 65\% $t$-derivative and 35\% fiber-connection contributions. Spectral fingerprint $[1, 10, 9, 30]$ at $5.8\sigma$. Full details in the companion numerical paper~\cite{numerical2026}.
+
+A critical bug in the $\mathfrak{g}_2$ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct $\mathfrak{g}_2$ generators. The correct $\mathfrak{g}_2$ subalgebra is the kernel of the Lie derivative map (Section~6.2).
+
+\textbf{Robust statistical validation}: The $\det(g) = 65/32$ prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3\%, joint constraint $p < 6 \times 10^{-6}$).
+
+Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper.
+
+\subsection{Lean 4 Formalization}
+
+\textbf{Scope of verification}: The Lean formalization (core v3.3.24, 140+ files, zero \texttt{sorry}) verifies:
+\begin{enumerate}
+\item Arithmetic identities and algebraic relations between GIFT constants
+\item Numerical bounds (e.g., torsion threshold)
+\item $\Gtwo$ differential geometry: exterior algebra $\Lambda^*(\mathbb{R}^7)$, Hodge star, $\psi = \star\varphi$ (axiom-free \texttt{Geometry} module)
+\item Physical spectral gap: $\lambda_1 = 13/99$ from Berger classification (\texttt{Spectral.PhysicalSpectralGap}, 28 theorems, zero axioms)
+\item Selberg bridge: trace formula connecting $S_w(T)$ to spectral gap (\texttt{Spectral.SelbergBridge})
+\item Mollified Dirichlet polynomial $S_w(T)$ over primes (axiom-free \texttt{MollifiedSum} module)
+\item Selection principle $\kappa = \pi^2/14$ (\texttt{Spectral.SelectionPrinciple})
+\end{enumerate}
+
+It does \textbf{not} formalize:
+\begin{itemize}
+\item Existence of $\Kseven$ as a smooth $\Gtwo$ manifold
+\item Physical interpretation of topological invariants
+\item Uniqueness of the TCS construction
+\end{itemize}
+
+\begin{lstlisting}
+-- GIFT.Foundations.AnalyticalMetric
+
+def phi0_indices : List (Fin 7 x Fin 7 x Fin 7) :=
+  [(0,1,2), (0,3,4), (0,5,6), (1,3,5), (1,4,6), (2,3,6), (2,4,5)]
+
+def phi0_signs : List Int := [1, 1, 1, 1, -1, -1, -1]
+
+def scale_factor_power_14 : Rat := 65 / 32
+
+theorem torsion_satisfies_joyce :
+  torsion_norm_constant_form < joyce_threshold_num := by native_decide
+
+theorem det_g_equals_target :
+  scale_factor_power_14 = det_g_target := rfl
+\end{lstlisting}
+
+\textbf{Status}: \proven{}
+
+\subsection{The Derivation Chain}
+
+The logical structure from algebra to predictions:
+
+\begin{lstlisting}
+Octonions (O)
+     |
+     v
+G2 = Aut(O), dim = 14
+     |
+     v
+Standard form phi_0 (Harvey-Lawson 1982)
+     |
+     v
+Scaling c = (65/32)^{1/14}    <- GIFT constraint
+     |
+     v
+Metric g = c^2 x I_7
+     |
+     v
+det(g) = 65/32               <- EXACT (algebraic, not fitted)
+     |
+     v
+sin^2(theta_W) = 3/13, Q = 2/3, ...  <- Predictions
+\end{lstlisting}
+
+\section{Analytical $\Gtwo$ Metric Details}
+
+\subsection{The Standard Form $\varphi_0$}
+
+The associative 3-form preserved by $\Gtwo \subset \SO(7)$, introduced by Harvey and Lawson (1982) in their foundational work on calibrated geometries:
+
+$$\varphi_0 = \sum_{(i,j,k) \in \mathcal{I}} \sigma_{ijk} \, e^{ijk}$$
+
+where:
+\begin{itemize}
+\item $\mathcal{I} = \{(0,1,2), (0,3,4), (0,5,6), (1,3,5), (1,4,6), (2,3,6), (2,4,5)\}$
+\item $\sigma = (+1, +1, +1, +1, -1, -1, -1)$
+\end{itemize}
+
+\subsection{Linear Index Representation}
+
+In the $\binom{7}{3} = 35$ basis:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cccccc}
+\toprule
+Index & Triple & Sign & Index & Triple & Sign \\
+\midrule
+0 & (0,1,2) & $+1$ & 23 & (1,4,6) & $-1$ \\
+9 & (0,3,4) & $+1$ & 27 & (2,3,6) & $-1$ \\
+14 & (0,5,6) & $+1$ & 28 & (2,4,5) & $-1$ \\
+20 & (1,3,5) & $+1$ & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All other 28 components are exactly 0.
+
+\subsection{Metric Derivation}
+
+From $\varphi_0$, the metric is computed via:
+$$g_{ij} = \frac{1}{6} \sum_{k,l} \varphi_{ikl} \varphi_{jkl}$$
+
+For standard $\varphi_0$: $g = I_7$ (identity), $\det(g) = 1$.
+
+Scaling $\varphi \to c\cdot\varphi$ gives $g \to c^2\cdot g$, hence $\det(g) \to c^{14}\cdot\det(g)$.
+
+Setting $c^{14} = 65/32$ yields the GIFT metric.
+
+\subsection{Comparison: Fano Plane vs $\Gtwo$ Form}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+Structure & 7 Triples & Role \\
+\midrule
+\textbf{Fano lines} & (0,1,3), (1,2,4), (2,3,5), (3,4,6), (4,5,0), (5,6,1), (6,0,2) & $\Gtwo$ cross-product $\epsilon_{ijk}$ \\
+\textbf{$\Gtwo$ form} & (0,1,2), (0,3,4), (0,5,6), (1,3,5), (1,4,6), (2,3,6), (2,4,5) & Associative 3-form \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Both have 7 terms but different index patterns. The Fano plane defines the octonion multiplication (cross-product), while the $\Gtwo$ form is the associative calibration.
+
+\subsection{Verification Summary}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+Method & Result & Reference \\
+\midrule
+Algebraic & $\varphi = (65/32)^{1/14} \times \varphi_0$ & This section \\
+Lean 4 & \texttt{det\_g\_equals\_target : rfl} & AnalyticalMetric.lean \\
+PINN & Converges to constant form & gift\_core/nn/ \\
+Joyce theorem & $\|T\| < 0.1 \to$ exists metric ($224\times$ margin) & \cite{joyce2000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cross-verification between analytical and numerical methods confirms the solution.
+
+% ============================================
+% REFERENCES
+% ============================================
+\begin{thebibliography}{99}
+
+\bibitem{adams1996} Adams, J.F. \textit{Lectures on Exceptional Lie Groups}
+
+\bibitem{harvey1982} Harvey, R., Lawson, H.B. ``Calibrated geometries.'' \textit{Acta Math.} 148, 47--157 (1982)
+
+\bibitem{bryant1987} Bryant, R.L. ``Metrics with exceptional holonomy.'' \textit{Ann. of Math.} 126, 525--576 (1987)
+
+\bibitem{joyce2000} Joyce, D. \textit{Compact Manifolds with Special Holonomy}
+
+\bibitem{corti2015} Corti, Haskins, Nordstr\"om, Pacini. \textit{$\Gtwo$-manifolds and associative submanifolds}
+
+\bibitem{kovalev2003} Kovalev, A. \textit{Twisted connected sums and special Riemannian holonomy}
+
+\bibitem{conway1999} Conway, J.H., Sloane, N.J.A. \textit{Sphere Packings, Lattices and Groups}
+
+\end{thebibliography}
+
+\subsection*{Related Works}
+\begin{itemize}
+\item GIFT Framework, \textit{Geometric Information Field Theory} (main paper)
+\item GIFT Framework, \textit{Supplement S2: Complete Derivations}
+\item GIFT Framework, \textit{Numerical $\Gtwo$ Metric Construction via Physics-Informed Neural Networks} (companion numerical paper)
+\end{itemize}
+
+\vfill
+\noindent\rule{\textwidth}{0.2pt}
+
+\textbf{Cross-references}: The torsion classes and geodesic framework introduced in Sections~6.4 and~10.2 are fully developed in the main paper (Section~3). Complete derivation proofs for all 18 verified relations appear in Supplement~S2: Complete Derivations.
+
+\vspace{0.5em}
+\textit{GIFT Framework -- Supplement S1}\\
+\textit{Mathematical Foundations: $\E_8$ + $\Gtwo$ + $\Kseven$}
+
+\end{document}

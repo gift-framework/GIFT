@@ -101,7 +101,7 @@ See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../reference
 
 ## Formal Verification
 
-**~290 relations verified** in Lean 4 (core v3.3.19).
+**2400+ theorems verified** in Lean 4 (core v3.3.24).
 
 See [gift-framework/core](https://github.com/gift-framework/core) for proofs.
 

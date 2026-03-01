@@ -673,10 +673,10 @@ The arithmetic relations are formalized in Lean 4 [28] with Mathlib [29]:
 
 | Category | Count |
 |----------|-------|
-| Verified theorems | 290+ |
+| Verified theorems | 2400+ |
 | Unproven (sorry) | 0 |
 | Custom axioms | 0 (for core relations) |
-| Source files | 130+ |
+| Source files | 140+ |
 
 Examples:
 
@@ -1054,7 +1054,7 @@ Integer arithmetic yielding physical constants invites skepticism. Our responses
 We have explored a framework deriving 33 dimensionless Standard Model parameters from topological invariants of a hypothesized G₂ manifold K₇ with E₈ x E₈ gauge structure:
 
 - **33 derived relations** with mean deviation 0.26% (18 core + 15 extended)
-- **Formal verification** of arithmetic consistency (290+ Lean 4 theorems, zero sorry, zero custom axioms)
+- **Formal verification** of arithmetic consistency (2400+ Lean 4 theorems, zero sorry, zero custom axioms)
 - **Statistical uniqueness** of (b₂, b₃) = (21, 77) at > 4.5 sigma among 192,349 alternatives
 - **Formula-level selection**: Joint null model p < 1.5 x 10^{-5}, permutation test p < 6 x 10^{-6}, leave-one-out stability 28/28 (Section 7.5)
 - **Torsional dynamics** connecting topology to RG flow via geodesic equations on K₇ (Section 3)
