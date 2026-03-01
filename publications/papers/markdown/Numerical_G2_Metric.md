@@ -53,9 +53,24 @@ V₇-valued), and systematically compare interpolation strategies
 (Cholesky vs log-Euclidean geodesic), identifying Cholesky
 interpolation as 2× superior.
 
+**Part III (Stages 9--12).** Landscape cartography (287 evaluations)
+confirms the optimum is the unique global minimum (Hessian condition
+number 92,392). The metric determinant is proven to be a pure gauge
+parameter (∇φ_code ∝ det^{3/7}, exact to 8.4 × 10⁻¹⁵), and the
+proper 3-form norm |φ|² = 42 = 7 × dim(G₂) is identified as an
+exact topological invariant. Full 7D spectral analysis (117,648 modes)
+confirms Weyl's law at 97.6%, with a critical crossing length
+L_cross = 0.35. Sturm-Liouville eigenfunctions match flat-space cosines
+to 4 × 10⁻⁶, yielding Yukawa selection rules (n₁ ± n₂ ± n₃ = 0,
+9/56 allowed, universal coupling |Y| = 1/√(2V)) preserved under the
+full metric (CV = 0.0001%). The G₂ representation-theoretic
+decomposition of cup product Yukawas reveals an exact selection rule
+Y(Ω²₇ × Ω²₇ × Ω³₇) = 0, and all J-invariant Yukawas vanish ---
+physical couplings originate exclusively from the anti-invariant sector.
+
 **Keywords**: G₂ holonomy, torsion-free structures, physics-informed
 neural networks, exceptional holonomy, twisted connected sum, spectral
-geometry, Cholesky parameterization, flat attractor
+geometry, Cholesky parameterization, flat attractor, Yukawa couplings
 
 **MSC 2020**: 53C29 (holonomy groups), 65N99 (numerical PDE methods),
 58J50 (spectral problems on manifolds)
@@ -1160,6 +1175,213 @@ the residual torsion is not removable by frame rotations.
 The G₀* matrix and optimized Chebyshev seam profile (40 nodes) define
 the new official baseline for all subsequent experiments.
 
+### 12.12 Landscape cartography
+
+The 4-parameter optimization of §12.11 raises the question: is the
+optimum unique? A systematic landscape exploration (287 evaluations)
+addresses this through six phases: LHS screening (120 random starts,
+94/120 non-SPD — the admissible domain is a small island in 4D),
+1D sensitivity profiling, 2D grid scans, Powell refinement, and
+Sobol sensitivity analysis.
+
+**Key findings:**
+
+| Quantity | Value |
+|----------|-------|
+| Total evaluations | 287 |
+| SPD-admissible fraction | 22% |
+| Basin count (6 starts) | 1 deep (unique) |
+| Hessian condition number | 92,392 |
+| Powell-refined ∇φ | 8.462 × 10⁻⁴ (identical to §12.11) |
+
+The Hessian eigenvalue analysis reveals extreme anisotropy:
+ε_f has curvature H = 155.6, ε_k has H = 41.2 (both with basin
+width below resolution), while log(a_f) and log(a_t) have H ≈ 0.004
+(basin widths ~2.5 and ~2.0 respectively). The condition number
+κ = 92,392 means perturbations in the ε directions are catastrophic
+while the log-scale parameters are gentle.
+
+Sobol sensitivity indices: ε_k (0.26) > ε_f (0.24) > log(a_t) (0.15)
+> log(a_f) (0.05). The most sensitive parameters have optimal values
+near zero — anisotropy is lethal, not useful.
+
+The optimum of §12.11 is the **unique global minimum** of the landscape.
+
+### 12.13 Determinant gauge invariance and |φ|² = 42
+
+An observation during landscape exploration (§12.12) suggested that
+det(g) = 1.5 gives 11% lower ∇φ_code than the canonical 65/32.
+We test whether this is a genuine improvement or a scale artifact.
+
+**Theoretical prediction.** Under a global rescaling g → α·g (or
+equivalently det(g) → β·det(g)), the code-reported torsion scales as
+∇φ_code ∝ det^{3/7} while the proper (coordinate-invariant) torsion
+scales as ∇φ_proper ∝ det^{-1/7}.
+
+**Phase 1 (no re-optimization, 10 det values spanning 12× range):**
+- ∇φ_code ∝ det^{0.428571} (predicted 3/7 = 0.428571) — **exact to
+  8.4 × 10⁻¹⁵**
+- ∇φ_proper ∝ det^{-0.142857} (predicted -1/7) — **exact**
+- All proper-torsion ratios equal 1.000000 across the full range
+
+**Phase 2 (with re-optimization, 8 det values, 200 steps each):**
+- ∇φ_code / det^{3/7} = constant with CV = 0.0013%
+- The optimizer finds identical geometry at every det value
+- g^{tt} ∝ det^{-1/7} as predicted
+
+**Phase 3 (spectral invariants):**
+- Eigenvalue ratios 1:4:9:16:25 preserved at all det values
+- λ₁·L² = π²·g^{tt} confirmed everywhere
+
+**Conclusion:** det(g) is a **pure gauge parameter** with no physical
+content. The apparent 11% improvement was exactly
+(1.5/2.031)^{3/7} = 0.878, predicting -12.2% (observed: -12.2%).
+
+**Bonus: |φ|²_proper = 42.000 = 7 × dim(G₂).** The proper norm of
+the associative 3-form, computed from the metric-corrected volume
+form, gives an exact topological invariant. This confirms the
+calibration of the numerical framework.
+
+### 12.14 Transverse spectrum and eigenfunctions
+
+The 1D metric g(t) defines a longitudinal Sturm-Liouville problem.
+The transverse directions (6D fiber perpendicular to the seam) define
+independent eigenproblems whose spectrum governs the transition from
+1D to fully 7D physics.
+
+**Transverse metric profile.** The 6×6 transverse metric g_⊥ has two
+groups of eigenvalues:
+- Fiber (θ, ψ): g^{-1}_⊥ = 0.687 (2 near-degenerate, CV < 0.003%)
+- K3 (4 directions): g^{-1}_⊥ = 1.32 (4 eigenvalues, CV < 0.06%)
+
+These are nearly constant along the seam — the warped product
+approximation is excellent.
+
+**Full product spectrum.** From the flat-torus transverse Laplacian
+with lattice vectors m ∈ Z⁶ (|m|_∞ ≤ 3): 117,648 total modes,
+8,872 unique eigenvalue levels.
+
+| Level | λ_⊥ | Degeneracy | Content |
+|-------|------|------------|---------|
+| 1 | 27.14 | 4 | Pure fiber (θ, ψ) |
+| 2 | 52.36 | 2 | K3₄ |
+| 3 | 52.39 | 4 | K3₃ |
+| 4 | 52.41 | 2 | K3₁ |
+| 5 | 54.28 | 4 | Mixed fiber |
+
+Scale hierarchy: λ₁_⊥ / λ₁_long = 8.19× at L = 1.
+
+**Regime transitions.** The critical crossing length is
+L_cross = 0.35, where the first longitudinal and first transverse
+eigenvalue coincide:
+- L > 0.7: clean 1D regime (λ₂/λ₁ = 4.000 exact)
+- L ~ 0.35–0.7: transition zone
+- L < 0.35: transverse/degenerate regime
+
+**Weyl's law.** The seam volume integral(√det · dt) = 1.4252.
+At λ = 100: N_actual = 170 vs N_Weyl = 174, ratio = 0.976 (97.6%).
+
+**Sturm-Liouville eigenfunctions.** Ten eigenvectors are extracted from
+the 1D longitudinal problem:
+
+| Property | Value |
+|----------|-------|
+| Eigenvalue ratios | 1 : 4 : 9 : 16 : 25 (exact) |
+| λ₀ (zero mode) | 6 × 10⁻¹³ (numerical zero) |
+| Orthonormality error | max off-diagonal = 1.86 × 10⁻¹⁰ |
+| Deviation from cosines | ‖ψ_n − √2 cos(nπs)‖₂ < 4 × 10⁻⁶ |
+
+The warping barely deforms the eigenfunctions — they are flat-space
+cosines to 6 significant figures. This validates the warped product
+structure of the metric.
+
+### 12.15 Yukawa selection rules
+
+The Sturm-Liouville eigenfunctions of §12.14 determine the
+longitudinal Yukawa triple-overlap integrals
+Y_{n₁,n₂,n₃} = ∫ ψ_{n₁} ψ_{n₂} ψ_{n₃} √det · dt.
+
+**Selection rule.** Y_{n₁,n₂,n₃} ≠ 0 if and only if
+n₁ ± n₂ ± n₃ = 0 for some sign combination.
+
+| Metric | Value |
+|----------|-------|
+| Allowed triples (first 6 modes) | 9 / 56 |
+| Universal coupling |Y| | 0.5923 = 1/√(2V) |
+| Rule-violating residuals | ~10⁻⁷ (6 orders below allowed) |
+| Full 7D triples (with transverse) | 200 valid (inheriting longitudinal structure) |
+
+The coupling is **universal**: all 9 allowed triples have identical
+|Y| = 0.5923, where V = 1.4252 is the seam volume. This is the
+flat-space result, preserved by the warped metric to better than 10⁻⁶.
+
+**Metric-corrected universality.** Integrating the seam metric g(t)
+with Clenshaw-Curtis quadrature (40 Chebyshev-Gauss-Lobatto nodes):
+
+| Quantity | Value |
+|----------|-------|
+| Metric-corrected |ỹ| | 1.1938 |
+| CV | 0.0001% |
+| max/min ratio | 1.000003 |
+| Significant couplings | 210 (all consistent) |
+
+Universality is preserved under the full metric with negligible
+distortion.
+
+### 12.16 G₂ decomposition and cup product Yukawas
+
+Moving beyond scalar Yukawas, we compute the algebraic cup product
+Y_{abI} = ∫ ω_a ∧ ω_b ∧ ψ_I over the torus T⁷, where
+ω_a ∈ Ω² (2-forms) and ψ_I ∈ Ω³ (3-forms), and decompose by
+G₂ irreducible representations.
+
+**G₂ decomposition of forms (textbook verification).**
+
+The Hodge-star composed with φ-wedge acts on Ω² with eigenvalues
+**+2 (×7)** and **−1 (×14)** — exactly the G₂ representation decomposition:
+
+$$\Omega^2 = \Omega^2_7 \oplus \Omega^2_{14} \qquad (7 + 14 = 21 = b_2)$$
+
+$$\Omega^3 = \Omega^3_1 \oplus \Omega^3_7 \oplus \Omega^3_{27} \qquad (1 + 7 + 27 = 35)$$
+
+Projector validation: P₇² = P₇ (error 0), P₁₄² = P₁₄ (error 4 × 10⁻¹⁶),
+P₇ + P₁₄ = I (error 0). The norm ‖φ‖² = 7.
+
+**Cup product on irreps.**
+
+| Channel | Nonzero fraction | Max |Y| |
+|---------|-----------------|---------|
+| Ω²₇ × Ω²₇ × Ω³₇ | **0/343 (= 0)** | 0 |
+| Ω²₇ × Ω²₇ × Ω³₁ | significant | 0.756 |
+| Ω²₇ × Ω²₇ × Ω³₂₇ | 1299/5145 (25%) | 0.545 |
+| Ω²₁₄ × Ω²₁₄ × Ω³ | **6860/6860 (100%)** | dense |
+
+The key result is the **G₂ selection rule**:
+$$\boxed{Y(\Omega^2_7 \times \Omega^2_7 \times \Omega^3_7) = 0}$$
+
+This vanishing is exact (not numerical) and follows from
+representation theory: the tensor product 7 ⊗ 7 decomposes as
+1 ⊕ 7 ⊕ 14 ⊕ 27, which does not contain the dual of 7 in the
+relevant coupling channel.
+
+**Kovalev twist (J-action) and orbifold selection.**
+
+The Kovalev twist J acts on forms with: order 8, det = −1
+(orientation-reversing). J-invariant subspaces:
+dim(Ω²)^J = 3, dim(Ω³)^J = 6. J mixes Ω²₇ and Ω²₁₄
+(off-diagonal norm = 2.31) — J is not in G₂.
+
+The cup product on the J-invariant subspace (3 × 3 × 6) is
+**identically zero**. Forms surviving the orbifold identification have
+vanishing torus Yukawa. Physical Yukawas originate exclusively from
+the J-anti-invariant sector: Y(anti₂ × anti₂ × anti₃) has
+14/112 nonzero entries, with max |Y| = 1.0.
+
+**Normalized Yukawas.** After mass-matrix normalization
+(cond(M₂) = 16.6, cond(M₃) = 44.1), all 210 nonzero entries
+have |ỹ| = 0.3326 with ratio max/min = 1.00 and std = 0.000 —
+**universal coupling**, consistent with the longitudinal result of §12.15.
+
 ---
 
 ## 13. Discussion
@@ -1210,6 +1432,27 @@ the new official baseline for all subsequent experiments.
     across 20 seeds (CV < 1%). The torsion budget shifts from 71/29
     to 65/35 (t/fiber).
 
+13. **Landscape uniqueness.** Systematic exploration (287 evaluations)
+    confirms the optimum is the unique global minimum with Hessian
+    condition number 92,392.
+
+14. **Determinant gauge invariance.** det(g) is a pure gauge parameter:
+    ∇φ_code ∝ det^{3/7} (verified to 8.4 × 10⁻¹⁵ precision). The
+    proper 3-form norm |φ|² = 42 = 7 × dim(G₂) is an exact
+    topological invariant.
+
+15. **Transverse spectrum.** Full 7D product spectrum (117,648 modes,
+    8,872 unique levels), with Weyl's law at 97.6% accuracy. Critical
+    crossing length L_cross = 0.35 separates 1D and transverse regimes.
+
+16. **Yukawa selection rules.** n₁ ± n₂ ± n₃ = 0, with 9/56 allowed
+    triples and universal coupling |Y| = 0.5923 = 1/√(2V). Universality
+    preserved under full metric (CV = 0.0001%).
+
+17. **G₂ cup product decomposition.** Y(Ω²₇ × Ω²₇ × Ω³₇) = 0 (exact
+    G₂ selection rule). All J-invariant Yukawas vanish. Physical
+    Yukawas originate exclusively from the J-anti-invariant sector.
+
 ### 13.2 Comparison with the state of the art
 
 | Domain | Best result | Reference |
@@ -1219,7 +1462,7 @@ the new official baseline for all subsequent experiments.
 | G₂ structure (contact CY₇) | NN-learned 3-form on CY link in S⁹ | Heyes et al. [22] |
 | G₂ flow numerics | Cohomogeneity-one solitons | [16] |
 | G₂ spectral estimates | Neck-stretching theory | Langlais [20] |
-| **G₂ metric (this work)** | **28 numbers, 5.8σ spectral fingerprint, ∇φ ~ 8.5 × 10⁻⁴/L² (42% below isotropic baseline)** | ---|
+| **G₂ metric (this work)** | **28 numbers, 5.8σ spectral fingerprint, ∇φ ~ 8.5 × 10⁻⁴/L² (unique basin), Yukawa selection rule Y(7×7×7) = 0, |φ|² = 42** | ---|
 
 ### 13.3 Limitations
 
@@ -1288,14 +1531,17 @@ This remains an open question (§13.5).
 ## 14. Conclusion
 
 We have presented a systematic approach to computing torsion-free
-G₂-structures on compact 7-manifolds, proceeding through eight stages
-from the flat torus to the frontier of numerical G₂ geometry.
+G₂-structures on compact 7-manifolds, progressing from the flat torus
+to the frontier of numerical G₂ geometry including spectral analysis,
+Yukawa couplings, and G₂ representation-theoretic decomposition.
 
 **Structural discoveries.** The PINN metric compresses to 28 numbers.
 The anisotropy κ_T = 1/61 emerges to 7 significant figures. The
 spectral degeneracies [1, 10, 9, 30] encode TCS building-block Betti
-numbers at 5.8σ significance. These results depend on the global metric
-structure and the Kovalev twist, not on local curvature.
+numbers at 5.8σ significance. The proper 3-form norm
+|φ|² = 42 = 7 × dim(G₂) is an exact topological invariant. These
+results depend on the global metric structure and the Kovalev twist,
+not on local curvature.
 
 **A general failure mode.** The trained atlas metric is essentially flat
 (||R|| ~ 10⁻¹³). The small torsion reported in Stages 1--4 is satisfied
@@ -1311,13 +1557,24 @@ across 8 independent methods confirms this floor is geometric, closing
 the 1D metric program. Bulk metric optimization --- block-diagonal
 rescaling of G₀ with optimal (a_t, a_f) = (2.47, 1.60) --- then
 reduces the torsion by a further 42%, yielding ∇φ(L) = 8.46 × 10⁻⁴/L²
-validated across 20 seeds (CV < 1%). The torsion budget shifts from
-71/29 to 65/35 (t/fiber) with the optimized metric. Cholesky
-interpolation outperforms the log-Euclidean geodesic by 2×.
+validated across 20 seeds (CV < 1%). The landscape has a unique global
+minimum (Hessian condition number 92,392), and det(g) is pure gauge
+(verified to 8.4 × 10⁻¹⁵ precision). Cholesky interpolation outperforms
+the log-Euclidean geodesic by 2×.
+
+**Spectral and algebraic structure.** The full 7D product spectrum
+(117,648 modes) satisfies Weyl's law at 97.6%, with a critical crossing
+length L_cross = 0.35 separating 1D and transverse regimes. Longitudinal
+Yukawa couplings obey the selection rule n₁ ± n₂ ± n₃ = 0 with
+universal coupling |Y| = 1/√(2V), preserved under the full metric
+(CV = 0.0001%). The G₂ decomposition of cup product Yukawas reveals an
+exact selection rule Y(Ω²₇ × Ω²₇ × Ω³₇) = 0, and all J-invariant
+Yukawas vanish — physical couplings originate exclusively from the
+anti-invariant sector.
 
 This is, to our knowledge, the first application of physics-informed
-neural networks to exceptional holonomy geometry. The eight-stage
-progression provides both a toolkit for numerical G₂ geometry and a
+neural networks to exceptional holonomy geometry. The progression
+provides both a toolkit for numerical G₂ geometry and a
 characterization of the obstacles --- in particular the flat attractor
 --- that must be overcome in PDE-constrained optimization on spaces of
 Riemannian metrics.

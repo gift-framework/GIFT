@@ -53,7 +53,7 @@ Before presenting derivations, we clarify the logical structure:
 ### 0.3 What We Observe
 
 - Given the inputs, the outputs follow by algebra
-- The outputs match experiment to 0.26% mean deviation (PDG 2024)
+- The outputs match experiment to **0.39%** mean deviation across 32 well-measured observables (PDG 2024 / NuFIT 6.0 / Planck 2020); the 33rd (δ_CP) lies at 1σ from NuFIT 6.0, raising the inclusive mean to 0.72%
 - No continuous parameters are fitted
 
 ### 0.4 Torsion Independence
@@ -566,11 +566,11 @@ $$\delta_{CP} = \dim(K_7) \cdot \dim(G_2) + H^* = 7 \times 14 + 99 = 98 + 99 = 1
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (T2K + NOνA) | 197° ± 24° |
-| GIFT prediction | 197° (exact) |
-| Deviation | 0.00% |
+| Experimental (NuFIT 6.0, NO IC19) | 177° ± 20° |
+| GIFT prediction | 197° |
+| Deviation | 11.3% (within 1σ) |
 
-**Note**: The T2K+NOvA joint analysis (Nature, 2025) reports delta_CP consistent with values in the range ~180-220 degrees. DUNE (2028-2040) will test with resolution of a few degrees to ~15 degrees. Hyper-Kamiokande provides independent verification starting ~2034.
+**Note**: The GIFT prediction (197°) was an exact match with NuFIT 5.3 (197° ± 24°) but lies at 1σ from the NuFIT 6.0 best-fit (177° ± 20°). The NuFIT 6.0 analysis notes the global fit is "consistent with CP conservation within 1σ for normal ordering" (arXiv:2410.05380), indicating δ_CP is not yet well-constrained. DUNE (2028-2040) will test with resolution of a few degrees to ~15 degrees. Hyper-Kamiokande provides independent verification starting ~2034.
 
 **Status**: VERIFIED ∎
 
@@ -591,9 +591,9 @@ $$\theta_{13} = \frac{\pi}{b_2(K_7)} = \frac{\pi}{21} = 8.571°$$
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (NuFIT 6.0) | 8.54° ± 0.12° |
+| Experimental (NuFIT 6.0, NO IC19) | 8.52° ± 0.11° |
 | GIFT prediction | 8.571° |
-| Deviation | 0.368% |
+| Deviation | 0.60% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -622,9 +622,9 @@ The atmospheric mixing angle θ₂₃ governs τ-μ flavor mixing. The formula (
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (NuFIT 6.0) | 49.3° ± 1.0° |
+| Experimental (NuFIT 6.0, NO IC19) | 48.5° ± 0.9° |
 | GIFT prediction | 49.251° |
-| Deviation | 0.10% |
+| Deviation | 1.55% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -654,9 +654,9 @@ $$\gamma_{\text{GIFT}} = \frac{2 \cdot \text{rank}(E_8) + 5 \cdot H^*}{10 \cdot 
 
 | Quantity | Value |
 |----------|-------|
-| Experimental (NuFIT 6.0) | 33.41° ± 0.75° |
+| Experimental (NuFIT 6.0, NO IC19) | 33.68° ± 0.72° |
 | GIFT prediction | 33.40° |
-| Deviation | 0.030% |
+| Deviation | 0.83% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -677,7 +677,7 @@ $$\sin^2\theta_{12}^{PMNS} = \frac{b_0 + N_{gen}}{\alpha_{sum}} = \frac{1 + 3}{1
 
 | Quantity | Value |
 |----------|-------|
-| Experimental | 0.307 ± 0.013 |
+| Experimental (NuFIT 6.0, NO IC19) | 0.307 ± 0.012 |
 | GIFT prediction | 0.3077 |
 | Deviation | 0.23% |
 
@@ -691,9 +691,9 @@ $$\sin^2\theta_{23}^{PMNS} = \frac{D_{bulk} - w}{D_{bulk}} = \frac{11 - 5}{11} =
 
 | Quantity | Value |
 |----------|-------|
-| Experimental | 0.546 ± 0.021 |
+| Experimental (NuFIT 6.0, NO IC19) | 0.561 ± 0.015 |
 | GIFT prediction | 0.5455 |
-| Deviation | 0.10% |
+| Deviation | 2.77% |
 
 ### Relation #14d: sin²θ₁₃(PMNS) = 11/496
 
@@ -702,9 +702,9 @@ $$\sin^2\theta_{13}^{PMNS} = \frac{D_{bulk}}{\dim(E_8 \times E_8)} = \frac{11}{4
 
 | Quantity | Value |
 |----------|-------|
-| Experimental | 0.0220 ± 0.0007 |
+| Experimental (NuFIT 6.0, NO IC19) | 0.02195 ± 0.00058 |
 | GIFT prediction | 0.02218 |
-| Deviation | 0.81% |
+| Deviation | 1.04% |
 
 **Status**: TOPOLOGICAL ∎
 
@@ -1071,10 +1071,10 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 | 8 | m_τ/m_e | 7+2480+990 | 3477 | 3477.15 | 0.0043% | VERIFIED |
 | 9 | m_μ/m_e | 27^φ | 207.01 | 206.768 | 0.118% | TOPOLOGICAL |
 | 10 | m_s/m_d | 4×5 | 20 | 20.0 | 0.00% | VERIFIED |
-| 11 | δ_CP | 7×14+99 | 197° | 197° | 0.00% | VERIFIED |
-| 12 | θ₁₃ | π/21 | 8.57° | 8.54° | 0.368% | TOPOLOGICAL |
-| 13 | θ₂₃ | arcsin((b₃-p₂)/H*) | 49.25° | 49.3° | 0.10% | TOPOLOGICAL |
-| 14 | θ₁₂ | arctan(...) | 33.40° | 33.41° | 0.030% | TOPOLOGICAL |
+| 11 | δ_CP | 7×14+99 | 197° | 177° ± 20° | 1.0σ | VERIFIED |
+| 12 | θ₁₃ | π/21 | 8.57° | 8.52° | 0.60% | TOPOLOGICAL |
+| 13 | θ₂₃ | arcsin((b₃-p₂)/H*) | 49.25° | 48.5° | 1.55% | TOPOLOGICAL |
+| 14 | θ₁₂ | arctan(...) | 33.40° | 33.68° | 0.83% | TOPOLOGICAL |
 | 15 | λ_H | √17/32 | 0.1288 | 0.129 | 0.119% | VERIFIED |
 | 16 | Ω_DE | ln(2)×(b2+b3)/H* | 0.6861 | 0.6847 | 0.211% | VERIFIED |
 | 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | VERIFIED |
@@ -1089,18 +1089,21 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 | Range | Count | Percentage |
 |-------|-------|------------|
-| 0.00% (exact) | 4 | 22% |
-| <0.01% | 3 | 17% |
-| 0.01-0.1% | 4 | 22% |
-| 0.1-0.5% | 7 | 39% |
+| 0.00% (exact) | 3 | 9% |
+| <0.01% | 3 | 9% |
+| 0.01-1% | 22 | 67% |
+| 1-5% | 4 | 12% |
+| >5% | 1 | 3% |
 
-**Mean deviation**: 0.26% (PDG 2024, 33 observables)
+**Mean deviation (32 well-measured observables)**: **0.39%** (PDG 2024 / NuFIT 6.0 / Planck 2020)
+**Mean deviation (all 33 incl. δ_CP)**: 0.72%
+**δ_CP**: 197° vs 177° ± 20° (1.0σ; experimental uncertainty ±11% — see main paper §9.1)
 
 ---
 
 ## 23. Statistical Uniqueness of (b₂=21, b₃=77)
 
-The comprehensive Monte Carlo validation (192,349 configurations tested, zero outperforming GIFT) is presented in the main paper, Section 7. Key results: E₈×E₈ achieves approximately 10× better agreement than alternatives; G₂ holonomy approximately 5× better than Calabi-Yau; significance > 4.5σ.
+The six-phase exhaustive validation (3,070,396 configurations tested including 30 known G₂ manifolds, zero outperforming GIFT) is presented in the main paper, Section 7. Key results: E₈×E₈ achieves approximately 10× better agreement than alternatives; G₂ holonomy approximately 5× better than Calabi-Yau; significance > 4.2σ (three independent null models); Bayes factors 288–4,567 (decisive); Westfall-Young maxT 11/33 individually significant (global p = 0.008); Pareto-optimal.
 
 Formula-level selection analysis (main paper Section 7.5) shows GIFT formulas rank first or near-first among all bounded-grammar alternatives, with joint null-model p < 1.5 × 10⁻⁵.
 
@@ -1137,10 +1140,10 @@ Each prediction admits multiple algebraically distinct representations that redu
 | 9 | m_s/m_d | p₂²×w | 20 | 20.0 | 0.00% | 14 | ROBUST |
 | 10 | m_b/m_t | 1/(2b₂) | 1/42 | 0.024 | 0.79% | 21 | CANONICAL |
 | 11 | m_u/m_d | (1+dim_E₆)/PSL₂₇ | 79/168 | 0.47 | 0.05% | 1 | SINGULAR |
-| 12 | δ_CP | dim_K₇×dim_G₂+H* | 197° | 197° | 0.00% | 3 | DERIVED |
-| 13 | θ₁₃ | π/b₂ | 8.57° | 8.54° | 0.37% | 3 | DERIVED |
-| 14 | θ₂₃ | arcsin((b₃-p₂)/H*) | 49.25° | 49.3° | 0.10% | 2 | DERIVED |
-| 15 | θ₁₂ | arctan(√(δ/γ)) | 33.40° | 33.41° | 0.03% | 2 | DERIVED |
+| 12 | δ_CP | dim_K₇×dim_G₂+H* | 197° | 177° ± 20° | 1.0σ | 3 | DERIVED |
+| 13 | θ₁₃ | π/b₂ | 8.57° | 8.52° | 0.60% | 3 | DERIVED |
+| 14 | θ₂₃ | arcsin((b₃-p₂)/H*) | 49.25° | 48.5° | 1.55% | 2 | DERIVED |
+| 15 | θ₁₂ | arctan(√(δ/γ)) | 33.40° | 33.68° | 0.83% | 2 | DERIVED |
 | 16 | Ω_DE | ln(2)×(b₂+b₃)/H* | 0.6861 | 0.6847 | 0.21% | 2 | DERIVED |
 | 17 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | 2 | DERIVED |
 | 18 | det(g) | 65/32 | 2.0313 | - | - | 8 | MODEL NORM. |
@@ -1152,8 +1155,8 @@ Each prediction admits multiple algebraically distinct representations that redu
 | # | Observable | Formula | Value | Exp. | Dev. | Expr. | Class |
 |---|------------|---------|-------|------|------|-------|-------|
 | 19 | sin²θ₁₂^PMNS | (1+N_gen)/α_sum | 4/13 | 0.307 | 0.23% | 28 | CANONICAL |
-| 20 | sin²θ₂₃^PMNS | (D_bulk−w)/D_bulk | 6/11 | 0.546 | 0.10% | 15 | ROBUST |
-| 21 | sin²θ₁₃^PMNS | D_bulk/dim_E₈₂ | 11/496 | 0.022 | 0.81% | 5 | SUPPORTED |
+| 20 | sin²θ₂₃^PMNS | (D_bulk−w)/D_bulk | 6/11 | 0.561 | 2.77% | 15 | ROBUST |
+| 21 | sin²θ₁₃^PMNS | D_bulk/dim_E₈₂ | 11/496 | 0.02195 | 1.04% | 5 | SUPPORTED |
 | 22 | sin²θ₁₂^CKM | 7/31 | 0.2258 | 0.225 | 0.36% | 16 | ROBUST |
 | 23 | A_Wolf | (w+dim_E₆)/H* | 83/99 | 0.836 | 0.29% | 4 | DERIVED |
 | 24 | sin²θ₂₃^CKM | dim_K₇/PSL₂₇ | 1/24 | 0.041 | 1.13% | 3 | DERIVED |

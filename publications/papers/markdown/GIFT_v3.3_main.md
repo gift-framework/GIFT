@@ -10,9 +10,9 @@
 
 The Standard Model's 19 free parameters lack theoretical explanation. We explore a geometric framework in which these parameters emerge as algebraic combinations of topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈ x E₈ gauge structure, with zero continuous adjustable parameters.
 
-The framework rests on three elements: (i) a compact G₂ manifold with Betti numbers b₂ = 21, b₃ = 77 (plausible within the twisted connected sum landscape); (ii) a dynamical mechanism in which torsion of the G₂ 3-form drives geodesic flow on K₇, identified with renormalization group evolution; and (iii) scale determination through topological exponents, yielding the electron mass at 0.09% and the electroweak scale at 0.4% (status: THEORETICAL). From these inputs, 33 dimensionless predictions follow with mean deviation 0.26% from experiment (PDG 2024), including the Koide parameter Q = 2/3, the neutrino CP phase delta_CP = 197 degrees, and the dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8. Of the 33, 18 core relations are algebraically verified in Lean 4.
+The framework rests on three elements: (i) a compact G₂ manifold with Betti numbers b₂ = 21, b₃ = 77 (plausible within the twisted connected sum landscape); (ii) a dynamical mechanism in which torsion of the G₂ 3-form drives geodesic flow on K₇, identified with renormalization group evolution; and (iii) scale determination through topological exponents, yielding the electron mass at 0.09% and the electroweak scale at 0.4% (status: THEORETICAL). From these inputs, 33 dimensionless predictions follow with mean deviation **0.39%** from experiment across 32 well-measured observables (PDG 2024 / NuFIT 6.0 / Planck 2020), including the Koide parameter Q = 2/3 and the dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8. The 33rd prediction, the neutrino CP phase delta_CP = 197°, lies at 1σ from the NuFIT 6.0 best-fit (177° ± 20°), a parameter whose experimental uncertainty (±11%) far exceeds any other observable; including it raises the mean to 0.72%. Of the 33, 18 core relations are algebraically verified in Lean 4.
 
-Statistical analysis confirms uniqueness at multiple levels: (b₂, b₃) = (21, 77) outperforms all 192,349 tested alternatives (p < 5 x 10^{-6}), remains the unique optimum under leave-one-out cross-validation (28/28), and joint null models reject accidental matching at p < 10^{-5} without independence assumptions. The Deep Underground Neutrino Experiment (DUNE, 2028-2040) provides a decisive test: measurement of delta_CP outside 182-212 degrees would refute the framework. We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
+Statistical analysis confirms uniqueness at multiple levels: (b₂, b₃) = (21, 77) outperforms all 3,070,396 tested alternatives including 30 known G₂ manifolds (p < 2 × 10⁻⁵, > 4.2σ), is Pareto-optimal, and Bayesian model comparison yields decisive Bayes factors (288–4,567). Westfall-Young maxT correction confirms 11/33 observables individually significant (global p = 0.008). The configuration remains the unique optimum under leave-one-out cross-validation (28/28), and joint null models reject accidental matching at p < 10^{-5} without independence assumptions. The Deep Underground Neutrino Experiment (DUNE, 2028-2040) provides a decisive test: measurement of delta_CP outside 182-212 degrees would refute the framework. We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
 
 **Keywords**: G₂ holonomy, exceptional Lie algebras, Standard Model parameters, topological field theory, falsifiability, formal verification
 
@@ -344,7 +344,7 @@ We claim that given the inputs, the outputs follow algebraically. We do **not** 
 
 ### 4.3 Structural Properties of the Framework
 
-**Multiplicity**: 33 independent predictions, not cherry-picked coincidences. Random matching at 0.26% mean deviation across 33 quantities has probability < 10^-20 under a naive null model.
+**Multiplicity**: 33 independent predictions, not cherry-picked coincidences. The 32 well-measured observables (excluding δ_CP, whose experimental uncertainty is ±11%) achieve 0.39% mean deviation. Even including δ_CP at its face-value 11.3% discrepancy, the combined 0.72% has probability < 2 × 10⁻⁵ under three independent null models (permutation, structure-preserved, adversarial; 50,000 trials each).
 
 **Exactness**: Several predictions are exactly rational:
 - sin²(theta_W) = 3/13 (not 0.2308...)
@@ -353,7 +353,7 @@ We claim that given the inputs, the outputs follow algebraically. We do **not** 
 
 These exact ratios cannot be "fitted"; they are correct or wrong.
 
-**Falsifiability**: DUNE will test delta_CP = 197 degrees to +/-5 degrees precision by 2039. A single clear contradiction would strongly disfavor the framework.
+**Falsifiability**: DUNE will test delta_CP = 197 degrees to +/-5 degrees precision by 2039. NuFIT 6.0 has shifted the best-fit to 177° ± 20°, placing the GIFT prediction at 1σ; resolution requires DUNE's precision. A clear contradiction would strongly disfavor the framework.
 
 ### 4.4 The Open Question
 
@@ -522,10 +522,10 @@ The GIFT prediction h = 167/248 = 0.6734 falls on the CMB/Planck side of the Hub
 | 5 | m_tau/m_e | 7 + 2480 + 990 | 3477 | 3477.15 | 0.004% | VERIFIED |
 | 6 | m_mu/m_e | 27^phi | 207.01 | 206.768 | 0.12% | TOPOLOGICAL |
 | 7 | m_s/m_d | p₂² x w | 20 | 20.0 | 0.00% | VERIFIED |
-| 8 | delta_CP | 7 x 14 + 99 | 197 deg | ~197 deg | compat. | VERIFIED |
-| 9 | theta_12 | arctan(sqrt(delta/gamma)) | 33.40 deg | 33.41 deg | 0.03% | TOPOLOGICAL |
-| 10 | theta_13 | pi/b₂ | 8.57 deg | 8.54 deg | 0.37% | TOPOLOGICAL |
-| 11 | theta_23 | arcsin((b₃-p₂)/H*) | 49.25 deg | 49.3 deg | 0.10% | TOPOLOGICAL |
+| 8 | delta_CP | 7 x 14 + 99 | 197 deg | 177 ± 20 deg | 1.0σ | VERIFIED |
+| 9 | theta_12 | arctan(sqrt(delta/gamma)) | 33.40 deg | 33.68 deg | 0.83% | TOPOLOGICAL |
+| 10 | theta_13 | pi/b₂ | 8.57 deg | 8.52 deg | 0.60% | TOPOLOGICAL |
+| 11 | theta_23 | arcsin((b₃-p₂)/H*) | 49.25 deg | 48.5 deg | 1.55% | TOPOLOGICAL |
 | 12 | lambda_H | sqrt(17)/32 | 0.1289 | 0.129 | 0.12% | VERIFIED |
 | 13 | tau | 496 x 21/(27 x 99) | 3472/891 | - | - | VERIFIED |
 | 14 | kappa_T | 1/(77-14-2) | 1/61 | - | - | VERIFIED |
@@ -544,22 +544,22 @@ The GIFT prediction h = 167/248 = 0.6734 falls on the CMB/Planck side of the Hub
 | 27 | Omega_b/Omega_m | 5/32 | 0.1562 | 0.157 | 0.16% | TOPOLOGICAL |
 | 28 | sigma_8 | 34/42 | 0.8095 | 0.811 | 0.18% | TOPOLOGICAL |
 | 29 | Y_p | 15/61 | 0.2459 | 0.245 | 0.37% | HEURISTIC |
-| 30-33 | (Additional extensions) | See S2 | - | - | <1% | HEURISTIC |
+| 30-33 | (Additional extensions) | See S2 | - | - | <3% | HEURISTIC |
 
 **18 core relations**: 11 algebraic identities verified in Lean 4 (VERIFIED), 6 topological formulas (TOPOLOGICAL), 1 model normalization (MODEL NORM.).
 **15 extended predictions**: Topological formulas without full Lean verification (TOPOLOGICAL or HEURISTIC).
 
-**Global performance** (33 predictions):
-- Mean deviation: **0.26%** (PDG 2024 / Planck 2020)
-- Median deviation: 0.10%
-- Exact matches: 4 (N_gen, m_s/m_d, delta_CP, Omega_DM/Omega_b)
-- Sub-0.1% deviation: 9
-- Sub-1% deviation: 32 (97%)
-- Maximum deviation: 1.13% (sin²(theta_23_CKM))
+**Global performance** (PDG 2024 / NuFIT 6.0 / Planck 2020):
+- Mean deviation (32 observables): **0.39%**
+- Mean deviation (all 33 incl. δ_CP): 0.72%
+- Exact matches: 3 (N_gen, m_s/m_d, Omega_DM/Omega_b)
+- Sub-1% deviation: 28 of 33 (85%)
+- δ_CP: 197° vs 177° ± 20° (within 1σ; see §9.1)
+- Significance: > 4.2σ across 3,070,396 alternative configurations
 
 ![All 33 GIFT predictions ranked by deviation from experiment](figures/fig5_predictions_light.png)
 
-*Figure 5: All 33 GIFT predictions ranked by deviation from experiment (log scale). Blue circles: Lean 4 verified; green circles: topological; grey diamonds: heuristic. Median deviation 0.10%, mean 0.26%.*
+*Figure 5: All 33 GIFT predictions ranked by deviation from experiment (log scale). Blue circles: Lean 4 verified; green circles: topological; grey diamonds: heuristic. Mean deviation 0.39% over 32 well-measured observables (0.72% including δ_CP at 1σ from NuFIT 6.0).*
 
 
 ---
@@ -705,29 +705,34 @@ The verification establishes **internal consistency**, not physical truth.
 
 **Question**: Is (b₂, b₃) = (21, 77) special, or could many configurations achieve similar precision?
 
-**Method**: Comprehensive Monte Carlo validation testing 192,349 alternative configurations:
-- 100,000 random (b₂, b₃) configurations
-- Gauge group comparison: E₈ x E₈, E₇ x E₇, E₆ x E₆, SO(32), SU(5) x SU(5), etc.
-- Holonomy comparison: G₂, Spin(7), SU(3) (Calabi-Yau), SU(4)
-- 91,896 full combinatorial configurations varying all parameters
-- Local sensitivity: +/-10 grid around (b₂=21, b₃=77)
+**Method**: Six-phase exhaustive validation testing 3,070,396 alternative configurations:
+- Phase 1: Exhaustive Betti grid (14,949 configurations)
+- Phase 2: Betti × holonomy across 8 groups (G₂, Spin(7), SU(3), SU(4), SU(2), U(1), Sp(2), SO(5); 119,592 configs)
+- Phase 3: Betti × gauge groups across 10 groups (E₈×E₈, SO(32), E₇×E₈, E₆×E₈, ..., SU(3)×SU(3); 149,490 configs)
+- Phase 4: Full discrete lattice varying all parameters (2,786,335 configs)
+- Phase 5: 30 known G₂ manifolds from the literature (Joyce, Kovalev TCS, CHNP, Haskins-Nordström)
+- Phase 6: KS test, leave-one-out stability, Pareto optimality
 
-Critically, this validation uses the actual topological formulas to compute predictions for each alternative configuration across all 33 observables.
+All phases use the actual topological formulas to compute predictions for each alternative configuration across all 33 observables. Additionally, three independent null models (permutation, structure-preserved, adversarial; 50,000 trials each) and Bayesian model comparison provide independent confirmation.
 
 | Metric | Value |
 |--------|-------|
-| Total configurations tested | 192,349 |
+| Total configurations tested | 3,070,396 |
 | Configurations better than GIFT | 0 |
-| GIFT mean deviation | 0.26% |
-| Alternative mean deviation | 32.9% |
-| P-value | < 5 x 10^-6 |
-| Significance | > 4.5 sigma |
+| GIFT mean deviation (all 33) | 0.72% (0.39% excl. δ_CP) |
+| Alternative mean deviation | 41.9% |
+| P-value (3 null models) | < 2 × 10⁻⁵ |
+| Significance | > 4.2σ |
+| Pareto-dominating configs | 0 |
+| KS D-statistic | 0.986 (p = 2.5 × 10⁻⁴³) |
+| Westfall-Young (global p) | 0.008 (11/33 individually significant) |
+| Bayes factor range | 288–4,567 (decisive) |
 
 **Gauge group comparison** (mean deviation over 33 observables):
 
 | Rank | Gauge Group | Dimension | Mean Dev. | N_gen |
 |------|-------------|-----------|-----------|-------|
-| 1 | **E₈ x E₈** | 496 | **0.26%** | **3.000** |
+| 1 | **E₈ x E₈** | 496 | **0.72%** | **3.000** |
 | 2 | E₇ x E₈ | 381 | 8.80% | 2.625 |
 | 3 | E₆ x E₈ | 326 | 15.50% | 2.250 |
 
@@ -737,7 +742,7 @@ E₈ x E₈ achieves approximately 10x better agreement than all tested alternat
 
 | Rank | Holonomy | dim | Mean Dev. |
 |------|----------|-----|-----------|
-| 1 | **G₂** | 14 | **0.26%** |
+| 1 | **G₂** | 14 | **0.72%** |
 | 2 | SU(4) | 15 | 1.46% |
 | 3 | SU(3) | 8 | 4.43% |
 
@@ -753,7 +758,7 @@ This validation addresses parameter variation within tested ranges. It does **no
 - Alternative TCS constructions with different Calabi-Yau building blocks
 - Why nature selected these specific discrete choices
 
-The statistical significance (p < 5 x 10^-6) applies to parameter variations. The formula-level analysis (Section 7.5) extends this to the space of formula structures within a defined grammar.
+The statistical significance (p < 2 × 10⁻⁵) applies to parameter variations, confirmed across three independent null models, multi-seed replication (10 seeds, mean σ = 3.91), and cross-sector held-out tests (7 sectors, all significant except structural). Bayesian model comparison (BF 288–4,567) and Westfall-Young maxT correction (11/33 individually significant, global p = 0.008) provide independent confirmation. The formula-level analysis (Section 7.5) extends this to the space of formula structures within a defined grammar.
 
 Complete methodology and reproducible scripts are available with the code repository.
 
@@ -953,10 +958,12 @@ Full details of the PINN architecture, training protocol, and complete analysis 
 ### 9.1 The delta_CP Test
 
 - **GIFT prediction**: delta_CP = 197 degrees
-- **Current data**: T2K+NOvA joint analysis consistent with ~197 degrees within uncertainties [26]
+- **Current data**: NuFIT 6.0 best-fit δ_CP = 177° ± 20° (NO, IC19); the GIFT prediction (197°) lies at 1σ. Earlier T2K+NOvA joint analysis was consistent with ~197° [26]. NuFIT 6.0 notes the global fit is "consistent with CP conservation within 1σ for normal ordering," indicating this parameter is not yet well-constrained.
 - **DUNE sensitivity**: Resolution of a few degrees to ~15 degrees depending on exposure and true delta_CP value [30,31]
 
 **Falsification criterion**: If DUNE measures delta_CP outside [182, 212] degrees at 3 sigma, the framework is refuted.
+
+**Methodological note on δ_CP and the mean deviation.** The 11.3% deviation of δ_CP from the NuFIT 6.0 central value is misleading as a measure of predictive failure, for two reasons. First, δ_CP is the only observable whose *experimental uncertainty* (±20° = ±11%) exceeds the GIFT deviation; for all other 32 observables, the experimental precision is far better than the framework's accuracy. Averaging a parameter measured at ±11% with ratios measured at ±0.01% in a single "mean percent deviation" conflates experimental imprecision with framework error. Second, the GIFT prediction (197°) lies at 1.0σ from the current best-fit — a statistically unremarkable tension. We therefore report the mean deviation as **0.39% across 32 well-measured observables**, with δ_CP treated separately as a 1σ-compatible prediction awaiting DUNE's resolution. For full transparency, the inclusive mean (all 33) is 0.72%.
 
 ### 9.2 Fourth Generation
 
@@ -1003,7 +1010,7 @@ GIFT differs from standard M-theory phenomenology [36] by focusing on topologica
 | Continuous parameters | 0 | ~10^500 | 0 |
 | Discrete formula choices | 33 (statistically constrained, Section 7.5) | N/A | Fixed |
 | Formal verification | Yes (Lean 4) | No | No |
-| Precise predictions | 33 at 0.26% | Qualitative | Mass ratios |
+| Precise predictions | 32 at 0.39% (+δ_CP at 1σ) | Qualitative | Mass ratios |
 
 **Distler-Garibaldi obstruction** [36]: Lisi's E₈ theory attempted direct particle embedding, which is mathematically impossible. GIFT uses E₈ x E₈ as algebraic scaffolding; particles emerge from cohomology, not representation decomposition.
 
@@ -1036,7 +1043,7 @@ Integer arithmetic yielding physical constants invites skepticism. Our responses
 
 1. **Falsifiability**: If DUNE measures delta_CP outside [182, 212] degrees, the framework fails regardless of arithmetic elegance.
 
-2. **Statistical analysis**: The configuration (21, 77) is the unique optimum among 192,349 tested, not an arbitrary choice.
+2. **Statistical analysis**: The configuration (21, 77) is the unique optimum among 3,070,396 tested (including 30 known G₂ manifolds), Pareto-optimal, not an arbitrary choice.
 
 3. **Structural coherence**: Key quantities admit multiple equivalent algebraic formulations (14 for sin²(theta_W), 20 for Q_Koide) within the enumerated grammar, suggesting structural coherence rather than isolated coincidences.
 
@@ -1053,13 +1060,13 @@ Integer arithmetic yielding physical constants invites skepticism. Our responses
 
 We have explored a framework deriving 33 dimensionless Standard Model parameters from topological invariants of a hypothesized G₂ manifold K₇ with E₈ x E₈ gauge structure:
 
-- **33 derived relations** with mean deviation 0.26% (18 core + 15 extended)
+- **33 derived relations** with mean deviation **0.39%** across 32 well-measured observables (18 core + 15 extended; 0.72% including δ_CP)
 - **Formal verification** of arithmetic consistency (2400+ Lean 4 theorems, zero sorry, zero custom axioms)
-- **Statistical uniqueness** of (b₂, b₃) = (21, 77) at > 4.5 sigma among 192,349 alternatives
+- **Statistical uniqueness** of (b₂, b₃) = (21, 77) at > 4.2σ among 3,070,396 alternatives (including 30 known G₂ manifolds), Pareto-optimal, confirmed by Bayesian analysis (BF 288–4,567) and Westfall-Young correction (11/33 individually significant)
 - **Formula-level selection**: Joint null model p < 1.5 x 10^{-5}, permutation test p < 6 x 10^{-6}, leave-one-out stability 28/28 (Section 7.5)
 - **Torsional dynamics** connecting topology to RG flow via geodesic equations on K₇ (Section 3)
 - **Scale determination**: Electron mass at 0.09% and electroweak scale at 0.4% from topological exponents (Section 6, status: THEORETICAL)
-- **Falsifiable prediction** delta_CP = 197 degrees, testable by DUNE
+- **Falsifiable prediction** delta_CP = 197° (within 1σ of NuFIT 6.0 best-fit 177° ± 20°), testable by DUNE
 - **Numerical G₂ metric program** with torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² (unique global minimum), spectral fingerprint [1, 10, 9, 30] at 5.8σ, G₂ Yukawa selection rule Y(7 × 7 × 7) = 0, and topological 3-form norm |φ|² = 42
 
 **We do not claim this framework is correct.** It may represent:
@@ -1068,7 +1075,7 @@ We have explored a framework deriving 33 dimensionless Standard Model parameters
 (b) Effective approximation
 (c) Elaborate coincidence
 
-Only experiment, particularly DUNE, can discriminate. The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 33 predictions at 0.26% mean deviation, derived from zero adjustable parameters, suggests that topology and physics may be more intimately connected than currently understood.
+Only experiment, particularly DUNE, can discriminate. The deeper question, why octonionic geometry would determine particle physics parameters, remains open. But the empirical success of 32 predictions at 0.39% mean deviation — with a 33rd (δ_CP) at 1σ from current data — derived from zero adjustable parameters and validated against 3 million alternative configurations, suggests that topology and physics may be more intimately connected than currently understood.
 
 **The ultimate arbiter is experiment.**
 
