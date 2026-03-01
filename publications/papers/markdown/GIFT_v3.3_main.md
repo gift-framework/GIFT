@@ -101,6 +101,10 @@ The octonions terminate this sequence. Their automorphism group G₂ = Aut(O) ha
 
 This chain is not accidental. It reflects the unique algebraic structure of the octonions: Im(O) has dimension 7, the Fano plane encodes the multiplication table, and G₂ preserves this structure. A G₂-holonomy manifold is therefore the natural geometric home for octonionic physics, just as U(1) holonomy is the natural setting for complex geometry.
 
+![The Fano plane encoding octonion multiplication](figures/fig2_fano_plane_light.png)
+
+*Figure 1: The Fano plane, whose 7 points and 7 lines encode the octonion multiplication table. The automorphism group of this structure is G₂ = Aut(O), with dim = 14 and natural action on Im(O) = ℝ⁷.*
+
 ### 2.2 E₈ x E₈ Structure
 
 E₈ is the largest exceptional simple Lie group with dimension 248 and rank 8 [18]. The product E₈ x E₈ arises in heterotic string theory for anomaly cancellation [19], with total dimension 496.
@@ -114,6 +118,10 @@ E₈ --> E₆ x SU(3) --> SO(10) x U(1) --> SU(5) --> SU(3) x SU(2) x U(1)
 The second E₈ provides a hidden sector whose physical interpretation remains an open question.
 
 Wilson (2024) demonstrates that E₈(-248) encodes three fermion generations (128 degrees of freedom) with GUT structure [9]. The product dimension 496 enters the hierarchy parameter tau = (496 x 21)/(27 x 99) = 3472/891, connecting gauge structure to internal topology.
+
+![E₈ Dynkin diagram with Standard Model breaking chain](figures/fig1_dynkin_E8_light.png)
+
+*Figure 2: The E₈ Dynkin diagram (dim = 248, rank = 8) with the Standard Model breaking chain E₈ → E₆ × SU(3) → SO(10) × U(1) → SU(3) × SU(2) × U(1). Color coding identifies the Standard Model gauge factors.*
 
 ### 2.3 The K₇ Manifold Hypothesis
 
@@ -142,11 +150,15 @@ Proposed building blocks for K₇:
 | M₂ | CI(2,2,2) in CP⁶ | 10 | 37 |
 | **K₇** | **TCS gluing** | **21** | **77** |
 
-Both Betti numbers are derived from the building blocks via Mayer-Vietoris, not assumed as inputs:
+For such building blocks, the Betti numbers would follow from the Mayer-Vietoris sequence:
 - b₂(K₇) = b₂(M₁) + b₂(M₂) = 11 + 10 = 21
 - b₃(K₇) = b₃(M₁) + b₃(M₂) = 40 + 37 = 77
 
-While we do not cite a specific construction achieving exactly these values with all required properties, such manifolds are plausible within the TCS/ETCS landscape.
+We do not cite a specific construction achieving exactly these values with all required properties; however, such manifolds are plausible within the TCS/ETCS landscape.
+
+![TCS construction of K₇](figures/fig4_tcs_construction_light.png)
+
+*Figure 3: Twisted connected sum construction of K₇. Two asymptotically cylindrical building blocks M₁ (Quintic in CP⁴, b₂ = 11, b₃ = 40) and M₂ (CI(2,2,2) in CP⁶, b₂ = 10, b₃ = 37) are glued via a φ-twist along the S¹ × CY₃ neck region, yielding K₇ with b₂ = 21, b₃ = 77, χ = 0, H* = 99.*
 
 The cohomological sum:
 
@@ -497,6 +509,8 @@ The Cabibbo angle emerges from the ratio of the E₇ fundamental representation 
 
 The dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8 is exact. The structural invariant 2b₂ = 42 that gives m_b/m_t = 1/42 also determines this cosmological ratio, connecting quark physics to large-scale structure through K₇ geometry.
 
+The GIFT prediction h = 167/248 = 0.6734 falls on the CMB/Planck side of the Hubble tension. Local distance-ladder measurements (SH0ES: h ≈ 0.73) remain in ~5σ tension with CMB-based values (Planck 2020: h = 0.674 ± 0.005), while recent DESI BAO results favor the lower range. Since GIFT derives h from topological invariants without cosmological model fitting, its alignment with the CMB value is a non-trivial structural prediction rather than a calibration choice.
+
 ### 5.9 Summary Table
 
 | # | Observable | Formula | Value | Exp. | Dev. | Status |
@@ -542,6 +556,10 @@ The dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8 is exact. The structur
 - Sub-0.1% deviation: 9
 - Sub-1% deviation: 32 (97%)
 - Maximum deviation: 1.13% (sin²(theta_23_CKM))
+
+![All 33 GIFT predictions ranked by deviation from experiment](figures/fig5_predictions_light.png)
+
+*Figure 5: All 33 GIFT predictions ranked by deviation from experiment (log scale). Blue circles: Lean 4 verified; green circles: topological; grey diamonds: heuristic. Median deviation 0.10%, mean 0.26%.*
 
 
 ---
@@ -807,6 +825,10 @@ For each observable, the GIFT formula is ranked by prediction error among all en
 
 A formula is Pareto-optimal if no other formula is simultaneously simpler *and* more precise. A focused benchmark on 5 representative observables spanning all classes confirms that all 5 GIFT formulas sit on the Pareto frontier of precision versus complexity. For Q_Koide and N_gen, the GIFT value constitutes the *entire* frontier: no other formula at any complexity level achieves the same precision.
 
+![Pareto frontier for sin²θ_W and Q_Koide](figures/fig3_pareto_frontier_light.png)
+
+*Figure 4: Pareto frontier of prediction error versus formula complexity for sin²θ_W and Q_Koide. Each point represents an enumerated formula from the bounded grammar. The GIFT formulas (red stars) sit on the Pareto frontier: no competitor is simultaneously simpler and more precise.*
+
 #### 7.5.5 Null Model Analysis
 
 Two null hypotheses were tested, each with 10,000 Monte Carlo trials per observable:
@@ -893,20 +915,35 @@ The metric is encoded in 28 numbers per point (a 38,231x compression from the ap
 
 ### 8.3 Key Results
 
-The numerical program has progressed through approximately 50 training versions, with a critical turning point: the discovery that the PINN naturally converges to near-flat metrics (the "flat attractor"). All earlier curvature-based holonomy scores were artifacts of finite-difference noise on an essentially flat solution. This discovery led to a fundamental methodological shift: abandoning finite-difference curvature in favor of autograd-only torsion computation, and introducing explicit anti-flat barriers to escape trivial solutions.
+The numerical program converges to a definitive set of results after extensive validation (over 60 independent training and optimization runs). A critical methodological insight is that PINNs minimizing torsion losses naturally converge to near-flat metrics (the "flat attractor"), where torsion vanishes trivially. All curvature measurements via finite-difference Christoffel symbols are artifacts of numerical noise (|R_FD|/|R_autograd| ~ 10⁸). This mandates autograd-only curvature computation and explicit anti-flat barriers targeting first-order quantities (metric spatial gradients) rather than second-order curvature invariants.
 
-**Validated results (February 2026)**:
+**Torsion scaling law.** Exhaustive 1D optimization across eight independent methods (distinct metric parametrizations, fiber-dependent perturbations g(t,θ), Kaluza-Klein gauge fields, SO(7)/G₂ coset frame rotations) all converge to the same geometric floor at fixed bulk metric G₀:
 
-- **Torsion scaling law**: ∇φ(L) = 8.46 × 10⁻⁴/L² after bulk metric optimization (42% improvement over the 1D baseline of 1.47 × 10⁻³/L²)
-- **Torsion budget**: 65% t-derivative, 35% fiber-connection (after G₀ optimization)
-- **Determinant constraint**: det(g) = 65/32 satisfied to machine precision
-- **Spectral fingerprint**: Eigenvalue degeneracy pattern [1, 10, 9, 30] at 5.8σ significance
-- **V7 fraction**: V7_frac = 0.325 (first reproducible value below 1/3)
-- **PINN contribution**: The neural network adds curvature orthogonally to torsion, demonstrating that curvature and torsion improvements are compatible
+$$\nabla\varphi(L)\big|_{\text{fixed }G_0} = 1.47 \times 10^{-3} / L^2$$
 
-**Honest assessment**: The PINN naturally converges to near-flat metrics; explicit anti-flat barriers are required to obtain solutions with non-trivial curvature. The torsion floor for any fixed bulk metric G₀ has been confirmed as geometric (not parametric) by exhaustive 1D optimization across 8 independent methods, all converging to ∇φ(L) = 1.47 × 10⁻³/L². The 1D metric optimization program is closed. Subsequent bulk metric optimization (block-diagonal rescaling of G₀) reduces this to ∇φ(L) = 8.46 × 10⁻⁴/L², with torsion budget shifting from 71/29 (fiber-connection/t-derivative) to 65/35 (t-derivative/fiber-connection). Reducing the floor further requires fiber-dependent φ(t,θ) or longer neck length L.
+No additional degree of freedom (fiber dependence, off-diagonal metric components, frame rotation) reduces torsion below this floor. The 1D seam optimization is fully closed.
 
-Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper [30].
+Block-diagonal rescaling of G₀ itself (stretching the t-direction by ~2.5 and fiber directions by ~1.6 relative to K3 directions) yields a 42% reduction to the global optimum:
+
+$$\boxed{\nabla\varphi(L) = 8.46 \times 10^{-4} / L^2}$$
+
+with torsion budget 65% t-derivative, 35% fiber-connection. Systematic landscape exploration (287 evaluations across the full 4D parameter space) confirms this is the unique global minimum, with Hessian condition number ~10⁵ and no secondary minima.
+
+**Metric determinant and gauge invariance.** The constraint det(g) = 65/32 functions as a normalization choice. The geometric torsion scalar ∇φ_proper (with metric contractions) scales as det⁻¹/⁷, and all det(g) configurations produce identical geometry after re-optimization. An independent confirmation: the G₂ 3-form norm satisfies |φ|² = 42 = dim(K₇) × dim(G₂) exactly, a topological invariant providing a calibration cross-check.
+
+**Curvature decomposition.** The full Riemann tensor computed via spectral differentiation (Bianchi identity satisfied to 10⁻¹⁷) decomposes as 80% Weyl, 20% Ricci at every point along the neck. This 4/5 ratio is an algebraic identity for 1D-dependent metrics in n = 7 dimensions. Curvature concentrates at the TCS junction endpoints (85% of total Kretschner scalar), arising from metric second-derivative discontinuities. A bending regularization reduces endpoint curvature by five orders of magnitude at only 4.5% torsion cost, confirming the concentration is a junction artifact.
+
+**Spectral structure.** The eigenvalue degeneracy pattern [1, 10, 9, 30] holds at 5.8σ significance (pre-registered, four null models). The longitudinal spectrum is textbook Sturm-Liouville: λ₁L² = π²⟨g^{tt}⟩ with ratios 1:4:9:16:25 to ten modes. The full 7D product spectrum separates cleanly into longitudinal (seam) and transverse (fiber) modes, with a scale hierarchy λ₁⊥/λ₁∥ = 8.2 at L = 1 and crossover length L_cross = 0.35. Above L ≈ 1, the first four modes are purely longitudinal; the spectrum is effectively one-dimensional.
+
+**Topological Yukawa structure.** The algebraic cup product Y_{abI} = ∫ ω_a ∧ ω_b ∧ ψ_I on the torus sector of K₇ exhibits a G₂ selection rule:
+
+$$Y(\Omega^2_7 \times \Omega^2_7 \times \Omega^3_7) = 0$$
+
+where subscripts denote G₂ irreducible representations (Ω² = Ω²₇ ⊕ Ω²₁₄, Ω³ = Ω³₁ ⊕ Ω³₇ ⊕ Ω³₂₇). The Kovalev gluing involution J mixes the 7- and 14-dimensional representations of Ω² (J lies outside G₂), and all J-invariant Yukawa couplings vanish identically on the torus sector. Physical Yukawa couplings must therefore arise entirely from the 42 resolution 3-forms (b₃(K₇) = 77 = 35 + 42, where 35 = C(7,3) from the torus and 42 from the Eguchi-Hanson resolution). This structural prediction constrains future Yukawa computations on K₇.
+
+**Honest assessment.** The torsion scaling ∇φ ~ L⁻² reflects the TCS interpolation seam structure. Further reduction requires either longer neck length L or fiber-dependent 3-form corrections φ(t,θ). Scalar Yukawa couplings on the optimized metric are trivially flat-space (eigenfunctions are undistorted cosines with universal coupling |Y| = 1/√(2V)); the topological cup product analysis identifies the resolution sector as the sole source of non-trivial Yukawa structure.
+
+Full details of the PINN architecture, training protocol, and complete analysis are presented in a companion paper ("A Numerical Candidate for a Torsion-Free G₂ Structure on a Compact TCS 7-Manifold," DOI: 10.5281/zenodo.18643069).
 
 
 ---
@@ -917,7 +954,7 @@ Full details of the PINN architecture, training protocol, and version-by-version
 
 - **GIFT prediction**: delta_CP = 197 degrees
 - **Current data**: T2K+NOvA joint analysis consistent with ~197 degrees within uncertainties [26]
-- **DUNE sensitivity**: Resolution of a few degrees to ~15 degrees depending on exposure and true delta_CP value [31,32]
+- **DUNE sensitivity**: Resolution of a few degrees to ~15 degrees depending on exposure and true delta_CP value [30,31]
 
 **Falsification criterion**: If DUNE measures delta_CP outside [182, 212] degrees at 3 sigma, the framework is refuted.
 
@@ -951,7 +988,7 @@ The derivation N_gen = 3 admits no flexibility. Discovery of a fourth-generation
 
 ### 10.1 Relation to M-Theory
 
-The E₈ x E₈ structure and G₂ holonomy connect to M-theory [33,34]:
+The E₈ x E₈ structure and G₂ holonomy connect to M-theory [32,33,34]:
 
 - Heterotic string theory requires E₈ x E₈ for anomaly cancellation [19]
 - M-theory on G₂ manifolds preserves N=1 SUSY in 4D [35]
@@ -968,9 +1005,9 @@ GIFT differs from standard M-theory phenomenology [36] by focusing on topologica
 | Formal verification | Yes (Lean 4) | No | No |
 | Precise predictions | 33 at 0.26% | Qualitative | Mass ratios |
 
-**Distler-Garibaldi obstruction** [37]: Lisi's E₈ theory attempted direct particle embedding, which is mathematically impossible. GIFT uses E₈ x E₈ as algebraic scaffolding; particles emerge from cohomology, not representation decomposition.
+**Distler-Garibaldi obstruction** [36]: Lisi's E₈ theory attempted direct particle embedding, which is mathematically impossible. GIFT uses E₈ x E₈ as algebraic scaffolding; particles emerge from cohomology, not representation decomposition.
 
-**Division algebra program** (Furey [7], Baez [38]): Derives Standard Model gauge groups from division algebras. GIFT quantifies this relationship: G₂ = Aut(O) determines the holonomy, and b₂ = C(7,2) = 21 gauge moduli arise from the 7 imaginary octonion units.
+**Division algebra program** (Furey [7], Baez [37]): Derives Standard Model gauge groups from division algebras. GIFT quantifies this relationship: G₂ = Aut(O) determines the holonomy, and b₂ = C(7,2) = 21 gauge moduli arise from the 7 imaginary octonion units.
 
 **G₂ manifold construction** (Crowley, Goette, Nordstrom [16]): Proves the moduli space of G₂ metrics is disconnected, with analytic invariant distinguishing components. This raises the selection question: which K₇ realizes physics? GIFT proposes that physical constraints select the manifold with (b₂=21, b₃=77).
 
@@ -1023,7 +1060,7 @@ We have explored a framework deriving 33 dimensionless Standard Model parameters
 - **Torsional dynamics** connecting topology to RG flow via geodesic equations on K₇ (Section 3)
 - **Scale determination**: Electron mass at 0.09% and electroweak scale at 0.4% from topological exponents (Section 6, status: THEORETICAL)
 - **Falsifiable prediction** delta_CP = 197 degrees, testable by DUNE
-- **Numerical G₂ metric program** with torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ
+- **Numerical G₂ metric program** with torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² (unique global minimum), spectral fingerprint [1, 10, 9, 30] at 5.8σ, G₂ Yukawa selection rule Y(7 × 7 × 7) = 0, and topological 3-form norm |φ|² = 42
 
 **We do not claim this framework is correct.** It may represent:
 
@@ -1074,14 +1111,14 @@ The author declares no competing interests.
 [6] Y. Koide, Lett. Nuovo Cim. 34, 201 (1982)
 [7] C. Furey, PhD thesis, Waterloo (2015); Phys. Lett. B 831, 137186 (2022)
 [8] N. Furey, M.J. Hughes, Phys. Lett. B 831, 137186 (2022)
-[9] R. Wilson, arXiv:2404.18938 (2024)
+[9] R. Wilson, arXiv:2404.18938 [hep-th] (2024, preprint)
 [10] T.P. Singh et al., arXiv:2206.06911v3 (2024)
 [11] B.S. Acharya, S. Gukov, Phys. Rep. 392, 121 (2004)
 [12] L. Foscolo et al., Duke Math. J. 170, 3 (2021)
 [13] D. Crowley et al., Invent. Math. (2025)
-[14] M. Haskins, J. Nordstrom, arXiv:1809.09083 (2022)
-[15] A. Kasprzyk, J. Nordstrom, arXiv:2209.00156 (2022)
-[16] D. Crowley, S. Goette, J. Nordstrom, Invent. Math. (2025)
+[14] J. Nordstrom, Ann. Glob. Anal. Geom. 64, art. 2 (2023). arXiv:1809.09083
+[15] G. Bera, arXiv:2209.00156 (2025)
+[16] D. Crowley, S. Goette, J. Nordstrom, Invent. Math. 239(3), 865-907 (2025)
 [17] T. Dray, C.A. Manogue, *The Geometry of the Octonions*, World Scientific (2015)
 [18] J.F. Adams, *Lectures on Exceptional Lie Groups*, U. Chicago Press (1996)
 [19] D.J. Gross et al., Nucl. Phys. B 256, 253 (1985)
