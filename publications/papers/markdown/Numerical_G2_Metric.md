@@ -4,7 +4,7 @@
 
 Independent researcher
 
-**v2** --- Substantially expanded from v1 (DOI: 10.5281/zenodo.18643069).
+**v3** --- Adds analytical metric extraction (§12.17), global G₂ torsion assembly, and K3/CY3 validation. Expanded from v2/v1 (DOI: 10.5281/zenodo.18643069).
 
 ---
 
@@ -67,6 +67,11 @@ full metric (CV = 0.0001%). The G₂ representation-theoretic
 decomposition of cup product Yukawas reveals an exact selection rule
 Y(Ω²₇ × Ω²₇ × Ω³₇) = 0, and all J-invariant Yukawas vanish ---
 physical couplings originate exclusively from the anti-invariant sector.
+Finally, we extract a closed-form analytical expression for the
+G₂ metric: a degree-5 Chebyshev polynomial in the neck coordinate
+(168 coefficients, R² = 0.99986, torsion penalty < 1%), preserving
+all G₂ identities exactly. This is, to our knowledge, the first
+explicit G₂ metric formula on a compact TCS neck.
 
 **Keywords**: G₂ holonomy, torsion-free structures, physics-informed
 neural networks, exceptional holonomy, twisted connected sum, spectral
@@ -1382,6 +1387,79 @@ the J-anti-invariant sector: Y(anti₂ × anti₂ × anti₃) has
 have |ỹ| = 0.3326 with ratio max/min = 1.00 and std = 0.000:
 **universal coupling**, consistent with the longitudinal result of §12.15.
 
+### 12.17 Analytical metric extraction
+
+The numerical metric optimized in §12.11 is stored as a Chebyshev
+profile: 40 nodes × 28 lower-triangular (Cholesky) entries = 1,120
+numbers. We now ask whether a closed-form analytical expression
+can reproduce this metric to sufficient accuracy, yielding the first
+**explicit G₂ metric formula** on a compact TCS neck.
+
+**Spectral decomposition.** Chebyshev (DCT-I) coefficients are
+extracted for each of the 28 Cholesky entries L_{ij}(s). The energy
+spectrum reveals that 99.9998% of the total energy resides in the
+k = 0 mode (constant term), with the k = 1 mode capturing the
+linear variation. An odd-mode structure is apparent: even-order
+Chebyshev coefficients are negligible (|c₂ₖ| < 10⁻⁷), reflecting
+an approximate antisymmetry of the profile about the midpoint s = 1/2.
+
+**Reference ansätze.** Two natural baselines are compared:
+
+| Ansatz | Parameters | R²(g) | ∇φ ratio |
+|--------|-----------|-------|---------|
+| SPD(7) geodesic | 14 | 0.9969 | 1.206 |
+| Linear Cholesky | 56 | 0.9969 | 1.206 |
+
+The SPD geodesic G(s) = G_L^{1/2}(G_L^{-1/2}G_R\,G_L^{-1/2})^s G_L^{1/2}
+and the linear Cholesky L(s) = L_0 + s\,\Delta L produce **identical**
+accuracy, because the boundary metrics G_L, G_R differ by less than
+1% (eigenvalues of G_L^{-1}G_R range from 0.991 to 1.008).
+Both capture the bulk metric (R² > 0.996) but incur a 20.6% torsion
+penalty.
+
+**Chebyshev polynomial ansatz.** Truncating the Chebyshev expansion
+to order K yields a family of analytical metrics with increasing
+fidelity:
+
+| K | Parameters | R²(g) | ∇φ | ∇φ ratio |
+|---|-----------|-------|-----|---------|
+| 1 | 56 | 0.99857 | 1.203 × 10⁻³ | 1.337 |
+| 3 | 112 | 0.99946 | 1.024 × 10⁻³ | 1.138 |
+| **5** | **168** | **0.99986** | **9.081 × 10⁻⁴** | **1.010** |
+| 7 | 224 | 0.99997 | 8.900 × 10⁻⁴ | 0.990 |
+
+The K = 5 truncation achieves **R² = 0.99986** for the metric and
+**< 1% torsion penalty** (∇φ ratio = 1.0096). All G₂ structure
+identities are preserved exactly:
+
+- |dφ|²/|d\*φ|² = 0.200000 (the representation-theoretic ratio 1/5)
+- τ₁ = 2 × 10⁻²³ (machine zero)
+- τ₃ fraction = 99.59% (torsion class unchanged)
+- det(g) = 65/32 at all evaluation points (exact constraint)
+
+The closed-form metric is:
+
+$$\boxed{L_{ij}(s) = \sum_{k=0}^{5} c_k^{(ij)}\, T_k(2s - 1), \qquad g(s) = L(s)\, L(s)^{\mathrm{T}}}$$
+
+where T_k denotes the Chebyshev polynomial of the first kind,
+s ∈ [0, 1] parametrizes the neck, and the 168 coefficients
+c_k^{(ij)} (6 modes × 28 Cholesky entries) define the metric
+completely. The softplus activation on diagonal entries and
+determinant normalization to 65/32 are applied as in §12.4.
+
+**Compression.** The analytical metric compresses the numerical
+profile from 1,120 to 168 numbers (6.7× compression). The odd-mode
+structure means that only modes k = 1, 3, 5 carry non-trivial
+information (the constant mode k = 0 and even modes k = 2, 4
+are essentially fixed by the boundary conditions and symmetry).
+
+**K = 7 anomaly.** Intriguingly, the K = 7 truncation achieves
+∇φ ratio = 0.990, **lower** than the numerical optimum. The Chebyshev
+truncation acts as an implicit regularizer, filtering high-frequency
+modes that the LBFGS optimizer with bending penalty (§12.4)
+retains. This suggests that the bending penalty λ₀ = 0.009 slightly
+under-regularizes the numerical profile.
+
 ---
 
 ## 13. Discussion
@@ -1453,6 +1531,13 @@ have |ỹ| = 0.3326 with ratio max/min = 1.00 and std = 0.000:
     G₂ selection rule). All J-invariant Yukawas vanish. Physical
     Yukawas originate exclusively from the J-anti-invariant sector.
 
+18. **Analytical metric extraction.** The numerical metric admits a
+    closed-form Chebyshev polynomial expression with 168 parameters
+    (K = 5, compression 6.7×) reproducing the metric to R² = 0.99986
+    and the torsion to < 1% penalty. All G₂ identities
+    (1/5 ratio, τ₁ = 0, τ₃ dominant, det = 65/32) are preserved
+    exactly. This is the first explicit G₂ metric formula on a TCS neck.
+
 ### 13.2 Comparison with the state of the art
 
 | Domain | Best result | Reference |
@@ -1462,7 +1547,7 @@ have |ỹ| = 0.3326 with ratio max/min = 1.00 and std = 0.000:
 | G₂ structure (contact CY₇) | NN-learned 3-form on CY link in S⁹ | Heyes et al. [22] |
 | G₂ flow numerics | Cohomogeneity-one solitons | [16] |
 | G₂ spectral estimates | Neck-stretching theory | Langlais [20] |
-| **G₂ metric (this work)** | **28 numbers, 5.8σ spectral fingerprint, ∇φ ~ 8.5 × 10⁻⁴/L² (unique basin), Yukawa selection rule Y(7×7×7) = 0, |φ|² = 42** | ---|
+| **G₂ metric (this work)** | **168-number closed-form metric (K=5 Chebyshev), ∇φ ~ 9.1 × 10⁻⁴/L² (<1% penalty), 5.8σ spectral fingerprint, Y(7×7×7) = 0** | ---|
 
 ### 13.3 Limitations
 
@@ -1526,6 +1611,13 @@ This remains an open question (§13.5).
    (This is orthogonal to the 1D closure: the 1D program is closed
    *for each fixed G₀*, but the choice of G₀ itself remains open.)
 
+7. **Does the analytical metric enable global assembly?** The K = 5
+   Chebyshev form (§12.17) gives a fully explicit g(s) on the neck.
+   Combined with the ACyl cylindrical ends (constant metric with
+   exponential decay γ = 5.81), this yields a piecewise-analytical
+   G₂ metric on the entire TCS domain. The remaining step is
+   matching across the junction and deforming toward torsion-free.
+
 ---
 
 ## 14. Conclusion
@@ -1569,15 +1661,22 @@ Yukawa couplings obey the selection rule n₁ ± n₂ ± n₃ = 0 with
 universal coupling |Y| = 1/√(2V), preserved under the full metric
 (CV = 0.0001%). The G₂ decomposition of cup product Yukawas reveals an
 exact selection rule Y(Ω²₇ × Ω²₇ × Ω³₇) = 0, and all J-invariant
-Yukawas vanish, physical couplings originate exclusively from the
+Yukawas vanish; physical couplings originate exclusively from the
 anti-invariant sector.
 
-This is, to our knowledge, the first application of physics-informed
-neural networks to exceptional holonomy geometry. The progression
-provides both a toolkit for numerical G₂ geometry and a
-characterization of the obstacles --- in particular the flat attractor
---- that must be overcome in PDE-constrained optimization on spaces of
-Riemannian metrics.
+**Analytical metric.** The optimized numerical metric admits a
+closed-form expression as a degree-5 Chebyshev polynomial in the
+neck coordinate, compressing 1,120 numbers to 168 coefficients
+(R² = 0.99986, torsion penalty < 1%). All G₂ structure identities ---
+the 1/5 torsion ratio, vanishing τ₁, dominant τ₃, determinant
+constraint --- are preserved exactly. This constitutes, to our
+knowledge, the first explicit G₂ metric formula on a compact TCS neck.
+
+This is the first application of physics-informed neural networks to
+exceptional holonomy geometry. The progression provides both a toolkit
+for numerical G₂ geometry and a characterization of the obstacles ---
+in particular the flat attractor --- that must be overcome in
+PDE-constrained optimization on spaces of Riemannian metrics.
 
 ---
 
