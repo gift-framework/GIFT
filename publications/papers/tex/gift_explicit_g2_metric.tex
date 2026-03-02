@@ -146,7 +146,7 @@
 \begin{abstract}
 We construct a numerical candidate for a Riemannian metric with holonomy contained in $\Gtwo$ on a computational proxy for the neck region of a compact twisted connected sum (TCS) 7-manifold $\Kseven$, with Betti numbers $b_2 = 21$ and $b_3 = 77$. The construction proceeds in three stages: (i)~an analytical target metric derived from the $\Gtwo$ representation-theoretic decomposition $\Lambda^3(\mathbb{R}^7) = \Lambda^3_1 \oplus \Lambda^3_7 \oplus \Lambda^3_{27}$ and period integrals on the moduli space of $\Gtwo$ structures; (ii)~a Cholesky-parameterized physics-informed neural network (PINN) that reconstructs a spatially varying metric field $g(x)$ on the computational domain; (iii)~verification against five geometric criteria. The resulting $7\times7$ metric satisfies a prescribed determinant $\det(g) = 65/32$ to 8 significant figures ($4 \times 10^{-8}\,\%$ deviation), has torsion $\|d\varphi\| + \|d{*}\varphi\|$ bounded by $3.71 \times 10^{-4}$ in a sampled $C^0$-style norm on the computational domain --- indicating a small-torsion regime in the heuristic sense of Joyce-style perturbation arguments --- condition number $\kappa = 1.0152$, and matches 77 target period integrals at 5 scales with RMS error $3.1 \times 10^{-4}$. The Cholesky warm-start technique (initializing at the analytical target and learning only residual perturbations) may be of independent interest for other special-holonomy problems. All code, data, and the trained checkpoint are publicly available.
 
-In Part III (Stages 9--12), we extend the analysis to landscape cartography (unique basin, Hessian condition ${\sim}92{,}000$), determinant gauge invariance ($\det(g)$ pure gauge to $8.4 \times 10^{-15}$) with $|\varphi|^2 = 42 = 7 \times \dimE(\Gtwo)$, the full transverse spectrum (117{,}648 modes, 8{,}872 unique levels, Weyl law at 97.6\%), and $\Gtwo$ Yukawa selection rules ($n_1 \pm n_2 \pm n_3 = 0$, $9/56$ channels allowed, $|Y| = 0.5923 = 1/\sqrt{2V}$) with $\Gtwo$ decomposition confirming $Y(\Omega^2_7 \times \Omega^2_7 \times \Omega^3_7) = 0$.
+In Part III (Stages 9--12), we extend the analysis to landscape cartography (unique basin, Hessian condition ${\sim}92{,}000$), determinant gauge invariance ($\det(g)$ pure gauge to $8.4 \times 10^{-15}$) with $|\varphi|^2 = 42 = 7 \times 3!$, the full transverse spectrum (117{,}648 modes, 8{,}872 unique levels, Weyl law at 97.6\%), and $\Gtwo$ Yukawa selection rules ($n_1 \pm n_2 \pm n_3 = 0$, $9/56$ channels allowed, $|Y| = 0.5923 = 1/\sqrt{2V}$) with $\Gtwo$ decomposition confirming $Y(\Omega^2_7 \times \Omega^2_7 \times \Omega^3_7) = 0$.
 \end{abstract}
 
 \vfill
@@ -219,11 +219,11 @@ Under $\Gtwo$, the space of 3-forms decomposes as:
 $$
 \Lambda^3(\mathbb{R}^7) = \Lambda^3_1 \oplus \Lambda^3_7 \oplus \Lambda^3_{27}
 $$
-with dimensions $1 + 7 + 27 = 35 = \binom{7}{3}$. The $\Gtwo$ metric is recovered from the 3-form via \cite{bryant1987}:
+with dimensions $1 + 7 + 27 = 35 = \binom{7}{3}$. The $\Gtwo$ metric is recovered from the 3-form via the remarkable formula \cite{bryant1987}:
 $$
-g_{ij} = \frac{1}{6} \sum_{k,l} \varphi_{ikl}\,\varphi_{jkl}
+g_{ij}\,\mathrm{vol}_g = \frac{1}{6}\,\iota_{e_i}\varphi \wedge \iota_{e_j}\varphi \wedge \varphi
 $$
-For the standard $\varphi_0$, this gives $g = I_7$. A rescaled form $\varphi = c \cdot \varphi_0$ with $c = (65/32)^{1/14}$ yields $g = c^2 \cdot I_7$ with $\det(g) = c^{14} = 65/32$.
+In an orthonormal frame adapted to $\varphi_0$, the contraction identity $\varphi_{ikl}\,\varphi_{jkl} = 6\,\delta_{ij}$ holds; in general coordinates, recovering $g$ from $\varphi$ requires the full nonlinear algebraic construction of Bryant~\cite{bryant1987}. For the standard $\varphi_0$, the metric is $g = I_7$. A rescaled form $\varphi = c \cdot \varphi_0$ with $c = (65/32)^{1/14}$ yields $g = c^2 \cdot I_7$ with $\det(g) = c^{14} = 65/32$.
 
 \subsection{The TCS construction}
 
@@ -653,7 +653,7 @@ An observation during landscape exploration (\S\ref{sec:landscape}) suggested th
 
 \textbf{Conclusion:} $\det(g)$ is a \textbf{pure gauge parameter} with no physical content. The apparent 11\% improvement was exactly $(1.5/2.031)^{3/7} = 0.878$.
 
-\textbf{Bonus:} $|\varphi|^2_{\mathrm{proper}} = 42.000 = 7 \times \dimE(\Gtwo)$. The proper norm of the associative 3-form, computed from the metric-corrected volume form, gives an exact topological invariant.
+\textbf{Bonus:} $|\varphi|^2_{\mathrm{proper}} = 42.000 = 7 \times 3!$. The proper norm of the associative 3-form, computed from the metric-corrected volume form, gives an exact topological invariant.
 
 \subsection{Transverse spectrum and eigenfunctions}\label{sec:spectrum}
 
@@ -752,7 +752,7 @@ This vanishing is exact (not numerical) and follows from representation theory: 
 
 \item \textbf{Landscape uniqueness with Sobol sensitivity.} Systematic exploration (287 evaluations) confirms the optimum is the unique global minimum with Hessian condition number $92{,}392$ and extreme anisotropy in the $\varepsilon$ parameters (\S\ref{sec:landscape}).
 
-\item \textbf{$|\varphi|^2 = 42$ topological identity.} The determinant is a pure gauge parameter (verified to $8.4 \times 10^{-15}$), and the proper 3-form norm $|\varphi|^2 = 42 = 7 \times \dimE(\Gtwo)$ is an exact topological invariant (\S\ref{sec:detgauge}).
+\item \textbf{$|\varphi|^2 = 42$ topological identity.} The determinant is a pure gauge parameter (verified to $8.4 \times 10^{-15}$), and the proper 3-form norm $|\varphi|^2 = 42 = 7 \times 3!$ is an exact topological invariant (\S\ref{sec:detgauge}).
 
 \item \textbf{Full 7D spectrum with Weyl law.} The product spectrum (117{,}648 modes, 8{,}872 unique levels) satisfies Weyl's law at 97.6\% accuracy, with critical crossing length $L_{\mathrm{cross}} = 0.35$ (\S\ref{sec:spectrum}).
 

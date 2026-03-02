@@ -930,7 +930,7 @@ $$\boxed{\nabla\varphi(L) = 8.46 \times 10^{-4} / L^2}$$
 
 with torsion budget 65% t-derivative, 35% fiber-connection. Systematic landscape exploration (287 evaluations across the full 4D parameter space) confirms this is the unique global minimum, with Hessian condition number ~10⁵ and no secondary minima.
 
-**Metric determinant and gauge invariance.** The constraint det(g) = 65/32 functions as a normalization choice. The geometric torsion scalar ∇φ_proper (with metric contractions) scales as det⁻¹/⁷, and all det(g) configurations produce identical geometry after re-optimization. An independent confirmation: the G₂ 3-form norm satisfies |φ|² = 42 = dim(K₇) × dim(G₂) exactly, a topological invariant providing a calibration cross-check.
+**Metric determinant and gauge invariance.** The constraint det(g) = 65/32 functions as a normalization choice. The geometric torsion scalar ∇φ_proper (with metric contractions) scales as det⁻¹/⁷, and all det(g) configurations produce identical geometry after re-optimization. An independent confirmation: the G₂ 3-form norm satisfies |φ|² = 42 = dim(K₇) × 3! exactly, a topological invariant providing a calibration cross-check.
 
 **Curvature decomposition.** The full Riemann tensor computed via spectral differentiation (Bianchi identity satisfied to 10⁻¹⁷) decomposes as 80% Weyl, 20% Ricci at every point along the neck. This 4/5 ratio is an algebraic identity for 1D-dependent metrics in n = 7 dimensions. Curvature concentrates at the TCS junction endpoints (85% of total Kretschner scalar), arising from metric second-derivative discontinuities. A bending regularization reduces endpoint curvature by five orders of magnitude at only 4.5% torsion cost, confirming the concentration is a junction artifact.
 

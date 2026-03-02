@@ -789,10 +789,10 @@ All other 28 components are exactly 0.
 
 ### 12.3 Metric Derivation
 
-From φ₀, the metric is computed via:
-$$g_{ij} = \frac{1}{6} \sum_{k,l} \varphi_{ikl} \varphi_{jkl}$$
+From φ₀, the metric is determined via [Bryant 1987]:
+$$g_{ij} \, \text{vol}_g = \frac{1}{6} \, \iota_{e_i}\varphi \wedge \iota_{e_j}\varphi \wedge \varphi$$
 
-For standard φ₀: g = I₇ (identity), det(g) = 1.
+In an orthonormal frame adapted to φ₀, this reduces to the contraction identity φ_{ikl} φ_{jkl} = 6 δ_{ij}. For the standard φ₀: g = I₇ (identity), det(g) = 1.
 
 Scaling φ → c·φ gives g → c²·g, hence det(g) → c¹⁴·det(g).
 

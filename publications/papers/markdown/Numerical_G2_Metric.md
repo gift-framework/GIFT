@@ -57,7 +57,7 @@ interpolation as 2× superior.
 confirms the optimum is the unique global minimum (Hessian condition
 number 92,392). The metric determinant is proven to be a pure gauge
 parameter (∇φ_code ∝ det^{3/7}, exact to 8.4 × 10⁻¹⁵), and the
-proper 3-form norm |φ|² = 42 = 7 × dim(G₂) is identified as an
+proper 3-form norm |φ|² = 42 = 7 × 3! is identified as an
 exact topological invariant. Full 7D spectral analysis (117,648 modes)
 confirms Weyl's law at 97.6%, with a critical crossing length
 L_cross = 0.30. Sturm-Liouville eigenfunctions match flat-space cosines
@@ -275,17 +275,18 @@ vol via the remarkable formula [2]:
 
 $$g_{ij} \, \text{vol} = \frac{1}{6} \, \iota_{e_i}\varphi \wedge \iota_{e_j}\varphi \wedge \varphi$$
 
-In coordinates, this simplifies to:
-
-$$g_{ij} = \frac{1}{6} \sum_{k,l=1}^{7} \varphi_{ikl} \, \varphi_{jkl}$$
-
-For the standard form φ₀, this gives g = I₇ (the identity). A rescaled
-form φ = c · φ₀ yields g = c² · I₇ with det(g) = c¹⁴.
+In an orthonormal frame adapted to φ₀, the contraction identity
+φ_{ikl} φ_{jkl} = 6 δ_{ij} holds; in general coordinates, recovering g
+from φ requires the full nonlinear algebraic construction of Bryant [2].
+For the standard form φ₀, the metric is g = I₇ (the identity). A
+rescaled form φ = c · φ₀ yields g = c² · I₇ with det(g) = c¹⁴.
 
 **The metric is determined by the 3-form.** This is the fundamental fact
 that makes the G₂ approach to Ricci-flat metrics possible: instead of
 optimizing a 28-parameter symmetric matrix at each point, one optimizes
-a 35-component 3-form, and the metric follows.
+a 35-component 3-form, and the metric follows. In our pipeline, we
+construct φ from the orthonormal coframe of g, so the Bryant inversion
+is not used.
 
 ### 2.4 Representation-theoretic decomposition
 
@@ -401,9 +402,10 @@ root lattice.
 The determinant of the G₂ metric on K₇ is determined by a model
 normalization. In the GIFT framework [12], this is derived as:
 
-$$\det(g) = \frac{65}{32} = \frac{\dim(E_8) + \dim(G_2) + \text{rank}(E_8) + \dim(K_7)}{2^5} = \frac{248 + 14 + 8 + 7}{32}$$
+$$\det(g) = \frac{65}{32} = \frac{w \times (\text{rank}(E_8) + w)}{2^w} = \frac{5 \times 13}{32}$$
 
-This equals 2.03125 exactly. **This relation is derived within the GIFT
+where w = 5 is the pentagonal index (N_gen + p₂ = 3 + 2). This
+equals 2.03125 exactly. **This relation is derived within the GIFT
 framework [12]; see §1.4 for its status and independence from the PINN
 methodology.**
 
@@ -1251,7 +1253,7 @@ scales as ∇φ_proper ∝ det^{-1/7}.
 content. The apparent 11% improvement was exactly
 (1.5/2.031)^{3/7} = 0.878, predicting -12.2% (observed: -12.2%).
 
-**Bonus: |φ|²_proper = 42.000 = 7 × dim(G₂).** The proper norm of
+**Bonus: |φ|²_proper = 42.000 = 7 × 3!.** The proper norm of
 the associative 3-form, computed from the metric-corrected volume
 form, gives an exact topological invariant. This confirms the
 calibration of the numerical framework.
@@ -1718,7 +1720,7 @@ contribute zero torsion (constant metric with exponential decay
 
 14. **Determinant gauge invariance.** det(g) is a pure gauge parameter:
     ∇φ_code ∝ det^{3/7} (verified to 8.4 × 10⁻¹⁵ precision). The
-    proper 3-form norm |φ|² = 42 = 7 × dim(G₂) is an exact
+    proper 3-form norm |φ|² = 42 = 7 × 3! is an exact
     topological invariant.
 
 15. **Transverse spectrum.** Full 7D product spectrum (117,648 modes,
@@ -1859,7 +1861,7 @@ Yukawa couplings, and G₂ representation-theoretic decomposition.
 The anisotropy κ_T = 1/61 emerges to 7 significant figures. The
 spectral degeneracies [1, 10, 9, 30] encode TCS building-block Betti
 numbers at 5.8σ significance. The proper 3-form norm
-|φ|² = 42 = 7 × dim(G₂) is an exact topological invariant. These
+|φ|² = 42 = 7 × 3! is an exact topological invariant. These
 results depend on the global metric structure and the Kovalev twist,
 not on local curvature.
 
