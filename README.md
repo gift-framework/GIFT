@@ -186,17 +186,6 @@ Their appearance suggests structural rather than coincidental relationships.
 
 ---
 
-## Interactive Visualizations
-
-| Blueprint | Description |
-|-----------|-------------|
-| [GIFT Lean Blueprint](https://gift-framework.github.io/GIFT/docs/figures/gift_blueprint.html) | Dependency graph |
-| [K7 Manifold Blueprint](https://gift-framework.github.io/GIFT/docs/figures/k7_blueprint.html) | K₇ construction |
-
-*Created with [Lean Blueprint Copilot](https://github.com/augustepoiroux/LeanBlueprintCopilot)*
-
----
-
 ## Related Repositories
 
 | Repository | Description |
