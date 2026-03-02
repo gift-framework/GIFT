@@ -30,11 +30,12 @@ publications/
 │   ├── STATISTICAL_EVIDENCE.md    # Rigorous statistical analysis
 │   └── Bibliography.md            # References
 │
-└── validation/                    # Monte Carlo validation
-    ├── validation_v33.py          # v3.3 comprehensive validation
+└── validation/                    # Monte Carlo validation (v3.3 only)
+    ├── validation_v33.py          # Core formulas & experimental data
+    ├── bulletproof_validation_v33.py    # 7-component bullet-proof validation
+    ├── exhaustive_validation_v33.py     # Exhaustive search (3M+ configs)
     ├── comprehensive_statistics_v33.py  # Advanced statistical tests
-    ├── paper1_*.py / paper2_*.py  # Paper-specific validations
-    └── results/                   # Validation results
+    └── selection/                 # Formula selection & Pareto analysis
 ```
 
 ---
@@ -70,7 +71,7 @@ PINN-based G₂ metric construction (companion numerical paper).
 | 9 | m_s/m_d | 20 | **PROVEN** |
 | 10 | δ_CP | 197° | **PROVEN** |
 
-**Zero continuous adjustable parameters. Mean deviation 0.21% (0.22% dimensionless only, PDG 2024).**
+**Zero continuous adjustable parameters. Mean deviation 0.24% across 32 well-measured observables (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0).**
 
 ---
 
@@ -113,5 +114,5 @@ Historical supplements (S1-S9 v2.2/v3.0) are archived in `../../docs/legacy/`.
 
 ---
 
-**Version**: 3.3.19 (2026-02-21)
+**Version**: 3.3.24 (2026-03-02)
 **Repository**: https://github.com/gift-framework/GIFT

@@ -32,7 +32,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.21% mean deviation across 33 predictions, 0.22% dimensionless only, PDG 2024)
+- Precision of experimental agreement (currently 0.24% mean deviation across 32 well-measured observables, PDG 2024 / NuFIT 6.0)
 - Falsifiability (clear criteria in Supplement S5)
 - Reproducibility (computational notebook available)
 
@@ -127,7 +127,7 @@ See Supplement S1 for complete mathematical details.
 - 2 electroweak parameters (λ_H, hierarchy)
 - 2 topological constants (κ_T, det(g))
 
-Mean deviation from experiment: **0.21%** total / **0.22%** dimensionless only (PDG 2024)
+Mean deviation from experiment: **0.24%** across 32 well-measured observables (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0)
 
 *Note: Extended dimensional predictions (masses, electroweak scale) are documented in legacy files (v2.3) with 0.197% mean deviation across 39 observables.*
 
@@ -153,15 +153,15 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 
 **Ultra-precise** (<0.01%):
 - α⁻¹: 0.001% deviation
-- δ_CP: 0.005% deviation
 - Q_Koide measured: 0.005% deviation
+- n_s: 0.004% deviation
 
 **High-precision** (<0.5%):
 - Complete neutrino sector: mean 0.24%
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.21% across 33 predictions (0.22% dimensionless only, v3.3, PDG 2024)
+**Overall**: Mean 0.24% across 32 well-measured observables (0.57% incl. δ_CP, v3.3, PDG 2024 / NuFIT 6.0)
 
 See Supplement S5 for detailed statistical analysis.
 
@@ -351,7 +351,7 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.3.19) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.3.24) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
 @software{gift_framework_v33,

@@ -12,22 +12,22 @@ Citation formats for the GIFT Framework v3.3.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.19},
+  version = {3.3.24},
   license = {MIT},
-  note    = {33 dimensionless predictions, 0.21\% mean deviation (PDG 2024), 290+ certified relations}
+  note    = {33 dimensionless predictions, 0.24\% mean deviation (32 well-measured, PDG 2024 / NuFIT 6.0), 290+ certified relations}
 }
 ```
 
 ### APA Style
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.3: Geometric Information Field Theory (Version 3.3.19) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2026). GIFT Framework v3.3: Geometric Information Field Theory (Version 3.3.24) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theory." Version 3.3.19. GitHub, 2026. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theory." Version 3.3.24. GitHub, 2026. https://github.com/gift-framework/GIFT.
 ```
 
 ---
@@ -41,7 +41,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.3: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2026},
-  note   = {Mean deviation 0.26\% (PDG 2024) across 33 dimensionless predictions, zero continuous adjustable parameters, 290+ proven exact relations},
+  note   = {Mean deviation 0.24\% across 32 well-measured observables (PDG 2024 / NuFIT 6.0), zero continuous adjustable parameters, 290+ proven exact relations},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -139,8 +139,8 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.3.19},
-  note    = {250+ relations verified, K₇ metric pipeline, Selection Principle, Spectral Theory}
+  version = {3.3.24},
+  note    = {290+ relations verified, K₇ metric pipeline, Selection Principle, Spectral Theory}
 }
 ```
 
@@ -159,6 +159,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.3.24 | 2026-03-02 | NuFIT 6.0 update, new neutrino formulas, Weyl→w rename, S1 softened, publications cleaned |
 | 3.3.19 | 2026-02-21 | S3 removal, cross-ref cleanup, sync with core v3.3.19 |
 | 3.3.18 | 2026-02-21 | Bullet-proof validation: Westfall-Young maxT, multi-stat PPC, noise curve, 3M+ exhaustive |
 | 3.3.17 | 2026-02-04 | θ₂₃ formula correction, α_s = √2/12, 0.21% mean deviation |
@@ -198,4 +199,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.3.19 (2026-02-21)
+**Version**: 3.3.24 (2026-03-02)

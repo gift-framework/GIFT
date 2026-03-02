@@ -36,7 +36,7 @@ python3 exhaustive_validation_v33.py
 
 ## Key Findings
 
-1. **GIFT Mean Deviation**: 0.21% total / 0.22% dimensionless only (33 observables)
+1. **GIFT Mean Deviation**: 0.24% across 32 well-measured observables (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0)
 2. **Zero configurations** out of 3,070,396 beat GIFT
 3. **E₈×E₈ uniqueness**: Outperforms all gauge groups by 21×
 4. **G₂ necessity**: Calabi-Yau (SU(3)) fails by 11×
@@ -63,45 +63,23 @@ python3 exhaustive_validation_v33.py
 
 ```
 publications/validation/
-├── bulletproof_validation_v33.py        # 7-component bullet-proof validation
-├── exhaustive_validation_v33.py         # Exhaustive search (3M+ configs)
-├── validation_v33.py                    # Core module (formulas, experimental data)
-├── comprehensive_statistics_v33.py      # Advanced statistical tests
-├── riemann_rigorous_validation.py       # Riemann-GIFT connection tests
-├── bulletproof_validation_v33_results.json  # Bullet-proof results
-├── validation_v33_results.json          # Core results
-├── GIFT_Statistical_Validation_Report_v33.md # v3.3 report
-├── VALIDATION_SUMMARY_v33.md            # v3.3 summary
-├── results/                             # Paper-specific results
-└── README.md                            # This file
+├── bulletproof_validation_v33.py              # 7-component bullet-proof validation
+├── exhaustive_validation_v33.py               # Exhaustive search (3M+ configs)
+├── validation_v33.py                          # Core module (formulas, experimental data)
+├── comprehensive_statistics_v33.py            # Advanced statistical tests
+├── rigorous_validation_v33.py                 # Rigorous statistical validation
+├── bulletproof_validation_v33_results.json     # Bullet-proof results
+├── comprehensive_statistics_v33_results.json   # Comprehensive results
+├── exhaustive_validation_v33_results.json      # Exhaustive search results
+├── GIFT_Statistical_Validation_Report_v33.md   # v3.3 report
+├── VALIDATION_SUMMARY_v33.md                   # v3.3 summary
+├── selection/                                  # Formula selection & Pareto analysis
+└── README.md                                   # This file
 ```
 
-## Riemann-GIFT Connection Validation
+## Riemann-GIFT Connection
 
-A separate rigorous validation tests the claimed Riemann zeta zero connection.
-
-```bash
-# Run Riemann validation (~15 minutes)
-python3 riemann_rigorous_validation.py
-```
-
-**8 independent tests** were conducted:
-
-| Test | Result | Finding |
-|------|--------|---------|
-| Sobol Coefficient Search | PASS | 0/10000 beat GIFT |
-| Rational Uniqueness | FAIL | 625 rationals beat 31/21 |
-| Lag Space Search | FAIL | GIFT (8,21) ranks #213/595 |
-| Fluctuation Analysis | PASS | R²=0.67 on detrended |
-| Permutation Test | PASS | Original distinct (14σ) |
-| Null Distribution | FAIL | p=0.5 (typical) |
-| Bootstrap Stability | FAIL | CV=46% (unstable) |
-| R² Decomposition | PASS | 99.9% from trend |
-
-**Verdict**: 4 PASS / 4 FAIL, **WEAK EVIDENCE**
-
-The Riemann connection is documented in [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md) with honest caveats.
-The 33 dimensionless predictions do NOT depend on Riemann.
+The Riemann zeta zero connection was tested rigorously (8 tests, 4 PASS / 4 FAIL: **WEAK EVIDENCE**). Scripts archived in `docs/legacy/validation_old/`. The 33 dimensionless predictions do NOT depend on Riemann. See [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md).
 
 ## Full Documentation
 
@@ -119,4 +97,4 @@ See [STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md) for:
 
 ---
 
-**Version**: 3.3.18 (2026-02-21)
+**Version**: 3.3.24 (2026-03-02)

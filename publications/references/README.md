@@ -10,9 +10,9 @@ Exploratory and reference documents for the GIFT framework v3.3.
 
 | File | Description |
 |------|-------------|
-| [GIFT_ATLAS.json](GIFT_ATLAS.json) | Structured atlas of all constants, predictions, and metadata (v3.3.18) |
+| [GIFT_ATLAS.json](GIFT_ATLAS.json) | Structured atlas of all constants, predictions, and metadata (v3.3.24) |
 | [observables.csv](observables.csv) | Machine-readable observable data (predictions + experimental values) |
-| [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities, v3.3.18) |
+| [OBSERVABLE_REFERENCE.md](OBSERVABLE_REFERENCE.md) | Complete observable catalog (51 quantities, v3.3.24) |
 
 ### Independent Validations
 
@@ -62,7 +62,7 @@ For the main framework documents, see [`../markdown/`](../markdown/):
 - [GIFT_v3.3_main.md](../markdown/GIFT_v3.3_main.md) - Main paper
 - [GIFT_v3.3_S1_foundations.md](../markdown/GIFT_v3.3_S1_foundations.md) - Foundations
 - [GIFT_v3.3_S2_derivations.md](../markdown/GIFT_v3.3_S2_derivations.md) - Derivations
-- [GIFT_v3.3_S3_dynamics.md](../markdown/GIFT_v3.3_S3_dynamics.md) - Dynamics
+- [Numerical_G2_Metric.md](../markdown/Numerical_G2_Metric.md) - Numerical G₂ metric
 
 ---
 
@@ -80,4 +80,4 @@ The **GIFT_ATLAS.json** is the canonical structured reference. When discrepancie
 
 ---
 
-*Part of GIFT Framework v3.3.18*
+*Part of GIFT Framework v3.3.24*

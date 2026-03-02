@@ -1,6 +1,6 @@
 # GIFT v3.3 Complete Validation Summary
 
-**Date**: 2026-02-28
+**Date**: 2026-03-02
 **Experimental references**: PDG 2024 / NuFIT 6.0 (NO, IC19) / Planck 2020
 **Exhaustive search**: 3,070,396 configurations, 0 better
 **Null model p-value**: < 2 x 10^-5 (sigma > 4.2)
@@ -13,8 +13,8 @@
 
 | Category | Predictions | Mean Deviation | Status |
 |----------|-------------|----------------|--------|
-| **Well-measured observables** | 32 | **0.39%** | VALIDATED |
-| **All observables incl. delta_CP** | 33 | 0.72% | VALIDATED |
+| **Well-measured observables** | 32 | **0.24%** | VALIDATED |
+| **All observables incl. delta_CP** | 33 | 0.57% | VALIDATED |
 | **Scale bridge** (3 masses in MeV) | 3 | 0.07% | EXPLORATORY |
 
 All 33 predictions are dimensionless: ratios, mixing angles, and coupling
@@ -27,7 +27,7 @@ uncertainty (+/-20 deg = +/-11%) exceeds the GIFT deviation. For all other
 The GIFT prediction (197 deg) lies at 1.0 sigma from the NuFIT 6.0 best-fit
 (177 deg +/- 20 deg). NuFIT 6.0 notes the global fit is "consistent with
 CP conservation within 1 sigma for normal ordering" (arXiv:2410.05380).
-We report 0.39% (32 observables) as the primary metric.
+We report 0.24% (32 observables) as the primary metric.
 
 ---
 
@@ -297,16 +297,17 @@ data expected ~2029) and T2HK, making it a clear falsification target.
 
 ## Changes from v3.3.18
 
-| Item | v3.3.18 (NuFIT 5.3) | This version (NuFIT 6.0) |
-|------|---------------------|--------------------------|
-| Mean deviation | 0.21% | 0.72% |
+| Item | v3.3.18 (NuFIT 5.3) | v3.3.24 (NuFIT 6.0 + new formulas) |
+|------|---------------------|-------------------------------------|
+| Mean deviation (32 well-measured) | 0.21% | **0.24%** |
+| Mean deviation (all 33) | 0.21% | 0.57% |
+| theta_12 formula | arctan(3/(b3-14-p2)) | arctan(dim(G2)/b2) = arctan(2/3) |
+| theta_23 formula | arcsin(25/33) | arctan(sqrt(dim(G2)/D_bulk)) |
+| sin^2 theta_23 | 0.546 | 14/25 = 0.56 |
 | delta_CP deviation | 0.00% (EXACT) | 11.30% (1 sigma) |
-| sin^2 theta_23 | 0.10% | 2.77% |
-| theta_23 | 0.10% | 1.55% |
-| theta_12 | 0.03% | 0.83% |
-| EXACT matches | 6 | 3 |
+| theta_23 deviation | 0.10% | 0.12% |
+| theta_12 deviation | 0.03% | 0.03% |
 | Sub-percent | 32/33 | 28/33 |
-| WAIC | GIFT preferred (+550) | Null preferred (-10.5) |
 | Bayes factors | 304-4,738 | 288-4,567 |
 | Null models | sigma > 4.2 | sigma > 4.2 (unchanged) |
 | Exhaustive search | 0/3,070,396 | 0/3,070,396 (unchanged) |

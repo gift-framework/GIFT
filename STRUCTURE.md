@@ -26,11 +26,12 @@ GIFT/
 │   │   ├── STATISTICAL_EVIDENCE.md    # Rigorous statistical analysis
 │   │   ├── INDEPENDENT_VALIDATIONS.md # External research converging with GIFT
 │   │   └── Bibliography.md            # References
-│   └── validation/                    # Monte Carlo validation
-│       ├── validation_v33.py          # v3.3 comprehensive validation
+│   └── validation/                    # Monte Carlo validation (v3.3 only)
+│       ├── validation_v33.py          # Core formulas & experimental data
+│       ├── bulletproof_validation_v33.py    # 7-component bullet-proof validation
+│       ├── exhaustive_validation_v33.py     # Exhaustive search (3M+ configs)
 │       ├── comprehensive_statistics_v33.py  # Advanced statistical tests
-│       ├── paper1_*.py / paper2_*.py  # Paper-specific validations
-│       └── results/                   # Validation results
+│       └── selection/                 # Formula selection & Pareto analysis
 │
 ├── research/                          # Exploratory research (WIP)
 │   ├── yang-mills/                    # Yang-Mills mass gap investigation
@@ -119,8 +120,8 @@ GIFT/
 
 ## Version
 
-**Current**: v3.3.19 (2026-02-21)
-**Relations**: ~290 certified (core v3.3.19)
-**Predictions**: 33 predictions (**0.21% mean deviation, 0.22% dimensionless only, PDG 2024**)
+**Current**: v3.3.24 (2026-03-02)
+**Relations**: ~290 certified (core v3.3.24)
+**Predictions**: 33 predictions (**0.24% mean deviation** across 32 well-measured, 0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0)
 **Validation**: 3,070,396 configs exhaustive + 7-component bullet-proof (Westfall-Young, Bayesian, PPC)
 **Key Result**: Analytical G₂ metric with T = 0 exactly

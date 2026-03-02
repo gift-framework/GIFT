@@ -1,8 +1,8 @@
 # GIFT Observable Reference
 
-**Version**: 3.3.18
+**Version**: 3.3.24
 **Status**: Reference documentation
-**Date**: February 2026
+**Date**: March 2026
 
 ---
 
@@ -15,7 +15,7 @@
 | **Cosmological parameters** | 11 |
 | **Structural constants** | 18 |
 | **Total cataloged quantities** | **51** |
-| Mean deviation (all 33) | 0.21% (0.22% dimensionless only) |
+| Mean deviation (32 well-measured) | 0.24% (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0) |
 | Exact matches (< 0.1%) | 14 (42%) |
 | Multiply determined (>=3 expr.) | 92% |
 | Total equivalent expressions | 280+ |
@@ -308,7 +308,7 @@ The structure is **real**, not coincidental.
 | Boson masses | 3 | 0.13% | m_H/m_W (0.02%) |
 | CKM | 4 | 0.59% | A_Wolf (0.29%) |
 | Cosmology | 11 | 0.16% | Omega_DM/Omega_b (0.00%) |
-| **Total** | **33** | **0.21%** | - |
+| **Total** | **32+1** | **0.24%** (excl. δ_CP) | - |
 
 ### 8.3 By Structural Classification
 

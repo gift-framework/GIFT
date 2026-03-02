@@ -5,6 +5,59 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.24] - 2026-03-02
+
+### NuFIT 6.0 Update & Publication Cleanup
+
+Comprehensive update to NuFIT 6.0 experimental values, new neutrino mixing angle formulas, and full publication cleanup.
+
+#### Changed
+
+**Neutrino Mixing Angle Formulas**
+- **θ₁₂**: arctan(dim(G₂)/b₂) = arctan(2/3) → 33.69° (was arctan(3/(b₃−14−p₂)))
+- **θ₂₃**: arctan(√(dim(G₂)/D_bulk)) = arctan(√(14/11)) → 48.44° (was arcsin(25/33))
+- **sin²θ₂₃**: 14/25 = dim(G₂)/w² → 0.56 (new formula)
+- Key insight: tan(θ₁₂) = Q_Koide = 2/3, linking neutrino mixing to Koide relation
+
+**NuFIT 6.0 Experimental Values (replacing NuFIT 5.3)**
+- θ₁₂: 33.68° ± 0.72° (was 33.41° ± 0.75°)
+- θ₁₃: 8.52° ± 0.11° (was 8.54° ± 0.12°)
+- θ₂₃: 48.5° ± 0.9° (was 49.3° ± 1.0°)
+- δ_CP: 177° ± 20° (NuFIT 6.0 NO IC19; was 197° ± 24° from T2K+NOvA)
+
+**Mean Deviation Reframing**
+- 32 well-measured observables: **0.24%** (PDG 2024 / NuFIT 6.0)
+- All 33 incl. δ_CP: 0.57% (δ_CP excluded from primary metric due to ±11% experimental uncertainty)
+
+**Validation Statistics**
+- 3,070,396 configs (including 30 known G₂ manifolds)
+- Bayes factors 288–4,567 (decisive)
+- Westfall-Young maxT: 11/33 individually significant (global p = 0.008)
+- Significance: > 4.2σ across three independent null families
+
+**S1 Foundations: Construction Claims Softened**
+- Title: "K₇ Construction" → "K₇ Topology"
+- TCS language changed to conditional blueprint (Joyce's existence theorem)
+- Explicit dependency on K₇ hypothesis stated
+
+**Weyl → w Rename**
+- Pentagonal index \Weyl now renders as "w" (not "Weyl") to avoid collision with Weyl curvature tensor
+
+**Publication Cleanup**
+- v3.2 tex/pdf moved to docs/legacy/
+- Old validation scripts (paper1, paper2, riemann) moved to docs/legacy/validation_old/
+- Stale Figure 5 removed from main paper
+- All metadata synced to v3.3.24
+
+#### Updated Files
+- All 4 markdown papers (main, S1, S2, G₂ metric)
+- All 4 LaTeX sources and PDFs
+- README.md, CITATION.md, STRUCTURE.md
+- publications/papers/README.md, validation/README.md
+- docs/GLOSSARY.md
+
+---
+
 ## [3.3.17] - 2026-02-04
 
 ### θ₂₃ Formula Correction Release

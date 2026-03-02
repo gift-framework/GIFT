@@ -1,7 +1,7 @@
 # Geometric Information Field Theory v3.3
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.19-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.3.24-green.svg)](CHANGELOG.md)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
 **Standard Model parameters from pure geometry**: E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
@@ -12,10 +12,10 @@
 
 | | |
 |---|---|
-| **Precision** | 0.21% mean deviation across 33 predictions (0.22% dimensionless only, PDG 2024) |
+| **Precision** | 0.24% mean deviation across 32 well-measured observables (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0) |
 | **Uniqueness** | #1 out of 3,070,396 configurations tested (3.9σ local significance) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 290+ relations proven in Lean 4 (core v3.3.19) |
+| **Verified** | 290+ relations proven in Lean 4 (core v3.3.24) |
 | **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -38,7 +38,7 @@
 |----------|-------------|
 | [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
 | [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.21% mean, 0.22% dimensionless only, PDG 2024) |
+| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.24% mean excl. δ_CP, PDG 2024 / NuFIT 6.0) |
 | [Numerical G₂ Metric](publications/papers/markdown/Numerical_G2_Metric.md) | PINN-based G₂ metric construction |
 
 ### For Specific Audiences
@@ -67,7 +67,7 @@
 | Electroweak | 3 | 0.12% | sin²θ_W = 3/13 |
 | Lepton | 3 | 0.04% | Q_Koide = 2/3 (0.0009%) |
 | Quark | 1 | 0.00% | m_s/m_d = 20 (exact) |
-| Neutrino | 4 | 0.15% | δ_CP = 197° |
+| Neutrino | 3+1 | 0.25% + δ_CP at 1σ | θ₁₂ = arctan(2/3) |
 | Cosmology | 3 | 0.07% | n_s = ζ(11)/ζ(5) (0.004%) |
 | Structural | 4 | exact | N_gen = 3, τ = 3472/891 |
 
@@ -80,7 +80,7 @@
 | τ | 3472/891 | (496 × 21)/(27 × 99) |
 | det(g) | 65/32 | Metric determinant from G₂ structure |
 | δ_CP | 197° | 7 × dim(G₂) + H* |
-| m_s/m_d | 20 | p₂² × Weyl |
+| m_s/m_d | 20 | p₂² × w |
 | Q_Koide | 2/3 | dim(G₂)/b₂ |
 | **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
@@ -119,7 +119,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 |--------|-------|
 | Configurations tested | 3,070,396 |
 | **GIFT rank** | **#1** |
-| GIFT mean deviation | 0.21% total / 0.22% dimensionless (PDG 2024) |
+| GIFT mean deviation | 0.24% (32 well-measured) / 0.57% incl. δ_CP (PDG 2024 / NuFIT 6.0) |
 | Better alternatives found | 0 |
 | p-value (empirical) | 0 / 3,070,396 |
 
@@ -127,7 +127,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 
 | Rank | b₂ | b₃ | Deviation |
 |:----:|:--:|:--:|:---------:|
-| **1** | **21** | **77** | **0.21%** |
+| **1** | **21** | **77** | **0.24%** |
 | 2 | 21 | 76 | 0.50% |
 | 3 | 21 | 78 | 0.50% |
 | 4 | 21 | 79 | 0.79% |
@@ -246,7 +246,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.19}
+  version = {3.3.24}
 }
 ```
 

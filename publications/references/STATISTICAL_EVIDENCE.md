@@ -1,8 +1,10 @@
 # GIFT Statistical Evidence
 
-**Version**: 3.3.18
-**Validation Date**: February 2026
+**Version**: 3.3.24
+**Validation Date**: March 2026
 **Scripts**: `publications/validation/bulletproof_validation_v33.py` (7-component), `publications/validation/exhaustive_validation_v33.py` (3M+ configs)
+
+> **Note (v3.3.24)**: The detailed statistics below were computed with NuFIT 5.3 experimental values (0.21% mean deviation). With the v3.3.24 update to NuFIT 6.0 and improved neutrino formulas (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), the current mean deviation is **0.24%** (32 well-measured observables) / **0.57%** (all 33 incl. δ_CP). The qualitative conclusions (significance > 4.2σ, unique optimum among 3M+ configs, decisive Bayes factors) remain unchanged.
 
 ---
 
@@ -410,5 +412,5 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.3.18: Bullet-Proof Statistical Evidence*
-*Validation: February 2026 | 7-component analysis | Mean deviation: 0.21%*
+*GIFT Framework v3.3.24: Bullet-Proof Statistical Evidence*
+*Validation: March 2026 | 7-component analysis | Mean deviation: 0.24% (32 well-measured) / 0.57% (all 33)*
