@@ -1180,7 +1180,7 @@ the new official baseline for all subsequent experiments.
 The 4-parameter optimization of §12.11 raises the question: is the
 optimum unique? A systematic landscape exploration (287 evaluations)
 addresses this through six phases: LHS screening (120 random starts,
-94/120 non-SPD — the admissible domain is a small island in 4D),
+94/120 non-SPD: the admissible domain is a small island in 4D),
 1D sensitivity profiling, 2D grid scans, Powell refinement, and
 Sobol sensitivity analysis.
 
@@ -1203,7 +1203,7 @@ while the log-scale parameters are gentle.
 
 Sobol sensitivity indices: ε_k (0.26) > ε_f (0.24) > log(a_t) (0.15)
 > log(a_f) (0.05). The most sensitive parameters have optimal values
-near zero — anisotropy is lethal, not useful.
+near zero, anisotropy is lethal, not useful.
 
 The optimum of §12.11 is the **unique global minimum** of the landscape.
 
@@ -1219,9 +1219,9 @@ equivalently det(g) → β·det(g)), the code-reported torsion scales as
 scales as ∇φ_proper ∝ det^{-1/7}.
 
 **Phase 1 (no re-optimization, 10 det values spanning 12× range):**
-- ∇φ_code ∝ det^{0.428571} (predicted 3/7 = 0.428571) — **exact to
+- ∇φ_code ∝ det^{0.428571} (predicted 3/7 = 0.428571), **exact to
   8.4 × 10⁻¹⁵**
-- ∇φ_proper ∝ det^{-0.142857} (predicted -1/7) — **exact**
+- ∇φ_proper ∝ det^{-0.142857} (predicted -1/7), **exact**
 - All proper-torsion ratios equal 1.000000 across the full range
 
 **Phase 2 (with re-optimization, 8 det values, 200 steps each):**
@@ -1254,7 +1254,7 @@ groups of eigenvalues:
 - Fiber (θ, ψ): g^{-1}_⊥ = 0.687 (2 near-degenerate, CV < 0.003%)
 - K3 (4 directions): g^{-1}_⊥ = 1.32 (4 eigenvalues, CV < 0.06%)
 
-These are nearly constant along the seam — the warped product
+These are nearly constant along the seam: the warped product
 approximation is excellent.
 
 **Full product spectrum.** From the flat-torus transverse Laplacian
@@ -1291,7 +1291,7 @@ the 1D longitudinal problem:
 | Orthonormality error | max off-diagonal = 1.86 × 10⁻¹⁰ |
 | Deviation from cosines | ‖ψ_n − √2 cos(nπs)‖₂ < 4 × 10⁻⁶ |
 
-The warping barely deforms the eigenfunctions — they are flat-space
+The warping barely deforms the eigenfunctions: they are flat-space
 cosines to 6 significant figures. This validates the warped product
 structure of the metric.
 
@@ -1338,7 +1338,7 @@ G₂ irreducible representations.
 **G₂ decomposition of forms (textbook verification).**
 
 The Hodge-star composed with φ-wedge acts on Ω² with eigenvalues
-**+2 (×7)** and **−1 (×14)** — exactly the G₂ representation decomposition:
+**+2 (×7)** and **−1 (×14)**, exactly the G₂ representation decomposition:
 
 $$\Omega^2 = \Omega^2_7 \oplus \Omega^2_{14} \qquad (7 + 14 = 21 = b_2)$$
 
@@ -1369,7 +1369,7 @@ relevant coupling channel.
 The Kovalev twist J acts on forms with: order 8, det = −1
 (orientation-reversing). J-invariant subspaces:
 dim(Ω²)^J = 3, dim(Ω³)^J = 6. J mixes Ω²₇ and Ω²₁₄
-(off-diagonal norm = 2.31) — J is not in G₂.
+(off-diagonal norm = 2.31): J is not in G₂.
 
 The cup product on the J-invariant subspace (3 × 3 × 6) is
 **identically zero**. Forms surviving the orbifold identification have
@@ -1379,7 +1379,7 @@ the J-anti-invariant sector: Y(anti₂ × anti₂ × anti₃) has
 
 **Normalized Yukawas.** After mass-matrix normalization
 (cond(M₂) = 16.6, cond(M₃) = 44.1), all 210 nonzero entries
-have |ỹ| = 0.3326 with ratio max/min = 1.00 and std = 0.000 —
+have |ỹ| = 0.3326 with ratio max/min = 1.00 and std = 0.000:
 **universal coupling**, consistent with the longitudinal result of §12.15.
 
 ---
@@ -1569,7 +1569,7 @@ Yukawa couplings obey the selection rule n₁ ± n₂ ± n₃ = 0 with
 universal coupling |Y| = 1/√(2V), preserved under the full metric
 (CV = 0.0001%). The G₂ decomposition of cup product Yukawas reveals an
 exact selection rule Y(Ω²₇ × Ω²₇ × Ω³₇) = 0, and all J-invariant
-Yukawas vanish — physical couplings originate exclusively from the
+Yukawas vanish, physical couplings originate exclusively from the
 anti-invariant sector.
 
 This is, to our knowledge, the first application of physics-informed

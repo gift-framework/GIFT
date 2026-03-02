@@ -19,7 +19,7 @@
 
 All 33 predictions are dimensionless: ratios, mixing angles, and coupling
 constants. There is no distinction between "dimensionless" and "dimensional"
-observables — angles in degrees or radians are pure numbers, and predictions
+observables, angles in degrees or radians are pure numbers, and predictions
 expressed both as angles (θ₁₂, θ₂₃, θ₁₃) and as their trigonometric
 equivalents (sin²θ₁₂, sin²θ₂₃, sin²θ₁₃) represent the same physical content
 in different coordinates.
@@ -165,7 +165,7 @@ Where: H* = 99 (cohomological sum), L₈ = 47 (8th Lucas number), φ = golden ra
 | 3. Betti × gauge (10 groups) | 149,490 | 0 |
 | 4. Full discrete lattice | 2,786,335 | 0 |
 | 5. Known G₂-manifolds | 30 | 0 |
-| 6. Extended battery | (statistics) | — |
+| 6. Extended battery | (statistics) |, |
 | **Total** | **3,070,396** | **0** |
 
 95% CI (Clopper-Pearson): [0, 3.7 × 10⁻⁶]
