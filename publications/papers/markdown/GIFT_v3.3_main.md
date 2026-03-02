@@ -557,10 +557,6 @@ The GIFT prediction h = 167/248 = 0.6734 falls on the CMB/Planck side of the Hub
 - δ_CP: 197° vs 177° ± 20° (within 1σ; see §9.1)
 - Significance: > 4.2σ across 3,070,396 alternative configurations
 
-![All 33 GIFT predictions ranked by deviation from experiment](figures/fig5_predictions_light.png)
-
-*Figure 5: All 33 GIFT predictions ranked by deviation from experiment (log scale). Blue circles: Lean 4 verified; green circles: topological; grey diamonds: heuristic. Mean deviation 0.24% over 32 well-measured observables (0.57% including δ_CP at 1σ from NuFIT 6.0).*
-
 
 ---
 
