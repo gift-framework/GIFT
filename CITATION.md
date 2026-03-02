@@ -150,7 +150,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 | Archive | Link |
 |---------|------|
-| Zenodo | [10.5281/zenodo.17979433](https://doi.org/10.5281/zenodo.17979433) |
+| Zenodo | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---

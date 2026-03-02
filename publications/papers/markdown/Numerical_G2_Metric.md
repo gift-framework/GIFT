@@ -1995,7 +1995,7 @@ results, not résumés.
 
 [12] de La Fournière, B. (2026). Geometric Information Field Theory:
      Standard Model parameters from E₈ × E₈ topology. Zenodo.
-     DOI: 10.5281/zenodo.18643070.
+     DOI: 10.5281/zenodo.18837071.
 
 [13] Lotay, J.D. & Wei, Y. (2019). Laplacian flow for closed G₂ structures.
      *Geom. Funct. Anal.* 29, 1048--1110.
@@ -2023,7 +2023,7 @@ results, not résumés.
      problems. *Commun. Math. Phys.* 406, 7. arXiv:2301.03513.
 
 [21] de La Fournière, B. (2026). A PINN Framework for Torsion-Free G₂
-     Structures (v1). Zenodo. DOI: 10.5281/zenodo.18643069.
+     Structures (v3). Zenodo. DOI: 10.5281/zenodo.18837071.
 
 [22] Heyes, E., Hirst, E., Sa Earp, H.N. & Silva, T.S.R. (2026). Neural
      and numerical methods for G₂-structures on contact Calabi-Yau

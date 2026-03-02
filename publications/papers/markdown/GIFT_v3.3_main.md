@@ -944,7 +944,7 @@ where subscripts denote G₂ irreducible representations (Ω² = Ω²₇ ⊕ Ω�
 
 **Honest assessment.** The torsion scaling ∇φ ~ L⁻² reflects the TCS interpolation seam structure. Further reduction requires either longer neck length L or fiber-dependent 3-form corrections φ(t,θ). Scalar Yukawa couplings on the optimized metric are trivially flat-space (eigenfunctions are undistorted cosines with universal coupling |Y| = 1/√(2V)); the topological cup product analysis identifies the resolution sector as the sole source of non-trivial Yukawa structure.
 
-Full details of the PINN architecture, training protocol, and complete analysis are presented in a companion paper ("A Numerical Candidate for a Torsion-Free G₂ Structure on a Compact TCS 7-Manifold," DOI: 10.5281/zenodo.18643069).
+Full details of the PINN architecture, training protocol, and complete analysis are presented in a companion paper ("A Numerical Candidate for a Torsion-Free G₂ Structure on a Compact TCS 7-Manifold," DOI: 10.5281/zenodo.18837071).
 
 
 ---
@@ -1092,7 +1092,7 @@ This framework was developed through sustained collaboration between the author 
 
 ## Data Availability
 
-- Paper and data: https://doi.org/10.5281/zenodo.17979433
+- Paper and data: https://doi.org/10.5281/zenodo.18837071
 - Code: https://github.com/gift-framework/core
 - Lean proofs: https://github.com/gift-framework/core/tree/main/Lean
 
