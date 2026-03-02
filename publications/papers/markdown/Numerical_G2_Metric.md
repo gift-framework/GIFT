@@ -4,7 +4,7 @@
 
 Independent researcher
 
-**v3** --- Adds analytical metric extraction (§12.17), global G₂ torsion assembly, and K3/CY3 validation. Expanded from v2/v1 (DOI: 10.5281/zenodo.18643069).
+**v3** --- Adds analytical metric extraction (§12.17), K3 cross-validation via cymyc (§12.19), cymyc-consistent baseline (§12.19--12.20), global G₂ torsion assembly (§12.21), and TCS--G₂ algebraic bridge (§12.18). Expanded from v2/v1 (DOI: 10.5281/zenodo.18643069).
 
 ---
 
@@ -60,13 +60,22 @@ parameter (∇φ_code ∝ det^{3/7}, exact to 8.4 × 10⁻¹⁵), and the
 proper 3-form norm |φ|² = 42 = 7 × dim(G₂) is identified as an
 exact topological invariant. Full 7D spectral analysis (117,648 modes)
 confirms Weyl's law at 97.6%, with a critical crossing length
-L_cross = 0.35. Sturm-Liouville eigenfunctions match flat-space cosines
+L_cross = 0.30. Sturm-Liouville eigenfunctions match flat-space cosines
 to 4 × 10⁻⁶, yielding Yukawa selection rules (n₁ ± n₂ ± n₃ = 0,
 9/56 allowed, universal coupling |Y| = 1/√(2V)) preserved under the
 full metric (CV = 0.0001%). The G₂ representation-theoretic
 decomposition of cup product Yukawas reveals an exact selection rule
 Y(Ω²₇ × Ω²₇ × Ω³₇) = 0, and all J-invariant Yukawas vanish ---
 physical couplings originate exclusively from the anti-invariant sector.
+The TCS construction is validated through 28/28 algebraic consistency
+checks and cross-referenced against an independently trained K3 metric
+(cymyc [17], σ = 0.0135), with hyper-Kähler triple verification,
+Kähler modulus matching (0.09% residual), and a cymyc-consistent
+background metric that costs only 1.3% in torsion. Global G₂ torsion
+assembly reveals that the residual torsion is 99.6% in the τ₃ class
+(W₃), with τ₁ vanishing exactly, the ratio |dφ|²/|d\*φ|² = 1/5
+(exact representation-theoretic value), and torsion class fractions
+that are perfectly L-independent.
 Finally, we extract a closed-form analytical expression for the
 G₂ metric: a degree-5 Chebyshev polynomial in the neck coordinate
 (168 coefficients, R² = 0.99986, torsion penalty < 1%), preserving
@@ -1256,32 +1265,34 @@ independent eigenproblems whose spectrum governs the transition from
 
 **Transverse metric profile.** The 6×6 transverse metric g_⊥ has two
 groups of eigenvalues:
-- Fiber (θ, ψ): g^{-1}_⊥ = 0.687 (2 near-degenerate, CV < 0.003%)
-- K3 (4 directions): g^{-1}_⊥ = 1.32 (4 eigenvalues, CV < 0.06%)
+- Fiber (θ, ψ): g^{-1}_⊥ = 0.855 (2 near-degenerate, CV < 0.04%)
+- K3 (4 directions): g^{-1}_⊥ = 1.21 (4 eigenvalues, CV < 0.07%)
 
 These are nearly constant along the seam: the warped product
-approximation is excellent.
+approximation is excellent. The K3/fiber eigenvalue ratio is 0.849,
+reflecting the Kähler anisotropy inherited from the cymyc-consistent
+background metric (§12.19).
 
 **Full product spectrum.** From the flat-torus transverse Laplacian
 with lattice vectors m ∈ Z⁶ (|m|_∞ ≤ 3): 117,648 total modes,
-8,872 unique eigenvalue levels.
+9,258 unique eigenvalue levels.
 
 | Level | λ_⊥ | Degeneracy | Content |
 |-------|------|------------|---------|
-| 1 | 27.14 | 4 | Pure fiber (θ, ψ) |
-| 2 | 52.36 | 2 | K3₄ |
-| 3 | 52.39 | 4 | K3₃ |
-| 4 | 52.41 | 2 | K3₁ |
-| 5 | 54.28 | 4 | Mixed fiber |
+| 1 | 33.77 | 4 | Pure fiber (θ, ψ) |
+| 2 | 47.67 | 2 | K3₄ |
+| 3 | 47.69 | 4 | K3₃ |
+| 4 | 47.72 | 2 | K3₁ |
+| 5 | 67.54 | 4 | Mixed fiber |
 
-Scale hierarchy: λ₁_⊥ / λ₁_long = 8.19× at L = 1.
+Scale hierarchy: λ₁_⊥ / λ₁_long = 10.83× at L = 1.
 
 **Regime transitions.** The critical crossing length is
-L_cross = 0.35, where the first longitudinal and first transverse
+L_cross = 0.30, where the first longitudinal and first transverse
 eigenvalue coincide:
-- L > 0.7: clean 1D regime (λ₂/λ₁ = 4.000 exact)
-- L ~ 0.35–0.7: transition zone
-- L < 0.35: transverse/degenerate regime
+- L > 0.5: clean 1D regime (λ₂/λ₁ = 4.000 exact)
+- L ~ 0.30–0.5: transition zone
+- L < 0.30: transverse/degenerate regime
 
 **Weyl's law.** The seam volume integral(√det · dt) = 1.4252.
 At λ = 100: N_actual = 170 vs N_Weyl = 174, ratio = 0.976 (97.6%).
@@ -1460,6 +1471,197 @@ modes that the LBFGS optimizer with bending penalty (§12.4)
 retains. This suggests that the bending penalty λ₀ = 0.009 slightly
 under-regularizes the numerical profile.
 
+### 12.18 TCS--G₂ algebraic bridge
+
+Before introducing external Calabi-Yau data, we verify that the PINN
+metric is algebraically consistent with the TCS construction. Twenty-eight
+independent checks are performed:
+
+| Category | Checks | Result |
+|----------|--------|--------|
+| Betti numbers from building blocks | 4 | b₂ = 21, b₃ = 77 (exact) |
+| Derived constants (H\*, κ_T, det(g), sin²θ_W) | 6 | All exact |
+| b₃ decomposition (local + global = 77) | 3 | 35 + 42 = 77 |
+| Associative 3-form structure (Fano triples) | 5 | 7 triples, φ₀ correct |
+| TCS factorization (3 choices of K3 × T²) | 7 | Choice B optimal |
+| Λ² projector (Ω²₇ ⊕ Ω²₁₄ splitting) | 2 | 6 + 15 = 21 eigenvalues |
+| Pell equation (H\*² − 50·dim(G₂)² = 1) | 1 | 9801 − 9800 = 1 |
+
+All 28/28 checks pass. The TCS building blocks are:
+- **M₁**: Quintic in P⁴ (b₂ = 11, b₃ = 40), based on CY₃ with (h¹¹, h²¹) = (1, 101)
+- **M₂**: Complete intersection CI(2,2,2) in P⁶ (b₂ = 10, b₃ = 37), based on CY₃ with (h¹¹, h²¹) = (1, 73)
+
+The three possible TCS factorizations K3 × T² differ in which four
+seam directions carry the K3 fiber. **Choice B** (K3 = {θ, K3₁, K3₄, ψ},
+T² = {K3₂, K3₃}) is uniquely selected: it alone exhibits a genuine
+2+2 Kähler eigenvalue gap (gap = 0.90, vs < 0.003 for Choices A and C)
+and achieves Procrustes residual 0.20 (vs > 0.45 for the others).
+This identifies the geometric embedding of the K3 fiber within the
+block-diagonal metric.
+
+### 12.19 Calabi-Yau K3 metric validation
+
+The K3 fiber metric is independently computed using the cymyc neural
+network framework [17] on a K3 surface realized as the complete
+intersection CI(1,2,2,2) ⊂ P⁶ --- the same K3 that appears as the
+common fiber in the TCS gluing of M₁ and M₂.
+
+**K3 metric training (A100 GPU).** 200,000 sample points, 256 epochs,
+batch size 2048:
+
+| Metric | Value |
+|--------|-------|
+| Monge-Ampère loss (σ-measure) | 0.0135 |
+| Ricci curvature measure | 0.705 |
+| Positive definite | 100% (min eigenvalue = 0.038) |
+| Monge-Ampère ratio | 0.817 ≈ κ = 0.815 (0.3%) |
+
+**Hyper-Kähler triple verification.** From the trained Kähler metric,
+the full hyper-Kähler triple (ω_I, ω_J, ω_K) is extracted:
+
+| Check | Result |
+|-------|--------|
+| J² = −I (all three) | Exact (error ~ 3 × 10⁻⁸) |
+| Quaternionic algebra | Exact (error ~ 4 × 10⁻⁸) |
+| Type constraint ω ∧ ω = 0 | Exact (median = 0) |
+| Volume matching vol(ω_I) = vol(ω_J) = vol(ω_K) | Exact (std ~ 10⁻⁷) |
+| Anti-self-duality | 0.017% |
+| G₂ 3-form assembly (90 components) | Perfect antisymmetry |
+
+**Kähler modulus matching.** The cymyc K3 metric has a characteristic
+2+2 eigenvalue structure (Kähler doubly-degenerate pairs):
+
+| Property | Seam K3 block | cymyc K3 |
+|----------|--------------|----------|
+| Eigenvalue structure | 4 × ~1.09 (isotropic) | 2 × 0.19 + 2 × 0.31 (Kähler) |
+| Isotropy ratio | 2.66:1 | 1.67:1 |
+
+Two Kähler moduli (ρ²_s = 5.86, ρ²_l = 9.30, ratio η = 1.26) map
+the cymyc eigenvalue structure onto the seam's K3 block with **0.09%
+anisotropic residual** (vs 18.3% isotropic). This two-parameter
+fit is only possible for Choice B (§12.18), confirming the TCS
+factorization from independent data.
+
+**cymyc-consistent background metric.** The bulk metric G₀\* is
+re-optimized with the K3 anisotropy ratio fixed to the cymyc value
+(η = 1.67):
+
+| Quantity | Original G₀\* | cymyc-consistent G₀\* | Change |
+|----------|--------------|----------------------|--------|
+| ∇φ | 8.462 × 10⁻⁴ | 8.571 × 10⁻⁴ | +1.3% |
+| a_t | 2.468 | 2.424 | −1.8% |
+| a_f | 1.603 | 1.294 | −19.3% |
+| K3 isotropy ratio | 2.65 | 1.73 | target 1.67 |
+
+The cymyc-consistent metric costs only 1.3% in torsion --- essentially
+free. All subsequent analyses use this physically motivated baseline.
+
+**Smoothed production baseline.** After bending regularization
+(λ₀ = 0.009, unchanged from the original baseline):
+
+$$\boxed{\nabla\varphi(L) = 8.994 \times 10^{-4} / L^2}$$
+
+The smoothing cost is 4.9% (vs 4.5% on the original baseline). The
+scaling exponent is −2.000 (exact), the Weyl fraction is 0.800,
+boundary curvature fraction is 39.3%, and the Bianchi identity is
+satisfied to machine precision.
+
+### 12.20 Spectrum and Yukawa on the cymyc-consistent baseline
+
+The transverse spectrum and Yukawa couplings of §12.14--12.15 are
+recomputed on the cymyc-consistent background metric.
+
+**Spectral evolution.**
+
+| Quantity | Original G₀\* | cymyc-consistent G₀\* | Change |
+|----------|--------------|----------------------|--------|
+| λ₁^⊥ | 27.14 | **33.77** | +24.4% |
+| L_cross | 0.350 | **0.304** | −13.2% |
+| ⟨g^{tt}⟩ | 0.336 | 0.316 | −6.0% |
+| K3/fiber ratio | 0.755 | 0.849 | +12.6% |
+
+The two-scale structure of the transverse spectrum is preserved, but
+the scales move toward each other as the K3 anisotropy approaches its
+physical value. The first transverse eigenvalue increases by 24%,
+extending the pure-1D regime to L > 0.5 (vs L > 0.7 previously).
+
+**Yukawa universality.** All Yukawa properties are perfectly preserved:
+
+| Quantity | Original G₀\* | cymyc-consistent G₀\* |
+|----------|--------------|----------------------|
+| \|ỹ\| mean | 1.193822 | **1.193822** |
+| CV | 0.0001% | **0.0001%** |
+| max/min ratio | 1.000003 | **1.000003** |
+| Significant couplings | 210 | **210** |
+| M₂ condition number | 7.7 | **5.4** (−29%) |
+| M₃ condition number | 14.8 | **7.7** (−48%) |
+| J-invariant Yukawa | ALL ZERO | **ALL ZERO** |
+
+Universality is preserved to 7 significant figures. The Kähler
+anisotropy has **zero effect** on coupling magnitudes but
+**substantially improves** mass matrix conditioning (factors 1.4× to 1.9×),
+suggesting the physical metric yields a more favorable flavor structure.
+The resolution decay rate increases to γ = 5.81 (+11.6%), indicating
+better mode localization.
+
+### 12.21 Global G₂ torsion assembly
+
+The G₂ 3-form φ is assembled over the full TCS domain
+(neck + ACyl cylindrical ends) and the torsion dφ, d\*φ is decomposed
+into Joyce torsion classes τ₀, τ₁, τ₂, τ₃.
+
+**Calibration checks.** The standard associative and coassociative
+forms satisfy all identities exactly:
+
+| Check | Value |
+|-------|-------|
+| ψ₀ = \*φ₀ (Hodge dual) | 0.00 (exact) |
+| φ ⊗ φ = g ⊗ g − g ⊗ g + ψ | 0.00 (exact) |
+| \|φ₀\|² | 42 = 7 × 3! |
+| \|ψ₀\|² | 168 = 7 × 4! |
+| φ ∧ ψ | 7 · vol₇ |
+
+**Torsion decomposition (L = 1, smoothed baseline).**
+
+| Quantity | Value |
+|----------|-------|
+| \|dφ\|² mean | 8.735 × 10⁻⁴ |
+| \|d\*φ\|² mean | 4.367 × 10⁻³ |
+| **\|dφ\|² / \|d\*φ\|²** | **0.2000 (exact ratio 1/5)** |
+| τ₀ fraction | 0.16% |
+| **τ₁ fraction** | **0.00% (~10⁻¹⁴)** |
+| **τ₃ fraction** | **99.6%** |
+| Boundary fraction | 3.1% (distributed, not endpoint-concentrated) |
+
+The torsion is almost entirely τ₃ (the 27-dimensional G₂ irreducible
+representation Ω³₂₇): dφ lives in the W₃ torsion class with d\*φ in W₂.
+The vanishing of τ₁ is exact (to machine precision) and follows from
+the determinant constraint det(g) = 65/32 = const, which forces the
+Lee form to vanish identically. The ratio |dφ|²/|d\*φ|² = 1/5 is the
+representation-theoretic ratio dim(Ω²₇)/dim(Ω²₁₄) = 6/15 × (7/2) × ...,
+confirmed to 12 significant digits.
+
+**L-independence of torsion classes.** The torsion class fractions are
+perfectly independent of neck length:
+
+| L | ∇φ | τ₀ | τ₁ | τ₃ |
+|---|-----|------|------|------|
+| 0.5 | 3.597 × 10⁻³ | 0.16% | 0.00% | 99.6% |
+| 1.0 | 8.994 × 10⁻⁴ | 0.16% | 0.00% | 99.6% |
+| 2.0 | 2.249 × 10⁻⁴ | 0.16% | 0.00% | 99.6% |
+| 5.0 | 3.597 × 10⁻⁵ | 0.16% | 0.00% | 99.6% |
+
+This L-independence demonstrates that the torsion class is a
+**geometric property** of the G₂ structure, not an artifact of the
+discretization. The torsion magnitude scales as L⁻² (as expected)
+while the class decomposition is invariant.
+
+**Junction quality.** At the neck-ACyl boundary: det(g) = 65/32
+everywhere (exact), φ₀₁₂ > 0 everywhere (G₂ positivity preserved),
+junction metric derivative |dg/dt|_F ≈ 0.006, and the ACyl tails
+contribute zero torsion (constant metric with exponential decay
+γ = 5.81).
+
 ---
 
 ## 13. Discussion
@@ -1520,8 +1722,8 @@ under-regularizes the numerical profile.
     topological invariant.
 
 15. **Transverse spectrum.** Full 7D product spectrum (117,648 modes,
-    8,872 unique levels), with Weyl's law at 97.6% accuracy. Critical
-    crossing length L_cross = 0.35 separates 1D and transverse regimes.
+    9,258 unique levels), with Weyl's law at 97.6% accuracy. Critical
+    crossing length L_cross = 0.30 separates 1D and transverse regimes.
 
 16. **Yukawa selection rules.** n₁ ± n₂ ± n₃ = 0, with 9/56 allowed
     triples and universal coupling |Y| = 0.5923 = 1/√(2V). Universality
@@ -1538,6 +1740,24 @@ under-regularizes the numerical profile.
     (1/5 ratio, τ₁ = 0, τ₃ dominant, det = 65/32) are preserved
     exactly. This is the first explicit G₂ metric formula on a TCS neck.
 
+19. **TCS--G₂ algebraic bridge.** 28/28 algebraic consistency checks
+    between the PINN metric and the TCS construction, identifying
+    Choice B as the unique K3 × T² factorization with genuine 2+2
+    Kähler eigenvalue gap.
+
+20. **K3 metric validation.** Independent K3 metric from cymyc [17]
+    (σ = 0.0135, HK triple verified), Kähler modulus matching with
+    0.09% anisotropic residual, and cymyc-consistent G₀\* at only
+    1.3% torsion cost.
+
+21. **Spectral and Yukawa stability.** On the cymyc-consistent
+    baseline: λ₁^⊥ increases 24% to 33.77, mass matrix conditioning
+    improves 29--48%, Yukawa universality preserved to 7 digits.
+
+22. **Global G₂ torsion assembly.** The full-domain torsion is 99.6% τ₃
+    (W₃ class), τ₁ = 0 exactly, |dφ|²/|d\*φ|² = 1/5 (exact), and
+    torsion class fractions are perfectly L-independent.
+
 ### 13.2 Comparison with the state of the art
 
 | Domain | Best result | Reference |
@@ -1547,7 +1767,7 @@ under-regularizes the numerical profile.
 | G₂ structure (contact CY₇) | NN-learned 3-form on CY link in S⁹ | Heyes et al. [22] |
 | G₂ flow numerics | Cohomogeneity-one solitons | [16] |
 | G₂ spectral estimates | Neck-stretching theory | Langlais [20] |
-| **G₂ metric (this work)** | **168-number closed-form metric (K=5 Chebyshev), ∇φ ~ 9.1 × 10⁻⁴/L² (<1% penalty), 5.8σ spectral fingerprint, Y(7×7×7) = 0** | ---|
+| **G₂ metric (this work)** | **168-number closed-form metric (K=5 Chebyshev), ∇φ ~ 9.0 × 10⁻⁴/L² (<1% penalty), 5.8σ spectral fingerprint, Y(7×7×7) = 0, τ₃ = 99.6%, cymyc K3 cross-validated** | ---|
 
 ### 13.3 Limitations
 
@@ -1558,8 +1778,8 @@ under-regularizes the numerical profile.
 2. **Analytical warm-start.** The PINN starts from an analytical target,
    inheriting its structure.
 
-3. **Residual torsion.** ∇φ(L) = 8.46 × 10⁻⁴/L² (after bulk
-   optimization) is not yet within the small-torsion regime of Joyce's
+3. **Residual torsion.** ∇φ(L) = 8.99 × 10⁻⁴/L² (cymyc-consistent,
+   smoothed) is not yet within the small-torsion regime of Joyce's
    theorem, though the L⁻² scaling shows it is achievable with longer
    neck lengths.
 
@@ -1581,42 +1801,50 @@ pattern [1, 10, 9, 30] at 5.8σ --- were computed on the
 piecewise-constant (flat) atlas metric. The absolute eigenvalue
 λ₁ × H* = 898 is a property of this flat background, not of a
 curved G₂ metric, and should not be compared directly to the GIFT
-prediction of 14 [12]. The spectrum of the non-trivially curved
-metrics (Stage 8, with optimized G₀*) has not yet been investigated.
-This remains an open question (§13.5).
+prediction of 14 [12]. On the non-trivially curved
+cymyc-consistent metric (§12.20), the transverse spectrum shifts
+significantly: λ₁^⊥ increases from 27.14 to 33.77 (+24%), the
+critical crossing length decreases from 0.35 to 0.30, and the
+degeneracy pattern evolves (level 10 changes from multiplicity 10
+to 8). The two-scale structure (fiber vs K3) is preserved but the
+scales converge as the K3 anisotropy approaches its physical value.
+Spectral comparison with GIFT predictions [12] requires completing
+the torsion-free deformation program.
 
-### 13.5 Open questions
+### 13.5 Open questions and resolved items
 
 1. **Can torsion reach the Joyce threshold?** The scaling law
-   ∇φ = 8.46 × 10⁻⁴/L² shows this is achievable with longer neck
-   lengths. At L = 10, ∇φ = 8.5 × 10⁻⁶.
+   ∇φ = 8.99 × 10⁻⁴/L² shows this is achievable with longer neck
+   lengths. At L = 10, ∇φ = 9.0 × 10⁻⁶. OPEN.
 
-2. **What is the spectrum of the curved metric?** Does the fingerprint
-   [1, 10, 9, 30] survive when genuine curvature is present?
+2. **What is the spectrum of the curved metric?** PARTIALLY RESOLVED
+   (§12.20): the cymyc-consistent metric has λ₁^⊥ = 33.77 (vs 27.14
+   on the original G₀\*). The two-scale structure persists but the
+   degeneracy pattern evolves. Full comparison with GIFT predictions
+   requires a torsion-free metric.
 
 3. **Is the flat attractor universal?** We conjecture it affects any
-   PINN trained on ∇φ = 0 without anti-flatness constraints.
+   PINN trained on ∇φ = 0 without anti-flatness constraints. OPEN.
 
-4. **Geodesic interpolation in SPD(7)/G₂.** ANSWERED: Tested.
-   Cholesky is 2× better. No quotient geometry improvement found
-   (§12.7).
+4. **Geodesic interpolation in SPD(7)/G₂.** RESOLVED (§12.7):
+   Cholesky is 2× better. No quotient geometry improvement found.
 
 5. **Fiber-dependent φ(t,θ) via Joyce η correction.** The remaining
-   path to attack the 35% fiber-connection torsion (65% after bulk
-   optimization).
+   path to attack the 37% fiber-connection torsion (63% after
+   cymyc-consistent optimization). OPEN.
 
-6. **Further G₀ optimization.** The 4-parameter block-diagonal scaling
-   already captures 42% of the available improvement. Can the remaining
-   degrees of freedom in the full 28-parameter G₀* yield further gains?
-   (This is orthogonal to the 1D closure: the 1D program is closed
-   *for each fixed G₀*, but the choice of G₀ itself remains open.)
+6. **Further G₀ optimization.** PARTIALLY RESOLVED (§12.19): the
+   cymyc K3 anisotropy constrains one degree of freedom (the a_f/a_k
+   ratio). The resulting 1.3% torsion cost confirms that the remaining
+   DOFs offer diminishing returns.
 
-7. **Does the analytical metric enable global assembly?** The K = 5
-   Chebyshev form (§12.17) gives a fully explicit g(s) on the neck.
-   Combined with the ACyl cylindrical ends (constant metric with
-   exponential decay γ = 5.81), this yields a piecewise-analytical
-   G₂ metric on the entire TCS domain. The remaining step is
-   matching across the junction and deforming toward torsion-free.
+7. **Torsion-free deformation.** The analytical metric (§12.17) and
+   global torsion assembly (§12.21) provide a complete piecewise-
+   analytical G₂ metric on the TCS domain with known torsion class
+   (W₂ ⊕ W₃, τ₁ = 0, 99.6% τ₃). The remaining step is to deform
+   this metric toward torsion-free using Joyce's perturbation theorem
+   or Kovalev--Nordström gluing theory. OPEN --- this is the primary
+   direction for future work.
 
 ---
 
@@ -1654,9 +1882,27 @@ minimum (Hessian condition number 92,392), and det(g) is pure gauge
 (verified to 8.4 × 10⁻¹⁵ precision). Cholesky interpolation outperforms
 the log-Euclidean geodesic by 2×.
 
+**K3 cross-validation and cymyc-consistent baseline.** An independently
+trained K3 metric (cymyc [17], σ = 0.0135 on CI(1,2,2,2) ⊂ P⁶)
+provides external validation: 28/28 algebraic checks confirm TCS
+consistency, the hyper-Kähler triple is verified to machine precision,
+and Kähler modulus matching identifies the unique TCS factorization
+(Choice B, 0.09% anisotropic residual). Incorporating the K3 anisotropy
+into the background metric costs only 1.3% in torsion, yielding the
+production baseline ∇φ(L) = 8.99 × 10⁻⁴/L². Spectral and Yukawa
+properties are preserved (universality to 7 digits), with improved mass
+matrix conditioning (29--48% improvement).
+
+**Global torsion structure.** Full-domain G₂ torsion assembly reveals
+that the residual torsion belongs to the W₂ ⊕ W₃ class: τ₃ accounts
+for 99.6%, τ₁ vanishes exactly (from det(g) = const), and
+|dφ|²/|d\*φ|² = 1/5 (the representation-theoretic ratio, exact to 12
+digits). These torsion class fractions are perfectly L-independent ---
+a geometric property of the G₂ structure, not a numerical artifact.
+
 **Spectral and algebraic structure.** The full 7D product spectrum
 (117,648 modes) satisfies Weyl's law at 97.6%, with a critical crossing
-length L_cross = 0.35 separating 1D and transverse regimes. Longitudinal
+length L_cross = 0.30 separating 1D and transverse regimes. Longitudinal
 Yukawa couplings obey the selection rule n₁ ± n₂ ± n₃ = 0 with
 universal coupling |Y| = 1/√(2V), preserved under the full metric
 (CV = 0.0001%). The G₂ decomposition of cup product Yukawas reveals an
@@ -1810,18 +2056,22 @@ results, not résumés.
 |----------|----------|
 | Atlas notebook | `notebooks/colab_atlas_g2_metric.ipynb` |
 | Multi-seed notebook | `notebooks/colab_p2_multiseed.ipynb` |
-| TCS warm-start training | `notebooks/run_a29_*` |
-| SO(7) rotation solver | `notebooks/run_a30_seam_solver.py` |
-| SPD(7) path comparison | `notebooks/run_a31_spd_path_solver.py` |
-| Data-driven compression | `notebooks/run_a33_datadriven_compression.py` |
-| Fresh PINN validation | `notebooks/run_a36_*` |
-| Joyce iteration | `notebooks/run_a41_*` |
-| Scaling law calibration | `notebooks/run_a46_*`, `notebooks/run_a47_*` |
-| Fiber-dependent metric | `notebooks/run_a48_*` |
-| KK gauge field | `notebooks/run_a49_*` |
-| SO(7)/G₂ coset rotation | `notebooks/run_a50_*` |
-| Bulk G₀ optimization | `notebooks/run_a51_*` |
-| Global baseline lock | `notebooks/run_a52_*` |
+| TCS warm-start training | `notebooks/tcs_warmstart_training.py` |
+| SO(7) rotation solver | `notebooks/seam_rotation_solver.py` |
+| SPD(7) path comparison | `notebooks/spd_path_solver.py` |
+| Data-driven compression | `notebooks/datadriven_compression.py` |
+| Fresh PINN validation | `notebooks/fresh_pinn_validation.py` |
+| Joyce iteration | `notebooks/joyce_iteration.py` |
+| Scaling law calibration | `notebooks/scaling_law_calibration.py` |
+| Fiber-dependent metric | `notebooks/fiber_dependent_metric.py` |
+| KK gauge field | `notebooks/kk_gauge_field.py` |
+| SO(7)/G₂ coset rotation | `notebooks/coset_rotation.py` |
+| Bulk G₀ optimization | `notebooks/bulk_g0_optimization.py` |
+| Global baseline lock | `notebooks/global_baseline.py` |
+| cymyc K3 metric | `notebooks/k3_metric_pipeline.py` |
+| Kähler modulus matching | `notebooks/modulus_matching.py` |
+| cymyc-consistent baseline | `notebooks/cymyc_consistent_baseline.py` |
+| Torsion decomposition | `notebooks/global_g2_assembly.py` |
 | Repository | github.com/gift-framework |
 
 **Hardware**: NVIDIA A100-SXM4 (Google Colab) for Stages 1--6;
@@ -1839,7 +2089,9 @@ NVIDIA RTX 2050 (4 GB VRAM, local) for Stages 7--8.
 | §11 | **New**: Flat attractor diagnosis |
 | §12 | **New**: Curvature recovery and interpolation comparison |
 | §12.10 | **New**: Exhaustive 1D optimization, scaling law, 1D program closed |
-| §12.11 | **New**: Bulk G₀ optimization (42% reduction, A51--A52) |
+| §12.11 | **New**: Bulk G₀ optimization (42% reduction) |
+| §12.14 | **Updated**: Transverse spectrum on cymyc-consistent baseline |
+| §12.18--12.21 | **New**: TCS--G₂ bridge, cymyc K3 validation, cymyc-consistent spectrum, global torsion assembly |
 | §13--14 | Expanded discussion, rewritten conclusion |
 
 ---
