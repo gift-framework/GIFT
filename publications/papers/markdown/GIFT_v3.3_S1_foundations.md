@@ -1,8 +1,8 @@
 # Supplement S1: Mathematical Foundations
 
-## E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Construction
+## E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Topology
 
-*Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
+*Complete mathematical foundations for GIFT, presenting E₈ architecture and K₇ topological blueprint.*
 
 **Lean Verification**: 2400+ theorems (core v3.3.24, zero `sorry`)
 
@@ -10,7 +10,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the exceptional chain identity. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III establishes K₇ manifold construction via twisted connected sum, building compact G₂ manifolds by gluing asymptotically cylindrical building blocks. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation achieves a torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the exceptional chain identity. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III presents a K₇ topological blueprint via the twisted connected sum framework, deriving Betti numbers and cohomological invariants from asymptotically cylindrical building blocks (conditional on existence of appropriate smooth G₂ manifold). Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation achieves a torsion scaling law ∇φ(L) = 8.46 × 10⁻⁴/L² and spectral fingerprint [1, 10, 9, 30] at 5.8σ significance. All algebraic results are formally verified in Lean 4.
 
 ---
 
@@ -473,7 +473,7 @@ The twisted connected sum (TCS) construction provides the primary method for con
 
 ### 8.3 Building Blocks (v3.3: Both Betti Numbers Derived)
 
-For the GIFT framework, K₇ is constructed from two specific ACyl building blocks:
+For the GIFT framework, the proposed K₇ blueprint uses two specific ACyl building blocks:
 
 **M₁: Quintic in CP⁴**
 - Construction: Derived from quintic hypersurface in CP⁴
@@ -502,8 +502,8 @@ $$K_7 = M_1 \cup_\phi M_2$$
 
 **Global properties**:
 - Compact 7-manifold (no boundary)
-- G₂ holonomy preserved by construction
-- Ricci-flat: Ric(g) = 0
+- G₂ holonomy: admits torsion-free G₂ metrics under Joyce's existence theorem (conditional on matching assumptions)
+- Ricci-flat: Ric(g) = 0 (consequence of full G₂ holonomy)
 - Euler characteristic: χ(K₇) = 0 (Poincaré duality for odd-dimensional manifolds)
 
 **Combinatorial connections**:
@@ -691,13 +691,13 @@ A companion numerical program constructs explicit G₂ metrics on K₇ via physi
 | det(g) at neck | 4.69 | 2.031 | locked at target |
 | phi drift | 13.4% | 0% | controlled |
 
-**Updated validated results (February 2026)**: Exhaustive 1D metric optimization establishes a scaling law ∇φ(L) = 1.47 × 10⁻³/L² (per fixed bulk metric G₀). Subsequent bulk metric optimization (block-diagonal rescaling of G₀) reduces this to ∇φ(L) = 8.46 × 10⁻⁴/L², a 42% improvement. The torsion decomposes into 65% t-derivative and 35% fiber-connection contributions. Spectral fingerprint [1, 10, 9, 30] at 5.8σ. Full details in the companion numerical paper [30].
+**Updated validated results (February 2026)**: Exhaustive 1D metric optimization establishes a scaling law ∇φ(L) = 1.47 × 10⁻³/L² (per fixed bulk metric G₀). Subsequent bulk metric optimization (block-diagonal rescaling of G₀) reduces this to ∇φ(L) = 8.46 × 10⁻⁴/L², a 42% improvement. The torsion decomposes into 65% t-derivative and 35% fiber-connection contributions. Spectral fingerprint [1, 10, 9, 30] at 5.8σ. Full details in the companion numerical paper [8].
 
 A critical bug in the g₂ basis construction was discovered and corrected between versions 9 and 10: the Fano-plane heuristic does not produce correct g₂ generators. The correct g₂ subalgebra is the kernel of the Lie derivative map (Section 6.2).
 
 **Robust statistical validation**: The det(g) = 65/32 prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3%, joint constraint p < 6 x 10⁻⁶).
 
-Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper.
+Full details of the PINN architecture, training protocol, and version-by-version results are presented in the companion numerical paper [8].
 
 ### 11.4 Lean 4 Formalization
 
@@ -816,7 +816,7 @@ Both have 7 terms but different index patterns. The Fano plane defines the octon
 | PINN | Converges to constant form | gift_core/nn/ |
 | Joyce theorem | ‖T‖ < 0.1 → exists metric (224× margin) | [Joyce 2000] |
 
-Cross-verification between analytical and numerical methods confirms the solution.
+Cross-verification between analytical and numerical methods supports internal consistency of the normalization and numerical entry into Joyce's perturbative regime (conditional on the K₇ hypothesis).
 
 ---
 
@@ -829,6 +829,7 @@ Cross-verification between analytical and numerical methods confirms the solutio
 5. Corti, Haskins, Nordström, Pacini. *G₂-manifolds and associative submanifolds*
 6. Kovalev, A. *Twisted connected sums and special Riemannian holonomy*
 7. Conway, J.H., Sloane, N.J.A. *Sphere Packings, Lattices and Groups*
+8. de La Fournière, B. "Numerical G₂ Metric on K₇ via Physics-Informed Neural Networks." doi:[10.5281/zenodo.18643069](https://doi.org/10.5281/zenodo.18643069)
 
 ---
 

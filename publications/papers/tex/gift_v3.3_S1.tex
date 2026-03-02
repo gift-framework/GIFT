@@ -92,7 +92,7 @@
 \newcommand{\Gtwo}{\mathrm{G}_2}
 \newcommand{\Kseven}{K_7}
 \newcommand{\dimE}{\mathrm{dim}}
-\newcommand{\Weyl}{\mathrm{Weyl}}
+\newcommand{\Weyl}{w}
 \newcommand{\rk}{\mathrm{rank}}
 \newcommand{\proven}{\textsc{Proven}}
 \newcommand{\topomark}{\textsc{Topological}}
@@ -107,7 +107,7 @@
   \def\Kseven{K7}%
   \def\E{E}%
   \def\dimE{dim}%
-  \def\Weyl{Weyl}%
+  \def\Weyl{w}%
   \def\rk{rank}%
   \def\proven{Proven}%
   \def\topomark{Topological}%
@@ -116,7 +116,7 @@
 
 \title{%
 \LARGE\textbf{Supplement S1: Mathematical Foundations}\\[0.3em]
-\Large $\E_8$ Exceptional Lie Algebra, $\Gtwo$ Holonomy Manifolds, and $\Kseven$ Construction
+\Large $\E_8$ Exceptional Lie Algebra, $\Gtwo$ Holonomy Manifolds, and $\Kseven$ Topology
 }
 \author{}
 \date{}
@@ -702,17 +702,17 @@ $$\varepsilon = 7 + \sqrt{50}, \quad \varepsilon^2 = 99 + 14\sqrt{50}$$
 \textbf{Status}: \topomark{} (algebraic identity verified in Lean)
 
 % ============================================
-% PART III: K7 MANIFOLD CONSTRUCTION
+% PART III: K7 TOPOLOGICAL BLUEPRINT
 % ============================================
 \newpage
-\part*{Part III: $\Kseven$ Manifold Construction}
-\addcontentsline{toc}{part}{Part III: K7 Manifold Construction}
+\part*{Part III: $\Kseven$ Topological Blueprint}
+\addcontentsline{toc}{part}{Part III: K7 Topological Blueprint}
 
 \section{Twisted Connected Sum Framework}
 
 \subsection{TCS Construction}
 
-The twisted connected sum (TCS) construction provides the primary method for constructing compact $\Gtwo$ manifolds from asymptotically cylindrical building blocks.
+The twisted connected sum (TCS) framework provides a candidate blueprint for compact $\Gtwo$ manifolds assembled from asymptotically cylindrical building blocks.
 
 \textbf{Key insight}: $\Gtwo$ manifolds can be built by gluing two asymptotically cylindrical (ACyl) $\Gtwo$ manifolds along their cylindrical ends, with the topology controlled by a twist diffeomorphism $\phi$.
 
@@ -722,7 +722,7 @@ The twisted connected sum (TCS) construction provides the primary method for con
 
 \subsection{Building Blocks (v3.3: Both Betti Numbers Derived)}
 
-For the GIFT framework, $\Kseven$ is constructed from two specific ACyl building blocks:
+The proposed $\Kseven$ blueprint uses two specific ACyl building blocks:
 
 \textbf{$M_1$: Quintic in $\mathbb{CP}^4$}
 \begin{itemize}
@@ -765,8 +765,8 @@ $$\Kseven = M_1 \cup_\phi M_2$$
 \textbf{Global properties}:
 \begin{itemize}
 \item Compact 7-manifold (no boundary)
-\item $\Gtwo$ holonomy preserved by construction
-\item Ricci-flat: $\mathrm{Ric}(g) = 0$
+\item $\Gtwo$ holonomy: admits torsion-free $\Gtwo$ metrics under Joyce's existence theorem (conditional on matching assumptions)
+\item Ricci-flat: $\mathrm{Ric}(g) = 0$ (consequence of full $\Gtwo$ holonomy)
 \item Euler characteristic: $\chi(\Kseven) = 0$ (Poincar\'e duality for odd-dimensional manifolds)
 \end{itemize}
 
@@ -944,7 +944,7 @@ The algebraic reference form in a local $\Gtwo$-adapted orthonormal coframe:
 $$\varphi_{\text{ref}} = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
 $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 
-\textbf{Important clarification}: This representation holds in a local orthonormal frame. The manifold $\Kseven$ constructed via TCS is curved and compact; ``$I_7$'' reflects the frame choice, not global flatness. The reference form $\varphi_{\text{ref}}$ determines $\det(g) = 65/32$; the global torsion-free solution $\varphi_{\text{TF}}$ exists by Joyce's theorem.
+\textbf{Important clarification}: This representation holds in a local orthonormal frame. The hypothesized manifold $\Kseven$ (via TCS) would be curved and compact; ``$I_7$'' reflects the frame choice, not global flatness. The reference form $\varphi_{\text{ref}}$ determines $\det(g) = 65/32$; the global torsion-free solution $\varphi_{\text{TF}}$ exists by Joyce's theorem.
 
 \begin{table}[H]
 \centering
@@ -1013,7 +1013,7 @@ A critical bug in the $\mathfrak{g}_2$ basis construction was discovered and cor
 
 \textbf{Robust statistical validation}: The $\det(g) = 65/32$ prediction passes 8/8 independent tests (permutation, bootstrap, Bayesian posterior 76.3\%, joint constraint $p < 6 \times 10^{-6}$).
 
-Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper.
+Full details of the PINN architecture, training protocol, and version-by-version results are presented in a companion paper (DOI: 10.5281/zenodo.18643069).
 
 \subsection{Lean 4 Formalization}
 
@@ -1158,7 +1158,7 @@ Joyce theorem & $\|T\| < 0.1 \to$ exists metric ($224\times$ margin) & \cite{joy
 \end{tabular}
 \end{table}
 
-Cross-verification between analytical and numerical methods confirms the solution.
+Cross-verification between analytical and numerical methods supports internal consistency of the normalization and numerical entry into Joyce's perturbative regime (conditional on the $\Kseven$ hypothesis).
 
 % ============================================
 % REFERENCES
@@ -1185,7 +1185,7 @@ Cross-verification between analytical and numerical methods confirms the solutio
 \begin{itemize}
 \item GIFT Framework, \textit{Geometric Information Field Theory} (main paper)
 \item GIFT Framework, \textit{Supplement S2: Complete Derivations}
-\item GIFT Framework, \textit{Numerical $\Gtwo$ Metric Construction via Physics-Informed Neural Networks} (companion numerical paper)
+\item GIFT Framework, \textit{Numerical $\Gtwo$ Metric Construction via Physics-Informed Neural Networks} (companion numerical paper, DOI: 10.5281/zenodo.18643069)
 \end{itemize}
 
 \vfill
