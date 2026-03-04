@@ -829,7 +829,7 @@ Cross-verification between analytical and numerical methods supports internal co
 5. Corti, Haskins, Nordström, Pacini. *G₂-manifolds and associative submanifolds*
 6. Kovalev, A. *Twisted connected sums and special Riemannian holonomy*
 7. Conway, J.H., Sloane, N.J.A. *Sphere Packings, Lattices and Groups*
-8. de La Fournière, B. "Numerical G₂ Metric on K₇ via Physics-Informed Neural Networks." doi:[10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+8. de La Fournière, B. "An Explicit Approximate G₂ Metric on a Compact TCS 7-Manifold with Certified Torsion-Free Completion." doi:[10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358)
 
 ---
 

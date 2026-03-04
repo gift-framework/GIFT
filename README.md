@@ -221,7 +221,8 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Archive | |
 |---------|---|
-| Zenodo | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
+| Zenodo (framework) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
+| Zenodo (explicit G₂ metric) | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---

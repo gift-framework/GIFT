@@ -901,3 +901,5 @@ preliminary numerical results. The two approaches are complementary (see §8.2).
 ---
 
 *Manuscript prepared March 2026.*
+
+**DOI**: [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358)

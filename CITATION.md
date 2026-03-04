@@ -146,11 +146,29 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 ---
 
+## Explicit G₂ Metric (Companion Paper)
+
+### BibTeX
+
+```bibtex
+@misc{gift_explicit_g2_metric,
+  title        = {An Explicit Approximate G₂ Metric on a Compact TCS 7-Manifold with Certified Torsion-Free Completion},
+  author       = {de La Fournière, Brieuc},
+  year         = {2026},
+  doi          = {10.5281/zenodo.18860358},
+  url          = {https://doi.org/10.5281/zenodo.18860358},
+  note         = {169-parameter Chebyshev--Cholesky metric, NK-certified torsion-free completion, h = 6.65e-8}
+}
+```
+
+---
+
 ## DOI Information
 
 | Archive | Link |
 |---------|------|
-| Zenodo | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
+| Zenodo (framework) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
+| Zenodo (explicit G₂ metric) | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
