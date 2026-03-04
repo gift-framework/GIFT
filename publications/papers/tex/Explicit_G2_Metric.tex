@@ -172,8 +172,8 @@ torsion-free equation is not solved. A computational Newton--Kantorovich (NK) ce
 establishes the existence of a unique torsion-free $\Gtwo$ metric $g^*$ within a relative
 distance of $4.86 \times 10^{-6}$ of our explicit iterate, which itself has residual torsion
 $\norm{T}_{C^0} = 2.98 \times 10^{-5}$ (a factor ${\sim}3000$ reduction from the initial approximation
-in 5 Joyce-type iterations). All NK constants --- including the inverse bound~$\beta$,
-the residual~$\eta$, and the Lipschitz bound~$\omega$ on the Fr\'echet derivative --- are computed
+in 5 Joyce-type iterations). All NK constants (including the inverse bound~$\beta$,
+the residual~$\eta$, and the Lipschitz bound~$\omega$ on the Fr\'echet derivative) are computed
 with conservative safety factors, yielding the NK contraction parameter
 $h = 6.65 \times 10^{-8}$, a margin of ${\times}7.5$~million below the threshold. Full interval
 verification of operator norms is left for future work. The K3 fiber variation is
@@ -315,7 +315,7 @@ K3 fiber & Common anticanonical K3 surface & $\chi = 24$, $h^{1,1} = 20$ \\
 
 We consider a TCS 7-manifold of topological type $(b_2 = 21, b_3 = 77)$. These Betti
 numbers are computed from the Mayer--Vietoris sequence for the TCS decomposition,
-which involves the matching data of the two building blocks --- specifically, the
+which involves the matching data of the two building blocks: specifically, the
 images of the restriction maps $H^2(M_i) \to H^2(\mathrm{K3})$ and their mutual position in the
 K3 lattice $\Lambda_{\mathrm{K3}}$ of signature $(3, 19)$. For the particular building block pair
 above, the polarization lattices $N_1 \subset \Lambda_{\mathrm{K3}}$ (rank 11) and $N_2 \subset \Lambda_{\mathrm{K3}}$ (rank 10)
@@ -645,12 +645,12 @@ between the closure and co-closure contributions.
 \subsection{K3 Fiber Verification}\label{sec:k3_fiber}
 
 The 1D seam ansatz treats the K3 fiber metric as spatially homogeneous ($y$-independent
-at each $s$). This does \textit{not} assume K3 is flat --- the K3 surface has $\chi = 24$ and
+at each $s$). This does \textit{not} assume K3 is flat: the K3 surface has $\chi = 24$ and
 nontrivial Riemann curvature, with an intrinsic metric variation of ${\sim}70\%$ across the
 surface (Appendix~\ref{app:k3}). The relevant property for the TCS construction is that K3 is
 approximately Ricci-flat ($\sigma = 0.011$), which controls the transverse torsion
 independently of the seam analysis. What \S\ref{sec:k3_fiber} bounds is the impact of K3 fiber
-variation on the \textit{1D seam torsion} --- specifically, how much the torsion functional
+variation on the \textit{1D seam torsion}: specifically, how much the torsion functional
 changes when the constant fiber metric is replaced by the actual $y$-dependent K3 metric,
 scaled by the NK correction amplitude.
 
@@ -695,7 +695,7 @@ Fraction of 1D torsion & 0.07\% \\
 \end{table}
 
 \textbf{Cross-validation}: at the worst K3 point (index 151,325 of 220,000), the actual
-torsion ($2.983 \times 10^{-5}$) is \textit{lower} than the 1D value --- the linear bound is
+torsion ($2.983 \times 10^{-5}$) is \textit{lower} than the 1D value: the linear bound is
 conservative. The ratio $|d\varphi|^2/|d{*}\varphi|^2 = 0.200000$ is preserved exactly at every K3
 sample point.
 
@@ -775,7 +775,7 @@ These values correspond to the embedded optimized coefficients (\texttt{OPT\_COE
 companion notebook). The companion's independent re-run achieves
 $\norm{T}_{C^0} = 2.485 \times 10^{-5}$ with the same structural properties.
 
-Both $d\varphi$ and $d{*}\varphi$ are individually small --- the near-vanishing of $\norm{T}$ is not due to
+Both $d\varphi$ and $d{*}\varphi$ are individually small: the near-vanishing of $\norm{T}$ is not due to
 cancellation between the two terms.
 
 % ============================================
@@ -818,7 +818,7 @@ $h = \beta \cdot \eta \cdot \omega$ & Product & $\mathbf{6.65 \times 10^{-8}}$ \
 \end{table}
 
 Since $h = 6.65 \times 10^{-8} < 1/2$, with a margin of $\mathbf{\times 7.5}$~\textbf{million}, the hypotheses
-are satisfied. The maximum $\omega$ that would still permit certification is $535{,}732$ --- a
+are satisfied. The maximum $\omega$ that would still permit certification is $535{,}732$: a
 factor $7{,}500$ above the computed value, demonstrating robustness against any
 reasonable tightening of the Lipschitz bound.
 
@@ -883,9 +883,9 @@ Therefore $\Hol(g^*) = \Gtwo$.
 
 \textbf{Numerical indicators} (at the optimized iterate $g_5$, supporting the formal proof):
 \begin{itemize}
-    \item $|\varphi|^2 = 42.0000000000$ (error: $2.1 \times 10^{-14}$) --- $\Gtwo$ calibration preserved
-    \item $\norm{\mathrm{Rm}}_{C^0} = 4.20 \times 10^{-5}$ --- metric is non-flat (curvature nonzero)
-    \item $\norm{\Gamma}_{C^0} = 2.81 \times 10^{-6}$ --- neck nearly flat (curvature concentrated in ACyl bulks)
+    \item $|\varphi|^2 = 42.0000000000$ (error: $2.1 \times 10^{-14}$), $\Gtwo$ calibration preserved
+    \item $\norm{\mathrm{Rm}}_{C^0} = 4.20 \times 10^{-5}$, metric is non-flat (curvature nonzero)
+    \item $\norm{\Gamma}_{C^0} = 2.81 \times 10^{-6}$, neck nearly flat (curvature concentrated in ACyl bulks)
 \end{itemize}
 
 % ============================================
@@ -958,7 +958,7 @@ manifold with an analytical (Chebyshev) parametrization and a convergence certif
           initial data. The K3 correction analysis (\S\ref{sec:k3_fiber}, \S\ref{sec:torsion_floor}) provides a starting point.
 
     \item \textbf{Spectral geometry.} With an explicit metric available, Laplacian eigenvalues and
-          harmonic forms can be computed numerically --- quantities previously inaccessible for
+          harmonic forms can be computed numerically, quantities not yet available for
           compact $\Gtwo$ manifolds.
 
     \item \textbf{Other topological types.} Apply the same pipeline to other TCS manifolds from the
@@ -1154,7 +1154,7 @@ NK-scaled variation in $\Gtwo$ & 0.037\% \\
 
 \textbf{Clarification on the two variation measures.} The ``intrinsic K3 variation'' (69.8\%)
 measures how much the Ricci-flat K3 metric $g_{\mathrm{CY}}(y)$ varies across the K3 surface:
-$\sigma(g_{\mathrm{CY}})/\langle\norm{g_{\mathrm{CY}}}\rangle$. This is large and \textit{expected} --- K3 has Euler characteristic $\chi = 24$
+$\sigma(g_{\mathrm{CY}})/\langle\norm{g_{\mathrm{CY}}}\rangle$. This is large and \textit{expected}: K3 has Euler characteristic $\chi = 24$
 and nontrivial Riemann curvature; a constant (flat) metric on K3 does not exist.
 The seam ansatz does not assume K3 is flat; it uses a spatially homogeneous
 ($y$-independent) fiber metric at each value of $s$, representing the average fiber
@@ -1204,8 +1204,8 @@ $\E_8 \times \E_8$ gauge structure, and the determinant value arises from a topo
 involving the dimensions of $\Gtwo$ and $\E_8$.
 
 The present paper makes no physical claims and treats these as input data for a purely
-geometric construction. In particular, the mathematical results --- torsion bounds,
-Newton--Kantorovich certification, and the holonomy proof --- hold for any compact TCS
+geometric construction. In particular, the mathematical results (torsion bounds,
+Newton--Kantorovich certification, and the holonomy proof) hold for any compact TCS
 7-manifold admitting a $\Gtwo$-structure with sufficiently small torsion, regardless of
 physical interpretation.
 
