@@ -82,7 +82,6 @@
 | δ_CP | 197° | 7 × dim(G₂) + H* |
 | m_s/m_d | 20 | p₂² × w |
 | Q_Koide | 2/3 | dim(G₂)/b₂ |
-| **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
 ### Analytical G₂ Metric
 
@@ -106,6 +105,7 @@ Joyce's existence theorem is **trivially satisfied**: no numerical fitting requi
 | Monster dimension | 196883 = 47×59×71, arithmetic progression d=12 | ✓ Proven |
 | j-invariant | 744 = 3 × 248 = N_gen × dim(E₈) | ✓ Proven |
 | McKay correspondence | Coxeter(E₈) = 30 = icosahedron edges | ✓ Proven |
+| **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
 ---
 
