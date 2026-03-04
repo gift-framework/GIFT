@@ -58,11 +58,11 @@ Exploratory and reference documents for the GIFT framework v3.3.
 
 ## Core Documents
 
-For the main framework documents, see [`../markdown/`](../markdown/):
-- [GIFT_v3.3_main.md](../markdown/GIFT_v3.3_main.md) - Main paper
-- [GIFT_v3.3_S1_foundations.md](../markdown/GIFT_v3.3_S1_foundations.md) - Foundations
-- [GIFT_v3.3_S2_derivations.md](../markdown/GIFT_v3.3_S2_derivations.md) - Derivations
-- [Numerical_G2_Metric.md](../markdown/Numerical_G2_Metric.md) - Numerical G₂ metric
+For the main framework documents, see [`../papers/markdown/`](../papers/markdown/):
+- [GIFT_v3.3_main.md](../papers/markdown/GIFT_v3.3_main.md) - Main paper
+- [GIFT_v3.3_S1_foundations.md](../papers/markdown/GIFT_v3.3_S1_foundations.md) - Foundations
+- [GIFT_v3.3_S2_derivations.md](../papers/markdown/GIFT_v3.3_S2_derivations.md) - Derivations
+- [Explicit_G2_Metric.md](../papers/markdown/Explicit_G2_Metric.md) - Analytical G₂ metric
 
 ---
 

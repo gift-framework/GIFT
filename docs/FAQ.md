@@ -33,7 +33,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 The framework is evaluated based on:
 - Mathematical rigor of derivations
 - Precision of experimental agreement (currently 0.24% mean deviation across 32 well-measured observables, PDG 2024 / NuFIT 6.0)
-- Falsifiability (clear criteria in Supplement S5)
+- Falsifiability (clear criteria in S2 Section 10)
 - Reproducibility (computational notebook available)
 
 ### How many free parameters?
@@ -53,7 +53,7 @@ Yes. Clear falsification criteria include:
 4. **Exact relation violations**: Q_Koide ≠ 2/3, m_s/m_d ≠ 20, etc.
 5. **Systematic deviations**: If multiple predictions deviate beyond experimental errors
 
-See Supplement S5 for comprehensive falsification criteria.
+See S2 Section 10 for comprehensive falsification criteria.
 
 ## Mathematical Structure
 
@@ -163,7 +163,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 
 **Overall**: Mean 0.24% across 32 well-measured observables (0.57% incl. δ_CP, v3.3, PDG 2024 / NuFIT 6.0)
 
-See Supplement S5 for detailed statistical analysis.
+See S2 Section 10 for detailed statistical analysis.
 
 ### What is the most impressive prediction?
 
@@ -264,7 +264,7 @@ This transparency allows readers to assess confidence levels for each prediction
 
 ### How is this computed?
 
-All calculations available in `statistical_validation/` and [giftpy](https://github.com/gift-framework/core):
+All calculations available in `publications/validation/` and [giftpy](https://github.com/gift-framework/core):
 
 **Analytical**: Mathematical derivations in supplements
 **Numerical**: Python implementation with NumPy, SciPy, SymPy
@@ -345,9 +345,9 @@ Depends on background:
 
 **General science literacy**: Start with README.md, then [GIFT for Everyone](GIFT_FOR_EVERYONE.md)
 **Undergraduate physics**: Main paper Section 1-4, then notebook
-**Graduate student**: Main paper fully, then Supplements S1 & S4
-**Professional physicist**: Main paper, Supplement S4 (proofs), Supplement S5 (falsification)
-**Mathematician**: Supplements S1 (foundations) and S4 (proofs)
+**Graduate student**: Main paper fully, then S1 (foundations) & S2 (derivations)
+**Professional physicist**: Main paper, S2 (derivations + falsification in Section 10)
+**Mathematician**: S1 (foundations) and S2 (derivations)
 
 ### Is there a paper I can cite?
 

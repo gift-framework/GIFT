@@ -428,7 +428,7 @@ Results: `publications/validation/results/gift_reference_data.json`
 - Koide, Y. "Fermion-boson two-body model." Lett. Nuovo Cim. 34 (1982)
 - Particle Data Group (2024), Review of Particle Physics
 - Planck Collaboration (2020), Cosmological parameters
-- GIFT Publications: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md), [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
+- GIFT Publications: [GIFT_v3.3_main.md](../papers/markdown/GIFT_v3.3_main.md), [GIFT_v3.3_S2_derivations.md](../papers/markdown/GIFT_v3.3_S2_derivations.md)
 
 ---
 

@@ -25,7 +25,7 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 - [Main Paper](../publications/papers/markdown/GIFT_v3.3_main.md) - Complete theoretical framework
 - [S1: Foundations](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
 - [S2: Derivations](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md) - 33 dimensionless derivations
-- [Numerical G₂ Metric](../publications/papers/markdown/Numerical_G2_Metric.md) - PINN-based G₂ metric construction
+- [Explicit G₂ Metric](../publications/papers/markdown/Explicit_G2_Metric.md) - Analytical G₂ metric construction
 - [Observables CSV](../publications/references/observables.csv) - Machine-readable data
 
 ## Exploratory References

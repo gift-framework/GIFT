@@ -15,7 +15,7 @@ publications/
 │   │   ├── GIFT_v3.3_main.md         # Main paper
 │   │   ├── GIFT_v3.3_S1_foundations.md   # E₈, G₂, K₇ foundations
 │   │   ├── GIFT_v3.3_S2_derivations.md   # 33 dimensionless derivations
-│   │   └── Numerical_G2_Metric.md        # PINN-based G₂ metric construction
+│   │   └── Explicit_G2_Metric.md          # Analytical G₂ metric construction
 │   ├── tex/                       # LaTeX sources
 │   └── pdf/                       # Generated PDFs
 │
@@ -51,8 +51,8 @@ Mathematical foundations: E₈ exceptional algebra, G₂ holonomy, K₇ manifold
 ### [GIFT_v3.3_S2_derivations.md](markdown/GIFT_v3.3_S2_derivations.md)
 All 33 dimensionless derivations with complete proofs.
 
-### [Numerical_G2_Metric.md](markdown/Numerical_G2_Metric.md)
-PINN-based G₂ metric construction (companion numerical paper).
+### [Explicit_G2_Metric.md](markdown/Explicit_G2_Metric.md)
+Analytical G₂ metric construction (companion paper).
 
 ---
 

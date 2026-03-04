@@ -39,7 +39,7 @@
 | [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
 | [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
 | [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.24% mean excl. δ_CP, PDG 2024 / NuFIT 6.0) |
-| [Numerical G₂ Metric](publications/papers/markdown/Numerical_G2_Metric.md) | PINN-based G₂ metric construction |
+| [Explicit G₂ Metric](publications/papers/markdown/Explicit_G2_Metric.md) | Analytical G₂ metric construction |
 
 ### For Specific Audiences
 

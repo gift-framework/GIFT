@@ -1,7 +1,5 @@
 # CLAUDE.md - Development Guide for GIFT Documentation
 
-> **Persistent context**: Read `../.claude-persistent-context.md` at session start for cross-session memory (key insights, ongoing experiments, decisions).
-
 This file provides development conventions for the GIFT theoretical documentation repository.
 
 ## Repository Purpose
@@ -18,15 +16,11 @@ GIFT/
 │   │   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
 │   │   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
 │   │   │   ├── GIFT_v3.3_S2_derivations.md  # All 33 dimensionless derivations
-│   │   │   └── Numerical_G2_Metric.md       # PINN-based G₂ metric construction
-│   │   ├── tex/            # LaTeX sources
-│   │   ├── pdf/            # Generated PDFs
-│   │   └── FoP/            # Foundations of Physics submission
+│   │   │   └── Explicit_G2_Metric.md         # Analytical G₂ metric construction
+│   │   └── tex/            # LaTeX sources
 │   ├── references/         # Extended topics (number theory, speculative physics)
 │   ├── outreach/           # Vulgarization & blog posts
 │   └── validation/         # Monte Carlo validation code
-│
-├── research/               # Exploratory research (WIP)
 │
 ├── docs/
 │   ├── FAQ.md             # Common questions
@@ -35,9 +29,7 @@ GIFT/
 │   ├── GIFTPY_FOR_GEOMETERS.md
 │   ├── INFO_GEO_FOR_PHYSICISTS.md
 │   ├── LEAN_FOR_PHYSICS.md
-│   ├── figures/           # Lean blueprints, diagrams
-│   ├── media/             # Logos, images
-│   └── legacy/            # Archived v2.3/v3.0 supplements
+│   └── figures/           # Lean blueprints, diagrams
 │
 ├── notebooks/              # Curated demo notebooks
 │

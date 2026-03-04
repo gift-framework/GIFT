@@ -67,7 +67,6 @@ publications/validation/
 ├── exhaustive_validation_v33.py               # Exhaustive search (3M+ configs)
 ├── validation_v33.py                          # Core module (formulas, experimental data)
 ├── comprehensive_statistics_v33.py            # Advanced statistical tests
-├── rigorous_validation_v33.py                 # Rigorous statistical validation
 ├── bulletproof_validation_v33_results.json     # Bullet-proof results
 ├── comprehensive_statistics_v33_results.json   # Comprehensive results
 ├── exhaustive_validation_v33_results.json      # Exhaustive search results
