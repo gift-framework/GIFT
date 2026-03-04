@@ -105,7 +105,6 @@ Joyce's existence theorem is **trivially satisfied**: no numerical fitting requi
 | Monster dimension | 196883 = 47×59×71, arithmetic progression d=12 | ✓ Proven |
 | j-invariant | 744 = 3 × 248 = N_gen × dim(E₈) | ✓ Proven |
 | McKay correspondence | Coxeter(E₈) = 30 = icosahedron edges | ✓ Proven |
-| **Monster** | **196883** | **L₈ × (b₃−18) × (b₃−6) = 47×59×71** |
 
 ---
 
