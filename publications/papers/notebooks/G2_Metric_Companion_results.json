@@ -1,0 +1,180 @@
+{
+  "title": "G2 Metric Companion Notebook -- Verification Results",
+  "timestamp_utc": "2026-03-03T22:03:24+00:00",
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.0.2",
+    "device": "cpu",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35"
+  },
+  "coefficient_hashes_sha256": {
+    "BASE_COEFFS": "7e966a1f4bcb9a7ca7b9676dd6d6cc47918e7a9a0397dd4b2f20262a3d534f2c",
+    "DELTA_COEFFS": "ca61d917f71e7740eb40c49d7d90e5e09cef20de9b8c4beec2d3193d34cde420",
+    "OPT_COEFFS": "fa2d62c482d3bc18773353716691e63c371b044c395de722142341f86da7f1f9"
+  },
+  "parameters": {
+    "n_coefficients": 169,
+    "chebyshev_order": 5,
+    "n_entries_per_mode": 28,
+    "n_chebyshev_nodes": 100,
+    "acyl_decay_rate": 5.811297,
+    "det_g": 2.03125
+  },
+  "checks": [
+    {
+      "id": 1,
+      "name": "SPD (all eigenvalues > 0)",
+      "passed": true,
+      "detail": "\u03bb_min = 0.822090"
+    },
+    {
+      "id": 2,
+      "name": "det(g) = 65/32",
+      "passed": true,
+      "detail": "max |det-target| = 6.22e-15"
+    },
+    {
+      "id": 3,
+      "name": "|\u03c6|\u00b2 = 42",
+      "passed": true,
+      "detail": "max error = 2.84e-14"
+    },
+    {
+      "id": 4,
+      "name": "|\u03c8|\u00b2 = 168",
+      "passed": true,
+      "detail": "max error = 1.14e-13"
+    },
+    {
+      "id": 5,
+      "name": "||T||_C\u2070 < 10\u207b\u00b3",
+      "passed": true,
+      "detail": "2.9836e-05"
+    },
+    {
+      "id": 6,
+      "name": "|d\u03c6|\u00b2/|d*\u03c6|\u00b2 = 1/5",
+      "passed": true,
+      "detail": "0.200000"
+    },
+    {
+      "id": 7,
+      "name": "d\u03c6, d*\u03c6 separately small",
+      "passed": true,
+      "detail": "d\u03c6=1.22e-05, d*\u03c6=2.72e-05"
+    },
+    {
+      "id": 8,
+      "name": "Joyce reduction > 1000\u00d7",
+      "passed": true,
+      "detail": "\u00d73596"
+    },
+    {
+      "id": 9,
+      "name": "||T||_final < 10\u207b\u2074",
+      "passed": true,
+      "detail": "2.4852e-05"
+    },
+    {
+      "id": 10,
+      "name": "NK: h < 1/2",
+      "passed": true,
+      "detail": "h = 6.6544e-08, margin \u00d77513773"
+    },
+    {
+      "id": 11,
+      "name": "||T|| < \u03b5\u2080 = 0.1",
+      "passed": true,
+      "detail": "3.1519e-05 < 0.1"
+    },
+    {
+      "id": 12,
+      "name": "|\u03c6|\u00b2 = 42 (G\u2082 calibration)",
+      "passed": true,
+      "detail": "42.0000000000"
+    },
+    {
+      "id": 13,
+      "name": "Non-flat (||\u0393|| > 0)",
+      "passed": true,
+      "detail": "||\u0393||_C\u2070 = 9.7576e-07"
+    },
+    {
+      "id": 14,
+      "name": "\u03c7(K\u2077) = 0",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "id": 15,
+      "name": "b\u2081 = 0 (simply connected)",
+      "passed": true,
+      "detail": "0"
+    }
+  ],
+  "results": {
+    "torsion_C0_optimized": 2.983634018605481e-05,
+    "torsion_C0_chebyshev_bound": 3.1518720612176144e-05,
+    "dphi_C0": 1.2180634876785521e-05,
+    "dstarphi_C0": 2.7236727587880768e-05,
+    "dphi2_over_dstarphi2": 0.1999999996013002,
+    "joyce_iterations": 5,
+    "joyce_reduction_factor": 3595.7599952667933,
+    "joyce_table": [
+      {
+        "step": 0,
+        "torsion_C0": 0.08936109725859122,
+        "dg_rel_pct": 0.0
+      },
+      {
+        "step": 1,
+        "torsion_C0": 0.06363651929925296,
+        "dg_rel_pct": 0.035773599479057554
+      },
+      {
+        "step": 2,
+        "torsion_C0": 0.037914838224947275,
+        "dg_rel_pct": 0.07154466528652026
+      },
+      {
+        "step": 3,
+        "torsion_C0": 0.01219794364080077,
+        "dg_rel_pct": 0.10731320730458242
+      },
+      {
+        "step": 4,
+        "torsion_C0": 2.6262622065894828e-05,
+        "dg_rel_pct": 0.12427862124187412
+      },
+      {
+        "step": 5,
+        "torsion_C0": 2.4851796943127436e-05,
+        "dg_rel_pct": 0.12427818637817639
+      }
+    ],
+    "NK_beta": 0.029611051065903442,
+    "NK_eta": 3.1518720612176144e-05,
+    "NK_omega": 0.0713,
+    "NK_h": 6.65444643697892e-08,
+    "NK_margin": 7513773.0047910195,
+    "dist_g5_gstar": 1.4401171304703137e-07,
+    "lambda_min": 0.8220901559254091,
+    "det_error_max": 6.217248937900877e-15,
+    "phi_sq": 42.0,
+    "betti": [
+      1,
+      0,
+      21,
+      77,
+      77,
+      21,
+      0,
+      1
+    ],
+    "euler": 0
+  },
+  "total_runtime_s": 43.02,
+  "n_pass": 15,
+  "n_total": 15
+}
