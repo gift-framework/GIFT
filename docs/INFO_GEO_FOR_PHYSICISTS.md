@@ -124,6 +124,7 @@ The framework's value, independent of its physical correctness, lies in demonstr
 - Main paper: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md)
 - Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
 - Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
+- Spectral geometry: [Spectral_Geometry.md](../publications/papers/markdown/Spectral_Geometry.md)
 - Formal verification: [gift-framework/core](https://github.com/gift-framework/core)
 
 ---

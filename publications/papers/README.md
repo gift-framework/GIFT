@@ -25,8 +25,6 @@ publications/
 ├── references/                    # Data & reference catalogs
 │   ├── observables.csv            # Machine-readable data
 │   ├── OBSERVABLE_REFERENCE.md    # Complete observable catalog
-│   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
-│   ├── SPECULATIVE_PHYSICS.md     # Scale bridge, Yukawa, M-theory, QG
 │   ├── STATISTICAL_EVIDENCE.md    # Rigorous statistical analysis
 │   └── Bibliography.md            # References
 │
@@ -88,15 +86,6 @@ Exhaustive search (3,070,396 configs) + seven-component bullet-proof analysis:
 | Bayes factor | 304–4,738 (decisive) |
 
 See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../references/STATISTICAL_EVIDENCE.md) for methodology.
-
----
-
-## Exploratory References
-
-| Document | Content | Status |
-|----------|---------|--------|
-| [NUMBER_THEORETIC_STRUCTURES.md](../references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine | Observation |
-| [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, QG | Speculative |
 
 ---
 

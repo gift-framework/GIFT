@@ -76,10 +76,6 @@ publications/validation/
 └── README.md                                   # This file
 ```
 
-## Riemann-GIFT Connection
-
-The Riemann zeta zero connection was tested rigorously (8 tests, 4 PASS / 4 FAIL: **WEAK EVIDENCE**). Scripts archived in `docs/legacy/validation_old/`. The 33 dimensionless predictions do NOT depend on Riemann. See [SPECULATIVE_PHYSICS.md](../references/SPECULATIVE_PHYSICS.md).
-
 ## Full Documentation
 
 See [STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md) for:

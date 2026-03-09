@@ -28,13 +28,6 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 - [Explicit G₂ Metric](../publications/papers/markdown/Explicit_G2_Metric.md) - Analytical G₂ metric construction
 - [Observables CSV](../publications/references/observables.csv) - Machine-readable data
 
-## Exploratory References
-
-| Document | Content |
-|----------|---------|
-| [Number-Theoretic Structures](../publications/references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine |
-| [Speculative Physics](../publications/references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, QG |
-
 ## Legacy
 
 Historical supplements (v2.3/v3.0 drafts) archived in [`legacy/`](legacy/).

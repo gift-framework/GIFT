@@ -19,7 +19,7 @@ GIFT/
 │   │   │   ├── Explicit_G2_Metric.md         # Analytical G₂ metric construction
 │   │   │   └── Spectral_Geometry.md          # Spectral geometry (KK, Yukawa, gauge)
 │   │   └── tex/            # LaTeX sources
-│   ├── references/         # Extended topics (number theory, speculative physics)
+│   ├── references/         # Data & reference catalogs
 │   ├── outreach/           # Vulgarization & blog posts
 │   └── validation/         # Monte Carlo validation code
 │
@@ -31,8 +31,6 @@ GIFT/
 │   ├── INFO_GEO_FOR_PHYSICISTS.md
 │   ├── LEAN_FOR_PHYSICS.md
 │   └── figures/           # Lean blueprints, diagrams
-│
-├── notebooks/              # Curated demo notebooks
 │
 ├── README.md              # Repository overview
 ├── STRUCTURE.md           # Directory layout
@@ -54,10 +52,6 @@ GIFT/
 - **S1 Foundations**: Complete mathematical construction (E₈ lattice, G₂ holonomy, K₇ topology)
 - **S2 Derivations**: All 33 dimensionless predictions with full derivations
 - **Numerical G₂ Metric**: PINN-based G₂ metric construction (companion numerical paper)
-
-### Extended References
-- Exploratory topics (Monster, sequences, Yukawa)
-- Not part of core claims
 
 ---
 

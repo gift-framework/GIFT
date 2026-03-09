@@ -12,16 +12,20 @@ GIFT/
 │   │   │   ├── GIFT_v3.3_main.md         # Main paper
 │   │   │   ├── GIFT_v3.3_S1_foundations.md   # E₈, G₂, K₇ foundations
 │   │   │   ├── GIFT_v3.3_S2_derivations.md   # 33 dimensionless derivations
-│   │   │   └── Explicit_G2_Metric.md          # Analytical G₂ metric construction
-│   │   └── tex/                       # LaTeX sources
+│   │   │   ├── Explicit_G2_Metric.md          # Analytical G₂ metric construction
+│   │   │   └── Spectral_Geometry.md           # KK spectrum, Yukawa, gauge unification
+│   │   ├── tex/                       # LaTeX sources
+│   │   ├── pdf/                       # Compiled PDFs
+│   │   ├── figures/                   # Publication figures (PDF + PNG)
+│   │   └── notebooks/                 # Companion Jupyter notebooks
+│   │       ├── G2_Metric_Companion.ipynb
+│   │       └── Spectral_Geometry_Companion.ipynb
 │   ├── outreach/                      # Vulgarization & blog posts
 │   │   └── (7 Substack posts)
 │   ├── references/                    # Data & reference catalogs
 │   │   ├── GIFT_ATLAS.json            # Canonical structured atlas (v3.3)
 │   │   ├── observables.csv            # Machine-readable observables
 │   │   ├── OBSERVABLE_REFERENCE.md    # Complete observable catalog
-│   │   ├── NUMBER_THEORETIC_STRUCTURES.md  # Fibonacci, Prime Atlas, Monster
-│   │   ├── SPECULATIVE_PHYSICS.md     # Scale bridge, Yukawa, M-theory, QG
 │   │   ├── STATISTICAL_EVIDENCE.md    # Rigorous statistical analysis
 │   │   ├── INDEPENDENT_VALIDATIONS.md # External research converging with GIFT
 │   │   └── Bibliography.md            # References
@@ -31,12 +35,6 @@ GIFT/
 │       ├── exhaustive_validation_v33.py     # Exhaustive search (3M+ configs)
 │       ├── comprehensive_statistics_v33.py  # Advanced statistical tests
 │       └── selection/                 # Formula selection & Pareto analysis
-│
-├── notebooks/                         # Curated demo notebooks
-│   ├── K7_Metric_Formalization.ipynb
-│   ├── Joyce_Formalization_Tutorial.ipynb
-│   ├── Selberg_Complete_Verification.ipynb
-│   └── ...
 │
 ├── docs/                              # User-facing documentation
 │   ├── GIFT_FOR_EVERYONE.md           # Complete guide with everyday analogies
@@ -62,12 +60,13 @@ GIFT/
 | Beginner-friendly guide | `docs/GIFT_FOR_EVERYONE.md` |
 | Complete theory | `publications/papers/markdown/GIFT_v3.3_main.md` |
 | All derivations | `publications/papers/markdown/GIFT_v3.3_S2_derivations.md` |
+| Spectral geometry | `publications/papers/markdown/Spectral_Geometry.md` |
+| Companion notebooks | `publications/papers/notebooks/` |
 | Observables data | `publications/references/observables.csv` |
 | Monte Carlo validation | `publications/validation/` |
 | Blog posts & outreach | `publications/outreach/` |
 | Formal verification | [gift-framework/core](https://github.com/gift-framework/core) |
 | Technical definitions | `docs/GLOSSARY.md` |
-| Demo notebooks | `notebooks/` |
 
 ## Core Documents (v3.3)
 
@@ -77,13 +76,7 @@ GIFT/
 | GIFT_v3.3_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
 | GIFT_v3.3_S2_derivations.md | 33 dimensionless derivations with proofs |
 | Explicit_G2_Metric.md | Analytical G₂ metric construction |
-
-## Exploratory References
-
-| Document | Content |
-|----------|---------|
-| NUMBER_THEORETIC_STRUCTURES.md | Fibonacci, Prime Atlas, Monster, Moonshine |
-| SPECULATIVE_PHYSICS.md | Scale bridge, Yukawa, M-theory, QG |
+| Spectral_Geometry.md | KK spectrum, Yukawa, gauge unification from G₂ metric |
 
 ## Related Repositories
 
@@ -93,8 +86,8 @@ GIFT/
 
 ## Version
 
-**Current**: v3.3.24 (2026-03-02)
-**Relations**: ~290 certified (core v3.3.24)
+**Current**: v3.3.31 (2026-03-08)
+**Relations**: 455+ certified (core v3.3.31)
 **Predictions**: 33 predictions (**0.24% mean deviation** across 32 well-measured, 0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0)
 **Validation**: 3,070,396 configs exhaustive + 7-component bullet-proof (Westfall-Young, Bayesian, PPC)
 **Key Result**: Analytical G₂ metric with T = 0 exactly

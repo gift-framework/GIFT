@@ -40,6 +40,7 @@
 | [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
 | [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.24% mean excl. δ_CP, PDG 2024 / NuFIT 6.0) |
 | [Explicit G₂ Metric](publications/papers/markdown/Explicit_G2_Metric.md) | Analytical G₂ metric construction |
+| [Spectral Geometry](publications/papers/markdown/Spectral_Geometry.md) | KK spectrum, Yukawa, gauge unification from G₂ metric |
 
 ### For Specific Audiences
 
@@ -49,13 +50,6 @@
 | Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md): G₂ metric construction pipeline |
 | Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md): Topological approach to SM parameters |
 | Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md): Machine-verified physical relations |
-### Exploratory Extensions
-
-| Document | Description |
-|----------|-------------|
-| [Speculative Physics](publications/references/SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity |
-| [Number-Theoretic Structures](publications/references/NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine |
-
 ---
 
 ## Key Results
@@ -95,16 +89,6 @@ The G₂ structure admits an **exact closed form**:
 | det(g) | 65/32 | EXACT |
 
 Joyce's existence theorem is **trivially satisfied**: no numerical fitting required.
-
-### Number-Theoretic Structures
-
-| Structure | Result | Status |
-|-----------|--------|:------:|
-| Fibonacci F₃–F₁₂ | Maps to GIFT constants (p₂, N_gen, Weyl, rank, α_B, b₂, ...) | ✓ Proven |
-| Prime Atlas | 100% coverage of primes < 200 | ✓ Proven |
-| Monster dimension | 196883 = 47×59×71, arithmetic progression d=12 | ✓ Proven |
-| j-invariant | 744 = 3 × 248 = N_gen × dim(E₈) | ✓ Proven |
-| McKay correspondence | Coxeter(E₈) = 30 = icosahedron edges | ✓ Proven |
 
 ---
 
@@ -173,15 +157,6 @@ The framework contains **no continuous adjustable parameters** fitted to data. H
 These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices: it does not explain *why* nature chose this geometry.
 
 **However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,070,396 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
-
-### Why Not Numerology?
-
-The v3.0 structures (Fibonacci, Monster, McKay) have **independent mathematical existence**:
-- Fibonacci appears in phyllotaxis, shell spirals, golden ratio
-- Monster group is a theorem (Griess 1982)
-- McKay correspondence is established mathematics (McKay 1980)
-
-Their appearance suggests structural rather than coincidental relationships.
 
 ---
 

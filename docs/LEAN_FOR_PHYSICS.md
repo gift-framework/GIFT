@@ -59,9 +59,7 @@ The Lean formalization is organized as follows:
 | `GIFT.Relations.IrrationalSector` | Golden ratio bounds | Transcendental relations |
 | `GIFT.Relations.ExceptionalGroups` | F₄, E₆, E₈ connections | Exceptional group relations |
 | `GIFT.Relations.BaseDecomposition` | Topological decompositions | Structure B base relations |
-| `GIFT.Spectral` | Spectral theory, mass gap λ₁ = 14/99 | Spectral relations |
-| `GIFT.Zeta` | GIFT-Zeta correspondences | Zeta connections |
-| `GIFT.Moonshine` | Monster group connections | Moonshine relations |
+| `GIFT.Spectral` | Spectral theory, mass gap λ₁ = 14/99, Yukawa ratios | Spectral relations |
 | `GIFT.Certificate` | Master theorem | `all_relations_certified` |
 
 ### 2.3 What is Actually Proven
@@ -178,9 +176,7 @@ core/
 │       ├── Certificate.lean     # Master theorem (290+ relations)
 │       ├── Foundations/         # E8 roots, G2 cross product
 │       ├── Geometry/            # DG-ready differential geometry
-│       ├── Spectral/            # Spectral theory, mass gap
-│       ├── Zeta/                # GIFT-Zeta correspondences
-│       ├── Moonshine/           # Monster group connections
+│       ├── Spectral/            # Spectral theory, mass gap, Yukawa
 │       ├── Relations/           # Physical predictions
 │       └── ...
 ├── gift_core/                   # Python package (giftpy)
@@ -216,8 +212,9 @@ The methodological contribution is independent of GIFT's physical correctness. F
 - GIFT main paper: [GIFT_v3.3_main.md](../publications/papers/markdown/GIFT_v3.3_main.md)
 - Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
 - Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
+- Spectral geometry: [Spectral_Geometry.md](../publications/papers/markdown/Spectral_Geometry.md)
 - Code repository: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 
 ---
 
-*GIFT Framework v3.3 - Formal Verification Documentation*
+*GIFT Framework v3.3.31 - Formal Verification Documentation*

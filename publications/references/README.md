@@ -1,6 +1,6 @@
 # GIFT Reference Documents
 
-Exploratory and reference documents for the GIFT framework v3.3.
+Reference documents for the GIFT framework v3.3.
 
 ---
 
@@ -21,22 +21,6 @@ Exploratory and reference documents for the GIFT framework v3.3.
 | [INDEPENDENT_VALIDATIONS.md](INDEPENDENT_VALIDATIONS.md) | External research converging with GIFT | Active |
 | [STATISTICAL_EVIDENCE.md](STATISTICAL_EVIDENCE.md) | 78+ relations, deviation analysis, duality patterns | Active |
 
-### Exploratory References
-
-| Document | Content | Status |
-|----------|---------|--------|
-| [SPECULATIVE_PHYSICS.md](SPECULATIVE_PHYSICS.md) | Scale bridge, Yukawa, M-theory, quantum gravity | Exploratory/Speculative |
-| [NUMBER_THEORETIC_STRUCTURES.md](NUMBER_THEORETIC_STRUCTURES.md) | Fibonacci, Prime Atlas, Monster, Moonshine | Pattern Recognition |
-
----
-
-## Status Legend
-
-| Status | Meaning |
-|--------|---------|
-| **Exploratory** | Promising direction, needs verification |
-| **Speculative** | Interesting connection, highly tentative |
-| **Pattern Recognition** | Mathematical patterns, physical significance unclear |
 
 ---
 
