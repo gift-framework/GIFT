@@ -312,7 +312,7 @@ consequence of the fiber metric being independent of s.
 | (2,1) | 4.4018 | 4.277 | 4 g^{θθ} + g^{ψψ} = 4.277 |
 | (1,2) | 4.4018 | 4.277 | g^{θθ} + 4 g^{ψψ} = 4.277 |
 
-The adiabatic additivity is exact to within 2% — limited by the Dirichlet boundary
+The adiabatic additivity is exact to within 2%, limited by the Dirichlet boundary
 conditions, not by physical s-dependence of the fiber. Key observations:
 
 - **T² isotropy**: (m, n) and (n, m) channels are degenerate to 3 × 10⁻⁷.
@@ -588,7 +588,7 @@ gauge group SU(3) × SU(2) × U(1), one must consider singular limits of the K3
 fiber [1, 11, 12]. An orbifold singularity of type A_{n-1} on K3 produces an SU(n)
 gauge group via the McKay correspondence.
 
-We model singularities as localized metric perturbations — bump functions centered
+We model singularities as localized metric perturbations, bump functions centered
 at position s₀ along the neck:
 
 ```
@@ -662,8 +662,8 @@ The key results are summarized:
 | Spectral democracy | 10⁻⁴ splitting | Computed |
 | Spectral stability | λ₁ shift ≤ 36% (all A ≤ 10) | Computed |
 
-The key numerical identities — Q₂₂ signature (3, 19) with 3 SD forms matching the
-generation count, SD/ASD gap exceeding 2000×, and Betti number arithmetic — are
+The key numerical identities (Q₂₂ signature (3, 19) with 3 SD forms matching the
+generation count, SD/ASD gap exceeding 2000×, and Betti number arithmetic) are
 formally verified in Lean 4 as part of a modular certificate system (150 files,
 48 published axioms, all proofs closed). The certificate is available in the
 companion code repository.
@@ -965,7 +965,7 @@ positions are provided in `wilson_line_3gen_results.json`.
 
 The spectral data computed in this paper bear several striking numerical
 relationships to quantities arising in particle physics. We record the most
-direct observation — the mass hierarchy from the SD/ASD structure — and
+direct observation (the mass hierarchy from the SD/ASD structure) and
 summarize the key physical quantities extracted from the metric. Further
 connections, including topological coupling formulas, gauge running, and
 falsifiable predictions, are developed in the author's companion framework.
@@ -983,7 +983,7 @@ Under the adiabatic decomposition, this reduces to a 1D integral involving the
 harmonic 2-form profiles f_I(s) from §5.2 and the intersection form Q_{IJ}(s).
 
 The Yukawa matrix Y has effective rank 3, but the mass matrix M = ψ Y ψᵀ has
-**rank 2 in the adiabatic limit** — the T² circle profiles ψ₁, ψ₂ are degenerate
+**rank 2 in the adiabatic limit**: the T² circle profiles ψ₁, ψ₂ are degenerate
 by isotropy. The third generation requires a non-adiabatic correction: a potential
 V_I(s) = c × Q_{II} that breaks the profile degeneracy for any c > 0. The
 effective coupling c and the matter localization positions (s₁, s₂, s₃) are
@@ -1011,7 +1011,7 @@ configurations).
 
 The effective coupling c_{eff} ≈ 0.18 is ∼ 10× larger than the physical estimate
 c_{phys} ≈ 0.017 from the smooth metric's K3 s-derivative. This enhancement factor
-is genuine (not a normalization artifact — see main text §4.3) and remains an open
+is genuine (not a normalization artifact; see main text §4.3) and remains an open
 question.
 
 ### E.2 Physical Quantities from the Metric
