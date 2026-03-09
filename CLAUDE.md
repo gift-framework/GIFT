@@ -16,7 +16,8 @@ GIFT/
 │   │   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
 │   │   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
 │   │   │   ├── GIFT_v3.3_S2_derivations.md  # All 33 dimensionless derivations
-│   │   │   └── Explicit_G2_Metric.md         # Analytical G₂ metric construction
+│   │   │   ├── Explicit_G2_Metric.md         # Analytical G₂ metric construction
+│   │   │   └── Spectral_Geometry.md          # Spectral geometry (KK, Yukawa, gauge)
 │   │   └── tex/            # LaTeX sources
 │   ├── references/         # Extended topics (number theory, speculative physics)
 │   ├── outreach/           # Vulgarization & blog posts

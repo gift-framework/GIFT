@@ -1,0 +1,369 @@
+{
+  "title": "Spectral Geometry Companion \u2014 Verification Results",
+  "timestamp_utc": "2026-03-08T21:10:59+00:00",
+  "environment": {
+    "python": "3.12.12",
+    "numpy": "2.0.2",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35"
+  },
+  "coefficient_hash_sha256": "7e966a1f4bcb9a7ca7b9676dd6d6cc47918e7a9a0397dd4b2f20262a3d534f2c",
+  "parameters": {
+    "n_coefficients": 169,
+    "chebyshev_order": 5,
+    "n_grid": 800,
+    "domain": [
+      -2,
+      3
+    ]
+  },
+  "checks": [
+    {
+      "id": 1,
+      "name": "det(g) = 65/32 everywhere",
+      "passed": true,
+      "detail": "max err = 5.33e-15"
+    },
+    {
+      "id": 2,
+      "name": "g SPD everywhere",
+      "passed": true,
+      "detail": "\u03bb_min = 0.820019"
+    },
+    {
+      "id": 3,
+      "name": "Zero mode \u2248 0 (b\u2080 = 1)",
+      "passed": true,
+      "detail": "\u03bb\u2080 = 3.47e-13"
+    },
+    {
+      "id": 4,
+      "name": "Spectral gap \u03bb\u2081 \u2248 0.1244",
+      "passed": true,
+      "detail": "\u03bb\u2081 = 0.1244"
+    },
+    {
+      "id": 5,
+      "name": "T\u00b2 isotropy (g^\u03b8\u03b8 \u2248 g^\u03c8\u03c8)",
+      "passed": true,
+      "detail": "splitting = 2.63e-08"
+    },
+    {
+      "id": 6,
+      "name": "Adiabatic additivity < 5%",
+      "passed": true,
+      "detail": "error = 0.00%"
+    },
+    {
+      "id": 7,
+      "name": "Weyl exponent \u03b1 \u2248 2.0",
+      "passed": true,
+      "detail": "\u03b1 = 2.000"
+    },
+    {
+      "id": 8,
+      "name": "KK tower > 1000 distinct states",
+      "passed": true,
+      "detail": "1744 states"
+    },
+    {
+      "id": 9,
+      "name": "Including multiplicity > 3000",
+      "passed": true,
+      "detail": "4460 states"
+    },
+    {
+      "id": 10,
+      "name": "Hierarchy: neck < T\u00b2 < K3",
+      "passed": true,
+      "detail": "0.353 < 0.925 < 1.099"
+    },
+    {
+      "id": 11,
+      "name": "b\u2082 = 21 (topological, TCS Mayer-Vietoris)",
+      "passed": true,
+      "detail": "confirmed: b\u2082(M\u2081)+b\u2082(M\u2082) = 11+10 = 21"
+    },
+    {
+      "id": 12,
+      "name": "Spectral gap ratio > 10000",
+      "passed": true,
+      "detail": "gap ratio = 14635\u00d7"
+    },
+    {
+      "id": 13,
+      "name": "K3 fiber nearly round",
+      "passed": true,
+      "detail": "eigenvalue spread = 1.2%"
+    },
+    {
+      "id": 14,
+      "name": "K3 SD/ASD structure",
+      "passed": true,
+      "detail": "Q\u2086 signature (3, 3)"
+    },
+    {
+      "id": 15,
+      "name": "f\u2081 monotonically decreasing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": 16,
+      "name": "f\u2082 monotonically increasing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": 17,
+      "name": "SD/ASD gap > 1000\u00d7",
+      "passed": true,
+      "detail": "gap = 2210\u00d7 (K3 Q\u2082\u2082)"
+    },
+    {
+      "id": 18,
+      "name": "21 K7 2-forms assembled",
+      "passed": true,
+      "detail": "11 N\u2081 + 10 N\u2082"
+    },
+    {
+      "id": 19,
+      "name": "3 SD eigenvalues (= N_gen)",
+      "passed": true,
+      "detail": "SD: 27.81, 19.62, 17.35"
+    },
+    {
+      "id": 20,
+      "name": "b\u2083 = 77",
+      "passed": true,
+      "detail": "35 + 21 + 21 = 77"
+    },
+    {
+      "id": 21,
+      "name": "Fiber flat in s (< 1%)",
+      "passed": true,
+      "detail": "g^\u03b8\u03b8 var = 0.0007%, g^\u03c8\u03c8 var = 0.0009%"
+    },
+    {
+      "id": 22,
+      "name": "T\u00b2 isotropy for 3-forms",
+      "passed": true,
+      "detail": "g^\u03b8\u03b8/g^\u03c8\u03c8 = 1.00000003"
+    },
+    {
+      "id": 23,
+      "name": "Spectral democracy \u0394\u2081 = \u0394\u2080",
+      "passed": true,
+      "detail": "relative diff = 0.0000%"
+    },
+    {
+      "id": 24,
+      "name": "b\u2081 = 0 (G\u2082 holonomy)",
+      "passed": true,
+      "detail": "\u03c0\u2081 finite by Seifert\u2013van Kampen \u27f9 b\u2081 = 0"
+    },
+    {
+      "id": 25,
+      "name": "Instanton action \u226b 1",
+      "passed": true,
+      "detail": "S = 159, exp(-S) \u2248 10^-69"
+    },
+    {
+      "id": 26,
+      "name": "19 orders of magnitude",
+      "passed": true,
+      "detail": "span = 19.1"
+    },
+    {
+      "id": 27,
+      "name": "Gap stable under perturbation",
+      "passed": true,
+      "detail": "max shift = 36.3%"
+    },
+    {
+      "id": 28,
+      "name": "No spectral collapse",
+      "passed": true,
+      "detail": "min gap = 0.1244"
+    },
+    {
+      "id": 29,
+      "name": "Profile differentiation (SD \u2260 ASD)",
+      "passed": true,
+      "detail": "3 distinct shapes"
+    },
+    {
+      "id": 30,
+      "name": "Adiabatic Yukawa rank \u2264 2",
+      "passed": true,
+      "detail": "rank = 2, ratio ev\u2083/ev\u2081 = 1.23e-16"
+    },
+    {
+      "id": 31,
+      "name": "Non-adiabatic: rank 3 (from [II])",
+      "passed": true,
+      "detail": "c*=0.452: \u03c4/\u03bc=16.54 (1.7%), \u03c4/e=3403 (2.1%)"
+    },
+    {
+      "id": 32,
+      "name": "Semi-classical valid (L \u226b L_Planck)",
+      "passed": true,
+      "detail": "L = 215 L_Planck"
+    },
+    {
+      "id": 33,
+      "name": "Proton decay SAFE",
+      "passed": true,
+      "detail": "\u03c4_p = 4.1e+38 yr (\u00d716908 Super-K)"
+    },
+    {
+      "id": 34,
+      "name": "99 massless fields",
+      "passed": true,
+      "detail": "1 + 21 + 77 = 99"
+    },
+    {
+      "id": 35,
+      "name": "Moduli metric rank = 77",
+      "passed": true,
+      "detail": "rank = 77"
+    },
+    {
+      "id": 36,
+      "name": "Condition number < 20",
+      "passed": true,
+      "detail": "\u03ba = 7.7"
+    },
+    {
+      "id": 37,
+      "name": "Gravitino mass ~ 100-500 GeV",
+      "passed": true,
+      "detail": "m\u2083/\u2082 = 166 GeV"
+    },
+    {
+      "id": 38,
+      "name": "sin\u00b2\u03b8_W = 3/13 within 0.5%",
+      "passed": true,
+      "detail": "theory 0.23077 vs exp 0.23122, dev = 0.19%"
+    },
+    {
+      "id": 39,
+      "name": "\u03b1_s = \u221a2/12 within 0.5%",
+      "passed": true,
+      "detail": "theory 0.11785 vs exp 0.118, dev = 0.13%"
+    },
+    {
+      "id": 40,
+      "name": "B-test \u2248 7/5 within 1%",
+      "passed": true,
+      "detail": "B = 1.4033, dev = 0.24%"
+    },
+    {
+      "id": 41,
+      "name": "112 = 2 \u00d7 56 (E\u2088 \u2283 E\u2087 \u00d7 SU(2))",
+      "passed": true,
+      "detail": "b\u2082+b\u2083+dim(G\u2082) = 112"
+    },
+    {
+      "id": 42,
+      "name": "sin\u00b2\u03b8_W = b\u2082/(N-b\u2082)",
+      "passed": true,
+      "detail": "21/91 = 3/13 = 0.230769"
+    },
+    {
+      "id": 43,
+      "name": "Topological (0.19%) beats 1-loop RGE",
+      "passed": true,
+      "detail": "topo 0.19% vs 1-loop 186.5%"
+    }
+  ],
+  "results": {
+    "metric": {
+      "det_err": 5.329070518200751e-15,
+      "eig_min": 0.8200185001184146
+    },
+    "scalar_spectrum": {
+      "spectral_gap": 0.12439947579629963,
+      "zero_mode": 3.4726196378134543e-13,
+      "kk_scale": 0.35270309864856536,
+      "weyl_alpha": 1.999720711359886,
+      "T2_isotropy": 2.6339910989536312e-08
+    },
+    "kk_tower": {
+      "n_distinct": 1744,
+      "n_with_mult": 4460,
+      "T2_scale": 0.924896488749053,
+      "K3_scale": 1.0993865192909236
+    },
+    "hodge_2form": {
+      "b2": 21,
+      "gap_ratio": 14635.0,
+      "first_5_eigenvalues": [
+        0.8554334919106327,
+        0.8554335146461598,
+        1.2074545704651953,
+        1.2080178242018915,
+        1.2080785960350262
+      ]
+    },
+    "k3_harmonics": {
+      "K3_spread_pct": 1.1564877640050466,
+      "Q6_signature": [
+        3,
+        3
+      ],
+      "full_Q22_signature": [
+        3,
+        19
+      ]
+    },
+    "k7_2forms": {
+      "n_N1": 11,
+      "n_N2": 10,
+      "sd_asd_gap": 2210.3915678537705,
+      "R11": 2.3738823331137517,
+      "R22": 2.3827982594133776,
+      "R12": 1.18916729165615,
+      "cross_suppression": 0.5009377571365781
+    },
+    "k7_3forms": {
+      "b3_total": 77,
+      "b3_const": 35,
+      "b3_theta": 21,
+      "b3_psi": 21,
+      "fiber_var_pct": 0.0009010407053249075,
+      "T2_isotropy": 1.0000000263399114
+    },
+    "yang_mills": {
+      "scalar_gap": 0.12439947579629963,
+      "oneform_gap": 0.12439947579629963,
+      "spectral_democracy_pct": 0.0,
+      "instanton_action": 158.96458827164352
+    },
+    "singularities": {
+      "max_shift_pct": 36.27082080931878,
+      "min_gap": 0.12439947579629963,
+      "n_distinct_profiles": 3
+    },
+    "physics_yukawa": {
+      "adiabatic_rank": 2,
+      "L_over_LP": 214.9830149559634,
+      "tau_p_years": 4.057941479367956e+38,
+      "n_massless": 99
+    },
+    "physics_gauge": {
+      "sin2_tw": 0.23076923076923078,
+      "alpha_s": 0.11785113019775793,
+      "dev_sin2_pct": 0.19495252606574986,
+      "dev_alpha_s_pct": 0.12616084935767827,
+      "B_test": 1.4033,
+      "B_dev_pct": 0.23571428571429148,
+      "N_112": 112,
+      "m_gravitino_GeV": 166.392626683778,
+      "moduli_rank": 77,
+      "moduli_cond": 7.6621399526527885
+    }
+  },
+  "total_runtime_s": 45.23,
+  "n_pass": 43,
+  "n_total": 43
+}

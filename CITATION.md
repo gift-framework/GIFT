@@ -163,12 +163,30 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 ---
 
+## Spectral Geometry (Companion Paper)
+
+### BibTeX
+
+```bibtex
+@misc{gift_spectral_geometry,
+  title        = {Spectral Geometry of an Explicit G₂ Metric on a Compact 7-Manifold},
+  author       = {de La Fournière, Brieuc},
+  year         = {2026},
+  doi          = {10.5281/zenodo.18920368},
+  url          = {https://doi.org/10.5281/zenodo.18920368},
+  note         = {KK tower, Yukawa couplings, gauge unification, b₂=21, b₃=77, spectral gap λ₁=0.1244}
+}
+```
+
+---
+
 ## DOI Information
 
 | Archive | Link |
 |---------|------|
 | Zenodo (framework) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
 | Zenodo (explicit G₂ metric) | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
+| Zenodo (spectral geometry) | [10.5281/zenodo.18920368](https://doi.org/10.5281/zenodo.18920368) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
