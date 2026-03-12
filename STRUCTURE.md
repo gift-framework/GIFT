@@ -78,6 +78,10 @@ GIFT/
 | Explicit_G2_Metric.md | Analytical G₂ metric construction |
 | Spectral_Geometry.md | KK spectrum, Yukawa, gauge unification from G₂ metric |
 
+## Wiki
+
+The **[GitHub Wiki](https://github.com/gift-framework/GIFT/wiki)** provides a navigable multi-audience hub consolidating all documentation, paper summaries, reference data, blog posts, and project meta.
+
 ## Related Repositories
 
 | Repository | Content |

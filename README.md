@@ -24,9 +24,9 @@
 
 ## Quick Start
 
-| Paper | Proofs | Video |
-|:-----:|:------:|:-----:|
-| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
+| Paper | Proofs | Wiki | Video |
+|:-----:|:------:|:----:|:-----:|
+| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [Wiki](https://github.com/gift-framework/GIFT/wiki) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
 
 ---
 
