@@ -44,7 +44,7 @@ jobs:
 
       - name: Install giftpy from core
         run: |
-          cd gift-core
+          cd gift-core/contrib/python
           pip install -e .
 
       - name: Run cross-repo consistency check

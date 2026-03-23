@@ -29,6 +29,7 @@ from fractions import Fraction
 def parse_lean_constants(lean_dir: Path) -> Dict[str, any]:
     """
     Parse constant definitions from Lean files.
+    lean_dir should be the GIFT/ directory at the root of core (v3.4+).
     Looks for patterns like:
     - def dim_E8 : ℕ := 248
     - abbrev b2 := 21
@@ -43,9 +44,9 @@ def parse_lean_constants(lean_dir: Path) -> Dict[str, any]:
     abbrev_pattern = r'abbrev\s+(\w+)\s*(?::\s*[ℕℤℚℝ\w]+)?\s*:=\s*(\d+)\s*$'
 
     lean_files = [
-        lean_dir / 'GIFT' / 'Core.lean',
-        lean_dir / 'GIFT' / 'Algebraic' / 'BettiNumbers.lean',
-        lean_dir / 'GIFT' / 'Algebraic' / 'GIFTConstants.lean',
+        lean_dir / 'Core.lean',
+        lean_dir / 'Algebraic' / 'BettiNumbers.lean',
+        lean_dir / 'Algebraic' / 'GIFTConstants.lean',
     ]
 
     for lean_file in lean_files:
@@ -90,16 +91,20 @@ def parse_lean_theorems(lean_dir: Path) -> Set[str]:
 
 def parse_python_constants(core_dir: Path) -> Dict[str, any]:
     """
-    Parse constants from gift_core/constants.py.
+    Parse constants from contrib/python/gift_core/constants/ package.
     Handles literal integers, Fractions, and simple computed expressions.
+    Scans all .py files in the constants package directory.
     """
     constants = {}
 
-    constants_file = core_dir / 'gift_core' / 'constants.py'
-    if not constants_file.exists():
+    constants_dir = core_dir / 'contrib' / 'python' / 'gift_core' / 'constants'
+    if not constants_dir.exists():
         return constants
 
-    content = constants_file.read_text(encoding='utf-8')
+    # Concatenate all .py files in the constants package
+    content = ''
+    for py_file in sorted(constants_dir.glob('*.py')):
+        content += py_file.read_text(encoding='utf-8') + '\n'
 
     # Pattern: NAME = value (integer)
     int_pattern = r'^(\w+)\s*=\s*(\d+)\s*(?:#.*)?$'
@@ -352,8 +357,8 @@ def check_version_consistency(docs_dir: Path, core_dir: Path) -> List[str]:
     """
     errors = []
 
-    # Extract version from core pyproject.toml
-    pyproject = core_dir / 'pyproject.toml'
+    # Extract version from core pyproject.toml (v3.4+: moved to contrib/python/)
+    pyproject = core_dir / 'contrib' / 'python' / 'pyproject.toml'
     core_version = None
     if pyproject.exists():
         content = pyproject.read_text()
@@ -405,7 +410,7 @@ def run_consistency_check(docs_dir: Path, core_dir: Path) -> Tuple[List[Consiste
 
     # Parse all sources
     print("  Parsing Lean constants...")
-    lean_constants = parse_lean_constants(core_dir / 'Lean')
+    lean_constants = parse_lean_constants(core_dir / 'GIFT')
 
     print("  Parsing Python constants...")
     py_constants = parse_python_constants(core_dir)
@@ -483,7 +488,7 @@ def check_theorem_references(docs_dir: Path, core_dir: Path) -> List[str]:
     warnings = []
 
     print("  Parsing Lean theorems...")
-    lean_theorems = parse_lean_theorems(core_dir / 'Lean')
+    lean_theorems = parse_lean_theorems(core_dir / 'GIFT')
 
     print("  Checking theorem references in docs...")
     doc_refs = parse_docs_theorem_refs(docs_dir)
