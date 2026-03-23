@@ -6,6 +6,7 @@ on:
     paths:
       - 'publications/papers/markdown/*.md'
       - '.github/scripts/cross_repo_check.py'
+      - '.github/workflows/cross-repo-consistency.yml'
   pull_request:
     branches: [main]
     paths:
