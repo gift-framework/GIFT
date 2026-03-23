@@ -42,11 +42,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install giftpy from core
-        run: |
-          cd gift-core/contrib/python
-          pip install -e .
-
       - name: Run cross-repo consistency check
         run: |
           cd gift-docs
