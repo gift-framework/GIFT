@@ -1,10 +1,60 @@
-# Geometric Information Field Theory v3.3
+# Geometric Information Field Theory
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.43-green.svg)](CHANGELOG.md)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
-**Standard Model parameters from pure geometry**: E₈×E₈ on G₂-holonomy manifold K₇, zero adjustable parameters.
+**What if physics isn't fine-tuned, just well-shaped?**
+
+GIFT derives Standard Model parameters from the geometry of a single 7-dimensional manifold. No free parameters. No fitting. Every prediction is a consequence of shape: E₈×E₈ gauge theory compactified on a G₂-holonomy manifold K₇ with Betti numbers (b₂, b₃) = (21, 77).
+
+---
+
+## Start Here
+
+| | |
+|:---:|:---:|
+| [**Watch** (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) | [**Read the blog**](https://giftheory.substack.com/) |
+| [**GIFT for Everyone**](docs/GIFT_FOR_EVERYONE.md) | [**FAQ**](docs/FAQ.md) |
+
+---
+
+## Blog
+
+All posts on [giftheory.substack.com](https://giftheory.substack.com/).
+
+| Post | Topic |
+|------|-------|
+| ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/the-authors-name-appears-to-be-fabricated) | Learning Physics with AI: the accidental origin of GIFT |
+| [The Geometry of the Impossible](publications/outreach/ROBERTO_CARLOS_GEOMETRY.md) | What Roberto Carlos Knew (Without Knowing It) |
+| [The Lice of the Universe](publications/outreach/LICE_OF_THE_UNIVERSE.md) | What We Cannot Perceive, and What That Means |
+| [The Algebra That Waited](publications/outreach/the_algebra_that_waited.md) | On octonions, patience, and a 43-year puzzle |
+| [Gift from Bit](publications/outreach/gift_from_bit.md) | Why geometry might be the language of physics |
+| [13 Theorems, Zero Trust Required](publications/outreach/13_theorems_zero_trust_required.md) | Machine-verified proofs in Lean 4 |
+| [Joyce's Theorem, Now in Lean](publications/outreach/joyce_theorem_now_in_lean.md) | Formalizing G₂ holonomy existence |
+| [On What Comes First](publications/outreach/on_what_comes_first.md) | Philosophy of mathematical primacy |
+
+---
+
+## For Specific Audiences
+
+| Background | Start Here |
+|------------|------------|
+| Everyone | [GIFT for Everyone](docs/GIFT_FOR_EVERYONE.md) — Complete guide with everyday analogies |
+| Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) — Topological approach to SM parameters |
+| Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) — G₂ metric construction pipeline |
+| Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md) — Machine-verified physical relations |
+
+---
+
+## Papers
+
+| Document | Description |
+|----------|-------------|
+| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
+| [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.24% mean, PDG 2024 / NuFIT 6.0) |
+| [Explicit G₂ Metric](publications/papers/markdown/Explicit_G2_Metric.md) | Analytical G₂ metric construction |
+| [Spectral Geometry](publications/papers/markdown/Spectral_Geometry.md) | KK spectrum, Yukawa, gauge unification from G₂ metric |
 
 ---
 
@@ -12,58 +62,17 @@
 
 | | |
 |---|---|
-| **Precision** | 0.24% mean deviation across 32 well-measured observables (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0) |
-| **Uniqueness** | #1 out of 3,070,396 configurations tested (3.9σ local significance) |
+| **Precision** | 0.24% mean deviation across 32 well-measured observables (PDG 2024 / NuFIT 6.0) |
+| **Observables** | 92 total (66 with experimental comparison) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 460+ relations proven in Lean 4 (core v3.3, 8 axioms) |
-| **Exact results** | sin²θ_W = 3/13 · τ = 3472/891 · det(g) = 65/32 |
+| **Verified** | 130 Lean 4 files, 7 axioms, zero incomplete proofs ([core v3.4.5](https://github.com/gift-framework/core)) |
+| **Uniqueness** | #1 out of 3,070,396 configurations tested |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
 
 ---
 
-## Quick Start
-
-| Paper | Proofs | Wiki | Video |
-|:-----:|:------:|:----:|:-----:|
-| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | [Lean 4](https://github.com/gift-framework/core) | [Wiki](https://github.com/gift-framework/GIFT/wiki) | [YouTube (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) |
-
----
-
-## Documentation
-
-### Core
-
-| Document | Description |
-|----------|-------------|
-| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
-| [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.24% mean excl. δ_CP, PDG 2024 / NuFIT 6.0) |
-| [Explicit G₂ Metric](publications/papers/markdown/Explicit_G2_Metric.md) | Analytical G₂ metric construction |
-| [Spectral Geometry](publications/papers/markdown/Spectral_Geometry.md) | KK spectrum, Yukawa, gauge unification from G₂ metric |
-
-### For Specific Audiences
-
-| Background | Start Here |
-|------------|------------|
-| Everyone | [GIFT for Everyone](docs/GIFT_FOR_EVERYONE.md): Complete guide with everyday analogies |
-| Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md): G₂ metric construction pipeline |
-| Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md): Topological approach to SM parameters |
-| Formalization | [Lean for Physics](docs/LEAN_FOR_PHYSICS.md): Machine-verified physical relations |
----
-
 ## Key Results
-
-### Precision by Sector
-
-| Sector | Predictions | Mean Deviation | Highlight |
-|--------|:-----------:|:--------------:|-----------|
-| Electroweak | 3 | 0.12% | sin²θ_W = 3/13 |
-| Lepton | 3 | 0.04% | Q_Koide = 2/3 (0.0009%) |
-| Quark | 1 | 0.00% | m_s/m_d = 20 (exact) |
-| Neutrino | 3+1 | 0.25% + δ_CP at 1σ | θ₁₂ = arctan(2/3) |
-| Cosmology | 3 | 0.07% | n_s = ζ(11)/ζ(5) (0.004%) |
-| Structural | 4 | exact | N_gen = 3, τ = 3472/891 |
 
 ### Exact Relations (Lean 4 Verified)
 
@@ -77,9 +86,18 @@
 | m_s/m_d | 20 | p₂² × w |
 | Q_Koide | 2/3 | dim(G₂)/b₂ |
 
-### Analytical G₂ Metric
+### Precision by Sector
 
-The G₂ structure admits an **exact closed form**:
+| Sector | Predictions | Mean Deviation | Highlight |
+|--------|:-----------:|:--------------:|-----------|
+| Electroweak | 3 | 0.12% | sin²θ_W = 3/13 |
+| Lepton | 3 | 0.04% | Q_Koide = 2/3 (0.0009%) |
+| Quark | 1 | 0.00% | m_s/m_d = 20 (exact) |
+| Neutrino | 3+1 | 0.25% + δ_CP at 1σ | θ₁₂ = arctan(2/3) |
+| Cosmology | 3 | 0.07% | n_s = ζ(11)/ζ(5) (0.004%) |
+| Structural | 4 | exact | N_gen = 3, τ = 3472/891 |
+
+### Analytical G₂ Metric
 
 | Property | Value | Status |
 |----------|-------|:------:|
@@ -88,23 +106,18 @@ The G₂ structure admits an **exact closed form**:
 | Torsion | T = 0 (constant form) | EXACT |
 | det(g) | 65/32 | EXACT |
 
-Joyce's existence theorem is **trivially satisfied**: no numerical fitting required.
-
 ---
 
 ## Statistical Uniqueness
 
-Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good choice but the **unique optimum** among G₂ manifold configurations.
-
-### Exhaustive Search Results (v3.3)
+### Exhaustive Search
 
 | Metric | Value |
 |--------|-------|
 | Configurations tested | 3,070,396 |
 | **GIFT rank** | **#1** |
-| GIFT mean deviation | 0.24% (32 well-measured) / 0.57% incl. δ_CP (PDG 2024 / NuFIT 6.0) |
+| Mean deviation | 0.24% (32 well-measured) |
 | Better alternatives found | 0 |
-| p-value (empirical) | 0 / 3,070,396 |
 
 ### Top 5 Configurations
 
@@ -116,7 +129,7 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 | 4 | 21 | 79 | 0.79% |
 | 5 | 21 | 75 | 0.81% |
 
-### Statistical Significance (Bullet-Proof Validation)
+### Statistical Significance
 
 | Test | Result |
 |------|--------|
@@ -125,8 +138,6 @@ Comprehensive validation confirms that (b₂=21, b₃=77) is not merely a good c
 | Pre-registered test split | p = 6.7×10⁻⁵ (σ = 4.0) |
 | Bayes factor | 304–4,738 across four priors (all decisive) |
 | Exhaustive search | 0/3,070,396 configs better |
-
-Seven-component analysis: pre-registration, three null families, multiple-testing corrections (Bonferroni/Holm/BH/Westfall-Young), cross-sector prediction, robustness/noise sensitivity, multi-seed replication, Bayesian (BF + PPC + WAIC).
 
 Details: [Statistical Evidence](publications/references/STATISTICAL_EVIDENCE.md)
 
@@ -141,22 +152,13 @@ Details: [Statistical Evidence](publications/references/STATISTICAL_EVIDENCE.md)
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
 
-Details: [S2 Section 10](publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
-
 ---
 
 ## Limitations
 
-### What "Zero-Parameter" Means
+The framework contains **no continuous adjustable parameters** fitted to data. However, it makes **discrete structural choices**: E₈×E₈ as gauge group, K₇ with (b₂=21, b₃=77), TCS building blocks. These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices: it does not explain *why* nature chose this geometry.
 
-The framework contains **no continuous adjustable parameters** fitted to data. However, it makes **discrete structural choices**:
-- E₈×E₈ as gauge group
-- K₇ manifold with (b₂=21, b₃=77)
-- TCS building blocks
-
-These are mathematically motivated but constitute model selection. The framework predicts observables *given* these choices: it does not explain *why* nature chose this geometry.
-
-**However**: Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,070,396 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
+Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,070,396 tested configurations. This doesn't explain the choice, but establishes it is not arbitrary.
 
 ---
 
@@ -168,30 +170,12 @@ These are mathematically motivated but constitute model selection. The framework
 
 ---
 
-## Outreach
-
-Blog posts and vulgarization articles are available in [publications/outreach/](publications/outreach/).
-
-| Post | Topic |
-|------|-------|
-| [Gift from Bit](publications/outreach/gift_from_bit.md) | Why geometry might be the language of physics |
-| [13 Theorems, Zero Trust Required](publications/outreach/13_theorems_zero_trust_required.md) | Machine-verified proofs in Lean 4 |
-| [Joyce's Theorem, Now in Lean](publications/outreach/joyce_theorem_now_in_lean.md) | Formalizing G₂ holonomy existence |
-| [The Algebra That Waited](publications/outreach/the_algebra_that_waited.md) | E₈ and the structure of matter |
-| [On What Comes First](publications/outreach/on_what_comes_first.md) | Philosophy of mathematical primacy |
-| [Lice of the Universe](publications/outreach/LICE_OF_THE_UNIVERSE.md) | The fine-tuning problem |
-| [Roberto Carlos' Geometry](publications/outreach/ROBERTO_CARLOS_GEOMETRY.md) | Geometry and physics for everyone |
-
-All posts on [giftheory.substack.com](https://giftheory.substack.com/).
-
----
-
 ## Connect
 
 | Platform | |
 |----------|---|
-| YouTube | [@giftheory](https://youtube.com/@giftheory) |
 | Substack | [giftheory.substack.com](https://giftheory.substack.com/) |
+| YouTube | [@giftheory](https://youtube.com/@giftheory) |
 | X | [@GIFTheory](https://x.com/GIFTheory) |
 
 | Archive | |
@@ -206,12 +190,12 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 ## Citation
 
 ```bibtex
-@software{gift_framework_v33,
-  title   = {GIFT Framework v3.3: Geometric Information Field Theory},
+@software{gift_framework,
+  title   = {GIFT: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.3.32}
+  version = {3.4}
 }
 ```
 
@@ -226,5 +210,3 @@ MIT License, see [LICENSE](LICENSE)
 ---
 
 > *Gift from bit*
-
----
