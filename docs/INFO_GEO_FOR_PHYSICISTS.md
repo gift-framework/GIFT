@@ -1,3 +1,7 @@
+---
+title: Info Geo for Physicists
+---
+
 # Information Geometry in Particle Physics: The GIFT Perspective
 
 ## Abstract

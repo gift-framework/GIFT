@@ -1,3 +1,7 @@
+---
+title: Lean for Physics
+---
+
 # Formal Verification in Theoretical Physics: A Case Study
 
 ## Abstract

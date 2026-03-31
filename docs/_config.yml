@@ -1,0 +1,13 @@
+title: "GIFT"
+description: "Geometric Information Field Theory"
+baseurl: "/GIFT"
+url: "https://gift-framework.github.io"
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

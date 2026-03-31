@@ -1,3 +1,7 @@
+---
+title: GiftPy for Geometers
+---
+
 # gift_core: Computational Tools for G₂ Geometry
 
 ## Abstract

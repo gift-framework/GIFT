@@ -1,3 +1,7 @@
+---
+title: GIFT for Everyone
+---
+
 # GIFT for Everyone
 
 **A complete guide to understanding GIFT, explained for humans**

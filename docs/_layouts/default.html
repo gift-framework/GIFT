@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }} — GIFT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="nav-brand">GIFT</a>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}#start">Guides</a></li>
+      <li><a href="{{ '/' | relative_url }}#blog">Blog</a></li>
+      <li><a href="{{ '/' | relative_url }}#results">Results</a></li>
+      <li><a href="{{ '/' | relative_url }}#papers">Papers</a></li>
+      <li><a href="https://github.com/gift-framework/GIFT">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="prose">
+  <div class="container">
+    {{ content }}
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>MIT License &middot; GIFT Framework v3.4</span>
+      <span class="gift-from-bit">Gift from bit</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

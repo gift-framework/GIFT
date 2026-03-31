@@ -1,3 +1,7 @@
+---
+title: FAQ
+---
+
 # Frequently Asked Questions
 
 Common questions about the GIFT framework, organized by topic.

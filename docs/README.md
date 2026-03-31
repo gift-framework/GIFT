@@ -1,3 +1,7 @@
+---
+title: Documentation
+---
+
 # GIFT Framework - Documentation
 
 Supporting documentation for the GIFT Framework v3.3.

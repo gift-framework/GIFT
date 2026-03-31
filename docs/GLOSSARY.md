@@ -1,3 +1,7 @@
+---
+title: Glossary
+---
+
 # Glossary of Technical Terms
 
 Comprehensive definitions of technical terms, mathematical notation, and acronyms used in the GIFT framework.
