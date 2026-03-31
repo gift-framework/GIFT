@@ -24,14 +24,14 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Post | Topic |
 |------|-------|
-| ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/the-authors-name-appears-to-be-fabricated) | Learning Physics with AI: the accidental origin of GIFT |
-| [The Geometry of the Impossible](publications/outreach/ROBERTO_CARLOS_GEOMETRY.md) | What Roberto Carlos Knew (Without Knowing It) |
-| [The Lice of the Universe](publications/outreach/LICE_OF_THE_UNIVERSE.md) | What We Cannot Perceive, and What That Means |
-| [The Algebra That Waited](publications/outreach/the_algebra_that_waited.md) | On octonions, patience, and a 43-year puzzle |
-| [Gift from Bit](publications/outreach/gift_from_bit.md) | Why geometry might be the language of physics |
-| [13 Theorems, Zero Trust Required](publications/outreach/13_theorems_zero_trust_required.md) | Machine-verified proofs in Lean 4 |
-| [Joyce's Theorem, Now in Lean](publications/outreach/joyce_theorem_now_in_lean.md) | Formalizing G₂ holonomy existence |
-| [On What Comes First](publications/outreach/on_what_comes_first.md) | Philosophy of mathematical primacy |
+| ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning Physics with AI: the accidental origin of GIFT |
+| [The Geometry of the Impossible](https://giftheory.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos Knew (Without Knowing It) |
+| [The Lice of the Universe](https://giftheory.substack.com/p/the-lice-of-the-universe) | What We Cannot Perceive, and What That Means |
+| [The Algebra That Waited](https://giftheory.substack.com/p/the-algebra-that-waited) | On octonions, patience, and a 43-year puzzle |
+| [Gift from Bit](https://giftheory.substack.com/p/gift-from-bit) | Why geometry might be the language of physics |
+| [13 Theorems, Zero Trust Required](https://giftheory.substack.com/p/13-theorems-zero-trust-required) | Machine-verified proofs in Lean 4 |
+| [Joyce's Theorem, Now in Lean](https://giftheory.substack.com/p/joyces-theorem-now-in-lean) | Formalizing G₂ holonomy existence |
+| [On What Comes First](https://giftheory.substack.com/p/on-what-comes-first) | Philosophy of mathematical primacy |
 
 ---
 
@@ -50,11 +50,11 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Document | Description |
 |----------|-------------|
-| [Main Paper](publications/papers/markdown/GIFT_v3.3_main.md) | Complete theoretical framework |
-| [S1: Foundations](publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations](publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | All 33 derivations (0.24% mean, PDG 2024 / NuFIT 6.0) |
-| [Explicit G₂ Metric](publications/papers/markdown/Explicit_G2_Metric.md) | Analytical G₂ metric construction |
-| [Spectral Geometry](publications/papers/markdown/Spectral_Geometry.md) | KK spectrum, Yukawa, gauge unification from G₂ metric |
+| [Main Paper (PDF)](publications/papers/pdf/gift_v3.3_main.pdf) | Complete theoretical framework |
+| [S1: Foundations (PDF)](publications/papers/pdf/gift_v3.3_S1.pdf) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations (PDF)](publications/papers/pdf/gift_v3.3_S2.pdf) | All 33 derivations (0.24% mean, PDG 2024 / NuFIT 6.0) |
+| [Explicit G₂ Metric (PDF)](publications/papers/pdf/Explicit_G2_Metric.pdf) | Analytical G₂ metric construction |
+| [Spectral Geometry (PDF)](publications/papers/pdf/Spectral_Geometry.pdf) | KK spectrum, Yukawa, gauge unification from G₂ metric |
 
 ---
 
