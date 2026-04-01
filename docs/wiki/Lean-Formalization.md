@@ -11,9 +11,9 @@ The GIFT framework is formally verified in **Lean 4** with Mathlib. The formaliz
 
 | Metric | Value |
 |--------|-------|
-| **Lean files** | 126 |
-| **Build jobs** | 2636 |
-| **Published axioms** | 38 |
+| **Lean files** | 130 |
+| **Build jobs** | 8378 |
+| **Published axioms** | 7 |
 | **sorry statements** | 0 |
 | **Warnings** | 0 |
 | **Certificate conjuncts** | 127 (Foundations 34 + Predictions 56 + Spectral 37) |
@@ -22,8 +22,8 @@ The GIFT framework is formally verified in **Lean 4** with Mathlib. The formaliz
 
 **Code**: [github.com/gift-framework/core](https://github.com/gift-framework/core)
 **Blueprint**: [gift-framework.github.io/core](https://gift-framework.github.io/core/)
-**Lean version**: 4.27.0
-**Mathlib version**: 4.27.0
+**Lean version**: 4.29.0
+**Mathlib version**: 4.29.0
 
 ## Architecture
 
@@ -77,7 +77,7 @@ Several modules prove their results with **zero domain-specific axioms**:
 
 ## Axiom Audit
 
-All 38 axioms are substantive (standard mathematical theorems or GIFT conjectures). Zero are placeholders. Categories:
+All 7 axioms are substantive (standard mathematical theorems or GIFT conjectures). Zero are placeholders. Categories:
 
 - **Topological inputs**: b₂ = 21, b₃ = 77, dim(G₂) = 14, etc.
 - **E₈ properties**: Root system, Weyl group factorization

@@ -60,7 +60,7 @@ Provides complete algebraic derivations for all 33 dimensionless predictions fro
 - **Part VI**: Neutrino Sector — δ_CP=197°, mixing angles
 - **Part VII**: Higgs & Cosmology — λ_H=√17/32, Ω_DE, n_s, h, σ₈
 - **Part VIII**: Summary (18 VERIFIED + 15 extended)
-- **Part IX**: Observable Catalog with Fibonacci-Lucas embedding
+- **Part IX**: Observable Catalog
 
 ---
 

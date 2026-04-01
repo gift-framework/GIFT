@@ -207,7 +207,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 | 3.3.14 | 2026-01-28 | Selection Principle, TCS Spectral Bounds, 290+ relations, Lean 4 only |
 | 3.3.0 | 2026-01-12 | 33 observables, PDG 2024 values, 192,349-config Monte Carlo |
 | 3.1.0 | 2025-12-17 | Analytical G₂ metric, 185 certified relations |
-| 3.0.0 | 2025-12-09 | Major release: 165+ certified relations, Fibonacci/Monster/McKay |
+| 3.0.0 | 2025-12-09 | Major release: 165+ certified relations, exceptional group structure |
 | 2.3.x | 2025-12 | Lean 4 verification |
 | 2.2.0 | 2025-11-27 | Zero-parameter paradigm |
 | 2.1.0 | 2025-11-22 | Torsional dynamics |

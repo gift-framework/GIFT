@@ -58,7 +58,7 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 **Major Release**
 
 - 165+ certified relations in Lean 4
-- Fibonacci/Monster/McKay explorations
+- Exceptional group structure explorations
 
 ## v2.3.x — 2025-12
 

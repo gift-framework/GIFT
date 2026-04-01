@@ -91,8 +91,8 @@ GIFT/
 
 ## Version
 
-**Current**: v3.3.32 (2026-03-09)
-**Relations**: 455+ certified (core v3.3.32, 38 axioms)
+**Current**: v3.4.6 (2026-03-09)
+**Relations**: 460+ certified (core v3.4.6, 7 axioms)
 **Predictions**: 33 predictions (**0.24% mean deviation** across 32 well-measured, 0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0)
 **Validation**: 3,070,396 configs exhaustive + 7-component bullet-proof (Westfall-Young, Bayesian, PPC)
 **Key Result**: Analytical G₂ metric with T = 0 exactly

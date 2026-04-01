@@ -142,7 +142,7 @@ They do not depend on NuFIT and are unchanged from previous versions.
 
 m_e = M_Pl x exp(-(H* - L_8 - ln(phi)))
 
-Where: H* = 99 (cohomological sum), L_8 = 47 (8th Lucas number), phi = golden ratio.
+Where: H* = 99 (cohomological sum), L_8 = 47, phi = golden ratio.
 
 ### II.2 Dimensional Results
 
@@ -154,7 +154,7 @@ Where: H* = 99 (cohomological sum), L_8 = 47 (8th Lucas number), phi = golden ra
 
 **Mean dimensional deviation**: 0.07%
 
-**Status**: EXPLORATORY (scale bridge involves Lucas number selection)
+**Status**: EXPLORATORY (scale bridge involves number-theoretic selection)
 
 ---
 
@@ -273,7 +273,7 @@ excluding delta_CP, the WAIC favors GIFT.
 
 The Riemann-GIFT connection was rigorously tested and found to have weak
 evidence (4 PASS / 4 FAIL across 8 independent statistical tests).
-The Fibonacci recurrence hypothesis was falsified on Weng G2 zeros.
+The sequence recurrence hypothesis was falsified on Weng G2 zeros.
 
 The 33 dimensionless predictions do NOT depend on the Riemann connection.
 

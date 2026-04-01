@@ -16,7 +16,7 @@ layout: default
 | **Predictions** | 89 observables (33 dimensionless + 56 structural/cosmological) |
 | **Mean deviation** | 0.24% across 32 well-measured observables (PDG 2024 / NuFIT 6.0) |
 | **Free parameters** | 0 |
-| **Lean 4 verification** | 126 files, 2636 build jobs, 0 sorry, 38 axioms |
+| **Lean 4 verification** | 130 files, 8378 build jobs, 0 sorry, 7 axioms |
 | **Statistical significance** | p < 2×10⁻⁵ (σ > 4.2), unique among 3M+ configurations |
 | **Monte Carlo null model** | P(algebraic) = 10⁻¹³³ over 4.2M formulas |
 

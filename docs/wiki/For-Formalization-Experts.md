@@ -41,7 +41,7 @@ The GIFT formalization focuses on the first three categories: algebraic data (Eâ
 
 ### 2.1 Scope
 
-The formalization covers 290+ exact relations verified in Lean 4 (with Mathlib 4.27+).
+The formalization covers 290+ exact relations verified in Lean 4 (with Mathlib 4.29+).
 
 **Critical property**: The proofs use zero domain-specific axioms. The only axioms employed are:
 - `propext` (propositional extensionality), `Quot.sound` (quotient soundness) - both standard Lean axioms
@@ -132,7 +132,7 @@ The formalization does not establish:
 | Metric | Value |
 |--------|-------|
 | Total relations verified | 290+ |
-| Proof assistant | Lean 4 (Mathlib 4.27+) |
+| Proof assistant | Lean 4 (Mathlib 4.29+) |
 | Domain axioms | 0 |
 | Incomplete proofs (`sorry`) | 0 |
 | CI status | Passing |

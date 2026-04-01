@@ -54,7 +54,7 @@ Complete index of all wiki pages.
 ## Project
 | Page | Description |
 |------|-------------|
-| [Lean Formalization](Lean-Formalization.html) | 126 files, 38 axioms, 127 conjuncts, blueprint |
+| [Lean Formalization](Lean-Formalization.html) | 130 files, 7 axioms, 213 conjuncts, blueprint |
 | [Repository Structure](Repository-Structure.html) | Directory layout and navigation |
 | [External Resources](External-Resources.html) | Links to all external resources |
 | [Citation Guide](Citation-Guide.html) | How to cite GIFT (BibTeX, APA, DOIs) |
