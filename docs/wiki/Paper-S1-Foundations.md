@@ -3,9 +3,9 @@ title: "Paper S1 Foundations"
 layout: default
 ---
 
-# Paper: S1 — Mathematical Foundations
+# Paper: S1: Mathematical Foundations
 
-**Supplement S1: Mathematical Foundations — E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Construction**
+**Supplement S1: Mathematical Foundations: E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Construction**
 
 *Brieuc de La Fournière (2026)*
 [Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | [Zenodo DOI: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
@@ -33,11 +33,11 @@ Develops E₈ architecture, G₂ holonomy manifolds via kernel of Lie derivative
 
 ## Section Structure
 
-- **Part 0**: Octonionic Foundation — Why 𝕆 is terminal, G₂ = Aut(𝕆), Fano plane
-- **Part I**: E₈ Exceptional Lie Algebra — Root system, Weyl group, exceptional chain
-- **Part II**: G₂ Holonomy Manifolds — Definition, Berger classification, torsion classes W₁–W₂₇
-- **Part III**: K₇ Manifold Construction — TCS framework, ACyl building blocks, Mayer-Vietoris
-- **Part IV**: Metric Structure & Verification — κ_T = 1/61, det(g) = 65/32, Joyce existence
+- **Part 0**: Octonionic Foundation: Why 𝕆 is terminal, G₂ = Aut(𝕆), Fano plane
+- **Part I**: E₈ Exceptional Lie Algebra: Root system, Weyl group, exceptional chain
+- **Part II**: G₂ Holonomy Manifolds: Definition, Berger classification, torsion classes W₁–W₂₇
+- **Part III**: K₇ Manifold Construction: TCS framework, ACyl building blocks, Mayer-Vietoris
+- **Part IV**: Metric Structure & Verification, κ_T = 1/61, det(g) = 65/32, Joyce existence
 
 ---
 
@@ -51,7 +51,7 @@ Weyl = (dim(G₂)+1)/N_gen = b₂/N_gen − p₂ = dim(G₂) − rank(E₈) − 
 
 ## Related
 
-- [Paper Main Framework](Paper-Main-Framework.html) — Main paper
-- [Paper S2 Derivations](Paper-S2-Derivations.html) — All 33 derivations
-- [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) — Numerical metric
-- [Glossary](Glossary.html) — Term definitions
+- [Paper Main Framework](Paper-Main-Framework.html): Main paper
+- [Paper S2 Derivations](Paper-S2-Derivations.html): All 33 derivations
+- [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html): Numerical metric
+- [Glossary](Glossary.html): Term definitions

@@ -36,14 +36,14 @@ Framework proposing that 19 Standard Model dimensionless parameters emerge as to
 
 ## Section Structure
 
-1. **Introduction** — Parameter problem, contemporary context, framework overview
-2. **Mathematical Framework** — Octonions, E₈×E₈, K₇ hypothesis, G₂ structure
-3. **Methodology & Epistemic Status** — Derivation principle, claims vs non-claims
-4. **Derivation of 33 Predictions** — Gauge, lepton, quark, neutrino, Higgs, cosmological sectors
-5. **Formal Verification & Statistics** — Lean 4 (290+ theorems), uniqueness among 192,349 alternatives
-6. **G₂ Metric Program** — PINN atlas construction, metric quality results
-7. **Falsifiable Predictions** — δ_CP via DUNE, fourth generation bounds
-8. **Discussion** — M-theory connections, comparison with other approaches, limitations
+1. **Introduction**: Parameter problem, contemporary context, framework overview
+2. **Mathematical Framework**: Octonions, E₈×E₈, K₇ hypothesis, G₂ structure
+3. **Methodology & Epistemic Status**: Derivation principle, claims vs non-claims
+4. **Derivation of 33 Predictions**: Gauge, lepton, quark, neutrino, Higgs, cosmological sectors
+5. **Formal Verification & Statistics**: Lean 4 (290+ theorems), uniqueness among 192,349 alternatives
+6. **G₂ Metric Program**: PINN atlas construction, metric quality results
+7. **Falsifiable Predictions**, δ_CP via DUNE, fourth generation bounds
+8. **Discussion**: M-theory connections, comparison with other approaches, limitations
 9. **Conclusion**
 
 ---
@@ -59,9 +59,9 @@ Framework proposing that 19 Standard Model dimensionless parameters emerge as to
 
 ## Related
 
-- [Paper S1 Foundations](Paper-S1-Foundations.html) — Mathematical foundations
-- [Paper S2 Derivations](Paper-S2-Derivations.html) — Complete derivations
-- [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) — Numerical G₂ metric
-- [Paper Spectral Geometry](Paper-Spectral-Geometry.html) — KK spectrum
-- [Observable Reference](Observable-Reference.html) — Full prediction catalog
-- [Statistical Evidence](Statistical-Evidence.html) — 7-component validation
+- [Paper S1 Foundations](Paper-S1-Foundations.html): Mathematical foundations
+- [Paper S2 Derivations](Paper-S2-Derivations.html): Complete derivations
+- [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html): Numerical G₂ metric
+- [Paper Spectral Geometry](Paper-Spectral-Geometry.html): KK spectrum
+- [Observable Reference](Observable-Reference.html): Full prediction catalog
+- [Statistical Evidence](Statistical-Evidence.html), 7-component validation

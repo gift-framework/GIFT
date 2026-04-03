@@ -32,10 +32,10 @@ First explicit numerical computation of Kaluza-Klein spectrum on compact G₂ ma
 
 | Betti | Spectral | Gap ratio |
 |-------|----------|-----------|
-| b₀ = 1 | 1 zero mode | — |
-| b₁ = 0 | no zero 1-forms | — |
+| b₀ = 1 | 1 zero mode |, |
+| b₁ = 0 | no zero 1-forms |, |
 | b₂ = 21 | 21 near-zero eigenvalues | 14,635× |
-| b₃ = 77 | 77 near-zero eigenvalues | — |
+| b₃ = 77 | 77 near-zero eigenvalues |, |
 
 ### Mass Hierarchy (from SD/ASD gap)
 
@@ -43,7 +43,7 @@ First explicit numerical computation of Kaluza-Klein spectrum on compact G₂ ma
 |-------|----------|------|------|
 | m₁/m₂ (τ/μ) | 16.5 | 16.82 | 1.9% |
 | m₁/m₃ (τ/e) | 3400 | 3477 | 2.2% |
-| SD/ASD gap | 2210× | — | — |
+| SD/ASD gap | 2210× | (|) |
 
 ### Adiabatic Validation (5 tests)
 
@@ -65,14 +65,14 @@ First explicit numerical computation of Kaluza-Klein spectrum on compact G₂ ma
 
 ## Section Structure
 
-1. **Introduction** — Context, adiabatic ansatz validation
-2. **The Metric** — Chebyshev-Cholesky summary, certification
-3. **Scalar Laplacian** — Spectral gap, Weyl law, KK tower
-4. **Hodge Laplacian on 2-Forms** — b₂=21 confirmation, SD/ASD structure
-5. **Harmonic Forms & Betti Numbers** — K3 forms, K₇ assembly, b₃=77
-6. **1-Form Hodge Laplacian** — Spectral democracy to 10⁻⁴, b₁=0
-7. **Singular Limits** — ADE singularity model, spectral stability
-8. **Discussion** — G₂-MSSM, F-theory, string landscape
+1. **Introduction**: Context, adiabatic ansatz validation
+2. **The Metric**: Chebyshev-Cholesky summary, certification
+3. **Scalar Laplacian**: Spectral gap, Weyl law, KK tower
+4. **Hodge Laplacian on 2-Forms**, b₂=21 confirmation, SD/ASD structure
+5. **Harmonic Forms & Betti Numbers**: K3 forms, K₇ assembly, b₃=77
+6. **1-Form Hodge Laplacian**: Spectral democracy to 10⁻⁴, b₁=0
+7. **Singular Limits**: ADE singularity model, spectral stability
+8. **Discussion**: G₂-MSSM, F-theory, string landscape
 9. **Conclusion**
 
 ---
@@ -89,7 +89,7 @@ First explicit numerical computation of Kaluza-Klein spectrum on compact G₂ ma
 
 ## Related
 
-- [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) — The metric this paper analyzes
-- [Paper Main Framework](Paper-Main-Framework.html) — Physics predictions from this geometry
-- [Paper S1 Foundations](Paper-S1-Foundations.html) — TCS construction theory
-- [Observable Reference](Observable-Reference.html) — Predictions catalog
+- [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html): The metric this paper analyzes
+- [Paper Main Framework](Paper-Main-Framework.html): Physics predictions from this geometry
+- [Paper S1 Foundations](Paper-S1-Foundations.html): TCS construction theory
+- [Observable Reference](Observable-Reference.html): Predictions catalog

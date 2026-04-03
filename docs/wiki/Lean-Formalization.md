@@ -67,7 +67,7 @@ Several modules prove their results with **zero domain-specific axioms**:
 
 | Module | Axioms | Theorems | Certificate |
 |--------|--------|----------|-------------|
-| NewtonKantorovich | 0 | — | NK convergence |
+| NewtonKantorovich | 0 |, | NK convergence |
 | TCSGaugeBreaking | 0 | 14 | 10 conjuncts |
 | GaugeBundleData | 0 | 12 | 11 conjuncts |
 | AssociativeVolumes | 0 | 19 | 14 conjuncts |
@@ -106,6 +106,6 @@ Completes in ~30 seconds (warm cache). CI rebuilds on every commit.
 
 ## Related
 
-- [For Formalization Experts](For-Formalization-Experts.html) — Methodology and context
-- [Paper Main Framework](Paper-Main-Framework.html) — Physics predictions these proofs certify
-- [Paper S2 Derivations](Paper-S2-Derivations.html) — The derivations being formalized
+- [For Formalization Experts](For-Formalization-Experts.html): Methodology and context
+- [Paper Main Framework](Paper-Main-Framework.html): Physics predictions these proofs certify
+- [Paper S2 Derivations](Paper-S2-Derivations.html): The derivations being formalized

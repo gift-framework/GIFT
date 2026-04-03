@@ -9,7 +9,7 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 
 ---
 
-## v3.3.24 — 2026-03-02
+## v3.3.24, 2026-03-02
 
 **NuFIT 6.0 Update & Publication Cleanup**
 
@@ -20,7 +20,7 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 - S1 construction claims softened (conditional on Joyce existence theorem)
 - Weyl → w rename to avoid collision with Weyl curvature
 
-## v3.3.17 — 2026-02-04
+## v3.3.17, 2026-02-04
 
 **θ₂₃ Formula Correction**
 
@@ -28,7 +28,7 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 - θ₂₃ deviation: 20% → **0.10%**
 - Mean deviation: 0.84% → **0.21%**
 
-## v3.3.14 — 2026-01-28
+## v3.3.14, 2026-01-28
 
 **Selection Principle & 290+ Relations**
 
@@ -37,7 +37,7 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 - 290+ total certified relations
 - Lean 4 as sole verification system (Coq archived)
 
-## v3.3.0 — 2026-01-12
+## v3.3.0, 2026-01-12
 
 **33 Observables & PDG 2024**
 
@@ -45,7 +45,7 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 - Updated to PDG 2024 experimental values
 - 192,349-configuration Monte Carlo validation
 
-## v3.1.0 — 2025-12-17
+## v3.1.0, 2025-12-17
 
 **Analytical G₂ Metric**
 
@@ -53,27 +53,27 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 - Newton-Kantorovich certification (h = 6.65×10⁻⁸)
 - 185 certified Lean relations
 
-## v3.0.0 — 2025-12-09
+## v3.0.0, 2025-12-09
 
 **Major Release**
 
 - 165+ certified relations in Lean 4
 - Exceptional group structure explorations
 
-## v2.3.x — 2025-12
+## v2.3.x, 2025-12
 
 - Lean 4 verification introduced
 
-## v2.2.0 — 2025-11-27
+## v2.2.0, 2025-11-27
 
 - Zero-parameter paradigm established
 
-## v2.1.0 — 2025-11-22
+## v2.1.0, 2025-11-22
 
 - Torsional dynamics framework
 - Scale bridge (Λ_GIFT = 21×e⁸×248/(7×π⁴))
 
-## v2.0.0 — 2025-10-24
+## v2.0.0, 2025-10-24
 
 - Framework reorganization
 

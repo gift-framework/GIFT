@@ -3,7 +3,7 @@ title: "Home"
 layout: default
 ---
 
-# GIFT — Geometric Information Field Theory
+# GIFT: Geometric Information Field Theory
 
 **A zero-parameter framework deriving Standard Model constants from G₂ holonomy geometry.**
 
@@ -26,10 +26,10 @@ layout: default
 
 | | |
 |---|---|
-| **New here?** | [Getting Started](Getting-Started.html) — Pick your path |
-| **Read papers** | [Paper Main Framework](Paper-Main-Framework.html) — [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) — [Paper Spectral Geometry](Paper-Spectral-Geometry.html) |
-| **Browse predictions** | [Observable Reference](Observable-Reference.html) — 89 observables with formulas |
-| **Check proofs** | [Lean Formalization](Lean-Formalization.html) — 127-conjunct certificate |
+| **New here?** | [Getting Started](Getting-Started.html): Pick your path |
+| **Read papers** | [Paper Main Framework](Paper-Main-Framework.html) ([Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html)) [Paper Spectral Geometry](Paper-Spectral-Geometry.html) |
+| **Browse predictions** | [Observable Reference](Observable-Reference.html), 89 observables with formulas |
+| **Check proofs** | [Lean Formalization](Lean-Formalization.html), 127-conjunct certificate |
 
 ---
 
@@ -72,9 +72,9 @@ N_gen    = |PSL(2,7)| / fund(E₇) = 168/56 = 3
 
 This wiki consolidates GIFT documentation across three repositories:
 
-- **[gift-framework/GIFT](https://github.com/gift-framework/GIFT)** — Theoretical documentation, papers, outreach
-- **[gift-framework/core](https://github.com/gift-framework/core)** — Lean 4 proofs, Python package, blueprint
-- **Zenodo deposits** — Archived data with DOIs
+- **[gift-framework/GIFT](https://github.com/gift-framework/GIFT)**: Theoretical documentation, papers, outreach
+- **[gift-framework/core](https://github.com/gift-framework/core)**: Lean 4 proofs, Python package, blueprint
+- **Zenodo deposits**: Archived data with DOIs
 
 Browse the sidebar for full navigation, or see the [Site Map](Site-Map.html) for a complete index.
 

@@ -3,9 +3,9 @@ title: "Paper S2 Derivations"
 layout: default
 ---
 
-# Paper: S2 — Complete Derivations
+# Paper: S2: Complete Derivations
 
-**Supplement S2: Complete Derivations (Dimensionless) — All 33 Dimensionless Predictions**
+**Supplement S2: Complete Derivations (Dimensionless): All 33 Dimensionless Predictions**
 
 *Brieuc de La Fournière (2026)*
 [Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | [Zenodo DOI: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
@@ -51,14 +51,14 @@ Provides complete algebraic derivations for all 33 dimensionless predictions fro
 
 ## Section Structure
 
-- **Part 0**: Derivation Philosophy — Inputs vs outputs, claims vs non-claims
-- **Part I**: Foundations — Status classification, notation
-- **Part II**: Foundational Theorems — N_gen=3, τ=3472/891, κ_T=1/61, det(g)=65/32
-- **Part III**: Gauge Sector — sin²θ_W=3/13, α_s=√2/12
-- **Part IV**: Lepton Sector — Q_Koide=2/3, m_τ/m_e=3477, m_μ/m_e=27^φ
-- **Part V**: Quark Sector — m_s/m_d=20, m_b/m_t=1/42, CKM angles
-- **Part VI**: Neutrino Sector — δ_CP=197°, mixing angles
-- **Part VII**: Higgs & Cosmology — λ_H=√17/32, Ω_DE, n_s, h, σ₈
+- **Part 0**: Derivation Philosophy: Inputs vs outputs, claims vs non-claims
+- **Part I**: Foundations: Status classification, notation
+- **Part II**: Foundational Theorems: N_gen=3, τ=3472/891, κ_T=1/61, det(g)=65/32
+- **Part III**: Gauge Sector, sin²θ_W=3/13, α_s=√2/12
+- **Part IV**: Lepton Sector: Q_Koide=2/3, m_τ/m_e=3477, m_μ/m_e=27^φ
+- **Part V**: Quark Sector, m_s/m_d=20, m_b/m_t=1/42, CKM angles
+- **Part VI**: Neutrino Sector, δ_CP=197°, mixing angles
+- **Part VII**: Higgs & Cosmology, λ_H=√17/32, Ω_DE, n_s, h, σ₈
 - **Part VIII**: Summary (18 VERIFIED + 15 extended)
 - **Part IX**: Observable Catalog
 
@@ -66,7 +66,7 @@ Provides complete algebraic derivations for all 33 dimensionless predictions fro
 
 ## Related
 
-- [Paper Main Framework](Paper-Main-Framework.html) — Main paper
-- [Paper S1 Foundations](Paper-S1-Foundations.html) — Mathematical foundations
-- [Observable Reference](Observable-Reference.html) — Complete observable catalog
-- [Lean Formalization](Lean-Formalization.html) — Machine-checked proofs
+- [Paper Main Framework](Paper-Main-Framework.html): Main paper
+- [Paper S1 Foundations](Paper-S1-Foundations.html): Mathematical foundations
+- [Observable Reference](Observable-Reference.html): Complete observable catalog
+- [Lean Formalization](Lean-Formalization.html): Machine-checked proofs

@@ -10,7 +10,7 @@ layout: default
 Choose the path that fits you best:
 
 ### I'm curious about science (no math required)
-Start with **[GIFT for Everyone](GIFT-for-Everyone.html)** — a complete guide using everyday analogies. Then check the **[FAQ](FAQ.html)** for common questions.
+Start with **[GIFT for Everyone](GIFT-for-Everyone.html)**: a complete guide using everyday analogies. Then check the **[FAQ](FAQ.html)** for common questions.
 
 ### I'm a physicist
 Read **[For Physicists](For-Physicists.html)** for a concise technical overview: E₈×E₈ architecture, K₇ compactification, and the 33 predictions. Then dive into the **[Main Paper](Paper-Main-Framework.html)**.
@@ -32,10 +32,10 @@ See **[Citation Guide](Citation-Guide.html)** for BibTeX, APA, and DOI informati
 ## Essential Reading Order
 
 1. **[GIFT for Everyone](GIFT-for-Everyone.html)** or **[For Physicists](For-Physicists.html)** (depending on background)
-2. **[Main Framework Paper](Paper-Main-Framework.html)** — the complete theory
-3. **[Observable Reference](Observable-Reference.html)** — all predictions in one table
-4. **[Statistical Evidence](Statistical-Evidence.html)** — why the numbers matter
-5. **[Lean Formalization](Lean-Formalization.html)** — machine-checked proofs
+2. **[Main Framework Paper](Paper-Main-Framework.html)**: the complete theory
+3. **[Observable Reference](Observable-Reference.html)**, all predictions in one table
+4. **[Statistical Evidence](Statistical-Evidence.html)**, why the numbers matter
+5. **[Lean Formalization](Lean-Formalization.html)**, machine-checked proofs
 
 ---
 

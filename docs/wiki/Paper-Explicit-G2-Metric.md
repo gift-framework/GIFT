@@ -53,15 +53,15 @@ Three-scale structure:
 
 ## Section Structure
 
-1. **Introduction** — Context, objective, scope & claims
-2. **The Manifold** — TCS construction, topology (b₂=21, b₃=77)
-3. **The Metric** — Model hierarchy, coordinates, Chebyshev-Cholesky parametrization
-4. **Norm Definitions & Domain** — Metric distance, torsion norms, NK norm
-5. **Torsion Analysis** — Initial approximation, K3 verification, Gauss-Newton reduction
-6. **Certification** — NK convergence, interval arithmetic, holonomy proof
-7. **Geometric Invariants** — det(g)=65/32, |φ|²=42, Hol(g*)=G₂
-8. **Discussion** — Limitations, comparison with prior work
-9. **Reproducibility** — Data files, companion notebook (< 1 min runtime)
+1. **Introduction**: Context, objective, scope & claims
+2. **The Manifold**: TCS construction, topology (b₂=21, b₃=77)
+3. **The Metric**: Model hierarchy, coordinates, Chebyshev-Cholesky parametrization
+4. **Norm Definitions & Domain**: Metric distance, torsion norms, NK norm
+5. **Torsion Analysis**: Initial approximation, K3 verification, Gauss-Newton reduction
+6. **Certification**: NK convergence, interval arithmetic, holonomy proof
+7. **Geometric Invariants**, det(g)=65/32, |φ|²=42, Hol(g*)=G₂
+8. **Discussion**: Limitations, comparison with prior work
+9. **Reproducibility**: Data files, companion notebook (< 1 min runtime)
 
 ---
 
@@ -76,7 +76,7 @@ Three-scale structure:
 
 ## Related
 
-- [Paper Main Framework](Paper-Main-Framework.html) — Physics application
-- [Paper S1 Foundations](Paper-S1-Foundations.html) — TCS construction theory
-- [Paper Spectral Geometry](Paper-Spectral-Geometry.html) — Spectral analysis of this metric
-- [For Geometers](For-Geometers.html) — Computational pipeline overview
+- [Paper Main Framework](Paper-Main-Framework.html): Physics application
+- [Paper S1 Foundations](Paper-S1-Foundations.html): TCS construction theory
+- [Paper Spectral Geometry](Paper-Spectral-Geometry.html): Spectral analysis of this metric
+- [For Geometers](For-Geometers.html): Computational pipeline overview
