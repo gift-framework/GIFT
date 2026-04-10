@@ -16,6 +16,9 @@
 <nav>
   <div class="container">
     <a href="{{ '/' | relative_url }}" class="nav-brand">GIFT</a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="{{ '/' | relative_url }}#start">Guides</a></li>
       <li><a href="{{ '/' | relative_url }}#blog">Blog</a></li>
@@ -26,6 +29,17 @@
     </ul>
   </div>
 </nav>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
 
 <main class="prose">
   <div class="container">

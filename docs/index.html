@@ -22,6 +22,9 @@ layout: null
 <nav>
   <div class="container">
     <a href="#" class="nav-brand">GIFT</a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#blog">Blog</a></li>
       <li><a href="#results">Results</a></li>
@@ -31,6 +34,17 @@ layout: null
     </ul>
   </div>
 </nav>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
 
 <!-- ========== HERO ========== -->
 <header class="hero">
