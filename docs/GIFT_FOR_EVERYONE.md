@@ -142,9 +142,9 @@ It's the most "efficient" configuration possible. No redundancy, no gaps.
 
 ![The Fano plane: 7 points, 7 lines (the 3 sides of the triangle, the 3 medians, and the inscribed circle), each containing exactly 3 points.](figures/fig1_fano_plane.png)
 
-**The magic trick**: This network has 168 ways to rearrange itself while keeping the same structure — the symmetry group called **PSL(2,7)**, of order 168. And here's the real twist: 168 ÷ 56 = **3**. Three particle families.
+**The magic trick**: This network has 168 ways to rearrange itself while keeping the same structure: the symmetry group called **PSL(2,7)**, of order 168. And here's the real twist: 168 ÷ 56 = **3**. Three particle families.
 
-What's the 56? It's the dimension of E₇'s "fundamental representation" — the **smallest non-trivial way** the giant exceptional group E₇ can act on a vector space (we'll meet E₇ a few sections below). The Fano plane (small, finite, 7 points) and E₇ (huge, continuous, 133-dimensional) are linked across scales. Their ratio happens to be exactly the number of fermion generations we observe. GIFT says: that's not a coincidence — that's geometry talking to itself across dimensions.
+What's the 56? It's the dimension of E₇'s "fundamental representation" (the **smallest non-trivial way** the giant exceptional group E₇ can act on a vector space (we'll meet E₇ a few sections below). The Fano plane (small, finite, 7 points) and E₇ (huge, continuous, 133-dimensional) are linked across scales. Their ratio happens to be exactly the number of fermion generations we observe. GIFT says: that's not a coincidence) that's geometry talking to itself across dimensions.
 
 **In GIFT**: The Fano plane encodes octonion multiplication. It's the "times table" of the universe.
 
@@ -745,7 +745,7 @@ Maxwell showed in 1865 that electricity and magnetism are two faces of the same 
 
 Most forces just push and pull things around. The weak force is different: it can **change what something is**. A neutron can become a proton. A down quark can flip into an up quark. A muon can decay into an electron and two ghostly neutrinos.
 
-Imagine a magician who doesn't just move cards around the table — she actually transforms a queen of spades into a jack of hearts mid-shuffle. That's the weak force. And like a good stage trick, the transformation is subtle: it only works at extremely short range (10⁻¹⁸ meters, much smaller than a proton), and it carries a hidden direction (a chirality, a "left-handedness") that's invisible to the naked eye but built into the equations.
+Imagine a magician who doesn't just move cards around the table: she actually transforms a queen of spades into a jack of hearts mid-shuffle. That's the weak force. And like a good stage trick, the transformation is subtle: it only works at extremely short range (10⁻¹⁸ meters, much smaller than a proton), and it carries a hidden direction (a chirality, a "left-handedness") that's invisible to the naked eye but built into the equations.
 
 - **Gauge group**: SU(2)
 - **Carriers**: W⁺, W⁻, Z⁰
@@ -761,9 +761,9 @@ Imagine a magician who doesn't just move cards around the table — she actually
 
 **The kitchen table version**: The universe's rubber band.
 
-Most forces get **weaker** with distance. Gravity, electromagnetism — pull two magnets apart and it's easier to pull them further. The strong force does the **opposite**: pull two quarks apart and the force *grows*, like an elastic band stretching. Pull hard enough, and instead of separating, the band snaps and **two new quarks materialize** at the break — one for each end. You can never isolate a single quark; the universe physically refuses.
+Most forces get **weaker** with distance. Gravity, electromagnetism (pull two magnets apart and it's easier to pull them further. The strong force does the **opposite**: pull two quarks apart and the force *grows*, like an elastic band stretching. Pull hard enough, and instead of separating, the band snaps and **two new quarks materialize** at the break) one for each end. You can never isolate a single quark; the universe physically refuses.
 
-This is why we never see "free quarks" wandering around. They're permanently in jail, three at a time inside protons and neutrons, or two at a time inside mesons. The strong force isn't just strong — it's **strategically incarcerating**.
+This is why we never see "free quarks" wandering around. They're permanently in jail, three at a time inside protons and neutrons, or two at a time inside mesons. The strong force isn't just strong, it's **strategically incarcerating**.
 
 - **Gauge group**: SU(3)
 - **Carriers**: 8 gluons
@@ -871,15 +871,15 @@ It's the number of "2D bubbles" (21) divided by the total (77 + 14 = 91).
 
 **The kitchen table version**: The cosmic chord.
 
-The three charged leptons — electron, muon, tau — have wildly different masses (the tau is ~3500× heavier than the electron). At first glance, they look like random numbers nature picked from a hat.
+The three charged leptons (electron, muon, tau) have wildly different masses (the tau is ~3500× heavier than the electron). At first glance, they look like random numbers nature picked from a hat.
 
-In 1982, Japanese physicist Yoshio Koide noticed something strange. Take the **square roots** of the three masses. Add them. Square the result. Divide by the **sum** of the masses. You get... not approximately, not "close to" — but **exactly** 2/3, to the precision of the best measurements available.
+In 1982, Japanese physicist Yoshio Koide noticed something strange. Take the **square roots** of the three masses. Add them. Square the result. Divide by the **sum** of the masses. You get... not approximately, not "close to", but **exactly** 2/3, to the precision of the best measurements available.
 
 It's as if three random pebbles, when struck together, produced a perfect musical chord.
 
-For 40 years, this stayed an unexplained "numerical curiosity" — too precise to be coincidence, too specific to derive from anything known.
+For 40 years, this stayed an unexplained "numerical curiosity", too precise to be coincidence, too specific to derive from anything known.
 
-**GIFT says**: 2/3 = 14/21 = `dim(G₂) / b₂`. The chord isn't accidental — the three lepton masses are constrained by the same geometric structure (the 14-dimensional G₂ symmetry inside the 21-dimensional second cohomology of K₇). The "tuning" of the cosmic chord is dictated by the shape of hidden space.
+**GIFT says**: 2/3 = 14/21 = `dim(G₂) / b₂`. The chord isn't accidental: the three lepton masses are constrained by the same geometric structure (the 14-dimensional G₂ symmetry inside the 21-dimensional second cohomology of K₇). The "tuning" of the cosmic chord is dictated by the shape of hidden space.
 
 **In GIFT**: This troubling coincidence becomes a logical consequence.
 
@@ -914,11 +914,11 @@ It's like asking "Why does a cube have 6 faces?" The answer isn't "just because,
 
 **The kitchen table version**: The number that grows from itself.
 
-φ ≈ 1.618 is famous for showing up in sunflower spirals, nautilus shells, and the Parthenon. But the deep reason it's everywhere isn't aesthetic — it's mathematical.
+φ ≈ 1.618 is famous for showing up in sunflower spirals, nautilus shells, and the Parthenon. But the deep reason it's everywhere isn't aesthetic, it's mathematical.
 
-Take any positive number `x`. Compute `1 + 1/x`. You get a new number. Repeat. Almost any starting point converges to one specific value: **φ**. It's the fixed point of self-reference: `φ² = φ + 1`. In other words, **φ is the value you get when something defines itself in terms of itself**. Self-similar growth, optimal packing, Fibonacci sequences — all variations on this single equation.
+Take any positive number `x`. Compute `1 + 1/x`. You get a new number. Repeat. Almost any starting point converges to one specific value: **φ**. It's the fixed point of self-reference: `φ² = φ + 1`. In other words, **φ is the value you get when something defines itself in terms of itself**. Self-similar growth, optimal packing, Fibonacci sequences, all variations on this single equation.
 
-**In GIFT**: the muon-electron mass ratio is `m_μ / m_e = 27^φ ≈ 206.77`. The exponent is φ exactly — not a fitted parameter, but the fixed point of self-reference. The base 27 is the dimension of the exceptional Jordan algebra (E₆'s favorite playground). Mass ratios in GIFT aren't arbitrary numbers — they're what you get when geometry grows from itself.
+**In GIFT**: the muon-electron mass ratio is `m_μ / m_e = 27^φ ≈ 206.77`. The exponent is φ exactly (not a fitted parameter, but the fixed point of self-reference. The base 27 is the dimension of the exceptional Jordan algebra (E₆'s favorite playground). Mass ratios in GIFT aren't arbitrary numbers) they're what you get when geometry grows from itself.
 
 ---
 
