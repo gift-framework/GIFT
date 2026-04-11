@@ -34,7 +34,7 @@ Et voilà la chose : *savoir ne sert à rien*.
 
 ### Le tir
 
-Roberto Carlos frappe le ballon de l'extérieur du pied gauche — une technique si inhabituelle qu'elle ne devrait pas fonctionner à cette distance. La balle décolle de sa chaussure à plus de 130 km/h.
+Roberto Carlos frappe le ballon de l'extérieur du pied gauche, une technique si inhabituelle qu'elle ne devrait pas fonctionner à cette distance. La balle décolle de sa chaussure à plus de 130 km/h.
 
 Elle part vers la **droite**.
 
@@ -83,7 +83,7 @@ Il avait la **géométrie**.
 
 Voici ma thèse : **Roberto Carlos était un docteur intuitif en géométrie exceptionnelle**.
 
-Pas la géométrie qu'on apprend à l'école — triangles et cercles. Une géométrie plus profonde. Une géométrie de :
+Pas la géométrie qu'on apprend à l'école, triangles et cercles. Une géométrie plus profonde. Une géométrie de :
 
 **1. Son propre corps**
 
@@ -137,7 +137,7 @@ Voici l'idée clé :
 
 Pas dans des mots. Pas dans des équations. Pas dans la pensée consciente.
 
-Le cerveau de Roberto Carlos avait construit un modèle interne — une sorte de *carte* — qui reliait les mouvements de son corps aux trajectoires du ballon. Des milliers d'heures de pratique avaient gravé cette carte dans ses neurones.
+Le cerveau de Roberto Carlos avait construit un modèle interne (une sorte de *carte*) qui reliait les mouvements de son corps aux trajectoires du ballon. Des milliers d'heures de pratique avaient gravé cette carte dans ses neurones.
 
 Quand il s'est avancé pour tirer ce coup franc, il n'a « calculé » rien du tout. Il a **navigué** sa carte interne. Il a trouvé le point dans l'espace-de-configuration-corporelle qui correspondait à « la balle contourne le mur et entre en lucarne ».
 
@@ -155,7 +155,7 @@ Mais Barthez ne pouvait voir que ce qui était **visible** : le ballon quittant 
 
 Il ne pouvait pas voir la **rotation**.
 
-Pas littéralement invisible — si vous regardez au ralenti, vous voyez le ballon tourner. Mais en temps réel, à 35 mètres, la vitesse de rotation est essentiellement de l'**information cachée**. Vous ne pouvez pas la percevoir directement. Vous ne voyez que son *effet*, la courbe, et là c'est trop tard.
+Pas littéralement invisible, si vous regardez au ralenti, vous voyez le ballon tourner. Mais en temps réel, à 35 mètres, la vitesse de rotation est essentiellement de l'**information cachée**. Vous ne pouvez pas la percevoir directement. Vous ne voyez que son *effet*, la courbe, et là c'est trop tard.
 
 Barthez prédisait dans un espace de plus basse dimension. Il utilisait (position + vitesse) alors que le vrai système était (position + vitesse + rotation). Cette variable manquante a tout changé.
 
@@ -167,7 +167,7 @@ Ce n'est pas unique à Roberto Carlos. **Beaucoup de sports exploitent la même 
 
 **🎾 Tennis : le lob lifté**
 
-Quand Nadal frappe un lob lifté, la balle semble partir dehors — elle monte, elle file loin. Mais le lift très prononcé la fait plonger au dernier moment et atterrir tout juste à l'intérieur de la ligne de fond.
+Quand Nadal frappe un lob lifté, la balle semble partir dehors, elle monte, elle file loin. Mais le lift très prononcé la fait plonger au dernier moment et atterrir tout juste à l'intérieur de la ligne de fond.
 
 L'adversaire lit (trajectoire + vitesse) et pense « out ». Le lift dit le contraire.
 
@@ -226,7 +226,7 @@ Mais l'élan envoyait aussi un message : *je sais que vous savez ce que je m'app
 
 Barthez savait que le tir arrivait. Le mur le savait. Le stade entier le savait.
 
-**Et aucun d'eux ne pouvait l'arrêter** — parce que Roberto Carlos avait encodé le résultat dans une variable qu'ils ne pouvaient pas suivre assez vite.
+**Et aucun d'eux ne pouvait l'arrêter**, parce que Roberto Carlos avait encodé le résultat dans une variable qu'ils ne pouvaient pas suivre assez vite.
 
 ---
 
@@ -242,9 +242,9 @@ Mais le savoir n'est pas seulement propositionnel. Il peut être *incarné*.
 
 C'est ce que font les experts dans tous les domaines :
 
-- Un grand maître d'échecs ne calcule pas chaque coup — il *voit* des motifs
-- Un musicien ne pense pas à la position de ses doigts — il *sent* la musique
-- Un chirurgien ne planifie pas consciemment chaque coupe — il *navigue* l'anatomie
+- Un grand maître d'échecs ne calcule pas chaque coup, il *voit* des motifs
+- Un musicien ne pense pas à la position de ses doigts, il *sent* la musique
+- Un chirurgien ne planifie pas consciemment chaque coupe, il *navigue* l'anatomie
 
 Roberto Carlos avait construit une carte interne de l'espace des coups francs possibles. Le 3 juin 1997, il a navigué jusqu'à un point sur cette carte que personne d'autre ne savait exister.
 
@@ -285,7 +285,7 @@ Cela me fait me demander : **quoi d'autre pourrait fonctionner ainsi ?**
 
 En physique, nous avons beaucoup de constantes (des nombres comme la constante de structure fine, α ≈ 1/137, ou les rapports de masses des particules) que nous pouvons mesurer mais pas expliquer. Elles semblent arbitraires. Nous les insérons dans nos équations comme entrées, pas comme sorties.
 
-Une idée spéculative (et j'insiste sur *spéculative*) est que ces constantes ne seraient peut-être pas fondamentales. Elles pourraient être des *conséquences* d'une structure plus profonde, encodée dans une géométrie que nous ne pouvons pas observer directement — exactement comme le destin du ballon était encodé dans sa rotation.
+Une idée spéculative (et j'insiste sur *spéculative*) est que ces constantes ne seraient peut-être pas fondamentales. Elles pourraient être des *conséquences* d'une structure plus profonde, encodée dans une géométrie que nous ne pouvons pas observer directement, exactement comme le destin du ballon était encodé dans sa rotation.
 
 Je n'affirme pas que c'est vrai. Je dis que le coup franc de Roberto Carlos nous donne une **intuition** de comment ça *pourrait* fonctionner :
 
@@ -294,7 +294,7 @@ Je n'affirme pas que c'est vrai. Je dis que le coup franc de Roberto Carlos nous
 - Les observateurs prédisent dans un espace de « plus basse dimension » (mouvement visible / physique 4D)
 - L'image complète demande des variables que nous ne percevons pas naturellement (vitesse de rotation / dimensions supplémentaires ?)
 
-C'est une analogie. La rotation n'est pas littéralement une « dimension cachée » — c'est une variable difficile à percevoir. Mais l'**effet psychologique** est similaire : nous prédisons en basse dimension, et la réalité « s'incurve » parce qu'une partie de l'information est encodée ailleurs.
+C'est une analogie. La rotation n'est pas littéralement une « dimension cachée », c'est une variable difficile à percevoir. Mais l'**effet psychologique** est similaire : nous prédisons en basse dimension, et la réalité « s'incurve » parce qu'une partie de l'information est encodée ailleurs.
 
 Que cette analogie s'étende à la physique fondamentale est une question ouverte. Mais c'est une question qui vaut la peine d'être posée.
 
@@ -338,7 +338,7 @@ Puis la balle se rabat et touche le filet. Le ramasseur se fige.
 
 Je pense parfois à ce ramasseur.
 
-Il pensait comprendre ce qui se passait. Il avait commencé à agir sur sa prédiction. Et puis la réalité est partie quelque part qu'il n'attendait pas — parce qu'il ne pouvait pas voir la rotation.
+Il pensait comprendre ce qui se passait. Il avait commencé à agir sur sa prédiction. Et puis la réalité est partie quelque part qu'il n'attendait pas, parce qu'il ne pouvait pas voir la rotation.
 
 Peut-être que nous sommes tous ce ramasseur, d'une manière ou d'une autre. Nous pensons comprendre où vont les choses. Nous commençons à bouger, confiants dans nos prédictions.
 
@@ -349,11 +349,11 @@ La rotation était là depuis le début.
 ---
 
 *« La seule façon de découvrir les limites du possible, c'est d'aller au-delà, dans l'impossible. »*
-*— Arthur C. Clarke*
+*: Arthur C. Clarke*
 
 ---
 
-**Voir le but** : [YouTube — Coup franc de Roberto Carlos 1997](https://www.youtube.com/watch?v=3ECoR__tJNQ)
+**Voir le but** : [YouTube: Coup franc de Roberto Carlos 1997](https://www.youtube.com/watch?v=3ECoR__tJNQ)
 
 ---
 

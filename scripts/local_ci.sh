@@ -55,10 +55,15 @@ run_check() {
 # ----------------------------------------------------------------------
 docs_check() {
     if [ "$FIX_MODE" -eq 1 ]; then
-        blue "  → Auto-fixing em-dashes first..."
-        python3 .github/scripts/fix_em_dashes.py docs/*.md publications/papers/markdown/*.md 2>&1 || true
+        blue "  → Auto-fixing em-dashes first (recursive)..."
+        python3 .github/scripts/fix_em_dashes.py 2>&1 || true
     fi
-    python3 .github/scripts/docs_linter.py
+    python3 .github/scripts/docs_linter.py || return 1
+    # The CI workflow also runs fix_em_dashes.py --check (recursive on docs/,
+    # so it catches the wiki/ subdirectory). Mirror that exactly.
+    blue ""
+    blue "  → Running em-dash check (recursive on docs/)..."
+    python3 .github/scripts/fix_em_dashes.py --check
 }
 
 # ----------------------------------------------------------------------

@@ -20,7 +20,7 @@ Vous n'avez pas à faire confiance aux maths. Lean les a vérifiées.
 
 Le problème du papier crayon
 
-La physique théorique a un petit souci de reproductibilité, qu'on tait souvent. Pas de la fraude — juste de la complexité. Les dérivations s'étalent sur des pages. Les indices se multiplient. Les erreurs de signes se dissimulent. Un facteur 2 qui se glisse quelque part vers l'équation 47.
+La physique théorique a un petit souci de reproductibilité, qu'on tait souvent. Pas de la fraude, juste de la complexité. Les dérivations s'étalent sur des pages. Les indices se multiplient. Les erreurs de signes se dissimulent. Un facteur 2 qui se glisse quelque part vers l'équation 47.
 
 La relecture par les pairs attrape certaines erreurs. Mais les relecteurs sont humains, occupés, et redériventt rarement tout depuis le début. Résultat : les articles sont publiés, les erreurs persistent, et des années plus tard quelqu'un trouve un signe moins qui change tout.
 
@@ -101,7 +101,7 @@ La clarté importe. Le code Lean prouve :
 
 SI ces entiers topologiques, ALORS ces rapports.
 
-Il ne prouve pas le SI. L'affirmation que b₂(K₇) = 21 et b₃(K₇) = 77 sont les bonnes valeurs pour notre univers — c'est de la physique, pas des mathématiques. Cette affirmation est empirique et falsifiable.
+Il ne prouve pas le SI. L'affirmation que b₂(K₇) = 21 et b₃(K₇) = 77 sont les bonnes valeurs pour notre univers, c'est de la physique, pas des mathématiques. Cette affirmation est empirique et falsifiable.
 
 Les expériences la testeront :
 
@@ -145,7 +145,7 @@ Ou lisez simplement les preuves. Elles sont courtes. La plupart tiennent en une 
 
 Pourquoi c'est important
 
-La vérification formelle n'est pas courante en physique théorique. La plupart des articles s'appuient sur la relecture par les pairs et la réputation. Mais une preuve est une preuve — elle ne devrait pas dépendre de qui l'a écrite.
+La vérification formelle n'est pas courante en physique théorique. La plupart des articles s'appuient sur la relecture par les pairs et la réputation. Mais une preuve est une preuve, elle ne devrait pas dépendre de qui l'a écrite.
 
 La formalisation Lean crée un précédent :
 

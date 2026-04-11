@@ -16,7 +16,7 @@ C'est une question raisonnable. GIFT prétend que la physique émerge d'une vari
 
 En 1996, Dominic Joyce a prouvé que les variétés G₂ compactes existent. La preuve utilise de l'analyse difficile : espaces de Sobolev, théorèmes des fonctions implicites, applications contractantes. Elle s'étale sur quelque 200 pages de géométrie différentielle.
 
-Nous avons maintenant formalisé des parties clés de cet argument en Lean 4. Voici ce que cela signifie — et ce que cela ne signifie pas.
+Nous avons maintenant formalisé des parties clés de cet argument en Lean 4. Voici ce que cela signifie, et ce que cela ne signifie pas.
 
 Le défi des théorèmes d'existence
 
@@ -33,7 +33,7 @@ La vérification formelle offre une approche différente. Et si une machine suiv
 
 Ce que dit le théorème de Joyce
 
-Soit M une variété compacte de dimension 7 avec une G₂-structure φ₀. La structure a une torsion T(φ₀), qui mesure à quel point φ₀ est éloignée d'être « sans torsion » — le cas désirable, qui implique d'être Ricci-plate.
+Soit M une variété compacte de dimension 7 avec une G₂-structure φ₀. La structure a une torsion T(φ₀), qui mesure à quel point φ₀ est éloignée d'être « sans torsion », le cas désirable, qui implique d'être Ricci-plate.
 
 **Théorème de Joyce (en gros)** : si ‖T(φ₀)‖ < ε₀ pour un certain seuil ε₀, alors il existe une G₂-structure lisse sans torsion φ sur M, avec ‖φ − φ₀‖ ≤ C·‖T(φ₀)‖.
 
@@ -98,7 +98,7 @@ La borne sur la torsion est la borne critique. Notre estimation pour le seuil de
 
 Marge de sécurité : approximativement 20×
 
-Cette marge donne une certaine confiance que la borne n'est pas marginale. Bien sûr, la vraie valeur de ε₀ pour K₇ dépend de constantes de Sobolev que nous n'avons pas calculées exactement — nous y reviendrons plus bas.
+Cette marge donne une certaine confiance que la borne n'est pas marginale. Bien sûr, la vraie valeur de ε₀ pour K₇ dépend de constantes de Sobolev que nous n'avons pas calculées exactement, nous y reviendrons plus bas.
 
 Audit des axiomes
 
@@ -130,7 +130,7 @@ Ce que cela ne prouve PAS
 
 Il vaut la peine d'être clair sur les limites :
 
-1. **Le théorème de Joyce n'est pas formalisé à partir des premiers principes.** Le cœur analytique — estimations de Sobolev, régularité elliptique, théorie de Schauder — est axiomatisé plutôt que prouvé en Lean. Une formalisation complète serait un projet substantiel, qui demanderait probablement des années de travail.
+1. **Le théorème de Joyce n'est pas formalisé à partir des premiers principes.** Le cœur analytique (estimations de Sobolev, régularité elliptique, théorie de Schauder) est axiomatisé plutôt que prouvé en Lean. Une formalisation complète serait un projet substantiel, qui demanderait probablement des années de travail.
 
 2. **Le seuil ε₀ est estimé, pas calculé exactement.** Nous utilisons une estimation conservative basée sur des constantes de Sobolev typiques. La vraie valeur pour K₇ requerrait une analyse plus détaillée.
 
@@ -160,7 +160,7 @@ La formalisation relie deux extrémités :
 - **En haut** : existence abstraite via le point fixe de Banach (formalisé)
 - **En bas** : bornes numériques issues de l'entraînement du PINN (certifiées)
 
-La couche du milieu — la machinerie analytique de Joyce — est actuellement axiomatisée. Compléter le tableau impliquerait de formaliser :
+La couche du milieu (la machinerie analytique de Joyce) est actuellement axiomatisée. Compléter le tableau impliquerait de formaliser :
 
 - La régularité elliptique sur les variétés compactes
 - Les théorèmes de multiplication et de plongement de Sobolev
@@ -168,7 +168,7 @@ La couche du milieu — la machinerie analytique de Joyce — est actuellement a
 
 C'est des mathématiques substantielles. Des efforts similaires (comme la formalisation de parties du dernier théorème de Fermat) ont pris des années. Nous ne prétendons pas l'avoir fait.
 
-Mais l'échafaudage existe. L'énoncé du théorème compile. Les bornes numériques sont vérifiées. Ce qu'il reste à faire, c'est de remplir le milieu analytique — une tâche bien définie, si exigeante.
+Mais l'échafaudage existe. L'énoncé du théorème compile. Les bornes numériques sont vérifiées. Ce qu'il reste à faire, c'est de remplir le milieu analytique, une tâche bien définie, si exigeante.
 
 Conclusion
 
@@ -180,7 +180,7 @@ Cet énoncé compile en Lean 4.14.0 avec Mathlib. Sous réserve des axiomes list
 
 Les axiomes sont explicites. Les manques sont reconnus. Les preuves numériques sont reproductibles.
 
-Si cela se connecte à la physique, c'est une question distincte — une question à laquelle ce sont les expériences, et non les assistants de preuve, qui finiront par répondre.
+Si cela se connecte à la physique, c'est une question distincte, une question à laquelle ce sont les expériences, et non les assistants de preuve, qui finiront par répondre.
 
 Dépôt : github.com/gift-framework/core
 

@@ -16,7 +16,7 @@ Dans l'essai précédent, nous nous demandions ce qui pourrait venir en premier 
 
 Mais une question restait en suspens : comment la structure mathématique pourrait-elle déterminer les constantes physiques ? Par quel mécanisme la topologie pourrait-elle nous offrir la masse de l'électron ?
 
-Cet essai explore cette question — non comme résolue, mais comme posable.
+Cet essai explore cette question, non comme résolue, mais comme posable.
 
 Partie I : L'inversion
 Le mot d'ordre de Wheeler
@@ -31,13 +31,13 @@ Une chaîne aléatoire de uns et de zéros est maximalement informative au sens 
 
 La grammaire manquante
 
-Qu'est-ce qui organise les bits en physique ? Wheeler évoquait « law without law » — l'idée que la loi physique elle-même pourrait émerger de principes plus profonds. Mais il ne précisait pas quels pourraient être ces principes.
+Qu'est-ce qui organise les bits en physique ? Wheeler évoquait « law without law », l'idée que la loi physique elle-même pourrait émerger de principes plus profonds. Mais il ne précisait pas quels pourraient être ces principes.
 
 Nous proposons ici une inversion, un complément à « it from bit » :
 
 > *Gift from bit* : la structure géométrique donne les constantes physiques.
 
-La grammaire qui organise l'information en physique est la topologie. Les règles qui déterminent quelles combinaisons de bits correspondent à des particules stables, à des interactions cohérentes, à des masses observables — ces règles sont des nécessités géométriques, pas des choix arbitraires.
+La grammaire qui organise l'information en physique est la topologie. Les règles qui déterminent quelles combinaisons de bits correspondent à des particules stables, à des interactions cohérentes, à des masses observables, ces règles sont des nécessités géométriques, pas des choix arbitraires.
 
 Partie II : Ce que la topologie donne
 La pauvreté de l'ajustement
@@ -46,7 +46,7 @@ Considérez comment nous « connaissons » actuellement la constante de structur
 
 Mais ce n'est pas une connaissance au sens le plus profond. C'est de la phénoménologie, le catalogage d'apparences. Nous savons que α prend cette valeur, pas pourquoi.
 
-Un cadre géométrique inverserait cette relation. Au lieu de mesurer α et de l'insérer, nous dériverions α à partir d'invariants topologiques : des grandeurs qui ne peuvent pas être ajustées parce qu'elles comptent quelque chose de discret — des trous dans une variété, des dimensions d'un groupe de symétrie, des rangs d'une algèbre.
+Un cadre géométrique inverserait cette relation. Au lieu de mesurer α et de l'insérer, nous dériverions α à partir d'invariants topologiques : des grandeurs qui ne peuvent pas être ajustées parce qu'elles comptent quelque chose de discret, des trous dans une variété, des dimensions d'un groupe de symétrie, des rangs d'une algèbre.
 
 La logique des invariants
 
@@ -108,18 +108,18 @@ Partie V : L'asymétrie des preuves
 
 Les résultats positifs (dérivations qui collent aux mesures) ne prouvent pas la détermination géométrique ; ils sont compatibles avec elle. Les résultats négatifs (dérivations qui échouent) réfutent des propositions géométriques spécifiques ; ils sont décisifs contre elles.
 
-Cette asymétrie conseille la patience. Beaucoup de cadres géométriques échoueront avant qu'un seul ne réussisse — si tant est qu'un seul réussisse. Le chemin entre « it from bit » et « gift from bit » pourrait être plus long qu'une vie humaine.
+Cette asymétrie conseille la patience. Beaucoup de cadres géométriques échoueront avant qu'un seul ne réussisse, si tant est qu'un seul réussisse. Le chemin entre « it from bit » et « gift from bit » pourrait être plus long qu'une vie humaine.
 
 Mais le chemin existe. On peut le parcourir. Et chaque pas, en avant ou en arrière, nous enseigne quelque chose sur l'architecture mathématique de la réalité.
 
 Coda : La générosité de la structure
 
-Il y a quelque chose d'inattendument généreux dans l'idée que la géométrie donne. Un univers de paramètres arbitraires ne serait compréhensible que par mesure exhaustive — une tâche infinie pour des esprits finis. Un univers de paramètres dérivés devient, en principe, connaissable par la raison.
+Il y a quelque chose d'inattendument généreux dans l'idée que la géométrie donne. Un univers de paramètres arbitraires ne serait compréhensible que par mesure exhaustive, une tâche infinie pour des esprits finis. Un univers de paramètres dérivés devient, en principe, connaissable par la raison.
 
 Nous ne méritons pas un tel univers. Il n'y a aucune raison évidente pour que la réalité soit structurée de manière à se laisser saisir par l'analyse mathématique. Et pourtant, c'est ce qui semble être le cas.
 
 Le don le plus profond est peut-être celui-ci : que l'univers soit le genre d'endroit où les dons sont possibles. Où la structure précède la substance. Où la géométrie donne, et où nous recevons.
 
-Que nous puissions même demander « pourquoi cette valeur ? » plutôt que simplement « quelle est cette valeur ? » — c'est déjà un don.
+Que nous puissions même demander « pourquoi cette valeur ? » plutôt que simplement « quelle est cette valeur ? », c'est déjà un don.
 
 Nous avançons avec gratitude.

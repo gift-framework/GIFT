@@ -16,13 +16,13 @@ layout: default
 
 ### L'analogie des poux
 
-Mes filles ont eu des poux pendant presque un an. Un cauchemar pour n'importe quel parent — mais étrangement, ça m'a donné une intuition sur la physique.
+Mes filles ont eu des poux pendant presque un an. Un cauchemar pour n'importe quel parent, mais étrangement, ça m'a donné une intuition sur la physique.
 
 Pensez-y du point de vue du pou.
 
-Pour un pou (ou pour toute une civilisation de poux), l'**univers entier** est une tête et quelques cheveux. C'est tout. Les cheveux sont leur forêt. Le cuir chevelu est leur sol. Quelques poux aventureux colonisent d'autres têtes. Certains meurent en transit (surtout ceux qui atterrissent sur la mienne — je suis apparemment immunisé).
+Pour un pou (ou pour toute une civilisation de poux), l'**univers entier** est une tête et quelques cheveux. C'est tout. Les cheveux sont leur forêt. Le cuir chevelu est leur sol. Quelques poux aventureux colonisent d'autres têtes. Certains meurent en transit (surtout ceux qui atterrissent sur la mienne, je suis apparemment immunisé).
 
-Mais voilà : un pou sur la tête d'un enfant peut passer à côté d'un **arbre**, d'une **voiture**, d'une **borne de recharge Tesla**, d'une **antenne 5G**. Le pou n'enregistre rien de tout ça. Ces choses entourent littéralement le pou, mais elles sont du **décor** — imperceptibles, sans intérêt, en dehors de son monde.
+Mais voilà : un pou sur la tête d'un enfant peut passer à côté d'un **arbre**, d'une **voiture**, d'une **borne de recharge Tesla**, d'une **antenne 5G**. Le pou n'enregistre rien de tout ça. Ces choses entourent littéralement le pou, mais elles sont du **décor**, imperceptibles, sans intérêt, en dehors de son monde.
 
 Le pou ne manque pas d'intelligence. Il n'est simplement pas **équipé** pour percevoir ces choses. Et l'échelle est si différente que, même s'il pouvait les percevoir, il n'arriverait probablement pas à les comprendre.
 
@@ -36,19 +36,19 @@ Et voici la question inconfortable :
 
 En 1909, le biologiste Jakob von Uexküll a introduit un concept qu'il appelait *Umwelt* : le « monde-propre » de chaque organisme. Chaque espèce vit dans sa propre bulle perceptive, ne voyant que ce que l'évolution l'a équipée pour voir.
 
-Une tique, par exemple, perçoit exactement trois choses : la lumière (pour grimper), l'acide butyrique (pour détecter les mammifères), et la chaleur (pour trouver le sang). C'est tout. L'univers entier d'une tique, c'est de la lumière, une odeur, et de la chaleur. Tout le reste — couleurs, sons, champs électromagnétiques, l'économie, votre angoisse existentielle — n'existe pas pour la tique.
+Une tique, par exemple, perçoit exactement trois choses : la lumière (pour grimper), l'acide butyrique (pour détecter les mammifères), et la chaleur (pour trouver le sang). C'est tout. L'univers entier d'une tique, c'est de la lumière, une odeur, et de la chaleur. Tout le reste (couleurs, sons, champs électromagnétiques, l'économie, votre angoisse existentielle) n'existe pas pour la tique.
 
 **Notre Umwelt est plus grand, mais c'est toujours un Umwelt.**
 
 Nous voyons une bande étroite de rayonnement électromagnétique (la lumière visible). Nous entendons une bande étroite d'ondes de pression (le son). Nous avons construit des instruments qui prolongent nos sens, mais même ces instruments sont conçus par des créatures limitées à leur propre Umwelt.
 
-Et s'il existait des aspects de la réalité pour lesquels nous ne pouvons tout simplement **pas** construire d'instruments — parce que nous ne pouvons même pas concevoir ce que nous chercherions ?
+Et s'il existait des aspects de la réalité pour lesquels nous ne pouvons tout simplement **pas** construire d'instruments, parce que nous ne pouvons même pas concevoir ce que nous chercherions ?
 
 ---
 
 ### Flatland : une parabole de l'aveuglement dimensionnel
 
-En 1884, Edwin Abbott a écrit *Flatland*, une histoire sur des créatures vivant dans un monde à deux dimensions. Le protagoniste, un Carré, vit sur un plan plat. Il peut bouger à gauche, à droite, en avant, en arrière — mais pas en haut ou en bas. « Haut » n'existe pas pour lui.
+En 1884, Edwin Abbott a écrit *Flatland*, une histoire sur des créatures vivant dans un monde à deux dimensions. Le protagoniste, un Carré, vit sur un plan plat. Il peut bouger à gauche, à droite, en avant, en arrière, mais pas en haut ou en bas. « Haut » n'existe pas pour lui.
 
 Un jour, une Sphère visite Flatland. Mais le Carré ne peut pas voir une sphère. Il ne voit qu'un **cercle** : la coupe transversale là où la sphère intersecte son plan. À mesure que la sphère traverse, le cercle grossit, puis rétrécit, puis disparaît.
 
@@ -60,7 +60,7 @@ Le Carré ne peut pas comprendre. Il n'a aucun concept de « haut ». Le mot ne 
 
 **Sommes-nous le Carré ?**
 
-S'il existe sept dimensions supplémentaires, compactifiées à des échelles trop petites pour qu'on les sonde, nous pourrions ne voir que les « coupes transversales » — des particules qui apparaissent et disparaissent, des forces qui agissent à distance, des constantes sans origine apparente.
+S'il existe sept dimensions supplémentaires, compactifiées à des échelles trop petites pour qu'on les sonde, nous pourrions ne voir que les « coupes transversales », des particules qui apparaissent et disparaissent, des forces qui agissent à distance, des constantes sans origine apparente.
 
 Nous voyons les cercles. Nous ne pouvons pas voir la sphère.
 
@@ -77,7 +77,7 @@ Mais nous ne *voyons* pas K₇. Nous voyons ses **effets** :
 - Les rapports de masses des particules
 - Les trois générations de matière
 
-Ces nombres, que la physique a mesurés mais jamais expliqués, émergent de la **topologie** de K₇ — le nombre et la forme de ses « trous ».
+Ces nombres, que la physique a mesurés mais jamais expliqués, émergent de la **topologie** de K₇, le nombre et la forme de ses « trous ».
 
 De notre point de vue, ce sont juste des constantes. Des entrées dans nos équations. Des nombres qui « se trouvent être » ce qu'ils sont.
 
@@ -124,7 +124,7 @@ Si Gaïa existe, nous ne la percevrions pas. Pas parce qu'elle se cache, mais pa
 2. **Sa substance** est la biosphère entière. Nous sommes des cellules.
 3. **Ses pensées** (si ce mot s'applique) seraient géologiques, atmosphériques, évolutives.
 
-Nous ne sommes pas équipés pour percevoir des entités à cette échelle. Nous pouvons mesurer le climat, suivre les écosystèmes, modéliser les boucles de rétroaction — mais « voir » Gaïa, ce serait comme pour un neurone « voir » le cerveau dont il fait partie.
+Nous ne sommes pas équipés pour percevoir des entités à cette échelle. Nous pouvons mesurer le climat, suivre les écosystèmes, modéliser les boucles de rétroaction, mais « voir » Gaïa, ce serait comme pour un neurone « voir » le cerveau dont il fait partie.
 
 **Et c'est juste en 4D.** Et les sept autres dimensions ?
 
@@ -138,7 +138,7 @@ Le panpsychisme est la vue philosophique selon laquelle la conscience est un tra
 
 Si le panpsychisme est vrai (et je ne dis pas qu'il l'est), alors les dimensions cachées ne seraient pas seulement des « structures géométriques ». Elles pourraient être des **structures expérientielles**, des substrats pour des formes de conscience que nous ne pouvons pas imaginer.
 
-Nous pourrions évoluer **aux côtés** de phénomènes conscients que nous ne percevons pas — de la même façon que le pou évolue aux côtés des voitures et des antennes-relais.
+Nous pourrions évoluer **aux côtés** de phénomènes conscients que nous ne percevons pas, de la même façon que le pou évolue aux côtés des voitures et des antennes-relais.
 
 Ce n'est pas une affirmation scientifique. GIFT ne prouve pas cela. Rien ne prouve cela. Mais c'est une pensée que les mathématiques permettent, même si elles ne l'exigent pas.
 
@@ -174,7 +174,7 @@ Un jour, un pou-philosophe demande : « Et s'il y avait plus ? Et si notre monde
 
 Les autres poux rient. « Comme quoi ? Du super-cheveu ? Du méga-cuir-chevelu ? Ne sois pas ridicule. Nous avons mesuré tout ce qui existe. »
 
-Mais la pou-philosophe n'est pas satisfaite. Elle n'a pas de preuves du monde plus grand. Elle ne peut pas le voir. Mais elle remarque des choses étranges — des perturbations qui ne collent pas à ses modèles, des constantes qui semblent arbitraires, des phénomènes en bordure de sa perception qui suggèrent quelque chose au-delà.
+Mais la pou-philosophe n'est pas satisfaite. Elle n'a pas de preuves du monde plus grand. Elle ne peut pas le voir. Mais elle remarque des choses étranges, des perturbations qui ne collent pas à ses modèles, des constantes qui semblent arbitraires, des phénomènes en bordure de sa perception qui suggèrent quelque chose au-delà.
 
 Elle ne peut rien prouver. Mais elle se demande.
 
@@ -182,7 +182,7 @@ Et peut-être que, pour des créatures à la perception limitée vivant dans un 
 
 ---
 
-*Nous sommes peut-être les poux de l'univers. Et ce n'est pas une insulte — c'est une invitation à l'humilité, à la curiosité, à l'émerveillement.*
+*Nous sommes peut-être les poux de l'univers. Et ce n'est pas une insulte, c'est une invitation à l'humilité, à la curiosité, à l'émerveillement.*
 
 ---
 

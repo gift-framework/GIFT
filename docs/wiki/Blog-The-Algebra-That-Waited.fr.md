@@ -25,7 +25,7 @@ Le 16 octobre 1843, William Rowan Hamilton se promenait le long du Royal Canal �
 
 Il venait de découvrir les quaternions : un système de nombres à quatre dimensions dans lequel la multiplication n'est pas commutative. L'ordre compte : ij ≠ ji.
 
-Hamilton a passé les vingt-deux années qui lui restaient à développer la théorie des quaternions, convaincu d'avoir trouvé l'algèbre de l'espace physique. Il avait en partie raison — les quaternions décrivent élégamment les rotations — mais l'histoire jugerait son obsession excessive. Le calcul vectoriel, développé par d'autres, s'est révélé plus pratique pour la plupart des physiques.
+Hamilton a passé les vingt-deux années qui lui restaient à développer la théorie des quaternions, convaincu d'avoir trouvé l'algèbre de l'espace physique. Il avait en partie raison (les quaternions décrivent élégamment les rotations) mais l'histoire jugerait son obsession excessive. Le calcul vectoriel, développé par d'autres, s'est révélé plus pratique pour la plupart des physiques.
 
 Ce que Hamilton ne pouvait pas savoir : sa découverte n'était pas la fin d'une suite, mais son avant-dernier terme.
 
@@ -61,7 +61,7 @@ L'algèbre terminale
 
 Cette terminaison est remarquable. La plupart des constructions mathématiques s'étendent indéfiniment. On peut toujours construire des groupes plus grands, des espaces de plus haute dimension, des topologies plus complexes. Mais les algèbres à division s'arrêtent. À la dimension huit, le processus de doublement atteint une frontière au-delà de laquelle certaines propriétés essentielles ne peuvent plus être préservées.
 
-Si l'univers a besoin d'une algèbre à division — si la physique a besoin d'un système de nombres où chaque élément non nul possède un inverse multiplicatif — alors les octonions sont l'option la plus riche disponible. Pas la plus simple, pas la plus pratique, mais la plus grande qui fonctionne.
+Si l'univers a besoin d'une algèbre à division (si la physique a besoin d'un système de nombres où chaque élément non nul possède un inverse multiplicatif) alors les octonions sont l'option la plus riche disponible. Pas la plus simple, pas la plus pratique, mais la plus grande qui fonctionne.
 
 Pendant 180 ans, cela a semblé être une curiosité mathématique sans application physique. Les octonions n'avaient pas de rôle évident en mécanique quantique, pas d'apparition dans le Modèle Standard, pas de présence en relativité générale.
 
@@ -88,7 +88,7 @@ La relation a été qualifiée de « mystique », « numérologique » et « pro
 
 Koide lui-même a proposé des modèles impliquant une sous-structure de préons. D'autres ont exploré des explications supersymétriques, des symétries de saveur, des zéros de texture. Aucune n'a fait consensus. La relation est restée orpheline : trop précise pour qu'on l'ignore, trop isolée pour qu'on l'intègre.
 
-Le casse-tête de Koide est devenu l'un de ces faits inconfortables que les physiciens reconnaissent sans pouvoir l'expliquer. Il apparaît dans les articles de revue avec des phrases comme « intrigant mais inexpliqué » et « en attente d'une compréhension théorique » — trop précis pour être écarté comme du bruit, mais déconnecté de tout principe théorique connu.
+Le casse-tête de Koide est devenu l'un de ces faits inconfortables que les physiciens reconnaissent sans pouvoir l'expliquer. Il apparaît dans les articles de revue avec des phrases comme « intrigant mais inexpliqué » et « en attente d'une compréhension théorique », trop précis pour être écarté comme du bruit, mais déconnecté de tout principe théorique connu.
 
 Quarante-trois années d'attente.
 
@@ -97,7 +97,7 @@ La connexion octonionique
 
 Le cadre GIFT propose une connexion qui mérite peut-être qu'on s'y attarde.
 
-Les octonions ont sept unités imaginaires. Leur groupe d'automorphismes — l'ensemble des transformations qui préservent la multiplication octonionique — est le groupe de Lie exceptionnel G₂. Ce groupe a une dimension de 14.
+Les octonions ont sept unités imaginaires. Leur groupe d'automorphismes (l'ensemble des transformations qui préservent la multiplication octonionique) est le groupe de Lie exceptionnel G₂. Ce groupe a une dimension de 14.
 
 Quand la physique est compactifiée sur une variété de dimension sept à holonomie G₂, des invariants topologiques émergent. L'un de ces invariants, le deuxième nombre de Betti b₂, compte certains cycles indépendants dans la géométrie. Pour la construction spécifique que GIFT considère, b₂ = 21.
 
@@ -148,7 +148,7 @@ Des correspondances individuelles peuvent être des coïncidences. Mais combien 
 
 Nous avons testé 19 100 configurations alternatives : différentes valeurs des invariants topologiques b₂ et b₃. Les valeurs spécifiques (21, 77) produisent l'écart moyen le plus bas avec l'expérience, sur 18 observables sans dimension. La deuxième meilleure configuration fait 2,2 fois moins bien selon ce critère.
 
-Cela ne prouve pas que le cadre est correct. Cela suggère que les accords numériques ne sont pas arbitraires — que quelque chose, dans (21, 77), est spécial, même si nous ne comprenons pas tout à fait ce que c'est.
+Cela ne prouve pas que le cadre est correct. Cela suggère que les accords numériques ne sont pas arbitraires, que quelque chose, dans (21, 77), est spécial, même si nous ne comprenons pas tout à fait ce que c'est.
 
 Partie VI : La vertu de la patience
 Ce que les octonions enseignent
