@@ -36,7 +36,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 | Page | Description |
 |------|-------------|
 | [Observable Reference](Observable-Reference.html) | 89 observables : formules, valeurs, écarts (EN) |
-| [Statistical Evidence](Statistical-Evidence.html) | Validation à 7 composantes, recherche exhaustive sur 3M+ configs (EN) |
+| 🇫🇷 [Preuves statistiques](Statistical-Evidence.fr.html) | Validation à 7 composantes, recherche exhaustive sur 3M+ configs |
 | 🇫🇷 [Résumé de validation](Validation-Summary.fr.html) | Résultats secteur par secteur avec NuFIT 6.0 |
 | 🇫🇷 [Validations indépendantes](Independent-Validations.fr.html) | Recherches externes qui convergent avec GIFT |
 
@@ -57,7 +57,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 | [Lean Formalization](Lean-Formalization.html) | 130 fichiers, 7 axiomes, 213 conjonctions, blueprint (EN) |
 | [Repository Structure](Repository-Structure.html) | Disposition des dossiers et navigation (EN) |
 | [External Resources](External-Resources.html) | Liens vers toutes les ressources externes (EN) |
-| [Citation Guide](Citation-Guide.html) | Comment citer GIFT (BibTeX, APA, DOIs) (EN) |
+| 🇫🇷 [Guide de citation](Citation-Guide.fr.html) | Comment citer GIFT (BibTeX, APA, DOIs) |
 | [Changelog Highlights](Changelog-Highlights.html) | Historique récent des versions (EN) |
 
 ---
