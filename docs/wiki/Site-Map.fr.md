@@ -26,11 +26,11 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles
 | Page | Description |
 |------|-------------|
-| [Paper Main Framework](Paper-Main-Framework.html) | Article principal : 33 prédictions, 0,24 % d'écart moyen (EN) |
-| [Paper S1 Foundations](Paper-S1-Foundations.html) | S1 : fondations mathématiques de E₈, G₂, K₇ (EN) |
-| [Paper S2 Derivations](Paper-S2-Derivations.html) | S2 : dérivations complètes pour les 33 observables (EN) |
-| [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) | Métrique G₂ Chebyshev-Cholesky à 169 paramètres (EN) |
-| [Paper Spectral Geometry](Paper-Spectral-Geometry.html) | Spectre KK, nombres de Betti, hiérarchie des masses (EN) |
+| 🇫🇷 [Article principal](Paper-Main-Framework.fr.html) | Article principal : 33 prédictions, 0,24 % d'écart moyen |
+| 🇫🇷 [Article S1 fondations](Paper-S1-Foundations.fr.html) | S1 : fondations mathématiques de E₈, G₂, K₇ |
+| 🇫🇷 [Article S2 dérivations](Paper-S2-Derivations.fr.html) | S2 : dérivations complètes pour les 33 observables |
+| 🇫🇷 [Article métrique G₂ explicite](Paper-Explicit-G2-Metric.fr.html) | Métrique G₂ Chebyshev-Cholesky à 169 paramètres |
+| 🇫🇷 [Article géométrie spectrale](Paper-Spectral-Geometry.fr.html) | Spectre KK, nombres de Betti, hiérarchie des masses |
 
 ## Données de référence
 | Page | Description |
