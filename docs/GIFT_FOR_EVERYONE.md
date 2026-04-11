@@ -2,6 +2,8 @@
 title: GIFT for Everyone
 ---
 
+> 🇬🇧 **English** · 🇫🇷 [Français](GIFT_FOR_EVERYONE.fr.html)
+
 # GIFT for Everyone
 
 **A complete guide to understanding GIFT, explained for humans**
@@ -138,17 +140,7 @@ After octonions, **there's nothing more**. Mathematically proven (Hurwitz theore
 
 It's the most "efficient" configuration possible. No redundancy, no gaps.
 
-```
-        1
-       /|\
-      / | \
-     /  |  \
-    2---7---3
-     \  |  /
-      \ | /
-       \|/
-    4---5---6
-```
+![The Fano plane: 7 points, 7 lines (the 3 sides of the triangle, the 3 medians, and the inscribed circle), each containing exactly 3 points.](figures/fig1_fano_plane.png)
 
 **The magic trick**: This network has 168 ways to rearrange itself while keeping the same structure — the symmetry group called **PSL(2,7)**, of order 168. And here's the real twist: 168 ÷ 56 = **3**. Three particle families.
 
