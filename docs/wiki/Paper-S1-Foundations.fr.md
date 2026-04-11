@@ -3,9 +3,9 @@ title: "Article S1 fondations"
 layout: default
 ---
 
-# Article : S1 — fondations mathématiques
+# Article : S1, fondations mathématiques
 
-**Supplément S1 : fondations mathématiques — algèbre de Lie exceptionnelle E₈, variétés à holonomie G₂ et construction de K₇**
+**Supplément S1 : fondations mathématiques, algèbre de Lie exceptionnelle E₈, variétés à holonomie G₂ et construction de K₇**
 
 *Brieuc de La Fournière (2026)*
 [Texte intégral (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.3_S1_foundations.md) | [DOI Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
@@ -33,10 +33,10 @@ Développe l'architecture E₈, les variétés à holonomie G₂ via le noyau de
 
 ## Structure des sections
 
-- **Partie 0** : fondation octonionique — pourquoi 𝕆 est terminale, G₂ = Aut(𝕆), plan de Fano
-- **Partie I** : algèbre de Lie exceptionnelle E₈ — système de racines, groupe de Weyl, chaîne exceptionnelle
-- **Partie II** : variétés à holonomie G₂ — définition, classification de Berger, classes de torsion W₁ à W₂₇
-- **Partie III** : construction de la variété K₇ — cadre TCS, blocs ACyl, Mayer-Vietoris
+- **Partie 0** : fondation octonionique, pourquoi 𝕆 est terminale, G₂ = Aut(𝕆), plan de Fano
+- **Partie I** : algèbre de Lie exceptionnelle E₈, système de racines, groupe de Weyl, chaîne exceptionnelle
+- **Partie II** : variétés à holonomie G₂, définition, classification de Berger, classes de torsion W₁ à W₂₇
+- **Partie III** : construction de la variété K₇, cadre TCS, blocs ACyl, Mayer-Vietoris
 - **Partie IV** : structure métrique et vérification, κ_T = 1/61, det(g) = 65/32, existence de Joyce
 
 ---

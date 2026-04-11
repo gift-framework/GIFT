@@ -3,9 +3,9 @@ title: "Article S2 dérivations"
 layout: default
 ---
 
-# Article : S2 — dérivations complètes
+# Article : S2, dérivations complètes
 
-**Supplément S2 : dérivations complètes (sans dimension) — les 33 prédictions sans dimension**
+**Supplément S2 : dérivations complètes (sans dimension), les 33 prédictions sans dimension**
 
 *Brieuc de La Fournière (2026)*
 [Texte intégral (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.3_S2_derivations.md) | [DOI Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
@@ -51,11 +51,11 @@ Fournit les dérivations algébriques complètes pour les 33 prédictions sans d
 
 ## Structure des sections
 
-- **Partie 0** : philosophie de la dérivation — entrées vs sorties, ce qui est revendiqué vs non
-- **Partie I** : fondations — classification des statuts, notation
-- **Partie II** : théorèmes fondationnels — N_gen=3, τ=3472/891, κ_T=1/61, det(g)=65/32
+- **Partie 0** : philosophie de la dérivation, entrées vs sorties, ce qui est revendiqué vs non
+- **Partie I** : fondations, classification des statuts, notation
+- **Partie II** : théorèmes fondationnels: N_gen=3, τ=3472/891, κ_T=1/61, det(g)=65/32
 - **Partie III** : secteur de jauge, sin² θ_W=3/13, α_s=√2/12
-- **Partie IV** : secteur leptonique — Q_Koide=2/3, m_τ/m_e=3477, m_μ/m_e=27^φ
+- **Partie IV** : secteur leptonique: Q_Koide=2/3, m_τ/m_e=3477, m_μ/m_e=27^φ
 - **Partie V** : secteur des quarks, m_s/m_d=20, m_b/m_t=1/42, angles CKM
 - **Partie VI** : secteur des neutrinos, δ_CP=197°, angles de mélange
 - **Partie VII** : Higgs et cosmologie, λ_H=√17/32, Ω_DE, n_s, h, σ₈
