@@ -19,9 +19,9 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Guides par profil
 | Page | Description |
 |------|-------------|
-| [For Physicists](For-Physicists.html) | Architecture E₈×E₈, compactification K₇, prédictions (EN) |
-| [For Geometers](For-Geometers.html) | Pipeline computationnel : TCS, PINNs, méthodes spectrales (EN) |
-| [For Formalization Experts](For-Formalization-Experts.html) | Formalisation Lean 4 : architecture, méthodologie, accès (EN) |
+| 🇫🇷 [Pour les physiciens](For-Physicists.fr.html) | Architecture E₈×E₈, compactification K₇, prédictions |
+| 🇫🇷 [Pour les géomètres](For-Geometers.fr.html) | Pipeline computationnel : TCS, PINNs, méthodes spectrales |
+| 🇫🇷 [Pour les experts en formalisation](For-Formalization-Experts.fr.html) | Formalisation Lean 4 : architecture, méthodologie, accès |
 
 ## Articles
 | Page | Description |
