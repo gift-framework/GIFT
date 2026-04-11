@@ -1,0 +1,484 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIFT — Geometric Information Field Theory</title>
+  <meta name="description" content="Les paramètres du Modèle Standard issus de la pure géométrie. E8 × E8 sur une variété K7 à holonomie G2, zéro paramètre ajustable, formellement vérifié en Lean 4.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-brand">GIFT</a>
+    <div class="lang-toggle" aria-label="Language">
+      <a class="lang-en" href="#" aria-label="English">EN</a>
+      <span aria-hidden="true">·</span>
+      <a class="lang-fr" href="#" aria-label="Français">FR</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#results">Résultats</a></li>
+      <li><a href="#papers">Articles</a></li>
+      <li><a href="wiki/Home.fr.html">Wiki</a></li>
+      <li><a href="https://github.com/gift-framework/GIFT">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+  // List of pages for which a French translation exists, generated at
+  // Jekyll build time. Each entry is the EN URL with baseurl prefix.
+  window.GIFT_FR_PAGES = new Set([
+{%- for p in site.pages -%}
+{%- if p.path contains ".fr.md" or p.path contains ".fr.html" -%}
+{%- assign en_url = p.url | replace: ".fr.html", ".html" -%}
+    "{{ en_url | relative_url }}",
+{%- endif -%}
+{%- endfor %}
+  ]);
+
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function(){
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var path = window.location.pathname;
+    if (path.endsWith('/')) path = path + 'index.html';
+    var isFrench = path.endsWith('.fr.html');
+    var enHref, frHref, enRefForCheck;
+    if (isFrench) {
+      enHref = path.replace('.fr.html', '.html');
+      frHref = path;
+      enRefForCheck = enHref;
+    } else {
+      enHref = path;
+      frHref = path.replace(/\.html$/, '.fr.html');
+      enRefForCheck = enHref;
+    }
+    var hasFrench = window.GIFT_FR_PAGES.has(enRefForCheck);
+    if (!hasFrench) {
+      var toggle = document.querySelector('.lang-toggle');
+      if (toggle) toggle.style.display = 'none';
+      return;
+    }
+    var enLink = document.querySelector('.lang-en');
+    var frLink = document.querySelector('.lang-fr');
+    if (enLink) {
+      enLink.href = enHref;
+      if (!isFrench) enLink.classList.add('active');
+    }
+    if (frLink) {
+      frLink.href = frHref;
+      if (isFrench) frLink.classList.add('active');
+    }
+  })();
+</script>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="container">
+    <h1>Geometric Information Field Theory</h1>
+    <p class="subtitle">Et si la physique n'était pas finement ajustée, mais simplement bien formée ?</p>
+    <p class="tagline">
+      GIFT dérive les paramètres du Modèle Standard à partir de la géométrie
+      d'une seule variété de dimension 7. Aucun paramètre libre. Aucun ajustement.
+      Chaque prédiction est une conséquence de la forme.
+    </p>
+
+    <div class="btn-group">
+      <a href="https://www.youtube.com/watch?v=6DVck30Q6XM" class="btn btn--primary">Voir la vidéo (8 min, EN)</a>
+      <a href="https://giftheory.substack.com/" class="btn">Lire le blog (EN)</a>
+      <a href="https://github.com/gift-framework/core" class="btn">Voir les preuves</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== START HERE ========== -->
+<section id="start">
+  <div class="container">
+    <h2 class="section-title">Par où commencer</h2>
+    <div class="sep"></div>
+    <p class="section-intro">
+      Que vous soyez curieux, physicien, mathématicien, ou amateur de vérification formelle,
+      il y a une porte pour vous.
+    </p>
+
+    <div class="audience-grid">
+      <a href="GIFT_FOR_EVERYONE.fr.html" class="audience-card">
+        <div class="audience-label">Curieux</div>
+        <h3>GIFT pour Tout le Monde</h3>
+        <p>Analogies du quotidien, aucune équation requise</p>
+      </a>
+      <a href="https://www.youtube.com/watch?v=6DVck30Q6XM" class="audience-card">
+        <div class="audience-label">Visuel</div>
+        <h3>Vidéo de 8 minutes</h3>
+        <p>L'idée centrale, expliquée sur YouTube (EN)</p>
+      </a>
+      <a href="INFO_GEO_FOR_PHYSICISTS.html" class="audience-card">
+        <div class="audience-label">Physicien</div>
+        <h3>Info Geo for Physicists</h3>
+        <p>Approche topologique des paramètres SM (EN)</p>
+      </a>
+      <a href="GIFTPY_FOR_GEOMETERS.html" class="audience-card">
+        <div class="audience-label">Géomètre</div>
+        <h3>GiftPy for Geometers</h3>
+        <p>Pipeline de construction de la métrique G&#8322; (EN)</p>
+      </a>
+      <a href="LEAN_FOR_PHYSICS.html" class="audience-card">
+        <div class="audience-label">Formalisation</div>
+        <h3>Lean for Physics</h3>
+        <p>Relations physiques vérifiées par machine (EN)</p>
+      </a>
+      <a href="wiki/FAQ.fr.html" class="audience-card">
+        <div class="audience-label">Questions</div>
+        <h3>FAQ</h3>
+        <p>Réponses aux questions courantes</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<section id="blog">
+  <div class="container">
+    <h2 class="section-title">Articles de blog</h2>
+    <div class="sep"></div>
+    <p class="section-intro">
+      Une écriture accessible sur les idées derrière GIFT.
+      Tous les articles sur <a href="https://giftheory.substack.com/">giftheory.substack.com</a> (EN).
+      Versions françaises disponibles via les liens ci-dessous.
+    </p>
+
+    <div class="blog-cards">
+      <a href="https://giftheory.substack.com/p/brieucs-gift" class="blog-card">
+        <h3>« Le nom de l'auteur semble fabriqué »</h3>
+        <p>Apprendre la physique avec une IA : l'origine accidentelle de GIFT</p>
+        <div class="date">9 mars 2026</div>
+      </a>
+      <a href="wiki/Blog-Roberto-Carlos-Geometry.fr.html" class="blog-card">
+        <h3>La géométrie de l'impossible</h3>
+        <p>Ce que Roberto Carlos savait (sans savoir qu'il le savait)</p>
+        <div class="date">18 février 2026</div>
+      </a>
+      <a href="wiki/Blog-Lice-of-the-Universe.fr.html" class="blog-card">
+        <h3>Les poux de l'univers</h3>
+        <p>Ce que nous ne pouvons pas percevoir, et ce que ça veut dire</p>
+        <div class="date">5 février 2026</div>
+      </a>
+      <a href="wiki/Blog-The-Algebra-That-Waited.fr.html" class="blog-card">
+        <h3>L'algèbre qui attendait</h3>
+        <p>Sur les octonions, la patience, et un casse-tête vieux de 43 ans</p>
+        <div class="date">27 décembre 2025</div>
+      </a>
+      <a href="wiki/Blog-Joyce-Theorem-in-Lean.fr.html" class="blog-card">
+        <h3>Le théorème de Joyce, désormais en Lean</h3>
+        <p>Formalisation de l'existence des variétés à holonomie G&#8322;</p>
+        <div class="date">2025</div>
+      </a>
+      <a href="wiki/Blog-Gift-from-Bit.fr.html" class="blog-card">
+        <h3>Gift from Bit</h3>
+        <p>Pourquoi la géométrie pourrait être le langage de la physique</p>
+        <div class="date">2025</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== RESULTS ========== -->
+<section id="results">
+  <div class="container">
+    <h2 class="section-title">Résultats clés</h2>
+    <div class="sep"></div>
+    <p class="section-intro">
+      Chaque valeur ci-dessous est dérivée de la topologie : la forme d'une seule
+      variété K&#8327; à holonomie G&#8322;. Rien n'est ajusté.
+    </p>
+
+    <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 1rem; color: var(--accent);">
+      Relations exactes (vérifiées en Lean 4)
+    </h3>
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Relation</th>
+          <th>Valeur</th>
+          <th>Origine topologique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>sin&#178;&#952;<sub>W</sub></td>
+          <td class="value exact">3/13</td>
+          <td>b&#8322;/(b&#8323; + dim G&#8322;)</td>
+        </tr>
+        <tr>
+          <td>&#954;<sub>T</sub></td>
+          <td class="value exact">1/61</td>
+          <td>1/(b&#8323; &minus; dim G&#8322; &minus; p&#8322;)</td>
+        </tr>
+        <tr>
+          <td>&#964;</td>
+          <td class="value exact">3472/891</td>
+          <td>(496 &times; 21)/(27 &times; 99)</td>
+        </tr>
+        <tr>
+          <td>det(g)</td>
+          <td class="value exact">65/32</td>
+          <td>déterminant de la métrique G&#8322;</td>
+        </tr>
+        <tr>
+          <td>&#948;<sub>CP</sub></td>
+          <td class="value exact">197&deg;</td>
+          <td>7 &times; dim G&#8322; + H*</td>
+        </tr>
+        <tr>
+          <td>Q<sub>Koide</sub></td>
+          <td class="value exact">2/3</td>
+          <td>dim G&#8322; / b&#8322;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 2rem 0 1rem; color: var(--accent);">
+      Précision par secteur
+    </h3>
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Secteur</th>
+          <th>Prédictions</th>
+          <th>Écart moyen</th>
+          <th>À retenir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Électrofaible</td>
+          <td>3</td>
+          <td class="value">0,12 %</td>
+          <td>sin&#178;&#952;<sub>W</sub> = 3/13</td>
+        </tr>
+        <tr>
+          <td>Lepton</td>
+          <td>3</td>
+          <td class="value">0,04 %</td>
+          <td>Q<sub>Koide</sub> = 2/3 (0,0009 %)</td>
+        </tr>
+        <tr>
+          <td>Neutrino</td>
+          <td>3+1</td>
+          <td class="value">0,25 %</td>
+          <td>&#952;&#8321;&#8322; = arctan(2/3)</td>
+        </tr>
+        <tr>
+          <td>Cosmologie</td>
+          <td>3</td>
+          <td class="value">0,07 %</td>
+          <td>n<sub>s</sub> = &#950;(11)/&#950;(5)</td>
+        </tr>
+        <tr>
+          <td>Structurel</td>
+          <td>4</td>
+          <td class="value exact">exact</td>
+          <td>N<sub>gen</sub> = 3</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 2rem 0 1rem; color: var(--accent);">
+      Unicité statistique
+    </h3>
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Résultat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Configurations testées</td>
+          <td class="value">3 070 396</td>
+        </tr>
+        <tr>
+          <td>Rang de GIFT</td>
+          <td class="value exact">n&deg; 1</td>
+        </tr>
+        <tr>
+          <td>Alternatives meilleures trouvées</td>
+          <td class="value exact">0</td>
+        </tr>
+        <tr>
+          <td>p-valeur du modèle nul</td>
+          <td class="value">&lt; 2&times;10&#8315;&#8309; (&sigma; &gt; 4,2)</td>
+        </tr>
+        <tr>
+          <td>Facteur de Bayes</td>
+          <td class="value">304 à 4 738 (décisif)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== PAPERS ========== -->
+<section id="papers">
+  <div class="container">
+    <h2 class="section-title">Articles &amp; preuves</h2>
+    <div class="sep"></div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Article principal</h3>
+        <p>Cadre théorique complet : compactification E&#8328;&times;E&#8328;, construction de K&#8327;, toutes les dérivations.</p>
+        <div class="card-meta">
+          <a href="https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_v3.3_main.pdf">PDF (EN) &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>S1 : Foundations</h3>
+        <p>Construction mathématique de E&#8328;, G&#8322;, K&#8327;. Théorie des réseaux, holonomie, recollement TCS.</p>
+        <div class="card-meta">
+          <a href="https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_v3.3_S1.pdf">PDF (EN) &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>S2 : Derivations</h3>
+        <p>Les 33 dérivations avec calcul complet. 0,24 % d'écart moyen (PDG 2024 / NuFIT 6.0).</p>
+        <div class="card-meta">
+          <a href="https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_v3.3_S2.pdf">PDF (EN) &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Métrique G&#8322; explicite</h3>
+        <p>Construction analytique de la métrique G&#8322;. det(g) = 65/32 à partir des constantes de structure.</p>
+        <div class="card-meta">
+          <a href="https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/Explicit_G2_Metric.pdf">PDF (EN) &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Géométrie spectrale</h3>
+        <p>Spectre KK, couplages de Yukawa, unification de jauge à partir des valeurs propres de la métrique G&#8322;.</p>
+        <div class="card-meta">
+          <a href="https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/Spectral_Geometry.pdf">PDF (EN) &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Preuves Lean 4</h3>
+        <p>130 fichiers, 7 axiomes, zéro preuve incomplète. Formellement vérifié en Lean 4 (core v3.4.7).</p>
+        <div class="card-meta">
+          <a href="https://github.com/gift-framework/core">Dépôt &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FALSIFICATION ========== -->
+<section id="falsification">
+  <div class="container">
+    <h2 class="section-title">Tests de falsification</h2>
+    <div class="sep"></div>
+    <p class="section-intro">
+      GIFT fait des prédictions concrètes qui peuvent être testées par des expériences en cours ou planifiées.
+    </p>
+
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Prédiction</th>
+          <th>Expérience</th>
+          <th>Calendrier</th>
+          <th>Critère de falsification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&#948;<sub>CP</sub> = 197&deg;</td>
+          <td>DUNE</td>
+          <td>2027 à 2030</td>
+          <td>hors de [187&deg;, 207&deg;]</td>
+        </tr>
+        <tr>
+          <td>sin&#178;&#952;<sub>W</sub> = 3/13</td>
+          <td>FCC-ee</td>
+          <td>2040s</td>
+          <td>hors de [0,2295, 0,2320]</td>
+        </tr>
+        <tr>
+          <td>m<sub>s</sub>/m<sub>d</sub> = 20</td>
+          <td>QCD sur réseau</td>
+          <td>2030</td>
+          <td>converge hors de [19, 21]</td>
+        </tr>
+        <tr>
+          <td>N<sub>gen</sub> = 3</td>
+          <td>LHC</td>
+          <td>en cours</td>
+          <td>découverte d'une 4&#8319; génération</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">
+          GIFT
+        </h4>
+        <p>
+          Et si la physique n'était pas finement ajustée, mais simplement bien formée ?
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="https://giftheory.substack.com/">Substack</a></li>
+          <li><a href="https://youtube.com/@giftheory">YouTube</a></li>
+          <li><a href="https://x.com/GIFTheory">X / Twitter</a></li>
+          <li><a href="https://www.researchgate.net/profile/Brieuc-De-La-Fourniere">ResearchGate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Archive</h4>
+        <ul>
+          <li><a href="https://doi.org/10.5281/zenodo.18837071">Zenodo (cadre)</a></li>
+          <li><a href="https://doi.org/10.5281/zenodo.18860358">Zenodo (métrique G&#8322;)</a></li>
+          <li><a href="https://doi.org/10.5281/zenodo.18920368">Zenodo (spectral)</a></li>
+          <li><a href="https://github.com/gift-framework/core">Core (Lean 4)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Licence MIT &middot; GIFT Framework v3.4</span>
+      <span class="gift-from-bit">Gift from bit</span>
+    </div>
+  </div>
+</footer>
+
+<script data-goatcounter="https://gift-framework.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
