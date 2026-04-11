@@ -54,7 +54,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Projet
 | Page | Description |
 |------|-------------|
-| [Lean Formalization](Lean-Formalization.html) | 130 fichiers, 7 axiomes, 213 conjonctions, blueprint (EN) |
+| 🇫🇷 [Formalisation Lean](Lean-Formalization.fr.html) | 130 fichiers, 7 axiomes, 213 conjonctions, blueprint |
 | 🇫🇷 [Structure du dépôt](Repository-Structure.fr.html) | Disposition des dossiers et navigation |
 | 🇫🇷 [Ressources externes](External-Resources.fr.html) | Liens vers toutes les ressources externes |
 | 🇫🇷 [Guide de citation](Citation-Guide.fr.html) | Comment citer GIFT (BibTeX, APA, DOIs) |
