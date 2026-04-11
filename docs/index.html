@@ -22,6 +22,11 @@ layout: null
 <nav>
   <div class="container">
     <a href="#" class="nav-brand">GIFT</a>
+    <div class="lang-toggle" aria-label="Language">
+      <a class="lang-en" href="#" aria-label="English">EN</a>
+      <span aria-hidden="true">·</span>
+      <a class="lang-fr" href="#" aria-label="Français">FR</a>
+    </div>
     <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -38,11 +43,33 @@ layout: null
   (function(){
     var btn = document.querySelector('.nav-toggle');
     var links = document.querySelector('.nav-links');
-    if (!btn || !links) return;
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+    if (btn && links) {
+      btn.addEventListener('click', function(){
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var path = window.location.pathname;
+    if (path.endsWith('/')) path = path + 'index.html';
+    var isFrench = path.endsWith('.fr.html');
+    var enHref, frHref;
+    if (isFrench) {
+      enHref = path.replace('.fr.html', '.html');
+      frHref = path;
+    } else {
+      enHref = path;
+      frHref = path.replace(/\.html$/, '.fr.html');
+    }
+    var enLink = document.querySelector('.lang-en');
+    var frLink = document.querySelector('.lang-fr');
+    if (enLink) {
+      enLink.href = enHref;
+      if (!isFrench) enLink.classList.add('active');
+    }
+    if (frLink) {
+      frLink.href = frHref;
+      if (isFrench) frLink.classList.add('active');
+    }
   })();
 </script>
 

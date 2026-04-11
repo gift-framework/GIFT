@@ -85,6 +85,36 @@ nav .container {
   list-style: none;
 }
 
+/* Language toggle (EN · FR) */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  margin-right: 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.lang-toggle a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.1rem 0.15rem;
+}
+.lang-toggle a.active {
+  color: var(--accent);
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent);
+}
+.lang-toggle a:not(.active):hover {
+  color: var(--accent);
+}
+.lang-toggle span {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
 /* Hamburger button — hidden on desktop, shown on mobile via @media */
 .nav-toggle {
   display: none;

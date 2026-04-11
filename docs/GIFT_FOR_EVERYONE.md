@@ -2,8 +2,6 @@
 title: GIFT for Everyone
 ---
 
-> 🇬🇧 **English** · 🇫🇷 [Français](GIFT_FOR_EVERYONE.fr.html)
-
 # GIFT for Everyone
 
 **A complete guide to understanding GIFT, explained for humans**
