@@ -55,10 +55,10 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 | Page | Description |
 |------|-------------|
 | [Lean Formalization](Lean-Formalization.html) | 130 fichiers, 7 axiomes, 213 conjonctions, blueprint (EN) |
-| [Repository Structure](Repository-Structure.html) | Disposition des dossiers et navigation (EN) |
-| [External Resources](External-Resources.html) | Liens vers toutes les ressources externes (EN) |
+| 🇫🇷 [Structure du dépôt](Repository-Structure.fr.html) | Disposition des dossiers et navigation |
+| 🇫🇷 [Ressources externes](External-Resources.fr.html) | Liens vers toutes les ressources externes |
 | 🇫🇷 [Guide de citation](Citation-Guide.fr.html) | Comment citer GIFT (BibTeX, APA, DOIs) |
-| [Changelog Highlights](Changelog-Highlights.html) | Historique récent des versions (EN) |
+| 🇫🇷 [Points clés du changelog](Changelog-Highlights.fr.html) | Historique récent des versions |
 
 ---
 
