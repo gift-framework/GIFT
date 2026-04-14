@@ -65,7 +65,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 | **Precision** | 0.24% mean deviation across 32 well-measured observables (PDG 2024 / NuFIT 6.0) |
 | **Observables** | 92 total (66 with experimental comparison) |
 | **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 130 Lean 4 files, 7 axioms, zero incomplete proofs ([core v3.4.8](https://github.com/gift-framework/core)) |
+| **Verified** | 130 Lean 4 files, 4 axioms, zero incomplete proofs ([core v3.4.9](https://github.com/gift-framework/core)) |
 | **Uniqueness** | #1 out of 3,070,396 configurations tested |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -195,7 +195,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4}
+  version = {3.4.9}
 }
 ```
 
