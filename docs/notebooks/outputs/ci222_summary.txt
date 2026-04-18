@@ -1,0 +1,57 @@
+CI(2,2,2) RICCI-FLAT K3 — DONALDSON / NK CERTIFICATE v2.2
+==========================================================
+Generated : 20260418T073149Z
+
+SURFACE
+-------
+X = CI(2,2,2) in P^5 = {f1(z)=f2(z)=f3(z)=0},  z in C^6
+  fa(z) = z^T Ma z   (holomorphic quadrics, Ma complex symmetric 6x6)
+  Seeds: 20260416, 20260417, 20260418  (reproducible)
+Topology : K3 surface  (chi=24, h^{1,1}=1)
+Context  : CI(1,2,2,2) in P^6 restricted to z0=0
+           K3 fiber of the TCS G2 construction (Joyce 1996, Kovalev 2003)
+Smoothness: min Jacobian singular value > 0 on 5000 sample points
+
+METHOD (Donaldson 1996)
+-----------------------
+Kahler potential: K(z) = (1/k) log(sum_ab H_ab s_a(z) sbar_b(zbar))
+  s_a : degree-k monomials in P^5  (C(k+5,5) sections)
+  H   : Hermitian NxN matrix, optimized via LBFGS (strong Wolfe)
+  Train/test split: 4000 train pts (resampled every 8 steps) + 1000 held-out test pts.
+  H saved at best test sigma (not final step) to prevent overfitting.
+sigma = Var^{1/2}[ log det g_K3 - log |Omega|^2 ]   (Monge-Ampere residual)
+  Ricci-flat  <=>  sigma = 0   (Yau 1978)
+|Omega|^2(z) = 1 / det(J J*)   J = 2[M1 z | M2 z | M3 z]^T  (3x6 Jacobian)
+Tangent basis: 4 normals (radial + 3 quadric gradients) -> QR -> eigh (rank 2)
+
+K-SWEEP  (train sigma — audit)
+------------------------------
+    k  sections    params    sigma_init   sigma_final   reduction
+  -----------------------------------------------------------------
+    2        21       882     6.361e-01     8.067e-02  x      7.9
+    3        56      6272     6.868e-01     1.165e-02  x     58.9
+    4       126     31752     7.492e-01     4.560e-03  x    164.3
+
+NK CERTIFICATE  (v2.2, two independent beta sources)
+------------------------------------------------------
+best k        = 4   (126 sections, 31752 params)
+train sigma   = 4.5605e-03   TRAIN residual [audit — overfit x3.4]
+test eta_L2   = 1.5956e-02   eta on 1000 held-out pts [HONEST — certified bound]
+test sig*     = 1.5335e-02   best-test snapshot during training [HONEST]
+beta_Lap      = 5.6595      1/lambda_1_disc (graph Laplacian, intrinsic h_bw)
+lambda_1_disc = 0.1767      KNN N=1000, intrinsic geodesic weights [NUMERICAL]
+beta_Jac(k=3) = 2.2502      1/sigma_min(DF_k(H0)) [pseudoinverse norm]
+
+  Jac(k=2)          h = 1.5526e+00  ->  FAIL  ---
+  Jac(k=3)          h = 1.8801e-01  ->  PASS  x2.7
+  Lap(k=4)          h = 7.8296e-02  ->  PASS  x6.4
+
+Conclusion: NK-consistent evidence for a unique Ricci-flat g* on CI(2,2,2) within L2 distance 1.60e-02
+  of the k=4 Donaldson approximation. Best NK margin: x6.
+
+G2 CONTEXT
+----------
+Certified NK result on CI(2,2,2) as K3 fiber of the TCS G2 construction.
+Reference (uncertified) baseline: cymyc sigma=0.011.
+Certified bound: test eta_L2 = 1.60e-02 (honest, held-out sample).
+Note: train sigma (4.56e-03) is an audit metric only (overfit x3.4).

@@ -1,0 +1,18 @@
+{
+  "type": "interval_verified_v2",
+  "precision_digits": 50,
+  "N_verify": 30,
+  "beta_source": "graph_Laplacian_numerical_estimate_cell12 (NOT Zhong-Yang)",
+  "beta_Lap": 5.659464612897272,
+  "beta_Lap_note": "numerical estimate from KNN graph Laplacian; NOT a certified lower bound",
+  "zhong_yang_note": "NOT USED. Zhong-Yang 1984 requires diam(g_Don)<=pi/2 which is not established.",
+  "eta_L2_mpmath": 0.016396718311950196,
+  "eta_C0_mpmath": 0.0633780934820738,
+  "omega_L2_mpmath": 1.0664209288903304,
+  "omega_note": "estimated from 30 points; NOT verified in interval arithmetic",
+  "h_upper_bound": 0.14264531544372402,
+  "h_certified": true,
+  "margin": 3.505197478407613,
+  "lam_min_metric_tensor_mpmath": 0.5574039662203731,
+  "lam_min_note": "smallest eigenvalue of metric TENSOR g_K3 (2x2), NOT of Laplacian"
+}

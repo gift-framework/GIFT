@@ -1,0 +1,115 @@
+{
+  "version": "v2.1",
+  "fix_log": [
+    "2026-04-17: h_bw uses intrinsic d\u00b2_gDon (not Euclidean) in cell 12",
+    "2026-04-17: \u03b2_Jac computed per-k for k in K_JAC_LIST in cell 13",
+    "2026-04-17: h_Jac(k) uses \u03b7(k),\u03c9(k) at SAME k (no cross-k mixing)"
+  ],
+  "surface": "CI(2,2,2) in P^5",
+  "best_k": 4,
+  "best_sigma_final": 0.004560450255968779,
+  "best_test_sigma_best": 0.015335426312781411,
+  "best_overfit_ratio_best": 3.362700051976271,
+  "K_JAC_LIST": [
+    2,
+    3
+  ],
+  "eta_omega_per_k": {
+    "4": {
+      "eta_Cinf": 0.129480769066749,
+      "eta_L2": 0.01595595035501914,
+      "omega_L2": 0.8670431515303941,
+      "omega_sup": 5.153061915815406,
+      "lam_min_g_K3": 0.44052171331947954,
+      "lam_med_g_K3": 1.073939073805992
+    },
+    "2": {
+      "eta_Cinf": 0.5059808251456417,
+      "eta_L2": 0.09107644151763518,
+      "omega_L2": 0.9107460807126697,
+      "omega_sup": 5.43097345557752,
+      "lam_min_g_K3": 0.4291026137642025,
+      "lam_med_g_K3": 1.0478553727061723
+    },
+    "3": {
+      "eta_Cinf": 0.1014893343738521,
+      "eta_L2": 0.02239729062390882,
+      "omega_L2": 0.9275469803004037,
+      "omega_sup": 5.630286306772099,
+      "lam_min_g_K3": 0.4214390362136545,
+      "lam_med_g_K3": 1.0383219667739132
+    }
+  },
+  "lam_min_g_K3_NOTE": "eigenvalue of metric tensor g_K3 (2x2), NOT of Laplacian operator",
+  "lambda_1_discrete": 0.17669515906524344,
+  "lambda_1_source": "KNN graph Laplacian, N=1000 pts, K_KNN=20, INTRINSIC h_bw, NUMERICAL ESTIMATE",
+  "beta_Lap": 5.659464612897272,
+  "beta_Jac_per_k": {
+    "2": 3.878380937039236,
+    "3": 2.2502047012174278
+  },
+  "omega_Jac_per_k": {
+    "2": 4.666389188123128,
+    "3": 3.8146540479339004
+  },
+  "sigma_min_per_k": {
+    "2": 0.25783955115131163,
+    "3": 0.44440401331441987
+  },
+  "cond_per_k": {
+    "2": 61.52025575493864,
+    "3": 40.19941897536947
+  },
+  "eta_L2_NJ_per_k": {
+    "2": 0.08578794429748833,
+    "3": 0.021903104417344776
+  },
+  "eta_L2_note": "eta_L2_NJ uses the same N_J=200 pts as DF (NK-consistent); eta_omega_per_k[k].eta_L2 uses 1000 fresh pts (cross-check only)",
+  "h_results": {
+    "Lap(k=4)": {
+      "k": 4.0,
+      "beta": 5.659464612897272,
+      "eta_L2": 0.01595595035501914,
+      "omega_L2": 0.8670431515303941,
+      "h": 0.0782958489336429,
+      "ok": 1.0,
+      "margin": 6.38603459582843,
+      "desc": "\u03b2_Lap=1/\u03bb\u2081_discrete (graph Laplacian, N=1000, K_KNN=20) \u2014 NUMERICAL ESTIMATE"
+    },
+    "Jac(k=2)": {
+      "k": 2.0,
+      "beta": 3.878380937039236,
+      "eta_L2_NJ": 0.08578794429748833,
+      "eta_L2_1000": 0.09107644151763518,
+      "omega_Jac": 4.666389188123128,
+      "omega_L2": 0.9107460807126697,
+      "sigma_final": 0.08066675594376986,
+      "h": 1.552593207495088,
+      "ok": 0.0,
+      "margin": null,
+      "desc": "\u03b2_Jac(k=2) = 1/\u03c3_min(DF_k(H\u2080)); \u03b7_L\u00b2 on N_J=200 pts (NK-consistent); \u03c9_Jac = Lipschitz of DF"
+    },
+    "Jac(k=3)": {
+      "k": 3.0,
+      "beta": 2.2502047012174278,
+      "eta_L2_NJ": 0.021903104417344776,
+      "eta_L2_1000": 0.02239729062390882,
+      "omega_Jac": 3.8146540479339004,
+      "omega_L2": 0.9275469803004037,
+      "sigma_final": 0.011652208258360358,
+      "h": 0.18801082669077698,
+      "ok": 1.0,
+      "margin": 2.659421315254117,
+      "desc": "\u03b2_Jac(k=3) = 1/\u03c3_min(DF_k(H\u2080)); \u03b7_L\u00b2 on N_J=200 pts (NK-consistent); \u03c9_Jac = Lipschitz of DF"
+    }
+  },
+  "zhong_yang_NOTE": "NOT USED. Requires diam(g_Don)<=pi/2 which is not established.",
+  "g2_context": {
+    "cymyc_sigma": 0.011,
+    "train_sigma_improvement_vs_cymyc": 2.4,
+    "test_eta_L2_improvement_vs_cymyc": 0.7,
+    "test_sigma_best_from_cell11": 0.015335426312781411,
+    "overfit_ratio_best": 3.362700051976271,
+    "note_on_improvement": "train_sigma is the optimizer objective on the training pool. test_eta_L2 is the honest generalization metric on a fresh held-out sample. Report test_eta_L2_improvement in the paper/mail."
+  }
+}
