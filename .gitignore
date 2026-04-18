@@ -97,3 +97,6 @@ core/
 outputs/zeros6
 outputs/zeros6.gz
 outputs/odlyzko_zeros_2M.npy
+
+# Claude Code session data
+.claude/

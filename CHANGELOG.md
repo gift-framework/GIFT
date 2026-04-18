@@ -5,6 +5,27 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.25] - 2026-04-18
+
+### K3 Newton-Kantorovich Certificate Notebook
+
+CI(2,2,2) ⊂ ℙ⁵ Donaldson k-sweep notebook published (v2.2).
+
+#### Added
+
+**`docs/notebooks/colab_ci222_cap_v2.ipynb`** — CI(2,2,2) K3 NK certification:
+- k-sweep k=2,3,4 (21/56/126 sections, up to 31,752 params)
+- Two independent β sources: graph Laplacian (h≈0.08, ×6.4) and Jacobian pseudoinverse (h≈0.19, ×2.7)
+- k=2 Jacobian FAILS (h=1.55) — demonstrates certificate selectivity
+- Honest train/test split: η_L² on 1,000-point held-out set (overfit ratio ×3.4)
+- Outputs: `ci222_nk_certificate_v2_1.json` + figure
+
+Formal Lean verification: `GIFT.Foundations.K3NewtonKantorovich` in [core v3.4.11](https://github.com/gift-framework/core).
+
+#### Changed
+
+- `README.md`: updated to core v3.4.11 (131 Lean files)
+
 ## [3.3.24] - 2026-03-02
 
 ### NuFIT 6.0 Update & Publication Cleanup
