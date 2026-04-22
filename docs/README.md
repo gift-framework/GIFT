@@ -11,6 +11,7 @@ Supporting documentation for the GIFT Framework v3.3.
 | Document | Description |
 |----------|-------------|
 | [GIFT_FOR_EVERYONE.md](GIFT_FOR_EVERYONE.md) | Complete guide with everyday analogies |
+| [GIFT_EXEC_SUMMARY.md](GIFT_EXEC_SUMMARY.md) | Mid-length technical narrative for curious physics readers |
 | [FAQ.md](FAQ.md) | Frequently asked questions |
 | [GLOSSARY.md](GLOSSARY.md) | Technical terms and definitions |
 | [GIFTPY_FOR_GEOMETERS.md](GIFTPY_FOR_GEOMETERS.md) | Guide for geometers |
