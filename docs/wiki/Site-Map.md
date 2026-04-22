@@ -43,6 +43,7 @@ Complete index of all wiki pages.
 ## Blog Posts
 | Page | Description |
 |------|-------------|
+| [Blog Lego Set Universe](Blog-Lego-Set-Universe.html) | Counting pieces, recognizing themes, reading the manual |
 | [Blog Roberto Carlos Geometry](Blog-Roberto-Carlos-Geometry.html) | The geometry of impossible curves |
 | [Blog Lice of the Universe](Blog-Lice-of-the-Universe.html) | Why the universe's constants aren't arbitrary |
 | [Blog The Algebra That Waited](Blog-The-Algebra-That-Waited.html) | E₈ and the algebra behind physics |

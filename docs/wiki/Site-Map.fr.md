@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Et si l'univers était un set Lego ?](Blog-Lego-Set-Universe.fr.html) | Compter les pièces, reconnaître le thème, lire la notice |
 | 🇫🇷 [La géométrie de l'impossible](Blog-Roberto-Carlos-Geometry.fr.html) | La géométrie des courbes impossibles |
 | 🇫🇷 [Les poux de l'univers](Blog-Lice-of-the-Universe.fr.html) | Pourquoi les constantes de l'univers ne sont pas arbitraires |
 | 🇫🇷 [L'algèbre qui attendait](Blog-The-Algebra-That-Waited.fr.html) | E₈ et l'algèbre derrière la physique |
