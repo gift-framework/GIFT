@@ -180,6 +180,24 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 
 ---
 
+## K3 NK Certificate (Companion Paper)
+
+### BibTeX
+
+```bibtex
+@misc{gift_k3_nk_certificate,
+  title        = {Newton--Kantorovich diagnostics on a Donaldson K3 metric: two $\beta$ estimates, machine-checked inequalities},
+  author       = {de La Fournière, Brieuc},
+  year         = {2026},
+  month        = {April},
+  doi          = {10.5281/zenodo.19708916},
+  url          = {https://doi.org/10.5281/zenodo.19708916},
+  note         = {Donaldson degree k=4 on CI(2,2,2) ⊂ ℙ⁵; β from graph Laplacian and Jacobian pseudoinverse; h < 1/2 machine-checked in Lean 4}
+}
+```
+
+---
+
 ## DOI Information
 
 | Archive | Link |
@@ -187,6 +205,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.3: Geometric Information Field Theo
 | Zenodo (framework) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
 | Zenodo (explicit G₂ metric) | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
 | Zenodo (spectral geometry) | [10.5281/zenodo.18920368](https://doi.org/10.5281/zenodo.18920368) |
+| Zenodo (K3 NK certificate) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
