@@ -13,10 +13,10 @@ CI(2,2,2) ⊂ ℙ⁵ Donaldson k-sweep notebook published (v2.2).
 
 #### Added
 
-**`docs/notebooks/colab_ci222_cap_v2.ipynb`** — CI(2,2,2) K3 NK certification:
+**`docs/notebooks/colab_ci222_cap_v2.ipynb`**: CI(2,2,2) K3 NK certification:
 - k-sweep k=2,3,4 (21/56/126 sections, up to 31,752 params)
 - Two independent β sources: graph Laplacian (h≈0.08, ×6.4) and Jacobian pseudoinverse (h≈0.19, ×2.7)
-- k=2 Jacobian FAILS (h=1.55) — demonstrates certificate selectivity
+- k=2 Jacobian FAILS (h=1.55), demonstrates certificate selectivity
 - Honest train/test split: η_L² on 1,000-point held-out set (overfit ratio ×3.4)
 - Outputs: `ci222_nk_certificate_v2_1.json` + figure
 
