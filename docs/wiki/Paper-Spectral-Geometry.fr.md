@@ -8,7 +8,7 @@ layout: default
 **Géométrie spectrale d'une métrique G₂ explicite sur une 7-variété compacte**
 
 *Brieuc de La Fournière (2026)*
-[Texte intégral (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/Spectral_Geometry.md) | [DOI Zenodo : 10.5281/zenodo.18920368](https://doi.org/10.5281/zenodo.18920368)
+[Texte intégral (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/g2_spectral.md) | [DOI Zenodo : 10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371)
 
 ---
 

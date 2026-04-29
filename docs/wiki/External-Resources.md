@@ -19,8 +19,8 @@ layout: default
 | Paper | DOI |
 |-------|-----|
 | Framework (data + scripts) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
-| Explicit G₂ Metric | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
-| Spectral Geometry | [10.5281/zenodo.18920368](https://doi.org/10.5281/zenodo.18920368) |
+| Explicit G₂ Metric | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
+| Spectral Geometry | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
 
 ## Outreach
 

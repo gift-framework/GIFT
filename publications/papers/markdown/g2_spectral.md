@@ -8,7 +8,7 @@
 
 ## Abstract
 
-We compute the Laplacian spectrum and harmonic forms on the certified torsion-free G₂ structure of a companion paper [A], constructed on a TCS-type neck model K3 × T² × [0,1]. The scalar spectral gap is λ₁ = 0.12461 ± 0.00016 (Richardson-extrapolated across six grids, Appendix A) with Weyl exponent α = 1.998 (adiabatic prediction: 2.0), matching the analytical formula λ₁ = π²/(L² g_ss) = 6π²/475 ≈ 0.12467 — derived a posteriori from the NK-certified seam parameters — to 0.05%. Spectral analysis of the Hodge Laplacians realizes the harmonic multiplicities (b₂, b₃) = (21, 77) expected from the conjectural compact extension: 21 near-zero eigenvalues of Δ₂ (gap ratio 14,635) and 77 near-zero eigenvalues of Δ₃. The 21 harmonic 2-forms carry a K3 fiber intersection form of signature (3, 18) — rank-21 restriction of the ambient K3 lattice (3, 19) — with SD/ASD eigenvalue gap 2,210. The spectral democracy theorem proven in [A] is verified numerically to 10⁻⁵ precision. The complete Kaluza-Klein tower comprises 22,671 levels with Poisson level spacing statistics. All spectral results are properties of the explicit neck-model metric; their interpretation on a closed compact G₂ manifold is conditional on the existence of such a manifold with (b₂, b₃) = (21, 77).
+We compute the Laplacian spectrum and harmonic forms on the certified torsion-free G₂ structure of a companion paper [A], constructed on a TCS-type neck model K3 × T² × [0,1]. The scalar spectral gap is λ₁ = 0.12461 ± 0.00016 (Richardson-extrapolated across six grids, Appendix A) with Weyl exponent α = 1.998 (adiabatic prediction: 2.0), matching the analytical formula λ₁ = π²/(L² g_ss) = 6π²/475 ≈ 0.12467 (derived a posteriori from the NK-certified seam parameters) to 0.05%. Spectral analysis of the Hodge Laplacians realizes the harmonic multiplicities (b₂, b₃) = (21, 77) expected from the conjectural compact extension: 21 near-zero eigenvalues of Δ₂ (gap ratio 14,635) and 77 near-zero eigenvalues of Δ₃. The 21 harmonic 2-forms carry a K3 fiber intersection form of signature (3, 18), rank-21 restriction of the ambient K3 lattice (3, 19), with SD/ASD eigenvalue gap 2,210. The spectral democracy theorem proven in [A] is verified numerically to 10⁻⁵ precision. The complete Kaluza-Klein tower comprises 22,671 levels with Poisson level spacing statistics. All spectral results are properties of the explicit neck-model metric; their interpretation on a closed compact G₂ manifold is conditional on the existence of such a manifold with (b₂, b₃) = (21, 77).
 
 **Keywords:** spectral geometry, G₂ holonomy, Hodge Laplacian, Kaluza-Klein spectrum, harmonic forms, intersection form
 
@@ -16,7 +16,7 @@ We compute the Laplacian spectrum and harmonic forms on the certified torsion-fr
 
 ## 1. Introduction
 
-The construction of explicit metrics with exceptional holonomy has been a long-standing challenge in Riemannian geometry. While existence theorems for compact G₂ manifolds are well-established (Joyce [1], Kovalev [2], CHNP [3], Nordström [5]), explicit spectral data — whether on closed compact G₂ manifolds or on neck-model geometries adapted to them — has remained unavailable due to the absence of concrete metric coefficients.
+The construction of explicit metrics with exceptional holonomy has been a long-standing challenge in Riemannian geometry. While existence theorems for compact G₂ manifolds are well-established (Joyce [1], Kovalev [2], CHNP [3], Nordström [5]), explicit spectral data (whether on closed compact G₂ manifolds or on neck-model geometries adapted to them) has remained unavailable due to the absence of concrete metric coefficients.
 
 In a companion paper [A], we certify a torsion-free G₂ structure on a TCS-type neck model K3 × T² × [0,1] via computer-assisted proof, with seam-sector geometry adapted to a putative compact extension of Betti numbers (b₂, b₃) = (21, 77), using interval arithmetic with zero finite differences. The present paper computes the spectral geometry of this certified neck-model metric; the spectral results are properties of that metric, while their interpretation on a closed compact G₂ manifold is conditional on the existence of such a manifold with (b₂, b₃) = (21, 77) ([A], §2.2). We compute:
 
@@ -39,7 +39,7 @@ with effective eigenvalues g_{ss} = 19/6 (torsion-minimizing rational, to 0.03%)
 
 For the spectral analysis below, the key property is that the torsion-free metric g* is adiabatically product-type with certified error ε_ad = 2 × 10⁻³ ([A], Proposition 3.3), giving eigenvalue perturbation |δλ|/λ ≤ 0.78% and enabling decomposition of 7D Laplacian operators into families of 1D Sturm-Liouville problems.
 
-**Remark (independence from the exact value of $g_{K3}$).** The spectral identifications of this paper — scalar gap $\lambda_1 = 0.12461$, Weyl exponent $\alpha = 1.998$, spectral Betti confirmations ($b_2 = 21$, $b_3 = 77$), intersection form signature $(3, 18)$ — rely only on the adiabatic product structure of $g^*$ with certified error $\varepsilon_{\mathrm{ad}} = 2 \times 10^{-3}$. They do *not* depend on the exact value of $g_{K3}$, on whether $g_{K3} = 64/77$ is an identity or an approximation, or on the precise K3 eigenvalue deviation pattern. In particular, the certified perturbation budget $|\delta\lambda_n|/\lambda_n \leq 0.78 \%$ already absorbs the measured K3 eigenvalue spread of $1.16 \%$ and any residual $O(10^{-3})$ uncertainty in the K3 structural constants. The spectral claims herein are robust to future revisions of the analytical status of $g_{K3}$ in [A].
+**Remark (independence from the exact value of $g_{K3}$).** The spectral identifications of this paper (scalar gap $\lambda_1 = 0.12461$, Weyl exponent $\alpha = 1.998$, spectral Betti confirmations ($b_2 = 21$, $b_3 = 77$), intersection form signature $(3, 18)$) rely only on the adiabatic product structure of $g^*$ with certified error $\varepsilon_{\mathrm{ad}} = 2 \times 10^{-3}$. They do *not* depend on the exact value of $g_{K3}$, on whether $g_{K3} = 64/77$ is an identity or an approximation, or on the precise K3 eigenvalue deviation pattern. In particular, the certified perturbation budget $|\delta\lambda_n|/\lambda_n \leq 0.78 \%$ already absorbs the measured K3 eigenvalue spread of $1.16 \%$ and any residual $O(10^{-3})$ uncertainty in the K3 structural constants. The spectral claims herein are robust to future revisions of the analytical status of $g_{K3}$ in [A].
 
 ## 3. Laplacian Spectrum
 
@@ -65,7 +65,7 @@ The first 10 eigenvalues of the (0, 0, 0) channel are:
 
 | n | λ_n | Δλ/λ (Richardson) |
 |---|------|-------------------|
-| 0 | 3.5 × 10⁻¹³ | — (zero mode) |
+| 0 | 3.5 × 10⁻¹³ |, (zero mode) |
 | 1 | 0.12450 | 0.08% |
 | 2 | 0.4976 | 0.04% |
 | 3 | 1.1196 | 0.02% |
@@ -131,7 +131,7 @@ This four-orders-of-magnitude gap confirms b₂ = 21.
 
 ### 4.2 Intersection structure
 
-The L² Gram matrix $G_{IJ} = \int_M \omega_I \wedge \star \omega_J$ is positive definite (condition number 1.047, §4.1). The topological intersection structure is accessed via the **K3 fiber pairing** $I_{IJ} = \int_{K3} \alpha_I \wedge \alpha_J$, where $\alpha_I = \omega_I|_{K3}$ are the restrictions to the K3 fiber — this is the cup-product intersection form on $H^2(K3)$, which takes both positive and negative values.
+The L² Gram matrix $G_{IJ} = \int_M \omega_I \wedge \star \omega_J$ is positive definite (condition number 1.047, §4.1). The topological intersection structure is accessed via the **K3 fiber pairing** $I_{IJ} = \int_{K3} \alpha_I \wedge \alpha_J$, where $\alpha_I = \omega_I|_{K3}$ are the restrictions to the K3 fiber: this is the cup-product intersection form on $H^2(K3)$, which takes both positive and negative values.
 
 The ambient K3 lattice $H^2(K3)$ has signature (3, 19) of rank 22. Of the 22 K3 classes, 21 extend to global harmonic forms on M (confirmed by the 21 near-zero Δ₂ eigenvalues, §4.1); the remaining class does not survive TCS boundary matching and corresponds to the first non-zero Δ₂ eigenvalue λ₂₂ ≈ 0.12. The K3 fiber pairing restricted to the **21 global harmonic 2-forms** has signature **(3, 18)**:
 
@@ -204,7 +204,7 @@ A companion paper [D] discusses the physical context of these spectral results i
 
 ### 6.3 Limitations
 
-**Adiabatic approximation.** The spectral computations exploit the product-type structure of the certified metric ([A], Proposition 3.3). The adiabatic error is ε_ad = 2 × 10⁻³ with certified eigenvalue perturbation |δλ_n|/λ_n ≤ 0.78% for all eigenvalues. The spectral Betti confirmation (gap ratio 14,635) is stable under this perturbation: a 0.78% shift on each eigenvalue changes the gap ratio by at most 2 × 0.78% = 1.56% (worst case, numerator and denominator moving in opposite directions), leaving it at four orders of magnitude. Equivalently, the spectral Betti identification $(b_2, b_3) = (21, 77)$ is a robust property of the torsion-free metric $g^*$ that survives any residual $O(10^{-3})$ uncertainty in the K3 fiber structural constants — including the eigenvalue spread of 1.16 % and the approximate nature of $g_{K3} = 64/77$ ([A] §3.8).
+**Adiabatic approximation.** The spectral computations exploit the product-type structure of the certified metric ([A], Proposition 3.3). The adiabatic error is ε_ad = 2 × 10⁻³ with certified eigenvalue perturbation |δλ_n|/λ_n ≤ 0.78% for all eigenvalues. The spectral Betti confirmation (gap ratio 14,635) is stable under this perturbation: a 0.78% shift on each eigenvalue changes the gap ratio by at most 2 × 0.78% = 1.56% (worst case, numerator and denominator moving in opposite directions), leaving it at four orders of magnitude. Equivalently, the spectral Betti identification $(b_2, b_3) = (21, 77)$ is a robust property of the torsion-free metric $g^*$ that survives any residual $O(10^{-3})$ uncertainty in the K3 fiber structural constants, including the eigenvalue spread of 1.16 % and the approximate nature of $g_{K3} = 64/77$ ([A] §3.8).
 
 **Convergence.** The spectral gap is Richardson-extrapolated from 6 grids (Appendix A). The error bar ± 0.0001 is a numerical estimate, not a rigorous bound.
 
@@ -220,7 +220,7 @@ A companion paper [D] discusses the physical context of these spectral results i
 
 | N | λ₁ (Neumann) | λ₁ (Dirichlet) | Δλ₁/λ₁ |
 |---|-------------|----------------|---------|
-| 200 | 0.12346 | 0.12361 | — |
+| 200 | 0.12346 | 0.12361 |, |
 | 400 | 0.12409 | 0.12418 | 0.51% |
 | 600 | 0.12430 | 0.12436 | 0.17% |
 | 800 | 0.12440 | 0.12444 | 0.08% |
@@ -231,11 +231,7 @@ Extrapolated: λ₁ = 0.12461 ± 0.00016.
 
 ---
 
-## Acknowledgements
-
-AI tools (Claude, Anthropic) were used for computational assistance. All scientific content, analysis, and conclusions are the sole responsibility of the author.
-
-## Author's note on AI collaboration
+## Author's note
 
 This framework was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), and Aristotle (Harmonic) for specific mathematical insights. Architectural decisions and many key derivations emerged from iterative dialogue sessions. This collaboration follows a transparent crediting approach for AI-assisted mathematical research.
 
@@ -265,7 +261,7 @@ This framework was developed through sustained collaboration between the author 
 
 ## Author's Related Works
 
-[A] B. de La Fournière, "A Certified Torsion-Free G₂ Structure on a TCS Neck Model via Computer-Assisted Proof," Zenodo 10.5281/zenodo.18860358 (2026).
+[A] B. de La Fournière, "A Certified Torsion-Free G₂ Structure on a TCS Neck Model via Computer-Assisted Proof," Zenodo 10.5281/zenodo.19892350 (2026).
 
 [C] B. de La Fournière, "Newton–Kantorovich diagnostics on a Donaldson K3 metric: two β estimates, machine-checked inequalities," Zenodo 10.5281/zenodo.19708916 (2026).
 

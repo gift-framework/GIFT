@@ -8,11 +8,11 @@
 
 ## Abstract
 
-We construct an explicit G₂ structure on the TCS-type neck model K3 × T² × [0,1] and certify, via Newton–Kantorovich interval arithmetic with zero finite differences, the existence of a unique nearby torsion-free G₂ structure with contraction parameter h ≤ 8.95 × 10⁻⁹ (analytical certificate, β = 0.321 from a Sturm–Liouville bound) — sharpened to h ≤ 1.43 × 10⁻⁹ with the numerical β = 0.02961; both well below the threshold 1/2 and relative to the fixed K3 neural-network input. The solution space is finite-dimensional (ℝ¹⁶⁸), the torsion map is a polynomial of degree ≤ 10 in the neck coordinate, and the analytical inverse bound is derived from the algebraically exact determinant det(g) = 65/32.
+We construct an explicit G₂ structure on the TCS-type neck model K3 × T² × [0,1] and certify, via Newton–Kantorovich interval arithmetic with zero finite differences, the existence of a unique nearby torsion-free G₂ structure with contraction parameter h ≤ 8.95 × 10⁻⁹ (analytical certificate, β = 0.321 from a Sturm–Liouville bound), sharpened to h ≤ 1.43 × 10⁻⁹ with the numerical β = 0.02961; both well below the threshold 1/2 and relative to the fixed K3 neural-network input. The solution space is finite-dimensional (ℝ¹⁶⁸), the torsion map is a polynomial of degree ≤ 10 in the neck coordinate, and the analytical inverse bound is derived from the algebraically exact determinant det(g) = 65/32.
 
-The optimized 169 parameters (168 Chebyshev–Cholesky coefficients + ACyl decay rate γ) exhibit a five-constant approximate structure — g_ss ≈ 19/6, g_{T²} ≈ 7/6, g_{K3} ≈ 64/77, det(g) = 65/32, γ = 2π√(6/7) — with sub-percent deviations; the first two are torsion minimizers and the last is derived from the T² Hodge Laplacian and H¹(K3) = 0. The G₂ torsion-free condition acts as an eigenvalue equalizer, reducing the K3 fiber anisotropy from 10:1 to 1.012:1. We prove analytically that product-type Ricci-flat G₂ metrics satisfy spectral democracy (Theorem 1.3).
+The optimized 169 parameters (168 Chebyshev–Cholesky coefficients + ACyl decay rate γ) exhibit a five-constant approximate structure (g_ss ≈ 19/6, g_{T²} ≈ 7/6, g_{K3} ≈ 64/77, det(g) = 65/32, γ = 2π√(6/7)) with sub-percent deviations; the first two are torsion minimizers and the last is derived from the T² Hodge Laplacian and H¹(K3) = 0. The G₂ torsion-free condition acts as an eigenvalue equalizer, reducing the K3 fiber anisotropy from 10:1 to 1.012:1. We prove analytically that product-type Ricci-flat G₂ metrics satisfy spectral democracy (Theorem 1.3).
 
-The NK certificate extends to the full 7D product metric via an analytical Fréchet bound on the K3 fiber, giving ‖T(g*)‖_{C⁰} ≤ 1.59 × 10⁻³, well below the Joyce perturbation threshold ε₀ ≈ 0.1. The underlying seam-sector torsion at the NK iterate is η ≤ 2.949 × 10⁻⁵ (direct sup of √(|dφ|² + |d⋆φ|²) at Clenshaw–Curtis nodes, used as η in NK; the slightly larger 2.984 × 10⁻⁵ in Table 8 is the conservative √((sup|dφ|)² + (sup|d⋆φ|)²)), and the empirical 7D maximum measured directly over 220,000 K3 fiber points is 3.154 × 10⁻⁵. Conditional on the existence of a compact simply connected 7-manifold with Betti numbers (b₂, b₃) = (21, 77) — a pair absent from all known G₂ constructions — this certificate yields a torsion-free G₂ metric on the compact manifold via Joyce's perturbation theorem.
+The NK certificate extends to the full 7D product metric via an analytical Fréchet bound on the K3 fiber, giving ‖T(g*)‖_{C⁰} ≤ 1.59 × 10⁻³, well below the Joyce perturbation threshold ε₀ ≈ 0.1. The underlying seam-sector torsion at the NK iterate is η ≤ 2.949 × 10⁻⁵ (direct sup of √(|dφ|² + |d⋆φ|²) at Clenshaw–Curtis nodes, used as η in NK; the slightly larger 2.984 × 10⁻⁵ in Table 8 is the conservative √((sup|dφ|)² + (sup|d⋆φ|)²)), and the empirical 7D maximum measured directly over 220,000 K3 fiber points is 3.154 × 10⁻⁵. Conditional on the existence of a compact simply connected 7-manifold with Betti numbers (b₂, b₃) = (21, 77) (a pair absent from all known G₂ constructions) this certificate yields a torsion-free G₂ metric on the compact manifold via Joyce's perturbation theorem.
 
 **Keywords:** G₂ holonomy, computer-assisted proof, Newton-Kantorovich, interval arithmetic, Chebyshev-Cholesky metric, spectral democracy
 
@@ -24,7 +24,7 @@ The NK certificate extends to the full 7D product metric via an analytical Fréc
 
 A compact Riemannian 7-manifold (M, g) with holonomy Hol(g) = G₂ carries a torsion-free G₂-structure: a 3-form φ satisfying dφ = 0 and d⋆φ = 0 [1, 2]. The metric is determined by φ, and torsion-freeness implies Ricci-flatness. Such manifolds play a central role in geometric analysis and in M-theory compactifications [3, 4].
 
-Despite significant progress on existence results — through Joyce's orbifold resolutions [1] and the Twisted Connected Sum (TCS) construction of Kovalev [5] and Corti–Haskins–Nordström–Pacini [6] — explicit metric data on compact G₂ manifolds has remained unavailable. The known constructions are perturbative: they establish existence of torsion-free metrics near approximate ones, without producing numerical metric tensor components. This contrasts with the Calabi–Yau setting, where numerical metrics have been computed via Donaldson's algorithm [7], balanced metrics [8], and neural network methods [9, 10].
+Despite significant progress on existence results (through Joyce's orbifold resolutions [1] and the Twisted Connected Sum (TCS) construction of Kovalev [5] and Corti–Haskins–Nordström–Pacini [6]) explicit metric data on compact G₂ manifolds has remained unavailable. The known constructions are perturbative: they establish existence of torsion-free metrics near approximate ones, without producing numerical metric tensor components. This contrasts with the Calabi–Yau setting, where numerical metrics have been computed via Donaldson's algorithm [7], balanced metrics [8], and neural network methods [9, 10].
 
 ### 1.2 Main results
 
@@ -40,7 +40,7 @@ Our main results are:
 
 *(iii) The metric is positive definite with det(g) = 65/32 (algebraically exact), κ(g) ≤ 3.88, and λ_min(g) ≥ 0.817.*
 
-**Corollary** (Metric decomposition). *The 169 parameters (168 Chebyshev–Cholesky + γ) reduce to 5 structural constants — g_{ss} = 19/6, g_{T²} = 7/6, g_{K3} = 64/77 (mean), det(g) = 65/32, γ = 2π√(6/7) — with sub-percent corrections. Even Chebyshev modes vanish to machine precision; odd modes are Cholesky gauge.*
+**Corollary** (Metric decomposition). *The 169 parameters (168 Chebyshev–Cholesky + γ) reduce to 5 structural constants (g_{ss} = 19/6, g_{T²} = 7/6, g_{K3} = 64/77 (mean), det(g) = 65/32, γ = 2π√(6/7)) with sub-percent corrections. Even Chebyshev modes vanish to machine precision; odd modes are Cholesky gauge.*
 
 **Theorem 1.3** (Spectral democracy). *Let (N, g) be a Riemannian manifold with product-type metric g = g_B(s) ⊕ g_F where g_F is independent of s and Ric(g) = 0. For a transverse 1-form α = f(s)dθ with θ a fiber coordinate, the Hodge Laplacian satisfies*
 
@@ -276,13 +276,13 @@ All cross-sector entries are below 0.035% of the corresponding diagonal.
 
 **K3 near-roundness.** At $s = 0.5$ the four K3 eigenvalues are $(0.82209, 0.82770, 0.82974, 0.83167)$, clustering within a spread $(\lambda_{\max} - \lambda_{\min}) / \bar\lambda = 1.16 \%$ around the measured arithmetic mean $\bar\lambda = 0.8278$. The rational approximation $64/77 \approx 0.8312$ matches this mean to $4.1 \times 10^{-3}$. The dominant source of K3 eigenvalue splitting is the K3 surface's intrinsic Ricci-flat Kähler anisotropy ($\chi = 24$, not flat), not G₂ corrections; the mean is topologically approximable but its exact value is not given by a simple rational combination of the TCS atoms at current precision.
 
-**Interval-certified measurements.** The numerical observations of this section are backed by interval arithmetic (mpmath.iv, dps = 50) in the companion notebook `colab_phase1b_interval_cert.ipynb`, which certifies (i) $\det(g(0.5)) = 65/32$ to better than $10^{-12}$ (interval width $1.4 \times 10^{-12}$), (ii) each K3 block eigenvalue interval has width $\sim 10^{-12}$, separated by gaps of $O(10^{-3})$ via a Weyl–Bauer–Fike halo with Frobenius residual $\|E\|_F \leq 8 \times 10^{-16}$, and (iii) PSLQ is robustly null for $g_{K3}^{\mathrm{exact}} = (1755/3724)^{1/4}$ across 15 tol × maxcoef configurations in the basis $\{1, \sqrt{n} : n \leq 110, \pi, \ln n\}$. The effective precision ceiling is $10^{-10}$, set by float64 ULPs in the 28 Chebyshev coefficients of the source fit — not by arithmetic precision. This upgrades the §3.8 observations from "numerical measurements" to "interval-certified measurements."
+**Interval-certified measurements.** The numerical observations of this section are backed by interval arithmetic (mpmath.iv, dps = 50) in the companion notebook `colab_phase1b_interval_cert.ipynb`, which certifies (i) $\det(g(0.5)) = 65/32$ to better than $10^{-12}$ (interval width $1.4 \times 10^{-12}$), (ii) each K3 block eigenvalue interval has width $\sim 10^{-12}$, separated by gaps of $O(10^{-3})$ via a Weyl–Bauer–Fike halo with Frobenius residual $\|E\|_F \leq 8 \times 10^{-16}$, and (iii) PSLQ is robustly null for $g_{K3}^{\mathrm{exact}} = (1755/3724)^{1/4}$ across 15 tol × maxcoef configurations in the basis $\{1, \sqrt{n} : n \leq 110, \pi, \ln n\}$. The effective precision ceiling is $10^{-10}$, set by float64 ULPs in the 28 Chebyshev coefficients of the source fit: not by arithmetic precision. This upgrades the §3.8 observations from "numerical measurements" to "interval-certified measurements."
 
-**1-parameter signature of the K3 block (testable analytical target).** An *extended* (post-certificate) Joyce NK run on the K3 block — 9 iterations with cumulative torsion reduction factor 18,837, going beyond the 5-iteration ~3,000× reduction of the main certificate (§4.3, Table 8) — leaves the four normalized K3 eigenvalue-deviation ratios $r_i = (\lambda_i - \bar\lambda) / (\lambda_{\max} - \bar\lambda)$ stable to 15 digits:
+**1-parameter signature of the K3 block (testable analytical target).** An *extended* (post-certificate) Joyce NK run on the K3 block (9 iterations with cumulative torsion reduction factor 18,837, going beyond the 5-iteration ~3,000× reduction of the main certificate (§4.3, Table 8)) leaves the four normalized K3 eigenvalue-deviation ratios $r_i = (\lambda_i - \bar\lambda) / (\lambda_{\max} - \bar\lambda)$ stable to 15 digits:
 $$(r_0, r_1, r_2, r_3) = (-1.47620631853764,\; -0.02477659401258,\; +0.50098291255022,\; +1),$$
-with scale $\sigma = \lambda_{\max} - \bar\lambda = 3.82755598235891 \times 10^{-3}$. These values are *not* the naive pattern $(-3/2, 0, 1/2, 1)$ — that pattern is falsified at $10^{-12}$ precision by the interval certificate and empirically pinned at residual $1.11 \times 10^{-4}$ under 18 837× torsion reduction (contraction rate $0.9993$, not $\rho_{\mathrm{NK}} \approx 0.014$). The deviations $\mathrm{dev}_i = r_i - r_i^{\mathrm{naive}}$ satisfy $\mathrm{dev}_0 + \mathrm{dev}_1 \approx 0$ and $\mathrm{dev}_2 \approx 0$ to $10^{-3}$:
+with scale $\sigma = \lambda_{\max} - \bar\lambda = 3.82755598235891 \times 10^{-3}$. These values are *not* the naive pattern $(-3/2, 0, 1/2, 1)$: that pattern is falsified at $10^{-12}$ precision by the interval certificate and empirically pinned at residual $1.11 \times 10^{-4}$ under 18 837× torsion reduction (contraction rate $0.9993$, not $\rho_{\mathrm{NK}} \approx 0.014$). The deviations $\mathrm{dev}_i = r_i - r_i^{\mathrm{naive}}$ satisfy $\mathrm{dev}_0 + \mathrm{dev}_1 \approx 0$ and $\mathrm{dev}_2 \approx 0$ to $10^{-3}$:
 $$r = (-3/2 + \delta,\; -\delta,\; 1/2,\; 1), \qquad \delta \approx 0.02379.$$
-This *1-parameter signature* — a single free number $\delta$ rather than four independent ratios — is the strongest substantive structural claim surviving PSLQ at all accessible precisions and bases. Together with the scale $\sigma$, it reduces the four K3 block eigenvalues to *two* free parameters $(\bar\lambda, \delta)$ (or equivalently $(\bar\lambda, \sigma)$), consistent with a period-integral origin in the Kähler moduli space of $\mathrm{CI}(1,2,2,2) \subset \mathbb{P}^6$. We record $(r_0, r_1, r_2, \sigma)$ as the numerical target for a future Picard–Fuchs derivation.
+This *1-parameter signature* (a single free number $\delta$ rather than four independent ratios) is the strongest substantive structural claim surviving PSLQ at all accessible precisions and bases. Together with the scale $\sigma$, it reduces the four K3 block eigenvalues to *two* free parameters $(\bar\lambda, \delta)$ (or equivalently $(\bar\lambda, \sigma)$), consistent with a period-integral origin in the Kähler moduli space of $\mathrm{CI}(1,2,2,2) \subset \mathbb{P}^6$. We record $(r_0, r_1, r_2, \sigma)$ as the numerical target for a future Picard–Fuchs derivation.
 
 **Proposition 3.4 (Eigenvalue constancy).** The metric eigenvalues are constant along the neck to 0.18%:
 
@@ -389,7 +389,7 @@ The Fréchet perturbation chain:
 | K3-inclusive certified torsion ‖T‖_{C⁰}^{7D} | ≤ 1.59 × 10⁻³ |
 | K3 fraction of seam-sector torsion | dominated by analytical bound |
 
-**Cross-validation**: at the worst K3 point (index 151,325 of 220,000), the actual torsion is *lower* than the seam-sector value — the linear bound is conservative.
+**Cross-validation**: at the worst K3 point (index 151,325 of 220,000), the actual torsion is *lower* than the seam-sector value: the linear bound is conservative.
 
 The analytical Fréchet bound is conservative but sufficient: the 7D torsion remains 63× below the Joyce perturbation threshold (ε₀ ≈ 0.1). No finite differences are used anywhere in the proof chain.
 
@@ -403,9 +403,9 @@ The cymyc Ricci-flatness residual σ = 0.011 measures the quality of the K3 metr
 
 **Independent NK certification of the K3 fiber.** The CI(2,2,2) surface admits an independent Newton–Kantorovich certificate via the Donaldson algebraic section method [7] at degree k=4 (126 sections, 31,752 parameters). Computer-assisted period and monodromy analyses on K3 toric hypersurfaces in a related interval-arithmetic framework appear in [22]. To our knowledge, this is the first certified NK existence proof for a Ricci-flat Kähler metric on a K3 surface via algebraic sections. On a held-out test set of 1,000 fresh points (training pool overfit by ×3.4), the Monge–Ampère residual is η_{L²} = 1.60 × 10⁻². Two structurally independent β sources certify h < 1/2: a graph-Laplacian bound β_{Lap} = 5.66 (λ₁ ≈ 0.177, intrinsic geodesic weights) gives h = 7.83 × 10⁻² (margin ×6.4); a Jacobian pseudoinverse bound β_{Jac} = 2.25 at k=3 gives h = 0.188 (margin ×2.7). These two estimates differ by a factor of 2.4 yet both certify h < 1/2, providing independent corroboration from structurally different spectral arguments.
 
-The Jacobian variant fails at k=2 (h = 1.55 > 1/2). This pass–fail asymmetry is mathematically non-trivial: it demonstrates that h < 1/2 is a genuinely discriminating condition on the Donaldson approximation quality, not an artifact of normalization or parameter scaling. The contraction condition is not uniformly satisfied — it depends critically on whether the ansatz is a sufficiently good approximation to the Ricci-flat metric. This certifies existence of a unique Ricci-flat g* on CI(2,2,2) within L² distance 1.60 × 10⁻² of the k=4 Donaldson approximation.
+The Jacobian variant fails at k=2 (h = 1.55 > 1/2). This pass–fail asymmetry is mathematically non-trivial: it demonstrates that h < 1/2 is a genuinely discriminating condition on the Donaldson approximation quality, not an artifact of normalization or parameter scaling. The contraction condition is not uniformly satisfied: it depends critically on whether the ansatz is a sufficiently good approximation to the Ricci-flat metric. This certifies existence of a unique Ricci-flat g* on CI(2,2,2) within L² distance 1.60 × 10⁻² of the k=4 Donaldson approximation.
 
-The current G₂ proof uses the cymyc approximation as a fixed external input throughout. Replacing it with the Donaldson k=4 approximation and applying the Fréchet bound via C_red = 0.881 would give δ_K3 ≤ 0.881 × 1.60 × 10⁻² ≈ 1.41 × 10⁻² — numerically larger than the current NK-scaled bound (1.59 × 10⁻³, Joyce margin ×63), but still 7× below the Joyce threshold ε₀ = 0.1. Full integration is deferred to a future revision once η_{L²} < 1.80 × 10⁻³. The six certificate conditions are machine-checked: all are verified by `native_decide` in Lean 4, requiring no human inference for the numerical inequalities (`ci222_k3_nk_certificate_valid` in `GIFT.Foundations.K3NewtonKantorovich`).
+The current G₂ proof uses the cymyc approximation as a fixed external input throughout. Replacing it with the Donaldson k=4 approximation and applying the Fréchet bound via C_red = 0.881 would give δ_K3 ≤ 0.881 × 1.60 × 10⁻² ≈ 1.41 × 10⁻², numerically larger than the current NK-scaled bound (1.59 × 10⁻³, Joyce margin ×63), but still 7× below the Joyce threshold ε₀ = 0.1. Full integration is deferred to a future revision once η_{L²} < 1.80 × 10⁻³. The six certificate conditions are machine-checked: all are verified by `native_decide` in Lean 4, requiring no human inference for the numerical inequalities (`ci222_k3_nk_certificate_valid` in `GIFT.Foundations.K3NewtonKantorovich`).
 
 ### 4.3 Torsion at the final iterate
 
@@ -431,13 +431,13 @@ parametrizing the Chebyshev-Cholesky coefficients c = (c_{kj})_{k=0}^{5, j=0}^{2
 
 $$\|c_1 - c_0\|_X = \sup_{s \in I} \frac{\|g(s; c_1) - g(s; c_0)\|_F}{\|g(s; c_0)\|_F}$$
 
-Since L(s; c) is a polynomial of degree K = 5 in s, the torsion T(g(s; c)) is a polynomial of degree ≤ 2K = 10 in the Chebyshev variable. The Chebyshev tail beyond degree K is **identically zero** — there is no truncation error and no tail estimate is needed. This structural property distinguishes the present problem from the infinite-dimensional setting of, e.g., the Nirenberg problem on S² [20].
+Since L(s; c) is a polynomial of degree K = 5 in s, the torsion T(g(s; c)) is a polynomial of degree ≤ 2K = 10 in the Chebyshev variable. The Chebyshev tail beyond degree K is **identically zero**, there is no truncation error and no tail estimate is needed. This structural property distinguishes the present problem from the infinite-dimensional setting of, e.g., the Nirenberg problem on S² [20].
 
 **Remark (Hölder embedding).** The space X embeds continuously into C^{k,α}([0,1], Sym_7(ℝ)) for all k ≥ 0 and α ∈ (0,1), since every element is a polynomial. This embedding justifies applying the NK theorem in the Hölder framework of Joyce [1] if desired, but the finite-dimensional formulation is self-contained.
 
 **Remark (why 169 parameters suffice).** A general computer-assisted proof for a G₂ metric would require discretizing the full 7D torsion-free equation, yielding thousands or tens of thousands of parameters. The drastic reduction to 169 is a consequence of the TCS product structure: the metric decomposes as g_seam(s) ⊕ g_{T²} ⊕ g_{K3}(y), where g_{T²} is flat and g_{K3} is a fixed external input (§4.2). The only free degrees of freedom are the 28 Cholesky entries of the 7×7 seam metric, each expanded to degree K = 5 in the neck coordinate s, giving 6 × 28 = 168 coefficients plus one ACyl decay rate. The adiabatic dominance (Proposition 3.3) certifies that this product ansatz captures 99.9998% of the metric, with all corrections bounded at the 10⁻³ level.
 
-**Remark (total parameter count).** The 169 coefficients are the RIGOROUSLY CERTIFIED parameters of the NK certificate. The K3 fiber metric g_{K3}(y) itself is a neural-network approximation (cymyc) with approximately 10⁵ effective parameters; these enter the 7D metric construction but are not part of the NK-certified subsystem. The K3 contribution is controlled analytically by the Fréchet bound (§4.2), not by a direct NK argument on the K3 fiber. The TCS product structure isolates the rigorous certificate to the 1D seam profile while propagating a certified K3 correction through the Fréchet chain. This is a qualitatively different setup from a full-7D NK certificate (as pursued in Platt's programme for general special holonomy metrics [20]), where the entire metric tensor — including K3-like fibers — would be simultaneously discretized.
+**Remark (total parameter count).** The 169 coefficients are the RIGOROUSLY CERTIFIED parameters of the NK certificate. The K3 fiber metric g_{K3}(y) itself is a neural-network approximation (cymyc) with approximately 10⁵ effective parameters; these enter the 7D metric construction but are not part of the NK-certified subsystem. The K3 contribution is controlled analytically by the Fréchet bound (§4.2), not by a direct NK argument on the K3 fiber. The TCS product structure isolates the rigorous certificate to the 1D seam profile while propagating a certified K3 correction through the Fréchet chain. This is a qualitatively different setup from a full-7D NK certificate (as pursued in Platt's programme for general special holonomy metrics [20]), where the entire metric tensor (including K3-like fibers) would be simultaneously discretized.
 
 **Remark (K-sweep validation).** To verify empirically that K=5 is not a computational truncation, we extended the Chebyshev degree to K ∈ {10, 15, 20} (up to 588 parameters) and re-optimized via LBFGS. The best torsion reduction is ×1.15 at K=10 (‖T‖_C⁰ = 2.45 × 10⁻⁵ vs 2.82 × 10⁻⁵ at K=5); for K ≥ 15 the additional modes are optimized to machine precision (even modes k=6,8,10,… at ~10⁻³², odd modes k=7,9,11,… at ~10⁻¹⁷) and the LBFGS convergence degrades due to over-parametrization. All K values satisfy h < 1/2 with comparable NK margins (×58M at K=5, ×67M at K=10, ×60M at K=20). This confirms that K=5 is structurally near-optimal: the TCS product geometry intrinsically suppresses higher-order modes, so 169 is not a truncation but the mathematically appropriate parametrization.
 
@@ -500,7 +500,7 @@ $$\|F'(g_0)^{-1}\| \leq \beta = \frac{1}{\lambda_1^\perp} = 0.02961$$
 
 The analytical certificate uses no numerical eigenvalues; all bounds are certified via interval arithmetic (mpmath.iv, 50-digit precision). The numerical certificate is sharper but relies on the Gershgorin eigenvalue enclosure for β.
 
-**Remark 5.9** (Robustness). The maximum ω still permitting certification is ω_max = 1/(2βη) = 1/(2 × 0.321 × 2.949 × 10⁻⁵) = 5.28 × 10⁴ — a factor 5.6 × 10⁷ (56 million) above the computed value.
+**Remark 5.9** (Robustness). The maximum ω still permitting certification is ω_max = 1/(2βη) = 1/(2 × 0.321 × 2.949 × 10⁻⁵) = 5.28 × 10⁴: a factor 5.6 × 10⁷ (56 million) above the computed value.
 
 ### 5.7 Existence, uniqueness, and holonomy
 
@@ -511,9 +511,9 @@ $$r_- = 8.73 \times 10^{-7}, \qquad r_+ = 1{,}222, \qquad \delta g/g \leq 1.35 \
 **Corollary 5.10** (Holonomy). *If M is compact and simply connected with b₁(M) = 0, then Hol(g*) = G₂.* (Joyce [1, Prop. 11.2.3])
 
 **Numerical indicators** (at g₅):
-- |φ|² = 42.0000000000 (error: 2.1 × 10⁻¹⁴) — G₂ calibration preserved
-- ‖Rm‖_{C⁰} = 4.20 × 10⁻⁵ — metric is non-flat
-- ‖Γ‖_{C⁰} = 2.81 × 10⁻⁶ — neck nearly flat
+- |φ|² = 42.0000000000 (error: 2.1 × 10⁻¹⁴): G₂ calibration preserved
+- ‖Rm‖_{C⁰} = 4.20 × 10⁻⁵, metric is non-flat
+- ‖Γ‖_{C⁰} = 2.81 × 10⁻⁶, neck nearly flat
 
 ### 5.8 Spectral stability
 
@@ -555,12 +555,12 @@ Joyce's perturbation theorem [1, Theorem 11.6.1] requires the following hypothes
 
 | Hypothesis | Statement | Status |
 |---|---|---|
-| **J1** | M is a compact 7-manifold | **Conditional** — depends on geometric realization of (21,77) (§2.2) |
-| **J2** | M carries a G₂ structure φ₀ | **Certified** — constructed explicitly from Chebyshev-Cholesky (§3) |
-| **J3** | ‖T(φ₀)‖_{C⁰} < ε₀ in the C⁰ norm on 3-forms | **Certified** — ‖T‖ ≤ 1.59 × 10⁻³, safety factor ×63 below ε₀ ≈ 0.1 |
-| **J4** | M is simply connected (π₁ = 1) | **Conditional** — assumed for Hol = G₂ conclusion |
-| **J5** | b₁(M) = 0 | **Conditional** — follows from J4 |
-| **J6** | Bounded geometry (injectivity radius, curvature bounds) | **Certified on neck** — κ(g) ≤ 3.88, λ_min ≥ 0.817; conditional on compact extension |
+| **J1** | M is a compact 7-manifold | **Conditional**, depends on geometric realization of (21,77) (§2.2) |
+| **J2** | M carries a G₂ structure φ₀ | **Certified**, constructed explicitly from Chebyshev-Cholesky (§3) |
+| **J3** | ‖T(φ₀)‖_{C⁰} < ε₀ in the C⁰ norm on 3-forms | **Certified**, ‖T‖ ≤ 1.59 × 10⁻³, safety factor ×63 below ε₀ ≈ 0.1 |
+| **J4** | M is simply connected (π₁ = 1) | **Conditional**, assumed for Hol = G₂ conclusion |
+| **J5** | b₁(M) = 0 | **Conditional**, follows from J4 |
+| **J6** | Bounded geometry (injectivity radius, curvature bounds) | **Certified on neck**, κ(g) ≤ 3.88, λ_min ≥ 0.817; conditional on compact extension |
 
 The certified hypotheses (J2, J3, J6-neck) are unconditional properties of the explicit metric. The conditional hypotheses (J1, J4, J5, J6-global) all reduce to the single open problem: the existence of a compact simply connected M with (b₂, b₃) = (21, 77).
 
@@ -679,9 +679,9 @@ All bounds verified at 50-digit precision via mpmath [13].
 
 **Companion interval-arithmetic certificates.** The analytical certificate chain above is complemented by two interval-arithmetic Jupyter/Colab notebooks which independently verify the §3.8 metric-decomposition observations using mpmath.iv at dps = 50:
 
-- `colab_phase1b_interval_cert.ipynb` — certifies (a) $\det(g(0.5)) = 65/32$ to width $1.4 \times 10^{-12}$; (b) all four K3 block eigenvalue intervals have width $\sim 10^{-12}$ and are pairwise separated by $O(10^{-3})$ via a Weyl–Bauer–Fike halo with Frobenius residual $\|E\|_F \leq 8 \times 10^{-16}$; (c) PSLQ-null status of $g_{K3}^{\mathrm{exact}} = (1755/3724)^{1/4}$ is robust across 15 tolerance × maxcoefficient configurations in the basis $\{1, \sqrt{n} : n \leq 110, \pi, \ln n\}$. This closes Phase 1 of the analytical-target program.
+- `colab_phase1b_interval_cert.ipynb`, certifies (a) $\det(g(0.5)) = 65/32$ to width $1.4 \times 10^{-12}$; (b) all four K3 block eigenvalue intervals have width $\sim 10^{-12}$ and are pairwise separated by $O(10^{-3})$ via a Weyl–Bauer–Fike halo with Frobenius residual $\|E\|_F \leq 8 \times 10^{-16}$; (c) PSLQ-null status of $g_{K3}^{\mathrm{exact}} = (1755/3724)^{1/4}$ is robust across 15 tolerance × maxcoefficient configurations in the basis $\{1, \sqrt{n} : n \leq 110, \pi, \ln n\}$. This closes Phase 1 of the analytical-target program.
 
-- `colab_phase3_interval_cert.ipynb` — certifies (d) the naive K3 deviation pattern $(-3/2, 0, 1/2, 1)$ is *rejected*: the target values lie outside the interval enclosures of the measured ratios at $10^{-12}$ precision; (e) the 1-parameter signature $(-3/2 + \delta, -\delta, 1/2, 1)$ is confirmed with $|\mathrm{dev}_2| / |\mathrm{dev}_0| = 0.041 < 5\%$. This closes Phase 3 of the analytical-target program.
+- `colab_phase3_interval_cert.ipynb`, certifies (d) the naive K3 deviation pattern $(-3/2, 0, 1/2, 1)$ is *rejected*: the target values lie outside the interval enclosures of the measured ratios at $10^{-12}$ precision; (e) the 1-parameter signature $(-3/2 + \delta, -\delta, 1/2, 1)$ is confirmed with $|\mathrm{dev}_2| / |\mathrm{dev}_0| = 0.041 < 5\%$. This closes Phase 3 of the analytical-target program.
 
 Together with step 12, these notebooks establish that both the torsion side (classical analytical chain) and the eigenvalue side (interval certificates) of the §3.8 observations are interval-arithmetically verified.
 
@@ -698,11 +698,11 @@ The K3 fiber metric g_{K3}(y) is computed using the cymyc neural network [9] on 
 | Intrinsic K3 variation | 69.8% (σ/‖g‖) |
 | NK-scaled variation in G₂ | 0.037% |
 
-**Two distinct variation measures.** The "intrinsic K3 variation" (69.8%) measures how much the Ricci-flat K3 metric varies across the K3 surface. This is large and expected — K3 has χ = 24 and nontrivial Riemann curvature; a flat metric on K3 does not exist. The "NK-scaled variation" (0.037%) is the NK amplitude × intrinsic variation: this is the quantity that enters the torsion perturbation bound (§4.2). The relevant measure for the product-type construction is not whether K3 is flat (it is not), but whether it is Ricci-flat.
+**Two distinct variation measures.** The "intrinsic K3 variation" (69.8%) measures how much the Ricci-flat K3 metric varies across the K3 surface. This is large and expected: K3 has χ = 24 and nontrivial Riemann curvature; a flat metric on K3 does not exist. The "NK-scaled variation" (0.037%) is the NK amplitude × intrinsic variation: this is the quantity that enters the torsion perturbation bound (§4.2). The relevant measure for the product-type construction is not whether K3 is flat (it is not), but whether it is Ricci-flat.
 
 ---
 
-## Author's note on AI collaboration
+## Author's note
 
 This framework was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), and Aristotle (Harmonic) for specific mathematical insights. Architectural decisions and many key derivations emerged from iterative dialogue sessions. This collaboration follows a transparent crediting approach for AI-assisted mathematical research.
 
@@ -758,7 +758,7 @@ This framework was developed through sustained collaboration between the author 
 
 ## Author's Related Works
 
-[B] B. de La Fournière, "Spectral Geometry of an Explicit G₂ Metric: Laplacian Spectrum and Harmonic Forms," Zenodo 10.5281/zenodo.18920368 (2026).
+[B] B. de La Fournière, "Spectral Geometry of an Explicit G₂ Metric: Laplacian Spectrum and Harmonic Forms," Zenodo 10.5281/zenodo.19893371 (2026).
 
 [C] B. de La Fournière, "Newton–Kantorovich diagnostics on a Donaldson K3 metric: two β estimates, machine-checked inequalities," Zenodo 10.5281/zenodo.19708916 (2026).
 

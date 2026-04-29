@@ -182,8 +182,8 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
 | Archive | |
 |---------|---|
 | Zenodo (framework) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
-| Zenodo (explicit G₂ metric) | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
-| Zenodo (spectral geometry) | [10.5281/zenodo.18920368](https://doi.org/10.5281/zenodo.18920368) |
+| Zenodo (explicit G₂ metric) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
+| Zenodo (spectral geometry) | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
