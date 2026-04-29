@@ -742,7 +742,7 @@ executes the full verification chain:
 6. JSON export of all results with UTC timestamp
 
 Total runtime: under a minute on CPU. The notebook outputs a timestamped JSON
-manifest (`G2_Metric_Companion_results.json`) containing all check results,
+manifest (`g2_certified_neck_companion_results.json`) containing all check results,
 coefficient hashes, and environment metadata for tamper-evident reproducibility.
 
 **Expected output:** 15/15 checks pass. Key values: ‖T‖_{C⁰} = 2.98 × 10⁻⁵,

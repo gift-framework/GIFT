@@ -18,8 +18,8 @@ GIFT/
 │   │   ├── pdf/                       # Compiled PDFs
 │   │   ├── figures/                   # Publication figures (PDF + PNG)
 │   │   └── notebooks/                 # Companion Jupyter notebooks
-│   │       ├── G2_Metric_Companion.ipynb
-│   │       └── Spectral_Geometry_Companion.ipynb
+│   │       ├── g2_certified_neck_companion.ipynb
+│   │       └── g2_spectral_companion.ipynb
 │   ├── outreach/                      # Vulgarization & blog posts
 │   │   └── (7 Substack posts)
 │   ├── references/                    # Data & reference catalogs
