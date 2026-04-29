@@ -259,6 +259,13 @@ The T² channels obey a quadratic potential $V_{(m,n)} = 0.855(m^2 + n^2)$ with 
 
 The level spacing distribution follows Poisson statistics ($\chi^2 = 1.36$) rather than GOE ($\chi^2 = 28.0$), consistent with an integrable adiabatic system.
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{fig_weyl_spacing_paper_b.png}
+\caption{Weyl exponent and level spacing for the unified KK tower. \emph{(a)} Convergence of the Weyl exponent $\alpha(\lambda_{\mathrm{cut}})$ as the cutoff is raised: stabilisation at $\alpha_{7D} = 3.460$ (vs.\ the theoretical $7/2 = 3.5$, deviation $1.1\%$); the convergence window is shaded. \emph{(b)} Histogram of the unfolded level spacing for the first 100 KK eigenvalues, compared to Poisson (integrable, $\chi^2 = 1.36$) and the GOE Wigner surmise ($\chi^2 = 28.0$); the data favour Poisson by more than an order of magnitude, consistent with the adiabatic product structure.}
+\label{fig:weyl_spacing}
+\end{figure}
+
 % ============================================
 \section{Harmonic Forms and Intersection Theory}\label{sec:harmonic}
 % ============================================
@@ -304,6 +311,13 @@ Anti-self-dual (ASD) & 18 & $-0.00423$ to $-0.00219$ \\
 The ratio of mean SD to mean ASD absolute eigenvalue is approximately $\mathbf{2{,}210}$. The cross-block Frobenius norm $\|I_{\mathrm{SD,ASD}}\|_F = 0.018$ confirms near-exact block diagonality.
 
 This extreme gap originates from the $\mathrm{SU}(2)$ holonomy of the K3 fiber: SD 2-forms are aligned with the hyperk\"ahler triple $(\omega_I, \omega_J, \omega_K)$, while ASD forms lie in the 18-dimensional complement of the rank-21 restricted lattice.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{fig_intersection_heatmap_paper_b.png}
+\caption{K3 fiber pairing $I_{IJ}$ on the $b_2(M) = 21$ subspace. \emph{(a)} The $22 \times 22$ ambient K3 lattice pairing as a heatmap (diverging colormap, signature $(3, 19)$); the orange-bordered class is the lattice direction killed by TCS boundary matching, so it does not extend to a global harmonic 2-form on $M$. \emph{(b)} Eigenvalue spectrum (signed bars) of $I_{IJ}$ restricted to the 21 surviving global harmonic 2-forms: 3 self-dual (red, $\sim 5\text{--}8$) and 18 anti-self-dual (blue, $\sim -10^{-3}$), giving signature $(3, 18)$ and the SD/ASD spectral gap of $\sim 2{,}210$.}
+\label{fig:intersection_heatmap}
+\end{figure}
 
 \subsection{Harmonic 3-forms}
 
@@ -372,8 +386,6 @@ We have computed the spectral geometry of the NK-certified $\Gtwo$ metric of~[A]
 
 The spectral data presented here is relevant for Kaluza--Klein reductions of supergravity theories on $\Gtwo$ manifolds. The scalar spectral gap determines the mass of the lightest KK mode; the harmonic forms determine the 4D field content; and the intersection form encodes gauge coupling structure.
 
-A companion paper~[D] discusses the physical context of these spectral results in the $\Gtwo$ compactification setting.
-
 \subsection{Limitations}
 
 \textbf{Adiabatic approximation.} The spectral computations exploit the product-type structure of the certified metric ([A], Proposition~3.3). The adiabatic error is $\varepsilon_{\mathrm{ad}} = 2 \times 10^{-3}$ with certified eigenvalue perturbation $|\delta\lambda_n|/\lambda_n \leq 0.78\%$ for all eigenvalues. The spectral Betti confirmation (gap ratio $14{,}635$) is stable under this perturbation: a $0.78\%$ shift on each eigenvalue changes the gap ratio by at most $2 \times 0.78\% = 1.56\%$ (worst case, numerator and denominator moving in opposite directions), leaving it at four orders of magnitude. The spectral Betti identification $(b_2, b_3) = (21, 77)$ is a robust property of the torsion-free metric $g^*$ that survives any residual $O(10^{-3})$ uncertainty in the K3 fiber structural constants.
@@ -435,12 +447,9 @@ The author reports there are no competing interests to declare.
 \section*{Author's related works}
 % ============================================
 
-The following papers by the author are referenced above or provide directly related context. They are listed separately from the main bibliography to keep the citation record of this paper independent from the author's own prior output.
-
 \begin{itemize}
-\item[{[A]}] de La Fourni\`ere, B. \emph{A Certified Torsion-Free $\Gtwo$ Structure on a TCS Neck Model via Computer-Assisted Proof}. Zenodo, 2026. DOI: \href{https://doi.org/10.5281/zenodo.18860358}{10.5281/zenodo.18860358}.
+\item[{[A]}] de La Fourni\`ere, B. \emph{A Certified Torsion-Free $\Gtwo$ Structure on a TCS Neck Model via Computer-Assisted Proof}. Zenodo, 2026. DOI: \href{https://doi.org/10.5281/zenodo.18643069}{10.5281/zenodo.18643069}.
 \item[{[C]}] de La Fourni\`ere, B. \emph{Newton--Kantorovich diagnostics on a Donaldson K3 metric: two $\beta$ estimates, machine-checked inequalities}. Zenodo, 2026. DOI: \href{https://doi.org/10.5281/zenodo.19708916}{10.5281/zenodo.19708916}.
-\item[{[D]}] de La Fourni\`ere, B. \emph{GIFT v3.4: geometric and physical context}. Companion paper, in preparation (2026).
 \end{itemize}
 
 % ============================================

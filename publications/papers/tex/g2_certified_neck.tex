@@ -129,7 +129,7 @@ on a TCS Neck Model via Computer-Assisted Proof}
 
 \noindent\textbf{Date}: April 2026
 
-\noindent\textbf{DOI}: \href{https://doi.org/10.5281/zenodo.18860358}{10.5281/zenodo.18860358}
+\noindent\textbf{DOI}: \href{https://doi.org/10.5281/zenodo.18643069}{10.5281/zenodo.18643069}
 
 \vfill
 
@@ -377,6 +377,13 @@ K3 ($y_1\ldots y_4$) & $0.828$ & Fiber \\
 
 Off-diagonal entries are below $0.007$. Certified bounds (Gershgorin, interval arithmetic): $\lambda_{\min}(g) \geq 0.817$, $\lambda_{\max}(g) \leq 3.167$, $\kappa(g) \leq 3.88$.
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{fig_metric_profile_paper_a.png}
+\caption{Metric profile at the neck midpoint $s = 0.5$. \emph{(a)} The $7 \times 7$ tensor $g$ (det-normalised to $65/32$): nearly block-diagonal seam $|$ $T^2$ $|$ $4 \times K3$ structure with off-diagonal couplings below $0.007$. \emph{(b)} Block eigenvalues coloured by adiabatic sector, with rational approximations $g_{ss} \approx 19/6$, $g_{T^2} \approx 7/6$, $g_{K3} \approx 64/77$ marked, and the ACyl decay rate $\gamma = 2\pi\sqrt{6/7}$ shown for reference (NK-computed $\gamma_{\mathrm{NK}} = 5.811$, $0.1\%$ proximity).}
+\label{fig:metric_profile}
+\end{figure}
+
 \subsection{Reconstruction algorithm}
 
 Given the coefficient matrix $C = (c_{kj})$ and decay rate $\gamma$, the metric $g(s)$ at any point $s$ is reconstructed in 6 steps:
@@ -443,7 +450,7 @@ r = (-3/2 + \delta,\; -\delta,\; 1/2,\; 1), \qquad \delta \approx 0.02379.
 \begin{table}[ht]
 \centering
 \small
-\begin{tabular}{lll}
+\begin{tabular}{p{4.2cm} p{2.8cm} p{8.4cm}}
 \toprule
 Identity & Status & Justification \\
 \midrule
@@ -617,6 +624,13 @@ The maximum $\omega$ still permitting certification is $\omega_{\max} = 1/(2\bet
 r_- = 8.73 \times 10^{-7}, \qquad r_+ = 1{,}222, \qquad \delta g/g \leq 1.35 \times 10^{-7}.
 \end{equation}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{fig_chebyshev_nk_paper_a.png}
+\caption{Chebyshev mode amplitudes and NK certificate. \emph{(a)} Per-mode RMS magnitudes $|c_k|_{\mathrm{rms}}$ (log scale) over the 28 Cholesky entries: $k = 0$ carries $> 99.99\%$ of the signal; even modes $k \in \{2, 4\}$ vanish at machine precision (central antisymmetry of the Cholesky factor); odd modes $k \in \{1, 3, 5\}$ provide small TCS-matching corrections at the $10^{-3}$/$10^{-5}$ level. \emph{(b)} NK certificate schematic showing the contraction quotient $h = \beta\eta\omega$ assembled from the analytical inverse bound, the certified torsion residual at Clenshaw--Curtis nodes, and the Bernstein--Markov Lipschitz bound; the analytical certificate gives $h = 8.95 \times 10^{-9}$ (margin $\times 5.6 \times 10^7$ vs the threshold $1/2$).}
+\label{fig:chebyshev_nk}
+\end{figure}
+
 \begin{corollary}[Holonomy]
 If $M$ is compact and simply connected, then $\mathrm{Hol}(g^*) = \Gtwo$ (simple connectivity gives $b_1(M) = 0$, the hypothesis used by Joyce \cite[Prop.~11.2.3]{Joyce2000}).
 \end{corollary}
@@ -784,12 +798,9 @@ The author reports there are no competing interests to declare.
 \section*{Author's related works}
 % ============================================
 
-The following papers by the author are referenced above or provide directly related context. They are listed separately from the main bibliography to keep the citation record of this paper independent from the author's own prior output.
-
 \begin{itemize}
 \item[{[B]}] de La Fourni\`ere, B. \emph{Spectral Geometry of an Explicit $\Gtwo$ Metric: Laplacian Spectrum and Harmonic Forms}. Zenodo, 2026. DOI: \href{https://doi.org/10.5281/zenodo.18920368}{10.5281/zenodo.18920368}.
 \item[{[C]}] de La Fourni\`ere, B. \emph{Newton--Kantorovich diagnostics on a Donaldson K3 metric: two $\beta$ estimates, machine-checked inequalities}. Zenodo, 2026. DOI: \href{https://doi.org/10.5281/zenodo.19708916}{10.5281/zenodo.19708916}.
-\item[{[D]}] de La Fourni\`ere, B. \emph{GIFT v3.4: geometric and physical context}. Companion paper, in preparation (2026).
 \end{itemize}
 
 % ============================================
