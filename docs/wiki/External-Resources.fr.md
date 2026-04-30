@@ -19,8 +19,8 @@ layout: default
 | Article | DOI |
 |---------|-----|
 | Cadre (données + scripts) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
-| Métrique G₂ explicite | [10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358) |
-| Géométrie spectrale | [10.5281/zenodo.18920368](https://doi.org/10.5281/zenodo.18920368) |
+| Métrique G₂ explicite | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
+| Géométrie spectrale | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
 
 ## Vulgarisation
 

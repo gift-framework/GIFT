@@ -8,7 +8,7 @@ layout: default
 **An Explicit Approximate G₂ Metric on a Compact TCS 7-Manifold with Certified Torsion-Free Completion**
 
 *Brieuc de La Fournière (2026)*
-[Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/Explicit_G2_Metric.md) | [Zenodo DOI: 10.5281/zenodo.18860358](https://doi.org/10.5281/zenodo.18860358)
+[Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/g2_certified_neck.md) | [Zenodo DOI: 10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350)
 
 ---
 

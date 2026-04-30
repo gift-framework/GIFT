@@ -43,7 +43,9 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Orientation, pas ontologie](Blog-Orientation-Not-Ontology.fr.html) | La posture philosophique derrière GIFT |
 | 🇫🇷 [Et si l'univers était un set Lego ?](Blog-Lego-Set-Universe.fr.html) | Compter les pièces, reconnaître le thème, lire la notice |
+| 🇫🇷 [« Le nom de l'auteur paraît inventé »](Blog-Brieucs-Gift.fr.html) | Apprendre la physique avec une IA : l'origine accidentelle de GIFT |
 | 🇫🇷 [La géométrie de l'impossible](Blog-Roberto-Carlos-Geometry.fr.html) | La géométrie des courbes impossibles |
 | 🇫🇷 [Les poux de l'univers](Blog-Lice-of-the-Universe.fr.html) | Pourquoi les constantes de l'univers ne sont pas arbitraires |
 | 🇫🇷 [L'algèbre qui attendait](Blog-The-Algebra-That-Waited.fr.html) | E₈ et l'algèbre derrière la physique |

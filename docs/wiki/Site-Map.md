@@ -41,16 +41,21 @@ Complete index of all wiki pages.
 | [Independent Validations](Independent-Validations.html) | External research converging with GIFT |
 
 ## Blog Posts
-| Page | Description |
+
+English posts are hosted on Substack ([giftheory.substack.com](https://giftheory.substack.com/)). French translations live in this wiki (see [Site Map FR](Site-Map.fr.html)).
+
+| Post | Description |
 |------|-------------|
-| [Blog Lego Set Universe](Blog-Lego-Set-Universe.html) | Counting pieces, recognizing themes, reading the manual |
-| [Blog Roberto Carlos Geometry](Blog-Roberto-Carlos-Geometry.html) | The geometry of impossible curves |
-| [Blog Lice of the Universe](Blog-Lice-of-the-Universe.html) | Why the universe's constants aren't arbitrary |
-| [Blog The Algebra That Waited](Blog-The-Algebra-That-Waited.html) | E₈ and the algebra behind physics |
-| [Blog Gift from Bit](Blog-Gift-from-Bit.html) | Information-theoretic foundations |
-| [Blog On What Comes First](Blog-On-What-Comes-First.html) | Geometry before physics |
-| [Blog Joyce Theorem in Lean](Blog-Joyce-Theorem-in-Lean.html) | Formalizing G₂ existence in Lean 4 |
-| [Blog 13 Theorems Zero Trust](Blog-13-Theorems-Zero-Trust.html) | Trust nothing, verify everything |
+| [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
+| [What if the universe was a Lego set?](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
+| ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of GIFT |
+| [The Geometry of the Impossible](https://giftheory.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos knew (without knowing it) |
+| [The Lice of the Universe](https://giftheory.substack.com/p/the-lice-of-the-universe) | Why the universe's constants aren't arbitrary |
+| [The Algebra That Waited](https://giftheory.substack.com/p/the-algebra-that-waited) | E₈ and the algebra behind physics |
+| [13 Theorems, Zero Trust Required](https://giftheory.substack.com/p/13-theorems-zero-trust-required) | Trust nothing, verify everything |
+| [On What Comes First](https://giftheory.substack.com/p/on-what-comes-first) | Geometry before physics |
+| [Joyce's Theorem, Now in Lean](https://giftheory.substack.com/p/joyces-theorem-now-in-lean) | Formalizing G₂ existence in Lean 4 |
+| [Gift from Bit](https://giftheory.substack.com/p/gift-from-bit) | Information-theoretic foundations |
 
 ## Project
 | Page | Description |
