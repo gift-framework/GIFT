@@ -9,6 +9,33 @@ Historique des versions abrégé. Pour le changelog complet, voir [`CHANGELOG.md
 
 ---
 
+## v3.4.13, 2026-04-29
+
+**Publication du triptyque & jalon de réduction d'axiomes**
+
+- **Articles A, B, C publiés sur Zenodo** (DOIs 19892350, 19893371, 19708916) — le triptyque relecture par les pairs (structure G₂ certifiée, géométrie spectrale, diagnostics NK sur K3)
+- **Réduction Lean** : 38 → 4 axiomes principaux (15 au total avec les certificats d'arithmétique d'intervalles), 0 sorry, 213 conjonctions certifiées
+- **K3NewtonKantorovich v3.0 hardcore** : η ×2,4 plus serré, marge Joyce ×17 sous ε₀
+- **γ² = 24π²/7 dérivé** (laplacien de Hodge sur T² + H¹(K3)=0 ; 135/4 était un artefact PSLQ)
+- **95 observables** : 35 Type I + 19 Type II + 21 Type III + 22 Type IV ; écart moyen 0,39 % sur Type I (PDG 2024 / NuFIT 6.0)
+- **3 primitives entières** : N=3, r₈=8, r₂=2 (zéro paramètre continu ajustable)
+
+## v3.4.3, 2026-04
+
+**Étapes 1-5 G₂ Mathlib promues en théorèmes**
+
+- φ₀ 3-forme ordonnée sur ℝ⁷, identité de Bryant ∑φ₀² = 6δ, rang=35 → dim(g₂)=14, B = 144δ, théorème det·gram (Aristotle)
+- 8 → 4 axiomes par promotion des identités algébriques en preuves native_decide
+- MollifiedSum archivé ; G₂ThreeForm axiomatisé proprement
+
+## v3.4.0, 2026-04
+
+**Programme métrique-first complet · K3 CAP**
+
+- Preuve assistée par ordinateur d'existence d'une métrique G₂ sans torsion sur modèle de cou TCS : h ≤ 8,95×10⁻⁹, marge ×56 millions sous ε₀ de Joyce
+- Certificats NK pour K3 : quartique de Fermat ×990, CI(2,2,2) ×6,4 (formalisés en Lean)
+- Verdict PSLQ hors-diagonale : les formules L[4,2], L[5,3] étaient des artefacts PSLQ (abandonnées)
+
 ## v3.3.24, 2026-03-02
 
 **Mise à jour NuFIT 6.0 et nettoyage des publications**

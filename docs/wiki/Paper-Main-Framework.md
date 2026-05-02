@@ -8,13 +8,15 @@ layout: default
 **Geometric Information Field Theory: Topological Derivation of Standard Model Parameters from G₂ Holonomy Manifolds**
 
 *Brieuc de La Fournière (2026)*
-[Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.3_main.md) | [Zenodo DOI: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+[Full text (markdown, v3.4)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md) | [v3.3 archive on Zenodo: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+
+> **v3.4 update.** Canonical content lives in [`GIFT_v3.4_main.md`](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md). The v3.4 LaTeX/PDF is being recompiled with the GIFT branding template. The peer-reviewable companion triptyque (Papers A, B, C) is published on Zenodo: [A — certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B — spectral](https://doi.org/10.5281/zenodo.19893371) · [C — K3 NK](https://doi.org/10.5281/zenodo.19708916).
 
 ---
 
 ## Abstract
 
-Framework proposing that 19 Standard Model dimensionless parameters emerge as topological invariants of a 7D G₂ holonomy manifold K₇ with Betti numbers (b₂=21, b₃=77) coupled to E₈×E₈ gauge structure. Derives 33 dimensionless predictions with mean deviation 0.24% from experiment. 18 core relations formally verified in Lean 4. DUNE will test δ_CP = 197° falsification criterion.
+Framework proposing that Standard Model dimensionless parameters emerge as topological invariants of a 7D G₂ holonomy manifold K₇ with Betti numbers (b₂=21, b₃=77) coupled to E₈×E₈ gauge structure. v3.4 catalogues 95 observables (35 Type I exact-target relations) with 0.39% mean deviation on Type I from experiment (PDG 2024 / NuFIT 6.0); 213 conjuncts certified in Lean 4 with 4 main-chain axioms. DUNE will test δ_CP = 197° falsification criterion.
 
 ---
 

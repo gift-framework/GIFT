@@ -13,12 +13,12 @@ layout: default
 
 | Property | Value |
 |----------|-------|
-| **Predictions** | 89 observables (33 dimensionless + 56 structural/cosmological) |
-| **Mean deviation** | 0.24% across 32 well-measured observables (PDG 2024 / NuFIT 6.0) |
-| **Free parameters** | 0 |
-| **Lean 4 verification** | 130 files, 8378 build jobs, 0 sorry, 7 axioms |
+| **Predictions** | 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Mean deviation** | 0.39% on 35 Type I (exact-target) relations (PDG 2024 / NuFIT 6.0) |
+| **Free parameters** | 0 (3 integer primitives: N=3, r₈=8, r₂=2) |
+| **Lean 4 verification** | 132 files, 8378 build jobs, 0 sorry, 4 main-chain axioms |
 | **Statistical significance** | p < 2×10⁻⁵ (σ > 4.2), unique among 3M+ configurations |
-| **Monte Carlo null model** | P(algebraic) = 10⁻¹³³ over 4.2M formulas |
+| **Monte Carlo null model** | P(algebraic) = 10⁻¹³⁸ over 3M+ formulas |
 
 ---
 
@@ -28,8 +28,8 @@ layout: default
 |---|---|
 | **New here?** | [Getting Started](Getting-Started.html): Pick your path |
 | **Read papers** | [Paper Main Framework](Paper-Main-Framework.html) ([Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html)) [Paper Spectral Geometry](Paper-Spectral-Geometry.html) |
-| **Browse predictions** | [Observable Reference](Observable-Reference.html), 89 observables with formulas |
-| **Check proofs** | [Lean Formalization](Lean-Formalization.html), 127-conjunct certificate |
+| **Browse predictions** | [Observable Reference](Observable-Reference.html), 95 observables with formulas |
+| **Check proofs** | [Lean Formalization](Lean-Formalization.html), 213-conjunct certificate |
 
 ---
 
@@ -80,4 +80,4 @@ Browse the sidebar for full navigation, or see the [Site Map](Site-Map.html) for
 
 ---
 
-*GIFT Framework v3.3 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo](https://doi.org/10.5281/zenodo.18837071) | MIT License*
+*GIFT Framework v3.4 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*

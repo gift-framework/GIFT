@@ -49,13 +49,26 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 ## Papers
 
+### Framework v3.4 (canonical sources in markdown — PDFs pending clean recompile)
+
 | Document | Description |
 |----------|-------------|
-| [Main Paper (PDF)](publications/papers/pdf/gift_v3.3_main.pdf) | Complete theoretical framework |
-| [S1: Foundations (PDF)](publications/papers/pdf/gift_v3.3_S1.pdf) | E₈, G₂, K₇ mathematical construction |
-| [S2: Derivations (PDF)](publications/papers/pdf/gift_v3.3_S2.pdf) | All 33 derivations (0.24% mean, PDG 2024 / NuFIT 6.0) |
-| [Explicit G₂ Metric (PDF)](publications/papers/pdf/Explicit_G2_Metric.pdf) | Analytical G₂ metric construction |
-| [Spectral Geometry (PDF)](publications/papers/pdf/Spectral_Geometry.pdf) | KK spectrum, Yukawa, gauge unification from G₂ metric |
+| [Main Paper (Markdown)](publications/papers/markdown/GIFT_v3.4_main.md) | Complete theoretical framework |
+| [S1: Foundations (Markdown)](publications/papers/markdown/GIFT_v3.4_S1_foundations.md) | E₈, G₂, K₇ mathematical construction |
+| [S2: Derivations (Markdown)](publications/papers/markdown/GIFT_v3.4_S2_derivations.md) | All 33 Type I derivations (0.39% mean, PDG 2024 / NuFIT 6.0) |
+| [S3: Observables (Markdown)](publications/papers/markdown/GIFT_v3.4_S3_observables.md) | 95-observable catalog with type breakdown |
+
+> v3.4 PDFs are being recompiled with the GIFT LaTeX template (v3.2/v3.3 main branding). Until then, the markdown sources are canonical. Last clean PDFs (v3.3) are archived in [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/).
+
+### Triptyque (peer-reviewable, published on Zenodo)
+
+| Paper | Description | DOI |
+|-------|-------------|-----|
+| [A — Certified G₂ Structure (PDF)](publications/papers/pdf/g2_certified_neck.pdf) | First computer-assisted existence proof for a metric with special holonomy (TCS neck model) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
+| [B — Spectral Geometry (PDF)](publications/papers/pdf/g2_spectral.pdf) | Laplacian spectrum, harmonic forms, λ₁ = 6π²/475 | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
+| C — Newton-Kantorovich on K3 | NK diagnostics on a Donaldson K3 metric (CI(2,2,2)) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
+
+> v3.3 archive: [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/)
 
 ---
 
@@ -63,11 +76,11 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | | |
 |---|---|
-| **Precision** | 0.24% mean deviation across 32 well-measured observables (PDG 2024 / NuFIT 6.0) |
-| **Observables** | 92 total (66 with experimental comparison) |
-| **Parameters** | Zero adjustable (all structurally determined) |
-| **Verified** | 131 Lean 4 files, 4 axioms, zero incomplete proofs ([core v3.4.11](https://github.com/gift-framework/core)) |
-| **Uniqueness** | #1 out of 3,070,396 configurations tested |
+| **Precision** | 0.39% mean deviation on Type I (35 exact-target relations); 0.97% across all 66 observables with experimental comparison (PDG 2024 / NuFIT 6.0) |
+| **Observables** | 95 total (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Parameters** | Zero adjustable (all structurally determined; 3 integer primitives: N=3, r₈=8, r₂=2) |
+| **Verified** | 132 Lean 4 files, 4 main-chain axioms (15 total incl. interval-arith certificates), zero sorry ([core v3.4.13](https://github.com/gift-framework/core)) |
+| **Uniqueness** | #1 out of 3M+ configurations tested (log₁₀ p_algebraic = −138) |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
 
@@ -115,9 +128,9 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Metric | Value |
 |--------|-------|
-| Configurations tested | 3,070,396 |
+| Configurations tested | 3,000,000+ |
 | **GIFT rank** | **#1** |
-| Mean deviation | 0.24% (32 well-measured) |
+| Mean deviation | 0.39% (35 Type I) / 0.97% (all 66 observables) |
 | Better alternatives found | 0 |
 
 ### Top 5 Configurations
@@ -196,7 +209,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.11}
+  version = {3.4.13}
 }
 ```
 
