@@ -10,7 +10,7 @@ layout: default
 *Brieuc de La Fournière (2026)*
 [Full text (markdown, v3.4)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md) | [v3.3 archive on Zenodo: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
 
-> **v3.4 update.** Canonical content lives in [`GIFT_v3.4_main.md`](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md). The v3.4 LaTeX/PDF is being recompiled with the GIFT branding template. The peer-reviewable companion triptyque (Papers A, B, C) is published on Zenodo: [A — certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B — spectral](https://doi.org/10.5281/zenodo.19893371) · [C — K3 NK](https://doi.org/10.5281/zenodo.19708916).
+> **v3.4 update.** Canonical content lives in [`GIFT_v3.4_main.md`](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md). The v3.4 LaTeX/PDF is being recompiled with the GIFT branding template. The peer-reviewable companion triptyque (Papers A, B, C) is published on Zenodo: [A: certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B: spectral](https://doi.org/10.5281/zenodo.19893371) · [C: K3 NK](https://doi.org/10.5281/zenodo.19708916).
 
 ---
 

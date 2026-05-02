@@ -430,7 +430,7 @@ The Laplace-Beltrami operator on K₇ admits a discrete spectrum with eigenvalue
 
 $$\frac{\dim(G_2)}{H^*} = \frac{14}{b_2 + b_3 + 1} = \frac{14}{99} = 0.1414...$$
 
-This is NOT the spectral gap itself, but a topological bound — see below.
+This is NOT the spectral gap itself, but a topological bound, see below.
 
 **Analytical spectral gap**: If the TCS decomposition holds with b₂(M₁) = 11, the first eigenvalue of the scalar Laplacian admits a closed-form expression from the 1D Sturm-Liouville reduction on the TCS neck:
 
@@ -654,7 +654,7 @@ numerator/denominator can be expressed as combinations of a few integers.
 
 **Numerical value**: 65/32 = 2.03125 (exact rational)
 
-**Status**: METRIC NORMALIZATION — algebraically exact in our metric, with three
+**Status**: METRIC NORMALIZATION, algebraically exact in our metric, with three
 suggestive integer formulas, but not derived from topology. The 6 observables using
 det_num or det_den (six Type I observables) depend on this normalization choice.
 
@@ -853,5 +853,5 @@ Cross-verification between analytical and numerical methods confirms the solutio
 
 ---
 
-*GIFT Framework — Supplement S1*
+*GIFT Framework: Supplement S1*
 *Mathematical Foundations: E₈ + G₂ + K₇*

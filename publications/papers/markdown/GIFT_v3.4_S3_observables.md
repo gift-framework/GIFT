@@ -4,7 +4,7 @@
 
 This supplement provides the complete GIFT observable dataset: 95 observables derived from a single G₂ metric (169 Chebyshev-Cholesky geometric parameters, zero freely adjustable physical parameters), organized by derivation type and cross-referenced with Lean formal verification. The dataset includes 2 BH remnant predictions from Pinčák et al. 2026 [46] (classified Type IV) and 6 new Type IV metric block eigenvalues (v3.4.13).
 
-The 95 observables decompose as **33(I) + 19(II) + 21(III) + 22(IV)** across four types of increasing derivation complexity. All predictions trace to a single compact G₂ manifold K₇ with (b₂, b₃) = (21, 77) and E₈×E₈ gauge structure — 169 metric parameters, zero continuously adjustable physical parameters. The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds; a complete geometric construction remains an open problem. The certified metric provides computational evidence for a new G₂ manifold.
+The 95 observables decompose as **33(I) + 19(II) + 21(III) + 22(IV)** across four types of increasing derivation complexity. All predictions trace to a single compact G₂ manifold K₇ with (b₂, b₃) = (21, 77) and E₈×E₈ gauge structure, 169 metric parameters, zero continuously adjustable physical parameters. The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds; a complete geometric construction remains an open problem. The certified metric provides computational evidence for a new G₂ manifold.
 
 The dataset serves as the canonical reference for all GIFT predictions, superseding scattered results across supplements S6–S25. Every entry traces back to a specific computation, a JSON artifact, and (where applicable) a Lean theorem.
 
@@ -107,19 +107,19 @@ Each observable record contains: GIFT prediction (float64), GIFT fraction (exact
 The 66 observables with experimental comparison (Types I+II+III) organize into 11 sectors with varying precision:
 
 **Best-performing sectors** (mean dev < 0.5%):
-- **Boson** (3 obs): mean 0.13% — m_H/m_W (0.02%), m_W/m_Z (0.06%), m_H/m_t (0.31%)
-- **Quark** (4 obs): mean 0.21% — m_s/m_d (0.00%), m_u/m_d (0.05%), m_c/m_s (0.12%), m_b/m_t (0.79%)
-- **CKM** (3 obs): mean 0.59% — A_Wolf (0.29%), sin²θ₁₂ (0.36%), sin²θ₂₃ (1.13%)
-- **Cosmology** (7 obs): mean 0.15% — n_s (0.004%), h (0.09%), Ω_b/Ω_m (0.16%), σ₈ (0.18%), Ω_DE (0.21%), Y_p (0.37%), Ω_DM/Ω_b (0.00%)
+- **Boson** (3 obs): mean 0.13%, m_H/m_W (0.02%), m_W/m_Z (0.06%), m_H/m_t (0.31%)
+- **Quark** (4 obs): mean 0.21%, m_s/m_d (0.00%), m_u/m_d (0.05%), m_c/m_s (0.12%), m_b/m_t (0.79%)
+- **CKM** (3 obs): mean 0.59%: A_Wolf (0.29%), sin²θ₁₂ (0.36%), sin²θ₂₃ (1.13%)
+- **Cosmology** (7 obs): mean 0.15%, n_s (0.004%), h (0.09%), Ω_b/Ω_m (0.16%), σ₈ (0.18%), Ω_DE (0.21%), Y_p (0.37%), Ω_DM/Ω_b (0.00%)
 
 **Good sectors** (mean dev 0.5–3%):
-- **Electroweak** (3 obs): mean 0.11% — α⁻¹ (0.002%), α_s (0.126%), sin²θ_W (0.20%)
-- **Lepton** (3 obs): mean 0.04% — Q_Koide (0.001%), m_τ/m_e (0.004%), m_μ/m_e (0.12%)
-- **PMNS** (4 obs): mean 0.29% — θ₁₂ (0.03%), θ₂₃ (0.10%), sin²θ₁₂ (0.23%), θ₁₃ (0.37%)
+- **Electroweak** (3 obs): mean 0.11%, α⁻¹ (0.002%), α_s (0.126%), sin²θ_W (0.20%)
+- **Lepton** (3 obs): mean 0.04%: Q_Koide (0.001%), m_τ/m_e (0.004%), m_μ/m_e (0.12%)
+- **PMNS** (4 obs): mean 0.29%, θ₁₂ (0.03%), θ₂₃ (0.10%), sin²θ₁₂ (0.23%), θ₁₃ (0.37%)
 
 **Challenging sectors** (mean dev > 3%):
-- **Gauge running** (4 obs): mean 2.3% — sin²θ_W(RGE) (2.78%), α_em⁻¹(RGE) (2.53%), α_s(RGE) (3.7%), M_GUT (0.00%)
-- **Instanton** (3 obs): mean 7.4% — ΔV(e-τ) (5.9%), ΔV(e-μ) (15.9%), κ(gauge) (4.7%)
+- **Gauge running** (4 obs): mean 2.3%, sin²θ_W(RGE) (2.78%), α_em⁻¹(RGE) (2.53%), α_s(RGE) (3.7%), M_GUT (0.00%)
+- **Instanton** (3 obs): mean 7.4%: ΔV(e-τ) (5.9%), ΔV(e-μ) (15.9%), κ(gauge) (4.7%)
 
 **B-test consistency** (derived, not counted as independent observable): The MSSM B parameter B = (α₁⁻¹−α₂⁻¹)/(α₂⁻¹−α₃⁻¹) evaluates to 1.4033 using GIFT couplings (0.23% from the theoretical 7/5), closer than the purely experimental B = 1.3948 (0.37%). The identity B = 7/5 is equivalent to α_em⁻¹(M_Z) = 91√2 = dim(Λ²𝔤₂)·√2 and implies the holonomy sequence α₁⁻¹:α₂⁻¹:α₃⁻¹ = dim(G₂):dim(K₇):p₂ = 14:7:2. See §5.4 of the main text.
 
@@ -141,15 +141,15 @@ The 66 observables with experimental comparison (Types I+II+III) organize into 1
 | α_GUT⁻¹ | 25.3 | 25.3 | 0.00% |
 | rank(Y) | 3 | 3 | 0.00% |
 
-Note: δ_CP canonical prediction is 197° (11.3% from NuFIT 6.0 central); a compactification factor 62/69 brings it to 177.014° (0.008%) but is not adopted — see §4.4.1. m_c/m_s deviation is 0.12%, above the 0.01% threshold.
+Note: δ_CP canonical prediction is 197° (11.3% from NuFIT 6.0 central); a compactification factor 62/69 brings it to 177.014° (0.008%) but is not adopted, see §4.4.1. m_c/m_s deviation is 0.12%, above the 0.01% threshold.
 
 ### Known Outliers
 
 Two observables deviate by more than 5%, each with an identified physical origin:
 
-**δ_CP**: The GIFT prediction is 197° (pure topological: 7 × 14 + 99), deviating 11.3% from NuFIT 6.0 central (177° ± 20°) but at the edge of 1σ. PSLQ analysis identifies a compactification factor 62/69 (§4.4.1 of main paper), documented as a structural observation but not adopted — the canonical prediction remains 197°. The experimental central value shifted from 197° (NuFIT 5.2) to 177° (NuFIT 6.0) and carries ±20° uncertainty. Falsifiable by DUNE (2028–2040).
+**δ_CP**: The GIFT prediction is 197° (pure topological: 7 × 14 + 99), deviating 11.3% from NuFIT 6.0 central (177° ± 20°) but at the edge of 1σ. PSLQ analysis identifies a compactification factor 62/69 (§4.4.1 of main paper), documented as a structural observation but not adopted: the canonical prediction remains 197°. The experimental central value shifted from 197° (NuFIT 5.2) to 177° (NuFIT 6.0) and carries ±20° uncertainty. Falsifiable by DUNE (2028–2040).
 
-**α_s(RGE) = +3.7%**: G₂-MSSM split-spectrum matching — MSSM above M_squark = 3165 GeV, SM + gauginos below (b₃ = −5) — gives α_s = 0.1224 (exp 0.1180, dev 3.7%). A naive degenerate-spectrum treatment would give 12.1%. The topological value α_s = √2/12 = 0.11785 (Type I) matches experiment to 0.126%.
+**α_s(RGE) = +3.7%**: G₂-MSSM split-spectrum matching (MSSM above M_squark = 3165 GeV, SM + gauginos below (b₃ = −5)) gives α_s = 0.1224 (exp 0.1180, dev 3.7%). A naive degenerate-spectrum treatment would give 12.1%. The topological value α_s = √2/12 = 0.11785 (Type I) matches experiment to 0.126%.
 
 **ΔV(e-μ) = +15.9%**: The instanton volume assignment ΔV(e-μ) = 3.271 versus target ln(16.82) = 2.823 reflects the optimal assignment problem for 57 associative cycles. The combined wilson_line+instanton pipeline with α = e^K (§S3.5) reduces this to 0.75%.
 
@@ -205,12 +205,12 @@ Of the 95 observables, **55 are formally verified** in Lean 4 across the followi
 
 | Lean File | Axioms | Theorems | Conjuncts | Coverage |
 |-----------|--------|----------|-----------|----------|
-| `Foundations.lean` | 0* | — | 38 | Type I: metric, torsion, topology |
-| `Predictions.lean` | 0* | — | 55 | Types I–III: couplings, masses, mixing |
-| `Spectral.lean` | 0* | — | 41 | Type II: KK spectrum, Weyl law |
-| `MetricEigenvalues.lean` | 0 | — | 15 | Metric fractions: g_ss=19/6, g_T²=7/6, γ²=24π²/7 (T² Laplacian) |
-| `SpectralInvariants.lean` | 0 | — | 10 | Heat kernel, ζ'(0), b₁=0 |
-| `CompactificationCorrection.lean` | 0 | — | 6 | δ_CP compactification factor |
+| `Foundations.lean` | 0* |, | 38 | Type I: metric, torsion, topology |
+| `Predictions.lean` | 0* |, | 55 | Types I–III: couplings, masses, mixing |
+| `Spectral.lean` | 0* |, | 41 | Type II: KK spectrum, Weyl law |
+| `MetricEigenvalues.lean` | 0 |, | 15 | Metric fractions: g_ss=19/6, g_T²=7/6, γ²=24π²/7 (T² Laplacian) |
+| `SpectralInvariants.lean` | 0 |, | 10 | Heat kernel, ζ'(0), b₁=0 |
+| `CompactificationCorrection.lean` | 0 |, | 6 | δ_CP compactification factor |
 | `TCSGaugeBreaking.lean` | 0 | 14 | 10 | Type III: gauge breaking chain |
 | `GaugeBundleData.lean` | 0 | 12 | 11 | Type III: bundle universality |
 | `AssociativeVolumes.lean` | 0 | 19 | 14 | Type III: instanton hierarchy |
@@ -257,5 +257,5 @@ All artifacts are archived in the Zenodo data deposit (DOI: [10.5281/zenodo.1989
 
 ---
 
-*GIFT Framework — Supplement S3: Observable Dataset*
+*GIFT Framework: Supplement S3: Observable Dataset*
 *95 observables, 4 types, 55 Lean-certified*

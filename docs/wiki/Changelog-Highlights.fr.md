@@ -13,7 +13,7 @@ Historique des versions abrégé. Pour le changelog complet, voir [`CHANGELOG.md
 
 **Publication du triptyque & jalon de réduction d'axiomes**
 
-- **Articles A, B, C publiés sur Zenodo** (DOIs 19892350, 19893371, 19708916) — le triptyque relecture par les pairs (structure G₂ certifiée, géométrie spectrale, diagnostics NK sur K3)
+- **Articles A, B, C publiés sur Zenodo** (DOIs 19892350, 19893371, 19708916), le triptyque relecture par les pairs (structure G₂ certifiée, géométrie spectrale, diagnostics NK sur K3)
 - **Réduction Lean** : 38 → 4 axiomes principaux (15 au total avec les certificats d'arithmétique d'intervalles), 0 sorry, 213 conjonctions certifiées
 - **K3NewtonKantorovich v3.0 hardcore** : η ×2,4 plus serré, marge Joyce ×17 sous ε₀
 - **γ² = 24π²/7 dérivé** (laplacien de Hodge sur T² + H¹(K3)=0 ; 135/4 était un artefact PSLQ)

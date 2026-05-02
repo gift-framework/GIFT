@@ -102,7 +102,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ## Triptyque (peer-reviewable companion papers, Zenodo)
 
-### Paper A — Certified G₂ Structure
+### Paper A: Certified G₂ Structure
 
 ```bibtex
 @misc{gift_paper_a_certified_neck,
@@ -115,7 +115,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 }
 ```
 
-### Paper B — Spectral Geometry
+### Paper B: Spectral Geometry
 
 ```bibtex
 @misc{gift_paper_b_spectral,
@@ -128,7 +128,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 }
 ```
 
-### Paper C — Newton-Kantorovich on K3
+### Paper C: Newton-Kantorovich on K3
 
 ```bibtex
 @misc{gift_paper_c_k3_nk,
@@ -163,9 +163,9 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 | Archive | Link |
 |---------|------|
 | Zenodo (framework v3.3 archive) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
-| Zenodo (Paper A — certified G₂) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
-| Zenodo (Paper B — spectral) | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
-| Zenodo (Paper C — K3 NK) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
+| Zenodo (Paper A, certified G₂) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
+| Zenodo (Paper B, spectral) | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
+| Zenodo (Paper C: K3 NK) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
@@ -193,10 +193,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 When using GIFT predictions:
 
-1. **Cite framework** — Use software citation above
-2. **Cite specific results** — Use the relevant document or triptyque entry
-3. **Specify version** — Always include version number (v3.4)
-4. **Link repository** — Include GitHub URL for reproducibility
+1. **Cite framework**: Use software citation above
+2. **Cite specific results**: Use the relevant document or triptyque entry
+3. **Specify version**: Always include version number (v3.4)
+4. **Link repository**: Include GitHub URL for reproducibility
 
 ### Example
 
@@ -210,7 +210,7 @@ When using GIFT predictions:
 
 ## License
 
-MIT License — See [LICENSE](LICENSE)
+MIT License: See [LICENSE](LICENSE)
 
 ---
 

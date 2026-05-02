@@ -39,7 +39,7 @@ Before presenting derivations, we clarify the logical structure:
 **Inputs** (taken as given):
 - The octonion algebra 𝕆 and its automorphism group G₂ = Aut(𝕆)
 - The E₈×E₈ gauge structure
-- The K₇ manifold (compact G₂ 7-manifold with b₂ = 21, b₃ = 77; explicit metric certified in Paper I [30]; the pair (21, 77) does not appear among previously constructed compact G₂ manifolds — a complete geometric construction remains an open problem)
+- The K₇ manifold (compact G₂ 7-manifold with b₂ = 21, b₃ = 77; explicit metric certified in Paper I [30]; the pair (21, 77) does not appear among previously constructed compact G₂ manifolds: a complete geometric construction remains an open problem)
 
 **Outputs** (derived from inputs):
 - The 33 Type I dimensionless predictions
@@ -68,7 +68,7 @@ Analysis of the NK-certified metric (Paper B [44]) computed all invariants direc
 
 - **Topological realization**: The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds; a complete geometric construction remains an open problem. Orthogonal TCS is excluded by parity (b₂+b₃=98 even). Any Betti decomposition via Mayer-Vietoris is conditional on the building block identification, which is open.
 - **ν̄ = 0**: Lean-certified in TCSConstruction.lean. For rectangular TCS (k₊=k₋=1), ν̄=0 automatically (CGN invariant); this is conditional on TCS realization.
-- **New topological formula**: V_min = √(Vol(K₇)/11), where 11 = b₃/n = 77/7. NK numerical: 219.90; formula: 221.24 (0.6% ✓). Identity: V_min² × b₃/n = Vol(K₇) — a universal G₂ relation.
+- **New topological formula**: V_min = √(Vol(K₇)/11), where 11 = b₃/n = 77/7. NK numerical: 219.90; formula: 221.24 (0.6% ✓). Identity: V_min² × b₃/n = Vol(K₇): a universal G₂ relation.
 - **U(1)² exact symmetry**: The T² directions θ and ψ are degenerate to 2×10⁻⁵ in the metric eigenvalues, propagating to S_θ = S_ψ = 6.1265 in all period integrals (exact to 2.6×10⁻⁸).
 - **SM gauge group origin**: NOT from ADE singularities (TCS is smooth). From g₂ ⊂ so(7) spectral structure and so(8) = g₂ ⊕ L ⊕ R triality → N_gen = 3.
 
@@ -200,7 +200,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 
 **Statement**: The K₇ metric determinant is exactly 65/32.
 
-**Classification**: METRIC NORMALIZATION (not TOPOLOGICAL — see S1 §10.3)
+**Classification**: METRIC NORMALIZATION (not TOPOLOGICAL, see S1 §10.3)
 
 ### Proof
 
@@ -218,7 +218,7 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \f
 
 **Verification**: The analytical metric g = (65/32)^{1/7} × I₇ has det(g) = [(65/32)^{1/7}]^7 = 65/32 exactly, consistent with the topological formula.
 
-**Epistemic note**: Three independent algebraic paths converge to 65/32, which is suggestive but does not constitute a derivation from topology — the metric optimization was constrained to this normalization target, and the formulas were identified post-hoc. See S1 §10.3 for full discussion. Six observables depending on det(g)_num or det(g)_den carry this normalization dependence.
+**Epistemic note**: Three independent algebraic paths converge to 65/32, which is suggestive but does not constitute a derivation from topology: the metric optimization was constrained to this normalization target, and the formulas were identified post-hoc. See S1 §10.3 for full discussion. Six observables depending on det(g)_num or det(g)_den carry this normalization dependence.
 
 **Status**: METRIC NORMALIZATION (algebraically exact; see S1 §10.3) ∎
 
@@ -601,7 +601,7 @@ lies at the 1σ boundary (177+20=197). DUNE (2028–2040) will resolve this defi
 correction (62/69 factor, yielding 177.01°) is documented in Appendix F as contingent
 on experimental confirmation. See also §4.4.1 of the main paper.
 
-**Status**: VERIFIED — original prediction, pending DUNE ∎
+**Status**: VERIFIED, original prediction, pending DUNE ∎
 
 ---
 
@@ -1270,7 +1270,7 @@ Each prediction admits multiple algebraically independent expressions that reduc
 | 32 | h | (PSL₂₇−1)/dim_E₈ | 167/248 | 0.674 | 0.09% | 3 | DERIVED |
 | 33 | σ₈ | (p₂+det_g_den)/(2b₂) | 34/42 | 0.811 | 0.18% | 4 | DERIVED |
 
-### 24.3b Relations #34–#35: BH Remnant Topological Predictions — Type IV (Pinčák et al. 2026 [46])
+### 24.3b Relations #34–#35: BH Remnant Topological Predictions: Type IV (Pinčák et al. 2026 [46])
 
 *These are classified as **Type IV structural diagnostics** (D22 = M_res, D20 = N_QNM) in the 95-observable dataset, not as Type I. They are included here for completeness as they are topologically derived from the same G₂ structural constants.*
 
@@ -1373,7 +1373,7 @@ This structure reflects the icosahedral geometry underlying the McKay correspond
 
 ---
 
-## Appendix F: δ_CP — The 197° Prediction and the Compactification Correction
+## Appendix F: δ_CP: The 197° Prediction and the Compactification Correction
 
 ### F.1 The Original Prediction
 
@@ -1406,7 +1406,7 @@ integers and the compactification ratio.
 ### F.3 Why We Do Not Adopt It (Yet)
 
 1. **Post-hoc identification**: The factor 62/69 was found AFTER the NuFIT 6.0 shift.
-   Adopting it would be fitting to the latest central value — the opposite of prediction.
+   Adopting it would be fitting to the latest central value: the opposite of prediction.
 
 2. **197° remains within 1σ**: The value 197° = 177° + 20° is AT the 1σ boundary.
    One-sigma deviations are expected ~32% of the time. This is not a falsification.
@@ -1439,7 +1439,7 @@ integers and the compactification ratio.
 |---------|-------|--------|-----------|
 | 7×14+99 | 197° | **PRIMARY** (original prediction) | 3 constants, 2 ops |
 | 12214/69 | 177.01° | Contingent (pending DUNE) | 5 constants, 4 ops |
-| Experimental | 177°±20° | NuFIT 6.0 (1σ band: [157°, 197°]) | — |
+| Experimental | 177°±20° | NuFIT 6.0 (1σ band: [157°, 197°]) |, |
 
 ---
 
@@ -1454,5 +1454,5 @@ integers and the compactification ratio.
 
 ---
 
-*GIFT Framework — Supplement S2*
+*GIFT Framework: Supplement S2*
 *Complete Derivations: 33 Type I Relations*

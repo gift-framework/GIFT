@@ -49,7 +49,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 ## Papers
 
-### Framework v3.4 (canonical sources in markdown — PDFs pending clean recompile)
+### Framework v3.4 (canonical sources in markdown: PDFs pending clean recompile)
 
 | Document | Description |
 |----------|-------------|
@@ -64,9 +64,9 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Paper | Description | DOI |
 |-------|-------------|-----|
-| [A — Certified G₂ Structure (PDF)](publications/papers/pdf/g2_certified_neck.pdf) | First computer-assisted existence proof for a metric with special holonomy (TCS neck model) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
-| [B — Spectral Geometry (PDF)](publications/papers/pdf/g2_spectral.pdf) | Laplacian spectrum, harmonic forms, λ₁ = 6π²/475 | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
-| C — Newton-Kantorovich on K3 | NK diagnostics on a Donaldson K3 metric (CI(2,2,2)) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
+| [A: Certified G₂ Structure (PDF)](publications/papers/pdf/g2_certified_neck.pdf) | First computer-assisted existence proof for a metric with special holonomy (TCS neck model) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
+| [B: Spectral Geometry (PDF)](publications/papers/pdf/g2_spectral.pdf) | Laplacian spectrum, harmonic forms, λ₁ = 6π²/475 | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
+| C: Newton-Kantorovich on K3 | NK diagnostics on a Donaldson K3 metric (CI(2,2,2)) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
 
 > v3.3 archive: [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/)
 

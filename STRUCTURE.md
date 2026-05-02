@@ -98,6 +98,6 @@ The **[GitHub Wiki](https://github.com/gift-framework/GIFT/wiki)** provides a na
 
 **Current**: v3.4.13 (2026-04-29)
 **Relations**: 213 conjuncts certified (core v3.4.13, 4 main-chain axioms + 11 interval-arith certificates)
-**Predictions**: 95 observables (35 Type I — exact targets, 0.39% mean deviation; PDG 2024 / NuFIT 6.0)
+**Predictions**: 95 observables (35 Type I, exact targets, 0.39% mean deviation; PDG 2024 / NuFIT 6.0)
 **Validation**: 3M+ configs exhaustive (log₁₀ p_algebraic = −138)
 **Triptyque**: Papers A (Zenodo 19892350) + B (19893371) + C (19708916) published 2026-04-29

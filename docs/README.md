@@ -31,7 +31,7 @@ Static visualizations are available in the [`figures/`](figures/) directory:
 - [S1: Foundations](../publications/papers/markdown/GIFT_v3.4_S1_foundations.md) - E₈, G₂, K₇ mathematical construction
 - [S2: Derivations](../publications/papers/markdown/GIFT_v3.4_S2_derivations.md) - 33 Type I derivations
 - [S3: Observables](../publications/papers/markdown/GIFT_v3.4_S3_observables.md) - 95-observable catalog
-- [Paper A — Certified G₂ Structure](../publications/papers/markdown/g2_certified_neck.md) | [Paper B — Spectral Geometry](../publications/papers/markdown/g2_spectral.md)
+- [Paper A: Certified G₂ Structure](../publications/papers/markdown/g2_certified_neck.md) | [Paper B: Spectral Geometry](../publications/papers/markdown/g2_spectral.md)
 - [Observables CSV](../publications/references/observables.csv) - Machine-readable data
 
 ## Legacy
