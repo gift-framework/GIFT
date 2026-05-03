@@ -3,14 +3,16 @@ title: "Résumé de validation"
 layout: default
 ---
 
-# Résumé complet de validation GIFT v3.3
+# Résumé complet de validation GIFT v3.4
 
-**Date** : 2026-03-02
+**Date** : 2026-04-29 (v3.4.13)
 **Références expérimentales** : PDG 2024 / NuFIT 6.0 (NO, IC19) / Planck 2020
-**Recherche exhaustive** : 3 070 396 configurations, 0 meilleure
-**p-valeur du modèle nul** : < 2 × 10⁻⁵ (sigma > 4,2)
-**Westfall-Young maxT** : 11/33 significatifs (p global = 0,008)
-**Facteur de Bayes** : 288 à 4 567 (décisif)
+**Recherche exhaustive (v3.4)** : 3M+ configurations, log₁₀ p_algébrique = −138
+**p-valeur du modèle nul** : < 2 × 10⁻⁵ (σ > 4,2)
+**Westfall-Young maxT** : 11/33 significatifs (p global = 0,008, base v3.3.24)
+**Facteur de Bayes** : 288 à 4 567 (décisif, base v3.3.24)
+
+> **Tête v3.4** : 0,39 % d'écart moyen sur 35 observables Type I (cibles exactes) dans le catalogue 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV). Les ventilations sectorielles ci-dessous conservent l'analyse v3.3.24 NuFIT 6.0 à des fins de traçabilité.
 
 ---
 
@@ -18,8 +20,9 @@ layout: default
 
 | Catégorie | Prédictions | Écart moyen | Statut |
 |---|---|---|---|
-| **Observables bien mesurés** | 32 | **0,24 %** | VALIDÉ |
-| **Tous, y compris δ_CP** | 33 | 0,57 % | VALIDÉ |
+| **Type I (cibles exactes, v3.4)** | 35 | **0,39 %** | VALIDÉ |
+| **Observables bien mesurés (v3.3.24)** | 32 | 0,24 % | VALIDÉ |
+| **Tous, y compris δ_CP (v3.3.24)** | 33 | 0,57 % | VALIDÉ |
 | **Pont d'échelle** (3 masses en MeV) | 3 | 0,07 % | EXPLORATOIRE |
 
 Les 33 prédictions sont sans dimension : ratios, angles de mélange et constantes de couplage. Les angles en degrés et leurs équivalents trigonométriques (sin² θ) représentent le même contenu physique dans des coordonnées différentes.
@@ -284,6 +287,6 @@ La prédiction de δ_CP (197°) sera testée de manière décisive par DUNE (pre
 
 ---
 
-*Validation statistique GIFT v3.3*
-*Généré le : 2026-02-28*
+*Validation statistique GIFT v3.4 (tête) / v3.3.24 (ventilation sectorielle)*
+*Sortie v3.4 : 2026-04-29 | tableaux sectoriels générés : 2026-02-28*
 *Données expérimentales : PDG 2024 / NuFIT 6.0 (arXiv:2410.05380) / Planck 2020*

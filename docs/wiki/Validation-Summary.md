@@ -3,14 +3,16 @@ title: "Validation Summary"
 layout: default
 ---
 
-# GIFT v3.3 Complete Validation Summary
+# GIFT v3.4 Complete Validation Summary
 
-**Date**: 2026-03-02
+**Date**: 2026-04-29 (v3.4.13)
 **Experimental references**: PDG 2024 / NuFIT 6.0 (NO, IC19) / Planck 2020
-**Exhaustive search**: 3,070,396 configurations, 0 better
+**Exhaustive search (v3.4)**: 3M+ configurations, log₁₀ p_algebraic = −138
 **Null model p-value**: < 2 x 10^-5 (sigma > 4.2)
-**Westfall-Young maxT**: 11/33 significant (global p = 0.008)
-**Bayes factor**: 288-4,567 (decisive)
+**Westfall-Young maxT**: 11/33 significant (global p = 0.008, v3.3.24 baseline)
+**Bayes factor**: 288-4,567 (decisive, v3.3.24 baseline)
+
+> **v3.4 top-level**: 0.39% mean deviation across 35 Type I (exact-target) observables in the 95-observable catalog (35 Type I + 19 Type II + 21 Type III + 22 Type IV). Sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis for traceability.
 
 ---
 
@@ -18,8 +20,9 @@ layout: default
 
 | Category | Predictions | Mean Deviation | Status |
 |----------|-------------|----------------|--------|
-| **Well-measured observables** | 32 | **0.24%** | VALIDATED |
-| **All observables incl. delta_CP** | 33 | 0.57% | VALIDATED |
+| **Type I (exact targets, v3.4)** | 35 | **0.39%** | VALIDATED |
+| **Well-measured observables (v3.3.24)** | 32 | 0.24% | VALIDATED |
+| **All observables incl. delta_CP (v3.3.24)** | 33 | 0.57% | VALIDATED |
 | **Scale bridge** (3 masses in MeV) | 3 | 0.07% | EXPLORATORY |
 
 All 33 predictions are dimensionless: ratios, mixing angles, and coupling
@@ -319,6 +322,6 @@ data expected ~2029) and T2HK, making it a clear falsification target.
 
 ---
 
-*GIFT Statistical Validation v3.3*
-*Generated: 2026-02-28*
+*GIFT Statistical Validation v3.4 (top-level) / v3.3.24 (sector breakdown)*
+*v3.4 release: 2026-04-29 | sector tables generated: 2026-02-28*
 *Experimental data: PDG 2024 / NuFIT 6.0 (arXiv:2410.05380) / Planck 2020*

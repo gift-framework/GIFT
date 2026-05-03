@@ -37,14 +37,14 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.24% mean deviation across 32 well-measured observables, PDG 2024 / NuFIT 6.0)
+- Precision of experimental agreement (currently 0.39% mean deviation across 35 Type I (exact-target) observables, PDG 2024 / NuFIT 6.0)
 - Falsifiability (clear criteria in S2 Section 10)
 - Reproducibility (computational notebook available)
 
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**GIFT v3.3**: Zero continuous adjustable parameters
+**GIFT v3.4**: Zero continuous adjustable parameters (3 integer primitives: N=3, r₈=8, r₂=2)
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all predictions.
 
@@ -120,7 +120,7 @@ See Supplement S1 for complete mathematical details.
 
 ### What observables does GIFT predict?
 
-**33 dimensionless predictions** (v3.3: 18 core + 15 extended):
+**95 observables** (v3.4: 35 Type I exact targets + 19 Type II + 21 Type III + 22 Type IV):
 
 - 3 gauge couplings (α, sin²θ_W, α_s)
 - 1 generation number (N_gen = 3)
@@ -131,10 +131,9 @@ See Supplement S1 for complete mathematical details.
 - 2 cosmological parameters (Ω_DE, n_s)
 - 2 electroweak parameters (λ_H, hierarchy)
 - 2 topological constants (κ_T, det(g))
+- additional Type II/III/IV predictions in S3
 
-Mean deviation from experiment: **0.24%** across 32 well-measured observables (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0)
-
-*Note: Extended dimensional predictions (masses, electroweak scale) are documented in legacy files (v2.3) with 0.197% mean deviation across 39 observables.*
+Mean deviation from experiment: **0.39%** across 35 Type I (exact-target) observables (PDG 2024 / NuFIT 6.0).
 
 ### What about dimensional parameters like masses?
 
@@ -166,7 +165,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.24% across 32 well-measured observables (0.57% incl. δ_CP, v3.3, PDG 2024 / NuFIT 6.0)
+**Overall**: Mean 0.39% across 35 Type I (exact-target) observables (v3.4, PDG 2024 / NuFIT 6.0)
 
 See S2 Section 10 for detailed statistical analysis.
 
@@ -356,19 +355,19 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.3) is available on GitHub. Citation format in [Citation Guide](Citation-Guide.html):
+Current version (v3.4) is available on GitHub. Citation format in [Citation Guide](Citation-Guide.html):
 
 ```bibtex
-@software{gift_framework_v33,
-  title={GIFT Framework v3.3: Geometric Information Field Theory},
+@software{gift_framework_v34,
+  title={GIFT Framework v3.4: Geometric Information Field Theory},
   author={de La Fournière, Brieuc},
   year={2026},
   url={https://github.com/gift-framework/GIFT},
-  version={3.3.0}
+  version={3.4.13}
 }
 ```
 
-Submission to arXiv and peer-reviewed journals is planned. Check repository for updates.
+The triptyque (Papers A, B, C) is published on Zenodo (DOIs 19892350, 19893371, 19708916). Submission to peer-reviewed journals is in progress.
 
 ### Can I use this in my research?
 
