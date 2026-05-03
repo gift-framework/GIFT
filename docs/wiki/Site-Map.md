@@ -46,6 +46,7 @@ English posts are hosted on Substack ([giftheory.substack.com](https://giftheory
 
 | Post | Description |
 |------|-------------|
+| [Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
 | [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
 | [What if the universe was a Lego set?](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
 | ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of GIFT |

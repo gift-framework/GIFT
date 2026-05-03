@@ -68,6 +68,12 @@ N_gen    = |PSL(2,7)| / fund(E₇) = 168/56 = 3
 
 ---
 
+## Outreach
+
+Accessible writing on the ideas behind GIFT lives on the [Substack blog](https://giftheory.substack.com/); see the [Site Map blog index](Site-Map.html#blog-posts) for the full list. Latest: *[Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you)*, opening a series on gaming as a school of quantum intuition.
+
+---
+
 ## Structure
 
 This wiki consolidates GIFT documentation across three repositories:

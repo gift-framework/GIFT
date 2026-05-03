@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html) | Le gaming comme école d'intuition quantique (ouverture de série) |
 | 🇫🇷 [Orientation, pas ontologie](Blog-Orientation-Not-Ontology.fr.html) | La posture philosophique derrière GIFT |
 | 🇫🇷 [Et si l'univers était un set Lego ?](Blog-Lego-Set-Universe.fr.html) | Compter les pièces, reconnaître le thème, lire la notice |
 | 🇫🇷 [« Le nom de l'auteur paraît inventé »](Blog-Brieucs-Gift.fr.html) | Apprendre la physique avec une IA : l'origine accidentelle de GIFT |

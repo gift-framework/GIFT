@@ -68,6 +68,12 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 ---
 
+## Vulgarisation
+
+Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html)*, ouverture d'une série sur le gaming comme école d'intuition quantique.
+
+---
+
 ## Structure
 
 Ce wiki regroupe la documentation de GIFT à travers trois dépôts :
