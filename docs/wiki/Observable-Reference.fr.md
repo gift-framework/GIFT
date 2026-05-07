@@ -5,21 +5,39 @@ layout: default
 
 # Référence des observables GIFT
 
-**Version** : 3.3.24
+**Version** : 3.4 (instantané de haut niveau ; voir Supplément S3 pour le jeu complet de 95 observables). Le découpage par secteur v3.3.24 ci-dessous est conservé pour la traçabilité de l'analyse NuFIT 6.0.
 **Statut** : documentation de référence
-**Date** : mars 2026
+**Date** : mai 2026
 
 ---
 
-## Résumé exécutif
+## Résumé exécutif (v3.4)
 
 | Métrique | Valeur |
 |----------|--------|
-| **Prédictions sans dimension principales** | 18 |
-| **Sans dimension étendues** | 15 |
-| **Paramètres cosmologiques** | 11 |
-| **Constantes structurelles** | 18 |
-| **Total des quantités cataloguées** | **51** |
+| **Total observables** | **95** (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Certifiées Lean** | 55 / 95 (Type I : 33/33, Type III : 14/21, Type IV : 8/22) |
+| **Avec comparaison expérimentale** | 66 / 95 |
+| Écart moyen (Type I, 33 obs) | 0,73 % |
+| Écart moyen (Type II, 19 obs) | 0,17 % |
+| Écart moyen (Type III, 21 obs) | 3,4 % |
+| Correspondances exactes (< 0,01 %) | 11 |
+| Sous 1 % | 53 |
+| Paramètres libres (continûment ajustables) | 0 |
+| Certificat Lean | 213 conjonctions, 4 axiomes principaux, 0 sorry, 134 fichiers .lean |
+| Tests statistiques nuls | uniforme P=10⁻³⁴⁶, null algébrique (4,2 M formules aléatoires) P=10⁻¹³³, surdétermination 2,13× |
+
+---
+
+### Découpage v3.3.24 par secteur (conservé pour traçabilité)
+
+| Métrique | Valeur (v3.3.24) |
+|----------|--------|
+| Prédictions sans dimension principales | 18 |
+| Sans dimension étendues | 15 |
+| Paramètres cosmologiques | 11 |
+| Constantes structurelles | 18 |
+| Total des quantités cataloguées | 51 |
 | Écart moyen (32 bien mesurées) | 0,24 % (0,57 % incl. δ_CP ; PDG 2024 / NuFIT 6.0) |
 | Correspondances exactes (< 0,1 %) | 14 (42 %) |
 | Multiplement déterminées (≥3 expressions) | 92 % |
@@ -437,4 +455,4 @@ Résultats : [`publications/references/observables.csv`](https://github.com/gift
 
 ---
 
-*Cadre GIFT v3.3, référence des observables*
+*Cadre GIFT v3.4, référence des observables*

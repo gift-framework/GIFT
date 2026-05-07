@@ -1,4 +1,4 @@
-# Geometric Information Field Theory: Topological Derivation of Standard Model Parameters from G₂ Holonomy Manifolds
+# Geometric Information Field Theory: Standard Model Parameters as Topological Invariants of a G₂ Holonomy Manifold
 
 **Brieuc de La Fourniere**
 
@@ -8,15 +8,26 @@
 
 ## Abstract
 
-The Standard Model requires 19 experimentally determined parameters lacking theoretical explanation. We present a geometric framework in which physical observables emerge as topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure, containing zero continuous adjustable parameters.
+The Standard Model requires 19 experimentally determined parameters lacking theoretical explanation. We present a geometric framework in which physical observables emerge as topological invariants of a seven-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge structure, with the topological inputs treated as discrete and the metric determinant det(g) = 65/32 imposed as a normalization target (§2.3); no continuously adjustable physical parameter is introduced.
 
-Building on an explicit Newton-Kantorovich-certified G₂ metric (companion Paper I [30]) with independently confirmed spectral structure (companion Paper B [44]), we derive **95 observables** from a compact 7-manifold K₇ with Betti numbers b₂ = 21 and b₃ = 77, organized in four types: 33 direct algebraic (Type I, mean deviation 0.73%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.4%), and 22 structural diagnostics (Type IV). Of 66 experimentally comparable observables, 11 are exact matches (deviation < 0.01%) and 53 are within 1%.
+Building on a Newton–Kantorovich-certified neck/metric model ([A], [B]) and a Joyce–Karigiannis topological/lattice route realizing (b₂, b₃) = (21, 77) (while the full smooth analytic compact construction remains open) we derive **95 observables** from K₇ organized in four types: 33 direct algebraic (Type I, mean deviation 0.73%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.4%), and 22 structural diagnostics (Type IV). Of 66 experimentally comparable observables, 11 are exact matches (deviation < 0.01%) and 53 are within 1%.
 
-The framework includes three new physics results beyond the original 33 predictions: (1) a complete E₈ → Standard Model gauge breaking chain with anomaly cancellation and bundle universality, (2) a combined lepton mass hierarchy mechanism achieving sub-percent precision from two independent geometric sources with α = e^K (zero free parameters), and (3) a sensitivity analysis demonstrating 2.13× overdetermination with coincidence probability 10⁻³⁴⁶ under a uniform null and 10⁻¹³³ under an algebraic null model (4.2M random formulas from the same 20 constants). Of the 95 observables, 55 are formally verified in Lean 4 (213 certificate conjuncts, 4 axioms, 0 sorry).
+The framework includes three new framework-level results beyond the original 33 predictions: (1) a proposed E₈ → Standard Model breaking chain with anomaly-cancellation checks and bundle-universality diagnostics, (2) a combined lepton mass hierarchy mechanism achieving sub-percent precision from two independent geometric sources with α = e^K (zero free parameters), and (3) a sensitivity analysis demonstrating 2.13× overdetermination with coincidence probability 10⁻³⁴⁶ under a uniform null and 10⁻¹³³ under an algebraic null model (4.2M random formulas from the same 20 constants). Of the 95 observables, 55 are formally verified in Lean 4 (213 certificate conjuncts, 4 axioms, 0 sorry); Lean certifies the algebraic relations and internal consistency, not the physical interpretation or the existence of the complete compact construction (§8.3).
 
 DUNE (2028–2040) will test the topological prediction δ_CP = 197° with resolution of a few degrees to ~15°; measurement outside [182, 212]° would create serious tension. We present this as an exploratory investigation emphasizing falsifiability, not a claim of correctness.
 
 **Keywords**: G₂ holonomy, exceptional Lie algebras, Standard Model parameters, topological field theory, falsifiability, formal verification, Lean 4
+
+---
+
+**Framework epistemic status at a glance:**
+
+| Component | Status |
+|-----------|--------|
+| Algebraic predictions (33 Type I observables) | Lean-certified (algebraic relations) |
+| K₇ Betti/lattice gate, (b₂, b₃) = (21, 77) | Certified: NK metric [A] + JK17 topological/lattice route |
+| Full smooth compact analytic construction | **Open** |
+| Physical interpretation | Conjectural / falsifiable |
 
 ---
 
@@ -113,15 +124,15 @@ Wilson (2024) demonstrates that E₈(-248) encodes three fermion generations (12
 
 We consider a compact, simply connected 7-manifold K₇ with G₂ holonomy and Betti numbers (b₂, b₃) = (21, 77). G₂ holonomy preserves N = 1 SUSY in 4D [11], implies Ric(g) = 0, and is the unique holonomy of G₂ = Aut(𝕆) acting on ℝ⁷.
 
-**Metric construction** (Paper I [30]): An explicit 7D G₂ metric g(s, θ, ψ, y) = g_seam(s) ⊕ g_{T²} ⊕ g_{K3}(y) on K₇ is constructed via Chebyshev-Cholesky parametrization (169 parameters), with K3 fiber contribution certified at 0.07% of total torsion [45]. The Newton-Kantorovich certificate (h = 8.95 × 10⁻⁹, margin ×56 million, zero finite differences) establishes existence and local uniqueness (within the NK certificate ball) of a nearby torsion-free metric with δg/g ≤ 4.86 × 10⁻⁶. The spectral analysis (Paper B [44]) independently confirms 21 near-zero eigenvalues of Δ₂ (gap ratio 14,635) and 77 near-zero eigenvalues of Δ₃, consistent with the Betti numbers (b₂, b₃) = (21, 77).
+**Metric construction** ([A]): An explicit 7D G₂ metric g(s, θ, ψ, y) = g_seam(s) ⊕ g_{T²} ⊕ g_{K3}(y) on K₇ is constructed via Chebyshev-Cholesky parametrization (169 parameters), with K3 fiber contribution certified at 0.07% of total torsion [C]. The Newton-Kantorovich certificate (h = 8.95 × 10⁻⁹, margin ×56 million, zero finite differences) establishes existence and local uniqueness (within the NK certificate ball) of a nearby torsion-free metric with δg/g ≤ 4.86 × 10⁻⁶. The spectral analysis ([B]) independently confirms 21 near-zero eigenvalues of Δ₂ (gap ratio 14,635) and 77 near-zero eigenvalues of Δ₃, consistent with the Betti numbers (b₂, b₃) = (21, 77).
 
 **Metric decomposition**: A Chebyshev mode analysis reveals that the metric is dominated by its constant mode (k=0), which carries 99.9998% of the L² energy. This mode is a product metric K3 × T² × I with structural parameters g_ss = 19/6, g_{T²} = 7/6, det(g) = 65/32 (fixed by the structural normalization and topological input data, with det(g) = 65/32 treated as a metric normalization target as discussed in S1 §10.3. The k≥1 modes (0.0002% of energy) constitute the minimal perturbation that breaks the product structure and lifts the holonomy from SU(2)×U(1) to full G₂. These corrections are responsible for b₁ = 0, the torsion ‖T‖ = 2.949×10⁻⁵, and the NK certification) but contribute nothing to the numerical values of the 95 observables, which depend only on topological integers.
 
-**Topological classification**: The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds, neither in Joyce's 252 orbifold types nor in the ~100 CHNP TCS examples. Orthogonal TCS is excluded by parity (b₂+b₃=98 is even; CHNP Lemma 6.7). Non-orthogonal TCS, extra-twisted connected sums [20], and new orbifold groups remain open paths. The NK-certified metric provides computational evidence; a complete geometric construction is an open problem. The pair is **unique** among all 65 known TCS literature examples (Kovalev, CHNP, Joyce, CGN, Nordström); nearest neighbor is at distance 7.6 in (b₂, b₃) space. The certified metric is 99.98% block-diagonal K3×T²×I with exact U(1)² symmetry (degenerate to 2×10⁻⁵).
+**Topological classification**: Among the *catalogued* compact G₂ examples (Joyce's 252 orbifold types and the ~100 CHNP TCS examples) the pair (b₂, b₃) = (21, 77) does not appear, and orthogonal TCS is excluded by parity (b₂+b₃=98 is even; CHNP Lemma 6.7). However, a Joyce-Karigiannis (JK) Z₂³ orbifold construction [43] *does* produce (b₂, b₃) = (21, 77): a four-phase computer-assisted audit (V4 symplectic screen on CI(2,2,2), anti-symplectic obstruction, K3 lattice existence via Mukai 1988 + Garbagnati-Sarti 2009, and the Betti formula b₂ = 0 + 21, b₃ = 22 + 55) closes the topological count exactly (Lean-formalized in `JoyceKarigiannisConstruction.lean`). The JK route is verified at the topological/lattice level; an explicit closed-form positive G₂-structure ansatz at the neck level, with hyperkähler rotation and five-layer Wirtinger certificate, is established in [D]; the explicit polynomial K3 coordinate model and JK 2017 analytic gluing certificate remain open. Among the 65 *catalogued* TCS literature examples, (21, 77) remains an outlier (nearest neighbor at distance 7.6); the JK route therefore extends the known catalogue rather than fitting in it. The certified metric is 99.98% block-diagonal K3×T²×I with exact U(1)² symmetry (degenerate to 2×10⁻⁵).
 
 **Further structure**: The certified metric is smooth (no singularities). The SM gauge group SU(3)×SU(2)×U(1) does **not** arise from ADE singularities in this framework; it emerges from the algebraic/spectral structure: g₂ ⊂ so(7) decomposition, so(8) = g₂ ⊕ L ⊕ R triality giving N_gen = 3, and spectral gap λ₁ = 6π²/475 = 0.12467 (Richardson extrapolation: 0.12461 ± 0.00016, deviation 0.05%) (§5). ADE singularities would be relevant at singular limits of G₂ moduli space; the smooth certified metric is at a generic point.
 
-The framework imposes det(g) = 65/32 = (Weyl × α_sum)/2⁵, equivalently 2 + 1/32. Joyce's theorem [20] guarantees existence of torsion-free G₂ metrics on suitable compact 7-manifolds; the Chebyshev-Cholesky construction (companion paper [30]) achieves ‖T‖ < 3 × 10⁻⁵ with Newton-Kantorovich certification h = 8.95 × 10⁻⁹ (Chebyshev-certified, margin ×56 million; §8.5).
+The framework imposes det(g) = 65/32 = (Weyl × α_sum)/2⁵, equivalently 2 + 1/32. Joyce's theorem [20] guarantees existence of torsion-free G₂ metrics on suitable compact 7-manifolds; the Chebyshev-Cholesky construction (companion paper [A]) achieves ‖T‖ < 3 × 10⁻⁵ with Newton-Kantorovich certification h = 8.95 × 10⁻⁹ (Chebyshev-certified, margin ×56 million; §8.5).
 
 ### 2.4 Topological Constraints on Field Content
 
@@ -169,13 +180,13 @@ Type I predictions are dimensionless ratios of topological integers: they cannot
 
 **Outputs**: 95 observables across 4 types (33 Type I, 19 Type II, 21 Type III, 22 Type IV), 66 experimentally testable.
 
-**Structure of predictions**: All 95 observables are algebraic functions of 6 primitive topological integers (b₂, b₃, dim(G₂), dim(E₈), rank(E₈), dim(K₇)) plus standard transcendentals (π, √2, ln 2). No observable depends on the detailed G₂ geometry (the metric certifies that the manifold exists but does not enter the prediction formulas. (Caveat: 6 observables use det_num/det_den = 65/32, which is a metric normalization target with suggestive but not derivational algebraic expressions in terms of topological integers) see §10.3 of S1.)
+**Structure of predictions**: All 95 observables are algebraic functions of 6 primitive topological integers (b₂, b₃, dim(G₂), dim(E₈), rank(E₈), dim(K₇)) plus standard transcendentals (π, √2, ln 2, ζ, and the golden ratio φ = (1+√5)/2; see §4.2.3 for the McKay E₈ ↔ 2I origin of φ). No observable depends on the detailed G₂ geometry (the metric certifies that the manifold exists but does not enter the prediction formulas. (Caveat: 6 observables use det_num/det_den = 65/32, which is a metric normalization target with suggestive but not derivational algebraic expressions in terms of topological integers) see §10.3 of S1.)
 
 We claim that given the inputs, the outputs follow algebraically (Type I) or computationally (Types II–IV). We do **not** claim uniqueness of the geometry, uniqueness of the formula assignments, or that the formula selection principle is understood.
 
 ### 3.3 Three Factors Distinguishing GIFT from Numerology
 
-**Multiplicity**: 95 observables (66 testable), not cherry-picked coincidences. The sensitivity analysis (§7) gives P(coincidence) = 10⁻³⁴⁶ with overdetermination ratio 2.13×, both computed on the 33 Type I observables with experimental comparison.
+**Multiplicity**: 95 observables (66 testable), not cherry-picked coincidences. The sensitivity analysis (§7) gives P(coincidence) = 10⁻³⁴⁶ under the declared uniform null model, with overdetermination ratio 2.13×, both computed on the 33 Type I observables with experimental comparison.
 
 **Exactness**: Several predictions are exactly rational, sin²θ_W = 3/13, Q_Koide = 2/3, m_s/m_d = 20, Ω_DM/Ω_b = 43/8. These cannot be fitted; they are correct or wrong.
 
@@ -185,7 +196,7 @@ We claim that given the inputs, the outputs follow algebraically (Type I) or com
 
 The selection question has two levels of answer.
 
-**Mathematical level (deterministic).** The NK-certified metric has zero free parameters; its 169 Chebyshev coefficients appear constrained to a lattice generated by {π², π, 1, e, χ₉₈} / (b₂·b₃) (a numerical observation, not a derived result; see S1 §10.3). Observables are functionals of this metric: they *must* therefore be algebraic in the topological invariants. The "selection" is not a choice; it is a consequence of the rigidity of the certified metric (local uniqueness within the NK ball; see §9.4 for the full argument, including extended grammar analysis with TCS atoms).
+**Mathematical level (deterministic).** The NK-certified metric has zero free parameters; its 169 Chebyshev coefficients appear constrained to a lattice generated by {π², π, 1, e, χ₉₈} / (b₂·b₃) (a numerical observation, not a derived result; see S1 §10.3). Observables are functionals of this metric and are therefore algebraic in the topological invariants. Within the declared formula grammar and structural-constant set, the observed relations are highly constrained and statistically non-generic; a first-principles derivation of the full formula-selection rule remains open (see §9.4 for the extended grammar analysis with TCS atoms).
 
 **Statistical level (empirical).** Even granting an adversary access to the same 20 structural constants, 4.2M random algebraic formula trees cannot reproduce GIFT's precision profile: joint coincidence probability P = 10⁻¹³³ (algebraic null model, §7). Structural redundancy adds a third line of evidence: sin²θ_W = 3/13 admits 14 independent derivations, Q_Koide = 2/3 admits 20 (see S2): an overdetermined web inconsistent with post-hoc cherry-picking.
 
@@ -199,9 +210,9 @@ It is useful to distinguish three registers at which a framework of this type op
 
 **Architectural register.** The choice of G₂-holonomy 7-manifolds with $E_8 \times E_8$ structure is *motivated* by mathematical considerations (§§2, 9.4): G₂ is the unique exceptional compact holonomy admitting the SU(3) × SU(2) × U(1) stabilizer chain, $E_8$ is the largest exceptional Lie algebra, and the topological constraints fix $(b_2, b_3) = (21, 77)$ and $N_{\mathrm{gen}} = 3$. We argue this architecture is *natural*; we do not argue it is *necessary*.
 
-**Ontological register.** A reader may wonder whether GIFT carries a thesis about reality: for instance, the speculation that geometry, information, and energy are not three correlated aspects of nature but three views of a single underlying configuration, or the resonance with Wheeler's "It from Bit" programme [40] and the holographic principle. Such readings are compatible with the framework and historically motivated its development, but they are **neither required nor demonstrated** by the predictions. A reader who finds the Wheeler-holographic picture persuasive will see GIFT as a natural piece of that puzzle; a reader who prefers a strictly empirical stance will see a falsifiable predictive framework. Both readings are defensible; the framework requires neither.
+**Ontological register.** A reader may wonder whether GIFT carries a thesis about reality: for instance, the speculation that geometry, information, and energy are not three correlated aspects of nature but three views of a single underlying configuration, or the resonance with Wheeler's "It from Bit" programme [39] and the holographic principle. Such readings are compatible with the framework and historically motivated its development, but they are **neither required nor demonstrated** by the predictions. A reader who finds the Wheeler-holographic picture persuasive will see GIFT as a natural piece of that puzzle; a reader who prefers a strictly empirical stance will see a falsifiable predictive framework. Both readings are defensible; the framework requires neither.
 
-In Worrall's [41] and Ladyman's [42] terms, GIFT is best read as a *moderate structural-realist orientation*: structure carries predictive weight independently of any further ontological commitment. The framework's success or failure is decided by experiment in the predictive register, not by adjudication in the ontological one. A more extended discussion of this posture, written for a non-technical audience, appears in the companion essay *Orientation, not ontology* [43].
+In Worrall's [40] and Ladyman's [41] terms, GIFT is best read as a *moderate structural-realist orientation*: structure carries predictive weight independently of any further ontological commitment. The framework's success or failure is decided by experiment in the predictive register, not by adjudication in the ontological one. A more extended discussion of this posture, written for a non-technical audience, appears in the companion essay *Orientation, not ontology* [essay].
 
 ---
 
@@ -287,7 +298,7 @@ decomposing into a local contribution (7 × 14 = 98, fiber-holonomy coupling) an
 
 **Experimental status**: NuFIT 5.2 (2022) gave δ_CP ≈ 197°, an exact match. NuFIT 6.0 (Oct 2024) shifted the central value to 177° ± 20°, creating an 11.3% deviation. The experimental uncertainty is large (±20°), and the central value may shift further as T2K, NOvA, and DUNE accumulate statistics.
 
-**Structural observation** (documented, not adopted): PSLQ residual analysis (§7.6) identifies a compactification factor 62/69 = dim(E₈)/(dim(E₈) + 4 dim(K₇)), which would yield 197 × 62/69 = 12214/69 ≈ 177.01°. This is documented as a structural observation (the ratio of gauge to total degrees of freedom (248 gauge DOF out of 276 = 248 + 4 × 7 total)) but is not adopted as a revision to the prediction. The canonical GIFT value remains 197°.
+A post-hoc structural observation involving a possible compactification factor 62/69 is recorded in S2 Appendix F for completeness; it is **not** part of the main framework and is not used to revise the canonical 197° prediction.
 
 **Falsification criterion**: If DUNE measures δ_CP outside [182, 212]° at 3σ, the framework faces serious tension. The 197° prediction sits at the edge of the current NuFIT 6.0 1σ band (177° ± 20° = [157°, 197°]).
 
@@ -343,14 +354,16 @@ The dark-to-baryonic matter ratio Omega_DM/Omega_b = 43/8 is exact. The structur
 
 The 33 Type I predictions derive directly from the 20 structural constants (Appendix A). All are dimensionless ratios; all 33 are Lean-certified. Representative highlights:
 
-| Observable | Formula | GIFT | Exp. | Dev. |
-|-----------|---------|------|------|------|
-| sin²θ_W | b₂/(b₃+dim(G₂)) = 21/91 | 3/13 | 0.23122 | 0.195% |
-| Q_Koide | dim(G₂)/b₂ = 14/21 | 2/3 | 0.666661 | 0.001% |
-| α⁻¹ | 128 + 9 + det(g)×κ_T | 137.033 | 137.036 | 0.002% |
-| m_τ/m_e | 7 + 2480 + 990 | 3477 | 3477.15 | 0.004% |
-| n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% |
-| Ω_DM/Ω_b | (1+42)/8 | 43/8 | 5.375 | 0.00% |
+| Observable | Formula | GIFT | Exp. | Dev. | Status |
+|-----------|---------|------|------|------|--------|
+| sin²θ_W | b₂/(b₃+dim(G₂)) = 21/91 | 3/13 | 0.23122 | 0.195% | TOPOLOGICAL |
+| Q_Koide | dim(G₂)/b₂ = 14/21 | 2/3 | 0.666661 | 0.001% | TOPOLOGICAL |
+| α⁻¹ | 128 + 9 + det(g)×κ_T | 137.033 | 137.036 | 0.002% | TOPOLOGICAL (uses metric normalization) |
+| m_τ/m_e | 7 + 2480 + 990 | 3477 | 3477.15 | 0.004% | TOPOLOGICAL |
+| n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% | DERIVED |
+| Ω_DM/Ω_b | (1+42)/8 | 43/8 | 5.375 | 0.00% | TOPOLOGICAL |
+
+All 33 Type I observables are VERIFIED in Lean 4. Status legend: TOPOLOGICAL = pure topological-integer ratio; DERIVED = closed-form involving standard transcendentals (π, √2, ln 2, ζ, golden ratio φ); STRUCTURAL = depends on the imposed metric normalization (det_num / det_den).
 
 Complete derivations for all 33 in Supplement S2; full 95-entry table in Supplement S3.
 
@@ -374,13 +387,13 @@ Type III observables involve multi-step dynamical mechanisms. They are grouped b
 
 **RGE_running RGE running** (4 obs): Two-loop MSSM evolution from M_GUT to M_Z. The topological sin²θ_W = 3/13 at M_GUT runs to 0.2377 at M_Z (exp 0.2312, dev 2.78%). The strong coupling α_s(RGE) = 0.1224 deviates 3.7% using G₂-MSSM split-spectrum matching (§5.3). M_GUT = 2 × 10¹⁶ GeV is an exact match.
 
-**spectral Spectral** (5 obs): effective Weyl law exponent (from the adiabatic seam-sector decomposition, extrapolated to d_eff = 7) α = 3.460 (exp 3.5, dev 1.1%), 22,671 KK states below cutoff, 57,578 fiber channels, Poisson level spacing. See Paper B [44] for the direct seam-sector result α = 1.998.
+**spectral Spectral** (5 obs): effective Weyl law exponent (from the adiabatic seam-sector decomposition, extrapolated to d_eff = 7) α = 3.460 (exp 3.5, dev 1.1%), 22,671 KK states below cutoff, 57,578 fiber channels, Poisson level spacing. See [B] for the direct seam-sector result α = 1.998.
 
 **gauge_bundle Gauge bundle** (4 obs): cond(f_IJ) = 1.047 (near-perfect gauge universality), α_ratio = 1.000002, effective Yukawa rank = 3, and κ(gauge) = 1.047 (4.7% departure from exact universality, the largest Type III bundle deviation).
 
 **instanton Instanton + combined** (5 obs): Associative volume differences give ΔV(e-τ) = 8.633 (dev 5.9%), ΔV(e-μ) = 3.271 (dev 15.9%). Combined wilson_line+instanton pipeline with α = e^K (geometric, §6.4) gives τ/e = 3485 (0.24%), τ/μ = 16.69 (0.75%), μ/e = 208.8 (0.97%).
 
-Type III mean deviation: **3.4%** across 14 experimentally comparable observables (2.3% across all 21, median 1.6%). Details in §5 (Gauge), §6 (Mass Hierarchy). (M_res and N_QNM from Pinčák et al. 2026 [46] are classified Type IV, see §4.11.)
+Type III mean deviation: **3.4%** across 14 experimentally comparable observables (2.3% across all 21, median 1.6%). Details in §5 (Gauge), §6 (Mass Hierarchy). (M_res and N_QNM from Pinčák et al. 2026 [42] are classified Type IV, see §4.11.)
 
 ### 4.11 Type IV: Structural Diagnostics (22)
 
@@ -392,7 +405,7 @@ Type IV observables are internal consistency checks with no experimental compari
 - **Spectral counts**: 22,671 KK states, 57,578 fiber channels, Poisson spacing confirmed
 - **Torsion**: ‖T‖_C⁰ = 2.949 × 10⁻⁵ (×2995 reduction in 5 Joyce steps)
 - **Metric eigenvalues**: g_ss = 19/6, g_{T²} = 7/6, g_{K3} ≈ 64/77
-- **Instanton & BH diagnostics** (Pinčák et al. 2026 [46]): N_QNM = 98 QNM mode families, b₃/b₃(S³×S⁴) = 77× instanton suppression, M_res = v_EW²/M_Pl (BH remnant mass: no experimental comparison)
+- **Instanton & BH diagnostics** (Pinčák et al. 2026 [42]): N_QNM = 98 QNM mode families, b₃/b₃(S³×S⁴) = 77× instanton suppression, M_res = v_EW²/M_Pl (BH remnant mass: no experimental comparison)
 
 These diagnostics confirm the geometric construction is well-conditioned and internally consistent.
 
@@ -500,7 +513,7 @@ The RGE deviations reflect sensitivity to the SUSY spectrum, particularly:
 - **Threshold corrections**: The split-spectrum matching captures the dominant effect; residual corrections from the detailed spectrum are subdominant
 - **3-loop effects**: Omitted from the current calculation
 
-**Topological vs. infrared**: The topological sin²θ_W = 3/13 = 0.23077 (dev 0.19% from PDG) is more accurate than the RGE-evolved value (dev 2.78%). This suggests the topological value may represent an infrared fixed point rather than a UV boundary condition: an observation also made in the G₂-MSSM literature [34].
+**Topological vs. infrared**: The topological sin²θ_W = 3/13 = 0.23077 (dev 0.19% from PDG) is more accurate than the RGE-evolved value (dev 2.78%). This suggests the topological value may represent an infrared fixed point rather than a UV boundary condition: an observation also made in the G₂-MSSM literature [33].
 
 **KK threshold corrections**: With 71 KK modes above M_GUT and Σ ln(m/M_GUT) = 89.2, the net correction to α_GUT⁻¹ is 0.0 (smooth K₇ manifolds have vanishing KK threshold corrections due to the cancellation between towers).
 
@@ -513,7 +526,7 @@ The RGE deviations reflect sensitivity to the SUSY spectrum, particularly:
 | m_gluino | 442 GeV | cMSSM with m₁/₂ = m_gravitino |
 | m_squark | 1094 GeV | cMSSM (running mass at low scale; decoupling matched at M_SUSY = m_moduli = 3165 GeV) |
 | m_slepton | 175 GeV | cMSSM |
-| LSP (Bino) | 70 GeV | Lightest neutralino (pure Bino; viable: LEP chargino bound 103 GeV does not exclude pure Bino LSP with suppressed gauge couplings [35]) |
+| LSP (Bino) | 70 GeV | Lightest neutralino (pure Bino; viable: LEP chargino bound 103 GeV does not exclude pure Bino LSP with suppressed gauge couplings [34]) |
 
 **Phenomenological caveat**: These masses are computed within the cMSSM approximation. Standard simplified SUSY searches at ATLAS/CMS already exclude portions of this parameter space; the spectrum is viable only in compressed or suppressed-coupling realizations. Definitive testing requires a dedicated recast of current ATLAS/CMS results against the G₂-MSSM split-spectrum scenario.
 
@@ -572,7 +585,7 @@ The gauge kinetic function f_IJ on K₇ determines gauge coupling universality. 
 | G_35 | 35×35 | **7.66** | Yes |, |
 | G_77 | 77×77 | **7.66** | Yes | 7×10⁻⁵ |
 
-The K3 and K7 22-form bases are nearly orthonormal (condition ~1.05). The full 77-form basis has moderate conditioning (7.66), with cross-block coupling between constant and fiber modes bounded by 7 × 10⁻⁵. Gram-Schmidt orthogonalization residuals are < 5 × 10⁻¹⁶ (machine precision).
+The K3 and K₇ 22-form bases are nearly orthonormal (condition ~1.05). The full 77-form basis has moderate conditioning (7.66), with cross-block coupling between constant and fiber modes bounded by 7 × 10⁻⁵. Gram-Schmidt orthogonalization residuals are < 5 × 10⁻¹⁶ (machine precision).
 
 **Figure 4**: Gauge bundle structure, eigenvalue spectrum of $f_{IJ}$ and Gram matrix diagnostics. See `fig_gauge_bundle.png`.
 
@@ -701,7 +714,7 @@ A framework claiming 95 observables from 20 structural constants must address th
 
 **Sensitivity-deviation correlation**: ρ = −0.083, **no systematic pattern**. Observables with high sensitivity to constant perturbations do not have larger deviations. The most sensitive constants are dim(K₇) (0.068), dim(G₂) (0.062), and H* (0.062).
 
-**NK ball rigidity**: The Newton-Kantorovich certification establishes δg/g ≤ 1.35 × 10⁻⁷, confirming the metric is effectively unique within its basin. The coefficient of variation of metric eigenvalues is ~10⁻⁷, confirming rigidity.
+**NK ball rigidity**: The analytical NK ball radius is δg/g ≤ 4.86 × 10⁻⁶ (the certified analytic bound). A tighter numerical eigenvalue-variation estimate gives δg/g ≤ 1.35 × 10⁻⁷ (not used as the certified analytic bound, but consistent with rigidity). The coefficient of variation of metric eigenvalues is ~10⁻⁷, confirming rigidity.
 
 ### 7.3 Effective Degrees of Freedom
 
@@ -769,7 +782,7 @@ The uniform null model assumes predictions are random numbers. A stronger test: 
 
 **Figure 10**: Per-observable log₁₀ P(random match). See `fig_mc_per_observable.png`.
 
-**Interpretation**: The algebraic null model is far more generous than the uniform null (it generates formulas from the *same constants*), yet GIFT's performance remains unmatched across 3M+ trials. Under both null hypotheses, chance agreement is excluded at extreme significance: P = 10⁻³⁴⁶ (uniform) and P = 10⁻¹³³ (algebraic).
+**Interpretation**: The algebraic null model is far more generous than the uniform null (it generates formulas from the *same constants*), yet GIFT's performance remains unmatched across 3M+ trials. Under both declared null models, chance agreement is excluded at extreme significance: P = 10⁻³⁴⁶ (uniform) and P = 10⁻¹³³ (algebraic). These figures quantify agreement under each declared model; they do not constitute an absolute probability that the framework is correct.
 
 ### 7.6 PSLQ Residual Analysis (PSLQ_residual)
 
@@ -790,7 +803,7 @@ Beyond the statistical null models, we apply PSLQ integer relation detection to 
 | Y_p | +0.00368 | 1/(φ × PSL₂₇) = 1/(φ × 168) | 0.04% |
 | sin²θ₁₂(CKM) | +0.00372 | 6/(b₂ × b₃) = 6/1617 | 0.2% |
 
-**Documented structural observation**: Only δ_CP (see §4.4.1). The residual 14/124 = dim(G₂)/(dim(E₈)/2) implies a compactification factor 62/69 = dim(E₈)/(dim(E₈) + 4 dim(K₇)), which would reduce the deviation from 11.3% to 0.008%. The factor has independent structural motivation as the ratio of gauge to total degrees of freedom. The canonical GIFT prediction remains 197°. The factor is presented for completeness.
+**Documented structural observation**: Only δ_CP. A possible compactification factor (62/69 = dim(E₈)/(dim(E₈) + 4 dim(K₇))) is recorded as a post-hoc observation in S2 Appendix F; it is not adopted as a revision and the canonical GIFT prediction remains 197°.
 
 **Not adopted**: The m_b/m_t correction (-1/126) and Y_p correction (1/(φ × 168)) are documented for future work pending structural derivation from the compactification geometry. The CKM correction (6/(b₂ × b₃)) is suggestive but at lower precision.
 
@@ -852,17 +865,17 @@ Among 192,349 alternative (gauge group, holonomy, Betti) configurations tested b
 
 ### 8.5 The G₂ Metric
 
-The predictions in §4 depend only on topological invariants. However, the G₂ metric constrained by det(g) = 65/32 is numerically constructed as a Chebyshev-Cholesky expansion with 169 parameters (companion paper [30]):
+The predictions in §4 depend only on topological invariants. However, the G₂ metric constrained by det(g) = 65/32 is numerically constructed as a Chebyshev-Cholesky expansion with 169 parameters (companion paper [A]):
 
 | Quantity | Value |
 |----------|-------|
 | ‖T‖_C⁰ (torsion) | 2.949 × 10⁻⁵ |
-| NK parameter h (analytical, Paper A [30]) | 8.95 × 10⁻⁹ (β = 0.321 exact, margin ×56M) |
+| NK parameter h (analytical, [A]) | 8.95 × 10⁻⁹ (β = 0.321 exact, margin ×56M) |
 | NK parameter h (numerical, tighter) | 1.43 × 10⁻⁹ (β = 0.0296 numerical, margin ×350M) |
 | δg/g (analytical ball radius) | ≤ 4.86 × 10⁻⁶ |
 | det(g) | 65/32 (exact, by construction) |
 
-The interval-arithmetic Newton-Kantorovich certification [30] establishes existence and uniqueness of a torsion-free G₂ metric within the certified ball. The analytical certificate uses β = 0.321 derived from det(g) = 65/32 (exact constraint); a tighter numerical estimate β = 0.0296 yields h = 1.43 × 10⁻⁹ (margin ×350M) but rests on numerical Lipschitz estimates rather than the analytical bound. Both values certify h < 0.5 (Kantorovich threshold) by a factor of at least 56 million. Torsion reduction ×2995 in 5 Joyce iterations is well within Joyce's perturbative regime.
+The interval-arithmetic Newton-Kantorovich certification [A] establishes existence and uniqueness of a torsion-free G₂ metric within the certified ball. The analytical certificate uses β = 0.321 derived from det(g) = 65/32 (exact constraint); a tighter numerical estimate β = 0.0296 yields h = 1.43 × 10⁻⁹ (margin ×350M) but rests on numerical Lipschitz estimates rather than the analytical bound. Both values certify h < 0.5 (Kantorovich threshold) by a factor of at least 56 million. Torsion reduction ×2995 in 5 Joyce iterations is well within Joyce's perturbative regime.
 
 **Analytic invariant.** The Crowley-Goette-Nordström invariant ν̄(K₇, g) ∈ ℤ [16] vanishes for any rectangular TCS with twisting numbers k₊ = k₋ = 1, by CGN Main Corollary (gluing angle θ = π/2 forced). This conditional result is certified in Lean (`TCSConstruction.lean`, `K7_nu_bar_zero`): if K₇ is realized as a rectangular TCS, then ν̄(K₇, g) = 0 without any additional geometric computation. The building block identification remains open.
 
@@ -874,7 +887,7 @@ The interval-arithmetic Newton-Kantorovich certification [30] establishes existe
 - **Universal law**: λ₁ × H* = 12.3364 holds for all 66 known G₂ manifolds.
 - **Lepton hierarchy from periods**: ln(m_τ/m_e) = 8.154 from SD associative volumes → e^8.154 = 3477 ✓ (Lean-certified).
 
-Full details in the companion paper [30].
+Full details in the companion paper [A].
 
 ---
 
@@ -884,7 +897,7 @@ Full details in the companion paper [30].
 
 The framework makes concrete, testable predictions. The most critical:
 
-**δ_CP**: The topological prediction is δ_CP = 197° = 7 × 14 + 99 (pure geometry). NuFIT 6.0 (NO w/o SK) gives 177° ± 20°, an 11.3% deviation from center but at the edge of the 1σ uncertainty band. The experimental central value has shifted significantly between NuFIT releases (197° in 5.2, 177° in 6.0) and may shift further as DUNE accumulates statistics (2028–2040). A PSLQ-identified compactification factor 62/69 is documented in §4.4.1 as a structural observation. **Falsification**: δ_CP outside [182, 212]° at 3σ creates serious tension.
+**δ_CP**: The topological prediction is δ_CP = 197° = 7 × 14 + 99 (pure geometry). NuFIT 6.0 (NO w/o SK) gives 177° ± 20°, an 11.3% deviation from center but at the edge of the 1σ uncertainty band. The experimental central value has shifted significantly between NuFIT releases (197° in 5.2, 177° in 6.0) and may shift further as DUNE accumulates statistics (2028–2040). A possible compactification factor (62/69) is recorded as a post-hoc observation in S2 Appendix F and is not part of the main prediction. **Falsification**: δ_CP outside [182, 212]° at 3σ creates serious tension.
 
 **N_gen = 3**: No flexibility. A fourth generation immediately falsifies.
 
@@ -910,11 +923,11 @@ The framework makes concrete, testable predictions. The most critical:
 
 E₈×E₈ and G₂ holonomy connect directly to M-theory [33,34]:
 - Heterotic string theory requires E₈×E₈ for anomaly cancellation [19]
-- M-theory on G₂ manifolds preserves N = 1 SUSY in 4D [35]
+- M-theory on G₂ manifolds preserves N = 1 SUSY in 4D [34]
 
-GIFT differs from standard M-theory phenomenology [36] by focusing on topological invariants rather than moduli stabilization. Where M-theory faces the landscape problem (~10⁵⁰⁰ vacua), GIFT proposes that topological data alone constrain the physics. The G₂-MSSM spectrum (§5.3, §6.5) is consistent with the phenomenology of Acharya et al. [34]: m_gravitino ~ 100 GeV, m_moduli ~ few TeV, gaugino condensation in a hidden sector.
+GIFT differs from standard M-theory phenomenology [35] by focusing on topological invariants rather than moduli stabilization. Where M-theory faces the landscape problem (~10⁵⁰⁰ vacua), GIFT proposes that topological data alone constrain the physics. The G₂-MSSM spectrum (§5.3, §6.5) is consistent with the phenomenology of Acharya et al. [33]: m_gravitino ~ 100 GeV, m_moduli ~ few TeV, gaugino condensation in a hidden sector.
 
-The second E₈ factor is required by anomaly cancellation but has no direct coupling to Standard Model fields. In heterotic M-theory, gaugino condensation in this hidden sector drives SUSY breaking [34]. A natural interpretation is that the hidden E₈ sector provides the dark sector: the predicted cosmological ratios Ω_DM/Ω_b = 43/8 and Ω_DE = ln(2) × 98/99 emerge from the same topological invariants (b₂, b₃) that also determine dim(E₈) = 248. Whether this connection is structural or coincidental remains an open question.
+The second E₈ factor is required by anomaly cancellation but has no direct coupling to Standard Model fields. In heterotic M-theory, gaugino condensation in this hidden sector drives SUSY breaking [33]. A natural interpretation is that the hidden E₈ sector provides the dark sector: the predicted cosmological ratios Ω_DM/Ω_b = 43/8 and Ω_DE = ln(2) × 98/99 emerge from the same topological invariants (b₂, b₃) that also determine dim(E₈) = 248. Whether this connection is structural or coincidental remains an open question.
 
 ### 9.3 Comparison
 
@@ -928,7 +941,7 @@ The second E₈ factor is required by anomaly cancellation but has no direct cou
 | Mass hierarchy | 2 mechanisms + combined | (|) |
 | Sensitivity analysis | r_eff = 15.53, P = 10⁻³⁴⁶ | (|) |
 
-**Distler-Garibaldi obstruction** [37]: Lisi's E₈ ToE attempted to embed all Standard Model fermions (including chirality) directly as roots of a single E₈. Distler and Garibaldi proved this is mathematically impossible: no E₈ representation decomposes into the correct chiral SM spectrum. GIFT avoids this obstruction entirely: E₈×E₈ is the gauge group of heterotic M-theory (not a particle container), the SM gauge group emerges from a six-level breaking chain (§5.1), fermion generations are fixed by the topological constraint (rank(E₈) + N_gen)b₂ = N_gen·b₃, giving N_gen = 3 (§2), and chirality is a topological property of the compactification. The mathematical relationship between E₈ and particles is cohomological (emergence from geometry), not representational (embedding into algebra).
+**Distler-Garibaldi obstruction** [36]: Lisi's E₈ ToE attempted to embed all Standard Model fermions (including chirality) directly as roots of a single E₈. Distler and Garibaldi proved this is mathematically impossible: no E₈ representation decomposes into the correct chiral SM spectrum. GIFT avoids this obstruction entirely: E₈×E₈ is the gauge group of heterotic M-theory (not a particle container), the SM gauge group emerges from a six-level breaking chain (§5.1), fermion generations are fixed by the topological constraint (rank(E₈) + N_gen)b₂ = N_gen·b₃, giving N_gen = 3 (§2), and chirality is a topological property of the compactification. The mathematical relationship between E₈ and particles is cohomological (emergence from geometry), not representational (embedding into algebra).
 
 ### 9.4 Limitations and Open Questions
 
@@ -938,16 +951,16 @@ The second E₈ factor is required by anomaly cancellation but has no direct cou
 | Singularity structure | Not required: SM gauge group from g₂⊂so(7) spectral structure (§5) | §2 |
 | Formula selection rules | Consequence of metric uniqueness (see §9.4 note) | §3, §7 |
 | α_s(RGE) = 3.7% deviation | SUSY threshold sensitivity; split-spectrum matching (§5.3) | §5 |
-| δ_CP deviation | 11.3% vs NuFIT 6.0 central; at edge of 1σ band (±20°); factor 62/69 documented §4.4.1 | §4.4.1, §9.1 |
+| δ_CP deviation | 11.3% vs NuFIT 6.0 central; at edge of 1σ band (±20°); see S2 Appendix F | §4.4.1, §9.1 |
 | ΔV(e-μ) = 15.9% deviation | Reduced to 0.75% by combined pipeline (α = e^K) | §6 |
 | Hidden E₈ sector | Candidate for dark sector (dark matter, dark energy); no direct observable coupling | §9.2 |
 | Quantum gravity completion | Not addressed |, |
 
-**Note on the selection principle.** A natural objection to any framework of this type is: why *these* observables? The question has two levels. At the mathematical level, it dissolves: the NK-certified metric has zero free parameters, and its 169 Chebyshev coefficients are algebraically constrained to a five-generator lattice Z[π², π, 1, e, χ₉₈] / (b₂·b₃). Observables are functionals of this metric; they *must* therefore be algebraic in topological invariants. The "selection" is not a choice: it is a consequence of metric uniqueness. Extended grammar analysis confirms this: adding TCS-level atoms (χ(K3)=24, b₂(M₁)=11, b₂(M₂)=10) to the search grammar discovers simpler and more precise formulas for several observables (m_c/m_s exact at 11+7/10; Ω_DE = 53/77 rational, 5× more precise; λ_H = 11/87, 7× more precise), consistent with the prediction that observables encode TCS structure more directly than the higher-level algebra currently used.
+**Note on the selection principle.** A natural objection to any framework of this type is: why *these* observables? At the mathematical level, the NK-certified metric has zero free parameters, and its 169 Chebyshev coefficients are algebraically constrained to a five-generator lattice Z[π², π, 1, e, χ₉₈] / (b₂·b₃). Observables are functionals of this metric and are therefore algebraic in topological invariants. Within the declared formula grammar and structural-constant set, the observed relations are highly constrained and statistically non-generic, but a first-principles derivation of the full formula-selection rule remains open. Extended grammar analysis is consistent with this picture: adding TCS-level atoms (χ(K3)=24, b₂(M₁)=11, b₂(M₂)=10) to the search grammar discovers simpler and more precise formulas for several observables (m_c/m_s exact at 11+7/10; Ω_DE = 53/77 rational, 5× more precise; λ_H = 11/87, 7× more precise), suggesting that observables encode TCS structure more directly than the higher-level algebra currently used.
 
 At the philosophical level, the residual question is: why G₂ holonomy? This is the framework's single underdetermined input: the assertion that the compactification manifold is a compact 7-manifold of G₂ holonomy with b₁=0. This question has the same epistemic status as "why Lorentz invariance?" in special relativity or "why the Dirac equation?" in relativistic quantum mechanics: it is recognized as the minimal consistent mathematical structure compatible with observed symmetries, not derived from something more fundamental. G₂ is the unique compact exceptional holonomy group admitting a 7-dimensional representation with the stabilizer chain G₂ ⊃ SU(3) ⊃ SU(2) ⊃ U(1) that naturally contains the subgroups needed for the Standard Model. It is not selected among a continuum of options; it is an isolated point in the space of compatible mathematical structures. Every other unification framework carries equivalent or greater philosophical inputs alongside substantially more free parameters. GIFT makes its single input explicit.
 
-**Honest assessment of outliers**: Two observables deviate by >5%: ΔV(e-μ) (15.9%, reduced to 0.75% by the combined wilson_line+instanton pipeline) and κ(gauge) (4.7%, reflecting genuine K₇ geometry at the percent level). The α_s(RGE) deviation is 3.7% with split-spectrum matching (§5.3); a naive degenerate-spectrum treatment would give 12.1%. The δ_CP prediction (197°) is 11.3% from NuFIT 6.0 central but at the edge of the 1σ uncertainty band (177° ± 20°). A structural compactification factor (62/69) is documented in §4.4.1.
+**Honest assessment of outliers**: Two observables deviate by >5%: ΔV(e-μ) (15.9%, reduced to 0.75% by the combined wilson_line+instanton pipeline) and κ(gauge) (4.7%, reflecting genuine K₇ geometry at the percent level). The α_s(RGE) deviation is 3.7% with split-spectrum matching (§5.3); a naive degenerate-spectrum treatment would give 12.1%. The δ_CP prediction (197°) is 11.3% from NuFIT 6.0 central but at the edge of the 1σ uncertainty band (177° ± 20°). A post-hoc structural observation involving a 62/69 factor is recorded in S2 Appendix F (not part of the main framework).
 
 ### 9.5 Conclusion
 
@@ -962,7 +975,7 @@ We have explored a framework deriving **95 observables** from topological invari
 
 **We do not claim this framework is correct.** It may represent genuine geometric insight, effective approximation, or elaborate coincidence. Only experiment can discriminate. The deeper question (why octonionic geometry would determine particle physics parameters) remains open.
 
-But the empirical success of 95 observables from zero adjustable parameters, with an overdetermination ratio of 2.13× and coincidence probability 10⁻³⁴⁶ (uniform) / 10⁻¹³³ (algebraic), suggests that topology and physics may be more intimately connected than currently understood.
+But the empirical success of 95 observables from zero adjustable parameters, with an overdetermination ratio of 2.13× and coincidence probability 10⁻³⁴⁶ (uniform null) / 10⁻¹³³ (algebraic null) under the declared null models, suggests that topology and physics may be more intimately connected than currently understood.
 
 **The ultimate arbiter is experiment.**
 
@@ -971,17 +984,6 @@ But the empirical success of 95 observables from zero adjustable parameters, wit
 ## Author's note
 
 This framework was developed through sustained collaboration between the author and several AI systems, primarily Claude (Anthropic), with contributions from GPT (OpenAI), Gemini (Google), Grok (xAI), for specific mathematical insights. The formal verification in Lean 4, architectural decisions, and many key derivations emerged from iterative dialogue sessions over several months. This collaboration follows transparent crediting approach for AI-assisted mathematical research. Mathematical constants underlying these relationships represent timeless logical structures that preceded human discovery. The value of any theoretical proposal depends on mathematical coherence and empirical accuracy, not origin. Mathematics is evaluated on results, not résumés.
-
----
-
-## Data Availability
-
-- Framework paper (this work): https://doi.org/10.5281/zenodo.18837071
-- Paper A (certified G₂ metric): https://doi.org/10.5281/zenodo.19892350
-- Paper B (spectral geometry): https://doi.org/10.5281/zenodo.19893371
-- Paper C (K3 NK certificate): https://doi.org/10.5281/zenodo.19708916
-- Code: https://github.com/gift-framework/core
-- Lean proofs: https://github.com/gift-framework/core/tree/main/Lean
 
 ---
 
@@ -1022,32 +1024,43 @@ The author declares no competing interests.
 [27] NuFIT 6.0, www.nu-fit.org (2024)
 [28] L. de Moura, S. Ullrich, CADE 28, 625 (2021)
 [29] mathlib Community, github.com/leanprover-community/mathlib4
-[30] B. de La Fourniere, "An Explicit Approximate G₂ Metric on a Compact 7-Manifold with Certified Torsion-Free Completion" (2026), doi:10.5281/zenodo.19892350
-[31] DUNE Collaboration, FERMILAB-TM-2696 (2020)
-[32] DUNE Collaboration, arXiv:2103.04797 (2021)
-[33] E. Witten, Nucl. Phys. B 471, 135 (1996)
-[34] B.S. Acharya et al., Phys. Rev. D 76, 126010 (2007)
-[35] M. Atiyah, E. Witten, Adv. Theor. Math. Phys. 6, 1 (2002)
-[36] G. Kane, *String Theory and the Real World* (2017)
-[37] J. Distler, S. Garibaldi, Commun. Math. Phys. 298, 419 (2010)
-[38] J.C. Baez, "Octonions and the Standard Model," math.ucr.edu/home/baez/standard/ (2020-2025)
-[39] Springer Nature, "Artificial intelligence (AI) policy," www.springernature.com/gp/policies (2024)
+[30] DUNE Collaboration, FERMILAB-TM-2696 (2020)
+[31] DUNE Collaboration, arXiv:2103.04797 (2021)
+[32] E. Witten, Nucl. Phys. B 471, 135 (1996)
+[33] B.S. Acharya et al., Phys. Rev. D 76, 126010 (2007)
+[34] M. Atiyah, E. Witten, Adv. Theor. Math. Phys. 6, 1 (2002)
+[35] G. Kane, *String Theory and the Real World* (2017)
+[36] J. Distler, S. Garibaldi, Commun. Math. Phys. 298, 419 (2010)
+[37] J.C. Baez, "Octonions and the Standard Model," math.ucr.edu/home/baez/standard/ (2020-2025)
+[38] Springer Nature, "Artificial intelligence (AI) policy," www.springernature.com/gp/policies (2024)
 
-[40] J.A. Wheeler, "Information, physics, quantum: the search for links," in *Complexity, Entropy, and the Physics of Information* (W.H. Zurek, ed.), Addison-Wesley (1990), pp. 3–28.
+[39] J.A. Wheeler, "Information, physics, quantum: the search for links," in *Complexity, Entropy, and the Physics of Information* (W.H. Zurek, ed.), Addison-Wesley (1990), pp. 3–28.
 
-[41] J. Worrall, "Structural realism: the best of both worlds?," *Dialectica* **43**, 99–124 (1989).
+[40] J. Worrall, "Structural realism: the best of both worlds?," *Dialectica* **43**, 99–124 (1989).
 
-[42] J. Ladyman, D. Ross, *Every Thing Must Go: Metaphysics Naturalized*, Oxford University Press (2007).
+[41] J. Ladyman, D. Ross, *Every Thing Must Go: Metaphysics Naturalized*, Oxford University Press (2007).
 
-[43] B. de La Fournière, *Orientation, not ontology* (companion essay), giftheory.substack.com/p/orientation-not-ontology (2026).
+[42] R. Pinčák, A. Pigazzini, M. Pudlák, E. Bartoš, "Geometric origin of a stable black hole remnant from torsion in G₂-manifold geometry," Gen. Rel. Grav. **58**, 29 (2026), doi:10.1007/s10714-026-03528-z
 
-[44] B. de La Fourniere, "Spectral Geometry of the G₂-GIFT Manifold: Betti Numbers, KK Spectrum, and Spectral Invariants" (2026), doi:10.5281/zenodo.19893371
+[43] D. Joyce, S. Karigiannis, "A new construction of compact torsion-free G₂-manifolds by gluing families of Eguchi-Hanson spaces," *J. Differential Geom.* (2021), arXiv:1707.09325 (2017).
 
-[45] B. de La Fourniere, "Newton-Kantorovich Certificate for the K3 Donaldson Embedding in the G₂-GIFT Metric" (2026), doi:10.5281/zenodo.19708916
+[44] S. Mukai, "Finite groups of automorphisms of K3 surfaces and the Mathieu group," *Invent. Math.* **94**, 183–221 (1988).
 
-[46] R. Pinčák, A. Pigazzini, M. Pudlák, E. Bartoš, "Geometric origin of a stable black hole remnant from torsion in G₂-manifold geometry," Gen. Rel. Grav. **58**, 29 (2026), doi:10.1007/s10714-026-03528-z
+[45] A. Garbagnati, A. Sarti, "Symplectic automorphisms of prime order on K3 surfaces," *J. Algebra* **318**, 323–350 (2008), arXiv:0712.3055. 
+
+[46] J. Chen, H. Hong, "Intermediate curvature and splitting theorem," arXiv:2604.26529 (2026).
 
 ---
+
+## Author's Related Works
+
+*Code and Lean proofs:* [github.com/gift-framework/core](https://github.com/gift-framework/core) (Lean module under `core/Lean/`).
+
+- **[A]** B. de La Fournière, "An Explicit Approximate G₂ Metric on a Compact 7-Manifold with Certified Torsion-Free Completion," Zenodo [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) (2026).
+- **[B]** B. de La Fournière, "Spectral Geometry of the G₂-GIFT Manifold: Betti Numbers, KK Spectrum, and Spectral Invariants," Zenodo [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) (2026).
+- **[C]** B. de La Fournière, "Newton-Kantorovich Certificate for the K3 Donaldson Embedding in the G₂-GIFT Metric," Zenodo [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) (2026).
+- **[D]** B. de La Fournière, "An Explicit Closed-Form G₂ Ansatz on a K3-Coassociative Neck with Hyperkähler Rotation and Picard-Lefschetz Wirtinger Certificate," Zenodo [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) (2026).
+- **[essay]** B. de La Fournière, *Orientation, not ontology* (companion essay), giftheory.substack.com/p/orientation-not-ontology (2026).
 
 ## Appendix A: Topological Input Constants
 
@@ -1079,9 +1092,9 @@ The complete set of 20 structural constants (including dim(E₆), dim(E₇), dim
 
 | Supplement | Content | Pages |
 |------------|---------|-------|
-| S1: Foundations | E₈, G₂, K₇ construction details | ~60 |
-| S2: Derivations | Complete proofs of 33 Type I relations | ~90 |
-| S3: Observable Dataset | Full 95-entry table, type classification, sensitivity | ~20 |
+| S1: Foundations | E₈, G₂, K₇ construction details | 27 |
+| S2: Derivations | Complete proofs of 33 Type I relations | 42 |
+| S3: Observable Dataset | Full 95-entry table, type classification, sensitivity | 10 |
 
 ---
 

@@ -39,7 +39,7 @@ Before presenting derivations, we clarify the logical structure:
 **Inputs** (taken as given):
 - The octonion algebra 𝕆 and its automorphism group G₂ = Aut(𝕆)
 - The E₈×E₈ gauge structure
-- The K₇ manifold (compact G₂ 7-manifold with b₂ = 21, b₃ = 77; explicit metric certified in Paper I [30]; the pair (21, 77) does not appear among previously constructed compact G₂ manifolds: a complete geometric construction remains an open problem)
+- The K₇ manifold (compact G₂ 7-manifold with b₂ = 21, b₃ = 77; explicit metric certified in [A]; topological construction via Joyce-Karigiannis Z₂³ orbifold route (S1 §8.4); explicit closed-form neck ansatz with Wirtinger certificate (S1 §8.4, [D]))
 
 **Outputs** (derived from inputs):
 - The 33 Type I dimensionless predictions
@@ -64,9 +64,9 @@ Before presenting derivations, we clarify the logical structure:
 
 ### 0.5 Results from Analysis of the NK-Certified Metric
 
-Analysis of the NK-certified metric (Paper B [44]) computed all invariants directly from the explicit metric. Key results:
+Analysis of the NK-certified metric ([B]) computed all invariants directly from the explicit metric. Key results:
 
-- **Topological realization**: The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds; a complete geometric construction remains an open problem. Orthogonal TCS is excluded by parity (b₂+b₃=98 even). Any Betti decomposition via Mayer-Vietoris is conditional on the building block identification, which is open.
+- **Topological realization**: The pair (b₂, b₃) = (21, 77) is realized topologically by the Joyce-Karigiannis Z₂³ orbifold route (S1 §8.4); an explicit closed-form neck ansatz with five-layer Wirtinger certificate is established in [D]. Orthogonal TCS is excluded by parity (b₂+b₃=98 even). Any Betti decomposition via Mayer-Vietoris is conditional on the building block identification, which is open.
 - **ν̄ = 0**: Lean-certified in TCSConstruction.lean. For rectangular TCS (k₊=k₋=1), ν̄=0 automatically (CGN invariant); this is conditional on TCS realization.
 - **New topological formula**: V_min = √(Vol(K₇)/11), where 11 = b₃/n = 77/7. NK numerical: 219.90; formula: 221.24 (0.6% ✓). Identity: V_min² × b₃/n = Vol(K₇): a universal G₂ relation.
 - **U(1)² exact symmetry**: The T² directions θ and ψ are degenerate to 2×10⁻⁵ in the metric eigenvalues, propagating to S_θ = S_ψ = 6.1265 in all period integrals (exact to 2.6×10⁻⁸).
@@ -204,7 +204,7 @@ $$\kappa_T = \frac{1}{b_3 - \dim(G_2) - p_2} = \frac{1}{61}$$
 
 ### Proof
 
-*Step 1: Define from topological structure*
+*Step 1: Define from structural normalization integers*
 $$\det(g) = p_2 + \frac{1}{b_2 + \dim(G_2) - N_{gen}}$$
 
 *Step 2: Compute denominator*
@@ -220,7 +220,7 @@ $$\det(g) = \frac{\text{Weyl} \times (\text{rank}(E_8) + \text{Weyl})}{2^5} = \f
 
 **Epistemic note**: Three independent algebraic paths converge to 65/32, which is suggestive but does not constitute a derivation from topology: the metric optimization was constrained to this normalization target, and the formulas were identified post-hoc. See S1 §10.3 for full discussion. Six observables depending on det(g)_num or det(g)_den carry this normalization dependence.
 
-**Status**: METRIC NORMALIZATION (algebraically exact; see S1 §10.3) ∎
+**Status**: STRUCTURAL (metric normalization, algebraically exact; see S1 §10.3) ∎
 
 ---
 
@@ -325,7 +325,7 @@ $$= 7 + 10 \times 248 + 10 \times 99 = 7 + 2480 + 990 = 3477$$
 *Prime factorization*:
 $$3477 = 3 \times 19 \times 61 = N_{gen} \times prime(8) \times \kappa_T^{-1}$$
 
-*Period integral cross-confirmation*: Analysis of the NK-certified metric (Paper B [44], §5) extracts associative 3-cycle volumes directly. The SD associative volumes yield ln(m_τ/m_e) = 8.154 from the Fano-plane volume hierarchy, giving e^8.154 = 3477 ✓. This provides an independent geometric confirmation of the algebraic prediction.
+*Period integral cross-confirmation*: Analysis of the NK-certified metric ([B], §5) extracts associative 3-cycle volumes directly. The SD associative volumes yield ln(m_τ/m_e) = 8.154 from the Fano-plane volume hierarchy, giving e^8.154 = 3477 ✓. This provides an independent geometric confirmation of the algebraic prediction.
 
 *Experimental comparison*:
 
@@ -1113,7 +1113,7 @@ $$= 128 + 9 + \frac{65}{32} \times \frac{1}{61} = 137.033$$
 
 ## 21. The 33 Type I Dimensionless Relations (+ 2 Type IV BH Appendix)
 
-**Note**: All predictions use only topological invariants (b2, b3, dim(G2), etc.). None depend on the realized torsion value T. Relation #19 (Ω_m) is DERIVED from Ω_DE via the Weyl triple identity.
+**Note**: All predictions use only topological invariants (b₂, b₃, dim(G₂), etc.). None depend on the realized torsion value T. Relation #19 (Ω_m) is DERIVED from Ω_DE via the Weyl triple identity.
 
 | # | Relation | Formula | Value | Exp. | Dev. | Status |
 |---|----------|---------|-------|------|------|--------|
@@ -1203,7 +1203,7 @@ G₂ achieves approximately 5x better agreement than Calabi-Yau (SU(3)).
 
 Among 192,349 tested alternatives, the configuration (b₂=21, b₃=77) with E₈ x E₈ gauge group and G₂ holonomy achieves the lowest mean deviation. Zero alternatives outperform it.
 
-**Literature uniqueness**: Analysis of the NK-certified metric (Paper B [44], §6) compared against all ~65 known compact G₂ manifolds from the literature (Kovalev, CHNP, CGN, Joyce, Nordström). The point (b₂=21, b₃=77) is UNIQUE: no known diffeomorphic example exists. The nearest neighbor in (b₂,b₃) space is the CHNP grid point (9,9), at distance 7.6. A complete geometric construction remains an open problem.
+**Literature uniqueness**: Analysis of the NK-certified metric ([B], §6) compared against all ~65 known compact G₂ manifolds from the literature (Kovalev, CHNP, CGN, Joyce, Nordström). The point (b₂=21, b₃=77) is UNIQUE: no known diffeomorphic example exists. The nearest neighbor in (b₂,b₃) space is the CHNP grid point (9,9), at distance 7.6. The topological pair is realized by the Joyce-Karigiannis Z₂³ orbifold route (S1 §8.4), extending the known catalogue; an explicit closed-form neck ansatz is established in [D].
 
 Complete methodology: [docs/STATISTICAL_EVIDENCE.md](../../docs/STATISTICAL_EVIDENCE.md)
 
@@ -1367,7 +1367,7 @@ $$L_8 = \alpha_{sum}^B + d_{hidden} = 13 + 34 = 47$$
 
 This structure reflects the icosahedral geometry underlying the McKay correspondence E₈ ↔ 2I, where icosahedral coordinates involve the golden ratio φ = lim(Fₙ₊₁/Fₙ).
 
-**Status**: PATTERN (mathematical fact; physical significance unclear)
+**Status**: STRUCTURAL (mathematical pattern; physical significance unclear)
 
 ---
 
@@ -1451,6 +1451,14 @@ integers and the compactification ratio.
 4. NuFIT 6.0 (2024). Global neutrino oscillation analysis. www.nu-fit.org.
 5. Planck Collaboration (2020). Cosmological parameters. A&A 641, A6.
 6. T2K, NOvA Collaborations (2025). Nature 638, 534-541.
+
+---
+
+## Author's Related Works
+
+- **[A]** B. de La Fournière, "An Explicit Approximate G₂ Metric on a Compact 7-Manifold with Certified Torsion-Free Completion," Zenodo [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) (2026).
+- **[B]** B. de La Fournière, "Spectral Geometry of the G₂-GIFT Manifold: Betti Numbers, KK Spectrum, and Spectral Invariants," Zenodo [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) (2026).
+- **[D]** B. de La Fournière, "An Explicit Closed-Form G₂ Ansatz on a K3-Coassociative Neck with Hyperkähler Rotation and Picard-Lefschetz Wirtinger Certificate," Zenodo [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) (2026).
 
 ---
 

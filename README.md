@@ -58,7 +58,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 | [S2: Derivations (Markdown)](publications/papers/markdown/GIFT_v3.4_S2_derivations.md) | All 33 Type I derivations (0.39% mean, PDG 2024 / NuFIT 6.0) |
 | [S3: Observables (Markdown)](publications/papers/markdown/GIFT_v3.4_S3_observables.md) | 95-observable catalog with type breakdown |
 
-> v3.4 PDFs are being recompiled with the GIFT LaTeX template (v3.2/v3.3 main branding). Until then, the markdown sources are canonical. Last clean PDFs (v3.3) are archived in [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/).
+> v3.4 PDFs (main + S1 + S2 + S3) are now recompiled cleanly under the shared GIFT LaTeX template; both markdown and PDF sources are in sync. Last v3.3 PDFs remain archived in [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/) for reference.
 
 ### Triptyque (peer-reviewable, published on Zenodo)
 
@@ -133,7 +133,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 | Mean deviation | 0.39% (35 Type I) / 0.97% (all 66 observables) |
 | Better alternatives found | 0 |
 
-### Top 5 Configurations
+### Top 5 Configurations (v3.3.24 leave-one-out scan, preserved for traceability)
 
 | Rank | b₂ | b₃ | Deviation |
 |:----:|:--:|:--:|:---------:|

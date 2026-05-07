@@ -35,7 +35,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Données de référence
 | Page | Description |
 |------|-------------|
-| 🇫🇷 [Référence des observables](Observable-Reference.fr.html) | 89 observables : formules, valeurs, écarts |
+| 🇫🇷 [Référence des observables](Observable-Reference.fr.html) | 95 observables : formules, valeurs, écarts (Type I/II/III/IV) |
 | 🇫🇷 [Preuves statistiques](Statistical-Evidence.fr.html) | Validation à 7 composantes, recherche exhaustive sur 3M+ configs |
 | 🇫🇷 [Résumé de validation](Validation-Summary.fr.html) | Résultats secteur par secteur avec NuFIT 6.0 |
 | 🇫🇷 [Validations indépendantes](Independent-Validations.fr.html) | Recherches externes qui convergent avec GIFT |

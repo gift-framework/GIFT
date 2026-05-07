@@ -4,7 +4,7 @@
 
 This supplement provides the complete GIFT observable dataset: 95 observables derived from a single G₂ metric (169 Chebyshev-Cholesky geometric parameters, zero freely adjustable physical parameters), organized by derivation type and cross-referenced with Lean formal verification. The dataset includes 2 BH remnant predictions from Pinčák et al. 2026 [46] (classified Type IV) and 6 new Type IV metric block eigenvalues (v3.4.13).
 
-The 95 observables decompose as **33(I) + 19(II) + 21(III) + 22(IV)** across four types of increasing derivation complexity. All predictions trace to a single compact G₂ manifold K₇ with (b₂, b₃) = (21, 77) and E₈×E₈ gauge structure, 169 metric parameters, zero continuously adjustable physical parameters. The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds; a complete geometric construction remains an open problem. The certified metric provides computational evidence for a new G₂ manifold.
+The 95 observables decompose as **33(I) + 19(II) + 21(III) + 22(IV)** across four types of increasing derivation complexity. All predictions trace to a single compact G₂ manifold K₇ with (b₂, b₃) = (21, 77) and E₈×E₈ gauge structure, 169 metric parameters, zero continuously adjustable physical parameters. The pair (b₂, b₃) = (21, 77) does not appear among the catalogued compact G₂ manifolds; a complete geometric construction remains an open problem. The certified metric provides computational evidence for a new G₂ manifold.
 
 The dataset serves as the canonical reference for all GIFT predictions, superseding scattered results across supplements S6–S25. Every entry traces back to a specific computation, a JSON artifact, and (where applicable) a Lean theorem.
 
@@ -63,8 +63,8 @@ The 20 structural constants from which all 95 observables derive:
 | 2 | rank(E₈) | 8 | Cartan subalgebra |
 | 3 | dim(G₂) | 14 | Aut(𝕆) |
 | 4 | dim(K₇) | 7 | Im(𝕆) |
-| 5 | b₂(K₇) | 21 | Input; confirmed by spectral analysis (Paper B [44], §2.3). Any Mayer-Vietoris decomposition is conditional on building block identification (open problem). |
-| 6 | b₃(K₇) | 77 | Input; confirmed by spectral analysis (Paper B [44], §2.3). Any Mayer-Vietoris decomposition is conditional on building block identification (open problem). |
+| 5 | b₂(K₇) | 21 | Input; confirmed by spectral analysis (Paper B [B], §2.3). Any Mayer-Vietoris decomposition is conditional on building block identification (open problem). |
+| 6 | b₃(K₇) | 77 | Input; confirmed by spectral analysis (Paper B [B], §2.3). Any Mayer-Vietoris decomposition is conditional on building block identification (open problem). |
 | 7 | N_gen | 3 | Index theorem |
 | 8 | p₂ | 2 | dim(G₂)/dim(K₇) |
 | 9 | Weyl | 5 | Triple identity |
@@ -205,18 +205,18 @@ Of the 95 observables, **55 are formally verified** in Lean 4 across the followi
 
 | Lean File | Axioms | Theorems | Conjuncts | Coverage |
 |-----------|--------|----------|-----------|----------|
-| `Foundations.lean` | 0* |, | 38 | Type I: metric, torsion, topology |
-| `Predictions.lean` | 0* |, | 55 | Types I–III: couplings, masses, mixing |
-| `Spectral.lean` | 0* |, | 41 | Type II: KK spectrum, Weyl law |
-| `MetricEigenvalues.lean` | 0 |, | 15 | Metric fractions: g_ss=19/6, g_T²=7/6, γ²=24π²/7 (T² Laplacian) |
-| `SpectralInvariants.lean` | 0 |, | 10 | Heat kernel, ζ'(0), b₁=0 |
-| `CompactificationCorrection.lean` | 0 |, | 6 | δ_CP compactification factor |
+| `Foundations.lean` | 0* | n/a | 38 | Type I: metric, torsion, topology |
+| `Predictions.lean` | 0* | n/a | 55 | Types I–III: couplings, masses, mixing |
+| `Spectral.lean` | 0* | n/a | 41 | Type II: KK spectrum, Weyl law |
+| `MetricEigenvalues.lean` | 0 | n/a | 15 | Metric fractions: g_ss=19/6, g_T²=7/6, γ²=24π²/7 (T² Laplacian) |
+| `SpectralInvariants.lean` | 0 | n/a | 10 | Heat kernel, ζ'(0), b₁=0 |
+| `CompactificationCorrection.lean` | 0 | n/a | 6 | δ_CP compactification factor |
 | `TCSGaugeBreaking.lean` | 0 | 14 | 10 | Type III: gauge breaking chain |
 | `GaugeBundleData.lean` | 0 | 12 | 11 | Type III: bundle universality |
 | `AssociativeVolumes.lean` | 0 | 19 | 14 | Type III: instanton hierarchy |
 | `ComputedWeylLaw.lean` | 0 | 8 | 7 | Type III: 7D spectral geometry |
 
-*4 published axioms (reduced from 7 in v3.4.8, from 38 in v3.3). All substantive: standard theorems (Cheeger inequality) + geometric structure (TCS spectral bounds) + physical inputs (literature package: CGN+Joyce). KK_YM_EFT, K7_spectral_data, K7_analysis_data promoted to theorems/defs in v3.4.9. G₂ group structure proven by `native_decide` (v3.4.5).
+*4 published axioms. All substantive: standard theorems (Cheeger inequality) + geometric structure (TCS spectral bounds) + physical inputs (literature package: CGN+Joyce). KK_YM_EFT, K7_spectral_data, K7_analysis_data are theorems/defs. G₂ group structure proven by `native_decide`.
 
 **Total certificate**: 213 conjuncts, 0 `sorry`, 134 .lean files (128 core + 6 generated + 12 test/support), 8378 build jobs (Lean 4.29.0).
 

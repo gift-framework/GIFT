@@ -32,7 +32,7 @@ Framework proposing that Standard Model dimensionless parameters emerge as topol
 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477.2 | 0.004% |
 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% |
 
-**Global**: 33 predictions, 0.24% mean deviation (32 well-measured), 4 exact, 28/33 sub-1%
+**Global** (v3.4): 95 observables in 4 types (33 Type I + 19 II + 21 III + 22 IV); 66 with experimental comparison; mean deviations 0.73% (Type I), 0.17% (Type II), 3.4% (Type III); 11 exact matches (<0.01%), 53 within 1%
 
 ---
 

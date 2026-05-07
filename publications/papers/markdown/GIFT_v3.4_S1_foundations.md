@@ -4,7 +4,7 @@
 
 ## E₈ Exceptional Lie Algebra, G₂ Holonomy Manifolds, and K₇ Construction
 
-*Complete mathematical foundations for GIFT, presenting E8 architecture and K7 manifold construction.*
+*Complete mathematical foundations for GIFT, presenting E₈ architecture and K₇ manifold construction.*
 
 **Lean Verification**: 213 certificate conjuncts, 4 axioms, 134 .lean files (Lean 4.29.0, zero `sorry`)
 
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III discusses K₇ manifold topology: the pair (b₂,b₃)=(21,77) does not appear among previously constructed compact G₂ manifolds, and the NK-certified metric provides computational evidence for a new G₂ manifold. A complete geometric construction (identifying explicit building blocks) remains an open problem. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's theorem guaranteeing existence of a torsion-free metric. PINN validation confirms near-G₂ holonomy with V₇ projection reduced by 97%. All algebraic results are formally verified in Lean 4.
+This supplement presents the mathematical architecture underlying GIFT. Part I develops the E₈ exceptional Lie algebra with the Exceptional Chain theorem. Part II introduces G₂ holonomy manifolds, including the correct characterization of the g₂ subalgebra as the kernel of the Lie derivative map. Part III discusses K₇ manifold topology: the pair (b₂,b₃)=(21,77) does not appear in the standard TCS catalogue, but the Joyce-Karigiannis (JK) Z₂³ orbifold construction realizes it via T³ × K3 / Z₂³ resolution (§8.4). A four-phase computer-assisted audit (V4 symplectic screen, anti-symplectic obstruction, K3 lattice existence via Mukai/Garbagnati-Sarti, Betti formula) closes the topological count exactly; the analytic torsion-free statement and an explicit polynomial Z₂³ realization are deferred. Part IV establishes the algebraic reference form determining det(g) = 65/32, with Joyce's perturbation theorem providing the existence criterion for a nearby torsion-free metric (subject to its hypothesis ‖T‖ < ε₀ = 0.1). PINN validation confirms near-G₂ holonomy with V₇ projection reduced by 97%. All algebraic results are formally verified in Lean 4 (including `JoyceKarigiannisConstruction.lean`, v3.4.14).
 
 ---
 
@@ -45,7 +45,7 @@ Topological invariants (b₂ = 21, b₃ = 77)
 95 observables (33(I) + 19(II) + 21(III) + 22(IV), 55 Lean-certified)
 ```
 
-**Status**: 95 observables across 4 types (v3.4.13). 33 Type I algebraic, 19 Type II one-step, 21 Type III multi-step, 22 Type IV structural (incl. 6 metric block eigenvalues + Pinčák 2026 [46]). 55/95 Lean-certified (213 conjuncts, 4 axioms, 0 sorry). See §4 of main text and Supplement S3 for the complete dataset. The gauge breaking chain (§5 of main text) is certified in `TCSGaugeBreaking.lean` and `GaugeBundleData.lean`.
+**Status**: 95 observables across 4 types (v3.4.13). 33 Type I algebraic, 19 Type II one-step, 21 Type III multi-step, 22 Type IV structural (incl. 6 metric block eigenvalues + Pinčák 2026 [42]). 55/95 Lean-certified (213 conjuncts, 4 axioms, 0 sorry). See §4 of main text and Supplement S3 for the complete dataset. The gauge breaking chain (§5 of main text) is certified in `TCSGaugeBreaking.lean` and `GaugeBundleData.lean`.
 
 ### 0.1 The Division Algebra Chain
 
@@ -167,7 +167,7 @@ $$|W(E_8)| = p_2^{\dim(G_2)} \times N_{gen}^{Weyl} \times Weyl^{p_2} \times \dim
 
 ---
 
-## 2.3 Triple Derivation of Weyl = 5
+### 2.3 Triple Derivation of Weyl = 5
 
 **Theorem**: The Weyl factor admits three independent derivations from topological invariants.
 
@@ -366,7 +366,7 @@ In practice, the kernel is computed via singular value decomposition (SVD) of th
 | **7** | **G₂** | **Exceptional** |
 | 8 | Spin(7) | Exceptional |
 
-### 6.3 Torsion: Definition and GIFT Interpretation
+### 6.4 Torsion: Definition and GIFT Interpretation
 
 **Mathematical definition**: Torsion measures failure of G₂ structure to be parallel:
 $$T = \nabla\phi \neq 0$$
@@ -503,11 +503,11 @@ The twisted connected sum (TCS) construction provides the primary method for con
 ### 8.3 Topological Classification
 
 The GIFT framework constructs an explicit G₂ metric on a compact 7-manifold K₇ with Betti numbers
-(b₂, b₃) = (21, 77), certified by Newton-Kantorovich theorem (Paper I [30]). The classification of this topological type within known construction methods remains open.
+(b₂, b₃) = (21, 77), certified by Newton-Kantorovich theorem ([A]). The classification of this topological type within known construction methods remains open.
 
-**Topological status.** The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds. Orthogonal TCS is excluded by parity (b₂+b₃=98 is even; CHNP Lemma 6.7). A building block scan (2026-04-14) shows that b₂=21 > 20=max ρ(K3) forces at least one semi-Fano (non-Fano) building block, and all generic K3 lattice embeddings are excluded by the parity theorem. Non-orthogonal TCS, extra-twisted connected sums, and Joyce orbifold resolutions with new groups remain open paths. A complete geometric construction is an open problem.
+**Topological status (TCS-specific).** The pair (b₂, b₃) = (21, 77) does not appear among the catalogued TCS-constructed compact G₂ manifolds. Orthogonal TCS is excluded by parity (b₂+b₃=98 is even; CHNP Lemma 6.7). A building block scan (2026-04-14) shows that b₂=21 > 20=max ρ(K3) forces at least one semi-Fano (non-Fano) building block, and all generic K3 lattice embeddings are excluded by the parity theorem. Non-orthogonal TCS and extra-twisted connected sums remain open paths within TCS itself. **The JK orbifold route, however, is constructive (§8.4) and realizes (21, 77) outside TCS via T³ × K3 / Z₂³ resolution.**
 
-**CHNP 2015 range.** The CHNP 2015 explicit tabulation covered building blocks with ρ ≤ 9, giving b₂ ≤ 18. Reaching b₂=21 requires at least one semi-Fano block with ρ ≥ 20 (Shioda-Inose), outside the CHNP tabulated range. The Mori-Mukai classification allows semi-Fano threefolds with ρ up to ~20; a TCS construction with such high-ρ blocks has not been explicitly carried out.
+**CHNP 2015 range.** The CHNP 2015 explicit tabulation covered building blocks with ρ ≤ 9, giving b₂ ≤ 18. Reaching b₂=21 within TCS would require at least one semi-Fano block with ρ ≥ 20 (Shioda-Inose), outside the CHNP tabulated range. The Mori-Mukai classification allows semi-Fano threefolds with ρ up to ~20; a TCS construction with such high-ρ blocks has not been explicitly carried out and is superseded for our purposes by the JK route below.
 
 **Lattice-theoretic analysis.** The K3 lattice Λ_{K3} = U³ ⊕ E₈(-1)² admits an
 orthogonal decomposition N₁ ⊕ N₂ ⊕ ⟨2⟩ with rk(N₁) = 11, rk(N₂) = 10, satisfying
@@ -525,7 +525,52 @@ matching). This is consistent with a TCS construction but does not constitute a 
 - b₂ = 21 = C(7,2) = edges in complete graph K₇
 - b₃ = 77 = C(7,3) + 2 × b₂ = 35 + 42
 
-**Status**: The Betti numbers (b₂, b₃) = (21, 77) are certified by the NK metric (Paper I). The spectral analysis (Paper B [44]) independently confirms 21 + 77 near-zero eigenvalues consistent with these Betti numbers. The pair (b₂, b₃) = (21, 77) does not appear among previously constructed compact G₂ manifolds. A complete geometric construction (explicit building blocks and gluing map) remains an open problem.
+**Status**: The Betti numbers (b₂, b₃) = (21, 77) are certified by the NK metric (Paper I). The spectral analysis ([B]) independently confirms 21 + 77 near-zero eigenvalues consistent with these Betti numbers. Within the TCS catalogue, the pair (21, 77) does not appear. Outside TCS, the JK Z₂³ orbifold route (§8.4) realizes (21, 77) at the topological/lattice level. An explicit closed-form positive G₂-structure ansatz at the neck level, with determinant constraint, hyperkähler rotation, and five-layer Picard-Lefschetz Wirtinger certificate, is established in [D]. A complete *smooth analytic* construction (explicit polynomial Z₂³ realization on a Picard-rank-1, η²=8 K3, plus JK 2017 analytic gluing) remains open.
+
+### 8.4 Joyce-Karigiannis Z₂³ Construction, realizes (b₂, b₃) = (21, 77)
+
+The Joyce-Karigiannis (JK) framework [43] resolves orbifolds T³ × K3 / G with G ⊂ Aut(T³) × Aut(K3) acting with A₁-type singularities via Eguchi-Hanson gluing, yielding compact torsion-free G₂ manifolds. For G = Z₂³ with a specific mixed-parity action, the resolved 7-manifold N has Betti numbers given by
+
+$$b_2(N) = b_2(T^3 \times K3 / G) + b_0(\text{fixed loci}), \qquad b_3(N) = b_3(T^3 \times K3 / G) + b_1(\text{fixed loci}).$$
+
+A four-phase computer-assisted audit (`canonical/scripts/jk_*.py`, results in `canonical/results/jk_*.json`, 2026-05-04) closes the count for the GIFT signature:
+
+**Phase 1: V4 symplectic screen on CI(2,2,2).** The diagonal V4 = ⟨s₁, s₂⟩ ⊂ Z₂³ action on the CI(2,2,2) ⊂ ℂP⁵ K3 fiber has 24 raw fixed points, decomposing into **12 V4-orbits → 12 T³ components** of the fixed locus. Generators commute on the V4-invariant 9-dimensional quadric subspace.
+
+**Phase 2, anti-symplectic obstruction.** For any diagonal τ on CI(2,2,2) ⊂ ℂP⁵ and the canonical quadric net R, the determinant ratio satisfies det(τ) / det(R) ≡ 1, so no diagonal P⁵-linear map is anti-symplectic. The full Z₂³ realization must use *intrinsic K3 lattice automorphisms*, not P⁵-linear actions.
+
+**Phase 2b: K3 lattice abstract existence.** On the K3 lattice Λ = U³ ⊕ E₈(-1)², the Nikulin involution σ₁ = E₈-swap is an order-2 isometry with trace 6 and eigenspaces (14, 8). The coinvariant T_{σ₁} ≅ E₈(-2) has discriminant 2⁸. **Mukai 1988** (V4 = Z₂² ⊂ M₂₃) gives a symplectic K3 action; **Garbagnati-Sarti 2009** verifies a > 16 - r for the order-two non-symplectic involutions on (r, a, δ) = (11, 7, 1) and (11, 9, 1), corresponding to fixed-locus shapes (g, k) = (2, 2) and (1, 1) respectively. η² = 8 is representable in each invariant sublattice.
+
+**Phase 4: Betti formula.** The fixed locus consists of:
+
+| Component | Count | b₀ | b₁ | Source |
+|---|---|---|---|---|
+| T³ | 12 | 12 | 36 | V4-fixed K3 points (Phase 1) |
+| S¹×Σ₂ | 1 | 1 | 5 | τ : (g,k)=(2,2) |
+| S¹×ℂP¹ | 2 | 2 | 2 | τ : k=2 rational curves |
+| S¹×T² | 3 | 3 | 9 | s₁τ, s₂τ, s₁s₂τ : (g,k)=(1,1) |
+| S¹×ℂP¹ | 3 | 3 | 3 | s₁τ, s₂τ, s₁s₂τ : k=1 rational |
+| **Total** | **21** | **21** | **55** | |
+
+Combined with the quotient cohomology b₂(T³ × K3 / Z₂³) = 0 and b₃(T³ × K3 / Z₂³) = 22, the JK formula gives
+
+$$b_2(N) = 0 + 21 = 21, \qquad b_3(N) = 22 + 55 = 77, \qquad \chi(N) = 0,$$
+
+matching the GIFT topological signature exactly.
+
+**Lean formalization** (v3.4.14): the four-phase audit is encoded in `GIFT/Foundations/JoyceKarigiannisConstruction.lean` with master theorem `jk_z23_construction_realizes_gift_betti` proving `phase4.b2N = GIFT.Core.b2 ∧ phase4.b3N = GIFT.Core.b3` by `native_decide`. The module introduces 0 axioms and 0 sorry; literature dependencies (Mukai, Garbagnati-Sarti) are encoded as Bool flags in a `JKPhase2bLatticeScreen` structure with explicit citation comments.
+
+**Honest scope.** This route certifies the *topological/lattice gate* only:
+- ✓ Betti pair (b₂, b₃) = (21, 77) closed by exact integer arithmetic
+- ✓ K3 surface with required Z₂³ action exists abstractly (Mukai/G-S)
+- ⏳ Explicit polynomial coordinate model on a Picard-rank-1, η² = 8 K3, deferred (existence guaranteed but moduli construction not done here)
+- ⏳ Smooth analytic torsion-free G₂ certificate, deferred to JK 2017 gluing theorem
+
+The full four-phase topological route (lattice screens, explicit (r, a, δ) bookkeeping, and Betti formula closure) follows the Joyce-Karigiannis Z₂³ framework [43]. An explicit closed-form positive G₂-structure ansatz at the neck level, determinant-preserving radial family, hyperkähler rotation, base-coframe absorption, and five-layer Picard-Lefschetz Wirtinger certificate, is established in [D].
+
+**Comparison to TCS within the GIFT framework.** The NK-certified metric ([A]) and the Donaldson analytic note [D] operate at the *neck level* of a putative compact extension and do not depend on whether the global construction is TCS or JK. The JK route provides a constructive existence proof for the topological pair; the NK metric and [D] provide complementary analytic evidence at the neck: the former via Newton-Kantorovich certificate, the latter via explicit closed-form positive G₂-structure ansatz with Wirtinger certificate; together they argue that the GIFT signature (b₂, b₃) = (21, 77) is realizable, with the JK route being the leading candidate for the global compact construction.
+
+**Compatibility with intermediate-curvature splitting (Chen-Hong 2026).** Recent work of Chen and Hong [46] establishes a sharp dichotomy for noncompact manifolds with nonnegative m-intermediate curvature admitting a smooth proper degree-nonzero map to M^{n−m} × T^{m−1} × ℝ. For 3 ≤ n ≤ 5 with 1 ≤ m ≤ n−1, or for 6 ≤ n ≤ 7 with m ∈ {1, n−2, n−1}, the manifold is forced to split isometrically as the Riemannian product E × T^{m−1} × ℝ. By contrast, for 6 ≤ n ≤ 7 and 2 ≤ m ≤ n−3, they construct explicit metrics on S^{n−m} × T^{m−1} × ℝ with uniformly positive m-intermediate curvature, showing the algebraic gate m² − mn + m + n > 0 is sharp. The GIFT coassociative neck has topology K3 × T² × ℝ (n = 7, m = 3, giving m² − mn + m + n = −2 < 0), placing it within the Chen-Hong "non-rigid" window: metrics on this topology with nonnegative 3-intermediate curvature need not split. The k ≥ 1 Chebyshev corrections that lift the holonomy from SU(2) × U(1) to full G₂ are therefore consistent with the Chen-Hong existence regime, rather than obstructed by a forced splitting.
 
 ---
 
@@ -539,11 +584,11 @@ $$\cdots \to H^{k-1}(N) \xrightarrow{\delta} H^k(K_7) \xrightarrow{i^*} H^k(M_1)
 
 ### 9.2 Betti Number Derivation
 
-**Result for b₂**: b₂(K₇) = 21 is certified by the NK metric. The spectral analysis (Paper B [44]) independently confirms 21 near-zero eigenvalues of Δ₂ with gap ratio 14,635. A TCS realization would require building blocks with Picard ranks summing to 21, but the specific identification of those blocks is an open problem.
+**Result for b₂**: b₂(K₇) = 21 is certified by the NK metric. The spectral analysis ([B]) independently confirms 21 near-zero eigenvalues of Δ₂ with gap ratio 14,635. A TCS realization would require building blocks with Picard ranks summing to 21, but the specific identification of those blocks is an open problem.
 
 **Result for b₃**: b₃(K₇) = 77 is certified by the NK metric. The harmonic decomposition b₃ = 35 + 42 = (1+7+27) + 2×21 is confirmed by the certified metric with spectral gap 10522× between zero and non-zero modes. A splitting b₃ = b₃(M₁) + b₃(M₂) via Mayer-Vietoris is conditional on the building block identification, which remains open.
 
-**Status**: CERTIFIED BY NK METRIC (Paper I); candidate TCS decomposition is conjectural
+**Status**: VERIFIED (NK metric, Paper I); candidate TCS decomposition is conjectural
 
 ### 9.3 Complete Betti Spectrum and Poincaré Duality
 
@@ -553,7 +598,7 @@ For a compact G₂-holonomy 7-manifold K₇, Poincaré duality gives b_k = b_{7-
 |---|---------|------------|
 | 0 | 1 | Connected |
 | 1 | 0 | Simply connected (G₂ holonomy) |
-| 2 | 21 | NK-certified; spectrally confirmed (Paper B [44]); building block decomposition open |
+| 2 | 21 | NK-certified; spectrally confirmed ([B]); building block decomposition open |
 | 3 | 77 | NK-certified; harmonic decomposition 35+42; building block decomposition open |
 | 4 | 77 | Poincaré duality: b₄ = b₃ |
 | 5 | 21 | Poincaré duality: b₅ = b₂ |
@@ -654,9 +699,7 @@ numerator/denominator can be expressed as combinations of a few integers.
 
 **Numerical value**: 65/32 = 2.03125 (exact rational)
 
-**Status**: METRIC NORMALIZATION, algebraically exact in our metric, with three
-suggestive integer formulas, but not derived from topology. The 6 observables using
-det_num or det_den (six Type I observables) depend on this normalization choice.
+**Status**: STRUCTURAL (metric normalization, algebraically exact in our metric, with three suggestive integer formulas, but not derived from topology). The 6 observables using det_num or det_den (six Type I observables) depend on this normalization choice.
 
 ---
 
@@ -669,7 +712,7 @@ The algebraic reference form in a local G₂-adapted orthonormal coframe:
 $$\varphi_{\text{ref}} = c \cdot \varphi_0, \quad c = \left(\frac{65}{32}\right)^{1/14}$$
 $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 
-**Important clarification**: This representation holds in a local orthonormal frame. The manifold K₇ is curved and compact; "I₇" reflects the frame choice, not global flatness. The reference form φ_ref yields det(g) = 65/32; the global torsion-free solution φ_TF exists by Joyce's theorem, certified by the NK bound (Paper I).
+**Important clarification**: This representation holds in a local orthonormal frame. The manifold K₇ is curved and compact; "I₇" reflects the frame choice, not global flatness. The reference form φ_ref yields det(g) = 65/32. The NK-certified model provides computational/conditional evidence for a nearby torsion-free G₂ structure within the certified analytic setup of Paper A; this does not by itself close the independent smooth compact construction problem for K₇, whose full building-block / gluing realization remains open.
 
 | Property | Value | Status |
 |----------|-------|--------|
@@ -684,7 +727,7 @@ $$g_{\text{ref}} = c^2 \cdot I_7 = \left(\frac{65}{32}\right)^{1/7} \cdot I_7$$
 **Actual solution structure**: The topology and geometry of K₇ impose a deformation:
 $$\varphi = \varphi_{\text{ref}} + \delta\varphi$$
 
-The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem guarantees existence of a torsion-free G₂ metric when the initial torsion satisfies ‖T‖ < ε₀ = 0.1. PINN validation (N=1000) confirms ‖T‖_max = 4.46 × 10⁻⁴, providing a 224× safety margin.
+The torsion-free condition (dφ = 0, d*φ = 0) is a **global constraint**. Joyce's perturbation theorem provides the existence criterion for a nearby torsion-free G₂ metric, conditional on the initial torsion satisfying ‖T‖ < ε₀ = 0.1. PINN validation (N=1000) confirms ‖T‖_max = 4.46 × 10⁻⁴, providing a 224× safety margin.
 
 **Why GIFT satisfies Joyce's criterion**: The topological bound κ_T = 1/61 constrains ‖δφ‖, placing the manifold within Joyce's perturbative regime where a torsion-free solution exists.
 
@@ -837,7 +880,7 @@ Both have 7 terms but different index patterns. The Fano plane defines the octon
 | PINN | Converges to constant form | gift_core/nn/ |
 | Joyce theorem | ‖T‖ < 0.1 → exists metric (224× margin) | [Joyce 2000] |
 
-Cross-verification between analytical and numerical methods confirms the solution.
+Cross-verification between analytical and numerical methods is consistent with the conditional NK-certified solution within its analytic setup.
 
 ---
 
@@ -846,10 +889,22 @@ Cross-verification between analytical and numerical methods confirms the solutio
 1. Adams, J.F. *Lectures on Exceptional Lie Groups*
 2. Harvey, R., Lawson, H.B. "Calibrated geometries." *Acta Math.* 148, 47-157 (1982)
 3. Bryant, R.L. "Metrics with exceptional holonomy." *Ann. of Math.* 126, 525-576 (1987)
-4. Joyce, D. *Compact Manifolds with Special Holonomy*
+4. Joyce, D. *Compact Manifolds with Special Holonomy*, Oxford U. Press (2000)
 5. Corti, Haskins, Nordström, Pacini. *G₂-manifolds and associative submanifolds*
 6. Kovalev, A. *Twisted connected sums and special Riemannian holonomy*
 7. Conway, J.H., Sloane, N.J.A. *Sphere Packings, Lattices and Groups*
+8. **[43]** Joyce, D., Karigiannis, S. "A new construction of compact torsion-free G₂-manifolds by gluing families of Eguchi-Hanson spaces." *J. Differential Geom.* (2021), arXiv:1707.09325 (2017).
+9. **[44]** Mukai, S. "Finite groups of automorphisms of K3 surfaces and the Mathieu group." *Invent. Math.* **94**, 183–221 (1988).
+10. **[45]** Garbagnati, A., Sarti, A. "Symplectic automorphisms of prime order on K3 surfaces." *J. Algebra* **318**, 323–350 (2008); also arXiv:0712.3055.
+11. **[46]** Chen, J., Hong, H. "Intermediate curvature and splitting theorem," arXiv:2604.26529 (2026).
+
+---
+
+## Author's Related Works
+
+- **[A]** B. de La Fournière, "An Explicit Approximate G₂ Metric on a Compact 7-Manifold with Certified Torsion-Free Completion," Zenodo [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) (2026).
+- **[B]** B. de La Fournière, "Spectral Geometry of the G₂-GIFT Manifold: Betti Numbers, KK Spectrum, and Spectral Invariants," Zenodo [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) (2026).
+- **[D]** B. de La Fournière, "An Explicit Closed-Form G₂ Ansatz on a K3-Coassociative Neck with Hyperkähler Rotation and Picard-Lefschetz Wirtinger Certificate," Zenodo [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) (2026).
 
 ---
 

@@ -149,4 +149,4 @@ lean_proof = result.certificate.to_lean()
 
 ---
 
-*`gift_core` fait partie du cadre GIFT v3.3. Pour l'application physique, voir l'[article principal](Paper-Main-Framework.html).*
+*`gift_core` fait partie du cadre GIFT v3.4. Pour l'application physique, voir l'[article principal](Paper-Main-Framework.html).*

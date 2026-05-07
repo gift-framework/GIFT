@@ -5,6 +5,55 @@ All notable changes to the GIFT framework are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.4.0] - 2026-05-07
+
+### Major: 95-observable dataset, four-type classification, Joyce-Karigiannis topological route
+
+The v3.4 release reframes the dataset from "33 dimensionless predictions" to a four-type classification of 95 observables, all derived from a single G₂ metric and the topological pair (b₂, b₃) = (21, 77).
+
+#### Added
+
+**Observable classification (95 observables, four types)**
+- **Type I** (33 obs, mean deviation 0.73%): Direct algebraic from structural constants. 33/33 Lean-certified.
+- **Type II** (19 obs, mean 0.17%): One physical identification step (absolute masses, CKM magnitudes, extended ratios).
+- **Type III** (21 obs, mean 3.4%): Multi-step dynamical chains (Wilson lines, instanton volumes, RGE running). 14/21 Lean-certified.
+- **Type IV** (22 obs, structural diagnostics): Internal consistency, NK certification values, BH remnant predictions (Pinčák et al. 2026). 8/22 Lean-certified.
+- Full canonical dataset in Supplement S3.
+
+**Joyce-Karigiannis Z₂³ topological route** (S1 §8.4)
+- Four-phase computer-assisted audit (V₄ symplectic screen on CI(2,2,2), anti-symplectic obstruction, K3 lattice existence via Mukai 1988 + Garbagnati-Sarti 2009, Betti formula closure) realizes (b₂, b₃) = (21, 77) at the topological/lattice level.
+- Lean-certified in `JoyceKarigiannisConstruction.lean` (master theorem `jk_z23_construction_realizes_gift_betti`, 0 sorry, 0 axioms).
+- Companion paper [D] (Donaldson Analytic Note, Zenodo 10.5281/zenodo.20039066) provides an explicit closed-form positive G₂-structure ansatz at the neck level with hyperkähler rotation and five-layer Picard-Lefschetz Wirtinger certificate. Smooth analytic compact construction remains an open problem.
+
+**Three new framework-level results** (beyond the original 33 predictions)
+- A proposed E₈ → Standard Model breaking chain with anomaly-cancellation checks and bundle-universality diagnostics.
+- A combined wilson_line+instanton lepton mass hierarchy mechanism, α = e^K, achieving sub-percent precision from two independent geometric sources.
+- A sensitivity analysis: 2.13× overdetermination, coincidence probability P=10⁻³⁴⁶ under a uniform null and P=10⁻¹³³ under an algebraic null model on 4.2M random formulas.
+
+**Lean certificate** (core v3.4.19)
+- 213 certificate conjuncts, 4 main-chain axioms, 0 sorry, 134 .lean files, 8378 build jobs (Lean 4.29.0).
+- Standard transcendental palette extended to {π, √2, ln 2, ζ, golden ratio φ}.
+
+**Companion papers (Zenodo, peer-reviewable)**
+- [A] Certified G₂ Metric (10.5281/zenodo.19892350): first computer-assisted existence proof for a metric with G₂ holonomy on a TCS neck model.
+- [B] Spectral Geometry (10.5281/zenodo.19893371): Laplacian spectrum, harmonic forms, λ₁ = 6π²/475.
+- [C] Newton-Kantorovich on K3 (10.5281/zenodo.19708916): NK diagnostics on a Donaldson K3 metric.
+- [D] Donaldson Analytic Note (10.5281/zenodo.20039066): explicit closed-form G₂ ansatz on a K3-coassociative neck with Wirtinger certificate.
+
+**Bibliography** consolidated in shared `gift_3.4_bib.tex`, sequential numbering [1]..[46].
+
+#### Changed
+
+- δ_CP framing: canonical 197° prediction preserved; the 62/69 compactification factor is documented in S2 Appendix F as a post-hoc structural observation, **not** adopted as a revision (the v3.4 main body no longer presents it as a contingency factor).
+- "containing zero continuous adjustable parameters" reformulated to explicitly flag the discrete topological inputs and the metric normalization target det(g) = 65/32.
+- Selection-rule wording softened: "Within the declared formula grammar and structural-constant set, the observed relations are highly constrained and statistically non-generic; a first-principles derivation of the full formula-selection rule remains open."
+- Joyce existence theorem framing softened from "guaranteeing existence" to "providing the perturbative existence criterion" (subject to ‖T‖ < ε₀ = 0.1).
+- "Author's Related Works" section consolidates companion paper DOIs and code/Lean GitHub links (replaces former "Data Availability" section).
+
+#### Compile state
+
+main 44 pp, S1 27 pp, S2 42 pp, S3 10 pp. 0 LaTeX errors, 0 undefined references, GIFT documentation CI: 0 errors / 0 warnings.
+
 ## [3.3.25] - 2026-04-18
 
 ### K3 Newton-Kantorovich Certificate Notebook
