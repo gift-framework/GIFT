@@ -5,11 +5,13 @@ layout: default
 
 # GIFT Statistical Evidence
 
-**Version**: 3.3.24
-**Validation Date**: March 2026
-**Scripts**: [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/bulletproof_validation_v33.py) (7-component), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/exhaustive_validation_v33.py) (3M+ configs)
+**Version**: 3.4.13
+**Validation Date**: April 2026
+**Scripts**: [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/bulletproof_validation_v33.py) (7-component, v3.3.24 archive), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/exhaustive_validation_v33.py) (3M+ configs)
 
-> **Note (v3.3.24)**: The detailed statistics below were computed with NuFIT 5.3 experimental values (0.21% mean deviation). With the v3.3.24 update to NuFIT 6.0 and improved neutrino formulas (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), the current mean deviation is **0.24%** (32 well-measured observables) / **0.57%** (all 33 incl. δ_CP). The qualitative conclusions (significance > 4.2σ, unique optimum among 3M+ configs, decisive Bayes factors) remain unchanged.
+> **Note (v3.4)**: top-level v3.4 stats are **0.39%** mean deviation across **35 Type I (exact-target) observables**, with log₁₀ p_algebraic = −138 over 3M+ configurations (95-observable catalog: 35 Type I + 19 Type II + 21 Type III + 22 Type IV). The detailed sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis (0.24% on 32 well-measured / 0.57% all 33) for traceability. The qualitative conclusions (significance > 4.2σ, unique optimum among 3M+ configs, decisive Bayes factors) hold across both versions.
+>
+> **Historical note (v3.3.24)**: the detailed statistics below were computed with NuFIT 5.3 experimental values (0.21% mean deviation). With the v3.3.24 update to NuFIT 6.0 and improved neutrino formulas (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), the v3.3.24 mean deviation was 0.24% (32 well-measured) / 0.57% (all 33 incl. δ_CP).
 
 ---
 
@@ -417,5 +419,6 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.3.24: Bullet-Proof Statistical Evidence*
-*Validation: March 2026 | 7-component analysis | Mean deviation: 0.24% (32 well-measured) / 0.57% (all 33)*
+*GIFT Framework v3.4.19: Bullet-Proof Statistical Evidence*
+*Top-level: mean deviation 0.39% across 35 Type I observables (PDG 2024 / NuFIT 6.0); log₁₀ p_algebraic = −138 over 3M+ configurations*
+*Detailed sector breakdown above: v3.3.24 NuFIT 6.0 analysis (0.24% on 32 well-measured / 0.57% all 33)*

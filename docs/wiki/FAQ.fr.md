@@ -37,14 +37,14 @@ GIFT est un cadre théorique spéculatif qui présente des prédictions testable
 
 Le cadre est évalué selon :
 - La rigueur mathématique des dérivations
-- La précision de l'accord expérimental (actuellement 0,24 % d'écart moyen sur 32 observables bien mesurés, PDG 2024 / NuFIT 6.0)
+- La précision de l'accord expérimental (actuellement 0,39 % d'écart moyen sur 35 observables Type I (cibles exactes), PDG 2024 / NuFIT 6.0)
 - La falsifiabilité (critères clairs en S2 Section 10)
 - La reproductibilité (notebook computationnel disponible)
 
 ### Combien y a-t-il de paramètres libres ?
 
 **Modèle Standard** : 19 paramètres libres
-**GIFT v3.3** : zéro paramètre continu ajustable
+**GIFT v3.4** : zéro paramètre continu ajustable (3 primitives entières : N=3, r₈=8, r₂=2)
 
 Toutes les quantités découlent d'une structure topologique fixe (groupe de jauge E₈×E₈, variété K₇ à holonomie G₂). Le cadre atteint une « détermination structurelle » où des choix mathématiques discrets déterminent uniquement toutes les prédictions.
 
@@ -120,7 +120,7 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 
 ### Quelles observables GIFT prédit-il ?
 
-**33 prédictions sans dimension** (v3.3 : 18 cœur + 15 étendues) :
+**95 observables** (v3.4 : 35 Type I cibles exactes + 19 Type II + 21 Type III + 22 Type IV) :
 
 - 3 couplages de jauge (α, sin²θ_W, α_s)
 - 1 nombre de générations (N_gen = 3)
@@ -131,10 +131,9 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 - 2 paramètres cosmologiques (Ω_DE, n_s)
 - 2 paramètres électrofaibles (λ_H, hiérarchie)
 - 2 constantes topologiques (κ_T, det(g))
+- prédictions Type II/III/IV supplémentaires en S3
 
-Écart moyen avec l'expérience : **0,24 %** sur 32 observables bien mesurés (0,57 % en incluant δ_CP ; PDG 2024 / NuFIT 6.0)
-
-*Note : les prédictions dimensionnelles étendues (masses, échelle électrofaible) sont documentées dans des fichiers historiques (v2.3) avec 0,197 % d'écart moyen sur 39 observables.*
+Écart moyen avec l'expérience : **0,39 %** sur 35 observables Type I (cibles exactes) (PDG 2024 / NuFIT 6.0).
 
 ### Et les paramètres dimensionnels comme les masses ?
 
@@ -166,7 +165,7 @@ Les prédictions dimensionnelles (statut : THEORETICAL/DERIVED) sont moins rigou
 - Couplages de jauge : moyenne 0,03 %
 - Matrice CKM : moyenne 0,11 %
 
-**Globalement** : moyenne 0,24 % sur 32 observables bien mesurés (0,57 % en incluant δ_CP, v3.3, PDG 2024 / NuFIT 6.0)
+**Globalement** : moyenne 0,39 % sur 35 observables Type I (cibles exactes) (v3.4, PDG 2024 / NuFIT 6.0)
 
 Voir S2 Section 10 pour l'analyse statistique détaillée.
 
@@ -356,19 +355,19 @@ Cela dépend de votre profil :
 
 ### Y a-t-il un article que je peux citer ?
 
-La version actuelle (v3.3) est disponible sur GitHub. Format de citation dans le [Guide de citation](Citation-Guide.html) :
+La version actuelle (v3.4) est disponible sur GitHub. Format de citation dans le [Guide de citation](Citation-Guide.html) :
 
 ```bibtex
-@software{gift_framework_v33,
-  title={GIFT Framework v3.3: Geometric Information Field Theory},
+@software{gift_framework_v34,
+  title={GIFT Framework v3.4: Geometric Information Field Theory},
   author={de La Fournière, Brieuc},
   year={2026},
   url={https://github.com/gift-framework/GIFT},
-  version={3.3.0}
+  version={3.4.13}
 }
 ```
 
-Soumission à arXiv et à des revues à comité de lecture est prévue. Consultez le dépôt pour les mises à jour.
+Le triptyque (Articles A, B, C) est publié sur Zenodo (DOIs 19892350, 19893371, 19708916). Soumission à des revues à comité de lecture en cours.
 
 ### Puis-je l'utiliser dans ma recherche ?
 

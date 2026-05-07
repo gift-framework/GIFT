@@ -5,21 +5,39 @@ layout: default
 
 # GIFT Observable Reference
 
-**Version**: 3.3.24
+**Version**: 3.4 (top-level snapshot; see Supplement S3 for the full 95-observable dataset). The legacy v3.3.24 sector breakdown below is preserved for traceability of the NuFIT 6.0 analysis.
 **Status**: Reference documentation
-**Date**: March 2026
+**Date**: May 2026
 
 ---
 
-## Executive Summary
+## Executive Summary (v3.4)
 
 | Metric | Value |
 |--------|-------|
-| **Core dimensionless predictions** | 18 |
-| **Extended dimensionless** | 15 |
-| **Cosmological parameters** | 11 |
-| **Structural constants** | 18 |
-| **Total cataloged quantities** | **51** |
+| **Total observables** | **95** (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Lean-certified** | 55 / 95 (Type I: 33/33, Type III: 14/21, Type IV: 8/22) |
+| **With experimental comparison** | 66 / 95 |
+| Mean deviation (Type I, 33 obs) | 0.73% |
+| Mean deviation (Type II, 19 obs) | 0.17% |
+| Mean deviation (Type III, 21 obs) | 3.4% |
+| Exact matches (< 0.01%) | 11 |
+| Within 1% | 53 |
+| Free parameters (continuously adjustable) | 0 |
+| Lean certificate | 213 conjuncts, 4 main-chain axioms, 0 sorry, 134 .lean files |
+| Statistical null | uniform P=10⁻³⁴⁶, algebraic null (4.2M random formulas) P=10⁻¹³³, overdetermination 2.13× |
+
+---
+
+### Legacy v3.3.24 sector breakdown (preserved for traceability)
+
+| Metric | Value (v3.3.24) |
+|--------|-------|
+| Core dimensionless predictions | 18 |
+| Extended dimensionless | 15 |
+| Cosmological parameters | 11 |
+| Structural constants | 18 |
+| Total cataloged quantities | 51 |
 | Mean deviation (32 well-measured) | 0.24% (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0) |
 | Exact matches (< 0.1%) | 14 (42%) |
 | Multiply determined (>=3 expr.) | 92% |
@@ -437,4 +455,4 @@ Results: [`publications/references/observables.csv`](https://github.com/gift-fra
 
 ---
 
-*GIFT Framework v3.3 - Observable Reference*
+*GIFT Framework v3.4 - Observable Reference*

@@ -35,7 +35,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Données de référence
 | Page | Description |
 |------|-------------|
-| 🇫🇷 [Référence des observables](Observable-Reference.fr.html) | 89 observables : formules, valeurs, écarts |
+| 🇫🇷 [Référence des observables](Observable-Reference.fr.html) | 95 observables : formules, valeurs, écarts (Type I/II/III/IV) |
 | 🇫🇷 [Preuves statistiques](Statistical-Evidence.fr.html) | Validation à 7 composantes, recherche exhaustive sur 3M+ configs |
 | 🇫🇷 [Résumé de validation](Validation-Summary.fr.html) | Résultats secteur par secteur avec NuFIT 6.0 |
 | 🇫🇷 [Validations indépendantes](Independent-Validations.fr.html) | Recherches externes qui convergent avec GIFT |
@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html) | Le gaming comme école d'intuition quantique (ouverture de série) |
 | 🇫🇷 [Orientation, pas ontologie](Blog-Orientation-Not-Ontology.fr.html) | La posture philosophique derrière GIFT |
 | 🇫🇷 [Et si l'univers était un set Lego ?](Blog-Lego-Set-Universe.fr.html) | Compter les pièces, reconnaître le thème, lire la notice |
 | 🇫🇷 [« Le nom de l'auteur paraît inventé »](Blog-Brieucs-Gift.fr.html) | Apprendre la physique avec une IA : l'origine accidentelle de GIFT |

@@ -13,12 +13,12 @@ layout: default
 
 | Propriété | Valeur |
 |---|---|
-| **Prédictions** | 89 observables (33 sans dimension + 56 structurelles/cosmologiques) |
-| **Écart moyen** | 0,24 % sur 32 observables bien mesurées (PDG 2024 / NuFIT 6.0) |
-| **Paramètres libres** | 0 |
-| **Vérification Lean 4** | 130 fichiers, 8378 jobs de build, 0 sorry, 7 axiomes |
+| **Prédictions** | 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Écart moyen** | 0,39 % sur 35 relations Type I (cible exacte, PDG 2024 / NuFIT 6.0) |
+| **Paramètres libres** | 0 (3 primitives entières : N=3, r₈=8, r₂=2) |
+| **Vérification Lean 4** | 134 fichiers, 8392 jobs de build, 0 sorry, 4 axiomes principaux (core v3.4.19) |
 | **Significativité statistique** | p < 2×10⁻⁵ (σ > 4,2), unique parmi 3M+ configurations |
-| **Modèle nul Monte Carlo** | P(algébrique) = 10⁻¹³³ sur 4,2M de formules |
+| **Modèle nul Monte Carlo** | P(algébrique) = 10⁻¹³⁸ sur 3M+ formules |
 
 ---
 
@@ -28,8 +28,8 @@ layout: default
 |---|---|
 | **Vous découvrez ?** | [Pour commencer](Getting-Started.fr.html) : choisissez votre voie |
 | **Lire les articles** | [Article principal](Paper-Main-Framework.html) ([Métrique G₂ explicite](Paper-Explicit-G2-Metric.html)) [Géométrie spectrale](Paper-Spectral-Geometry.html) |
-| **Parcourir les prédictions** | [Référence des observables](Observable-Reference.html), 89 observables avec formules |
-| **Vérifier les preuves** | [Formalisation Lean](Lean-Formalization.html), certificat à 127 conjonctions |
+| **Parcourir les prédictions** | [Référence des observables](Observable-Reference.html), 95 observables avec formules |
+| **Vérifier les preuves** | [Formalisation Lean](Lean-Formalization.html), certificat à 213 conjonctions |
 
 ---
 
@@ -68,6 +68,12 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 ---
 
+## Vulgarisation
+
+Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html)*, ouverture d'une série sur le gaming comme école d'intuition quantique.
+
+---
+
 ## Structure
 
 Ce wiki regroupe la documentation de GIFT à travers trois dépôts :
@@ -80,4 +86,4 @@ Parcourez la barre latérale pour la navigation complète, ou consultez le [plan
 
 ---
 
-*GIFT Framework v3.4 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo](https://doi.org/10.5281/zenodo.18837071) | Licence MIT*
+*GIFT Framework v3.4 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Article A)](https://doi.org/10.5281/zenodo.19892350) · [Article B](https://doi.org/10.5281/zenodo.19893371) · [Article C](https://doi.org/10.5281/zenodo.19708916) | Licence MIT*

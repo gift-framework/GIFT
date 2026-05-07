@@ -222,4 +222,4 @@ La contribution méthodologique est indépendante de la correction physique de G
 
 ---
 
-*Cadre GIFT v3.3.31, documentation de vérification formelle*
+*Cadre GIFT v3.4, documentation de vérification formelle*

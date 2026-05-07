@@ -36,7 +36,7 @@ GIFT est un cadre théorique spéculatif qui présente des prédictions testable
 
 Le cadre est évalué selon :
 - La rigueur mathématique des dérivations
-- La précision de l'accord expérimental (actuellement 0,24 % d'écart moyen sur 32 observables bien mesurés, PDG 2024 / NuFIT 6.0)
+- La précision de l'accord expérimental (v3.4 : 95 observables en 4 types : Type I 0,73 % d'écart moyen sur 33 obs, Type II 0,17 % sur 19 obs, Type III 3,4 % sur 21 obs ; 11 correspondances exactes, 53 sous 1 % ; PDG 2024 / NuFIT 6.0)
 - La falsifiabilité (critères clairs en S2 Section 10)
 - La reproductibilité (notebook computationnel disponible)
 
@@ -131,9 +131,9 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 - 2 paramètres électrofaibles (λ_H, hiérarchie)
 - 2 constantes topologiques (κ_T, det(g))
 
-Écart moyen avec l'expérience : **0,24 %** sur 32 observables bien mesurés (0,57 % en incluant δ_CP ; PDG 2024 / NuFIT 6.0)
+Écart moyen avec l'expérience (v3.4, 95 observables) : **Type I 0,73 %** sur 33 ratios sans dimension, **Type II 0,17 %** sur 19 extractions physiques en une étape, **Type III 3,4 %** sur 21 chaînes dynamiques multi-étapes ; 11 correspondances exactes (<0,01 %), 53 sous 1 % (PDG 2024 / NuFIT 6.0).
 
-*Note : les prédictions dimensionnelles étendues (masses, échelle électrofaible) sont documentées dans des fichiers historiques (v2.3) avec 0,197 % d'écart moyen sur 39 observables.*
+*Référence historique (v3.3.24) : 0,24 % d'écart moyen sur 32 observables bien mesurés (0,57 % en incluant δ_CP), préservée dans le découpage par secteur de Statistical-Evidence.*
 
 ### Et les paramètres dimensionnels comme les masses ?
 
@@ -161,11 +161,11 @@ Les prédictions dimensionnelles (statut : THEORETICAL/DERIVED) sont moins rigou
 - n_s : 0,004 % d'écart
 
 **Haute précision** (<0,5 %) :
-- Secteur neutrino complet : moyenne 0,24 %
+- Secteur neutrino complet : moyenne 0,24 % (référence v3.3.24)
 - Couplages de jauge : moyenne 0,03 %
 - Matrice CKM : moyenne 0,11 %
 
-**Globalement** : moyenne 0,24 % sur 32 observables bien mesurés (0,57 % en incluant δ_CP, v3.3, PDG 2024 / NuFIT 6.0)
+**Globalement (v3.4, dataset à 95 observables)** : Type I 0,73 % sur 33 ratios, Type II 0,17 % sur 19 obs, Type III 3,4 % sur 21 obs ; 11 exactes (<0,01 %), 53 sous 1 %. La référence historique v3.3.24 (0,24 % sur 32 obs, 0,57 % incl. δ_CP) est préservée par secteur pour traçabilité.
 
 Voir S2 Section 10 pour l'analyse statistique détaillée.
 

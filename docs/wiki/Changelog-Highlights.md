@@ -9,6 +9,33 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 
 ---
 
+## v3.4.13, 2026-04-29
+
+**Triptyque published & axiom reduction milestone**
+
+- **Papers A, B, C published on Zenodo** (DOIs 19892350, 19893371, 19708916): the peer-reviewable companion triptyque (certified G₂ structure, spectral geometry, K3 NK diagnostics)
+- **Lean axiom reduction**: 38 → 4 main-chain axioms (15 total incl. interval-arithmetic certificates), 0 sorry, 213 conjuncts certified
+- **K3NewtonKantorovich v3.0 hardcore**: η ×2.4 tighter, Joyce margin ×17 below ε₀
+- **γ² = 24π²/7 derived** (T² Hodge Laplacian + H¹(K3)=0; was PSLQ artifact 135/4)
+- **95 observables**: 35 Type I + 19 Type II + 21 Type III + 22 Type IV; 0.39% mean deviation on Type I (PDG 2024 / NuFIT 6.0)
+- **3 integer primitives**: N=3, r₈=8, r₂=2 (no continuous adjustable parameters)
+
+## v3.4.3, 2026-04
+
+**G₂ Mathlib steps 1-5 promoted to theorems**
+
+- φ₀ ordered 3-form on ℝ⁷, Bryant identity ∑φ₀² = 6δ, rank=35 → dim(g₂)=14, B = 144δ, det·gram theorem (Aristotle)
+- 8 → 4 axioms by promoting algebraic identities to native_decide proofs
+- MollifiedSum archived; G₂ThreeForm axiomized cleanly
+
+## v3.4.0, 2026-04
+
+**Metric-first program complete · K3 CAP**
+
+- Computer-assisted proof of torsion-free G₂ metric existence on TCS neck model: h ≤ 8.95×10⁻⁹, ×56 million margin below Joyce ε₀
+- K3 NK certificates: Fermat quartic ×990, CI(2,2,2) ×6.4 (Lean-formalized)
+- Off-diagonal PSLQ verdict: L[4,2], L[5,3] formulas were PSLQ artifacts (dropped from claims)
+
 ## v3.3.24, 2026-03-02
 
 **NuFIT 6.0 Update & Publication Cleanup**

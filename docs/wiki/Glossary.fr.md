@@ -390,9 +390,9 @@ Cadre introduit en v2.1 reliant la torsion non nulle sur K₇ au flot du groupe 
 ### Pont d'échelle (v2.1)
 Infrastructure mathématique reliant les observables sans dimension aux observables dimensionnels : Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1,63×10⁶.
 
-### Lean 4 (v3.3)
-Démonstrateur de théorèmes utilisé pour la vérification formelle des relations exactes de GIFT. Le dépôt [gift-framework/core](https://github.com/gift-framework/core) contient 455+ relations certifiées, incluant le système de racines de E₈, les propriétés du produit vectoriel G₂, la théorie spectrale, les bornes TCS, et les rapports de masses Yukawa. Théorème clé : `GIFT_framework_certified`.
+### Lean 4 (v3.4)
+Démonstrateur de théorèmes utilisé pour la vérification formelle des relations exactes de GIFT. Le dépôt [gift-framework/core](https://github.com/gift-framework/core) contient 213 conjonctions certifiées (132 fichiers Lean, 4 axiomes principaux, 0 sorry) incluant le système de racines de E₈, les propriétés du produit vectoriel G₂, la théorie spectrale, les bornes TCS, les rapports de masses Yukawa, et le certificat Newton-Kantorovich K3. Théorème clé : `GIFT_framework_certified`.
 
 ---
 
-Dernière mise à jour : v3.3.31 (2026-03-09)
+Dernière mise à jour : v3.4.19 (2026-05-07)

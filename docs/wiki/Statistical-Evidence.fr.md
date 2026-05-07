@@ -5,11 +5,13 @@ layout: default
 
 # Preuves statistiques de GIFT
 
-**Version** : 3.3.24
-**Date de validation** : mars 2026
-**Scripts** : [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/bulletproof_validation_v33.py) (7 composantes), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/exhaustive_validation_v33.py) (3M+ configs)
+**Version** : 3.4.13
+**Date de validation** : avril 2026
+**Scripts** : [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/bulletproof_validation_v33.py) (7 composantes, archive v3.3.24), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/exhaustive_validation_v33.py) (3M+ configurations)
 
-> **Note (v3.3.24)** : les statistiques détaillées ci-dessous ont été calculées avec les valeurs expérimentales NuFIT 5.3 (0,21 % d'écart moyen). Avec la mise à jour v3.3.24 vers NuFIT 6.0 et les formules neutrino améliorées (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), l'écart moyen actuel est de **0,24 %** (32 observables bien mesurés) / **0,57 %** (tous les 33, y compris δ_CP). Les conclusions qualitatives (significativité > 4,2 σ, optimum unique parmi 3M+ configurations, facteurs de Bayes décisifs) restent inchangées.
+> **Note (v3.4)** : les statistiques de tête v3.4 sont **0,39 %** d'écart moyen sur **35 observables Type I (cibles exactes)**, avec log₁₀ p_algébrique = −138 sur 3M+ configurations (catalogue 95 observables : 35 Type I + 19 Type II + 21 Type III + 22 Type IV). Les ventilations sectorielles ci-dessous conservent l'analyse v3.3.24 NuFIT 6.0 (0,24 % sur 32 bien mesurés / 0,57 % tous les 33) à des fins de traçabilité. Les conclusions qualitatives (significativité > 4,2 σ, optimum unique parmi 3M+ configurations, facteurs de Bayes décisifs) tiennent dans les deux versions.
+>
+> **Note historique (v3.3.24)** : les statistiques détaillées ci-dessous ont été calculées avec les valeurs expérimentales NuFIT 5.3 (0,21 % d'écart moyen). Avec la mise à jour v3.3.24 vers NuFIT 6.0 et les formules neutrino améliorées (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), l'écart moyen v3.3.24 était de 0,24 % (32 bien mesurés) / 0,57 % (tous les 33, y compris δ_CP).
 
 ---
 
@@ -417,5 +419,6 @@ GIFT atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. 
 
 ---
 
-*GIFT Framework v3.3.24 : preuves statistiques à toute épreuve*
-*Validation : mars 2026 | analyse à 7 composantes | écart moyen : 0,24 % (32 bien mesurés) / 0,57 % (tous les 33)*
+*GIFT Framework v3.4.19 : preuves statistiques à toute épreuve*
+*Tête : écart moyen 0,39 % sur 35 observables Type I (PDG 2024 / NuFIT 6.0) ; log₁₀ p_algébrique = −138 sur 3M+ configurations*
+*Ventilation sectorielle ci-dessus : analyse v3.3.24 NuFIT 6.0 (0,24 % sur 32 bien mesurés / 0,57 % tous les 33)*

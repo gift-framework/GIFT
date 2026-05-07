@@ -12,12 +12,13 @@ This repository contains the **theoretical documentation** for GIFT (Geometric I
 GIFT/
 ├── publications/
 │   ├── papers/
-│   │   ├── markdown/       # Core documents (v3.3)
-│   │   │   ├── GIFT_v3.3_main.md        # Main paper (accessible, quasi-autonomous)
-│   │   │   ├── GIFT_v3.3_S1_foundations.md  # E₈, G₂, K₇ foundations
-│   │   │   ├── GIFT_v3.3_S2_derivations.md  # All 33 dimensionless derivations
-│   │   │   ├── Explicit_G2_Metric.md         # Analytical G₂ metric construction
-│   │   │   └── Spectral_Geometry.md          # Spectral geometry (KK, Yukawa, gauge)
+│   │   ├── markdown/       # Core documents (v3.4)
+│   │   │   ├── GIFT_v3.4_main.md             # Main paper
+│   │   │   ├── GIFT_v3.4_S1_foundations.md   # E₈, G₂, K₇ foundations
+│   │   │   ├── GIFT_v3.4_S2_derivations.md   # All 33 Type I derivations
+│   │   │   ├── GIFT_v3.4_S3_observables.md   # Full 95-observable dataset
+│   │   │   ├── g2_certified_neck.md          # Companion Paper A (certified G₂ metric)
+│   │   │   ├── g2_spectral.md                # Companion Paper B (spectral geometry)
 │   │   └── tex/            # LaTeX sources
 │   ├── references/         # Data & reference catalogs
 │   ├── outreach/           # Vulgarization & blog posts

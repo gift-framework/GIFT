@@ -8,13 +8,16 @@ layout: default
 **Geometric Information Field Theory: Topological Derivation of Standard Model Parameters from G₂ Holonomy Manifolds**
 
 *Brieuc de La Fournière (2026)*
-[Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.3_main.md) | [Zenodo DOI: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+
+[**PDF (main, 44 pp.)**](https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_3.4_main.pdf) | [**DOI: 10.5281/zenodo.20070101**](https://doi.org/10.5281/zenodo.20070101) | [Markdown](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md)
+
+> **Companion papers (Zenodo):** [A: certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B: spectral](https://doi.org/10.5281/zenodo.19893371) · [C: K3 NK](https://doi.org/10.5281/zenodo.19708916) · [D: Donaldson analytic](https://doi.org/10.5281/zenodo.20039066) · [v3.3 archive](https://doi.org/10.5281/zenodo.18837071)
 
 ---
 
 ## Abstract
 
-Framework proposing that 19 Standard Model dimensionless parameters emerge as topological invariants of a 7D G₂ holonomy manifold K₇ with Betti numbers (b₂=21, b₃=77) coupled to E₈×E₈ gauge structure. Derives 33 dimensionless predictions with mean deviation 0.24% from experiment. 18 core relations formally verified in Lean 4. DUNE will test δ_CP = 197° falsification criterion.
+Framework proposing that Standard Model dimensionless parameters emerge as topological invariants of a 7D G₂ holonomy manifold K₇ with Betti numbers (b₂=21, b₃=77) coupled to E₈×E₈ gauge structure. v3.4 catalogues 95 observables (35 Type I exact-target relations) with 0.39% mean deviation on Type I from experiment (PDG 2024 / NuFIT 6.0); 213 conjuncts certified in Lean 4 with 4 main-chain axioms. DUNE will test δ_CP = 197° falsification criterion.
 
 ---
 
@@ -30,7 +33,7 @@ Framework proposing that 19 Standard Model dimensionless parameters emerge as to
 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477.2 | 0.004% |
 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% |
 
-**Global**: 33 predictions, 0.24% mean deviation (32 well-measured), 4 exact, 28/33 sub-1%
+**Global** (v3.4): 95 observables in 4 types (33 Type I + 19 II + 21 III + 22 IV); 66 with experimental comparison; mean deviations 0.73% (Type I), 0.17% (Type II), 3.4% (Type III); 11 exact matches (<0.01%), 53 within 1%
 
 ---
 

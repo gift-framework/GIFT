@@ -26,7 +26,7 @@ Complete index of all wiki pages.
 ## Papers
 | Page | Description |
 |------|-------------|
-| [Paper Main Framework](Paper-Main-Framework.html) | Main paper: 33 predictions, 0.24% mean deviation |
+| [Paper Main Framework](Paper-Main-Framework.html) | Main paper: 95 observables (33 Type I, 0.73% mean dev) + 19 Type II + 21 Type III + 22 Type IV |
 | [Paper S1 Foundations](Paper-S1-Foundations.html) | S1: E₈, G₂, K₇ mathematical foundations |
 | [Paper S2 Derivations](Paper-S2-Derivations.html) | S2: Complete derivations for all 33 observables |
 | [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) | 169-parameter Chebyshev-Cholesky G₂ metric |
@@ -35,7 +35,7 @@ Complete index of all wiki pages.
 ## Reference Data
 | Page | Description |
 |------|-------------|
-| [Observable Reference](Observable-Reference.html) | 89 observables: formulas, values, deviations |
+| [Observable Reference](Observable-Reference.html) | 95 observables: formulas, values, deviations (Type I/II/III/IV) |
 | [Statistical Evidence](Statistical-Evidence.html) | 7-component validation, 3M+ exhaustive search |
 | [Validation Summary](Validation-Summary.html) | Sector-by-sector results with NuFIT 6.0 |
 | [Independent Validations](Independent-Validations.html) | External research converging with GIFT |
@@ -46,6 +46,7 @@ English posts are hosted on Substack ([giftheory.substack.com](https://giftheory
 
 | Post | Description |
 |------|-------------|
+| [Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
 | [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
 | [What if the universe was a Lego set?](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
 | ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of GIFT |

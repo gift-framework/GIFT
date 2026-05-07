@@ -1,0 +1,280 @@
+% ============================================
+% GIFT v3.4 — Shared Preamble
+% ============================================
+% Usage: \input{gift_preamble} after \documentclass
+
+% ENCODING & FONTS
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% PAGE LAYOUT (Golden Ratio)
+\usepackage[margin=1.618cm, top=2.618cm, bottom=2.618cm]{geometry}
+
+% ESSENTIAL PACKAGES
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{enumitem}
+% Unicode fallbacks (pandoc artifacts that survive markdown→LaTeX)
+\DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\sqrt{\,}}}
+\DeclareUnicodeCharacter{2713}{\ensuremath{\checkmark}}
+\DeclareUnicodeCharacter{2717}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{2070}{\ensuremath{^{0}}}
+\DeclareUnicodeCharacter{00B9}{\ensuremath{^{1}}}
+\DeclareUnicodeCharacter{00B2}{\ensuremath{^{2}}}
+\DeclareUnicodeCharacter{00B3}{\ensuremath{^{3}}}
+\DeclareUnicodeCharacter{2074}{\ensuremath{^{4}}}
+\DeclareUnicodeCharacter{2075}{\ensuremath{^{5}}}
+\DeclareUnicodeCharacter{2076}{\ensuremath{^{6}}}
+\DeclareUnicodeCharacter{2077}{\ensuremath{^{7}}}
+\DeclareUnicodeCharacter{2078}{\ensuremath{^{8}}}
+\DeclareUnicodeCharacter{2079}{\ensuremath{^{9}}}
+\DeclareUnicodeCharacter{2071}{\ensuremath{^{i}}}
+\DeclareUnicodeCharacter{2080}{\ensuremath{_{0}}}
+\DeclareUnicodeCharacter{2081}{\ensuremath{_{1}}}
+\DeclareUnicodeCharacter{2082}{\ensuremath{_{2}}}
+\DeclareUnicodeCharacter{2083}{\ensuremath{_{3}}}
+\DeclareUnicodeCharacter{2084}{\ensuremath{_{4}}}
+\DeclareUnicodeCharacter{2085}{\ensuremath{_{5}}}
+\DeclareUnicodeCharacter{2086}{\ensuremath{_{6}}}
+\DeclareUnicodeCharacter{2087}{\ensuremath{_{7}}}
+\DeclareUnicodeCharacter{2088}{\ensuremath{_{8}}}
+\DeclareUnicodeCharacter{2089}{\ensuremath{_{9}}}
+\DeclareUnicodeCharacter{208A}{\ensuremath{_{+}}}
+\DeclareUnicodeCharacter{208B}{\ensuremath{_{-}}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{2502}{|}
+\DeclareUnicodeCharacter{25BC}{\ensuremath{\blacktriangledown}}
+\DeclareUnicodeCharacter{2500}{\ensuremath{-}}
+\DeclareUnicodeCharacter{2514}{\ensuremath{\llcorner}}
+\DeclareUnicodeCharacter{251C}{\ensuremath{\vdash}}
+\DeclareUnicodeCharacter{2026}{\ldots}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2229}{\ensuremath{\cap}}
+\DeclareUnicodeCharacter{222A}{\ensuremath{\cup}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
+\DeclareUnicodeCharacter{2245}{\ensuremath{\cong}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2261}{\ensuremath{\equiv}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
+\DeclareUnicodeCharacter{2225}{\ensuremath{\|}}
+% Greek letters used in body text (pandoc passes them through unchanged)
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}}
+\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
+\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
+\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
+\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
+\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{0398}{\ensuremath{\Theta}}
+\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
+\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{03A8}{\ensuremath{\Psi}}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2207}{\ensuremath{\nabla}}
+\DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
+\DeclareUnicodeCharacter{2218}{\ensuremath{\circ}}
+\DeclareUnicodeCharacter{2032}{\ensuremath{\prime}}
+\DeclareUnicodeCharacter{2113}{\ensuremath{\ell}}
+\DeclareUnicodeCharacter{210F}{\ensuremath{\hbar}}
+\DeclareUnicodeCharacter{27E8}{\ensuremath{\langle}}
+\DeclareUnicodeCharacter{27E9}{\ensuremath{\rangle}}
+\DeclareUnicodeCharacter{2308}{\ensuremath{\lceil}}
+\DeclareUnicodeCharacter{2309}{\ensuremath{\rceil}}
+\DeclareUnicodeCharacter{230A}{\ensuremath{\lfloor}}
+\DeclareUnicodeCharacter{230B}{\ensuremath{\rfloor}}
+\DeclareUnicodeCharacter{222B}{\ensuremath{\int}}
+\DeclareUnicodeCharacter{2211}{\ensuremath{\sum}}
+\DeclareUnicodeCharacter{220F}{\ensuremath{\prod}}
+\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}
+\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{2236}{\ensuremath{\colon}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{21A6}{\ensuremath{\mapsto}}
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}
+\DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
+\DeclareUnicodeCharacter{2282}{\ensuremath{\subset}}
+\DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
+\DeclareUnicodeCharacter{2287}{\ensuremath{\supseteq}}
+\DeclareUnicodeCharacter{222B}{\ensuremath{\int}}
+\DeclareUnicodeCharacter{2205}{\ensuremath{\emptyset}}
+\DeclareUnicodeCharacter{2299}{\ensuremath{\odot}}
+\DeclareUnicodeCharacter{2220}{\ensuremath{\angle}}
+\DeclareUnicodeCharacter{2135}{\ensuremath{\aleph}}
+\DeclareUnicodeCharacter{207B}{\ensuremath{^{-}}}
+\DeclareUnicodeCharacter{207A}{\ensuremath{^{+}}}
+\DeclareUnicodeCharacter{220E}{\ensuremath{\blacksquare}}
+\DeclareUnicodeCharacter{2061}{}
+\DeclareUnicodeCharacter{2062}{}
+\DeclareUnicodeCharacter{2063}{}
+\DeclareUnicodeCharacter{2009}{\,}
+\DeclareUnicodeCharacter{200A}{\,}
+\DeclareUnicodeCharacter{200B}{}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
+\DeclareUnicodeCharacter{2099}{\ensuremath{_{n}}}
+\DeclareUnicodeCharacter{2098}{\ensuremath{_{m}}}
+\DeclareUnicodeCharacter{2096}{\ensuremath{_{k}}}
+\DeclareUnicodeCharacter{2095}{\ensuremath{_{h}}}
+\DeclareUnicodeCharacter{2090}{\ensuremath{_{a}}}
+\DeclareUnicodeCharacter{2091}{\ensuremath{_{e}}}
+\DeclareUnicodeCharacter{2093}{\ensuremath{_{x}}}
+\DeclareUnicodeCharacter{1D62}{\ensuremath{_{i}}}
+\DeclareUnicodeCharacter{2C7C}{\ensuremath{_{j}}}
+\DeclareUnicodeCharacter{2C7B}{\ensuremath{^{e}}}
+\DeclareUnicodeCharacter{1D52}{\ensuremath{^{o}}}
+\DeclareUnicodeCharacter{1D5}{\ensuremath{^{u}}}
+\DeclareUnicodeCharacter{02E1}{\ensuremath{^{l}}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{27FA}{\ensuremath{\Longleftrightarrow}}
+\DeclareUnicodeCharacter{27F9}{\ensuremath{\Longrightarrow}}
+\DeclareUnicodeCharacter{2299}{\ensuremath{\odot}}
+% Provide \tightlist used by pandoc-generated lists (no-op)
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% pandoc longtable column specs: provide \real as passthrough and a
+% `none` counter so that calc's \real{x} expansion path works.
+\newcounter{none}
+\providecommand{\real}[1]{#1}
+
+% LISTINGS
+\lstset{
+    basicstyle=\small\ttfamily,
+    breaklines=true, frame=single,
+    keepspaces=true, showstringspaces=false,
+    aboveskip=0.8em, belowskip=0.8em
+}
+
+% HEADER/FOOTER
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+% HYPERREF
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue, citecolor=blue, urlcolor=blue,
+    pdfauthor={Brieuc de La Fourniere}
+}
+
+% SPACING
+\setstretch{1.2}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+
+% TITLE FORMATTING
+\usepackage{titling}
+\pretitle{\LARGE\bfseries}
+\posttitle{\vspace{-0.4em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+\setlength{\droptitle}{-2.0em}
+
+% CUSTOM COMMANDS — GIFT notation
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Gtwo}{\mathrm{G}_2}
+\newcommand{\Kseven}{K_7}
+\newcommand{\AdS}{\mathrm{AdS}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\SM}{\mathrm{SM}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\Hol}{\mathrm{Hol}}
+\newcommand{\Ric}{\mathrm{Ric}}
+\newcommand{\Rm}{\mathrm{Rm}}
+\newcommand{\Scal}{\mathrm{Scal}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\cond}{cond}
+\newcommand{\GIFT}{\textrm{GIFT}}
+\newcommand{\CP}{\mathrm{CP}}
+\newcommand{\CKM}{\mathrm{CKM}}
+\newcommand{\PMNS}{\mathrm{PMNS}}
+\newcommand{\EW}{\mathrm{EW}}
+\newcommand{\Pl}{\mathrm{Pl}}
+\newcommand{\DE}{\mathrm{DE}}
+\newcommand{\DM}{\mathrm{DM}}
+\newcommand{\KK}{\mathrm{KK}}
+\newcommand{\NK}{\mathrm{NK}}
+\newcommand{\TCS}{\mathrm{TCS}}
+\newcommand{\PINN}{\mathrm{PINN}}
+\newcommand{\btwo}{b_2}
+\newcommand{\bthree}{b_3}
+\newcommand{\typeI}{\textsc{I}}
+\newcommand{\typeII}{\textsc{II}}
+\newcommand{\typeIII}{\textsc{III}}
+\newcommand{\typeIV}{\textsc{IV}}
+\newcommand{\proven}{\textsc{Proven}}
+
+% PDF bookmark safety
+\pdfstringdefDisableCommands{%
+  \def\textsubscript#1{#1}%
+  \def\textsuperscript#1{#1}%
+  \def\CP{CP}%
+  \def\Gtwo{G2}%
+  \def\Kseven{K7}%
+  \def\GIFT{GIFT}%
+  \def\E{E}%
+  \def\SM{SM}%
+}
+
+% THEOREM ENVIRONMENTS
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}

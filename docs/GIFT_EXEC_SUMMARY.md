@@ -42,7 +42,7 @@ The initial version of GIFT, in 2025, carried **four free geometric parameters**
 
 A second version, at the end of 2025, reduced that count to **three topological parameters**: *p₂* = 2 (a binary duality emerging from dim(G₂)/dim(K₇)), *β₀* = π/8 (an angular quantization tied to the rank of E₈), and a pentagonal factor linked to the Weyl group structure. These three parameters were no longer really free: each was a ratio of topological integers. The number of observables covered had risen to 34, with mean precision 0.13%.
 
-The current version, GIFT v3.3, took a further step. **There are no free parameters at all.** The structure is entirely fixed by the choice (*b₂*, *b₃*) = (21, 77) and the algebraic properties of E₈ × E₈. Thirty-three dimensionless predictions follow, with mean deviation of 0.24% across thirty-two well-measured observables. Eighteen of the central algebraic relations have been formally verified in Lean 4.
+The current version, GIFT v3.4, took a further step. **There are no continuously adjustable physical parameters.** The structure is entirely fixed by the choice (*b₂*, *b₃*) = (21, 77), the algebraic properties of E₈ × E₈, and a metric normalization target det(g) = 65/32. Ninety-five observables follow, organized in four types: 33 direct algebraic Type I predictions (mean deviation 0.73%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.4%), and 22 structural diagnostics (Type IV). Of the 95 observables, 55 are formally verified in Lean 4 (213 certificate conjuncts, 4 main-chain axioms, 0 sorry).
 
 This trajectory, viewed from the outside, deserves a moment's pause.
 
@@ -78,7 +78,7 @@ First, yes, some formulas were indeed found by automated search over restricted 
 
 Second, and this is the decisive point: during that exploration, formulas were encountered that produced *better* numerical deviations than those ultimately retained, but which had no structural meaning within the framework. They were set aside. That qualitative criterion (a formula must fit the geometric architecture, not merely match the data) is what distinguishes theoretical compression from numerical fitting. A numerological framework keeps whatever fits best; a structural framework keeps whatever sits inside the structure, even at the cost of slightly lower precision.
 
-Beyond this methodological discipline, several statistical analyses documented in v3.3 test the coincidence hypothesis directly.
+Beyond this methodological discipline, several statistical analyses documented in the v3.4 main paper test the coincidence hypothesis directly.
 
 **Combinatorial test**: the configuration (*b*₂, *b*₃) = (21, 77) was compared against 3,070,396 alternatives tested within a bounded space, including thirty G₂ manifolds explicitly known in the mathematical literature. It remains optimal with *p* < 2 × 10⁻⁵, corresponding to significance above 4.2σ. It is also Pareto-optimal: no other tested configuration simultaneously improves on multiple criteria.
 

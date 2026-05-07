@@ -1,10 +1,12 @@
 # GIFT Statistical Evidence
 
-**Version**: 3.3.24
-**Validation Date**: March 2026
-**Scripts**: `publications/validation/bulletproof_validation_v33.py` (7-component), `publications/validation/exhaustive_validation_v33.py` (3M+ configs)
+**Methodology version**: 3.3.24 (March 2026), kept as canonical reference for statistical method
+**Latest stats refresh**: v3.4.19 (May 2026), see headline numbers in v3.4 banner below
+**Legacy scripts**: `publications/validation/legacy/v3.3/bulletproof_validation_v33.py` (7-component), `legacy/v3.3/exhaustive_validation_v33.py` (3M+ configs), `legacy/v3.3/selection/` (Pareto formula selection)
 
-> **Note (v3.3.24)**: The detailed statistics below were computed with NuFIT 5.3 experimental values (0.21% mean deviation). With the v3.3.24 update to NuFIT 6.0 and improved neutrino formulas (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), the current mean deviation is **0.24%** (32 well-measured observables) / **0.57%** (all 33 incl. δ_CP). The qualitative conclusions (significance > 4.2σ, unique optimum among 3M+ configs, decisive Bayes factors) remain unchanged.
+> **v3.4 update (2026-04-29).** The v3.4 release re-ran the statistics on the expanded observable catalog: **95 observables** (35 Type I exact-target + 19 II + 21 III + 22 IV), with Type I mean deviation **0.39%** (PDG 2024 / NuFIT 6.0). Algebraic null model: log₁₀ p = **−138** over 3M+ formulas. The qualitative conclusions of the v3.3 bullet-proof analysis below (σ > 4.2 vs. three independent null families, unique optimum among 3M+ configs, decisive Bayes factors) remain valid. The detailed v3.3 numbers in this document are kept as historical record; the methodology (Westfall-Young maxT, Bayesian comparison, Pareto formula selection) is unchanged.
+
+> **Note (v3.3.24)**: The detailed statistics below were computed with NuFIT 5.3 experimental values (0.21% mean deviation). With the v3.3.24 update to NuFIT 6.0 and improved neutrino formulas (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), the v3.3.24 mean deviation was **0.24%** (32 well-measured observables) / **0.57%** (all 33 incl. δ_CP).
 
 ---
 
@@ -412,5 +414,6 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.3.24: Bullet-Proof Statistical Evidence*
-*Validation: March 2026 | 7-component analysis | Mean deviation: 0.24% (32 well-measured) / 0.57% (all 33)*
+*GIFT Framework: Statistical Evidence (v3.3 methodology canonical, v3.4 numbers in top banner)*
+*v3.3 Validation: March 2026 | 7-component analysis | v3.3.24 mean dev: 0.24% (32 well-measured) / 0.57% (all 33)*
+*v3.4 Refresh: April 2026 | 95 observables | Type I mean dev: 0.39% | log₁₀ p_algebraic = −138*
