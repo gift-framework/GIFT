@@ -419,6 +419,6 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.4.19: Bullet-Proof Statistical Evidence*
+*GIFT Framework v3.4.20: Bullet-Proof Statistical Evidence*
 *Top-level: mean deviation 0.39% across 35 Type I observables (PDG 2024 / NuFIT 6.0); log₁₀ p_algebraic = −138 over 3M+ configurations*
 *Detailed sector breakdown above: v3.3.24 NuFIT 6.0 analysis (0.24% on 32 well-measured / 0.57% all 33)*

@@ -16,7 +16,7 @@ layout: default
 | **Prédictions** | 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Écart moyen** | 0,39 % sur 35 relations Type I (cible exacte, PDG 2024 / NuFIT 6.0) |
 | **Paramètres libres** | 0 (3 primitives entières : N=3, r₈=8, r₂=2) |
-| **Vérification Lean 4** | 134 fichiers, 8392 jobs de build, 0 sorry, 4 axiomes principaux (core v3.4.19) |
+| **Vérification Lean 4** | 144 fichiers, 8392 jobs de build, 0 sorry, 4 axiomes principaux (core v3.4.20) |
 | **Significativité statistique** | p < 2×10⁻⁵ (σ > 4,2), unique parmi 3M+ configurations |
 | **Modèle nul Monte Carlo** | P(algébrique) = 10⁻¹³⁸ sur 3M+ formules |
 
@@ -70,7 +70,7 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 ## Vulgarisation
 
-Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html)*, ouverture d'une série sur le gaming comme école d'intuition quantique.
+Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Épisode 1 : Le jour où Newton a perdu le contrôle](Blog-Fall-Guys-Newton-Lost-Control.fr.html)*, Fall Guys et le mythe de la physique prévisible.
 
 ---
 

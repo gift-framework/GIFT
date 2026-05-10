@@ -419,6 +419,6 @@ GIFT atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. 
 
 ---
 
-*GIFT Framework v3.4.19 : preuves statistiques à toute épreuve*
+*GIFT Framework v3.4.20 : preuves statistiques à toute épreuve*
 *Tête : écart moyen 0,39 % sur 35 observables Type I (PDG 2024 / NuFIT 6.0) ; log₁₀ p_algébrique = −138 sur 3M+ configurations*
 *Ventilation sectorielle ci-dessus : analyse v3.3.24 NuFIT 6.0 (0,24 % sur 32 bien mesurés / 0,57 % tous les 33)*

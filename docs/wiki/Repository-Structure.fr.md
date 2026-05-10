@@ -101,8 +101,8 @@ Le **[Wiki GitHub](https://github.com/gift-framework/GIFT/wiki)** fournit un hub
 
 ## Version
 
-**Actuelle** : v3.4.19 (2026-05-07)
-**Relations** : 213 conjonctions certifiées (core v3.4.19, 4 axiomes principaux + 11 certificats d'arithmétique d'intervalles)
+**Actuelle** : v3.4.20 (2026-05-10)
+**Relations** : 213 conjonctions certifiées (core v3.4.20, 4 axiomes principaux + 11 certificats d'arithmétique d'intervalles)
 **Prédictions** : 95 observables (35 Type I, cibles exactes, 0,39 % d'écart moyen ; PDG 2024 / NuFIT 6.0)
 **Validation** : 3M+ configurations exhaustives (log₁₀ p_algébrique = −138)
 **Triptyque** : Articles A (Zenodo 19892350) + B (19893371) + C (19708916) publiés le 2026-04-29

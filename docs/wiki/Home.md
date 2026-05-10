@@ -16,7 +16,7 @@ layout: default
 | **Predictions** | 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Mean deviation** | 0.39% on 35 Type I (exact-target) relations (PDG 2024 / NuFIT 6.0) |
 | **Free parameters** | 0 (3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Lean 4 verification** | 134 files, 8392 build jobs, 0 sorry, 4 main-chain axioms (core v3.4.19) |
+| **Lean 4 verification** | 144 files, 8392 build jobs, 0 sorry, 4 main-chain axioms (core v3.4.20) |
 | **Statistical significance** | p < 2×10⁻⁵ (σ > 4.2), unique among 3M+ configurations |
 | **Monte Carlo null model** | P(algebraic) = 10⁻¹³⁸ over 3M+ formulas |
 
@@ -70,7 +70,7 @@ N_gen    = |PSL(2,7)| / fund(E₇) = 168/56 = 3
 
 ## Outreach
 
-Accessible writing on the ideas behind GIFT lives on the [Substack blog](https://giftheory.substack.com/); see the [Site Map blog index](Site-Map.html#blog-posts) for the full list. Latest: *[Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you)*, opening a series on gaming as a school of quantum intuition.
+Accessible writing on the ideas behind GIFT lives on the [Substack blog](https://giftheory.substack.com/); see the [Site Map blog index](Site-Map.html#blog-posts) for the full list. Latest: *[Episode 1: The day Newton lost control](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control)*, Fall Guys and the myth of predictable physics.
 
 ---
 

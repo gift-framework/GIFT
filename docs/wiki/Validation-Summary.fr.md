@@ -5,7 +5,7 @@ layout: default
 
 # Résumé complet de validation GIFT v3.4
 
-**Date** : 2026-05-07 (v3.4.19)
+**Date** : 2026-05-10 (v3.4.20)
 **Références expérimentales** : PDG 2024 / NuFIT 6.0 (NO, IC19) / Planck 2020
 **Recherche exhaustive (v3.4)** : 3M+ configurations, log₁₀ p_algébrique = −138
 **p-valeur du modèle nul** : < 2 × 10⁻⁵ (σ > 4,2)

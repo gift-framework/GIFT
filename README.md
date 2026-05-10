@@ -78,7 +78,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 | **Precision** | 0.39% mean deviation on Type I (35 exact-target relations); 0.97% across all 66 observables with experimental comparison (PDG 2024 / NuFIT 6.0) |
 | **Observables** | 95 total (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Parameters** | Zero adjustable (all structurally determined; 3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Verified** | 134 Lean 4 files, 4 main-chain axioms (15 total incl. interval-arith certificates), zero sorry ([core v3.4.19](https://github.com/gift-framework/core)) |
+| **Verified** | 144 Lean 4 files, 4 main-chain axioms (15 total incl. interval-arith certificates), zero sorry ([core v3.4.20](https://github.com/gift-framework/core)) |
 | **Uniqueness** | #1 out of 3M+ configurations tested (log₁₀ p_algebraic = −138) |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)

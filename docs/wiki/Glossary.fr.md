@@ -395,4 +395,4 @@ Démonstrateur de théorèmes utilisé pour la vérification formelle des relati
 
 ---
 
-Dernière mise à jour : v3.4.19 (2026-05-07)
+Dernière mise à jour : v3.4.20 (2026-05-10)
