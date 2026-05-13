@@ -49,7 +49,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 ## Papers
 
-### Framework v3.4 (published — PDF, TeX, and markdown)
+### Framework v3.4 (published: PDF, TeX, and markdown)
 
 | Document | PDF | Markdown |
 |----------|-----|----------|
