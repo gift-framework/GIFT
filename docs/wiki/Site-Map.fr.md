@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html) | Annonce GIFT v3.4 en langage simple |
 | 🇫🇷 [Épisode 1 : Le jour où Newton a perdu le contrôle](Blog-Fall-Guys-Newton-Lost-Control.fr.html) | Fall Guys et le mythe de la physique prévisible |
 | 🇫🇷 [Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html) | Le gaming comme école d'intuition quantique (ouverture de série) |
 | 🇫🇷 [Orientation, pas ontologie](Blog-Orientation-Not-Ontology.fr.html) | La posture philosophique derrière GIFT |

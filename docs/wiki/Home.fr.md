@@ -70,7 +70,7 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 ## Vulgarisation
 
-Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Épisode 1 : Le jour où Newton a perdu le contrôle](Blog-Fall-Guys-Newton-Lost-Control.fr.html)*, Fall Guys et le mythe de la physique prévisible.
+Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html)*, annonce GIFT v3.4 en langage simple.
 
 ---
 
