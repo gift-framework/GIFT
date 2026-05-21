@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Le mot qui manque](Blog-No-Word-For-This.fr.html) | Trois noms qui ne marchent pas, et une question ouverte sur le rôle dans la collaboration humain-IA |
 | 🇫🇷 [On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html) | Annonce GIFT v3.4 en langage simple |
 | 🇫🇷 [Épisode 2 : Le jour où Tetris t'a appris que l'ordre fait tout](Blog-Tetris-Order-Is-Everything.fr.html) | Tetris et la non-commutativité productive |
 | 🇫🇷 [Épisode 1 : Le jour où Newton a perdu le contrôle](Blog-Fall-Guys-Newton-Lost-Control.fr.html) | Fall Guys et le mythe de la physique prévisible |

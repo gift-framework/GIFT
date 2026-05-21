@@ -46,6 +46,9 @@ English posts are hosted on Substack ([giftheory.substack.com](https://giftheory
 
 | Post | Description |
 |------|-------------|
+| [No Word for This](https://giftheory.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
+| [We've Released Our Draft Blueprint](https://giftheory.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
+| [Episode 2: The day Tetris taught you that order is everything](https://giftheory.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
 | [Episode 1: The day Newton lost control](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
 | [Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
 | [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
