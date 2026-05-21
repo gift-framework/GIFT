@@ -24,6 +24,13 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Post | Topic |
 |------|-------|
+| [No Word for This](https://giftheory.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
+| [We've Released Our Draft Blueprint](https://giftheory.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
+| [Episode 2: The day Tetris taught you that order is everything](https://giftheory.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
+| [Episode 1: The day Newton lost control](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
+| [Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
+| [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
+| [What if the universe was a Lego set?](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
 | ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning Physics with AI: the accidental origin of GIFT |
 | [The Geometry of the Impossible](https://giftheory.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos Knew (Without Knowing It) |
 | [The Lice of the Universe](https://giftheory.substack.com/p/the-lice-of-the-universe) | What We Cannot Perceive, and What That Means |
@@ -66,7 +73,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 |-------|-------------|-----|
 | [A: Certified G₂ Structure (PDF)](publications/papers/pdf/g2_certified_neck.pdf) | First computer-assisted existence proof for a metric with special holonomy (TCS neck model) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
 | [B: Spectral Geometry (PDF)](publications/papers/pdf/g2_spectral.pdf) | Laplacian spectrum, harmonic forms, λ₁ = 6π²/475 | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
-| C: Newton-Kantorovich on K3 | NK diagnostics on a Donaldson K3 metric (CI(2,2,2)) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
+| [C: Newton-Kantorovich on K3 (PDF)](publications/papers/pdf/K3_NK_Certificate.pdf) | NK diagnostics on a Donaldson K3 metric (CI(2,2,2)) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
 | [D: Donaldson Analytic Note (PDF)](publications/papers/pdf/donaldson_analytic.pdf) | Explicit closed-form G₂ ansatz on a K3-coassociative neck with 5-layer Wirtinger certificate | [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) |
 
 ---
@@ -78,7 +85,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 | **Precision** | 0.39% mean deviation on Type I (35 exact-target relations); 0.97% across all 66 observables with experimental comparison (PDG 2024 / NuFIT 6.0) |
 | **Observables** | 95 total (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Parameters** | Zero adjustable (all structurally determined; 3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Verified** | 144 Lean 4 files, 4 main-chain axioms (15 total incl. interval-arith certificates), zero sorry ([core v3.4.20](https://github.com/gift-framework/core)) |
+| **Verified** | 144 Lean 4 files, 4 main-chain axioms (15 total incl. interval-arith certificates), zero sorry ([core v3.4.23](https://github.com/gift-framework/core)) |
 | **Uniqueness** | #1 out of 3M+ configurations tested (log₁₀ p_algebraic = −138) |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -211,7 +218,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.19}
+  version = {3.4.23}
 }
 ```
 
