@@ -24,6 +24,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | Post | Topic |
 |------|-------|
+| [The Furrow](https://giftheory.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
 | [No Word for This](https://giftheory.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
 | [We've Released Our Draft Blueprint](https://giftheory.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
 | [Episode 2: The day Tetris taught you that order is everything](https://giftheory.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
