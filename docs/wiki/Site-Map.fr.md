@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Épisode 4 : Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une](Blog-Minecraft-Discrete-Sphere.fr.html) | Minecraft, la discrétisation et l'éternel problème du continu |
 | 🇫🇷 [Le sillon](Blog-The-Furrow.fr.html) | Un an de recherche non-orthodoxe : ce qui a changé, ce qui n'a pas changé, et ce que je ne sais toujours pas |
 | 🇫🇷 [Le mot qui manque](Blog-No-Word-For-This.fr.html) | Trois noms qui ne marchent pas, et une question ouverte sur le rôle dans la collaboration humain-IA |
 | 🇫🇷 [On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html) | Annonce GIFT v3.4 en langage simple |
