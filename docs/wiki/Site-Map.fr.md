@@ -43,6 +43,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Le verre qui chante](Blog-The-Singing-Glass.fr.html) | Quand un verre de Bourgogne explique les dimensions cachées de l'univers |
 | 🇫🇷 [Épisode 4 : Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une](Blog-Minecraft-Discrete-Sphere.fr.html) | Minecraft, la discrétisation et l'éternel problème du continu |
 | 🇫🇷 [Le sillon](Blog-The-Furrow.fr.html) | Un an de recherche non-orthodoxe : ce qui a changé, ce qui n'a pas changé, et ce que je ne sais toujours pas |
 | 🇫🇷 [Épisode 3 : Le jour où la carapace bleue a su où tu étais](Blog-Mario-Kart-Blue-Shell.fr.html) | Mario Kart, la non-localité et les corrélations à distance |

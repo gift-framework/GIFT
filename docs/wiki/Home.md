@@ -70,7 +70,7 @@ N_gen    = |PSL(2,7)| / fund(E₇) = 168/56 = 3
 
 ## Outreach
 
-Accessible writing on the ideas behind GIFT lives on the [Substack blog](https://giftheory.substack.com/); see the [Site Map blog index](Site-Map.html#blog-posts) for the full list. Latest: *[Episode 1: The day Newton lost control](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control)*, Fall Guys and the myth of predictable physics.
+Accessible writing on the ideas behind GIFT lives on the [Substack blog](https://giftheory.substack.com/); see the [Site Map blog index](Site-Map.html#blog-posts) for the full list. Latest: *[The Singing Glass](https://giftheory.substack.com/p/the-singing-glass)*, when a Burgundy wine glass explains the hidden dimensions of the universe.
 
 ---
 

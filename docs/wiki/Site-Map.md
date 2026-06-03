@@ -46,6 +46,7 @@ English posts are hosted on Substack ([giftheory.substack.com](https://giftheory
 
 | Post | Description |
 |------|-------------|
+| [The Singing Glass](https://giftheory.substack.com/p/the-singing-glass) | When a Burgundy wine glass explains the hidden dimensions of the universe |
 | [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://giftheory.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
 | [The Furrow](https://giftheory.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
 | [Episode 3: The day the blue shell knew where you were](https://giftheory.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |

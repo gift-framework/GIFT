@@ -70,7 +70,7 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 ## Vulgarisation
 
-Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html)*, annonce GIFT v3.4 en langage simple.
+Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://giftheory.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Le verre qui chante](Blog-The-Singing-Glass.fr.html)*, quand un verre de Bourgogne explique les dimensions cachées de l'univers.
 
 ---
 
