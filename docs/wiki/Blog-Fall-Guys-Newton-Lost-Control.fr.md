@@ -7,7 +7,7 @@ layout: default
 
 # Épisode 1 : Le jour où Newton a perdu le contrôle
 
-*Épisode 1 : Fall Guys et le mythe de la physique prévisible.*
+*Fall Guys et le mythe de la physique prévisible.*
 
 ---
 
