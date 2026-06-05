@@ -13,10 +13,10 @@ layout: default
 
 | Property | Value |
 |----------|-------|
-| **Predictions** | 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
-| **Mean deviation** | 0.39% on 35 Type I (exact-target) relations (PDG 2024 / NuFIT 6.0) |
+| **Predictions** | 95 observables (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Mean deviation** | 0.92% on 33 Type I (exact-target) relations (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
 | **Free parameters** | 0 (3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Lean 4 verification** | 144 files, 8392 build jobs, 0 sorry, 4 main-chain axioms (core v3.4.20) |
+| **Lean 4 verification** | 143 files, 8391 build jobs, 0 sorry, 15 axioms (4 main-chain + 11 interval-arithmetic) (core v3.4.26) |
 | **Statistical significance** | p < 2×10⁻⁵ (σ > 4.2), unique among 3M+ configurations |
 | **Monte Carlo null model** | P(algebraic) = 10⁻¹³⁸ over 3M+ formulas |
 
@@ -29,7 +29,7 @@ layout: default
 | **New here?** | [Getting Started](Getting-Started.html): Pick your path |
 | **Read papers** | [Paper Main Framework](Paper-Main-Framework.html) ([Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html)) [Paper Spectral Geometry](Paper-Spectral-Geometry.html) |
 | **Browse predictions** | [Observable Reference](Observable-Reference.html), 95 observables with formulas |
-| **Check proofs** | [Lean Formalization](Lean-Formalization.html), 213-conjunct certificate |
+| **Check proofs** | [Lean Formalization](Lean-Formalization.html), 140-conjunct certificate |
 
 ---
 
@@ -41,7 +41,7 @@ layout: default
 | N_gen | rank(E₈) − Weyl | 3 | 3 | exact |
 | Q_Koide | dim(G₂)/b₂ = 14/21 | 2/3 | 0.6667 | 0.001% |
 | α_s(M_Z) | √2/(dim(G₂)−p₂) | √2/12 | 0.1179 | 0.04% |
-| δ_CP | dim(K₇)×dim(G₂)+H* | 197° | 177°±20° | 1.0σ |
+| δ_CP | dim(K₇)×dim(G₂)+H* | 197° | ~207-212° (NuFIT 6.1) | ~1σ |
 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477.2 | 0.004% |
 | Ω_DE | ln(2)×98/99 | 0.686 | 0.685 | 0.21% |
 
@@ -61,7 +61,7 @@ N_gen    = |PSL(2,7)| / fund(E₇) = 168/56 = 3
 
 | Prediction | Experiment | Timeline | Status |
 |------------|------------|----------|--------|
-| δ_CP = 197° ± 5° | DUNE | 2028–2039 | Awaiting |
+| δ_CP = 197° (window [182°, 212°]) | DUNE | 2028–2040 | Awaiting |
 | sin²θ_W = 3/13 | FCC-ee | 2040s | Awaiting |
 | N_gen = 3 (no 4th gen) | LHC/FCC | Ongoing | Consistent |
 | m_s/m_d = 20 | Lattice QCD | ~2030 | Consistent |
@@ -86,4 +86,4 @@ Browse the sidebar for full navigation, or see the [Site Map](Site-Map.html) for
 
 ---
 
-*GIFT Framework v3.4 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*
+*GIFT Framework v3.4.26 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*

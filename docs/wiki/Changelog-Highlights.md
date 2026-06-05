@@ -14,10 +14,10 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 **Triptyque published & axiom reduction milestone**
 
 - **Papers A, B, C published on Zenodo** (DOIs 19892350, 19893371, 19708916): the peer-reviewable companion triptyque (certified G₂ structure, spectral geometry, K3 NK diagnostics)
-- **Lean axiom reduction**: 38 → 4 main-chain axioms (15 total incl. interval-arithmetic certificates), 0 sorry, 213 conjuncts certified
+- **Lean axiom reduction**: 38 → 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry, 140 conjuncts certified
 - **K3NewtonKantorovich v3.0 hardcore**: η ×2.4 tighter, Joyce margin ×17 below ε₀
 - **γ² = 24π²/7 derived** (T² Hodge Laplacian + H¹(K3)=0; was PSLQ artifact 135/4)
-- **95 observables**: 35 Type I + 19 Type II + 21 Type III + 22 Type IV; 0.39% mean deviation on Type I (PDG 2024 / NuFIT 6.0)
+- **95 observables**: 33 Type I + 19 Type II + 21 Type III + 22 Type IV; 0.92% mean deviation on Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 - **3 integer primitives**: N=3, r₈=8, r₂=2 (no continuous adjustable parameters)
 
 ## v3.4.3, 2026-04

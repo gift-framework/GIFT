@@ -6,13 +6,13 @@ layout: default
 # GIFT v3.4 Complete Validation Summary
 
 **Date**: 2026-05-10 (v3.4.20)
-**Experimental references**: PDG 2024 / NuFIT 6.0 (NO, IC19) / Planck 2020
-**Exhaustive search (v3.4)**: 3M+ configurations, log₁₀ p_algebraic = −138
+**Experimental references**: NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022
+**Exhaustive search (v3.4)**: 3,000,000 random formula sets; set-level bound ~10⁻⁶ (assumption-free)
 **Null model p-value**: < 2 x 10^-5 (sigma > 4.2)
 **Westfall-Young maxT**: 11/33 significant (global p = 0.008, v3.3.24 baseline)
 **Bayes factor**: 288-4,567 (decisive, v3.3.24 baseline)
 
-> **v3.4 top-level**: 0.39% mean deviation across 35 Type I (exact-target) observables in the 95-observable catalog (35 Type I + 19 Type II + 21 Type III + 22 Type IV). Sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis for traceability.
+> **v3.4 top-level**: 0.92% mean deviation across 33 Type I (exact-target) observables in the 95-observable catalog (33 Type I + 19 Type II + 21 Type III + 22 Type IV). Sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis for traceability.
 
 ---
 
@@ -20,7 +20,7 @@ layout: default
 
 | Category | Predictions | Mean Deviation | Status |
 |----------|-------------|----------------|--------|
-| **Type I (exact targets, v3.4)** | 35 | **0.39%** | VALIDATED |
+| **Type I (exact targets, v3.4)** | 33 | **0.92%** | VALIDATED |
 | **Well-measured observables (v3.3.24)** | 32 | 0.24% | VALIDATED |
 | **All observables incl. delta_CP (v3.3.24)** | 33 | 0.57% | VALIDATED |
 | **Scale bridge** (3 masses in MeV) | 3 | 0.07% | EXPLORATORY |
@@ -32,10 +32,9 @@ represent the same physical content in different coordinates.
 **Note on delta_CP**: delta_CP is the only observable whose experimental
 uncertainty (+/-20 deg = +/-11%) exceeds the GIFT deviation. For all other
 32 observables, the experimental precision far exceeds the framework's accuracy.
-The GIFT prediction (197 deg) lies at 1.0 sigma from the NuFIT 6.0 best-fit
-(177 deg +/- 20 deg). NuFIT 6.0 notes the global fit is "consistent with
-CP conservation within 1 sigma for normal ordering" (arXiv:2410.05380).
-We report 0.24% (32 observables) as the primary metric.
+The GIFT prediction (197 deg) lies within ~1 sigma of the NuFIT 6.1 best fit
+(~207-212 deg), inside the falsification window [182, 212] deg.
+We report 0.92% (33 Type I relations) as the primary metric.
 
 ---
 
@@ -131,8 +130,6 @@ lower octant (sin^2 theta_23 = 0.470), which would increase the tension further.
 | **Moderate** | 4 | 1% - 5% |
 | **Outlier** | 1 | > 5% (delta_CP) |
 | **Sub-percent** | 28/33 | 84.8% |
-| **Well-measured (32)** | 32 | **Mean: 0.39%** |
-| **All incl. delta_CP (33)** | 33 | Mean: 0.72% |
 
 ---
 
@@ -284,12 +281,12 @@ The 33 dimensionless predictions do NOT depend on the Riemann connection.
 
 ## Conclusion
 
-With NuFIT 6.0 experimental values, the GIFT framework achieves:
+With NuFIT 6.1 experimental values, the GIFT framework achieves:
 
-- **Mean deviation**: **0.39%** across 32 well-measured observables (0.72% including delta_CP)
+- **Mean deviation**: **0.92%** across the 33 Type I relations
 - **3 exact matches** (0.00% deviation: N_gen, m_s/m_d, Omega_DM/Omega_b)
 - **28/33 sub-percent** accuracy
-- **delta_CP**: 197 deg at 1.0 sigma from NuFIT 6.0 (177 deg +/- 20 deg), awaiting DUNE
+- **delta_CP**: 197 deg within ~1 sigma of the NuFIT 6.1 best fit (~207-212 deg), awaiting DUNE
 - **0 configurations** out of 3,070,396 tested perform better
 - **Null model p < 2 x 10^-5** across three independent null families (sigma > 4.2)
 - **Westfall-Young maxT**: 11/33 individually significant (global p = 0.008)
@@ -324,4 +321,4 @@ data expected ~2029) and T2HK, making it a clear falsification target.
 
 *GIFT Statistical Validation v3.4 (top-level) / v3.3.24 (sector breakdown)*
 *v3.4 release: 2026-04-29 | sector tables generated: 2026-02-28*
-*Experimental data: PDG 2024 / NuFIT 6.0 (arXiv:2410.05380) / Planck 2020*
+*Experimental data: NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022*

@@ -26,7 +26,7 @@ Complete index of all wiki pages.
 ## Papers
 | Page | Description |
 |------|-------------|
-| [Paper Main Framework](Paper-Main-Framework.html) | Main paper: 95 observables (33 Type I, 0.73% mean dev) + 19 Type II + 21 Type III + 22 Type IV |
+| [Paper Main Framework](Paper-Main-Framework.html) | Main paper: 95 observables (33 Type I, 0.92% mean dev) + 19 Type II + 21 Type III + 22 Type IV |
 | [Paper S1 Foundations](Paper-S1-Foundations.html) | S1: E₈, G₂, K₇ mathematical foundations |
 | [Paper S2 Derivations](Paper-S2-Derivations.html) | S2: Complete derivations for all 33 observables |
 | [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) | 169-parameter Chebyshev-Cholesky G₂ metric |
@@ -37,7 +37,7 @@ Complete index of all wiki pages.
 |------|-------------|
 | [Observable Reference](Observable-Reference.html) | 95 observables: formulas, values, deviations (Type I/II/III/IV) |
 | [Statistical Evidence](Statistical-Evidence.html) | 7-component validation, 3M+ exhaustive search |
-| [Validation Summary](Validation-Summary.html) | Sector-by-sector results with NuFIT 6.0 |
+| [Validation Summary](Validation-Summary.html) | Sector-by-sector results with NuFIT 6.1 |
 | [Independent Validations](Independent-Validations.html) | External research converging with GIFT |
 
 ## Blog Posts
@@ -69,7 +69,7 @@ English posts are hosted on Substack ([giftheory.substack.com](https://giftheory
 ## Project
 | Page | Description |
 |------|-------------|
-| [Lean Formalization](Lean-Formalization.html) | 130 files, 7 axioms, 213 conjuncts, blueprint |
+| [Lean Formalization](Lean-Formalization.html) | 143 files, 15 axioms, 140 conjuncts, blueprint |
 | [Repository Structure](Repository-Structure.html) | Directory layout and navigation |
 | [External Resources](External-Resources.html) | Links to all external resources |
 | [Citation Guide](Citation-Guide.html) | How to cite GIFT (BibTeX, APA, DOIs) |

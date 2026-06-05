@@ -26,7 +26,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles
 | Page | Description |
 |------|-------------|
-| 🇫🇷 [Article principal](Paper-Main-Framework.fr.html) | Article principal : 33 prédictions, 0,24 % d'écart moyen |
+| 🇫🇷 [Article principal](Paper-Main-Framework.fr.html) | Article principal : 33 relations Type I, 0,92 % d'écart moyen |
 | 🇫🇷 [Article S1 fondations](Paper-S1-Foundations.fr.html) | S1 : fondations mathématiques de E₈, G₂, K₇ |
 | 🇫🇷 [Article S2 dérivations](Paper-S2-Derivations.fr.html) | S2 : dérivations complètes pour les 33 observables |
 | 🇫🇷 [Article métrique G₂ explicite](Paper-Explicit-G2-Metric.fr.html) | Métrique G₂ Chebyshev-Cholesky à 169 paramètres |
@@ -37,7 +37,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 |------|-------------|
 | 🇫🇷 [Référence des observables](Observable-Reference.fr.html) | 95 observables : formules, valeurs, écarts (Type I/II/III/IV) |
 | 🇫🇷 [Preuves statistiques](Statistical-Evidence.fr.html) | Validation à 7 composantes, recherche exhaustive sur 3M+ configs |
-| 🇫🇷 [Résumé de validation](Validation-Summary.fr.html) | Résultats secteur par secteur avec NuFIT 6.0 |
+| 🇫🇷 [Résumé de validation](Validation-Summary.fr.html) | Résultats secteur par secteur avec NuFIT 6.1 |
 | 🇫🇷 [Validations indépendantes](Independent-Validations.fr.html) | Recherches externes qui convergent avec GIFT |
 
 ## Articles de blog
@@ -66,7 +66,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Projet
 | Page | Description |
 |------|-------------|
-| 🇫🇷 [Formalisation Lean](Lean-Formalization.fr.html) | 130 fichiers, 7 axiomes, 213 conjonctions, blueprint |
+| 🇫🇷 [Formalisation Lean](Lean-Formalization.fr.html) | 143 fichiers, 15 axiomes, 140 conjonctions, blueprint |
 | 🇫🇷 [Structure du dépôt](Repository-Structure.fr.html) | Disposition des dossiers et navigation |
 | 🇫🇷 [Ressources externes](External-Resources.fr.html) | Liens vers toutes les ressources externes |
 | 🇫🇷 [Guide de citation](Citation-Guide.fr.html) | Comment citer GIFT (BibTeX, APA, DOIs) |

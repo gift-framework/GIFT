@@ -13,10 +13,10 @@ layout: default
 
 | Propriété | Valeur |
 |---|---|
-| **Prédictions** | 95 observables (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
-| **Écart moyen** | 0,39 % sur 35 relations Type I (cible exacte, PDG 2024 / NuFIT 6.0) |
+| **Prédictions** | 95 observables (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
+| **Écart moyen** | 0,92 % sur 33 relations Type I (cible exacte, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
 | **Paramètres libres** | 0 (3 primitives entières : N=3, r₈=8, r₂=2) |
-| **Vérification Lean 4** | 144 fichiers, 8392 jobs de build, 0 sorry, 4 axiomes principaux (core v3.4.20) |
+| **Vérification Lean 4** | 143 fichiers, 8391 jobs de build, 0 sorry, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle) (core v3.4.26) |
 | **Significativité statistique** | p < 2×10⁻⁵ (σ > 4,2), unique parmi 3M+ configurations |
 | **Modèle nul Monte Carlo** | P(algébrique) = 10⁻¹³⁸ sur 3M+ formules |
 
@@ -29,7 +29,7 @@ layout: default
 | **Vous découvrez ?** | [Pour commencer](Getting-Started.fr.html) : choisissez votre voie |
 | **Lire les articles** | [Article principal](Paper-Main-Framework.html) ([Métrique G₂ explicite](Paper-Explicit-G2-Metric.html)) [Géométrie spectrale](Paper-Spectral-Geometry.html) |
 | **Parcourir les prédictions** | [Référence des observables](Observable-Reference.html), 95 observables avec formules |
-| **Vérifier les preuves** | [Formalisation Lean](Lean-Formalization.html), certificat à 213 conjonctions |
+| **Vérifier les preuves** | [Formalisation Lean](Lean-Formalization.html), certificat à 140 conjonctions |
 
 ---
 
@@ -41,7 +41,7 @@ layout: default
 | N_gen | rang(E₈) − Weyl | 3 | 3 | exact |
 | Q_Koide | dim(G₂)/b₂ = 14/21 | 2/3 | 0,6667 | 0,001 % |
 | α_s(M_Z) | √2/(dim(G₂)−p₂) | √2/12 | 0,1179 | 0,04 % |
-| δ_CP | dim(K₇)×dim(G₂)+H* | 197° | 177°±20° | 1,0σ |
+| δ_CP | dim(K₇)×dim(G₂)+H* | 197° | ~207-212° (NuFIT 6.1) | ~1σ |
 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477,2 | 0,004 % |
 | Ω_DE | ln(2)×98/99 | 0,686 | 0,685 | 0,21 % |
 
@@ -61,7 +61,7 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 | Prédiction | Expérience | Calendrier | État |
 |---|---|---|---|
-| δ_CP = 197° ± 5° | DUNE | 2028–2039 | en attente |
+| δ_CP = 197° (fenêtre [182°, 212°]) | DUNE | 2028–2040 | en attente |
 | sin²θ_W = 3/13 | FCC-ee | 2040s | en attente |
 | N_gen = 3 (pas de 4e gén.) | LHC/FCC | en cours | cohérent |
 | m_s/m_d = 20 | QCD sur réseau | ~2030 | cohérent |
@@ -86,4 +86,4 @@ Parcourez la barre latérale pour la navigation complète, ou consultez le [plan
 
 ---
 
-*GIFT Framework v3.4 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Article A)](https://doi.org/10.5281/zenodo.19892350) · [Article B](https://doi.org/10.5281/zenodo.19893371) · [Article C](https://doi.org/10.5281/zenodo.19708916) | Licence MIT*
+*GIFT Framework v3.4.26 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Article A)](https://doi.org/10.5281/zenodo.19892350) · [Article B](https://doi.org/10.5281/zenodo.19893371) · [Article C](https://doi.org/10.5281/zenodo.19708916) | Licence MIT*

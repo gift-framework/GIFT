@@ -18,13 +18,13 @@ layout: default
 | **Total observables** | **95** (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Certifiées Lean** | 55 / 95 (Type I : 33/33, Type III : 14/21, Type IV : 8/22) |
 | **Avec comparaison expérimentale** | 66 / 95 |
-| Écart moyen (Type I, 33 obs) | 0,73 % |
+| Écart moyen (Type I, 33 obs) | 0,92 % |
 | Écart moyen (Type II, 19 obs) | 0,17 % |
-| Écart moyen (Type III, 21 obs) | 3,4 % |
+| Écart moyen (Type III, 21 obs) | 3,44 % |
 | Correspondances exactes (< 0,01 %) | 11 |
 | Sous 1 % | 53 |
 | Paramètres libres (continûment ajustables) | 0 |
-| Certificat Lean | 213 conjonctions, 4 axiomes principaux, 0 sorry, 134 fichiers .lean |
+| Certificat Lean | 140 conjonctions, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), 0 sorry, 143 fichiers .lean |
 | Tests statistiques nuls | uniforme P=10⁻³⁴⁶, null algébrique (4,2 M formules aléatoires) P=10⁻¹³³, surdétermination 2,13× |
 
 ---
@@ -38,7 +38,7 @@ layout: default
 | Paramètres cosmologiques | 11 |
 | Constantes structurelles | 18 |
 | Total des quantités cataloguées | 51 |
-| Écart moyen (32 bien mesurées) | 0,24 % (0,57 % incl. δ_CP ; PDG 2024 / NuFIT 6.0) |
+| Écart moyen (32 bien mesurées) | 0,92 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
 | Correspondances exactes (< 0,1 %) | 14 (42 %) |
 | Multiplement déterminées (≥3 expressions) | 92 % |
 | Total des expressions équivalentes | 280+ |
@@ -331,7 +331,7 @@ La structure est **réelle**, pas coïncidente.
 | Masses bosoniques | 3 | 0,13 % | m_H/m_W (0,02 %) |
 | CKM | 4 | 0,59 % | A_Wolf (0,29 %) |
 | Cosmologie | 11 | 0,16 % | Omega_DM/Omega_b (0,00 %) |
-| **Total** | **32+1** | **0,24 %** (excl. δ_CP) | - |
+| **Total** | **32+1** | **0,92 %** | - |
 
 ### 8.3 Par classification structurelle
 

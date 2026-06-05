@@ -33,7 +33,7 @@ layout: default
 | Source | Description |
 |--------|-------------|
 | [PDG 2024](https://pdg.lbl.gov/) | Particle Data Group, masses, couplings, CKM |
-| [NuFIT 6.0](http://www.nu-fit.org/) | Neutrino oscillation parameters (Oct 2024) |
+| [NuFIT 6.1](http://www.nu-fit.org/) | Neutrino oscillation parameters |
 | [Planck PR4](https://www.cosmos.esa.int/web/planck) | Cosmological parameters (Tristram+ 2024) |
 | [CODATA 2022](https://physics.nist.gov/cuu/Constants/) | Fundamental physical constants |
 

@@ -87,7 +87,7 @@ GIFT/
 | GIFT_v3.4_main.md | Complete theoretical framework |
 | GIFT_v3.4_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
 | GIFT_v3.4_S2_derivations.md | 33 Type I derivations with proofs |
-| GIFT_v3.4_S3_observables.md | 95-observable catalog (35 I + 19 II + 21 III + 22 IV) |
+| GIFT_v3.4_S3_observables.md | 95-observable catalog (33 I + 19 II + 21 III + 22 IV) |
 | g2_certified_neck.md (Paper A) | Computer-assisted G₂ existence proof |
 | g2_spectral.md (Paper B) | Laplacian spectrum, harmonic forms |
 
@@ -103,8 +103,8 @@ The **[GitHub Wiki](https://github.com/gift-framework/GIFT/wiki)** provides a na
 
 ## Version
 
-**Current**: v3.4.20 (2026-05-10)
-**Relations**: 213 conjuncts certified (core v3.4.20, 4 main-chain axioms + 11 interval-arith certificates)
-**Predictions**: 95 observables (35 Type I, exact targets, 0.39% mean deviation; PDG 2024 / NuFIT 6.0)
-**Validation**: 3M+ configs exhaustive (log₁₀ p_algebraic = −138)
+**Current**: v3.4.26 (2026-05-10)
+**Relations**: 140 conjuncts certified (core v3.4.26, 15 axioms (4 main-chain + 11 interval-arithmetic))
+**Predictions**: 95 observables (33 Type I, exact targets, 0.92% mean deviation; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
+**Validation**: 3,000,000 random algebraic formula sets, none reproduces the joint profile (set-level bound ~10⁻⁶, no independence assumption)
 **Papers**: Framework v3.4 (Zenodo 20070101) + A (19892350) + B (19893371) + C (19708916) + D (20039066)

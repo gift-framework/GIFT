@@ -36,7 +36,7 @@ GIFT est un cadre théorique spéculatif qui présente des prédictions testable
 
 Le cadre est évalué selon :
 - La rigueur mathématique des dérivations
-- La précision de l'accord expérimental (v3.4 : 95 observables en 4 types : Type I 0,73 % d'écart moyen sur 33 obs, Type II 0,17 % sur 19 obs, Type III 3,4 % sur 21 obs ; 11 correspondances exactes, 53 sous 1 % ; PDG 2024 / NuFIT 6.0)
+- La précision de l'accord expérimental (v3.4 : 95 observables en 4 types : Type I 0,92 % d'écart moyen sur 33 obs, Type II 0,17 % sur 19 obs, Type III 3,44 % sur 21 obs ; 11 correspondances exactes, 53 sous 1 % ; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 - La falsifiabilité (critères clairs en S2 Section 10)
 - La reproductibilité (notebook computationnel disponible)
 
@@ -119,7 +119,7 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 
 ### Quelles observables GIFT prédit-il ?
 
-**33 prédictions sans dimension** (v3.3 : 18 cœur + 15 étendues) :
+**33 relations Type I** (v3.3 : 18 cœur + 15 étendues) :
 
 - 3 couplages de jauge (α, sin²θ_W, α_s)
 - 1 nombre de générations (N_gen = 3)
@@ -131,7 +131,7 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 - 2 paramètres électrofaibles (λ_H, hiérarchie)
 - 2 constantes topologiques (κ_T, det(g))
 
-Écart moyen avec l'expérience (v3.4, 95 observables) : **Type I 0,73 %** sur 33 ratios sans dimension, **Type II 0,17 %** sur 19 extractions physiques en une étape, **Type III 3,4 %** sur 21 chaînes dynamiques multi-étapes ; 11 correspondances exactes (<0,01 %), 53 sous 1 % (PDG 2024 / NuFIT 6.0).
+Écart moyen avec l'expérience (v3.4, 95 observables) : **Type I 0,92 %** sur 33 ratios sans dimension, **Type II 0,17 %** sur 19 extractions physiques en une étape, **Type III 3,44 %** sur 21 chaînes dynamiques multi-étapes ; 11 correspondances exactes (<0,01 %), 53 sous 1 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
 *Référence historique (v3.3.24) : 0,24 % d'écart moyen sur 32 observables bien mesurés (0,57 % en incluant δ_CP), préservée dans le découpage par secteur de Statistical-Evidence.*
 
@@ -165,7 +165,7 @@ Les prédictions dimensionnelles (statut : THEORETICAL/DERIVED) sont moins rigou
 - Couplages de jauge : moyenne 0,03 %
 - Matrice CKM : moyenne 0,11 %
 
-**Globalement (v3.4, dataset à 95 observables)** : Type I 0,73 % sur 33 ratios, Type II 0,17 % sur 19 obs, Type III 3,4 % sur 21 obs ; 11 exactes (<0,01 %), 53 sous 1 %. La référence historique v3.3.24 (0,24 % sur 32 obs, 0,57 % incl. δ_CP) est préservée par secteur pour traçabilité.
+**Globalement (v3.4, dataset à 95 observables)** : Type I 0,92 % sur 33 ratios, Type II 0,17 % sur 19 obs, Type III 3,44 % sur 21 obs ; 11 exactes (<0,01 %), 53 sous 1 %. La référence historique v3.3.24 (0,24 % sur 32 obs, 0,57 % incl. δ_CP) est préservée par secteur pour traçabilité.
 
 Voir S2 Section 10 pour l'analyse statistique détaillée.
 

@@ -36,7 +36,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (v3.4: 95 observables in 4 types: Type I 0.73% mean dev on 33 obs, Type II 0.17% on 19 obs, Type III 3.4% on 21 obs; 11 exact matches, 53 within 1%; PDG 2024 / NuFIT 6.0)
+- Precision of experimental agreement (v3.4: 95 observables in 4 types: Type I 0.92% mean dev on 33 obs, Type II 0.17% on 19 obs, Type III 3.44% on 21 obs; 11 exact matches, 53 within 1%; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 - Falsifiability (clear criteria in S2 Section 10)
 - Reproducibility (computational notebook available)
 
@@ -119,7 +119,7 @@ See Supplement S1 for complete mathematical details.
 
 ### What observables does GIFT predict?
 
-**33 dimensionless predictions** (v3.3: 18 core + 15 extended):
+**33 Type-I relations** (v3.3: 18 core + 15 extended):
 
 - 3 gauge couplings (α, sin²θ_W, α_s)
 - 1 generation number (N_gen = 3)
@@ -131,7 +131,7 @@ See Supplement S1 for complete mathematical details.
 - 2 electroweak parameters (λ_H, hierarchy)
 - 2 topological constants (κ_T, det(g))
 
-Mean deviation from experiment (v3.4, 95 observables): **Type I 0.73%** on 33 dimensionless ratios, **Type II 0.17%** on 19 one-step physical extractions, **Type III 3.4%** on 21 multi-step dynamical chains; 11 exact matches (<0.01%), 53 within 1% (PDG 2024 / NuFIT 6.0).
+Mean deviation from experiment (v3.4, 95 observables): **Type I 0.92%** on 33 dimensionless ratios, **Type II 0.17%** on 19 one-step physical extractions, **Type III 3.44%** on 21 multi-step dynamical chains; 11 exact matches (<0.01%), 53 within 1% (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
 *Legacy reference (v3.3.24): 0.24% mean deviation across 32 well-measured observables (0.57% incl. δ_CP), preserved in the per-sector breakdown of Statistical-Evidence.*
 
@@ -165,7 +165,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall (v3.4, 95-observable dataset)**: Type I 0.73% on 33 dimensionless ratios, Type II 0.17% on 19 obs, Type III 3.4% on 21 obs; 11 exact (<0.01%), 53 within 1%. The legacy v3.3.24 figure (0.24% across 32 obs, 0.57% incl. δ_CP) is preserved per-sector for traceability.
+**Overall (v3.4, 95-observable dataset)**: Type I 0.92% on 33 dimensionless ratios, Type II 0.17% on 19 obs, Type III 3.44% on 21 obs; 11 exact (<0.01%), 53 within 1%. The legacy v3.3.24 figure (0.24% across 32 obs, 0.57% incl. δ_CP) is preserved per-sector for traceability.
 
 See S2 Section 10 for detailed statistical analysis.
 

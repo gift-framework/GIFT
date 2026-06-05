@@ -75,7 +75,7 @@ Important : aucun de ces résultats n'a été *ajusté*. La forme a été choisi
 
 Pendant qu'on faisait tout ça, on a aussi demandé à un programme informatique appelé Lean de relire le raisonnement. Lean fait un travail de comptable : il vérifie ligne par ligne que rien n'a été glissé sous le tapis. Il ne fait pas confiance, il ne saute aucune étape, il pose des questions stupides à chaque virgule. C'est insupportable et c'est exactement ce qu'on lui demande.
 
-Lean a relu 213 affirmations clés du raisonnement, et n'y a trouvé aucune incohérence interne. C'est aussi proche d'un certificat d'absence d'erreur que la mathématique sait produire aujourd'hui.
+Lean a relu 140 affirmations clés du raisonnement, et n'y a trouvé aucune incohérence interne. C'est aussi proche d'un certificat d'absence d'erreur que la mathématique sait produire aujourd'hui.
 
 ## La pièce qu'on retire au Jenga
 

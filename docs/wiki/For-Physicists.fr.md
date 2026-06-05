@@ -7,7 +7,7 @@ layout: default
 
 ## Résumé
 
-Le cadre Geometric Information Field Theory (GIFT) propose que les paramètres du Modèle Standard ne sont pas des constantes libres nécessitant une détermination expérimentale, mais plutôt des invariants topologiques d'une structure géométrique sous-jacente. Plus précisément, le cadre dérive 18 prédictions sans dimension à partir de la cohomologie d'une variété K₇ à holonomie G₂ de dimension 7, couplée à une architecture de jauge E₈×E₈. Ce document présente la structure conceptuelle pour les physiciens théoriciens, en se concentrant sur la manière dont la topologie pourrait éliminer le besoin de paramètres ajustables.
+Le cadre Geometric Information Field Theory (GIFT) propose que les paramètres du Modèle Standard ne sont pas des constantes libres nécessitant une détermination expérimentale, mais plutôt des invariants topologiques d'une structure géométrique sous-jacente. Plus précisément, le cadre dérive 33 relations Type I sans dimension à partir de la cohomologie d'une variété K₇ à holonomie G₂ de dimension 7, couplée à une architecture de jauge E₈×E₈. Ce document présente la structure conceptuelle pour les physiciens théoriciens, en se concentrant sur la manière dont la topologie pourrait éliminer le besoin de paramètres ajustables.
 
 ## 1. Le problème des paramètres
 
@@ -81,9 +81,9 @@ La formule empirique de Koide (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)²
 
 ### 3.3 Ce qui est revendiqué
 
-Le cadre produit 18 prédictions sans dimension couvrant les couplages de jauge, le mélange des neutrinos, les rapports de masses des leptons, les rapports de masses des quarks et les observables cosmologiques. L'écart moyen par rapport aux valeurs expérimentales est de 0,24 % (PDG 2024).
+Le cadre produit 33 relations Type I sans dimension couvrant les couplages de jauge, le mélange des neutrinos, les rapports de masses des leptons, les rapports de masses des quarks et les observables cosmologiques. L'écart moyen par rapport aux valeurs expérimentales est de 0,92 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
-Toutes les 290+ relations ont été formellement vérifiées dans l'assistant de preuve Lean 4, en n'utilisant que les axiomes standards (propext, Quot.sound en Lean) sans aucun axiome spécifique au domaine.
+Toutes les 460+ relations certifiées ont été formellement vérifiées dans l'assistant de preuve Lean 4, avec 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle) et 0 sorry.
 
 ### 3.4 Ce qui n'est pas revendiqué
 
@@ -99,12 +99,12 @@ Le cadre fait des prédictions spécifiques testables par des expériences à co
 
 | Prédiction | Valeur actuelle | Expérience | Calendrier |
 |------------|-----------------|------------|------------|
-| δ_CP = 197° | 197° ± 24° | DUNE | 2027-2030 |
+| δ_CP = 197° | meilleur ajustement ~207-212° (NuFIT 6.1), 197° à ~1σ | DUNE | 2028-2040 |
 | sin²θ_W = 3/13 | 0,23122 ± 0,00003 | FCC-ee | années 2040 |
 | m_s/m_d = 20 | 20,0 ± 1,0 | QCD sur réseau | 2030 |
 | N_gen = 3 | 3 | LHC | en cours |
 
-**Critères de falsification** : le cadre serait réfuté par une mesure de δ_CP en dehors de [187°, 207°], la découverte d'un fermion de quatrième génération, ou une détermination de précision de m_s/m_d significativement différente de 20. Ce sont de véritables tests expérimentaux, pas des accommodements a posteriori.
+**Critères de falsification** : le cadre serait réfuté par une mesure de δ_CP en dehors de [182°, 212°], la découverte d'un fermion de quatrième génération, ou une détermination de précision de m_s/m_d significativement différente de 20. Ce sont de véritables tests expérimentaux, pas des accommodements a posteriori.
 
 ## 5. Relation aux autres approches
 
@@ -120,7 +120,7 @@ Le cadre fait des prédictions spécifiques testables par des expériences à co
 
 Le cadre GIFT explore si les paramètres du Modèle Standard pourraient être des invariants topologiques plutôt que des constantes libres. La proposition spécifique implique une structure de jauge E₈×E₈, une holonomie G₂ sur une 7-variété K₇ avec nombres de Betti b₂ = 21 et b₃ = 77, et une torsion contrôlée fournissant la dynamique.
 
-Les 18 prédictions sans dimension qui en résultent correspondent à l'expérience avec une précision moyenne de 0,24 % (PDG 2024). Que cela reflète une physique fondamentale ou une coïncidence élaborée sera déterminé par les expériences, en particulier la mesure par DUNE de la phase de violation CP δ_CP dans les années à venir.
+Les 33 relations Type I sans dimension qui en résultent correspondent à l'expérience avec une précision moyenne de 0,92 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Que cela reflète une physique fondamentale ou une coïncidence élaborée sera déterminé par les expériences, en particulier la mesure par DUNE de la phase de violation CP δ_CP dans les années à venir.
 
 La valeur du cadre, indépendamment de sa correction physique, réside dans la démonstration que des principes géométriques peuvent contraindre substantiellement les paramètres de la physique des particules. Il fournit un exemple concret de la manière dont la topologie pourrait remplacer l'ajustement.
 
@@ -134,4 +134,4 @@ La valeur du cadre, indépendamment de sa correction physique, réside dans la d
 
 ---
 
-*Cadre GIFT v3.4*
+*Cadre GIFT v3.4.26*

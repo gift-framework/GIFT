@@ -18,13 +18,13 @@ layout: default
 | **Total observables** | **95** (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Lean-certified** | 55 / 95 (Type I: 33/33, Type III: 14/21, Type IV: 8/22) |
 | **With experimental comparison** | 66 / 95 |
-| Mean deviation (Type I, 33 obs) | 0.73% |
+| Mean deviation (Type I, 33 obs) | 0.92% |
 | Mean deviation (Type II, 19 obs) | 0.17% |
-| Mean deviation (Type III, 21 obs) | 3.4% |
+| Mean deviation (Type III, 21 obs) | 3.44% |
 | Exact matches (< 0.01%) | 11 |
 | Within 1% | 53 |
 | Free parameters (continuously adjustable) | 0 |
-| Lean certificate | 213 conjuncts, 4 main-chain axioms, 0 sorry, 134 .lean files |
+| Lean certificate | 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry, 143 .lean files |
 | Statistical null | uniform P=10⁻³⁴⁶, algebraic null (4.2M random formulas) P=10⁻¹³³, overdetermination 2.13× |
 
 ---
@@ -38,7 +38,7 @@ layout: default
 | Cosmological parameters | 11 |
 | Structural constants | 18 |
 | Total cataloged quantities | 51 |
-| Mean deviation (32 well-measured) | 0.24% (0.57% incl. δ_CP; PDG 2024 / NuFIT 6.0) |
+| Mean deviation (32 well-measured) | 0.92% (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
 | Exact matches (< 0.1%) | 14 (42%) |
 | Multiply determined (>=3 expr.) | 92% |
 | Total equivalent expressions | 280+ |
@@ -331,7 +331,7 @@ The structure is **real**, not coincidental.
 | Boson masses | 3 | 0.13% | m_H/m_W (0.02%) |
 | CKM | 4 | 0.59% | A_Wolf (0.29%) |
 | Cosmology | 11 | 0.16% | Omega_DM/Omega_b (0.00%) |
-| **Total** | **32+1** | **0.24%** (excl. δ_CP) | - |
+| **Total** | **32+1** | **0.92%** | - |
 
 ### 8.3 By Structural Classification
 

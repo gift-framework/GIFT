@@ -18,7 +18,7 @@ Formats de citation pour le cadre GIFT v3.4.
   url     = {https://github.com/gift-framework/GIFT},
   version = {3.4.13},
   license = {MIT},
-  note    = {95 observables, 0.39\% mean deviation on 35 Type I relations (PDG 2024 / NuFIT 6.0), 213 conjuncts certified in Lean 4, 4 main-chain axioms}
+  note    = {95 observables, 0.92\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic)}
 }
 ```
 
@@ -45,7 +45,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.4: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2026},
-  note   = {Mean deviation 0.39\% on 35 Type I relations (PDG 2024 / NuFIT 6.0), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 213 conjuncts in Lean 4},
+  note   = {Mean deviation 0.92\% on 33 Type I relations (PDG 2024 / NuFIT 6.1), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 140 conjuncts in Lean 4},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -156,7 +156,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
   version = {3.4.13},
-  note    = {132 Lean 4 files, 213 conjuncts, 4 main-chain axioms (15 total incl. interval-arithmetic certificates), 0 sorry}
+  note    = {143 Lean 4 files, 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry}
 }
 ```
 

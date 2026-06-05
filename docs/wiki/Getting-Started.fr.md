@@ -19,7 +19,7 @@ Lisez **[Pour les physiciens](For-Physicists.html)** pour une vue d'ensemble tec
 Lisez **[Pour les géomètres](For-Geometers.html)** pour le pipeline computationnel : construction TCS, métriques PINN, extraction spectrale, et ponts vers Lean 4. L'article **[Métrique G₂ explicite](Paper-Explicit-G2-Metric.html)** est votre point d'entrée.
 
 ### Je m'intéresse à la vérification formelle
-Lisez **[Pour les experts en formalisation](For-Formalization-Experts.html)** pour l'architecture Lean 4 : 134 fichiers .lean, 4 axiomes principaux, certificat à 213 conjonctions, zéro sorry. Voir **[Formalisation Lean](Lean-Formalization.html)** pour la vue d'ensemble.
+Lisez **[Pour les experts en formalisation](For-Formalization-Experts.html)** pour l'architecture Lean 4 : 143 fichiers .lean, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), certificat à 140 conjonctions, zéro sorry. Voir **[Formalisation Lean](Lean-Formalization.html)** pour la vue d'ensemble.
 
 ### Je veux vérifier les chiffres
 Allez directement à la **[Référence des observables](Observable-Reference.html)** (95 observables = 33 Type I + 19 Type II + 21 Type III + 22 Type IV) et aux **[Preuves statistiques](Statistical-Evidence.html)** (null uniforme P=10⁻³⁴⁶, null algébrique P=10⁻¹³³ sur 4,2M formules aléatoires, surdétermination 2,13×).

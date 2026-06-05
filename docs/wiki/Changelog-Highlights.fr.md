@@ -14,10 +14,10 @@ Historique des versions abrégé. Pour le changelog complet, voir [`CHANGELOG.md
 **Publication du triptyque & jalon de réduction d'axiomes**
 
 - **Articles A, B, C publiés sur Zenodo** (DOIs 19892350, 19893371, 19708916), le triptyque relecture par les pairs (structure G₂ certifiée, géométrie spectrale, diagnostics NK sur K3)
-- **Réduction Lean** : 38 → 4 axiomes principaux (15 au total avec les certificats d'arithmétique d'intervalles), 0 sorry, 213 conjonctions certifiées
+- **Réduction Lean** : 38 → 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), 0 sorry, 140 conjonctions certifiées
 - **K3NewtonKantorovich v3.0 hardcore** : η ×2,4 plus serré, marge Joyce ×17 sous ε₀
 - **γ² = 24π²/7 dérivé** (laplacien de Hodge sur T² + H¹(K3)=0 ; 135/4 était un artefact PSLQ)
-- **95 observables** : 35 Type I + 19 Type II + 21 Type III + 22 Type IV ; écart moyen 0,39 % sur Type I (PDG 2024 / NuFIT 6.0)
+- **95 observables** : 33 Type I + 19 Type II + 21 Type III + 22 Type IV ; écart moyen 0,92 % sur Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 - **3 primitives entières** : N=3, r₈=8, r₂=2 (zéro paramètre continu ajustable)
 
 ## v3.4.3, 2026-04

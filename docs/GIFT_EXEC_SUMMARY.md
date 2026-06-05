@@ -42,7 +42,7 @@ The initial version of GIFT, in 2025, carried **four free geometric parameters**
 
 A second version, at the end of 2025, reduced that count to **three topological parameters**: *p₂* = 2 (a binary duality emerging from dim(G₂)/dim(K₇)), *β₀* = π/8 (an angular quantization tied to the rank of E₈), and a pentagonal factor linked to the Weyl group structure. These three parameters were no longer really free: each was a ratio of topological integers. The number of observables covered had risen to 34, with mean precision 0.13%.
 
-The current version, GIFT v3.4, took a further step. **There are no continuously adjustable physical parameters.** The structure is entirely fixed by the choice (*b₂*, *b₃*) = (21, 77), the algebraic properties of E₈ × E₈, and a metric normalization target det(g) = 65/32. Ninety-five observables follow, organized in four types: 33 direct algebraic Type I predictions (mean deviation 0.73%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.4%), and 22 structural diagnostics (Type IV). Of the 95 observables, 55 are formally verified in Lean 4 (213 certificate conjuncts, 4 main-chain axioms, 0 sorry).
+The current version, GIFT v3.4, took a further step. **There are no continuously adjustable physical parameters.** The structure is entirely fixed by the choice (*b₂*, *b₃*) = (21, 77), the algebraic properties of E₈ × E₈, and a metric normalization target det(g) = 65/32. Ninety-five observables follow, organized in four types: 33 direct algebraic Type I predictions (mean deviation 0.92%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.44%), and 22 structural diagnostics (Type IV). Of the 95 observables, 55 are formally verified in Lean 4 (140 certificate conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry).
 
 This trajectory, viewed from the outside, deserves a moment's pause.
 
@@ -64,7 +64,7 @@ At the end of this trajectory, certain relations have revealed themselves to be 
 
 **The Koide parameter**: *Q* = dim(G₂) / *b*₂(*K₇*) = 14 / 21 = 2/3. An exact rational ratio. The experimental value is 0.6667 ± 0.0001. This relation, observed for more than forty years, had no theoretical explanation.
 
-**The neutrino CP-violating phase**: *δ*_CP = 7 × dim(G₂) + *H*\* = 7 × 14 + 99 = 197°. An additive combination of topological invariants. The most recent measurement (NuFIT 6.0) gives 177° ± 20°, consistent at 1σ. This is the framework's most important falsifiable prediction: the DUNE experiment (2028–2040) will measure this phase with a precision that settles it decisively.
+**The neutrino CP-violating phase**: *δ*_CP = 7 × dim(G₂) + *H*\* = 7 × 14 + 99 = 197°. An additive combination of topological invariants. Under NuFIT 6.1 the best fit has moved to about 207° (no-SK) / 212° (SK), so the predicted 197° sits within about 1σ. This is the framework's most important falsifiable prediction: the DUNE experiment (2028–2040) will measure this phase with a precision that settles it decisively.
 
 Alongside these exact identities, the framework predicts the ten elements of the CKM matrix with mean deviation 0.11%, the three neutrino mixing angles to better than 0.5%, the inverse fine-structure constant to 0.002%, nine quark mass ratios to 0.09% on average, and several cosmological observables (including the dark-to-baryonic matter ratio Ω_DM/Ω_b = 43/8) with comparable precision.
 
