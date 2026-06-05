@@ -85,11 +85,13 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 
 | | |
 |---|---|
-| **Precision** | 0.39% mean deviation on Type I (35 exact-target relations); 0.97% across all 66 observables with experimental comparison (PDG 2024 / NuFIT 6.0) |
-| **Observables** | 95 total (35 Type I + 19 Type II + 21 Type III + 22 Type IV) |
-| **Parameters** | Zero adjustable (all structurally determined; 3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Verified** | 144 Lean 4 files, 4 main-chain axioms (15 total incl. interval-arith certificates), zero sorry ([core v3.4.23](https://github.com/gift-framework/core)) |
-| **Uniqueness** | #1 out of 3M+ configurations tested (log₁₀ p_algebraic = −138) |
+| **Parameters** | Zero adjustable -- all structurally determined (3 integer primitives: N=3, r₈=8, r₂=2) |
+| **Verified** | 15 Lean 4 axioms (4 on the prediction chain + 11 K3 interval-arithmetic certificates), zero `sorry`, 460+ certified relations ([core v3.4.25](https://github.com/gift-framework/core)) |
+| **Parameter-free core** | 33 exact relations among topological integers (Type I) -- each individually correct-or-wrong, none tunable |
+| **Falsifiable** | δ_CP = 197°, N_gen = 3, θ₂₃ upper octant -- tested by DUNE / FCC-ee |
+| **Observables** | 95 total (33 Type I + 19 Type II + 21 Type III + 22 Type IV); 66 with experimental data |
+| **Precision** | 0.92% mean deviation on the 33 Type-I core relations (PDG 2024 / NuFIT 6.1 / Planck 2018) |
+| **Uniqueness** | #1 of 3M+ random configurations tested (log₁₀ p_algebraic = −134) |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
 
@@ -139,7 +141,7 @@ All posts on [giftheory.substack.com](https://giftheory.substack.com/).
 |--------|-------|
 | Configurations tested | 3,000,000+ |
 | **GIFT rank** | **#1** |
-| Mean deviation | 0.39% (35 Type I) / 0.97% (all 66 observables) |
+| Mean deviation | 0.92% on the 33 Type-I core relations (NuFIT 6.1) |
 | Better alternatives found | 0 |
 
 ### Top 5 Configurations (v3.3.24 leave-one-out scan, preserved for traceability)
@@ -170,7 +172,7 @@ Details: [Statistical Evidence](publications/references/STATISTICAL_EVIDENCE.md)
 
 | Prediction | Experiment | Timeline | Falsification Criterion |
 |------------|------------|----------|------------------------|
-| δ_CP = 197° | DUNE | 2027-2030 | Outside [187°, 207°] |
+| δ_CP = 197° | DUNE | 2028-2040 | Outside [182°, 212°] at 3σ |
 | sin²θ_W = 3/13 | FCC-ee | 2040s | Outside [0.2295, 0.2320] |
 | m_s/m_d = 20 | Lattice QCD | 2030 | Converges outside [19, 21] |
 | N_gen = 3 | LHC | Ongoing | Fourth generation discovery |
@@ -221,7 +223,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.23}
+  version = {3.4.25}
 }
 ```
 
