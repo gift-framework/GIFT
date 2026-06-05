@@ -5,9 +5,9 @@ layout: default
 
 > Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-3-the-day-the-blue-shell)
 
-# Épisode 3 — Le jour où la carapace bleue a su où tu étais
+# Épisode 3: Le jour où la carapace bleue a su où tu étais
 
-*Épisode 3 : Mario Kart, la non-localité et les corrélations à distance.*
+*Mario Kart, la non-localité et les corrélations à distance.*
 
 ---
 
@@ -33,7 +33,7 @@ Commençons par éliminer ce que tu pourrais croire.
 
 La carapace bleue n'est pas un missile à tête chercheuse ordinaire. Un missile classique verrouille une cible *visible*, calcule une trajectoire, et te poursuit dans l'espace. Si tu es plus rapide que lui, tu le sèmes. Si tu mets un obstacle entre lui et toi, il percute l'obstacle. C'est un objet *local* : il agit de proche en proche, il a besoin d'un chemin continu entre lui et sa cible.
 
-La carapace bleue ne fonctionne pas comme ça. Elle ne te poursuit pas dans l'espace : elle remonte le circuit en suivant le tracé, ignore tout le monde, et frappe la première place. Elle n'a pas besoin de te *voir*. Elle n'a pas besoin d'un chemin dégagé. Elle n'a même pas besoin de savoir où tu es géographiquement. Elle a besoin d'une seule information : *qui est premier*. Et cette information n'est pas une position sur la carte, c'est une **propriété relationnelle** — une propriété qui ne décrit pas un endroit, mais un rapport entre tous les joueurs.
+La carapace bleue ne fonctionne pas comme ça. Elle ne te poursuit pas dans l'espace : elle remonte le circuit en suivant le tracé, ignore tout le monde, et frappe la première place. Elle n'a pas besoin de te *voir*. Elle n'a pas besoin d'un chemin dégagé. Elle n'a même pas besoin de savoir où tu es géographiquement. Elle a besoin d'une seule information : *qui est premier*. Et cette information n'est pas une position sur la carte, c'est une **propriété relationnelle**: une propriété qui ne décrit pas un endroit, mais un rapport entre tous les joueurs.
 
 Voilà la première idée à tenir : il existe des propriétés qui ne sont *nulle part*. "Être premier" n'est pas un lieu. Aucune coordonnée GPS ne te dira qui est premier. C'est une propriété qui n'existe que dans la mise en relation de tous les karts entre eux. Et pourtant, cette propriété sans lieu peut déclencher un effet bien réel, bien localisé : une explosion, sur toi, maintenant.
 
@@ -41,7 +41,7 @@ Voilà la première idée à tenir : il existe des propriétés qui ne sont *nul
 
 ## Le rêve d'un monde local
 
-En physique, pendant très longtemps, on a cru à ce qu'on appelle le **principe de localité**. L'idée est simple et profondément intuitive : un objet ne peut être influencé que par ce qui le touche, ou par ce qui touche ce qui le touche, et ainsi de suite de proche en proche. Pour agir sur quelque chose à distance, il faut que *quelque chose voyage* dans l'espace entre les deux — une force, une onde, une particule, un signal. Rien ne saute.
+En physique, pendant très longtemps, on a cru à ce qu'on appelle le **principe de localité**. L'idée est simple et profondément intuitive : un objet ne peut être influencé que par ce qui le touche, ou par ce qui touche ce qui le touche, et ainsi de suite de proche en proche. Pour agir sur quelque chose à distance, il faut que *quelque chose voyage* dans l'espace entre les deux: une force, une onde, une particule, un signal. Rien ne saute.
 
 Newton lui-même, dont la théorie de la gravitation impliquait pourtant une action à distance instantanée, était profondément gêné par cette idée. Il a écrit qu'imaginer un corps agir sur un autre à distance, à travers le vide, sans intermédiaire, était une absurdité telle qu'aucun penseur compétent ne pourrait y adhérer. La localité, c'était le bon sens même.
 
@@ -57,7 +57,7 @@ Voilà le problème que la mécanique quantique a posé, et qui a empoisonné la
 
 On peut préparer deux particules ensemble, puis les séparer, les envoyer aux deux bouts d'un laboratoire, d'un pays, en principe d'une galaxie. Ces deux particules forment ce qu'on appelle un système **intriqué**. Et voici ce qui est étrange : tant que tu n'as mesuré aucune des deux, aucune des deux n'a de valeur définie pour la propriété qu'on va mesurer. Mais à l'instant où tu mesures la première, les résultats apparaissent corrélés d'une manière qu'aucune histoire locale pré-écrite ne peut expliquer. Quelle que soit la distance.
 
-Einstein détestait ça. Il a appelé ça, avec mépris, une "action fantôme à distance", et il était convaincu que ça révélait que la mécanique quantique était incomplète — qu'il devait exister des informations cachées, inscrites dans les particules dès le départ, qui détermineraient les résultats à l'avance. Comme deux gants séparés dans deux boîtes : ouvrir une boîte et trouver le gant gauche te dit instantanément que l'autre boîte contient le droit, mais il n'y a là aucune magie, juste une information qui était fixée depuis le début.
+Einstein détestait ça. Il a appelé ça, avec mépris, une "action fantôme à distance", et il était convaincu que ça révélait que la mécanique quantique était incomplète, qu'il devait exister des informations cachées, inscrites dans les particules dès le départ, qui détermineraient les résultats à l'avance. Comme deux gants séparés dans deux boîtes : ouvrir une boîte et trouver le gant gauche te dit instantanément que l'autre boîte contient le droit, mais il n'y a là aucune magie, juste une information qui était fixée depuis le début.
 
 On a vu dans l'épisode 0, avec Pudge et le théorème de Bell ([à relire ici](#) si besoin), comment cette dispute a été tranchée. John Bell a trouvé un test expérimental capable de distinguer deux hypothèses : soit les résultats étaient déterminés localement à l'avance, par des variables cachées inscrites dans les particules avant leur séparation, soit la nature viole cette image locale-réaliste. Les expériences ont tranché, et elles ont tranché contre l'explication locale à variables cachées. Il n'y a pas de gants cachés dans les boîtes. La corrélation est réelle, et elle n'est pas portée par quelque chose qui voyage de A vers B comme un message.
 
@@ -79,9 +79,9 @@ Alors pourquoi en parler ?
 
 Parce que Mario Kart entraîne, dans ton corps de joueur, deux intuitions qui sont *exactement* les bonnes, et que la plupart des gens n'ont jamais développées :
 
-La première : **certaines propriétés ne sont pas locales**. "Être premier" n'est pas un lieu. C'est une propriété du système entier, de la configuration globale de tous les karts. Tu as appris, manette en main, qu'un système peut avoir des propriétés qui ne sont attachées à aucun point particulier. C'est une intuition cruciale, et l'école ne te la donne jamais — elle te fait penser que toute propriété d'un objet est *dans* l'objet, ici, à cet endroit.
+La première : **certaines propriétés ne sont pas locales**. "Être premier" n'est pas un lieu. C'est une propriété du système entier, de la configuration globale de tous les karts. Tu as appris, manette en main, qu'un système peut avoir des propriétés qui ne sont attachées à aucun point particulier. C'est une intuition cruciale, et l'école ne te la donne jamais, elle te fait penser que toute propriété d'un objet est *dans* l'objet, ici, à cet endroit.
 
-La seconde : **un effet local peut être déclenché par une propriété non-locale**. L'explosion, elle, est parfaitement localisée : c'est toi, maintenant, ici. Mais ce qui l'a déclenchée — "être premier" — n'était nulle part. Tu as vécu, des centaines de fois, ce couplage entre une propriété globale sans lieu et une conséquence brutalement locale.
+La seconde : **un effet local peut être déclenché par une propriété non-locale**. L'explosion, elle, est parfaitement localisée : c'est toi, maintenant, ici. Mais ce qui l'a déclenchée "être premier" n'était nulle part. Tu as vécu, des centaines de fois, ce couplage entre une propriété globale sans lieu et une conséquence brutalement locale.
 
 Ces deux intuitions sont la *porte d'entrée* correcte vers l'intrication. L'intrication quantique va plus loin, elle ajoute quelque chose que Mario Kart n'a pas : dans le cas quantique, il n'y a *pas* de programme central qui connaît tout. Il n'y a pas de console qui tient les positions de toutes les particules. La corrélation est là sans que rien ni personne ne la calcule depuis un point central. C'est ça, le saut vertigineux, et c'est ça qui a donné tort à Einstein.
 
@@ -95,7 +95,7 @@ Il y a une dernière chose, dans la carapace bleue, qui mérite qu'on s'y arrêt
 
 La carapace bleue ne cible pas un joueur. Elle cible une *position dans une hiérarchie*. Elle frappe "le premier", qui que ce soit. Si, dans la demi-seconde où elle arrive, quelqu'un te dépasse, elle le frappe lui, et tu t'en sors. La cible n'est pas une personne, c'est un *rôle*.
 
-Ça veut dire que la propriété qui te désigne — "premier" — peut changer de porteur à la dernière seconde. Elle n'est pas collée à toi. Elle est collée à une *place* dans la structure, et la place peut être occupée par n'importe qui.
+Ça veut dire que la propriété qui te désigne "premier" peut changer de porteur à la dernière seconde. Elle n'est pas collée à toi. Elle est collée à une *place* dans la structure, et la place peut être occupée par n'importe qui.
 
 C'est une idée qu'on retrouvera, transformée, quand on parlera des particules elles-mêmes. En physique quantique, deux électrons ne sont pas "cet électron-ci" et "cet électron-là". Ils sont rigoureusement indiscernables, interchangeables, et certaines de leurs propriétés n'appartiennent pas à l'un ou à l'autre mais à la *paire*, à la configuration. La carapace bleue, en frappant un rôle plutôt qu'une personne, te donne un avant-goût de cette idée : dans un système suffisamment lié, ce qui compte n'est pas *qui* mais *quelle place*.
 
@@ -109,11 +109,11 @@ Si tu as suivi jusqu'ici, tu as gagné trois intuitions que la plupart des gens 
 
 **Un**. Il existe des propriétés qui ne sont nulle part. "Être premier" n'a pas de coordonnées. C'est une propriété du système entier, pas d'un point. Le monde n'est pas seulement fait de choses situées : il est aussi fait de relations, et les relations n'ont pas d'adresse.
 
-**Deux**. Une propriété sans lieu peut déclencher un effet bien localisé. La carapace explose sur toi, ici, maintenant — mais ce qui l'a appelée n'était nulle part. Le global et le local sont couplés.
+**Deux**. Une propriété sans lieu peut déclencher un effet bien localisé. La carapace explose sur toi, ici, maintenant, mais ce qui l'a appelée n'était nulle part. Le global et le local sont couplés.
 
 **Trois**. Le principe de localité a ses limites. Newton et Einstein le défendaient, et pourtant le monde quantique le dépasse : la corrélation entre deux particules intriquées est réelle, immédiate, et pourtant elle ne transporte aucun signal.
 
-La carapace bleue n'est pas de l'intrication. Mais elle t'a appris à penser des propriétés non-locales sans avoir peur — et ça, c'est la moitié du chemin.
+La carapace bleue n'est pas de l'intrication. Mais elle t'a appris à penser des propriétés non-locales sans avoir peur, et ça, c'est la moitié du chemin.
 
 Dans les épisodes qui viennent, on verra comment cette non-localité se combine avec la mesure (épisode 0) et la non-commutativité (épisode 2) pour produire le comportement le plus déroutant de toute la physique. Pour l'instant, retiens juste ça : la prochaine fois que tu entends ce sifflement monter derrière toi, tu n'entends pas l'injustice d'un jeu mal équilibré. Tu entends une propriété qui n'est nulle part, sur le point de devenir un événement qui est quelque part.
 
