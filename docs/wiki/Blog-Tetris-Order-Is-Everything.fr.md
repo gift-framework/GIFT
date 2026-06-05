@@ -7,7 +7,7 @@ layout: default
 
 # Épisode 2 : Le jour où Tetris t'a appris que l'ordre fait tout
 
-*Épisode 2 : Tetris et la non-commutativité productive.*
+*Tetris et la non-commutativité productive.*
 
 ---
 
