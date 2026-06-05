@@ -5,9 +5,9 @@ layout: default
 
 > Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-4-the-day-minecraft-taught)
 
-# Épisode 4 — Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une
+# Épisode 4: Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une
 
-*Épisode 4 : Minecraft, la discrétisation, et l'éternel problème du continu.*
+*Minecraft, la discrétisation, et l'éternel problème du continu.*
 
 ---
 
@@ -47,7 +47,7 @@ Donc dès qu'on a voulu *simuler* la physique dans un ordinateur, on s'est heurt
 
 La réponse, qu'on utilise depuis cinquante ans : on **discrétise**. On découpe l'espace en petites cellules, le temps en petits intervalles, les valeurs en petits paliers. On fait du Minecraft, en gros. Et on espère que si on découpe assez finement, le résultat ressemblera assez à ce qu'aurait donné le calcul continu.
 
-Quand un physicien simule l'atmosphère terrestre pour prédire la météo, il découpe la Terre en cubes de quelques kilomètres de côté. Quand on simule le climat, on monte à des dizaines de kilomètres. Quand on simule une étoile en train de s'effondrer, on découpe en mailles adaptées à la densité locale. Quand on calcule la masse du proton à partir des quarks qui le composent, on découpe carrément l'espace-temps lui-même en une grille de quelques fermis : c'est la *lattice QCD*, et c'est notre meilleure preuve que la discrétisation, faite avec rigueur, donne des prédictions qui collent à dix décimales aux mesures expérimentales. Quand on simule la structure géométrique d'une variété abstraite en sept dimensions — j'y reviendrai — on découpe avec des réseaux de neurones qui apprennent à interpoler entre les mailles.
+Quand un physicien simule l'atmosphère terrestre pour prédire la météo, il découpe la Terre en cubes de quelques kilomètres de côté. Quand on simule le climat, on monte à des dizaines de kilomètres. Quand on simule une étoile en train de s'effondrer, on découpe en mailles adaptées à la densité locale. Quand on calcule la masse du proton à partir des quarks qui le composent, on découpe carrément l'espace-temps lui-même en une grille de quelques fermis : c'est la *lattice QCD*, et c'est notre meilleure preuve que la discrétisation, faite avec rigueur, donne des prédictions qui collent à dix décimales aux mesures expérimentales. Quand on simule la structure géométrique d'une variété abstraite en sept dimensions (j'y reviendrai) on découpe avec des réseaux de neurones qui apprennent à interpoler entre les mailles.
 
 À chaque fois, le même problème : la discrétisation est une trahison du continu. On fait au mieux. On raffine. On vérifie que les résultats convergent quand on raffine encore. Mais on sait, intimement, qu'on construit une sphère Minecraft. La vraie sphère, on ne la touche pas. On l'approxime.
 
@@ -85,11 +85,11 @@ Minecraft, lui, est sans ambiguïté du côté de la première : c'est un outil 
 
 Minecraft a une grille fixe. Les blocs s'alignent sur trois axes privilégiés : haut-bas, nord-sud, est-ouest. Ces directions existent *avant* qu'on y mette quoi que ce soit. Si tu déplaces ta sphère Minecraft de quelques mètres, ou si tu la fais tourner de 30 degrés, elle cesse d'être bien définie sur la grille : les blocs ne s'alignent plus, il faut tout reconstruire. La grille porte une orientation absolue.
 
-La vraie physique discrète, telle que les théoriciens essaient de la construire, refuse exactement ça. Une théorie sérieuse de l'espace-temps discret ne peut pas avoir d'orientation préférentielle, parce que la nature, à notre échelle, n'en a aucune : les lois sont les mêmes que tu te tournes vers le nord ou vers l'ouest, que tu te déplaces lentement ou rapidement. Donc les théoriciens construisent des modèles où il n'y a *pas* de grille de fond. Les éléments discrets — petits volumes, petits tétraèdres, petits nœuds reliés en réseau — n'existent pas *dans* un espace, ils *constituent* l'espace, par leurs relations mutuelles. Pas d'axes posés avant eux. Pas de Nord absolu.
+La vraie physique discrète, telle que les théoriciens essaient de la construire, refuse exactement ça. Une théorie sérieuse de l'espace-temps discret ne peut pas avoir d'orientation préférentielle, parce que la nature, à notre échelle, n'en a aucune : les lois sont les mêmes que tu te tournes vers le nord ou vers l'ouest, que tu te déplaces lentement ou rapidement. Donc les théoriciens construisent des modèles où il n'y a *pas* de grille de fond. Les éléments discrets, petits volumes, petits tétraèdres, petits nœuds reliés en réseau, n'existent pas *dans* un espace, ils *constituent* l'espace, par leurs relations mutuelles. Pas d'axes posés avant eux. Pas de Nord absolu.
 
 La gravité quantique à boucles fait ça avec ce qu'on appelle des *réseaux de spins*. Les triangulations causales dynamiques font ça avec des assemblages de tétraèdres dont seule la topologie compte. Dans tous les cas, le mot-clé est *background-independent* : indépendant du fond. Le discret de Minecraft est lui *background-dependent* : il vit sur une grille préexistante.
 
-C'est une différence profonde. Minecraft te donne l'intuition que le discret est possible et qu'il peut produire des illusions de continu convaincantes à grande échelle. Mais il te donne aussi, gratuitement et un peu trompeusement, une grille fixe que la vraie physique discrète n'a pas. À toi de retenir l'intuition de fond — *le lisse pourrait être une illusion macroscopique* — sans transposer l'orientation fixe des blocs Minecraft sur la nature.
+C'est une différence profonde. Minecraft te donne l'intuition que le discret est possible et qu'il peut produire des illusions de continu convaincantes à grande échelle. Mais il te donne aussi, gratuitement et un peu trompeusement, une grille fixe que la vraie physique discrète n'a pas. À toi de retenir l'intuition de fond, *le lisse pourrait être une illusion macroscopique*, sans transposer l'orientation fixe des blocs Minecraft sur la nature.
 
 Garde ça en tête pour ce qui suit.
 
@@ -101,11 +101,11 @@ Voilà la question qui change tout, et qui est encore ouverte aujourd'hui en phy
 
 Toute la physique du XXe siècle a supposé que l'espace et le temps étaient continus. Tu peux zoomer indéfiniment dans la matière (et tu trouves des particules), mais l'*espace* dans lequel se déplacent ces particules, lui, est supposé lisse, sans plus petit élément.
 
-Cette supposition pose des problèmes quand on essaie de combiner la mécanique quantique avec la relativité générale d'Einstein. Quand on essaie, à toutes petites échelles, de calculer ce qui se passe quand la gravité devient quantique, on tombe sur des infinis impossibles à gérer. La théorie *casse*. Et beaucoup de physiciens, depuis les années 1960, se sont demandé si ce ne serait pas le signe que l'hypothèse de fond — l'espace continu — était fausse.
+Cette supposition pose des problèmes quand on essaie de combiner la mécanique quantique avec la relativité générale d'Einstein. Quand on essaie, à toutes petites échelles, de calculer ce qui se passe quand la gravité devient quantique, on tombe sur des infinis impossibles à gérer. La théorie *casse*. Et beaucoup de physiciens, depuis les années 1960, se sont demandé si ce ne serait pas le signe que l'hypothèse de fond *l'espace continu* était fausse.
 
 L'échelle où ça devrait se passer s'appelle la **longueur de Planck**, et elle vaut à peu près 1,6 × 10⁻³⁵ mètre. Pour donner une idée : si tu prenais un atome et que tu le grossissais à la taille de l'univers observable, la longueur de Planck serait encore plus petite qu'un grain de sable à cette échelle. C'est ridiculement minuscule. On ne sait pas la mesurer directement aujourd'hui, et elle semble absurdement hors de portée expérimentale. Mais c'est, paraît-il, l'échelle où l'espace lui-même pourrait cesser d'être lisse.
 
-Et ici, l'intuition Minecraft devient utile à condition de la corriger : tu en as déjà vu plus haut la limite — pas de grille fixe en physique fondamentale, pas d'axes privilégiés. Mais l'intuition *de fond* est juste : à très petite échelle, le lisse pourrait disparaître au profit d'une combinatoire de petits éléments, et la nappe continue que nous percevons à notre échelle ne serait que leur effet collectif moyenné, comme ta sphère paraît ronde de loin et révèle ses blocs de près.
+Et ici, l'intuition Minecraft devient utile à condition de la corriger : tu en as déjà vu plus haut la limite, pas de grille fixe en physique fondamentale, pas d'axes privilégiés. Mais l'intuition *de fond* est juste : à très petite échelle, le lisse pourrait disparaître au profit d'une combinatoire de petits éléments, et la nappe continue que nous percevons à notre échelle ne serait que leur effet collectif moyenné, comme ta sphère paraît ronde de loin et révèle ses blocs de près.
 
 Si c'est vrai, alors le rapport s'inverse complètement. Ce n'est plus toi, dans Minecraft, qui essaies de faire une vraie sphère avec des blocs imparfaits. C'est l'univers entier qui est fait de petits éléments discrets, et toi, sphère humaine, qui es l'illusion macroscopique d'un assemblage à très petite échelle. Toi, ta tasse de café, la Lune, tout. Des illusions de lisse tellement bien raffinées qu'elles trompent toute mesure que nous savons faire.
 
@@ -117,7 +117,7 @@ Personne ne sait encore si c'est le cas. Mais le fait même que la question soit
 
 Il y a un autre versant de ce problème, plus modeste mais tout aussi vertigineux, qui occupe une grande partie de la recherche actuelle. C'est celui dans lequel je passe une partie de mes journées, donc je vais le mentionner brièvement, sans en faire un épisode à part.
 
-Quand tu veux étudier une forme géométrique compliquée qui vit dans un espace abstrait à sept dimensions — par exemple, parce que tu cherches à savoir si certaines structures mathématiques existent vraiment et avec quelles propriétés — tu ne peux évidemment pas la dessiner. Tu ne peux pas non plus la calculer entièrement à la main : les équations sont trop riches. Alors tu fais ce qu'on fait depuis trente ans en physique numérique : tu discrétises. Tu prends ta forme idéale, qui devrait être lisse et continue, et tu la représentes par un réseau de neurones qui apprend à donner une valeur en chaque point.
+Quand tu veux étudier une forme géométrique compliquée qui vit dans un espace abstrait à sept dimensions (par exemple, parce que tu cherches à savoir si certaines structures mathématiques existent vraiment et avec quelles propriétés) tu ne peux évidemment pas la dessiner. Tu ne peux pas non plus la calculer entièrement à la main : les équations sont trop riches. Alors tu fais ce qu'on fait depuis trente ans en physique numérique : tu discrétises. Tu prends ta forme idéale, qui devrait être lisse et continue, et tu la représentes par un réseau de neurones qui apprend à donner une valeur en chaque point.
 
 C'est exactement la sphère Minecraft du début de cet épisode. À ceci près qu'au lieu de blocs cubiques alignés sur une grille, tu as des neurones qui interpolent. Et au lieu d'une sphère à trois dimensions, tu as une variété à sept dimensions. Mais le geste profond est le même : tenter de capturer une forme lisse avec des éléments discrets, en raffinant assez pour que les invariants importants survivent à la discrétisation.
 
@@ -133,7 +133,7 @@ Si tu as suivi jusqu'ici, tu as compris trois choses que beaucoup d'étudiants e
 
 **Deux.** Certaines propriétés survivent à la discrétisation, d'autres pas. Savoir lesquelles, c'est une compétence centrale de la physique numérique. Le rayon de ta sphère survit. Sa courbure non. Et il faut s'en souvenir.
 
-**Trois.** La question "et si l'univers réel était lui-même, métaphoriquement, un Minecraft à très petite échelle ?" — non pas avec des cubes alignés, évidemment, mais avec une structure discrète sous-jacente — n'est pas une fantaisie de geek. C'est une hypothèse de travail sérieuse en gravité quantique. Si elle est vraie, alors le lisse qu'on touche du doigt, qu'on voit, qu'on construit comme dans Minecraft, est *toujours* une illusion macroscopique d'un substrat discret sous-jacent. Tu serais alors, comme ta sphère Minecraft, une illusion convaincante à grande échelle.
+**Trois.** La question "et si l'univers réel était lui-même, métaphoriquement, un Minecraft à très petite échelle ?" (non pas avec des cubes alignés, évidemment, mais avec une structure discrète sous-jacente) n'est pas une fantaisie de geek. C'est une hypothèse de travail sérieuse en gravité quantique. Si elle est vraie, alors le lisse qu'on touche du doigt, qu'on voit, qu'on construit comme dans Minecraft, est *toujours* une illusion macroscopique d'un substrat discret sous-jacent. Tu serais alors, comme ta sphère Minecraft, une illusion convaincante à grande échelle.
 
 Dans les épisodes qui viennent, on continuera à explorer ces frontières. Pour l'instant, retiens juste ça : la prochaine fois que tu construis une boule de pierre lisse en Minecraft à mille blocs de rayon et que tu te dis que ça fait illusion, tu ne fais pas seulement un projet de jeu. Tu fais, à ta façon, un geste que les physiciens font tous les jours, et qui pose la question la plus profonde qu'on puisse poser sur la nature : *à partir de quelle échelle le réel cesse-t-il d'être grossier ?*
 
