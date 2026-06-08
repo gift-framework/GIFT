@@ -46,6 +46,7 @@ English posts are hosted on Substack ([giftheory.substack.com](https://giftheory
 
 | Post | Description |
 |------|-------------|
+| [Episode 5: The day Skyrim wasn't breathing without you](https://giftheory.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing) | Skyrim, a world waiting for an observer |
 | [The Singing Glass](https://giftheory.substack.com/p/the-singing-glass) | When a Burgundy wine glass explains the hidden dimensions of the universe |
 | [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://giftheory.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
 | [The Furrow](https://giftheory.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
