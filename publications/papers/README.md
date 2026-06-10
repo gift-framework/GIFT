@@ -84,7 +84,7 @@ publications/
 | 9 | m_s/m_d | 20 | **PROVEN** |
 | 10 | δ_CP | 197° | **PROVEN** |
 
-**Zero continuous adjustable parameters. 3 integer primitives (N=3, r₈=8, r₂=2). Mean deviation 0.39% on 35 Type I exact-target relations (PDG 2024 / NuFIT 6.0).**
+**Zero continuous adjustable parameters. 3 integer primitives (N=3, r₈=8, r₂=2). Mean deviation 0.92% on 33 Type I exact-target relations (PDG 2024 / NuFIT 6.1).**
 
 ---
 
@@ -94,8 +94,8 @@ publications/
 |--------|-------|
 | Configurations tested | 3,000,000+ |
 | Better alternatives | 0 |
-| Algebraic null model | log₁₀ p = −138 |
-| Lean certificate | 213 conjuncts, 4 main-chain axioms, 0 sorry |
+| Algebraic null model | set-level ~10⁻⁶ (assumption-free); log₁₀ p = −134 |
+| Lean certificate | 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry |
 
 See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../references/STATISTICAL_EVIDENCE.md) for methodology. The v3.3 validation pipeline (3,070,396-config exhaustive + 7-component bullet-proof) is archived in [`validation/legacy/v3.3/`](../validation/legacy/v3.3/).
 
@@ -103,9 +103,9 @@ See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../reference
 
 ## Formal Verification
 
-132 Lean 4 files, 213 conjuncts certified, 4 main-chain axioms (15 total incl. interval-arithmetic certificates), 0 sorry.
+143 Lean 4 files, 140 conjuncts certified, 15 axioms (4 main-chain + 11 interval-arithmetic certificates), 0 sorry, 8391 build jobs.
 
-See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3.4.19).
+See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3.4.26).
 
 ---
 
@@ -116,5 +116,5 @@ See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3
 
 ---
 
-**Version**: 3.4.19 (2026-05-07)
+**Version**: 3.4.26 (2026-06-03)
 **Repository**: https://github.com/gift-framework/GIFT

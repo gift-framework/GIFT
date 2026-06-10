@@ -1,10 +1,10 @@
 # GIFT Statistical Evidence
 
 **Methodology version**: 3.3.24 (March 2026), kept as canonical reference for statistical method
-**Latest stats refresh**: v3.4.19 (May 2026), see headline numbers in v3.4 banner below
+**Latest stats refresh**: v3.4.26 (June 2026, NuFIT 6.1), see headline numbers in v3.4 banner below
 **Legacy scripts**: `publications/validation/legacy/v3.3/bulletproof_validation_v33.py` (7-component), `legacy/v3.3/exhaustive_validation_v33.py` (3M+ configs), `legacy/v3.3/selection/` (Pareto formula selection)
 
-> **v3.4 update (2026-04-29).** The v3.4 release re-ran the statistics on the expanded observable catalog: **95 observables** (35 Type I exact-target + 19 II + 21 III + 22 IV), with Type I mean deviation **0.39%** (PDG 2024 / NuFIT 6.0). Algebraic null model: log₁₀ p = **−138** over 3M+ formulas. The qualitative conclusions of the v3.3 bullet-proof analysis below (σ > 4.2 vs. three independent null families, unique optimum among 3M+ configs, decisive Bayes factors) remain valid. The detailed v3.3 numbers in this document are kept as historical record; the methodology (Westfall-Young maxT, Bayesian comparison, Pareto formula selection) is unchanged.
+> **v3.4 update (refreshed to NuFIT 6.1, 2026-06-05).** The v3.4 release re-ran the statistics on the expanded observable catalog: **95 observables** (33 Type I exact-target + 19 II + 21 III + 22 IV), with Type I mean deviation **0.92%** (PDG 2024 / NuFIT 6.1). Null model: set-level bound **~10⁻⁶** (assumption-free) over 3M+ random formula sets; the per-formula algebraic indicator is log₁₀ p = **−134**. The qualitative conclusions of the v3.3 bullet-proof analysis below (σ > 4.2 vs. three independent null families, unique optimum among 3M+ configs, decisive Bayes factors) remain valid. The detailed v3.3 numbers in this document are kept as historical record; the methodology (Westfall-Young maxT, Bayesian comparison, Pareto formula selection) is unchanged.
 
 > **Note (v3.3.24)**: The detailed statistics below were computed with NuFIT 5.3 experimental values (0.21% mean deviation). With the v3.3.24 update to NuFIT 6.0 and improved neutrino formulas (θ₁₂ = arctan(2/3), θ₂₃ = arctan(√(14/11))), the v3.3.24 mean deviation was **0.24%** (32 well-measured observables) / **0.57%** (all 33 incl. δ_CP).
 

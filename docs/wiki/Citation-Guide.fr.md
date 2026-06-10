@@ -16,7 +16,7 @@ Formats de citation pour le cadre GIFT v3.4.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.13},
+  version = {3.4.26},
   license = {MIT},
   note    = {95 observables, 0.92\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic)}
 }
@@ -25,13 +25,13 @@ Formats de citation pour le cadre GIFT v3.4.
 ### Style APA
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.13) [Logiciel]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.26) [Logiciel]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Style Chicago
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.13. GitHub, 2026. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.26. GitHub, 2026. https://github.com/gift-framework/GIFT.
 ```
 
 ---
@@ -150,12 +150,12 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 ## Vérification formelle (Core)
 
 ```bibtex
-@software{gift_core_v3413,
+@software{gift_core_v3426,
   title   = {GIFT Core: Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.4.13},
+  version = {3.4.26},
   note    = {143 Lean 4 files, 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry}
 }
 ```
@@ -178,6 +178,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 | Version | Date | Faits marquants |
 |---------|------|-----------------|
+| 3.4.26 | 2026-06-03 | Purge numérologie ; observables.json rafraîchi sur NuFIT 6.1 (Type I 0,92 %) ; 143 fichiers .lean, 8391 jobs, 15 axiomes (4+11), 140 conjonctions ; giftpy 3.4.26 sur PyPI |
+| 3.4.24 | 2026-06-01 | Nettoyage terminologie académique (modules K3 et articles) |
+| 3.4.23 | 2026-05-19 | Témoin résidu CY K3 sous forme close, certifié par intervalles (ε₃' < 10⁻³) |
+| 3.4.20 | 2026-05-10 | Rafraîchissement validations indépendantes ; synchronisation documentation |
 | 3.4.13 | 2026-04-29 | Triptyque publié (Articles A, B, C sur Zenodo) ; réduction d'axiomes 38→4 sur la chaîne principale ; K3NK v3.0 hardcore (Joyce ×17) ; γ² = 24π²/7 dérivé |
 | 3.4.3 | 2026-04 | Étapes 1-5 G₂ Mathlib promues en théorèmes (8→4 axiomes) ; MollifiedSum archivé |
 | 3.4.0 | 2026-04 | Programme metric-first complet ; K3 CAP (Fermat ×990, CI(2,2,2) ×6.4) |
@@ -218,4 +222,4 @@ Licence MIT : voir [LICENSE](LICENSE)
 
 ---
 
-**Version** : 3.4.13 (2026-04-29)
+**Version** : 3.4.26 (2026-06-03)

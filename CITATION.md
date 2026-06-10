@@ -12,22 +12,22 @@ Citation formats for the GIFT Framework v3.4.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.19},
+  version = {3.4.26},
   license = {MIT},
-  note    = {95 observables, 0.39\% mean deviation on 35 Type I relations (PDG 2024 / NuFIT 6.0), 213 conjuncts certified in Lean 4, 4 main-chain axioms, Donaldson direct chain closed (5-layer Wirtinger certificate)}
+  note    = {95 observables, 0.92\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic), Donaldson direct chain closed (5-layer Wirtinger certificate)}
 }
 ```
 
 ### APA Style
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.19) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.26) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.19. GitHub, 2026. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.26. GitHub, 2026. https://github.com/gift-framework/GIFT.
 ```
 
 ---
@@ -41,7 +41,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.4: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2026},
-  note   = {Mean deviation 0.39\% on 35 Type I relations (PDG 2024 / NuFIT 6.0), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 213 conjuncts in Lean 4},
+  note   = {Mean deviation 0.92\% on 33 Type I relations (PDG 2024 / NuFIT 6.1), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 140 conjuncts in Lean 4},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -168,13 +168,13 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 ## Formal Verification (Core)
 
 ```bibtex
-@software{gift_core_v3419,
+@software{gift_core_v3426,
   title   = {GIFT Core: Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.4.19},
-  note    = {134 Lean 4 files, 213 conjuncts, 4 main-chain axioms (15 total incl. interval-arithmetic certificates), 0 sorry, Donaldson coassociative fibration formalized}
+  version = {3.4.26},
+  note    = {143 Lean 4 files, 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic certificates), 0 sorry, 8391 build jobs, Donaldson coassociative fibration formalized}
 }
 ```
 
@@ -198,6 +198,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.4.26 | 2026-06-03 | Numerology purge (competing κ_T modules removed); observables.json refreshed to NuFIT 6.1 (Type I 0.92%); 143 .lean files, 8391 jobs, 15 axioms (4+11), 140 conjuncts; giftpy 3.4.26 on PyPI |
+| 3.4.24 | 2026-06-01 | Academic terminology cleanup across K3 modules and papers |
+| 3.4.23 | 2026-05-19 | Closed-form K3 CY-residual witness, interval-certified (ε₃' < 10⁻³) |
+| 3.4.20 | 2026-05-10 | Independent-validations refresh; documentation sync |
 | 3.4.19 | 2026-05-05 | Donaldson direct chain closed (5-layer Wirtinger cert); DAN [D] published Zenodo 20039066; framework v3.4 PDFs published |
 | 3.4.13 | 2026-04-29 | Triptyque published (Papers A, B, C on Zenodo); axiom reduction 38→4 main-chain; K3NK v3.0 hardcore (Joyce ×17); γ² = 24π²/7 derived |
 | 3.4.3 | 2026-04 | G₂ Mathlib steps 1-5 promoted to theorems (8→4 axioms); MollifiedSum archived |
@@ -238,4 +242,4 @@ MIT License: See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.4.19 (2026-05-07)
+**Version**: 3.4.26 (2026-06-03)

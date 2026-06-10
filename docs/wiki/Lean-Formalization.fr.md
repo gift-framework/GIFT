@@ -11,12 +11,12 @@ Le cadre GIFT est formellement vérifié en **Lean 4** avec Mathlib. La formalis
 
 | Métrique | Valeur |
 |----------|--------|
-| **Fichiers Lean** | 130 |
-| **Jobs de build** | 8378 |
-| **Axiomes publiés** | 7 |
+| **Fichiers Lean** | 143 |
+| **Jobs de build** | 8391 |
+| **Axiomes** | 15 (4 chaîne principale + 11 certificats d'intervalle K3) |
 | **Énoncés `sorry`** | 0 |
 | **Avertissements** | 0 |
-| **Conjonctions du certificat** | 127 (Foundations 34 + Predictions 56 + Spectral 37) |
+| **Conjonctions du certificat** | 140 (à travers les piliers Foundations / Predictions / Spectral) |
 
 ## Dépôt
 

@@ -5,7 +5,7 @@ layout: default
 
 # GIFT v3.4 Complete Validation Summary
 
-**Date**: 2026-05-10 (v3.4.20)
+**Date**: 2026-06-05 (v3.4.26)
 **Experimental references**: NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022
 **Exhaustive search (v3.4)**: 3,000,000 random formula sets; set-level bound ~10⁻⁶ (assumption-free)
 **Null model p-value**: < 2 x 10^-5 (sigma > 4.2)
