@@ -3,7 +3,7 @@ title: "Blog : Orientation, pas ontologie"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/orientation-not-ontology)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/orientation-not-ontology)
 
 # Orientation, pas ontologie
 

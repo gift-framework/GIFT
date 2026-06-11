@@ -1,6 +1,6 @@
 # GIFT Outreach
 
-Vulgarization and blog posts about the GIFT framework, published on [Substack](https://giftheory.substack.com/).
+Vulgarization and blog posts about the GIFT framework, published on [Substack](https://arithmon.substack.com/).
 
 ## Posts
 
@@ -14,4 +14,4 @@ Vulgarization and blog posts about the GIFT framework, published on [Substack](h
 | [Roberto Carlos' Geometry](ROBERTO_CARLOS_GEOMETRY.md) | Geometry explained through football |
 | [Lice of the Universe](LICE_OF_THE_UNIVERSE.md) | A lighthearted take on fundamental constants |
 
-All posts are also available at [giftheory.substack.com](https://giftheory.substack.com/).
+All posts are also available at [arithmon.substack.com](https://arithmon.substack.com/).

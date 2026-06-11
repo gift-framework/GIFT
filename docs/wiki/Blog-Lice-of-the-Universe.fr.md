@@ -3,7 +3,7 @@ title: "Blog : Les poux de l'univers"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/the-lice-of-the-universe)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/the-lice-of-the-universe)
 
 # Les poux de l'univers
 ## Ce que nous ne pouvons pas percevoir, et ce que cela signifie pour les dimensions supplémentaires
@@ -190,7 +190,7 @@ Et peut-être que, pour des créatures à la perception limitée vivant dans un 
 - Edwin Abbott, *Flatland : un roman à plusieurs dimensions* (1884)
 - Jakob von Uexküll, *Mondes animaux et monde humain* (1934)
 - James Lovelock, *Gaïa : une nouvelle vue de la vie sur Terre* (1979)
-- GIFT Framework : [giftheory.substack.com](https://giftheory.substack.com)
+- GIFT Framework : [arithmon.substack.com](https://arithmon.substack.com)
 
 ---
 

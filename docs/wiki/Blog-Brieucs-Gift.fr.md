@@ -3,7 +3,7 @@ title: "Blog : Le nom de l'auteur paraît inventé"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/brieucs-gift)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/brieucs-gift)
 
 # Brieuc's GIFT
 ## "Le nom de l'auteur paraît inventé": Apprendre la physique avec l'IA : l'origine accidentelle de GIFT
@@ -145,5 +145,5 @@ Le roman de science-fiction, d'ailleurs, n'est toujours pas terminé. Mais la ph
 ### Pour aller plus loin
 - **Le framework** : [GIFT v3.3 sur Zenodo](https://doi.org/10.5281/zenodo.18837071)
 - **Le code** : [github.com/gift-framework/GIFT](https://github.com/gift-framework/GIFT)
-- **Le blog** : [giftheory.substack.com](https://giftheory.substack.com)
+- **Le blog** : [arithmon.substack.com](https://arithmon.substack.com)
 - **Le profil Google Scholar** : [scholar.google.com](https://scholar.google.com/citations?user=_oxvuUsAAAAJ&hl=fr&oi=ao)

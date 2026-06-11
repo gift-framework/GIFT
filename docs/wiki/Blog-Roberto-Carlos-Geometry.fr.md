@@ -3,7 +3,7 @@ title: "Blog : La géométrie de l'impossible"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/the-geometry-of-the-impossible)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/the-geometry-of-the-impossible)
 
 # La géométrie de l'impossible
 ## Ce que Roberto Carlos savait (sans savoir qu'il le savait)

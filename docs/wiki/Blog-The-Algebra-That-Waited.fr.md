@@ -3,7 +3,7 @@ title: "Blog : L'algèbre qui attendait"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/the-algebra-that-waited)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/the-algebra-that-waited)
 
 # L'algèbre qui attendait
 Sur les octonions, la patience, et un casse-tête vieux de 43 ans

@@ -44,4 +44,4 @@ See **[Citation Guide](Citation-Guide.html)** for BibTeX, APA, and DOI informati
 - [GitHub: GIFT documentation](https://github.com/gift-framework/GIFT)
 - [GitHub: Core (Lean 4 + Python)](https://github.com/gift-framework/core)
 - [Lean Blueprint](https://gift-framework.github.io/core/)
-- [Substack blog](https://giftheory.substack.com/)
+- [Substack blog](https://arithmon.substack.com/)

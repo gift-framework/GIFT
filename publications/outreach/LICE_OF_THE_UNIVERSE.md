@@ -181,7 +181,7 @@ And maybe, for creatures with limited perception living in a vast and mysterious
 - Edwin Abbott, *Flatland: A Romance of Many Dimensions* (1884)
 - Jakob von Uexküll, *A Foray into the Worlds of Animals and Humans* (1934)
 - James Lovelock, *Gaia: A New Look at Life on Earth* (1979)
-- GIFT Framework: [giftheory.substack.com](https://giftheory.substack.com)
+- GIFT Framework: [arithmon.substack.com](https://arithmon.substack.com)
 
 ---
 

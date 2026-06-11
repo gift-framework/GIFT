@@ -3,7 +3,7 @@ title: "Blog : Le verre qui chante"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/the-singing-glass)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/the-singing-glass)
 
 # Le verre qui chante
 

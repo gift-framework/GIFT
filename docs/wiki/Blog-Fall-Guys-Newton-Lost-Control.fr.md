@@ -3,7 +3,7 @@ title: "Blog : Le jour où Newton a perdu le contrôle"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-1-the-day-newton-lost-control)
 
 # Épisode 1 : Le jour où Newton a perdu le contrôle
 
@@ -119,6 +119,6 @@ C'était la promesse de cette série. On commence à la tenir.
 
 ---
 
-*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [giftheory.substack.com](https://giftheory.substack.com/).*
+*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [arithmon.substack.com](https://arithmon.substack.com/).*
 
 🌀

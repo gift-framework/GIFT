@@ -3,7 +3,7 @@ title: "Blog : Le jour où Pudge t'a appris la mécanique quantique"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-0-the-day-pudge-taught-you)
 
 # Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique
 
@@ -159,6 +159,6 @@ Tu n'es pas étranger à cette physique. Tu y vis depuis des années. On va just
 
 ---
 
-*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [giftheory.substack.com](https://giftheory.substack.com/).*
+*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [arithmon.substack.com](https://arithmon.substack.com/).*
 
 🌀

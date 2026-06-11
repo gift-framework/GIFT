@@ -3,7 +3,7 @@ title: "Blog : On a publié notre brouillon de notice"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/weve-released-our-draft-blueprint)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/weve-released-our-draft-blueprint)
 
 # On a publié notre brouillon de notice
 

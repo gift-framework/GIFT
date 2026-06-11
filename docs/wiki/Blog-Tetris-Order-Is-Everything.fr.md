@@ -3,7 +3,7 @@ title: "Blog : Le jour où Tetris t'a appris que l'ordre fait tout"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-2-the-day-tetris-taught-you)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-2-the-day-tetris-taught-you)
 
 # Épisode 2 : Le jour où Tetris t'a appris que l'ordre fait tout
 
@@ -141,6 +141,6 @@ Lui en a fait une matrice. Toi tu en as fait un T-spin triple. Le geste profond 
 
 ---
 
-*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [giftheory.substack.com](https://giftheory.substack.com/).*
+*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [arithmon.substack.com](https://arithmon.substack.com/).*
 
 🌀

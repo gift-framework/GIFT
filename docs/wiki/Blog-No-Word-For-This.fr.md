@@ -3,7 +3,7 @@ title: "Blog : Le mot qui manque"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/no-word-for-this)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/no-word-for-this)
 
 # Le mot qui manque
 
@@ -67,4 +67,4 @@ En attendant je continue à signer mes papiers tout seul, à payer mes abonnemen
 
 ---
 
-*Les commentaires sont ouverts sur [le post original](https://giftheory.substack.com/p/no-word-for-this). Pour suivre les prochains textes, abonne-toi sur [giftheory.substack.com](https://giftheory.substack.com/).*
+*Les commentaires sont ouverts sur [le post original](https://arithmon.substack.com/p/no-word-for-this). Pour suivre les prochains textes, abonne-toi sur [arithmon.substack.com](https://arithmon.substack.com/).*

@@ -3,7 +3,7 @@ title: "Blog : Gift from Bit"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/gift-from-bit)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/gift-from-bit)
 
 # Gift from Bit
 Quand la géométrie donne

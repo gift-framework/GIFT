@@ -3,6 +3,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
+Part of the **[Arithmon program](https://github.com/arithmon)** -- the hypothesis that the constants of nature are counts.
+
 **What if physics isn't fine-tuned, just well-shaped?**
 
 GIFT derives Standard Model parameters from the geometry of a single 7-dimensional manifold. No free parameters. No fitting. Every prediction is a consequence of shape: E₈×E₈ gauge theory compactified on a G₂-holonomy manifold K₇ with Betti numbers (b₂, b₃) = (21, 77).
@@ -13,35 +15,35 @@ GIFT derives Standard Model parameters from the geometry of a single 7-dimension
 
 | | |
 |:---:|:---:|
-| [**Watch** (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) | [**Read the blog**](https://giftheory.substack.com/) |
+| [**Watch** (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) | [**Read the blog**](https://arithmon.substack.com/) |
 | [**GIFT for Everyone**](docs/GIFT_FOR_EVERYONE.md) | [**FAQ**](docs/FAQ.md) |
 
 ---
 
 ## Blog
 
-All posts on [giftheory.substack.com](https://giftheory.substack.com/).
+All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 
 | Post | Topic |
 |------|-------|
-| [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://giftheory.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
-| [The Furrow](https://giftheory.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
-| [Episode 3: The day the blue shell knew where you were](https://giftheory.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |
-| [No Word for This](https://giftheory.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
-| [We've Released Our Draft Blueprint](https://giftheory.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
-| [Episode 2: The day Tetris taught you that order is everything](https://giftheory.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
-| [Episode 1: The day Newton lost control](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
-| [Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
-| [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
-| [What if the universe was a Lego set?](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
-| ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning Physics with AI: the accidental origin of GIFT |
-| [The Geometry of the Impossible](https://giftheory.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos Knew (Without Knowing It) |
-| [The Lice of the Universe](https://giftheory.substack.com/p/the-lice-of-the-universe) | What We Cannot Perceive, and What That Means |
-| [The Algebra That Waited](https://giftheory.substack.com/p/the-algebra-that-waited) | On octonions, patience, and a 43-year puzzle |
-| [Gift from Bit](https://giftheory.substack.com/p/gift-from-bit) | Why geometry might be the language of physics |
-| [13 Theorems, Zero Trust Required](https://giftheory.substack.com/p/13-theorems-zero-trust-required) | Machine-verified proofs in Lean 4 |
-| [Joyce's Theorem, Now in Lean](https://giftheory.substack.com/p/joyces-theorem-now-in-lean) | Formalizing G₂ holonomy existence |
-| [On What Comes First](https://giftheory.substack.com/p/on-what-comes-first) | Philosophy of mathematical primacy |
+| [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://arithmon.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
+| [The Furrow](https://arithmon.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
+| [Episode 3: The day the blue shell knew where you were](https://arithmon.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |
+| [No Word for This](https://arithmon.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
+| [We've Released Our Draft Blueprint](https://arithmon.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
+| [Episode 2: The day Tetris taught you that order is everything](https://arithmon.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
+| [Episode 1: The day Newton lost control](https://arithmon.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
+| [Episode 0: The day Pudge taught you quantum mechanics](https://arithmon.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
+| [Orientation, not ontology](https://arithmon.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
+| [What if the universe was a Lego set?](https://arithmon.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
+| ["The author's name appears to be fabricated"](https://arithmon.substack.com/p/brieucs-gift) | Learning Physics with AI: the accidental origin of GIFT |
+| [The Geometry of the Impossible](https://arithmon.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos Knew (Without Knowing It) |
+| [The Lice of the Universe](https://arithmon.substack.com/p/the-lice-of-the-universe) | What We Cannot Perceive, and What That Means |
+| [The Algebra That Waited](https://arithmon.substack.com/p/the-algebra-that-waited) | On octonions, patience, and a 43-year puzzle |
+| [Gift from Bit](https://arithmon.substack.com/p/gift-from-bit) | Why geometry might be the language of physics |
+| [13 Theorems, Zero Trust Required](https://arithmon.substack.com/p/13-theorems-zero-trust-required) | Machine-verified proofs in Lean 4 |
+| [Joyce's Theorem, Now in Lean](https://arithmon.substack.com/p/joyces-theorem-now-in-lean) | Formalizing G₂ holonomy existence |
+| [On What Comes First](https://arithmon.substack.com/p/on-what-comes-first) | Philosophy of mathematical primacy |
 
 ---
 
@@ -199,7 +201,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
 
 | Platform | |
 |----------|---|
-| Substack | [giftheory.substack.com](https://giftheory.substack.com/) |
+| Substack | [arithmon.substack.com](https://arithmon.substack.com/) |
 | YouTube | [@giftheory](https://youtube.com/@giftheory) |
 | X | [@GIFTheory](https://x.com/GIFTheory) |
 
@@ -223,7 +225,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.25}
+  version = {3.4.26}
 }
 ```
 
@@ -237,4 +239,6 @@ MIT License, see [LICENSE](LICENSE)
 
 ---
 
+> **GIFT is the founding framework of the [Arithmon program](https://github.com/arithmon).**
+>
 > *Gift from bit*

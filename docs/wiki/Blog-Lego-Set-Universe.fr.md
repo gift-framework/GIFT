@@ -3,7 +3,7 @@ title: "Blog : Et si l'univers était un set Lego"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/what-if-the-universe-was-a-lego-set)
 
 # Et si l'univers était un set Lego reçu en vrac ?
 

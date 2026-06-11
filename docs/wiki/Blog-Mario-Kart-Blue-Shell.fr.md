@@ -3,7 +3,7 @@ title: "Blog : Le jour où la carapace bleue a su où tu étais"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-3-the-day-the-blue-shell)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-3-the-day-the-blue-shell)
 
 # Épisode 3: Le jour où la carapace bleue a su où tu étais
 
@@ -121,6 +121,6 @@ Einstein a détesté cette idée toute sa vie. Toi, tu la subis depuis l'enfance
 
 ---
 
-*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [giftheory.substack.com](https://giftheory.substack.com/).*
+*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [arithmon.substack.com](https://arithmon.substack.com/).*
 
 🌀

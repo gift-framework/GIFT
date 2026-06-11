@@ -3,9 +3,9 @@ title: "Blog : Le jour où Bordeciel ne respirait pas sans toi"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing)
 
-# Épisode 5 — Le jour où Bordeciel ne respirait pas sans toi
+# Épisode 5: Le jour où Bordeciel ne respirait pas sans toi
 
 *Skyrim, le monde en attente d'observateur.*
 
@@ -17,7 +17,7 @@ Pose-toi une question simple. Là, maintenant, pendant que tu chemines, à quoi 
 
 La réponse, si tu as déjà ouvert un fichier de sauvegarde Skyrim ou si tu connais un peu la machinerie des jeux à monde ouvert, est très brutale : *non*. Les bandits ne font rien. Ils n'existent pas. Aucune ligne de code ne calcule ce qu'ils sont en train de faire. Il y a, dans la mémoire de ton ordinateur, une description vide : *bandits, fort de [coordonnées], status : non chargés*. C'est tout. Pas de pensée, pas de respiration, pas de geste. Ils sont en attente d'observateur.
 
-Tu t'approches. Tu passes une crête. À une distance précise — quelques centaines de mètres dans Skyrim, ça varie selon les jeux et les versions — le moteur déclenche ce qu'on appelle un **chargement de chunk**. La zone autour du fort entre en mémoire. Les bandits *commencent à exister*. Le feu prend. Les positions s'instancient. Une routine est lancée pour décider qui fait quoi. Et au moment où tu arrives à portée de vue, les bandits sont là, en train de cuisiner leur cerf, comme s'ils l'avaient toujours fait.
+Tu t'approches. Tu passes une crête. À une distance précise (quelques centaines de mètres dans Skyrim, ça varie selon les jeux et les versions) le moteur déclenche ce qu'on appelle un **chargement de chunk**. La zone autour du fort entre en mémoire. Les bandits *commencent à exister*. Le feu prend. Les positions s'instancient. Une routine est lancée pour décider qui fait quoi. Et au moment où tu arrives à portée de vue, les bandits sont là, en train de cuisiner leur cerf, comme s'ils l'avaient toujours fait.
 
 Mais ils ne l'avaient *pas* toujours fait. Ils ont commencé à le faire au moment où tu es entré dans leur sphère d'observation.
 
@@ -29,7 +29,7 @@ Tu joues à un univers qui ne tourne que là où tu poses ton regard. C'est l'é
 
 Skyrim, comme tous les jeux à monde ouvert un peu sérieux, n'a tout simplement pas le luxe de calculer tout ce qui se passe dans tout le monde en même temps. La carte est trop grande, la mémoire est trop limitée, le processeur a d'autres choses à faire. Donc le moteur fait un choix radical : il ne simule que ce qui est *suffisamment proche du joueur*.
 
-Plus précisément, Skyrim découpe le monde extérieur en blocs (chunks), des cases de 4096 unités de côté — environ soixante mètres dans l'échelle du jeu. À chaque instant, seules les cells dans un certain rayon autour du joueur sont **chargées** : leurs objets existent en mémoire, leurs créatures pensent, leurs PNJ vivent. Les autres cells, qui constituent l'écrasante majorité de Bordeciel à tout moment, sont **déchargées** : elles existent comme des descriptions abstraites sur le disque dur, mais aucun calcul ne tourne pour elles.
+Plus précisément, Skyrim découpe le monde extérieur en blocs (chunks), des cases de 4096 unités de côté, environ soixante mètres dans l'échelle du jeu. À chaque instant, seules les cells dans un certain rayon autour du joueur sont **chargées** : leurs objets existent en mémoire, leurs créatures pensent, leurs PNJ vivent. Les autres cells, qui constituent l'écrasante majorité de Bordeciel à tout moment, sont **déchargées** : elles existent comme des descriptions abstraites sur le disque dur, mais aucun calcul ne tourne pour elles.
 
 Quand tu marches, des cells se chargent devant toi et se déchargent derrière. Le monde se *constitue* autour de toi, par paquets, en permanence. C'est invisible quand le matériel suit. Quand le matériel suit moins bien, tu vois des arbres apparaître, des PNJ se téléporter sur place, des objets surgir. Tu vois, en transparence, le mécanisme.
 
@@ -77,11 +77,11 @@ Skyrim a un observateur unique : toi, le joueur. Tu es le centre absolu, le réf
 
 La physique réelle, elle, ne tolère aucun observateur privilégié. C'est même un principe fondateur depuis Einstein : les lois sont les mêmes pour tous les observateurs, peu importe leur position, leur vitesse, leur état. Donc une théorie sérieuse du "tout n'existe qu'à travers l'observation" doit s'arranger pour que *tous* les observateurs voient un monde cohérent, sans qu'aucun ne soit le centre. C'est une contrainte technique très lourde, et c'est l'une des raisons pour lesquelles l'interprétation participative de Wheeler reste minoritaire parmi les physiciens.
 
-Plusieurs courants modernes ont essayé de la sauver en la modifiant. La **mécanique quantique relationnelle** de Carlo Rovelli dit que les propriétés d'un système n'existent que relativement à d'autres systèmes (pas seulement à des humains conscients), et que chaque "observateur" voit sa propre version cohérente du réel. Le **QBisme** (Quantum Bayesianism) dit que la fonction d'onde n'est pas une description du monde mais un état de croyance d'un agent particulier. Ces approches gardent l'esprit Wheeler — l'observation comme participante — sans le piège du "vous êtes spéciaux".
+Plusieurs courants modernes ont essayé de la sauver en la modifiant. La **mécanique quantique relationnelle** de Carlo Rovelli dit que les propriétés d'un système n'existent que relativement à d'autres systèmes (pas seulement à des humains conscients), et que chaque "observateur" voit sa propre version cohérente du réel. Le **QBisme** (Quantum Bayesianism) dit que la fonction d'onde n'est pas une description du monde mais un état de croyance d'un agent particulier. Ces approches gardent l'esprit Wheeler (l'observation comme participante) sans le piège du "vous êtes spéciaux".
 
 Donc l'analogie Skyrim est juste pour te donner *l'intuition de fond* qu'une existence peut être conditionnée à une observation. Elle est trompeuse si tu en conclus que toi, joueur humain, es au centre cosmique de l'univers. Tu n'es pas le centre. Tu es un observateur parmi d'autres, et chaque observateur fait, peut-être, charger ses propres chunks.
 
-C'est plus subtil et plus démocratique que Skyrim. Mais le geste profond — *l'existence comme acte conditionné, pas comme propriété intrinsèque* — est exactement le bon.
+C'est plus subtil et plus démocratique que Skyrim. Mais le geste profond (*l'existence comme acte conditionné, pas comme propriété intrinsèque*) est exactement le bon.
 
 ---
 
@@ -95,7 +95,7 @@ Réfléchis trente secondes à ce que tu as fait. Tu as exploré plusieurs *bran
 
 C'est cousin lointain de ce qu'on appelle l'**interprétation des mondes multiples** d'Everett en mécanique quantique, où toutes les branches d'une superposition se réalisent dans des univers parallèles, mais chaque observateur ne vit consciemment qu'une seule. La différence majeure : dans Everett, les autres branches *continuent d'exister*, tu n'es juste pas dans la position de les vivre. Dans Skyrim, les autres branches *sont effacées* du disque dur.
 
-On reverra cette idée plus en détail dans un épisode futur, parce qu'elle ouvre une autre porte vertigineuse. Pour l'instant, garde simplement ça en tête : à chaque fois que tu charges une sauvegarde, tu fais, en miniature, ce qu'un univers à mondes multiples ferait à ton insu en permanence — sauf que les "univers manqués" d'Everett, eux, ne s'effacent pas. Ils continuent quelque part, peuplés de versions de toi qui ont fait d'autres choix.
+On reverra cette idée plus en détail dans un épisode futur, parce qu'elle ouvre une autre porte vertigineuse. Pour l'instant, garde simplement ça en tête : à chaque fois que tu charges une sauvegarde, tu fais, en miniature, ce qu'un univers à mondes multiples ferait à ton insu en permanence, sauf que les "univers manqués" d'Everett, eux, ne s'effacent pas. Ils continuent quelque part, peuplés de versions de toi qui ont fait d'autres choix.
 
 ---
 
@@ -105,7 +105,7 @@ Si tu as suivi jusqu'ici, tu as trois intuitions que la plupart des gens n'ont p
 
 **Un**. L'existence d'une chose peut être conditionnée à un acte d'observation. Tu l'as vécue dans Skyrim sans y penser : les bandits du fort lointain n'existaient pas, et c'était normal. Wheeler proposait que quelque chose d'analogue, à un niveau profond, soit peut-être vrai des phénomènes quantiques élémentaires dans la nature.
 
-**Deux**. La frontière entre observateur et observé n'est pas une ligne nette inscrite dans le monde. Elle dépend de protocoles, de seuils, d'algorithmes. Dans Skyrim, c'est le rayon de chargement des *portions (chunks) de la carte*. En physique fondamentale, c'est le choix d'appareils de mesure, les contextes expérimentaux, et — pour Rovelli ou le QBisme — le système de référence qu'on adopte. La nature ne pose pas une frontière, elle la négocie.
+**Deux**. La frontière entre observateur et observé n'est pas une ligne nette inscrite dans le monde. Elle dépend de protocoles, de seuils, d'algorithmes. Dans Skyrim, c'est le rayon de chargement des *portions (chunks) de la carte*. En physique fondamentale, c'est le choix d'appareils de mesure, les contextes expérimentaux, et (pour Rovelli ou le QBisme) le système de référence qu'on adopte. La nature ne pose pas une frontière, elle la négocie.
 
 **Trois**. L'analogie Skyrim a une limite essentielle : tu es l'observateur unique du jeu. La physique sérieuse ne tolère aucun observateur privilégié. Si l'intuition participative est vraie, elle doit valoir pour *tous* les observateurs simultanément, sans centre cosmique. C'est ce qui rend la question vraiment difficile, et c'est aussi ce qui empêche de basculer dans la mystique New Age. Wheeler ne disait pas que tu crées l'univers en y pensant. Il disait que l'univers n'a peut-être pas, à son niveau le plus fin, de propriétés définies indépendamment de toute observation par quoi que ce soit.
 

@@ -42,30 +42,30 @@ Complete index of all wiki pages.
 
 ## Blog Posts
 
-English posts are hosted on Substack ([giftheory.substack.com](https://giftheory.substack.com/)). French translations live in this wiki (see [Site Map FR](Site-Map.fr.html)).
+English posts are hosted on Substack ([arithmon.substack.com](https://arithmon.substack.com/)). French translations live in this wiki (see [Site Map FR](Site-Map.fr.html)).
 
 | Post | Description |
 |------|-------------|
-| [Episode 5: The day Skyrim wasn't breathing without you](https://giftheory.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing) | Skyrim, a world waiting for an observer |
-| [The Singing Glass](https://giftheory.substack.com/p/the-singing-glass) | When a Burgundy wine glass explains the hidden dimensions of the universe |
-| [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://giftheory.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
-| [The Furrow](https://giftheory.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
-| [Episode 3: The day the blue shell knew where you were](https://giftheory.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |
-| [No Word for This](https://giftheory.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
-| [We've Released Our Draft Blueprint](https://giftheory.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
-| [Episode 2: The day Tetris taught you that order is everything](https://giftheory.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
-| [Episode 1: The day Newton lost control](https://giftheory.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
-| [Episode 0: The day Pudge taught you quantum mechanics](https://giftheory.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
-| [Orientation, not ontology](https://giftheory.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
-| [What if the universe was a Lego set?](https://giftheory.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
-| ["The author's name appears to be fabricated"](https://giftheory.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of GIFT |
-| [The Geometry of the Impossible](https://giftheory.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos knew (without knowing it) |
-| [The Lice of the Universe](https://giftheory.substack.com/p/the-lice-of-the-universe) | Why the universe's constants aren't arbitrary |
-| [The Algebra That Waited](https://giftheory.substack.com/p/the-algebra-that-waited) | E₈ and the algebra behind physics |
-| [13 Theorems, Zero Trust Required](https://giftheory.substack.com/p/13-theorems-zero-trust-required) | Trust nothing, verify everything |
-| [On What Comes First](https://giftheory.substack.com/p/on-what-comes-first) | Geometry before physics |
-| [Joyce's Theorem, Now in Lean](https://giftheory.substack.com/p/joyces-theorem-now-in-lean) | Formalizing G₂ existence in Lean 4 |
-| [Gift from Bit](https://giftheory.substack.com/p/gift-from-bit) | Information-theoretic foundations |
+| [Episode 5: The day Skyrim wasn't breathing without you](https://arithmon.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing) | Skyrim, a world waiting for an observer |
+| [The Singing Glass](https://arithmon.substack.com/p/the-singing-glass) | When a Burgundy wine glass explains the hidden dimensions of the universe |
+| [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://arithmon.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
+| [The Furrow](https://arithmon.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
+| [Episode 3: The day the blue shell knew where you were](https://arithmon.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |
+| [No Word for This](https://arithmon.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
+| [We've Released Our Draft Blueprint](https://arithmon.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
+| [Episode 2: The day Tetris taught you that order is everything](https://arithmon.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
+| [Episode 1: The day Newton lost control](https://arithmon.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
+| [Episode 0: The day Pudge taught you quantum mechanics](https://arithmon.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
+| [Orientation, not ontology](https://arithmon.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
+| [What if the universe was a Lego set?](https://arithmon.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
+| ["The author's name appears to be fabricated"](https://arithmon.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of GIFT |
+| [The Geometry of the Impossible](https://arithmon.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos knew (without knowing it) |
+| [The Lice of the Universe](https://arithmon.substack.com/p/the-lice-of-the-universe) | Why the universe's constants aren't arbitrary |
+| [The Algebra That Waited](https://arithmon.substack.com/p/the-algebra-that-waited) | E₈ and the algebra behind physics |
+| [13 Theorems, Zero Trust Required](https://arithmon.substack.com/p/13-theorems-zero-trust-required) | Trust nothing, verify everything |
+| [On What Comes First](https://arithmon.substack.com/p/on-what-comes-first) | Geometry before physics |
+| [Joyce's Theorem, Now in Lean](https://arithmon.substack.com/p/joyces-theorem-now-in-lean) | Formalizing G₂ existence in Lean 4 |
+| [Gift from Bit](https://arithmon.substack.com/p/gift-from-bit) | Information-theoretic foundations |
 
 ## Project
 | Page | Description |

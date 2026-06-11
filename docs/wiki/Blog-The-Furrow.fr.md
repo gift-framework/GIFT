@@ -3,7 +3,7 @@ title: "Blog : Le sillon"
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/the-furrow)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/the-furrow)
 
 # Le sillon
 
@@ -57,4 +57,4 @@ Quelques mois plus tard, la physique n'est toujours pas sûre. Mais le sillon es
 
 ---
 
-*Si vous découvrez ce Substack, le point de départ est [ici](https://giftheory.substack.com/p/brieucs-gift). Les papiers techniques sont sur [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22de%20La%20Fourni%C3%A8re%2C%20Brieuc%22&l=list&p=1&s=10&sort=bestmatch). Et si vous êtes géomètre, physicien, ou simplement curieux, mes DMs sont ouverts.*
+*Si vous découvrez ce Substack, le point de départ est [ici](https://arithmon.substack.com/p/brieucs-gift). Les papiers techniques sont sur [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22de%20La%20Fourni%C3%A8re%2C%20Brieuc%22&l=list&p=1&s=10&sort=bestmatch). Et si vous êtes géomètre, physicien, ou simplement curieux, mes DMs sont ouverts.*

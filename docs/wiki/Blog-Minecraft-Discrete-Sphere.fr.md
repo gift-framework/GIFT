@@ -3,7 +3,7 @@ title: "Blog : Le jour où Minecraft t'a appris à dessiner une sphère qui n'en
 layout: default
 ---
 
-> Version originale en anglais sur [giftheory.substack.com](https://giftheory.substack.com/p/episode-4-the-day-minecraft-taught)
+> Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-4-the-day-minecraft-taught)
 
 # Épisode 4: Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une
 
@@ -141,6 +141,6 @@ Personne ne sait. Toi, tu construis pendant qu'on cherche.
 
 ---
 
-*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [giftheory.substack.com](https://giftheory.substack.com/).*
+*Cette série explore une douzaine de jeux et leurs concepts physiques associés. Pour ne rien rater, abonne-toi sur [arithmon.substack.com](https://arithmon.substack.com/).*
 
 🌀

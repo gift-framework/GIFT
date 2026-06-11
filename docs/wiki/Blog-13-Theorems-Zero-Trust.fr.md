@@ -3,7 +3,7 @@ title: "Blog : 13 théorèmes, zéro confiance requise"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/13-theorems-zero-trust-required)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/13-theorems-zero-trust-required)
 
 # 13 théorèmes, zéro confiance requise
 GIFT rencontre Lean 4

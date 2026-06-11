@@ -26,7 +26,7 @@ layout: default
 
 | Ressource | Lien |
 |-----------|------|
-| Blog Substack | [giftheory.substack.com](https://giftheory.substack.com/) |
+| Blog Substack | [arithmon.substack.com](https://arithmon.substack.com/) |
 
 ## Références expérimentales
 

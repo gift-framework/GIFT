@@ -3,7 +3,7 @@ title: "Blog : Le théorème de Joyce, désormais en Lean"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/joyces-theorem-now-in-lean)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/joyces-theorem-now-in-lean)
 
 # Le théorème de Joyce, désormais en Lean
 Vers une existence vérifiée par machine des variétés G₂

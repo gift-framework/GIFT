@@ -3,7 +3,7 @@ title: "Blog : Ce qui vient avant"
 layout: default
 ---
 
-> Publié à l'origine sur [giftheory.substack.com](https://giftheory.substack.com/p/on-what-comes-first)
+> Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/on-what-comes-first)
 
 # Ce qui vient avant
 Humilité devant les nombres
