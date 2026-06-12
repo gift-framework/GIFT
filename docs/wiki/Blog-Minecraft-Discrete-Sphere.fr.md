@@ -5,7 +5,7 @@ layout: default
 
 > Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-4-the-day-minecraft-taught)
 
-# Épisode 4: Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une
+# Épisode 4 : Le jour où Minecraft t'a appris à dessiner une sphère qui n'en est pas une
 
 *Minecraft, la discrétisation, et l'éternel problème du continu.*
 

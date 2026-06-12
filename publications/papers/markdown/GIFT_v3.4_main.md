@@ -1060,7 +1060,7 @@ The author declares no competing interests.
 - **[B]** B. de La Fournière, "Spectral Geometry of the G₂-GIFT Manifold: Betti Numbers, KK Spectrum, and Spectral Invariants," Zenodo [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) (2026).
 - **[C]** B. de La Fournière, "Newton-Kantorovich Certificate for the K3 Donaldson Embedding in the G₂-GIFT Metric," Zenodo [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) (2026).
 - **[D]** B. de La Fournière, "An Explicit Closed-Form G₂ Ansatz on a K3-Coassociative Neck with Hyperkähler Rotation and Picard-Lefschetz Wirtinger Certificate," Zenodo [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) (2026).
-- **[essay]** B. de La Fournière, *Orientation, not ontology* (companion essay), giftheory.substack.com/p/orientation-not-ontology (2026).
+- **[essay]** B. de La Fournière, *Orientation, not ontology* (companion essay), arithmon.substack.com/p/orientation-not-ontology (2026).
 
 ## Appendix A: Topological Input Constants
 

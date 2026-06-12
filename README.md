@@ -202,8 +202,8 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
 | Platform | |
 |----------|---|
 | Substack | [arithmon.substack.com](https://arithmon.substack.com/) |
-| YouTube | [@giftheory](https://youtube.com/@giftheory) |
-| X | [@GIFTheory](https://x.com/GIFTheory) |
+| YouTube | [@arithmon](https://youtube.com/@arithmon) |
+| X | [@ArithmonProgram](https://x.com/ArithmonProgram) |
 
 | Archive | |
 |---------|---|

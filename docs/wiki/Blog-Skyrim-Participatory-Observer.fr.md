@@ -5,7 +5,7 @@ layout: default
 
 > Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing)
 
-# Épisode 5: Le jour où Bordeciel ne respirait pas sans toi
+# Épisode 5 : Le jour où Bordeciel ne respirait pas sans toi
 
 *Skyrim, le monde en attente d'observateur.*
 
@@ -17,7 +17,7 @@ Pose-toi une question simple. Là, maintenant, pendant que tu chemines, à quoi 
 
 La réponse, si tu as déjà ouvert un fichier de sauvegarde Skyrim ou si tu connais un peu la machinerie des jeux à monde ouvert, est très brutale : *non*. Les bandits ne font rien. Ils n'existent pas. Aucune ligne de code ne calcule ce qu'ils sont en train de faire. Il y a, dans la mémoire de ton ordinateur, une description vide : *bandits, fort de [coordonnées], status : non chargés*. C'est tout. Pas de pensée, pas de respiration, pas de geste. Ils sont en attente d'observateur.
 
-Tu t'approches. Tu passes une crête. À une distance précise (quelques centaines de mètres dans Skyrim, ça varie selon les jeux et les versions) le moteur déclenche ce qu'on appelle un **chargement de chunk**. La zone autour du fort entre en mémoire. Les bandits *commencent à exister*. Le feu prend. Les positions s'instancient. Une routine est lancée pour décider qui fait quoi. Et au moment où tu arrives à portée de vue, les bandits sont là, en train de cuisiner leur cerf, comme s'ils l'avaient toujours fait.
+Tu t'approches. Tu passes une crête. À une distance précise (quelques centaines de mètres dans Skyrim, ça varie selon les jeux et les versions), le moteur déclenche ce qu'on appelle un **chargement de chunk**. La zone autour du fort entre en mémoire. Les bandits *commencent à exister*. Le feu prend. Les positions s'instancient. Une routine est lancée pour décider qui fait quoi. Et au moment où tu arrives à portée de vue, les bandits sont là, en train de cuisiner leur cerf, comme s'ils l'avaient toujours fait.
 
 Mais ils ne l'avaient *pas* toujours fait. Ils ont commencé à le faire au moment où tu es entré dans leur sphère d'observation.
 
