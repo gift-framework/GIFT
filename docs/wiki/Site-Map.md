@@ -46,6 +46,7 @@ English posts are hosted on Substack ([arithmon.substack.com](https://arithmon.s
 
 | Post | Description |
 |------|-------------|
+| [Episode 6: The day Stardew taught you why time moves in one direction](https://arithmon.substack.com/p/episode-6-the-day-stardew-taught) | Stardew, the arrow of time and entropy |
 | [Episode 5: The day Skyrim wasn't breathing without you](https://arithmon.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing) | Skyrim, a world waiting for an observer |
 | [The Singing Glass](https://arithmon.substack.com/p/the-singing-glass) | When a Burgundy wine glass explains the hidden dimensions of the universe |
 | [Episode 4: The day Minecraft taught you to draw a sphere that wasn't one](https://arithmon.substack.com/p/episode-4-the-day-minecraft-taught) | Minecraft, discretization and the eternal problem of the continuum |
