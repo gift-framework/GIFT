@@ -17,7 +17,7 @@ layout: default
 
 ## Abstract
 
-Framework proposing that Standard Model dimensionless parameters emerge as topological invariants of a 7D G₂ holonomy manifold K₇ with Betti numbers (b₂=21, b₃=77) coupled to E₈×E₈ gauge structure. v3.4 catalogues 95 observables (33 Type I exact-target relations) with 0.92% mean deviation on Type I from experiment (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022); 140 conjuncts certified in Lean 4 with 15 axioms (4 main-chain + 11 interval-arithmetic). DUNE will test δ_CP = 197° falsification criterion.
+Framework proposing that Standard Model dimensionless parameters emerge as topological invariants of a 7D G₂ holonomy manifold K₇ with Betti numbers (b₂=21, b₃=77) coupled to E₈×E₈ gauge structure. v3.4 catalogues 95 observables (33 Type I exact-target relations) with 0.99% mean deviation on Type I from experiment (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022); 140 conjuncts certified in Lean 4 with 15 axioms (4 main-chain + 11 interval-arithmetic). DUNE will test δ_CP = 197° falsification criterion.
 
 ---
 
@@ -33,7 +33,7 @@ Framework proposing that Standard Model dimensionless parameters emerge as topol
 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477.2 | 0.004% |
 | n_s | ζ(11)/ζ(5) | 0.9649 | 0.9649 | 0.004% |
 
-**Global** (v3.4): 95 observables in 4 types (33 Type I + 19 II + 21 III + 22 IV); 66 with experimental comparison; mean deviations 0.92% (Type I), 0.17% (Type II), 3.44% (Type III); 11 exact matches (<0.01%), 53 within 1%
+**Global** (v3.4): 95 observables in 4 types (33 Type I + 19 II + 21 III + 22 IV); 66 with experimental comparison; mean deviations 0.99% (Type I), 0.17% (Type II), 3.44% (Type III); 11 exact matches (<0.01%), 53 within 1%
 
 ---
 

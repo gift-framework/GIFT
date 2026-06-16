@@ -26,7 +26,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles
 | Page | Description |
 |------|-------------|
-| 🇫🇷 [Article principal](Paper-Main-Framework.fr.html) | Article principal : 33 relations Type I, 0,92 % d'écart moyen |
+| 🇫🇷 [Article principal](Paper-Main-Framework.fr.html) | Article principal : 33 relations Type I, 0,99 % d'écart moyen |
 | 🇫🇷 [Article S1 fondations](Paper-S1-Foundations.fr.html) | S1 : fondations mathématiques de E₈, G₂, K₇ |
 | 🇫🇷 [Article S2 dérivations](Paper-S2-Derivations.fr.html) | S2 : dérivations complètes pour les 33 observables |
 | 🇫🇷 [Article métrique G₂ explicite](Paper-Explicit-G2-Metric.fr.html) | Métrique G₂ Chebyshev-Cholesky à 169 paramètres |

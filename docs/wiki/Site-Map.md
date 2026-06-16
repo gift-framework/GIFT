@@ -26,7 +26,7 @@ Complete index of all wiki pages.
 ## Papers
 | Page | Description |
 |------|-------------|
-| [Paper Main Framework](Paper-Main-Framework.html) | Main paper: 95 observables (33 Type I, 0.92% mean dev) + 19 Type II + 21 Type III + 22 Type IV |
+| [Paper Main Framework](Paper-Main-Framework.html) | Main paper: 95 observables (33 Type I, 0.99% mean dev) + 19 Type II + 21 Type III + 22 Type IV |
 | [Paper S1 Foundations](Paper-S1-Foundations.html) | S1: E₈, G₂, K₇ mathematical foundations |
 | [Paper S2 Derivations](Paper-S2-Derivations.html) | S2: Complete derivations for all 33 observables |
 | [Paper Explicit G2 Metric](Paper-Explicit-G2-Metric.html) | 169-parameter Chebyshev-Cholesky G₂ metric |

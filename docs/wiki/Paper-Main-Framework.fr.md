@@ -16,7 +16,7 @@ layout: default
 
 ## Résumé
 
-Cadre proposant que les paramètres sans dimension du Modèle Standard émergent comme invariants topologiques d'une variété K₇ à holonomie G₂ de dimension 7 avec nombres de Betti (b₂=21, b₃=77) couplée à une structure de jauge E₈×E₈. La v3.4 catalogue 95 observables (33 relations Type I à cible exacte) avec un écart moyen de 0,92 % sur Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) ; 140 conjonctions certifiées en Lean 4 avec 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle). DUNE testera le critère de falsification δ_CP = 197°.
+Cadre proposant que les paramètres sans dimension du Modèle Standard émergent comme invariants topologiques d'une variété K₇ à holonomie G₂ de dimension 7 avec nombres de Betti (b₂=21, b₃=77) couplée à une structure de jauge E₈×E₈. La v3.4 catalogue 95 observables (33 relations Type I à cible exacte) avec un écart moyen de 0,99 % sur Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) ; 140 conjonctions certifiées en Lean 4 avec 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle). DUNE testera le critère de falsification δ_CP = 197°.
 
 ---
 
@@ -32,7 +32,7 @@ Cadre proposant que les paramètres sans dimension du Modèle Standard émergent
 | m_τ/m_e | 7+10×248+10×99 | 3477 | 3477,2 | 0,004 % |
 | n_s | ζ(11)/ζ(5) | 0,9649 | 0,9649 | 0,004 % |
 
-**Global** : 33 relations Type I, 0,92 % d'écart moyen ; Type II 0,17 % ; Type III 3,44 % ; 11 exactes (< 0,01 %), 53 sous 1 %
+**Global** : 33 relations Type I, 0,99 % d'écart moyen ; Type II 0,17 % ; Type III 3,44 % ; 11 exactes (< 0,01 %), 53 sous 1 %
 
 ---
 

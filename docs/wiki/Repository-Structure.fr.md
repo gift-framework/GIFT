@@ -103,6 +103,6 @@ Le **[Wiki GitHub](https://github.com/gift-framework/GIFT/wiki)** fournit un hub
 
 **Actuelle** : v3.4.26 (2026-05-10)
 **Relations** : 140 conjonctions certifiées (core v3.4.26, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle))
-**Prédictions** : 95 observables (33 Type I, cibles exactes, 0,92 % d'écart moyen ; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
+**Prédictions** : 95 observables (33 Type I, cibles exactes, 0,99 % d'écart moyen ; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 **Validation** : 3 000 000 de jeux de formules aléatoires, aucun ne reproduit le profil joint (borne au niveau ensemble ~10⁻⁶, sans hypothèse d'indépendance)
 **Triptyque** : Articles A (Zenodo 19892350) + B (19893371) + C (19708916) publiés le 2026-04-29

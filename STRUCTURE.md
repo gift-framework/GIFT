@@ -104,6 +104,6 @@ The **[GitHub Wiki](https://github.com/gift-framework/GIFT/wiki)** provides a na
 
 **Current**: v3.4.26 (2026-06-03)
 **Relations**: 140 conjuncts certified (core v3.4.26, 15 axioms = 4 main-chain + 11 interval-arith certificates), 0 `sorry`, 143 .lean files, 8391 build jobs
-**Predictions**: 95 observables (33 Type I, exact targets, 0.92% mean deviation; PDG 2024 / NuFIT 6.1 / Planck 2018)
+**Predictions**: 95 observables (33 Type I, exact targets, 0.99% mean deviation; PDG 2024 / NuFIT 6.1 / Planck 2018)
 **Validation**: 3M+ configs exhaustive (set-level bound ~10⁻⁶, assumption-free; log₁₀ p_algebraic = −134)
 **Papers**: Framework v3.4 (Zenodo 20070101) + A (19892350) + B (19893371) + C (19708916) + D (20039066)

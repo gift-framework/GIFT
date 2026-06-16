@@ -81,7 +81,7 @@ The empirical Koide formula (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)² =
 
 ### 3.3 What is Claimed
 
-The framework produces 33 Type-I relations (dimensionless) spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, and cosmological observables. The mean deviation from experimental values is 0.92% (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
+The framework produces 33 Type-I relations (dimensionless) spanning gauge couplings, neutrino mixing, lepton mass ratios, quark mass ratios, and cosmological observables. The mean deviation from experimental values is 0.99% (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
 All 460+ certified relations have been formally verified in the Lean 4 proof assistant, with 15 axioms (4 main-chain + 11 interval-arithmetic) and 0 sorry.
 
@@ -120,7 +120,7 @@ The framework makes specific predictions testable by near-term experiments:
 
 The GIFT framework explores whether Standard Model parameters might be topological invariants rather than free constants. The specific proposal involves E₈×E₈ gauge structure, G₂ holonomy on a 7-manifold K₇ with Betti numbers b₂ = 21 and b₃ = 77, and controlled torsion providing dynamics.
 
-The resulting 33 Type-I relations (dimensionless) match experiment to 0.92% mean precision (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
+The resulting 33 Type-I relations (dimensionless) match experiment to 0.99% mean precision (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
 
 The framework's value, independent of its physical correctness, lies in demonstrating that geometric principles can substantially constrain particle physics parameters. It provides a concrete example of how topology might replace tuning.
 

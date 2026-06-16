@@ -37,7 +37,7 @@ GIFT est un cadre théorique spéculatif qui présente des prédictions testable
 
 Le cadre est évalué selon :
 - La rigueur mathématique des dérivations
-- La précision de l'accord expérimental (actuellement 0,92 % d'écart moyen sur 33 observables Type I (cibles exactes), NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
+- La précision de l'accord expérimental (actuellement 0,99 % d'écart moyen sur 33 observables Type I (cibles exactes), NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 - La falsifiabilité (critères clairs en S2 Section 10)
 - La reproductibilité (notebook computationnel disponible)
 
@@ -133,7 +133,7 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 - 2 constantes topologiques (κ_T, det(g))
 - prédictions Type II/III/IV supplémentaires en S3
 
-Écart moyen avec l'expérience : **0,92 %** sur 33 observables Type I (cibles exactes) (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
+Écart moyen avec l'expérience : **0,99 %** sur 33 observables Type I (cibles exactes) (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
 ### Et les paramètres dimensionnels comme les masses ?
 
@@ -165,7 +165,7 @@ Les prédictions dimensionnelles (statut : THEORETICAL/DERIVED) sont moins rigou
 - Couplages de jauge : moyenne 0,03 %
 - Matrice CKM : moyenne 0,11 %
 
-**Globalement** : moyenne 0,92 % sur 33 observables Type I (cibles exactes) (v3.4, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
+**Globalement** : moyenne 0,99 % sur 33 observables Type I (cibles exactes) (v3.4, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 
 Voir S2 Section 10 pour l'analyse statistique détaillée.
 

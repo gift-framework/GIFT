@@ -14,7 +14,7 @@ layout: default
 | Propriété | Valeur |
 |---|---|
 | **Prédictions** | 95 observables (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
-| **Écart moyen** | 0,92 % sur 33 relations Type I (cible exacte, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
+| **Écart moyen** | 0,99 % sur 33 relations Type I (cible exacte, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
 | **Paramètres libres** | 0 (3 primitives entières : N=3, r₈=8, r₂=2) |
 | **Vérification Lean 4** | 143 fichiers, 8391 jobs de build, 0 sorry, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle) (core v3.4.26) |
 | **Significativité statistique** | p < 2×10⁻⁵ (σ > 4,2), unique parmi 3M+ configurations |

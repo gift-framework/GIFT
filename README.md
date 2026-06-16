@@ -92,7 +92,7 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 | **Parameter-free core** | 33 exact relations among topological integers (Type I) -- each individually correct-or-wrong, none tunable |
 | **Falsifiable** | δ_CP = 197°, N_gen = 3, θ₂₃ upper octant -- tested by DUNE / FCC-ee |
 | **Observables** | 95 total (33 Type I + 19 Type II + 21 Type III + 22 Type IV); 66 with experimental data |
-| **Precision** | 0.92% mean deviation on the 33 Type-I core relations (PDG 2024 / NuFIT 6.1 / Planck 2018) |
+| **Precision** | 0.99% mean deviation on the 33 Type-I core relations (PDG 2024 / NuFIT 6.1 / Planck 2018) |
 | **Uniqueness** | #1 of 3M+ random configurations tested (log₁₀ p_algebraic = −134) |
 
 **Dimensional reduction:** E₈×E₈ (496D) → AdS₄ × K₇ (11D) → Standard Model (4D)
@@ -143,7 +143,7 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 |--------|-------|
 | Configurations tested | 3,000,000+ |
 | **GIFT rank** | **#1** |
-| Mean deviation | 0.92% on the 33 Type-I core relations (NuFIT 6.1) |
+| Mean deviation | 0.99% on the 33 Type-I core relations (NuFIT 6.1) |
 | Better alternatives found | 0 |
 
 ### Top 5 Configurations (v3.3.24 leave-one-out scan, preserved for traceability)

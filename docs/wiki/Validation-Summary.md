@@ -12,7 +12,7 @@ layout: default
 **Westfall-Young maxT**: 11/33 significant (global p = 0.008, v3.3.24 baseline)
 **Bayes factor**: 288-4,567 (decisive, v3.3.24 baseline)
 
-> **v3.4 top-level**: 0.92% mean deviation across 33 Type I (exact-target) observables in the 95-observable catalog (33 Type I + 19 Type II + 21 Type III + 22 Type IV). Sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis for traceability.
+> **v3.4 top-level**: 0.99% mean deviation across 33 Type I (exact-target) observables in the 95-observable catalog (33 Type I + 19 Type II + 21 Type III + 22 Type IV). Sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis for traceability.
 
 ---
 
@@ -20,7 +20,7 @@ layout: default
 
 | Category | Predictions | Mean Deviation | Status |
 |----------|-------------|----------------|--------|
-| **Type I (exact targets, v3.4)** | 33 | **0.92%** | VALIDATED |
+| **Type I (exact targets, v3.4)** | 33 | **0.99%** | VALIDATED |
 | **Well-measured observables (v3.3.24)** | 32 | 0.24% | VALIDATED |
 | **All observables incl. delta_CP (v3.3.24)** | 33 | 0.57% | VALIDATED |
 | **Scale bridge** (3 masses in MeV) | 3 | 0.07% | EXPLORATORY |
@@ -34,7 +34,7 @@ uncertainty (+/-20 deg = +/-11%) exceeds the GIFT deviation. For all other
 32 observables, the experimental precision far exceeds the framework's accuracy.
 The GIFT prediction (197 deg) lies within ~1 sigma of the NuFIT 6.1 best fit
 (~207-212 deg), inside the falsification window [182, 212] deg.
-We report 0.92% (33 Type I relations) as the primary metric.
+We report 0.99% (33 Type I relations) as the primary metric.
 
 ---
 
@@ -283,7 +283,7 @@ The 33 dimensionless predictions do NOT depend on the Riemann connection.
 
 With NuFIT 6.1 experimental values, the GIFT framework achieves:
 
-- **Mean deviation**: **0.92%** across the 33 Type I relations
+- **Mean deviation**: **0.99%** across the 33 Type I relations
 - **3 exact matches** (0.00% deviation: N_gen, m_s/m_d, Omega_DM/Omega_b)
 - **28/33 sub-percent** accuracy
 - **delta_CP**: 197 deg within ~1 sigma of the NuFIT 6.1 best fit (~207-212 deg), awaiting DUNE

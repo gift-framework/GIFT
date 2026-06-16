@@ -12,7 +12,7 @@ layout: default
 **Westfall-Young maxT** : 11/33 significatifs (p global = 0,008, base v3.3.24)
 **Facteur de Bayes** : 288 à 4 567 (décisif, base v3.3.24)
 
-> **Tête v3.4** : 0,92 % d'écart moyen sur 33 relations Type I (cibles exactes) dans le catalogue 95 observables (33 Type I + 19 Type II + 21 Type III + 22 Type IV ; Type II 0,17 %, Type III 3,44 %). Les ventilations sectorielles ci-dessous conservent l'analyse v3.3.24 NuFIT 6.0 à des fins de traçabilité.
+> **Tête v3.4** : 0,99 % d'écart moyen sur 33 relations Type I (cibles exactes) dans le catalogue 95 observables (33 Type I + 19 Type II + 21 Type III + 22 Type IV ; Type II 0,17 %, Type III 3,44 %). Les ventilations sectorielles ci-dessous conservent l'analyse v3.3.24 NuFIT 6.0 à des fins de traçabilité.
 
 ---
 
@@ -20,14 +20,14 @@ layout: default
 
 | Catégorie | Prédictions | Écart moyen | Statut |
 |---|---|---|---|
-| **Type I (cibles exactes, v3.4)** | 33 | **0,92 %** | VALIDÉ |
+| **Type I (cibles exactes, v3.4)** | 33 | **0,99 %** | VALIDÉ |
 | **Observables bien mesurés (v3.3.24)** | 32 | 0,24 % | VALIDÉ |
 | **Tous, y compris δ_CP (v3.3.24)** | 33 | 0,57 % | VALIDÉ |
 | **Pont d'échelle** (3 masses en MeV) | 3 | 0,07 % | EXPLORATOIRE |
 
 Les 33 prédictions sont sans dimension : ratios, angles de mélange et constantes de couplage. Les angles en degrés et leurs équivalents trigonométriques (sin² θ) représentent le même contenu physique dans des coordonnées différentes.
 
-**Note sur δ_CP** : δ_CP est la seule observable dont l'incertitude expérimentale (±20° = ±11 %) dépasse l'écart de GIFT. Pour les 32 autres observables, la précision expérimentale dépasse largement la précision du cadre. La prédiction de GIFT (197°) se situe à ~1 σ du meilleur ajustement de NuFIT 6.1 (~207-212°), à l'intérieur de la fenêtre de falsification [182, 212]°. Nous rapportons 0,92 % (33 relations Type I) comme métrique principale.
+**Note sur δ_CP** : δ_CP est la seule observable dont l'incertitude expérimentale (±20° = ±11 %) dépasse l'écart de GIFT. Pour les 32 autres observables, la précision expérimentale dépasse largement la précision du cadre. La prédiction de GIFT (197°) se situe à ~1 σ du meilleur ajustement de NuFIT 6.1 (~207-212°), à l'intérieur de la fenêtre de falsification [182, 212]°. Nous rapportons 0,99 % (33 relations Type I) comme métrique principale.
 
 ---
 
@@ -251,7 +251,7 @@ Les 33 prédictions sans dimension NE dépendent PAS de la connexion de Riemann.
 
 Avec les valeurs expérimentales NuFIT 6.1, le cadre GIFT atteint :
 
-- **Écart moyen** : **0,92 %** sur les 33 relations Type I
+- **Écart moyen** : **0,99 %** sur les 33 relations Type I
 - **3 correspondances exactes** (0,00 % d'écart : N_gen, m_s/m_d, Ω_DM/Ω_b)
 - **28/33 sous le pour cent** de précision
 - **δ_CP** : 197° à ~1 σ du meilleur ajustement NuFIT 6.1 (~207-212°), en attente de DUNE

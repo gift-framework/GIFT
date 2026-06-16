@@ -80,7 +80,7 @@ La formule empirique de Koide (m_e + m_μ + m_τ)/(√m_e + √m_μ + √m_τ)²
 
 ### 3.3 Ce qui est revendiqué
 
-Le cadre produit 33 relations Type I sans dimension couvrant les couplages de jauge, le mélange des neutrinos, les rapports de masses des leptons, les rapports de masses des quarks et les observables cosmologiques. L'écart moyen par rapport aux valeurs expérimentales est de 0,92 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
+Le cadre produit 33 relations Type I sans dimension couvrant les couplages de jauge, le mélange des neutrinos, les rapports de masses des leptons, les rapports de masses des quarks et les observables cosmologiques. L'écart moyen par rapport aux valeurs expérimentales est de 0,99 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
 Toutes les 460+ relations certifiées ont été formellement vérifiées dans l'assistant de preuve Lean 4, avec 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle) et 0 sorry.
 
@@ -119,7 +119,7 @@ Le cadre fait des prédictions spécifiques testables par des expériences à co
 
 Le cadre GIFT explore si les paramètres du Modèle Standard pourraient être des invariants topologiques plutôt que des constantes libres. La proposition spécifique implique une structure de jauge E₈×E₈, une holonomie G₂ sur une 7-variété K₇ avec nombres de Betti b₂ = 21 et b₃ = 77, et une torsion contrôlée fournissant la dynamique.
 
-Les 33 relations Type I sans dimension qui en résultent correspondent à l'expérience avec une précision moyenne de 0,92 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Que cela reflète une physique fondamentale ou une coïncidence élaborée sera déterminé par les expériences, en particulier la mesure par DUNE de la phase de violation CP δ_CP dans les années à venir.
+Les 33 relations Type I sans dimension qui en résultent correspondent à l'expérience avec une précision moyenne de 0,99 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Que cela reflète une physique fondamentale ou une coïncidence élaborée sera déterminé par les expériences, en particulier la mesure par DUNE de la phase de violation CP δ_CP dans les années à venir.
 
 La valeur du cadre, indépendamment de sa correction physique, réside dans la démonstration que des principes géométriques peuvent contraindre substantiellement les paramètres de la physique des particules. Il fournit un exemple concret de la manière dont la topologie pourrait remplacer l'ajustement.
 

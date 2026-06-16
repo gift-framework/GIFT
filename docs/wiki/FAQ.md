@@ -37,7 +37,7 @@ GIFT is a speculative theoretical framework presenting testable predictions. The
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
-- Precision of experimental agreement (currently 0.92% mean deviation across 33 Type I (exact-target) observables, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
+- Precision of experimental agreement (currently 0.99% mean deviation across 33 Type I (exact-target) observables, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 - Falsifiability (clear criteria in S2 Section 10)
 - Reproducibility (computational notebook available)
 
@@ -133,7 +133,7 @@ See Supplement S1 for complete mathematical details.
 - 2 topological constants (κ_T, det(g))
 - additional Type II/III/IV predictions in S3
 
-Mean deviation from experiment: **0.92%** across 33 Type I (exact-target) observables (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
+Mean deviation from experiment: **0.99%** across 33 Type I (exact-target) observables (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022).
 
 ### What about dimensional parameters like masses?
 
@@ -165,7 +165,7 @@ The dimensional predictions (status: THEORETICAL/DERIVED) are less rigorous than
 - Gauge couplings: mean 0.03%
 - CKM matrix: mean 0.11%
 
-**Overall**: Mean 0.92% across 33 Type I (exact-target) observables (v3.4, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
+**Overall**: Mean 0.99% across 33 Type I (exact-target) observables (v3.4, NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 
 See S2 Section 10 for detailed statistical analysis.
 

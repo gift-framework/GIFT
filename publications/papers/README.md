@@ -84,7 +84,7 @@ publications/
 | 9 | m_s/m_d | 20 | **PROVEN** |
 | 10 | δ_CP | 197° | **PROVEN** |
 
-**Zero continuous adjustable parameters. 3 integer primitives (N=3, r₈=8, r₂=2). Mean deviation 0.92% on 33 Type I exact-target relations (PDG 2024 / NuFIT 6.1).**
+**Zero continuous adjustable parameters. 3 integer primitives (N=3, r₈=8, r₂=2). Mean deviation 0.99% on 33 Type I exact-target relations (PDG 2024 / NuFIT 6.1).**
 
 ---
 

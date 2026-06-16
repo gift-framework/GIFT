@@ -18,7 +18,7 @@ Formats de citation pour le cadre GIFT v3.4.
   url     = {https://github.com/gift-framework/GIFT},
   version = {3.4.26},
   license = {MIT},
-  note    = {95 observables, 0.92\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic)}
+  note    = {95 observables, 0.99\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic)}
 }
 ```
 
@@ -45,7 +45,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   title  = {Geometric Information Field Theory v3.4: Topological Determination of Standard Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2026},
-  note   = {Mean deviation 0.92\% on 33 Type I relations (PDG 2024 / NuFIT 6.1), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 140 conjuncts in Lean 4},
+  note   = {Mean deviation 0.99\% on 33 Type I relations (PDG 2024 / NuFIT 6.1), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 140 conjuncts in Lean 4},
   url    = {https://github.com/gift-framework/GIFT}
 }
 ```
@@ -178,7 +178,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 | Version | Date | Faits marquants |
 |---------|------|-----------------|
-| 3.4.26 | 2026-06-03 | Purge numérologie ; observables.json rafraîchi sur NuFIT 6.1 (Type I 0,92 %) ; 143 fichiers .lean, 8391 jobs, 15 axiomes (4+11), 140 conjonctions ; giftpy 3.4.26 sur PyPI |
+| 3.4.26 | 2026-06-03 | Purge numérologie ; observables.json rafraîchi sur NuFIT 6.1 (Type I 0,99 %) ; 143 fichiers .lean, 8391 jobs, 15 axiomes (4+11), 140 conjonctions ; giftpy 3.4.26 sur PyPI |
 | 3.4.24 | 2026-06-01 | Nettoyage terminologie académique (modules K3 et articles) |
 | 3.4.23 | 2026-05-19 | Témoin résidu CY K3 sous forme close, certifié par intervalles (ε₃' < 10⁻³) |
 | 3.4.20 | 2026-05-10 | Rafraîchissement validations indépendantes ; synchronisation documentation |

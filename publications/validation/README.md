@@ -13,7 +13,7 @@ These newer scripts and results live in the canonical workspace (private repo). 
 | Metric | Value |
 |--------|-------|
 | Type I observables | 33 (exact-target relations) |
-| Mean deviation (Type I) | **0.92%** (PDG 2024 / NuFIT 6.1) |
+| Mean deviation (Type I) | **0.99%** (PDG 2024 / NuFIT 6.1) |
 | Total observables | 95 (33 I + 19 II + 21 III + 22 IV) |
 | Algebraic null model | set-level ~10⁻⁶ (assumption-free); log₁₀ p = −134 over 3M+ formulas |
 | Lean certificate | 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry |
