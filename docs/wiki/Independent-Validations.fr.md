@@ -156,4 +156,4 @@ Les validations indépendantes sont encouragées. Si vous dérivez des prédicti
 ---
 
 *Fait partie du GIFT Framework v3.4*
-*Dernière mise à jour : 2026-06-03 (sortie v3.4.26)*
+*Dernière mise à jour : 2026-06-03 (sortie v3.4.27)*

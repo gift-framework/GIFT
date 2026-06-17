@@ -28,4 +28,4 @@ See [STATISTICAL_EVIDENCE.md](../references/STATISTICAL_EVIDENCE.md) for the can
 
 ---
 
-**Version**: 3.4.26 (2026-06-03)
+**Version**: 3.4.27 (2026-06-03)

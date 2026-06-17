@@ -156,4 +156,4 @@ Independent validations are encouraged. If you derive GIFT predictions using alt
 ---
 
 *Part of GIFT Framework v3.4*
-*Last updated: 2026-06-03 (v3.4.26 release)*
+*Last updated: 2026-06-03 (v3.4.27 release)*

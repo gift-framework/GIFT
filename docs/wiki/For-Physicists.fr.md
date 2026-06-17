@@ -134,4 +134,4 @@ La valeur du cadre, indépendamment de sa correction physique, réside dans la d
 
 ---
 
-*Cadre GIFT v3.4.26*
+*Cadre GIFT v3.4.27*

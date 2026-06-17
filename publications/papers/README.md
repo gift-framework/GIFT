@@ -105,7 +105,7 @@ See [`validation/`](../validation/) and [`STATISTICAL_EVIDENCE.md`](../reference
 
 143 Lean 4 files, 140 conjuncts certified, 15 axioms (4 main-chain + 11 interval-arithmetic certificates), 0 sorry, 8391 build jobs.
 
-See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3.4.26).
+See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3.4.27).
 
 ---
 
@@ -116,5 +116,5 @@ See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3
 
 ---
 
-**Version**: 3.4.26 (2026-06-03)
+**Version**: 3.4.27 (2026-06-03)
 **Repository**: https://github.com/gift-framework/GIFT

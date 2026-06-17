@@ -5,7 +5,7 @@ layout: default
 
 # Preuves statistiques de GIFT
 
-**Version** : 3.4.26
+**Version** : 3.4.27
 **Date de validation** : avril 2026
 **Scripts** : [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/bulletproof_validation_v33.py) (7 composantes, archive v3.3.24), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/exhaustive_validation_v33.py) (3M+ configurations)
 
@@ -419,6 +419,6 @@ GIFT atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. 
 
 ---
 
-*GIFT Framework v3.4.26 : preuves statistiques à toute épreuve*
+*GIFT Framework v3.4.27 : preuves statistiques à toute épreuve*
 *Tête : écart moyen 0,99 % sur 33 relations Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) ; une borne au niveau ensemble ~10⁻⁶ sur 3 000 000 de jeux de formules aléatoires (sans hypothèse d'indépendance)*
 *Ventilation sectorielle ci-dessus : analyse v3.3.24 NuFIT 6.0 (0,24 % sur 32 bien mesurés / 0,57 % tous les 33)*

@@ -12,7 +12,7 @@ Citation formats for the GIFT Framework v3.4.
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/GIFT},
-  version = {3.4.26},
+  version = {3.4.27},
   license = {MIT},
   note    = {95 observables, 0.99\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic), Donaldson direct chain closed (5-layer Wirtinger certificate)}
 }
@@ -21,13 +21,13 @@ Citation formats for the GIFT Framework v3.4.
 ### APA Style
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.26) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.27) [Software]. GitHub. https://github.com/gift-framework/GIFT
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.26. GitHub, 2026. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.27. GitHub, 2026. https://github.com/gift-framework/GIFT.
 ```
 
 ---
@@ -173,7 +173,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/gift-framework/core},
-  version = {3.4.26},
+  version = {3.4.27},
   note    = {143 Lean 4 files, 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic certificates), 0 sorry, 8391 build jobs, Donaldson coassociative fibration formalized}
 }
 ```
@@ -198,7 +198,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| 3.4.26 | 2026-06-03 | Numerology purge (competing κ_T modules removed); observables.json refreshed to NuFIT 6.1 (Type I 0.99%); 143 .lean files, 8391 jobs, 15 axioms (4+11), 140 conjuncts; giftpy 3.4.26 on PyPI |
+| 3.4.27 | 2026-06-03 | Numerology purge (competing κ_T modules removed); observables.json refreshed to NuFIT 6.1 (Type I 0.99%); 143 .lean files, 8391 jobs, 15 axioms (4+11), 140 conjuncts; giftpy 3.4.27 on PyPI |
 | 3.4.24 | 2026-06-01 | Academic terminology cleanup across K3 modules and papers |
 | 3.4.23 | 2026-05-19 | Closed-form K3 CY-residual witness, interval-certified (ε₃' < 10⁻³) |
 | 3.4.20 | 2026-05-10 | Independent-validations refresh; documentation sync |
@@ -242,4 +242,4 @@ MIT License: See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.4.26 (2026-06-03)
+**Version**: 3.4.27 (2026-06-03)

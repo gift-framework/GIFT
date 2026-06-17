@@ -16,7 +16,7 @@ layout: default
 | **Predictions** | 95 observables (33 Type I + 19 Type II + 21 Type III + 22 Type IV) |
 | **Mean deviation** | 0.99% on 33 Type I (exact-target) relations (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) |
 | **Free parameters** | 0 (3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Lean 4 verification** | 143 files, 8391 build jobs, 0 sorry, 15 axioms (4 main-chain + 11 interval-arithmetic) (core v3.4.26) |
+| **Lean 4 verification** | 143 files, 8391 build jobs, 0 sorry, 15 axioms (4 main-chain + 11 interval-arithmetic) (core v3.4.27) |
 | **Statistical significance** | p < 2×10⁻⁵ (σ > 4.2), unique among 3M+ configurations |
 | **Monte Carlo null model** | P(algebraic) = 10⁻¹³⁸ over 3M+ formulas |
 
@@ -86,4 +86,4 @@ Browse the sidebar for full navigation, or see the [Site Map](Site-Map.html) for
 
 ---
 
-*GIFT Framework v3.4.26 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*
+*GIFT Framework v3.4.27 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*

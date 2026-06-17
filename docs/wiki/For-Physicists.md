@@ -134,4 +134,4 @@ The framework's value, independent of its physical correctness, lies in demonstr
 
 ---
 
-*GIFT Framework v3.4.26*
+*GIFT Framework v3.4.27*

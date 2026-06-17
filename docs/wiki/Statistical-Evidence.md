@@ -5,7 +5,7 @@ layout: default
 
 # GIFT Statistical Evidence
 
-**Version**: 3.4.26
+**Version**: 3.4.27
 **Validation Date**: April 2026
 **Scripts**: [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/bulletproof_validation_v33.py) (7-component, v3.3.24 archive), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/exhaustive_validation_v33.py) (3M+ configs)
 
@@ -419,6 +419,6 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.4.26: Bullet-Proof Statistical Evidence*
+*GIFT Framework v3.4.27: Bullet-Proof Statistical Evidence*
 *Top-level: mean deviation 0.99% across 33 Type I relations (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022); a set-level bound ~10⁻⁶ over 3,000,000 random formula sets (assumption-free)*
 *Detailed sector breakdown above: v3.3.24 NuFIT 6.0 analysis (0.24% on 32 well-measured / 0.57% all 33)*

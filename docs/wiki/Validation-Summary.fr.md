@@ -5,7 +5,7 @@ layout: default
 
 # Résumé complet de validation GIFT v3.4
 
-**Date** : 2026-06-05 (v3.4.26)
+**Date** : 2026-06-05 (v3.4.27)
 **Références expérimentales** : NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022
 **Recherche exhaustive (v3.4)** : 3 000 000 de jeux de formules aléatoires ; borne au niveau ensemble ~10⁻⁶ (sans hypothèse d'indépendance)
 **p-valeur du modèle nul** : < 2 × 10⁻⁵ (σ > 4,2)
