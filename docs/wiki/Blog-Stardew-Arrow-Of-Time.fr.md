@@ -29,7 +29,7 @@ C'est l'épisode où on parle de ça.
 
 Voilà un fait étrange que la plupart des gens ne réalisent jamais.
 
-Quand tu écris les équations de la physique fondamentale — la mécanique de Newton, l'électromagnétisme de Maxwell, la mécanique quantique, la relativité d'Einstein — toutes ces équations ont une propriété frappante : elles fonctionnent aussi bien dans un sens du temps que dans l'autre. Mathématiquement, si tu prends une solution de l'équation et que tu remplaces *t* (le temps) par *-t* (le temps qui remonte), tu obtiens une autre solution valide.
+Quand tu écris les équations de la physique fondamentale — la mécanique de Newton, l'électromagnétisme de Maxwell, la mécanique quantique, la relativité d'Einstein, toutes ces équations ont une propriété frappante : elles fonctionnent aussi bien dans un sens du temps que dans l'autre. Mathématiquement, si tu prends une solution de l'équation et que tu remplaces *t* (le temps) par *-t* (le temps qui remonte), tu obtiens une autre solution valide.
 
 Concrètement : si tu filmais deux boules de billard qui se cognent et que tu passais la vidéo à l'envers, ce que tu verrais (les boules qui se "décognent" et repartent vers leurs positions de départ) serait *parfaitement compatible* avec les lois de Newton. Un physicien qui ne saurait pas que la vidéo est à l'envers ne pourrait pas le détecter en regardant juste les boules. Les équations ne distinguent pas le passé du futur.
 
@@ -49,11 +49,11 @@ Exemple : ta grange dans Stardew. Si tu mets toutes tes ressources rangées prop
 
 Maintenant fais tomber tout ça en vrac sur le sol. Le résultat est en désordre. Et voici ce qui est subtil : il y a *énormément* de configurations différentes qui correspondent toutes à "un bordel sur le sol". Tu peux permuter les morceaux, les mettre dans n'importe quel ordre, ça reste un bordel. C'est un état très *désordonné*, à haute entropie.
 
-Le deuxième principe dit ceci : si tu laisses un système livré à lui-même, il évolue spontanément vers les états qui ont le plus de configurations possibles — donc vers le désordre. Pas par méchanceté du monde. Par pure statistique : il y a tellement plus de manières d'être en désordre que d'être en ordre que, choisis au hasard, tu tomberas presque toujours sur du désordre.
+Le deuxième principe dit ceci : si tu laisses un système livré à lui-même, il évolue spontanément vers les états qui ont le plus de configurations possibles : donc vers le désordre. Pas par méchanceté du monde. Par pure statistique : il y a tellement plus de manières d'être en désordre que d'être en ordre que, choisis au hasard, tu tomberas presque toujours sur du désordre.
 
 Quand tu lâches un château de cartes, il s'effondre. Pas parce qu'une loi physique l'oblige à s'effondrer, mais parce qu'il y a un milliard de façons de "ne plus être un château" pour une seule façon d'être ce château précis. Le hasard fait le reste.
 
-Et voici la chose vertigineuse : le deuxième principe est, à toutes fins pratiques, la *seule* loi fondamentale de la physique qui distingue le passé du futur. (Il existe bien, en physique des particules, une minuscule asymétrie temporelle dans certaines désintégrations exotiques — on la laisse de côté ici ; elle est bien trop faible pour expliquer que ton omelette ne redevienne pas des œufs.) C'est lui, et lui seul, qui te dit que l'omelette ne redevient pas des œufs. Ce n'est pas que ce serait *impossible* mécaniquement. Ce serait juste si improbable, sur un nombre de configurations si astronomique, que tu peux attendre un million d'âges de l'univers sans le voir une seule fois.
+Et voici la chose vertigineuse : le deuxième principe est, à toutes fins pratiques, la *seule* loi fondamentale de la physique qui distingue le passé du futur. (Il existe bien, en physique des particules, une minuscule asymétrie temporelle dans certaines désintégrations exotiques, on la laisse de côté ici ; elle est bien trop faible pour expliquer que ton omelette ne redevienne pas des œufs.) C'est lui, et lui seul, qui te dit que l'omelette ne redevient pas des œufs. Ce n'est pas que ce serait *impossible* mécaniquement. Ce serait juste si improbable, sur un nombre de configurations si astronomique, que tu peux attendre un million d'âges de l'univers sans le voir une seule fois.
 
 ---
 
@@ -67,7 +67,7 @@ C'est la signature même de l'entropie. Détruire est facile parce qu'il y a bea
 
 **La deuxième :** *les saisons macroscopiques sont cycliques, mais leur contenu local est irréversible*. Le printemps revient chaque année, oui. Mais les *plants de navets de ce printemps-ci* ne reviennent pas l'année prochaine. Tu vis dans un système où le cadre se répète (un cycle annuel) tout en imposant que *les événements particuliers à l'intérieur du cycle ne se répètent jamais*. C'est exactement le cas de notre monde : la Terre tourne autour du Soleil, les saisons reviennent, mais aucun jour ne se répète, aucune feuille ne tombe deux fois. Un cadre cyclique n'efface pas la flèche du temps locale.
 
-**La troisième :** *l'ordre que tu maintiens sur ta ferme te coûte de l'énergie en permanence*. Tu dois arroser, récolter, nourrir, réparer. Si tu arrêtes de t’en occuper, rien ne progresse. Les mauvaises herbes gagnent du terrain, les animaux cessent de produire correctement, les cultures ratées encombrent le sol. Ta ferme ne reste pas “en ordre” toute seule. C'est un état que tu *maintiens activement* contre une tendance naturelle à se défaire. Cette intuition est exactement celle que Prigogine a transformée en science : un être vivant, une ville, une ferme, ce sont des *structures dissipatives*, qui maintiennent leur ordre en consommant de l'énergie et en rejetant du désordre autour d'elles. On y reviendra dans un futur épisode — il portera un nom d'usine.
+**La troisième :** *l'ordre que tu maintiens sur ta ferme te coûte de l'énergie en permanence*. Tu dois arroser, récolter, nourrir, réparer. Si tu arrêtes de t’en occuper, rien ne progresse. Les mauvaises herbes gagnent du terrain, les animaux cessent de produire correctement, les cultures ratées encombrent le sol. Ta ferme ne reste pas “en ordre” toute seule. C'est un état que tu *maintiens activement* contre une tendance naturelle à se défaire. Cette intuition est exactement celle que Prigogine a transformée en science : un être vivant, une ville, une ferme, ce sont des *structures dissipatives*, qui maintiennent leur ordre en consommant de l'énergie et en rejetant du désordre autour d'elles. On y reviendra dans un futur épisode, il portera un nom d'usine.
 
 ---
 
@@ -83,19 +83,19 @@ Plusieurs hypothèses circulent depuis cent ans pour expliquer pourquoi notre un
 
 Mais personne ne sait pourquoi l'univers a démarré dans cet état si particulier. Et personne ne sait, vraiment, pourquoi le second principe semble universel alors que rien dans les équations fondamentales ne l'impose. C'est l'une des questions les plus ouvertes de la physique théorique, depuis Boltzmann à la fin du XIXe siècle jusqu'à aujourd'hui.
 
-Donc Stardew te donne *l'intuition juste* — le temps va dans un sens, ce qui se défait ne se refait pas — sans te donner le *mécanisme*. Le mécanisme est plus subtil, plus statistique, et il reste partiellement mystérieux même pour les meilleurs physiciens vivants.
+Donc Stardew te donne *l'intuition juste* (le temps va dans un sens, ce qui se défait ne se refait pas) sans te donner le *mécanisme*. Le mécanisme est plus subtil, plus statistique, et il reste partiellement mystérieux même pour les meilleurs physiciens vivants.
 
 ---
 
 ## La nouvelle partie, ou la condition initiale du monde
 
-Reviens une seconde sur cette histoire d'univers qui aurait "commencé" dans un état à très basse entropie. C'est l'hypothèse la plus discutée pour expliquer la flèche du temps, et Stardew en donne une image étonnamment fidèle — à condition de bien comprendre ce que "basse entropie" veut dire.
+Reviens une seconde sur cette histoire d'univers qui aurait "commencé" dans un état à très basse entropie. C'est l'hypothèse la plus discutée pour expliquer la flèche du temps, et Stardew en donne une image étonnamment fidèle, à condition de bien comprendre ce que "basse entropie" veut dire.
 
-Quand tu lances une nouvelle partie, ta ferme n'est pas *propre*. Au contraire : elle est jonchée de cailloux, de branches, de souches, de mauvaises herbes. Il y a des petits rochers que tu dégages à la main et des gros blocs que tu ne peux même pas casser tant que tu n'as pas la pioche en fer — un seuil que tu ne franchis qu'après des heures de jeu, ta petite version privée de l'âge du fer. Tu ne peux rien planter directement. Visuellement, ça ressemble plutôt au désordre.
+Quand tu lances une nouvelle partie, ta ferme n'est pas *propre*. Au contraire : elle est jonchée de cailloux, de branches, de souches, de mauvaises herbes. Il y a des petits rochers que tu dégages à la main et des gros blocs que tu ne peux même pas casser tant que tu n'as pas la pioche en fer, un seuil que tu ne franchis qu'après des heures de jeu, ta petite version privée de l'âge du fer. Tu ne peux rien planter directement. Visuellement, ça ressemble plutôt au désordre.
 
 Et pourtant c'est un état à *basse entropie*. Parce que la basse entropie, ce n'est pas "être bien rangé" — c'est "être *cette* configuration précise, et aucune autre". Chaque nouvelle partie sur la même ferme te sert exactement la même disposition de cailloux, au pixel près. Une seule configuration possible : entropie minimale. Ton sauvegarde de l'année 3, avec ses centaines de tuiles aménagées différemment selon mille décisions, c'est ça l'état à haute entropie — une parmi des milliards d'histoires que tu aurais pu vivre.
 
-C'est exactement le scénario qu'on prête à l'univers. Le Big Bang n'était pas "propre" non plus — c'était un plasma brûlant et violent. Mais c'était une configuration extraordinairement *spéciale*, à très basse entropie, et toute l'histoire du cosmos depuis n'est qu'une longue dérive à partir de cet état de départ unique vers l'immense majorité des configurations possibles. Ta partie de Stardew fait pareil : elle s'éloigne, jour après jour, de l'unique écran de départ que le jeu impose à tout le monde. La flèche du temps, dans le jeu comme dans le cosmos, c'est la mémoire de cette condition initiale singulière.
+C'est exactement le scénario qu'on prête à l'univers. Le Big Bang n'était pas "propre" non plus, c'était un plasma brûlant et violent. Mais c'était une configuration extraordinairement *spéciale*, à très basse entropie, et toute l'histoire du cosmos depuis n'est qu'une longue dérive à partir de cet état de départ unique vers l'immense majorité des configurations possibles. Ta partie de Stardew fait pareil : elle s'éloigne, jour après jour, de l'unique écran de départ que le jeu impose à tout le monde. La flèche du temps, dans le jeu comme dans le cosmos, c'est la mémoire de cette condition initiale singulière.
 
 ---
 
@@ -103,7 +103,7 @@ C'est exactement le scénario qu'on prête à l'univers. Le Big Bang n'était pa
 
 Il y a une chose dans Stardew (et dans tous les jeux à sauvegarde) qui mérite qu'on s'y attarde, parce qu'elle pointe vers quelque chose de précis.
 
-Si tu fais une mauvaise journée — tu oublies de fermer le poulailler, les poules meurent, l'orage abîme tes cultures — tu peux quitter sans sauvegarder. Au prochain lancement, tu reviens à la veille. La journée catastrophe est effacée. Tu as *littéralement* fait remonter le temps local.
+Si tu fais une mauvaise journée, tu oublies de fermer le poulailler, les poules meurent, l'orage abîme tes cultures, tu peux quitter sans sauvegarder. Au prochain lancement, tu reviens à la veille. La journée catastrophe est effacée. Tu as *littéralement* fait remonter le temps local.
 
 Mais regarde ce que tu as fait, exactement. Tu n'as pas inversé la flèche du temps *à l'intérieur* du jeu. Tu as utilisé une fonctionnalité *en dehors* du jeu (le système de sauvegarde sur ton disque dur) pour te placer à un autre point. Du point de vue de ton personnage de fermier, il n'a *jamais vécu* la journée catastrophe. Elle n'a pas eu lieu. Ce n'est pas qu'elle a été défaite, c'est qu'elle n'a *jamais existé* dans cette version de l'histoire.
 
