@@ -1,0 +1,34 @@
+{
+  "artifact": "phase3_kappa_src_vs_G_discharge",
+  "generated_at": "2026-07-02T00:00:00+02:00",
+  "scope": "collar_to_global_quantitative_comparison",
+  "status": "compatibility_check",
+  "inputs": {
+    "G_discharge_source_envelope": {
+      "C_src_universal": 2.0,
+      "K_A": 1.0,
+      "r0": 0.01,
+      "source_norm_Y_neg3": 2e-07
+    },
+    "first_kappa_src_ansatz": {
+      "gamma_geom": "3/8",
+      "A_bulk_alpha1_alpha1_lower_bound": 0.43290043290043284,
+      "candidate_kappa_src_R_lower_bound": 0.1623376623376623
+    }
+  },
+  "comparison": {
+    "candidate_source_norm_Y_neg3": 1.6233766233766234e-08,
+    "ratio_G_envelope_over_candidate": 12.32,
+    "r_G_local_current": 0.00026842464499999993,
+    "r_G_local_candidate": 2.178771469155844e-05,
+    "same_ratio_on_rG_local": 12.319999999999999
+  },
+  "interpretation": {
+    "compatible": true,
+    "meaning": "The present G-discharge is compatible with the first kappa_src ansatz but is too coarse to distinguish it sharply; C_src = 2 acts as a conservative envelope rather than an extracted local coefficient."
+  },
+  "depends_on": [
+    "/home/brieuc/gift-framework/GIFT/certificates/phase3_kappa_src_first_ansatz_proto.json",
+    "/home/brieuc/gift-framework/private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json"
+  ]
+}

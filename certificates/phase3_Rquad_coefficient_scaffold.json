@@ -1,0 +1,53 @@
+{
+  "artifact": "phase3_Rquad_coefficient_scaffold",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "symbolic_scaling_scaffold",
+  "purpose": "Freeze the explicit kinematic coefficient carried by the branched seed w^(3/2) and its weighted Y_-3 scaling, as a first step toward a theorem-grade certificate for the collar quadratic source term R_quad.",
+  "inputs": {
+    "local_model_script": {
+      "path": "/home/brieuc/gift-framework/private/canonical/scripts/axis2_maximal_eq_local_model_2026_06_20.py",
+      "sha256": "f657c05071010bfd74a84a120540c8546216b943a092182af467552119bd5939"
+    },
+    "local_model_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_maximal_eq_local_model_2026_06_20.json",
+      "sha256": "1dbbb307109405d438bfd4ecbb41b06791244aa529274375dfdc5093db5153a0"
+    },
+    "source_residual_ledger": {
+      "path": "/home/brieuc/gift-framework/GIFT/certificates/phase3_source_residual_ledger.json"
+    }
+  },
+  "symbolic_facts": {
+    "branched_seed": "h_delta = w^(3/2)",
+    "first_derivative": "d/dw h_delta = (3/2) w^(1/2)",
+    "second_derivative": "d^2/dw^2 h_delta = (3/4) w^(-1/2)",
+    "indicial_reading": {
+      "upper_seed_root": "mu = 3/2",
+      "curvature_root": "mu = -1/2"
+    }
+  },
+  "scaling_consequence": {
+    "interpretation": "Any quadratic source term built from one bounded factor and one second-derivative branch factor inherits the rho^(1/2) pointwise profile and therefore contributes at Y_-3 scale r0^(7/2).",
+    "pointwise_profile_model": "(3/4) * rho^(1/2)",
+    "weighted_Y_neg3_profile_model": "rho^3 * (3/4) * rho^(1/2) = (3/4) * rho^(7/2)"
+  },
+  "D0_evaluation": {
+    "r0": 0.01,
+    "pointwise_model_value_at_r0": 0.07500000000000001,
+    "weighted_Y_neg3_model_value_at_r0": 7.500000000000002e-08
+  },
+  "status_interpretation": {
+    "what_this_certifies": [
+      "The explicit 3/4 coefficient in the second derivative of the w^(3/2) branch seed.",
+      "The exact weighted Y_-3 exponent r0^(7/2) coming from that branch seed."
+    ],
+    "what_this_does_not_certify": [
+      "The full coefficient of the nonlinear maximal-source term R_quad.",
+      "The tensorial contraction with A_bulk(alpha_1, alpha_1).",
+      "The complete quadratic remainder of m(h_loc,aff + h_loc,branch)."
+    ]
+  },
+  "verification": {
+    "reproduce_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_maximal_eq_local_model_2026_06_20.py"
+  }
+}

@@ -1,0 +1,745 @@
+{
+  "artifact": "phase4_donaldson_coefficients_check",
+  "generated_by": "scripts/phase4_donaldson_coefficients_checker.py",
+  "scope": "Independent structural checker for Stage B v1 symbolic Donaldson coefficient formulas",
+  "status": "checker_for_symbolic_formulas_not_a_numerical_certificate",
+  "checked_artifact": "certificates/phase4_donaldson_coefficients.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_candidate",
+      "pass": true,
+      "detail": "top-level status remains candidate"
+    },
+    {
+      "name": "all_pass_true",
+      "pass": true,
+      "detail": "top-level all_pass is true"
+    },
+    {
+      "name": "type_gate_source",
+      "pass": true,
+      "detail": "coefficient JSON points to the canonical type gate"
+    },
+    {
+      "name": "type_gate_all_pass",
+      "pass": true,
+      "detail": "coefficient JSON records type gate all_pass"
+    },
+    {
+      "name": "type_gate_refuses_false",
+      "pass": true,
+      "detail": "producer gate refusal is declared"
+    },
+    {
+      "name": "type_gate_check_count_matches",
+      "pass": true,
+      "detail": "coefficient JSON check count matches type-check certificate"
+    },
+    {
+      "name": "external_type_gate_passes",
+      "pass": true,
+      "detail": "type-check certificate itself passes"
+    },
+    {
+      "name": "all_terms_present",
+      "pass": true,
+      "detail": "all expected bigraded terms are present"
+    },
+    {
+      "name": "term_omega_bidegree",
+      "pass": true,
+      "detail": "omega has bidegree [1, 2]"
+    },
+    {
+      "name": "term_omega_metadata",
+      "pass": true,
+      "detail": "omega carries source/gauge/inverse fields"
+    },
+    {
+      "name": "term_lambda_bidegree",
+      "pass": true,
+      "detail": "lambda has bidegree [3, 0]"
+    },
+    {
+      "name": "term_lambda_metadata",
+      "pass": true,
+      "detail": "lambda carries source/gauge/inverse fields"
+    },
+    {
+      "name": "term_Theta_bidegree",
+      "pass": true,
+      "detail": "Theta has bidegree [2, 2]"
+    },
+    {
+      "name": "term_Theta_metadata",
+      "pass": true,
+      "detail": "Theta carries source/gauge/inverse fields"
+    },
+    {
+      "name": "term_mu_bidegree",
+      "pass": true,
+      "detail": "mu has bidegree [0, 4]"
+    },
+    {
+      "name": "term_mu_metadata",
+      "pass": true,
+      "detail": "mu carries source/gauge/inverse fields"
+    },
+    {
+      "name": "term_M_eps_bidegree",
+      "pass": true,
+      "detail": "M_eps has bidegree [3, 2]"
+    },
+    {
+      "name": "term_M_eps_metadata",
+      "pass": true,
+      "detail": "M_eps carries source/gauge/inverse fields"
+    },
+    {
+      "name": "all_edges_present",
+      "pass": true,
+      "detail": "all expected operator edges are present"
+    },
+    {
+      "name": "E3_input_degree",
+      "pass": true,
+      "detail": "F_H omega has bidegree Omega^{3,1}"
+    },
+    {
+      "name": "E3_output_degree",
+      "pass": true,
+      "detail": "G_f returns lambda in Omega^{3,0}"
+    },
+    {
+      "name": "E3_inverse_degree",
+      "pass": true,
+      "detail": "independent E3 inverse degree check"
+    },
+    {
+      "name": "E3_uses_G_f",
+      "pass": true,
+      "detail": "E3 names the fibrewise inverse"
+    },
+    {
+      "name": "E5_input_degree",
+      "pass": true,
+      "detail": "F_H mu has bidegree Omega^{2,3}"
+    },
+    {
+      "name": "E5_output_degree",
+      "pass": true,
+      "detail": "G_f returns Theta in Omega^{2,2}"
+    },
+    {
+      "name": "E5_inverse_degree",
+      "pass": true,
+      "detail": "independent E5 inverse degree check"
+    },
+    {
+      "name": "E5_uses_G_f",
+      "pass": true,
+      "detail": "E5 names the fibrewise inverse"
+    },
+    {
+      "name": "connection_input_degree",
+      "pass": true,
+      "detail": "d_H omega has bidegree Omega^{2,2}"
+    },
+    {
+      "name": "connection_no_inverse",
+      "pass": true,
+      "detail": "connection-choice edge has no hidden inverse"
+    },
+    {
+      "name": "E6_input_degree",
+      "pass": true,
+      "detail": "d_H Theta has bidegree Omega^{3,2}"
+    },
+    {
+      "name": "E6_output_degree",
+      "pass": true,
+      "detail": "E6 projects to M_eps bidegree"
+    },
+    {
+      "name": "E3_F_H_omega_to_lambda_status",
+      "pass": true,
+      "detail": "E3_F_H_omega_to_lambda remains candidate"
+    },
+    {
+      "name": "E3_F_H_omega_to_lambda_required_fields",
+      "pass": true,
+      "detail": "E3_F_H_omega_to_lambda carries all Stage B edge fields"
+    },
+    {
+      "name": "E5_F_H_mu_to_Theta_status",
+      "pass": true,
+      "detail": "E5_F_H_mu_to_Theta remains candidate"
+    },
+    {
+      "name": "E5_F_H_mu_to_Theta_required_fields",
+      "pass": true,
+      "detail": "E5_F_H_mu_to_Theta carries all Stage B edge fields"
+    },
+    {
+      "name": "connection_choice_d_H_omega_status",
+      "pass": true,
+      "detail": "connection_choice_d_H_omega remains candidate"
+    },
+    {
+      "name": "connection_choice_d_H_omega_required_fields",
+      "pass": true,
+      "detail": "connection_choice_d_H_omega carries all Stage B edge fields"
+    },
+    {
+      "name": "E6_projection_d_H_Theta_status",
+      "pass": true,
+      "detail": "E6_projection_d_H_Theta remains candidate"
+    },
+    {
+      "name": "E6_projection_d_H_Theta_required_fields",
+      "pass": true,
+      "detail": "E6_projection_d_H_Theta carries all Stage B edge fields"
+    },
+    {
+      "name": "coefficient_objects_present",
+      "pass": true,
+      "detail": "P1/P2/R3 objects are present"
+    },
+    {
+      "name": "P1_status",
+      "pass": true,
+      "detail": "P1 remains candidate"
+    },
+    {
+      "name": "P1_formula_status",
+      "pass": true,
+      "detail": "P1 has symbolic formula bounds"
+    },
+    {
+      "name": "P1_domain_codomain",
+      "pass": true,
+      "detail": "P1 has the Phase 3/4 norm convention"
+    },
+    {
+      "name": "P2_status",
+      "pass": true,
+      "detail": "P2 remains candidate"
+    },
+    {
+      "name": "P2_formula_status",
+      "pass": true,
+      "detail": "P2 has symbolic formula bounds"
+    },
+    {
+      "name": "P2_domain_codomain",
+      "pass": true,
+      "detail": "P2 has the Phase 3/4 norm convention"
+    },
+    {
+      "name": "R3_status",
+      "pass": true,
+      "detail": "R3 remains candidate"
+    },
+    {
+      "name": "R3_formula_status",
+      "pass": true,
+      "detail": "R3 has symbolic formula bounds"
+    },
+    {
+      "name": "R3_domain_codomain",
+      "pass": true,
+      "detail": "R3 has the Phase 3/4 norm convention"
+    },
+    {
+      "name": "old_placeholders_removed",
+      "pass": true,
+      "detail": "legacy placeholder block is absent"
+    },
+    {
+      "name": "formulas_present",
+      "pass": true,
+      "detail": "all coefficient formulas are present"
+    },
+    {
+      "name": "source_P1_status",
+      "pass": true,
+      "detail": "source_P1 remains candidate"
+    },
+    {
+      "name": "source_P1_required_formula_fields",
+      "pass": true,
+      "detail": "source_P1 carries all formula fields"
+    },
+    {
+      "name": "source_P1_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "source_P1 has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "source_P1_has_upper_bound_formula",
+      "pass": true,
+      "detail": "source_P1 records a symbolic upper-bound formula"
+    },
+    {
+      "name": "source_P1_has_constants",
+      "pass": true,
+      "detail": "source_P1 names constants used by its formula"
+    },
+    {
+      "name": "source_P1_domain_codomain",
+      "pass": true,
+      "detail": "source_P1 uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "source_P1_has_check_rule",
+      "pass": true,
+      "detail": "source_P1 has a checker rule"
+    },
+    {
+      "name": "source_P2_status",
+      "pass": true,
+      "detail": "source_P2 remains candidate"
+    },
+    {
+      "name": "source_P2_required_formula_fields",
+      "pass": true,
+      "detail": "source_P2 carries all formula fields"
+    },
+    {
+      "name": "source_P2_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "source_P2 has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "source_P2_has_upper_bound_formula",
+      "pass": true,
+      "detail": "source_P2 records a symbolic upper-bound formula"
+    },
+    {
+      "name": "source_P2_has_constants",
+      "pass": true,
+      "detail": "source_P2 names constants used by its formula"
+    },
+    {
+      "name": "source_P2_domain_codomain",
+      "pass": true,
+      "detail": "source_P2 uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "source_P2_has_check_rule",
+      "pass": true,
+      "detail": "source_P2 has a checker rule"
+    },
+    {
+      "name": "DP1_norm_status",
+      "pass": true,
+      "detail": "DP1_norm remains candidate"
+    },
+    {
+      "name": "DP1_norm_required_formula_fields",
+      "pass": true,
+      "detail": "DP1_norm carries all formula fields"
+    },
+    {
+      "name": "DP1_norm_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "DP1_norm has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "DP1_norm_has_upper_bound_formula",
+      "pass": true,
+      "detail": "DP1_norm records a symbolic upper-bound formula"
+    },
+    {
+      "name": "DP1_norm_has_constants",
+      "pass": true,
+      "detail": "DP1_norm names constants used by its formula"
+    },
+    {
+      "name": "DP1_norm_domain_codomain",
+      "pass": true,
+      "detail": "DP1_norm uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "DP1_norm_has_check_rule",
+      "pass": true,
+      "detail": "DP1_norm has a checker rule"
+    },
+    {
+      "name": "DP2_norm_status",
+      "pass": true,
+      "detail": "DP2_norm remains candidate"
+    },
+    {
+      "name": "DP2_norm_required_formula_fields",
+      "pass": true,
+      "detail": "DP2_norm carries all formula fields"
+    },
+    {
+      "name": "DP2_norm_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "DP2_norm has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "DP2_norm_has_upper_bound_formula",
+      "pass": true,
+      "detail": "DP2_norm records a symbolic upper-bound formula"
+    },
+    {
+      "name": "DP2_norm_has_constants",
+      "pass": true,
+      "detail": "DP2_norm names constants used by its formula"
+    },
+    {
+      "name": "DP2_norm_domain_codomain",
+      "pass": true,
+      "detail": "DP2_norm uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "DP2_norm_has_check_rule",
+      "pass": true,
+      "detail": "DP2_norm has a checker rule"
+    },
+    {
+      "name": "D2P1_norm_status",
+      "pass": true,
+      "detail": "D2P1_norm remains candidate"
+    },
+    {
+      "name": "D2P1_norm_required_formula_fields",
+      "pass": true,
+      "detail": "D2P1_norm carries all formula fields"
+    },
+    {
+      "name": "D2P1_norm_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "D2P1_norm has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "D2P1_norm_has_upper_bound_formula",
+      "pass": true,
+      "detail": "D2P1_norm records a symbolic upper-bound formula"
+    },
+    {
+      "name": "D2P1_norm_has_constants",
+      "pass": true,
+      "detail": "D2P1_norm names constants used by its formula"
+    },
+    {
+      "name": "D2P1_norm_domain_codomain",
+      "pass": true,
+      "detail": "D2P1_norm uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "D2P1_norm_has_check_rule",
+      "pass": true,
+      "detail": "D2P1_norm has a checker rule"
+    },
+    {
+      "name": "D3m_norm_status",
+      "pass": true,
+      "detail": "D3m_norm remains candidate"
+    },
+    {
+      "name": "D3m_norm_required_formula_fields",
+      "pass": true,
+      "detail": "D3m_norm carries all formula fields"
+    },
+    {
+      "name": "D3m_norm_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "D3m_norm has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "D3m_norm_has_upper_bound_formula",
+      "pass": true,
+      "detail": "D3m_norm records a symbolic upper-bound formula"
+    },
+    {
+      "name": "D3m_norm_has_constants",
+      "pass": true,
+      "detail": "D3m_norm names constants used by its formula"
+    },
+    {
+      "name": "D3m_norm_domain_codomain",
+      "pass": true,
+      "detail": "D3m_norm uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "D3m_norm_has_check_rule",
+      "pass": true,
+      "detail": "D3m_norm has a checker rule"
+    },
+    {
+      "name": "raw_P3_scale_status",
+      "pass": true,
+      "detail": "raw_P3_scale remains candidate"
+    },
+    {
+      "name": "raw_P3_scale_required_formula_fields",
+      "pass": true,
+      "detail": "raw_P3_scale carries all formula fields"
+    },
+    {
+      "name": "raw_P3_scale_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "raw_P3_scale has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "raw_P3_scale_has_upper_bound_formula",
+      "pass": true,
+      "detail": "raw_P3_scale records a symbolic upper-bound formula"
+    },
+    {
+      "name": "raw_P3_scale_has_constants",
+      "pass": true,
+      "detail": "raw_P3_scale names constants used by its formula"
+    },
+    {
+      "name": "raw_P3_scale_domain_codomain",
+      "pass": true,
+      "detail": "raw_P3_scale uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "raw_P3_scale_has_check_rule",
+      "pass": true,
+      "detail": "raw_P3_scale has a checker rule"
+    },
+    {
+      "name": "remainder_R3_status",
+      "pass": true,
+      "detail": "remainder_R3 remains candidate"
+    },
+    {
+      "name": "remainder_R3_required_formula_fields",
+      "pass": true,
+      "detail": "remainder_R3 carries all formula fields"
+    },
+    {
+      "name": "remainder_R3_has_symbolic_value_marker",
+      "pass": true,
+      "detail": "remainder_R3 has a symbolic value marker, not a numeric placeholder"
+    },
+    {
+      "name": "remainder_R3_has_upper_bound_formula",
+      "pass": true,
+      "detail": "remainder_R3 records a symbolic upper-bound formula"
+    },
+    {
+      "name": "remainder_R3_has_constants",
+      "pass": true,
+      "detail": "remainder_R3 names constants used by its formula"
+    },
+    {
+      "name": "remainder_R3_domain_codomain",
+      "pass": true,
+      "detail": "remainder_R3 uses the Phase 3/4 norm convention"
+    },
+    {
+      "name": "remainder_R3_has_check_rule",
+      "pass": true,
+      "detail": "remainder_R3 has a checker rule"
+    },
+    {
+      "name": "internal_formula_dependencies_resolve",
+      "pass": true,
+      "detail": "formula dependencies that reference coefficient names resolve internally"
+    },
+    {
+      "name": "source_P1_mentions_Hodge_and_curvature",
+      "pass": true,
+      "detail": "source_P1 formula names K_H_K3 and K_F"
+    },
+    {
+      "name": "source_P2_depends_on_source_P1",
+      "pass": true,
+      "detail": "source_P2 formula explicitly depends on source_P1"
+    },
+    {
+      "name": "remainder_R3_uses_taylor_terms",
+      "pass": true,
+      "detail": "remainder_R3 formula names Taylor and raw P3 terms"
+    },
+    {
+      "name": "legacy_comparison_status",
+      "pass": true,
+      "detail": "legacy power-counting bounds are comparison-only"
+    },
+    {
+      "name": "legacy_not_in_formulas",
+      "pass": true,
+      "detail": "numeric legacy values are not copied into coefficient formulas"
+    },
+    {
+      "name": "promotion_boundary_mentions_checker",
+      "pass": true,
+      "detail": "promotion boundary requires an independent checker"
+    },
+    {
+      "name": "promotion_boundary_keeps_AR_open",
+      "pass": true,
+      "detail": "promotion boundary keeps AR open"
+    },
+    {
+      "name": "values_artifact_present",
+      "pass": true,
+      "detail": "evaluated values artifact is present"
+    },
+    {
+      "name": "values_artifact_name",
+      "pass": true,
+      "detail": "values artifact id matches"
+    },
+    {
+      "name": "values_all_pass",
+      "pass": true,
+      "detail": "values artifact all_pass is true"
+    },
+    {
+      "name": "values_required_constants",
+      "pass": true,
+      "detail": "values artifact has required constants"
+    },
+    {
+      "name": "values_required_evaluated",
+      "pass": true,
+      "detail": "values artifact has required evaluated fields"
+    },
+    {
+      "name": "values_source_P1_exact",
+      "pass": true,
+      "detail": "source_P1 exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_source_P1_status",
+      "pass": true,
+      "detail": "source_P1 has an accepted value status"
+    },
+    {
+      "name": "values_source_P2_exact",
+      "pass": true,
+      "detail": "source_P2 exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_source_P2_status",
+      "pass": true,
+      "detail": "source_P2 has an accepted value status"
+    },
+    {
+      "name": "values_DP1_norm_exact",
+      "pass": true,
+      "detail": "DP1_norm exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_DP1_norm_status",
+      "pass": true,
+      "detail": "DP1_norm has an accepted value status"
+    },
+    {
+      "name": "values_DP2_norm_exact",
+      "pass": true,
+      "detail": "DP2_norm exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_DP2_norm_status",
+      "pass": true,
+      "detail": "DP2_norm has an accepted value status"
+    },
+    {
+      "name": "values_D2P1_norm_exact",
+      "pass": true,
+      "detail": "D2P1_norm exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_D2P1_norm_status",
+      "pass": true,
+      "detail": "D2P1_norm has an accepted value status"
+    },
+    {
+      "name": "values_D3m_norm_exact",
+      "pass": true,
+      "detail": "D3m_norm exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_D3m_norm_status",
+      "pass": true,
+      "detail": "D3m_norm has an accepted value status"
+    },
+    {
+      "name": "values_raw_P3_scale_exact",
+      "pass": true,
+      "detail": "raw_P3_scale exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_raw_P3_scale_status",
+      "pass": true,
+      "detail": "raw_P3_scale has an accepted value status"
+    },
+    {
+      "name": "values_xi1_bound_exact",
+      "pass": true,
+      "detail": "xi1_bound exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_xi1_bound_status",
+      "pass": true,
+      "detail": "xi1_bound has an accepted value status"
+    },
+    {
+      "name": "values_xi2_forcing_exact",
+      "pass": true,
+      "detail": "xi2_forcing exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_xi2_forcing_status",
+      "pass": true,
+      "detail": "xi2_forcing has an accepted value status"
+    },
+    {
+      "name": "values_xi2_bound_exact",
+      "pass": true,
+      "detail": "xi2_bound exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_xi2_bound_status",
+      "pass": true,
+      "detail": "xi2_bound has an accepted value status"
+    },
+    {
+      "name": "values_remainder_R3_exact",
+      "pass": true,
+      "detail": "remainder_R3 exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_remainder_R3_status",
+      "pass": true,
+      "detail": "remainder_R3 has an accepted value status"
+    },
+    {
+      "name": "values_tail_contraction_denominator_exact",
+      "pass": true,
+      "detail": "tail_contraction_denominator exact value recomputes from serialized constants"
+    },
+    {
+      "name": "values_tail_contraction_denominator_status",
+      "pass": true,
+      "detail": "tail_contraction_denominator has an accepted value status"
+    },
+    {
+      "name": "values_R_threshold_float",
+      "pass": true,
+      "detail": "R_threshold float display recomputes from exact denominator"
+    }
+  ],
+  "summary": {
+    "checks_total": 146,
+    "checks_passed": 146,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

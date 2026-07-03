@@ -1,0 +1,27 @@
+{
+  "artifact": "phase3_Pi_obs_constant_mode_proto",
+  "status": "operational_constant_mode_model",
+  "scope": "single_collar_rank_one_demo",
+  "input_regime": {
+    "assumed_source_form": "rho^(-1/2) (a(s) cos(varphi/2) + b(s) sin(varphi/2)) + higher terms",
+    "longitudinal_period_used_in_demo": "2*pi"
+  },
+  "demo_input": "rho**(3/2)*cos(3*varphi/2) + ((3*sin(s) + 5)*sin(varphi/2) + (cos(s) + 2)*cos(varphi/2))/sqrt(rho)",
+  "extracted_lower_root_coeff_functions": {
+    "a_of_s": "cos(s) + 2",
+    "b_of_s": "3*sin(s) + 5",
+    "projection_residual": "0"
+  },
+  "constant_mode_projection": {
+    "Pi_const(a_of_s)": "2",
+    "Pi_const(b_of_s)": "5",
+    "R2_coordinate_output": {
+      "e_R": "2",
+      "e_I": "5"
+    }
+  },
+  "interpretation": {
+    "meaning": "This is the prototype rule for Pi_obs once the source has been reduced to its lower-root trace representation.",
+    "not_a_claim": "This does not construct the full PDE source projection or prove that every source reduces to this model without further work."
+  }
+}

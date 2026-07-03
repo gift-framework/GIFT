@@ -1,0 +1,22 @@
+{
+  "artifact": "phase3_source_trace_resolution",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "resolved_repository_convention",
+  "canonical_objects": {
+    "profile_src": "raw pointwise leading source profile, where rho^(1/2) statements live",
+    "ev_minus_half": "coefficient in the lower-root trace basis rho^(-1/2) cos(varphi/2), rho^(-1/2) sin(varphi/2)",
+    "src_weighted_profile": "quantity entering Y_-3 after weight multiplication"
+  },
+  "resolution_rule": "Interpret existing rho^(1/2) source statements as raw-profile statements, not as literal lower-root trace coefficients.",
+  "repository_policy": [
+    "Use ev_{-1/2} only for coefficients in the fixed lower-root basis.",
+    "Use profile_src for leading pointwise source formulae.",
+    "Use Y_-3 or src_weighted_profile for norm-level quantities."
+  ],
+  "safe_consequences": [
+    "Existing Phase 3 basis and projector artifacts remain usable.",
+    "The r0^(7/2) norm scaling remains intact.",
+    "Future kappa_src extraction must include an explicit raw-profile-to-trace conversion step."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "artifact": "phase3_profile_to_trace_proto",
+  "status": "convention_comparison_prototype",
+  "raw_profile_input": "sqrt(rho)*(a*cos(varphi/2) + b*sin(varphi/2))",
+  "raw_profile_half_angle_coefficients": {
+    "coeff_R": "a",
+    "coeff_I": "b",
+    "residual": "0"
+  },
+  "literal_lower_root_trace_test": {
+    "rho_half_times_profile": "rho*(a*cos(varphi/2) + b*sin(varphi/2))",
+    "rho_to_0_limit": "0",
+    "projected_coefficients": {
+      "coeff_R": "0",
+      "coeff_I": "0",
+      "residual": "0"
+    },
+    "interpretation": "Under the canonical lower-root trace convention, a pure rho^(1/2) profile has zero mu=-1/2 trace coefficient."
+  },
+  "weighted_quantity": {
+    "rho3_times_profile": "rho**(7/2)*(a*cos(varphi/2) + b*sin(varphi/2))",
+    "interpretation": "The same raw profile contributes nontrivially to the weighted Y_-3 bookkeeping even though its literal lower-root trace is zero."
+  }
+}

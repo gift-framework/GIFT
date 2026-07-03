@@ -1,0 +1,141 @@
+{
+  "version": "2026-07-01",
+  "branch": "codex/gift-work",
+  "goal_levels": {
+    "E": "compact torsion-free G2 structure on K7 with full holonomy",
+    "Q": "all analytic constants are reproducibly certified",
+    "CF": "finite closed expression for phi_R or g_R"
+  },
+  "nodes": [
+    {
+      "id": "D0",
+      "label": "Explicit datum D0",
+      "status": "partial",
+      "scope": "compact-global",
+      "artifacts": [
+        "private/canonical/papers/rank_one_branched_adiabatic/draft.md",
+        "private/canonical/results/axis2_K7_topology_2026_07_01.json"
+      ]
+    },
+    {
+      "id": "K3Box",
+      "label": "K3 box-local residual witness",
+      "status": "proved",
+      "scope": "box-local",
+      "artifacts": [
+        "core/GIFT/Foundations/K3ClosedFormWitness.lean"
+      ]
+    },
+    {
+      "id": "K3Global",
+      "label": "Global K3 positivity and spectral control",
+      "status": "open",
+      "scope": "global",
+      "artifacts": [
+        "private/canonical/scripts/phase_iii3_global_bound_feasibility.py"
+      ]
+    },
+    {
+      "id": "TopoArithmetic",
+      "label": "Donaldson link arithmetic shadow",
+      "status": "proved",
+      "scope": "global",
+      "artifacts": [
+        "core/GIFT/Foundations/G2DonaldsonLinkCohomology.lean"
+      ]
+    },
+    {
+      "id": "TopoK7",
+      "label": "Smooth compact K7 topology theorem",
+      "status": "conditional",
+      "scope": "compact-global",
+      "artifacts": [
+        "private/canonical/results/axis2_K7_topology_2026_07_01.json"
+      ]
+    },
+    {
+      "id": "CollarScalar",
+      "label": "Collar scalar constants",
+      "status": "proved",
+      "scope": "collar",
+      "artifacts": [
+        "core/GIFT/Foundations/CollarResummationCertificate.lean"
+      ]
+    },
+    {
+      "id": "JacobiID",
+      "label": "Jacobi operator identification",
+      "status": "partial",
+      "scope": "collar",
+      "artifacts": [
+        "private/canonical/results/axis2_jacobi_maximal_section_2026_06_25.json"
+      ]
+    },
+    {
+      "id": "MaximalSection",
+      "label": "Global maximal-section theorem",
+      "status": "open",
+      "scope": "global",
+      "artifacts": [
+        "private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json"
+      ]
+    },
+    {
+      "id": "Adiabatic",
+      "label": "Convergent adiabatic reconstruction",
+      "status": "open",
+      "scope": "global",
+      "artifacts": [
+        "private/canonical/results/axis2_M_epsilon_adiabatic_2026_07_01.json"
+      ]
+    },
+    {
+      "id": "SmallTorsion",
+      "label": "Closed positive small-torsion family",
+      "status": "open",
+      "scope": "compact-global",
+      "artifacts": [
+        "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+      ]
+    },
+    {
+      "id": "J",
+      "label": "Anisotropic perturbation theorem",
+      "status": "open",
+      "scope": "compact-global",
+      "artifacts": [
+        "GIFT/paper/anisotropic_joyce_theorem.md"
+      ]
+    },
+    {
+      "id": "Holonomy",
+      "label": "Full holonomy theorem",
+      "status": "open",
+      "scope": "compact-global",
+      "artifacts": [
+        "GIFT/paper/theorem_E_exact.md"
+      ]
+    }
+  ],
+  "edges": [
+    { "from": "D0", "to": "TopoArithmetic", "kind": "supports" },
+    { "from": "D0", "to": "TopoK7", "kind": "supports" },
+    { "from": "K3Box", "to": "K3Global", "kind": "seed_only" },
+    { "from": "CollarScalar", "to": "MaximalSection", "kind": "constant_input" },
+    { "from": "JacobiID", "to": "MaximalSection", "kind": "operator_identification" },
+    { "from": "K3Global", "to": "Adiabatic", "kind": "required" },
+    { "from": "MaximalSection", "to": "Adiabatic", "kind": "required" },
+    { "from": "Adiabatic", "to": "SmallTorsion", "kind": "required" },
+    { "from": "MaximalSection", "to": "SmallTorsion", "kind": "required" },
+    { "from": "SmallTorsion", "to": "J", "kind": "input_family" },
+    { "from": "TopoK7", "to": "Holonomy", "kind": "required" },
+    { "from": "J", "to": "Holonomy", "kind": "required" },
+    { "from": "SmallTorsion", "to": "Holonomy", "kind": "required" }
+  ],
+  "quarantined": [
+    "core/GIFT/Foundations/AnalyticalMetric.lean",
+    "core/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean",
+    "private/computation/metric_certification/run_g2_joyce_certified.py",
+    "private/computation/metric_certification/run_g8_torsion_free.py"
+  ]
+}

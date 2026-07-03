@@ -1,0 +1,127 @@
+{
+  "artifact": "phase4_ar_majorant_candidate",
+  "generated_by": "scripts/phase4_ar_majorant_candidate.py",
+  "scope": "Conditional scalar majorant for P4.2 global AR convergence",
+  "status": "conditional_majorant_candidate_not_AR_theorem",
+  "depends_on": [
+    "certificates/phase4_donaldson_coefficients_values.json"
+  ],
+  "conditional_assumptions": {
+    "K_AR_prod": {
+      "exact": "9/20",
+      "value": 0.45,
+      "meaning": "Hypothetical product-space norm of the fibrewise Hodge reconstruction inverse. Not yet proved in P4.2."
+    },
+    "product_space_defined": false,
+    "uniform_fibrewise_inverse_proved": false
+  },
+  "inputs": {
+    "source_P1": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "meaning": "P4.1 checked first-order source"
+    },
+    "source_P2": {
+      "exact": "25440723/4000000",
+      "value": 6.36018075,
+      "meaning": "P4.1 checked second-order source"
+    },
+    "DP1_norm": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "meaning": "P4.1 checked first derivative"
+    },
+    "DP2_norm": {
+      "exact": "16796241/2000000",
+      "value": 8.3981205,
+      "meaning": "P4.1 checked second derivative proxy"
+    },
+    "remainder_R3": {
+      "exact": "137707931700815927923/10000000000000",
+      "value": 13770793.170081593,
+      "meaning": "P4.1 checked K=2 remainder coefficient"
+    },
+    "R_threshold_P4_1": {
+      "value": 3664.0659853300026,
+      "meaning": "P4.1 finite-order tail threshold from checked coefficients"
+    }
+  },
+  "chosen_threshold": {
+    "R_AR": {
+      "exact": "4000",
+      "value": 4000.0,
+      "meaning": "conservative public AR candidate threshold"
+    },
+    "eps_AR": {
+      "exact": "1/4000",
+      "value": 0.00025,
+      "meaning": "1/R_AR"
+    },
+    "r_AR": {
+      "exact": "1/100",
+      "value": 0.01,
+      "meaning": "candidate reconstruction ball radius"
+    }
+  },
+  "majorant_constants": {
+    "C_AR_source": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "meaning": "coefficient of eps in source majorant"
+    },
+    "C_AR_second": {
+      "exact": "25440723/4000000",
+      "value": 6.36018075,
+      "meaning": "coefficient of eps^2 in source majorant"
+    },
+    "C_AR_lin": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "meaning": "coefficient of eps in Lipschitz majorant"
+    },
+    "C_AR_quad": {
+      "exact": "16796241/2000000",
+      "value": 8.3981205,
+      "meaning": "coefficient of eps^2 in Lipschitz majorant"
+    },
+    "C_AR_tail": {
+      "exact": "137707931700815927923/10000000000000",
+      "value": 13770793.170081593,
+      "meaning": "coefficient of eps^3 tail majorant"
+    }
+  },
+  "evaluated_at_eps_AR": {
+    "source_majorant": {
+      "exact": "636922338930815927923/640000000000000000000000",
+      "value": 0.0009951911545794,
+      "meaning": "C_AR_source eps + C_AR_second eps^2 + C_AR_tail eps^3"
+    },
+    "displacement_majorant": {
+      "exact": "5732301050377343351307/12800000000000000000000000",
+      "value": 0.00044783601956072995,
+      "meaning": "K_AR_prod * source_majorant"
+    },
+    "q_AR": {
+      "exact": "5733034708687343351307/12800000000000000000000000",
+      "value": 0.0004478933366161987,
+      "meaning": "K_AR_prod * (C_AR_lin eps + C_AR_quad eps^2 + C_AR_tail eps^3)"
+    },
+    "tail_at_eps": {
+      "exact": "137707931700815927923/640000000000000000000000",
+      "value": 0.0002151686432825249,
+      "meaning": "C_AR_tail eps^3"
+    }
+  },
+  "checks": {
+    "R_AR_exceeds_P4_1_threshold": true,
+    "q_AR_lt_half": true,
+    "displacement_inside_half_ball": true,
+    "tail_lt_linear_source": true
+  },
+  "acceptance_boundary": [
+    "This is a scalar conditional majorant only.",
+    "It does not prove the product Banach-space reconstruction theorem.",
+    "It must not be cited as AR discharged until K_AR_prod and the product-space contraction are proved."
+  ],
+  "all_pass": true
+}

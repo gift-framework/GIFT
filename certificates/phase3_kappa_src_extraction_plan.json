@@ -1,0 +1,54 @@
+{
+  "artifact": "phase3_kappa_src_extraction_plan",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "protocol_definition",
+  "purpose": "Fix a reproducible extraction protocol for the source coefficient kappa_src^(i) from the local seed residual of Lemma 5.9.",
+  "inputs": {
+    "seed_section": "h_bar = h_loc,aff + h_loc,branch on U_i",
+    "branched_part": "h_loc,branch = c0^(i) * w^(3/2) * alpha_1 + higher polyhomogeneous terms",
+    "fixed_basis": "/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_basis.json"
+  },
+  "protocol": [
+    {
+      "step": 1,
+      "name": "local_residual_expansion",
+      "task": "Expand m(h_loc,aff + h_loc,branch) near rho = 0 and isolate the sigma-odd lower-root trace at mu = -1/2."
+    },
+    {
+      "step": 2,
+      "name": "basis_projection",
+      "task": "Project the mu = -1/2 trace onto the fixed real basis {Phi_{-1/2,R}^{(i)}, Phi_{-1/2,I}^{(i)}}."
+    },
+    {
+      "step": 3,
+      "name": "quadratic_factorization",
+      "task": "Factor out (c0^(i))^2 and identify the remaining scalar/vector coefficient as kappa_src^(i)."
+    },
+    {
+      "step": 4,
+      "name": "uniformity_split",
+      "task": "Separate the leading q=0 constant-section coefficient from the O(kappa_g r0) non-constant longitudinal correction."
+    },
+    {
+      "step": 5,
+      "name": "tail_bound",
+      "task": "Bound the O(rho^(3/2)) remainder in Y_-3 on rho <= r0."
+    }
+  ],
+  "output_shape": {
+    "leading_trace": "ev_{-1/2}^{(i)}(m(h_bar)) = (c0^(i))^2 * (kappa_src,R^(i) Phi_{-1/2,R}^{(i)} + kappa_src,I^(i) Phi_{-1/2,I}^{(i)}) + remainder",
+    "D0_expected_reduction": "By symmetry and identical-copies construction, the component-wise constants should collapse to one common pair at D0."
+  },
+  "acceptance_requirements": [
+    "The projection basis must be exactly the one fixed in phase3_mu_minus_half_basis.json.",
+    "The coefficient pair must be serialized as real coefficients, not complex Fourier coefficients.",
+    "The remainder must be bounded separately from the leading coefficient.",
+    "Any use of A_bulk(alpha_1, alpha_1) must be explicit in the serialized formula."
+  ],
+  "current_blockers": [
+    "No existing script yet computes the actual local residual trace in the fixed basis.",
+    "The higher polyhomogeneous terms of h_loc,branch are not yet serialized as theorem-grade input.",
+    "The Y_-3 tail bound has not yet been interval-certified."
+  ]
+}

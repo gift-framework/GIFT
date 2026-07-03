@@ -1,0 +1,334 @@
+- id: analytical_metric_r7_constant_model
+  claim: "Scaled standard G2 form with zero torsion and determinant 65/32."
+  status: theorem
+  ambient_space: "R^7"
+  domain_of_validity: "Constant 3-form model in Euclidean coordinates."
+  assumptions: []
+  dependencies:
+    - "core/GIFT/Foundations/AnalyticalMetric.lean"
+  code_locations:
+    - "core/GIFT/Foundations/AnalyticalMetric.lean"
+  paper_locations:
+    - "GIFT/CHANGELOG.md"
+    - "core/blueprint/src/content.tex"
+  certificate_type: "Lean arithmetic and definitional equalities"
+  unformalized_gap: "No compact atlas, no descent to K7, no holonomy argument, no global positivity on compact K7."
+  acceptance_test: "Must never be cited as a compact K7 metric unless accompanied by a separate compact-global construction theorem."
+
+- id: analytical_metric_compact_k7_promotion
+  claim: "Exact metric on compact K7."
+  status: obsolete
+  ambient_space: "compact K7"
+  domain_of_validity: "None currently justified."
+  assumptions: []
+  dependencies:
+    - "analytical_metric_r7_constant_model"
+  code_locations:
+    - "core/GIFT/Foundations/AnalyticalMetric.lean"
+  paper_locations:
+    - "GIFT/CHANGELOG.md"
+  certificate_type: "none"
+  unformalized_gap: "Global descent, compactness, positivity, torsion-free compact proof, and holonomy are all missing."
+  acceptance_test: "Fails P0 gate unless ambient_space=compact K7, status=theorem, assumptions=[], torsion_free=proved, global_descent=proved, metric_positive=proved."
+
+- id: k3_closed_form_box_local_witness
+  claim: "The 667-parameter witness has residual variance <= 1321/10^7 on 4000 explicit Krawczyk boxes."
+  status: numerical_certificate
+  ambient_space: "Explicit union of 4000 Krawczyk boxes on one CI(2,2,2) K3 chart presentation"
+  domain_of_validity: "Frozen box-local witness at radius 10^-8."
+  assumptions: []
+  dependencies:
+    - "core/GIFT/Foundations/K3ClosedFormWitness.lean"
+    - "core/GIFT/Foundations/K3ClosedFormBoxEnclosures.lean"
+    - "private/canonical/results/phase_iii3_interval_metric_box_local_r1e-8.json"
+  code_locations:
+    - "core/GIFT/Foundations/K3ClosedFormWitness.lean"
+    - "core/GIFT/Foundations/K3ClosedFormBoxEnclosures.lean"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "Lean aggregation over rational interval endpoints plus external interval production"
+  unformalized_gap: "No whole-K3 coverage, no global positivity theorem, no uniform spectral gap."
+  acceptance_test: "May be cited only as box-local residual control, never as a global Ricci-flat K3 theorem."
+
+- id: k3_global_positivity_route
+  claim: "Whole-K3 positivity and spectral control for the actual K3 metric."
+  status: heuristic
+  ambient_space: "Compact K3 fibre"
+  domain_of_validity: "Target theorem, not yet proved."
+  assumptions:
+    - "Global positivity/SOS certificate"
+    - "Uniform exact-form spectral lower bound"
+  dependencies:
+    - "k3_closed_form_box_local_witness"
+    - "private/canonical/scripts/phase_iii3_*"
+  code_locations:
+    - "private/canonical/scripts/phase_iii3_global_bound_feasibility.py"
+    - "private/canonical/scripts/phase_iii3_structural_bound_pilot.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "planned SOS / Positivstellensatz / spectral certificate"
+  unformalized_gap: "Main missing ingredient for Phase 4 fibrewise inverse and for honest global K3 claims."
+  acceptance_test: "Requires semialgebraic positivity certificate and reproducible spectral lower bound on the exact-form sector."
+
+- id: g2_donaldson_link_cohomology_arithmetic
+  claim: "For the modeled LinkType family, b3 = 1 + b1(Sigma_2(L)) and b2=21 in the uniform-reflection case."
+  status: definition
+  ambient_space: "Modeled discriminant link types and arithmetic shadow of a K3-fibration"
+  domain_of_validity: "Combinatorial LinkType universe defined in Lean."
+  assumptions:
+    - "Donaldson 2017 Leray/localization derivation"
+    - "Reflection invariant-subspace identity"
+  dependencies:
+    - "core/GIFT/Foundations/G2DonaldsonLinkCohomology.lean"
+  code_locations:
+    - "core/GIFT/Foundations/G2DonaldsonLinkCohomology.lean"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "Lean arithmetic over explicit definitions"
+  unformalized_gap: "The Leray / sheaf-theoretic derivation and geometric realization by a smooth compact K3-fibration are not formalized there."
+  acceptance_test: "May be cited as arithmetic consequence of stated formulas, not as the geometric theorem that those formulas hold for K7."
+
+- id: k7_topology_rank_one_77_unlink
+  claim: "K7 is smooth compact simply connected with Betti numbers (1,0,21,77,77,21,0,1)."
+  status: conditional_theorem
+  ambient_space: "compact K7"
+  domain_of_validity: "Rank-one 77-unlink Kovalev-Lefschetz datum D0."
+  assumptions:
+    - "Local ODP smoothing theorem"
+    - "Global fibration realization with fixed discriminant"
+    - "Leray/Wang/Van Kampen derivation matching the rank-one monodromy data"
+  dependencies:
+    - "g2_donaldson_link_cohomology_arithmetic"
+    - "private/canonical/results/axis2_K7_topology_2026_07_01.json"
+  code_locations:
+    - "private/canonical/scripts/axis2_K7_topology_2026_07_01.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "JSON proof outline plus arithmetic checks"
+  unformalized_gap: "Needs a full handwritten proof and a Lean interface theorem mirroring exact hypotheses."
+  acceptance_test: "Promote to theorem only after Appendix C theorem chain is written and reproduced from explicit datum hypotheses."
+
+- id: collar_resummation_binomial_identity
+  claim: "The absolute generalized-binomial sum equals 3 and the indicial constant is symmetric at beta = +/-1."
+  status: theorem
+  ambient_space: "Scalar model identities"
+  domain_of_validity: "Generalized binomial series and indicial polynomial."
+  assumptions: []
+  dependencies:
+    - "core/GIFT/Foundations/CollarResummationCertificate.lean"
+  code_locations:
+    - "core/GIFT/Foundations/CollarResummationCertificate.lean"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "Lean theorem"
+  unformalized_gap: "No PDE convergence, no edge Fredholm theorem, no global Schauder estimate."
+  acceptance_test: "May be used only as a scalar constant input inside a larger analytic proof."
+
+- id: jacobi_operator_regrounding
+  claim: "The edge operator belongs to the Jacobi operator J_h on the rank-19 normal bundle of the maximal section."
+  status: numerical_certificate
+  ambient_space: "Maximal-section model on the punctured base"
+  domain_of_validity: "Current axis2 operator identification notes."
+  assumptions:
+    - "Affine background model"
+  dependencies:
+    - "private/canonical/results/axis2_jacobi_maximal_section_2026_06_25.json"
+  code_locations:
+    - "private/canonical/scripts/axis2_jacobi_maximal_section_2026_06_25.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "deterministic JSON note"
+  unformalized_gap: "Needs integration into a fully specified Banach-space Fredholm theorem."
+  acceptance_test: "Use as operator attribution and notation fix, not as a complete global inverse theorem."
+
+- id: global_maximal_section_scaffold
+  claim: "The global maximal background problem is discharged."
+  status: heuristic
+  ambient_space: "S^3 \\ Sigma"
+  domain_of_validity: "Current draft and axis2 scaffolds."
+  assumptions:
+    - "Augmented right inverse with explicit norm"
+    - "Global parametrix and transmission conditions"
+    - "Cokernel matrix invertibility"
+  dependencies:
+    - "jacobi_operator_regrounding"
+    - "private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json"
+    - "private/canonical/results/axis2_E_geom_interval_2026_06_30.json"
+    - "private/canonical/results/axis2_E_link_interval_2026_06_30.json"
+  code_locations:
+    - "private/canonical/scripts/axis2_certificate_sigma_min_NK_2026_06_30.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "assembled numerical scaffold"
+  unformalized_gap: "Banach spaces, operator domains, global parametrix theorem, and explicit right inverse are still missing as actual analytic artifacts."
+  acceptance_test: "Cannot be called discharged before explicit theorem of Phase 3 exists."
+
+- id: phase3_d0_sharp_constant_closure_20260702
+  claim: "At the normalized datum D0, the local sharp constants entering the E/AR/G numerical scaffolds are extracted or sharpened: C_src=27/16, C_nl=2/3, K_H^{K3}<=0.45, and (C_FS,gamma_link,C_link,C_outer)=(0.3,2,1,1)."
+  status: numerical_certificate
+  ambient_space: "Rank-one D0 Phase-3 scaffold on S^3 \\ Sigma"
+  domain_of_validity: "Local and numerical D0 constant bookkeeping for the current rank-one 77-unlink branch."
+  assumptions:
+    - "Private canonical derivations are accepted as the current sharp-source ledger."
+    - "The global Phase-3 operator theorem and right inverse are still external to this constant certificate."
+    - "Pi_obs is certified only on the already-reduced lower-root source model; the full PDE identification theorem remains to be written."
+    - "R_comm is certified as a clean parametrix Neumann factor at D0; the full global parametrix theorem remains to be assembled."
+  dependencies:
+    - "private/canonical/results/axis2_gamma_src_Yneg3_norm_2026_07_02.json"
+    - "private/canonical/results/axis2_C_nl_theorem_grade_2026_07_02.json"
+    - "private/canonical/results/axis2_K3_hodge_gap_2026_07_02.json"
+    - "private/canonical/results/axis2_E_sharp_constants_2026_07_02.json"
+    - "private/canonical/results/axis2_datum_D0_certificate_2026_07_02.json"
+    - "GIFT/certificates/phase3_projection_commutator_certificate.json"
+  code_locations:
+    - "private/canonical/scripts/axis2_gamma_src_Yneg3_norm_2026_07_02.py"
+    - "private/canonical/scripts/axis2_C_nl_theorem_grade_2026_07_02.py"
+    - "private/canonical/scripts/axis2_K3_hodge_gap_2026_07_02.py"
+    - "private/canonical/scripts/axis2_E_sharp_constants_2026_07_02.py"
+    - "GIFT/scripts/phase3_projection_commutator_certificate.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+    - "GIFT/docs/mission_progress_summary.md"
+    - "GIFT/paper/phase3_projection_commutator_certificate.md"
+  certificate_type: "deterministic JSON/script chain plus handwritten notes"
+  unformalized_gap: "This closes the D0 constant envelopes and local projection/commutator bookkeeping, not the full Banach-space parametrix, adiabatic reconstruction, anisotropic Joyce perturbation, or compact K7 topology proof."
+  acceptance_test: "May be cited only as D0 sharp-current constant bookkeeping. It cannot promote global_maximal_section_scaffold, adiabatic_reconstruction_k2_scaffold, or level_e_target_on_k7 to theorem status."
+
+- id: phase3_effective_jacobi_parametrix_candidate_20260702
+  claim: "A finite-mode normal-operator experiment gives K_ind=4/3, candidate scalar K_Sch^Maz=16/3, and candidate rank-19 Jacobi transfer 12.32 for D0."
+  status: numerical_certificate
+  ambient_space: "one collar normal model and D0 rank-19 transfer bookkeeping"
+  domain_of_validity: "Finite-mode sigma-odd half-integer normal-operator scan with explicit overhead slot; candidate only."
+  assumptions:
+    - "The edge/Schauder overhead slot C_edge_overhead=4 is accepted as a candidate calibration, not as a proof."
+    - "The actual edge-calculus Schauder theorem for J_h has not yet been proved."
+    - "Uniformity over all 77 collars still needs outward-rounded interval proof."
+  dependencies:
+    - "GIFT/certificates/phase3_effective_jacobi_parametrix_candidate.json"
+    - "GIFT/certificates/datum_D0.json"
+  code_locations:
+    - "GIFT/scripts/phase3_effective_jacobi_parametrix_candidate.py"
+  paper_locations:
+    - "GIFT/paper/phase3_effective_jacobi_parametrix_candidate.md"
+    - "GIFT/paper/theorem_Q_certified.md"
+  certificate_type: "deterministic symbolic/rational finite-mode scan"
+  unformalized_gap: "The candidate does not replace the public theorem-safe envelope K_Sch^Maz<=17 until a real edge-Schauder proof and independent interval checker exist."
+  acceptance_test: "May be cited only as a Task 4 candidate bound. It must not be used as a theorem input for Level E/Q closure."
+
+- id: adiabatic_reconstruction_k2_scaffold
+  claim: "The K=2 ansatz matches the first two orders of the adiabatic operator M_epsilon and leaves residual O(epsilon^3)."
+  status: formal_series
+  ambient_space: "Formal adiabatic expansion"
+  domain_of_validity: "Symbolic order-matching in epsilon."
+  assumptions:
+    - "Existence of P1, P2, and augmented inverse G_aug with required bounds"
+  dependencies:
+    - "private/canonical/results/axis2_M_epsilon_adiabatic_2026_07_01.json"
+    - "GIFT/certificates/phase4_adiabatic_sources_candidate.json"
+    - "GIFT/certificates/phase4_bigraded_type_check.json"
+    - "GIFT/certificates/phase4_donaldson_coefficients.json"
+    - "GIFT/certificates/phase4_donaldson_coefficients_check.json"
+    - "GIFT/certificates/phase4_donaldson_coefficients_values.json"
+    - "GIFT/paper/phase4_true_coefficients_derivation_plan.md"
+    - "GIFT/paper/phase4_donaldson_E1_E5_operator.md"
+  code_locations:
+    - "private/canonical/scripts/axis2_M_epsilon_adiabatic_2026_07_01.py"
+    - "GIFT/scripts/phase4_adiabatic_sources_candidate.py"
+    - "GIFT/scripts/phase4_bigraded_type_checker.py"
+    - "GIFT/scripts/phase4_donaldson_coefficients.py"
+    - "GIFT/scripts/phase4_donaldson_coefficients_values.py"
+    - "GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+    - "GIFT/paper/phase4_adiabatic_operator_form.md"
+    - "GIFT/paper/phase4_true_coefficients_derivation_plan.md"
+    - "GIFT/paper/phase4_donaldson_E1_E5_operator.md"
+    - "GIFT/paper/phase4_donaldson_coefficients_stageB_v1.md"
+    - "GIFT/paper/phase4_donaldson_coefficients_checker_stageC_v1.md"
+    - "GIFT/paper/phase4_donaldson_coefficients_values.md"
+    - "GIFT/paper/phase4_ar_convergence_theorem_spec.md"
+  certificate_type: "symbolic expansion certificate plus pre-coefficient bigraded type-check plus typed symbolic coefficient formulas plus D0 value certificate plus structural/arithmetic checker"
+  unformalized_gap: "No convergent operator theorem, no globally certified product-space reconstruction theorem, no full Banach-space contraction. The corrected true-coefficient operator ledger, bidegree type-check, Stage B v1 symbolic formula producer, D0 value certificate, and Stage C v1 checker exist. These close the P4.1 coefficient values at D0, but not the full AR convergence theorem."
+  acceptance_test: "May be cited as finite-order formal matching and theorem-grade D0 coefficient values for P4.1. It must not be cited as a proof of global adiabatic reconstruction convergence."
+
+- id: adiabatic_reconstruction_global_theorem_target
+  claim: "A convergent product-space adiabatic reconstruction map should turn a solution of M_eps(h)=0 into actual Donaldson data and a closed reconstructed G2 form."
+  status: conditional_theorem
+  ambient_space: "P4.2 product Banach reconstruction space over the D0 K3 fibration"
+  domain_of_validity: "Specified only; proof and constants not yet supplied."
+  assumptions:
+    - "Uniform fibrewise Hodge inverse theorem for G_f in the weighted product norms"
+    - "Majorant/contraction constants with q_AR < 1"
+    - "Compatibility of reconstructed Donaldson data with the closed G2 form Phi_eps"
+  dependencies:
+    - "adiabatic_reconstruction_k2_scaffold"
+    - "GIFT/paper/phase4_ar_convergence_theorem_spec.md"
+    - "GIFT/certificates/phase4_donaldson_coefficients_values.json"
+    - "GIFT/certificates/phase4_ar_majorant_candidate.json"
+    - "GIFT/certificates/phase4_ar_majorant_check.json"
+  code_locations:
+    - "GIFT/scripts/phase4_ar_majorant_candidate.py"
+    - "GIFT/scripts/phase4_ar_majorant_checker.py"
+  paper_locations:
+    - "GIFT/paper/phase4_ar_convergence_theorem_spec.md"
+    - "GIFT/paper/phase4_ar_majorant_candidate.md"
+  certificate_type: "theorem specification plus conditional scalar majorant"
+  unformalized_gap: "No product Banach-space proof, no uniform fibrewise Hodge inverse theorem, and no nonlinear reconstruction contraction proof. The scalar majorant at R_AR=4000 is conditional on K_AR_prod<=9/20."
+  acceptance_test: "May be cited only as the P4.2 target statement, dependency map, and conditional scalar margin. It must not be cited as AR discharged."
+
+- id: joyce_hypothesis_d0_check
+  claim: "The D0 datum passes the needed Joyce-type hypotheses in the K3-fibered collapsing regime."
+  status: heuristic
+  ambient_space: "Anisotropic collapsing K3-fibered regime"
+  domain_of_validity: "D0 scale audit at R=100."
+  assumptions:
+    - "Availability of a K3-fibered refinement of Joyce's perturbation theorem"
+    - "Bracketed constants C0 and lambda_J"
+  dependencies:
+    - "private/canonical/results/axis2_joyce_hypotheses_D0_2026_07_01.json"
+  code_locations:
+    - "private/canonical/scripts/axis2_joyce_hypotheses_D0_2026_07_01.py"
+  paper_locations:
+    - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  certificate_type: "scale audit JSON"
+  unformalized_gap: "This is not the anisotropic perturbation theorem J itself. The natural compact Joyce theorem fails in the collapsing regime."
+  acceptance_test: "Must not be cited as a proof of torsion-free deformation; only as motivation for the theorem specification of J."
+
+- id: donaldson_global_base_audit_fano_branch
+  claim: "Global Donaldson base geometry status certificate equals matches."
+  status: obsolete
+  ambient_space: "Older Fano-link / global-coframe branch"
+  domain_of_validity: "Exploratory branch, not current rank-one 77-unlink pipeline."
+  assumptions: []
+  dependencies:
+    - "core/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean"
+  code_locations:
+    - "core/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean"
+  paper_locations:
+    - "core/contrib/CHANGELOG.md"
+  certificate_type: "Lean status flags"
+  unformalized_gap: "Internal inconsistency with `compatibleOpen`, `openPath`, and `obstructed` fields; no direct relevance to the current D0 branch unless explicitly re-imported."
+  acceptance_test: "Quarantine from the current theorem chain unless a file states exactly which pieces remain relevant."
+
+- id: level_e_target_on_k7
+  claim: "For all R >= R*, there exists a compact torsion-free positive G2 form phi_R on K7 with Hol = G2."
+  status: conditional_theorem
+  ambient_space: "compact K7"
+  domain_of_validity: "Rank-one datum D0 and future admissible variants."
+  assumptions:
+    - "k7_topology_rank_one_77_unlink"
+    - "global_maximal_section_theorem"
+    - "adiabatic_reconstruction_theorem"
+    - "anisotropic_joyce_theorem_J"
+  dependencies:
+    - "k7_topology_rank_one_77_unlink"
+    - "global_maximal_section_scaffold"
+    - "adiabatic_reconstruction_k2_scaffold"
+    - "joyce_hypothesis_d0_check"
+  code_locations:
+    - "GIFT/paper/theorem_E_exact.md"
+  paper_locations:
+    - "GIFT/paper/theorem_E_exact.md"
+  certificate_type: "target theorem specification"
+  unformalized_gap: "Depends on Phases 2-5 being turned into actual theorems."
+  acceptance_test: "Promote to theorem only when every assumption points to a named discharged proof artifact."

@@ -1,0 +1,312 @@
+{
+  "certificate_id": "datum_D0",
+  "version_date": "2026-07-01",
+  "status": "partial_certified",
+  "scope": "rank-one 77-unlink datum for the branched adiabatic K3-fibration programme",
+  "repo_context": {
+    "gift_repo_branch": "codex/gift-work",
+        "private_repo_commit": "b46e3cd6c57757cd466e3001092fed7ef4d7d456",
+    "core_repo_commit": "667c8b9d45850a0e4cdb800895cffa44115dfd62",
+    "private_repo_dirty_worktree": true,
+    "note": "The private worktree is dirty, so each source file is pinned by sha256 in addition to the repo commit."
+  },
+  "field_schema": {
+      "status_values": [
+      "certified_interval",
+      "certified_upper_bound",
+      "certified_lower_bound",
+      "derived_from_certified_sources",
+      "pending_exact_certificate",
+      "candidate_not_theorem"
+    ],
+    "required_metadata": [
+      "source_script",
+      "source_script_sha256",
+      "source_result",
+      "source_result_sha256",
+      "precision_or_mode",
+      "enclosure_method",
+      "verification_command"
+    ]
+  },
+  "fields": {
+    "r0": {
+      "status": "derived_from_certified_sources",
+      "value": [
+        0.01,
+        0.01
+      ],
+      "units": "base collar radius",
+      "source_script": "private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+      "source_script_sha256": "643848b50a99b00f9026536c73b9977faae123cdc62f90dd2d99ccf4785623f9",
+      "source_result": "private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json",
+      "source_result_sha256": "441446de7c5eb6408faafeba5e8a3971ed07c6c53a2b92ff9013eefe1202150c",
+      "precision_or_mode": "exact decimal scalar in JSON",
+      "enclosure_method": "explicit datum parameter used in the G-quant source bound",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json"
+    },
+    "d_min": {
+      "status": "derived_from_certified_sources",
+      "value": [
+        1.0,
+        1.0
+      ],
+      "units": "pairwise component separation in base units",
+      "source_script": "private/canonical/scripts/axis2_hypothesis_E_discharge_2026_07_01.py",
+      "source_script_sha256": "fc5947d05950681460aca3f285cdb2ae4edfc1bbaeeed4d366d75e230b80e8f7",
+      "source_result": "private/canonical/results/axis2_hypothesis_E_discharge_2026_07_01.json",
+      "source_result_sha256": "b15819d69fa289d021b242e71beaa7367cec8c26e8171de1c9fab07fc0545120",
+      "precision_or_mode": "exact decimal scalar in JSON",
+      "enclosure_method": "explicit D0 geometry parameter",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_hypothesis_E_discharge_2026_07_01.json"
+    },
+    "inj_base": {
+      "status": "pending_exact_certificate",
+      "value": null,
+      "note": "The current branch records only normalized base scale ratios such as H_diam_base = 1, not an explicit interval enclosure for the injectivity radius of the base metric itself.",
+      "source_script": "private/canonical/scripts/axis2_joyce_hypotheses_D0_2026_07_01.py",
+      "source_script_sha256": "9f64679ce98d51c6aebb0c97960b4af53fc4a86921273029a37e504563b116ce",
+      "source_result": "private/canonical/results/axis2_joyce_hypotheses_D0_2026_07_01.json",
+      "source_result_sha256": "0fb613a14a9fa527b8753daedf0a51a486037bf3160b309a28c8063c1b1020f5",
+      "precision_or_mode": "not yet enclosed",
+      "enclosure_method": "pending dedicated base-geometry certificate",
+      "verification_command": "rg -n \"H_diam_base|inj\" private/canonical/results/axis2_joyce_hypotheses_D0_2026_07_01.json private/canonical/scripts/axis2_joyce_hypotheses_D0_2026_07_01.py"
+    },
+    "curv_base": {
+      "status": "pending_exact_certificate",
+      "value": null,
+      "note": "The current branch certifies geodesic curvature of the discriminant and normalized geometric ratios, but not an explicit interval enclosure for the ambient base-curvature tensor.",
+      "source_script": "private/canonical/scripts/axis2_E_geom_interval_2026_06_30.py",
+      "source_script_sha256": "1f16d2cab118ff9bb66a248d26d29e2fea006ac792af6941ca9ecc8473532fd7",
+      "source_result": "private/canonical/results/axis2_E_geom_interval_2026_06_30.json",
+      "source_result_sha256": "a1ed8f622161298f163f77140b5d3b3e975f77a3c404a724541d6cb715223bb3",
+      "precision_or_mode": "not yet enclosed",
+      "enclosure_method": "pending dedicated base-curvature certificate",
+      "verification_command": "rg -n \"curv|kappa_g\" private/canonical/results/axis2_E_geom_interval_2026_06_30.json private/canonical/scripts/axis2_E_geom_interval_2026_06_30.py"
+    },
+    "kappa_g": {
+      "status": "certified_upper_bound",
+      "value": [
+        0.0,
+        1.0
+      ],
+      "units": "C0 norm of geodesic curvature along discriminant components",
+      "source_script": "private/canonical/scripts/axis2_E_geom_interval_2026_06_30.py",
+      "source_script_sha256": "1f16d2cab118ff9bb66a248d26d29e2fea006ac792af6941ca9ecc8473532fd7",
+      "source_result": "private/canonical/results/axis2_E_geom_interval_2026_06_30.json",
+      "source_result_sha256": "a1ed8f622161298f163f77140b5d3b3e975f77a3c404a724541d6cb715223bb3",
+      "precision_or_mode": "exact D0 upper bound encoded in source",
+      "enclosure_method": "interval arithmetic on Frenet-Serret perturbation with explicit D0 parameter",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_E_geom_interval_2026_06_30.json"
+    },
+    "cond_A_bulk": {
+      "status": "certified_upper_bound",
+      "value": [
+        0.0,
+        2.31
+      ],
+      "units": "condition number of A_bulk on the rank-19 normal bundle metric",
+      "source_script": "private/canonical/scripts/axis2_hypothesis_AR_discharge_2026_07_01.py",
+      "source_script_sha256": "e253d8f301bf1c66fff7c6b899363e0201e74a9d8392d0453c6cef517bd59b1f",
+      "source_result": "private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json",
+      "source_result_sha256": "c4ad698e564a87052c5edeb9bf91147f97854e4eab370e72cc0ff662aba10124",
+      "precision_or_mode": "exact decimal upper bound in JSON",
+      "enclosure_method": "carried as datum input into AR-quant",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json"
+    },
+    "A_bulk_alpha1_alpha1": {
+      "status": "certified_lower_bound",
+      "value": [
+        0.43290043290043284,
+        null
+      ],
+      "units": "diagonal coefficient along the distinguished alpha1 direction",
+      "note": "Derived from sigma_min(A_loc) = 2 * A_bulk(alpha1,alpha1) and the conservative lower bound sigma_min >= 0.8658008658008657.",
+      "source_script": "private/canonical/scripts/axis2_certificate_sigma_min_NK_2026_06_30.py",
+      "source_script_sha256": "d4d4c2a1d19284b6c2cdf4d47c41e1868c0c85ac1ed83bfb5ccdae31abe17527",
+      "source_result": "private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json",
+      "source_result_sha256": "5a7d42ef3fce762f3c41644e2b18b6a74725d1fd7e7b850e6d7d2a52d12e1b91",
+      "precision_or_mode": "derived lower bound from interval enclosure of sigma_min",
+      "enclosure_method": "A_bulk(alpha1,alpha1) >= sigma_min_conservative / 2",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json"
+    },
+    "K_H_K3": {
+      "status": "certified_upper_bound",
+      "value": [
+        0.0,
+        1.0
+      ],
+      "units": "operator norm of fibrewise Hodge Green operator on d_f-exact 2-forms",
+      "derived_bound": 0.8912676813146139,
+      "source_script": "private/canonical/scripts/axis2_hypothesis_AR_discharge_2026_07_01.py",
+      "source_script_sha256": "e253d8f301bf1c66fff7c6b899363e0201e74a9d8392d0453c6cef517bd59b1f",
+      "source_result": "private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json",
+      "source_result_sha256": "c4ad698e564a87052c5edeb9bf91147f97854e4eab370e72cc0ff662aba10124",
+      "precision_or_mode": "derived from Cheeger-Yau lower bound on lambda_1 and then rounded up conservatively to 1",
+      "enclosure_method": "Bochner-Weitzenboeck + Cheeger-Yau spectral lower bound",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json"
+    },
+    "norm_F_H": {
+      "status": "certified_upper_bound",
+      "value": [
+        0.0,
+        2.31
+      ],
+      "units": "Pacard C^{0,alpha}_{-1} weighted norm of horizontal curvature",
+      "note": "Recorded in the AR discharge as K_F(D0) = cond(A_bulk) * K_A with K_A(D0) = 1.",
+      "source_script": "private/canonical/scripts/axis2_hypothesis_AR_discharge_2026_07_01.py",
+      "source_script_sha256": "e253d8f301bf1c66fff7c6b899363e0201e74a9d8392d0453c6cef517bd59b1f",
+      "source_result": "private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json",
+      "source_result_sha256": "c4ad698e564a87052c5edeb9bf91147f97854e4eab370e72cc0ff662aba10124",
+      "precision_or_mode": "exact decimal upper bound in JSON",
+      "enclosure_method": "weighted norm bound in the AR-quant reduction",
+      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json"
+    },
+        "source_P1": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                3.1185
+            ],
+            "note": "Phase 4.1 theorem-grade upper bound from the actual Donaldson bigraded coefficient formulas at D0: source_P1 = 3 * K_H_K3 * K_F = 6237/2000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=6237/2000",
+            "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "source_P2": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                6.36018075
+            ],
+            "note": "Phase 4.1 theorem-grade upper bound from the actual Donaldson bigraded coefficient formulas at D0: source_P2 = 25440723/4000000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=25440723/4000000",
+            "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "remainder_R3": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                13770793.170081593
+            ],
+            "note": "Phase 4.1 theorem-grade upper bound for ||R_eps|| / eps^3 after the K=2 ansatz, exact=137707931700815927923/10000000000000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic; decimal serialized for readability",
+            "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation and K=2 Taylor remainder checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+    "D2m": {
+      "status": "certified_upper_bound",
+      "value": [
+        0.0,
+        1.0
+      ],
+      "units": "operator norm bound for D^2 m at the maximal background",
+      "note": "Used in the G-quant discharge as K_nl = ||D^2 m|| <= 1.",
+      "source_script": "private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+      "source_script_sha256": "643848b50a99b00f9026536c73b9977faae123cdc62f90dd2d99ccf4785623f9",
+      "source_result": "private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json",
+      "source_result_sha256": "441446de7c5eb6408faafeba5e8a3971ed07c6c53a2b92ff9013eefe1202150c",
+      "precision_or_mode": "exact decimal upper bound in JSON",
+      "enclosure_method": "working nonlinear norm bound in G-quant",
+      "verification_command": "sed -n '1,160p' private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json"
+    }
+  },
+  "supporting_artifacts": {
+    "R0_geom_native_k3": {
+      "result_path": "private/canonical/results/axis2_R0_geom_native_k3_2026_06_22.json",
+      "result_sha256": "c00553b14b5c27c7b0be74a64fdf2c74ed98b2eca89031465542b5b705300ccd",
+      "script_path": "private/canonical/scripts/axis2_R0_geom_native_k3_2026_06_22.py",
+      "script_sha256": "e3f275af78752e213538ee1fff4ec4bfc391e998a52972986615f717ff409ea1",
+      "summary": "Native K3 geometric scale audit; useful support for R0_geom and transverse injectivity, but not yet the canonical source of the exact datum field r0."
+    },
+    "K7_topology": {
+      "result_path": "private/canonical/results/axis2_K7_topology_2026_07_01.json",
+      "result_sha256": "d9cc619f65539edf55742b0541086e27fca728efbeae0e7406811133e60cd8ae",
+      "script_path": "private/canonical/scripts/axis2_K7_topology_2026_07_01.py",
+      "script_sha256": "0927cce1b9b1a1ea2260e6ea9100d420976a6f583a551c18120c6345e9c7a8be",
+      "summary": "Topology proof outline for compact K7: pi1 = 1, Betti numbers, smoothing. Still conditional on the full theorem chain described in Appendix C."
+    },
+    "J_phys_local_block": {
+      "result_path": "private/canonical/results/axis2_J_phys_A_loc_2026_06_30.json",
+      "result_sha256": "f77a3e0685e3887bd95e2667526325e1021e7d0b3801d0778563fe77c0508abb",
+      "script_path": "private/canonical/scripts/axis2_J_phys_A_loc_2026_06_30.py",
+      "script_sha256": "06fdd458aa6ab6b6ce864335cd6d74d3e8df8d91e234f891a1dc66bce2d9e003",
+      "summary": "Local physical edge operator and conservative sigma_min lower bound."
+    },
+    "sigma_min_NK": {
+      "result_path": "private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json",
+      "result_sha256": "5a7d42ef3fce762f3c41644e2b18b6a74725d1fd7e7b850e6d7d2a52d12e1b91",
+      "script_path": "private/canonical/scripts/axis2_certificate_sigma_min_NK_2026_06_30.py",
+      "script_sha256": "d4d4c2a1d19284b6c2cdf4d47c41e1868c0c85ac1ed83bfb5ccdae31abe17527",
+      "summary": "Assembled Neumann-Kronecker scaffold for the Jacobi reduction."
+    },
+    "E_geom_interval": {
+      "result_path": "private/canonical/results/axis2_E_geom_interval_2026_06_30.json",
+      "result_sha256": "a1ed8f622161298f163f77140b5d3b3e975f77a3c404a724541d6cb715223bb3",
+      "script_path": "private/canonical/scripts/axis2_E_geom_interval_2026_06_30.py",
+      "script_sha256": "1f16d2cab118ff9bb66a248d26d29e2fea006ac792af6941ca9ecc8473532fd7",
+      "summary": "Rigorous Frenet-Serret geometric perturbation bound."
+    },
+    "F_H_neck_interval": {
+      "result_path": "private/canonical/results/axis2_F_H_neck_interval_2026_06_30.json",
+      "result_sha256": "91d7d3090ba2bb399bb79e38b3d66ee5e8adc28884809e8d3d50d75c3151f398",
+      "script_path": "private/canonical/scripts/axis2_F_H_neck_interval_2026_06_30.py",
+      "script_sha256": "48610f8c4045a128c12da5b2db603c1e602dfa48c8970dd533799069a29e109c",
+      "summary": "Order-level F_H neck analysis. Constants C0 and lambda_J remain bracketed, not certified exactly."
+    },
+    "M_epsilon_adiabatic": {
+      "result_path": "private/canonical/results/axis2_M_epsilon_adiabatic_2026_07_01.json",
+      "result_sha256": "e88322af7bdf944176eb4726dc9fe43b29d776541b992002fc78ddb65b1c4fa0",
+      "script_path": "private/canonical/scripts/axis2_M_epsilon_adiabatic_2026_07_01.py",
+      "script_sha256": "94bf749ce4be68eb664618e66a00602cc52eb5389a088abec9c319f089d94165",
+      "summary": "Formal K=2 order matching for the adiabatic operator; source norms still need explicit interval certificates."
+    },
+        "phase4_adiabatic_sources_candidate": {
+            "result_path": "GIFT/certificates/phase4_adiabatic_sources_candidate.json",
+            "result_sha256": "pending_git_commit_hash",
+            "script_path": "GIFT/scripts/phase4_adiabatic_sources_candidate.py",
+            "script_sha256": "pending_git_commit_hash",
+            "summary": "P4.1 candidate source norms for P1, P2, and R3 using norm_F_H power-counting. Not theorem-grade."
+        },
+        "phase4_donaldson_coefficients_values": {
+            "result_path": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "result_sha256": "pending_git_commit_hash",
+            "script_path": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "script_sha256": "pending_git_commit_hash",
+            "summary": "Phase 4.1 theorem-grade D0 values for source_P1, source_P2, derivative norms, raw_P3_scale, remainder_R3, and the resulting R_threshold, checked by phase4_donaldson_coefficients_checker.py."
+        },
+    "hypothesis_AR_discharge": {
+      "result_path": "private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json",
+      "result_sha256": "c4ad698e564a87052c5edeb9bf91147f97854e4eab370e72cc0ff662aba10124",
+      "script_path": "private/canonical/scripts/axis2_hypothesis_AR_discharge_2026_07_01.py",
+      "script_sha256": "e253d8f301bf1c66fff7c6b899363e0201e74a9d8392d0453c6cef517bd59b1f",
+      "summary": "Conservative upper bounds for K_H_K3 and K_F."
+    },
+    "hypothesis_G_discharge": {
+      "result_path": "private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json",
+      "result_sha256": "441446de7c5eb6408faafeba5e8a3971ed07c6c53a2b92ff9013eefe1202150c",
+      "script_path": "private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+      "script_sha256": "643848b50a99b00f9026536c73b9977faae123cdc62f90dd2d99ccf4785623f9",
+      "summary": "Conservative upper bound for ||D^2 m|| and source norm in the global maximal-background discharge."
+    }
+  },
+  "unresolved_items": [
+    "inj_base requires a dedicated base-geometry certificate.",
+    "curv_base requires a dedicated base-curvature certificate.",
+        "A fully exact A_bulk(alpha1,alpha1) interval is not yet present; only a conservative lower bound is available.",
+    "The E-quant discharge has a branching issue between the best-case gamma=2 and worst-case gamma=1 link exponent; the datum certificate therefore does not use it as a canonical source for any new exact field."
+  ]
+}

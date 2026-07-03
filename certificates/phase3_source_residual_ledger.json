@@ -1,0 +1,146 @@
+{
+  "artifact": "phase3_source_residual_ledger",
+  "generated_at": "2026-07-02T00:00:00+02:00",
+  "scope": "global",
+  "status": "D0_sharp_current_certificate",
+  "purpose": "Decompose the source residual m(h_bar_global) entering Phase 3 into explicit analytic pieces and record the D0 sharp-current source/projection/commutator bookkeeping.",
+  "inputs": {
+    "datum_certificate": {
+      "path": "/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json",
+      "sha256": "6aad1502b001dac2a9151974ee60598ac1ab23ab33d169e6f0848830376cd38a"
+    },
+    "Gquant_script": {
+      "path": "/home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+      "sha256": "643848b50a99b00f9026536c73b9977faae123cdc62f90dd2d99ccf4785623f9"
+    },
+    "Gquant_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json",
+      "sha256": "441446de7c5eb6408faafeba5e8a3971ed07c6c53a2b92ff9013eefe1202150c"
+    },
+    "collar_matching_script": {
+      "path": "/home/brieuc/gift-framework/private/canonical/scripts/axis2_collar_matching_lemma_2026_06_25.py",
+      "sha256": "447cc06dc49b9991e5d0409afc040f2fe14d532d0516963aab972cb46d7ee4c9"
+    },
+    "collar_matching_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_collar_matching_lemma_2026_06_25.json",
+      "sha256": "ffec5e8a0ef5ca46fb10e57b3b706b08fa3c5c39882bb3328661782e9041b4f4"
+    },
+    "branch_motion_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_free_boundary_branch_motion_2026_06_20.json",
+      "sha256": "b76b2dd63fda8457039ec848043a33527bc5f5937da7ff3d7dc56fc0c89e1c40"
+    },
+    "sharp_C_src_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_gamma_src_Yneg3_norm_2026_07_02.json",
+      "meaning": "Theorem-grade fixed-Sigma sigma-odd cubic source coefficient C_src = 27/16."
+    },
+    "projection_commutator_certificate": {
+      "path": "/home/brieuc/gift-framework/GIFT/certificates/phase3_projection_commutator_certificate.json",
+      "meaning": "Public certificate for Pi_obs on the reduced lower-root model and q_comm < 1 in the clean annular construction."
+    },
+    "paper_draft": {
+      "path": "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md",
+      "sha256": "fcef05a61f52c67c4cc3c525cbb6a1f3d831847edb4a90cce28eb173573ca252",
+      "relevant_sections": [
+        "§3.1 lines 268-308",
+        "§5.6 lines 801-837",
+        "§6 lines 924-934"
+      ]
+    }
+  },
+  "decomposition": {
+    "formula": "m(h_bar_global) = residual_collar_quadratic + residual_annular_commutator + residual_affine_mismatch",
+    "target_norm": "Y_-3",
+    "expected_scale": "r0^(7/2) for the source term, eta_aff for affine mismatch, and q_comm as an operator/parametrix factor in the clean construction"
+  },
+  "terms": {
+    "residual_collar_quadratic": {
+      "status": "D0_theorem_grade_coefficient",
+      "theorem_scope": "collar",
+      "statement": "The leading fixed-Sigma sigma-odd obstruction source is cubic in c0, with theorem-grade coefficient C_src = 27/16 and Y_-3 scale r0^(7/2).",
+      "source_basis": [
+        "draft Lemma 5.9",
+        "axis2_hypothesis_G_discharge_2026_07_01.py lines 119-145",
+        "axis2_free_boundary_branch_motion_2026_06_20.json",
+        "axis2_gamma_src_derivation_2026_07_02.json",
+        "axis2_gamma_src_christoffel_2026_07_02.json",
+        "axis2_gamma_src_Yneg3_norm_2026_07_02.json"
+      ],
+      "known_at_D0": {
+        "c0_amplitude_upper_bound": 1.0,
+        "K_A_upper_bound": 1.0,
+        "r0": 0.01,
+        "C_src_exact": "27/16",
+        "source_norm_Y_neg3_upper_bound": 1.6875000000000003e-07
+      },
+      "gap": "Public theorem write-up still has to integrate the private parity/cubic derivation, but the D0 coefficient is no longer an envelope."
+    },
+    "residual_annular_commutator": {
+      "status": "clean_parametrix_commutator_certified_at_D0",
+      "theorem_scope": "annular",
+      "statement": "In the clean moving-coordinate construction, the annular commutator is a Neumann perturbation with q_comm = (4/3) K_Sch^Maz kappa_E epsilon, not an additive C_src source envelope.",
+      "source_basis": [
+        "draft lines 270-277 and 934",
+        "axis2_collar_matching_lemma_2026_06_25.json N2/N3/N6",
+        "phase3_projection_commutator_certificate.json"
+      ],
+      "known_at_D0": {
+        "support_region": "r0/4 < |w| < r0/2 or equivalent annular overlap",
+        "weight_shift_verified": true,
+        "boundedness_constant_finite": true,
+        "K_Sch_Maz_upper_bound": 17.0,
+        "kappa_E_conservative_upper_bound": 3.0,
+        "epsilon": 0.01,
+        "q_comm_conservative": 0.68,
+        "epsilon_0_lower_bound": 0.014705882352941176,
+        "q_comm_less_than_1": true
+      },
+      "gap": "The full global parametrix theorem still has to incorporate this local Neumann factor."
+    },
+    "residual_affine_mismatch": {
+      "status": "exact_zero_at_D0",
+      "theorem_scope": "bulk-transition",
+      "statement": "The mismatch between collar-affine models across components is measured by eta_aff.",
+      "source_basis": [
+        "axis2_hypothesis_G_discharge_2026_07_01.py lines 162-189",
+        "axis2_hypothesis_G_discharge_2026_07_01.json G3_consistency_at_D0"
+      ],
+      "known_at_D0": {
+        "eta_aff_D0": 0.0,
+        "reason": "77 identical copies of a single local model"
+      },
+      "gap": "For general admissible data the coefficient C_aff is still structural, but for D0 the term vanishes exactly."
+    }
+  },
+  "assembled_current_bound": {
+    "status": "D0_sharp_current",
+    "statement": "Using C_src = 27/16 from the private P1 chain and R_aff(D0)=0, one gets ||m(h_bar_global)||_{Y_-3} <= 1.6875e-7 at D0. R_comm is controlled as a clean parametrix Neumann factor q_comm <= 0.68, not as an extra additive source envelope.",
+    "value_upper_bound": 1.6875000000000003e-07,
+    "depends_on": [
+      "residual_collar_quadratic coefficient C_src = 27/16",
+      "residual_annular_commutator q_comm <= 0.68 in the clean construction",
+      "residual_affine_mismatch = 0 at D0"
+    ],
+    "superseded_old_bound": {
+      "status": "superseded_envelope",
+      "statement": "The old placeholder C_src <= 2 gave ||m(h_bar_global)||_{Y_-3} <= 2e-7 at D0.",
+      "value_upper_bound": 2e-07
+    }
+  },
+  "what_is_certified_now": [
+    "The residual decomposes into the three named contributions above.",
+    "The affine mismatch term vanishes exactly at D0.",
+    "The collar source coefficient is C_src = 27/16 at D0.",
+    "Pi_obs is certified on the reduced lower-root constant-mode model.",
+    "The clean annular commutator has q_comm <= 0.68 at D0 in the conservative Mazzeo regime."
+  ],
+  "what_is_not_certified_now": [
+    "The full PDE identification theorem Pi_obs = Pi_obs,proto beyond the reduced lower-root model.",
+    "The final global Phase 3.2/3.3 right inverse theorem.",
+    "The final theorem statement assembling the local certificates into the global maximal-section theorem."
+  ],
+  "verification": {
+    "reproduce_Gquant_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+    "reproduce_commutator_bookkeeping_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_collar_matching_lemma_2026_06_25.py",
+    "reproduce_public_projection_commutator_command": "python3 /home/brieuc/gift-framework/GIFT/scripts/phase3_projection_commutator_certificate.py"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "artifact": "phase3_mu_minus_half_matching_target",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "target_definition",
+  "purpose": "Define the exact scalar quantity that must be extracted from the Lemma 5.9 source trace in order to convert the current lower-root structural information into a theorem-grade source coefficient.",
+  "target_quantity": {
+    "name": "kappa_src^(i)",
+    "definition": "For each component Sigma_i, define kappa_src^(i) by ev_{-1/2}^{(i)}(m(h_bar)) = (c0^(i))^2 * kappa_src^(i) * Phi_{-1/2}^{std} + higher / s-dependent corrections, where Phi_{-1/2}^{std} is the fixed sigma-odd mu=-1/2 normal form on the collar.",
+    "normal_form_basis": "Phi_{-1/2}^{std} = the chosen real two-dimensional basis of the mu=-1/2 sigma-odd trace space, to be fixed consistently with Theorem 5.10 / R^{2N} coordinates."
+  },
+  "already_known_structure": {
+    "source_side": {
+      "from_draft": "ev_{-1/2}(m(h_bar)) is s-uniform at leading order and is sourced by the quadratic remainder only.",
+      "dependence": "(c0^(i))^2 * polynomial(A_bulk|_{Sigma_i})"
+    },
+    "channel_side": {
+      "from_rho2_scaffold": "The branch-motion normal form has exact lower-root coefficient 3/8 in the mu=-1/2 channel."
+    }
+  },
+  "comparison_problem": {
+    "what_must_be_computed": "Express the leading source trace ev_{-1/2}^{(i)}(m(h_bar)) in the same basis Phi_{-1/2}^{std} used for the branch-motion normal form.",
+    "why_this_is_the_right_target": "Once kappa_src^(i) is known, the collar source contribution becomes an explicit scalar multiple of the already rigidified lower-root channel, and the remaining source bound reduces to coefficient size plus the O(rho^(3/2)) tail."
+  },
+  "decomposition_after_matching": {
+    "leading_part": "R_quad^(i,lead) = (c0^(i))^2 * kappa_src^(i) * rho^(1/2) * Phi_{-1/2}^{std}",
+    "tail_part": "R_quad^(i,tail) = O(rho^(3/2))",
+    "weighted_norm_consequence": "||R_quad^(i)||_{Y_-3} <= |kappa_src^(i)| * |c0^(i)|^2 * r0^(7/2) + tail_bound"
+  },
+  "what_is_not_fixed_yet": [
+    "The explicit choice of Phi_{-1/2}^{std} in repository coordinates.",
+    "The scalar value or interval for kappa_src^(i).",
+    "The tail bound for O(rho^(3/2))."
+  ]
+}

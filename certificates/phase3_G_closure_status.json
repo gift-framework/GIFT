@@ -1,0 +1,133 @@
+{
+  "artifact": "phase3_G_closure_status",
+  "generated_at": "2026-07-02T00:00:00+02:00",
+  "scope": "global",
+  "status": "conditional_numeric_closure",
+  "purpose": "Freeze the current status of the Phase 3 contraction inputs C_src and C_nl for the global maximal-section problem, updated after the private 2026-07-02 P1/C_nl sharp-constant chain.",
+  "inputs": {
+    "datum_certificate": {
+      "path": "/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json",
+      "sha256": "6aad1502b001dac2a9151974ee60598ac1ab23ab33d169e6f0848830376cd38a"
+    },
+    "producer_script": {
+      "path": "/home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+      "sha256": "643848b50a99b00f9026536c73b9977faae123cdc62f90dd2d99ccf4785623f9"
+    },
+    "producer_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json",
+      "sha256": "441446de7c5eb6408faafeba5e8a3971ed07c6c53a2b92ff9013eefe1202150c"
+    },
+    "producer_result_C_src": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_gamma_src_Yneg3_norm_2026_07_02.json",
+      "meaning": "Theorem-grade fixed-Sigma sigma-odd cubic source coefficient C_src = 27/16."
+    },
+    "producer_result_C_nl": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_C_nl_theorem_grade_2026_07_02.json",
+      "meaning": "Theorem-grade symmetric-space nonlinear constant C_nl = 2/3 at D0."
+    },
+    "projection_commutator_certificate": {
+      "path": "/home/brieuc/gift-framework/GIFT/certificates/phase3_projection_commutator_certificate.json",
+      "meaning": "Public certificate for Pi_obs on the reduced lower-root model and q_comm <= 0.68 in the clean annular construction."
+    },
+    "paper_draft": {
+      "path": "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md",
+      "sha256": "fcef05a61f52c67c4cc3c525cbb6a1f3d831847edb4a90cce28eb173573ca252",
+      "relevant_lines": [
+        "165-173",
+        "268-308"
+      ]
+    }
+  },
+  "theorem_usable_constants": {
+    "C_lin": {
+      "value_upper_bound": 36.635,
+      "status": "conditional_theorem",
+      "meaning": "Working upper bound for ||J_ext^{-1}|| from the current reduced-sector certificate and Mazzeo/Schauder scaffold.",
+      "depends_on": [
+        "datum_D0.cond(A_bulk)",
+        "axis2_certificate_sigma_min_NK_2026_06_30",
+        "Phase 3.2 theorem still to be completed"
+      ]
+    },
+    "D2m": {
+      "value_upper_bound": 0.6666666666666666,
+      "status": "theorem_grade_at_D0",
+      "meaning": "Sharp-current bound for ||D^2 m|| carried by the private C_nl theorem-grade extraction.",
+      "depends_on": [
+        "datum_D0.D2m",
+        "axis2_C_nl_theorem_grade_2026_07_02"
+      ]
+    },
+    "C_src_universal": {
+      "value_upper_bound": 1.6875,
+      "exact_value": "27/16",
+      "status": "theorem_grade_at_D0",
+      "meaning": "Fixed-Sigma sigma-odd cubic source coefficient in ||m(h_bar_global)||_{Y_-3} <= C_src * r0^(7/2), from the private P1 chain.",
+      "depends_on": [
+        "axis2_gamma_src_derivation_2026_07_02",
+        "axis2_gamma_src_christoffel_2026_07_02",
+        "axis2_gamma_src_Yneg3_norm_2026_07_02"
+      ]
+    },
+    "C_nl": {
+      "value_upper_bound": 0.6666666666666666,
+      "exact_value": "2/3",
+      "status": "theorem_grade_at_D0",
+      "meaning": "Weighted nonlinear second-variation coefficient at D0 from symmetric-space normal coordinates, collinearity, and type-IV curvature bound.",
+      "depends_on": [
+        "axis2_C_nl_theorem_grade_2026_07_02"
+      ]
+    }
+  },
+  "superseded_placeholder_constants": {
+    "C_src_universal": {
+      "value_upper_bound": 2.0,
+      "status": "superseded_envelope",
+      "meaning": "Universal coefficient in ||m(h_bar_global)||_{Y_-3} <= C_src * r0^(7/2) * ||A_bulk||_{C^{0,alpha}}.",
+      "current_basis": "Quoted from Lemma 5.9 coefficient bookkeeping and hard-coded in axis2_hypothesis_G_discharge_2026_07_01.py lines 140-145.",
+      "superseded_by": "C_src = 27/16 from axis2_gamma_src_Yneg3_norm_2026_07_02."
+    },
+    "C_nl": {
+      "value_upper_bound": 1.0,
+      "status": "superseded_envelope",
+      "meaning": "Quadratic remainder constant used in the contraction bound; presently identified with ||D^2 m|| <= 1.",
+      "current_basis": "Used as K_nl = 1.0 in axis2_hypothesis_G_discharge_2026_07_01.py lines 197-245 and in draft Proposition 3.1ter bookkeeping.",
+      "superseded_by": "C_nl = 2/3 from axis2_C_nl_theorem_grade_2026_07_02."
+    }
+  },
+  "derived_D0_values": {
+    "r0": 0.01,
+    "eta_aff_D0": 0.0,
+    "source_norm_Y_neg3_upper_bound_using_C_src_27_over_16": 1.6875000000000003e-07,
+    "r_G_local_upper_bound_using_C_nl_2_over_3": 0.00015098886281249998,
+    "margin_factor_below_half_using_sharp_constants": 3311.50252201652,
+    "rho_fixed_point_radius_using_sharp_constants": 1.23643125e-05,
+    "closure_scalar_4_C_lin_sq_C_nl_C_src": 0.0006039554512499999,
+    "closure_scalar_margin_below_half": 827.87563050413,
+    "superseded_envelope_values": {
+      "source_norm_Y_neg3_upper_bound_using_C_src_2": 2e-07,
+      "r_G_local_upper_bound_using_C_nl_1": 0.00026842464499999993,
+      "margin_factor_below_half_using_old_placeholders": 1862.7201686342926,
+      "rho_fixed_point_radius_using_old_placeholders": 1.4654e-05,
+      "closure_scalar_4_C_lin_sq_C_nl_C_src_old": 0.00107369858
+    }
+  },
+  "interpretation": {
+    "numerically_closed_with_sharp_current_constants": true,
+    "analytic_status": "The D0 source and nonlinear envelopes have been sharpened to theorem-grade constants in the private chain. Public Pi_obs/R_comm local bookkeeping is now certified. The global Phase 3 operator theorem and full Pi_obs PDE identification remain open.",
+    "what_is_safe_to_claim_now": [
+      "At D0, the current G-quant scaffold is numerically far below the 1/2 contraction threshold using C_src = 27/16 and C_nl = 2/3.",
+      "The smallness is driven by r0^(7/2), the identical-copies condition eta_aff_D0 = 0, and the private sharp-constant chain."
+    ],
+    "what_is_not_safe_to_claim_now": [
+      "That the full global maximal-section theorem is proved before the Phase 3.2/3.3 operator package is promoted to theorem form.",
+      "That the full Pi_obs PDE theorem beyond the reduced lower-root model is proved.",
+      "That q_comm has already been assembled into a complete global parametrix theorem.",
+      "That Phase 3, Phase 4, Phase 5, or compact Level E is complete."
+    ]
+  },
+  "verification": {
+    "reproduce_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
+    "independent_check_command": "python3 - <<'PY'\nC_lin = 36.635\nC_src = (27/16) * (1e-2)**3.5\nC_nl = 2/3\nrho = 2 * C_lin * C_src\nlhs = 4 * C_lin * C_lin * C_nl * C_src\nr_G = C_lin * C_lin * C_nl * C_src\nprint({'source': C_src, 'rho': rho, 'r_G': r_G, 'lhs': lhs})\nPY"
+  }
+}

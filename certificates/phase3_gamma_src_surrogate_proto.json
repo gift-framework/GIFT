@@ -1,0 +1,27 @@
+{
+  "artifact": "phase3_gamma_src_surrogate_proto",
+  "status": "explicit_local_surrogate",
+  "scope": "rank_one_constant_mode",
+  "surrogate_assumption": {
+    "id": "S_qsur",
+    "statement": "The leading obstruction projection of the quadratic seed residual uses the same lower-root channel coefficient as the certified branch-motion normal form."
+  },
+  "surrogate_output": {
+    "gamma_src_sur": "3/8",
+    "real_axis_pair": {
+      "kappa_src_R": "(3/8) * A_bulk(alpha_1, alpha_1)",
+      "kappa_src_I": "0"
+    },
+    "covariant_pair_extension": "(3/8) * A_bulk(alpha_1, alpha_1) * ((c_R)^2 - (c_I)^2, 2 c_R c_I)"
+  },
+  "D0_specialization": {
+    "A_bulk_alpha1_alpha1_lower_bound": 0.43290043290043284,
+    "r0": 0.01,
+    "candidate_lower_bound_for_kappa_src_R": 0.1623376623376623,
+    "candidate_lower_bound_for_weighted_source_scale": 1.6233766233766234e-08
+  },
+  "not_certified": [
+    "That the true nonlinear source coefficient equals 3/8.",
+    "That the full PDE obstruction projection coincides with this surrogate on all inputs."
+  ]
+}

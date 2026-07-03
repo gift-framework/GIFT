@@ -1,0 +1,32 @@
+{
+  "artifact": "phase3_source_trace_convention_status",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "open_consistency_issue",
+  "issue": "The current branch mixes a lower-root trace labeled mu = -1/2 with a quadratic source term written at radial order rho^(1/2).",
+  "locations": {
+    "mu_minus_half_trace": [
+      "/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md",
+      "/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md",
+      "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md §4.3/§5.5"
+    ],
+    "rho_plus_half_source": [
+      "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md §3.1 and Lemma 5.9 sketch",
+      "/home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py"
+    ]
+  },
+  "allowed_interpretations": [
+    "radial-order typo in the current draft",
+    "implicit weighted renormalization of the source before taking the trace",
+    "undocumented shifted trace convention"
+  ],
+  "blocked_outputs": [
+    "theorem-grade serialization of kappa_src",
+    "final collar contribution to C_src_exact"
+  ],
+  "safe_outputs": [
+    "basis fixing",
+    "projection prototypes",
+    "algebraic source-to-correction interface"
+  ]
+}

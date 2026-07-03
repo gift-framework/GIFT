@@ -1,0 +1,473 @@
+{
+  "artifact": "phase4_donaldson_coefficients",
+  "generated_by": "scripts/phase4_donaldson_coefficients.py",
+  "scope": "Phase 4.1 Stage B v1 symbolic Donaldson coefficient formulas",
+  "status": "candidate_not_theorem",
+  "type_gate": {
+    "source": "certificates/phase4_bigraded_type_check.json",
+    "all_pass": true,
+    "checks_count": 11,
+    "producer_refuses_if_false": true
+  },
+  "operator_sources": {
+    "E1_horizontal": "d_H omega = 0, implemented through the Donaldson connection choice",
+    "E3_df_lambda": "d_f lambda = -F_H omega",
+    "E4_horizontal_mu": "d_H mu = 0",
+    "E5_df_Theta": "d_f Theta = -F_H mu",
+    "E6_reduced": "M_eps(h) = Pi_reduced(d_H Theta)"
+  },
+  "operator_tree": {
+    "bigraded_terms": {
+      "omega": {
+        "term": "omega",
+        "bidegree": [
+          1,
+          2
+        ],
+        "source": "Donaldson phi mixed component",
+        "gauge": "connection choice imposes d_H omega = 0",
+        "inverse": null
+      },
+      "lambda": {
+        "term": "lambda",
+        "bidegree": [
+          3,
+          0
+        ],
+        "source": "d_f lambda = -F_H omega",
+        "gauge": "horizontal volume component; harmonic part fixed separately",
+        "inverse": "G_f = Delta_f^{-1} d_f^*"
+      },
+      "Theta": {
+        "term": "Theta",
+        "bidegree": [
+          2,
+          2
+        ],
+        "source": "d_f Theta = -F_H mu",
+        "gauge": "harmonic part fixed separately or projected",
+        "inverse": "G_f = Delta_f^{-1} d_f^*"
+      },
+      "mu": {
+        "term": "mu",
+        "bidegree": [
+          0,
+          4
+        ],
+        "source": "Donaldson star_phi_phi fibrewise volume component",
+        "gauge": "d_H mu = 0",
+        "inverse": null
+      },
+      "M_eps": {
+        "term": "M_eps",
+        "bidegree": [
+          3,
+          2
+        ],
+        "source": "Pi_reduced(d_H Theta)",
+        "gauge": "project to reduced maximal-section source",
+        "inverse": null
+      }
+    },
+    "edges": [
+      {
+        "id": "E3_F_H_omega_to_lambda",
+        "source_donaldson": "E3: d_f lambda = -F_H omega",
+        "input_bidegree": [
+          3,
+          1
+        ],
+        "output_bidegree": [
+          3,
+          0
+        ],
+        "eps_order": ">=1",
+        "gauge": "horizontal volume component; harmonic part fixed separately",
+        "inverse": "G_f = Delta_f^{-1} d_f^*",
+        "formula": "lambda_corr = -G_f(F_H omega)",
+        "status": "candidate_not_theorem"
+      },
+      {
+        "id": "E5_F_H_mu_to_Theta",
+        "source_donaldson": "E5: d_f Theta = -F_H mu",
+        "input_bidegree": [
+          2,
+          3
+        ],
+        "output_bidegree": [
+          2,
+          2
+        ],
+        "eps_order": ">=1",
+        "gauge": "harmonic part fixed separately or projected",
+        "inverse": "G_f = Delta_f^{-1} d_f^*",
+        "formula": "Theta_corr = -G_f(F_H mu)",
+        "status": "candidate_not_theorem"
+      },
+      {
+        "id": "connection_choice_d_H_omega",
+        "source_donaldson": "E1 horizontal component: d_H omega = 0",
+        "input_bidegree": [
+          2,
+          2
+        ],
+        "output_bidegree": [
+          2,
+          2
+        ],
+        "eps_order": ">=1",
+        "gauge": "connection choice imposes d_H omega = 0",
+        "inverse": null,
+        "formula": "partial_j omega_i - partial_i omega_j + L_{v_j} omega_i - L_{v_i} omega_j",
+        "status": "candidate_not_theorem"
+      },
+      {
+        "id": "E6_projection_d_H_Theta",
+        "source_donaldson": "E6: d_H Theta = 0",
+        "input_bidegree": [
+          3,
+          2
+        ],
+        "output_bidegree": [
+          3,
+          2
+        ],
+        "eps_order": "0,1,2,>=3",
+        "gauge": "project to reduced maximal-section source",
+        "inverse": null,
+        "formula": "M_eps(h) = Pi_reduced(d_H Theta)",
+        "status": "candidate_not_theorem"
+      }
+    ]
+  },
+  "coefficient_objects": {
+    "P1": {
+      "definition": "Pi_reduced(Source_E6_order_1(A0(h), A1(h), H, F_H))",
+      "eps_order": "1",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "required_constants": [
+        "K_H_K3",
+        "K_F",
+        "C_conn_1",
+        "C_comm",
+        "C_projection"
+      ],
+      "formula_status": "symbolic_formula_bound",
+      "status": "candidate_not_theorem"
+    },
+    "P2": {
+      "definition": "Pi_reduced(Source_E6_order_2(A0(h), A1(h), A2(h), H, F_H))",
+      "eps_order": "2",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "required_constants": [
+        "K_H_K3",
+        "K_F",
+        "C_conn_2",
+        "C_comm",
+        "C_wedge",
+        "C_Hodge",
+        "C_projection"
+      ],
+      "formula_status": "symbolic_formula_bound",
+      "status": "candidate_not_theorem"
+    },
+    "R3": {
+      "definition": "eps^{-3} * (M_eps - m - eps P1 - eps^2 P2) after K=2 ansatz",
+      "eps_order": ">=3",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "source_edges": [
+        "third_and_higher_order_E6_projection_terms",
+        "Taylor_terms_from_m_P1_P2",
+        "commutators_not_absorbed_in_P1_P2"
+      ],
+      "required_constants": [
+        "DP1_norm",
+        "DP2_norm",
+        "D2P1_norm",
+        "D3m_norm",
+        "raw_P3_scale",
+        "G_aug"
+      ],
+      "formula_status": "symbolic_formula_bound",
+      "status": "candidate_not_theorem"
+    }
+  },
+  "coefficient_formulas": {
+    "source_P1": {
+      "name": "source_P1",
+      "target": "||P1(h0)||_{Y_{beta-2}}",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "1",
+      "upper_bound_formula": "C_projection * (C_conn_1 + C_comm + K_H_K3 * K_F * (C_E3_omega + C_E5_mu))",
+      "constants": [
+        "C_projection",
+        "C_conn_1",
+        "C_comm",
+        "K_H_K3",
+        "K_F",
+        "C_E3_omega",
+        "C_E5_mu"
+      ],
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "check_rule": "all constants must be formula-level bounds or certified intervals before numeric evaluation",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "source_P2": {
+      "name": "source_P2",
+      "target": "||P2(h0)||_{Y_{beta-2}}",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "2",
+      "upper_bound_formula": "C_projection * (C_conn_2 + C_comm_2 + C_wedge * source_P1 + C_Hodge * (K_H_K3 * K_F)^2 * (C_E3_omega + C_E5_mu))",
+      "constants": [
+        "C_projection",
+        "C_conn_2",
+        "C_comm_2",
+        "C_wedge",
+        "source_P1",
+        "C_Hodge",
+        "K_H_K3",
+        "K_F",
+        "C_E3_omega",
+        "C_E5_mu"
+      ],
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "check_rule": "source_P1 dependency must resolve to the formula object of the same name",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "DP1_norm": {
+      "name": "DP1_norm",
+      "target": "||DP1(h0)||_{X_beta^ext -> Y_{beta-2}}",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "1",
+      "upper_bound_formula": "C_projection * (C_D_conn_1 + C_D_comm + K_H_K3 * K_F * (C_D_E3 + C_D_E5))",
+      "constants": [
+        "C_projection",
+        "C_D_conn_1",
+        "C_D_comm",
+        "K_H_K3",
+        "K_F",
+        "C_D_E3",
+        "C_D_E5"
+      ],
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "check_rule": "linearization constants must be derived from the same Donaldson edges as P1",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "DP2_norm": {
+      "name": "DP2_norm",
+      "target": "||DP2(h0)||_{X_beta^ext -> Y_{beta-2}}",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "2",
+      "upper_bound_formula": "C_projection * (C_D_conn_2 + C_D_comm_2 + C_D_wedge * source_P1 + C_wedge * DP1_norm + C_D_Hodge * (K_H_K3 * K_F)^2)",
+      "constants": [
+        "C_projection",
+        "C_D_conn_2",
+        "C_D_comm_2",
+        "C_D_wedge",
+        "source_P1",
+        "C_wedge",
+        "DP1_norm",
+        "C_D_Hodge",
+        "K_H_K3",
+        "K_F"
+      ],
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "check_rule": "source_P1 and DP1_norm dependencies must resolve to formula objects",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "D2P1_norm": {
+      "name": "D2P1_norm",
+      "target": "||D^2 P1(h0)||",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "1",
+      "upper_bound_formula": "C_projection * (C_D2_conn_1 + C_D2_comm + K_H_K3 * K_F * (C_D2_E3 + C_D2_E5))",
+      "constants": [
+        "C_projection",
+        "C_D2_conn_1",
+        "C_D2_comm",
+        "K_H_K3",
+        "K_F",
+        "C_D2_E3",
+        "C_D2_E5"
+      ],
+      "source_edges": [
+        "E3_F_H_omega_to_lambda",
+        "E5_F_H_mu_to_Theta",
+        "connection_choice_d_H_omega",
+        "E6_projection_d_H_Theta"
+      ],
+      "check_rule": "second variation constants must name their Donaldson source edge",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "D3m_norm": {
+      "name": "D3m_norm",
+      "target": "||D^3 m(h0)||",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "0",
+      "upper_bound_formula": "C_D3m",
+      "constants": [
+        "C_D3m"
+      ],
+      "source_edges": [
+        "Phase3_maximal_section_operator"
+      ],
+      "check_rule": "Phase 3 maximal-section cubic constant must be supplied before numeric use",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "raw_P3_scale": {
+      "name": "raw_P3_scale",
+      "target": "order-3 source scale before K=2 tail contraction",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": "3",
+      "upper_bound_formula": "C_projection * (C_conn_3 + C_comm_3 + C_cubic_star + C_Hodge_3 * (K_H_K3 * K_F)^3)",
+      "constants": [
+        "C_projection",
+        "C_conn_3",
+        "C_comm_3",
+        "C_cubic_star",
+        "C_Hodge_3",
+        "K_H_K3",
+        "K_F"
+      ],
+      "source_edges": [
+        "third_and_higher_order_E6_projection_terms",
+        "commutators_not_absorbed_in_P1_P2"
+      ],
+      "check_rule": "raw third-order source must remain separate from Taylor terms in R3",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    },
+    "remainder_R3": {
+      "name": "remainder_R3",
+      "target": "||R_eps|| / eps^3 after K=2 ansatz",
+      "domain": "X_beta^ext",
+      "codomain": "Y_{beta-2}",
+      "eps_order": ">=3",
+      "upper_bound_formula": "DP1_norm * xi2_bound + C_nl * xi1_bound * xi2_bound + (1/6) * D3m_norm * xi1_bound^3 + (1/2) * D2P1_norm * xi1_bound^2 + DP2_norm * xi1_bound + raw_P3_scale",
+      "constants": [
+        "DP1_norm",
+        "xi2_bound",
+        "C_nl",
+        "xi1_bound",
+        "D3m_norm",
+        "D2P1_norm",
+        "DP2_norm",
+        "raw_P3_scale"
+      ],
+      "source_edges": [
+        "Taylor_terms_from_m_P1_P2",
+        "third_and_higher_order_E6_projection_terms",
+        "commutators_not_absorbed_in_P1_P2"
+      ],
+      "check_rule": "xi1_bound and xi2_bound must be computed from formula-level source_P1/source_P2 before numeric use",
+      "value": "symbolic_formula_not_numeric",
+      "status": "candidate_not_theorem"
+    }
+  },
+  "comparison_to_power_counting_candidate": {
+    "source": "certificates/phase4_adiabatic_sources_candidate.json",
+    "status": "comparison_only_not_used_as_derivation",
+    "old_power_counting_bounds": {
+      "source_P1": {
+        "exact": "231/100",
+        "value": 2.31,
+        "model": "||P1(h0)|| <= ||F_H||",
+        "status": "candidate_not_theorem"
+      },
+      "source_P2": {
+        "exact": "53361/10000",
+        "value": 5.3361,
+        "model": "||P2(h0)|| <= ||F_H||^2",
+        "status": "candidate_not_theorem"
+      },
+      "DP1_norm": {
+        "exact": "231/100",
+        "value": 2.31,
+        "status": "candidate_not_theorem"
+      },
+      "DP2_norm": {
+        "exact": "53361/10000",
+        "value": 5.3361,
+        "status": "candidate_not_theorem"
+      },
+      "D2P1_norm": {
+        "exact": "53361/10000",
+        "value": 5.3361,
+        "status": "candidate_not_theorem"
+      },
+      "D3m_norm": {
+        "exact": "1",
+        "value": 1.0,
+        "status": "candidate_not_theorem"
+      },
+      "raw_P3_scale": {
+        "exact": "12326391/1000000",
+        "value": 12.326391,
+        "status": "candidate_not_theorem"
+      }
+    },
+    "old_tail_contraction_candidate": {
+      "condition": "4 * ||G_aug||^2 * C_nl * R3_coeff * eps^3 < 1",
+      "eps_threshold_candidate": 0.00036621811958484525,
+      "R_threshold_candidate": 2730.613114210807,
+      "status": "candidate_not_theorem",
+      "interpretation": "Only a scale diagnostic. The constants are intentionally broad and not yet from the actual Donaldson operator."
+    }
+  },
+  "next_required_artifact": "scripts/phase4_donaldson_coefficients_checker.py",
+  "promotion_boundary": [
+    "This artifact is a typed symbolic formula producer, not a numerical certificate.",
+    "No coefficient may be promoted until every symbolic constant is supplied by a formula-level bound or interval.",
+    "No Level Q promotion is allowed without an independent checker.",
+    "AR remains open until the convergence/majorant theorem is proved."
+  ],
+  "all_pass": true
+}

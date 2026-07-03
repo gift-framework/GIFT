@@ -1,0 +1,85 @@
+{
+  "artifact": "phase4_ar_majorant_check",
+  "generated_by": "scripts/phase4_ar_majorant_checker.py",
+  "scope": "Independent scalar checker for conditional P4.2 AR majorant",
+  "status": "checker_for_conditional_majorant_not_AR_theorem",
+  "checked_artifact": "certificates/phase4_ar_majorant_candidate.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_conditional",
+      "pass": true,
+      "detail": "status remains conditional"
+    },
+    {
+      "name": "values_dependency",
+      "pass": true,
+      "detail": "depends on P4.1 values"
+    },
+    {
+      "name": "inverse_is_conditional",
+      "pass": true,
+      "detail": "inverse theorem is not marked proved"
+    },
+    {
+      "name": "R_eps_inverse",
+      "pass": true,
+      "detail": "eps_AR = 1/R_AR"
+    },
+    {
+      "name": "source_majorant_exact",
+      "pass": true,
+      "detail": "source_majorant exact recomputes"
+    },
+    {
+      "name": "displacement_majorant_exact",
+      "pass": true,
+      "detail": "displacement_majorant exact recomputes"
+    },
+    {
+      "name": "q_AR_exact",
+      "pass": true,
+      "detail": "q_AR exact recomputes"
+    },
+    {
+      "name": "tail_at_eps_exact",
+      "pass": true,
+      "detail": "tail_at_eps exact recomputes"
+    },
+    {
+      "name": "q_AR_lt_half",
+      "pass": true,
+      "detail": "q_AR < 1/2"
+    },
+    {
+      "name": "displacement_inside_half_ball",
+      "pass": true,
+      "detail": "displacement <= r_AR/2"
+    },
+    {
+      "name": "tail_lt_linear_source",
+      "pass": true,
+      "detail": "tail <= first-order source contribution"
+    },
+    {
+      "name": "cert_checks_match",
+      "pass": true,
+      "detail": "producer checks all true"
+    },
+    {
+      "name": "boundary_not_AR_theorem",
+      "pass": true,
+      "detail": "acceptance boundary prevents AR promotion"
+    }
+  ],
+  "summary": {
+    "checks_total": 14,
+    "checks_passed": 14,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

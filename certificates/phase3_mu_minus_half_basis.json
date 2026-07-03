@@ -1,0 +1,38 @@
+{
+  "artifact": "phase3_mu_minus_half_basis",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "definition",
+  "purpose": "Fix the standard real basis of the sigma-odd lower-root trace bundle at mu = -1/2 and identify it canonically with the R^{2N} coordinates used elsewhere in Phase 3.",
+  "basis_definition": {
+    "per_component": {
+      "Phi_minus_half_R^(i)": "rho^(-1/2) cos(varphi/2) in the alpha_1 direction on collar U_i",
+      "Phi_minus_half_I^(i)": "rho^(-1/2) sin(varphi/2) in the alpha_1 direction on collar U_i"
+    },
+    "trace_bundle": "T_{-1/2}|_{Sigma_i} = span_R { Phi_minus_half_R^(i), Phi_minus_half_I^(i) }",
+    "global_constant_section_layer": "R^{2N} = direct_sum_i span_R { e_i^R, e_i^I }"
+  },
+  "coordinate_identification": {
+    "dictionary": {
+      "e_i^R": "constant coefficient of the upper-root model psi_i^R = rho^(3/2) cos(varphi/2)",
+      "e_i^I": "constant coefficient of the upper-root model psi_i^I = rho^(3/2) sin(varphi/2)"
+    },
+    "lower_root_dual_dictionary": {
+      "e_i^R_dual": "constant coefficient of Phi_minus_half_R^(i)",
+      "e_i^I_dual": "constant coefficient of Phi_minus_half_I^(i)"
+    }
+  },
+  "model_identity": {
+    "Delta_psi_R": "Delta_w (rho^(3/2) cos(varphi/2)) = 2 rho^(-1/2) cos(varphi/2)",
+    "Delta_psi_I": "Delta_w (rho^(3/2) sin(varphi/2)) = 2 rho^(-1/2) sin(varphi/2)",
+    "consequence": "In the model normalization, one unit of upper-root coefficient in e_i^R or e_i^I produces two units in the corresponding lower-root basis coefficient."
+  },
+  "normalization_rule_for_kappa_src": {
+    "rule": "kappa_src^(i) must be recorded in the lower-root basis {Phi_minus_half_R^(i), Phi_minus_half_I^(i)} fixed here, not in any alternative complex or cover-normalized basis.",
+    "if_complex_notation_is_used": "convert e^{± i varphi/2} coefficients to the real cosine/sine basis before serializing."
+  },
+  "inputs": {
+    "phase3_spaces": "/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md",
+    "draft_section_4_3_and_5_2": "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md"
+  }
+}

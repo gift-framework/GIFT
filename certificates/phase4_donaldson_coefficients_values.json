@@ -1,0 +1,299 @@
+{
+  "artifact": "phase4_donaldson_coefficients_values",
+  "generated_by": "scripts/phase4_donaldson_coefficients_values.py",
+  "scope": "Phase 4.1 theorem-grade D0 values for Stage B v1 symbolic formulas",
+  "status": "theorem_grade_formula_values_from_private_canonical_artifacts",
+  "private_context": {
+    "repo_commit": "b46e3cd6c57757cd466e3001092fed7ef4d7d456",
+    "dirty_worktree_note": "private has an unrelated dirty memory/agent_reports/epistemic_map_status.json"
+  },
+  "private_sources": {
+    "first_order": {
+      "script": "private/canonical/scripts/axis2_phase4_1_first_order_2026_07_03.py",
+      "script_sha256": "0f6586c0f1d016374c8de5e6e8dc5e773a135766dceaf8ebda9176fad6e851e7",
+      "result": "private/canonical/results/axis2_phase4_1_first_order_2026_07_03.json",
+      "result_sha256": "95c12129852038fd2ce2917d7f25836a08b10824032ad03ff442643b5f720252"
+    },
+    "second_order": {
+      "script": "private/canonical/scripts/axis2_phase4_1_second_order_2026_07_03.py",
+      "script_sha256": "b5703ac5ec9fc2ff413601c1761afd2861ce9fee13e5c3958702ea42fc5fd50a",
+      "result": "private/canonical/results/axis2_phase4_1_second_order_2026_07_03.json",
+      "result_sha256": "e6827ee35e5f1252df80e1fa1fccdfa37f29026d09e1c602ef045702ad2d7d72"
+    },
+    "third_order": {
+      "script": "private/canonical/scripts/axis2_phase4_1_third_order_2026_07_03.py",
+      "script_sha256": "5069bfc67fcd06a4dcccd0f00dfbc34f8f622ceb87855ded519e1f0310fd5594",
+      "result": "private/canonical/results/axis2_phase4_1_third_order_2026_07_03.json",
+      "result_sha256": "9e3a27f18677257224cfb494a75172bf71d2e0c8733d1951803b6a4cee3928b7"
+    }
+  },
+  "constants": {
+    "K_H_K3": {
+      "exact": "9/20",
+      "value": 0.45,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private axis2_K3_hodge_gap / Phase 4.1 closure uses K_H_K3 <= 0.45"
+    },
+    "K_F": {
+      "exact": "231/100",
+      "value": 2.31,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private axis2_hypothesis_AR_discharge: K_F <= 2.31"
+    },
+    "G_aug": {
+      "exact": "183/5",
+      "value": 36.6,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private Phase 4.1 third-order closure uses ||G_aug|| <= 36.6"
+    },
+    "C_nl": {
+      "exact": "2/3",
+      "value": 0.6666666666666666,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private C_nl theorem-grade extraction"
+    },
+    "C_projection": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "L2 orthogonal projection has sharp norm 1"
+    },
+    "C_conn_1": {
+      "exact": "0",
+      "value": 0.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge d_H omega = 0"
+    },
+    "C_D_conn_1": {
+      "exact": "0",
+      "value": 0.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge"
+    },
+    "C_conn_2": {
+      "exact": "0",
+      "value": 0.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge to second order"
+    },
+    "C_D_conn_2": {
+      "exact": "0",
+      "value": 0.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge to second order"
+    },
+    "C_conn_3": {
+      "exact": "0",
+      "value": 0.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge to third order"
+    },
+    "C_E3_omega": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "unit-normalized K3 source"
+    },
+    "C_E5_mu": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "unit-normalized K3 source"
+    },
+    "C_D_E3": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "linearized unit-normalized K3 source"
+    },
+    "C_D_E5": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "linearized unit-normalized K3 source"
+    },
+    "C_D2_E3": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "second variation unit-normalized K3 source"
+    },
+    "C_D2_E5": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "second variation unit-normalized K3 source"
+    },
+    "C_comm": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Weitzenboeck/Kato commutator bound K_H_K3*K_F"
+    },
+    "C_D_comm": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "linearized Weitzenboeck/Kato commutator bound"
+    },
+    "C_D2_comm": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "second variation Weitzenboeck/Kato commutator bound"
+    },
+    "C_comm_2": {
+      "exact": "4322241/4000000",
+      "value": 1.08056025,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "iterated commutator bound (K_H_K3*K_F)^2"
+    },
+    "C_D_comm_2": {
+      "exact": "4322241/4000000",
+      "value": 1.08056025,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "linearized iterated commutator bound"
+    },
+    "C_wedge": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "unit-normalized fibrewise wedge on K3"
+    },
+    "C_D_wedge": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "linearized unit-normalized wedge"
+    },
+    "C_Hodge": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "canonical unit-normalized fibrewise Hodge coefficient"
+    },
+    "C_D_Hodge": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "linearized canonical unit-normalized fibrewise Hodge coefficient"
+    },
+    "C_comm_3": {
+      "exact": "8985939039/8000000000",
+      "value": 1.123242379875,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "third iterated commutator bound (K_H_K3*K_F)^3"
+    },
+    "C_cubic_star": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "unit-normalized cubic star/Hodge nonlinearity"
+    },
+    "C_Hodge_3": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "third-order canonical unit-normalized Hodge coefficient"
+    },
+    "C_D3m": {
+      "exact": "4/9",
+      "value": 0.4444444444444444,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Simons-type third variation + collinearity + type-IV bound"
+    }
+  },
+  "evaluated_coefficients": {
+    "source_P1": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "3 * K_H_K3 * K_F"
+    },
+    "source_P2": {
+      "exact": "25440723/4000000",
+      "value": 6.36018075,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "3 * (K_H_K3*K_F)^2 + source_P1"
+    },
+    "DP1_norm": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "same first-order structure as source_P1"
+    },
+    "DP2_norm": {
+      "exact": "16796241/2000000",
+      "value": 8.3981205,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "2 * (K_H_K3*K_F)^2 + source_P1 + DP1_norm"
+    },
+    "D2P1_norm": {
+      "exact": "6237/2000",
+      "value": 3.1185,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "same structural bound as source_P1"
+    },
+    "D3m_norm": {
+      "exact": "4/9",
+      "value": 0.4444444444444444,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "C_D3m = 4/9"
+    },
+    "raw_P3_scale": {
+      "exact": "12985939039/4000000000",
+      "value": 3.24648475975,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "1 + 2 * (K_H_K3*K_F)^3"
+    },
+    "xi1_bound": {
+      "exact": "1141371/10000",
+      "value": 114.1371,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "G_aug * source_P1"
+    },
+    "xi2_forcing": {
+      "exact": "470472259257/100000000",
+      "value": 4704.72259257,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "source_P2 + DP1*xi1 + 1/2*C_nl*xi1^2"
+    },
+    "xi2_bound": {
+      "exact": "86096423444031/500000000",
+      "value": 172192.846888062,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "G_aug * xi2_forcing"
+    },
+    "remainder_R3": {
+      "exact": "137707931700815927923/10000000000000",
+      "value": 13770793.170081593,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Taylor R3 formula from Stage B v1"
+    },
+    "tail_contraction_denominator": {
+      "exact": "1537233641576208203404449/31250000000000",
+      "value": 49191476530.43866,
+      "status": "theorem_grade_upper_bound",
+      "provenance": "4 * G_aug^2 * C_nl * remainder_R3"
+    },
+    "R_threshold": {
+      "value": 3664.0659853300026,
+      "status": "floating_display_from_exact_denominator",
+      "provenance": "(4 * G_aug^2 * C_nl * remainder_R3)^(1/3)"
+    }
+  },
+  "comparison_to_old_power_counting": {
+    "source_P1_old": 2.31,
+    "source_P2_old": 5.3361,
+    "R_threshold_old": 2730.613114210807,
+    "R_threshold_new": 3664.0659853300026,
+    "R_threshold_ratio_new_over_old": 1.3418473551823467,
+    "note": "The theorem-grade threshold is larger than the old public candidate; the old candidate was not a theorem input."
+  },
+  "acceptance_boundary": [
+    "This closes Phase 4.1 coefficient values at D0.",
+    "This does not prove the global adiabatic reconstruction convergence theorem.",
+    "This does not prove the anisotropic Joyce perturbation theorem."
+  ],
+  "all_pass": true
+}

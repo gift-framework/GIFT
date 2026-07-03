@@ -1,0 +1,144 @@
+{
+  "artifact": "phase3_effective_jacobi_parametrix_candidate",
+  "generated_by": "scripts/phase3_effective_jacobi_parametrix_candidate.py",
+  "scope": "collar finite-mode normal-operator experiment plus D0 bookkeeping",
+  "status": "candidate_not_theorem",
+  "normal_operator_scan": {
+    "beta": "1",
+    "max_k": 12,
+    "max_q": 12,
+    "r0": "1/100",
+    "worst_mode": {
+      "m": "1/2",
+      "q": 0,
+      "denominator": "3/4",
+      "inverse": "4/3",
+      "inverse_float": 1.3333333333333333
+    },
+    "expected_exact_worst": {
+      "mode": "m=1/2, q=0",
+      "denominator": "3/4",
+      "inverse": "4/3",
+      "pass": true
+    },
+    "sample_records_first_12": [
+      {
+        "m": "1/2",
+        "q": 0,
+        "denominator": "3/4",
+        "inverse": "4/3"
+      },
+      {
+        "m": "1/2",
+        "q": 1,
+        "denominator": "7501/10000",
+        "inverse": "10000/7501"
+      },
+      {
+        "m": "1/2",
+        "q": 2,
+        "denominator": "469/625",
+        "inverse": "625/469"
+      },
+      {
+        "m": "1/2",
+        "q": 3,
+        "denominator": "7509/10000",
+        "inverse": "10000/7509"
+      },
+      {
+        "m": "1/2",
+        "q": 4,
+        "denominator": "1879/2500",
+        "inverse": "2500/1879"
+      },
+      {
+        "m": "1/2",
+        "q": 5,
+        "denominator": "301/400",
+        "inverse": "400/301"
+      },
+      {
+        "m": "1/2",
+        "q": 6,
+        "denominator": "471/625",
+        "inverse": "625/471"
+      },
+      {
+        "m": "1/2",
+        "q": 7,
+        "denominator": "7549/10000",
+        "inverse": "10000/7549"
+      },
+      {
+        "m": "1/2",
+        "q": 8,
+        "denominator": "1891/2500",
+        "inverse": "2500/1891"
+      },
+      {
+        "m": "1/2",
+        "q": 9,
+        "denominator": "7581/10000",
+        "inverse": "10000/7581"
+      },
+      {
+        "m": "1/2",
+        "q": 10,
+        "denominator": "19/25",
+        "inverse": "25/19"
+      },
+      {
+        "m": "1/2",
+        "q": 11,
+        "denominator": "7621/10000",
+        "inverse": "10000/7621"
+      }
+    ]
+  },
+  "candidate_constants": {
+    "K_ind_exact": {
+      "value": 1.3333333333333333,
+      "exact": "4/3",
+      "meaning": "Worst scalar indicial inverse in the sigma-odd half-integer sector at beta=1."
+    },
+    "C_edge_overhead_candidate": {
+      "value": 4.0,
+      "exact": "4",
+      "meaning": "Explicit calibration slot for local Schauder/Holder overhead; not theorem-grade."
+    },
+    "K_Sch_Maz_candidate_scalar": {
+      "value": 5.333333333333333,
+      "exact": "16/3",
+      "compared_to_current_public_envelope_17": 3.1875
+    },
+    "cond_A_bulk_D0": {
+      "value": 2.31,
+      "exact": "231/100"
+    },
+    "K_Jacobi_rank19_candidate": {
+      "value": 12.32,
+      "exact": "308/25",
+      "meaning": "Candidate after the rank-19 twist transfer by cond(A_bulk)."
+    }
+  },
+  "D0_implications_if_candidate_were_proved": {
+    "q_comm_formula": "(4/3) * K_Sch_candidate * kappa_E * epsilon",
+    "using_kappa_E": 3.0,
+    "using_epsilon": 0.01,
+    "q_comm": 0.21333333333333335,
+    "epsilon_0_lower_bound": 0.046875
+  },
+  "current_safe_value": {
+    "K_Sch_Maz_public_envelope": 17.0,
+    "status": "still the theorem-safe public envelope",
+    "reason": "The candidate has not been upgraded to a genuine edge Schauder proof."
+  },
+  "acceptance_requirements_to_promote": [
+    "replace C_edge_overhead_candidate by an edge-calculus Schauder proof",
+    "prove coefficient perturbation bounds for the actual J_h on each collar",
+    "show uniformity over all 77 collars with outward-rounded intervals",
+    "independently check the serialized interval certificate"
+  ],
+  "all_pass": true
+}

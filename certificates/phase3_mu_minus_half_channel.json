@@ -1,0 +1,48 @@
+{
+  "artifact": "phase3_mu_minus_half_channel",
+  "generated_at": "2026-07-01T21:16:46+02:00",
+  "scope": "collar",
+  "status": "channel_coefficient_scaffold",
+  "purpose": "Freeze the first exact coefficient already available in the actual lower-root channel mu = -1/2, namely the 3/8 coefficient from the rho^2 branch-motion expansion, while keeping separate the unresolved coefficient of the source term R_quad itself.",
+  "inputs": {
+    "rho2_script": {
+      "path": "/home/brieuc/gift-framework/private/canonical/scripts/axis2_rho2_scaffold_2026_06_22.py",
+      "sha256": "69eea339111027896e12a17cf7a1365892fe2431073f988941978ea05b8a513e"
+    },
+    "rho2_result": {
+      "path": "/home/brieuc/gift-framework/private/canonical/results/axis2_rho2_scaffold_2026_06_22.json",
+      "sha256": "b8ea1ad2c4ca7d8ab6b30c8d4665278b33ef69a99309af8981342b2dd2f3f896"
+    },
+    "pacard_beta_neg1_script": {
+      "path": "/home/brieuc/gift-framework/private/canonical/scripts/axis2_pacard_beta_neg1_indicial_2026_06_23.py",
+      "sha256": "0a6beadc3cce9c35ee68e6c39db844ea16fb0f028204ec882a89bef12e170d42"
+    }
+  },
+  "exact_channel_data": {
+    "expansion_term": "(w-rho)^(3/2) = ... + (3/8) rho^2 w^(-1/2) + ...",
+    "rho2_coefficient": "3/8",
+    "channel": "mu = -1/2, sigma-odd",
+    "meaning": "Second-order branch motion produces a nonzero coefficient in the lower obstruction channel.",
+    "is_nonzero_iso": true
+  },
+  "D0_scaling": {
+    "r0": 0.01,
+    "pointwise_profile_at_r0": 3.75,
+    "weighted_Y_neg3_profile_at_r0": 3.7500000000000005e-06
+  },
+  "status_interpretation": {
+    "what_this_certifies": [
+      "The exact coefficient 3/8 in the branch-motion expansion at the lower root mu=-1/2.",
+      "The existence of a nonzero geometric lever in the actual obstruction channel."
+    ],
+    "what_this_does_not_certify": [
+      "That the seed residual R_quad itself has coefficient 3/8.",
+      "That the source coefficient C_src is now known.",
+      "That the branch-motion coefficient equals the nonlinear source coefficient."
+    ],
+    "why_it_still_matters": "It proves that the repository already contains an exact coefficient in the correct obstruction channel, so future extraction of the source coefficient should be compared against a real geometric normal form rather than against a flat toy graph."
+  },
+  "verification": {
+    "reproduce_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_rho2_scaffold_2026_06_22.py"
+  }
+}

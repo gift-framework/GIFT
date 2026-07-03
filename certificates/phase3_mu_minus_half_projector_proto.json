@@ -1,0 +1,18 @@
+{
+  "artifact": "phase3_mu_minus_half_projector_proto",
+  "status": "symbolic_projection_prototype",
+  "basis": {
+    "Phi_minus_half_R": "rho^(-1/2) cos(varphi/2)",
+    "Phi_minus_half_I": "rho^(-1/2) sin(varphi/2)",
+    "integration_domain": "[0, 4pi]"
+  },
+  "demo_input": "rho**(3/2)*cos(3*varphi/2) + (a*cos(varphi/2) + b*sin(varphi/2))/sqrt(rho)",
+  "demo_extraction": {
+    "weighted_expr": "a*cos(varphi/2) + b*sin(varphi/2) + rho**2*cos(3*varphi/2)",
+    "leading_trace_after_rho_half_weight": "a*cos(varphi/2) + b*sin(varphi/2)",
+    "coeff_Phi_minus_half_R": "a",
+    "coeff_Phi_minus_half_I": "b",
+    "projection_residual": "0"
+  },
+  "intended_use": "Replace demo_input by a symbolic model for the actual local residual m(h_loc,aff + h_loc,branch), then read off kappa_R and kappa_I."
+}

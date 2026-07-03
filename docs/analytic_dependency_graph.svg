@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="980" viewBox="0 0 1200 980">
+  <style>
+    .title { font: 700 24px sans-serif; fill: #111827; }
+    .label { font: 600 14px sans-serif; fill: #111827; }
+    .small { font: 500 12px sans-serif; fill: #374151; }
+    .box { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 12; ry: 12; }
+    .warn { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; ry: 12; }
+    .ok { fill: #ecfeff; stroke: #0f766e; stroke-width: 2; rx: 12; ry: 12; }
+    .legacy { fill: #fef2f2; stroke: #b91c1c; stroke-width: 2; rx: 12; ry: 12; }
+    .arrow { stroke: #475569; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    .dashed { stroke-dasharray: 8 6; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="34" y="42" class="title">Analytic Dependency Graph: rank-one branched adiabatic branch</text>
+
+  <rect x="40" y="80" width="300" height="120" class="box"/>
+  <text x="58" y="110" class="label">Explicit datum D0</text>
+  <text x="58" y="136" class="small">K7 -&gt; S3, 77-unlink, rank-one monodromy,</text>
+  <text x="58" y="156" class="small">branched period section, quantitative constants.</text>
+  <text x="58" y="182" class="small">Primary sources: axis2_K7_topology, axis2_* D0 scripts.</text>
+
+  <rect x="430" y="80" width="320" height="120" class="ok"/>
+  <text x="448" y="110" class="label">Topological / arithmetic interface</text>
+  <text x="448" y="136" class="small">G2DonaldsonLinkCohomology.lean</text>
+  <text x="448" y="156" class="small">b2 rigidity, b3 combinatorics, not the full Leray proof.</text>
+  <text x="448" y="182" class="small">Scope: arithmetic consequence, not compact-global geometry.</text>
+
+  <rect x="840" y="80" width="300" height="120" class="warn"/>
+  <text x="858" y="110" class="label">Whole-K7 topology theorem</text>
+  <text x="858" y="136" class="small">Need handwritten Leray / Wang / Van Kampen proof</text>
+  <text x="858" y="156" class="small">with Lean interface matching hypotheses.</text>
+  <text x="858" y="182" class="small">Current source: axis2_K7_topology_2026_07_01.json</text>
+
+  <rect x="40" y="270" width="300" height="120" class="ok"/>
+  <text x="58" y="300" class="label">K3 box-local witness</text>
+  <text x="58" y="326" class="small">K3ClosedFormWitness.lean + box enclosures.</text>
+  <text x="58" y="346" class="small">Residual certificate on 4000 Krawczyk boxes.</text>
+  <text x="58" y="372" class="small">Scope: box-local, not global K3 positivity.</text>
+
+  <rect x="430" y="270" width="320" height="120" class="warn"/>
+  <text x="448" y="300" class="label">Global K3 positivity / spectral control</text>
+  <text x="448" y="326" class="small">Need det(G), |Omega|^2 >= delta and lambda1 &gt;= lambda_min</text>
+  <text x="448" y="346" class="small">on the actual K3, not just on frozen boxes.</text>
+  <text x="448" y="372" class="small">First route: SOS / Positivstellensatz prototype.</text>
+
+  <rect x="840" y="270" width="300" height="120" class="ok"/>
+  <text x="858" y="300" class="label">Collar scalar certificates</text>
+  <text x="858" y="326" class="small">CollarResummationCertificate.lean</text>
+  <text x="858" y="346" class="small">Exact coefficient sum and indicial parity.</text>
+  <text x="858" y="372" class="small">Useful input, but not a PDE convergence theorem.</text>
+
+  <rect x="40" y="460" width="300" height="120" class="ok"/>
+  <text x="58" y="490" class="label">Jacobi operator re-grounding</text>
+  <text x="58" y="516" class="small">axis2_jacobi_maximal_section_2026_06_25.json</text>
+  <text x="58" y="536" class="small">Identifies the edge operator as J_h on N_h, rank 19.</text>
+  <text x="58" y="562" class="small">Removes false dependence on fibrewise Lead-B coercivity.</text>
+
+  <rect x="430" y="460" width="320" height="120" class="warn"/>
+  <text x="448" y="490" class="label">Global maximal-section theorem</text>
+  <text x="448" y="516" class="small">Need actual Banach spaces, global parametrix,</text>
+  <text x="448" y="536" class="small">cokernel matrix, explicit right inverse.</text>
+  <text x="448" y="562" class="small">Current numerical scaffolds: axis2_certificate_sigma_min_NK,</text>
+  <text x="448" y="582" class="small">axis2_DtN_* , axis2_E_geom_*, axis2_E_link_*.</text>
+
+  <rect x="840" y="460" width="300" height="120" class="warn"/>
+  <text x="858" y="490" class="label">Adiabatic reconstruction theorem</text>
+  <text x="858" y="516" class="small">Need convergent operator theorem for M_epsilon.</text>
+  <text x="858" y="536" class="small">Current source: axis2_M_epsilon_adiabatic_2026_07_01.json</text>
+  <text x="858" y="562" class="small">Status: formal finite-order matching plus IFT scaffold.</text>
+
+  <rect x="240" y="665" width="320" height="120" class="warn"/>
+  <text x="258" y="695" class="label">Closed positive small-torsion family</text>
+  <text x="258" y="721" class="small">Target: closed positive 3-forms in [phi0] + R[B]</text>
+  <text x="258" y="741" class="small">with certified anisotropic small torsion.</text>
+  <text x="258" y="767" class="small">Depends on the global maximal background and AR closure.</text>
+
+  <rect x="650" y="665" width="320" height="120" class="warn"/>
+  <text x="668" y="695" class="label">Anisotropic perturbation theorem (J)</text>
+  <text x="668" y="721" class="small">Need three-scale spaces, parametrix, gauge fixing,</text>
+  <text x="668" y="741" class="small">uniform linear estimate, nonlinear contraction.</text>
+  <text x="668" y="767" class="small">Currently open; axis2_joyce_hypotheses_* is not enough.</text>
+
+  <rect x="420" y="855" width="340" height="90" class="box"/>
+  <text x="438" y="888" class="label">Level E theorem on compact K7</text>
+  <text x="438" y="914" class="small">Exists R* and torsion-free positive G2 form phi_R</text>
+  <text x="438" y="934" class="small">with Hol(metricOf phi_R) = G2, after pi1(K7) = 1.</text>
+
+  <rect x="980" y="665" width="170" height="120" class="legacy"/>
+  <text x="998" y="695" class="label">Legacy branch</text>
+  <text x="998" y="721" class="small">AnalyticalMetric.lean</text>
+  <text x="998" y="741" class="small">DonaldsonGlobalBaseAudit.lean</text>
+  <text x="998" y="767" class="small">older TCS / Fano-link</text>
+
+  <path d="M340 140 L430 140" class="arrow"/>
+  <path d="M750 140 L840 140" class="arrow"/>
+  <path d="M340 330 L430 330" class="arrow"/>
+  <path d="M750 330 L840 330" class="arrow dashed"/>
+  <path d="M340 520 L430 520" class="arrow"/>
+  <path d="M750 520 L840 520" class="arrow"/>
+  <path d="M590 200 L590 270" class="arrow"/>
+  <path d="M590 390 L590 460" class="arrow"/>
+  <path d="M590 580 L400 665" class="arrow"/>
+  <path d="M900 580 L820 665" class="arrow"/>
+  <path d="M560 725 L650 725" class="arrow"/>
+  <path d="M400 785 L520 855" class="arrow"/>
+  <path d="M810 785 L660 855" class="arrow"/>
+  <path d="M1065 665 L970 725" class="arrow dashed"/>
+</svg>

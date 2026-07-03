@@ -1,0 +1,227 @@
+{
+  "artifact": "phase4_bigraded_type_check",
+  "generated_by": "scripts/phase4_bigraded_type_checker.py",
+  "scope": "Phase 4.1 pre-coefficient bigraded type check",
+  "status": "type_check_only_not_a_coefficient_certificate",
+  "convention": {
+    "bidegree_order": "horizontal first, fibre second",
+    "d_f": "Omega^{p,q} -> Omega^{p,q+1}",
+    "d_H": "Omega^{p,q} -> Omega^{p+1,q}",
+    "F_H": "Omega^{p,q} -> Omega^{p+2,q-1}",
+    "G_f": "Delta_f^{-1} d_f^* on d_f-exact fibrewise sources"
+  },
+  "terms": {
+    "omega": {
+      "name": "omega",
+      "bidegree": [
+        1,
+        2
+      ],
+      "eps_order": "0",
+      "source": "Donaldson phi mixed component",
+      "gauge": "connection choice imposes d_H omega = 0",
+      "inverse": null
+    },
+    "lambda": {
+      "name": "lambda",
+      "bidegree": [
+        3,
+        0
+      ],
+      "eps_order": "0+",
+      "source": "d_f lambda = -F_H omega",
+      "gauge": "horizontal volume component; harmonic part fixed separately",
+      "inverse": "G_f = Delta_f^{-1} d_f^*"
+    },
+    "Theta": {
+      "name": "Theta",
+      "bidegree": [
+        2,
+        2
+      ],
+      "eps_order": "0+",
+      "source": "d_f Theta = -F_H mu",
+      "gauge": "harmonic part fixed separately or projected",
+      "inverse": "G_f = Delta_f^{-1} d_f^*"
+    },
+    "mu": {
+      "name": "mu",
+      "bidegree": [
+        0,
+        4
+      ],
+      "eps_order": "0",
+      "source": "Donaldson star_phi_phi fibrewise volume component",
+      "gauge": "d_H mu = 0",
+      "inverse": null
+    },
+    "M_eps": {
+      "name": "M_eps",
+      "bidegree": [
+        3,
+        2
+      ],
+      "eps_order": "0,1,2,>=3",
+      "source": "Pi_reduced(d_H Theta)",
+      "gauge": "project to reduced maximal-section source",
+      "inverse": null
+    }
+  },
+  "checks": [
+    {
+      "name": "total_degree_phi_omega",
+      "lhs": [
+        3,
+        0
+      ],
+      "rhs": [
+        3,
+        0
+      ],
+      "rule": "omega is a total 3-form component",
+      "pass": true
+    },
+    {
+      "name": "total_degree_phi_lambda",
+      "lhs": [
+        3,
+        0
+      ],
+      "rhs": [
+        3,
+        0
+      ],
+      "rule": "lambda is a total 3-form component",
+      "pass": true
+    },
+    {
+      "name": "total_degree_star_Theta",
+      "lhs": [
+        4,
+        0
+      ],
+      "rhs": [
+        4,
+        0
+      ],
+      "rule": "Theta is a total 4-form component",
+      "pass": true
+    },
+    {
+      "name": "total_degree_star_mu",
+      "lhs": [
+        4,
+        0
+      ],
+      "rhs": [
+        4,
+        0
+      ],
+      "rule": "mu is a total 4-form component",
+      "pass": true
+    },
+    {
+      "name": "E3_source_matches_d_f_lambda",
+      "lhs": [
+        3,
+        1
+      ],
+      "rhs": [
+        3,
+        1
+      ],
+      "rule": "d_f lambda = -F_H omega",
+      "pass": true
+    },
+    {
+      "name": "E3_inverse_returns_lambda",
+      "lhs": [
+        3,
+        0
+      ],
+      "rhs": [
+        3,
+        0
+      ],
+      "rule": "G_f maps F_H omega in Omega^{3,1} to lambda in Omega^{3,0}",
+      "pass": true
+    },
+    {
+      "name": "E5_source_matches_d_f_Theta",
+      "lhs": [
+        2,
+        3
+      ],
+      "rhs": [
+        2,
+        3
+      ],
+      "rule": "d_f Theta = -F_H mu",
+      "pass": true
+    },
+    {
+      "name": "E5_inverse_returns_Theta",
+      "lhs": [
+        2,
+        2
+      ],
+      "rhs": [
+        2,
+        2
+      ],
+      "rule": "G_f maps F_H mu in Omega^{2,3} to Theta in Omega^{2,2}",
+      "pass": true
+    },
+    {
+      "name": "connection_choice_d_H_omega",
+      "lhs": [
+        2,
+        2
+      ],
+      "rhs": [
+        2,
+        2
+      ],
+      "rule": "d_H omega is the connection-choice source",
+      "pass": true
+    },
+    {
+      "name": "E4_d_H_mu",
+      "lhs": [
+        1,
+        4
+      ],
+      "rhs": [
+        1,
+        4
+      ],
+      "rule": "d_H mu = 0",
+      "pass": true
+    },
+    {
+      "name": "E6_projection_source",
+      "lhs": [
+        3,
+        2
+      ],
+      "rhs": [
+        3,
+        2
+      ],
+      "rule": "Pi_reduced(d_H Theta) gives the reduced M_eps source bidegree",
+      "pass": true
+    }
+  ],
+  "stage_b_gate": {
+    "required_before_coefficients": true,
+    "producer_must_refuse_if_all_pass_is_false": true,
+    "required_fields_per_future_term": [
+      "bidegree",
+      "eps_order",
+      "source Donaldson",
+      "gauge",
+      "inverse"
+    ]
+  },
+  "all_pass": true
+}

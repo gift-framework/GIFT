@@ -1,0 +1,16 @@
+{
+  "artifact": "phase3_source_to_obstruction_bridge",
+  "generated_at": "2026-07-02T00:00:00+02:00",
+  "scope": "collar",
+  "status": "resolved_repository_convention",
+  "statement": "The analytically correct bridge from the local source term to the finite-dimensional obstruction layer is profile_src -> Y_{beta-2} source -> Pi_obs(source) in R^{2N}.",
+  "policy": {
+    "kappa_src_meaning": "Coordinate of Pi_obs(m(h_bar)) in the fixed R^{2N} basis",
+    "not_meaning": "Naive coefficient of the raw pointwise source profile alone"
+  },
+  "depends_on": [
+    "/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md",
+    "/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md",
+    "/home/brieuc/gift-framework/GIFT/paper/phase3_source_trace_resolution.md"
+  ]
+}
