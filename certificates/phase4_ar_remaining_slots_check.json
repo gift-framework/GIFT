@@ -1,0 +1,175 @@
+{
+  "artifact": "phase4_ar_remaining_slots_check",
+  "generated_by": "scripts/phase4_ar_remaining_slots_checker.py",
+  "scope": "Independent checker for remaining P4.2 AR Neumann-slot candidates",
+  "status": "checker_for_candidates_not_AR_theorem",
+  "checked_artifact": "certificates/phase4_ar_remaining_slots_candidate.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_candidate",
+      "pass": true,
+      "detail": "status remains candidate"
+    },
+    {
+      "name": "depends_on_phase4_ar_product_space_contract",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_product_space_contract.json"
+    },
+    {
+      "name": "depends_on_phase4_ar_neumann_budget_candidate",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_neumann_budget_candidate.json"
+    },
+    {
+      "name": "K_H_matches_product",
+      "pass": true,
+      "detail": "K_H_K3 matches product-space contract"
+    },
+    {
+      "name": "K_AR_matches_product",
+      "pass": true,
+      "detail": "K_AR_prod matches product-space contract"
+    },
+    {
+      "name": "K_projection_matches_product",
+      "pass": true,
+      "detail": "K_projection matches product-space contract"
+    },
+    {
+      "name": "eps_matches_budget",
+      "pass": true,
+      "detail": "eps_AR matches Neumann budget"
+    },
+    {
+      "name": "candidates_present",
+      "pass": true,
+      "detail": "all remaining slot candidates are present"
+    },
+    {
+      "name": "q_hodge_uniform_status_candidate",
+      "pass": true,
+      "detail": "q_hodge_uniform remains candidate"
+    },
+    {
+      "name": "q_hodge_uniform_constant_recomputes",
+      "pass": true,
+      "detail": "q_hodge_uniform constant recomputes"
+    },
+    {
+      "name": "q_hodge_uniform_value_recomputes",
+      "pass": true,
+      "detail": "q_hodge_uniform value recomputes"
+    },
+    {
+      "name": "q_hodge_uniform_margin_recomputes",
+      "pass": true,
+      "detail": "q_hodge_uniform margin recomputes"
+    },
+    {
+      "name": "q_hodge_uniform_below_target",
+      "pass": true,
+      "detail": "q_hodge_uniform candidate is below target"
+    },
+    {
+      "name": "q_hodge_uniform_constant_below_250",
+      "pass": true,
+      "detail": "q_hodge_uniform constant is below 250"
+    },
+    {
+      "name": "q_hodge_uniform_budget_still_pending",
+      "pass": true,
+      "detail": "q_hodge_uniform budget slot remains pending"
+    },
+    {
+      "name": "q_projection_residual_status_candidate",
+      "pass": true,
+      "detail": "q_projection_residual remains candidate"
+    },
+    {
+      "name": "q_projection_residual_constant_recomputes",
+      "pass": true,
+      "detail": "q_projection_residual constant recomputes"
+    },
+    {
+      "name": "q_projection_residual_value_recomputes",
+      "pass": true,
+      "detail": "q_projection_residual value recomputes"
+    },
+    {
+      "name": "q_projection_residual_margin_recomputes",
+      "pass": true,
+      "detail": "q_projection_residual margin recomputes"
+    },
+    {
+      "name": "q_projection_residual_below_target",
+      "pass": true,
+      "detail": "q_projection_residual candidate is below target"
+    },
+    {
+      "name": "q_projection_residual_constant_below_250",
+      "pass": true,
+      "detail": "q_projection_residual constant is below 250"
+    },
+    {
+      "name": "q_projection_residual_budget_still_pending",
+      "pass": true,
+      "detail": "q_projection_residual budget slot remains pending"
+    },
+    {
+      "name": "q_gauge_transfer_status_candidate",
+      "pass": true,
+      "detail": "q_gauge_transfer remains candidate"
+    },
+    {
+      "name": "q_gauge_transfer_constant_recomputes",
+      "pass": true,
+      "detail": "q_gauge_transfer constant recomputes"
+    },
+    {
+      "name": "q_gauge_transfer_value_recomputes",
+      "pass": true,
+      "detail": "q_gauge_transfer value recomputes"
+    },
+    {
+      "name": "q_gauge_transfer_margin_recomputes",
+      "pass": true,
+      "detail": "q_gauge_transfer margin recomputes"
+    },
+    {
+      "name": "q_gauge_transfer_below_target",
+      "pass": true,
+      "detail": "q_gauge_transfer candidate is below target"
+    },
+    {
+      "name": "q_gauge_transfer_constant_below_250",
+      "pass": true,
+      "detail": "q_gauge_transfer constant is below 250"
+    },
+    {
+      "name": "q_gauge_transfer_budget_still_pending",
+      "pass": true,
+      "detail": "q_gauge_transfer budget slot remains pending"
+    },
+    {
+      "name": "producer_checks_all_true",
+      "pass": true,
+      "detail": "producer checks are true"
+    },
+    {
+      "name": "boundary_does_not_close_slots",
+      "pass": true,
+      "detail": "acceptance boundary prevents slot closure"
+    }
+  ],
+  "summary": {
+    "checks_total": 32,
+    "checks_passed": 32,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

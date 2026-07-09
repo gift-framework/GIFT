@@ -23,7 +23,7 @@ This phase may use only the currently frozen datum certificate fields:
 - `A_bulk(alpha1,alpha1) >= 0.43290043290043284`,
 - `D2m <= 1`.
 
-See [datum_D0.json](/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json).
+See [datum_D0.json](../certificates/datum_D0.json).
 
 ## Operator identity already fixed
 
@@ -37,7 +37,7 @@ Current source: `axis2_jacobi_maximal_section_2026_06_25`.
 
 ## P3.1 Banach spaces to define explicitly
 
-The canonical definitions are now frozen in [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md). That file should be treated as the source of notation for all later Phase 3 statements.
+The canonical definitions are now frozen in [phase3_spaces.md](phase3_spaces.md). That file should be treated as the source of notation for all later Phase 3 statements.
 
 The theorem must define the following spaces without relying on shorthand:
 
@@ -64,7 +64,7 @@ with:
 
 ## P3.2 Linear theorem to prove
 
-The canonical statement is now frozen in [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md).
+The canonical statement is now frozen in [phase3_linear_theorem.md](phase3_linear_theorem.md).
 
 For the actual Jacobi operator
 
@@ -81,7 +81,7 @@ prove:
 
 ## P3.3 Global parametrix architecture
 
-The canonical architecture is now frozen in [phase3_global_parametrix.md](/home/brieuc/gift-framework/GIFT/paper/phase3_global_parametrix.md).
+The canonical architecture is now frozen in [phase3_global_parametrix.md](phase3_global_parametrix.md).
 
 The proof should build
 
@@ -97,7 +97,7 @@ with:
 
 ## P3.4 Nonlinear closure
 
-The fixed-point closure is now frozen in [phase3_nonlinear_closure.md](/home/brieuc/gift-framework/GIFT/paper/phase3_nonlinear_closure.md).
+The fixed-point closure is now frozen in [phase3_nonlinear_closure.md](phase3_nonlinear_closure.md).
 
 This is the first place where the Phase 3 chain becomes an actual PDE solution rather than a parametrix architecture. The theorem must solve
 
@@ -114,8 +114,8 @@ for `u in X_beta^{ext}` by combining:
 
 The current status of `C_src` and `C_nl` is now frozen in:
 
-- [phase3_source_nonlinear_constants.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_nonlinear_constants.md),
-- [phase3_G_closure_status.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_G_closure_status.json).
+- [phase3_source_nonlinear_constants.md](phase3_source_nonlinear_constants.md),
+- [phase3_G_closure_status.json](../certificates/phase3_G_closure_status.json).
 
 These artifacts separate:
 

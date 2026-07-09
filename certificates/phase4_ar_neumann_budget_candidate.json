@@ -1,0 +1,182 @@
+{
+  "artifact": "phase4_ar_neumann_budget_candidate",
+  "generated_by": "scripts/phase4_ar_neumann_budget_candidate.py",
+  "scope": "P4.2 Neumann-budget interface for upgrading the conditional AR majorant to a product-space theorem",
+  "status": "budget_skeleton_pending_exact_certificates",
+  "depends_on": [
+    "certificates/phase4_ar_product_space_contract.json",
+    "certificates/phase4_ar_majorant_candidate.json",
+    "certificates/phase4_ar_inverse_budget_audit.json"
+  ],
+  "known_inputs": {
+    "R_AR": {
+      "exact": "4000",
+      "value": 4000.0,
+      "meaning": "current AR threshold"
+    },
+    "eps_AR": {
+      "exact": "1/4000",
+      "value": 0.00025,
+      "meaning": "1/R_AR"
+    },
+    "K_AR_prod": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "meaning": "structural product-max bound from the product-space contract"
+    },
+    "q_AR_scalar": {
+      "exact": "1324331017706776314151917/1280000000000000000000000000",
+      "value": 0.001034633607583419,
+      "meaning": "checked scalar contraction majorant before Neumann-error slots"
+    },
+    "inverse_budget_status": "audit_confirms_structural_product_max_bound",
+    "product_space_obligations": {
+      "product_space_defined": true,
+      "uniform_fibrewise_inverse_proved": false,
+      "commutators_bounded_in_product_norm": false,
+      "reduced_projection_global_identity_proved": false,
+      "closedness_preservation_proved": false
+    }
+  },
+  "neumann_slots": {
+    "q_hodge_uniform": {
+      "id": "q_hodge_uniform",
+      "status": "pending_exact_certificate",
+      "role": "Defect between the fibrewise Hodge inverse bound and the beta-weighted product norm over the full fibration.",
+      "formula": "sup ||G_f||_{A_beta source -> A_beta correction} / K_H_K3 - 1, positive part",
+      "target_upper_bound": {
+        "exact": "1/16",
+        "value": 0.0625,
+        "meaning": "sufficient per-slot Neumann budget cap"
+      },
+      "value": null,
+      "required_artifact": "uniform fibrewise Hodge inverse theorem in the product norm",
+      "acceptance_test": "Provide a certified upper bound value <= target_upper_bound.",
+      "candidate_artifact": {
+        "path": "certificates/phase4_ar_remaining_slots_candidate.json",
+        "status": "candidate_formula_not_certificate",
+        "candidate_value": {
+          "exact": "29/5000",
+          "value": 0.0058,
+          "meaning": "candidate Neumann error for q_hodge_uniform",
+          "status": "candidate_not_theorem"
+        },
+        "candidate_below_target": true,
+        "note": "Candidate only; the slot remains pending_exact_certificate."
+      }
+    },
+    "q_comm_FH_Gf": {
+      "id": "q_comm_FH_Gf",
+      "status": "pending_exact_certificate",
+      "role": "Neumann error from commutators of F_H, G_f, d_H, cutoffs, and collar/base transitions.",
+      "formula": "C_comm_AR * eps_AR",
+      "target_upper_bound": {
+        "exact": "1/16",
+        "value": 0.0625,
+        "meaning": "sufficient per-slot Neumann budget cap"
+      },
+      "value": null,
+      "required_artifact": "product-norm commutator certificate for F_H/G_f and collars",
+      "acceptance_test": "Provide a certified upper bound value <= target_upper_bound.",
+      "candidate_artifact": {
+        "path": "certificates/phase4_ar_commutator_slot_candidate.json",
+        "status": "candidate_formula_not_certificate",
+        "candidate_value": {
+          "exact": "1350149/100000000",
+          "value": 0.01350149,
+          "meaning": "candidate Neumann error for F_H/G_f commutators",
+          "status": "candidate_not_theorem"
+        },
+        "candidate_below_target": true,
+        "note": "Candidate only; the slot remains pending_exact_certificate."
+      }
+    },
+    "q_projection_residual": {
+      "id": "q_projection_residual",
+      "status": "pending_exact_certificate",
+      "role": "Residual after replacing d_H Theta=0 by the reduced equation M_eps(h)=0.",
+      "formula": "C_projection_residual * eps_AR",
+      "target_upper_bound": {
+        "exact": "1/16",
+        "value": 0.0625,
+        "meaning": "sufficient per-slot Neumann budget cap"
+      },
+      "value": null,
+      "required_artifact": "global reduced-projection identity certificate",
+      "acceptance_test": "Provide a certified upper bound value <= target_upper_bound.",
+      "candidate_artifact": {
+        "path": "certificates/phase4_ar_remaining_slots_candidate.json",
+        "status": "candidate_formula_not_certificate",
+        "candidate_value": {
+          "exact": "4079/250000",
+          "value": 0.016316,
+          "meaning": "candidate Neumann error for q_projection_residual",
+          "status": "candidate_not_theorem"
+        },
+        "candidate_below_target": true,
+        "note": "Candidate only; the slot remains pending_exact_certificate."
+      }
+    },
+    "q_gauge_transfer": {
+      "id": "q_gauge_transfer",
+      "status": "pending_exact_certificate",
+      "role": "Error introduced by transferring between Donaldson gauge, fibrewise coexact gauge, and product-space coordinates.",
+      "formula": "C_gauge_transfer * eps_AR",
+      "target_upper_bound": {
+        "exact": "1/16",
+        "value": 0.0625,
+        "meaning": "sufficient per-slot Neumann budget cap"
+      },
+      "value": null,
+      "required_artifact": "gauge-transfer and closedness-preservation certificate",
+      "acceptance_test": "Provide a certified upper bound value <= target_upper_bound.",
+      "candidate_artifact": {
+        "path": "certificates/phase4_ar_remaining_slots_candidate.json",
+        "status": "candidate_formula_not_certificate",
+        "candidate_value": {
+          "exact": "12237/2000000",
+          "value": 0.0061185,
+          "meaning": "candidate Neumann error for q_gauge_transfer",
+          "status": "candidate_not_theorem"
+        },
+        "candidate_below_target": true,
+        "note": "Candidate only; the slot remains pending_exact_certificate."
+      }
+    }
+  },
+  "budget_targets": {
+    "per_slot_target": {
+      "exact": "1/16",
+      "value": 0.0625,
+      "meaning": "initial sufficient target for each missing analytic slot"
+    },
+    "q_neumann_total_target": {
+      "exact": "1/4",
+      "value": 0.25,
+      "meaning": "initial sufficient target for sum of Neumann-error slots"
+    },
+    "q_scalar_plus_neumann_target": {
+      "exact": "321324331017706776314151917/1280000000000000000000000000",
+      "value": 0.25103463360758344,
+      "meaning": "q_AR_scalar + q_neumann_total_target"
+    },
+    "contraction_threshold": {
+      "exact": "1",
+      "value": 1.0,
+      "meaning": "strict contraction threshold"
+    }
+  },
+  "current_evaluation": {
+    "all_slots_certified": false,
+    "q_neumann_total": null,
+    "q_total_with_scalar": null,
+    "promotion_ready": false,
+    "reason": "All four Neumann-error slots are pending exact analytic certificates."
+  },
+  "acceptance_boundary": [
+    "This is a budget skeleton, not an AR theorem.",
+    "It must not be cited as proving the product-space inverse or closedness.",
+    "Promotion requires every slot to carry a certified upper bound and q_AR_scalar + q_neumann_total < 1."
+  ],
+  "all_pass": true
+}

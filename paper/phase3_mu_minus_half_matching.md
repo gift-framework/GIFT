@@ -8,7 +8,7 @@ This note states the exact quantity that still has to be computed in order to tu
 
 The machine-readable freeze is:
 
-- [phase3_mu_minus_half_matching_target.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_matching_target.json).
+- [phase3_mu_minus_half_matching_target.json](../certificates/phase3_mu_minus_half_matching_target.json).
 
 ## The problem in one line
 
@@ -59,7 +59,7 @@ So there is no ambiguity anymore about the channel. Only the source coefficient 
 
 The basis note is now frozen in:
 
-- [phase3_mu_minus_half_basis.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md),
-- [phase3_mu_minus_half_basis.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_basis.json).
+- [phase3_mu_minus_half_basis.md](phase3_mu_minus_half_basis.md),
+- [phase3_mu_minus_half_basis.json](../certificates/phase3_mu_minus_half_basis.json).
 
 So the remaining next step is no longer to choose coordinates, but to compute the actual two real coefficients of `ev_{-1/2}^{(i)}(m(h_bar))` in that fixed basis.

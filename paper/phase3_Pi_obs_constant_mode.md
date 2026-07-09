@@ -13,7 +13,7 @@ that the current branch can use honestly.
 
 ## Purpose
 
-After [phase3_source_to_obstruction_bridge.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_to_obstruction_bridge.md),
+After [phase3_source_to_obstruction_bridge.md](phase3_source_to_obstruction_bridge.md),
 the next missing piece is not a new asymptotic basis. It is an operational rule
 for how a source in the lower-root channel contributes to the finite-dimensional
 layer `R^{2N}`.
@@ -73,13 +73,13 @@ This is the first concrete model for the map
 
 This rule matches the existing Phase 3 architecture:
 
-1. [phase3_mu_minus_half_basis.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md)
+1. [phase3_mu_minus_half_basis.md](phase3_mu_minus_half_basis.md)
    fixes the real lower-root basis on each collar.
 
-2. [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md)
+2. [phase3_spaces.md](phase3_spaces.md)
    defines `R^{2N}` as the constant longitudinal layer.
 
-3. [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md)
+3. [phase3_linear_theorem.md](phase3_linear_theorem.md)
    already states that non-constant longitudinal modes are absorbed by DtN
    positivity, leaving only the constant-section obstruction.
 
@@ -137,7 +137,7 @@ The next practical computation should therefore follow this chain:
    functions `a_i(s), b_i(s)`,
 2. apply constant-mode averaging,
 3. feed the resulting pair into
-   [phase3_kappa_src_projection.md](/home/brieuc/gift-framework/GIFT/paper/phase3_kappa_src_projection.md).
+   [phase3_kappa_src_projection.md](phase3_kappa_src_projection.md).
 
 That is the first route from the local source term to a serializable candidate
 for `kappa_src`.

@@ -1,0 +1,150 @@
+{
+  "artifact": "phase4_ar_remaining_slots_candidate",
+  "generated_by": "scripts/phase4_ar_remaining_slots_candidate.py",
+  "scope": "Candidate formulas for the remaining P4.2 AR Neumann slots",
+  "status": "candidate_formulas_not_certificates",
+  "depends_on": [
+    "certificates/phase4_ar_product_space_contract.json",
+    "certificates/phase4_ar_neumann_budget_candidate.json"
+  ],
+  "inputs": {
+    "K_H_K3": {
+      "exact": "9/20",
+      "value": 0.45,
+      "meaning": "fibrewise Hodge inverse bound",
+      "status": "certified_upper_bound_at_D0"
+    },
+    "K_AR_prod": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "meaning": "structural product-max bound",
+      "status": "structural_product_max_bound"
+    },
+    "K_projection": {
+      "exact": "1",
+      "value": 1.0,
+      "meaning": "reduced projection bound",
+      "status": "certified_on_reduced_model_only"
+    },
+    "eps_AR": {
+      "exact": "1/4000",
+      "value": 0.00025,
+      "meaning": "current AR threshold inverse",
+      "status": "candidate_not_theorem"
+    }
+  },
+  "candidates": {
+    "q_hodge_uniform": {
+      "slot": "q_hodge_uniform",
+      "formula": {
+        "C_q_hodge_uniform": "16 * (1 + K_H_K3)",
+        "q_hodge_uniform": "C_q_hodge_uniform * eps_AR"
+      },
+      "candidate_values": {
+        "C_q_hodge_uniform": {
+          "exact": "116/5",
+          "value": 23.2,
+          "meaning": "candidate fibrewise-to-product norm uniformity constant",
+          "status": "candidate_not_theorem"
+        },
+        "q_hodge_uniform": {
+          "exact": "29/5000",
+          "value": 0.0058,
+          "meaning": "candidate Neumann error for q_hodge_uniform",
+          "status": "candidate_not_theorem"
+        },
+        "target_margin": {
+          "exact": "567/10000",
+          "value": 0.0567,
+          "meaning": "slot_target - q_hodge_uniform candidate",
+          "status": "candidate_not_theorem"
+        }
+      },
+      "checks": {
+        "candidate_below_slot_target": true,
+        "candidate_constant_below_250": true
+      },
+      "status": "candidate_formula_not_certificate"
+    },
+    "q_projection_residual": {
+      "slot": "q_projection_residual",
+      "formula": {
+        "C_q_projection_residual": "16 * (1 + K_projection) * (1 + K_AR_prod)",
+        "q_projection_residual": "C_q_projection_residual * eps_AR"
+      },
+      "candidate_values": {
+        "C_q_projection_residual": {
+          "exact": "8158/125",
+          "value": 65.264,
+          "meaning": "candidate reduced-projection residual constant",
+          "status": "candidate_not_theorem"
+        },
+        "q_projection_residual": {
+          "exact": "4079/250000",
+          "value": 0.016316,
+          "meaning": "candidate Neumann error for q_projection_residual",
+          "status": "candidate_not_theorem"
+        },
+        "target_margin": {
+          "exact": "5773/125000",
+          "value": 0.046184,
+          "meaning": "slot_target - q_projection_residual candidate",
+          "status": "candidate_not_theorem"
+        }
+      },
+      "checks": {
+        "candidate_below_slot_target": true,
+        "candidate_constant_below_250": true
+      },
+      "status": "candidate_formula_not_certificate"
+    },
+    "q_gauge_transfer": {
+      "slot": "q_gauge_transfer",
+      "formula": {
+        "C_q_gauge_transfer": "12 * (1 + K_AR_prod)",
+        "q_gauge_transfer": "C_q_gauge_transfer * eps_AR"
+      },
+      "candidate_values": {
+        "C_q_gauge_transfer": {
+          "exact": "12237/500",
+          "value": 24.474,
+          "meaning": "candidate gauge-transfer constant",
+          "status": "candidate_not_theorem"
+        },
+        "q_gauge_transfer": {
+          "exact": "12237/2000000",
+          "value": 0.0061185,
+          "meaning": "candidate Neumann error for q_gauge_transfer",
+          "status": "candidate_not_theorem"
+        },
+        "target_margin": {
+          "exact": "112763/2000000",
+          "value": 0.0563815,
+          "meaning": "slot_target - q_gauge_transfer candidate",
+          "status": "candidate_not_theorem"
+        }
+      },
+      "checks": {
+        "candidate_below_slot_target": true,
+        "candidate_constant_below_250": true
+      },
+      "status": "candidate_formula_not_certificate"
+    }
+  },
+  "checks": {
+    "all_candidates_below_targets": true,
+    "all_candidate_constants_below_250": true,
+    "status_not_certificate": true
+  },
+  "open_assumptions": [
+    "q_hodge_uniform needs the uniform fibrewise inverse theorem in the beta-weighted product norm.",
+    "q_projection_residual needs the global reduced-projection identity.",
+    "q_gauge_transfer needs a gauge-transfer and closedness-preservation theorem."
+  ],
+  "acceptance_boundary": [
+    "These candidates may guide the remaining Neumann-slot proof targets.",
+    "They do not close any Neumann slot.",
+    "The Neumann budget must keep all three slots pending until theorem-grade certificates exist."
+  ],
+  "all_pass": true
+}

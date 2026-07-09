@@ -6,8 +6,28 @@ Specification only. This is not a proof of adiabatic reconstruction.
 
 P4.1 coefficient extraction at `D0` is closed by:
 
-- [phase4_donaldson_coefficients_values.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_values.json)
-- [phase4_donaldson_coefficients_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_check.json)
+- [phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json)
+- [phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json)
+
+The product-space definition layer is now fixed by:
+
+- [phase4_ar_product_space_contract.json](../certificates/phase4_ar_product_space_contract.json)
+- [phase4_ar_product_space_check.json](../certificates/phase4_ar_product_space_check.json)
+
+The Neumann-error budget layer is fixed by:
+
+- [phase4_ar_neumann_budget_candidate.json](../certificates/phase4_ar_neumann_budget_candidate.json)
+- [phase4_ar_neumann_budget_check.json](../certificates/phase4_ar_neumann_budget_check.json)
+
+The first commutator-slot candidate is recorded by:
+
+- [phase4_ar_commutator_slot_candidate.json](../certificates/phase4_ar_commutator_slot_candidate.json)
+- [phase4_ar_commutator_slot_check.json](../certificates/phase4_ar_commutator_slot_check.json)
+
+The remaining slot candidates are recorded by:
+
+- [phase4_ar_remaining_slots_candidate.json](../certificates/phase4_ar_remaining_slots_candidate.json)
+- [phase4_ar_remaining_slots_check.json](../certificates/phase4_ar_remaining_slots_check.json)
 
 The next target is the global AR theorem: a convergent reconstruction map from
 a solution of the reduced equation `M_eps(h)=0` to actual Donaldson data
@@ -44,12 +64,13 @@ Fibrewise inverse input:
 - compatibility of `G_f` with the weighted base norms used by `X_beta^ext`
   and `Y_{beta-2}`.
 
-This last item is not yet a public theorem. It is the first analytic dependency
-for P4.2.
+The product-space contract records this as an explicit open theorem obligation,
+not as a hidden constant.
 
 ## Product Space
 
-Define the reconstruction Banach space
+The reconstruction Banach space is now fixed by the public product-space
+contract:
 
 `A_beta = A_omega x A_lambda x A_mu x A_Theta`
 
@@ -67,7 +88,9 @@ The norm must be a weighted product norm compatible with:
 - the `F_H : Omega^{p,q} -> Omega^{p+2,q-1}` action;
 - the projection `Pi_reduced(d_H Theta)`.
 
-No unnamed `O(1)` constants are allowed in this norm.
+No unnamed `O(1)` constants are allowed in this norm. The current checker
+verifies the component bidegrees and block degree shifts, but not the uniform
+analytic inverse theorem.
 
 ## Reconstruction Map
 
@@ -121,6 +144,17 @@ and for the nonlinear tail map `T_eps`,
 
 with an explicit `q_AR < 1`.
 
+The current budget skeleton splits the remaining Neumann error into:
+
+- `q_hodge_uniform`;
+- `q_comm_FH_Gf`;
+- `q_projection_residual`;
+- `q_gauge_transfer`.
+
+Each slot has target `1/16`; all are still pending exact analytic certificates.
+All four slots now have checked candidate values below target, but none is yet
+theorem-grade.
+
 ## Output Theorem
 
 Target statement:
@@ -142,8 +176,10 @@ in the chosen gauge such that:
 
 P4.2 is not closed until the repository contains:
 
-- the product Banach-space definition;
-- a uniform fibrewise Hodge inverse theorem or explicit hypothesis;
+- the product Banach-space definition; done at contract/checker level;
+- a uniform fibrewise Hodge inverse theorem or explicit hypothesis; still open;
 - a majorant/contraction certificate with `q_AR < 1`;
+- certified Neumann-error slots with total error still below the contraction
+  threshold;
 - an independent checker for the scalar inequalities;
 - a ledger update keeping P4.2 separate from P5 `(J)`.

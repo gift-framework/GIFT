@@ -21,9 +21,39 @@
       "detail": "depends on P4.1 values"
     },
     {
+      "name": "product_space_dependency",
+      "pass": true,
+      "detail": "depends on product-space contract"
+    },
+    {
+      "name": "product_space_is_defined",
+      "pass": true,
+      "detail": "product space is defined by the contract"
+    },
+    {
       "name": "inverse_is_conditional",
       "pass": true,
       "detail": "inverse theorem is not marked proved"
+    },
+    {
+      "name": "K_AR_prod_matches_contract",
+      "pass": true,
+      "detail": "K_AR_prod is read from the product-space contract"
+    },
+    {
+      "name": "commutators_bounded_in_product_norm_open",
+      "pass": true,
+      "detail": "commutators_bounded_in_product_norm remains open"
+    },
+    {
+      "name": "reduced_projection_global_identity_proved_open",
+      "pass": true,
+      "detail": "reduced_projection_global_identity_proved remains open"
+    },
+    {
+      "name": "closedness_preservation_proved_open",
+      "pass": true,
+      "detail": "closedness_preservation_proved remains open"
     },
     {
       "name": "R_eps_inverse",
@@ -77,8 +107,8 @@
     }
   ],
   "summary": {
-    "checks_total": 14,
-    "checks_passed": 14,
+    "checks_total": 20,
+    "checks_passed": 20,
     "checks_failed": 0
   },
   "all_pass": true

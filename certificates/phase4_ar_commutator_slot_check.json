@@ -1,0 +1,95 @@
+{
+  "artifact": "phase4_ar_commutator_slot_check",
+  "generated_by": "scripts/phase4_ar_commutator_slot_checker.py",
+  "scope": "Independent checker for the P4.2 q_comm_FH_Gf candidate formula",
+  "status": "checker_for_candidate_not_commutator_theorem",
+  "checked_artifact": "certificates/phase4_ar_commutator_slot_candidate.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_candidate",
+      "pass": true,
+      "detail": "status remains candidate"
+    },
+    {
+      "name": "slot_name",
+      "pass": true,
+      "detail": "candidate targets q_comm_FH_Gf"
+    },
+    {
+      "name": "depends_on_phase4_ar_product_space_contract",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_product_space_contract.json"
+    },
+    {
+      "name": "depends_on_phase4_ar_neumann_budget_candidate",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_neumann_budget_candidate.json"
+    },
+    {
+      "name": "K_F_matches_product",
+      "pass": true,
+      "detail": "K_F matches product-space contract"
+    },
+    {
+      "name": "K_AR_matches_product",
+      "pass": true,
+      "detail": "K_AR_prod matches product-space contract"
+    },
+    {
+      "name": "eps_matches_budget",
+      "pass": true,
+      "detail": "eps_AR matches Neumann budget"
+    },
+    {
+      "name": "target_matches_budget",
+      "pass": true,
+      "detail": "slot target matches Neumann budget"
+    },
+    {
+      "name": "C_comm_AR_recomputes",
+      "pass": true,
+      "detail": "C_comm_AR recomputes"
+    },
+    {
+      "name": "q_comm_recomputes",
+      "pass": true,
+      "detail": "q_comm_FH_Gf recomputes"
+    },
+    {
+      "name": "margin_recomputes",
+      "pass": true,
+      "detail": "target margin recomputes"
+    },
+    {
+      "name": "candidate_below_slot_target",
+      "pass": true,
+      "detail": "candidate q_comm <= slot target"
+    },
+    {
+      "name": "candidate_C_comm_AR_below_250",
+      "pass": true,
+      "detail": "candidate C_comm_AR <= 250"
+    },
+    {
+      "name": "budget_slot_still_pending",
+      "pass": true,
+      "detail": "Neumann budget slot remains pending"
+    },
+    {
+      "name": "boundary_does_not_close_slot",
+      "pass": true,
+      "detail": "acceptance boundary prevents slot closure"
+    }
+  ],
+  "summary": {
+    "checks_total": 16,
+    "checks_passed": 16,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

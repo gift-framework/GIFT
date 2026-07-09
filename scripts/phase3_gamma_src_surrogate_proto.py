@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
-Explicit local quadratic surrogate for gamma_src.
+Reconcile the old quadratic gamma_src surrogate with the sharp source channel.
 
 Purpose:
-  Package the smallest concrete surrogate for the leading source coefficient in
-  the rank-one constant-section channel:
+  Keep the exact lower-root normal-form coefficient 3/8 on file as a legacy
+  comparison value, while making the active fixed-Sigma sigma-odd source
+  coefficient theorem-grade:
 
-      gamma_src,sur = 3/8
+      C_src = 27/16.
 
-  with the corresponding real-axis obstruction pair and D0 comparison scale.
-
-This is a modeling surrogate, not an extracted theorem-grade coefficient.
+The parity reconciliation says the quadratic-in-c0 contribution belongs to the
+alpha1-perp regular sigma-even sector, not to the sigma-odd mu=-1/2 obstruction
+channel. This file therefore supersedes the old gamma_src,sur certificate.
 """
 
 from __future__ import annotations
@@ -24,45 +25,50 @@ def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     datum = json.loads((repo_root / "certificates" / "datum_D0.json").read_text())
 
-    a_bulk_lb = datum["fields"]["A_bulk_alpha1_alpha1"]["value"][0]
     r0 = datum["fields"]["r0"]["value"][0]
 
-    gamma_sur = Fraction(3, 8)
-    kappa_r_lb = float(gamma_sur) * float(a_bulk_lb)
-    source_scale_lb = kappa_r_lb * (float(r0) ** 3.5)
+    c_src = Fraction(27, 16)
+    legacy_gamma_sur = Fraction(3, 8)
+    source_scale_bound = float(c_src) * (float(r0) ** 3.5)
 
     out = {
         "artifact": "phase3_gamma_src_surrogate_proto",
-        "status": "explicit_local_surrogate",
-        "scope": "rank_one_constant_mode",
-        "surrogate_assumption": {
-            "id": "S_qsur",
+        "status": "superseded_by_sigma_odd_cubic_source",
+        "scope": "fixed_Sigma_sigma_odd_mu_minus_half_source_channel_at_D0",
+        "active_source_coefficient": {
+            "name": "C_src",
+            "exact": str(c_src),
+            "value": float(c_src),
+            "degree_in_c0": 3,
+            "channel": "fixed-Sigma sigma-odd obstruction channel",
+            "provenance": "private/canonical/notes/axis2_codex_reconciliation_2026_07_02.md and axis2_gamma_src_Yneg3_norm_2026_07_02",
+            "status": "theorem_grade_current_public_ledger_value",
+        },
+        "legacy_quadratic_comparison": {
+            "name": "gamma_src_sur",
+            "exact": str(legacy_gamma_sur),
+            "value": float(legacy_gamma_sur),
+            "status": "legacy_comparison_not_active_source_coefficient",
+            "valid_scope": "lower-root branch-motion normal-form comparison and possible alpha1-perp regular-sector diagnostic only",
+        },
+        "parity_reconciliation": {
             "statement": (
-                "The leading obstruction projection of the quadratic seed residual "
-                "uses the same lower-root channel coefficient as the certified "
-                "branch-motion normal form."
+                "The quadratic-in-c0 contribution is assigned to the alpha1-perp "
+                "regular sigma-even sector, while the fixed-Sigma sigma-odd "
+                "obstruction source is cubic with C_src = 27/16."
             ),
+            "confirmed_bridge_identity": "J_h(psi_R) = 2 * A_bulk * Phi_{-1/2,R}",
+            "cover_side_conformal_factor": 4,
         },
-        "surrogate_output": {
-            "gamma_src_sur": str(gamma_sur),
-            "real_axis_pair": {
-                "kappa_src_R": "(3/8) * A_bulk(alpha_1, alpha_1)",
-                "kappa_src_I": "0",
-            },
-            "covariant_pair_extension": (
-                "(3/8) * A_bulk(alpha_1, alpha_1) * "
-                "((c_R)^2 - (c_I)^2, 2 c_R c_I)"
-            ),
-        },
-        "D0_specialization": {
-            "A_bulk_alpha1_alpha1_lower_bound": a_bulk_lb,
+        "D0_active_scale": {
             "r0": r0,
-            "candidate_lower_bound_for_kappa_src_R": kappa_r_lb,
-            "candidate_lower_bound_for_weighted_source_scale": source_scale_lb,
+            "C_src": str(c_src),
+            "weighted_source_scale_upper_envelope": source_scale_bound,
         },
-        "not_certified": [
-            "That the true nonlinear source coefficient equals 3/8.",
-            "That the full PDE obstruction projection coincides with this surrogate on all inputs.",
+        "do_not_use_as": [
+            "a proof that gamma_src equals 3/8 in the fixed-Sigma sigma-odd source channel",
+            "a replacement for the private theorem-grade extraction C_src = 27/16",
+            "a global Phase-3 parametrix or maximal-section theorem",
         ],
     }
 

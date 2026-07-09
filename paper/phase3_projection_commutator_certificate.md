@@ -6,11 +6,11 @@ Local D0 certificate completed.
 
 Machine artifact:
 
-- [phase3_projection_commutator_certificate.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_projection_commutator_certificate.json)
+- [phase3_projection_commutator_certificate.json](../certificates/phase3_projection_commutator_certificate.json)
 
 Producer:
 
-- [phase3_projection_commutator_certificate.py](/home/brieuc/gift-framework/GIFT/scripts/phase3_projection_commutator_certificate.py)
+- [phase3_projection_commutator_certificate.py](../scripts/phase3_projection_commutator_certificate.py)
 
 This certificate closes two public bookkeeping gaps that were left after the
 private 2026-07-02 sharp-constant chain:

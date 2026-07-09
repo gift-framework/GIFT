@@ -1,0 +1,220 @@
+{
+  "artifact": "phase4_ar_neumann_budget_check",
+  "generated_by": "scripts/phase4_ar_neumann_budget_checker.py",
+  "scope": "Independent checker for the P4.2 AR Neumann-budget skeleton",
+  "status": "checker_for_budget_skeleton_not_AR_theorem",
+  "checked_artifact": "certificates/phase4_ar_neumann_budget_candidate.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_pending",
+      "pass": true,
+      "detail": "budget is marked pending certificates"
+    },
+    {
+      "name": "depends_on_phase4_ar_product_space_contract",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_product_space_contract.json"
+    },
+    {
+      "name": "depends_on_phase4_ar_majorant_candidate",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_majorant_candidate.json"
+    },
+    {
+      "name": "depends_on_phase4_ar_inverse_budget_audit",
+      "pass": true,
+      "detail": "depends on certificates/phase4_ar_inverse_budget_audit.json"
+    },
+    {
+      "name": "K_AR_matches_majorant",
+      "pass": true,
+      "detail": "K_AR_prod matches majorant"
+    },
+    {
+      "name": "q_scalar_matches_majorant",
+      "pass": true,
+      "detail": "q_AR_scalar matches majorant"
+    },
+    {
+      "name": "inverse_audit_status_matches",
+      "pass": true,
+      "detail": "inverse audit status matches"
+    },
+    {
+      "name": "product_obligations_match",
+      "pass": true,
+      "detail": "product-space obligations match contract"
+    },
+    {
+      "name": "slots_present",
+      "pass": true,
+      "detail": "all Neumann slots are present"
+    },
+    {
+      "name": "q_hodge_uniform_status_pending",
+      "pass": true,
+      "detail": "q_hodge_uniform is pending"
+    },
+    {
+      "name": "q_hodge_uniform_no_value",
+      "pass": true,
+      "detail": "q_hodge_uniform has no fake numeric value"
+    },
+    {
+      "name": "q_hodge_uniform_target_matches",
+      "pass": true,
+      "detail": "q_hodge_uniform uses the per-slot target"
+    },
+    {
+      "name": "q_hodge_uniform_has_required_artifact",
+      "pass": true,
+      "detail": "q_hodge_uniform names required artifact"
+    },
+    {
+      "name": "q_hodge_uniform_candidate_not_certificate",
+      "pass": true,
+      "detail": "q_hodge_uniform candidate remains non-certificate"
+    },
+    {
+      "name": "q_hodge_uniform_candidate_does_not_close_slot",
+      "pass": true,
+      "detail": "q_hodge_uniform remains pending despite candidate"
+    },
+    {
+      "name": "q_comm_FH_Gf_status_pending",
+      "pass": true,
+      "detail": "q_comm_FH_Gf is pending"
+    },
+    {
+      "name": "q_comm_FH_Gf_no_value",
+      "pass": true,
+      "detail": "q_comm_FH_Gf has no fake numeric value"
+    },
+    {
+      "name": "q_comm_FH_Gf_target_matches",
+      "pass": true,
+      "detail": "q_comm_FH_Gf uses the per-slot target"
+    },
+    {
+      "name": "q_comm_FH_Gf_has_required_artifact",
+      "pass": true,
+      "detail": "q_comm_FH_Gf names required artifact"
+    },
+    {
+      "name": "q_comm_FH_Gf_candidate_not_certificate",
+      "pass": true,
+      "detail": "q_comm_FH_Gf candidate remains non-certificate"
+    },
+    {
+      "name": "q_comm_FH_Gf_candidate_does_not_close_slot",
+      "pass": true,
+      "detail": "q_comm_FH_Gf remains pending despite candidate"
+    },
+    {
+      "name": "q_projection_residual_status_pending",
+      "pass": true,
+      "detail": "q_projection_residual is pending"
+    },
+    {
+      "name": "q_projection_residual_no_value",
+      "pass": true,
+      "detail": "q_projection_residual has no fake numeric value"
+    },
+    {
+      "name": "q_projection_residual_target_matches",
+      "pass": true,
+      "detail": "q_projection_residual uses the per-slot target"
+    },
+    {
+      "name": "q_projection_residual_has_required_artifact",
+      "pass": true,
+      "detail": "q_projection_residual names required artifact"
+    },
+    {
+      "name": "q_projection_residual_candidate_not_certificate",
+      "pass": true,
+      "detail": "q_projection_residual candidate remains non-certificate"
+    },
+    {
+      "name": "q_projection_residual_candidate_does_not_close_slot",
+      "pass": true,
+      "detail": "q_projection_residual remains pending despite candidate"
+    },
+    {
+      "name": "q_gauge_transfer_status_pending",
+      "pass": true,
+      "detail": "q_gauge_transfer is pending"
+    },
+    {
+      "name": "q_gauge_transfer_no_value",
+      "pass": true,
+      "detail": "q_gauge_transfer has no fake numeric value"
+    },
+    {
+      "name": "q_gauge_transfer_target_matches",
+      "pass": true,
+      "detail": "q_gauge_transfer uses the per-slot target"
+    },
+    {
+      "name": "q_gauge_transfer_has_required_artifact",
+      "pass": true,
+      "detail": "q_gauge_transfer names required artifact"
+    },
+    {
+      "name": "q_gauge_transfer_candidate_not_certificate",
+      "pass": true,
+      "detail": "q_gauge_transfer candidate remains non-certificate"
+    },
+    {
+      "name": "q_gauge_transfer_candidate_does_not_close_slot",
+      "pass": true,
+      "detail": "q_gauge_transfer remains pending despite candidate"
+    },
+    {
+      "name": "total_target_is_slot_sum",
+      "pass": true,
+      "detail": "total target is sum of slot caps"
+    },
+    {
+      "name": "scalar_plus_target_matches",
+      "pass": true,
+      "detail": "q_scalar_plus_neumann target recomputes"
+    },
+    {
+      "name": "target_would_contract",
+      "pass": true,
+      "detail": "target budget would still be a contraction"
+    },
+    {
+      "name": "all_slots_not_certified",
+      "pass": true,
+      "detail": "slots are not certified"
+    },
+    {
+      "name": "q_total_absent",
+      "pass": true,
+      "detail": "no total is faked"
+    },
+    {
+      "name": "promotion_not_ready",
+      "pass": true,
+      "detail": "promotion is not ready"
+    },
+    {
+      "name": "boundary_blocks_promotion",
+      "pass": true,
+      "detail": "acceptance boundary requires future certificates"
+    }
+  ],
+  "summary": {
+    "checks_total": 41,
+    "checks_passed": 41,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

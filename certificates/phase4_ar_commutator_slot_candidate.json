@@ -1,0 +1,83 @@
+{
+  "artifact": "phase4_ar_commutator_slot_candidate",
+  "generated_by": "scripts/phase4_ar_commutator_slot_candidate.py",
+  "scope": "Candidate formula for the AR Neumann slot q_comm_FH_Gf",
+  "status": "candidate_formula_not_certificate",
+  "depends_on": [
+    "certificates/phase4_ar_product_space_contract.json",
+    "certificates/phase4_ar_neumann_budget_candidate.json"
+  ],
+  "slot": "q_comm_FH_Gf",
+  "formula": {
+    "C_comm_AR": "8 * (1 + K_F) * (1 + K_AR_prod)",
+    "q_comm_FH_Gf": "C_comm_AR * eps_AR"
+  },
+  "inputs": {
+    "K_F": {
+      "exact": "231/100",
+      "value": 2.31,
+      "meaning": "horizontal curvature action bound from product-space contract",
+      "status": "certified_upper_bound_at_D0"
+    },
+    "K_AR_prod": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "meaning": "structural product-max bound from product-space contract",
+      "status": "structural_product_max_bound"
+    },
+    "eps_AR": {
+      "exact": "1/4000",
+      "value": 0.00025,
+      "meaning": "current AR threshold inverse",
+      "status": "candidate_not_theorem"
+    },
+    "C_overhead": {
+      "exact": "8",
+      "value": 8.0,
+      "meaning": "explicit candidate Leibniz/cutoff overhead",
+      "status": "candidate_not_theorem"
+    },
+    "slot_target": {
+      "exact": "1/16",
+      "value": 0.0625,
+      "meaning": "Neumann budget target for q_comm_FH_Gf",
+      "status": "candidate_not_theorem"
+    }
+  },
+  "candidate_values": {
+    "C_comm_AR": {
+      "exact": "1350149/25000",
+      "value": 54.00596,
+      "meaning": "candidate commutator constant",
+      "status": "candidate_not_theorem"
+    },
+    "q_comm_FH_Gf": {
+      "exact": "1350149/100000000",
+      "value": 0.01350149,
+      "meaning": "candidate Neumann error for F_H/G_f commutators",
+      "status": "candidate_not_theorem"
+    },
+    "target_margin": {
+      "exact": "4899851/100000000",
+      "value": 0.04899851,
+      "meaning": "slot_target - q_comm_FH_Gf candidate",
+      "status": "candidate_not_theorem"
+    }
+  },
+  "checks": {
+    "candidate_below_slot_target": true,
+    "candidate_C_comm_AR_below_250": true,
+    "status_not_certificate": true
+  },
+  "open_assumptions": [
+    "A product-norm commutator theorem must justify the factor 8 overhead or replace it by a certified value.",
+    "Collar/base transition commutators must be bounded in the same A_beta norm.",
+    "No derivative loss beyond the beta-weighted product norm may be hidden in K_F or K_AR_prod."
+  ],
+  "acceptance_boundary": [
+    "This candidate may guide the q_comm_FH_Gf proof target.",
+    "It does not close the q_comm_FH_Gf Neumann slot.",
+    "The Neumann budget must keep q_comm_FH_Gf pending until a theorem-grade commutator certificate exists."
+  ],
+  "all_pass": true
+}

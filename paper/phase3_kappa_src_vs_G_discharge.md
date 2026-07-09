@@ -33,7 +33,7 @@ This is an envelope estimate, not an extracted coefficient.
 ## What the first ansatz predicts
 
 The first channel-compatible ansatz from
-[phase3_kappa_src_first_ansatz.md](/home/brieuc/gift-framework/GIFT/paper/phase3_kappa_src_first_ansatz.md)
+[phase3_kappa_src_first_ansatz.md](phase3_kappa_src_first_ansatz.md)
 predicts the leading real obstruction coefficient
 
 `kappa_src,R^(i) ?= (3/8) * A_bulk(alpha_1, alpha_1)|_{Sigma_i}`,

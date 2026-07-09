@@ -11,7 +11,7 @@ This note records a distinction that matters for the rest of Phase 3:
 
 The machine-readable freeze is:
 
-- [phase3_mu_minus_half_channel.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_channel.json).
+- [phase3_mu_minus_half_channel.json](../certificates/phase3_mu_minus_half_channel.json).
 
 ## Exact lower-root coefficient
 

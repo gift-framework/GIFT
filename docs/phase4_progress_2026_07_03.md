@@ -6,12 +6,12 @@ P4.1 coefficient extraction at `D0` is now public, reproducible, and checked.
 
 Artifacts:
 
-- [phase4_donaldson_E1_E5_operator.md](/home/brieuc/gift-framework/GIFT/paper/phase4_donaldson_E1_E5_operator.md)
-- [phase4_bigraded_type_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_bigraded_type_check.json)
-- [phase4_donaldson_coefficients.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients.json)
-- [phase4_donaldson_coefficients_values.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_values.json)
-- [phase4_donaldson_coefficients_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_check.json)
-- [datum_D0.json](/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json)
+- [phase4_donaldson_E1_E5_operator.md](../paper/phase4_donaldson_E1_E5_operator.md)
+- [phase4_bigraded_type_check.json](../certificates/phase4_bigraded_type_check.json)
+- [phase4_donaldson_coefficients.json](../certificates/phase4_donaldson_coefficients.json)
+- [phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json)
+- [phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json)
+- [datum_D0.json](../certificates/datum_D0.json)
 
 Checked D0 values:
 
@@ -25,9 +25,14 @@ Checked D0 values:
 - `remainder_R3 = 13770793.170081593`;
 - `R_threshold = 3664.0659853300026`.
 
+`R_threshold` is the minimum admissible `R` for the `eps^3` tail contraction:
+the certified condition holds for `R >= R_threshold`. It is not an upper
+headroom margin.
+
 Checker result:
 
-`146/146` checks pass.
+`172/172` checks pass, including outward-rounded interval recomputation for the
+scalar coefficient layer.
 
 ## Scope
 
@@ -40,22 +45,35 @@ It does not close:
 - preservation of closedness for the actual reconstructed `Phi_eps`;
 - anisotropic Joyce perturbation.
 
-## Next
+## Product-space contract
 
-The next Phase 4 artifact is the global AR theorem specification:
+The Phase 4.2 product-space contract is now serialized:
 
-- define the product Banach space for `(omega, lambda, mu, Theta)`;
-- name the fibrewise inverse and its uniformity assumptions;
-- build the majorant/contraction constants using the now-checked P4.1 values;
-- state the exact output: `M_eps(h_eps)=0` implies the reconstructed
-  `Phi_eps(h_eps)` is closed and has controlled coclosed defect.
+- [phase4_ar_product_space_contract.json](../certificates/phase4_ar_product_space_contract.json)
+- [phase4_ar_product_space_check.json](../certificates/phase4_ar_product_space_check.json)
+
+It fixes `A_beta = A_omega x A_lambda x A_mu x A_Theta`, the component
+bidegrees, the `F_H/G_f` block architecture, and the conditional
+`K_AR_prod = 2079/2000` structural product-max value used by the scalar
+majorant.
+
+Checker result:
+
+`36/36` checks pass.
+
+Open theorem obligations remain:
+
+- uniform fibrewise inverse in the product norm;
+- commutator bounds in the product norm;
+- global reduced-projection identity;
+- closedness preservation.
 
 ## Continued
 
 The first conditional scalar AR majorant is now serialized:
 
-- [phase4_ar_majorant_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_ar_majorant_candidate.json)
-- [phase4_ar_majorant_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_ar_majorant_check.json)
+- [phase4_ar_majorant_candidate.json](../certificates/phase4_ar_majorant_candidate.json)
+- [phase4_ar_majorant_check.json](../certificates/phase4_ar_majorant_check.json)
 
 It uses the checked P4.1 values and chooses:
 
@@ -66,12 +84,12 @@ It uses the checked P4.1 values and chooses:
 At `eps_AR`, it gives:
 
 - `source_majorant = 0.0009951911545794`;
-- `displacement_majorant = 0.00044783601956072995`;
-- `q_AR = 0.0004478933366161987`.
+- `displacement_majorant = 0.0010345012051852862`;
+- `q_AR = 0.001034633607583419`.
 
 Checker result:
 
-`14/14` checks pass.
+`20/20` checks pass.
 
-This is conditional on `K_AR_prod <= 9/20`; the product-space inverse theorem
-is still open.
+This uses `K_AR_prod <= 2079/2000` from the product-space contract; the uniform
+inverse theorem and closedness theorem are still open.

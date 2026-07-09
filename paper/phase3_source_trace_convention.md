@@ -38,9 +38,9 @@ Until this is resolved, any extracted scalar `kappa_src` would risk being attach
 
 The `mu = -1/2` convention is explicit in:
 
-- [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md),
+- [phase3_spaces.md](phase3_spaces.md),
 - the draft §4.3 / §5.5 discussion of the lower-root cokernel,
-- [phase3_mu_minus_half_basis.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md).
+- [phase3_mu_minus_half_basis.md](phase3_mu_minus_half_basis.md).
 
 The `rho^(1/2)` source statement is explicit in:
 
@@ -56,8 +56,8 @@ The coefficient-extraction machinery implemented so far remains useful, but it m
 
 The convention-resolution artifact is now frozen in:
 
-- [phase3_source_trace_resolution.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_trace_resolution.md),
-- [phase3_source_trace_resolution.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_source_trace_resolution.json).
+- [phase3_source_trace_resolution.md](phase3_source_trace_resolution.md),
+- [phase3_source_trace_resolution.json](../certificates/phase3_source_trace_resolution.json).
 
 Repository convention from now on:
 

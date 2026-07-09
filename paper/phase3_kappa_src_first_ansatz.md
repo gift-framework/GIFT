@@ -15,9 +15,9 @@ already frozen lower-root channel data.
 
 After:
 
-- [phase3_source_to_obstruction_bridge.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_to_obstruction_bridge.md),
-- [phase3_Pi_obs_constant_mode.md](/home/brieuc/gift-framework/GIFT/paper/phase3_Pi_obs_constant_mode.md),
-- [phase3_mu_minus_half_channel.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_channel.md),
+- [phase3_source_to_obstruction_bridge.md](phase3_source_to_obstruction_bridge.md),
+- [phase3_Pi_obs_constant_mode.md](phase3_Pi_obs_constant_mode.md),
+- [phase3_mu_minus_half_channel.md](phase3_mu_minus_half_channel.md),
 
 the next missing step is not yet a theorem-grade coefficient extraction. The
 next honest step is to record the first serious candidate for the constant-mode
@@ -102,9 +102,9 @@ This ansatz uses only information already present in the branch:
 1. real scalar seed coefficient `c0^(i)` from the draft;
 2. quadratic dependence on that scalar from Lemma 5.9;
 3. the fixed real obstruction basis from
-   [phase3_mu_minus_half_basis.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md);
+   [phase3_mu_minus_half_basis.md](phase3_mu_minus_half_basis.md);
 4. the exact lower-root coefficient `3/8` from
-   [phase3_mu_minus_half_channel.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_channel.md).
+   [phase3_mu_minus_half_channel.md](phase3_mu_minus_half_channel.md).
 
 What it does **not** do is identify the nonlinear source coefficient with the
 branch-motion coefficient. That equality remains unproved.
@@ -144,20 +144,24 @@ value
 
 at the normalized datum `D0`, again only as a candidate comparison scale.
 
-## What this changes operationally
+## Current operational use
 
-The branch can now test two distinct statements:
+This file is now historical/diagnostic. It should test two distinct statements
+without promoting the old comparison ansatz:
 
-1. a weak structural statement:
+1. a regular-sector diagnostic:
 
-   `kappa_src,I^(i)` should be negligible or zero at leading order;
+   if a quadratic fixed-Sigma term appears, check whether it belongs to the
+   `alpha_1`-perp regular sigma-even sector rather than the sigma-odd
+   obstruction channel;
 
-2. a stronger coefficient statement:
+2. a lower-root comparison:
 
-   `kappa_src,R^(i)` should be close to `(3/8) * A_bulk(alpha_1, alpha_1)`.
+   compare any branch-motion normal-form coefficient against
+   `(3/8) * A_bulk(alpha_1, alpha_1)`.
 
-That is a much sharper target than the previous generic placeholder
-`C_src <= 2`.
+Neither statement competes with the active fixed-Sigma sigma-odd source
+coefficient `C_src = 27/16`.
 
 Post-2026-07-02 reading: this remains a useful historical and diagnostic
 ansatz, but the public Phase-3 ledger should now compare it against the private

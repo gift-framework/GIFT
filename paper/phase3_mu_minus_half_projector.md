@@ -8,8 +8,8 @@ This note records the first working projector that extracts the two real coeffic
 
 The executed prototype is:
 
-- [phase3_mu_minus_half_projector_proto.py](/home/brieuc/gift-framework/GIFT/scripts/phase3_mu_minus_half_projector_proto.py),
-- with output [phase3_mu_minus_half_projector_proto.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_projector_proto.json).
+- [phase3_mu_minus_half_projector_proto.py](../scripts/phase3_mu_minus_half_projector_proto.py),
+- with output [phase3_mu_minus_half_projector_proto.json](../certificates/phase3_mu_minus_half_projector_proto.json).
 
 ## What it does
 

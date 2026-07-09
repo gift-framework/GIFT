@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 """
-Prototype first real ansatz for the collar source coefficient kappa_src.
+Legacy first ansatz for kappa_src, reconciled with the sharp source channel.
 
-Purpose:
-  Freeze the first channel-compatible candidate for the obstruction pair
-  (kappa_src,R, kappa_src,I) using:
-    - the real scalar seed coefficient c0 from draft Lemma 5.9,
-    - the quadratic dependence on c0,
-    - the exact lower-root comparison coefficient 3/8,
-    - the datum-level lower bound for A_bulk(alpha_1, alpha_1).
-
-This is a conditional ansatz, not a theorem-grade extraction.
+The old comparison ansatz used the lower-root normal-form coefficient 3/8 as a
+quadratic source model. The 2026-07-02 parity reconciliation supersedes that
+as the active fixed-Sigma sigma-odd source model: the relevant source is cubic
+with theorem-grade coefficient C_src = 27/16. The old ansatz remains useful only
+as a diagnostic for the alpha1-perp regular sigma-even sector.
 """
 
 from __future__ import annotations
@@ -27,19 +23,21 @@ def main() -> None:
 
     a_bulk_lb = datum["fields"]["A_bulk_alpha1_alpha1"]["value"][0]
     gamma_geom = Fraction(3, 8)
-    kappa_r_candidate_lb = float(gamma_geom) * float(a_bulk_lb)
+    c_src = Fraction(27, 16)
+    legacy_kappa_r_candidate_lb = float(gamma_geom) * float(a_bulk_lb)
 
     out = {
         "artifact": "phase3_kappa_src_first_ansatz_proto",
-        "status": "conditional_first_ansatz",
+        "status": "legacy_comparison_superseded_for_sigma_odd_source",
         "scope": "collar_rank_one_constant_mode",
         "inputs": {
             "draft_seed_shape": "h_loc,branch = c0^(i) * w^(3/2) * alpha_1 + ... with c0^(i) real and s-independent",
-            "draft_source_shape": "Pi_obs^(i)(m(h_bar)) is quadratic in c0^(i) and s-uniform up to O(kappa_g r0)",
-            "comparison_channel_coefficient": "3/8",
+            "legacy_draft_source_shape": "Pi_obs^(i)(m(h_bar)) was tested as quadratic in c0^(i) and s-uniform up to O(kappa_g r0)",
+            "legacy_comparison_channel_coefficient": "3/8",
+            "active_sigma_odd_source_coefficient": "27/16",
             "datum_A_bulk_alpha1_alpha1_lower_bound": a_bulk_lb,
         },
-        "leading_real_axis_ansatz": {
+        "legacy_leading_real_axis_ansatz": {
             "formula": (
                 "Pi_obs^(i)(m(h_bar)) ~= (c0^(i))^2 * "
                 "(kappa_src,R^(i) * e_i^R + kappa_src,I^(i) * e_i^I)"
@@ -48,6 +46,21 @@ def main() -> None:
                 "kappa_src,R^(i)": "(3/8) * A_bulk(alpha_1, alpha_1)|_{Sigma_i}",
                 "kappa_src,I^(i)": "0",
             },
+            "current_status": (
+                "superseded for the fixed-Sigma sigma-odd source channel; retained "
+                "only as a comparison for lower-root normal forms or regular-sector diagnostics"
+            ),
+        },
+        "active_sigma_odd_channel": {
+            "coefficient": {
+                "name": "C_src",
+                "exact": str(c_src),
+                "value": float(c_src),
+            },
+            "degree_in_c0": 3,
+            "source_channel": "fixed-Sigma sigma-odd mu=-1/2 obstruction channel",
+            "provenance": "private/canonical/notes/axis2_codex_reconciliation_2026_07_02.md and axis2_gamma_src_Yneg3_norm_2026_07_02",
+            "parity_rule": "quadratic-in-c0 contribution is alpha1-perp regular sigma-even, not sigma-odd mu=-1/2",
         },
         "covariant_pair_extension": {
             "formula": (
@@ -61,16 +74,15 @@ def main() -> None:
         },
         "D0_comparison_scale": {
             "gamma_geom": str(gamma_geom),
-            "candidate_lower_bound_for_kappa_src_R": kappa_r_candidate_lb,
+            "legacy_candidate_lower_bound_for_kappa_src_R": legacy_kappa_r_candidate_lb,
             "meaning": (
-                "At D0, if the source coefficient matches the branch-motion "
-                "comparison value 3/8, then the real obstruction coordinate has "
-                "scale at least this size."
+                "At D0, this is only the old lower-root comparison scale. It is "
+                "not the active fixed-Sigma sigma-odd source coefficient."
             ),
         },
         "not_certified": [
-            "That gamma_src equals 3/8.",
-            "That the true source coefficient has zero imaginary component beyond leading order.",
+            "That gamma_src equals 3/8 in the fixed-Sigma sigma-odd source channel.",
+            "That the true fixed-Sigma source is quadratic in c0.",
             "That Pi_obs has already been identified with this explicit quadratic map for all sources.",
         ],
     }

@@ -8,8 +8,8 @@ This note records the first explicit test of the convention resolution.
 
 The executed prototype is:
 
-- [phase3_profile_to_trace_proto.py](/home/brieuc/gift-framework/GIFT/scripts/phase3_profile_to_trace_proto.py),
-- with output [phase3_profile_to_trace_proto.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_profile_to_trace_proto.json).
+- [phase3_profile_to_trace_proto.py](../scripts/phase3_profile_to_trace_proto.py),
+- with output [phase3_profile_to_trace_proto.json](../certificates/phase3_profile_to_trace_proto.json).
 
 ## Test statement
 

@@ -6,11 +6,11 @@ Candidate numerical/symbolic experiment only. Not a theorem.
 
 Machine artifact:
 
-- [phase3_effective_jacobi_parametrix_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_effective_jacobi_parametrix_candidate.json)
+- [phase3_effective_jacobi_parametrix_candidate.json](../certificates/phase3_effective_jacobi_parametrix_candidate.json)
 
 Producer:
 
-- [phase3_effective_jacobi_parametrix_candidate.py](/home/brieuc/gift-framework/GIFT/scripts/phase3_effective_jacobi_parametrix_candidate.py)
+- [phase3_effective_jacobi_parametrix_candidate.py](../scripts/phase3_effective_jacobi_parametrix_candidate.py)
 
 This is the public Task 4 artefact from the completion plan: it gives a
 candidate effective bound for the collar Jacobi parametrix constant

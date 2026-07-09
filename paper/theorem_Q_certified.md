@@ -2,7 +2,10 @@
 
 ## Status
 
-Current status: target quantitative theorem only. Partial ingredients exist.
+Current status: Stage D reconciled target. The `D0` source constants, `Pi_obs`
+identification, `K_Sch <= 16/3`, and L2 assembly are pinned to private
+theorem-grade closures; the remaining Level Q work is interval-promotion and
+packaging of the full certificate layer.
 
 ## Goal
 
@@ -50,12 +53,12 @@ Each constant must record:
 - `CollarResummationCertificate.lean` gives exact scalar constants.
 - `axis2_certificate_sigma_min_NK_2026_06_30.json` gives a reproducible numerical scaffold for one part of the Jacobi reduction.
 - `axis2_joyce_hypotheses_D0_2026_07_01.json` is an audit note, not yet a theorem-grade certificate for `(J)`.
-- `phase3_projection_commutator_certificate.json` certifies the reduced-model
-  `Pi_obs` projection and the clean D0 annular commutator factor `q_comm <= 0.68`.
-- `phase3_effective_jacobi_parametrix_candidate.json` gives a Task 4 candidate
-  for `K_Sch_Maz`: exact normal inverse `4/3`, scalar candidate `16/3`, rank-19
-  candidate `12.32`. This is not theorem-grade; `K_Sch_Maz <= 17` remains the
-  public safe envelope.
+- `phase3_projection_commutator_certificate.json` is retained as the
+  reduced-model `Pi_obs` witness; private M-L1.d promotes the `D0` PDE
+  identification `Pi_obs^PDE = Pi_{R^{2N}}`.
+- `phase3_effective_jacobi_parametrix_candidate.json` is superseded for the
+  scalar bound: private M-L1.n/o/p promotes `K_Sch_Maz <= 16/3` theorem-grade
+  at `D0` by raw 77-collar outward-rounded intervals.
 - `phase4_adiabatic_sources_candidate.json` is now legacy comparison material:
   it fixed the public operator form and gave power-counting candidate bounds
   `P1 <= 2.31`, `P2 <= 5.3361`, `R3 <= 5.688783e6`. These are superseded by
@@ -72,13 +75,15 @@ Each constant must record:
   `omega/lambda/Theta/mu = (1,2)/(3,0)/(2,2)/(0,4)` and must gate Stage B.
 - `phase4_donaldson_coefficients.json` is Stage B v1: a type-gated symbolic
   formula tree for `P1`, `P2`, and `R3`, with no placeholder block.
-- `phase4_donaldson_coefficients_check.json` is Stage C v1: an independent
-  structural and arithmetic checker for that symbolic formula tree. With
-  `phase4_donaldson_coefficients_values.json`, it passes `146/146` checks.
+- `phase4_donaldson_coefficients_check.json` is the Stage C/E checker: an
+  independent structural, arithmetic, and outward-rounded interval checker for
+  that symbolic formula tree. With `phase4_donaldson_coefficients_values.json`,
+  it passes `172/172` checks.
 - `phase4_donaldson_coefficients_values.json` evaluates the D0 coefficient
   formulas: `source_P1 = 3.1185`, `source_P2 = 6.36018075`, and
   `remainder_R3 = 13770793.170081593`. This closes P4.1 coefficients at D0,
-  not the global AR convergence theorem.
+  and private L2 assembly closes the product-max AR contraction at D0 with
+  `q_total = 26236977/3200000000`.
 
 ## Acceptance rule
 

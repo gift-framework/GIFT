@@ -1,0 +1,95 @@
+{
+  "artifact": "phase4_ar_inverse_budget_check",
+  "generated_by": "scripts/phase4_ar_inverse_budget_checker.py",
+  "scope": "Independent checker for P4.2 inverse-budget normalization audit",
+  "status": "checker_for_audit_not_AR_theorem",
+  "checked_artifact": "certificates/phase4_ar_inverse_budget_audit.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_structural_bound",
+      "pass": true,
+      "detail": "audit status confirms the structural product-max bound"
+    },
+    {
+      "name": "depends_on_contract",
+      "pass": true,
+      "detail": "audit depends on product-space contract"
+    },
+    {
+      "name": "depends_on_majorant",
+      "pass": true,
+      "detail": "audit depends on AR majorant"
+    },
+    {
+      "name": "K_H_matches",
+      "pass": true,
+      "detail": "K_H_K3 matches contract"
+    },
+    {
+      "name": "K_F_matches",
+      "pass": true,
+      "detail": "K_F matches contract"
+    },
+    {
+      "name": "K_projection_matches",
+      "pass": true,
+      "detail": "projection bound matches contract"
+    },
+    {
+      "name": "K_AR_matches",
+      "pass": true,
+      "detail": "K_AR_prod matches majorant"
+    },
+    {
+      "name": "block_product_matches",
+      "pass": true,
+      "detail": "block bound recomputes"
+    },
+    {
+      "name": "K_AR_is_block_product",
+      "pass": true,
+      "detail": "K_AR_prod is K_H_K3*K_F"
+    },
+    {
+      "name": "K_AR_covers_G_f_truth",
+      "pass": true,
+      "detail": "G_f coverage truth matches arithmetic"
+    },
+    {
+      "name": "K_AR_covers_G_f_F_H",
+      "pass": true,
+      "detail": "audit confirms K_AR_prod covers the -G_f F_H block under the declared norm"
+    },
+    {
+      "name": "K_AR_covers_projection",
+      "pass": true,
+      "detail": "audit confirms K_AR_prod covers projection bound under the declared norm"
+    },
+    {
+      "name": "direct_unweighted_max_norm_compatible",
+      "pass": true,
+      "detail": "audit accepts direct unweighted max-norm compatibility"
+    },
+    {
+      "name": "finding_mentions_product_max_repair",
+      "pass": true,
+      "detail": "finding names product-max repair route"
+    },
+    {
+      "name": "boundary_keeps_AR_open",
+      "pass": true,
+      "detail": "acceptance boundary keeps analytic AR obligations open"
+    }
+  ],
+  "summary": {
+    "checks_total": 16,
+    "checks_passed": 16,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

@@ -15,9 +15,9 @@ right-inverse theorem or the full weighted mapping theorem.
 
 After:
 
-- [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md),
-- [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md),
-- [phase3_global_parametrix.md](/home/brieuc/gift-framework/GIFT/paper/phase3_global_parametrix.md),
+- [phase3_spaces.md](phase3_spaces.md),
+- [phase3_linear_theorem.md](phase3_linear_theorem.md),
+- [phase3_global_parametrix.md](phase3_global_parametrix.md),
 
 the remaining task in Phase 3 is to solve the actual maximal-section equation
 
@@ -51,7 +51,7 @@ Expand at `h_bar_global`:
 
 where:
 
-- `J_h` is the Jacobi operator already fixed in [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md),
+- `J_h` is the Jacobi operator already fixed in [phase3_linear_theorem.md](phase3_linear_theorem.md),
 - `N_h(u)` is the nonlinear remainder,
 - `N_h(0) = 0`,
 - `D N_h(0) = 0`.
@@ -121,9 +121,9 @@ The target theorem for Phase 3.4 should read:
 
 Fix `beta in (1/2, 3/2)`. Assume:
 
-1. the datum constants from [datum_D0.json](/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json),
-2. the linear right-inverse theorem of [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md),
-3. the global parametrix theorem of [phase3_global_parametrix.md](/home/brieuc/gift-framework/GIFT/paper/phase3_global_parametrix.md),
+1. the datum constants from [datum_D0.json](../certificates/datum_D0.json),
+2. the linear right-inverse theorem of [phase3_linear_theorem.md](phase3_linear_theorem.md),
+3. the global parametrix theorem of [phase3_global_parametrix.md](phase3_global_parametrix.md),
 4. the quadratic estimate above with explicit constant `C_nl`,
 5. the source bound `||m(h_bar_global)|| <= C_src`.
 

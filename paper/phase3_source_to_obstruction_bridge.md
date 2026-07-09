@@ -52,13 +52,13 @@ This is the analytically correct quantity for Phase 3.
 
 The current chain is now:
 
-1. [phase3_source_trace_resolution.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_trace_resolution.md)
+1. [phase3_source_trace_resolution.md](phase3_source_trace_resolution.md)
    separates raw profile, trace coefficient, and weighted quantity.
 
-2. [phase3_mu_minus_half_basis.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md)
+2. [phase3_mu_minus_half_basis.md](phase3_mu_minus_half_basis.md)
    fixes the lower-root basis used to represent the obstruction layer.
 
-3. [phase3_kappa_src_projection.md](/home/brieuc/gift-framework/GIFT/paper/phase3_kappa_src_projection.md)
+3. [phase3_kappa_src_projection.md](phase3_kappa_src_projection.md)
    gives the algebraic map from an obstruction coefficient to the cubic
    correcting datum.
 

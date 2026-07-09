@@ -1,8 +1,8 @@
 {
   "artifact": "phase4_donaldson_coefficients_check",
   "generated_by": "scripts/phase4_donaldson_coefficients_checker.py",
-  "scope": "Independent structural checker for Stage B v1 symbolic Donaldson coefficient formulas",
-  "status": "checker_for_symbolic_formulas_not_a_numerical_certificate",
+  "scope": "Independent structural, arithmetic, and outward-interval checker for Stage B v1 Donaldson coefficient formulas",
+  "status": "checker_with_outward_interval_recomputation_for_D0_coefficients",
   "checked_artifact": "certificates/phase4_donaldson_coefficients.json",
   "checks": [
     {
@@ -734,11 +734,343 @@
       "name": "values_R_threshold_float",
       "pass": true,
       "detail": "R_threshold float display recomputes from exact denominator"
+    },
+    {
+      "name": "interval_source_P1_contains_exact",
+      "pass": true,
+      "detail": "source_P1 outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_source_P1_outward_width_small",
+      "pass": true,
+      "detail": "source_P1 interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_source_P2_contains_exact",
+      "pass": true,
+      "detail": "source_P2 outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_source_P2_outward_width_small",
+      "pass": true,
+      "detail": "source_P2 interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_DP1_norm_contains_exact",
+      "pass": true,
+      "detail": "DP1_norm outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_DP1_norm_outward_width_small",
+      "pass": true,
+      "detail": "DP1_norm interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_DP2_norm_contains_exact",
+      "pass": true,
+      "detail": "DP2_norm outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_DP2_norm_outward_width_small",
+      "pass": true,
+      "detail": "DP2_norm interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_D2P1_norm_contains_exact",
+      "pass": true,
+      "detail": "D2P1_norm outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_D2P1_norm_outward_width_small",
+      "pass": true,
+      "detail": "D2P1_norm interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_D3m_norm_contains_exact",
+      "pass": true,
+      "detail": "D3m_norm outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_D3m_norm_outward_width_small",
+      "pass": true,
+      "detail": "D3m_norm interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_raw_P3_scale_contains_exact",
+      "pass": true,
+      "detail": "raw_P3_scale outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_raw_P3_scale_outward_width_small",
+      "pass": true,
+      "detail": "raw_P3_scale interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_xi1_bound_contains_exact",
+      "pass": true,
+      "detail": "xi1_bound outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_xi1_bound_outward_width_small",
+      "pass": true,
+      "detail": "xi1_bound interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_xi2_forcing_contains_exact",
+      "pass": true,
+      "detail": "xi2_forcing outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_xi2_forcing_outward_width_small",
+      "pass": true,
+      "detail": "xi2_forcing interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_xi2_bound_contains_exact",
+      "pass": true,
+      "detail": "xi2_bound outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_xi2_bound_outward_width_small",
+      "pass": true,
+      "detail": "xi2_bound interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_remainder_R3_contains_exact",
+      "pass": true,
+      "detail": "remainder_R3 outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_remainder_R3_outward_width_small",
+      "pass": true,
+      "detail": "remainder_R3 interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_tail_contraction_denominator_contains_exact",
+      "pass": true,
+      "detail": "tail_contraction_denominator outward decimal interval contains exact rational value"
+    },
+    {
+      "name": "interval_tail_contraction_denominator_outward_width_small",
+      "pass": true,
+      "detail": "tail_contraction_denominator interval width is consistent with 18-place outward rounding"
+    },
+    {
+      "name": "interval_R_threshold_brackets_cube_root",
+      "pass": true,
+      "detail": "R_threshold interval cubes bracket the exact tail denominator"
+    },
+    {
+      "name": "interval_R_threshold_width_small",
+      "pass": true,
+      "detail": "R_threshold interval width is exactly one unit at the serialized scale"
     }
   ],
+  "outward_interval_recomputation": {
+    "status": "outward_rounded_interval_recomputation",
+    "method": "Independent exact Fraction recomputation of all Stage B v1 formulas, followed by decimal floor/ceiling serialization. R_threshold is bracketed by integer bisection on the cube.",
+    "decimal_places": 18,
+    "constants": {
+      "C_D3m": {
+        "lower": "0.444444444444444444",
+        "upper": "0.444444444444444445",
+        "decimal_places": 18,
+        "exact": "4/9"
+      },
+      "C_E3_omega": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "C_E5_mu": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "C_Hodge": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "C_Hodge_3": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "C_comm": {
+        "lower": "1.039500000000000000",
+        "upper": "1.039500000000000000",
+        "decimal_places": 18,
+        "exact": "2079/2000"
+      },
+      "C_comm_2": {
+        "lower": "1.080560250000000000",
+        "upper": "1.080560250000000000",
+        "decimal_places": 18,
+        "exact": "4322241/4000000"
+      },
+      "C_comm_3": {
+        "lower": "1.123242379875000000",
+        "upper": "1.123242379875000000",
+        "decimal_places": 18,
+        "exact": "8985939039/8000000000"
+      },
+      "C_conn_1": {
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000",
+        "decimal_places": 18,
+        "exact": "0"
+      },
+      "C_conn_2": {
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000",
+        "decimal_places": 18,
+        "exact": "0"
+      },
+      "C_conn_3": {
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000",
+        "decimal_places": 18,
+        "exact": "0"
+      },
+      "C_cubic_star": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "C_nl": {
+        "lower": "0.666666666666666666",
+        "upper": "0.666666666666666667",
+        "decimal_places": 18,
+        "exact": "2/3"
+      },
+      "C_projection": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "C_wedge": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "G_aug": {
+        "lower": "36.600000000000000000",
+        "upper": "36.600000000000000000",
+        "decimal_places": 18,
+        "exact": "183/5"
+      },
+      "K_F": {
+        "lower": "2.310000000000000000",
+        "upper": "2.310000000000000000",
+        "decimal_places": 18,
+        "exact": "231/100"
+      },
+      "K_H_K3": {
+        "lower": "0.450000000000000000",
+        "upper": "0.450000000000000000",
+        "decimal_places": 18,
+        "exact": "9/20"
+      }
+    },
+    "evaluated_coefficients": {
+      "source_P1": {
+        "lower": "3.118500000000000000",
+        "upper": "3.118500000000000000",
+        "decimal_places": 18,
+        "exact": "6237/2000"
+      },
+      "source_P2": {
+        "lower": "6.360180750000000000",
+        "upper": "6.360180750000000000",
+        "decimal_places": 18,
+        "exact": "25440723/4000000"
+      },
+      "DP1_norm": {
+        "lower": "3.118500000000000000",
+        "upper": "3.118500000000000000",
+        "decimal_places": 18,
+        "exact": "6237/2000"
+      },
+      "DP2_norm": {
+        "lower": "8.398120500000000000",
+        "upper": "8.398120500000000000",
+        "decimal_places": 18,
+        "exact": "16796241/2000000"
+      },
+      "D2P1_norm": {
+        "lower": "3.118500000000000000",
+        "upper": "3.118500000000000000",
+        "decimal_places": 18,
+        "exact": "6237/2000"
+      },
+      "D3m_norm": {
+        "lower": "0.444444444444444444",
+        "upper": "0.444444444444444445",
+        "decimal_places": 18,
+        "exact": "4/9"
+      },
+      "raw_P3_scale": {
+        "lower": "3.246484759750000000",
+        "upper": "3.246484759750000000",
+        "decimal_places": 18,
+        "exact": "12985939039/4000000000"
+      },
+      "xi1_bound": {
+        "lower": "114.137100000000000000",
+        "upper": "114.137100000000000000",
+        "decimal_places": 18,
+        "exact": "1141371/10000"
+      },
+      "xi2_forcing": {
+        "lower": "4704.722592570000000000",
+        "upper": "4704.722592570000000000",
+        "decimal_places": 18,
+        "exact": "470472259257/100000000"
+      },
+      "xi2_bound": {
+        "lower": "172192.846888062000000000",
+        "upper": "172192.846888062000000000",
+        "decimal_places": 18,
+        "exact": "86096423444031/500000000"
+      },
+      "remainder_R3": {
+        "lower": "13770793.170081592792300000",
+        "upper": "13770793.170081592792300000",
+        "decimal_places": 18,
+        "exact": "137707931700815927923/10000000000000"
+      },
+      "tail_contraction_denominator": {
+        "lower": "49191476530.438662508942368000",
+        "upper": "49191476530.438662508942368000",
+        "decimal_places": 18,
+        "exact": "1537233641576208203404449/31250000000000"
+      }
+    },
+    "R_threshold": {
+      "lower": "3664.065985330004",
+      "upper": "3664.065985330005",
+      "decimal_places": 12,
+      "lower_cube_le_value": "768616820788103819781028363014165854282747501/15625000000000000000000000000000000",
+      "upper_cube_gt_value": "393531812243509477936995598319334960659198001/8000000000000000000000000000000000",
+      "radicand_exact": "1537233641576208203404449/31250000000000"
+    },
+    "rounding_protocol": {
+      "rational_values": "lower=floor(q*10^p)/10^p, upper=ceil(q*10^p)/10^p",
+      "R_threshold": "find integers n,n+1 with (n/10^p)^3 <= D < ((n+1)/10^p)^3",
+      "float_inputs": "none used for interval acceptance"
+    }
+  },
   "summary": {
-    "checks_total": 146,
-    "checks_passed": 146,
+    "checks_total": 172,
+    "checks_passed": 172,
     "checks_failed": 0
   },
   "all_pass": true

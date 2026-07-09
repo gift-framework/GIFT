@@ -14,6 +14,7 @@ from pathlib import Path
 
 
 VALUES_PATH = "certificates/phase4_donaldson_coefficients_values.json"
+PRODUCT_SPACE_PATH = "certificates/phase4_ar_product_space_contract.json"
 OUT_PATH = "certificates/phase4_ar_majorant_candidate.json"
 
 
@@ -28,6 +29,7 @@ def rec(x: Fraction, meaning: str) -> dict[str, object]:
 def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     values = json.loads((repo_root / VALUES_PATH).read_text())
+    product_space = json.loads((repo_root / PRODUCT_SPACE_PATH).read_text())
     ev = values["evaluated_coefficients"]
 
     source_P1 = Fraction(ev["source_P1"]["exact"])
@@ -37,9 +39,11 @@ def main() -> None:
     remainder_R3 = Fraction(ev["remainder_R3"]["exact"])
     R_threshold = values["evaluated_coefficients"]["R_threshold"]["value"]
 
-    # Conditional product-space inverse bound. This must later be replaced by
-    # the actual P4.2 uniform fibrewise Hodge inverse theorem.
-    K_AR_prod = Fraction(9, 20)
+    # Conditional product-space inverse bound. This is now read from the public
+    # product-space contract, but the contract still marks the uniform inverse
+    # theorem as an open obligation.
+    K_AR_prod = Fraction(product_space["candidate_product_inverse_bound"]["K_AR_prod"]["exact"])
+    obligations = product_space["theorem_obligations"]
 
     R_AR = Fraction(4000, 1)
     eps_AR = Fraction(1, 4000)
@@ -63,15 +67,19 @@ def main() -> None:
         "status": "conditional_majorant_candidate_not_AR_theorem",
         "depends_on": [
             VALUES_PATH,
+            PRODUCT_SPACE_PATH,
         ],
         "conditional_assumptions": {
             "K_AR_prod": {
                 "exact": str(K_AR_prod),
                 "value": f(K_AR_prod),
-                "meaning": "Hypothetical product-space norm of the fibrewise Hodge reconstruction inverse. Not yet proved in P4.2.",
+                "meaning": "Structural product-max bound from phase4_ar_product_space_contract. Uniformity is still not proved.",
             },
-            "product_space_defined": False,
-            "uniform_fibrewise_inverse_proved": False,
+            "product_space_defined": obligations["product_space_defined"],
+            "uniform_fibrewise_inverse_proved": obligations["uniform_fibrewise_inverse_proved"],
+            "commutators_bounded_in_product_norm": obligations["commutators_bounded_in_product_norm"],
+            "reduced_projection_global_identity_proved": obligations["reduced_projection_global_identity_proved"],
+            "closedness_preservation_proved": obligations["closedness_preservation_proved"],
         },
         "inputs": {
             "source_P1": rec(source_P1, "P4.1 checked first-order source"),

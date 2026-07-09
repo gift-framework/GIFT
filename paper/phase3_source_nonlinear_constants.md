@@ -9,7 +9,7 @@ Partial certification only, with the original placeholder layer superseded at
 - constants whose *smallness consequence* is numerically clear,
 - constants whose *analytic derivation* is still missing at theorem level.
 
-It is the bridge between [phase3_nonlinear_closure.md](/home/brieuc/gift-framework/GIFT/paper/phase3_nonlinear_closure.md) and a future fully rigorous discharge of Proposition 3.1ter.
+It is the bridge between [phase3_nonlinear_closure.md](phase3_nonlinear_closure.md) and a future fully rigorous discharge of Proposition 3.1ter.
 
 Latest sharp-current values from `private`:
 
@@ -35,9 +35,9 @@ At present the branch already has an excellent *numerical margin* at `D0`, but t
 
 The current source for `(G-quant)` is:
 
-- [axis2_hypothesis_G_discharge_2026_07_01.py](/home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py),
-- [axis2_hypothesis_G_discharge_2026_07_01.json](/home/brieuc/gift-framework/private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json),
-- encoded locally in [phase3_G_closure_status.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_G_closure_status.json).
+- [axis2_hypothesis_G_discharge_2026_07_01.py](../../private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py),
+- [axis2_hypothesis_G_discharge_2026_07_01.json](../../private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json),
+- encoded locally in [phase3_G_closure_status.json](../certificates/phase3_G_closure_status.json).
 
 Using the original placeholders:
 
@@ -204,8 +204,8 @@ At `D0`, the affine mismatch term should vanish exactly.
 
 This decomposition is now frozen in:
 
-- [phase3_source_residual_certificate.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_residual_certificate.md),
-- [phase3_source_residual_ledger.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_source_residual_ledger.json).
+- [phase3_source_residual_certificate.md](phase3_source_residual_certificate.md),
+- [phase3_source_residual_ledger.json](../certificates/phase3_source_residual_ledger.json).
 
 ### S2. Weighted nonlinear estimate
 
@@ -217,13 +217,13 @@ for
 on the chosen Banach ball.
 
 This estimate must be phrased in the actual norms of
-[phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md), not in a schematic unweighted norm.
+[phase3_spaces.md](phase3_spaces.md), not in a schematic unweighted norm.
 
 ## Relation to the current certificate
 
 The machine-readable status freeze for this file is:
 
-- [phase3_G_closure_status.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_G_closure_status.json).
+- [phase3_G_closure_status.json](../certificates/phase3_G_closure_status.json).
 
 That certificate used to be deliberately conservative and predated the private
 P1/C_nl updates. It has now been moved to the sharp-current constants

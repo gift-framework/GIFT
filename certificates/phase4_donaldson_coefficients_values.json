@@ -279,7 +279,8 @@
     "R_threshold": {
       "value": 3664.0659853300026,
       "status": "floating_display_from_exact_denominator",
-      "provenance": "(4 * G_aug^2 * C_nl * remainder_R3)^(1/3)"
+      "provenance": "(4 * G_aug^2 * C_nl * remainder_R3)^(1/3)",
+      "semantics": "minimum admissible R for the eps^3 tail contraction; 4 * G_aug^2 * C_nl * remainder_R3 * eps^3 < 1 holds for R >= R_threshold"
     }
   },
   "comparison_to_old_power_counting": {
@@ -288,7 +289,8 @@
     "R_threshold_old": 2730.613114210807,
     "R_threshold_new": 3664.0659853300026,
     "R_threshold_ratio_new_over_old": 1.3418473551823467,
-    "note": "The theorem-grade threshold is larger than the old public candidate; the old candidate was not a theorem input."
+    "R_pc_check_public_candidate": 4019,
+    "note": "R_threshold is a lower admissibility threshold in R, not a headroom margin. The 2730 comparison is against an old public candidate that was not a theorem input; the like-for-like public power-counting check is R_pc_check_public_candidate = 4019."
   },
   "acceptance_boundary": [
     "This closes Phase 4.1 coefficient values at D0.",

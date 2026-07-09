@@ -8,7 +8,7 @@ This note fixes the standard real basis of the lower-root `sigma`-odd trace bund
 
 The machine-readable freeze is:
 
-- [phase3_mu_minus_half_basis.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_basis.json).
+- [phase3_mu_minus_half_basis.json](../certificates/phase3_mu_minus_half_basis.json).
 
 ## Per-component basis
 

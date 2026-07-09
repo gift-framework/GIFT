@@ -6,7 +6,7 @@ Theorem specification only. This file does not claim that the Fredholm theorem o
 
 ## Purpose
 
-This file fixes the exact linear theorem needed after [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md). It isolates:
+This file fixes the exact linear theorem needed after [phase3_spaces.md](phase3_spaces.md). It isolates:
 
 - the operator,
 - the Fredholm window,
@@ -20,7 +20,7 @@ Fix:
 
 - `alpha in (0,1)`,
 - `beta in (1/2, 3/2)`,
-- the global spaces `X_beta^{(0)}`, `X_beta^{ext}`, `Y_{beta-2}` from [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md).
+- the global spaces `X_beta^{(0)}`, `X_beta^{ext}`, `Y_{beta-2}` from [phase3_spaces.md](phase3_spaces.md).
 
 Let
 
@@ -110,10 +110,10 @@ The branch already has the following conservative values:
 
 These come from:
 
-- [axis2_certificate_sigma_min_NK_2026_06_30.json](/home/brieuc/gift-framework/private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json),
-- [axis2_DtN_interface_2026_06_30.json](/home/brieuc/gift-framework/private/canonical/results/axis2_DtN_interface_2026_06_30.json),
-- [axis2_E_link_interval_2026_06_30.json](/home/brieuc/gift-framework/private/canonical/results/axis2_E_link_interval_2026_06_30.json),
-- [axis2_E_geom_interval_2026_06_30.json](/home/brieuc/gift-framework/private/canonical/results/axis2_E_geom_interval_2026_06_30.json).
+- [axis2_certificate_sigma_min_NK_2026_06_30.json](../../private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json),
+- [axis2_DtN_interface_2026_06_30.json](../../private/canonical/results/axis2_DtN_interface_2026_06_30.json),
+- [axis2_E_link_interval_2026_06_30.json](../../private/canonical/results/axis2_E_link_interval_2026_06_30.json),
+- [axis2_E_geom_interval_2026_06_30.json](../../private/canonical/results/axis2_E_geom_interval_2026_06_30.json).
 
 ## Theorem L3: DtN positivity and non-constant mode absorption
 
@@ -206,7 +206,7 @@ such that
 - `A_red = Pi_obs o J_h o iota_ext |_{R^{2N}}` is invertible,
 - `J_h o G_aug = Id` on `Y_{beta-2}`,
 - `||G_aug|| <= C_aug(D0)`,
-- `C_aug(D0)` is expressed explicitly in terms of the frozen constants from [datum_D0.json](/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json).
+- `C_aug(D0)` is expressed explicitly in terms of the frozen constants from [datum_D0.json](../certificates/datum_D0.json).
 
 ## Interaction with later phases
 

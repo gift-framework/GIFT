@@ -19,6 +19,7 @@ TYPE_GATE_PATH = "certificates/phase4_bigraded_type_check.json"
 VALUES_PATH = "certificates/phase4_donaldson_coefficients_values.json"
 OUT_PATH = "certificates/phase4_donaldson_coefficients_check.json"
 STATUS = "candidate_not_theorem"
+INTERVAL_DECIMAL_PLACES = 18
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -50,6 +51,60 @@ def frac(record_obj: dict[str, Any], key: str) -> Fraction:
     return Fraction(record_obj[key]["exact"])
 
 
+def floor_scaled(value: Fraction, scale: int) -> int:
+    return value.numerator * scale // value.denominator
+
+
+def ceil_scaled(value: Fraction, scale: int) -> int:
+    return -((-value.numerator * scale) // value.denominator)
+
+
+def scaled_decimal(numer: int, places: int) -> str:
+    sign = "-" if numer < 0 else ""
+    numer = abs(numer)
+    scale = 10**places
+    whole, frac_part = divmod(numer, scale)
+    return f"{sign}{whole}.{frac_part:0{places}d}"
+
+
+def outward_decimal_interval(value: Fraction, places: int = INTERVAL_DECIMAL_PLACES) -> dict[str, Any]:
+    scale = 10**places
+    lower_int = floor_scaled(value, scale)
+    upper_int = ceil_scaled(value, scale)
+    return {
+        "lower": scaled_decimal(lower_int, places),
+        "upper": scaled_decimal(upper_int, places),
+        "decimal_places": places,
+        "exact": str(value),
+    }
+
+
+def cube_root_outward_interval(value: Fraction, places: int = 12) -> dict[str, Any]:
+    """Return decimal interval [n/s, (n+1)/s] bracketing value^(1/3)."""
+    if value < 0:
+        raise ValueError("cube_root_outward_interval expects a nonnegative value")
+    scale = 10**places
+    lo = 0
+    hi = 1
+    # Find hi with (hi / scale)^3 > value.
+    while Fraction(hi**3, scale**3) <= value:
+        hi *= 2
+    while hi - lo > 1:
+        mid = (lo + hi) // 2
+        if Fraction(mid**3, scale**3) <= value:
+            lo = mid
+        else:
+            hi = mid
+    return {
+        "lower": scaled_decimal(lo, places),
+        "upper": scaled_decimal(hi, places),
+        "decimal_places": places,
+        "lower_cube_le_value": str(Fraction(lo**3, scale**3)),
+        "upper_cube_gt_value": str(Fraction(hi**3, scale**3)),
+        "radicand_exact": str(value),
+    }
+
+
 def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     coeff = read_json(repo_root / COEFF_PATH)
@@ -57,6 +112,7 @@ def main() -> None:
     values_path = repo_root / VALUES_PATH
     values = read_json(values_path) if values_path.exists() else None
     checks: list[dict[str, Any]] = []
+    outward_interval_recomputation: dict[str, Any] | None = None
 
     record(checks, "artifact_name", coeff.get("artifact") == "phase4_donaldson_coefficients", "artifact id matches")
     record(checks, "status_candidate", coeff.get("status") == STATUS, "top-level status remains candidate")
@@ -398,15 +454,73 @@ def main() -> None:
                 abs(actual_R - expected_R) <= 1e-9,
                 "R_threshold float display recomputes from exact denominator",
             )
+            interval_constants = {
+                name: outward_decimal_interval(frac(constants, name))
+                for name in sorted(required_constants)
+                if name in constants and "exact" in constants[name]
+            }
+            interval_evaluated = {
+                name: outward_decimal_interval(value)
+                for name, value in expected.items()
+            }
+            r_threshold_interval = cube_root_outward_interval(tail_denominator, places=12)
+            outward_interval_recomputation = {
+                "status": "outward_rounded_interval_recomputation",
+                "method": (
+                    "Independent exact Fraction recomputation of all Stage B v1 "
+                    "formulas, followed by decimal floor/ceiling serialization. "
+                    "R_threshold is bracketed by integer bisection on the cube."
+                ),
+                "decimal_places": INTERVAL_DECIMAL_PLACES,
+                "constants": interval_constants,
+                "evaluated_coefficients": interval_evaluated,
+                "R_threshold": r_threshold_interval,
+                "rounding_protocol": {
+                    "rational_values": "lower=floor(q*10^p)/10^p, upper=ceil(q*10^p)/10^p",
+                    "R_threshold": "find integers n,n+1 with (n/10^p)^3 <= D < ((n+1)/10^p)^3",
+                    "float_inputs": "none used for interval acceptance",
+                },
+            }
+            for name, expected_value in expected.items():
+                interval = interval_evaluated[name]
+                lower = Fraction(interval["lower"])
+                upper = Fraction(interval["upper"])
+                record(
+                    checks,
+                    f"interval_{name}_contains_exact",
+                    lower <= expected_value <= upper,
+                    f"{name} outward decimal interval contains exact rational value",
+                )
+                record(
+                    checks,
+                    f"interval_{name}_outward_width_small",
+                    upper - lower <= Fraction(1, 10 ** (INTERVAL_DECIMAL_PLACES - 1)),
+                    f"{name} interval width is consistent with {INTERVAL_DECIMAL_PLACES}-place outward rounding",
+                )
+            r_lower = Fraction(r_threshold_interval["lower"])
+            r_upper = Fraction(r_threshold_interval["upper"])
+            record(
+                checks,
+                "interval_R_threshold_brackets_cube_root",
+                r_lower**3 <= tail_denominator < r_upper**3,
+                "R_threshold interval cubes bracket the exact tail denominator",
+            )
+            record(
+                checks,
+                "interval_R_threshold_width_small",
+                r_upper - r_lower == Fraction(1, 10**12),
+                "R_threshold interval width is exactly one unit at the serialized scale",
+            )
 
     all_pass = all(check["pass"] for check in checks)
     payload = {
         "artifact": "phase4_donaldson_coefficients_check",
         "generated_by": "scripts/phase4_donaldson_coefficients_checker.py",
-        "scope": "Independent structural checker for Stage B v1 symbolic Donaldson coefficient formulas",
-        "status": "checker_for_symbolic_formulas_not_a_numerical_certificate",
+        "scope": "Independent structural, arithmetic, and outward-interval checker for Stage B v1 Donaldson coefficient formulas",
+        "status": "checker_with_outward_interval_recomputation_for_D0_coefficients",
         "checked_artifact": COEFF_PATH,
         "checks": checks,
+        "outward_interval_recomputation": outward_interval_recomputation,
         "summary": {
             "checks_total": len(checks),
             "checks_passed": sum(1 for check in checks if check["pass"]),

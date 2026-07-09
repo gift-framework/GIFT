@@ -10,16 +10,16 @@ global adiabatic reconstruction convergence theorem.
 
 Producer:
 
-- [phase4_donaldson_coefficients_values.py](/home/brieuc/gift-framework/GIFT/scripts/phase4_donaldson_coefficients_values.py)
+- [phase4_donaldson_coefficients_values.py](../scripts/phase4_donaldson_coefficients_values.py)
 
 Machine output:
 
-- [phase4_donaldson_coefficients_values.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_values.json)
+- [phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json)
 
 Checker:
 
-- [phase4_donaldson_coefficients_checker.py](/home/brieuc/gift-framework/GIFT/scripts/phase4_donaldson_coefficients_checker.py)
-- [phase4_donaldson_coefficients_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_check.json)
+- [phase4_donaldson_coefficients_checker.py](../scripts/phase4_donaldson_coefficients_checker.py)
+- [phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json)
 
 ## Values
 
@@ -35,6 +35,15 @@ The checked D0 values are:
 - `remainder_R3 = 137707931700815927923/10000000000000`;
 - `R_threshold = 3664.0659853300026`.
 
+`R_threshold` is a lower admissibility threshold: the certified tail condition
+holds for `R >= R_threshold`. It is not a headroom margin over a smaller edge
+threshold.
+
+The authoritative interval packaging is in
+[phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json).
+For `R_threshold`, the checker records the outward-rounded bracket
+`[3664.065985330004, 3664.065985330005]`.
+
 The checker recomputes the exact rational values from:
 
 - `K_H_K3 = 9/20`;
@@ -47,7 +56,7 @@ The checker recomputes the exact rational values from:
 
 Current checker result:
 
-`146/146` checks pass.
+`172/172` checks pass.
 
 ## Boundary
 

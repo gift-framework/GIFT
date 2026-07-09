@@ -1,14 +1,13 @@
 {
   "certificate_id": "datum_D0",
-  "version_date": "2026-07-01",
+  "version_date": "2026-07-09",
   "status": "partial_certified",
   "scope": "rank-one 77-unlink datum for the branched adiabatic K3-fibration programme",
   "repo_context": {
     "gift_repo_branch": "codex/gift-work",
-        "private_repo_commit": "b46e3cd6c57757cd466e3001092fed7ef4d7d456",
+    "private_repo_commit": "0db0b05d24d7d18a911d56a1e552d9ab3aecd8ac",
     "core_repo_commit": "667c8b9d45850a0e4cdb800895cffa44115dfd62",
-    "private_repo_dirty_worktree": true,
-    "note": "The private worktree is dirty, so each source file is pinned by sha256 in addition to the repo commit."
+    "note": "Stage D repin against the pushed private 2026-07-09 read window; private dirty-worktree flag intentionally dropped."
   },
   "field_schema": {
       "status_values": [
@@ -134,17 +133,17 @@
       "status": "certified_upper_bound",
       "value": [
         0.0,
-        1.0
+        0.45
       ],
       "units": "operator norm of fibrewise Hodge Green operator on d_f-exact 2-forms",
-      "derived_bound": 0.8912676813146139,
-      "source_script": "private/canonical/scripts/axis2_hypothesis_AR_discharge_2026_07_01.py",
-      "source_script_sha256": "e253d8f301bf1c66fff7c6b899363e0201e74a9d8392d0453c6cef517bd59b1f",
-      "source_result": "private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json",
-      "source_result_sha256": "c4ad698e564a87052c5edeb9bf91147f97854e4eab370e72cc0ff662aba10124",
-      "precision_or_mode": "derived from Cheeger-Yau lower bound on lambda_1 and then rounded up conservatively to 1",
-      "enclosure_method": "Bochner-Weitzenboeck + Cheeger-Yau spectral lower bound",
-      "verification_command": "sed -n '1,120p' private/canonical/results/axis2_hypothesis_AR_discharge_2026_07_01.json"
+      "exact_upper_bound": "9/20",
+      "source_script": "private/canonical/scripts/axis2_K3_hodge_gap_2026_07_02.py",
+      "source_script_sha256": "tracked_private_axis2_K3_hodge_gap_2026_07_02",
+      "source_result": "private/canonical/results/axis2_K3_hodge_gap_2026_07_02.json",
+      "source_result_sha256": "tracked_private_axis2_K3_hodge_gap_2026_07_02",
+      "precision_or_mode": "exact rational upper bound serialized in phase4_donaldson_coefficients_values.json",
+      "enclosure_method": "H1 reduction plus Zhong-Yang spectral gap bound, carried into the Phase 4.1 coefficient closure",
+      "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
     },
     "norm_F_H": {
       "status": "certified_upper_bound",
@@ -207,6 +206,96 @@
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation and K=2 Taylor remainder checked independently",
             "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
         },
+        "DP1_norm": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                3.1185
+            ],
+            "note": "Phase 4.1 theorem-grade derivative bound at D0: DP1_norm = 6237/2000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=6237/2000",
+            "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "DP2_norm": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                8.3981205
+            ],
+            "note": "Phase 4.1 theorem-grade derivative bound at D0: DP2_norm = 16796241/2000000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=16796241/2000000",
+            "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "D2P1_norm": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                3.1185
+            ],
+            "note": "Phase 4.1 theorem-grade second derivative bound at D0: D2P1_norm = 6237/2000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=6237/2000",
+            "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "D3m_norm": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                0.4444444444444444
+            ],
+            "note": "Phase 4.1 theorem-grade third-variation bound at D0: D3m_norm = 4/9.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=4/9",
+            "enclosure_method": "Simons-type third variation plus collinearity and type-IV bound as carried by Phase 4.1",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "raw_P3_scale": {
+            "status": "certified_upper_bound",
+            "value": [
+                0.0,
+                3.24648475975
+            ],
+            "note": "Phase 4.1 theorem-grade raw third-order source scale at D0: raw_P3_scale = 12985939039/4000000000.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "exact rational arithmetic, serialized exact=12985939039/4000000000",
+            "enclosure_method": "Donaldson E1-E5 third-order formula evaluation checked independently",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
+        "R_threshold": {
+            "status": "certified_lower_bound",
+            "value": [
+                3664.0659853300026,
+                null
+            ],
+            "note": "Minimum admissible R for the eps^3 tail contraction: the condition 4 * G_aug^2 * C_nl * remainder_R3 * eps^3 < 1 holds for R >= R_threshold, not for R below it.",
+            "source_script": "GIFT/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script_sha256": "pending_git_commit_hash",
+            "source_result": "GIFT/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result_sha256": "pending_git_commit_hash",
+            "precision_or_mode": "floating display recomputed by checker from exact rational tail denominator",
+            "enclosure_method": "R_threshold = (4 * G_aug^2 * C_nl * remainder_R3)^(1/3)",
+            "verification_command": "python3 GIFT/scripts/phase4_donaldson_coefficients_values.py && python3 GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+        },
     "D2m": {
       "status": "certified_upper_bound",
       "value": [
@@ -222,6 +311,95 @@
       "precision_or_mode": "exact decimal upper bound in JSON",
       "enclosure_method": "working nonlinear norm bound in G-quant",
       "verification_command": "sed -n '1,160p' private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json"
+    },
+    "L1.6_K_Sch": {
+      "status": "theorem_grade_via_recollement",
+      "closure_date": "2026-07-05",
+      "K_Sch_bound": {
+        "exact": "16/3",
+        "value": 5.333333333333333
+      },
+      "composition": {
+        "formula": "(4/3) * 3 * (4/3)",
+        "normal_multiplier": "4/3",
+        "holder_cutoff_overhead": "3",
+        "q_coeff_overhead": "4/3"
+      },
+      "q_coeff_headline": {
+        "exact": "6304065500000000000000000000003/37500000000000000000000000000000",
+        "value": 0.16810841333333335,
+        "kappa_E": "51/50",
+        "slack_to_1_4": 0.08189158666666667
+      },
+      "q_coeff_sharp": {
+        "exact": "2996035749500000000000000000002187/27337500000000000000000000000000000",
+        "value": 0.10959435754915409,
+        "kappa_E": "406/675",
+        "slack_to_1_4": 0.1404056424508459
+      },
+      "G_aug_crude_headline": {
+        "value": 25.945,
+        "target": 36.6,
+        "passes": true
+      },
+      "G_aug_crude_sharp": {
+        "value": 24.78,
+        "target": 36.6,
+        "passes": true
+      },
+      "gates": "M-L1.p P0-P5 all pass; raw 77-collar mpmath.iv intervals from M-L1.n; independent theorem checker M-L1.o",
+      "source_result": "private/canonical/results/axis2_L1p_KSch_theorem_recollement_2026_07_05.json",
+      "provenance": "axis2_L1n_p_qcoeff_theorem_closure_2026_07_05",
+      "verification_command": "python3 private/canonical/scripts/axis2_L1p_KSch_theorem_recollement_2026_07_05.py"
+    },
+    "L2_AR_assembly_theorem": {
+      "status": "certified",
+      "closure_date": "2026-07-05",
+      "product_space": "X_AR = X_omega x X_lambda x X_mu x X_Theta",
+      "norm": "product-max",
+      "K_AR_prod": {
+        "exact": "2079/2000",
+        "value": 1.0395,
+        "meaning": "product-max companion normalization from K_H_K3 * K_F"
+      },
+      "aggregate_Lipschitz_bound": {
+        "exact": "26236977/3200000000",
+        "value": 0.0081990553125
+      },
+      "slot_budgets": {
+        "q_AR": {
+          "exact": "207/200000",
+          "value": 0.001035
+        },
+        "q_comm": {
+          "exact": "222453/160000000",
+          "value": 0.00139033125
+        },
+        "q_proj": {
+          "exact": "65133/80000000",
+          "value": 0.0008141625
+        },
+        "q_hodge": {
+          "exact": "1253637/3200000000",
+          "value": 0.0003917615625
+        },
+        "q_gauge": {
+          "exact": "22839/5000000",
+          "value": 0.0045678
+        }
+      },
+      "gates": {
+        "A0_slots_loaded_all_pass": true,
+        "A1_each_slot_below_1_16": true,
+        "A2_aggregate": true,
+        "A3_below_0_251_candidate_headline": true,
+        "A4_below_1_2_Banach": true,
+        "A5_below_1_Neumann": true
+      },
+      "theorem": "Lip(T_AR) <= q_total < 1/2, hence Banach fixed-point gives a unique reconstruction in X_AR under product-max norm.",
+      "source_result": "private/canonical/results/axis2_L2_assembly_theorem_2026_07_05.json",
+      "provenance": "axis2_L2_assembly_theorem_2026_07_05",
+      "verification_command": "python3 private/canonical/scripts/axis2_L2_assembly_theorem_2026_07_05.py"
     }
   },
   "supporting_artifacts": {

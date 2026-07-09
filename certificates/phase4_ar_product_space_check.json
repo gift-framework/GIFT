@@ -1,0 +1,195 @@
+{
+  "artifact": "phase4_ar_product_space_check",
+  "generated_by": "scripts/phase4_ar_product_space_checker.py",
+  "scope": "Independent checker for the Phase 4.2 product-space contract",
+  "status": "checker_for_definition_not_AR_theorem",
+  "checked_artifact": "certificates/phase4_ar_product_space_contract.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "status_keeps_obligations_visible",
+      "pass": true,
+      "detail": "contract status is definition with obligations"
+    },
+    {
+      "name": "type_gate_passes",
+      "pass": true,
+      "detail": "bigraded type gate passes"
+    },
+    {
+      "name": "values_pass",
+      "pass": true,
+      "detail": "P4.1 values artifact passes"
+    },
+    {
+      "name": "depends_on_values",
+      "pass": true,
+      "detail": "contract depends on values artifact"
+    },
+    {
+      "name": "product_space_name",
+      "pass": true,
+      "detail": "product space is named A_beta"
+    },
+    {
+      "name": "components_present",
+      "pass": true,
+      "detail": "all four components are present"
+    },
+    {
+      "name": "norm_no_hidden_O1",
+      "pass": true,
+      "detail": "product norm explicitly forbids hidden O(1) constants"
+    },
+    {
+      "name": "omega_bidegree",
+      "pass": true,
+      "detail": "omega bidegree matches"
+    },
+    {
+      "name": "omega_has_gauge",
+      "pass": true,
+      "detail": "omega has a gauge field"
+    },
+    {
+      "name": "omega_has_norm",
+      "pass": true,
+      "detail": "omega has a norm field"
+    },
+    {
+      "name": "lambda_bidegree",
+      "pass": true,
+      "detail": "lambda bidegree matches"
+    },
+    {
+      "name": "lambda_has_gauge",
+      "pass": true,
+      "detail": "lambda has a gauge field"
+    },
+    {
+      "name": "lambda_has_norm",
+      "pass": true,
+      "detail": "lambda has a norm field"
+    },
+    {
+      "name": "mu_bidegree",
+      "pass": true,
+      "detail": "mu bidegree matches"
+    },
+    {
+      "name": "mu_has_gauge",
+      "pass": true,
+      "detail": "mu has a gauge field"
+    },
+    {
+      "name": "mu_has_norm",
+      "pass": true,
+      "detail": "mu has a norm field"
+    },
+    {
+      "name": "Theta_bidegree",
+      "pass": true,
+      "detail": "Theta bidegree matches"
+    },
+    {
+      "name": "Theta_has_gauge",
+      "pass": true,
+      "detail": "Theta has a gauge field"
+    },
+    {
+      "name": "Theta_has_norm",
+      "pass": true,
+      "detail": "Theta has a norm field"
+    },
+    {
+      "name": "F_H_degree_rule",
+      "pass": true,
+      "detail": "F_H has degree shift (2,-1)"
+    },
+    {
+      "name": "G_f_degree_rule",
+      "pass": true,
+      "detail": "G_f has degree shift (0,-1)"
+    },
+    {
+      "name": "Pi_reduced_bound_one",
+      "pass": true,
+      "detail": "Pi_reduced bound is one"
+    },
+    {
+      "name": "K_H_K3_matches_values",
+      "pass": true,
+      "detail": "G_f bound matches P4.1 values"
+    },
+    {
+      "name": "K_F_matches_values",
+      "pass": true,
+      "detail": "F_H bound matches P4.1 values"
+    },
+    {
+      "name": "lambda_block_degree",
+      "pass": true,
+      "detail": "lambda block degrees compose as omega -> F_H omega -> G_f F_H omega"
+    },
+    {
+      "name": "theta_block_degree",
+      "pass": true,
+      "detail": "Theta block degrees compose as mu -> F_H mu -> G_f F_H mu"
+    },
+    {
+      "name": "reduced_block_degree",
+      "pass": true,
+      "detail": "reduced projection stays in M_eps bidegree"
+    },
+    {
+      "name": "K_AR_prod_candidate_matches_block",
+      "pass": true,
+      "detail": "K_AR_prod candidate equals K_H_K3*K_F"
+    },
+    {
+      "name": "K_AR_prod_structural_status",
+      "pass": true,
+      "detail": "K_AR_prod is structural product-max bound"
+    },
+    {
+      "name": "product_space_defined",
+      "pass": true,
+      "detail": "product space is marked defined"
+    },
+    {
+      "name": "uniform_fibrewise_inverse_proved_open",
+      "pass": true,
+      "detail": "uniform_fibrewise_inverse_proved remains open"
+    },
+    {
+      "name": "commutators_bounded_in_product_norm_open",
+      "pass": true,
+      "detail": "commutators_bounded_in_product_norm remains open"
+    },
+    {
+      "name": "reduced_projection_global_identity_proved_open",
+      "pass": true,
+      "detail": "reduced_projection_global_identity_proved remains open"
+    },
+    {
+      "name": "closedness_preservation_proved_open",
+      "pass": true,
+      "detail": "closedness_preservation_proved remains open"
+    },
+    {
+      "name": "boundary_prevents_AR_discharge",
+      "pass": true,
+      "detail": "acceptance boundary prevents AR promotion"
+    }
+  ],
+  "summary": {
+    "checks_total": 36,
+    "checks_passed": 36,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

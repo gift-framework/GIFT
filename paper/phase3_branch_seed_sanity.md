@@ -8,7 +8,7 @@ This note records a negative result that is useful for scope control: the lower-
 
 The machine-readable freeze is:
 
-- [phase3_branch_seed_sanity.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_branch_seed_sanity.json).
+- [phase3_branch_seed_sanity.json](../certificates/phase3_branch_seed_sanity.json).
 
 ## Scalar flat probe
 

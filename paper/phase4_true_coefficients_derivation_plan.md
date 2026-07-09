@@ -7,8 +7,8 @@ Donaldson-operator coefficients.
 
 Current candidate artifact:
 
-- [phase4_adiabatic_operator_form.md](/home/brieuc/gift-framework/GIFT/paper/phase4_adiabatic_operator_form.md)
-- [phase4_adiabatic_sources_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_adiabatic_sources_candidate.json)
+- [phase4_adiabatic_operator_form.md](phase4_adiabatic_operator_form.md)
+- [phase4_adiabatic_sources_candidate.json](../certificates/phase4_adiabatic_sources_candidate.json)
 
 Target replacement artifacts:
 
@@ -168,27 +168,32 @@ Acceptance:
 Stage C v1 status:
 
 - the checker exists and independently verifies the symbolic Stage B formulas;
-- current result is `146/146` structural and arithmetic checks passing;
-- interval packaging for broader AR convergence remains open, but P4.1 D0
-  coefficient values are evaluated and checked.
+- current result is `172/172` structural, arithmetic, and outward-interval
+  checks passing;
+- interval packaging for the P4.1 D0 scalar coefficient layer is present.
+  Broader AR convergence remains open.
 
 ## Stage D: replace datum candidates
 
 After Stages B-C pass, update:
 
-- [datum_D0.json](/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json)
+- [datum_D0.json](../certificates/datum_D0.json)
 
 Fields to update:
 
 - `source_P1`;
 - `source_P2`;
 - `remainder_R3`.
+- derivative and tail-control fields `DP1_norm`, `DP2_norm`, `D2P1_norm`,
+  `D3m_norm`, `raw_P3_scale`, and `R_threshold`.
 
 Allowed statuses:
 
 - `candidate_not_theorem` if still formula-level only;
 - `certified_upper_bound` only after outward-rounded intervals and independent
   checker exist.
+
+Stage D status: done for the P4.1 D0 scalar coefficient layer.
 
 ## Stage E: promotion gate
 
@@ -202,6 +207,10 @@ The P4.1 coefficients are promotable to Level Q only when:
 5. the theorem ledger still marks P4.3 convergence as open.
 
 This closes P4.1, not P4.3.
+
+Stage E status: done for the P4.1 D0 scalar coefficient layer. The checker
+serializes outward-rounded intervals in
+`phase4_donaldson_coefficients_check.json`.
 
 ## Current Next Step
 

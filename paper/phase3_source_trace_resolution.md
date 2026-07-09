@@ -5,7 +5,7 @@
 Convention resolved for repository use.
 
 This note resolves the local notation mismatch identified in
-[phase3_source_trace_convention.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_trace_convention.md)
+[phase3_source_trace_convention.md](phase3_source_trace_convention.md)
 by separating three different objects that had been blurred together.
 
 ## Canonical distinction
@@ -95,5 +95,5 @@ This naming rule should be followed in all future Phase 3 notes and certificates
 
 The symbolic check validating this distinction is now frozen in:
 
-- [phase3_profile_to_trace.md](/home/brieuc/gift-framework/GIFT/paper/phase3_profile_to_trace.md),
-- [phase3_profile_to_trace_proto.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_profile_to_trace_proto.json).
+- [phase3_profile_to_trace.md](phase3_profile_to_trace.md),
+- [phase3_profile_to_trace_proto.json](../certificates/phase3_profile_to_trace_proto.json).

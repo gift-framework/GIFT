@@ -112,6 +112,11 @@ def main() -> None:
             "value": R_threshold,
             "status": "floating_display_from_exact_denominator",
             "provenance": "(4 * G_aug^2 * C_nl * remainder_R3)^(1/3)",
+            "semantics": (
+                "minimum admissible R for the eps^3 tail contraction; "
+                "4 * G_aug^2 * C_nl * remainder_R3 * eps^3 < 1 holds for "
+                "R >= R_threshold"
+            ),
         },
     }
 
@@ -152,7 +157,13 @@ def main() -> None:
             "R_threshold_old": 2730.613114210807,
             "R_threshold_new": R_threshold,
             "R_threshold_ratio_new_over_old": R_threshold / 2730.613114210807,
-            "note": "The theorem-grade threshold is larger than the old public candidate; the old candidate was not a theorem input.",
+            "R_pc_check_public_candidate": 4019,
+            "note": (
+                "R_threshold is a lower admissibility threshold in R, not a "
+                "headroom margin. The 2730 comparison is against an old public "
+                "candidate that was not a theorem input; the like-for-like "
+                "public power-counting check is R_pc_check_public_candidate = 4019."
+            ),
         },
         "acceptance_boundary": [
             "This closes Phase 4.1 coefficient values at D0.",

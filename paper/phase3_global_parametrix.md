@@ -8,8 +8,8 @@ Parametrix specification only. This file does not yet claim a complete proof tha
 
 After:
 
-- [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md),
-- [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md),
+- [phase3_spaces.md](phase3_spaces.md),
+- [phase3_linear_theorem.md](phase3_linear_theorem.md),
 
 the next missing step is to define the actual global parametrix
 

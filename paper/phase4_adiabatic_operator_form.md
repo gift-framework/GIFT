@@ -4,15 +4,15 @@
 
 Legacy candidate P4.1 artifact only. Not a convergent reconstruction theorem.
 The power-counting bounds in this file are superseded by
-[phase4_donaldson_coefficients_values.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_values.json).
+[phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json).
 
 Machine artifact:
 
-- [phase4_adiabatic_sources_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_adiabatic_sources_candidate.json)
+- [phase4_adiabatic_sources_candidate.json](../certificates/phase4_adiabatic_sources_candidate.json)
 
 Producer:
 
-- [phase4_adiabatic_sources_candidate.py](/home/brieuc/gift-framework/GIFT/scripts/phase4_adiabatic_sources_candidate.py)
+- [phase4_adiabatic_sources_candidate.py](../scripts/phase4_adiabatic_sources_candidate.py)
 
 This file freezes the public Phase 4.1 operator shape and serializes first
 candidate norms for `source_P1`, `source_P2`, and `remainder_R3`.

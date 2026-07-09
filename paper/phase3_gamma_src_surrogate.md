@@ -1,20 +1,20 @@
-# Phase 3.S1.p: local quadratic surrogate for `gamma_src`
+# Phase 3.S1.p: reconciled `gamma_src` surrogate record
 
 ## Status
 
-Explicit surrogate only. Superseded for the fixed-discriminant Lemma 5.9
-source channel by the private 2026-07-02 theorem-grade extraction:
+Superseded record. The old quadratic surrogate is no longer an active source
+coefficient for the fixed-discriminant Lemma 5.9 sigma-odd channel.
 
-- the quadratic `gamma_src,sur = 3/8` lives only at the modeling/surrogate
-  layer recorded here;
-- the sharp-current fixed-Sigma obstruction-channel coefficient is cubic,
+- the sharp-current fixed-Sigma sigma-odd obstruction-channel coefficient is
+  cubic,
   `C_src = 27/16`;
-- the parity reconciliation is recorded in
+- the old quadratic `gamma_src,sur = 3/8` lives only as a legacy comparison for
+  the lower-root normal form or for diagnosing a regular sigma-even sector;
+- the parity reconciliation is recorded by
   `private/canonical/notes/axis2_codex_reconciliation_2026_07_02.md`.
 
-This file does not prove the true quadratic tensor coefficient in Lemma 5.9.
-It records the smallest local surrogate that outputs a concrete candidate
-`gamma_src` while exposing exactly one additional modeling assumption.
+This file must not be used to cite `3/8` as the fixed-Sigma sigma-odd source
+coefficient.
 
 ## Purpose
 
@@ -25,12 +25,13 @@ At this point, the branch has:
 - the fixed lower-root basis and constant-mode obstruction layer,
 - the first real-axis ansatz for `kappa_src`.
 
-What is still missing is a theorem-grade extraction of the true nonlinear source
-coefficient. The present surrogate fills only that gap, and only conditionally.
+The theorem-grade extraction now available for the fixed-Sigma sigma-odd source
+coefficient is `C_src = 27/16`. What remains missing is the full global
+Phase-3 Banach-space parametrix and maximal-section theorem.
 
 ## Surrogate assumption
 
-Introduce the single modeling assumption:
+The old file introduced the modeling assumption:
 
 `(S_qsur)`
 
@@ -50,72 +51,52 @@ with
 
 and zero leading `e_i^I` component.
 
-## Why this is the minimal surrogate
+Stage D supersedes this as the active source model: the quadratic-in-`c0`
+contribution belongs to the `alpha_1`-perp regular sigma-even sector, while the
+fixed-Sigma sigma-odd obstruction source is cubic with coefficient `27/16`.
 
-This surrogate does not invent a new number. It reuses the only exact lower-root
-channel coefficient already certified in the branch:
+## Why the legacy value is kept
 
-- [phase3_mu_minus_half_channel.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_channel.md).
+The legacy comparison does not invent a new number. It reuses the exact
+lower-root normal-form coefficient already certified in the branch:
 
-So the extra assumption is not
+- [phase3_mu_minus_half_channel.md](phase3_mu_minus_half_channel.md).
 
-- "some unknown constant is about one",
+It remains useful only as a diagnostic comparison. It is not allowed to compete
+with the active `C_src = 27/16` source coefficient.
 
-but specifically
+## Active output
 
-- "the nonlinear source projection uses the same channel coefficient as the
-  branch-motion normal form."
+The public certificate now records:
 
-That is a sharp, falsifiable modeling statement.
+`C_src = 27/16`
 
-## Output of the surrogate
+for the fixed-Sigma sigma-odd `mu=-1/2` obstruction channel at `D0`.
 
-Under `(S_qsur)`, the constant-mode obstruction coefficient becomes
+It also records the confirmed bridge identity:
 
-`kappa_src,R^(i) = (3/8) * A_bulk(alpha_1, alpha_1)|_{Sigma_i}`,
-
-`kappa_src,I^(i) = 0`.
-
-Equivalently, in the pair coordinates `(c_i^R, c_i^I)`:
-
-`Q_sur(c_i^R, c_i^I)`
-`=`
-`(3/8) * A_bulk(alpha_1, alpha_1)`
-`*`
-`((c_i^R)^2 - (c_i^I)^2, 2 c_i^R c_i^I)`.
+`J_h(psi_R) = 2 * A_bulk * Phi_{-1/2,R}`.
 
 ## `D0` specialization
 
-Using the currently frozen lower bound
+With `r0 = 10^-2`, the active scalar envelope records
 
-`A_bulk(alpha_1, alpha_1) >= 0.43290043290043284`,
-
-the surrogate gives
-
-`kappa_src,R^(i) >= 0.1623376623376623`,
-
-and the corresponding weighted source comparison scale
-
-`kappa_src,R^(i) * r0^(7/2) >= 1.6233766233766234e-8`.
+`C_src * r0^(7/2) = 1.6875000000000003e-7`.
 
 ## Proper interpretation
 
-This surrogate is useful only for two things:
+The legacy `3/8` comparison is useful only for two things:
 
 1. sharpening downstream quantitative checks,
 2. defining a concrete coefficient target for future local extraction.
 
-It must **not** be cited as the true value of `gamma_src`.
-
-After the private P1 chain, it must also not be cited as the current best
-coefficient for the fixed-Sigma sigma-odd source in Lemma 5.9. The current best
-coefficient there is `27/16`, cubic in `c_0`. The `3/8` surrogate may still be
-useful as a comparison value for branch-motion normal forms or for diagnosing
-which channel a quadratic contribution belongs to.
+It must **not** be cited as the true value of `gamma_src` in the fixed-Sigma
+sigma-odd channel. The current public ledger value there is `C_src = 27/16`,
+cubic in `c_0`.
 
 ## What would falsify the surrogate
 
-Any of the following would falsify `(S_qsur)`:
+Any of the following would falsify the old `(S_qsur)` interpretation:
 
 1. a local symbolic calculation showing a different lower-root scalar
    coefficient;
@@ -123,15 +104,16 @@ Any of the following would falsify `(S_qsur)`:
 3. a theorem-level identification of `Pi_obs` with a trace formula producing a
    coefficient different from `3/8`.
 
-## Why it is still worth keeping
+## Why the file is still worth keeping
 
 The repository now has three tiers:
 
 1. proven channel geometry:
    exact `3/8` in the lower-root normal form;
-2. explicit surrogate:
-   `gamma_src,sur = 3/8`;
-3. theorem target:
-   true extracted `gamma_src`.
+2. legacy surrogate:
+   `gamma_src,sur = 3/8`, not active for the sigma-odd source;
+3. sharp current source:
+   `C_src = 27/16`.
 
-That is cleaner than jumping directly from “unknown `O(1)`” to “exact theorem”.
+That keeps the historical diagnostic without polluting the current source
+ledger.

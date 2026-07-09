@@ -1,22 +1,22 @@
-# Phase 4.1 Stage C v1: symbolic coefficient-formula checker
+# Phase 4.1 Stage C/E: coefficient-formula and interval checker
 
 ## Status
 
-Independent structural checker for the Stage B v1 symbolic coefficient formulas.
-This is not a numerical coefficient checker, not an interval checker, and not a
-Level Q certificate.
+Independent checker for the Stage B v1 symbolic coefficient formulas and their
+`D0` evaluated values. It now includes outward-rounded interval recomputation
+for the rational coefficient layer.
 
 Checker:
 
-- [phase4_donaldson_coefficients_checker.py](/home/brieuc/gift-framework/GIFT/scripts/phase4_donaldson_coefficients_checker.py)
+- [phase4_donaldson_coefficients_checker.py](../scripts/phase4_donaldson_coefficients_checker.py)
 
 Machine output:
 
-- [phase4_donaldson_coefficients_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_check.json)
+- [phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json)
 
 Checked artifact:
 
-- [phase4_donaldson_coefficients.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients.json)
+- [phase4_donaldson_coefficients.json](../certificates/phase4_donaldson_coefficients.json)
 
 ## Checks
 
@@ -37,19 +37,23 @@ The checker independently verifies:
 - internal dependencies such as `source_P1`, `DP1_norm`, and `raw_P3_scale`
   resolve to formula objects;
 - legacy power-counting numbers remain comparison-only.
+- every exact rational `D0` coefficient value is reserialized as an
+  outward-rounded decimal interval;
+- `R_threshold` is bracketed by integer bisection on the cube, avoiding any
+  floating-point input to the interval acceptance test.
 
 Current result with the D0 values artifact present:
 
-`146/146` checks pass.
+`172/172` checks pass.
 
 ## Boundary
 
 This checker confirms symbolic formula consistency and exact rational
-evaluation of the D0 coefficient values. It does not check:
+evaluation of the D0 coefficient values, with outward-rounded interval
+packaging for the scalar coefficient layer. It does not check:
 
-- outward-rounded interval packaging beyond the serialized rational values;
 - global Taylor/majorant convergence for the full reconstruction map;
 - convergence of the reconstruction map.
 
-The next upgrade is the global AR convergence/majorant theorem, not another
-P4.1 coefficient placeholder pass.
+The next upgrade is the global AR product-space theorem, not another P4.1
+coefficient placeholder pass.

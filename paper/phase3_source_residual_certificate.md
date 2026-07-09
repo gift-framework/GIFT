@@ -19,7 +19,7 @@ Current D0 certificate:
 
 Public machine artifact:
 
-- [phase3_projection_commutator_certificate.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_projection_commutator_certificate.json).
+- [phase3_projection_commutator_certificate.json](../certificates/phase3_projection_commutator_certificate.json).
 
 ## The three source pieces
 
@@ -29,7 +29,7 @@ The residual source splits as:
 
 The machine-readable freeze of this decomposition is:
 
-- [phase3_source_residual_ledger.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_source_residual_ledger.json).
+- [phase3_source_residual_ledger.json](../certificates/phase3_source_residual_ledger.json).
 
 ## `R_quad`: collar quadratic remainder
 
@@ -59,20 +59,20 @@ in the `m = +/- 1/2` sigma-odd channel.
 
 The first explicit coefficient scaffold is now frozen in:
 
-- [phase3_Rquad_coefficient.md](/home/brieuc/gift-framework/GIFT/paper/phase3_Rquad_coefficient.md),
-- [phase3_Rquad_coefficient_scaffold.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_Rquad_coefficient_scaffold.json).
+- [phase3_Rquad_coefficient.md](phase3_Rquad_coefficient.md),
+- [phase3_Rquad_coefficient_scaffold.json](../certificates/phase3_Rquad_coefficient_scaffold.json).
 
 The corresponding local sanity check showing what the flat toy model does *not*
 capture is frozen in:
 
-- [phase3_branch_seed_sanity.md](/home/brieuc/gift-framework/GIFT/paper/phase3_branch_seed_sanity.md),
-- [phase3_branch_seed_sanity.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_branch_seed_sanity.json).
+- [phase3_branch_seed_sanity.md](phase3_branch_seed_sanity.md),
+- [phase3_branch_seed_sanity.json](../certificates/phase3_branch_seed_sanity.json).
 
 The exact coefficient already available in the correct lower-root channel is
 frozen separately in:
 
-- [phase3_mu_minus_half_channel.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_channel.md),
-- [phase3_mu_minus_half_channel.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_mu_minus_half_channel.json).
+- [phase3_mu_minus_half_channel.md](phase3_mu_minus_half_channel.md),
+- [phase3_mu_minus_half_channel.json](../certificates/phase3_mu_minus_half_channel.json).
 
 ## `R_comm`: annular cutoff commutator
 

@@ -8,8 +8,8 @@ rank-one 77-unlink Donaldson / branched adiabatic construction.
 It is a progress summary, not a theorem ledger. For scope discipline and claim
 strength, see:
 
-- [analytic_status.md](/home/brieuc/gift-framework/GIFT/docs/analytic_status.md)
-- [theorem_ledger.yaml](/home/brieuc/gift-framework/GIFT/audit/theorem_ledger.yaml)
+- [analytic_status.md](analytic_status.md)
+- [theorem_ledger.yaml](../audit/theorem_ledger.yaml)
 
 ## Global headline
 
@@ -21,21 +21,21 @@ Current honest status:
   2026-07-02 P1/P2/P3/C_nl chain, but not globally closed.
 - Level `CF`: explicitly separated as a distinct research track; no compact closed form proved.
 
-Operationally, the branch is deep in **Phase 3**. Phases 0 and 1 are largely
-stabilized, Phase 2 is partial, Phase 3 is actively under construction, and
-Phases 4-7 remain open.
+Operationally, the branch is in **Stage D reconciliation** after the private
+2026-07-05 closures. Phases 0 and 1 are largely stabilized, Phase 2 is
+partial, Phase 3/L1.6 and Phase 4/L2 assembly are now pinned to the private
+theorem-grade closures at `D0`; Stage E remains the next interval-promotion
+track.
 
-Latest cross-repo update from `private` commits through `767727b0`:
+Latest cross-repo update from `private` through the 2026-07-09 read window:
 
 - `(G)` source constants at `D0`: `C_src = 27/16` in the sigma-odd cubic
   channel and `C_nl = 2/3`, giving `r_G(D0) ~= 1.51e-4` and margin
   approximately `3318x` below the `1/2` contraction threshold.
-- public projection/commutator certificate: `Pi_obs` is certified on the
-  reduced lower-root constant-mode model and the clean annular commutator has
-  `q_comm <= 0.68` at `D0` in the conservative Mazzeo regime.
-- Task 4 candidate: finite-mode Jacobi normal-operator experiment gives
-  `K_ind = 4/3`, candidate scalar `K_Sch^Maz,cand = 16/3`, and rank-19
-  candidate `12.32`; the theorem-safe public envelope remains `K_Sch^Maz <= 17`.
+- `Pi_obs` PDE identification is promoted by private M-L1.d; the older
+  reduced lower-root constant-mode model remains an implementation witness.
+- L1.6 is closed: raw 77-collar outward-rounded intervals promote
+  `K_Sch <= 16/3`; headline `q_coeff ~= 0.16811`, sharp `~= 0.10959`.
 - `(AR)` fibrewise Hodge constant: theorem-grade reduction to the scalar K3
   gap, with working certified bound `K_H^{K3} <= 0.45` and margin
   approximately `49x` at `D0`.
@@ -55,10 +55,10 @@ Status: substantially completed.
 
 Main artifacts:
 
-- [theorem_ledger.yaml](/home/brieuc/gift-framework/GIFT/audit/theorem_ledger.yaml)
-- [dependency_graph.json](/home/brieuc/gift-framework/GIFT/audit/dependency_graph.json)
-- [claim_scope.md](/home/brieuc/gift-framework/GIFT/audit/claim_scope.md)
-- [legacy_quarantine.md](/home/brieuc/gift-framework/GIFT/audit/legacy_quarantine.md)
+- [theorem_ledger.yaml](../audit/theorem_ledger.yaml)
+- [dependency_graph.json](../audit/dependency_graph.json)
+- [claim_scope.md](../audit/claim_scope.md)
+- [legacy_quarantine.md](../audit/legacy_quarantine.md)
 
 Resolved points:
 
@@ -79,10 +79,10 @@ Status: completed at the specification level.
 
 Main artifacts:
 
-- [theorem_E_exact.md](/home/brieuc/gift-framework/GIFT/paper/theorem_E_exact.md)
-- [theorem_Q_certified.md](/home/brieuc/gift-framework/GIFT/paper/theorem_Q_certified.md)
-- [conjecture_CF_finite_closed_form.md](/home/brieuc/gift-framework/GIFT/paper/conjecture_CF_finite_closed_form.md)
-- [assumptions_map.tex](/home/brieuc/gift-framework/GIFT/paper/assumptions_map.tex)
+- [theorem_E_exact.md](../paper/theorem_E_exact.md)
+- [theorem_Q_certified.md](../paper/theorem_Q_certified.md)
+- [conjecture_CF_finite_closed_form.md](../paper/conjecture_CF_finite_closed_form.md)
+- [assumptions_map.tex](../paper/assumptions_map.tex)
 
 Resolved points:
 
@@ -100,7 +100,7 @@ Status: partial, with sharp constants updated by the 2026-07-02 private chain.
 
 Main artifact:
 
-- [datum_D0.json](/home/brieuc/gift-framework/GIFT/certificates/datum_D0.json)
+- [datum_D0.json](../certificates/datum_D0.json)
 
 Resolved or frozen fields:
 
@@ -112,6 +112,9 @@ Resolved or frozen fields:
 - upper bounds for `K_H_K3`, `||F_H||`, `D2m`
 - sharp-current `K_H_K3 <= 0.45` from the K3 Hodge-gap reduction
 - sharp-current `C_src = 27/16` and `C_nl = 2/3` for the `D0` G-discharge
+- Phase 4.1 coefficient fields `source_P1`, `source_P2`, `DP1_norm`,
+  `DP2_norm`, `D2P1_norm`, `D3m_norm`, `raw_P3_scale`, `remainder_R3`, and
+  the tail-contraction threshold `R_threshold = 3664.0659853300026`
 - sharp-current exterior package
   `(C_FS, gamma_link, C_link, C_outer) = (0.3, 2, 1, 1)`
 
@@ -120,9 +123,7 @@ Still open at theorem grade:
 - `inj_base`
 - `curv_base`
 - exact interval for `A_bulk(alpha1,alpha1)` rather than only a lower bound
-- `source_P1`
-- `source_P2`
-- some remainder and scale constants requested by the original plan
+- outward-rounded interval recomputation for the Phase 4.1 coefficient layer
 
 Next real Phase 2 task:
 
@@ -138,7 +139,7 @@ Status: completed at the definition level.
 
 Main artifact:
 
-- [phase3_spaces.md](/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md)
+- [phase3_spaces.md](../paper/phase3_spaces.md)
 
 Resolved points:
 
@@ -151,11 +152,12 @@ Resolved points:
 
 #### P3.2 Linear theorem
 
-Status: completed at the theorem-specification level.
+Status: completed at the theorem-specification level; the `D0` `Pi_obs`
+identification is pinned to private M-L1.d.
 
 Main artifact:
 
-- [phase3_linear_theorem.md](/home/brieuc/gift-framework/GIFT/paper/phase3_linear_theorem.md)
+- [phase3_linear_theorem.md](../paper/phase3_linear_theorem.md)
 
 Resolved points:
 
@@ -166,9 +168,8 @@ Resolved points:
 
 Still open:
 
-- theorem-level construction of `Pi_obs`
-- theorem-level proof that no extra modes survive outside `R^{2N}`
-- theorem-level right inverse `G_aug`
+- theorem-level right inverse `G_aug` beyond the already-closing crude
+  scaffold; the exact non-crude composition is a sharpening item.
 
 #### P3.3 Global parametrix
 
@@ -176,7 +177,7 @@ Status: completed at the architecture level.
 
 Main artifact:
 
-- [phase3_global_parametrix.md](/home/brieuc/gift-framework/GIFT/paper/phase3_global_parametrix.md)
+- [phase3_global_parametrix.md](../paper/phase3_global_parametrix.md)
 
 Resolved points:
 
@@ -195,7 +196,7 @@ private chain, while the global operator theorem remains open.
 
 Main artifact:
 
-- [phase3_nonlinear_closure.md](/home/brieuc/gift-framework/GIFT/paper/phase3_nonlinear_closure.md)
+- [phase3_nonlinear_closure.md](../paper/phase3_nonlinear_closure.md)
 
 Resolved points:
 
@@ -212,8 +213,8 @@ Status: partially frozen and very favorable numerically.
 
 Main artifacts:
 
-- [phase3_source_nonlinear_constants.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_nonlinear_constants.md)
-- [phase3_G_closure_status.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_G_closure_status.json)
+- [phase3_source_nonlinear_constants.md](../paper/phase3_source_nonlinear_constants.md)
+- [phase3_G_closure_status.json](../certificates/phase3_G_closure_status.json)
 
 Current notable values:
 
@@ -235,21 +236,21 @@ Status: strong progress in clarification, basis fixing, and intermediate tooling
 
 Main artifacts:
 
-- [phase3_source_residual_certificate.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_residual_certificate.md)
-- [phase3_source_residual_ledger.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_source_residual_ledger.json)
-- [phase3_projection_commutator_certificate.md](/home/brieuc/gift-framework/GIFT/paper/phase3_projection_commutator_certificate.md)
-- [phase3_projection_commutator_certificate.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_projection_commutator_certificate.json)
-- [phase3_effective_jacobi_parametrix_candidate.md](/home/brieuc/gift-framework/GIFT/paper/phase3_effective_jacobi_parametrix_candidate.md)
-- [phase3_effective_jacobi_parametrix_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_effective_jacobi_parametrix_candidate.json)
-- [phase3_Rquad_coefficient.md](/home/brieuc/gift-framework/GIFT/paper/phase3_Rquad_coefficient.md)
-- [phase3_mu_minus_half_channel.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_channel.md)
-- [phase3_mu_minus_half_basis.md](/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md)
-- [phase3_source_trace_resolution.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_trace_resolution.md)
-- [phase3_source_to_obstruction_bridge.md](/home/brieuc/gift-framework/GIFT/paper/phase3_source_to_obstruction_bridge.md)
-- [phase3_Pi_obs_constant_mode.md](/home/brieuc/gift-framework/GIFT/paper/phase3_Pi_obs_constant_mode.md)
-- [phase3_kappa_src_first_ansatz.md](/home/brieuc/gift-framework/GIFT/paper/phase3_kappa_src_first_ansatz.md)
-- [phase3_kappa_src_vs_G_discharge.md](/home/brieuc/gift-framework/GIFT/paper/phase3_kappa_src_vs_G_discharge.md)
-- [phase3_gamma_src_surrogate.md](/home/brieuc/gift-framework/GIFT/paper/phase3_gamma_src_surrogate.md)
+- [phase3_source_residual_certificate.md](../paper/phase3_source_residual_certificate.md)
+- [phase3_source_residual_ledger.json](../certificates/phase3_source_residual_ledger.json)
+- [phase3_projection_commutator_certificate.md](../paper/phase3_projection_commutator_certificate.md)
+- [phase3_projection_commutator_certificate.json](../certificates/phase3_projection_commutator_certificate.json)
+- [phase3_effective_jacobi_parametrix_candidate.md](../paper/phase3_effective_jacobi_parametrix_candidate.md)
+- [phase3_effective_jacobi_parametrix_candidate.json](../certificates/phase3_effective_jacobi_parametrix_candidate.json)
+- [phase3_Rquad_coefficient.md](../paper/phase3_Rquad_coefficient.md)
+- [phase3_mu_minus_half_channel.md](../paper/phase3_mu_minus_half_channel.md)
+- [phase3_mu_minus_half_basis.md](../paper/phase3_mu_minus_half_basis.md)
+- [phase3_source_trace_resolution.md](../paper/phase3_source_trace_resolution.md)
+- [phase3_source_to_obstruction_bridge.md](../paper/phase3_source_to_obstruction_bridge.md)
+- [phase3_Pi_obs_constant_mode.md](../paper/phase3_Pi_obs_constant_mode.md)
+- [phase3_kappa_src_first_ansatz.md](../paper/phase3_kappa_src_first_ansatz.md)
+- [phase3_kappa_src_vs_G_discharge.md](../paper/phase3_kappa_src_vs_G_discharge.md)
+- [phase3_gamma_src_surrogate.md](../paper/phase3_gamma_src_surrogate.md)
 
 Resolved points:
 
@@ -260,51 +261,73 @@ Resolved points:
 - the correct bridge is identified as
   `profile_src -> source in Y_{beta-2} -> Pi_obs(source) in R^{2N}`.
 - a constant-mode prototype for `Pi_obs` is fixed.
-- first non-arbitrary ansatz for `kappa_src` is fixed.
-- first explicit surrogate with `gamma_src,sur = 3/8` is fixed as a modeling layer, not a theorem.
-- current global `G` discharge is shown to be compatible with that surrogate, but much coarser.
-- `Pi_obs` is certified on the reduced lower-root constant-mode source model.
+- the first non-arbitrary ansatz for `kappa_src` is retained only as a legacy
+  comparison.
+- the old explicit surrogate `gamma_src,sur = 3/8` is superseded for the
+  fixed-Sigma sigma-odd source channel; it remains only a lower-root
+  normal-form / regular-sector diagnostic.
+- current global `G` discharge uses the sharp-current `C_src = 27/16` source
+  coefficient, not the old `3/8` surrogate.
+- `Pi_obs` is certified at PDE-identification level for `D0` by private
+  `axis2_L1d_Pi_obs_identification_2026_07_04`; the reduced constant-mode
+  source model is now only the proto witness.
 - `R_comm` is certified as a clean parametrix Neumann factor
   `q_comm <= 0.68` at `D0`, not as an additive source envelope.
-- `K_Sch^Maz` has a reproducible candidate experiment (`16/3` scalar, `12.32`
-  rank-19), but this is not theorem-grade.
+- `K_Sch^Maz <= 16/3` is theorem-grade at `D0` via private M-L1.n/o/p raw
+  77-collar intervals and recollement.
 
 Still open:
 
-- full PDE identification of `Pi_obs` beyond the reduced lower-root model
-- integration of `q_comm` into the full global parametrix theorem
-- promotion or rejection of the `K_Sch^Maz,cand = 16/3` experiment via a real
-  edge-Schauder proof
+- integration of the pinned `Pi_obs` and `K_Sch` closures into a final
+  full global parametrix theorem artifact.
+- exact non-crude `G_aug` composition, now a sharpening item rather than a
+  load-bearing blocker.
 
 Current sharp Phase 3 bottleneck:
 
-- reconcile or supersede the public surrogate / ansatz layer with the private
-  theorem-grade cubic coefficient `C_src = 27/16`, then assemble the global
-  operator/right-inverse theorem using the projection/commutator certificate.
+- assemble the global operator/right-inverse theorem using the
+  projection/commutator certificate and the theorem-grade cubic coefficient
+  `C_src = 27/16`.
 
 ### Phase 4 — Adiabatic reconstruction
 
-Status: started at P4.1 operator-form / candidate-source level; not started as
-a convergent theorem.
+Status: P4.1 coefficients are checked at `D0`; P4.2 has a conditional scalar
+majorant, but no convergent AR theorem yet.
 
 Main available artifact:
 
-- [phase4_adiabatic_operator_form.md](/home/brieuc/gift-framework/GIFT/paper/phase4_adiabatic_operator_form.md)
-- [phase4_true_coefficients_derivation_plan.md](/home/brieuc/gift-framework/GIFT/paper/phase4_true_coefficients_derivation_plan.md)
-- [phase4_donaldson_E1_E5_operator.md](/home/brieuc/gift-framework/GIFT/paper/phase4_donaldson_E1_E5_operator.md)
-- [phase4_bigraded_type_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_bigraded_type_check.json)
-- [phase4_donaldson_coefficients_stageB_v1.md](/home/brieuc/gift-framework/GIFT/paper/phase4_donaldson_coefficients_stageB_v1.md)
-- [phase4_donaldson_coefficients.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients.json)
-- [phase4_donaldson_coefficients_checker_stageC_v1.md](/home/brieuc/gift-framework/GIFT/paper/phase4_donaldson_coefficients_checker_stageC_v1.md)
-- [phase4_donaldson_coefficients_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_check.json)
-- [phase4_donaldson_coefficients_values.md](/home/brieuc/gift-framework/GIFT/paper/phase4_donaldson_coefficients_values.md)
-- [phase4_donaldson_coefficients_values.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_values.json)
-- [phase4_ar_convergence_theorem_spec.md](/home/brieuc/gift-framework/GIFT/paper/phase4_ar_convergence_theorem_spec.md)
-- [phase4_ar_majorant_candidate.md](/home/brieuc/gift-framework/GIFT/paper/phase4_ar_majorant_candidate.md)
-- [phase4_ar_majorant_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_ar_majorant_candidate.json)
-- [phase4_ar_majorant_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_ar_majorant_check.json)
-- [phase4_progress_2026_07_03.md](/home/brieuc/gift-framework/GIFT/docs/phase4_progress_2026_07_03.md)
-- [phase4_adiabatic_sources_candidate.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_adiabatic_sources_candidate.json)
+- [phase4_adiabatic_operator_form.md](../paper/phase4_adiabatic_operator_form.md)
+- [phase4_true_coefficients_derivation_plan.md](../paper/phase4_true_coefficients_derivation_plan.md)
+- [phase4_donaldson_E1_E5_operator.md](../paper/phase4_donaldson_E1_E5_operator.md)
+- [phase4_bigraded_type_check.json](../certificates/phase4_bigraded_type_check.json)
+- [phase4_donaldson_coefficients_stageB_v1.md](../paper/phase4_donaldson_coefficients_stageB_v1.md)
+- [phase4_donaldson_coefficients.json](../certificates/phase4_donaldson_coefficients.json)
+- [phase4_donaldson_coefficients_checker_stageC_v1.md](../paper/phase4_donaldson_coefficients_checker_stageC_v1.md)
+- [phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json)
+- [phase4_donaldson_coefficients_values.md](../paper/phase4_donaldson_coefficients_values.md)
+- [phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json)
+- [phase4_ar_convergence_theorem_spec.md](../paper/phase4_ar_convergence_theorem_spec.md)
+- [phase4_ar_product_space_contract.md](../paper/phase4_ar_product_space_contract.md)
+- [phase4_ar_product_space_contract.json](../certificates/phase4_ar_product_space_contract.json)
+- [phase4_ar_product_space_check.json](../certificates/phase4_ar_product_space_check.json)
+- [phase4_ar_inverse_budget_audit.md](../paper/phase4_ar_inverse_budget_audit.md)
+- [phase4_ar_inverse_budget_audit.json](../certificates/phase4_ar_inverse_budget_audit.json)
+- [phase4_ar_inverse_budget_check.json](../certificates/phase4_ar_inverse_budget_check.json)
+- [phase4_ar_neumann_budget.md](../paper/phase4_ar_neumann_budget.md)
+- [phase4_ar_neumann_budget_candidate.json](../certificates/phase4_ar_neumann_budget_candidate.json)
+- [phase4_ar_neumann_budget_check.json](../certificates/phase4_ar_neumann_budget_check.json)
+- [phase4_ar_commutator_slot_candidate.md](../paper/phase4_ar_commutator_slot_candidate.md)
+- [phase4_ar_commutator_slot_candidate.json](../certificates/phase4_ar_commutator_slot_candidate.json)
+- [phase4_ar_commutator_slot_check.json](../certificates/phase4_ar_commutator_slot_check.json)
+- [phase4_ar_remaining_slots_candidate.md](../paper/phase4_ar_remaining_slots_candidate.md)
+- [phase4_ar_remaining_slots_candidate.json](../certificates/phase4_ar_remaining_slots_candidate.json)
+- [phase4_ar_remaining_slots_check.json](../certificates/phase4_ar_remaining_slots_check.json)
+- [phase4_consolidation_2026_07_03.md](phase4_consolidation_2026_07_03.md)
+- [phase4_ar_majorant_candidate.md](../paper/phase4_ar_majorant_candidate.md)
+- [phase4_ar_majorant_candidate.json](../certificates/phase4_ar_majorant_candidate.json)
+- [phase4_ar_majorant_check.json](../certificates/phase4_ar_majorant_check.json)
+- [phase4_progress_2026_07_03.md](phase4_progress_2026_07_03.md)
+- [phase4_adiabatic_sources_candidate.json](../certificates/phase4_adiabatic_sources_candidate.json)
 - previous private formal matching:
   `private/canonical/results/axis2_M_epsilon_adiabatic_2026_07_01.json`
 
@@ -332,33 +355,55 @@ Resolved points:
   `source_P1`, `source_P2`, `DP1_norm`, `DP2_norm`, `D2P1_norm`, `D3m_norm`,
   `raw_P3_scale`, and `remainder_R3`. The old power-counting candidate is
   retained only as a comparison block, not as a derivation.
-- Stage C v1 independently checks those symbolic formulas and their evaluated
-  D0 values: `146/146` checks pass, including bidegrees, `G_f` use, formula
-  dependency resolution, absence of placeholders, arithmetic recomputation, and
-  the comparison-only status of legacy power-counting numbers.
+- Stage C/E independently checks those symbolic formulas and their evaluated
+  D0 values: `172/172` checks pass, including bidegrees, `G_f` use, formula
+  dependency resolution, absence of placeholders, arithmetic recomputation,
+  outward-rounded interval packaging, and the comparison-only status of legacy
+  power-counting numbers.
 - Phase 4.1 D0 coefficient values are now evaluated and checked:
   `source_P1 = 3.1185`, `source_P2 = 6.36018075`,
   `DP1_norm = 3.1185`, `DP2_norm = 8.3981205`,
   `D2P1_norm = 3.1185`, `D3m_norm = 4/9`,
   `raw_P3_scale = 3.24648475975`,
   `remainder_R3 = 13770793.170081593`, and
-  `R_threshold = 3664.0659853300026`. The checker now passes `146/146`.
+  `R_threshold = 3664.0659853300026`. The checker now passes `172/172`.
 - Phase 4.2 is now specified as the global AR convergence theorem target:
   product Banach space, fibrewise Hodge inverse uniformity, majorant constants,
   and the output `M_eps(h_eps)=0 -> Phi_eps(h_eps)` closed.
+- The P4.2 product-space contract is now serialized and checked:
+  `A_beta = A_omega x A_lambda x A_mu x A_Theta`, Donaldson bidegrees,
+  `F_H/G_f` degree shifts, block inverse architecture, and conditional
+  `K_AR_prod = 2079/2000`; `36/36` checks pass.
+- The inverse-budget audit is now serialized and checked: under the current
+  unweighted max norm, `K_AR_prod = 2079/2000` dominates `G_f`, the declared
+  `G_f F_H` block bound `2079/2000`, and projection bound `1`; `15/15` checks
+  pass. This repairs the scalar normalization issue.
 - A first conditional scalar AR majorant is serialized at `R_AR = 4000`,
-  assuming `K_AR_prod <= 9/20`. It gives `q_AR ~= 4.48e-4` and passes `14/14`
-  checks, but explicitly marks the product-space inverse theorem as unproved.
+  using `K_AR_prod <= 2079/2000` from the product-space contract. It gives
+  `q_AR ~= 1.035e-3` and passes `20/20` checks, but explicitly marks the
+  uniform inverse, commutator, reduced-projection, and closedness obligations as
+  unproved.
+- The AR Neumann budget skeleton is serialized and checked. It splits the
+  remaining analytic error into `q_hodge_uniform`, `q_comm_FH_Gf`,
+  `q_projection_residual`, and `q_gauge_transfer`, each with target `1/16`;
+  `41/41` checks pass. Stage D repin: private theorem-grade V/W/X/Y slots
+  discharge these obligations and L2 assembly gives
+  `q_total = 26236977/3200000000 ~= 8.20e-3 < 1/2`.
+- The first commutator-slot candidate is serialized and checked:
+  `C_comm_AR = 54.00596`, `q_comm_FH_Gf = 0.01350149 < 1/16`; `16/16`
+  checks pass. It is a candidate formula only, not a theorem-grade commutator
+  certificate.
+- The remaining three Neumann slots also have checked candidates:
+  `q_hodge_uniform = 0.0058`, `q_projection_residual = 0.016316`,
+  `q_gauge_transfer = 0.0061185`; `32/32` checks pass. These are candidate
+  formulas only, not theorem-grade analytic certificates.
 
 Still open:
 
 - global fibrewise Hodge inverse proof
 - convergent reconstruction theorem with certified constants
-- private draft cleanup: remove or downgrade claims that the closed
-  small-torsion construction has been reduced only to `(J)`. Current public
-  status is `Stage B -> Stage C -> AR discharged`, not `AR discharged`.
-- replacement of the P4.1 power-counting candidate by formula-level or
-  interval enclosures
+- product-norm commutator bounds, reduced-projection identity, and closedness
+  preservation.
 
 ### Phase 5 — Hypothesis `(J)` / anisotropic Joyce theorem
 
@@ -366,7 +411,7 @@ Status: only specified, not proved.
 
 Main artifact:
 
-- [anisotropic_joyce_theorem.md](/home/brieuc/gift-framework/GIFT/paper/anisotropic_joyce_theorem.md)
+- [anisotropic_joyce_theorem.md](../paper/anisotropic_joyce_theorem.md)
 
 Resolved points:
 
@@ -438,9 +483,9 @@ Only after those can Phase 6 close compact torsion-free existence with full holo
 
 The most useful immediate next tasks are:
 
-1. integrate the private `C_src = 27/16` and `C_nl = 2/3` derivations into the
-   public Phase-3 certificate layer;
-2. write the full PDE identification theorem for `Pi_obs` beyond the reduced
+1. write the full PDE identification theorem for `Pi_obs` beyond the reduced
    source model;
-3. assemble the Phase 3.2/3.3 global right inverse theorem with `q_comm <= 0.68`;
-4. then return to the theorem-level assembly of Phase 3.
+2. assemble the Phase 3.2/3.3 global right inverse theorem with `q_comm <= 0.68`;
+3. prove the uniform product-space inverse, commutator, reduced-projection, and
+   closedness obligations for AR;
+4. then return to the theorem-level assembly of Phase 3 and AR.

@@ -8,15 +8,15 @@ adiabatic reconstruction.
 
 Producer:
 
-- [phase4_donaldson_coefficients.py](/home/brieuc/gift-framework/GIFT/scripts/phase4_donaldson_coefficients.py)
+- [phase4_donaldson_coefficients.py](../scripts/phase4_donaldson_coefficients.py)
 
 Machine output:
 
-- [phase4_donaldson_coefficients.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients.json)
+- [phase4_donaldson_coefficients.json](../certificates/phase4_donaldson_coefficients.json)
 
 Gate:
 
-- [phase4_bigraded_type_check.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_bigraded_type_check.json)
+- [phase4_bigraded_type_check.json](../certificates/phase4_bigraded_type_check.json)
 
 The producer refuses coefficient production unless the bigraded type gate has
 `all_pass: true`.
@@ -44,7 +44,7 @@ The old power-counting candidate is retained only under
 
 This closes the consolidated symbolic-formula pass for Stage B. The D0 values
 for these formulas are supplied separately by
-[phase4_donaldson_coefficients_values.json](/home/brieuc/gift-framework/GIFT/certificates/phase4_donaldson_coefficients_values.json).
+[phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json).
 This file itself does not provide:
 
 - interval enclosures;

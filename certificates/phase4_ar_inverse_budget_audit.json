@@ -1,0 +1,58 @@
+{
+  "artifact": "phase4_ar_inverse_budget_audit",
+  "generated_by": "scripts/phase4_ar_inverse_budget_audit.py",
+  "scope": "Semantic audit of K_AR_prod against the declared P4.2 product-space block contract",
+  "status": "audit_confirms_structural_product_max_bound",
+  "depends_on": [
+    "certificates/phase4_ar_product_space_contract.json",
+    "certificates/phase4_ar_majorant_candidate.json"
+  ],
+  "declared_constants": {
+    "K_H_K3": {
+      "exact": "9/20",
+      "value": 0.45,
+      "meaning": "fibrewise Hodge inverse bound"
+    },
+    "K_F": {
+      "exact": "231/100",
+      "value": 2.31,
+      "meaning": "horizontal curvature action bound"
+    },
+    "K_projection": {
+      "exact": "1",
+      "value": 1.0,
+      "meaning": "reduced projection bound"
+    },
+    "K_AR_prod": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "meaning": "scalar product inverse bound used by the AR majorant"
+    },
+    "K_H_K3_times_K_F": {
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "meaning": "declared block bound for -G_f F_H"
+    }
+  },
+  "compatibility_checks": {
+    "K_AR_prod_covers_G_f": true,
+    "K_AR_prod_covers_G_f_F_H_block": true,
+    "K_AR_prod_covers_projection": true,
+    "direct_unweighted_max_norm_compatible": true
+  },
+  "finding": {
+    "summary": "With the currently declared unweighted max norm, K_AR_prod must dominate G_f, the declared -G_f F_H block bound K_H_K3*K_F=2079/2000, and the projection bound 1.",
+    "interpretation": "The structural product-max repair sets K_AR_prod=K_H_K3*K_F, which covers all declared slots under the current max norm. This repairs the scalar normalization gap, but not the remaining analytic uniformity, commutator, projection-identity, or closedness theorems."
+  },
+  "allowed_repairs": [
+    "Current selected repair: use K_AR_prod = K_H_K3 * K_F = 2079/2000 as the product-max structural constant.",
+    "Alternative still possible: introduce weighted component norms with explicit weights and prove a sharper block matrix norm.",
+    "Alternative still possible: define K_AR_prod as a post-inversion source-to-correction constant with separate F_H/projection factors."
+  ],
+  "acceptance_boundary": [
+    "This audit resolves the scalar normalization mismatch for the product-max contract.",
+    "It does not invalidate the P4.1 coefficients.",
+    "It does not prove the remaining analytic AR theorem obligations."
+  ],
+  "all_pass": true
+}

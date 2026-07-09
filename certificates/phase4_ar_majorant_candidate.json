@@ -4,16 +4,20 @@
   "scope": "Conditional scalar majorant for P4.2 global AR convergence",
   "status": "conditional_majorant_candidate_not_AR_theorem",
   "depends_on": [
-    "certificates/phase4_donaldson_coefficients_values.json"
+    "certificates/phase4_donaldson_coefficients_values.json",
+    "certificates/phase4_ar_product_space_contract.json"
   ],
   "conditional_assumptions": {
     "K_AR_prod": {
-      "exact": "9/20",
-      "value": 0.45,
-      "meaning": "Hypothetical product-space norm of the fibrewise Hodge reconstruction inverse. Not yet proved in P4.2."
+      "exact": "2079/2000",
+      "value": 1.0395,
+      "meaning": "Structural product-max bound from phase4_ar_product_space_contract. Uniformity is still not proved."
     },
-    "product_space_defined": false,
-    "uniform_fibrewise_inverse_proved": false
+    "product_space_defined": true,
+    "uniform_fibrewise_inverse_proved": false,
+    "commutators_bounded_in_product_norm": false,
+    "reduced_projection_global_identity_proved": false,
+    "closedness_preservation_proved": false
   },
   "inputs": {
     "source_P1": {
@@ -97,13 +101,13 @@
       "meaning": "C_AR_source eps + C_AR_second eps^2 + C_AR_tail eps^3"
     },
     "displacement_majorant": {
-      "exact": "5732301050377343351307/12800000000000000000000000",
-      "value": 0.00044783601956072995,
+      "exact": "1324161542637166314151917/1280000000000000000000000000",
+      "value": 0.0010345012051852862,
       "meaning": "K_AR_prod * source_majorant"
     },
     "q_AR": {
-      "exact": "5733034708687343351307/12800000000000000000000000",
-      "value": 0.0004478933366161987,
+      "exact": "1324331017706776314151917/1280000000000000000000000000",
+      "value": 0.001034633607583419,
       "meaning": "K_AR_prod * (C_AR_lin eps + C_AR_quad eps^2 + C_AR_tail eps^3)"
     },
     "tail_at_eps": {

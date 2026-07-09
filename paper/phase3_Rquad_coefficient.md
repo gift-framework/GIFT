@@ -16,7 +16,7 @@ so its weighted `Y_-3` bookkeeping contribution is exactly of order `r0^(7/2)`.
 
 The machine-readable freeze is:
 
-- [phase3_Rquad_coefficient_scaffold.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_Rquad_coefficient_scaffold.json).
+- [phase3_Rquad_coefficient_scaffold.json](../certificates/phase3_Rquad_coefficient_scaffold.json).
 
 ## What is now explicit
 

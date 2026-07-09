@@ -8,8 +8,8 @@ This note records the exact algebraic interface between the lower-root source co
 
 The executed prototype is:
 
-- [phase3_kappa_src_projection_proto.py](/home/brieuc/gift-framework/GIFT/scripts/phase3_kappa_src_projection_proto.py),
-- with output [phase3_kappa_src_projection_proto.json](/home/brieuc/gift-framework/GIFT/certificates/phase3_kappa_src_projection_proto.json).
+- [phase3_kappa_src_projection_proto.py](../scripts/phase3_kappa_src_projection_proto.py),
+- with output [phase3_kappa_src_projection_proto.json](../certificates/phase3_kappa_src_projection_proto.json).
 
 ## Main formula
 
