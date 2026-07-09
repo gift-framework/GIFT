@@ -4,8 +4,8 @@
   "scope": "Phase 4.1 theorem-grade D0 values for Stage B v1 symbolic formulas",
   "status": "theorem_grade_formula_values_from_private_canonical_artifacts",
   "private_context": {
-    "repo_commit": "b46e3cd6c57757cd466e3001092fed7ef4d7d456",
-    "dirty_worktree_note": "private has an unrelated dirty memory/agent_reports/epistemic_map_status.json"
+    "repo_commit": "0db0b05d24d7d18a911d56a1e552d9ab3aecd8ac",
+    "stageD_note": "repinned after private L1.6 and L2 assembly closures; private dirty-worktree flag removed"
   },
   "private_sources": {
     "first_order": {
@@ -294,7 +294,8 @@
   },
   "acceptance_boundary": [
     "This closes Phase 4.1 coefficient values at D0.",
-    "This does not prove the global adiabatic reconstruction convergence theorem.",
+    "Stage D imports the global adiabatic reconstruction assembly theorem separately via axis2_L2_assembly_theorem_2026_07_05.",
+    "Stage E promotes the coefficient layer by outward-rounded interval recomputation and packaging for Level Q.",
     "This does not prove the anisotropic Joyce perturbation theorem."
   ],
   "all_pass": true

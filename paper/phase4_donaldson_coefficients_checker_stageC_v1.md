@@ -50,10 +50,12 @@ Current result with the D0 values artifact present:
 
 This checker confirms symbolic formula consistency and exact rational
 evaluation of the D0 coefficient values, with outward-rounded interval
-packaging for the scalar coefficient layer. It does not check:
+packaging for the scalar coefficient layer. Stage D separately imports the
+L2 assembly theorem, so the remaining purpose of this checker is Stage E /
+Level Q packaging of the coefficient layer. It does not check:
 
-- global Taylor/majorant convergence for the full reconstruction map;
-- convergence of the reconstruction map.
+- the anisotropic Joyce perturbation theorem;
+- non-D0 uniformity of the coefficient bounds.
 
-The next upgrade is the global AR product-space theorem, not another P4.1
-coefficient placeholder pass.
+The next upgrade is to expose the outward-rounded intervals as the citable
+Level Q coefficient package, not another P4.1 placeholder pass.

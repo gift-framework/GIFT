@@ -341,9 +341,9 @@ def main() -> None:
     )
     record(
         checks,
-        "promotion_boundary_keeps_AR_open",
-        any("AR remains open" in line for line in boundary),
-        "promotion boundary keeps AR open",
+        "promotion_boundary_stageE_scope",
+        any("Stage E" in line or "Level Q" in line for line in boundary),
+        "promotion boundary points to Stage E / Level Q interval packaging",
     )
 
     record(checks, "values_artifact_present", values is not None, "evaluated values artifact is present")

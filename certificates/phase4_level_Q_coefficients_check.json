@@ -1,0 +1,919 @@
+{
+  "artifact": "phase4_level_Q_coefficients_check",
+  "generated_by": "scripts/phase4_level_Q_coefficients_checker.py",
+  "scope": "Lossless projection checker for phase4_level_Q_coefficients.json",
+  "checked_artifact": "certificates/phase4_level_Q_coefficients.json",
+  "checks": [
+    {
+      "name": "artifact_name",
+      "pass": true,
+      "detail": "artifact id matches"
+    },
+    {
+      "name": "package_all_pass",
+      "pass": true,
+      "detail": "package all_pass is true"
+    },
+    {
+      "name": "source_checker_matches",
+      "pass": true,
+      "detail": "source checker path is canonical"
+    },
+    {
+      "name": "source_values_matches",
+      "pass": true,
+      "detail": "source values path is canonical"
+    },
+    {
+      "name": "source_checker_passes",
+      "pass": true,
+      "detail": "source checker passes"
+    },
+    {
+      "name": "source_values_passes",
+      "pass": true,
+      "detail": "source values pass"
+    },
+    {
+      "name": "checker_summary_copied",
+      "pass": true,
+      "detail": "checker summary is copied exactly"
+    },
+    {
+      "name": "rounding_protocol_copied",
+      "pass": true,
+      "detail": "rounding protocol is copied exactly"
+    },
+    {
+      "name": "decimal_places_copied",
+      "pass": true,
+      "detail": "decimal precision is copied exactly"
+    },
+    {
+      "name": "constant_K_H_K3_exists_in_values",
+      "pass": true,
+      "detail": "K_H_K3 exists in values"
+    },
+    {
+      "name": "constant_K_H_K3_exists_in_intervals",
+      "pass": true,
+      "detail": "K_H_K3 exists in interval recomputation"
+    },
+    {
+      "name": "constant_K_H_K3_exact_lossless",
+      "pass": true,
+      "detail": "K_H_K3 exact copied"
+    },
+    {
+      "name": "constant_K_H_K3_float_lossless",
+      "pass": true,
+      "detail": "K_H_K3 display copied"
+    },
+    {
+      "name": "constant_K_H_K3_status_lossless",
+      "pass": true,
+      "detail": "K_H_K3 status copied"
+    },
+    {
+      "name": "constant_K_H_K3_provenance_lossless",
+      "pass": true,
+      "detail": "K_H_K3 provenance copied"
+    },
+    {
+      "name": "constant_K_H_K3_interval_lossless",
+      "pass": true,
+      "detail": "K_H_K3 interval copied"
+    },
+    {
+      "name": "constant_K_F_exists_in_values",
+      "pass": true,
+      "detail": "K_F exists in values"
+    },
+    {
+      "name": "constant_K_F_exists_in_intervals",
+      "pass": true,
+      "detail": "K_F exists in interval recomputation"
+    },
+    {
+      "name": "constant_K_F_exact_lossless",
+      "pass": true,
+      "detail": "K_F exact copied"
+    },
+    {
+      "name": "constant_K_F_float_lossless",
+      "pass": true,
+      "detail": "K_F display copied"
+    },
+    {
+      "name": "constant_K_F_status_lossless",
+      "pass": true,
+      "detail": "K_F status copied"
+    },
+    {
+      "name": "constant_K_F_provenance_lossless",
+      "pass": true,
+      "detail": "K_F provenance copied"
+    },
+    {
+      "name": "constant_K_F_interval_lossless",
+      "pass": true,
+      "detail": "K_F interval copied"
+    },
+    {
+      "name": "constant_G_aug_exists_in_values",
+      "pass": true,
+      "detail": "G_aug exists in values"
+    },
+    {
+      "name": "constant_G_aug_exists_in_intervals",
+      "pass": true,
+      "detail": "G_aug exists in interval recomputation"
+    },
+    {
+      "name": "constant_G_aug_exact_lossless",
+      "pass": true,
+      "detail": "G_aug exact copied"
+    },
+    {
+      "name": "constant_G_aug_float_lossless",
+      "pass": true,
+      "detail": "G_aug display copied"
+    },
+    {
+      "name": "constant_G_aug_status_lossless",
+      "pass": true,
+      "detail": "G_aug status copied"
+    },
+    {
+      "name": "constant_G_aug_provenance_lossless",
+      "pass": true,
+      "detail": "G_aug provenance copied"
+    },
+    {
+      "name": "constant_G_aug_interval_lossless",
+      "pass": true,
+      "detail": "G_aug interval copied"
+    },
+    {
+      "name": "constant_C_nl_exists_in_values",
+      "pass": true,
+      "detail": "C_nl exists in values"
+    },
+    {
+      "name": "constant_C_nl_exists_in_intervals",
+      "pass": true,
+      "detail": "C_nl exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_nl_exact_lossless",
+      "pass": true,
+      "detail": "C_nl exact copied"
+    },
+    {
+      "name": "constant_C_nl_float_lossless",
+      "pass": true,
+      "detail": "C_nl display copied"
+    },
+    {
+      "name": "constant_C_nl_status_lossless",
+      "pass": true,
+      "detail": "C_nl status copied"
+    },
+    {
+      "name": "constant_C_nl_provenance_lossless",
+      "pass": true,
+      "detail": "C_nl provenance copied"
+    },
+    {
+      "name": "constant_C_nl_interval_lossless",
+      "pass": true,
+      "detail": "C_nl interval copied"
+    },
+    {
+      "name": "constant_C_projection_exists_in_values",
+      "pass": true,
+      "detail": "C_projection exists in values"
+    },
+    {
+      "name": "constant_C_projection_exists_in_intervals",
+      "pass": true,
+      "detail": "C_projection exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_projection_exact_lossless",
+      "pass": true,
+      "detail": "C_projection exact copied"
+    },
+    {
+      "name": "constant_C_projection_float_lossless",
+      "pass": true,
+      "detail": "C_projection display copied"
+    },
+    {
+      "name": "constant_C_projection_status_lossless",
+      "pass": true,
+      "detail": "C_projection status copied"
+    },
+    {
+      "name": "constant_C_projection_provenance_lossless",
+      "pass": true,
+      "detail": "C_projection provenance copied"
+    },
+    {
+      "name": "constant_C_projection_interval_lossless",
+      "pass": true,
+      "detail": "C_projection interval copied"
+    },
+    {
+      "name": "constant_C_conn_1_exists_in_values",
+      "pass": true,
+      "detail": "C_conn_1 exists in values"
+    },
+    {
+      "name": "constant_C_conn_1_exists_in_intervals",
+      "pass": true,
+      "detail": "C_conn_1 exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_conn_1_exact_lossless",
+      "pass": true,
+      "detail": "C_conn_1 exact copied"
+    },
+    {
+      "name": "constant_C_conn_1_float_lossless",
+      "pass": true,
+      "detail": "C_conn_1 display copied"
+    },
+    {
+      "name": "constant_C_conn_1_status_lossless",
+      "pass": true,
+      "detail": "C_conn_1 status copied"
+    },
+    {
+      "name": "constant_C_conn_1_provenance_lossless",
+      "pass": true,
+      "detail": "C_conn_1 provenance copied"
+    },
+    {
+      "name": "constant_C_conn_1_interval_lossless",
+      "pass": true,
+      "detail": "C_conn_1 interval copied"
+    },
+    {
+      "name": "constant_C_conn_2_exists_in_values",
+      "pass": true,
+      "detail": "C_conn_2 exists in values"
+    },
+    {
+      "name": "constant_C_conn_2_exists_in_intervals",
+      "pass": true,
+      "detail": "C_conn_2 exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_conn_2_exact_lossless",
+      "pass": true,
+      "detail": "C_conn_2 exact copied"
+    },
+    {
+      "name": "constant_C_conn_2_float_lossless",
+      "pass": true,
+      "detail": "C_conn_2 display copied"
+    },
+    {
+      "name": "constant_C_conn_2_status_lossless",
+      "pass": true,
+      "detail": "C_conn_2 status copied"
+    },
+    {
+      "name": "constant_C_conn_2_provenance_lossless",
+      "pass": true,
+      "detail": "C_conn_2 provenance copied"
+    },
+    {
+      "name": "constant_C_conn_2_interval_lossless",
+      "pass": true,
+      "detail": "C_conn_2 interval copied"
+    },
+    {
+      "name": "constant_C_conn_3_exists_in_values",
+      "pass": true,
+      "detail": "C_conn_3 exists in values"
+    },
+    {
+      "name": "constant_C_conn_3_exists_in_intervals",
+      "pass": true,
+      "detail": "C_conn_3 exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_conn_3_exact_lossless",
+      "pass": true,
+      "detail": "C_conn_3 exact copied"
+    },
+    {
+      "name": "constant_C_conn_3_float_lossless",
+      "pass": true,
+      "detail": "C_conn_3 display copied"
+    },
+    {
+      "name": "constant_C_conn_3_status_lossless",
+      "pass": true,
+      "detail": "C_conn_3 status copied"
+    },
+    {
+      "name": "constant_C_conn_3_provenance_lossless",
+      "pass": true,
+      "detail": "C_conn_3 provenance copied"
+    },
+    {
+      "name": "constant_C_conn_3_interval_lossless",
+      "pass": true,
+      "detail": "C_conn_3 interval copied"
+    },
+    {
+      "name": "constant_C_comm_exists_in_values",
+      "pass": true,
+      "detail": "C_comm exists in values"
+    },
+    {
+      "name": "constant_C_comm_exists_in_intervals",
+      "pass": true,
+      "detail": "C_comm exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_comm_exact_lossless",
+      "pass": true,
+      "detail": "C_comm exact copied"
+    },
+    {
+      "name": "constant_C_comm_float_lossless",
+      "pass": true,
+      "detail": "C_comm display copied"
+    },
+    {
+      "name": "constant_C_comm_status_lossless",
+      "pass": true,
+      "detail": "C_comm status copied"
+    },
+    {
+      "name": "constant_C_comm_provenance_lossless",
+      "pass": true,
+      "detail": "C_comm provenance copied"
+    },
+    {
+      "name": "constant_C_comm_interval_lossless",
+      "pass": true,
+      "detail": "C_comm interval copied"
+    },
+    {
+      "name": "constant_C_comm_2_exists_in_values",
+      "pass": true,
+      "detail": "C_comm_2 exists in values"
+    },
+    {
+      "name": "constant_C_comm_2_exists_in_intervals",
+      "pass": true,
+      "detail": "C_comm_2 exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_comm_2_exact_lossless",
+      "pass": true,
+      "detail": "C_comm_2 exact copied"
+    },
+    {
+      "name": "constant_C_comm_2_float_lossless",
+      "pass": true,
+      "detail": "C_comm_2 display copied"
+    },
+    {
+      "name": "constant_C_comm_2_status_lossless",
+      "pass": true,
+      "detail": "C_comm_2 status copied"
+    },
+    {
+      "name": "constant_C_comm_2_provenance_lossless",
+      "pass": true,
+      "detail": "C_comm_2 provenance copied"
+    },
+    {
+      "name": "constant_C_comm_2_interval_lossless",
+      "pass": true,
+      "detail": "C_comm_2 interval copied"
+    },
+    {
+      "name": "constant_C_comm_3_exists_in_values",
+      "pass": true,
+      "detail": "C_comm_3 exists in values"
+    },
+    {
+      "name": "constant_C_comm_3_exists_in_intervals",
+      "pass": true,
+      "detail": "C_comm_3 exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_comm_3_exact_lossless",
+      "pass": true,
+      "detail": "C_comm_3 exact copied"
+    },
+    {
+      "name": "constant_C_comm_3_float_lossless",
+      "pass": true,
+      "detail": "C_comm_3 display copied"
+    },
+    {
+      "name": "constant_C_comm_3_status_lossless",
+      "pass": true,
+      "detail": "C_comm_3 status copied"
+    },
+    {
+      "name": "constant_C_comm_3_provenance_lossless",
+      "pass": true,
+      "detail": "C_comm_3 provenance copied"
+    },
+    {
+      "name": "constant_C_comm_3_interval_lossless",
+      "pass": true,
+      "detail": "C_comm_3 interval copied"
+    },
+    {
+      "name": "constant_C_D3m_exists_in_values",
+      "pass": true,
+      "detail": "C_D3m exists in values"
+    },
+    {
+      "name": "constant_C_D3m_exists_in_intervals",
+      "pass": true,
+      "detail": "C_D3m exists in interval recomputation"
+    },
+    {
+      "name": "constant_C_D3m_exact_lossless",
+      "pass": true,
+      "detail": "C_D3m exact copied"
+    },
+    {
+      "name": "constant_C_D3m_float_lossless",
+      "pass": true,
+      "detail": "C_D3m display copied"
+    },
+    {
+      "name": "constant_C_D3m_status_lossless",
+      "pass": true,
+      "detail": "C_D3m status copied"
+    },
+    {
+      "name": "constant_C_D3m_provenance_lossless",
+      "pass": true,
+      "detail": "C_D3m provenance copied"
+    },
+    {
+      "name": "constant_C_D3m_interval_lossless",
+      "pass": true,
+      "detail": "C_D3m interval copied"
+    },
+    {
+      "name": "coefficient_source_P1_exists_in_values",
+      "pass": true,
+      "detail": "source_P1 exists in values"
+    },
+    {
+      "name": "coefficient_source_P1_exists_in_intervals",
+      "pass": true,
+      "detail": "source_P1 exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_source_P1_exact_lossless",
+      "pass": true,
+      "detail": "source_P1 exact copied"
+    },
+    {
+      "name": "coefficient_source_P1_float_lossless",
+      "pass": true,
+      "detail": "source_P1 display copied"
+    },
+    {
+      "name": "coefficient_source_P1_status_lossless",
+      "pass": true,
+      "detail": "source_P1 status copied"
+    },
+    {
+      "name": "coefficient_source_P1_provenance_lossless",
+      "pass": true,
+      "detail": "source_P1 provenance copied"
+    },
+    {
+      "name": "coefficient_source_P1_interval_lossless",
+      "pass": true,
+      "detail": "source_P1 interval copied"
+    },
+    {
+      "name": "coefficient_source_P2_exists_in_values",
+      "pass": true,
+      "detail": "source_P2 exists in values"
+    },
+    {
+      "name": "coefficient_source_P2_exists_in_intervals",
+      "pass": true,
+      "detail": "source_P2 exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_source_P2_exact_lossless",
+      "pass": true,
+      "detail": "source_P2 exact copied"
+    },
+    {
+      "name": "coefficient_source_P2_float_lossless",
+      "pass": true,
+      "detail": "source_P2 display copied"
+    },
+    {
+      "name": "coefficient_source_P2_status_lossless",
+      "pass": true,
+      "detail": "source_P2 status copied"
+    },
+    {
+      "name": "coefficient_source_P2_provenance_lossless",
+      "pass": true,
+      "detail": "source_P2 provenance copied"
+    },
+    {
+      "name": "coefficient_source_P2_interval_lossless",
+      "pass": true,
+      "detail": "source_P2 interval copied"
+    },
+    {
+      "name": "coefficient_DP1_norm_exists_in_values",
+      "pass": true,
+      "detail": "DP1_norm exists in values"
+    },
+    {
+      "name": "coefficient_DP1_norm_exists_in_intervals",
+      "pass": true,
+      "detail": "DP1_norm exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_DP1_norm_exact_lossless",
+      "pass": true,
+      "detail": "DP1_norm exact copied"
+    },
+    {
+      "name": "coefficient_DP1_norm_float_lossless",
+      "pass": true,
+      "detail": "DP1_norm display copied"
+    },
+    {
+      "name": "coefficient_DP1_norm_status_lossless",
+      "pass": true,
+      "detail": "DP1_norm status copied"
+    },
+    {
+      "name": "coefficient_DP1_norm_provenance_lossless",
+      "pass": true,
+      "detail": "DP1_norm provenance copied"
+    },
+    {
+      "name": "coefficient_DP1_norm_interval_lossless",
+      "pass": true,
+      "detail": "DP1_norm interval copied"
+    },
+    {
+      "name": "coefficient_DP2_norm_exists_in_values",
+      "pass": true,
+      "detail": "DP2_norm exists in values"
+    },
+    {
+      "name": "coefficient_DP2_norm_exists_in_intervals",
+      "pass": true,
+      "detail": "DP2_norm exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_DP2_norm_exact_lossless",
+      "pass": true,
+      "detail": "DP2_norm exact copied"
+    },
+    {
+      "name": "coefficient_DP2_norm_float_lossless",
+      "pass": true,
+      "detail": "DP2_norm display copied"
+    },
+    {
+      "name": "coefficient_DP2_norm_status_lossless",
+      "pass": true,
+      "detail": "DP2_norm status copied"
+    },
+    {
+      "name": "coefficient_DP2_norm_provenance_lossless",
+      "pass": true,
+      "detail": "DP2_norm provenance copied"
+    },
+    {
+      "name": "coefficient_DP2_norm_interval_lossless",
+      "pass": true,
+      "detail": "DP2_norm interval copied"
+    },
+    {
+      "name": "coefficient_D2P1_norm_exists_in_values",
+      "pass": true,
+      "detail": "D2P1_norm exists in values"
+    },
+    {
+      "name": "coefficient_D2P1_norm_exists_in_intervals",
+      "pass": true,
+      "detail": "D2P1_norm exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_D2P1_norm_exact_lossless",
+      "pass": true,
+      "detail": "D2P1_norm exact copied"
+    },
+    {
+      "name": "coefficient_D2P1_norm_float_lossless",
+      "pass": true,
+      "detail": "D2P1_norm display copied"
+    },
+    {
+      "name": "coefficient_D2P1_norm_status_lossless",
+      "pass": true,
+      "detail": "D2P1_norm status copied"
+    },
+    {
+      "name": "coefficient_D2P1_norm_provenance_lossless",
+      "pass": true,
+      "detail": "D2P1_norm provenance copied"
+    },
+    {
+      "name": "coefficient_D2P1_norm_interval_lossless",
+      "pass": true,
+      "detail": "D2P1_norm interval copied"
+    },
+    {
+      "name": "coefficient_D3m_norm_exists_in_values",
+      "pass": true,
+      "detail": "D3m_norm exists in values"
+    },
+    {
+      "name": "coefficient_D3m_norm_exists_in_intervals",
+      "pass": true,
+      "detail": "D3m_norm exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_D3m_norm_exact_lossless",
+      "pass": true,
+      "detail": "D3m_norm exact copied"
+    },
+    {
+      "name": "coefficient_D3m_norm_float_lossless",
+      "pass": true,
+      "detail": "D3m_norm display copied"
+    },
+    {
+      "name": "coefficient_D3m_norm_status_lossless",
+      "pass": true,
+      "detail": "D3m_norm status copied"
+    },
+    {
+      "name": "coefficient_D3m_norm_provenance_lossless",
+      "pass": true,
+      "detail": "D3m_norm provenance copied"
+    },
+    {
+      "name": "coefficient_D3m_norm_interval_lossless",
+      "pass": true,
+      "detail": "D3m_norm interval copied"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_exists_in_values",
+      "pass": true,
+      "detail": "raw_P3_scale exists in values"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_exists_in_intervals",
+      "pass": true,
+      "detail": "raw_P3_scale exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_exact_lossless",
+      "pass": true,
+      "detail": "raw_P3_scale exact copied"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_float_lossless",
+      "pass": true,
+      "detail": "raw_P3_scale display copied"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_status_lossless",
+      "pass": true,
+      "detail": "raw_P3_scale status copied"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_provenance_lossless",
+      "pass": true,
+      "detail": "raw_P3_scale provenance copied"
+    },
+    {
+      "name": "coefficient_raw_P3_scale_interval_lossless",
+      "pass": true,
+      "detail": "raw_P3_scale interval copied"
+    },
+    {
+      "name": "coefficient_xi1_bound_exists_in_values",
+      "pass": true,
+      "detail": "xi1_bound exists in values"
+    },
+    {
+      "name": "coefficient_xi1_bound_exists_in_intervals",
+      "pass": true,
+      "detail": "xi1_bound exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_xi1_bound_exact_lossless",
+      "pass": true,
+      "detail": "xi1_bound exact copied"
+    },
+    {
+      "name": "coefficient_xi1_bound_float_lossless",
+      "pass": true,
+      "detail": "xi1_bound display copied"
+    },
+    {
+      "name": "coefficient_xi1_bound_status_lossless",
+      "pass": true,
+      "detail": "xi1_bound status copied"
+    },
+    {
+      "name": "coefficient_xi1_bound_provenance_lossless",
+      "pass": true,
+      "detail": "xi1_bound provenance copied"
+    },
+    {
+      "name": "coefficient_xi1_bound_interval_lossless",
+      "pass": true,
+      "detail": "xi1_bound interval copied"
+    },
+    {
+      "name": "coefficient_xi2_forcing_exists_in_values",
+      "pass": true,
+      "detail": "xi2_forcing exists in values"
+    },
+    {
+      "name": "coefficient_xi2_forcing_exists_in_intervals",
+      "pass": true,
+      "detail": "xi2_forcing exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_xi2_forcing_exact_lossless",
+      "pass": true,
+      "detail": "xi2_forcing exact copied"
+    },
+    {
+      "name": "coefficient_xi2_forcing_float_lossless",
+      "pass": true,
+      "detail": "xi2_forcing display copied"
+    },
+    {
+      "name": "coefficient_xi2_forcing_status_lossless",
+      "pass": true,
+      "detail": "xi2_forcing status copied"
+    },
+    {
+      "name": "coefficient_xi2_forcing_provenance_lossless",
+      "pass": true,
+      "detail": "xi2_forcing provenance copied"
+    },
+    {
+      "name": "coefficient_xi2_forcing_interval_lossless",
+      "pass": true,
+      "detail": "xi2_forcing interval copied"
+    },
+    {
+      "name": "coefficient_xi2_bound_exists_in_values",
+      "pass": true,
+      "detail": "xi2_bound exists in values"
+    },
+    {
+      "name": "coefficient_xi2_bound_exists_in_intervals",
+      "pass": true,
+      "detail": "xi2_bound exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_xi2_bound_exact_lossless",
+      "pass": true,
+      "detail": "xi2_bound exact copied"
+    },
+    {
+      "name": "coefficient_xi2_bound_float_lossless",
+      "pass": true,
+      "detail": "xi2_bound display copied"
+    },
+    {
+      "name": "coefficient_xi2_bound_status_lossless",
+      "pass": true,
+      "detail": "xi2_bound status copied"
+    },
+    {
+      "name": "coefficient_xi2_bound_provenance_lossless",
+      "pass": true,
+      "detail": "xi2_bound provenance copied"
+    },
+    {
+      "name": "coefficient_xi2_bound_interval_lossless",
+      "pass": true,
+      "detail": "xi2_bound interval copied"
+    },
+    {
+      "name": "coefficient_remainder_R3_exists_in_values",
+      "pass": true,
+      "detail": "remainder_R3 exists in values"
+    },
+    {
+      "name": "coefficient_remainder_R3_exists_in_intervals",
+      "pass": true,
+      "detail": "remainder_R3 exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_remainder_R3_exact_lossless",
+      "pass": true,
+      "detail": "remainder_R3 exact copied"
+    },
+    {
+      "name": "coefficient_remainder_R3_float_lossless",
+      "pass": true,
+      "detail": "remainder_R3 display copied"
+    },
+    {
+      "name": "coefficient_remainder_R3_status_lossless",
+      "pass": true,
+      "detail": "remainder_R3 status copied"
+    },
+    {
+      "name": "coefficient_remainder_R3_provenance_lossless",
+      "pass": true,
+      "detail": "remainder_R3 provenance copied"
+    },
+    {
+      "name": "coefficient_remainder_R3_interval_lossless",
+      "pass": true,
+      "detail": "remainder_R3 interval copied"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_exists_in_values",
+      "pass": true,
+      "detail": "tail_contraction_denominator exists in values"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_exists_in_intervals",
+      "pass": true,
+      "detail": "tail_contraction_denominator exists in interval recomputation"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_exact_lossless",
+      "pass": true,
+      "detail": "tail_contraction_denominator exact copied"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_float_lossless",
+      "pass": true,
+      "detail": "tail_contraction_denominator display copied"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_status_lossless",
+      "pass": true,
+      "detail": "tail_contraction_denominator status copied"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_provenance_lossless",
+      "pass": true,
+      "detail": "tail_contraction_denominator provenance copied"
+    },
+    {
+      "name": "coefficient_tail_contraction_denominator_interval_lossless",
+      "pass": true,
+      "detail": "tail_contraction_denominator interval copied"
+    },
+    {
+      "name": "R_threshold_float_lossless",
+      "pass": true,
+      "detail": "R_threshold float display copied"
+    },
+    {
+      "name": "R_threshold_interval_lossless",
+      "pass": true,
+      "detail": "R_threshold interval copied"
+    },
+    {
+      "name": "R_threshold_semantics_lossless",
+      "pass": true,
+      "detail": "R_threshold semantics copied"
+    },
+    {
+      "name": "claim_boundary_level_Q",
+      "pass": true,
+      "detail": "claim boundary names Level Q"
+    }
+  ],
+  "summary": {
+    "checks_total": 181,
+    "checks_passed": 181,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

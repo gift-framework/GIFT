@@ -11,6 +11,8 @@ Artifacts:
 - [phase4_donaldson_coefficients.json](../certificates/phase4_donaldson_coefficients.json)
 - [phase4_donaldson_coefficients_values.json](../certificates/phase4_donaldson_coefficients_values.json)
 - [phase4_donaldson_coefficients_check.json](../certificates/phase4_donaldson_coefficients_check.json)
+- [phase4_level_Q_coefficients.json](../certificates/phase4_level_Q_coefficients.json)
+- [phase4_level_Q_coefficients_check.json](../certificates/phase4_level_Q_coefficients_check.json)
 - [datum_D0.json](../certificates/datum_D0.json)
 
 Checked D0 values:
@@ -33,6 +35,12 @@ Checker result:
 
 `172/172` checks pass, including outward-rounded interval recomputation for the
 scalar coefficient layer.
+
+Compact Level Q extraction:
+
+`181/181` checks pass. The compact package exposes the citable intervals,
+including
+`R_threshold in [3664.065985330004, 3664.065985330005]`.
 
 ## Scope
 
@@ -61,7 +69,12 @@ Checker result:
 
 `36/36` checks pass.
 
-Open theorem obligations remain:
+Stage D update (2026-07-09): these obligations are now imported from the
+private V/W/X/Y slot theorems and `axis2_L2_assembly_theorem_2026_07_05`.
+The historical Codex contract remains the public audit witness for the
+product-max normalization.
+
+Previously open theorem obligations:
 
 - uniform fibrewise inverse in the product norm;
 - commutator bounds in the product norm;
@@ -91,5 +104,6 @@ Checker result:
 
 `20/20` checks pass.
 
-This uses `K_AR_prod <= 2079/2000` from the product-space contract; the uniform
-inverse theorem and closedness theorem are still open.
+This uses `K_AR_prod <= 2079/2000` from the product-space contract. Stage D
+imports the private L2 assembly closure; Stage E now focuses on outward-rounded
+interval packaging of the coefficient layer for Level Q.

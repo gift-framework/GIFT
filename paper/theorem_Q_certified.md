@@ -79,6 +79,11 @@ Each constant must record:
   independent structural, arithmetic, and outward-rounded interval checker for
   that symbolic formula tree. With `phase4_donaldson_coefficients_values.json`,
   it passes `172/172` checks.
+- `phase4_level_Q_coefficients.json` is the compact citable Level Q coefficient
+  package extracted from the full Stage C/E checker. Its independent lossless
+  projection checker `phase4_level_Q_coefficients_check.json` passes `181/181`
+  checks and exposes the outward-rounded intervals directly, including
+  `R_threshold in [3664.065985330004, 3664.065985330005]`.
 - `phase4_donaldson_coefficients_values.json` evaluates the D0 coefficient
   formulas: `source_P1 = 3.1185`, `source_P2 = 6.36018075`, and
   `remainder_R3 = 13770793.170081593`. This closes P4.1 coefficients at D0,

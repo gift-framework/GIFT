@@ -1,0 +1,331 @@
+{
+  "artifact": "phase4_level_Q_coefficients",
+  "generated_by": "scripts/phase4_level_Q_coefficients.py",
+  "scope": "Compact citable Level Q package for D0 Donaldson coefficient intervals",
+  "status": "level_Q_coefficient_interval_package",
+  "source_checker": "certificates/phase4_donaldson_coefficients_check.json",
+  "source_values": "certificates/phase4_donaldson_coefficients_values.json",
+  "source_checker_summary": {
+    "checks_total": 172,
+    "checks_passed": 172,
+    "checks_failed": 0
+  },
+  "rounding_protocol": {
+    "rational_values": "lower=floor(q*10^p)/10^p, upper=ceil(q*10^p)/10^p",
+    "R_threshold": "find integers n,n+1 with (n/10^p)^3 <= D < ((n+1)/10^p)^3",
+    "float_inputs": "none used for interval acceptance"
+  },
+  "decimal_places": 18,
+  "constants": {
+    "K_H_K3": {
+      "exact": "9/20",
+      "float_display": 0.45,
+      "interval": {
+        "lower": "0.450000000000000000",
+        "upper": "0.450000000000000000",
+        "decimal_places": 18,
+        "exact": "9/20"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private axis2_K3_hodge_gap / Phase 4.1 closure uses K_H_K3 <= 0.45"
+    },
+    "K_F": {
+      "exact": "231/100",
+      "float_display": 2.31,
+      "interval": {
+        "lower": "2.310000000000000000",
+        "upper": "2.310000000000000000",
+        "decimal_places": 18,
+        "exact": "231/100"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private axis2_hypothesis_AR_discharge: K_F <= 2.31"
+    },
+    "G_aug": {
+      "exact": "183/5",
+      "float_display": 36.6,
+      "interval": {
+        "lower": "36.600000000000000000",
+        "upper": "36.600000000000000000",
+        "decimal_places": 18,
+        "exact": "183/5"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private Phase 4.1 third-order closure uses ||G_aug|| <= 36.6"
+    },
+    "C_nl": {
+      "exact": "2/3",
+      "float_display": 0.6666666666666666,
+      "interval": {
+        "lower": "0.666666666666666666",
+        "upper": "0.666666666666666667",
+        "decimal_places": 18,
+        "exact": "2/3"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "private C_nl theorem-grade extraction"
+    },
+    "C_projection": {
+      "exact": "1",
+      "float_display": 1.0,
+      "interval": {
+        "lower": "1.000000000000000000",
+        "upper": "1.000000000000000000",
+        "decimal_places": 18,
+        "exact": "1"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "L2 orthogonal projection has sharp norm 1"
+    },
+    "C_conn_1": {
+      "exact": "0",
+      "float_display": 0.0,
+      "interval": {
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000",
+        "decimal_places": 18,
+        "exact": "0"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge d_H omega = 0"
+    },
+    "C_conn_2": {
+      "exact": "0",
+      "float_display": 0.0,
+      "interval": {
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000",
+        "decimal_places": 18,
+        "exact": "0"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge to second order"
+    },
+    "C_conn_3": {
+      "exact": "0",
+      "float_display": 0.0,
+      "interval": {
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000",
+        "decimal_places": 18,
+        "exact": "0"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Donaldson canonical gauge to third order"
+    },
+    "C_comm": {
+      "exact": "2079/2000",
+      "float_display": 1.0395,
+      "interval": {
+        "lower": "1.039500000000000000",
+        "upper": "1.039500000000000000",
+        "decimal_places": 18,
+        "exact": "2079/2000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Weitzenboeck/Kato commutator bound K_H_K3*K_F"
+    },
+    "C_comm_2": {
+      "exact": "4322241/4000000",
+      "float_display": 1.08056025,
+      "interval": {
+        "lower": "1.080560250000000000",
+        "upper": "1.080560250000000000",
+        "decimal_places": 18,
+        "exact": "4322241/4000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "iterated commutator bound (K_H_K3*K_F)^2"
+    },
+    "C_comm_3": {
+      "exact": "8985939039/8000000000",
+      "float_display": 1.123242379875,
+      "interval": {
+        "lower": "1.123242379875000000",
+        "upper": "1.123242379875000000",
+        "decimal_places": 18,
+        "exact": "8985939039/8000000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "third iterated commutator bound (K_H_K3*K_F)^3"
+    },
+    "C_D3m": {
+      "exact": "4/9",
+      "float_display": 0.4444444444444444,
+      "interval": {
+        "lower": "0.444444444444444444",
+        "upper": "0.444444444444444445",
+        "decimal_places": 18,
+        "exact": "4/9"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Simons-type third variation + collinearity + type-IV bound"
+    }
+  },
+  "coefficients": {
+    "source_P1": {
+      "exact": "6237/2000",
+      "float_display": 3.1185,
+      "interval": {
+        "lower": "3.118500000000000000",
+        "upper": "3.118500000000000000",
+        "decimal_places": 18,
+        "exact": "6237/2000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "3 * K_H_K3 * K_F"
+    },
+    "source_P2": {
+      "exact": "25440723/4000000",
+      "float_display": 6.36018075,
+      "interval": {
+        "lower": "6.360180750000000000",
+        "upper": "6.360180750000000000",
+        "decimal_places": 18,
+        "exact": "25440723/4000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "3 * (K_H_K3*K_F)^2 + source_P1"
+    },
+    "DP1_norm": {
+      "exact": "6237/2000",
+      "float_display": 3.1185,
+      "interval": {
+        "lower": "3.118500000000000000",
+        "upper": "3.118500000000000000",
+        "decimal_places": 18,
+        "exact": "6237/2000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "same first-order structure as source_P1"
+    },
+    "DP2_norm": {
+      "exact": "16796241/2000000",
+      "float_display": 8.3981205,
+      "interval": {
+        "lower": "8.398120500000000000",
+        "upper": "8.398120500000000000",
+        "decimal_places": 18,
+        "exact": "16796241/2000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "2 * (K_H_K3*K_F)^2 + source_P1 + DP1_norm"
+    },
+    "D2P1_norm": {
+      "exact": "6237/2000",
+      "float_display": 3.1185,
+      "interval": {
+        "lower": "3.118500000000000000",
+        "upper": "3.118500000000000000",
+        "decimal_places": 18,
+        "exact": "6237/2000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "same structural bound as source_P1"
+    },
+    "D3m_norm": {
+      "exact": "4/9",
+      "float_display": 0.4444444444444444,
+      "interval": {
+        "lower": "0.444444444444444444",
+        "upper": "0.444444444444444445",
+        "decimal_places": 18,
+        "exact": "4/9"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "C_D3m = 4/9"
+    },
+    "raw_P3_scale": {
+      "exact": "12985939039/4000000000",
+      "float_display": 3.24648475975,
+      "interval": {
+        "lower": "3.246484759750000000",
+        "upper": "3.246484759750000000",
+        "decimal_places": 18,
+        "exact": "12985939039/4000000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "1 + 2 * (K_H_K3*K_F)^3"
+    },
+    "xi1_bound": {
+      "exact": "1141371/10000",
+      "float_display": 114.1371,
+      "interval": {
+        "lower": "114.137100000000000000",
+        "upper": "114.137100000000000000",
+        "decimal_places": 18,
+        "exact": "1141371/10000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "G_aug * source_P1"
+    },
+    "xi2_forcing": {
+      "exact": "470472259257/100000000",
+      "float_display": 4704.72259257,
+      "interval": {
+        "lower": "4704.722592570000000000",
+        "upper": "4704.722592570000000000",
+        "decimal_places": 18,
+        "exact": "470472259257/100000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "source_P2 + DP1*xi1 + 1/2*C_nl*xi1^2"
+    },
+    "xi2_bound": {
+      "exact": "86096423444031/500000000",
+      "float_display": 172192.846888062,
+      "interval": {
+        "lower": "172192.846888062000000000",
+        "upper": "172192.846888062000000000",
+        "decimal_places": 18,
+        "exact": "86096423444031/500000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "G_aug * xi2_forcing"
+    },
+    "remainder_R3": {
+      "exact": "137707931700815927923/10000000000000",
+      "float_display": 13770793.170081593,
+      "interval": {
+        "lower": "13770793.170081592792300000",
+        "upper": "13770793.170081592792300000",
+        "decimal_places": 18,
+        "exact": "137707931700815927923/10000000000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "Taylor R3 formula from Stage B v1"
+    },
+    "tail_contraction_denominator": {
+      "exact": "1537233641576208203404449/31250000000000",
+      "float_display": 49191476530.43866,
+      "interval": {
+        "lower": "49191476530.438662508942368000",
+        "upper": "49191476530.438662508942368000",
+        "decimal_places": 18,
+        "exact": "1537233641576208203404449/31250000000000"
+      },
+      "status": "theorem_grade_upper_bound",
+      "provenance": "4 * G_aug^2 * C_nl * remainder_R3"
+    }
+  },
+  "R_threshold": {
+    "float_display": 3664.0659853300026,
+    "interval": {
+      "lower": "3664.065985330004",
+      "upper": "3664.065985330005",
+      "decimal_places": 12,
+      "lower_cube_le_value": "768616820788103819781028363014165854282747501/15625000000000000000000000000000000",
+      "upper_cube_gt_value": "393531812243509477936995598319334960659198001/8000000000000000000000000000000000",
+      "radicand_exact": "1537233641576208203404449/31250000000000"
+    },
+    "semantics": "minimum admissible R for the eps^3 tail contraction; 4 * G_aug^2 * C_nl * remainder_R3 * eps^3 < 1 holds for R >= R_threshold",
+    "status": "outward_rounded_cube_root_interval"
+  },
+  "claim_boundary": [
+    "Citable at D0 for Level Q coefficient intervals.",
+    "Lossless projection of phase4_donaldson_coefficients_check.json on the selected citable fields.",
+    "Does not prove non-D0 uniformity.",
+    "Does not prove the anisotropic Joyce perturbation theorem."
+  ],
+  "all_pass": true
+}

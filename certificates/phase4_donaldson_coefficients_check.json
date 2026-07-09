@@ -581,9 +581,9 @@
       "detail": "promotion boundary requires an independent checker"
     },
     {
-      "name": "promotion_boundary_keeps_AR_open",
+      "name": "promotion_boundary_stageE_scope",
       "pass": true,
-      "detail": "promotion boundary keeps AR open"
+      "detail": "promotion boundary points to Stage E / Level Q interval packaging"
     },
     {
       "name": "values_artifact_present",
