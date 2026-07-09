@@ -96,6 +96,12 @@ def main() -> None:
         "R_threshold": {
             "float_display": evaluated_values["R_threshold"]["value"],
             "interval": intervals["R_threshold"],
+            "citable_upper": "3664.066",
+            "citation": {
+                "certified_upper_endpoint": intervals["R_threshold"]["upper"],
+                "human_conservative_round": "3664.066",
+                "recommended_text": "R_threshold <= 3664.066, with machine bracket [3664.065985330004, 3664.065985330005]",
+            },
             "semantics": evaluated_values["R_threshold"]["semantics"],
             "status": "outward_rounded_cube_root_interval",
         },

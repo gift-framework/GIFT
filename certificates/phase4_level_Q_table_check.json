@@ -1,0 +1,230 @@
+{
+  "artifact": "phase4_level_Q_table_check",
+  "generated_by": "scripts/phase4_level_Q_table_checker.py",
+  "scope": "Paper-facing Level Q table consistency check",
+  "checked_paper": "paper/theorem_Q_certified.md",
+  "checked_package": "certificates/phase4_level_Q_coefficients.json",
+  "checks": [
+    {
+      "name": "package_all_pass",
+      "pass": true,
+      "detail": "Level Q package passes"
+    },
+    {
+      "name": "table_present",
+      "pass": true,
+      "detail": "paper-facing table is present"
+    },
+    {
+      "name": "table_row_set_matches",
+      "pass": true,
+      "detail": "table rows match compact package coefficient list plus R_threshold"
+    },
+    {
+      "name": "source_P1_row_present",
+      "pass": true,
+      "detail": "source_P1 row exists"
+    },
+    {
+      "name": "source_P1_exact_matches",
+      "pass": true,
+      "detail": "source_P1 exact value matches"
+    },
+    {
+      "name": "source_P1_interval_matches",
+      "pass": true,
+      "detail": "source_P1 compact interval matches package interval"
+    },
+    {
+      "name": "source_P2_row_present",
+      "pass": true,
+      "detail": "source_P2 row exists"
+    },
+    {
+      "name": "source_P2_exact_matches",
+      "pass": true,
+      "detail": "source_P2 exact value matches"
+    },
+    {
+      "name": "source_P2_interval_matches",
+      "pass": true,
+      "detail": "source_P2 compact interval matches package interval"
+    },
+    {
+      "name": "DP1_norm_row_present",
+      "pass": true,
+      "detail": "DP1_norm row exists"
+    },
+    {
+      "name": "DP1_norm_exact_matches",
+      "pass": true,
+      "detail": "DP1_norm exact value matches"
+    },
+    {
+      "name": "DP1_norm_interval_matches",
+      "pass": true,
+      "detail": "DP1_norm compact interval matches package interval"
+    },
+    {
+      "name": "DP2_norm_row_present",
+      "pass": true,
+      "detail": "DP2_norm row exists"
+    },
+    {
+      "name": "DP2_norm_exact_matches",
+      "pass": true,
+      "detail": "DP2_norm exact value matches"
+    },
+    {
+      "name": "DP2_norm_interval_matches",
+      "pass": true,
+      "detail": "DP2_norm compact interval matches package interval"
+    },
+    {
+      "name": "D2P1_norm_row_present",
+      "pass": true,
+      "detail": "D2P1_norm row exists"
+    },
+    {
+      "name": "D2P1_norm_exact_matches",
+      "pass": true,
+      "detail": "D2P1_norm exact value matches"
+    },
+    {
+      "name": "D2P1_norm_interval_matches",
+      "pass": true,
+      "detail": "D2P1_norm compact interval matches package interval"
+    },
+    {
+      "name": "D3m_norm_row_present",
+      "pass": true,
+      "detail": "D3m_norm row exists"
+    },
+    {
+      "name": "D3m_norm_exact_matches",
+      "pass": true,
+      "detail": "D3m_norm exact value matches"
+    },
+    {
+      "name": "D3m_norm_interval_matches",
+      "pass": true,
+      "detail": "D3m_norm compact interval matches package interval"
+    },
+    {
+      "name": "raw_P3_scale_row_present",
+      "pass": true,
+      "detail": "raw_P3_scale row exists"
+    },
+    {
+      "name": "raw_P3_scale_exact_matches",
+      "pass": true,
+      "detail": "raw_P3_scale exact value matches"
+    },
+    {
+      "name": "raw_P3_scale_interval_matches",
+      "pass": true,
+      "detail": "raw_P3_scale compact interval matches package interval"
+    },
+    {
+      "name": "xi1_bound_row_present",
+      "pass": true,
+      "detail": "xi1_bound row exists"
+    },
+    {
+      "name": "xi1_bound_exact_matches",
+      "pass": true,
+      "detail": "xi1_bound exact value matches"
+    },
+    {
+      "name": "xi1_bound_interval_matches",
+      "pass": true,
+      "detail": "xi1_bound compact interval matches package interval"
+    },
+    {
+      "name": "xi2_forcing_row_present",
+      "pass": true,
+      "detail": "xi2_forcing row exists"
+    },
+    {
+      "name": "xi2_forcing_exact_matches",
+      "pass": true,
+      "detail": "xi2_forcing exact value matches"
+    },
+    {
+      "name": "xi2_forcing_interval_matches",
+      "pass": true,
+      "detail": "xi2_forcing compact interval matches package interval"
+    },
+    {
+      "name": "xi2_bound_row_present",
+      "pass": true,
+      "detail": "xi2_bound row exists"
+    },
+    {
+      "name": "xi2_bound_exact_matches",
+      "pass": true,
+      "detail": "xi2_bound exact value matches"
+    },
+    {
+      "name": "xi2_bound_interval_matches",
+      "pass": true,
+      "detail": "xi2_bound compact interval matches package interval"
+    },
+    {
+      "name": "remainder_R3_row_present",
+      "pass": true,
+      "detail": "remainder_R3 row exists"
+    },
+    {
+      "name": "remainder_R3_exact_matches",
+      "pass": true,
+      "detail": "remainder_R3 exact value matches"
+    },
+    {
+      "name": "remainder_R3_interval_matches",
+      "pass": true,
+      "detail": "remainder_R3 compact interval matches package interval"
+    },
+    {
+      "name": "tail_contraction_denominator_row_present",
+      "pass": true,
+      "detail": "tail_contraction_denominator row exists"
+    },
+    {
+      "name": "tail_contraction_denominator_exact_matches",
+      "pass": true,
+      "detail": "tail_contraction_denominator exact value matches"
+    },
+    {
+      "name": "tail_contraction_denominator_interval_matches",
+      "pass": true,
+      "detail": "tail_contraction_denominator compact interval matches package interval"
+    },
+    {
+      "name": "R_threshold_row_present",
+      "pass": true,
+      "detail": "R_threshold row exists"
+    },
+    {
+      "name": "R_threshold_exact_label",
+      "pass": true,
+      "detail": "R_threshold exact label is descriptive"
+    },
+    {
+      "name": "R_threshold_interval_mentions_bracket",
+      "pass": true,
+      "detail": "R_threshold table row includes machine bracket"
+    },
+    {
+      "name": "R_threshold_interval_mentions_human_round",
+      "pass": true,
+      "detail": "R_threshold table row includes human conservative round"
+    }
+  ],
+  "summary": {
+    "checks_total": 43,
+    "checks_passed": 43,
+    "checks_failed": 0
+  },
+  "all_pass": true
+}

@@ -905,14 +905,34 @@
       "detail": "R_threshold semantics copied"
     },
     {
+      "name": "R_threshold_flat_citable_upper_present",
+      "pass": true,
+      "detail": "R_threshold flat citable upper is present"
+    },
+    {
+      "name": "R_threshold_certified_endpoint_matches_interval",
+      "pass": true,
+      "detail": "R_threshold certified endpoint is the interval upper endpoint"
+    },
+    {
+      "name": "R_threshold_human_round_conservative",
+      "pass": true,
+      "detail": "R_threshold human citation round is conservative"
+    },
+    {
+      "name": "R_threshold_recommended_text_mentions_both",
+      "pass": true,
+      "detail": "R_threshold recommended text includes both human and machine citations"
+    },
+    {
       "name": "claim_boundary_level_Q",
       "pass": true,
       "detail": "claim boundary names Level Q"
     }
   ],
   "summary": {
-    "checks_total": 181,
-    "checks_passed": 181,
+    "checks_total": 185,
+    "checks_passed": 185,
     "checks_failed": 0
   },
   "all_pass": true

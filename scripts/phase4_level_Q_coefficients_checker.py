@@ -87,6 +87,34 @@ def main() -> None:
     add(checks, "R_threshold_float_lossless", r_pkg.get("float_display") == r_value.get("value"), "R_threshold float display copied")
     add(checks, "R_threshold_interval_lossless", r_pkg.get("interval") == intervals.get("R_threshold"), "R_threshold interval copied")
     add(checks, "R_threshold_semantics_lossless", r_pkg.get("semantics") == r_value.get("semantics"), "R_threshold semantics copied")
+    citation = r_pkg.get("citation", {})
+    add(
+        checks,
+        "R_threshold_flat_citable_upper_present",
+        r_pkg.get("citable_upper") == "3664.066",
+        "R_threshold flat citable upper is present",
+    )
+    add(
+        checks,
+        "R_threshold_certified_endpoint_matches_interval",
+        citation.get("certified_upper_endpoint") == intervals.get("R_threshold", {}).get("upper"),
+        "R_threshold certified endpoint is the interval upper endpoint",
+    )
+    add(
+        checks,
+        "R_threshold_human_round_conservative",
+        citation.get("human_conservative_round") == "3664.066"
+        and r_pkg.get("citable_upper") == citation.get("human_conservative_round")
+        and citation.get("human_conservative_round", "") >= intervals.get("R_threshold", {}).get("upper", ""),
+        "R_threshold human citation round is conservative",
+    )
+    add(
+        checks,
+        "R_threshold_recommended_text_mentions_both",
+        "3664.066" in citation.get("recommended_text", "")
+        and intervals.get("R_threshold", {}).get("upper", "") in citation.get("recommended_text", ""),
+        "R_threshold recommended text includes both human and machine citations",
+    )
     add(
         checks,
         "claim_boundary_level_Q",

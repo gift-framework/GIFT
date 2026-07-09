@@ -318,6 +318,12 @@
       "upper_cube_gt_value": "393531812243509477936995598319334960659198001/8000000000000000000000000000000000",
       "radicand_exact": "1537233641576208203404449/31250000000000"
     },
+    "citable_upper": "3664.066",
+    "citation": {
+      "certified_upper_endpoint": "3664.065985330005",
+      "human_conservative_round": "3664.066",
+      "recommended_text": "R_threshold <= 3664.066, with machine bracket [3664.065985330004, 3664.065985330005]"
+    },
     "semantics": "minimum admissible R for the eps^3 tail contraction; 4 * G_aug^2 * C_nl * remainder_R3 * eps^3 < 1 holds for R >= R_threshold",
     "status": "outward_rounded_cube_root_interval"
   },

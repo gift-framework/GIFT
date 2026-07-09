@@ -38,9 +38,15 @@ scalar coefficient layer.
 
 Compact Level Q extraction:
 
-`181/181` checks pass. The compact package exposes the citable intervals,
+`185/185` checks pass. The compact package exposes the citable intervals,
 including
-`R_threshold in [3664.065985330004, 3664.065985330005]`.
+`R_threshold in [3664.065985330004, 3664.065985330005]`. Prose may cite the
+conservative human round `R_threshold <= 3664.066`.
+
+Paper-facing table check:
+
+`43/43` checks pass for the Level Q coefficient table in
+`paper/theorem_Q_certified.md`.
 
 ## Scope
 

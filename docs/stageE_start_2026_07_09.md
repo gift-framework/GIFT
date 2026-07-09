@@ -88,7 +88,7 @@ The compact citable package now exists:
 Current lossless-projection checker result:
 
 ```text
-181/181 checks pass
+185/185 checks pass
 ```
 
 The package extracts:
@@ -99,17 +99,38 @@ The package extracts:
 - the rounding protocol;
 - the Stage E claim boundary.
 
+For `R_threshold`, the package carries both citation forms:
+
+```text
+machine endpoint: 3664.065985330005
+human conservative round: 3664.066
+```
+
 It is a lossless projection of the selected fields from
 `phase4_donaldson_coefficients_check.json`, so downstream notes can cite the
 compact package without manually reading the full checker output.
+
+## Third slice completed
+
+The paper-facing table in `paper/theorem_Q_certified.md` is now guarded by:
+
+- checker: `scripts/phase4_level_Q_table_checker.py`;
+- output: `certificates/phase4_level_Q_table_check.json`.
+
+Current table consistency result:
+
+```text
+43/43 checks pass
+```
+
+This checker verifies that every table row matches the compact Level Q package,
+including exact values, compact intervals, and the dual `R_threshold` citation.
 
 ## Next gates
 
 Recommended next Stage E gates:
 
-1. Patch downstream prose to cite the compact package rather than the full
-   verbose checker JSON.
-2. Decide whether `R_threshold` should be cited as the interval upper endpoint
-   `3664.065985330005` or rounded conservatively to `3664.066`.
-3. Decide whether to add `phase4_level_Q_coefficients.json` to
-   `datum_D0.json` supporting artifacts or keep it as a theorem-Q layer only.
+1. Consider adding a small changelog/release note entry for Stage E.
+2. Decide whether the Level Q package should also expose a shorter
+   public-facing `R_threshold <= 3664.066` scalar field, in addition to the
+   existing nested citation block.

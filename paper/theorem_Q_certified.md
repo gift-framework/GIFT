@@ -81,9 +81,10 @@ Each constant must record:
   it passes `172/172` checks.
 - `phase4_level_Q_coefficients.json` is the compact citable Level Q coefficient
   package extracted from the full Stage C/E checker. Its independent lossless
-  projection checker `phase4_level_Q_coefficients_check.json` passes `181/181`
+  projection checker `phase4_level_Q_coefficients_check.json` passes `185/185`
   checks and exposes the outward-rounded intervals directly, including
-  `R_threshold in [3664.065985330004, 3664.065985330005]`.
+  `R_threshold in [3664.065985330004, 3664.065985330005]`, cited in prose as
+  the conservative round `R_threshold <= 3664.066`.
 - `phase4_donaldson_coefficients_values.json` evaluates the D0 coefficient
   formulas: `source_P1 = 3.1185`, `source_P2 = 6.36018075`, and
   `remainder_R3 = 13770793.170081593`. This closes P4.1 coefficients at D0,
@@ -93,3 +94,26 @@ Each constant must record:
 ## Acceptance rule
 
 No theorem may import a floating-point summary without a serialized outward-rounded interval and a checker distinct from the producer.
+
+## Level Q coefficient table
+
+The paper-facing values below are compact displays of the citable interval
+package. Exact rationals and 18-decimal outward intervals live in
+`phase4_level_Q_coefficients.json`; the lossless projection checker is
+`phase4_level_Q_coefficients_check.json`.
+
+| Quantity | Exact value | Paper-facing interval |
+|---|---:|---:|
+| `source_P1` | `6237/2000` | `[3.1185, 3.1185]` |
+| `source_P2` | `25440723/4000000` | `[6.36018075, 6.36018075]` |
+| `DP1_norm` | `6237/2000` | `[3.1185, 3.1185]` |
+| `DP2_norm` | `16796241/2000000` | `[8.3981205, 8.3981205]` |
+| `D2P1_norm` | `6237/2000` | `[3.1185, 3.1185]` |
+| `D3m_norm` | `4/9` | `[0.444444444444444444, 0.444444444444444445]` |
+| `raw_P3_scale` | `12985939039/4000000000` | `[3.24648475975, 3.24648475975]` |
+| `xi1_bound` | `1141371/10000` | `[114.1371, 114.1371]` |
+| `xi2_forcing` | `470472259257/100000000` | `[4704.72259257, 4704.72259257]` |
+| `xi2_bound` | `86096423444031/500000000` | `[172192.846888062, 172192.846888062]` |
+| `remainder_R3` | `137707931700815927923/10000000000000` | `[13770793.1700815927923, 13770793.1700815927923]` |
+| `tail_contraction_denominator` | `1537233641576208203404449/31250000000000` | `[49191476530.438662508942368, 49191476530.438662508942368]` |
+| `R_threshold` | cube-root bracket | `[3664.065985330004, 3664.065985330005]`, cite as `<= 3664.066` |
