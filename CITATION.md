@@ -11,7 +11,7 @@ Citation formats for the GIFT Framework v3.4.
   title   = {GIFT Framework v3.4: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
-  url     = {https://github.com/gift-framework/GIFT},
+  url     = {https://github.com/Arithmon/K7},
   version = {3.4.27},
   license = {MIT},
   note    = {95 observables, 0.99\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic), Donaldson certificate pipeline scoped by docs/analytic_status.md}
@@ -21,13 +21,13 @@ Citation formats for the GIFT Framework v3.4.
 ### APA Style
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.27) [Software]. GitHub. https://github.com/gift-framework/GIFT
+de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.27) [Software]. GitHub. https://github.com/Arithmon/K7
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.27. GitHub, 2026. https://github.com/gift-framework/GIFT.
+de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.27. GitHub, 2026. https://github.com/Arithmon/K7.
 ```
 
 ---
@@ -42,7 +42,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   author = {de La Fournière, Brieuc},
   year   = {2026},
   note   = {Mean deviation 0.99\% on 33 Type I relations (PDG 2024 / NuFIT 6.1), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 140 conjuncts in Lean 4},
-  url    = {https://github.com/gift-framework/GIFT}
+  url    = {https://github.com/Arithmon/K7}
 }
 ```
 
@@ -60,7 +60,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   month        = {May},
   howpublished = {GIFT Framework v3.4, 44 pp.},
   doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_3.4_main.pdf}
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_main.pdf}
 }
 ```
 
@@ -74,7 +74,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   month        = {May},
   howpublished = {GIFT Framework v3.4, Supplement S1, 27 pp.},
   doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_3.4_S1.pdf}
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_S1.pdf}
 }
 ```
 
@@ -88,7 +88,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   month        = {May},
   howpublished = {GIFT Framework v3.4, Supplement S2, 42 pp.},
   doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_3.4_S2.pdf}
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_S2.pdf}
 }
 ```
 
@@ -102,7 +102,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   month        = {May},
   howpublished = {GIFT Framework v3.4, Supplement S3, 10 pp.},
   doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_3.4_S3.pdf}
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_S3.pdf}
 }
 ```
 
@@ -230,7 +230,7 @@ When using GIFT predictions:
 
 > "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197° [2]."
 >
-> [1] de La Fournière, B. "GIFT Framework v3.4," 2026, https://github.com/gift-framework/GIFT
+> [1] de La Fournière, B. "GIFT Framework v3.4," 2026, https://github.com/Arithmon/K7
 >
 > [2] de La Fournière, B. "GIFT S2: Complete Derivations," 2026.
 

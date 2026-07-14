@@ -16,7 +16,7 @@ abstract: >-
   manifold K7 with Betti numbers (b2, b3) = (21, 77). Formerly published as
   GIFT (Geometric Information Field Theory); GIFT remains the name of the
   founding phase. Companion repository of certified Lean 4 identities:
-  https://github.com/Arithmon/K7-Lean
+  https://github.com/gift-framework/core (moving to Arithmon/K7-Lean).
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16891489

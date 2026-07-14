@@ -7,7 +7,7 @@ layout: default
 
 **Version**: 3.4.27
 **Validation Date**: April 2026
-**Scripts**: [`bulletproof_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/bulletproof_validation_v33.py) (7-component, v3.3.24 archive), [`exhaustive_validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/legacy/v3.3/exhaustive_validation_v33.py) (3M+ configs)
+**Scripts**: [`bulletproof_validation_v33.py`](https://github.com/Arithmon/K7/blob/main/publications/validation/legacy/v3.3/bulletproof_validation_v33.py) (7-component, v3.3.24 archive), [`exhaustive_validation_v33.py`](https://github.com/Arithmon/K7/blob/main/publications/validation/legacy/v3.3/exhaustive_validation_v33.py) (3M+ configs)
 
 > **Note (v3.4)**: top-level v3.4 stats are **0.99%** mean deviation across **33 Type I (exact-target) relations**, with a set-level bound ~10⁻⁶ over 3,000,000 random formula sets (assumption-free) (95-observable catalog: 33 Type I + 19 Type II + 21 Type III + 22 Type IV; Type II 0.17%, Type III 3.44%). Data sources: NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022. The detailed sector breakdowns below preserve the v3.3.24 NuFIT 6.0 analysis (0.24% on 32 well-measured / 0.57% all 33) for traceability. The qualitative conclusions (significance > 4.2σ, unique optimum among 3M+ configs, decisive Bayes factors) hold across both versions.
 >

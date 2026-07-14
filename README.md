@@ -263,7 +263,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
   title   = {GIFT: Geometric Information Field Theory},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
-  url     = {https://github.com/gift-framework/GIFT},
+  url     = {https://github.com/Arithmon/K7},
   version = {3.4.27}
 }
 ```

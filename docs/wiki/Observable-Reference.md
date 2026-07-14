@@ -408,13 +408,13 @@ This is **not numerology**, it's the octonionic Fano structure manifesting in pa
 
 ### 10.4 Validation Script
 
-Full analysis available: [`publications/validation/validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/validation_v33.py)
+Full analysis available: [`publications/validation/validation_v33.py`](https://github.com/Arithmon/K7/blob/main/publications/validation/validation_v33.py)
 
 ```bash
 python publications/validation/validation_v33.py
 ```
 
-Results: [`publications/references/observables.csv`](https://github.com/gift-framework/GIFT/blob/main/publications/references/observables.csv)
+Results: [`publications/references/observables.csv`](https://github.com/Arithmon/K7/blob/main/publications/references/observables.csv)
 
 ---
 

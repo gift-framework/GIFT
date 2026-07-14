@@ -117,4 +117,4 @@ See [gift-framework/core](https://github.com/gift-framework/core) for proofs (v3
 ---
 
 **Version**: 3.4.27 (2026-06-03)
-**Repository**: https://github.com/gift-framework/GIFT
+**Repository**: https://github.com/Arithmon/K7

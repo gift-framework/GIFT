@@ -179,4 +179,4 @@ Peut-être que les octonions attendront encore un siècle avant que leur rôle n
 
 Ce que nous pouvons faire, c'est proposer, tester, et rester humbles devant les nombres. L'algèbre a attendu 182 ans. Elle peut bien attendre un peu plus le temps que nous la rattrapions.
 
-Le cadre GIFT est développé en source ouverte. Code, preuves et données sont disponibles sur github.com/gift-framework/GIFT. La connexion avec Koide proposée ici n'est pas de la physique établie : c'est une hypothèse en attente d'un test expérimental et d'un examen par les pairs.
+Le cadre GIFT est développé en source ouverte. Code, preuves et données sont disponibles sur github.com/Arithmon/K7. La connexion avec Koide proposée ici n'est pas de la physique établie : c'est une hypothèse en attente d'un test expérimental et d'un examen par les pairs.

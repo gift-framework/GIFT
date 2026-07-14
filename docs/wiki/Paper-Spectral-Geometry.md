@@ -8,7 +8,7 @@ layout: default
 **Spectral Geometry of an Explicit G₂ Metric on a Compact 7-Manifold**
 
 *Brieuc de La Fournière (2026)*
-[Full text (markdown)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/g2_spectral.md) | [Zenodo DOI: 10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371)
+[Full text (markdown)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/g2_spectral.md) | [Zenodo DOI: 10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371)
 
 ---
 

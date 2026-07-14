@@ -9,7 +9,7 @@ layout: default
 
 | Resource | Link |
 |----------|------|
-| GIFT Documentation | [github.com/gift-framework/GIFT](https://github.com/gift-framework/GIFT) |
+| GIFT Documentation | [github.com/Arithmon/K7](https://github.com/Arithmon/K7) |
 | Core (Lean 4 + Python) | [github.com/gift-framework/core](https://github.com/gift-framework/core) |
 | Lean Blueprint | [gift-framework.github.io/core](https://gift-framework.github.io/core/) |
 | PyPI Package | [pypi.org/project/gift-core](https://pypi.org/project/gift-core/) |

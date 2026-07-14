@@ -9,7 +9,7 @@ layout: default
 
 *Brieuc de La Fournière (2026)*
 
-[**PDF (main, 44 pp.)**](https://github.com/gift-framework/GIFT/raw/main/publications/papers/pdf/gift_3.4_main.pdf) | [**DOI: 10.5281/zenodo.20070101**](https://doi.org/10.5281/zenodo.20070101) | [Markdown](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md)
+[**PDF (main, 44 pp.)**](https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_main.pdf) | [**DOI: 10.5281/zenodo.20070101**](https://doi.org/10.5281/zenodo.20070101) | [Markdown](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_main.md)
 
 > **Companion papers (Zenodo):** [A: certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B: spectral](https://doi.org/10.5281/zenodo.19893371) · [C: K3 NK](https://doi.org/10.5281/zenodo.19708916) · [D: Donaldson analytic](https://doi.org/10.5281/zenodo.20039066) · [v3.3 archive](https://doi.org/10.5281/zenodo.18837071)
 

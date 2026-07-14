@@ -156,4 +156,4 @@ Perhaps the octonions will wait another century before their role becomes clear.
 
 What we can do is propose, test, and remain humble before the numbers. The algebra waited 182 years. It can wait a little longer for us to catch up.
 
-The GIFT framework is developed openly. Code, proofs, and data are available at github.com/gift-framework/GIFT. The Koide connection proposed here is not established physics: it is a hypothesis awaiting experimental test and peer scrutiny.
+The GIFT framework is developed openly. Code, proofs, and data are available at github.com/Arithmon/K7. The Koide connection proposed here is not established physics: it is a hypothesis awaiting experimental test and peer scrutiny.

@@ -362,7 +362,7 @@ Current version (v3.3.31) is available on GitHub. Citation format in `CITATION.m
   title={GIFT Framework v3.3: Geometric Information Field Theory},
   author={de La Fournière, Brieuc},
   year={2026},
-  url={https://github.com/gift-framework/GIFT},
+  url={https://github.com/Arithmon/K7},
   version={3.3.0}
 }
 ```
@@ -388,7 +388,7 @@ Please cite appropriately (see `CITATION.md`) and note any modifications.
 - Supplements: Detailed derivations
 
 **Open an issue**:
-- https://github.com/gift-framework/GIFT/issues
+- https://github.com/Arithmon/K7/issues
 - Tag as "question" for clarification requests
 
 **Contact**:

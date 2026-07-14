@@ -189,4 +189,4 @@ Si cela se connecte à la physique, c'est une question distincte, une question �
 
 Dépôt : github.com/gift-framework/core
 
-Notebook : github.com/gift-framework/GIFT/notebooks
+Notebook : github.com/Arithmon/K7/notebooks

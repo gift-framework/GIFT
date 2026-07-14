@@ -8,9 +8,9 @@ layout: default
 **Geometric Information Field Theory : dérivation topologique des paramètres du Modèle Standard à partir de variétés à holonomie G₂**
 
 *Brieuc de La Fournière (2026)*
-[Texte intégral (markdown, v3.4)](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+[Texte intégral (markdown, v3.4)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_main.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
 
-> **Mise à jour v3.4.** Le contenu canonique est dans [`GIFT_v3.4_main.md`](https://github.com/gift-framework/GIFT/blob/main/publications/papers/markdown/GIFT_v3.4_main.md). Le LaTeX/PDF v3.4 est en cours de recompilation avec le template GIFT. Le triptyque relecture par les pairs (articles A, B, C) est publié sur Zenodo : [A : G₂ certifié](https://doi.org/10.5281/zenodo.19892350) · [B : spectral](https://doi.org/10.5281/zenodo.19893371) · [C : K3 NK](https://doi.org/10.5281/zenodo.19708916).
+> **Mise à jour v3.4.** Le contenu canonique est dans [`GIFT_v3.4_main.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_main.md). Le LaTeX/PDF v3.4 est en cours de recompilation avec le template GIFT. Le triptyque relecture par les pairs (articles A, B, C) est publié sur Zenodo : [A : G₂ certifié](https://doi.org/10.5281/zenodo.19892350) · [B : spectral](https://doi.org/10.5281/zenodo.19893371) · [C : K3 NK](https://doi.org/10.5281/zenodo.19708916).
 
 ---
 

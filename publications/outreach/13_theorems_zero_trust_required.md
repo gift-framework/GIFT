@@ -98,7 +98,7 @@ Lean/
 
 Build it yourself:
 
-git clone https://github.com/gift-framework/GIFT.git
+git clone https://github.com/Arithmon/K7.git
 cd GIFT/Lean
 lake update
 lake exe cache get   # Download Mathlib cache (~2GB)

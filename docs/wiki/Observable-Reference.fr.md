@@ -408,13 +408,13 @@ Ce n'est **pas de la numérologie**, c'est la structure octonionique de Fano se 
 
 ### 10.4 Script de validation
 
-Analyse complète disponible : [`publications/validation/validation_v33.py`](https://github.com/gift-framework/GIFT/blob/main/publications/validation/validation_v33.py)
+Analyse complète disponible : [`publications/validation/validation_v33.py`](https://github.com/Arithmon/K7/blob/main/publications/validation/validation_v33.py)
 
 ```bash
 python publications/validation/validation_v33.py
 ```
 
-Résultats : [`publications/references/observables.csv`](https://github.com/gift-framework/GIFT/blob/main/publications/references/observables.csv)
+Résultats : [`publications/references/observables.csv`](https://github.com/Arithmon/K7/blob/main/publications/references/observables.csv)
 
 ---
 

@@ -78,7 +78,7 @@ Accessible writing on the ideas behind GIFT lives on the [Substack blog](https:/
 
 This wiki consolidates GIFT documentation across three repositories:
 
-- **[gift-framework/GIFT](https://github.com/gift-framework/GIFT)**: Theoretical documentation, papers, outreach
+- **[gift-framework/GIFT](https://github.com/Arithmon/K7)**: Theoretical documentation, papers, outreach
 - **[gift-framework/core](https://github.com/gift-framework/core)**: Lean 4 proofs, Python package, blueprint
 - **Zenodo deposits**: Archived data with DOIs
 
@@ -86,4 +86,4 @@ Browse the sidebar for full navigation, or see the [Site Map](Site-Map.html) for
 
 ---
 
-*GIFT Framework v3.4.27 | [GitHub](https://github.com/gift-framework/GIFT) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*
+*GIFT Framework v3.4.27 | [GitHub](https://github.com/Arithmon/K7) | [Core](https://github.com/gift-framework/core) | [Blueprint](https://gift-framework.github.io/core/) | [Zenodo (Paper A)](https://doi.org/10.5281/zenodo.19892350) · [Paper B](https://doi.org/10.5281/zenodo.19893371) · [Paper C](https://doi.org/10.5281/zenodo.19708916) | MIT License*

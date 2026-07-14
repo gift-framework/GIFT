@@ -148,4 +148,4 @@ In a discipline where many recent frameworks struggle to produce near-term testa
 
 ---
 
-*For primary sources, formal proofs in Lean 4, complete derivations of the 33 predictions, and detailed statistical analyses, see the main manuscript on Zenodo (DOI [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)) and the code repository on [GitHub](https://github.com/gift-framework/GIFT).*
+*For primary sources, formal proofs in Lean 4, complete derivations of the 33 predictions, and detailed statistical analyses, see the main manuscript on Zenodo (DOI [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)) and the code repository on [GitHub](https://github.com/Arithmon/K7).*

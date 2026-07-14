@@ -335,7 +335,7 @@ Le cadre est neutre sur les questions métaphysiques de simulation, et se concen
 
 ### Comment puis-je contribuer ?
 
-Voir [CONTRIBUTING.md](https://github.com/gift-framework/GIFT/blob/main/CONTRIBUTING.md) pour les directives détaillées. Contributions bienvenues sur :
+Voir [CONTRIBUTING.md](https://github.com/Arithmon/K7/blob/main/CONTRIBUTING.md) pour les directives détaillées. Contributions bienvenues sur :
 
 - Dérivations et preuves mathématiques
 - Comparaisons expérimentales avec de nouvelles données
@@ -362,7 +362,7 @@ La version actuelle (v3.3) est disponible sur GitHub. Format de citation dans le
   title={GIFT Framework v3.3: Geometric Information Field Theory},
   author={de La Fournière, Brieuc},
   year={2026},
-  url={https://github.com/gift-framework/GIFT},
+  url={https://github.com/Arithmon/K7},
   version={3.3.0}
 }
 ```
@@ -371,7 +371,7 @@ Soumission à arXiv et à des revues à comité de lecture est prévue. Consulte
 
 ### Puis-je l'utiliser dans ma recherche ?
 
-Oui, sous licence MIT (voir [LICENSE](https://github.com/gift-framework/GIFT/blob/main/LICENSE)). Vous pouvez :
+Oui, sous licence MIT (voir [LICENSE](https://github.com/Arithmon/K7/blob/main/LICENSE)). Vous pouvez :
 - Utiliser les calculs dans vos travaux
 - Étendre le cadre
 - L'appliquer à des problèmes connexes
@@ -388,7 +388,7 @@ Merci de citer correctement (voir [Guide de citation](Citation-Guide.html)) et d
 - [S1](Paper-S1-Foundations.html), [S2](Paper-S2-Derivations.html) : dérivations détaillées
 
 **Ouvrir un ticket** :
-- https://github.com/gift-framework/GIFT/issues
+- https://github.com/Arithmon/K7/issues
 - Mettez le tag « question » pour les demandes de clarification
 
 **Contact** :

@@ -379,7 +379,7 @@ For more detailed explanations:
 ## Contributing
 
 This glossary is continuously updated. To suggest additions or corrections:
-1. Open issue at https://github.com/gift-framework/GIFT/issues
+1. Open issue at https://github.com/Arithmon/K7/issues
 2. Tag as "documentation"
 3. Specify term and proposed definition
 

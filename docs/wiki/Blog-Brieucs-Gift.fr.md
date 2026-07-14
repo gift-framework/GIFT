@@ -138,12 +138,12 @@ Le roman de science-fiction, d'ailleurs, n'est toujours pas terminé. Mais la ph
 
 ---
 
-*Brieuc de La Fournière est propriétaire de la Galerie Cadran Solaire à Beaune (Bourgogne) avec son épouse Alix-Anne. Il n'a aucune formation scientifique formelle. Tous les travaux GIFT sont disponibles en open source sur [github.com/gift-framework/GIFT](https://github.com/gift-framework/GIFT).*
+*Brieuc de La Fournière est propriétaire de la Galerie Cadran Solaire à Beaune (Bourgogne) avec son épouse Alix-Anne. Il n'a aucune formation scientifique formelle. Tous les travaux GIFT sont disponibles en open source sur [github.com/Arithmon/K7](https://github.com/Arithmon/K7).*
 
 ---
 
 ### Pour aller plus loin
 - **Le framework** : [GIFT v3.3 sur Zenodo](https://doi.org/10.5281/zenodo.18837071)
-- **Le code** : [github.com/gift-framework/GIFT](https://github.com/gift-framework/GIFT)
+- **Le code** : [github.com/Arithmon/K7](https://github.com/Arithmon/K7)
 - **Le blog** : [arithmon.substack.com](https://arithmon.substack.com)
 - **Le profil Google Scholar** : [scholar.google.com](https://scholar.google.com/citations?user=_oxvuUsAAAAJ&hl=fr&oi=ao)

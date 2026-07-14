@@ -5,7 +5,7 @@ layout: default
 
 # Changelog Highlights
 
-Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://github.com/gift-framework/GIFT/blob/main/CHANGELOG.md).
+Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://github.com/Arithmon/K7/blob/main/CHANGELOG.md).
 
 ---
 
@@ -106,4 +106,4 @@ Abridged version history. For the full changelog, see [`CHANGELOG.md`](https://g
 
 ---
 
-*For complete details, see the [full changelog](https://github.com/gift-framework/GIFT/blob/main/CHANGELOG.md).*
+*For complete details, see the [full changelog](https://github.com/Arithmon/K7/blob/main/CHANGELOG.md).*

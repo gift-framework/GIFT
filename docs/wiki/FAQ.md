@@ -335,7 +335,7 @@ The framework is neutral on metaphysical questions about simulation, focusing on
 
 ### How can I contribute?
 
-See [CONTRIBUTING.md](https://github.com/gift-framework/GIFT/blob/main/CONTRIBUTING.md) for detailed guidelines. Contributions welcome in:
+See [CONTRIBUTING.md](https://github.com/Arithmon/K7/blob/main/CONTRIBUTING.md) for detailed guidelines. Contributions welcome in:
 
 - Mathematical derivations and proofs
 - Experimental comparisons with new data
@@ -362,7 +362,7 @@ Current version (v3.4) is available on GitHub. Citation format in [Citation Guid
   title={GIFT Framework v3.4: Geometric Information Field Theory},
   author={de La Fournière, Brieuc},
   year={2026},
-  url={https://github.com/gift-framework/GIFT},
+  url={https://github.com/Arithmon/K7},
   version={3.4.13}
 }
 ```
@@ -371,7 +371,7 @@ The triptyque (Papers A, B, C) is published on Zenodo (DOIs 19892350, 19893371, 
 
 ### Can I use this in my research?
 
-Yes, under MIT License (see [LICENSE](https://github.com/gift-framework/GIFT/blob/main/LICENSE)). You may:
+Yes, under MIT License (see [LICENSE](https://github.com/Arithmon/K7/blob/main/LICENSE)). You may:
 - Use calculations in your work
 - Extend the framework
 - Apply to related problems
@@ -388,7 +388,7 @@ Please cite appropriately (see [Citation Guide](Citation-Guide.html)) and note a
 - [S1](Paper-S1-Foundations.html), [S2](Paper-S2-Derivations.html): Detailed derivations
 
 **Open an issue**:
-- https://github.com/gift-framework/GIFT/issues
+- https://github.com/Arithmon/K7/issues
 - Tag as "question" for clarification requests
 
 **Contact**:

@@ -43,7 +43,7 @@ GIFT/
 │                                      # v3.4 stats refresh in core/private)
 │
 ├── docs/                              # User-facing documentation + Jekyll site
-│   ├── index.html                     # Landing page (gift-framework.github.io)
+│   ├── index.html                     # Landing page (arithmon.github.io/K7)
 │   ├── _config.yml                    # Jekyll config
 │   ├── GIFT_FOR_EVERYONE.md           # Complete guide with everyday analogies
 │   ├── FAQ.md                         # Common questions
@@ -92,7 +92,7 @@ GIFT/
 
 ## Wiki
 
-The **[GitHub Wiki](https://github.com/gift-framework/GIFT/wiki)** provides a navigable multi-audience hub consolidating all documentation, paper summaries, reference data, blog posts, and project meta.
+The **[GitHub Wiki](https://github.com/Arithmon/K7/wiki)** provides a navigable multi-audience hub consolidating all documentation, paper summaries, reference data, blog posts, and project meta.
 
 ## Related Repositories
 

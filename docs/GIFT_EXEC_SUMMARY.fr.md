@@ -148,4 +148,4 @@ C'est, dans une discipline où beaucoup de cadres récents peinent à produire d
 
 ---
 
-*Pour les sources primaires, les preuves formelles en Lean 4, les dérivations complètes des 33 prédictions, et les analyses statistiques détaillées, voir le manuscrit principal disponible sur Zenodo (DOI [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)) et le dépôt de code sur [GitHub](https://github.com/gift-framework/GIFT).*
+*Pour les sources primaires, les preuves formelles en Lean 4, les dérivations complètes des 33 prédictions, et les analyses statistiques détaillées, voir le manuscrit principal disponible sur Zenodo (DOI [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)) et le dépôt de code sur [GitHub](https://github.com/Arithmon/K7).*

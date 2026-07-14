@@ -380,7 +380,7 @@ Pour des explications plus détaillées :
 ## Contribuer
 
 Ce glossaire est continuellement mis à jour. Pour suggérer des ajouts ou des corrections :
-1. Ouvrez un ticket sur https://github.com/gift-framework/GIFT/issues
+1. Ouvrez un ticket sur https://github.com/Arithmon/K7/issues
 2. Marquez-le « documentation »
 3. Précisez le terme et la définition proposée
 

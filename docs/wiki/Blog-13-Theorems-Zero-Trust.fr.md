@@ -134,7 +134,7 @@ Lean/
 Construisez-le vous-même :
 
 ```bash
-git clone https://github.com/gift-framework/GIFT.git
+git clone https://github.com/Arithmon/K7.git
 cd GIFT/Lean
 lake update
 lake exe cache get   # Téléchargement du cache Mathlib (~2 Go)

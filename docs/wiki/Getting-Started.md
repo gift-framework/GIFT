@@ -41,7 +41,7 @@ See **[Citation Guide](Citation-Guide.html)** for BibTeX, APA, and DOI informati
 
 ## External Links
 
-- [GitHub: GIFT documentation](https://github.com/gift-framework/GIFT)
+- [GitHub: GIFT documentation](https://github.com/Arithmon/K7)
 - [GitHub: Core (Lean 4 + Python)](https://github.com/gift-framework/core)
 - [Lean Blueprint](https://gift-framework.github.io/core/)
 - [Substack blog](https://arithmon.substack.com/)
