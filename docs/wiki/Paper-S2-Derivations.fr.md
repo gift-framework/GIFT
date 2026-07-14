@@ -8,9 +8,9 @@ layout: default
 **Supplément S2 : dérivations complètes (sans dimension), les 33 prédictions sans dimension**
 
 *Brieuc de La Fournière (2026)*
-[Texte intégral (markdown, v3.4)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_S2_derivations.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+[Texte intégral (markdown, v3.4)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
 
-> **Mise à jour v3.4.** Le contenu canonique est dans [`GIFT_v3.4_S2_derivations.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_S2_derivations.md). Le LaTeX/PDF v3.4 est en cours de recompilation avec le template GIFT.
+> **Mise à jour v3.4.** Le contenu canonique est dans [`GIFT_v3.4_S2_derivations.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md). Le LaTeX/PDF v3.4 est en cours de recompilation avec le template GIFT.
 
 ---
 

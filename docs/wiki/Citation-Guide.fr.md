@@ -62,7 +62,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2026},
   howpublished = {GIFT Framework v3.4},
-  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_main.md}
+  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_main.md}
 }
 ```
 
@@ -74,7 +74,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2026},
   howpublished = {GIFT Framework v3.4, Supplement S1},
-  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_S1_foundations.md}
+  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S1_foundations.md}
 }
 ```
 
@@ -86,7 +86,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2026},
   howpublished = {GIFT Framework v3.4, Supplement S2},
-  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_S2_derivations.md}
+  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md}
 }
 ```
 
@@ -98,7 +98,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   author       = {de La Fournière, Brieuc},
   year         = {2026},
   howpublished = {GIFT Framework v3.4, Supplement S3},
-  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_S3_observables.md}
+  url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S3_observables.md}
 }
 ```
 

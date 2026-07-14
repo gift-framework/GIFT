@@ -1,0 +1,567 @@
+\documentclass[11pt,a4paper]{article}
+\input{gift_preamble}
+% pandoc >= 3.2.1 emits \pandocbounded around images; provide a fallback.
+% Also clamp all images to \linewidth (natural-size figures overflowed the
+% right margin -- the "truncated figures" flagged by the round-2 reviews).
+% Kept here rather than in gift_preamble.tex, shared with the 3.4 build.
+\providecommand{\pandocbounded}[1]{#1}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,keepaspectratio}
+% md headings carry their own literal numbering ("3.2 What ..."); suppress
+% the LaTeX section counters to avoid "0.2 1. Introduction" double numbering.
+\setcounter{secnumdepth}{0}
+% Loosen justification slightly: long technical identifiers (made breakable
+% at build time via \allowbreak) still need extra stretch to avoid overfulls.
+\emergencystretch=3em
+\fancyhead[L]{The $K_7$ Framework v3.5: Supplement S3}
+\hypersetup{pdftitle={The K7 Framework v3.5 Supplement S3: Observable Dataset}}
+
+\graphicspath{{../../../figures/}}
+
+\title{%
+\LARGE\textbf{Supplement S3: Observable Dataset}\\[0.3em]
+\large Complete Observable Dataset (95 entries) + Per-Sector Relation Tables%
+}
+\author{Brieuc de La Fourni\`ere \\ \textit{Independent researcher, Beaune, France}}
+\date{July 2026 \quad\textbar\quad v3.5}
+
+\begin{document}
+
+\maketitle
+\noindent\rule{\textwidth}{0.2pt}
+
+\thispagestyle{fancy}
+
+\section{S3.1 Introduction}\label{s3.1-introduction}
+
+This supplement provides the complete observable dataset of the K₇ framework: 95 observables derived from a single G₂ metric (169 Chebyshev-Cholesky geometric parameters, zero freely adjustable physical parameters), organized by derivation type and cross-referenced with Lean formal verification. The dataset includes 2 BH remnant predictions from Pinčák et al.~2026 (main text ref. \cite{42}, classified Type IV) and 6 Type IV metric block eigenvalues (v3.4.29 ledger).
+
+The 95 observables decompose as \textbf{33(I) + 19(II) + 21(III) + 22(IV)} across four types of increasing derivation complexity. All predictions trace to a single compact G₂ manifold K₇ with (b₂, b₃) = (21, 77) and E₈×E₈ gauge structure, 169 metric parameters, zero continuously adjustable physical parameters. The pair (b₂, b₃) = (21, 77) does not appear among the catalogued compact G₂ manifolds; the Joyce-Karigiannis Z₂³ route realizes it at the topological/lattice level (S1 §8.4), the companion scheme {[}E{]} discharges the datum-level analytic layer conditionally, and the global-analytic completion remains open (two-layer boundary: main §9). The certified metric provides computational evidence for a new G₂ manifold.
+
+The dataset serves as the canonical reference for all framework predictions, superseding results previously scattered across internal working supplements. Every entry traces back to a specific computation, a JSON artifact, and (where applicable) a Lean theorem.
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.2 Type Classification}\label{s3.2-type-classification}
+
+Observables are classified into four types by derivation directness. The type assignment reflects the number of physical identification steps between the G₂ metric and the final prediction:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1186}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2203}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3051}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2542}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Count
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Derivation chain
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lean coverage
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+I & 33 & Direct algebraic from structural constants & topology → formula → ratio & 33/33 (100\%) \\
+II & 19 & One physical identification step & formula + VEV or scale → dimensional quantity & 0/19 (0\%) \\
+III & 21 & Multi-step dynamical chains & metric → mechanism → observable & 14/21 (67\%) \\
+IV & 22 & Structural/internal quantities & metric → diagnostic & 8/22 (36\%) \\
+\end{longtable}
+
+\textbf{Type I} (33 observables): Direct from metric geometry and topological invariants (b₂, b₃, dim(G₂), dim(E₈), etc.). These are dimensionless ratios expressed as algebraic combinations of integers. Examples: sin²θ\_\allowbreak{}W = 3/13, Q\_\allowbreak{}Koide = 2/3, m\_\allowbreak{}τ/m\_\allowbreak{}e = 3477. All 33 are Lean-certified. The two BH remnant topological predictions are classified as Type IV structural diagnostics (not part of the 33 Type I Lean-certified core).
+
+\textbf{Type II} (19 observables): One physical identification step beyond Type I. Absolute masses from ratios × VEV (e.g., m\_\allowbreak{}u = (m\_\allowbreak{}u/m\_\allowbreak{}d) × m\_\allowbreak{}d\_\allowbreak{}exp), CKM magnitudes from Wolfenstein parametrization, extended quark ratios. From the \texttt{gift\_\allowbreak{}observables.\allowbreak{}csv} pipeline.
+
+\textbf{Type III} (21 observables): Multi-step chains involving dynamical mechanisms: - wilson\_\allowbreak{}line non-adiabatic eigenvalue splitting (3 observables: raw lepton ratios) - S11 RGE gauge coupling running (4 observables: sin²θ\_\allowbreak{}W, α\_\allowbreak{}em⁻¹, α\_\allowbreak{}s at M\_\allowbreak{}Z, M\_\allowbreak{}GUT) - spectral 7D spectral geometry (5 observables: Weyl exponent, KK states, fiber channels) - gauge\_\allowbreak{}bundle gauge bundle data (4 observables: f\_\allowbreak{}IJ conditioning, α\_\allowbreak{}ratio, Yukawa rank) - instanton instanton volumes + combined wilson\_\allowbreak{}line+instanton (5 observables: ΔV's, combined ratios)
+
+\textbf{Type IV} (22 observables): Structural and internal consistency quantities with no direct experimental comparison. These include topology diagnostics (b₂, b₃, χ(K₇)), Newton-Kantorovich certification values (h, distance, margin), Gram matrix conditioning (cond(G\_\allowbreak{}K3), cond(G\_\allowbreak{}77)), spectral counts, metric block eigenvalues (g\_\allowbreak{}ss = 19/6, g\_\allowbreak{}\{T²\} = 7/6, g\_\allowbreak{}K3 ≈ 64/77), and Pinčák et al.~2026 (main text ref. \cite{42}) topological diagnostics (N\_\allowbreak{}QNM = 98, M\_\allowbreak{}res, instanton suppression ×77). M\_\allowbreak{}res and N\_\allowbreak{}QNM are the two BH-remnant-related entries; they are classified here as structural diagnostics, not as Type I or Type III, because they require a physical scale identification (τ₀ = v\_\allowbreak{}EW) not derivable from topology alone. These quantities verify internal consistency rather than predict measurements directly.
+
+\textbf{Derivation depth}: The type assignment correlates with derivation chain length. Type I observables require 1 algebraic step; Type II requires 2 steps (algebra + scale identification); Type III requires 3--5 steps (algebra + dynamics + calibration); Type IV involves diagnostic computation chains of variable length.
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.3 Methodology}\label{s3.3-methodology}
+
+\subsection{Experimental Sources}\label{experimental-sources}
+
+All experimental reference values are drawn from four standard compilations:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4167}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Source
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Coverage
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Date
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{PDG 2024} \cite{1} & Particle masses, gauge couplings, CKM elements & 2024 \\
+\textbf{NuFIT 6.0} \cite{27} & Neutrino oscillation parameters (NO w/o SK) & Oct 2024 \\
+\textbf{Planck PR4} (Tristram+ 2024) \cite{49} & Cosmological parameters: h, σ₈, Ω\_\allowbreak{}Λ & 2024 \\
+\textbf{CODATA 2022} \cite{50} & Lepton mass ratios & 2022 \\
+\end{longtable}
+
+Selected NuFIT 6.0 values: sin²θ₂₃ = 0.561, δ\_\allowbreak{}CP = 177°. Selected Planck PR4 values: h = 0.6764, σ₈ = 0.807, Ω\_\allowbreak{}Λ = 0.6847. NuFIT 6.0 is the \emph{frozen dataset} for all deviation statistics in this supplement; the subsequent NuFIT 6.1 release (2025, δ\_\allowbreak{}CP = 207° +23/−20 NO w/o SK-atm) is tracked in the main paper §4.2 and moves the δ\_\allowbreak{}CP prediction inside the 1σ band.
+
+\subsection{Structural Constants}\label{structural-constants}
+
+The 20 structural constants from which all 95 observables derive:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1071}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2857}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Constant
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Origin
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & dim(E₈) & 248 & E₈ Lie algebra \\
+2 & rank(E₈) & 8 & Cartan subalgebra \\
+3 & dim(G₂) & 14 & Aut(\ensuremath{\mathbb{O}}) \\
+4 & dim(K₇) & 7 & Im(\ensuremath{\mathbb{O}}) \\
+5 & b₂(K₇) & 21 & Input; confirmed by spectral analysis (Paper B {[}B{]}, §2.3). Any Mayer-Vietoris decomposition is conditional on building block identification (open problem). \\
+6 & b₃(K₇) & 77 & Input; confirmed by spectral analysis (Paper B {[}B{]}, §2.3). Any Mayer-Vietoris decomposition is conditional on building block identification (open problem). \\
+7 & N\_\allowbreak{}gen & 3 & Index theorem \\
+8 & p₂ & 2 & dim(G₂)/dim(K₇) \\
+9 & Weyl & 5 & Triple identity \\
+10 & H* & 99 & b₂+b₃+1 \\
+11 & dim(J₃(\ensuremath{\mathbb{O}})) & 27 & Jordan algebra \\
+12 & dim(E₆) & 78 & E₆ Lie algebra \\
+13 & dim(E₇) & 133 & E₇ Lie algebra \\
+14 & dim(F₄) & 52 & Aut(J₃(\ensuremath{\mathbb{O}})) \\
+15 & fund(E₇) & 56 & E₇ fundamental \\
+16 & \textbar PSL(2,7)\textbar{} & 168 & Fano automorphisms \\
+17 & D\_\allowbreak{}bulk & 11 & 4+7 \\
+18 & α\_\allowbreak{}sum & 13 & rank(E₈)+Weyl \\
+19 & det(g)\_\allowbreak{}den & 32 & b₂+dim(G₂)−N\_\allowbreak{}gen \\
+20 & det(g)\_\allowbreak{}num & 65 & Weyl×α\_\allowbreak{}sum \\
+\end{longtable}
+
+\subsection{Consolidation Pipeline}\label{consolidation-pipeline}
+
+The master dataset (\texttt{gift\_\allowbreak{}observables.\allowbreak{}json}) is generated by \texttt{observable\_\allowbreak{}dataset.\allowbreak{}py}, which collects the individual JSON results of the internal computation supplements and performs 5 verification checks:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Completeness}: All 95 entries present across 4 types
+\item
+  \textbf{Uniqueness}: No duplicate observable IDs
+\item
+  \textbf{Consistency}: Predicted values match source JSONs to machine precision
+\item
+  \textbf{Source tracing}: Every entry maps to a documented computation step
+\item
+  \textbf{Format validation}: JSON, CSV, and LaTeX outputs agree
+\end{enumerate}
+
+Each observable record contains: prediction (float64), fraction (exact symbolic), experimental value and uncertainty, experimental source, relative deviation (\%), Lean theorem name (if certified), and provenance (computation step).
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.4 Complete Observable Table}\label{s3.4-complete-observable-table}
+
+\textbf{Table S3.1}: Complete observable dataset (95 entries, v3.4.29 ledger). Columns: name, prediction, experimental value, relative deviation (\%), type (I/II/III/IV), source computation, Lean verification status.
+
+{[}The full LaTeX table is provided in \texttt{data/\allowbreak{}gift\_\allowbreak{}observables\_\allowbreak{}latex.\allowbreak{}tex} and will be included at typesetting.{]}
+
+\subsection{Per-Sector Relation Tables}\label{per-sector-relation-tables}
+
+\emph{The per-sector Type I tables and their derivational prose moved here from main §4 at 3.5; the main paper keeps a representative summary (main §4.1) and the δ\_\allowbreak{}CP discussion (main §4.2). Conventions: PDG 2024 \cite{1}; NuFIT 6.0 frozen dataset \cite{27}; Planck PR4 \cite{49}.}
+
+\subsubsection{Gauge sector}\label{gauge-sector}
+
+\[\sin^2\theta_W = \frac{b_2}{b_3 + \dim(G_2)} = \frac{21}{91} = \frac{3}{13} = 0.230769\]
+
+Experimental (PDG 2024) \cite{1}: 0.23122 ± 0.00004. Deviation: \textbf{0.195\%}. The numerator b₂ counts gauge moduli; the denominator b₃ + dim(G₂) counts matter plus holonomy degrees of freedom. The ratio measures gauge-matter coupling geometrically.
+
+\[\alpha_s(M_Z) = \frac{\sqrt{2}}{\dim(G_2) - p_2} = \frac{\sqrt{2}}{12} = 0.11785\]
+
+Experimental: 0.1180 ± 0.0009. Deviation: \textbf{0.126\%}.
+
+\subsubsection{Lepton sector}\label{lepton-sector}
+
+\textbf{Koide parameter.} The Koide relation among charged lepton masses, Q = (m\_\allowbreak{}e + m\_\allowbreak{}μ + m\_\allowbreak{}τ)/(√m\_\allowbreak{}e + √m\_\allowbreak{}μ + √m\_\allowbreak{}τ)² = 2/3, has resisted explanation since 1982. Using contemporary mass values it holds to six significant figures: Q\_\allowbreak{}exp = 0.666661 ± 0.000007. The K₇ framework provides Q\_\allowbreak{}Koide = dim(G₂)/b₂ = 14/21 = 2/3, an algebraic identity in two topological invariants; no fitting is involved.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3077}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3077}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Approach
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Preon models (Koide 1982) & Q = 2/3 assumed & Circular \\
+S₃ symmetry (various) & Q \textasciitilde{} 2/3 fitted & Approximate \\
+\textbf{K₇ framework} & \textbf{Q = dim(G₂)/b₂ = 14/21 = 2/3} & \textbf{Algebraic identity} \\
+\end{longtable}
+
+Deviation: \textbf{0.0009\%}, the most precise agreement in the framework.
+
+\textbf{Tau-electron mass ratio.} m\_\allowbreak{}τ/m\_\allowbreak{}e = dim(K₇) + 10 × dim(E₈) + 10 × H* = 7 + 2480 + 990 = 3477. Experimental: 3477.15 ± 0.05; deviation \textbf{0.004\%}. The integer 3477 = 3 × 19 × 61 = N\_\allowbreak{}gen × prime(8) × κ\_\allowbreak{}T⁻¹ factorizes into framework constants.
+
+\textbf{Muon-electron mass ratio.} m\_\allowbreak{}μ/m\_\allowbreak{}e = dim(J₃(\ensuremath{\mathbb{O}}))\^{}φ = 27\^{}φ = 207.01, with φ = (1+√5)/2 from the McKay correspondence E₈ ↔ 2I (binary icosahedral group). Experimental: 206.768; deviation \textbf{0.118\%}. See the golden-ratio caveat in main §4.1: φ is the only non-integer input among the 33 Type I relations, and its status is weaker than the integer-ratio derivations (S2 §11).
+
+\subsubsection{Quark sector}\label{quark-sector}
+
+\[\frac{m_s}{m_d} = p_2^2 \times \text{Weyl} = 4 \times 5 = 20\]
+
+Experimental (PDG 2024): 20.0 ± 1.0. Deviation: \textbf{0.00\%}.
+
+\[\frac{m_b}{m_t} = \frac{b_0}{2b_2} = \frac{1}{42}\]
+
+Experimental: 0.024 ± 0.001. Deviation: \textbf{0.79\%}. The constant 42 = p₂ × N\_\allowbreak{}gen × dim(K₇) = 2 × 3 × 7 is a structural invariant (not to be confused with χ(K₇) = 0, which vanishes for any compact odd-dimensional manifold).
+
+\subsubsection{Neutrino mixing angles}\label{neutrino-mixing-angles}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+Angle & Formula & Prediction & NuFIT 6.0 \cite{27} & Dev. \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+θ₁₂ & arctan(√(δ/γ\_\allowbreak{}GIFT)) & 33.40° & 33.41 ± 0.75° & 0.03\% \\
+θ₁₃ & π/b₂ & 8.57° & 8.54 ± 0.12° & 0.37\% \\
+θ₂₃ & arcsin((b₃ − p₂)/H*) & 49.25° & 49.3 ± 1.0° & 0.10\% \\
+\end{longtable}
+
+Auxiliary parameters: δ = 2π/Weyl² = 2π/25 and γ\_\allowbreak{}GIFT (historical symbol name) = (2 × rank(E₈) + 5 × H*)/(10 × dim(G₂) + 3 × dim(E₈)) = 511/884. The δ\_\allowbreak{}CP prediction is discussed in main §4.2.
+
+\subsubsection{Higgs sector}\label{higgs-sector}
+
+\[\lambda_H = \frac{\sqrt{\dim(G_2) + N_{gen}}}{\det(g)_{den}} = \frac{\sqrt{17}}{32} = 0.1289\]
+
+The Higgs self-coupling combines holonomy dimension with generation count, normalized by the metric determinant scale. Experimental (PDG 2024): 0.129 ± 0.001. Deviation: \textbf{0.12\%}. A TCS alternative λ\_\allowbreak{}H = b₂(M₁)/(b₃+b₂(M₂)) = 11/87 = 0.1264 is purely rational (see S2 §17).
+
+\subsubsection{Boson mass ratios}\label{boson-mass-ratios}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2553}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1915}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1277}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2979}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1277}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Observable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Formula
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Prediction
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Experimental
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dev.
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+m\_\allowbreak{}H/m\_\allowbreak{}W & (N\_\allowbreak{}gen + dim(E₆))/dim(F₄) = 81/52 & 1.5577 & 1.558 ± 0.002 & 0.02\% \\
+m\_\allowbreak{}W/m\_\allowbreak{}Z & (2b₂ - Weyl)/(2b₂) = 37/42 & 0.8810 & 0.8815 ± 0.0002 & 0.06\% \\
+m\_\allowbreak{}H/m\_\allowbreak{}t & fund(E₇)/b₃ = 56/77 & 0.7273 & 0.725 ± 0.003 & 0.31\% \\
+\end{longtable}
+
+\subsubsection{CKM matrix}\label{ckm-matrix}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2553}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1915}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1277}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2979}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1277}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Observable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Formula
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Prediction
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Experimental
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dev.
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+sin²(θ₁₂ CKM) & fund(E₇)/dim(E₈) = 56/248 & 0.2258 & 0.2250 ± 0.0006 & 0.36\% \\
+A\_\allowbreak{}Wolfenstein & (Weyl + dim(E₆))/H* = 83/99 & 0.838 & 0.836 ± 0.015 & 0.29\% \\
+sin²(θ₂₃ CKM) & dim(K₇)/PSL(2,7) = 7/168 & 0.0417 & 0.0412 ± 0.0008 & 1.13\% \\
+\end{longtable}
+
+The Cabibbo angle emerges from the ratio of the E₇ fundamental representation to E₈ dimension.
+
+\subsubsection{Cosmological observables}\label{cosmological-observables}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2553}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1915}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1277}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2979}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1277}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Observable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Formula
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Prediction
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Experimental
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dev.
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ω\_\allowbreak{}DM/Ω\_\allowbreak{}b & (1 + 2b₂)/rank(E₈) = 43/8 & 5.375 & 5.375 ± 0.1 & 0.00\% \\
+n\_\allowbreak{}s & ζ(11)/ζ(5) & 0.9649 & 0.9649 ± 0.0042 & 0.004\% \\
+h (Hubble) & (PSL(2,7) - 1)/dim(E₈) = 167/248 & 0.6734 & 0.674 ± 0.005 & 0.09\% \\
+Ω\_\allowbreak{}b/Ω\_\allowbreak{}m & Weyl/det(g)\_\allowbreak{}den = 5/32 & 0.1562 & 0.157 ± 0.003 & 0.16\% \\
+σ₈ & (p₂ + 32)/(2b₂) = 34/42 & 0.8095 & 0.811 ± 0.006 & 0.18\% \\
+Ω\_\allowbreak{}DE & ln(2)×(b₂+b₃)/H* = ln(2)×98/99 & 0.6861 & 0.6847 ± 0.005 & 0.21\% \\
+Y\_\allowbreak{}p & (1 + dim(G₂))/κ\_\allowbreak{}T⁻¹ = 15/61 & 0.2459 & 0.245 ± 0.003 & 0.37\% \\
+\end{longtable}
+
+The dark-to-baryonic matter ratio Ω\_\allowbreak{}DM/Ω\_\allowbreak{}b = 43/8 is exact. The structural invariant 2b₂ = 42 that gives m\_\allowbreak{}b/m\_\allowbreak{}t = 1/42 also determines this cosmological ratio, connecting quark physics to large-scale structure through K₇ geometry.
+
+\subsection{Sector-by-Sector Performance}\label{sector-by-sector-performance}
+
+The 66 observables with experimental comparison (Types I+II+III) organize into sectors of varying precision:
+
+\textbf{Best-performing sectors} (mean dev \textless{} 0.5\%): - \textbf{Lepton} (3 obs): mean 0.04\%: Q\_\allowbreak{}Koide (0.001\%), m\_\allowbreak{}τ/m\_\allowbreak{}e (0.004\%), m\_\allowbreak{}μ/m\_\allowbreak{}e (0.12\%) - \textbf{Electroweak} (3 obs): mean 0.11\%, α⁻¹ (0.002\%), α\_\allowbreak{}s (0.126\%), sin²θ\_\allowbreak{}W (0.20\%) - \textbf{Boson} (3 obs): mean 0.13\%, m\_\allowbreak{}H/m\_\allowbreak{}W (0.02\%), m\_\allowbreak{}W/m\_\allowbreak{}Z (0.06\%), m\_\allowbreak{}H/m\_\allowbreak{}t (0.31\%) - \textbf{Cosmology} (7 obs): mean 0.15\%, n\_\allowbreak{}s (0.004\%), h (0.09\%), Ω\_\allowbreak{}b/Ω\_\allowbreak{}m (0.16\%), σ₈ (0.18\%), Ω\_\allowbreak{}DE (0.21\%), Y\_\allowbreak{}p (0.37\%), Ω\_\allowbreak{}DM/Ω\_\allowbreak{}b (0.00\%) - \textbf{Quark} (4 obs): mean 0.24\%, m\_\allowbreak{}s/m\_\allowbreak{}d (0.00\%), m\_\allowbreak{}u/m\_\allowbreak{}d (0.05\%), m\_\allowbreak{}c/m\_\allowbreak{}s (0.12\%), m\_\allowbreak{}b/m\_\allowbreak{}t (0.79\%) - \textbf{PMNS} (4 obs): mean 0.29\%, θ₁₂ (0.03\%), θ₂₃ (0.10\%), sin²θ₁₂ (0.23\%), sin²θ₁₃ (0.81\%)
+
+\textbf{Good sectors} (mean dev 0.5--3\%): - \textbf{CKM} (3 obs): mean 0.59\%: A\_\allowbreak{}Wolf (0.29\%), sin²θ₁₂ (0.36\%), sin²θ₂₃ (1.13\%) - \textbf{Gauge running} (4 obs): mean 2.3\%, sin²θ\_\allowbreak{}W(RGE) (2.78\%), α\_\allowbreak{}em⁻¹(RGE) (2.53\%), α\_\allowbreak{}s(RGE) (3.7\%), M\_\allowbreak{}GUT (0.00\%)
+
+\textbf{Challenging sectors} (mean dev \textgreater{} 3\%): - \textbf{Instanton} (2 obs): mean 10.9\%: ΔV(e-τ) (5.9\%), ΔV(e-μ) (15.9\%); both reduced to sub-percent by the combined pipeline (§S3.5) - \textbf{Bundle} (1 obs): κ(gauge) (4.7\%), classified with the gauge-bundle diagnostics as in main §5.5
+
+\textbf{B-test consistency} (derived, not counted as independent observable): The MSSM B parameter B = (α₁⁻¹−α₂⁻¹)/(α₂⁻¹−α₃⁻¹) evaluates to 1.4033 using the framework couplings (0.23\% from the theoretical 7/5), closer than the purely experimental B = 1.3948 (0.37\%). The identity B = 7/5 is equivalent to α\_\allowbreak{}em⁻¹(M\_\allowbreak{}Z) = 91√2 = dim(Λ²\ensuremath{\mathfrak{g}}₂)·√2 and implies the holonomy sequence α₁⁻¹:α₂⁻¹:α₃⁻¹ = dim(G₂):dim(K₇):p₂ = 14:7:2. See §5.4 of the main text.
+
+\subsection{Exact Matches}\label{exact-matches}
+
+11 observables achieve deviations below 0.01\% (effectively exact):
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Observable & Prediction & Exp. & Dev. \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+α⁻¹ & 137.033 & 137.036 & 0.002\% \\
+Q\_\allowbreak{}Koide & 2/3 & 0.666661 & 0.001\% \\
+m\_\allowbreak{}τ/m\_\allowbreak{}e & 3477 & 3477.15 & 0.004\% \\
+m\_\allowbreak{}s/m\_\allowbreak{}d & 20 & 20.0 & 0.000\% \\
+n\_\allowbreak{}s & 0.9649 & 0.9649 & 0.004\% \\
+m\_\allowbreak{}u & 2.16 & 2.16 & 0.00\% \\
+\textbar V\_\allowbreak{}tb\textbar{} & 0.999 & 0.999 & 0.00\% \\
+m\_\allowbreak{}c & 1.27 & 1.27 & 0.00\% \\
+M\_\allowbreak{}GUT & 2×10¹⁶ & 2×10¹⁶ & 0.00\% \\
+α\_\allowbreak{}GUT⁻¹ & 25.3 & 25.3 & 0.00\% \\
+rank(Y) & 3 & 3 & 0.00\% \\
+\end{longtable}
+
+Note: δ\_\allowbreak{}CP canonical prediction is 197° (11.3\% from the frozen NuFIT 6.0 central; 4.8\% from the NuFIT 6.1 central, inside 1σ); a compactification factor 62/69 brings it to 177.014° vs the 6.0 central (0.008\%) but is not adopted, see main §4.2. m\_\allowbreak{}c/m\_\allowbreak{}s deviation is 0.12\% and its Type I product with m\_\allowbreak{}s/m\_\allowbreak{}d gives m\_\allowbreak{}c/m\_\allowbreak{}d = 234.3 vs the PDG scale-common ratio 234 (0.12\%), so neither is listed among the exact matches above; the mixed-scale value 272 that would arise from combining m\_\allowbreak{}c(m\_\allowbreak{}c) and m\_\allowbreak{}d(2 GeV) violates the §4 convention (all quark ratios at the PDG reference scales) and is not tracked.
+
+\subsection{Known Outliers}\label{known-outliers}
+
+Two observables deviate by more than 5\%, each with an identified physical origin:
+
+\textbf{δ\_\allowbreak{}CP}: The framework prediction is 197° (pure topological: 7 × 14 + 99), deviating 11.3\% from the frozen NuFIT 6.0 central (177° ± 20°, edge of 1σ) and 4.8\% from the NuFIT 6.1 central (207° +23/−20, inside 1σ). PSLQ analysis identifies a compactification factor 62/69 (§4.2 of main paper), documented as a structural observation but not adopted: the canonical prediction remains 197°. The experimental central value drifted from 197° (NuFIT 5.2) to 177° (NuFIT 6.0) to 207° (NuFIT 6.1), bracketing the prediction. Falsifiable by DUNE (first beam targeted 2031; physics run late 2030s--2040s).
+
+\textbf{α\_\allowbreak{}s(RGE) = +3.7\%}: G₂-MSSM split-spectrum matching (MSSM above M\_\allowbreak{}squark = 3165 GeV, SM + gauginos below (b₃ = −5)) gives α\_\allowbreak{}s = 0.1224 (exp 0.1180, dev 3.7\%). A naive degenerate-spectrum treatment would give 12.1\%. The topological value α\_\allowbreak{}s = √2/12 = 0.11785 (Type I) matches experiment to 0.126\%.
+
+\textbf{ΔV(e-μ) = +15.9\%}: The instanton volume assignment ΔV(e-μ) = 3.271 versus target ln(16.82) = 2.823 reflects the optimal assignment problem for 57 associative cycles. The combined wilson\_\allowbreak{}line+instanton pipeline with α = e\^{}K (§S3.5) reduces this to 0.75\%.
+
+\textbf{κ(gauge) = +4.7\%}: The gauge kinetic function conditioning cond(f\_\allowbreak{}IJ) = 1.047 measures departure from exact universality. The deviation from 1.000 reflects K₇ geometry at the percent level.
+
+\subsection{Summary Statistics}\label{summary-statistics}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Metric & Value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Total observables & 95 \\
+Type breakdown & 33(I) + 19(II) + 21(III) + 22(IV) \\
+With experimental comparison & 66 \\
+Exact matches (dev \textless{} 0.01\%) & 11 \\
+Within 1\% of experiment & 53 \\
+Within 5\% of experiment & 63 \\
+Lean-certified & 55 \\
+Structural constants & 20 \\
+Metric parameters & 169 \\
+\end{longtable}
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.5 The Combined wilson\_\allowbreak{}line+instanton Pipeline}\label{s3.5-the-combined-wilson_lineinstanton-pipeline}
+
+The lepton mass hierarchy (combined lepton ratio observables) uses two complementary geometric mechanisms. The complete derivation is in §6 of the main text; results are summarised here for cross-reference.
+
+Raw wilson\_\allowbreak{}line (K3 fiber eigenvalue splitting at c = 0.452): m\_\allowbreak{}τ/m\_\allowbreak{}e = 3403 (2.1\%), m\_\allowbreak{}τ/m\_\allowbreak{}μ = 16.54 (1.7\%), m\_\allowbreak{}μ/m\_\allowbreak{}e = 205.7 (0.5\%). Raw instanton (associative 3-cycle volumes, 57 cycles): ΔV(e-τ) = 8.633 (5.9\%), ΔV(e-μ) = 3.271 (15.9\%). Combined with α = e\^{}\{K₀\} = V̂\^{}\{−3\} = 0.002763 (Kähler potential of K₇, zero free parameters):
+
+\begin{itemize}
+\tightlist
+\item
+  m\_\allowbreak{}τ/m\_\allowbreak{}e = 3485 (exp 3477, \textbf{0.23\%})
+\item
+  m\_\allowbreak{}τ/m\_\allowbreak{}μ = 16.69 (exp 16.82, \textbf{0.75\%})
+\item
+  m\_\allowbreak{}μ/m\_\allowbreak{}e = 208.8 (exp 206.8, \textbf{0.98\%})
+\end{itemize}
+
+Certified in Lean: \texttt{Associative\allowbreak{}Volumes.\allowbreak{}lean} (14 conjuncts, 0 sorry). Full mechanism description: main §6.4.
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.6 Sensitivity Cross-Reference}\label{s3.6-sensitivity-cross-reference}
+
+The complete sensitivity analysis is in §7 of the main text. Key results for cross-reference:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Effective DOF}: r\_\allowbreak{}eff = 15.53 (SVD of 20×33 constant-usage Jacobian)
+\item
+  \textbf{Overdetermination}: 33/15.53 = 2.13× (more constraints than free dimensions)
+\item
+  \textbf{Cross-coupling}: 155/528 observable pairs share a structural constant; all form one connected component
+\item
+  \textbf{P(coincidence, uniform)} = 10⁻³⁴⁶ (χ² + Fisher combined; archived diagnostic, see Supplement S4)
+\item
+  \textbf{P(coincidence, algebraic)} = 10⁻¹³³ (4.2M random formulas from same 20 constants; archived diagnostic, see Supplement S4). These joint-probability figures are internal-consistency diagnostics, superseded as headline methodology by the Sieve reading (main §7).
+\end{itemize}
+
+Figures: \texttt{fig\_\allowbreak{}sensitivity\_\allowbreak{}heatmap.\allowbreak{}png}, \texttt{fig\_\allowbreak{}constant\_\allowbreak{}usage.\allowbreak{}png}, \texttt{fig\_\allowbreak{}observable\_\allowbreak{}correlations.\allowbreak{}png}, \texttt{fig\_\allowbreak{}mc\_\allowbreak{}per\_\allowbreak{}observable.\allowbreak{}png}.
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.7 Lean Cross-References}\label{s3.7-lean-cross-references}
+
+Of the 95 observables, \textbf{55 are formally verified} in Lean 4 across the following certificate files:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1600}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Lean File
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Axioms
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theorems
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conjuncts
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Coverage
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{Foundations.\allowbreak{}lean} & 0* & n/a & 39 & Type I: metric, torsion, topology \\
+\texttt{Predictions.\allowbreak{}lean} & 0* & n/a & 56 & Types I--III: couplings, masses, mixing \\
+\texttt{Spectral.\allowbreak{}lean} & 0* & n/a & 45 & Types III-IV: KK spectrum, Weyl law \\
+\texttt{Metric\allowbreak{}Eigenvalues.\allowbreak{}lean} & 0 & n/a & 15 & Metric fractions: g\_\allowbreak{}ss=19/6, g\_\allowbreak{}T²=7/6, γ²=24π²/7 (T² Laplacian) \\
+\texttt{Spectral\allowbreak{}Invariants.\allowbreak{}lean} & 0 & n/a & 10 & Heat kernel, ζ'(0), b₁=0 \\
+\texttt{Compactification\allowbreak{}Correction.\allowbreak{}lean} & 0 & n/a & 6 & δ\_\allowbreak{}CP compactification factor \\
+\texttt{TCSGauge\allowbreak{}Breaking.\allowbreak{}lean} & 0 & 14 & 10 & Type III: gauge breaking chain \\
+\texttt{Gauge\allowbreak{}Bundle\allowbreak{}Data.\allowbreak{}lean} & 0 & 12 & 11 & Type III: bundle universality \\
+\texttt{Associative\allowbreak{}Volumes.\allowbreak{}lean} & 0 & 19 & 14 & Type III: instanton hierarchy \\
+\texttt{Computed\allowbreak{}Weyl\allowbreak{}Law.\allowbreak{}lean} & 0 & 8 & 7 & Type III: 7D spectral geometry \\
+\end{longtable}
+
+*4 external data-package axioms (of 15 classified in the A--F taxonomy of the v3.4.29 release audit; see main §8.1 for the reconciliation). All substantive: standard theorems (Cheeger inequality) + geometric structure (TCS spectral bounds) + physical inputs (literature package: CGN+Joyce). G₂ group structure proven by \texttt{native\_\allowbreak{}decide}.
+
+\textbf{Total certificate}: 213 conjuncts (top-level conjunctions of the master certificates: 39 + 56 + 45 + 15 + 10 + 6 + 10 + 11 + 14 + 7), 0 \texttt{sorry}, 146 .lean files under \texttt{GIFT/\allowbreak{}} (140 core + 6 generated), 8394 build jobs (Lean 4.29.0).
+
+\subsection{Coverage by Type}\label{coverage-by-type}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Type & Certified & Total & Coverage \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{I} & 33 & 33 & 100\% \\
+\textbf{II} & 0 & 19 & 0\% \\
+\textbf{III} & 14 & 21 & 67\% \\
+\textbf{IV} & 8 & 22 & 36\% \\
+\textbf{Total} & \textbf{55} & \textbf{95} & \textbf{58\%} \\
+\end{longtable}
+
+\textbf{Type II uncertified}: The 19 Type II observables derive from the CSV pipeline (absolute masses from ratio × VEV, CKM magnitudes from Wolfenstein). These involve dimensional quantities and intermediate data that have not yet been axiomatized in Lean. The underlying Type I ratios from which they derive are all certified.
+
+\textbf{Type IV partial}: 8 of 22 structural quantities are certified (Betti numbers, holonomy dimension, NK certification bounds). The remaining 14 involve spectral counts, conditioning numbers, metric eigenvalues, and BH remnant estimates that require floating-point Lean infrastructure not yet developed.
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\section{S3.8 Data Availability}\label{s3.8-data-availability}
+
+The complete dataset is generated deterministically by the \texttt{observable\_\allowbreak{}dataset.\allowbreak{}py} + \texttt{deviation\_\allowbreak{}systematics.\allowbreak{}py} pipeline from the frozen inputs and is available in three formats:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{JSON}: \texttt{gift\_\allowbreak{}observables.\allowbreak{}json} (machine-readable, full metadata per observable)
+\item
+  \textbf{CSV}: \texttt{gift\_\allowbreak{}observables.\allowbreak{}csv} (tabular, 95 rows × 13 columns, for analysis)
+\item
+  \textbf{LaTeX}: \texttt{gift\_\allowbreak{}observables\_\allowbreak{}latex.\allowbreak{}tex} (publication-ready table)
+\end{itemize}
+
+The dataset, the generator scripts, and the mechanism-selection protocols referenced in main §6 (search spaces, objective function, cycle-assignment selection) are available from the author on request pending public deposit. The spectral companion artifacts of {[}B{]} are archived separately on Zenodo (DOI: \href{https://doi.org/10.5281/zenodo.19893371}{10.5281/zenodo.19893371}).
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+
+\bigskip
+\input{gift_3.5_bib}
+
+\end{document}

@@ -5,13 +5,13 @@ layout: default
 
 # Paper: Main Framework
 
-**Geometric Information Field Theory: Topological Derivation of Standard Model Parameters from G₂ Holonomy Manifolds**
+**The K₇ Framework: Conditional Topological Relations for Standard-Model Parameters from G₂ Holonomy and E₈×E₈ Structure** (v3.5)
 
 *Brieuc de La Fournière (2026)*
 
-[**PDF (main, 44 pp.)**](https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_main.pdf) | [**DOI: 10.5281/zenodo.20070101**](https://doi.org/10.5281/zenodo.20070101) | [Markdown](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/GIFT_v3.4_main.md)
+[**PDF (main, 47 pp.)**](https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_main.pdf) | [**DOI: 10.5281/zenodo.21296168**](https://doi.org/10.5281/zenodo.21296168) | [Markdown](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_main.md)
 
-> **Companion papers (Zenodo):** [A: certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B: spectral](https://doi.org/10.5281/zenodo.19893371) · [C: K3 NK](https://doi.org/10.5281/zenodo.19708916) · [D: Donaldson analytic](https://doi.org/10.5281/zenodo.20039066) · [v3.3 archive](https://doi.org/10.5281/zenodo.18837071)
+> **Companion papers (Zenodo):** [A: certified G₂](https://doi.org/10.5281/zenodo.19892350) · [B: spectral](https://doi.org/10.5281/zenodo.19893371) · [C: K3 NK](https://doi.org/10.5281/zenodo.19708916) · [D: Donaldson analytic](https://doi.org/10.5281/zenodo.20039066) · [E: rank-1 branched](https://doi.org/10.5281/zenodo.21209413) · [v3.4 archive](https://doi.org/10.5281/zenodo.20070101) · [v3.3 archive](https://doi.org/10.5281/zenodo.18837071)
 
 ---
 

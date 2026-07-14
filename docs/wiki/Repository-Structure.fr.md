@@ -66,9 +66,9 @@ GIFT/
 |------------------|---------|
 | Vue d'ensemble du cadre | `README.md` |
 | Guide accessible aux débutants | `docs/GIFT_FOR_EVERYONE.md` |
-| Théorie complète | `publications/papers/markdown/GIFT_v3.4_main.md` |
-| Toutes les dérivations | `publications/papers/markdown/GIFT_v3.4_S2_derivations.md` |
-| Catalogue d'observables | `publications/papers/markdown/GIFT_v3.4_S3_observables.md` |
+| Théorie complète | `publications/papers/markdown/k7_framework_3_5_main.md` |
+| Toutes les dérivations | `publications/papers/markdown/k7_framework_3_5_S2_derivations.md` |
+| Catalogue d'observables | `publications/papers/markdown/k7_framework_3_5_S3_observables.md` |
 | Article A (G₂ certifiée) | `publications/papers/pdf/g2_certified_neck.pdf` |
 | Article B (géométrie spectrale) | `publications/papers/pdf/g2_spectral.pdf` |
 | Notebooks compagnons | `publications/papers/notebooks/` |

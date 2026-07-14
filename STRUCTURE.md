@@ -1,6 +1,6 @@
 # Repository Structure
 
-This repository contains the theoretical documentation for GIFT v3.4.
+This repository contains the theoretical documentation for The K₇ Framework v3.5 (formerly GIFT).
 
 ## Directory Layout
 
@@ -8,24 +8,28 @@ This repository contains the theoretical documentation for GIFT v3.4.
 GIFT/
 ├── publications/                      # Published content & validation
 │   ├── papers/                        # Scientific articles
-│   │   ├── markdown/                  # Core documents (v3.4 — canonical sources)
-│   │   │   ├── GIFT_v3.4_main.md              # Main paper
-│   │   │   ├── GIFT_v3.4_S1_foundations.md    # E₈, G₂, K₇ foundations
-│   │   │   ├── GIFT_v3.4_S2_derivations.md    # 33 Type I derivations
-│   │   │   ├── GIFT_v3.4_S3_observables.md    # 95-observable catalog
+│   │   ├── markdown/                  # Core documents (v3.5 — canonical sources)
+│   │   │   ├── k7_framework_3_5_main.md               # Main paper
+│   │   │   ├── k7_framework_3_5_S1_foundations.md     # E₈, G₂, K₇ foundations
+│   │   │   ├── k7_framework_3_5_S2_derivations.md     # Type I derivations
+│   │   │   ├── k7_framework_3_5_S3_observables.md     # Observable catalog
+│   │   │   ├── k7_framework_3_5_S4_sieve_diagnostics.md # Sieve diagnostics
 │   │   │   ├── g2_certified_neck.md           # Paper A — certified G₂ structure
 │   │   │   └── g2_spectral.md                 # Paper B — spectral geometry
-│   │   ├── tex/                       # LaTeX sources (v3.4)
+│   │   ├── tex/                       # LaTeX sources (v3.5)
 │   │   ├── pdf/                       # Compiled PDFs (all published)
-│   │   │   ├── gift_3.4_main.pdf              # Framework main (Zenodo 20070101)
-│   │   │   ├── gift_3.4_S1.pdf                # Framework S1  (Zenodo 20070101)
-│   │   │   ├── gift_3.4_S2.pdf                # Framework S2  (Zenodo 20070101)
-│   │   │   ├── gift_3.4_S3.pdf                # Framework S3  (Zenodo 20070101)
+│   │   │   ├── k7_framework_3_5_main.pdf              # Framework main (Zenodo 21296168)
+│   │   │   ├── k7_framework_3_5_S1_foundations.pdf    # Framework S1  (Zenodo 21296168)
+│   │   │   ├── k7_framework_3_5_S2_derivations.pdf    # Framework S2  (Zenodo 21296168)
+│   │   │   ├── k7_framework_3_5_S3_observables.pdf    # Framework S3  (Zenodo 21296168)
+│   │   │   ├── k7_framework_3_5_S4_sieve_diagnostics.pdf # Framework S4 (Zenodo 21296168)
 │   │   │   ├── g2_certified_neck.pdf          # Paper A (Zenodo 19892350)
 │   │   │   ├── g2_spectral.pdf                # Paper B (Zenodo 19893371)
 │   │   │   ├── K3_NK_Certificate.pdf          # Paper C (Zenodo 19708916)
-│   │   │   └── donaldson_analytic.pdf         # Paper D (Zenodo 20039066)
-│   │   ├── legacy/v3.3/               # v3.3 framework PDFs + markdown (archived)
+│   │   │   ├── donaldson_analytic.pdf         # Paper D (Zenodo 20039066)
+│   │   │   └── rank_one_branched_adiabatic.pdf # Paper E (Zenodo 21209413)
+│   │   ├── legacy/v3.3/               # v3.3 framework PDFs + markdown + tex (archived)
+│   │   ├── legacy/v3.4/               # v3.4 framework PDFs + markdown + tex (archived, Zenodo 20070101)
 │   │   ├── figures/                   # Publication figures (PDF + PNG)
 │   │   └── notebooks/                 # Companion Jupyter notebooks
 │   │       ├── g2_certified_neck_companion.ipynb
@@ -40,7 +44,7 @@ GIFT/
 │   │   └── Bibliography.md            # References
 │   └── validation/                    # Monte Carlo validation
 │       └── legacy/v3.3/               # v3.3 validation scripts (archived;
-│                                      # v3.4 stats refresh in core/private)
+│                                      # stats refresh in core/private)
 │
 ├── docs/                              # User-facing documentation + Jekyll site
 │   ├── index.html                     # Landing page (arithmon.github.io/K7)
@@ -67,9 +71,9 @@ GIFT/
 |----------------|-------|
 | Framework overview | `README.md` |
 | Beginner-friendly guide | `docs/GIFT_FOR_EVERYONE.md` |
-| Complete theory | `publications/papers/markdown/GIFT_v3.4_main.md` |
-| All derivations | `publications/papers/markdown/GIFT_v3.4_S2_derivations.md` |
-| Observable catalog | `publications/papers/markdown/GIFT_v3.4_S3_observables.md` |
+| Complete theory | `publications/papers/markdown/k7_framework_3_5_main.md` |
+| All derivations | `publications/papers/markdown/k7_framework_3_5_S2_derivations.md` |
+| Observable catalog | `publications/papers/markdown/k7_framework_3_5_S3_observables.md` |
 | Paper A (certified G₂) | `publications/papers/pdf/g2_certified_neck.pdf` |
 | Paper B (spectral geometry) | `publications/papers/pdf/g2_spectral.pdf` |
 | Companion notebooks | `publications/papers/notebooks/` |
@@ -79,14 +83,15 @@ GIFT/
 | v3.3 archive | `publications/papers/legacy/v3.3/` |
 | Technical definitions | `docs/GLOSSARY.md` |
 
-## Core Documents (v3.4)
+## Core Documents (v3.5)
 
 | Document | Content |
 |----------|---------|
-| GIFT_v3.4_main.md | Complete theoretical framework |
-| GIFT_v3.4_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
-| GIFT_v3.4_S2_derivations.md | 33 Type I derivations with proofs |
-| GIFT_v3.4_S3_observables.md | 95-observable catalog (35 I + 19 II + 21 III + 22 IV) |
+| k7_framework_3_5_main.md | Complete theoretical framework |
+| k7_framework_3_5_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
+| k7_framework_3_5_S2_derivations.md | Type I derivations with proofs |
+| k7_framework_3_5_S3_observables.md | 95-observable catalog (35 I + 19 II + 21 III + 22 IV) |
+| k7_framework_3_5_S4_sieve_diagnostics.md | Sieve diagnostics |
 | g2_certified_neck.md (Paper A) | Computer-assisted G₂ existence proof |
 | g2_spectral.md (Paper B) | Laplacian spectrum, harmonic forms |
 
@@ -102,8 +107,8 @@ The **[GitHub Wiki](https://github.com/Arithmon/K7/wiki)** provides a navigable 
 
 ## Version
 
-**Current**: v3.4.27 (2026-06-03)
-**Relations**: 140 conjuncts certified (core v3.4.27, 15 axioms = 4 main-chain + 11 interval-arith certificates), 0 `sorry`, 143 .lean files, 8391 build jobs
+**Current**: v3.5 (2026-07-10)
+**Relations**: 140 conjuncts certified (K7-Lean v3.4.29, 15 axioms = 4 main-chain + 11 interval-arith certificates), 0 `sorry`, 143 .lean files, 8391 build jobs
 **Predictions**: 95 observables (33 Type I, exact targets, 0.99% mean deviation; PDG 2024 / NuFIT 6.1 / Planck 2018)
 **Validation**: 3M+ configs exhaustive (set-level bound ~10⁻⁶, assumption-free; log₁₀ p_algebraic = −134)
-**Papers**: Framework v3.4 (Zenodo 20070101) + A (19892350) + B (19893371) + C (19708916) + D (20039066)
+**Papers**: Framework v3.5 (Zenodo 21296168, concept 16891489) + A (19892350) + B (19893371) + C (19708916) + D (20039066) + E (21209413)

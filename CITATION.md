@@ -1,18 +1,19 @@
 # Citation Guide
 
-Citation formats for the GIFT Framework v3.4.
+Citation formats for The K₇ Framework v3.5 (formerly GIFT).
 
 ## Software Citation (Recommended)
 
 ### BibTeX
 
 ```bibtex
-@software{gift_framework_v34,
-  title   = {GIFT Framework v3.4: Geometric Information Field Theory},
+@software{k7_framework_v35,
+  title   = {The K₇ Framework (formerly GIFT)},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/Arithmon/K7},
-  version = {3.4.27},
+  doi     = {10.5281/zenodo.16891489},
+  version = {3.5},
   license = {MIT},
   note    = {95 observables, 0.99\% mean deviation on 33 Type I relations (PDG 2024 / NuFIT 6.1), 140 conjuncts certified in Lean 4, 15 axioms (4 main-chain + 11 interval-arithmetic), Donaldson certificate pipeline scoped by docs/analytic_status.md}
 }
@@ -21,13 +22,13 @@ Citation formats for the GIFT Framework v3.4.
 ### APA Style
 
 ```
-de La Fournière, B. (2026). GIFT Framework v3.4: Geometric Information Field Theory (Version 3.4.27) [Software]. GitHub. https://github.com/Arithmon/K7
+de La Fournière, B. (2026). The K₇ Framework (formerly GIFT) (Version 3.5) [Software]. Zenodo. https://doi.org/10.5281/zenodo.16891489
 ```
 
 ### Chicago Style
 
 ```
-de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theory." Version 3.4.27. GitHub, 2026. https://github.com/Arithmon/K7.
+de La Fournière, Brieuc. "The K₇ Framework (formerly GIFT)." Version 3.5. Zenodo, 2026. https://doi.org/10.5281/zenodo.16891489.
 ```
 
 ---
@@ -37,8 +38,8 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 ### BibTeX
 
 ```bibtex
-@article{gift_theory_v34,
-  title  = {Geometric Information Field Theory v3.4: Topological Determination of Standard Model Parameters},
+@article{k7_framework_theory_v35,
+  title  = {The K₇ Framework v3.5: Conditional Topological Relations for Standard-Model Parameters},
   author = {de La Fournière, Brieuc},
   year   = {2026},
   note   = {Mean deviation 0.99\% on 33 Type I relations (PDG 2024 / NuFIT 6.1), zero continuous adjustable parameters, 3 integer primitives (N=3, r₈=8, r₂=2), 140 conjuncts in Lean 4},
@@ -48,72 +49,88 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ---
 
-## Framework v3.4 Papers (Zenodo, PDF)
+## Framework v3.5 Papers (Zenodo, PDF)
 
 ### Main Paper
 
 ```bibtex
-@misc{gift_main_v34,
-  title        = {Geometric Information Field Theory: Standard Model Parameters as Topological Invariants of a G\textsubscript{2} Holonomy Manifold},
+@misc{k7_main_v35,
+  title        = {The K₇ Framework: Conditional Topological Relations for Standard-Model Parameters from G₂ Holonomy and E₈×E₈ Structure},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  month        = {May},
-  howpublished = {GIFT Framework v3.4, 44 pp.},
-  doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_main.pdf}
+  month        = {July},
+  howpublished = {The K₇ Framework v3.5, 47 pp.},
+  doi          = {10.5281/zenodo.21296168},
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_main.pdf}
 }
 ```
 
 ### S1: Foundations
 
 ```bibtex
-@misc{gift_s1_foundations_v34,
-  title        = {GIFT S1: Mathematical Foundations — E₈, G₂, K₇},
+@misc{k7_s1_foundations_v35,
+  title        = {K₇ Framework S1: Mathematical Foundations — E₈, G₂, K₇},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  month        = {May},
-  howpublished = {GIFT Framework v3.4, Supplement S1, 27 pp.},
-  doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_S1.pdf}
+  month        = {July},
+  howpublished = {The K₇ Framework v3.5, Supplement S1},
+  doi          = {10.5281/zenodo.21296168},
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_S1_foundations.pdf}
 }
 ```
 
 ### S2: Derivations
 
 ```bibtex
-@misc{gift_s2_derivations_v34,
-  title        = {GIFT S2: Complete Derivations — 33 Type I Relations},
+@misc{k7_s2_derivations_v35,
+  title        = {K₇ Framework S2: Complete Derivations — Type I Relations},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  month        = {May},
-  howpublished = {GIFT Framework v3.4, Supplement S2, 42 pp.},
-  doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_S2.pdf}
+  month        = {July},
+  howpublished = {The K₇ Framework v3.5, Supplement S2},
+  doi          = {10.5281/zenodo.21296168},
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_S2_derivations.pdf}
 }
 ```
 
 ### S3: Observables
 
 ```bibtex
-@misc{gift_s3_observables_v34,
-  title        = {GIFT S3: Observable Catalog — 95 Predictions},
+@misc{k7_s3_observables_v35,
+  title        = {K₇ Framework S3: Complete Observable Dataset},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  month        = {May},
-  howpublished = {GIFT Framework v3.4, Supplement S3, 10 pp.},
-  doi          = {10.5281/zenodo.20070101},
-  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/gift_3.4_S3.pdf}
+  month        = {July},
+  howpublished = {The K₇ Framework v3.5, Supplement S3},
+  doi          = {10.5281/zenodo.21296168},
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_S3_observables.pdf}
 }
 ```
 
+### S4: Sieve Diagnostics
+
+```bibtex
+@misc{k7_s4_sieve_diagnostics_v35,
+  title        = {K₇ Framework S4: Sieve Diagnostics},
+  author       = {de La Fournière, Brieuc},
+  year         = {2026},
+  month        = {July},
+  howpublished = {The K₇ Framework v3.5, Supplement S4},
+  doi          = {10.5281/zenodo.21296168},
+  url          = {https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_S4_sieve_diagnostics.pdf}
+}
+```
+
+> Archived versions: v3.4 (Zenodo [10.5281/zenodo.20070101](https://doi.org/10.5281/zenodo.20070101), files in [`publications/papers/legacy/v3.4/`](publications/papers/legacy/v3.4/)); v3.3 (Zenodo [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071), files in [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/)).
+
 ---
 
-## Triptyque (peer-reviewable companion papers, Zenodo)
+## Companion Papers (peer-reviewable, Zenodo)
 
 ### Paper A: Certified G₂ Structure
 
 ```bibtex
-@misc{gift_paper_a_certified_neck,
+@misc{k7_paper_a_certified_neck,
   title        = {Certified Torsion-Free G₂ Structure on a TCS Neck Model via Computer-Assisted Proof},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
@@ -126,7 +143,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 ### Paper B: Spectral Geometry
 
 ```bibtex
-@misc{gift_paper_b_spectral,
+@misc{k7_paper_b_spectral,
   title        = {Spectral Geometry of an Explicit G₂ Metric: Laplacian Spectrum and Harmonic Forms},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
@@ -139,7 +156,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 ### Paper C: Newton-Kantorovich on K3
 
 ```bibtex
-@misc{gift_paper_c_k3_nk,
+@misc{k7_paper_c_k3_nk,
   title        = {Newton--Kantorovich Diagnostics on a Donaldson K3 Metric},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
@@ -152,7 +169,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 ### Paper D: Donaldson Analytic Note
 
 ```bibtex
-@misc{gift_paper_d_donaldson,
+@misc{k7_paper_d_donaldson,
   title        = {An Explicit Closed-Form G\textsubscript{2} Ansatz on a K3-Coassociative Neck with Hyperk\"{a}hler Rotation and Picard--Lefschetz Wirtinger Certificate},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
@@ -163,17 +180,31 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 }
 ```
 
----
-
-## Formal Verification (Core)
+### Paper E: Rank-1 Branched Adiabatic
 
 ```bibtex
-@software{gift_core_v3426,
-  title   = {GIFT Core: Formal Verification in Lean 4},
+@misc{k7_paper_e_rank_one_branched,
+  title        = {Rank-1 Branched Adiabatic Machinery for the Donaldson Programme: Neck-Level Closure at D₀},
+  author       = {de La Fournière, Brieuc},
+  year         = {2026},
+  month        = {July},
+  doi          = {10.5281/zenodo.21209413},
+  url          = {https://doi.org/10.5281/zenodo.21209413},
+  note         = {Analytic machinery closed at D₀ (K_Sch ≤ 16/3, q_total = 8.2e-3, κ_E ≤ 1.02, R_0 ≤ 4.9e3). Open: (J) anisotropic perturbation theorem and H_global. Main 68 pp. + supplement 25 pp.}
+}
+```
+
+---
+
+## Formal Verification (K7-Lean)
+
+```bibtex
+@software{k7_lean_v3429,
+  title   = {K7-Lean (formerly GIFT Core): Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/Arithmon/K7-Lean},
-  version = {3.4.27},
+  version = {3.4.29},
   note    = {143 Lean 4 files, 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic certificates), 0 sorry, 8391 build jobs, Donaldson coassociative fibration formalized}
 }
 ```
@@ -184,12 +215,15 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 | Archive | Link |
 |---------|------|
-| Zenodo (framework v3.4) | [10.5281/zenodo.20070101](https://doi.org/10.5281/zenodo.20070101) |
+| Zenodo (framework v3.5, current) | [10.5281/zenodo.21296168](https://doi.org/10.5281/zenodo.21296168) |
+| Zenodo (framework concept DOI, always latest) | [10.5281/zenodo.16891489](https://doi.org/10.5281/zenodo.16891489) |
+| Zenodo (framework v3.4 archive) | [10.5281/zenodo.20070101](https://doi.org/10.5281/zenodo.20070101) |
 | Zenodo (framework v3.3 archive) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
 | Zenodo (Paper A, certified G₂) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
 | Zenodo (Paper B, spectral) | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
 | Zenodo (Paper C, K3 NK) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
 | Zenodo (Paper D, Donaldson analytic) | [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) |
+| Zenodo (Paper E, rank-1 branched adiabatic) | [10.5281/zenodo.21209413](https://doi.org/10.5281/zenodo.21209413) |
 | ResearchGate | [Author page](https://www.researchgate.net/profile/Brieuc-De-La-Fourniere) |
 
 ---
@@ -198,6 +232,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 3.5 | 2026-07-10 | Renamed "The K₇ Framework" (GIFT = founding-phase name); S4 sieve diagnostics supplement; three AI-review rounds discharged; conditional framing throughout |
 | 3.4.27 | 2026-06-03 | Numerology purge (competing κ_T modules removed); observables.json refreshed to NuFIT 6.1 (Type I 0.99%); 143 .lean files, 8391 jobs, 15 axioms (4+11), 140 conjuncts; giftpy 3.4.27 on PyPI |
 | 3.4.24 | 2026-06-01 | Academic terminology cleanup across K3 modules and papers |
 | 3.4.23 | 2026-05-19 | Closed-form K3 CY-residual witness, interval-certified (ε₃' < 10⁻³) |
@@ -219,20 +254,20 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ## Usage in Publications
 
-When using GIFT predictions:
+When using K₇ framework predictions:
 
 1. **Cite framework**: Use software citation above
-2. **Cite specific results**: Use the relevant document or triptyque entry
-3. **Specify version**: Always include version number (v3.4)
+2. **Cite specific results**: Use the relevant document or companion-paper entry
+3. **Specify version**: Always include version number (v3.5)
 4. **Link repository**: Include GitHub URL for reproducibility
 
 ### Example
 
-> "We compare our measurements with predictions from the Geometric Information Field Theory (GIFT) framework [1], which derives Standard Model parameters from E₈×E₈ topology. The GIFT prediction for the CP violation phase is δ_CP = 197° [2]."
+> "We compare our measurements with predictions from the K₇ framework (formerly GIFT) [1], which derives Standard Model parameters from E₈×E₈ topology. The K₇ framework prediction for the CP violation phase is δ_CP = 197° [2]."
 >
-> [1] de La Fournière, B. "GIFT Framework v3.4," 2026, https://github.com/Arithmon/K7
+> [1] de La Fournière, B. "The K₇ Framework v3.5," 2026, https://github.com/Arithmon/K7
 >
-> [2] de La Fournière, B. "GIFT S2: Complete Derivations," 2026.
+> [2] de La Fournière, B. "K₇ Framework S2: Complete Derivations," 2026.
 
 ---
 
@@ -242,4 +277,4 @@ MIT License: See [LICENSE](LICENSE)
 
 ---
 
-**Version**: 3.4.27 (2026-06-03)
+**Version**: 3.5 (2026-07-10)

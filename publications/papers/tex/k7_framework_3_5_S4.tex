@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper]{article}
+\input{gift_preamble}
+% pandoc >= 3.2.1 emits \pandocbounded around images; provide a fallback.
+% Also clamp all images to \linewidth (natural-size figures overflowed the
+% right margin -- the "truncated figures" flagged by the round-2 reviews).
+% Kept here rather than in gift_preamble.tex, shared with the 3.4 build.
+\providecommand{\pandocbounded}[1]{#1}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,keepaspectratio}
+% md headings carry their own literal numbering ("3.2 What ..."); suppress
+% the LaTeX section counters to avoid "0.2 1. Introduction" double numbering.
+\setcounter{secnumdepth}{0}
+% Loosen justification slightly: long technical identifiers (made breakable
+% at build time via \allowbreak) still need extra stretch to avoid overfulls.
+\emergencystretch=3em
+\fancyhead[L]{The $K_7$ Framework v3.5: Supplement S4}
+\hypersetup{pdftitle={The K7 Framework v3.5 Supplement S4: Sieve Diagnostics}}
+
+\graphicspath{{../../../figures/}}
+
+\title{%
+\LARGE\textbf{Supplement S4: Sieve Diagnostics}\\[0.3em]
+\large Coincidence-Probability Tables (Archived from v3.4 \S 7.5)%
+}
+\author{Brieuc de La Fourni\`ere \\ \textit{Independent researcher, Beaune, France}}
+\date{July 2026 \quad\textbar\quad v3.5}
+
+\begin{document}
+
+\maketitle
+\noindent\rule{\textwidth}{0.2pt}
+
+\thispagestyle{fancy}
+
+\emph{Companion to the K₇ framework paper v3.5. This supplement archives the coincidence-probability tables from the 3.4 §7.5 ``Coincidence Test'' section, which the 3.5 restructure demoted from statistical headline to internal-consistency diagnostics. The archived tables remain available for readers who want the previous framing. The 3.5 headline methodology is the Sieve reading (main paper §7); see the Arithmon methodology paper (Zenodo \href{https://doi.org/10.5281/zenodo.20666879}{10.5281/zenodo.20666879}) for the underlying construction.}
+
+\section{S4.1 Purpose}\label{s4.1-purpose}
+
+The 3.4 paper reported joint coincidence probabilities
+
+\[
+P_{\rm uniform} \sim 10^{-346}, \qquad P_{\rm algebraic} \sim 10^{-133}
+\]
+
+for the 33 Type I observables under (i) a uniform null model over \([0, 50\%]\) deviations, and (ii) an algebraic null model built from \(4.2 \cdot 10^6\) random formulas over the same 20 structural constants. These figures do not distinguish a \emph{genuine} survivor of a public sieve from a \emph{well-tuned} formula grammar; the 3.5 update supersedes them by the Sieve reading of §7 as headline, and preserves them here as diagnostic evidence of internal consistency.
+
+\section{S4.2 Uniform Null Model (archived tables)}\label{s4.2-uniform-null-model-archived-tables}
+
+Multiple statistical tests under the null hypothesis of uniform deviations in \([0, 50\%]\):
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Test & Statistic & df & p-value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\chi^2\) & 1063 & 33 & \(5.0 \times 10^{-202}\) \\
+Fisher combined & 1100.5 & 66 & \(2.2 \times 10^{-187}\) \\
+KS (pull normality) & 0.189 & n/a & 0.165 \\
+\textbf{Combined uniform} & -- & -- & \textbf{\(10^{-346}\)} \\
+\end{longtable}
+
+\textbf{Pull distribution}: mean \(= -0.774\), std \(= 5.62\). 72.7\% of pulls within \(1\sigma\), 87.9\% within \(2\sigma\). The KS test (\(p = 0.165\)) is consistent with Gaussian pulls: the deviations are not cherry-picked.
+
+\textbf{Reduced \(\chi^2 = 32.2\)} is large, driven by outliers (\(\delta_{\rm CP}\), \(\alpha_s(\text{RGE})\)). The Bayes factor \(\log_{10} = -2.3\) is inconclusive, reflecting this: the bulk of predictions match extremely well, but a few outliers inflate the tails. Removing the 4 known outliers gives reduced \(\chi^2 < 2\).
+
+\section{S4.3 Algebraic Null Model (algebraic\_\allowbreak{}MC, archived)}\label{s4.3-algebraic-null-model-algebraic_mc-archived}
+
+The uniform null model assumes predictions are random numbers. A stronger test: use random \emph{algebraic formulas} from the same 20 structural constants. \(4{,}188{,}086\) unique formula values were generated via exhaustive depth-1/2 enumeration (\(1.8 \cdot 10^6\)) plus \(3 \cdot 10^6\) random expression trees (depth 2--4), using 5 binary operations (\(+, -, \times, \div, \wedge\)) and 5 unary transforms (id, inv, \(\sqrt{}\), \(\square^2\), \(\ln\)).
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Metric & K₇ framework & Random algebraic (median) & Factor \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean deviation & \textbf{0.73\%} & \(4.1 \cdot 10^9\) \% & \(5.6 \cdot 10^9\) \\
+Exact matches (\textless{} 0.01\%) & \textbf{5} & 0 & -- \\
+Within 1\% & \textbf{28} & 0 & -- \\
+\end{longtable}
+
+\textbf{Per-observable}: combined P(random algebraic formula matches the framework's precision) = \textbf{\(10^{-133}\)} (product over 33 observables). Only 0.02\% of \(4.2 \cdot 10^6\) formulas match \emph{any} observable within 0.01\%.
+
+\textbf{Set-level}: 0 out of \(3{,}000{,}000\) random sets of 33 algebraic formulas achieved the framework's mean deviation, exact count, or within-1\% count. Under this null: \(P < 3.3 \cdot 10^{-7}\) for each metric.
+
+\textbf{Interpretation (archived, 3.4 language).} The algebraic null model is far more generous than the uniform null (it generates formulas from the \emph{same constants}), yet the framework's performance remains unmatched across \(3 \cdot 10^6\) trials. Under both declared null models, chance agreement is excluded at extreme significance: \(P = 10^{-346}\) (uniform) and \(P = 10^{-133}\) (algebraic). These figures quantify agreement under each declared model; they do not constitute an absolute probability that the framework is correct.
+
+\section{S4.4 What changed in 3.5 (Sieve reading)}\label{s4.4-what-changed-in-3.5-sieve-reading}
+
+The Sieve reading of §7 in the main paper isolates individual \emph{survivors} rather than joint probabilities. Under the 4-null battery (uniform / algebraic / factorised / permuted) followed by budget-uniqueness ranking and Lean 4 R2 formal-identity flag, the outcome is:
+
+\begin{itemize}
+\tightlist
+\item
+  \(m_H / m_W\) (Route A): unique survivor at exact rank 1 budget-unique; carries the formal-identity flag via its Lean 4 R2 pre-registered identity.
+\item
+  Koide's \(Q = 2/3\): passes the battery with a narrow budget margin.
+\item
+  \(n_s\): passes the battery without a distinguishing budget signature.
+\end{itemize}
+
+The joint coincidence-probability language of §7.5 (this supplement) is not the right unit for the Sieve reading: two different jointness questions (probability under null vs certified survivor of a public sieve) are conflated in the 3.4 framing. The 3.5 restructure separates them and puts the certified-survivor language on the main line.
+
+\section{S4.5 Reproducibility}\label{s4.5-reproducibility}
+
+The archived null-model computations are reproducible from the same scripts used for the 3.4 release; the Sieve reading is reproducible via the Lean 4 module \texttt{Sieve/\allowbreak{}GStruct.\allowbreak{}lean} in the public \texttt{arithmon/\allowbreak{}Lean} repository. The Type I observable list is unchanged from 3.4 modulo the reconciliations documented in the CHANGELOG (observables reconciliation: 0.99\% Type I after the audit against the reconciled post-freeze sources used by the Arithmon/Sieve pipeline; the Type I tables of this paper use the earlier frozen PDG 2024 + NuFIT 6.0 dataset, mean 0.73\%, cf.~S2 §22; \(m_c/m_s\) erratum inlined).
+
+\begin{center}\rule{\linewidth}{0.5pt}\end{center}
+
+\emph{The K₇ Framework (formerly GIFT): Supplement S4: Sieve Diagnostics}
+
+
+\bigskip
+\input{gift_3.5_bib}
+
+\end{document}

@@ -98,16 +98,17 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 
 ## Papers
 
-### Framework v3.4 (published: PDF, TeX, and markdown)
+### Framework v3.5 (published: PDF, TeX, and markdown -- Zenodo [10.5281/zenodo.21296168](https://doi.org/10.5281/zenodo.21296168))
 
 | Document | PDF | Markdown |
 |----------|-----|----------|
-| Main Paper (44 pp.) | [PDF](publications/papers/pdf/gift_3.4_main.pdf) | [Markdown](publications/papers/markdown/GIFT_v3.4_main.md) |
-| S1: Foundations (27 pp.) | [PDF](publications/papers/pdf/gift_3.4_S1.pdf) | [Markdown](publications/papers/markdown/GIFT_v3.4_S1_foundations.md) |
-| S2: Derivations (42 pp.) | [PDF](publications/papers/pdf/gift_3.4_S2.pdf) | [Markdown](publications/papers/markdown/GIFT_v3.4_S2_derivations.md) |
-| S3: Observables (10 pp.) | [PDF](publications/papers/pdf/gift_3.4_S3.pdf) | [Markdown](publications/papers/markdown/GIFT_v3.4_S3_observables.md) |
+| Main Paper (47 pp.) | [PDF](publications/papers/pdf/k7_framework_3_5_main.pdf) | [Markdown](publications/papers/markdown/k7_framework_3_5_main.md) |
+| S1: Foundations | [PDF](publications/papers/pdf/k7_framework_3_5_S1_foundations.pdf) | [Markdown](publications/papers/markdown/k7_framework_3_5_S1_foundations.md) |
+| S2: Derivations | [PDF](publications/papers/pdf/k7_framework_3_5_S2_derivations.pdf) | [Markdown](publications/papers/markdown/k7_framework_3_5_S2_derivations.md) |
+| S3: Observables | [PDF](publications/papers/pdf/k7_framework_3_5_S3_observables.pdf) | [Markdown](publications/papers/markdown/k7_framework_3_5_S3_observables.md) |
+| S4: Sieve Diagnostics | [PDF](publications/papers/pdf/k7_framework_3_5_S4_sieve_diagnostics.pdf) | [Markdown](publications/papers/markdown/k7_framework_3_5_S4_sieve_diagnostics.md) |
 
-> LaTeX sources: [`publications/papers/tex/`](publications/papers/tex/). v3.3 archive: [`publications/papers/legacy/v3.3/`](publications/papers/legacy/v3.3/).
+> LaTeX sources: [`publications/papers/tex/`](publications/papers/tex/). Archives: [`legacy/v3.4/`](publications/papers/legacy/v3.4/), [`legacy/v3.3/`](publications/papers/legacy/v3.3/).
 
 ### Companion Papers (peer-reviewable, published on Zenodo)
 
@@ -117,6 +118,7 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 | [B: Spectral Geometry (PDF)](publications/papers/pdf/g2_spectral.pdf) | Laplacian spectrum, harmonic forms, λ₁ = 6π²/475 | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
 | [C: Newton-Kantorovich on K3 (PDF)](publications/papers/pdf/K3_NK_Certificate.pdf) | NK diagnostics on a Donaldson K3 metric (CI(2,2,2)) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
 | [D: Donaldson Analytic Note (PDF)](publications/papers/pdf/donaldson_analytic.pdf) | Explicit closed-form G₂ ansatz on a K3-coassociative neck with 5-layer Wirtinger certificate | [10.5281/zenodo.20039066](https://doi.org/10.5281/zenodo.20039066) |
+| [E: Rank-1 Branched Adiabatic (PDF)](publications/papers/pdf/rank_one_branched_adiabatic.pdf) | Neck-level analytic machinery closed at D₀ (open: (J) and H_global) | [10.5281/zenodo.21209413](https://doi.org/10.5281/zenodo.21209413) |
 
 ---
 
@@ -125,7 +127,7 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 | | |
 |---|---|
 | **Parameters** | Zero adjustable -- all structurally determined (3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Verified** | 15 Lean 4 axioms (4 on the prediction chain + 11 K3 interval-arithmetic certificates), zero `sorry`, 460+ certified relations ([K7-Lean v3.4.27](https://github.com/Arithmon/K7-Lean)) |
+| **Verified** | 15 Lean 4 axioms (4 on the prediction chain + 11 K3 interval-arithmetic certificates), zero `sorry`, 460+ certified relations ([K7-Lean v3.4.29](https://github.com/Arithmon/K7-Lean)) |
 | **Parameter-free core** | 33 exact relations among topological integers (Type I) -- each individually correct-or-wrong, none tunable |
 | **Falsifiable** | δ_CP = 197°, N_gen = 3, θ₂₃ upper octant -- tested by DUNE / FCC-ee |
 | **Observables** | 95 total (33 Type I + 19 Type II + 21 Type III + 22 Type IV); 66 with experimental data |
@@ -246,8 +248,11 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
 
 | Archive | |
 |---------|---|
-| Zenodo (framework v3.4) | [10.5281/zenodo.20070101](https://doi.org/10.5281/zenodo.20070101) |
+| Zenodo (framework v3.5, current) | [10.5281/zenodo.21296168](https://doi.org/10.5281/zenodo.21296168) |
+| Zenodo (framework concept DOI, always latest) | [10.5281/zenodo.16891489](https://doi.org/10.5281/zenodo.16891489) |
+| Zenodo (framework v3.4 archive) | [10.5281/zenodo.20070101](https://doi.org/10.5281/zenodo.20070101) |
 | Zenodo (framework v3.3 archive) | [10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071) |
+| Zenodo (Paper E, rank-1 branched adiabatic) | [10.5281/zenodo.21209413](https://doi.org/10.5281/zenodo.21209413) |
 | Zenodo (Paper A, certified G₂) | [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) |
 | Zenodo (Paper B, spectral) | [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) |
 | Zenodo (Paper C, K3 NK) | [10.5281/zenodo.19708916](https://doi.org/10.5281/zenodo.19708916) |
@@ -259,12 +264,13 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
 ## Citation
 
 ```bibtex
-@software{gift_framework,
-  title   = {GIFT: Geometric Information Field Theory},
+@software{k7_framework,
+  title   = {The K₇ Framework (formerly GIFT)},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/Arithmon/K7},
-  version = {3.4.27}
+  doi     = {10.5281/zenodo.16891489},
+  version = {3.5}
 }
 ```
 
