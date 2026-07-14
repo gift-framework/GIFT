@@ -1,5 +1,10 @@
 # Phase 3.S1.q: public certificate for `Pi_obs` and `R_comm`
 
+> **2026-07-09 status.** The projection/commutator convention in this file
+> remains useful. Numerical examples using `K_Sch^Maz <= 17` are historical;
+> current D0 bookkeeping uses the Stage D scalar bound `K_Sch^Maz <= 16/3` from
+> `certificates/datum_D0.json`.
+
 ## Status
 
 Local D0 certificate completed.
@@ -58,7 +63,7 @@ moving-coordinate parametrix:
 
 `q_comm = (4/3) K_Sch^Maz kappa_E epsilon`.
 
-At D0, using the conservative public constants
+At D0, the historical conservative public example used
 
 - `K_Sch^Maz <= 17`;
 - `kappa_E <= 3`;
@@ -73,6 +78,12 @@ With the sharper rank-one rigidity variant `kappa_E <= 1`, it gives
 
 - `q_comm <= 0.22666666666666666`;
 - `epsilon_0 >= 0.04411764705882353`.
+
+With the active Stage D scalar bound `K_Sch^Maz <= 16/3`, the same formula gives
+the sharper D0 examples:
+
+- for `kappa_E <= 3`: `q_comm <= 0.21333333333333335`;
+- for `kappa_E <= 1`: `q_comm <= 0.07111111111111111`.
 
 The superseded internal bulk/collar split would have produced a `K_Sch^2`
 loss. That split is not used here.

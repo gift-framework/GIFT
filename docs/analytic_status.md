@@ -13,7 +13,52 @@ This document freezes the current analytic status of the Donaldson/Kovalev-Lefsc
 
 ## Current headline
 
-The repository currently contains a credible conditional programme for Level E, partial quantitative artifacts for Level Q, and no finite closed-form compact torsion-free metric for Level CF.
+The repository currently contains a credible conditional programme for Level E,
+a Stage E certified D0 coefficient package for Level Q, and no finite
+closed-form compact torsion-free metric for Level CF.
+
+The Level E theorem remains conditional because the anisotropic perturbation
+theorem `(J)`, compact datum/topology closure, and final public theorem wrappers
+are not all discharged in this repository.
+
+The active Level Q citation path is:
+
+- `certificates/datum_D0.json`
+- `certificates/phase4_donaldson_coefficients_values.json`
+- `certificates/phase4_donaldson_coefficients_check.json`
+- `certificates/phase4_level_Q_coefficients.json`
+- `certificates/phase4_level_Q_coefficients_check.json`
+- `certificates/phase4_level_Q_table_check.json`
+- `paper/theorem_Q_certified.md`
+
+The citable Stage E headline is
+`R_threshold <= 3664.066`, with machine bracket
+`[3664.065985330004, 3664.065985330005]`.
+
+## 2026-07-09 Stage D/E Cleanup
+
+The following older public artifacts are retained as historical comparison
+material only:
+
+- `paper/phase3_effective_jacobi_parametrix_candidate.md`
+- `certificates/phase3_effective_jacobi_parametrix_candidate.json`
+- `paper/phase3_projection_commutator_certificate.md`
+- `certificates/phase3_projection_commutator_certificate.json`
+- `paper/phase4_adiabatic_operator_form.md`
+- `certificates/phase4_adiabatic_sources_candidate.json`
+- `paper/phase4_ar_neumann_budget.md`
+- `paper/phase4_ar_commutator_slot_candidate.md`
+- `paper/phase4_ar_remaining_slots_candidate.md`
+- `paper/phase4_ar_majorant_candidate.md`
+
+They must not be used to override the Stage D/E path. In particular:
+
+- `K_Sch^Maz <= 17` is a stale public envelope; the active D0 scalar bound is
+  `K_Sch^Maz <= 16/3`, imported through the Stage D `L1.6_K_Sch` block.
+- `gamma_src,sur = 3/8` is a legacy surrogate, not the active source constant.
+  The active source constant is `C_src = 27/16`.
+- Phase 4 power-counting candidates are superseded by the Stage E coefficient
+  values and independent checkers.
 
 ## 2026-07-02 D0 Sharp-Constant Update
 
@@ -28,10 +73,9 @@ the local `D0` constants. Through commit `767727b0`, it records:
   for the exterior `(E)` package.
 
 These are sharp-current `D0` constants, not a compact-global torsion-free
-metric theorem. They should be used to update the Phase-3 numerical closure
-ledger, while preserving the existing warnings about the missing global
-parametrix theorem, adiabatic reconstruction theorem, anisotropic Joyce
-theorem `(J)`, and Appendix C compact-topology proof.
+metric theorem. Stage D/E promote the D0 constant and coefficient bookkeeping,
+while preserving the warnings about the missing public global Phase 3 theorem,
+anisotropic Joyce theorem `(J)`, and Appendix C compact-topology proof.
 
 ## Strong-claim audit
 
@@ -86,6 +130,29 @@ theorem `(J)`, and Appendix C compact-topology proof.
   Any statements still treating `C_src <= 2` and `C_nl <= 1` as the current
   best constants should be read as superseded envelopes for `D0`, not as the
   latest sharp-current bookkeeping.
+
+- `GIFT/paper/phase3_effective_jacobi_parametrix_candidate.md`
+  The public Task 4 candidate is superseded for the D0 scalar constant by the
+  Stage D `K_Sch^Maz <= 16/3` import. Keep the file as the original experiment
+  and as a reproducibility trail, not as the active citation target.
+
+- `GIFT/paper/phase3_projection_commutator_certificate.md`
+  Any numerical example using `K_Sch^Maz <= 17` is historical. The current
+  citable scalar bound is `16/3`; the certificate remains useful for the
+  projection/commutator convention.
+
+### Public Phase-4 candidate text now superseded
+
+- `GIFT/paper/phase4_adiabatic_operator_form.md`
+  Keep as the operator-form/power-counting scaffold only. Active P4.1 values are
+  in `phase4_donaldson_coefficients_values.json` and checked by
+  `phase4_donaldson_coefficients_check.json`.
+
+- `GIFT/paper/phase4_ar_*candidate*.md`
+  Keep as the public construction trail for the Neumann-slot candidates. Stage D
+  imports the theorem-grade L2 assembly; Stage E packages the outward-rounded
+  coefficient layer. These candidate notes are no longer load-bearing theorem
+  inputs.
 
 ## Current branch classification
 

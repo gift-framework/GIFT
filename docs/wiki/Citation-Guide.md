@@ -157,7 +157,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   month        = {May},
   doi          = {10.5281/zenodo.20039066},
   url          = {https://doi.org/10.5281/zenodo.20039066},
-  note         = {Donaldson direct chain closed at 5 levels; 15 pp.}
+  note         = {Donaldson neck-level certificate at 5 levels; not a compact K7 torsion-free theorem. 15 pp.}
 }
 ```
 
@@ -200,7 +200,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 | 3.4.24 | 2026-06-01 | Academic terminology cleanup across K3 modules and papers |
 | 3.4.23 | 2026-05-19 | Closed-form K3 CY-residual witness, interval-certified (ε₃' < 10⁻³) |
 | 3.4.20 | 2026-05-10 | Independent-validations refresh; documentation sync |
-| 3.4.19 | 2026-05-07 | Framework v3.4 PDFs published (Zenodo 20070101); Donaldson direct chain closed (5-layer Wirtinger cert); Paper D published (Zenodo 20039066) |
+| 3.4.19 | 2026-05-07 | Framework v3.4 PDFs published (Zenodo 20070101); Donaldson neck-level 5-layer Wirtinger certificate; Paper D published (Zenodo 20039066) |
 | 3.4.13 | 2026-04-29 | Triptyque published (Papers A, B, C on Zenodo); axiom reduction 38→4 main-chain; K3NK v3.0 hardcore (Joyce ×17); γ² = 24π²/7 derived |
 | 3.4.3 | 2026-04 | G₂ Mathlib steps 1-5 promoted to theorems (8→4 axioms); MollifiedSum archived |
 | 3.4.0 | 2026-04 | Metric-first program complete; K3 CAP (Fermat ×990, CI(2,2,2) ×6.4) |

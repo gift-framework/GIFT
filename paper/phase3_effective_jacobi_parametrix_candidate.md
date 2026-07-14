@@ -1,8 +1,14 @@
 # Phase 3 Task 4: effective Jacobi parametrix candidate
 
+> **2026-07-09 status.** Historical Task 4 experiment only. The active D0
+> scalar citation is now the Stage D `L1.6_K_Sch` import recorded in
+> `certificates/datum_D0.json`, with `K_Sch^Maz <= 16/3`. This file remains a
+> reproducibility trail for the original public finite-mode candidate and must
+> not be used as the current Level Q theorem input.
+
 ## Status
 
-Candidate numerical/symbolic experiment only. Not a theorem.
+Candidate numerical/symbolic experiment only. Not the active theorem citation.
 
 Machine artifact:
 
@@ -12,10 +18,9 @@ Producer:
 
 - [phase3_effective_jacobi_parametrix_candidate.py](../scripts/phase3_effective_jacobi_parametrix_candidate.py)
 
-This is the public Task 4 artefact from the completion plan: it gives a
-candidate effective bound for the collar Jacobi parametrix constant
-`K_Sch^Maz(D0)`, while keeping the existing public envelope `17` as the
-theorem-safe value.
+This is the public Task 4 artefact from the completion plan: it gives the
+historical candidate route for the collar Jacobi parametrix constant
+`K_Sch^Maz(D0)`. It is superseded for current D0 bookkeeping by Stage D.
 
 ## Normal-operator scan
 
@@ -43,7 +48,8 @@ Schauder overhead:
 - exact indicial inverse: `K_ind = 4/3`;
 - explicit overhead slot: `C_edge_overhead = 4`;
 - scalar candidate: `K_Sch^Maz,cand = 16/3 ~= 5.333333333333333`;
-- current theorem-safe public envelope: `K_Sch^Maz <= 17`;
+- historical public envelope at the time: `K_Sch^Maz <= 17`;
+- active Stage D D0 citation: `K_Sch^Maz <= 16/3`;
 - envelope/candidate ratio: `3.1875`.
 
 For the rank-19 Jacobi operator, using `cond(A_bulk) <= 2.31`, the candidate
@@ -74,6 +80,10 @@ To promote this candidate into Level Q:
 3. show uniformity over all 77 collars with outward-rounded intervals;
 4. add an independent checker distinct from the producer script.
 
-Until those steps exist, the public theorem-safe value remains:
+For the historical public-only route, until those steps exist, the public
+envelope recorded by this file remains:
 
 `K_Sch^Maz <= 17`.
+
+For current Stage D/E Level Q bookkeeping, use `certificates/datum_D0.json` and
+`paper/theorem_Q_certified.md` instead.

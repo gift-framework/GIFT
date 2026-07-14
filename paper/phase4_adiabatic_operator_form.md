@@ -1,5 +1,12 @@
 # Phase 4.1: adiabatic operator form and source candidates
 
+> **2026-07-09 status.** Historical operator-form and power-counting scaffold.
+> The active P4.1/Level Q values are the Stage E outward-rounded certificates
+> `phase4_donaldson_coefficients_values.json`,
+> `phase4_donaldson_coefficients_check.json`,
+> `phase4_level_Q_coefficients.json`, and
+> `phase4_level_Q_coefficients_check.json`.
+
 ## Status
 
 Legacy candidate P4.1 artifact only. Not a convergent reconstruction theorem.
@@ -101,4 +108,5 @@ To promote this P4.1 artifact into Level Q:
 5. only then update `datum_D0.json` from candidate values to certified
    intervals.
 
-Until then, Phase 4 remains at operator-form/candidate-source status.
+This historical artifact remains at operator-form/candidate-source status. The
+current Stage E coefficient package should be used for D0 Level Q citations.

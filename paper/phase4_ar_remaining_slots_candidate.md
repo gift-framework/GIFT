@@ -1,5 +1,9 @@
 # Phase 4.2: remaining Neumann-slot candidates
 
+> **2026-07-09 status.** Historical candidate slots. Stage D imports the
+> theorem-grade L2 assembly for D0; this file remains a reproducibility trail
+> for the public candidate formulas only.
+
 ## Status
 
 Candidate formulas only. These are not theorem-grade analytic certificates.

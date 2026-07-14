@@ -1,5 +1,11 @@
 # Phase 4.2: AR Neumann budget
 
+> **2026-07-09 status.** Historical public Neumann-slot scaffold. Stage D
+> imports the theorem-grade L2 assembly for D0; this note is retained as the
+> public candidate trail and is no longer the active reconstruction theorem
+> citation. Use `certificates/datum_D0.json`, `docs/stageD_recap_2026_07_09.md`,
+> and `docs/stageE_recap_2026_07_09.md` for current D0 bookkeeping.
+
 ## Status
 
 Budget skeleton only. This is not a product-space reconstruction theorem.

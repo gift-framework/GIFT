@@ -1,5 +1,9 @@
 # Phase 4.2: `q_comm_FH_Gf` candidate
 
+> **2026-07-09 status.** Historical candidate slot. Stage D imports the
+> theorem-grade L2 assembly for D0; this file remains a reproducibility trail
+> for the public candidate formula only.
+
 ## Status
 
 Candidate formula only. This is not a theorem-grade commutator certificate.

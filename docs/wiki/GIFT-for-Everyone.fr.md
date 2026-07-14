@@ -541,7 +541,10 @@ La torsion mesure cette « torsion » de l'espace.
 
 **Sur K₇** : la torsion doit être très petite (κ_T = 1/61) pour que la physique soit cohérente.
 
-**Et dans GIFT** : le théorème de Joyce garantit qu'on peut avoir une métrique sans torsion sur K₇.
+**Et dans GIFT** : le programme actuel vise à prouver une métrique sans torsion
+sur K₇. Le théorème de Joyce usuel ne suffit pas dans le régime K3 fibré
+effondré ; l'étape analytique manquante est le théorème de perturbation
+anisotrope suivi dans `docs/analytic_status.md`.
 
 ---
 

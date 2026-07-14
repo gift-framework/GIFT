@@ -104,7 +104,10 @@ theorem tau_certified :
 
 La formalisation n'établit pas :
 
-1. **Existence de K₇** : le fait qu'une variété G₂ avec nombres de Betti (21, 77) existe est établi via le théorème de Joyce et la certification numérique (voir Supplément S2), mais le théorème de Joyce lui-même est axiomatisé, pas formalisé à partir de premiers principes.
+1. **Existence de K₇** : l'énoncé compact d'existence sans torsion sur `K_7`
+   est une hypothèse/cible analytique dans la branche actuelle. Le théorème de
+   Joyce usuel ne suffit pas dans le régime K3 fibré effondré ; voir
+   `docs/analytic_status.md`.
 
 2. **Interprétation physique** : que sin²θ_W corresponde au mélange électrofaible, ou que b₂ compte les champs de jauge, est une affirmation physique en dehors du champ de la vérification formelle.
 

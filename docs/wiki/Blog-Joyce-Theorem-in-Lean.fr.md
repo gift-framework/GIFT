@@ -5,6 +5,11 @@ layout: default
 
 > Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/joyces-theorem-now-in-lean)
 
+> **Statut 2026-07-09.** Billet historique. La branche analytique courante ne
+> considère pas le théorème compact sur `K_7` comme fermé : le verrou restant est
+> le théorème de perturbation anisotrope `(J)`, suivi dans
+> `docs/analytic_status.md`.
+
 # Le théorème de Joyce, désormais en Lean
 Vers une existence vérifiée par machine des variétés G₂
 

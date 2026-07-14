@@ -540,7 +540,10 @@ Torsion measures this "twisting" of space.
 
 **In K₇**: Torsion must be very small (κ_T = 1/61) for physics to be consistent.
 
-**In GIFT**: Joyce's theorem guarantees we can have a torsion-free metric on K₇.
+**In GIFT**: The current programme aims to prove a torsion-free metric on K₇.
+The usual Joyce theorem is not enough in the collapsing K3-fibred regime; the
+missing analytic step is the anisotropic perturbation theorem tracked in
+`docs/analytic_status.md`.
 
 ---
 

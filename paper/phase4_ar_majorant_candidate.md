@@ -1,5 +1,10 @@
 # Phase 4.2: conditional scalar AR majorant
 
+> **2026-07-09 status.** Historical conditional majorant. Stage D imports the
+> theorem-grade L2 assembly for D0; this note remains useful for the public
+> product-space audit trail but is not the active reconstruction theorem
+> citation.
+
 ## Status
 
 Conditional scalar majorant only. This is not the global adiabatic

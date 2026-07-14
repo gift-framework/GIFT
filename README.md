@@ -11,6 +11,23 @@ GIFT derives Standard Model parameters from the geometry of a single 7-dimension
 
 ---
 
+## Current Analytic Scope
+
+The compact `K_7` torsion-free existence theorem is an active analytic target,
+not a completed theorem in this repository. Current status is tracked in
+[docs/analytic_status.md](docs/analytic_status.md):
+
+- Level E remains conditional on the anisotropic perturbation theorem `(J)` and
+  compact datum/topology wrappers.
+- Level Q has a Stage E certified D0 coefficient package.
+- Level CF, a finite closed-form compact metric, remains a separate open
+  programme.
+
+Older public notes about Joyce or Donaldson should be read through that status
+ledger.
+
+---
+
 ## Start Here
 
 | | |
@@ -128,10 +145,12 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 
 | Property | Value | Status |
 |----------|-------|:------:|
-| Associative 3-form | φ = (65/32)^{1/14} × φ₀ | EXACT |
-| Metric | g = (65/32)^{1/7} × I₇ | EXACT |
-| Torsion | T = 0 (constant form) | EXACT |
-| det(g) | 65/32 | EXACT |
+| Associative 3-form | φ = (65/32)^{1/14} × φ₀ | EXACT local `R^7` model |
+| Metric | g = (65/32)^{1/7} × I₇ | EXACT local `R^7` model |
+| Torsion | T = 0 (constant form) | EXACT local `R^7` model |
+| det(g) | 65/32 | EXACT local `R^7` model |
+
+This table is not a compact `K_7` torsion-free metric theorem.
 
 ---
 

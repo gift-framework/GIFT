@@ -196,14 +196,15 @@
   acceptance_test: "May be cited only as D0 sharp-current constant bookkeeping. It cannot promote global_maximal_section_scaffold, adiabatic_reconstruction_k2_scaffold, or level_e_target_on_k7 to theorem status."
 
 - id: phase3_effective_jacobi_parametrix_candidate_20260702
-  claim: "A finite-mode normal-operator experiment gives K_ind=4/3, candidate scalar K_Sch^Maz=16/3, and candidate rank-19 Jacobi transfer 12.32 for D0."
+  claim: "Historical public Task 4 finite-mode normal-operator experiment gives K_ind=4/3, candidate scalar K_Sch^Maz=16/3, and candidate rank-19 Jacobi transfer 12.32 for D0."
   status: numerical_certificate
   ambient_space: "one collar normal model and D0 rank-19 transfer bookkeeping"
-  domain_of_validity: "Finite-mode sigma-odd half-integer normal-operator scan with explicit overhead slot; candidate only."
+  domain_of_validity: "Finite-mode sigma-odd half-integer normal-operator scan with explicit overhead slot; retained as a historical candidate/comparison artifact after Stage D."
   assumptions:
     - "The edge/Schauder overhead slot C_edge_overhead=4 is accepted as a candidate calibration, not as a proof."
     - "The actual edge-calculus Schauder theorem for J_h has not yet been proved."
     - "Uniformity over all 77 collars still needs outward-rounded interval proof."
+    - "Active D0 scalar use is superseded by the Stage D L1.6_K_Sch import recorded in datum_D0.json."
   dependencies:
     - "GIFT/certificates/phase3_effective_jacobi_parametrix_candidate.json"
     - "GIFT/certificates/datum_D0.json"
@@ -213,8 +214,30 @@
     - "GIFT/paper/phase3_effective_jacobi_parametrix_candidate.md"
     - "GIFT/paper/theorem_Q_certified.md"
   certificate_type: "deterministic symbolic/rational finite-mode scan"
-  unformalized_gap: "The candidate does not replace the public theorem-safe envelope K_Sch^Maz<=17 until a real edge-Schauder proof and independent interval checker exist."
-  acceptance_test: "May be cited only as a Task 4 candidate bound. It must not be used as a theorem input for Level E/Q closure."
+  unformalized_gap: "The public candidate file is not itself the edge-Schauder proof. For current D0 citations use the Stage D L1.6_K_Sch block rather than this historical candidate."
+  acceptance_test: "May be cited only as the original Task 4 experiment or reproducibility trail. Active Level Q citations must go through datum_D0.json and theorem_Q_certified.md."
+
+- id: phase3_L16_KSch_stageD_20260709
+  claim: "At D0, the scalar Mazzeo/Schauder constant used by the current rank-one branch satisfies K_Sch^Maz <= 16/3."
+  status: numerical_certificate
+  ambient_space: "D0 collar/Jacobi constant package"
+  domain_of_validity: "Rank-one 77-unlink datum D0 after private Stage D import."
+  assumptions:
+    - "Private M-L1.n/o/p raw artifacts are accepted as theorem-grade inputs for the D0 branch."
+    - "This does not by itself prove the full global maximal-section theorem."
+  dependencies:
+    - "GIFT/certificates/datum_D0.json"
+    - "GIFT/docs/stageD_reconciliation_report_2026_07_09.md"
+    - "GIFT/docs/stageD_recap_2026_07_09.md"
+  code_locations:
+    - "private/canonical/scripts/axis2_L1k_KSch_recollement_2026_07_05.py"
+    - "private/canonical/scripts/axis2_L1l_qcoeff_interval_envelope_2026_07_05.py"
+    - "private/canonical/scripts/axis2_L1m_qcoeff_interval_checker_2026_07_05.py"
+  paper_locations:
+    - "GIFT/paper/theorem_Q_certified.md"
+  certificate_type: "private theorem-grade D0 import plus public datum certificate block"
+  unformalized_gap: "Still not a compact-global torsion-free theorem and not the full Phase 3 Banach-space right-inverse theorem."
+  acceptance_test: "May be cited as the active D0 K_Sch scalar bound for Level Q bookkeeping, provided the citation also records the private import boundary."
 
 - id: adiabatic_reconstruction_k2_scaffold
   claim: "The K=2 ansatz matches the first two orders of the adiabatic operator M_epsilon and leaves residual O(epsilon^3)."
@@ -230,6 +253,9 @@
     - "GIFT/certificates/phase4_donaldson_coefficients.json"
     - "GIFT/certificates/phase4_donaldson_coefficients_check.json"
     - "GIFT/certificates/phase4_donaldson_coefficients_values.json"
+    - "GIFT/certificates/phase4_level_Q_coefficients.json"
+    - "GIFT/certificates/phase4_level_Q_coefficients_check.json"
+    - "GIFT/certificates/phase4_level_Q_table_check.json"
     - "GIFT/paper/phase4_true_coefficients_derivation_plan.md"
     - "GIFT/paper/phase4_donaldson_E1_E5_operator.md"
   code_locations:
@@ -239,6 +265,9 @@
     - "GIFT/scripts/phase4_donaldson_coefficients.py"
     - "GIFT/scripts/phase4_donaldson_coefficients_values.py"
     - "GIFT/scripts/phase4_donaldson_coefficients_checker.py"
+    - "GIFT/scripts/phase4_level_Q_coefficients.py"
+    - "GIFT/scripts/phase4_level_Q_coefficients_checker.py"
+    - "GIFT/scripts/phase4_level_Q_table_checker.py"
   paper_locations:
     - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
     - "GIFT/paper/phase4_adiabatic_operator_form.md"
@@ -248,9 +277,10 @@
     - "GIFT/paper/phase4_donaldson_coefficients_checker_stageC_v1.md"
     - "GIFT/paper/phase4_donaldson_coefficients_values.md"
     - "GIFT/paper/phase4_ar_convergence_theorem_spec.md"
+    - "GIFT/paper/theorem_Q_certified.md"
   certificate_type: "symbolic expansion certificate plus pre-coefficient bigraded type-check plus typed symbolic coefficient formulas plus D0 value certificate plus structural/arithmetic/outward-interval checker"
-  unformalized_gap: "No convergent operator theorem, no globally certified product-space reconstruction theorem, no full Banach-space contraction. The corrected true-coefficient operator ledger, bidegree type-check, Stage B v1 symbolic formula producer, D0 value certificate, and Stage C/E checker exist. These close the P4.1 coefficient values at D0 with outward-rounded interval packaging, but not the full AR convergence theorem."
-  acceptance_test: "May be cited as finite-order formal matching and theorem-grade D0 coefficient values for P4.1. It must not be cited as a proof of global adiabatic reconstruction convergence."
+  unformalized_gap: "No compact-global torsion-free theorem. The corrected true-coefficient operator ledger, bidegree type-check, Stage B v1 symbolic formula producer, D0 value certificate, Stage C/E checker, compact Level Q package, and table checker exist. These close the P4.1 coefficient values at D0 with outward-rounded interval packaging, but do not by themselves prove anisotropic Joyce (J)."
+  acceptance_test: "May be cited as finite-order formal matching and theorem-grade D0 coefficient values for P4.1/Level Q. It must not be cited as a proof of compact-global torsion-free existence."
 
 - id: adiabatic_reconstruction_global_theorem_target
   claim: "A convergent product-space adiabatic reconstruction map turns a solution of M_eps(h)=0 into actual Donaldson data and a closed reconstructed G2 form at D0."

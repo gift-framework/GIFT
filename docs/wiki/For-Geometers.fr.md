@@ -72,19 +72,23 @@ L'entraînement s'exécute en 5 à 10 minutes sur du matériel grand public et a
 
 ## 3. Pont de vérification formelle
 
-Une caractéristique distinctive de `gift_core` est sa connexion avec les assistants de preuve formelle. Les résultats numériques alimentent un certificat Lean 4 qui établit l'existence rigoureusement.
+Une caractéristique distinctive de `gift_core` est sa connexion avec les
+assistants de preuve formelle. Les anciens certificats numériques/TCS alimentent
+des contrôles Lean 4, mais ils ne doivent pas être lus comme le théorème Level E
+compact courant sur `K_7`.
 
-**Ce qui est prouvé** : la formalisation Lean vérifie que le théorème de perturbation de Joyce (théorème 11.6.1 dans *Compact Manifolds with Special Holonomy*) s'applique à la solution numérique. Plus précisément :
+**Portée courante** : la branche rank-one `D0` suit l'existence compacte sans
+torsion dans `docs/analytic_status.md`. Le théorème anisotrope de Joyce `(J)`
+reste une entrée analytique ouverte.
 
-| Théorème | Énoncé | Statut Lean |
-|----------|--------|-------------|
-| `global_below_joyce` | ||T|| < ε₀ | Prouvé |
-| `joyce_margin` | Facteur de sécurité > 35× | Prouvé |
-| `k7_admits_torsion_free_g2` | ∃ φ_tf sans torsion | Prouvé |
+Les anciens contrôles numériques peuvent certifier des diagnostics de petite
+torsion ou des modèles locaux/TCS-neck, mais ils ne prouvent pas à eux seuls une
+métrique compacte sans torsion sur le datum `K_7` courant.
 
-L'argument central : le théorème de Joyce énonce que si une 7-variété compacte admet une structure G₂ avec une torsion suffisamment petite, alors une structure G₂ sans torsion proche existe. La solution PINN atteint ||T|| = 0,00286 face à un seuil conservateur ε₀ = 0,1, fournissant une marge de sécurité de 35×.
-
-**Ce qui reste numérique** : les coefficients métriques explicites sont des poids du PINN, pas des expressions en forme close. Les formes harmoniques sont des vecteurs propres numériques, pas des formules analytiques. Lean certifie des bornes d'existence plutôt que de calculer la métrique sans torsion exacte.
+**Ce qui reste numérique ou conditionnel** : les coefficients métriques explicites
+de l'ancien pipeline PINN sont numériques, pas en forme close. Le théorème
+compact courant requiert aussi le théorème de perturbation anisotrope et les
+wrappers compacts datum/topologie.
 
 ## 4. Utilisation
 

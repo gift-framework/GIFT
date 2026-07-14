@@ -103,7 +103,10 @@ theorem tau_certified :
 
 The formalization does not establish:
 
-1. **Existence of K₇**: That a G₂ manifold with Betti numbers (21, 77) exists is established via Joyce's theorem and numerical certification (see Supplement S2), but Joyce's theorem itself is axiomatized, not formalized from first principles.
+1. **Existence of K₇**: The compact `K_7` torsion-free existence statement is
+   an analytic assumption/target in the current branch. The usual Joyce theorem
+   is not enough in the collapsing K3-fibred regime; see
+   `docs/analytic_status.md`.
 
 2. **Physical interpretation**: That sin²θ_W corresponds to electroweak mixing, or that b₂ counts gauge fields, is a physical claim outside the scope of formal verification.
 

@@ -71,19 +71,22 @@ Given the trained metric, the pipeline extracts topological invariants:
 
 ## 3. Formal Verification Bridge
 
-A distinctive feature of `gift_core` is its connection to formal proof assistants. The numerical results feed into a Lean 4 certificate that establishes existence rigorously.
+A distinctive feature of `gift_core` is its connection to formal proof assistants.
+Older numerical/TCS certificates feed into Lean 4 status checks, but they should
+not be read as the current compact `K_7` Level E theorem.
 
-**What is proven**: The Lean formalization verifies that Joyce's perturbation theorem (Theorem 11.6.1 in *Compact Manifolds with Special Holonomy*) applies to the numerical solution. Specifically:
+**Current scope**: the current rank-one `D0` branch tracks compact torsion-free
+existence in `docs/analytic_status.md`. The anisotropic Joyce theorem `(J)` is
+still an open analytic input.
 
-| Theorem | Statement | Lean Status |
-|---------|-----------|-------------|
-| `global_below_joyce` | ||T|| < ε₀ | Proven |
-| `joyce_margin` | Safety factor > 35× | Proven |
-| `k7_admits_torsion_free_g2` | ∃ φ_tf torsion-free | Proven |
+Legacy numerical checks may certify small-torsion diagnostics or local/TCS-neck
+models, but they do not by themselves prove a compact torsion-free metric on the
+current `K_7` datum.
 
-The core argument: Joyce's theorem states that if a compact 7-manifold admits a G₂ structure with sufficiently small torsion, then a nearby torsion-free G₂ structure exists. The PINN solution achieves ||T|| = 0.00286 against a conservative threshold ε₀ = 0.1, providing a 35× safety margin.
-
-**What remains numerical**: The explicit metric coefficients are PINN weights, not closed-form expressions. The harmonic forms are numerical eigenvectors, not analytic formulae. Lean certifies existence bounds rather than computing the exact torsion-free metric.
+**What remains numerical or conditional**: explicit metric coefficients in the
+legacy PINN pipeline are numerical, not closed form. The current compact theorem
+also requires the anisotropic perturbation theorem and compact datum/topology
+wrappers.
 
 ## 4. Usage
 

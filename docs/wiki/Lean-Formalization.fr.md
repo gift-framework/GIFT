@@ -81,7 +81,9 @@ Tous les 7 axiomes sont substantiels (théorèmes mathématiques standards ou co
 
 - **Entrées topologiques** : b₂ = 21, b₃ = 77, dim(G₂) = 14, etc.
 - **Propriétés de E₈** : système de racines, factorisation du groupe de Weyl
-- **Existence de Joyce** : la métrique G₂ sans torsion existe sur K₇
+- **Entrée Joyce/anisotrope** : l'existence compacte d'une métrique `G_2` sans
+  torsion sur `K_7` est une hypothèse/cible analytique, suivie dans
+  `docs/analytic_status.md`
 - **Bornes spectrales** : résultats numériques de calcul certifié
 
 ## Vérification

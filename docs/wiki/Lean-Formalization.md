@@ -81,7 +81,8 @@ All 7 axioms are substantive (standard mathematical theorems or GIFT conjectures
 
 - **Topological inputs**: b₂ = 21, b₃ = 77, dim(G₂) = 14, etc.
 - **E₈ properties**: Root system, Weyl group factorization
-- **Joyce existence**: Torsion-free G₂ metric exists on K₇
+- **Joyce/anistropic existence input**: compact torsion-free `G_2` existence on
+  `K_7` is an analytic assumption/target, tracked in `docs/analytic_status.md`
 - **Spectral bounds**: Numerical results from certified computation
 
 ## Verification
