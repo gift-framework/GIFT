@@ -7,7 +7,7 @@ This directory contains interactive visualization assets.
 | File | Description |
 |------|-------------|
 | `k7_blueprint.html` | K₇ manifold blueprint (interactive) |
-| `gift_blueprint.html` | GIFT framework blueprint (interactive D3.js) |
+| `archive/gift_blueprint.html` | Former GIFT framework blueprint (interactive D3.js, superseded by `k7_blueprint.html`) |
 
 ## Live Versions
 
