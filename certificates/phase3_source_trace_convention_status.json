@@ -6,8 +6,8 @@
   "issue": "The current branch mixes a lower-root trace labeled mu = -1/2 with a quadratic source term written at radial order rho^(1/2).",
   "locations": {
     "mu_minus_half_trace": [
-      "/home/brieuc/gift-framework/GIFT/paper/phase3_spaces.md",
-      "/home/brieuc/gift-framework/GIFT/paper/phase3_mu_minus_half_basis.md",
+      "/home/brieuc/gift-framework/K7/paper/phase3_spaces.md",
+      "/home/brieuc/gift-framework/K7/paper/phase3_mu_minus_half_basis.md",
       "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md §4.3/§5.5"
     ],
     "rho_plus_half_source": [

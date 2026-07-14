@@ -28,7 +28,7 @@ Le cadre GIFT est formellement vérifié en **Lean 4** avec Mathlib. La formalis
 ## Architecture
 
 ```
-core/Lean/GIFT/
+K7-Lean/Lean/GIFT/
 ├── Core.lean              # constantes (dim_E8, b2, b3, H*, ...)
 ├── Certificate.lean       # théorème maître (127 conjonctions)
 ├── Foundations/            # racines E8, produit vectoriel G2
@@ -92,7 +92,7 @@ Pour vérifier toutes les preuves localement :
 
 ```bash
 git clone https://github.com/Arithmon/K7-Lean
-cd core/Lean
+cd K7-Lean/Lean
 lake build
 ```
 

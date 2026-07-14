@@ -78,7 +78,7 @@ Accessible writing on the ideas behind GIFT lives on the [Substack blog](https:/
 
 This wiki consolidates GIFT documentation across three repositories:
 
-- **[gift-framework/GIFT](https://github.com/Arithmon/K7)**: Theoretical documentation, papers, outreach
+- **[Arithmon/K7](https://github.com/Arithmon/K7)**: Theoretical documentation, papers, outreach
 - **[Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)**: Lean 4 proofs, Python package, blueprint
 - **Zenodo deposits**: Archived data with DOIs
 

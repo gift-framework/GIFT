@@ -28,7 +28,7 @@
     "meaning": "The present G-discharge is compatible with the first kappa_src ansatz but is too coarse to distinguish it sharply; C_src = 2 acts as a conservative envelope rather than an extracted local coefficient."
   },
   "depends_on": [
-    "/home/brieuc/gift-framework/GIFT/certificates/phase3_kappa_src_first_ansatz_proto.json",
+    "/home/brieuc/gift-framework/K7/certificates/phase3_kappa_src_first_ansatz_proto.json",
     "/home/brieuc/gift-framework/private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json"
   ]
 }

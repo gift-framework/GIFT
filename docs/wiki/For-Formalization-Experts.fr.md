@@ -197,7 +197,7 @@ Pour vérifier les preuves Lean :
 
 ```bash
 git clone https://github.com/Arithmon/K7-Lean
-cd core/Lean
+cd K7-Lean/Lean
 lake build
 ```
 

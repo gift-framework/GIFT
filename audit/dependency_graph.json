@@ -23,7 +23,7 @@
       "status": "proved",
       "scope": "box-local",
       "artifacts": [
-        "core/GIFT/Foundations/K3ClosedFormWitness.lean"
+        "K7-Lean/GIFT/Foundations/K3ClosedFormWitness.lean"
       ]
     },
     {
@@ -41,7 +41,7 @@
       "status": "proved",
       "scope": "global",
       "artifacts": [
-        "core/GIFT/Foundations/G2DonaldsonLinkCohomology.lean"
+        "K7-Lean/GIFT/Foundations/G2DonaldsonLinkCohomology.lean"
       ]
     },
     {
@@ -59,7 +59,7 @@
       "status": "proved",
       "scope": "collar",
       "artifacts": [
-        "core/GIFT/Foundations/CollarResummationCertificate.lean"
+        "K7-Lean/GIFT/Foundations/CollarResummationCertificate.lean"
       ]
     },
     {
@@ -104,7 +104,7 @@
       "status": "open",
       "scope": "compact-global",
       "artifacts": [
-        "GIFT/paper/anisotropic_joyce_theorem.md"
+        "K7/paper/anisotropic_joyce_theorem.md"
       ]
     },
     {
@@ -113,7 +113,7 @@
       "status": "open",
       "scope": "compact-global",
       "artifacts": [
-        "GIFT/paper/theorem_E_exact.md"
+        "K7/paper/theorem_E_exact.md"
       ]
     }
   ],
@@ -133,8 +133,8 @@
     { "from": "SmallTorsion", "to": "Holonomy", "kind": "required" }
   ],
   "quarantined": [
-    "core/GIFT/Foundations/AnalyticalMetric.lean",
-    "core/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean",
+    "K7-Lean/GIFT/Foundations/AnalyticalMetric.lean",
+    "K7-Lean/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean",
     "private/computation/metric_certification/run_g2_joyce_certified.py",
     "private/computation/metric_certification/run_g8_torsion_free.py"
   ]

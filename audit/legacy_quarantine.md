@@ -10,10 +10,10 @@ The current analytic branch is:
 - `private/canonical/scripts/axis2_*`
 - `private/canonical/results/axis2_*`
 - `private/canonical/results/phase_iii3_*`
-- `core/GIFT/Foundations/K3ClosedFormWitness.lean`
-- `core/GIFT/Foundations/K3ClosedFormBoxEnclosures.lean`
-- `core/GIFT/Foundations/G2DonaldsonLinkCohomology.lean`
-- `core/GIFT/Foundations/CollarResummationCertificate.lean`
+- `K7-Lean/GIFT/Foundations/K3ClosedFormWitness.lean`
+- `K7-Lean/GIFT/Foundations/K3ClosedFormBoxEnclosures.lean`
+- `K7-Lean/GIFT/Foundations/G2DonaldsonLinkCohomology.lean`
+- `K7-Lean/GIFT/Foundations/CollarResummationCertificate.lean`
 
 These artifacts are allowed to feed the Phase 0-5 theorem chain.
 
@@ -21,14 +21,14 @@ These artifacts are allowed to feed the Phase 0-5 theorem chain.
 
 ### Flat `R^7` branch
 
-- `core/GIFT/Foundations/AnalyticalMetric.lean`
+- `K7-Lean/GIFT/Foundations/AnalyticalMetric.lean`
 - Role: comparison / local sanity check only.
 - Not a dependency for compact `K_7`.
 
 ### Older Fano-link / global-coframe branch
 
-- `core/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean`
-- `core/contrib/python/gift_core/geometry/wirtinger_symbolic.py`
+- `K7-Lean/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean`
+- `K7-Lean/contrib/python/gift_core/geometry/wirtinger_symbolic.py`
 - Role: historical exploration of Fano-link compatibility and symbolic Wirtinger layers.
 - Status for current branch: orthogonal unless explicitly re-imported through a rank-one 77-unlink argument.
 
@@ -43,7 +43,7 @@ These artifacts are allowed to feed the Phase 0-5 theorem chain.
 
 ### Mixed meta-ledger files
 
-- `core/GIFT/Foundations/MetricGapClosure.lean`
+- `K7-Lean/GIFT/Foundations/MetricGapClosure.lean`
 - Role: honest separation of levels, useful as repository hygiene.
 - Status for current branch: not itself a proof of any Phase 2-5 gate.
 

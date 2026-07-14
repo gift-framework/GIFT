@@ -39,7 +39,7 @@ GIFT/
 │   │   └── Bibliography.md            # Références
 │   └── validation/                    # Validation Monte Carlo
 │       └── legacy/v3.3/               # Scripts de validation v3.3 (archivés ;
-│                                      # rafraîchissement stats v3.4 dans core/private)
+│                                      # rafraîchissement stats v3.4 dans K7-Lean/private)
 │
 ├── docs/                              # Documentation utilisateur et site Jekyll
 │   ├── index.html                     # Page d'accueil (arithmon.github.io/K7)

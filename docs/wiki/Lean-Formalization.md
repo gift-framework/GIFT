@@ -28,7 +28,7 @@ The GIFT framework is formally verified in **Lean 4** with Mathlib. The formaliz
 ## Architecture
 
 ```
-core/Lean/GIFT/
+K7-Lean/Lean/GIFT/
 ├── Core.lean              # Constants (dim_E8, b2, b3, H*, ...)
 ├── Certificate.lean       # Master theorem (127 conjuncts)
 ├── Foundations/            # E8 roots, G2 cross product
@@ -91,7 +91,7 @@ To verify all proofs locally:
 
 ```bash
 git clone https://github.com/Arithmon/K7-Lean
-cd core/Lean
+cd K7-Lean/Lean
 lake build
 ```
 
