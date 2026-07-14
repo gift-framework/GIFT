@@ -38,13 +38,13 @@ This note records where existing comments or summaries currently overstate the m
 
 ## Public prose requiring care
 
-### `K7/docs/GIFT_FOR_EVERYONE.md`
+### `docs/GIFT_FOR_EVERYONE.md`
 
 - Current phrase: "Joyce's theorem guarantees we can have a torsion-free metric on K7."
 - Required interpretation: false as written for the current collapsing branch.
 - Correct replacement: a compact bounded-geometry Joyce theorem does not directly apply; a separate anisotropic K3-fibered perturbation theorem is needed.
 
-### `K7/README.md` and `K7/CITATION.md`
+### `README.md` and `CITATION.md`
 
 - Current issue: neck-level or certificate-level closure language can be misread as compact-global Level E closure.
 - Required interpretation: any "closed-form" phrase must be annotated by its actual scope: neck-level, local, box-local, or conditional on `(J)`.

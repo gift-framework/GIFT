@@ -9,8 +9,8 @@
     "not_meaning": "Naive coefficient of the raw pointwise source profile alone"
   },
   "depends_on": [
-    "/home/brieuc/gift-framework/K7/paper/phase3_linear_theorem.md",
-    "/home/brieuc/gift-framework/K7/paper/phase3_mu_minus_half_basis.md",
-    "/home/brieuc/gift-framework/K7/paper/phase3_source_trace_resolution.md"
+    "/home/brieuc/gift-framework/paper/phase3_linear_theorem.md",
+    "/home/brieuc/gift-framework/paper/phase3_mu_minus_half_basis.md",
+    "/home/brieuc/gift-framework/paper/phase3_source_trace_resolution.md"
   ]
 }

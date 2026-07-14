@@ -6,7 +6,7 @@
   "purpose": "Decompose the source residual m(h_bar_global) entering Phase 3 into explicit analytic pieces and record the D0 sharp-current source/projection/commutator bookkeeping.",
   "inputs": {
     "datum_certificate": {
-      "path": "/home/brieuc/gift-framework/K7/certificates/datum_D0.json",
+      "path": "/home/brieuc/gift-framework/certificates/datum_D0.json",
       "sha256": "6aad1502b001dac2a9151974ee60598ac1ab23ab33d169e6f0848830376cd38a"
     },
     "Gquant_script": {
@@ -34,7 +34,7 @@
       "meaning": "Theorem-grade fixed-Sigma sigma-odd cubic source coefficient C_src = 27/16."
     },
     "projection_commutator_certificate": {
-      "path": "/home/brieuc/gift-framework/K7/certificates/phase3_projection_commutator_certificate.json",
+      "path": "/home/brieuc/gift-framework/certificates/phase3_projection_commutator_certificate.json",
       "meaning": "Public certificate for Pi_obs on the reduced lower-root model and q_comm < 1 in the clean annular construction."
     },
     "paper_draft": {
@@ -141,6 +141,6 @@
   "verification": {
     "reproduce_Gquant_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py",
     "reproduce_commutator_bookkeeping_command": "python3 /home/brieuc/gift-framework/private/canonical/scripts/axis2_collar_matching_lemma_2026_06_25.py",
-    "reproduce_public_projection_commutator_command": "python3 /home/brieuc/gift-framework/K7/scripts/phase3_projection_commutator_certificate.py"
+    "reproduce_public_projection_commutator_command": "python3 /home/brieuc/gift-framework/scripts/phase3_projection_commutator_certificate.py"
   }
 }

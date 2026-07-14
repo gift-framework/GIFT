@@ -14,7 +14,7 @@
       "sha256": "1dbbb307109405d438bfd4ecbb41b06791244aa529274375dfdc5093db5153a0"
     },
     "source_residual_ledger": {
-      "path": "/home/brieuc/gift-framework/K7/certificates/phase3_source_residual_ledger.json"
+      "path": "/home/brieuc/gift-framework/certificates/phase3_source_residual_ledger.json"
     }
   },
   "symbolic_facts": {

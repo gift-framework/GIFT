@@ -143,7 +143,7 @@
       "source_result_sha256": "tracked_private_axis2_K3_hodge_gap_2026_07_02",
       "precision_or_mode": "exact rational upper bound serialized in phase4_donaldson_coefficients_values.json",
       "enclosure_method": "H1 reduction plus Zhong-Yang spectral gap bound, carried into the Phase 4.1 coefficient closure",
-      "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+      "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
     },
     "norm_F_H": {
       "status": "certified_upper_bound",
@@ -168,13 +168,13 @@
                 3.1185
             ],
             "note": "Phase 4.1 theorem-grade upper bound from the actual Donaldson bigraded coefficient formulas at D0: source_P1 = 3 * K_H_K3 * K_F = 6237/2000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=6237/2000",
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "source_P2": {
             "status": "certified_upper_bound",
@@ -183,13 +183,13 @@
                 6.36018075
             ],
             "note": "Phase 4.1 theorem-grade upper bound from the actual Donaldson bigraded coefficient formulas at D0: source_P2 = 25440723/4000000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=25440723/4000000",
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "remainder_R3": {
             "status": "certified_upper_bound",
@@ -198,13 +198,13 @@
                 13770793.170081593
             ],
             "note": "Phase 4.1 theorem-grade upper bound for ||R_eps|| / eps^3 after the K=2 ansatz, exact=137707931700815927923/10000000000000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic; decimal serialized for readability",
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation and K=2 Taylor remainder checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "DP1_norm": {
             "status": "certified_upper_bound",
@@ -213,13 +213,13 @@
                 3.1185
             ],
             "note": "Phase 4.1 theorem-grade derivative bound at D0: DP1_norm = 6237/2000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=6237/2000",
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "DP2_norm": {
             "status": "certified_upper_bound",
@@ -228,13 +228,13 @@
                 8.3981205
             ],
             "note": "Phase 4.1 theorem-grade derivative bound at D0: DP2_norm = 16796241/2000000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=16796241/2000000",
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "D2P1_norm": {
             "status": "certified_upper_bound",
@@ -243,13 +243,13 @@
                 3.1185
             ],
             "note": "Phase 4.1 theorem-grade second derivative bound at D0: D2P1_norm = 6237/2000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=6237/2000",
             "enclosure_method": "Donaldson E1-E5 symbolic formula evaluation checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "D3m_norm": {
             "status": "certified_upper_bound",
@@ -258,13 +258,13 @@
                 0.4444444444444444
             ],
             "note": "Phase 4.1 theorem-grade third-variation bound at D0: D3m_norm = 4/9.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=4/9",
             "enclosure_method": "Simons-type third variation plus collinearity and type-IV bound as carried by Phase 4.1",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "raw_P3_scale": {
             "status": "certified_upper_bound",
@@ -273,13 +273,13 @@
                 3.24648475975
             ],
             "note": "Phase 4.1 theorem-grade raw third-order source scale at D0: raw_P3_scale = 12985939039/4000000000.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "exact rational arithmetic, serialized exact=12985939039/4000000000",
             "enclosure_method": "Donaldson E1-E5 third-order formula evaluation checked independently",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
         "R_threshold": {
             "status": "certified_lower_bound",
@@ -288,13 +288,13 @@
                 null
             ],
             "note": "Minimum admissible R for the eps^3 tail contraction: the condition 4 * G_aug^2 * C_nl * remainder_R3 * eps^3 < 1 holds for R >= R_threshold, not for R below it.",
-            "source_script": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "source_script": "scripts/phase4_donaldson_coefficients_values.py",
             "source_script_sha256": "pending_git_commit_hash",
-            "source_result": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "source_result": "certificates/phase4_donaldson_coefficients_values.json",
             "source_result_sha256": "pending_git_commit_hash",
             "precision_or_mode": "floating display recomputed by checker from exact rational tail denominator",
             "enclosure_method": "R_threshold = (4 * G_aug^2 * C_nl * remainder_R3)^(1/3)",
-            "verification_command": "python3 K7/scripts/phase4_donaldson_coefficients_values.py && python3 K7/scripts/phase4_donaldson_coefficients_checker.py"
+            "verification_command": "python3 scripts/phase4_donaldson_coefficients_values.py && python3 scripts/phase4_donaldson_coefficients_checker.py"
         },
     "D2m": {
       "status": "certified_upper_bound",
@@ -453,16 +453,16 @@
       "summary": "Formal K=2 order matching for the adiabatic operator; source norms still need explicit interval certificates."
     },
         "phase4_adiabatic_sources_candidate": {
-            "result_path": "K7/certificates/phase4_adiabatic_sources_candidate.json",
+            "result_path": "certificates/phase4_adiabatic_sources_candidate.json",
             "result_sha256": "pending_git_commit_hash",
-            "script_path": "K7/scripts/phase4_adiabatic_sources_candidate.py",
+            "script_path": "scripts/phase4_adiabatic_sources_candidate.py",
             "script_sha256": "pending_git_commit_hash",
             "summary": "P4.1 candidate source norms for P1, P2, and R3 using norm_F_H power-counting. Not theorem-grade."
         },
         "phase4_donaldson_coefficients_values": {
-            "result_path": "K7/certificates/phase4_donaldson_coefficients_values.json",
+            "result_path": "certificates/phase4_donaldson_coefficients_values.json",
             "result_sha256": "pending_git_commit_hash",
-            "script_path": "K7/scripts/phase4_donaldson_coefficients_values.py",
+            "script_path": "scripts/phase4_donaldson_coefficients_values.py",
             "script_sha256": "pending_git_commit_hash",
             "summary": "Phase 4.1 theorem-grade D0 values for source_P1, source_P2, derivative norms, raw_P3_scale, remainder_R3, and the resulting R_threshold, checked by phase4_donaldson_coefficients_checker.py."
         },
@@ -481,18 +481,18 @@
       "summary": "Conservative upper bound for ||D^2 m|| and source norm in the global maximal-background discharge."
     },
     "phase4_level_Q_coefficients": {
-      "result_path": "K7/certificates/phase4_level_Q_coefficients.json",
+      "result_path": "certificates/phase4_level_Q_coefficients.json",
       "result_sha256": "pending_git_commit_hash",
-      "script_path": "K7/scripts/phase4_level_Q_coefficients.py",
+      "script_path": "scripts/phase4_level_Q_coefficients.py",
       "script_sha256": "pending_git_commit_hash",
-      "checker_path": "K7/certificates/phase4_level_Q_coefficients_check.json",
+      "checker_path": "certificates/phase4_level_Q_coefficients_check.json",
       "checker_sha256": "pending_git_commit_hash",
       "summary": "Compact citable Level Q package extracted losslessly from the full Phase 4.1 Stage C/E checker; includes outward-rounded coefficient intervals and dual R_threshold citation."
     },
     "phase4_level_Q_table_check": {
-      "result_path": "K7/certificates/phase4_level_Q_table_check.json",
+      "result_path": "certificates/phase4_level_Q_table_check.json",
       "result_sha256": "pending_git_commit_hash",
-      "script_path": "K7/scripts/phase4_level_Q_table_checker.py",
+      "script_path": "scripts/phase4_level_Q_table_checker.py",
       "script_sha256": "pending_git_commit_hash",
       "summary": "Consistency checker for the paper-facing Level Q coefficient table in theorem_Q_certified.md."
     }

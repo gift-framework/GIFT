@@ -7,7 +7,7 @@
   "inputs": {
     "seed_section": "h_bar = h_loc,aff + h_loc,branch on U_i",
     "branched_part": "h_loc,branch = c0^(i) * w^(3/2) * alpha_1 + higher polyhomogeneous terms",
-    "fixed_basis": "/home/brieuc/gift-framework/K7/certificates/phase3_mu_minus_half_basis.json"
+    "fixed_basis": "/home/brieuc/gift-framework/certificates/phase3_mu_minus_half_basis.json"
   },
   "protocol": [
     {

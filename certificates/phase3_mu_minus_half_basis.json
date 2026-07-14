@@ -32,7 +32,7 @@
     "if_complex_notation_is_used": "convert e^{± i varphi/2} coefficients to the real cosine/sine basis before serializing."
   },
   "inputs": {
-    "phase3_spaces": "/home/brieuc/gift-framework/K7/paper/phase3_spaces.md",
+    "phase3_spaces": "/home/brieuc/gift-framework/paper/phase3_spaces.md",
     "draft_section_4_3_and_5_2": "/home/brieuc/gift-framework/private/canonical/papers/rank_one_branched_adiabatic/draft.md"
   }
 }

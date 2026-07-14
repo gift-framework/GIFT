@@ -104,7 +104,7 @@
       "status": "open",
       "scope": "compact-global",
       "artifacts": [
-        "K7/paper/anisotropic_joyce_theorem.md"
+        "paper/anisotropic_joyce_theorem.md"
       ]
     },
     {
@@ -113,7 +113,7 @@
       "status": "open",
       "scope": "compact-global",
       "artifacts": [
-        "K7/paper/theorem_E_exact.md"
+        "paper/theorem_E_exact.md"
       ]
     }
   ],
