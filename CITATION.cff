@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "The K7 Framework (formerly GIFT)"
+message: >-
+  If you use this framework, please cite it using the concept DOI below.
+  The concept DOI always resolves to the most recent version; do not pin a
+  version DOI unless you specifically mean that version.
+type: software
+authors:
+  - family-names: "de La Fournière"
+    given-names: "Brieuc"
+repository-code: "https://github.com/Arithmon/K7"
+url: "https://arithmon.github.io/K7/"
+abstract: >-
+  Standard-Model parameter relations derived from the geometry of a single
+  7-dimensional manifold: E8xE8 gauge theory compactified on a G2-holonomy
+  manifold K7 with Betti numbers (b2, b3) = (21, 77). Formerly published as
+  GIFT (Geometric Information Field Theory); GIFT remains the name of the
+  founding phase. Companion repository of certified Lean 4 identities:
+  https://github.com/Arithmon/K7-Lean
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.16891489
+    description: >-
+      Concept DOI. Resolves to the latest version. USE THIS ONE.
+  - type: doi
+    value: 10.5281/zenodo.21296168
+    description: >-
+      Version DOI for "The K7 Framework" v3.5 (2026).
+keywords:
+  - G2 holonomy
+  - E8xE8
+  - Standard Model
+  - Lean 4
+  - formal verification
+license: MIT

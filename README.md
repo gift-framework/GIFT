@@ -1,5 +1,25 @@
 # Geometric Information Field Theory
 
+> ### This repository is moving
+>
+> **`gift-framework/GIFT` → [`Arithmon/K7`](https://github.com/Arithmon/K7)**
+>
+> The framework is now presented as the **K₇ framework**; *GIFT* remains the name of its
+> founding phase. The move consolidates it under the [Arithmon](https://github.com/Arithmon)
+> organisation alongside Atlas, Program, Lean and Sieve.
+>
+> **Nothing you cite will break.** GitHub redirects the old URLs (web *and* `git clone` /
+> `fetch` / `push`), and the published papers cite `github.com/gift-framework/*` — those
+> redirects are load-bearing infrastructure, so the old paths will never be reused.
+>
+> One thing does *not* redirect: the documentation site moves from
+> `gift-framework.github.io/GIFT/` to `arithmon.github.io/K7/`.
+>
+> Companion repository: `gift-framework/core` → `Arithmon/K7-Lean`.
+
+---
+
+
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
 
