@@ -284,6 +284,9 @@ MIT License, see [LICENSE](LICENSE)
 
 ---
 
-> **GIFT is the founding framework of the [Arithmon program](https://github.com/arithmon).**
 >
 > *Gift from bit*
+
+---
+
+**GIFT is the founding framework of the [Arithmon program](https://github.com/arithmon).**
