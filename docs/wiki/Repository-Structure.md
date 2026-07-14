@@ -4,7 +4,7 @@ layout: default
 ---
 
 
-This repository contains the theoretical documentation for K₇ v3.4.
+This repository contains the theoretical documentation for K₇ v3.5.
 
 ## Directory Layout
 
@@ -12,20 +12,24 @@ This repository contains the theoretical documentation for K₇ v3.4.
 K₇/
 ├── publications/                      # Published content & validation
 │   ├── papers/                        # Scientific articles
-│   │   ├── markdown/                  # Core documents (v3.4 — canonical sources)
-│   │   │   ├── GIFT_v3.4_main.md              # Main paper
-│   │   │   ├── GIFT_v3.4_S1_foundations.md    # E₈, G₂, K₇ foundations
-│   │   │   ├── GIFT_v3.4_S2_derivations.md    # 33 Type I derivations
-│   │   │   ├── GIFT_v3.4_S3_observables.md    # 95-observable catalog
+│   │   ├── markdown/                  # Core documents (v3.5 — canonical sources)
+│   │   │   ├── k7_framework_3_5_main.md            # Main paper
+│   │   │   ├── k7_framework_3_5_S1_foundations.md  # E₈, G₂, K₇ foundations
+│   │   │   ├── k7_framework_3_5_S2_derivations.md  # 33 Type I derivations
+│   │   │   ├── k7_framework_3_5_S3_observables.md  # 95-observable catalog
+│   │   │   ├── k7_framework_3_5_S4_sieve_diagnostics.md  # Sieve diagnostics
 │   │   │   ├── g2_certified_neck.md           # Paper A — certified G₂ structure
 │   │   │   └── g2_spectral.md                 # Paper B — spectral geometry
-│   │   ├── tex/                       # LaTeX sources (v3.4)
+│   │   ├── tex/                       # LaTeX sources (v3.5)
 │   │   ├── pdf/                       # Compiled PDFs (all published)
-│   │   │   ├── gift_3.4_main.pdf              # Framework (Zenodo 20070101)
+│   │   │   ├── k7_framework_3_5_main.pdf      # Framework (Zenodo 21296168)
+│   │   │   ├── k7_framework_3_5_S1_foundations.pdf … S4_sieve_diagnostics.pdf
 │   │   │   ├── g2_certified_neck.pdf          # Paper A (Zenodo 19892350)
 │   │   │   ├── g2_spectral.pdf                # Paper B (Zenodo 19893371)
 │   │   │   ├── K3_NK_Certificate.pdf          # Paper C (Zenodo 19708916)
-│   │   │   └── donaldson_analytic.pdf         # Paper D (Zenodo 20039066)
+│   │   │   ├── donaldson_analytic.pdf         # Paper D (Zenodo 20039066)
+│   │   │   └── rank_one_branched_adiabatic.pdf (+ _supplement)  # Paper E (Zenodo 21209413)
+│   │   ├── legacy/v3.4/               # v3.4 framework PDFs + markdown + tex (archived)
 │   │   ├── legacy/v3.3/               # v3.3 framework PDFs + markdown (archived)
 │   │   ├── figures/                   # Publication figures (PDF + PNG)
 │   │   └── notebooks/                 # Companion Jupyter notebooks
@@ -80,14 +84,15 @@ K₇/
 | v3.3 archive | `publications/papers/legacy/v3.3/` |
 | Technical definitions | `docs/GLOSSARY.md` |
 
-## Core Documents (v3.4)
+## Core Documents (v3.5)
 
 | Document | Content |
 |----------|---------|
-| GIFT_v3.4_main.md | Complete theoretical framework |
-| GIFT_v3.4_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
-| GIFT_v3.4_S2_derivations.md | 33 Type I derivations with proofs |
-| GIFT_v3.4_S3_observables.md | 95-observable catalog (33 I + 19 II + 21 III + 22 IV) |
+| k7_framework_3_5_main.md | Complete theoretical framework |
+| k7_framework_3_5_S1_foundations.md | E₈, G₂, K₇ mathematical construction |
+| k7_framework_3_5_S2_derivations.md | 33 Type I derivations with proofs |
+| k7_framework_3_5_S3_observables.md | 95-observable catalog (33 I + 19 II + 21 III + 22 IV) |
+| k7_framework_3_5_S4_sieve_diagnostics.md | Sieve diagnostics supplement |
 | g2_certified_neck.md (Paper A) | Computer-assisted G₂ existence proof |
 | g2_spectral.md (Paper B) | Laplacian spectrum, harmonic forms |
 
@@ -103,8 +108,8 @@ The **[GitHub Wiki](https://github.com/Arithmon/K7/wiki)** provides a navigable 
 
 ## Version
 
-**Current**: v3.4.27 (2026-05-10)
-**Relations**: 140 conjuncts certified (core v3.4.27, 15 axioms (4 main-chain + 11 interval-arithmetic))
+**Current**: v3.5 (2026-07-10)
+**Relations**: 140 conjuncts certified (core v3.4.29, 15 axioms (4 main-chain + 11 interval-arithmetic))
 **Predictions**: 95 observables (33 Type I, exact targets, 0.99% mean deviation; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 **Validation**: 3,000,000 random algebraic formula sets, none reproduces the joint profile (set-level bound ~10⁻⁶, no independence assumption)
-**Papers**: Framework v3.4 (Zenodo 20070101) + A (19892350) + B (19893371) + C (19708916) + D (20039066)
+**Papers**: Framework v3.5 (Zenodo 21296168) + A (19892350) + B (19893371) + C (19708916) + D (20039066) + E (21209413)

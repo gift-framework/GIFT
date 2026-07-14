@@ -5,18 +5,19 @@ layout: default
 
 # Article : cadre principal
 
-**Geometric Information Field Theory : dérivation topologique des paramètres du Modèle Standard à partir de variétés à holonomie G₂**
+**The K₇ Framework : relations topologiques conditionnelles pour les paramètres du Modèle Standard à partir de l'holonomie G₂ et de la structure E₈×E₈** (v3.5)
 
 *Brieuc de La Fournière (2026)*
-[Texte intégral (markdown, v3.4)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_main.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
 
-> **Mise à jour v3.4.** Le contenu canonique est dans [`GIFT_v3.4_main.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_main.md). Le LaTeX/PDF v3.4 est en cours de recompilation avec le template GIFT. Le triptyque relecture par les pairs (articles A, B, C) est publié sur Zenodo : [A : G₂ certifié](https://doi.org/10.5281/zenodo.19892350) · [B : spectral](https://doi.org/10.5281/zenodo.19893371) · [C : K3 NK](https://doi.org/10.5281/zenodo.19708916).
+[**PDF (principal, 47 pp.)**](https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_main.pdf) | [**DOI : 10.5281/zenodo.21296168**](https://doi.org/10.5281/zenodo.21296168) | [Markdown](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_main.md)
+
+> **Articles compagnons (Zenodo) :** [A : G₂ certifié](https://doi.org/10.5281/zenodo.19892350) · [B : spectral](https://doi.org/10.5281/zenodo.19893371) · [C : K3 NK](https://doi.org/10.5281/zenodo.19708916) · [D : note analytique Donaldson](https://doi.org/10.5281/zenodo.20039066) · [E : adiabatique branché de rang 1](https://doi.org/10.5281/zenodo.21209413) · [archive v3.4](https://doi.org/10.5281/zenodo.20070101) · [archive v3.3](https://doi.org/10.5281/zenodo.18837071)
 
 ---
 
 ## Résumé
 
-Cadre proposant que les paramètres sans dimension du Modèle Standard émergent comme invariants topologiques d'une variété K₇ à holonomie G₂ de dimension 7 avec nombres de Betti (b₂=21, b₃=77) couplée à une structure de jauge E₈×E₈. La v3.4 catalogue 95 observables (33 relations Type I à cible exacte) avec un écart moyen de 0,99 % sur Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) ; 140 conjonctions certifiées en Lean 4 avec 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle). DUNE testera le critère de falsification δ_CP = 197°.
+Cadre proposant que les paramètres sans dimension du Modèle Standard émergent comme invariants topologiques d'une variété K₇ à holonomie G₂ de dimension 7 avec nombres de Betti (b₂=21, b₃=77) couplée à une structure de jauge E₈×E₈. La v3.5 catalogue 95 observables (33 relations Type I à cible exacte) avec un écart moyen de 0,99 % sur Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) ; 140 conjonctions certifiées en Lean 4 avec 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle). DUNE testera le critère de falsification δ_CP = 197°.
 
 ---
 

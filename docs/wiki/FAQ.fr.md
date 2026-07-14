@@ -44,7 +44,7 @@ Le cadre est évalué selon :
 ### Combien y a-t-il de paramètres libres ?
 
 **Modèle Standard** : 19 paramètres libres
-**K₇ v3.4** : zéro paramètre continu ajustable (3 primitives entières : N=3, r₈=8, r₂=2)
+**K₇ v3.5** : zéro paramètre continu ajustable (3 primitives entières : N=3, r₈=8, r₂=2)
 
 Toutes les quantités découlent d'une structure topologique fixe (groupe de jauge E₈×E₈, variété K₇ à holonomie G₂). Le cadre atteint une « détermination structurelle » où des choix mathématiques discrets déterminent uniquement toutes les prédictions.
 
@@ -355,15 +355,16 @@ Cela dépend de votre profil :
 
 ### Y a-t-il un article que je peux citer ?
 
-La version actuelle (v3.4) est disponible sur GitHub. Format de citation dans le [Guide de citation](Citation-Guide.html) :
+La version actuelle (v3.5) est disponible sur GitHub. Format de citation dans le [Guide de citation](Citation-Guide.html) :
 
 ```bibtex
-@software{gift_framework_v34,
-  title={GIFT Framework v3.4: Geometric Information Field Theory},
+@software{k7_framework_v35,
+  title={The K₇ Framework (formerly GIFT)},
   author={de La Fournière, Brieuc},
   year={2026},
   url={https://github.com/Arithmon/K7},
-  version={3.4.13}
+  doi={10.5281/zenodo.16891489},
+  version={3.5}
 }
 ```
 

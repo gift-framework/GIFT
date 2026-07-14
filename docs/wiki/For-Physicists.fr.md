@@ -134,4 +134,4 @@ La valeur du cadre, indépendamment de sa correction physique, réside dans la d
 
 ---
 
-*Cadre K₇ v3.4.27*
+*Cadre K₇ v3.5*

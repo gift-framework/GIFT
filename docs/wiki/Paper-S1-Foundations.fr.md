@@ -8,9 +8,9 @@ layout: default
 **Supplément S1 : fondations mathématiques, algèbre de Lie exceptionnelle E₈, variétés à holonomie G₂ et construction de K₇**
 
 *Brieuc de La Fournière (2026)*
-[Texte intégral (markdown, v3.4)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S1_foundations.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
+[Texte intégral (markdown, v3.5)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S1_foundations.md) | [archive v3.3 sur Zenodo : 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
 
-> **Mise à jour v3.4.** Le contenu canonique est dans [`GIFT_v3.4_S1_foundations.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S1_foundations.md). Le LaTeX/PDF v3.4 est en cours de recompilation avec le template GIFT.
+> **v3.5.** [PDF](https://github.com/Arithmon/K7/raw/main/publications/papers/pdf/k7_framework_3_5_S1_foundations.pdf) · [DOI : 10.5281/zenodo.21296168](https://doi.org/10.5281/zenodo.21296168) · markdown canonique [`k7_framework_3_5_S1_foundations.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S1_foundations.md).
 
 ---
 

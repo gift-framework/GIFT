@@ -43,7 +43,7 @@ The framework is evaluated based on:
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**K₇ v3.3**: Zero continuous adjustable parameters
+**K₇ v3.5**: Zero continuous adjustable parameters
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all predictions.
 
@@ -212,7 +212,7 @@ Honest assessment requires reporting both successes and areas needing refinement
 - Precision tests of exact relations
 - Cosmological observations: Dark energy density
 
-See the [Main Paper](../publications/papers/markdown/GIFT_v3.3_main.md) for detailed falsification criteria.
+See the [Main Paper](../publications/papers/markdown/k7_framework_3_5_main.md) for detailed falsification criteria.
 
 ### What would definitively falsify K₇?
 
@@ -355,15 +355,16 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.3.31) is available on GitHub. Citation format in `CITATION.md`:
+Current version (v3.5) is available on GitHub. Citation format in `CITATION.md`:
 
 ```bibtex
-@software{gift_framework_v33,
-  title={GIFT Framework v3.3: Geometric Information Field Theory},
+@software{k7_framework_v35,
+  title={The K₇ Framework (formerly GIFT)},
   author={de La Fournière, Brieuc},
   year={2026},
   url={https://github.com/Arithmon/K7},
-  version={3.3.0}
+  doi={10.5281/zenodo.16891489},
+  version={3.5}
 }
 ```
 

@@ -5,7 +5,7 @@ layout: default
 
 # Structure du dépôt
 
-Ce dépôt contient la documentation théorique de K₇ v3.4.
+Ce dépôt contient la documentation théorique de K₇ v3.5.
 
 ## Arborescence
 
@@ -13,17 +13,24 @@ Ce dépôt contient la documentation théorique de K₇ v3.4.
 K₇/
 ├── publications/                      # Contenu publié et validation
 │   ├── papers/                        # Articles scientifiques
-│   │   ├── markdown/                  # Documents principaux (v3.4, sources canoniques)
-│   │   │   ├── GIFT_v3.4_main.md              # Article principal
-│   │   │   ├── GIFT_v3.4_S1_foundations.md    # Fondations E₈, G₂, K₇
-│   │   │   ├── GIFT_v3.4_S2_derivations.md    # 33 dérivations Type I
-│   │   │   ├── GIFT_v3.4_S3_observables.md    # Catalogue de 95 observables
+│   │   ├── markdown/                  # Documents principaux (v3.5, sources canoniques)
+│   │   │   ├── k7_framework_3_5_main.md            # Article principal
+│   │   │   ├── k7_framework_3_5_S1_foundations.md  # Fondations E₈, G₂, K₇
+│   │   │   ├── k7_framework_3_5_S2_derivations.md  # 33 dérivations Type I
+│   │   │   ├── k7_framework_3_5_S3_observables.md  # Catalogue de 95 observables
+│   │   │   ├── k7_framework_3_5_S4_sieve_diagnostics.md  # Diagnostics de crible
 │   │   │   ├── g2_certified_neck.md           # Article A, structure G₂ certifiée
 │   │   │   └── g2_spectral.md                 # Article B, géométrie spectrale
-│   │   ├── tex/                       # Sources LaTeX (recompilation v3.4 en attente)
-│   │   ├── pdf/                       # PDF compilés (Articles A, B publiés)
+│   │   ├── tex/                       # Sources LaTeX (v3.5)
+│   │   ├── pdf/                       # PDF compilés (tous publiés)
+│   │   │   ├── k7_framework_3_5_main.pdf      # Cadre (Zenodo 21296168)
+│   │   │   ├── k7_framework_3_5_S1_foundations.pdf … S4_sieve_diagnostics.pdf
 │   │   │   ├── g2_certified_neck.pdf          # Article A (Zenodo 19892350)
-│   │   │   └── g2_spectral.pdf                # Article B (Zenodo 19893371)
+│   │   │   ├── g2_spectral.pdf                # Article B (Zenodo 19893371)
+│   │   │   ├── K3_NK_Certificate.pdf          # Article C (Zenodo 19708916)
+│   │   │   ├── donaldson_analytic.pdf         # Article D (Zenodo 20039066)
+│   │   │   └── rank_one_branched_adiabatic.pdf (+ _supplement)  # Article E (Zenodo 21209413)
+│   │   ├── legacy/v3.4/               # PDFs + markdown + tex du cadre v3.4 (archivés)
 │   │   ├── legacy/v3.3/               # PDFs + markdown du cadre v3.3 (archivés)
 │   │   ├── figures/                   # Figures de publication (PDF + PNG)
 │   │   └── notebooks/                 # Notebooks Jupyter compagnons
@@ -78,14 +85,15 @@ K₇/
 | Archive v3.3 | `publications/papers/legacy/v3.3/` |
 | Définitions techniques | `docs/GLOSSARY.md` |
 
-## Documents principaux (v3.4)
+## Documents principaux (v3.5)
 
 | Document | Contenu |
 |----------|---------|
-| GIFT_v3.4_main.md | Cadre théorique complet |
-| GIFT_v3.4_S1_foundations.md | Construction mathématique E₈, G₂, K₇ |
-| GIFT_v3.4_S2_derivations.md | 33 dérivations Type I avec preuves |
-| GIFT_v3.4_S3_observables.md | Catalogue de 95 observables (33 I + 19 II + 21 III + 22 IV) |
+| k7_framework_3_5_main.md | Cadre théorique complet |
+| k7_framework_3_5_S1_foundations.md | Construction mathématique E₈, G₂, K₇ |
+| k7_framework_3_5_S2_derivations.md | 33 dérivations Type I avec preuves |
+| k7_framework_3_5_S3_observables.md | Catalogue de 95 observables (33 I + 19 II + 21 III + 22 IV) |
+| k7_framework_3_5_S4_sieve_diagnostics.md | Supplément diagnostics de crible |
 | g2_certified_neck.md (Article A) | Preuve d'existence G₂ assistée par ordinateur |
 | g2_spectral.md (Article B) | Spectre laplacien, formes harmoniques |
 
@@ -101,8 +109,8 @@ Le **[Wiki GitHub](https://github.com/Arithmon/K7/wiki)** fournit un hub multi-p
 
 ## Version
 
-**Actuelle** : v3.4.27 (2026-05-10)
-**Relations** : 140 conjonctions certifiées (core v3.4.27, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle))
+**Actuelle** : v3.5 (2026-07-10)
+**Relations** : 140 conjonctions certifiées (core v3.4.29, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle))
 **Prédictions** : 95 observables (33 Type I, cibles exactes, 0,99 % d'écart moyen ; NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022)
 **Validation** : 3 000 000 de jeux de formules aléatoires, aucun ne reproduit le profil joint (borne au niveau ensemble ~10⁻⁶, sans hypothèse d'indépendance)
 **Triptyque** : Articles A (Zenodo 19892350) + B (19893371) + C (19708916) publiés le 2026-04-29

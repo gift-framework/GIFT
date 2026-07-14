@@ -44,7 +44,7 @@ The framework is evaluated based on:
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**K₇ v3.4**: Zero continuous adjustable parameters (3 integer primitives: N=3, r₈=8, r₂=2)
+**K₇ v3.5**: Zero continuous adjustable parameters (3 integer primitives: N=3, r₈=8, r₂=2)
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all predictions.
 
@@ -355,15 +355,16 @@ Depends on background:
 
 ### Is there a paper I can cite?
 
-Current version (v3.4) is available on GitHub. Citation format in [Citation Guide](Citation-Guide.html):
+Current version (v3.5) is available on GitHub. Citation format in [Citation Guide](Citation-Guide.html):
 
 ```bibtex
-@software{gift_framework_v34,
-  title={GIFT Framework v3.4: Geometric Information Field Theory},
+@software{k7_framework_v35,
+  title={The K₇ Framework (formerly GIFT)},
   author={de La Fournière, Brieuc},
   year={2026},
   url={https://github.com/Arithmon/K7},
-  version={3.4.13}
+  doi={10.5281/zenodo.16891489},
+  version={3.5}
 }
 ```
 

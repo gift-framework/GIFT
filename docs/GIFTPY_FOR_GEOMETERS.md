@@ -147,8 +147,8 @@ lean_proof = result.certificate.to_lean()
 
 **Code repository**: [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
-**Related documentation**: [S1: Foundations](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
+**Related documentation**: [S1: Foundations](../publications/papers/markdown/k7_framework_3_5_S1_foundations.md)
 
 ---
 
-*`gift_core` is part of the K₇ Framework v3.3. For the physics application, see the [main paper](../publications/papers/markdown/GIFT_v3.3_main.md).*
+*`gift_core` is part of the K₇ Framework v3.3. For the physics application, see the [main paper](../publications/papers/markdown/k7_framework_3_5_main.md).*
