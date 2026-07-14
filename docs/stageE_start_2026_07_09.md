@@ -1,4 +1,4 @@
-# Stage E start — outward-rounded Level Q coefficient package — 2026-07-09
+# Stage E start (outward-rounded Level Q coefficient package) 2026-07-09
 
 ## Objective
 

@@ -7,8 +7,8 @@ Donaldson-operator coefficients.
 
 Current candidate artifact:
 
-- [phase4_adiabatic_operator_form.md](phase4_adiabatic_operator_form.md)
-- [phase4_adiabatic_sources_candidate.json](../certificates/phase4_adiabatic_sources_candidate.json)
+- [phase4_adiabatic_operator_form.md](../legacy/paper/phase4_adiabatic_operator_form.md)
+- [phase4_adiabatic_sources_candidate.json](../legacy/certificates/phase4_adiabatic_sources_candidate.json)
 
 Target replacement artifacts:
 

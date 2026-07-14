@@ -15,9 +15,9 @@ by coefficients derived from Donaldson's bigraded equations.
 Current related artifacts:
 
 - [phase4_true_coefficients_derivation_plan.md](phase4_true_coefficients_derivation_plan.md)
-- [phase4_adiabatic_operator_form.md](phase4_adiabatic_operator_form.md)
+- [phase4_adiabatic_operator_form.md](../legacy/paper/phase4_adiabatic_operator_form.md)
 - [phase4_bigraded_type_check.json](../certificates/phase4_bigraded_type_check.json)
-- [phase4_adiabatic_sources_candidate.json](../certificates/phase4_adiabatic_sources_candidate.json)
+- [phase4_adiabatic_sources_candidate.json](../legacy/certificates/phase4_adiabatic_sources_candidate.json)
 
 ## Bigraded Convention
 

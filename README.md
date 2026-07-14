@@ -9,7 +9,7 @@
 > organisation alongside Atlas, Program, Lean and Sieve.
 >
 > **Nothing you cite will break.** GitHub redirects the old URLs (web *and* `git clone` /
-> `fetch` / `push`), and the published papers cite `github.com/gift-framework/*` — those
+> `fetch` / `push`), and the published papers cite `github.com/gift-framework/*`: those
 > redirects are load-bearing infrastructure, so the old paths will never be reused.
 >
 > One thing does *not* redirect: the documentation site moves from

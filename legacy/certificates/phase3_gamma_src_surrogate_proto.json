@@ -1,0 +1,36 @@
+{
+  "artifact": "phase3_gamma_src_surrogate_proto",
+  "status": "superseded_by_sigma_odd_cubic_source",
+  "scope": "fixed_Sigma_sigma_odd_mu_minus_half_source_channel_at_D0",
+  "active_source_coefficient": {
+    "name": "C_src",
+    "exact": "27/16",
+    "value": 1.6875,
+    "degree_in_c0": 3,
+    "channel": "fixed-Sigma sigma-odd obstruction channel",
+    "provenance": "private/canonical/notes/axis2_codex_reconciliation_2026_07_02.md and axis2_gamma_src_Yneg3_norm_2026_07_02",
+    "status": "theorem_grade_current_public_ledger_value"
+  },
+  "legacy_quadratic_comparison": {
+    "name": "gamma_src_sur",
+    "exact": "3/8",
+    "value": 0.375,
+    "status": "legacy_comparison_not_active_source_coefficient",
+    "valid_scope": "lower-root branch-motion normal-form comparison and possible alpha1-perp regular-sector diagnostic only"
+  },
+  "parity_reconciliation": {
+    "statement": "The quadratic-in-c0 contribution is assigned to the alpha1-perp regular sigma-even sector, while the fixed-Sigma sigma-odd obstruction source is cubic with C_src = 27/16.",
+    "confirmed_bridge_identity": "J_h(psi_R) = 2 * A_bulk * Phi_{-1/2,R}",
+    "cover_side_conformal_factor": 4
+  },
+  "D0_active_scale": {
+    "r0": 0.01,
+    "C_src": "27/16",
+    "weighted_source_scale_upper_envelope": 1.6875000000000003e-07
+  },
+  "do_not_use_as": [
+    "a proof that gamma_src equals 3/8 in the fixed-Sigma sigma-odd source channel",
+    "a replacement for the private theorem-grade extraction C_src = 27/16",
+    "a global Phase-3 parametrix or maximal-section theorem"
+  ]
+}

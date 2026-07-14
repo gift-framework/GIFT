@@ -19,7 +19,7 @@ Current D0 certificate:
 
 Public machine artifact:
 
-- [phase3_projection_commutator_certificate.json](../certificates/phase3_projection_commutator_certificate.json).
+- [phase3_projection_commutator_certificate.json](../legacy/certificates/phase3_projection_commutator_certificate.json).
 
 ## The three source pieces
 

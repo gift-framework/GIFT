@@ -1,4 +1,4 @@
-# Récap Stage E — Level Q coefficient package — 2026-07-09
+# Récap Stage E (Level Q coefficient package) 2026-07-09
 
 ## Résumé court
 
@@ -37,7 +37,7 @@ Table paper-facing :
 Documentation :
 
 - `docs/stageE_start_2026_07_09.md`
-- `docs/phase4_progress_2026_07_03.md`
+- `legacy/docs/phase4_progress_2026_07_03.md`
 
 ## Résultats de checks
 

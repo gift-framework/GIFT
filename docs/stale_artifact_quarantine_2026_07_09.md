@@ -3,6 +3,14 @@
 This file records public artifacts that remain useful as provenance or
 comparison material but are no longer the active theorem/certificate path.
 
+**Update 2026-07-14**: the reproducibility-preserving archive move allowed by
+the rules below has been carried out. All quarantined artifacts now live under
+`legacy/` (structure mirrors the original layout: `legacy/paper/`,
+`legacy/certificates/`). The table paths below reflect the new locations; see
+`legacy/README.md` for the full mapping. Generator scripts remain in
+`scripts/` and frozen certificate JSONs keep their original provenance strings
+(they refer to pre-move paths, which is historically accurate).
+
 ## Active Citation Path
 
 Use these for current D0 Level Q bookkeeping:
@@ -22,18 +30,18 @@ Use these for current D0 Level Q bookkeeping:
 
 | Artifact | Reason | Replacement / active path |
 | --- | --- | --- |
-| `paper/phase3_effective_jacobi_parametrix_candidate.md` | Original Task 4 finite-mode candidate; still not itself the edge-Schauder proof. | Stage D `L1.6_K_Sch` block in `datum_D0.json`, `K_Sch^Maz <= 16/3`. |
-| `certificates/phase3_effective_jacobi_parametrix_candidate.json` | Machine output for the historical candidate. | `datum_D0.json`. |
-| `paper/phase3_projection_commutator_certificate.md` | Projection convention remains useful, but examples with `K_Sch^Maz <= 17` are stale. | Same formula with Stage D `K_Sch^Maz <= 16/3`. |
-| `certificates/phase3_projection_commutator_certificate.json` | Historical constants include the old public envelope. | `datum_D0.json` plus Stage D recaps. |
-| `paper/phase3_gamma_src_surrogate.md` | `gamma_src,sur = 3/8` is a legacy surrogate. | Active source constant `C_src = 27/16`. |
-| `certificates/phase3_gamma_src_surrogate_proto.json` | Machine output for the surrogate comparison. | Stage D source bookkeeping in `datum_D0.json`. |
-| `paper/phase4_adiabatic_operator_form.md` | Power-counting candidate scaffold. | Stage E coefficient values and checks. |
-| `certificates/phase4_adiabatic_sources_candidate.json` | Candidate norms, not theorem inputs. | `phase4_donaldson_coefficients_values.json` and Level Q package. |
-| `paper/phase4_ar_neumann_budget.md` | Public candidate trail for AR slots. | Private L2 assembly import plus Stage D/E public packaging. |
-| `paper/phase4_ar_commutator_slot_candidate.md` | Candidate slot note. | Private theorem-grade slot import recorded by Stage D. |
-| `paper/phase4_ar_remaining_slots_candidate.md` | Candidate slot note. | Private theorem-grade slot import recorded by Stage D. |
-| `paper/phase4_ar_majorant_candidate.md` | Candidate majorant note. | Stage D L2 assembly and Stage E coefficient package. |
+| `legacy/paper/phase3_effective_jacobi_parametrix_candidate.md` | Original Task 4 finite-mode candidate; still not itself the edge-Schauder proof. | Stage D `L1.6_K_Sch` block in `datum_D0.json`, `K_Sch^Maz <= 16/3`. |
+| `legacy/certificates/phase3_effective_jacobi_parametrix_candidate.json` | Machine output for the historical candidate. | `datum_D0.json`. |
+| `legacy/paper/phase3_projection_commutator_certificate.md` | Projection convention remains useful, but examples with `K_Sch^Maz <= 17` are stale. | Same formula with Stage D `K_Sch^Maz <= 16/3`. |
+| `legacy/certificates/phase3_projection_commutator_certificate.json` | Historical constants include the old public envelope. | `datum_D0.json` plus Stage D recaps. |
+| `legacy/paper/phase3_gamma_src_surrogate.md` | `gamma_src,sur = 3/8` is a legacy surrogate. | Active source constant `C_src = 27/16`. |
+| `legacy/certificates/phase3_gamma_src_surrogate_proto.json` | Machine output for the surrogate comparison. | Stage D source bookkeeping in `datum_D0.json`. |
+| `legacy/paper/phase4_adiabatic_operator_form.md` | Power-counting candidate scaffold. | Stage E coefficient values and checks. |
+| `legacy/certificates/phase4_adiabatic_sources_candidate.json` | Candidate norms, not theorem inputs. | `phase4_donaldson_coefficients_values.json` and Level Q package. |
+| `legacy/paper/phase4_ar_neumann_budget.md` | Public candidate trail for AR slots. | Private L2 assembly import plus Stage D/E public packaging. |
+| `legacy/paper/phase4_ar_commutator_slot_candidate.md` | Candidate slot note. | Private theorem-grade slot import recorded by Stage D. |
+| `legacy/paper/phase4_ar_remaining_slots_candidate.md` | Candidate slot note. | Private theorem-grade slot import recorded by Stage D. |
+| `legacy/paper/phase4_ar_majorant_candidate.md` | Candidate majorant note. | Stage D L2 assembly and Stage E coefficient package. |
 
 ## Rules
 

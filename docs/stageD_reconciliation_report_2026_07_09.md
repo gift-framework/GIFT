@@ -1,4 +1,4 @@
-# Stage D reconciliation report — 2026-07-09
+# Stage D reconciliation report, 2026-07-09
 
 Scope: Codex branch `codex/gift-work`, reconciled against the private
 mission brief `private/docs/codex_stageD_mission_2026_07_09.md`.

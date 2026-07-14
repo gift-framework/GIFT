@@ -1,0 +1,108 @@
+{
+  "artifact": "phase4_adiabatic_sources_candidate",
+  "generated_by": "scripts/phase4_adiabatic_sources_candidate.py",
+  "scope": "Phase 4.1 adiabatic operator source-norm candidate at D0",
+  "status": "candidate_not_theorem",
+  "operator_form": {
+    "formula": "M_eps(h) = m(h) + eps * P1(h) + eps^2 * P2(h) + R_eps(h)",
+    "domain": "X_beta^ext maximal-section Banach neighbourhood of h0",
+    "codomain": "Y_{beta-2} Donaldson/maximal-section source space",
+    "epsilon": "R^-1",
+    "background": "m(h0)=0 from Phase 3 maximal-section theorem once proved"
+  },
+  "D0_input_constants": {
+    "G_aug_working_bound": {
+      "exact": "7327/200",
+      "value": 36.635,
+      "status": "working_bound"
+    },
+    "K_F_norm_F_H": {
+      "exact": "231/100",
+      "value": 2.31,
+      "status": "D0 datum envelope"
+    },
+    "C_nl": {
+      "exact": "2/3",
+      "value": 0.6666666666666666,
+      "status": "sharp-current at D0"
+    }
+  },
+  "candidate_source_norms": {
+    "source_P1": {
+      "exact": "231/100",
+      "value": 2.31,
+      "model": "||P1(h0)|| <= ||F_H||",
+      "status": "candidate_not_theorem"
+    },
+    "source_P2": {
+      "exact": "53361/10000",
+      "value": 5.3361,
+      "model": "||P2(h0)|| <= ||F_H||^2",
+      "status": "candidate_not_theorem"
+    },
+    "DP1_norm": {
+      "exact": "231/100",
+      "value": 2.31,
+      "status": "candidate_not_theorem"
+    },
+    "DP2_norm": {
+      "exact": "53361/10000",
+      "value": 5.3361,
+      "status": "candidate_not_theorem"
+    },
+    "D2P1_norm": {
+      "exact": "53361/10000",
+      "value": 5.3361,
+      "status": "candidate_not_theorem"
+    },
+    "D3m_norm": {
+      "exact": "1",
+      "value": 1.0,
+      "status": "candidate_not_theorem"
+    },
+    "raw_P3_scale": {
+      "exact": "12326391/1000000",
+      "value": 12.326391,
+      "status": "candidate_not_theorem"
+    }
+  },
+  "finite_order_ansatz_bounds": {
+    "xi1_bound": {
+      "formula": "||xi1|| <= ||G_aug|| * ||P1(h0)||",
+      "exact": "1692537/20000",
+      "value": 84.62685
+    },
+    "xi2_forcing_bound": {
+      "formula": "||P2|| + ||DP1|| ||xi1|| + 1/2 C_nl ||xi1||^2",
+      "exact": "1035223481523/400000000",
+      "value": 2588.0587038075
+    },
+    "xi2_bound": {
+      "formula": "||xi2|| <= ||G_aug|| * xi2_forcing",
+      "exact": "7585082449119021/80000000000",
+      "value": 94813.53061398776
+    }
+  },
+  "remainder_R3_candidate": {
+    "formula": "DP1*xi2 + C_nl*xi1*xi2 + (1/6)D3m*xi1^3 + (1/2)D2P1*xi1^2 + DP2*xi1 + P3_raw",
+    "coefficient_exact": "4551026642646170457309/800000000000000",
+    "coefficient_value": 5688783.303307713,
+    "meaning": "Candidate upper bound for ||R_eps|| / eps^3 after the K=2 ansatz.",
+    "status": "candidate_not_theorem"
+  },
+  "tail_contraction_candidate": {
+    "condition": "4 * ||G_aug||^2 * C_nl * R3_coeff * eps^3 < 1",
+    "eps_threshold_candidate": 0.00036621811958484525,
+    "R_threshold_candidate": 2730.613114210807,
+    "status": "candidate_not_theorem",
+    "interpretation": "Only a scale diagnostic. The constants are intentionally broad and not yet from the actual Donaldson operator."
+  },
+  "acceptance_requirements_to_promote": [
+    "derive P1, P2, and R_eps from the actual Donaldson (E1)-(E5) equations in the chosen norms",
+    "replace K_F power-counting by interval enclosures for ||P1(h0)|| and ||P2(h0)||",
+    "bound DP1, DP2, D2P1, D3m, and raw P3 with outward-rounded intervals",
+    "provide an independent checker distinct from this producer script",
+    "only then update datum_D0 source_P1/source_P2/remainder_R3 to certified intervals"
+  ],
+  "all_pass": true
+}

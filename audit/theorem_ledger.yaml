@@ -180,7 +180,7 @@
     - "private/canonical/results/axis2_E_sharp_constants_2026_07_02.json"
     - "private/canonical/results/axis2_datum_D0_certificate_2026_07_02.json"
     - "private/canonical/results/axis2_L1d_Pi_obs_identification_2026_07_04.json"
-    - "GIFT/certificates/phase3_projection_commutator_certificate.json"
+    - "GIFT/legacy/certificates/phase3_projection_commutator_certificate.json"
   code_locations:
     - "private/canonical/scripts/axis2_gamma_src_Yneg3_norm_2026_07_02.py"
     - "private/canonical/scripts/axis2_C_nl_theorem_grade_2026_07_02.py"
@@ -190,7 +190,7 @@
   paper_locations:
     - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
     - "GIFT/docs/mission_progress_summary.md"
-    - "GIFT/paper/phase3_projection_commutator_certificate.md"
+    - "GIFT/legacy/paper/phase3_projection_commutator_certificate.md"
   certificate_type: "deterministic JSON/script chain plus handwritten notes"
   unformalized_gap: "This closes the D0 constant envelopes and local projection/commutator bookkeeping, not the full Banach-space parametrix, adiabatic reconstruction, anisotropic Joyce perturbation, or compact K7 topology proof."
   acceptance_test: "May be cited only as D0 sharp-current constant bookkeeping. It cannot promote global_maximal_section_scaffold, adiabatic_reconstruction_k2_scaffold, or level_e_target_on_k7 to theorem status."
@@ -206,12 +206,12 @@
     - "Uniformity over all 77 collars still needs outward-rounded interval proof."
     - "Active D0 scalar use is superseded by the Stage D L1.6_K_Sch import recorded in datum_D0.json."
   dependencies:
-    - "GIFT/certificates/phase3_effective_jacobi_parametrix_candidate.json"
+    - "GIFT/legacy/certificates/phase3_effective_jacobi_parametrix_candidate.json"
     - "GIFT/certificates/datum_D0.json"
   code_locations:
     - "GIFT/scripts/phase3_effective_jacobi_parametrix_candidate.py"
   paper_locations:
-    - "GIFT/paper/phase3_effective_jacobi_parametrix_candidate.md"
+    - "GIFT/legacy/paper/phase3_effective_jacobi_parametrix_candidate.md"
     - "GIFT/paper/theorem_Q_certified.md"
   certificate_type: "deterministic symbolic/rational finite-mode scan"
   unformalized_gap: "The public candidate file is not itself the edge-Schauder proof. For current D0 citations use the Stage D L1.6_K_Sch block rather than this historical candidate."
@@ -248,7 +248,7 @@
     - "Existence of P1, P2, and augmented inverse G_aug with required bounds"
   dependencies:
     - "private/canonical/results/axis2_M_epsilon_adiabatic_2026_07_01.json"
-    - "GIFT/certificates/phase4_adiabatic_sources_candidate.json"
+    - "GIFT/legacy/certificates/phase4_adiabatic_sources_candidate.json"
     - "GIFT/certificates/phase4_bigraded_type_check.json"
     - "GIFT/certificates/phase4_donaldson_coefficients.json"
     - "GIFT/certificates/phase4_donaldson_coefficients_check.json"
@@ -270,7 +270,7 @@
     - "GIFT/scripts/phase4_level_Q_table_checker.py"
   paper_locations:
     - "private/canonical/papers/rank_one_branched_adiabatic/draft.md"
-    - "GIFT/paper/phase4_adiabatic_operator_form.md"
+    - "GIFT/legacy/paper/phase4_adiabatic_operator_form.md"
     - "GIFT/paper/phase4_true_coefficients_derivation_plan.md"
     - "GIFT/paper/phase4_donaldson_E1_E5_operator.md"
     - "GIFT/paper/phase4_donaldson_coefficients_stageB_v1.md"
@@ -325,10 +325,10 @@
     - "GIFT/paper/phase4_ar_convergence_theorem_spec.md"
     - "GIFT/paper/phase4_ar_product_space_contract.md"
     - "GIFT/paper/phase4_ar_inverse_budget_audit.md"
-    - "GIFT/paper/phase4_ar_neumann_budget.md"
-    - "GIFT/paper/phase4_ar_commutator_slot_candidate.md"
-    - "GIFT/paper/phase4_ar_remaining_slots_candidate.md"
-    - "GIFT/paper/phase4_ar_majorant_candidate.md"
+    - "GIFT/legacy/paper/phase4_ar_neumann_budget.md"
+    - "GIFT/legacy/paper/phase4_ar_commutator_slot_candidate.md"
+    - "GIFT/legacy/paper/phase4_ar_remaining_slots_candidate.md"
+    - "GIFT/legacy/paper/phase4_ar_majorant_candidate.md"
   certificate_type: "product-space definition contract/checker plus imported theorem-grade Neumann slots plus assembled Banach contraction certificate"
   unformalized_gap: "Stage D repin: the four Neumann slots V/W/X/Y were discharged theorem-grade in private on 2026-07-04 and the assembled L2 theorem closed on 2026-07-05. The Codex 16/16 + 41/41 audit agrees structurally modulo product-max normalization K_AR_prod=2079/2000. Residual work is no longer the L2 assembly gate; it is Stage E outward-rounded interval recomputation for Level Q promotion and any later non-load-bearing sharpening."
   acceptance_test: "May be cited as L2 assembly certified at D0 after importing private/canonical/results/axis2_L2_assembly_theorem_2026_07_05.json; product-max normalization is the citable convention."

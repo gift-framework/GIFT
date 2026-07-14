@@ -82,8 +82,8 @@ Its confrontation with the current `G`-discharge envelope is now frozen in:
 
 The first explicit local quadratic surrogate is now frozen in:
 
-- [phase3_gamma_src_surrogate.md](phase3_gamma_src_surrogate.md),
-- [phase3_gamma_src_surrogate_proto.json](../certificates/phase3_gamma_src_surrogate_proto.json).
+- [phase3_gamma_src_surrogate.md](../legacy/paper/phase3_gamma_src_surrogate.md),
+- [phase3_gamma_src_surrogate_proto.json](../legacy/certificates/phase3_gamma_src_surrogate_proto.json).
 
 ## Why this is now well-posed
 

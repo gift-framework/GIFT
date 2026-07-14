@@ -1,4 +1,4 @@
-# Récap Stage D — réconciliation Codex / private — 2026-07-09
+# Récap Stage D (réconciliation Codex / private) 2026-07-09
 
 ## Résumé court
 
@@ -41,7 +41,7 @@ source actif est `C_src = 27/16`.
   - pin `Pi_obs`;
   - statut H_global / Stage E.
 
-## L1.6 — `K_Sch <= 16/3`
+## L1.6, `K_Sch <= 16/3`
 
 Import depuis private :
 
@@ -63,7 +63,7 @@ Conséquence :
 - `||G_aug||_crude <= 24.780` en sharp;
 - les deux sont `< 36.6`.
 
-## L2 assembly — contraction AR
+## L2 assembly, contraction AR
 
 Import depuis private :
 
@@ -156,7 +156,7 @@ Commandes validées :
 
 ```bash
 python3 -m json.tool certificates/datum_D0.json
-python3 -m json.tool certificates/phase3_gamma_src_surrogate_proto.json
+python3 -m json.tool legacy/certificates/phase3_gamma_src_surrogate_proto.json
 python3 -m json.tool certificates/phase3_kappa_src_first_ansatz_proto.json
 python3 -c "import yaml, pathlib; yaml.safe_load(pathlib.Path('audit/theorem_ledger.yaml').read_text())"
 ```

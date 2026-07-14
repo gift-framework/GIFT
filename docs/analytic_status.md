@@ -40,16 +40,16 @@ The citable Stage E headline is
 The following older public artifacts are retained as historical comparison
 material only:
 
-- `paper/phase3_effective_jacobi_parametrix_candidate.md`
-- `certificates/phase3_effective_jacobi_parametrix_candidate.json`
-- `paper/phase3_projection_commutator_certificate.md`
-- `certificates/phase3_projection_commutator_certificate.json`
-- `paper/phase4_adiabatic_operator_form.md`
-- `certificates/phase4_adiabatic_sources_candidate.json`
-- `paper/phase4_ar_neumann_budget.md`
-- `paper/phase4_ar_commutator_slot_candidate.md`
-- `paper/phase4_ar_remaining_slots_candidate.md`
-- `paper/phase4_ar_majorant_candidate.md`
+- `legacy/paper/phase3_effective_jacobi_parametrix_candidate.md`
+- `legacy/certificates/phase3_effective_jacobi_parametrix_candidate.json`
+- `legacy/paper/phase3_projection_commutator_certificate.md`
+- `legacy/certificates/phase3_projection_commutator_certificate.json`
+- `legacy/paper/phase4_adiabatic_operator_form.md`
+- `legacy/certificates/phase4_adiabatic_sources_candidate.json`
+- `legacy/paper/phase4_ar_neumann_budget.md`
+- `legacy/paper/phase4_ar_commutator_slot_candidate.md`
+- `legacy/paper/phase4_ar_remaining_slots_candidate.md`
+- `legacy/paper/phase4_ar_majorant_candidate.md`
 
 They must not be used to override the Stage D/E path. In particular:
 
@@ -131,19 +131,19 @@ anisotropic Joyce theorem `(J)`, and Appendix C compact-topology proof.
   best constants should be read as superseded envelopes for `D0`, not as the
   latest sharp-current bookkeeping.
 
-- `GIFT/paper/phase3_effective_jacobi_parametrix_candidate.md`
+- `GIFT/legacy/paper/phase3_effective_jacobi_parametrix_candidate.md`
   The public Task 4 candidate is superseded for the D0 scalar constant by the
   Stage D `K_Sch^Maz <= 16/3` import. Keep the file as the original experiment
   and as a reproducibility trail, not as the active citation target.
 
-- `GIFT/paper/phase3_projection_commutator_certificate.md`
+- `GIFT/legacy/paper/phase3_projection_commutator_certificate.md`
   Any numerical example using `K_Sch^Maz <= 17` is historical. The current
   citable scalar bound is `16/3`; the certificate remains useful for the
   projection/commutator convention.
 
 ### Public Phase-4 candidate text now superseded
 
-- `GIFT/paper/phase4_adiabatic_operator_form.md`
+- `GIFT/legacy/paper/phase4_adiabatic_operator_form.md`
   Keep as the operator-form/power-counting scaffold only. Active P4.1 values are
   in `phase4_donaldson_coefficients_values.json` and checked by
   `phase4_donaldson_coefficients_check.json`.

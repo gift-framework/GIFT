@@ -49,7 +49,7 @@ theorem, the anisotropic Joyce theorem `(J)`, or the compact `K7` result.
 
 ## Phase-by-phase status
 
-### Phase 0 — Truth ledger and canonicalisation
+### Phase 0: Truth ledger and canonicalisation
 
 Status: substantially completed.
 
@@ -73,7 +73,7 @@ Remaining work:
 - keep the ledger updated as stronger or sharper artifacts are added.
 - continue preventing repo prose from over-promoting local or conditional results.
 
-### Phase 1 — Precise theorem targets
+### Phase 1: Precise theorem targets
 
 Status: completed at the specification level.
 
@@ -94,7 +94,7 @@ Remaining work:
 
 - no structural rewrite needed; future work is theorem discharge, not target redefinition.
 
-### Phase 2 — Explicit datum `D0`
+### Phase 2: Explicit datum `D0`
 
 Status: partial, with sharp constants updated by the 2026-07-02 private chain.
 
@@ -129,7 +129,7 @@ Next real Phase 2 task:
 
 - continue turning `datum_D0.json` from `partial_certified` into a complete datum certificate.
 
-### Phase 3 — Global maximal-section theorem
+### Phase 3: Global maximal-section theorem
 
 Status: active main workstream.
 
@@ -238,10 +238,10 @@ Main artifacts:
 
 - [phase3_source_residual_certificate.md](../paper/phase3_source_residual_certificate.md)
 - [phase3_source_residual_ledger.json](../certificates/phase3_source_residual_ledger.json)
-- [phase3_projection_commutator_certificate.md](../paper/phase3_projection_commutator_certificate.md)
-- [phase3_projection_commutator_certificate.json](../certificates/phase3_projection_commutator_certificate.json)
-- [phase3_effective_jacobi_parametrix_candidate.md](../paper/phase3_effective_jacobi_parametrix_candidate.md)
-- [phase3_effective_jacobi_parametrix_candidate.json](../certificates/phase3_effective_jacobi_parametrix_candidate.json)
+- [phase3_projection_commutator_certificate.md](../legacy/paper/phase3_projection_commutator_certificate.md)
+- [phase3_projection_commutator_certificate.json](../legacy/certificates/phase3_projection_commutator_certificate.json)
+- [phase3_effective_jacobi_parametrix_candidate.md](../legacy/paper/phase3_effective_jacobi_parametrix_candidate.md)
+- [phase3_effective_jacobi_parametrix_candidate.json](../legacy/certificates/phase3_effective_jacobi_parametrix_candidate.json)
 - [phase3_Rquad_coefficient.md](../paper/phase3_Rquad_coefficient.md)
 - [phase3_mu_minus_half_channel.md](../paper/phase3_mu_minus_half_channel.md)
 - [phase3_mu_minus_half_basis.md](../paper/phase3_mu_minus_half_basis.md)
@@ -250,7 +250,7 @@ Main artifacts:
 - [phase3_Pi_obs_constant_mode.md](../paper/phase3_Pi_obs_constant_mode.md)
 - [phase3_kappa_src_first_ansatz.md](../paper/phase3_kappa_src_first_ansatz.md)
 - [phase3_kappa_src_vs_G_discharge.md](../paper/phase3_kappa_src_vs_G_discharge.md)
-- [phase3_gamma_src_surrogate.md](../paper/phase3_gamma_src_surrogate.md)
+- [phase3_gamma_src_surrogate.md](../legacy/paper/phase3_gamma_src_surrogate.md)
 
 Resolved points:
 
@@ -289,14 +289,14 @@ Current sharp Phase 3 bottleneck:
   projection/commutator certificate and the theorem-grade cubic coefficient
   `C_src = 27/16`.
 
-### Phase 4 — Adiabatic reconstruction
+### Phase 4: Adiabatic reconstruction
 
 Status: P4.1 coefficients are checked at `D0`; P4.2 has a conditional scalar
 majorant, but no convergent AR theorem yet.
 
 Main available artifact:
 
-- [phase4_adiabatic_operator_form.md](../paper/phase4_adiabatic_operator_form.md)
+- [phase4_adiabatic_operator_form.md](../legacy/paper/phase4_adiabatic_operator_form.md)
 - [phase4_true_coefficients_derivation_plan.md](../paper/phase4_true_coefficients_derivation_plan.md)
 - [phase4_donaldson_E1_E5_operator.md](../paper/phase4_donaldson_E1_E5_operator.md)
 - [phase4_bigraded_type_check.json](../certificates/phase4_bigraded_type_check.json)
@@ -313,21 +313,21 @@ Main available artifact:
 - [phase4_ar_inverse_budget_audit.md](../paper/phase4_ar_inverse_budget_audit.md)
 - [phase4_ar_inverse_budget_audit.json](../certificates/phase4_ar_inverse_budget_audit.json)
 - [phase4_ar_inverse_budget_check.json](../certificates/phase4_ar_inverse_budget_check.json)
-- [phase4_ar_neumann_budget.md](../paper/phase4_ar_neumann_budget.md)
+- [phase4_ar_neumann_budget.md](../legacy/paper/phase4_ar_neumann_budget.md)
 - [phase4_ar_neumann_budget_candidate.json](../certificates/phase4_ar_neumann_budget_candidate.json)
 - [phase4_ar_neumann_budget_check.json](../certificates/phase4_ar_neumann_budget_check.json)
-- [phase4_ar_commutator_slot_candidate.md](../paper/phase4_ar_commutator_slot_candidate.md)
+- [phase4_ar_commutator_slot_candidate.md](../legacy/paper/phase4_ar_commutator_slot_candidate.md)
 - [phase4_ar_commutator_slot_candidate.json](../certificates/phase4_ar_commutator_slot_candidate.json)
 - [phase4_ar_commutator_slot_check.json](../certificates/phase4_ar_commutator_slot_check.json)
-- [phase4_ar_remaining_slots_candidate.md](../paper/phase4_ar_remaining_slots_candidate.md)
+- [phase4_ar_remaining_slots_candidate.md](../legacy/paper/phase4_ar_remaining_slots_candidate.md)
 - [phase4_ar_remaining_slots_candidate.json](../certificates/phase4_ar_remaining_slots_candidate.json)
 - [phase4_ar_remaining_slots_check.json](../certificates/phase4_ar_remaining_slots_check.json)
-- [phase4_consolidation_2026_07_03.md](phase4_consolidation_2026_07_03.md)
-- [phase4_ar_majorant_candidate.md](../paper/phase4_ar_majorant_candidate.md)
+- [phase4_consolidation_2026_07_03.md](../legacy/docs/phase4_consolidation_2026_07_03.md)
+- [phase4_ar_majorant_candidate.md](../legacy/paper/phase4_ar_majorant_candidate.md)
 - [phase4_ar_majorant_candidate.json](../certificates/phase4_ar_majorant_candidate.json)
 - [phase4_ar_majorant_check.json](../certificates/phase4_ar_majorant_check.json)
-- [phase4_progress_2026_07_03.md](phase4_progress_2026_07_03.md)
-- [phase4_adiabatic_sources_candidate.json](../certificates/phase4_adiabatic_sources_candidate.json)
+- [phase4_progress_2026_07_03.md](../legacy/docs/phase4_progress_2026_07_03.md)
+- [phase4_adiabatic_sources_candidate.json](../legacy/certificates/phase4_adiabatic_sources_candidate.json)
 - previous private formal matching:
   `private/canonical/results/axis2_M_epsilon_adiabatic_2026_07_01.json`
 
@@ -405,7 +405,7 @@ Still open:
 - product-norm commutator bounds, reduced-projection identity, and closedness
   preservation.
 
-### Phase 5 — Hypothesis `(J)` / anisotropic Joyce theorem
+### Phase 5: Hypothesis `(J)` / anisotropic Joyce theorem
 
 Status: only specified, not proved.
 
@@ -429,7 +429,7 @@ Still open:
 
 This remains the decisive open theorem for Level `E`.
 
-### Phase 6 — Compactness, positivity, holonomy
+### Phase 6: Compactness, positivity, holonomy
 
 Status: not started as proof work.
 
@@ -444,7 +444,7 @@ Still open:
 - actual torsion-free theorem input from earlier phases
 - full holonomy wrapper theorem
 
-### Phase 7 — Closed-form programme
+### Phase 7: Closed-form programme
 
 Status: separated conceptually, not advanced as an active proof line.
 
