@@ -173,7 +173,7 @@ Les mathématiques continues (analyse, géométrie différentielle) restent plus
 
 Toutes les preuves sont publiquement disponibles :
 
-**Dépôt** : [github.com/gift-framework/core](https://github.com/gift-framework/core)
+**Dépôt** : [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 **Structure** :
 ```
@@ -196,7 +196,7 @@ core/
 Pour vérifier les preuves Lean :
 
 ```bash
-git clone https://github.com/gift-framework/core
+git clone https://github.com/Arithmon/K7-Lean
 cd core/Lean
 lake build
 ```
@@ -221,7 +221,7 @@ La contribution méthodologique est indépendante de la correction physique de G
 - Fondations mathématiques : [Article S1 fondations](Paper-S1-Foundations.html)
 - Dérivations complètes : [Article S2 dérivations](Paper-S2-Derivations.html)
 - Géométrie spectrale : [Article géométrie spectrale](Paper-Spectral-Geometry.html)
-- Dépôt de code : [github.com/gift-framework/core](https://github.com/gift-framework/core)
+- Dépôt de code : [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 ---
 

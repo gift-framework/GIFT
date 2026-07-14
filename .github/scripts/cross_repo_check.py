@@ -2,7 +2,7 @@
 """
 Cross-Repo Consistency Check - CI Script for GIFT Documentation
 
-Validates that documentation in GIFT matches verified values in gift-framework/core:
+Validates that documentation in GIFT matches verified values in Arithmon/K7-Lean:
 1. Python constants (gift_core/constants.py)
 2. Lean definitions (Lean/GIFT/Core.lean)
 3. Theorem names referenced in docs match blueprint
@@ -517,7 +517,7 @@ def check_theorem_references(docs_dir: Path, core_dir: Path) -> List[str]:
 def main():
     parser = argparse.ArgumentParser(description='Cross-repo consistency check')
     parser.add_argument('--core-path', type=Path, required=True,
-                       help='Path to gift-framework/core checkout')
+                       help='Path to Arithmon/K7-Lean checkout')
     args = parser.parse_args()
 
     print("=" * 70)

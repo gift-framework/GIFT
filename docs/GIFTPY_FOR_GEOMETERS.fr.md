@@ -146,7 +146,7 @@ lean_proof = result.certificate.to_lean()
 - Corti, A., Haskins, M., Nordström, J., Pacini, T. (2015). « G₂-manifolds and associative submanifolds via semi-Fano 3-folds. » *Duke Math. J.* 164(10), 1971-2092.
 - Raissi, M., Perdikaris, P., Karniadakis, G.E. (2019). « Physics-informed neural networks. » *J. Comp. Phys.* 378, 686-707.
 
-**Dépôt de code** : [github.com/gift-framework/core](https://github.com/gift-framework/core)
+**Dépôt de code** : [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 **Documentation associée** : [S1 : Fondations](Paper-S1-Foundations.html)
 

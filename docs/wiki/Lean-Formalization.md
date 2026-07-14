@@ -20,8 +20,8 @@ The GIFT framework is formally verified in **Lean 4** with Mathlib. The formaliz
 
 ## Repository
 
-**Code**: [github.com/gift-framework/core](https://github.com/gift-framework/core)
-**Blueprint**: [gift-framework.github.io/core](https://gift-framework.github.io/core/)
+**Code**: [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
+**Blueprint**: [arithmon.github.io/K7-Lean](https://arithmon.github.io/K7-Lean/)
 **Lean version**: 4.29.0
 **Mathlib version**: 4.29.0
 
@@ -90,7 +90,7 @@ All 7 axioms are substantive (standard mathematical theorems or GIFT conjectures
 To verify all proofs locally:
 
 ```bash
-git clone https://github.com/gift-framework/core
+git clone https://github.com/Arithmon/K7-Lean
 cd core/Lean
 lake build
 ```

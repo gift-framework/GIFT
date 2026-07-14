@@ -172,7 +172,7 @@ Continuous mathematics (analysis, differential geometry) remains harder to forma
 
 All proofs are publicly available:
 
-**Repository**: [github.com/gift-framework/core](https://github.com/gift-framework/core)
+**Repository**: [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 **Structure**:
 ```
@@ -195,7 +195,7 @@ core/
 To verify the Lean proofs:
 
 ```bash
-git clone https://github.com/gift-framework/core
+git clone https://github.com/Arithmon/K7-Lean
 cd core/Lean
 lake build
 ```
@@ -220,7 +220,7 @@ The methodological contribution is independent of GIFT's physical correctness. F
 - Mathematical foundations: [GIFT_v3.3_S1_foundations.md](../publications/papers/markdown/GIFT_v3.3_S1_foundations.md)
 - Complete derivations: [GIFT_v3.3_S2_derivations.md](../publications/papers/markdown/GIFT_v3.3_S2_derivations.md)
 - Spectral geometry: [Spectral_Geometry.md](../publications/papers/markdown/Spectral_Geometry.md)
-- Code repository: [github.com/gift-framework/core](https://github.com/gift-framework/core)
+- Code repository: [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 ---
 

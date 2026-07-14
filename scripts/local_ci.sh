@@ -67,13 +67,13 @@ docs_check() {
 }
 
 # ----------------------------------------------------------------------
-# 2. Cross-repo consistency (only if gift-framework/core is cloned next door)
+# 2. Cross-repo consistency (only if Arithmon/K7-Lean is cloned next door)
 # ----------------------------------------------------------------------
 consistency_check() {
     local CORE_PATH="../core"
     if [ ! -d "$CORE_PATH" ]; then
         echo "  ⚠ ../core/ not found — skipping cross-repo consistency check"
-        echo "    (clone gift-framework/core next to this repo to enable it)"
+        echo "    (clone Arithmon/K7-Lean next to this repo to enable it)"
         return 0
     fi
     python3 .github/scripts/cross_repo_check.py --core-path "$CORE_PATH"

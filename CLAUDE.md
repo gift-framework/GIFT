@@ -4,7 +4,7 @@ This file provides development conventions for the GIFT theoretical documentatio
 
 ## Repository Purpose
 
-This repository contains the **theoretical documentation** for GIFT (Geometric Information Field Theory). For formal proofs and computational code, see [gift-framework/core](https://github.com/gift-framework/core).
+This repository contains the **theoretical documentation** for GIFT (Geometric Information Field Theory). For formal proofs and computational code, see [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean).
 
 ## Project Structure
 
@@ -153,7 +153,7 @@ blueprint/
 
 ### Viewing Blueprint
 
-Generated at: https://gift-framework.github.io/core/
+Generated at: https://arithmon.github.io/K7-Lean/
 
 ---
 
@@ -199,7 +199,7 @@ for effective torsion that remain under investigation"
 - Statistical validation
 - Guides for different audiences
 
-### gift-framework/core
+### Arithmon/K7-Lean
 - Formal proofs (Lean 4)
 - Python package `giftpy`
 - Blueprint documentation
@@ -231,8 +231,8 @@ Before committing documentation changes:
 
 | Resource | URL |
 |----------|-----|
-| Core Repository | https://github.com/gift-framework/core |
-| Blueprint | https://gift-framework.github.io/core/ |
+| Core Repository | https://github.com/Arithmon/K7-Lean |
+| Blueprint | https://arithmon.github.io/K7-Lean/ |
 | PyPI Package | https://pypi.org/project/gift-core/ |
 
 ---

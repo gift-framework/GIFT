@@ -163,6 +163,6 @@ Les relations entre invariants topologiques et constantes physiques sont désorm
 
 La physique reste à tester. Les maths sont réglées.
 
-Dépôt : https://github.com/gift-framework/core/
+Dépôt : https://github.com/Arithmon/K7-Lean/
 
 Retours, corrections, et critiques brutales bienvenus via les issues GitHub.

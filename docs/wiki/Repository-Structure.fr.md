@@ -74,7 +74,7 @@ GIFT/
 | Notebooks compagnons | `publications/papers/notebooks/` |
 | Données d'observables | `publications/references/observables.csv` |
 | Articles de blog et vulgarisation | `publications/outreach/` |
-| Vérification formelle | [gift-framework/core](https://github.com/gift-framework/core) |
+| Vérification formelle | [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) |
 | Archive v3.3 | `publications/papers/legacy/v3.3/` |
 | Définitions techniques | `docs/GLOSSARY.md` |
 
@@ -97,7 +97,7 @@ Le **[Wiki GitHub](https://github.com/Arithmon/K7/wiki)** fournit un hub multi-p
 
 | Dépôt | Contenu |
 |-------|---------|
-| [gift-framework/core](https://github.com/gift-framework/core) | Preuves formelles (Lean 4), pipeline de métrique K₇, giftpy |
+| [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) | Preuves formelles (Lean 4), pipeline de métrique K₇, giftpy |
 
 ## Version
 

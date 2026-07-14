@@ -4,7 +4,7 @@
 
 This repository contains theoretical documentation only. No executable code.
 
-For security issues in the code repository, see [gift-framework/core](https://github.com/gift-framework/core).
+For security issues in the code repository, see [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean).
 
 ## Scientific Integrity
 

@@ -20,8 +20,8 @@ Le cadre GIFT est formellement vérifié en **Lean 4** avec Mathlib. La formalis
 
 ## Dépôt
 
-**Code** : [github.com/gift-framework/core](https://github.com/gift-framework/core)
-**Blueprint** : [gift-framework.github.io/core](https://gift-framework.github.io/core/)
+**Code** : [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
+**Blueprint** : [arithmon.github.io/K7-Lean](https://arithmon.github.io/K7-Lean/)
 **Version Lean** : 4.29.0
 **Version Mathlib** : 4.29.0
 
@@ -91,7 +91,7 @@ Tous les 7 axiomes sont substantiels (théorèmes mathématiques standards ou co
 Pour vérifier toutes les preuves localement :
 
 ```bash
-git clone https://github.com/gift-framework/core
+git clone https://github.com/Arithmon/K7-Lean
 cd core/Lean
 lake build
 ```

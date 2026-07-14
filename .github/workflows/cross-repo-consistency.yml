@@ -13,7 +13,7 @@ on:
       - 'publications/papers/markdown/*.md'
       - '.github/scripts/cross_repo_check.py'
       - '.github/workflows/cross-repo-consistency.yml'
-  # Triggered by repository_dispatch from gift-framework/core
+  # Triggered by repository_dispatch from Arithmon/K7-Lean
   repository_dispatch:
     types: [core-updated]
   workflow_dispatch:
@@ -24,7 +24,7 @@ on:
 jobs:
   cross-repo-check:
     runs-on: ubuntu-latest
-    name: Check Consistency with gift-framework/core
+    name: Check Consistency with Arithmon/K7-Lean
 
     steps:
       - name: Checkout GIFT (docs)
@@ -32,10 +32,10 @@ jobs:
         with:
           path: gift-docs
 
-      - name: Checkout gift-framework/core
+      - name: Checkout Arithmon/K7-Lean
         uses: actions/checkout@v4
         with:
-          repository: gift-framework/core
+          repository: Arithmon/K7-Lean
           path: gift-core
 
       - name: Set up Python
@@ -66,11 +66,11 @@ jobs:
         with:
           script: |
             const title = 'Cross-Repo Consistency Check Failed';
-            const body = `The cross-repo consistency check between GIFT docs and gift-framework/core has failed.
+            const body = `The cross-repo consistency check between GIFT docs and Arithmon/K7-Lean has failed.
 
             **Workflow run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}
 
-            Please review the consistency report artifact and update the documentation to match the verified values in gift-framework/core.`;
+            Please review the consistency report artifact and update the documentation to match the verified values in Arithmon/K7-Lean.`;
 
             // Check if issue already exists
             const issues = await github.rest.issues.listForRepo({

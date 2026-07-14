@@ -130,7 +130,7 @@ The framework's value, independent of its physical correctness, lies in demonstr
 - Mathematical foundations: [Paper S1 Foundations](Paper-S1-Foundations.html)
 - Complete derivations: [Paper S2 Derivations](Paper-S2-Derivations.html)
 - Spectral geometry: [Paper Spectral Geometry](Paper-Spectral-Geometry.html)
-- Formal verification: [gift-framework/core](https://github.com/gift-framework/core)
+- Formal verification: [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 ---
 

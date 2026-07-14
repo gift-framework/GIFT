@@ -268,7 +268,7 @@ This transparency allows readers to assess confidence levels for each prediction
 
 ### How is this computed?
 
-All calculations available in `publications/validation/` and [giftpy](https://github.com/gift-framework/core):
+All calculations available in `publications/validation/` and [giftpy](https://github.com/Arithmon/K7-Lean):
 
 **Analytical**: Mathematical derivations in supplements
 **Numerical**: Python implementation with NumPy, SciPy, SymPy

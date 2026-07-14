@@ -187,6 +187,6 @@ Les axiomes sont explicites. Les manques sont reconnus. Les preuves numériques 
 
 Si cela se connecte à la physique, c'est une question distincte, une question à laquelle ce sont les expériences, et non les assistants de preuve, qui finiront par répondre.
 
-Dépôt : github.com/gift-framework/core
+Dépôt : github.com/Arithmon/K7-Lean
 
 Notebook : github.com/Arithmon/K7/notebooks

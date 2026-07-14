@@ -268,7 +268,7 @@ Cette transparence permet aux lecteurs d'évaluer le niveau de confiance pour ch
 
 ### Comment cela se calcule-t-il ?
 
-Tous les calculs sont disponibles dans `publications/validation/` et [giftpy](https://github.com/gift-framework/core) :
+Tous les calculs sont disponibles dans `publications/validation/` et [giftpy](https://github.com/Arithmon/K7-Lean) :
 
 **Analytique** : dérivations mathématiques dans les suppléments
 **Numérique** : implémentation Python avec NumPy, SciPy, SymPy

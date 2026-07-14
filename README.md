@@ -15,13 +15,13 @@
 > One thing does *not* redirect: the documentation site moves from
 > `gift-framework.github.io/GIFT/` to `arithmon.github.io/K7/`.
 >
-> Companion repository: `gift-framework/core` → `Arithmon/K7-Lean`.
+> Companion repository: `gift-framework/core` → [`Arithmon/K7-Lean`](https://github.com/Arithmon/K7-Lean) (moved 2026-07-14).
 
 ---
 
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/gift-framework/core)
+[![Lean 4](https://img.shields.io/badge/Formally_Verified-Lean_4-blue)](https://github.com/Arithmon/K7-Lean)
 
 Part of the **[Arithmon program](https://github.com/arithmon)** -- the hypothesis that the constants of nature are counts.
 
@@ -125,7 +125,7 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 | | |
 |---|---|
 | **Parameters** | Zero adjustable -- all structurally determined (3 integer primitives: N=3, r₈=8, r₂=2) |
-| **Verified** | 15 Lean 4 axioms (4 on the prediction chain + 11 K3 interval-arithmetic certificates), zero `sorry`, 460+ certified relations ([core v3.4.27](https://github.com/gift-framework/core)) |
+| **Verified** | 15 Lean 4 axioms (4 on the prediction chain + 11 K3 interval-arithmetic certificates), zero `sorry`, 460+ certified relations ([K7-Lean v3.4.27](https://github.com/Arithmon/K7-Lean)) |
 | **Parameter-free core** | 33 exact relations among topological integers (Type I) -- each individually correct-or-wrong, none tunable |
 | **Falsifiable** | δ_CP = 197°, N_gen = 3, θ₂₃ upper octant -- tested by DUNE / FCC-ee |
 | **Observables** | 95 total (33 Type I + 19 Type II + 21 Type III + 22 Type IV); 66 with experimental data |
@@ -232,7 +232,7 @@ Statistical validation shows (b₂=21, b₃=77) is the unique optimum among 3,07
 
 | Repository | Description |
 |------------|-------------|
-| [gift-framework/core](https://github.com/gift-framework/core) | Formal verification (Lean 4), K₇ metric pipeline, giftpy |
+| [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) | Formal verification (Lean 4), K₇ metric pipeline, giftpy (formerly `gift-framework/core`) |
 
 ---
 

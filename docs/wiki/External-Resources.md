@@ -10,8 +10,8 @@ layout: default
 | Resource | Link |
 |----------|------|
 | GIFT Documentation | [github.com/Arithmon/K7](https://github.com/Arithmon/K7) |
-| Core (Lean 4 + Python) | [github.com/gift-framework/core](https://github.com/gift-framework/core) |
-| Lean Blueprint | [gift-framework.github.io/core](https://gift-framework.github.io/core/) |
+| Core (Lean 4 + Python) | [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) |
+| Lean Blueprint | [arithmon.github.io/K7-Lean](https://arithmon.github.io/K7-Lean/) |
 | PyPI Package | [pypi.org/project/gift-core](https://pypi.org/project/gift-core/) |
 
 ## Zenodo Deposits (DOIs)

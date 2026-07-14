@@ -25,7 +25,7 @@ This repository contains the theoretical documentation for GIFT v3.4. Contributi
 
 ## Code Contributions
 
-For code contributions (K₇ metric, formal proofs, giftpy), see [gift-framework/core](https://github.com/gift-framework/core).
+For code contributions (K₇ metric, formal proofs, giftpy), see [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean).
 
 ## License
 

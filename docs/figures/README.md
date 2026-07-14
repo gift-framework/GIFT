@@ -11,8 +11,8 @@ This directory contains interactive visualization assets.
 
 ## Live Versions
 
-- [Blueprint (web)](https://gift-framework.github.io/core/blueprint/) - Lean blueprint with proofs
-- [Dependency Graph](https://gift-framework.github.io/core/blueprint/dep_graph_document.html) - Proof dependencies
+- [Blueprint (web)](https://arithmon.github.io/K7-Lean/blueprint/) - Lean blueprint with proofs
+- [Dependency Graph](https://arithmon.github.io/K7-Lean/blueprint/dep_graph_document.html) - Proof dependencies
 
 ---
 

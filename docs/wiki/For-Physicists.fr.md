@@ -130,7 +130,7 @@ La valeur du cadre, indépendamment de sa correction physique, réside dans la d
 - Fondations mathématiques : [Article S1 fondations](Paper-S1-Foundations.html)
 - Dérivations complètes : [Article S2 dérivations](Paper-S2-Derivations.html)
 - Géométrie spectrale : [Article géométrie spectrale](Paper-Spectral-Geometry.html)
-- Vérification formelle : [gift-framework/core](https://github.com/gift-framework/core)
+- Vérification formelle : [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)
 
 ---
 

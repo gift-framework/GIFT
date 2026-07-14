@@ -106,7 +106,7 @@ La deuxième, c'est que les théories scientifiques ne sont jamais le travail d'
 Si tu veux aller plus loin :
 
 - la **notice complète**, dans le détail mathématique, est sur Zenodo (lien dans la page d'accueil du blog),
-- les **vérifications informatiques** sont sur [github.com/gift-framework/core](https://github.com/gift-framework/core),
+- les **vérifications informatiques** sont sur [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean),
 - les épisodes précédents de ce blog (Pudge et la mécanique quantique, le Lego cosmique, l'algèbre qui a attendu, la géométrie de Roberto Carlos, la notice de Joyce) racontent les morceaux dans le désordre, par petites touches.
 
 Et comme à la fin de l'épisode Lego : peut-être que nous faisons tous la même chose depuis des siècles. Trier des pièces, comparer des motifs, tester des assemblages, corriger nos erreurs, recommencer.

@@ -391,7 +391,7 @@ Cadre introduit en v2.1 reliant la torsion non nulle sur K₇ au flot du groupe 
 Infrastructure mathématique reliant les observables sans dimension aux observables dimensionnels : Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1,63×10⁶.
 
 ### Lean 4 (v3.4)
-Démonstrateur de théorèmes utilisé pour la vérification formelle des relations exactes de GIFT. Le dépôt [gift-framework/core](https://github.com/gift-framework/core) contient 140 conjonctions certifiées (143 fichiers Lean, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), 0 sorry) incluant le système de racines de E₈, les propriétés du produit vectoriel G₂, la théorie spectrale, les bornes TCS, les rapports de masses Yukawa, et le certificat Newton-Kantorovich K3. Théorème clé : `GIFT_framework_certified`.
+Démonstrateur de théorèmes utilisé pour la vérification formelle des relations exactes de GIFT. Le dépôt [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) contient 140 conjonctions certifiées (143 fichiers Lean, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), 0 sorry) incluant le système de racines de E₈, les propriétés du produit vectoriel G₂, la théorie spectrale, les bornes TCS, les rapports de masses Yukawa, et le certificat Newton-Kantorovich K3. Théorème clé : `GIFT_framework_certified`.
 
 ---
 

@@ -170,7 +170,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   title   = {GIFT Core: Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
-  url     = {https://github.com/gift-framework/core},
+  url     = {https://github.com/Arithmon/K7-Lean},
   version = {3.4.27},
   note    = {143 Lean 4 files, 140 conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry, Donaldson coassociative fibration formalized}
 }
