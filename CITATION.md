@@ -232,7 +232,7 @@ de La Fournière, Brieuc. "The K₇ Framework (formerly GIFT)." Version 3.5. Zen
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| 3.5 | 2026-07-10 | Renamed "The K₇ Framework" (GIFT = founding-phase name); S4 sieve diagnostics supplement; three AI-review rounds discharged; conditional framing throughout |
+| 3.5 | 2026-07-10 | Renamed "The K₇ Framework" (K₇ = founding-phase name); S4 sieve diagnostics supplement; three AI-review rounds discharged; conditional framing throughout |
 | 3.4.27 | 2026-06-03 | Numerology purge (competing κ_T modules removed); observables.json refreshed to NuFIT 6.1 (Type I 0.99%); 143 .lean files, 8391 jobs, 15 axioms (4+11), 140 conjuncts; giftpy 3.4.27 on PyPI |
 | 3.4.24 | 2026-06-01 | Academic terminology cleanup across K3 modules and papers |
 | 3.4.23 | 2026-05-19 | Closed-form K3 CY-residual witness, interval-certified (ε₃' < 10⁻³) |

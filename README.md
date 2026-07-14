@@ -1,10 +1,10 @@
-# Geometric Information Field Theory
+# The K₇ Framework
 
 > ### This repository is moving
 >
 > **`gift-framework/GIFT` → [`Arithmon/K7`](https://github.com/Arithmon/K7)**
 >
-> The framework is now presented as the **K₇ framework**; *GIFT* remains the name of its
+> The framework is now presented as the **K₇ framework**; *K₇* remains the name of its
 > founding phase. The move consolidates it under the [Arithmon](https://github.com/Arithmon)
 > organisation alongside Atlas, Program, Lean and Sieve.
 >
@@ -13,7 +13,7 @@
 > redirects are load-bearing infrastructure, so the old paths will never be reused.
 >
 > One thing does *not* redirect: the documentation site moves from
-> `gift-framework.github.io/GIFT/` to `arithmon.github.io/K7/`.
+> `gift-framework.github.io/K₇/` to `arithmon.github.io/K7/`.
 >
 > Companion repository: `gift-framework/core` → [`Arithmon/K7-Lean`](https://github.com/Arithmon/K7-Lean) (moved 2026-07-14).
 
@@ -27,7 +27,7 @@ Part of the **[Arithmon program](https://github.com/arithmon)** -- the hypothesi
 
 **What if physics isn't fine-tuned, just well-shaped?**
 
-GIFT derives Standard Model parameters from the geometry of a single 7-dimensional manifold. No free parameters. No fitting. Every prediction is a consequence of shape: E₈×E₈ gauge theory compactified on a G₂-holonomy manifold K₇ with Betti numbers (b₂, b₃) = (21, 77).
+K₇ derives Standard Model parameters from the geometry of a single 7-dimensional manifold. No free parameters. No fitting. Every prediction is a consequence of shape: E₈×E₈ gauge theory compactified on a G₂-holonomy manifold K₇ with Betti numbers (b₂, b₃) = (21, 77).
 
 ---
 
@@ -53,7 +53,7 @@ ledger.
 | | |
 |:---:|:---:|
 | [**Watch** (8 min)](https://www.youtube.com/watch?v=6DVck30Q6XM) | [**Read the blog**](https://arithmon.substack.com/) |
-| [**GIFT for Everyone**](docs/GIFT_FOR_EVERYONE.md) | [**FAQ**](docs/FAQ.md) |
+| [**K₇ for Everyone**](docs/GIFT_FOR_EVERYONE.md) | [**FAQ**](docs/FAQ.md) |
 
 ---
 
@@ -67,13 +67,13 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 | [The Furrow](https://arithmon.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
 | [Episode 3: The day the blue shell knew where you were](https://arithmon.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |
 | [No Word for This](https://arithmon.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
-| [We've Released Our Draft Blueprint](https://arithmon.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
+| [We've Released Our Draft Blueprint](https://arithmon.substack.com/p/weve-released-our-draft-blueprint) | Announcing K₇ v3.4 in plain language |
 | [Episode 2: The day Tetris taught you that order is everything](https://arithmon.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
 | [Episode 1: The day Newton lost control](https://arithmon.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
 | [Episode 0: The day Pudge taught you quantum mechanics](https://arithmon.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
-| [Orientation, not ontology](https://arithmon.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
+| [Orientation, not ontology](https://arithmon.substack.com/p/orientation-not-ontology) | The philosophical posture behind K₇ |
 | [What if the universe was a Lego set?](https://arithmon.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
-| ["The author's name appears to be fabricated"](https://arithmon.substack.com/p/brieucs-gift) | Learning Physics with AI: the accidental origin of GIFT |
+| ["The author's name appears to be fabricated"](https://arithmon.substack.com/p/brieucs-gift) | Learning Physics with AI: the accidental origin of K₇ |
 | [The Geometry of the Impossible](https://arithmon.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos Knew (Without Knowing It) |
 | [The Lice of the Universe](https://arithmon.substack.com/p/the-lice-of-the-universe) | What We Cannot Perceive, and What That Means |
 | [The Algebra That Waited](https://arithmon.substack.com/p/the-algebra-that-waited) | On octonions, patience, and a 43-year puzzle |
@@ -88,7 +88,7 @@ All posts on [arithmon.substack.com](https://arithmon.substack.com/).
 
 | Background | Start Here |
 |------------|------------|
-| Everyone | [GIFT for Everyone](docs/GIFT_FOR_EVERYONE.md) -- Complete guide with everyday analogies |
+| Everyone | [K₇ for Everyone](docs/GIFT_FOR_EVERYONE.md) -- Complete guide with everyday analogies |
 | Overview | [Executive Summary](docs/GIFT_EXEC_SUMMARY.md) -- Mid-length technical narrative for curious physics readers |
 | Physicist | [Info Geo for Physicists](docs/INFO_GEO_FOR_PHYSICISTS.md) -- Topological approach to SM parameters |
 | Geometer | [GiftPy for Geometers](docs/GIFTPY_FOR_GEOMETERS.md) -- G₂ metric construction pipeline |
@@ -183,7 +183,7 @@ This table is not a compact `K_7` torsion-free metric theorem.
 | Metric | Value |
 |--------|-------|
 | Configurations tested | 3,000,000+ |
-| **GIFT rank** | **#1** |
+| **K₇ rank** | **#1** |
 | Mean deviation | 0.99% on the 33 Type-I core relations (NuFIT 6.1) |
 | Better alternatives found | 0 |
 
@@ -289,4 +289,4 @@ MIT License, see [LICENSE](LICENSE)
 
 ---
 
-**GIFT is the founding framework of the [Arithmon program](https://github.com/arithmon).**
+**K₇ is the founding framework of the [Arithmon program](https://github.com/arithmon).**

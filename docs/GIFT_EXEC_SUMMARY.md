@@ -1,8 +1,8 @@
 ---
-title: GIFT: Executive Summary
+title: K₇: Executive Summary
 ---
 
-# GIFT: Reading topology instead of fitting it
+# K₇: Reading topology instead of fitting it
 
 *A technical summary for curious physics readers*
 
@@ -18,7 +18,7 @@ Nineteen numbers. No explanation. The Standard Model is an extraordinarily preci
 
 To this are added a handful of long-standing puzzles that have crossed the discipline for decades. Why exactly three generations of matter rather than two, or five, or seventeen? Why do the charged lepton masses obey the Koide relation *Q* = 2/3 to a precision of 10⁻⁴, a relation first noticed in 1981 and never explained? Why does the ratio of dark matter to baryonic matter sit close to a simple rational?
 
-GIFT (*Geometric Information Field Theory*) is an attempt to answer these questions by changing the nature of the question itself. Rather than asking "what is the value of these parameters," GIFT asks: "what if these parameters were not values to be measured, but consequences of a geometric structure to be identified?"
+K₇ (*formerly Geometric Information Field Theory*) is an attempt to answer these questions by changing the nature of the question itself. Rather than asking "what is the value of these parameters," K₇ asks: "what if these parameters were not values to be measured, but consequences of a geometric structure to be identified?"
 
 ## The hypothesis
 
@@ -30,27 +30,27 @@ A **seven-dimensional manifold** is a curved space with seven dimensions; one ca
 
 The **topological invariants** of such a manifold are integers that characterize its shape independently of its precise metric. For G₂ manifolds, the most important are the **Betti numbers** *b₂* and *b₃*, which count the harmonic 2-forms and 3-forms the space can carry. These are discrete global properties: they cannot vary continuously. They are whole numbers, full stop.
 
-GIFT makes the specific hypothesis that there exists such a manifold *K₇* with (*b₂*, *b₃*) = (21, 77), coupled to the E₈ × E₈ gauge structure of dimension 496. From these ingredients alone, it attempts to derive the observed parameters algebraically.
+K₇ makes the specific hypothesis that there exists such a manifold *K₇* with (*b₂*, *b₃*) = (21, 77), coupled to the E₈ × E₈ gauge structure of dimension 496. From these ingredients alone, it attempts to derive the observed parameters algebraically.
 
-**E₈** is the largest of the exceptional Lie groups, of dimension 248, with a singularly rich combinatorial structure. The product E₈ × E₈ arises naturally in heterotic string theory. GIFT does not attempt to embed the Standard Model particles directly in E₈: an approach whose mathematical impossibility was proven by Distler and Garibaldi in 2010. E₈ × E₈ plays a different role in GIFT: it supplies the gauge architecture, while matter content and parameter values emerge from the geometry of K₇.
+**E₈** is the largest of the exceptional Lie groups, of dimension 248, with a singularly rich combinatorial structure. The product E₈ × E₈ arises naturally in heterotic string theory. K₇ does not attempt to embed the Standard Model particles directly in E₈: an approach whose mathematical impossibility was proven by Distler and Garibaldi in 2010. E₈ × E₈ plays a different role in K₇: it supplies the gauge architecture, while matter content and parameter values emerge from the geometry of K₇.
 
 ## How the framework was built: a story in three acts
 
 This is where the argument becomes interesting, and where the history matters.
 
-The initial version of GIFT, in 2025, carried **four free geometric parameters**: quantities *ξ*, *τ*, *β₀*, *δ* encoding various aspects of the geometric architecture, tuned to reproduce about 22 observables with a mean precision of 0.38%. This was already more constrained than the Standard Model itself (four inputs for twenty-two outputs), but it retained some slack: there was enough latitude in the choice of those four parameters to leave the framework vulnerable to the charge of fitting.
+The initial version of K₇, in 2025, carried **four free geometric parameters**: quantities *ξ*, *τ*, *β₀*, *δ* encoding various aspects of the geometric architecture, tuned to reproduce about 22 observables with a mean precision of 0.38%. This was already more constrained than the Standard Model itself (four inputs for twenty-two outputs), but it retained some slack: there was enough latitude in the choice of those four parameters to leave the framework vulnerable to the charge of fitting.
 
 A second version, at the end of 2025, reduced that count to **three topological parameters**: *p₂* = 2 (a binary duality emerging from dim(G₂)/dim(K₇)), *β₀* = π/8 (an angular quantization tied to the rank of E₈), and a pentagonal factor linked to the Weyl group structure. These three parameters were no longer really free: each was a ratio of topological integers. The number of observables covered had risen to 34, with mean precision 0.13%.
 
-The current version, GIFT v3.4, took a further step. **There are no continuously adjustable physical parameters.** The structure is entirely fixed by the choice (*b₂*, *b₃*) = (21, 77), the algebraic properties of E₈ × E₈, and a metric normalization target det(g) = 65/32. Ninety-five observables follow, organized in four types: 33 direct algebraic Type I predictions (mean deviation 0.99%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.44%), and 22 structural diagnostics (Type IV). Of the 95 observables, 55 are formally verified in Lean 4 (140 certificate conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry).
+The current version, K₇ v3.4, took a further step. **There are no continuously adjustable physical parameters.** The structure is entirely fixed by the choice (*b₂*, *b₃*) = (21, 77), the algebraic properties of E₈ × E₈, and a metric normalization target det(g) = 65/32. Ninety-five observables follow, organized in four types: 33 direct algebraic Type I predictions (mean deviation 0.99%), 19 one-step physical extractions (Type II, 0.17%), 21 multi-step dynamical chains (Type III, 3.44%), and 22 structural diagnostics (Type IV). Of the 95 observables, 55 are formally verified in Lean 4 (140 certificate conjuncts, 15 axioms (4 main-chain + 11 interval-arithmetic), 0 sorry).
 
 This trajectory, viewed from the outside, deserves a moment's pause.
 
 In general, when a theoretical framework is tuned to data (what statisticians call an *overfit*) it has to *increase* its degrees of freedom in order to maintain or improve its fit quality as it is asked to cover more observations. This is almost tautological. Add observations without adding parameters and fit quality degrades.
 
-GIFT did the opposite. At each iteration, the number of adjustable parameters went down, the number of observables covered went up, and precision held or improved. This trajectory (4 → 3 → 0 parameters) is an unusual epistemic signature. It suggests that the topological constraints, as they tightened, were genuinely absorbing the degrees of freedom that had previously seemed necessary. In other words: what looked like tunable slack in the early versions turned out to be a consequence of the structure.
+K₇ did the opposite. At each iteration, the number of adjustable parameters went down, the number of observables covered went up, and precision held or improved. This trajectory (4 → 3 → 0 parameters) is an unusual epistemic signature. It suggests that the topological constraints, as they tightened, were genuinely absorbing the degrees of freedom that had previously seemed necessary. In other words: what looked like tunable slack in the early versions turned out to be a consequence of the structure.
 
-This is not proof that GIFT is correct. But it is proof that *what is happening during iteration is not fitting*. It is compression. And compression that holds, historically in physics, is what precedes moments of new understanding.
+This is not proof that K₇ is correct. But it is proof that *what is happening during iteration is not fitting*. It is compression. And compression that holds, historically in physics, is what precedes moments of new understanding.
 
 ## The predictions that no longer move
 
@@ -86,13 +86,13 @@ Beyond this methodological discipline, several statistical analyses documented i
 
 **Leave-one-out validation**: in 28 independent tests where one observable is withheld and the others used to reconstruct the framework, the (21, 77) configuration remains the unique optimum every time. The withheld prediction is then compared against observation: agreement holds without exception.
 
-**Bayesian comparison**: Bayes factors between GIFT and reasonable null models range from 288 to 4,567, placing the result in the "decisive evidence" category by Jeffreys's conventions.
+**Bayesian comparison**: Bayes factors between K₇ and reasonable null models range from 288 to 4,567, placing the result in the "decisive evidence" category by Jeffreys's conventions.
 
-None of these tests constitutes proof that GIFT is correct. They constitute proof that the observed values are not a combinatorial accident. That distinction matters.
+None of these tests constitutes proof that K₇ is correct. They constitute proof that the observed values are not a combinatorial accident. That distinction matters.
 
 ## Falsifiability
 
-The framework is, by construction, without tunable parameters. This means it cannot be "saved" by retouching a constant to absorb an experimental disagreement. Any significant deviation between a GIFT prediction and a sufficiently precise measurement refutes it.
+The framework is, by construction, without tunable parameters. This means it cannot be "saved" by retouching a constant to absorb an experimental disagreement. Any significant deviation between a K₇ prediction and a sufficiently precise measurement refutes it.
 
 The decisive upcoming tests are clearly identified.
 
@@ -106,23 +106,23 @@ The decisive upcoming tests are clearly identified.
 
 The timelines run over 2027–2040. Until then, the framework remains a proposal to be examined, not a validated theory.
 
-## What GIFT is not
+## What K₇ is not
 
 A new theoretical framework in a mature discipline benefits from defining its limits as sharply as its content.
 
-GIFT is not a theory of everything. It does not claim to explain quantum gravity, resolve the measurement problem in quantum mechanics, or unify all forces in a single framework. It confines itself to a specific problem: deriving the dimensionless parameters of the Standard Model from a fixed geometric structure. The rest is outside its current scope.
+K₇ is not a theory of everything. It does not claim to explain quantum gravity, resolve the measurement problem in quantum mechanics, or unify all forces in a single framework. It confines itself to a specific problem: deriving the dimensionless parameters of the Standard Model from a fixed geometric structure. The rest is outside its current scope.
 
-GIFT is not a cosmogony. It proposes no mechanism for the origin of the universe, for the emergence of spacetime, or for the selection of the manifold K₇ among all mathematically possible manifolds. The question "why *this* topology rather than another" remains open, and the framework explicitly acknowledges this as a limit. The only defense available at this stage is statistical: this configuration is optimal among those tested. *Why* it is so remains unknown.
+K₇ is not a cosmogony. It proposes no mechanism for the origin of the universe, for the emergence of spacetime, or for the selection of the manifold K₇ among all mathematically possible manifolds. The question "why *this* topology rather than another" remains open, and the framework explicitly acknowledges this as a limit. The only defense available at this stage is statistical: this configuration is optimal among those tested. *Why* it is so remains unknown.
 
-GIFT does not reduce to any single reading of the word *information*. The name *Geometric Information Field Theory* deserves to be unfolded across three distinct registers.
+K₇ does not reduce to any single reading of the word *information*. The name *Geometric Information Field Theory* deserves to be unfolded across three distinct registers.
 
-**At the first register, the empirical predictions depend on no ontological thesis.** The thirty-three derived relations, the numerical deviations, the planned falsification tests, all of these stand independently of what "information" ultimately is. An instrumentalist physicist can work with GIFT by treating its predictions as algebraic consequences of topological invariants, without ever committing further.
+**At the first register, the empirical predictions depend on no ontological thesis.** The thirty-three derived relations, the numerical deviations, the planned falsification tests, all of these stand independently of what "information" ultimately is. An instrumentalist physicist can work with K₇ by treating its predictions as algebraic consequences of topological invariants, without ever committing further.
 
-**At the second register, the framework's architecture sits within a well-established physics lineage.** The choice of a G₂ manifold coupled to E₈ × E₈, of Betti numbers as primitives, of the total cohomological dimension *H\** as algebraic organizer, belongs to a precise program. Wheeler proposed as early as 1989 that "it from bit" (that matter, energy, and spacetime emerge from information-theoretic foundations. Bekenstein established since the 1970s that the informational capacity of a region is bounded by its area, not its volume. Jacobson derived in 1995 Einstein's equations as a thermodynamic equation of state for observer horizons. Van Raamsdonk showed in 2010 how spacetime connectivity emerges from quantum entanglement. Thirty years of mainstream physics) the holographic principle, black hole thermodynamics, entanglement entropy, have made the idea that geometry, information, and energy are three readings of a single structural organization far less exotic than it sounds. The Betti numbers are not convenient labels in GIFT: they are dimensions of harmonic form spaces, hence exact counts of degrees of freedom: the very notion of informational capacity applied to a geometric structure.
+**At the second register, the framework's architecture sits within a well-established physics lineage.** The choice of a G₂ manifold coupled to E₈ × E₈, of Betti numbers as primitives, of the total cohomological dimension *H\** as algebraic organizer, belongs to a precise program. Wheeler proposed as early as 1989 that "it from bit" (that matter, energy, and spacetime emerge from information-theoretic foundations. Bekenstein established since the 1970s that the informational capacity of a region is bounded by its area, not its volume. Jacobson derived in 1995 Einstein's equations as a thermodynamic equation of state for observer horizons. Van Raamsdonk showed in 2010 how spacetime connectivity emerges from quantum entanglement. Thirty years of mainstream physics) the holographic principle, black hole thermodynamics, entanglement entropy, have made the idea that geometry, information, and energy are three readings of a single structural organization far less exotic than it sounds. The Betti numbers are not convenient labels in K₇: they are dimensions of harmonic form spaces, hence exact counts of degrees of freedom: the very notion of informational capacity applied to a geometric structure.
 
-**At the third register, the ontological thesis proper** (that geometry, information, and energy are not three correlated aspects but three views of a single underlying configuration) GIFT does not settle. It is compatible with the framework, it motivates the architecture, but it is neither required nor demonstrated by the predictions. Its elaboration is the subject of a separate text (see the companion post [*Gift from Bit*](https://arithmon.substack.com/p/gift-from-bit)). A reader who finds Wheeler prophetic and the holographic program persuasive will see GIFT as a natural piece of that puzzle. A reader who prefers to stay empirical will see a falsifiable predictive framework. Both readings are defensible; the framework requires neither.
+**At the third register, the ontological thesis proper** (that geometry, information, and energy are not three correlated aspects but three views of a single underlying configuration) K₇ does not settle. It is compatible with the framework, it motivates the architecture, but it is neither required nor demonstrated by the predictions. Its elaboration is the subject of a separate text (see the companion post [*Gift from Bit*](https://arithmon.substack.com/p/gift-from-bit)). A reader who finds Wheeler prophetic and the holographic program persuasive will see K₇ as a natural piece of that puzzle. A reader who prefers to stay empirical will see a falsifiable predictive framework. Both readings are defensible; the framework requires neither.
 
-Finally, GIFT does not belong to the tradition of unification attempts through direct embedding of Standard Model particles into E₈. That approach, associated with Lisi (2007), meets a mathematical impossibility proven by Distler and Garibaldi in 2010. GIFT uses E₈ × E₈ differently, as gauge architecture, with particles emerging from the cohomology of K₇ rather than from a direct E₈ representation.
+Finally, K₇ does not belong to the tradition of unification attempts through direct embedding of Standard Model particles into E₈. That approach, associated with Lisi (2007), meets a mathematical impossibility proven by Distler and Garibaldi in 2010. K₇ uses E₈ × E₈ differently, as gauge architecture, with particles emerging from the cohomology of K₇ rather than from a direct E₈ representation.
 
 ## The open questions
 
@@ -138,7 +138,7 @@ These limits are acknowledged, documented, and do not obscure what the framework
 
 ## What remains to be seen
 
-GIFT is a proposal. No more, no less. A mathematically precise proposal, empirically precise at present, and falsifiable through experiments already on the books.
+K₇ is a proposal. No more, no less. A mathematically precise proposal, empirically precise at present, and falsifiable through experiments already on the books.
 
 Its value, if any, will be judged in the years to come. If DUNE measures *δ*_CP at 197° to within a few degrees, the framework passes a hard test. If it measures outside the prediction window, the framework is set aside. If a fourth generation of matter is discovered, the framework is set aside. If the predictions hold, further digging is called for.
 

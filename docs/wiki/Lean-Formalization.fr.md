@@ -7,7 +7,7 @@ layout: default
 
 ## Vue d'ensemble
 
-Le cadre GIFT est formellement vérifié en **Lean 4** avec Mathlib. La formalisation établit que toutes les relations algébriques revendiquées entre les entrées topologiques et les prédictions physiques suivent par pur calcul.
+Le cadre K₇ est formellement vérifié en **Lean 4** avec Mathlib. La formalisation établit que toutes les relations algébriques revendiquées entre les entrées topologiques et les prédictions physiques suivent par pur calcul.
 
 | Métrique | Valeur |
 |----------|--------|
@@ -28,7 +28,7 @@ Le cadre GIFT est formellement vérifié en **Lean 4** avec Mathlib. La formalis
 ## Architecture
 
 ```
-K7-Lean/Lean/GIFT/
+K7-Lean/Lean/K₇/
 ├── Core.lean              # constantes (dim_E8, b2, b3, H*, ...)
 ├── Certificate.lean       # théorème maître (127 conjonctions)
 ├── Foundations/            # racines E8, produit vectoriel G2
@@ -55,7 +55,7 @@ K7-Lean/Lean/GIFT/
 
 ### Certificat maître (127 conjonctions)
 
-Le théorème `GIFT_framework_certified` vérifie toutes les relations en une seule compilation :
+Le théorème `K₇_framework_certified` vérifie toutes les relations en une seule compilation :
 
 - **Foundations** (34) : dimensions de E₈, structure G₂, topologie de K₇, groupe de Weyl
 - **Predictions** (56) : jauge, leptons, quarks, neutrinos, CKM, bosons, cosmologie
@@ -77,7 +77,7 @@ Plusieurs modules prouvent leurs résultats avec **zéro axiome spécifique au d
 
 ## Audit des axiomes
 
-Tous les 7 axiomes sont substantiels (théorèmes mathématiques standards ou conjectures GIFT). Aucun n'est un placeholder. Catégories :
+Tous les 7 axiomes sont substantiels (théorèmes mathématiques standards ou conjectures K₇). Aucun n'est un placeholder. Catégories :
 
 - **Entrées topologiques** : b₂ = 21, b₃ = 77, dim(G₂) = 14, etc.
 - **Propriétés de E₈** : système de racines, factorisation du groupe de Weyl

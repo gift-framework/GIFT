@@ -7,7 +7,7 @@ layout: default
 
 ## Overview
 
-The GIFT framework is formally verified in **Lean 4** with Mathlib. The formalization establishes that all claimed algebraic relations between topological inputs and physical predictions follow by pure computation.
+The K₇ framework is formally verified in **Lean 4** with Mathlib. The formalization establishes that all claimed algebraic relations between topological inputs and physical predictions follow by pure computation.
 
 | Metric | Value |
 |--------|-------|
@@ -28,7 +28,7 @@ The GIFT framework is formally verified in **Lean 4** with Mathlib. The formaliz
 ## Architecture
 
 ```
-K7-Lean/Lean/GIFT/
+K7-Lean/Lean/K₇/
 ├── Core.lean              # Constants (dim_E8, b2, b3, H*, ...)
 ├── Certificate.lean       # Master theorem (127 conjuncts)
 ├── Foundations/            # E8 roots, G2 cross product
@@ -55,7 +55,7 @@ K7-Lean/Lean/GIFT/
 
 ### Master Certificate (127 conjuncts)
 
-The `GIFT_framework_certified` theorem verifies all relations in one compile:
+The `K₇_framework_certified` theorem verifies all relations in one compile:
 
 - **Foundations** (34): E₈ dimensions, G₂ structure, K₇ topology, Weyl group
 - **Predictions** (56): Gauge, lepton, quark, neutrino, CKM, boson, cosmological
@@ -77,7 +77,7 @@ Several modules prove their results with **zero domain-specific axioms**:
 
 ## Axiom Audit
 
-All 7 axioms are substantive (standard mathematical theorems or GIFT conjectures). Zero are placeholders. Categories:
+All 7 axioms are substantive (standard mathematical theorems or K₇ conjectures). Zero are placeholders. Categories:
 
 - **Topological inputs**: b₂ = 21, b₃ = 77, dim(G₂) = 14, etc.
 - **E₈ properties**: Root system, Weyl group factorization

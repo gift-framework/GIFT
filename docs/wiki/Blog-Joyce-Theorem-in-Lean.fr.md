@@ -17,7 +17,7 @@ Vers une existence vérifiée par machine des variétés G₂
 
 « K₇ existe-t-il vraiment ? »
 
-C'est une question raisonnable. GIFT prétend que la physique émerge d'une variété 7D à holonomie G₂. Mais affirmer qu'une variété existe et prouver qu'elle existe sont deux exercices différents.
+C'est une question raisonnable. K₇ prétend que la physique émerge d'une variété 7D à holonomie G₂. Mais affirmer qu'une variété existe et prouver qu'elle existe sont deux exercices différents.
 
 En 1996, Dominic Joyce a prouvé que les variétés G₂ compactes existent. La preuve utilise de l'analyse difficile : espaces de Sobolev, théorèmes des fonctions implicites, applications contractantes. Elle s'étale sur quelque 200 pages de géométrie différentielle.
 

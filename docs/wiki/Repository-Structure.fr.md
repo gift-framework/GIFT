@@ -5,12 +5,12 @@ layout: default
 
 # Structure du dépôt
 
-Ce dépôt contient la documentation théorique de GIFT v3.4.
+Ce dépôt contient la documentation théorique de K₇ v3.4.
 
 ## Arborescence
 
 ```
-GIFT/
+K₇/
 ├── publications/                      # Contenu publié et validation
 │   ├── papers/                        # Articles scientifiques
 │   │   ├── markdown/                  # Documents principaux (v3.4, sources canoniques)
@@ -31,11 +31,11 @@ GIFT/
 │   │       └── g2_spectral_companion.ipynb
 │   ├── outreach/                      # Vulgarisation et articles de blog
 │   ├── references/                    # Données et catalogues de référence
-│   │   ├── GIFT_ATLAS.json            # Atlas structuré canonique
+│   │   ├── K₇_ATLAS.json            # Atlas structuré canonique
 │   │   ├── observables.csv            # Observables lisibles par machine
 │   │   ├── OBSERVABLE_REFERENCE.md    # Catalogue complet d'observables
 │   │   ├── STATISTICAL_EVIDENCE.md    # Analyse statistique rigoureuse
-│   │   ├── INDEPENDENT_VALIDATIONS.md # Recherches externes convergeant avec GIFT
+│   │   ├── INDEPENDENT_VALIDATIONS.md # Recherches externes convergeant avec K₇
 │   │   └── Bibliography.md            # Références
 │   └── validation/                    # Validation Monte Carlo
 │       └── legacy/v3.3/               # Scripts de validation v3.3 (archivés ;

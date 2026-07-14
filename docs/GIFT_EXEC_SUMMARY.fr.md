@@ -1,8 +1,8 @@
 ---
-title: GIFT: Résumé exécutif
+title: K₇: Résumé exécutif
 ---
 
-# GIFT : lire la topologie plutôt que l'ajuster
+# K₇ : lire la topologie plutôt que l'ajuster
 
 *Un résumé technique pour lecteurs de physique curieux*
 
@@ -18,7 +18,7 @@ Dix-neuf nombres. Aucune explication. Le Modèle Standard est un instrument de m
 
 À cela s'ajoutent une poignée d'énigmes qui traversent la discipline depuis des décennies. Pourquoi exactement trois générations de matière et pas deux, ou cinq, ou dix-sept ? Pourquoi les masses des leptons chargés obéissent-elles à la relation de Koide *Q* = 2/3 à une précision de 10⁻⁴, relation découverte en 1981 et jamais expliquée ? Pourquoi le rapport entre matière noire et matière baryonique est-il proche d'un rationnel simple ?
 
-GIFT (*Geometric Information Field Theory*) est une tentative de répondre à ces questions en changeant la nature de la question elle-même. Plutôt que de demander « quelle est la valeur de ces paramètres », GIFT demande : « et si ces paramètres n'étaient pas des valeurs à mesurer, mais des conséquences d'une structure géométrique à identifier ? »
+K₇ (*anciennement Geometric Information Field Theory*) est une tentative de répondre à ces questions en changeant la nature de la question elle-même. Plutôt que de demander « quelle est la valeur de ces paramètres », K₇ demande : « et si ces paramètres n'étaient pas des valeurs à mesurer, mais des conséquences d'une structure géométrique à identifier ? »
 
 ## L'hypothèse
 
@@ -30,27 +30,27 @@ Une **variété de dimension sept** est un espace courbe à sept dimensions ; on
 
 Les **invariants topologiques** d'une telle variété sont des entiers qui caractérisent sa forme indépendamment de sa métrique précise. Pour les variétés G₂, les plus importants sont les **nombres de Betti** *b₂* et *b₃*, qui comptent respectivement les formes harmoniques de degré 2 et de degré 3 que l'espace peut porter. Ces deux nombres sont des propriétés globales discrètes : ils ne peuvent pas varier continûment. Ce sont des nombres entiers, point.
 
-GIFT fait l'hypothèse spécifique qu'il existe une telle variété *K₇* avec (*b₂*, *b₃*) = (21, 77), couplée à la structure de jauge E₈ × E₈ de dimension 496. Puis, à partir de ces seuls ingrédients, tente de dériver algébriquement les paramètres observés.
+K₇ fait l'hypothèse spécifique qu'il existe une telle variété *K₇* avec (*b₂*, *b₃*) = (21, 77), couplée à la structure de jauge E₈ × E₈ de dimension 496. Puis, à partir de ces seuls ingrédients, tente de dériver algébriquement les paramètres observés.
 
-**E₈** est le plus grand des groupes de Lie exceptionnels, de dimension 248, et possède une structure combinatoire d'une richesse singulière. Le groupe E₈ × E₈ apparaît naturellement dans la théorie des cordes hétérotique. GIFT ne cherche pas à plonger les particules du Modèle Standard directement dans E₈, une approche dont l'impossibilité a été démontrée par Distler et Garibaldi en 2010. Le rôle de E₈ × E₈ dans GIFT est différent : il fournit l'architecture de jauge, tandis que le contenu en matière et les valeurs des paramètres émergent de la géométrie de K₇.
+**E₈** est le plus grand des groupes de Lie exceptionnels, de dimension 248, et possède une structure combinatoire d'une richesse singulière. Le groupe E₈ × E₈ apparaît naturellement dans la théorie des cordes hétérotique. K₇ ne cherche pas à plonger les particules du Modèle Standard directement dans E₈, une approche dont l'impossibilité a été démontrée par Distler et Garibaldi en 2010. Le rôle de E₈ × E₈ dans K₇ est différent : il fournit l'architecture de jauge, tandis que le contenu en matière et les valeurs des paramètres émergent de la géométrie de K₇.
 
 ## Comment le cadre s'est construit : une histoire en trois actes
 
 C'est ici que l'argument devient intéressant, et qu'il faut regarder l'historique.
 
-La version initiale de GIFT, en 2025, comportait **quatre paramètres géométriques libres** : des quantités *ξ*, *τ*, *β₀*, *δ* encodant divers aspects de l'architecture géométrique, ajustées pour reproduire environ 22 observables avec une précision moyenne de 0.38%. C'était déjà plus contraint que le Modèle Standard lui-même (quatre entrées pour vingt-deux sorties), mais restait relativement souple : il y avait suffisamment de liberté dans le choix de ces quatre paramètres pour rendre le cadre vulnérable à l'accusation d'ajustement.
+La version initiale de K₇, en 2025, comportait **quatre paramètres géométriques libres** : des quantités *ξ*, *τ*, *β₀*, *δ* encodant divers aspects de l'architecture géométrique, ajustées pour reproduire environ 22 observables avec une précision moyenne de 0.38%. C'était déjà plus contraint que le Modèle Standard lui-même (quatre entrées pour vingt-deux sorties), mais restait relativement souple : il y avait suffisamment de liberté dans le choix de ces quatre paramètres pour rendre le cadre vulnérable à l'accusation d'ajustement.
 
 Une deuxième version, fin 2025, a réduit ce nombre à **trois paramètres topologiques** : *p₂* = 2 (une dualité binaire émergeant de dim(G₂)/dim(K₇)), *β₀* = π/8 (une quantification angulaire liée au rang de E₈), et un facteur pentagonal lié à la structure du groupe de Weyl. Ces trois paramètres n'étaient plus vraiment libres, chacun était un rapport d'entiers topologiques. Le nombre d'observables couverts était passé à 34, la précision moyenne à 0.13%.
 
-La version actuelle, GIFT v3.4, a franchi une étape supplémentaire. **Il n'y a plus de paramètre physique continûment ajustable.** La structure est entièrement fixée par le choix (*b₂*, *b₃*) = (21, 77), les propriétés algébriques de E₈ × E₈, et une cible de normalisation métrique det(g) = 65/32. Quatre-vingt-quinze observables se déduisent, organisées en quatre types : 33 prédictions algébriques directes de Type I (déviation moyenne 0,99 %), 19 extractions physiques en une étape (Type II, 0,17 %), 21 chaînes dynamiques multi-étapes (Type III, 3,44 %), et 22 diagnostics structurels (Type IV). Sur les 95 observables, 55 sont formellement vérifiées en Lean 4 (140 conjonctions de certificat, 15 axiomes (4 principaux + 11 d'arithmetique d'intervalle), 0 sorry).
+La version actuelle, K₇ v3.4, a franchi une étape supplémentaire. **Il n'y a plus de paramètre physique continûment ajustable.** La structure est entièrement fixée par le choix (*b₂*, *b₃*) = (21, 77), les propriétés algébriques de E₈ × E₈, et une cible de normalisation métrique det(g) = 65/32. Quatre-vingt-quinze observables se déduisent, organisées en quatre types : 33 prédictions algébriques directes de Type I (déviation moyenne 0,99 %), 19 extractions physiques en une étape (Type II, 0,17 %), 21 chaînes dynamiques multi-étapes (Type III, 3,44 %), et 22 diagnostics structurels (Type IV). Sur les 95 observables, 55 sont formellement vérifiées en Lean 4 (140 conjonctions de certificat, 15 axiomes (4 principaux + 11 d'arithmetique d'intervalle), 0 sorry).
 
 Cette trajectoire, vue de l'extérieur, mérite une seconde de réflexion.
 
 En général, quand un cadre théorique est ajusté sur des données (ce qu'on appelle en statistique un *overfit*) il doit *augmenter* ses degrés de liberté pour maintenir ou améliorer la qualité de son ajustement à mesure qu'on lui demande de couvrir plus d'observations. C'est presque une tautologie. Si on ajoute des observations sans ajouter de paramètres, la qualité de l'ajustement diminue.
 
-GIFT a fait l'inverse. À chaque itération, le nombre de paramètres ajustables a diminué, le nombre d'observables couverts a augmenté, et la précision s'est maintenue ou améliorée. Cette trajectoire (4 → 3 → 0 paramètres) est une signature épistémique inhabituelle. Elle suggère que les contraintes topologiques, à mesure qu'elles étaient serrées, absorbaient effectivement les degrés de liberté qui avaient précédemment semblé nécessaires. Autrement dit : ce qui paraissait, dans les versions précoces, être de la liberté réglable, s'est révélé être une conséquence de la structure.
+K₇ a fait l'inverse. À chaque itération, le nombre de paramètres ajustables a diminué, le nombre d'observables couverts a augmenté, et la précision s'est maintenue ou améliorée. Cette trajectoire (4 → 3 → 0 paramètres) est une signature épistémique inhabituelle. Elle suggère que les contraintes topologiques, à mesure qu'elles étaient serrées, absorbaient effectivement les degrés de liberté qui avaient précédemment semblé nécessaires. Autrement dit : ce qui paraissait, dans les versions précoces, être de la liberté réglable, s'est révélé être une conséquence de la structure.
 
-Ce n'est pas une preuve que GIFT est correct. Mais c'est une preuve que *ce qui se passe pendant l'itération n'est pas un ajustement*. C'est de la compression. Et la compression qui tient, en physique, est historiquement ce qui précède les moments où l'on comprend quelque chose de nouveau.
+Ce n'est pas une preuve que K₇ est correct. Mais c'est une preuve que *ce qui se passe pendant l'itération n'est pas un ajustement*. C'est de la compression. Et la compression qui tient, en physique, est historiquement ce qui précède les moments où l'on comprend quelque chose de nouveau.
 
 ## Les prédictions qui ne bougent plus
 
@@ -86,13 +86,13 @@ Au-delà de cette discipline méthodologique, plusieurs analyses statistiques do
 
 **Validation par leave-one-out** : dans 28 tests indépendants où une observable est retirée et les autres utilisées pour reconstruire le cadre, la configuration (21, 77) reste l'optimum unique à chaque fois. La prédiction retirée est ensuite comparée à l'observation : l'accord persiste sans exception.
 
-**Comparaison bayésienne** : les facteurs de Bayes entre GIFT et des modèles nuls raisonnables varient de 288 à 4567, ce qui place le résultat dans la catégorie « évidence décisive » selon les conventions de Jeffreys.
+**Comparaison bayésienne** : les facteurs de Bayes entre K₇ et des modèles nuls raisonnables varient de 288 à 4567, ce qui place le résultat dans la catégorie « évidence décisive » selon les conventions de Jeffreys.
 
-Aucun de ces tests ne constitue une preuve que GIFT est vrai. Ils constituent une preuve que les valeurs observées ne sont pas un accident combinatoire. C'est une différence importante.
+Aucun de ces tests ne constitue une preuve que K₇ est vrai. Ils constituent une preuve que les valeurs observées ne sont pas un accident combinatoire. C'est une différence importante.
 
 ## Falsifiabilité
 
-Le cadre est, par construction, sans paramètre ajustable. Cela signifie qu'il ne peut pas être « sauvé » en retouchant une constante pour absorber un désaccord expérimental. Toute déviation significative entre une prédiction GIFT et une mesure suffisamment précise le réfute.
+Le cadre est, par construction, sans paramètre ajustable. Cela signifie qu'il ne peut pas être « sauvé » en retouchant une constante pour absorber un désaccord expérimental. Toute déviation significative entre une prédiction K₇ et une mesure suffisamment précise le réfute.
 
 Les tests décisifs à venir sont clairement identifiés :
 
@@ -106,23 +106,23 @@ Les tests décisifs à venir sont clairement identifiés :
 
 Les échéances courent sur la période 2027–2040. D'ici là, le cadre reste une proposition à examiner, pas une théorie validée.
 
-## Ce que GIFT n'est pas
+## Ce que K₇ n'est pas
 
 Un cadre théorique nouveau, dans une discipline mature, gagne à définir ses limites autant que son contenu.
 
-GIFT n'est pas une théorie du tout. Il ne prétend pas expliquer la gravité quantique, résoudre le problème de la mesure en mécanique quantique, ou unifier toutes les forces dans un cadre unique. Il se limite à un problème précis : dériver les paramètres sans dimension du Modèle Standard à partir d'une structure géométrique fixe. Le reste est au-delà de sa portée actuelle.
+K₇ n'est pas une théorie du tout. Il ne prétend pas expliquer la gravité quantique, résoudre le problème de la mesure en mécanique quantique, ou unifier toutes les forces dans un cadre unique. Il se limite à un problème précis : dériver les paramètres sans dimension du Modèle Standard à partir d'une structure géométrique fixe. Le reste est au-delà de sa portée actuelle.
 
-GIFT n'est pas une cosmogonie. Il ne propose pas de mécanisme pour l'origine de l'univers, pour l'émergence de l'espace-temps, ou pour la sélection de la variété K₇ parmi toutes les variétés mathématiquement possibles. La question « pourquoi *cette* topologie plutôt qu'une autre » reste ouverte, et le cadre la reconnaît explicitement comme une limite. La seule défense disponible à ce stade est statistique : cette configuration est optimale parmi celles qui ont été testées. Pourquoi elle l'est reste inconnu.
+K₇ n'est pas une cosmogonie. Il ne propose pas de mécanisme pour l'origine de l'univers, pour l'émergence de l'espace-temps, ou pour la sélection de la variété K₇ parmi toutes les variétés mathématiquement possibles. La question « pourquoi *cette* topologie plutôt qu'une autre » reste ouverte, et le cadre la reconnaît explicitement comme une limite. La seule défense disponible à ce stade est statistique : cette configuration est optimale parmi celles qui ont été testées. Pourquoi elle l'est reste inconnu.
 
-GIFT ne se réduit pas à l'une ou l'autre des lectures possibles du mot *information*. Le nom *Geometric Information Field Theory* demande d'être déplié en trois registres distincts.
+K₇ ne se réduit pas à l'une ou l'autre des lectures possibles du mot *information*. Le nom *Geometric Information Field Theory* demande d'être déplié en trois registres distincts.
 
-**Au premier registre, les prédictions empiriques ne dépendent d'aucune thèse ontologique.** Les trente-trois relations dérivées, les déviations numériques, les tests de falsification programmés tiennent indépendamment de la question de savoir ce qu'est « l'information » en dernier ressort. Un physicien instrumentaliste peut travailler avec GIFT en traitant ses prédictions comme des conséquences algébriques d'invariants topologiques, sans jamais s'engager plus loin.
+**Au premier registre, les prédictions empiriques ne dépendent d'aucune thèse ontologique.** Les trente-trois relations dérivées, les déviations numériques, les tests de falsification programmés tiennent indépendamment de la question de savoir ce qu'est « l'information » en dernier ressort. Un physicien instrumentaliste peut travailler avec K₇ en traitant ses prédictions comme des conséquences algébriques d'invariants topologiques, sans jamais s'engager plus loin.
 
-**Au deuxième registre, l'architecture du cadre s'inscrit dans une lignée physique établie.** Le choix d'une variété G₂ couplée à E₈×E₈, des nombres de Betti comme primitives, de la dimension cohomologique totale *H\** comme organisateur algébrique, appartient à un programme précis. Wheeler proposait dès 1989 que « it from bit » (que la matière, l'énergie et l'espace-temps émergent de fondations théorico-informationnelles. Bekenstein a établi depuis les années 1970 que la capacité informationnelle d'une région est bornée par son aire, pas son volume. Jacobson a dérivé en 1995 les équations d'Einstein comme équation d'état thermodynamique d'horizons d'observateurs. Van Raamsdonk a montré en 2010 comment la connectivité de l'espace-temps émerge de l'intrication quantique. Trente années de physique) principe holographique, thermodynamique des trous noirs, entropie d'intrication, ont rendu l'idée que géométrie, information et énergie sont trois lectures d'une même organisation structurelle beaucoup moins exotique qu'elle ne le paraît. Les nombres de Betti ne sont pas dans GIFT des étiquettes commodes : ce sont des dimensions d'espaces de formes harmoniques, donc des décomptes exacts de degrés de liberté, la notion même de capacité informationnelle appliquée à une structure géométrique.
+**Au deuxième registre, l'architecture du cadre s'inscrit dans une lignée physique établie.** Le choix d'une variété G₂ couplée à E₈×E₈, des nombres de Betti comme primitives, de la dimension cohomologique totale *H\** comme organisateur algébrique, appartient à un programme précis. Wheeler proposait dès 1989 que « it from bit » (que la matière, l'énergie et l'espace-temps émergent de fondations théorico-informationnelles. Bekenstein a établi depuis les années 1970 que la capacité informationnelle d'une région est bornée par son aire, pas son volume. Jacobson a dérivé en 1995 les équations d'Einstein comme équation d'état thermodynamique d'horizons d'observateurs. Van Raamsdonk a montré en 2010 comment la connectivité de l'espace-temps émerge de l'intrication quantique. Trente années de physique) principe holographique, thermodynamique des trous noirs, entropie d'intrication, ont rendu l'idée que géométrie, information et énergie sont trois lectures d'une même organisation structurelle beaucoup moins exotique qu'elle ne le paraît. Les nombres de Betti ne sont pas dans K₇ des étiquettes commodes : ce sont des dimensions d'espaces de formes harmoniques, donc des décomptes exacts de degrés de liberté, la notion même de capacité informationnelle appliquée à une structure géométrique.
 
-**Au troisième registre, la thèse ontologique proprement dite** (à savoir que géométrie, information et énergie ne sont pas trois aspects corrélés mais trois vues d'une même configuration sous-jacente) GIFT ne la tranche pas. Elle est compatible avec le cadre, elle en motive l'architecture, mais elle n'est ni requise ni démontrée par les prédictions. Son élaboration fait l'objet d'un texte séparé (voir le billet compagnon [*Gift from Bit*](wiki/Blog-Gift-from-Bit.fr.html)). Un lecteur qui trouve Wheeler prophétique et le programme holographique convaincant verra dans GIFT une pièce naturelle de ce puzzle. Un lecteur qui préfère s'en tenir à l'empirique verra un cadre prédictif falsifiable. Les deux lectures sont défendables ; le cadre n'exige aucune des deux.
+**Au troisième registre, la thèse ontologique proprement dite** (à savoir que géométrie, information et énergie ne sont pas trois aspects corrélés mais trois vues d'une même configuration sous-jacente) K₇ ne la tranche pas. Elle est compatible avec le cadre, elle en motive l'architecture, mais elle n'est ni requise ni démontrée par les prédictions. Son élaboration fait l'objet d'un texte séparé (voir le billet compagnon [*Gift from Bit*](wiki/Blog-Gift-from-Bit.fr.html)). Un lecteur qui trouve Wheeler prophétique et le programme holographique convaincant verra dans K₇ une pièce naturelle de ce puzzle. Un lecteur qui préfère s'en tenir à l'empirique verra un cadre prédictif falsifiable. Les deux lectures sont défendables ; le cadre n'exige aucune des deux.
 
-Enfin, GIFT ne s'inscrit pas dans la tradition des tentatives d'unification par plongement direct des particules du Modèle Standard dans E₈. Cette approche, associée notamment à Lisi (2007), se heurte à une impossibilité mathématique démontrée par Distler et Garibaldi en 2010. GIFT utilise E₈ × E₈ différemment, comme architecture de jauge, avec les particules émergeant de la cohomologie de K₇ et non d'une représentation directe de E₈.
+Enfin, K₇ ne s'inscrit pas dans la tradition des tentatives d'unification par plongement direct des particules du Modèle Standard dans E₈. Cette approche, associée notamment à Lisi (2007), se heurte à une impossibilité mathématique démontrée par Distler et Garibaldi en 2010. K₇ utilise E₈ × E₈ différemment, comme architecture de jauge, avec les particules émergeant de la cohomologie de K₇ et non d'une représentation directe de E₈.
 
 ## Les questions ouvertes
 
@@ -138,7 +138,7 @@ Ces limites sont reconnues, documentées, et ne masquent pas ce que le cadre fai
 
 ## Ce qu'il reste à voir
 
-GIFT est une proposition. Ni plus, ni moins. Une proposition mathématiquement précise, empiriquement précise à l'heure actuelle, et falsifiable par des expériences déjà programmées.
+K₇ est une proposition. Ni plus, ni moins. Une proposition mathématiquement précise, empiriquement précise à l'heure actuelle, et falsifiable par des expériences déjà programmées.
 
 Sa valeur, si valeur il y a, sera jugée dans les années qui viennent. Si DUNE mesure *δ*_CP à 197° à quelques degrés près, le cadre passe un test difficile. S'il le mesure hors de la fenêtre de prédiction, le cadre est écarté. Si une quatrième génération de matière est découverte, le cadre est écarté. Si les prédictions tiennent, il faudra continuer à creuser.
 

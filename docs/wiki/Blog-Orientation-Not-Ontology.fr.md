@@ -21,7 +21,7 @@ Ce qui suit ne fait pas partie de GIFT. Le cadre théorique, ses prédictions et
 
 ## Pourquoi cet essai existe
 
-Au cours des derniers mois, plusieurs lecteurs attentifs de GIFT ont soulevé une question que les articles eux-mêmes n'abordent pas : *pourquoi cette structure plutôt qu'une autre ?* Pourquoi une variété compacte de dimension 7 à holonomie G₂, pourquoi les nombres de Betti spécifiques (b₂, b₃) = (21, 77), pourquoi E₈ × E₈ ?
+Au cours des derniers mois, plusieurs lecteurs attentifs de K₇ ont soulevé une question que les articles eux-mêmes n'abordent pas : *pourquoi cette structure plutôt qu'une autre ?* Pourquoi une variété compacte de dimension 7 à holonomie G₂, pourquoi les nombres de Betti spécifiques (b₂, b₃) = (21, 77), pourquoi E₈ × E₈ ?
 
 Les articles n'apportent pas de réponse à cette question parce qu'ils ne le peuvent pas. Aucune théorie physique à ma connaissance ne répond pleinement à sa propre question de sélection. Le Modèle Standard n'explique pas son groupe de jauge. La théorie des cordes a son problème de paysage. La relativité générale ne dérive pas la dimensionnalité de l'espace-temps. La question de la sélection est structurelle à la physique fondamentale, pas spécifique à un cadre particulier.
 
@@ -43,7 +43,7 @@ Cette position est humble sans être déflationniste. Je ne crois pas que la lig
 
 ## Le pari ontologique
 
-S'il y a un pari ontologique derrière GIFT, ce n'est pas que la réalité « est » une variété G₂, une structure E₈ × E₈, ou tout autre objet mathématique présent. Les objets mathématiques sont des outils, et les outils évoluent.
+S'il y a un pari ontologique derrière K₇, ce n'est pas que la réalité « est » une variété G₂, une structure E₈ × E₈, ou tout autre objet mathématique présent. Les objets mathématiques sont des outils, et les outils évoluent.
 
 Le pari est plus modeste, et plus difficile à déloger : la loi physique pourrait être le résidu visible de contraintes profondes d'auto-cohérence, et la topologie enregistrerait la part de ces contraintes qui survit à la déformation.
 
@@ -75,7 +75,7 @@ L'orientation décrite dans cet essai est plus proche de l'OSR modérée que de 
 
 Cette filiation a ses critiques sérieuses, et il serait malhonnête de les ignorer. **L'objection de Newman** (formalisée par M.H.A. Newman en 1928 contre Russell, et réactualisée contre l'ESR par Demopoulos et Friedman en 1985) souligne que connaître seulement la « structure » du monde au sens purement formel est presque trivial : pour tout ensemble d'objets de cardinalité suffisante, on peut définir des relations qui satisfont n'importe quelle structure abstraite donnée. Le réalisme structurel doit donc préciser ce qu'il entend par « structure » d'une manière qui dépasse la pure satisfaction logique. **Stathis Psillos** a développé une critique systématique de l'ESR (notamment dans *Scientific Realism: How Science Tracks Truth*, 1999), arguant que la distinction structure/nature est intenable et que la structure ne peut être maintenue indépendamment d'une certaine compréhension de ce qu'elle structure. Ces objections sont vivantes ; elles n'ont pas été refermées par le débat.
 
-GIFT n'a pas vocation à arbitrer entre ces positions. L'orientation décrite ici opère dans un cadre où le réalisme structurel ontique est pris au sérieux comme programme de recherche en philosophie de la physique, et où l'enjeu de capturer des invariants topologiques et des structures algébriques exceptionnelles est compris non comme une coquetterie esthétique, mais comme une stratégie cohérente avec ce programme. Que ce programme soit ultimement défendable est une question ouverte pour la philosophie, pas pour les articles techniques de GIFT.
+K₇ n'a pas vocation à arbitrer entre ces positions. L'orientation décrite ici opère dans un cadre où le réalisme structurel ontique est pris au sérieux comme programme de recherche en philosophie de la physique, et où l'enjeu de capturer des invariants topologiques et des structures algébriques exceptionnelles est compris non comme une coquetterie esthétique, mais comme une stratégie cohérente avec ce programme. Que ce programme soit ultimement défendable est une question ouverte pour la philosophie, pas pour les articles techniques de GIFT.
 
 ---
 
@@ -85,7 +85,7 @@ Cette orientation a un périmètre précis. Soyons explicites sur ce qu'elle fai
 
 Cela produit un goût pour les structures à auto-cohérence multi-couches, pour les invariants topologiques (ce qui survit à toute déformation continue est plus probablement structurel qu'incident), et pour les configurations exceptionnelles (les structures rares sont plus probablement sélectionnées que les génériques). Cela produit une disposition à prendre au sérieux la question de savoir pourquoi certaines structures mathématiques spécifiques continuent d'apparaître en physique, sans avoir besoin d'y répondre.
 
-Cela ne produit aucune des prédictions de GIFT. Celles-ci proviennent d'invariants topologiques spécifiques et de combinaisons algébriques, calculables indépendamment de toute orientation. Cela ne produit aucune des techniques des diagnostics Newton–Kantorovich, des calculs de géométrie spectrale, ou de la vérification Lean 4. Cela ne produit aucune des revendications falsifiables qui distinguent GIFT de la spéculation.
+Cela ne produit aucune des prédictions de GIFT. Celles-ci proviennent d'invariants topologiques spécifiques et de combinaisons algébriques, calculables indépendamment de toute orientation. Cela ne produit aucune des techniques des diagnostics Newton–Kantorovich, des calculs de géométrie spectrale, ou de la vérification Lean 4. Cela ne produit aucune des revendications falsifiables qui distinguent K₇ de la spéculation.
 
 Le travail technique tient sur ses propres pieds. Cet essai l'accompagne. Les deux doivent être jugés séparément.
 

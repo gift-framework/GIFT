@@ -3,7 +3,7 @@ title: "Référence des observables"
 layout: default
 ---
 
-# Référence des observables GIFT
+# Référence des observables K₇
 
 **Version** : 3.4 (instantané de haut niveau ; voir Supplément S3 pour le jeu complet de 95 observables). Le découpage par secteur v3.3.24 ci-dessous est conservé pour la traçabilité de l'analyse NuFIT 6.0.
 **Statut** : documentation de référence
@@ -46,7 +46,7 @@ layout: default
 
 ---
 
-## 1. Constantes topologiques GIFT
+## 1. Constantes topologiques K₇
 
 ### 1.1 Constantes primaires
 
@@ -106,7 +106,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 | **DÉRIVÉE** | 2-4 expressions | au moins double dérivation |
 | **SINGULIÈRE** | 1 expression | dérivation unique (coïncidence numérique possible) |
 
-**Référence croisée avec les étiquettes de statut de GIFT_ATLAS.json** :
+**Référence croisée avec les étiquettes de statut de K₇_ATLAS.json** :
 
 | Ce document | Équivalent atlas | Justification du mappage |
 |-------------|------------------|--------------------------|
@@ -122,13 +122,13 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 3.1 Structurelle
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 1 | **N_gen** | indice d'Atiyah-Singer | **3** | 3 | 0,00 % | 24+ | CANONIQUE |
 
 ### 3.2 Secteur électrofaible
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 2 | **sin² θ_W** | b_2/(b_3+dim_G_2) | 3/13 = 0,2308 | 0,23122 | 0,20 % | 19 | ROBUSTE |
 | 3 | **alpha_s(M_Z)** | sqrt(2)/(dim_G2 - p_2) | sqrt(2)/12 = 0,1179 | 0,1179 | 0,042 % | 9 | TOPOLOGICAL |
@@ -137,7 +137,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 3.3 Secteur leptonique
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 6 | **Q_Koide** | dim_G_2/b_2 | 2/3 | 0,666661 | 0,001 % | 27 | CANONIQUE |
 | 7 | **m_tau/m_e** | 7+10x248+10x99 | 3477 | 3477,15 | 0,004 % | 3 | DÉRIVÉE |
@@ -145,7 +145,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 3.4 Secteur des quarks
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 9 | **m_s/m_d** | p_2² x Weyl | 4 x 5 = 20 | 20,0 | 0,00 % | 14 | VERIFIED |
 | 10 | **m_c/m_s** | (dim_E8-p_2)/b_2 | 246/21 = 11,71 | 11,7 | 0,12 % | 5 | SOUTENUE |
@@ -154,7 +154,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 3.5 Secteur neutrinos / PMNS
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 13 | **delta_CP** | dim_K7 x dim_G2 + H* | 197° | 197° ± 24° | 0,00 % | 3 | DÉRIVÉE |
 | 14 | **theta_13^PMNS** | π/b_2 | 8,57° | 8,54° | 0,37 % | 3 | DÉRIVÉE |
@@ -163,7 +163,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 3.6 Secteur cosmologique
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 17 | **Omega_DE** | ln(2)x(b_2+b_3)/H* | 0,6861 | 0,6847 | 0,21 % | 2 | DÉRIVÉE |
 | 18 | **n_s** | zeta(11)/zeta(5) | 0,9649 | 0,9649 | 0,004 % | 2 | DÉRIVÉE |
@@ -174,7 +174,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 4.1 Forme PMNS sin²
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 19 | **sin² θ_12^PMNS** | (1+N_gen)/alpha_sum | 4/13 = 0,308 | 0,307 | 0,23 % | 21 | CANONIQUE |
 | 20 | **sin² θ_23^PMNS** | (D_bulk-Weyl)/D_bulk | 6/11 = 0,545 | 0,546 | 0,10 % | 13 | ROBUSTE |
@@ -182,7 +182,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 4.2 Matrice CKM
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 22 | **sin² θ_12^CKM** | fund_E7/dim_E8 | 56/248 = 0,2258 | 0,2250 | 0,36 % | 16 | ROBUSTE |
 | 23 | **A_Wolfenstein** | (Weyl+dim_E6)/H* | 83/99 = 0,838 | 0,836 | 0,29 % | 7 | SOUTENUE |
@@ -190,7 +190,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 4.3 Rapports de masses bosoniques
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 25 | **m_H/m_t** | fund_E7/b_3 | 56/77 = 0,7273 | 0,725 | 0,31 % | 16 | ROBUSTE |
 | 26 | **m_H/m_W** | (N_gen+dim_E6)/dim_F4 | 81/52 = 1,5577 | 1,558 | 0,02 % | 3 | DÉRIVÉE |
@@ -200,7 +200,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 4.4 Rapports leptoniques étendus
 
-| # | Observable | Formule GIFT | Valeur | Exp. | Écart | # Expr. | Statut |
+| # | Observable | Formule K₇ | Valeur | Exp. | Écart | # Expr. | Statut |
 |---|------------|--------------|--------|------|-------|---------|--------|
 | 28 | **m_mu/m_tau** | (b_2-D_bulk)/PSL_27 | 10/168 = 0,0595 | 0,0595 | 0,04 % | 9 | SOUTENUE |
 
@@ -210,7 +210,7 @@ Chaque observable reçoit une classification basée sur le nombre d'expressions 
 
 ### 5.1 Composition de l'univers
 
-| # | Observable | Planck 2018 | GIFT | Valeur | Écart | # Expr |
+| # | Observable | Planck 2018 | K₇ | Valeur | Écart | # Expr |
 |---|------------|-------------|------|--------|-------|--------|
 | 29 | **Omega_DM/Omega_b** | 5,375 ± 0,1 | (b_0+chi)/rang | **43/8 = 5,375** | **0,00 %** | 3 |
 | 30 | **Omega_c/Omega_Lambda** | 0,387 ± 0,01 | det_g_num/PSL_27 | 65/168 = 0,3869 | 0,01 % | 5 |
@@ -347,7 +347,7 @@ La structure est **réelle**, pas coïncidente.
 
 ## 9. Expressions uniques (prudence)
 
-Observables avec une seule expression GIFT (coïncidence numérique possible) :
+Observables avec une seule expression K₇ (coïncidence numérique possible) :
 
 | Observable | Expression | Valeur | Statut |
 |------------|------------|--------|--------|
@@ -435,7 +435,7 @@ Résultats : [`publications/references/observables.csv`](https://github.com/Arit
 
 ## 12. L'analogie de Balmer
 
-| Aspect | Balmer (1885) | GIFT |
+| Aspect | Balmer (1885) | K₇ |
 |--------|---------------|------|
 | Formule empirique | λ = B x n²/(n²-4) | sin² θ_W = 3/13 |
 | Correspond à l'expérience | oui | oui |
@@ -451,8 +451,8 @@ Résultats : [`publications/references/observables.csv`](https://github.com/Arit
 - Koide, Y. « Fermion-boson two-body model. » Lett. Nuovo Cim. 34 (1982)
 - Particle Data Group (2024), Review of Particle Physics
 - Planck Collaboration (2020), paramètres cosmologiques
-- Publications GIFT : [Article principal](Paper-Main-Framework.html), [Article S2 dérivations](Paper-S2-Derivations.html)
+- Publications K₇ : [Article principal](Paper-Main-Framework.html), [Article S2 dérivations](Paper-S2-Derivations.html)
 
 ---
 
-*Cadre GIFT v3.4, référence des observables*
+*Cadre K₇ v3.4, référence des observables*

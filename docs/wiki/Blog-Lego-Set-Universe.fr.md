@@ -61,7 +61,7 @@ Les entiers donnent la charpente. Les pièces spéciales permettent l'articulati
 
 ## G.I.F.T. comme hypothèse de notice
 
-C'est probablement la façon la plus simple dont je peux décrire GIFT (Geometric Information Field Theory).
+C'est probablement la façon la plus simple dont je peux décrire K₇ (anciennement Geometric Information Field Theory).
 
 Pas comme une théorie de plus qui ajouterait encore des pièces au tas. Mais comme une tentative de reconstituer une partie de la notice.
 
@@ -69,9 +69,9 @@ Prenez la constante qu'on appelle α, la « constante de structure fine ». C'es
 
 Autre exemple : il y a exactement *trois* familles de matière dans l'univers. Trois versions de l'électron, de plus en plus lourdes. Trois versions de chaque quark. Pas deux. Pas cinq. Trois. Personne ne sait pourquoi.
 
-GIFT pose une question simple : et si ces nombres n'étaient pas arbitraires ? Et s'ils étaient les **conséquences d'un mode d'assemblage** ? Les briques étaient là, les pièces spéciales étaient là, le thème était là. La notice les articulait d'une certaine façon. Nous en lisons aujourd'hui les produits finis sans encore savoir la lire à l'envers. GIFT essaie de la lire.
+K₇ pose une question simple : et si ces nombres n'étaient pas arbitraires ? Et s'ils étaient les **conséquences d'un mode d'assemblage** ? Les briques étaient là, les pièces spéciales étaient là, le thème était là. La notice les articulait d'une certaine façon. Nous en lisons aujourd'hui les produits finis sans encore savoir la lire à l'envers. K₇ essaie de la lire.
 
-Les physiciens étudient les pièces depuis longtemps, avec une puissance admirable. GIFT pose une question légèrement différente : *et si le vrai secret n'était pas seulement dans les pièces, mais dans la manière dont elles s'emboîtent ?*
+Les physiciens étudient les pièces depuis longtemps, avec une puissance admirable. K₇ pose une question légèrement différente : *et si le vrai secret n'était pas seulement dans les pièces, mais dans la manière dont elles s'emboîtent ?*
 
 Ce que je propose, concrètement, c'est une notice qui utilise plus de 99 % des pièces disponibles, sans en laisser traîner sur le côté, sans en ajouter qui ne seraient pas dans la boîte. Et quand on suit cette notice jusqu'au bout, le modèle qui sort ressemble *presque parfaitement* à celui qu'on voit depuis toujours dans la vitrine : le monde, tel qu'on le mesure. Pas exactement. Presque. Mais assez pour penser qu'il y a là une piste à creuser et assez loin de la perfection pour savoir qu'il reste encore du travail.
 
@@ -85,7 +85,7 @@ Je crois que nos théories physiques sont un peu comme ces histoires.
 
 Les pièces, la notice, le thème : tout cela est *déjà là*, dans la nature, depuis quatorze milliards d'années. Mais nos *théories*, celles qu'on bâtit pour expliquer tout ça, ce sont nos histoires à nous. Elles ne sont pas le réel lui-même. Ce sont des récits mathématiquement contraints, construits pour suivre au plus près la manière dont les pièces semblent réellement s'emboîter.
 
-GIFT est une histoire de plus. Peut-être une histoire un peu particulière, parce qu'elle essaie moins d'inventer une intrigue que de lire la notice, mais une histoire quand même, avec ses limites, ses bords, ses parts d'ombre.
+K₇ est une histoire de plus. Peut-être une histoire un peu particulière, parce qu'elle essaie moins d'inventer une intrigue que de lire la notice, mais une histoire quand même, avec ses limites, ses bords, ses parts d'ombre.
 
 ## Nous faisons tous la même chose
 

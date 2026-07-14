@@ -3,7 +3,7 @@ title: "Preuves statistiques"
 layout: default
 ---
 
-# Preuves statistiques de GIFT
+# Preuves statistiques de K₇
 
 **Version** : 3.4.27
 **Date de validation** : avril 2026
@@ -28,7 +28,7 @@ layout: default
 | **Meilleur facteur de Bayes** | **4 738** (décisif) |
 | **p du test pré-enregistré** | 6,7 × 10⁻⁵ (σ = 4,0) |
 | **Configurations testées (exhaustif)** | 3 070 396 |
-| **Meilleures que GIFT** | **0** |
+| **Meilleures que K₇** | **0** |
 
 ### Résultats par niveau de précision (écart relatif)
 
@@ -43,7 +43,7 @@ layout: default
 
 - **100 % des prédictions** s'accordent avec l'expérience à moins de 5 %
 - **88 % des prédictions** s'accordent à moins de 1 %
-- GIFT est **uniquement optimal** parmi les 3 070 396 configurations testées
+- K₇ est **uniquement optimal** parmi les 3 070 396 configurations testées
 - Les trois familles de modèles nuls rejettent à p < 2 × 10⁻⁵
 - La correction permutationnelle FWER de Westfall-Young maxT confirme 11/33 individuellement significatifs après prise en compte des corrélations
 - Les facteurs de Bayes vont de 304 à 4 738 pour quatre spécifications de priors (tous décisifs)
@@ -54,7 +54,7 @@ layout: default
 
 ### 1.1 Métrique principale : écart custom
 
-La validation GIFT utilise une métrique d'**écart custom** qui capture la qualité d'ajustement sur des observables hétérogènes (angles, ratios, constantes de couplage) :
+La validation K₇ utilise une métrique d'**écart custom** qui capture la qualité d'ajustement sur des observables hétérogènes (angles, ratios, constantes de couplage) :
 
 $$\text{Écart} = \frac{|\text{pred} - \text{exp}|}{|\text{exp}|} \times 100\%$$
 
@@ -89,9 +89,9 @@ Trois familles indépendantes de modèles nuls rejettent toutes à la limite de 
 
 | Famille nulle | p-valeur | σ | Description |
 |---|---|---|---|
-| **Permutation** | 2,0 × 10⁻⁵ | 4,27 | assignation aléatoire de (b₂, b₃) ; moyenne nulle 82,6 % vs GIFT 0,21 % |
-| **Structure préservée** | 2,0 × 10⁻⁵ | 4,27 | 0/50 000 configurations atteignent ou battent GIFT |
-| **Adversariel** | 2,0 × 10⁻⁵ | 4,27 | meilleur adversaire à 65,8 % vs GIFT 0,21 % |
+| **Permutation** | 2,0 × 10⁻⁵ | 4,27 | assignation aléatoire de (b₂, b₃) ; moyenne nulle 82,6 % vs K₇ 0,21 % |
+| **Structure préservée** | 2,0 × 10⁻⁵ | 4,27 | 0/50 000 configurations atteignent ou battent K₇ |
+| **Adversariel** | 2,0 × 10⁻⁵ | 4,27 | meilleur adversaire à 65,8 % vs K₇ 0,21 % |
 
 Les trois familles nulles produisent des écarts moyens environ 300× pires que GIFT.
 
@@ -128,7 +128,7 @@ Décompte explicite des essais LEE : 23 167 200 (toutes les combinaisons (b₂, 
 
 ### 4.1 Leave-one-sector-out
 
-Chaque secteur de physique est retiré tour à tour ; le (b₂, b₃) de GIFT est testé sur le secteur retiré sans réajustement :
+Chaque secteur de physique est retiré tour à tour ; le (b₂, b₃) de K₇ est testé sur le secteur retiré sans réajustement :
 
 | Secteur | Obs. retirées | Écart de test | p-valeur | σ |
 |---|---|---|---|---|
@@ -150,7 +150,7 @@ Tous les secteurs non triviaux atteignent p < 0,05, ce qui confirme que la cross
 | Test (17 obs.) | 17 | 0,32 % |
 | **p-valeur du test** | | **6,7 × 10⁻⁵** (σ = 4,0) |
 
-L'ensemble de test held-out atteint σ = 4,0, ce qui confirme que la précision de GIFT n'est pas un artefact d'ajustement à un sous-ensemble particulier.
+L'ensemble de test held-out atteint σ = 4,0, ce qui confirme que la précision de K₇ n'est pas un artefact d'ajustement à un sous-ensemble particulier.
 
 ---
 
@@ -203,7 +203,7 @@ Sur 1 000 essais avec 1× les incertitudes publiées :
 - Moyenne : 1,50 % ± 0,35 %
 - Seulement 5 % des essais restent sous 1 %
 
-Ceci confirme la courbe de sensibilité au bruit : le résultat GIFT à 0,21 % se situe bien sous le plancher de bruit.
+Ceci confirme la courbe de sensibilité au bruit : le résultat K₇ à 0,21 % se situe bien sous le plancher de bruit.
 
 ---
 
@@ -233,7 +233,7 @@ Les résultats sont invariants à la graine PRNG et tiennent sous une métrique 
 | Jeffreys | 2 423 | décisif pour H₁ |
 | Enthousiaste (uniforme ≤ 1 %) | 4 738 | décisif pour H₁ |
 
-Les quatre priors donnent des preuves décisives (BF > 100) en faveur de GIFT contre le nul. Le prior sceptique, qui accorde au nul la latitude maximale, donne encore BF = 304.
+Les quatre priors donnent des preuves décisives (BF > 100) en faveur de K₇ contre le nul. Le prior sceptique, qui accorde au nul la latitude maximale, donne encore BF = 304.
 
 ### 7.2 Vérifications prédictives postérieures (4 statistiques)
 
@@ -244,17 +244,17 @@ Les quatre priors donnent des preuves décisives (BF > 100) en faveur de GIFT co
 | T₃ : nombre > 1 % | 1 | 12,1 | 1,000 | ↑ supérieur |
 | T₄ : pire secteur | 0,59 % | 4,28 % | 1,000 | ↑ supérieur |
 
-**Statut** : `superior_to_noise` : le cadre s'ajuste significativement mieux que ce que prédit le bruit de mesure, sur les quatre statistiques de test. Les jeux de données répliqués (en ajoutant du bruit aux niveaux d'incertitude publiés) montrent systématiquement des écarts de 5 à 12× supérieurs à ce que GIFT atteint. C'est cohérent avec un contenu physique authentique plutôt qu'une coïncidence numérique.
+**Statut** : `superior_to_noise` : le cadre s'ajuste significativement mieux que ce que prédit le bruit de mesure, sur les quatre statistiques de test. Les jeux de données répliqués (en ajoutant du bruit aux niveaux d'incertitude publiés) montrent systématiquement des écarts de 5 à 12× supérieurs à ce que K₇ atteint. C'est cohérent avec un contenu physique authentique plutôt qu'une coïncidence numérique.
 
-**Note** : un PPC p ≈ 1,0 n'indique pas un mauvais ajustement de modèle. Dans le cadre PPC, un p proche de 0 indique un sous-ajustement systématique, un p proche de 0,5 indique une calibration parfaite au modèle de bruit, et un p proche de 1 indique que le modèle dépasse les attentes du bruit. Le résultat confirme que la précision de GIFT dépasse ce que les incertitudes de mesure seules prédiraient.
+**Note** : un PPC p ≈ 1,0 n'indique pas un mauvais ajustement de modèle. Dans le cadre PPC, un p proche de 0 indique un sous-ajustement systématique, un p proche de 0,5 indique une calibration parfaite au modèle de bruit, et un p proche de 1 indique que le modèle dépasse les attentes du bruit. Le résultat confirme que la précision de K₇ dépasse ce que les incertitudes de mesure seules prédiraient.
 
 ### 7.3 Comparaison de modèles WAIC
 
 | Modèle | WAIC | Interprétation |
 |---|---|---|
-| GIFT | 29,9 | préféré |
+| K₇ | 29,9 | préféré |
 | Nul | 580,2 | |
-| **ΔWAIC** | **550,3** | **favorise fortement GIFT** |
+| **ΔWAIC** | **550,3** | **favorise fortement K₇** |
 
 ---
 
@@ -267,7 +267,7 @@ Les quatre priors donnent des preuves décisives (BF > 100) en faveur de GIFT co
 | Plage de b₂ | [5, 100] |
 | Plage de b₃ | [40, 200] |
 | Configurations testées | 3 070 396 |
-| Meilleures que GIFT | **0** |
+| Meilleures que K₇ | **0** |
 | IC à 95 % (Clopper-Pearson) | [0, 3,7 × 10⁻⁵] |
 
 ### 8.2 Comparaison des groupes de jauge
@@ -328,7 +328,7 @@ G₂ atteint un accord **11× meilleur** que Calabi-Yau (SU(3)).
 ### 10.3 Statut PPC supérieur au bruit
 
 Les vérifications prédictives postérieures montrent PPC p = 1,0 sur les quatre statistiques de test. Cela signifie que les prédictions du cadre sont plus précises que ce que le bruit de mesure seul prédirait. Explications possibles :
-- Le cadre capture une véritable structure physique (la revendication de GIFT)
+- Le cadre capture une véritable structure physique (la revendication de K₇)
 - Les incertitudes expérimentales publiées sont conservatrices
 - Il existe des corrélations entre observables non capturées par le modèle de bruit
 
@@ -346,7 +346,7 @@ Les corrections de Bonferroni et Holm donnent 0/33 observables significatives pa
 
 ## 11. Prédictions de falsification
 
-| Prédiction | Valeur GIFT | Exp. actuelle | Cible | Expérience | Calendrier |
+| Prédiction | Valeur K₇ | Exp. actuelle | Cible | Expérience | Calendrier |
 |---|---|---|---|---|---|
 | δ_CP | 197° | ~207-212° (NuFIT 6.1, ~1 σ) | ±5° | DUNE | 2028-2040 |
 | sin²θ_W | 3/13 | 0,2312 ± 4 × 10⁻⁵ | ±10⁻⁵ | FCC-ee | 2040s |
@@ -383,7 +383,7 @@ python3 exhaustive_validation_v33.py
 
 ### Constatation principale
 
-GIFT atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. Parmi 3 070 396 configurations testées, **zéro** font mieux. Ce résultat survit à :
+K₇ atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. Parmi 3 070 396 configurations testées, **zéro** font mieux. Ce résultat survit à :
 
 - Trois familles indépendantes de modèles nuls (p < 2 × 10⁻⁵)
 - Correction FWER de Westfall-Young maxT (p global = 0,008, 11/33 individuellement significatifs)
@@ -404,7 +404,7 @@ GIFT atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. 
 | p global Westfall-Young | **0,008** |
 | Meilleur facteur de Bayes | **4 738** |
 | Configurations testées | 3 070 396 |
-| Meilleures que GIFT | **0** |
+| Meilleures que K₇ | **0** |
 
 ---
 
@@ -419,6 +419,6 @@ GIFT atteint un **écart moyen de 0,21 %** (0,41 % relatif) sur 33 observables. 
 
 ---
 
-*GIFT Framework v3.4.27 : preuves statistiques à toute épreuve*
+*K₇ Framework v3.4.27 : preuves statistiques à toute épreuve*
 *Tête : écart moyen 0,99 % sur 33 relations Type I (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022) ; une borne au niveau ensemble ~10⁻⁶ sur 3 000 000 de jeux de formules aléatoires (sans hypothèse d'indépendance)*
 *Ventilation sectorielle ci-dessus : analyse v3.3.24 NuFIT 6.0 (0,24 % sur 32 bien mesurés / 0,57 % tous les 33)*

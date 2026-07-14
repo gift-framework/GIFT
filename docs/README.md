@@ -2,7 +2,7 @@
 title: Documentation
 ---
 
-# GIFT Framework - Documentation
+# K₇ Framework - Documentation
 
 Supporting documentation for The K₇ Framework v3.5 (formerly GIFT).
 

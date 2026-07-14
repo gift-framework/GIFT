@@ -9,8 +9,8 @@ Définitions complètes des termes techniques, de la notation mathématique et d
 
 ## Termes spécifiques au cadre
 
-### GIFT
-**Geometric Information Field Theory**. Le cadre théorique qui propose que les paramètres fondamentaux de la physique émergent comme des invariants topologiques d'une structure E₈×E₈ compactifiée sur des variétés à holonomie G₂.
+### K₇
+**Le cadre K₇** (anciennement Geometric Information Field Theory). Le cadre théorique qui propose que les paramètres fondamentaux de la physique émergent comme des invariants topologiques d'une structure E₈×E₈ compactifiée sur des variétés à holonomie G₂.
 
 ### K₇
 Une variété riemannienne compacte de dimension 7 à holonomie G₂. L'indice 7 indique la dimension. Propriétés topologiques spécifiques : b₂(K₇) = 21, b₃(K₇) = 77.
@@ -142,10 +142,10 @@ Processus par lequel les bosons de jauge acquièrent une masse via la brisure sp
 ## Observables spécifiques
 
 ### N_gen
-Nombre de générations de fermions. Expérimentalement : 3. GIFT prédit : rang(E₈) − rang(Weyl) = 3.
+Nombre de générations de fermions. Expérimentalement : 3. K₇ prédit : rang(E₈) − rang(Weyl) = 3.
 
 ### δ_CP
-Phase violant CP dans le mélange des neutrinos. GIFT prédit : 197° à partir de la formule dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°.
+Phase violant CP dans le mélange des neutrinos. K₇ prédit : 197° à partir de la formule dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°.
 
 ### θ₁₂, θ₁₃, θ₂₃
 Trois angles de mélange des neutrinos dans la matrice PMNS.
@@ -158,10 +158,10 @@ Paramètre de la formule de Koide reliant les masses des leptons chargés :
 ```
 Q = (mₑ + mμ + mτ)² / (mₑ² + mμ² + mτ²)
 ```
-Expérimental : Q ≈ 2/3. GIFT : Q = 2/3 exactement.
+Expérimental : Q ≈ 2/3. K₇ : Q = 2/3 exactement.
 
 ### Ω_DE
-Densité d'énergie noire en fraction de la densité critique. Expérimental : Ω_DE ≈ 0,689. GIFT : Ω_DE = ln(2) ≈ 0,693.
+Densité d'énergie noire en fraction de la densité critique. Expérimental : Ω_DE ≈ 0,689. K₇ : Ω_DE = ln(2) ≈ 0,693.
 
 ### H₀
 **Constante de Hubble**. Taux d'expansion actuel de l'univers. Mesures locales : ~73 km/s/Mpc. Mesures CMB : ~67 km/s/Mpc. La « tension de Hubble » désigne cet écart.
@@ -263,7 +263,7 @@ Identiquement égal ou défini comme.
 ### ∼
 Du même ordre de grandeur, ou équivalent à.
 
-## Lettres grecques dans GIFT
+## Lettres grecques dans K₇
 
 ### α (alpha)
 Constante de structure fine, α ≈ 1/137.
@@ -297,7 +297,7 @@ Nombre d'or ou angle.
 
 ## Acronymes
 
-### GIFT
+### K₇
 Geometric Information Field Theory
 
 ### SM
@@ -391,7 +391,7 @@ Cadre introduit en v2.1 reliant la torsion non nulle sur K₇ au flot du groupe 
 Infrastructure mathématique reliant les observables sans dimension aux observables dimensionnels : Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1,63×10⁶.
 
 ### Lean 4 (v3.4)
-Démonstrateur de théorèmes utilisé pour la vérification formelle des relations exactes de GIFT. Le dépôt [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) contient 140 conjonctions certifiées (143 fichiers Lean, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), 0 sorry) incluant le système de racines de E₈, les propriétés du produit vectoriel G₂, la théorie spectrale, les bornes TCS, les rapports de masses Yukawa, et le certificat Newton-Kantorovich K3. Théorème clé : `GIFT_framework_certified`.
+Démonstrateur de théorèmes utilisé pour la vérification formelle des relations exactes de GIFT. Le dépôt [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) contient 140 conjonctions certifiées (143 fichiers Lean, 15 axiomes (4 principaux + 11 d'arithmétique d'intervalle), 0 sorry) incluant le système de racines de E₈, les propriétés du produit vectoriel G₂, la théorie spectrale, les bornes TCS, les rapports de masses Yukawa, et le certificat Newton-Kantorovich K3. Théorème clé : `K₇_framework_certified`.
 
 ---
 

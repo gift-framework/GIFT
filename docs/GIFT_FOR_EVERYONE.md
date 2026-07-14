@@ -1,10 +1,10 @@
 ---
-title: GIFT for Everyone
+title: K₇ for Everyone
 ---
 
-# GIFT for Everyone
+# K₇ for Everyone
 
-**A complete guide to understanding GIFT, explained for humans**
+**A complete guide to understanding K₇, explained for humans**
 
 ---
 
@@ -13,7 +13,7 @@ title: GIFT for Everyone
 Each concept has:
 - **The fancy word**, what physicists and mathematicians say
 - **The kitchen table version**, what it actually means
-- **In GIFT**, why it matters for the framework
+- **In K₇**, why it matters for the framework
 
 Whether you're a curious student, a science enthusiast, or just someone who wondered "why is the universe the way it is?", this guide is for you.
 
@@ -21,7 +21,7 @@ Whether you're a curious student, a science enthusiast, or just someone who wond
 
 ## Table of Contents
 
-1. [Introduction: What is GIFT?](#introduction-what-is-gift)
+1. [Introduction: What is K₇?](#introduction-what-is-gift)
 2. [Part I: The Building Blocks](#part-i-the-building-blocks)
    - [Number Systems](#number-systems)
    - [Symmetry Groups](#symmetry-groups)
@@ -34,7 +34,7 @@ Whether you're a curious student, a science enthusiast, or just someone who wond
    - [The Particle Zoo](#the-particle-zoo)
 5. [Part IV: The Forces](#part-iv-the-forces)
 6. [Part V: The Magic Numbers](#part-v-the-magic-numbers)
-7. [Part VI: Why GIFT is Different](#part-vi-why-gift-is-different)
+7. [Part VI: Why K₇ is Different](#part-vi-why-gift-is-different)
 8. [Part VII: The Experiments](#part-vii-the-experiments)
 9. [Key Figures](#key-figures)
 10. [Summary Table](#summary-table)
@@ -42,9 +42,9 @@ Whether you're a curious student, a science enthusiast, or just someone who wond
 
 ---
 
-# Introduction: What is GIFT?
+# Introduction: What is K₇?
 
-**GIFT** (Geometric Information Field Theory) proposes that the fundamental constants of physics (numbers like 1/137, the masses of particles, the strengths of forces) are not arbitrary. They emerge from the **shape** of hidden dimensions in the universe.
+**K₇** (formerly Geometric Information Field Theory) proposes that the fundamental constants of physics (numbers like 1/137, the masses of particles, the strengths of forces) are not arbitrary. They emerge from the **shape** of hidden dimensions in the universe.
 
 **The core idea in one sentence**: The universe has 7 hidden dimensions curled up in a specific shape called K₇, and the properties of this shape mathematically determine everything we measure.
 
@@ -52,7 +52,7 @@ Whether you're a curious student, a science enthusiast, or just someone who wond
 
 The Standard Model of physics has **19 free parameters**, numbers we measure but can't explain. Why is the electron 1836 times lighter than the proton? Why are there exactly 3 families of particles? Why is the fine structure constant 1/137?
 
-GIFT proposes answers: **zero free parameters**. Everything comes from geometry.
+K₇ proposes answers: **zero free parameters**. Everything comes from geometry.
 
 ---
 
@@ -66,7 +66,7 @@ GIFT proposes answers: **zero free parameters**. Everything comes from geometry.
 
 **The kitchen table version**: A ruler. The numbers we use every day: 1, 2, 3.14159..., -7, √2. You can place them on an infinite line.
 
-**In GIFT**: The basic brick. Everything else is built on top.
+**In K₇**: The basic brick. Everything else is built on top.
 
 ---
 
@@ -78,7 +78,7 @@ GIFT proposes answers: **zero free parameters**. Everything comes from geometry.
 
 **Everyday use**: The electricity in your home uses complex numbers! Alternating current "rotates" like a needle on the map.
 
-**In GIFT**: Complex numbers describe the phases of quantum waves.
+**In K₇**: Complex numbers describe the phases of quantum waves.
 
 ---
 
@@ -90,7 +90,7 @@ GIFT proposes answers: **zero free parameters**. Everything comes from geometry.
 
 **Fun fact**: Discovered in 1843 by Hamilton, who carved the formula i² = j² = k² = ijk = -1 on a bridge in Dublin!
 
-**In GIFT**: Intermediate step toward octonions. Shows that number systems "grow" by powers of 2.
+**In K₇**: Intermediate step toward octonions. Shows that number systems "grow" by powers of 2.
 
 ---
 
@@ -111,7 +111,7 @@ After octonions, **there's nothing more**. Mathematically proven (Hurwitz theore
 
 **The weirdness**: Octonions are not "associative." (a × b) × c ≠ a × (b × c). It's as if the order you assembled your Legos changed the final result!
 
-**In GIFT**: The universe uses the most complete kit available. The 7 imaginary units of octonions give the 7 dimensions of K₇.
+**In K₇**: The universe uses the most complete kit available. The 7 imaginary units of octonions give the 7 dimensions of K₇.
 
 ---
 
@@ -121,7 +121,7 @@ After octonions, **there's nothing more**. Mathematically proven (Hurwitz theore
 
 **The kitchen table version**: The defective Lego kit. You can keep doubling: 16, 32, 64... But starting at 16, the "Legos" no longer fit together properly. You can have pieces that, multiplied together, give zero even if neither is zero. It's broken.
 
-**In GIFT**: This explains why nature stops at octonions. No choice, it's the last "proper" algebra.
+**In K₇**: This explains why nature stops at octonions. No choice, it's the last "proper" algebra.
 
 ---
 
@@ -142,9 +142,9 @@ It's the most "efficient" configuration possible. No redundancy, no gaps.
 
 **The magic trick**: This network has 168 ways to rearrange itself while keeping the same structure: the symmetry group called **PSL(2,7)**, of order 168. And here's the real twist: 168 ÷ 56 = **3**. Three particle families.
 
-What's the 56? It's the dimension of E₇'s "fundamental representation" (the **smallest non-trivial way** the giant exceptional group E₇ can act on a vector space (we'll meet E₇ a few sections below). The Fano plane (small, finite, 7 points) and E₇ (huge, continuous, 133-dimensional) are linked across scales. Their ratio happens to be exactly the number of fermion generations we observe. GIFT says: that's not a coincidence) that's geometry talking to itself across dimensions.
+What's the 56? It's the dimension of E₇'s "fundamental representation" (the **smallest non-trivial way** the giant exceptional group E₇ can act on a vector space (we'll meet E₇ a few sections below). The Fano plane (small, finite, 7 points) and E₇ (huge, continuous, 133-dimensional) are linked across scales. Their ratio happens to be exactly the number of fermion generations we observe. K₇ says: that's not a coincidence) that's geometry talking to itself across dimensions.
 
-**In GIFT**: The Fano plane encodes octonion multiplication. It's the "times table" of the universe.
+**In K₇**: The Fano plane encodes octonion multiplication. It's the "times table" of the universe.
 
 ---
 
@@ -174,7 +174,7 @@ A mathematical group is like a club where:
 
 **In physics**: It's the symmetry group of **electromagnetism**. Changing the "phase" of a charged particle (like rotating the hand) doesn't change observable physics.
 
-**In GIFT**: U(1) naturally emerges from larger structures like E₈.
+**In K₇**: U(1) naturally emerges from larger structures like E₈.
 
 ---
 
@@ -192,7 +192,7 @@ SU(2) captures this weirdness: it has "twice as many" elements as ordinary rotat
 
 **In physics**: It's the group of the **weak force** (the one that causes radioactivity). It also describes electron **spin**.
 
-**In GIFT**: SU(2) is contained in G₂ and E₈.
+**In K₇**: SU(2) is contained in G₂ and E₈.
 
 ---
 
@@ -208,7 +208,7 @@ SU(3) describes all the ways to **mix these colors** together, like a sophistica
 
 **In physics**: It's the group of the **strong force** (the one that glues quarks together). The 8 "gluons" correspond to the 8 dimensions of SU(3).
 
-**In GIFT**: dim(SU(3)) = 8 = dim(𝕆). Coincidence? GIFT says no.
+**In K₇**: dim(SU(3)) = 8 = dim(𝕆). Coincidence? K₇ says no.
 
 ---
 
@@ -224,7 +224,7 @@ Imagine a crystal ball with patterns inside. G₂ is the set of all transformati
 
 **The 5 exceptional groups**: G₂, F₄, E₆, E₇, E₈: these are the "outsiders" in the classification of Lie groups. They don't belong to any infinite family.
 
-**In GIFT**: G₂ is EVERYWHERE. dim(G₂) = 14 appears in Koide (14/21 = 2/3), in δ_CP (7×14+99), etc.
+**In K₇**: G₂ is EVERYWHERE. dim(G₂) = 14 appears in Koide (14/21 = 2/3), in δ_CP (7×14+99), etc.
 
 ---
 
@@ -234,7 +234,7 @@ Imagine a crystal ball with patterns inside. G₂ is the set of all transformati
 
 **The kitchen table version**: The architect of the halfway house. F₄ is related to the "octonion plane" (the octonionic projective plane).
 
-**In GIFT**: dim(F₄) = 52 appears in scale bridge calculations.
+**In K₇**: dim(F₄) = 52 appears in scale bridge calculations.
 
 ---
 
@@ -248,7 +248,7 @@ E₆ contains SO(10) which contains SU(5) which contains U(1)×SU(2)×SU(3). It'
 
 **Bonus**: E₆ has a 27-dimensional representation linked to the exceptional Jordan algebra.
 
-**In GIFT**: The Jordan algebra (dim 27) appears in m_μ/m_e = 27^φ.
+**In K₇**: The Jordan algebra (dim 27) appears in m_μ/m_e = 27^φ.
 
 ---
 
@@ -258,7 +258,7 @@ E₆ contains SO(10) which contains SU(5) which contains U(1)×SU(2)×SU(3). It'
 
 **The kitchen table version**: The mysterious older brother. E₇ has a fundamental representation of dimension **56**. And 168/56 = 3!
 
-**In GIFT**: N_gen = |PSL(2,7)| / dim(fund(E₇)) = 168/56 = 3.
+**In K₇**: N_gen = |PSL(2,7)| / dim(fund(E₇)) = 168/56 = 3.
 
 ---
 
@@ -275,7 +275,7 @@ E₈ is the most complex and beautiful symmetry group that exists. Its structure
 
 **Fun fact**: In 2007, a team of 18 mathematicians took 4 years to completely calculate E₈'s structure. The result is 60 gigabytes!
 
-**In GIFT**: E₈ × E₈ (248 + 248 = 496 dimensions) is the fundamental symmetry group. 248 appears in m_τ/m_e = 7 + 10×248 + 10×99.
+**In K₇**: E₈ × E₈ (248 + 248 = 496 dimensions) is the fundamental symmetry group. 248 appears in m_τ/m_e = 7 + 10×248 + 10×99.
 
 ---
 
@@ -289,7 +289,7 @@ Imagine a kaleidoscope. The mirrors create multiple reflections, and certain mir
 
 **For E₈**: The Weyl group has an astronomical order: 696,729,600.
 
-**In GIFT**: The "Weyl number" Weyl = 5 appears in various formulas.
+**In K₇**: The "Weyl number" Weyl = 5 appears in various formulas.
 
 ---
 
@@ -324,7 +324,7 @@ A manifold is the same: **globally** it can have a complicated shape, but **loca
 - **3D** (space): "Latitude? Longitude? Altitude?" → 3 questions
 - **7D** (K₇): You need 7 numbers to say "where" you are
 
-**In GIFT**: The universe = 4D visible + 7D hidden = 11D total.
+**In K₇**: The universe = 4D visible + 7D hidden = 11D total.
 
 ---
 
@@ -339,7 +339,7 @@ A manifold is the same: **globally** it can have a complicated shape, but **loca
 
 The surface of the Earth is compact: you can walk a long time, but you'll eventually return to your starting point.
 
-**In GIFT**: K₇ is compact: the 7 dimensions are "folded" on themselves, not infinite.
+**In K₇**: K₇ is compact: the 7 dimensions are "folded" on themselves, not infinite.
 
 ---
 
@@ -359,7 +359,7 @@ The universe might be the same:
 
 The 7 curled-up dimensions have the shape of K₇.
 
-**In GIFT**: We don't "see" K₇, but its properties dictate the constants we measure.
+**In K₇**: We don't "see" K₇, but its properties dictate the constants we measure.
 
 ---
 
@@ -373,7 +373,7 @@ Calabi-Yau spaces are the "hidden shapes" used in traditional string theory. The
 
 **Problem**: There are BILLIONS of different ones (the famous 10^500 solution "landscape"). Which one to choose?
 
-**In GIFT**: K₇ (G₂ holonomy, 7 dimensions) is more constrained than Calabi-Yau (SU(3) holonomy, 6 dimensions). G₂ achieves 13× better precision than Calabi-Yau approaches.
+**In K₇**: K₇ (G₂ holonomy, 7 dimensions) is more constrained than Calabi-Yau (SU(3) holonomy, 6 dimensions). G₂ achieves 13× better precision than Calabi-Yau approaches.
 
 ---
 
@@ -396,7 +396,7 @@ K₇ is a "7-dimensional diabolo" whose shape is dictated by octonions (via G₂
 - 77 "3D holes" (b₃ = 77)
 - A very special curvature (G₂ holonomy)
 
-**In GIFT**: Everything flows from K₇. It's THE shape of the hidden universe.
+**In K₇**: Everything flows from K₇. It's THE shape of the hidden universe.
 
 ---
 
@@ -415,7 +415,7 @@ At each point of the base, there's a "fiber" attached. The whole thing forms the
 
 **In physics**: Spacetime is the base, and at each point are attached "fibers" containing information about fields.
 
-**In GIFT**: K₇ is "fibered" over spacetime in a specific way.
+**In K₇**: K₇ is "fibered" over spacetime in a specific way.
 
 ---
 
@@ -432,7 +432,7 @@ At each point of the base, there's a "fiber" attached. The whole thing forms the
 
 **The classic**: Coffee mug = donut. Both have exactly 1 hole (the mug handle = the donut hole). You can deform one into the other without cutting or gluing.
 
-**In GIFT**: Physical constants are topological: they come from the "number of holes," not distances. That's why they're stable and universal.
+**In K₇**: Physical constants are topological: they come from the "number of holes," not distances. That's why they're stable and universal.
 
 ---
 
@@ -446,7 +446,7 @@ You can change your hairstyle, clothes, gain or lose weight... but your DNA stay
 
 Topological invariants are shapes' DNA. You can deform K₇ in a thousand ways, b₂ will stay 21 and b₃ will stay 77.
 
-**In GIFT**: Physical constants = the universe's DNA. They can't be different.
+**In K₇**: Physical constants = the universe's DNA. They can't be different.
 
 ---
 
@@ -473,7 +473,7 @@ Topological invariants are shapes' DNA. You can deform K₇ in a thousand ways, 
 - 21 = 3 × 7 (three times the 7 points of the Fano plane)
 - 77 = 7 × 11 (seven times 11)
 
-**In GIFT**: These two numbers are enough to calculate almost all physical constants! For example, sin²θ_W = 21/(77+14) = 3/13.
+**In K₇**: These two numbers are enough to calculate almost all physical constants! For example, sin²θ_W = 21/(77+14) = 3/13.
 
 ---
 
@@ -489,7 +489,7 @@ It's like the difference between:
 - Counting lakes on a map (homology)
 - Making the official registry with area, depth, etc. (cohomology)
 
-**In GIFT**: H² and H³ of K₇ give the spaces where different physical fields "live."
+**In K₇**: H² and H³ of K₇ give the spaces where different physical fields "live."
 
 ---
 
@@ -507,7 +507,7 @@ Holonomy measures "how much things rotate when you make a loop."
 
 **G₂-holonomy** = K₇'s curvature rotates things exactly according to G₂ rules (the 14 allowed directions).
 
-**In GIFT**: G₂ holonomy is what links K₇'s shape to the octonions.
+**In K₇**: G₂ holonomy is what links K₇'s shape to the octonions.
 
 ---
 
@@ -524,7 +524,7 @@ A tetrahedron: 4 - 6 + 4 = 2 ✓
 
 This formula generalizes to all dimensions!
 
-**In GIFT**: χ(K₇) is linked to the number of generations via the Atiyah-Singer index.
+**In K₇**: χ(K₇) is linked to the number of generations via the Atiyah-Singer index.
 
 ---
 
@@ -540,7 +540,7 @@ Torsion measures this "twisting" of space.
 
 **In K₇**: Torsion must be very small (κ_T = 1/61) for physics to be consistent.
 
-**In GIFT**: The current programme aims to prove a torsion-free metric on K₇.
+**In K₇**: The current programme aims to prove a torsion-free metric on K₇.
 The usual Joyce theorem is not enough in the collapsing K3-fibred regime; the
 missing analytic step is the anisotropic perturbation theorem tracked in
 `docs/analytic_status.md`.
@@ -561,7 +561,7 @@ Imagine different types of "detectors":
 
 Differential forms generalize this to any dimension.
 
-**In GIFT**: The 3-form φ (G₂'s associative form) defines K₇'s structure.
+**In K₇**: The 3-form φ (G₂'s associative form) defines K₇'s structure.
 
 ---
 
@@ -583,7 +583,7 @@ That's why matter is solid! Electrons (fermions) repel each other and don't comp
 
 **The spin thing**: You need to rotate a fermion 720° (two turns) to return to the initial state!
 
-**In GIFT**: Fermions are associated with H³(K₇), hence b₃ = 77.
+**In K₇**: Fermions are associated with H³(K₇), hence b₃ = 77.
 
 ---
 
@@ -599,7 +599,7 @@ That's what enables lasers (lots of identical photons) and Bose-Einstein condens
 
 **The family**: Photons, gluons, W, Z, Higgs, graviton (hypothetical)...
 
-**In GIFT**: Bosons are associated with H²(K₇), hence b₂ = 21.
+**In K₇**: Bosons are associated with H²(K₇), hence b₂ = 21.
 
 ---
 
@@ -615,7 +615,7 @@ The electron is the lightest charged lepton. It's the one that orbits atoms and 
 
 It has two heavier siblings: the muon (×207) and the tau (×3477).
 
-**In GIFT**: The electron defines the fundamental scale λ_e = h/m_e c.
+**In K₇**: The electron defines the fundamental scale λ_e = h/m_e c.
 
 ---
 
@@ -629,11 +629,11 @@ Exactly like the electron, but heavier:
 - **Muon**: ×207 (lives ~2 microseconds)
 - **Tau**: ×3477 (lives ~0.3 picoseconds)
 
-Nobody knew why these precise ratios. GIFT says:
+Nobody knew why these precise ratios. K₇ says:
 - m_μ/m_e = 27^φ (golden ratio!)
 - m_τ/m_e = 7 + 10×248 + 10×99 = 3477
 
-**In GIFT**: The three sisters (Koide) = dim(G₂)/b₂ = 14/21 = 2/3.
+**In K₇**: The three sisters (Koide) = dim(G₂)/b₂ = 14/21 = 2/3.
 
 ---
 
@@ -647,7 +647,7 @@ Neutrinos pass through matter as if it didn't exist. Billions pass through you e
 
 They "oscillate" between three types (electron, muon, tau) while traveling, it's like they change costumes in flight.
 
-**In GIFT**: Neutrino mixing angles (θ₁₂, θ₁₃, θ₂₃) and CP phase (δ = 197°) are derived from topology.
+**In K₇**: Neutrino mixing angles (θ₁₂, θ₁₃, θ₂₃) and CP phase (δ = 197°) are derived from topology.
 
 ---
 
@@ -664,7 +664,7 @@ Quarks are **always** locked up in groups of 2 or 3. You can never see one alone
 - Charm, Strange (medium)
 - Top, Bottom (heavy)
 
-**In GIFT**: Quark mass ratios like m_s/m_d = 20 are derived from topology.
+**In K₇**: Quark mass ratios like m_s/m_d = 20 are derived from topology.
 
 ---
 
@@ -678,7 +678,7 @@ The Higgs field fills the entire universe like invisible molasses. Particles tha
 
 **Discovery**: 2012 at the LHC, 2013 Nobel Prize.
 
-**In GIFT**: λ_H (Higgs coupling) = √17/32 = √(dim(G₂) + N_gen) / 2^Weyl.
+**In K₇**: λ_H (Higgs coupling) = √17/32 = √(dim(G₂) + N_gen) / 2^Weyl.
 
 ---
 
@@ -690,7 +690,7 @@ The Higgs field fills the entire universe like invisible molasses. Particles tha
 
 The photon IS light. It carries the electromagnetic force between charged particles. It always travels at the speed of light and has no mass.
 
-**In GIFT**: Vacuum impedance (377 ohms) is linked to α via E₈ structures.
+**In K₇**: Vacuum impedance (377 ohms) is linked to α via E₈ structures.
 
 ---
 
@@ -704,7 +704,7 @@ Gluons "glue" quarks together. But unlike photons, gluons **carry the charge the
 
 **Why 8?** That's the dimension of SU(3). And 8 = dim(𝕆), the dimension of octonions!
 
-**In GIFT**: α_s = √2/12 (strong coupling) comes from dim(G₂) - 2 = 12.
+**In K₇**: α_s = √2/12 (strong coupling) comes from dim(G₂) - 2 = 12.
 
 ---
 
@@ -716,7 +716,7 @@ Gluons "glue" quarks together. But unlike photons, gluons **carry the charge the
 
 W⁺, W⁻ and Z⁰ carry the weak force (the one behind radioactivity). Unlike the photon, they're very heavy (~80-90 GeV), which is why the weak force has short range.
 
-**In GIFT**: M_Z/M_W = √(13/10) comes from sin²θ_W = 3/13.
+**In K₇**: M_Z/M_W = √(13/10) comes from sin²θ_W = 3/13.
 
 ---
 
@@ -734,7 +734,7 @@ Maxwell showed in 1865 that electricity and magnetism are two faces of the same 
 - **Carrier**: Photon
 - **Range**: Infinite
 
-**In GIFT**: α = 1/137.033 determines the strength.
+**In K₇**: α = 1/137.033 determines the strength.
 
 ---
 
@@ -752,7 +752,7 @@ Imagine a magician who doesn't just move cards around the table: she actually tr
 - **Carriers**: W⁺, W⁻, Z⁰
 - **Range**: ~10⁻¹⁸ m (very short!)
 
-**In GIFT**: sin²θ_W = 3/13 describes weak/EM mixing.
+**In K₇**: sin²θ_W = 3/13 describes weak/EM mixing.
 
 ---
 
@@ -770,7 +770,7 @@ This is why we never see "free quarks" wandering around. They're permanently in 
 - **Carriers**: 8 gluons
 - **Range**: ~10⁻¹⁵ m
 
-**In GIFT**: α_s = √2/12 ≈ 0.1179 at the M_Z scale.
+**In K₇**: α_s = √2/12 ≈ 0.1179 at the M_Z scale.
 
 ---
 
@@ -785,7 +785,7 @@ Imagine spacetime as a trampoline. Masses "push down" on the trampoline, creatin
 - **Carrier (hypothetical)**: Graviton (spin 2)
 - **Range**: Infinite
 
-**In GIFT**: Gravity potentially emerges from E₈ × E₈ structures at the Planck scale.
+**In K₇**: Gravity potentially emerges from E₈ × E₈ structures at the Planck scale.
 
 ---
 
@@ -801,7 +801,7 @@ As it cools, the "cocktail" separates: you get EM (photon) and weak (W, Z).
 
 **The mixing angle**: sin²θ_W ≈ 0.231 says "how much" of each.
 
-**In GIFT**: sin²θ_W = 21/91 = 3/13 = b₂/(b₃ + dim(G₂)).
+**In K₇**: sin²θ_W = 21/91 = 3/13 = b₂/(b₃ + dim(G₂)).
 
 ---
 
@@ -820,9 +820,9 @@ A gauge group is **the set of rules that define a force**.
 - U(1) → rules of electromagnetism
 - SU(2) → rules of the weak force
 - SU(3) → rules of the strong force
-- E₈ × E₈ → GIFT's meta-rules (where the others come from)
+- E₈ × E₈ → K₇'s meta-rules (where the others come from)
 
-**In GIFT**: E₈ × E₈ is the "original card game" from which all others are simplifications.
+**In K₇**: E₈ × E₈ is the "original card game" from which all others are simplifications.
 
 ---
 
@@ -844,7 +844,7 @@ For 60+ years, physicists have measured this number to insane precision (10 deci
 
 Feynman, 1985 (*QED: The Strange Theory of Light and Matter*): *"It's one of the greatest damn mysteries of physics: a magic number that comes to us with no understanding by man. You might say the 'hand of God' wrote that number, and 'we don't know how He pushed His pencil.'"*
 
-**GIFT's claim**: it's not magic. `α⁻¹ = 137.033` emerges from the topology of K₇, as `128 + 9 + correction`, where `128 = 2⁷` (the 7 hidden dimensions of K₇) and `9 = 99/11` (a ratio of topological invariants). Feynman's "great damn mystery" becomes a **consequence of shape**.
+**K₇'s claim**: it's not magic. `α⁻¹ = 137.033` emerges from the topology of K₇, as `128 + 9 + correction`, where `128 = 2⁷` (the 7 hidden dimensions of K₇) and `9 = 99/11` (a ratio of topological invariants). Feynman's "great damn mystery" becomes a **consequence of shape**.
 
 ---
 
@@ -858,11 +858,11 @@ At very high energy, electromagnetism and the weak force are **the same force**,
 
 sin²θ_W ≈ 0.231 means "about 23% weak force, 77% electromagnetism" in the final mix.
 
-**GIFT**: sin²θ_W = 21/91 = 3/13
+**K₇**: sin²θ_W = 21/91 = 3/13
 
 It's the number of "2D bubbles" (21) divided by the total (77 + 14 = 91).
 
-**In GIFT**: The cocktail recipe isn't arbitrary, it's dictated by the shape of the cosmic shaker (K₇).
+**In K₇**: The cocktail recipe isn't arbitrary, it's dictated by the shape of the cosmic shaker (K₇).
 
 ---
 
@@ -880,9 +880,9 @@ It's as if three random pebbles, when struck together, produced a perfect musica
 
 For 40 years, this stayed an unexplained "numerical curiosity", too precise to be coincidence, too specific to derive from anything known.
 
-**GIFT says**: 2/3 = 14/21 = `dim(G₂) / b₂`. The chord isn't accidental: the three lepton masses are constrained by the same geometric structure (the 14-dimensional G₂ symmetry inside the 21-dimensional second cohomology of K₇). The "tuning" of the cosmic chord is dictated by the shape of hidden space.
+**K₇ says**: 2/3 = 14/21 = `dim(G₂) / b₂`. The chord isn't accidental: the three lepton masses are constrained by the same geometric structure (the 14-dimensional G₂ symmetry inside the 21-dimensional second cohomology of K₇). The "tuning" of the cosmic chord is dictated by the shape of hidden space.
 
-**In GIFT**: This troubling coincidence becomes a logical consequence.
+**In K₇**: This troubling coincidence becomes a logical consequence.
 
 ---
 
@@ -899,13 +899,13 @@ All particles come in 3 increasingly heavy "copies":
 
 Why not 2? Or 47?
 
-**Before GIFT**: "We observe 3, we don't know why."
+**Before K₇**: "We observe 3, we don't know why."
 
-**GIFT**: The Fano plane has 168 symmetries. 168 ÷ 56 = **3**.
+**K₇**: The Fano plane has 168 symmetries. 168 ÷ 56 = **3**.
 
 It's like asking "Why does a cube have 6 faces?" The answer isn't "just because," it's "because it's a cube." The shape imposes the number.
 
-**In GIFT**: The number of families isn't an accident, it's a geometric consequence.
+**In K₇**: The number of families isn't an accident, it's a geometric consequence.
 
 ---
 
@@ -919,7 +919,7 @@ It's like asking "Why does a cube have 6 faces?" The answer isn't "just because,
 
 Take any positive number `x`. Compute `1 + 1/x`. You get a new number. Repeat. Almost any starting point converges to one specific value: **φ**. It's the fixed point of self-reference: `φ² = φ + 1`. In other words, **φ is the value you get when something defines itself in terms of itself**. Self-similar growth, optimal packing, Fibonacci sequences, all variations on this single equation.
 
-**In GIFT**: the muon-electron mass ratio is `m_μ / m_e = 27^φ ≈ 206.77`. The exponent is φ exactly (not a fitted parameter, but the fixed point of self-reference. The base 27 is the dimension of the exceptional Jordan algebra (E₆'s favorite playground). Mass ratios in GIFT aren't arbitrary numbers) they're what you get when geometry grows from itself.
+**In K₇**: the muon-electron mass ratio is `m_μ / m_e = 27^φ ≈ 206.77`. The exponent is φ exactly (not a fitted parameter, but the fixed point of self-reference. The base 27 is the dimension of the exceptional Jordan algebra (E₆'s favorite playground). Mass ratios in K₇ aren't arbitrary numbers) they're what you get when geometry grows from itself.
 
 ---
 
@@ -931,11 +931,11 @@ Take any positive number `x`. Compute `1 + 1/x`. You get a new number. Repeat. A
 
 At the Planck scale (~10⁻³⁵ m), gravity and quantum mechanics become equally strong. That's where our current physics breaks down.
 
-**In GIFT**: The "scale bridge" connects M_Pl to m_e via topological invariants.
+**In K₇**: The "scale bridge" connects M_Pl to m_e via topological invariants.
 
 ---
 
-# Part VI: Why GIFT is Different
+# Part VI: Why K₇ is Different
 
 ### Zero Free Parameters
 
@@ -945,9 +945,9 @@ At the Planck scale (~10⁻³⁵ m), gravity and quantum mechanics become equall
 
 - **The Standard Model** = Custom furniture. The carpenter takes 19 measurements at your place and builds furniture that fits perfectly. But he can't explain *why* your living room has those dimensions.
 
-- **GIFT** = Universal IKEA furniture. The instructions say: "Take a 7-dimensional diabolo with G₂ holonomy." There's only one way to assemble it. The dimensions come out automatically.
+- **K₇** = Universal IKEA furniture. The instructions say: "Take a 7-dimensional diabolo with G₂ holonomy." There's only one way to assemble it. The dimensions come out automatically.
 
-**In GIFT**: 19 mysterious numbers → 0 mysterious numbers. Everything comes from the shape.
+**In K₇**: 19 mysterious numbers → 0 mysterious numbers. Everything comes from the shape.
 
 ---
 
@@ -959,16 +959,16 @@ At the Planck scale (~10⁻³⁵ m), gravity and quantum mechanics become equall
 
 A horoscope says: "You will meet someone interesting." Impossible to disprove.
 
-GIFT says: "The neutrino CP phase δ_CP = 197°, no more, no less."
+K₇ says: "The neutrino CP phase δ_CP = 197°, no more, no less."
 
 The DUNE experiment will measure this in 2034-2039.
 
-- If DUNE finds 197° ± 5° → GIFT survives
-- If DUNE finds 250° → GIFT is dead. Done. We move on.
+- If DUNE finds 197° ± 5° → K₇ survives
+- If DUNE finds 250° → K₇ is dead. Done. We move on.
 
 **That's science**: predictions that can die.
 
-**In GIFT**: GIFT plays the game honestly. It makes testable predictions.
+**In K₇**: K₇ plays the game honestly. It makes testable predictions.
 
 ---
 
@@ -980,7 +980,7 @@ The DUNE experiment will measure this in 2034-2039.
 
 A theory is "natural" if it doesn't need parameters tuned to 0.0000001% precision to work.
 
-**In GIFT**: Zero adjustable parameters = maximum naturalness.
+**In K₇**: Zero adjustable parameters = maximum naturalness.
 
 ---
 
@@ -992,7 +992,7 @@ A theory is "natural" if it doesn't need parameters tuned to 0.0000001% precisio
 
 Individual atoms aren't wet. "Wetness" emerges when billions of atoms are together.
 
-**In GIFT**: 4D physical constants "emerge" from 7D topology.
+**In K₇**: 4D physical constants "emerge" from 7D topology.
 
 ---
 
@@ -1004,7 +1004,7 @@ Individual atoms aren't wet. "Wetness" emerges when billions of atoms are togeth
 
 Lean 4 is a computer program that checks every step of every proof. You can't cheat, can't make calculation errors, can't "skip" a step. If Lean accepts your proof, it's **mathematically certain**.
 
-**In GIFT**: 290+ relations verified in Lean 4 with 0 "sorry" (holes). Zero domain-specific axioms.
+**In K₇**: 290+ relations verified in Lean 4 with 0 "sorry" (holes). Zero domain-specific axioms.
 
 ---
 
@@ -1018,7 +1018,7 @@ Lean 4 is a computer program that checks every step of every proof. You can't ch
 
 The PDG publishes the best values for all masses, lifetimes, etc. every year. It's THE reference.
 
-**In GIFT**: All comparisons use PDG 2024.
+**In K₇**: All comparisons use PDG 2024.
 
 ---
 
@@ -1032,7 +1032,7 @@ The LHC accelerates protons to nearly the speed of light and smashes them togeth
 
 **Major discovery**: Higgs boson (2012).
 
-**In GIFT**: The LHC measured W, Z, Higgs masses that GIFT predicts.
+**In K₇**: The LHC measured W, Z, Higgs masses that K₇ predicts.
 
 ---
 
@@ -1044,9 +1044,9 @@ The LHC accelerates protons to nearly the speed of light and smashes them togeth
 
 DUNE will send neutrinos 1300 km and study their oscillations with unprecedented precision.
 
-**GIFT prediction**: δ_CP = 197° ± 5° (measurable 2034-2039)
+**K₇ prediction**: δ_CP = 197° ± 5° (measurable 2034-2039)
 
-**In GIFT**: If DUNE finds δ_CP very different from 197°, GIFT is falsified. This is the key test.
+**In K₇**: If DUNE finds δ_CP very different from 197°, K₇ is falsified. This is the key test.
 
 ---
 
@@ -1058,7 +1058,7 @@ DUNE will send neutrinos 1300 km and study their oscillations with unprecedented
 
 The Planck satellite took the most detailed "photo" of the Big Bang's fossil radiation: the oldest light in the universe.
 
-**In GIFT**: Planck measured Ω_DE, n_s, etc. that GIFT predicts.
+**In K₇**: Planck measured Ω_DE, n_s, etc. that K₇ predicts.
 
 ---
 
@@ -1066,19 +1066,19 @@ The Planck satellite took the most detailed "photo" of the Big Bang's fossil rad
 
 ### Dominic Joyce
 British mathematician, proved in 1996 the existence of compact manifolds with G₂ holonomy.
-**For GIFT**: His theorem guarantees K₇ can exist.
+**For K₇**: His theorem guarantees K₇ can exist.
 
 ### Yoshio Koide
 Japanese physicist, discovered in 1982 the Q = 2/3 relation for lepton masses.
-**For GIFT**: GIFT explains Koide via 14/21 = dim(G₂)/b₂.
+**For K₇**: K₇ explains Koide via 14/21 = dim(G₂)/b₂.
 
 ### Michael Atiyah & Isadore Singer
 Mathematicians, index theorem (1963), Fields Medals and Abel Prize.
-**For GIFT**: Their theorem gives N_gen = 3.
+**For K₇**: Their theorem gives N_gen = 3.
 
 ### Edward Witten
 Physicist and mathematician, M-theory, only physicist with a Fields Medal (1990).
-**For GIFT**: M-theory (11D) is the natural framework where GIFT lives.
+**For K₇**: M-theory (11D) is the natural framework where K₇ lives.
 
 ---
 
@@ -1175,6 +1175,6 @@ Physicist and mathematician, M-theory, only physicist with a Fields Medal (1990)
 
 ---
 
-*GIFT Framework v3.3: For Everyone*
+*K₇ Framework v3.3: For Everyone*
 
 *"If you understood correctly all of this, you've understood more than me!"*

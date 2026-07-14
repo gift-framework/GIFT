@@ -3,7 +3,7 @@ title: "Accueil"
 layout: default
 ---
 
-# GIFT : Geometric Information Field Theory
+# Le cadre K₇
 
 **Un cadre théorique à zéro paramètre, qui dérive les constantes du Modèle Standard à partir de la géométrie d'holonomie G₂.**
 
@@ -35,7 +35,7 @@ layout: default
 
 ## Résultats clés
 
-| Observable | Formule GIFT | Valeur | Exp. | Écart |
+| Observable | Formule K₇ | Valeur | Exp. | Écart |
 |---|---|---|---|---|
 | sin²θ_W | b₂/(b₃+dim(G₂)) = 21/91 | 3/13 | 0,2312 | 0,19 % |
 | N_gen | rang(E₈) − Weyl | 3 | 3 | exact |
@@ -70,13 +70,13 @@ N_gen    = |PSL(2,7)| / fond(E₇) = 168/56 = 3
 
 ## Vulgarisation
 
-Une écriture accessible sur les idées derrière GIFT vit sur le [blog Substack](https://arithmon.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Le verre qui chante](Blog-The-Singing-Glass.fr.html)*, quand un verre de Bourgogne explique les dimensions cachées de l'univers.
+Une écriture accessible sur les idées derrière K₇ vit sur le [blog Substack](https://arithmon.substack.com/) (en anglais) ; les traductions FR sont sur ce wiki, voir l'[index des articles de blog](Site-Map.fr.html#articles-de-blog) pour la liste complète. Dernier paru : *[Le verre qui chante](Blog-The-Singing-Glass.fr.html)*, quand un verre de Bourgogne explique les dimensions cachées de l'univers.
 
 ---
 
 ## Structure
 
-Ce wiki regroupe la documentation de GIFT à travers trois dépôts :
+Ce wiki regroupe la documentation de K₇ à travers trois dépôts :
 
 - **[Arithmon/K7](https://github.com/Arithmon/K7)** : documentation théorique, articles, vulgarisation
 - **[Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean)** : preuves Lean 4, paquet Python, blueprint
@@ -86,4 +86,4 @@ Parcourez la barre latérale pour la navigation complète, ou consultez le [plan
 
 ---
 
-*GIFT Framework v3.4.27 | [GitHub](https://github.com/Arithmon/K7) | [Core](https://github.com/Arithmon/K7-Lean) | [Blueprint](https://arithmon.github.io/K7-Lean/) | [Zenodo (Article A)](https://doi.org/10.5281/zenodo.19892350) · [Article B](https://doi.org/10.5281/zenodo.19893371) · [Article C](https://doi.org/10.5281/zenodo.19708916) | Licence MIT*
+*K₇ Framework v3.4.27 | [GitHub](https://github.com/Arithmon/K7) | [Core](https://github.com/Arithmon/K7-Lean) | [Blueprint](https://arithmon.github.io/K7-Lean/) | [Zenodo (Article A)](https://doi.org/10.5281/zenodo.19892350) · [Article B](https://doi.org/10.5281/zenodo.19893371) · [Article C](https://doi.org/10.5281/zenodo.19708916) | Licence MIT*

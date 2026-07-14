@@ -3,9 +3,9 @@ title: "Independent Validations"
 layout: default
 ---
 
-# Independent Validations of GIFT Framework
+# Independent Validations of K₇ Framework
 
-Documentation of independent research converging with or citing GIFT predictions.
+Documentation of independent research converging with or citing K₇ predictions.
 
 ---
 
@@ -21,11 +21,11 @@ The scientific validity of any theoretical framework is strengthened when indepe
 **Theodorsson, Tryggvi.** (2026). "The Geometric Equation of State: Conservation of Action in the E₈ Vacuum." *Independent manuscript*, 42 pp.
 
 - **File**: *Manuscript on file (not publicly hosted)*
-- **GIFT Citation**: References [15, 16] in the manuscript
+- **K₇ Citation**: References [15, 16] in the manuscript
 
 ### Convergent Results
 
-| Quantity | Theodorsson | GIFT | Agreement |
+| Quantity | Theodorsson | K₇ | Agreement |
 |----------|-------------|------|-----------|
 | sin²θ_W (Weinberg angle) | 3/13 ≈ 0.2308 | 3/13 ≈ 0.2308 | Exact |
 | Methodology | Zero adjustable parameters | Zero adjustable parameters | Exact |
@@ -40,7 +40,7 @@ The scientific validity of any theoretical framework is strengthened when indepe
 - "Rule of 17": α⁻¹ = 8 × 17 + 1 = 137 (using Fermat prime 17 = 2^(2²) + 1)
 - Cosmological ratio: ΩΛ/Ωm = 37/17 ≈ 2.176
 
-**GIFT Approach:**
+**K₇ Approach:**
 - K₇ compact manifold with G₂ holonomy
 - E₈ lattice embedding
 - sin²θ_W = b₂/(b₃ + dim(G₂)) = 21/(77 + 14) = 3/13
@@ -66,10 +66,10 @@ Two independent frameworks deriving sin²θ_W = 3/13 from E₈/G₂ geometry wit
 
 ### Relevant Connections
 
-| Topic | Zhou & Zhou | GIFT Relevance |
+| Topic | Zhou & Zhou | K₇ Relevance |
 |-------|-------------|----------------|
-| Compactification | G₂ manifolds as alternatives to Calabi-Yau | GIFT uses K₇ with G₂ holonomy |
-| RG Framework | String theory as geometric fixed point | GIFT dynamics (S3) uses RG flow |
+| Compactification | G₂ manifolds as alternatives to Calabi-Yau | K₇ uses K₇ with G₂ holonomy |
+| RG Framework | String theory as geometric fixed point | K₇ dynamics (S3) uses RG flow |
 | Topological backgrounds | Central role | K₇ topology determines predictions |
 
 ### Key Concepts
@@ -79,15 +79,15 @@ Two independent frameworks deriving sin²θ_W = 3/13 from E₈/G₂ geometry wit
 - Topological backgrounds as fundamental
 - Connection to holonomy classification
 
-### Significance for GIFT
+### Significance for K₇
 
-Provides theoretical context for understanding GIFT's position within broader theory space. The emphasis on G₂ manifolds and topological backgrounds aligns with GIFT's foundational choices.
+Provides theoretical context for understanding K₇'s position within broader theory space. The emphasis on G₂ manifolds and topological backgrounds aligns with K₇'s foundational choices.
 
 ---
 
 ## Summary Table
 
-| Author(s) | Year | Key Result | GIFT Connection |
+| Author(s) | Year | Key Result | K₇ Connection |
 |-----------|------|------------|-----------------|
 | Theodorsson | 2026 | sin²θ_W = 3/13 | Direct citation, identical result |
 | Zhou & Zhou | 2026 | G₂ string compactification | Aligned methodology |
@@ -100,38 +100,38 @@ Based on these independent validations, the following directions merit investiga
 
 ### Priority 1: Rule of 17 and K₇ Topology ✓ ANALYZED
 
-**Finding**: 17 appears naturally in GIFT as dim(G₂) + N_gen = 14 + 3.
+**Finding**: 17 appears naturally in K₇ as dim(G₂) + N_gen = 14 + 3.
 
-Theodorsson identifies 17 as the third Fermat prime (2^(2²) + 1), while GIFT derives it from G₂ holonomy dimension plus generation number. Both are mathematically equivalent.
+Theodorsson identifies 17 as the third Fermat prime (2^(2²) + 1), while K₇ derives it from G₂ holonomy dimension plus generation number. Both are mathematically equivalent.
 
 **α⁻¹ Structure Comparison**:
 
 | Framework | Formula | Expansion |
 |-----------|---------|-----------|
 | Theodorsson | 8 × 17 + 1 | = 137 |
-| GIFT | (dim(E₈)+rank)/2 + H*/D_bulk + corr | = 128 + 9 + 0.033 = 137.033 |
+| K₇ | (dim(E₈)+rank)/2 + H*/D_bulk + corr | = 128 + 9 + 0.033 = 137.033 |
 
-**Key insight**: GIFT's 128 = 8 × 16 = 8 × (17 - 1), so:
-$$\alpha^{-1}_{GIFT} = 8 \times (17-1) + 9 + \text{corr} = 8 \times 17 + 1 + \text{corr}$$
+**Key insight**: K₇'s 128 = 8 × 16 = 8 × (17 - 1), so:
+$$\alpha^{-1}_{K₇} = 8 \times (17-1) + 9 + \text{corr} = 8 \times 17 + 1 + \text{corr}$$
 
-The structures are algebraically equivalent, with GIFT providing a torsional correction term det(g)×κ_T ≈ 0.033.
+The structures are algebraically equivalent, with K₇ providing a torsional correction term det(g)×κ_T ≈ 0.033.
 
 ### Priority 2: Cosmological Ratio ✓ ANALYZED
 
-**Finding**: Both 37 and 17 are GIFT-expressible.
+**Finding**: Both 37 and 17 are K₇-expressible.
 
-| Number | GIFT Expression | Value |
+| Number | K₇ Expression | Value |
 |--------|-----------------|-------|
 | 17 | dim(G₂) + N_gen | 14 + 3 = 17 |
 | 37 | b₃ - 2×b₂ + 2 | 77 - 42 + 2 = 37 |
 
 **Theodorsson ratio**: ΩΛ/Ωm = 37/17 ≈ 2.176
 
-**GIFT ratio**: Ω_DE/Ω_m = ln(2)×(b₂+b₃)/H* / (Ω_DE/√Weyl) ≈ 2.24
+**K₇ ratio**: Ω_DE/Ω_m = ln(2)×(b₂+b₃)/H* / (Ω_DE/√Weyl) ≈ 2.24
 
 The ratios differ by ~3%, suggesting either:
 - Different cosmological models
-- GIFT's ln(2) factor has different physical origin
+- K₇'s ln(2) factor has different physical origin
 - Further investigation needed
 
 **Potential unified expression**:
@@ -146,7 +146,7 @@ $$\frac{\Omega_\Lambda}{\Omega_m} = \frac{b_3 - 2b_2 + p_2}{\dim(G_2) + N_{gen}}
 
 ## How to Contribute
 
-Independent validations are encouraged. If you derive GIFT predictions using alternative methods, please:
+Independent validations are encouraged. If you derive K₇ predictions using alternative methods, please:
 
 1. Document methodology clearly
 2. State all assumptions
@@ -155,5 +155,5 @@ Independent validations are encouraged. If you derive GIFT predictions using alt
 
 ---
 
-*Part of GIFT Framework v3.4*
+*Part of K₇ Framework v3.4*
 *Last updated: 2026-06-03 (v3.4.27 release)*

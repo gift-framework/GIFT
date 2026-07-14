@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title | default: site.title }} — GIFT</title>
+  <title>{{ page.title | default: site.title }} — K₇</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 
 <nav>
   <div class="container">
-    <a href="{{ '/' | relative_url }}" class="nav-brand">GIFT</a>
+    <a href="{{ '/' | relative_url }}" class="nav-brand">K₇</a>
     <div class="lang-toggle" aria-label="Language">
       <a class="lang-en" href="#" aria-label="English">EN</a>
       <span aria-hidden="true">·</span>
@@ -38,7 +38,7 @@
   // List of pages for which a French translation exists, generated at
   // Jekyll build time. Each entry is the EN URL (with baseurl prefix);
   // the FR sibling lives at the same path with .html → .fr.html.
-  window.GIFT_FR_PAGES = new Set([
+  window.K₇_FR_PAGES = new Set([
 {%- for p in site.pages -%}
 {%- if p.path contains ".fr.md" or p.path contains ".fr.html" -%}
 {%- assign en_url = p.url | replace: ".fr.html", ".html" -%}
@@ -72,7 +72,7 @@
       enRefForCheck = enHref;
     }
     // Hide the toggle entirely if no FR translation exists for this page
-    var hasFrench = window.GIFT_FR_PAGES.has(enRefForCheck);
+    var hasFrench = window.K₇_FR_PAGES.has(enRefForCheck);
     if (!hasFrench) {
       var toggle = document.querySelector('.lang-toggle');
       if (toggle) toggle.style.display = 'none';
@@ -100,7 +100,7 @@
 <footer>
   <div class="container">
     <div class="footer-bottom">
-      <span>MIT License &middot; GIFT Framework v3.4</span>
+      <span>MIT License &middot; K₇ Framework v3.4</span>
       <span class="gift-from-bit">Gift from bit</span>
     </div>
   </div>

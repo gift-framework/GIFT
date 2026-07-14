@@ -66,9 +66,9 @@ Nous voyons les cercles. Nous ne pouvons pas voir la sphère.
 
 ---
 
-### GIFT et les sept cachés
+### K₇ et les sept cachés
 
-Dans le cadre théorique GIFT, notre univers visible 4D (3 d'espace + 1 de temps) est fibré au-dessus d'une variété compacte de dimension 7 appelée K₇. Le total est de 11 dimensions, ce qui est cohérent avec la M-théorie.
+Dans le cadre théorique K₇, notre univers visible 4D (3 d'espace + 1 de temps) est fibré au-dessus d'une variété compacte de dimension 7 appelée K₇. Le total est de 11 dimensions, ce qui est cohérent avec la M-théorie.
 
 Mais nous ne *voyons* pas K₇. Nous voyons ses **effets** :
 
@@ -140,7 +140,7 @@ Si le panpsychisme est vrai (et je ne dis pas qu'il l'est), alors les dimensions
 
 Nous pourrions évoluer **aux côtés** de phénomènes conscients que nous ne percevons pas, de la même façon que le pou évolue aux côtés des voitures et des antennes-relais.
 
-Ce n'est pas une affirmation scientifique. GIFT ne prouve pas cela. Rien ne prouve cela. Mais c'est une pensée que les mathématiques permettent, même si elles ne l'exigent pas.
+Ce n'est pas une affirmation scientifique. K₇ ne prouve pas cela. Rien ne prouve cela. Mais c'est une pensée que les mathématiques permettent, même si elles ne l'exigent pas.
 
 ---
 
@@ -158,7 +158,7 @@ Voici ce que je crois vraiment, dépouillé de toute spéculation :
 
 5. **L'humilité est appropriée.** Le pou ne sait pas qu'il est un pou. Nous non plus.
 
-GIFT propose un cadre mathématique où les constantes émergent de la topologie. C'est intéressant et testable. Mais même si GIFT a raison, il ne nous dit pas ce que K₇ **est** : seulement ce qu'il **fait**.
+K₇ propose un cadre mathématique où les constantes émergent de la topologie. C'est intéressant et testable. Mais même si K₇ a raison, il ne nous dit pas ce que K₇ **est** : seulement ce qu'il **fait**.
 
 Les questions plus profondes restent ouvertes.
 
@@ -190,7 +190,7 @@ Et peut-être que, pour des créatures à la perception limitée vivant dans un 
 - Edwin Abbott, *Flatland : un roman à plusieurs dimensions* (1884)
 - Jakob von Uexküll, *Mondes animaux et monde humain* (1934)
 - James Lovelock, *Gaïa : une nouvelle vue de la vie sur Terre* (1979)
-- GIFT Framework : [arithmon.substack.com](https://arithmon.substack.com)
+- K₇ Framework : [arithmon.substack.com](https://arithmon.substack.com)
 
 ---
 

@@ -3,11 +3,11 @@ title: "Pour les physiciens"
 layout: default
 ---
 
-# Géométrie de l'information en physique des particules : la perspective GIFT
+# Géométrie de l'information en physique des particules : la perspective K₇
 
 ## Résumé
 
-Le cadre Geometric Information Field Theory (GIFT) propose que les paramètres du Modèle Standard ne sont pas des constantes libres nécessitant une détermination expérimentale, mais plutôt des invariants topologiques d'une structure géométrique sous-jacente. Plus précisément, le cadre dérive 33 relations Type I sans dimension à partir de la cohomologie d'une variété K₇ à holonomie G₂ de dimension 7, couplée à une architecture de jauge E₈×E₈. Ce document présente la structure conceptuelle pour les physiciens théoriciens, en se concentrant sur la manière dont la topologie pourrait éliminer le besoin de paramètres ajustables.
+Le cadre K₇ propose que les paramètres du Modèle Standard ne sont pas des constantes libres nécessitant une détermination expérimentale, mais plutôt des invariants topologiques d'une structure géométrique sous-jacente. Plus précisément, le cadre dérive 33 relations Type I sans dimension à partir de la cohomologie d'une variété K₇ à holonomie G₂ de dimension 7, couplée à une architecture de jauge E₈×E₈. Ce document présente la structure conceptuelle pour les physiciens théoriciens, en se concentrant sur la manière dont la topologie pourrait éliminer le besoin de paramètres ajustables.
 
 ## 1. Le problème des paramètres
 
@@ -15,7 +15,7 @@ Le Modèle Standard décrit avec une grande précision les interactions électro
 
 Les approches d'unification traditionnelles n'ont pas résolu cette situation. Les théories de grande unification introduisent des paramètres supplémentaires en tentant d'expliquer les 19 d'origine. L'espace des modules de la théorie des cordes englobe environ 10⁵⁰⁰ vides, transformant le problème des paramètres en un problème de sélection de vide. La question persiste : ces paramètres sont-ils vraiment libres, ou encodent-ils une structure plus profonde ?
 
-Le cadre GIFT explore une alternative : et si les 19 paramètres étaient des invariants topologiques d'une variété interne compacte ? Dans cette image, il n'y a rien à ajuster car les données topologiques discrètes n'admettent aucune variation continue.
+Le cadre K₇ explore une alternative : et si les 19 paramètres étaient des invariants topologiques d'une variété interne compacte ? Dans cette image, il n'y a rien à ajuster car les données topologiques discrètes n'admettent aucune variation continue.
 
 ## 2. La construction géométrique
 
@@ -108,17 +108,17 @@ Le cadre fait des prédictions spécifiques testables par des expériences à co
 
 ## 5. Relation aux autres approches
 
-**Diffère de l'embarquement E₈ direct** : les premières tentatives d'embarquer les champs du Modèle Standard directement dans des représentations de E₈ ont rencontré l'obstruction de Distler-Garibaldi. GIFT utilise E₈×E₈ comme architecture, pas comme espace de représentation direct pour les fermions.
+**Diffère de l'embarquement E₈ direct** : les premières tentatives d'embarquer les champs du Modèle Standard directement dans des représentations de E₈ ont rencontré l'obstruction de Distler-Garibaldi. K₇ utilise E₈×E₈ comme architecture, pas comme espace de représentation direct pour les fermions.
 
-**Diffère du paysage des cordes** : les 10⁵⁰⁰ vides de la théorie des cordes créent un problème de sélection. GIFT propose que des contraintes topologiques déterminent uniquement les observables, éliminant la dégénérescence des vides (bien que cela requière la construction K₇ spécifique).
+**Diffère du paysage des cordes** : les 10⁵⁰⁰ vides de la théorie des cordes créent un problème de sélection. K₇ propose que des contraintes topologiques déterminent uniquement les observables, éliminant la dégénérescence des vides (bien que cela requière la construction K₇ spécifique).
 
-**Connexion avec la M-théorie** : le bulk à 11 dimensions et la compactification G₂ sont standards en M-théorie. GIFT peut être vu comme l'extraction de prédictions spécifiques d'un coin particulier du paysage de la M-théorie.
+**Connexion avec la M-théorie** : le bulk à 11 dimensions et la compactification G₂ sont standards en M-théorie. K₇ peut être vu comme l'extraction de prédictions spécifiques d'un coin particulier du paysage de la M-théorie.
 
 **Interprétation théorico-informationnelle** : le facteur de dualité binaire p₂ = 2, l'apparition de ln(2) dans les formules cosmologiques, et la compression dimensionnelle 496 → 99 → 4 suggèrent des connexions avec la théorie de l'information et la correction d'erreurs quantique.
 
 ## 6. Synthèse
 
-Le cadre GIFT explore si les paramètres du Modèle Standard pourraient être des invariants topologiques plutôt que des constantes libres. La proposition spécifique implique une structure de jauge E₈×E₈, une holonomie G₂ sur une 7-variété K₇ avec nombres de Betti b₂ = 21 et b₃ = 77, et une torsion contrôlée fournissant la dynamique.
+Le cadre K₇ explore si les paramètres du Modèle Standard pourraient être des invariants topologiques plutôt que des constantes libres. La proposition spécifique implique une structure de jauge E₈×E₈, une holonomie G₂ sur une 7-variété K₇ avec nombres de Betti b₂ = 21 et b₃ = 77, et une torsion contrôlée fournissant la dynamique.
 
 Les 33 relations Type I sans dimension qui en résultent correspondent à l'expérience avec une précision moyenne de 0,99 % (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Que cela reflète une physique fondamentale ou une coïncidence élaborée sera déterminé par les expériences, en particulier la mesure par DUNE de la phase de violation CP δ_CP dans les années à venir.
 
@@ -134,4 +134,4 @@ La valeur du cadre, indépendamment de sa correction physique, réside dans la d
 
 ---
 
-*Cadre GIFT v3.4.27*
+*Cadre K₇ v3.4.27*

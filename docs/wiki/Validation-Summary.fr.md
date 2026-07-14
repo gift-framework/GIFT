@@ -3,7 +3,7 @@ title: "Résumé de validation"
 layout: default
 ---
 
-# Résumé complet de validation GIFT v3.4
+# Résumé complet de validation K₇ v3.4
 
 **Date** : 2026-06-05 (v3.4.27)
 **Références expérimentales** : NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022
@@ -27,7 +27,7 @@ layout: default
 
 Les 33 prédictions sont sans dimension : ratios, angles de mélange et constantes de couplage. Les angles en degrés et leurs équivalents trigonométriques (sin² θ) représentent le même contenu physique dans des coordonnées différentes.
 
-**Note sur δ_CP** : δ_CP est la seule observable dont l'incertitude expérimentale (±20° = ±11 %) dépasse l'écart de GIFT. Pour les 32 autres observables, la précision expérimentale dépasse largement la précision du cadre. La prédiction de GIFT (197°) se situe à ~1 σ du meilleur ajustement de NuFIT 6.1 (~207-212°), à l'intérieur de la fenêtre de falsification [182, 212]°. Nous rapportons 0,99 % (33 relations Type I) comme métrique principale.
+**Note sur δ_CP** : δ_CP est la seule observable dont l'incertitude expérimentale (±20° = ±11 %) dépasse l'écart de GIFT. Pour les 32 autres observables, la précision expérimentale dépasse largement la précision du cadre. La prédiction de K₇ (197°) se situe à ~1 σ du meilleur ajustement de NuFIT 6.1 (~207-212°), à l'intérieur de la fenêtre de falsification [182, 212]°. Nous rapportons 0,99 % (33 relations Type I) comme métrique principale.
 
 ---
 
@@ -37,13 +37,13 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.1 Structurel (1 prédiction)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | N_gen | 3 | 3 | **0,00 %** | EXACT |
 
 ### I.2 Secteur électrofaible (4 prédictions)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | sin²θ_W | 3/13 = 0,2308 | 0,2312 | 0,19 % | < 1 % |
 | α_s(M_Z) | √2/12 = 0,1179 | 0,1180 | 0,13 % | < 1 % |
@@ -52,7 +52,7 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.3 Secteur leptonique (4 prédictions)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | Q_Koide | 2/3 = 0,6667 | 0,6667 | **0,001 %** | < 1 % |
 | m_τ/m_e | 3477 | 3477,23 | **0,007 %** | < 1 % |
@@ -61,7 +61,7 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.4 Secteur quark (4 prédictions)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | m_s/m_d | 20 | 20,0 | **0,00 %** | EXACT |
 | m_c/m_s | 82/7 = 11,71 | 11,7 | 0,12 % | < 1 % |
@@ -70,7 +70,7 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.5 Secteur PMNS (7 prédictions)
 
-| Observable | GIFT | NuFIT 6.0 | Écart | Statut |
+| Observable | K₇ | NuFIT 6.0 | Écart | Statut |
 |---|---|---|---|---|
 | δ_CP | 197° | 177° ± 20° | 11,30 % | TENSION (1 σ) |
 | θ_23 | 49,25° | 48,5° ± 0,9° | 1,55 % | 1-5 % |
@@ -84,7 +84,7 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.6 Secteur CKM (3 prédictions)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | sin²θ_12 | 0,226 | 0,225 | 0,36 % | < 1 % |
 | A_Wolf | 0,838 | 0,836 | 0,29 % | < 1 % |
@@ -92,7 +92,7 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.7 Rapports de masses bosoniques (3 prédictions)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | m_H/m_t | 0,727 | 0,725 | 0,31 % | < 1 % |
 | m_H/m_W | 1,558 | 1,558 | **0,02 %** | < 1 % |
@@ -100,7 +100,7 @@ Les 33 prédictions sont des ratios topologiquement dérivés ou des nombres pur
 
 ### I.8 Secteur cosmologique (7 prédictions)
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | Ω_DE | ln(2) × 98/99 = 0,686 | 0,685 | 0,21 % | < 1 % |
 | n_s | ζ(11)/ζ(5) = 0,9649 | 0,9649 | **0,004 %** | < 1 % |
@@ -135,7 +135,7 @@ Où : H* = 99 (somme cohomologique), L_8 = 47, φ = nombre d'or.
 
 ### II.2 Résultats dimensionnels
 
-| Observable | GIFT | Expérience | Écart | Statut |
+| Observable | K₇ | Expérience | Écart | Statut |
 |---|---|---|---|---|
 | m_e | 0,5114 MeV | 0,5110 MeV | **0,09 %** | < 1 % |
 | m_μ | 105,78 MeV | 105,66 MeV | 0,12 % | < 1 % |
@@ -151,7 +151,7 @@ Où : H* = 99 (somme cohomologique), L_8 = 47, φ = nombre d'or.
 
 ### III.1 Recherche exhaustive (6 phases)
 
-| Phase | Configurations | Meilleures que GIFT |
+| Phase | Configurations | Meilleures que K₇ |
 |---|---|---|
 | 1. Grille de Betti (b₂ × b₃) | 14 949 | 0 |
 | 2. Betti × holonomie (8 groupes) | 119 592 | 0 |
@@ -172,7 +172,7 @@ IC à 95 % (Clopper-Pearson) : [0 ; 3,7 × 10⁻⁶]
 | Holonomie Spin(7) | 6,44 % | n° 3 |
 | SU(3) (Calabi-Yau) | 6,71 % | n° 4 |
 
-Parmi 30 variétés G₂ connues issues de la littérature mathématique (Joyce, Kovalev TCS, CHNP, Nordström, Halverson-Morrison), la variété GIFT K₇ = (b₂=21, b₃=77) se classe **n° 1**. La suivante est CHNP (b₂=20, b₃=76) à 2,44 %.
+Parmi 30 variétés G₂ connues issues de la littérature mathématique (Joyce, Kovalev TCS, CHNP, Nordström, Halverson-Morrison), la variété K₇ = (b₂=21, b₃=77) se classe **n° 1**. La suivante est CHNP (b₂=20, b₃=76) à 2,44 %.
 
 ### III.3 Validation à toute épreuve (7 composantes)
 
@@ -227,13 +227,13 @@ Comparaison WAIC : ΔWAIC = −10,5 (le modèle nul est marginalement préféré
 
 ### III.7 Limites et réserves
 
-1. **Tension sur δ_CP** : le plus grand écart sur une seule observable (11,3 %) correspond au paramètre PMNS le moins contraint. NuFIT 6.0 rapporte δ_CP = 177 ± 20° (1 σ), donc la prédiction GIFT de 197° se situe à 1,0 σ. Les données futures (DUNE, T2HK) affineront ce test.
+1. **Tension sur δ_CP** : le plus grand écart sur une seule observable (11,3 %) correspond au paramètre PMNS le moins contraint. NuFIT 6.0 rapporte δ_CP = 177 ± 20° (1 σ), donc la prédiction K₇ de 197° se situe à 1,0 σ. Les données futures (DUNE, T2HK) affineront ce test.
 
 2. **Inversion WAIC** : la comparaison théorico-informationnelle (WAIC) préfère marginalement le modèle nul, à cause de δ_CP. Toutes les autres métriques de comparaison de modèles (facteurs de Bayes, p-valeurs des modèles nuls, recherche exhaustive) favorisent fortement GIFT. À surveiller à mesure que les contraintes sur δ_CP s'améliorent.
 
-3. **Décalage de sin²θ_23** : NuFIT 6.0 est passé de 0,546 à 0,561 (IC19 sans SK-atm). La prédiction GIFT (6/11 = 0,545) suivait de près la valeur NuFIT 5.3 ; le décalage augmente l'écart de 0,1 % à 2,8 %. L'ambiguïté d'octant (IC24 avec SK-atm préfère 0,470) ajoute de l'incertitude à cette observable.
+3. **Décalage de sin²θ_23** : NuFIT 6.0 est passé de 0,546 à 0,561 (IC19 sans SK-atm). La prédiction K₇ (6/11 = 0,545) suivait de près la valeur NuFIT 5.3 ; le décalage augmente l'écart de 0,1 % à 2,8 %. L'ambiguïté d'octant (IC24 avec SK-atm préfère 0,470) ajoute de l'incertitude à cette observable.
 
-4. **Fonction de score** : tous les résultats utilisent l'écart relatif moyen (en %). Cela pondère également toutes les observables, indépendamment de la précision expérimentale. Sous un score pondéré par la précision (1/incertitude), les correspondances ultra-précises de GIFT (α⁻¹, Q_Koide, n_s) domineraient, et l'écart moyen approcherait zéro.
+4. **Fonction de score** : tous les résultats utilisent l'écart relatif moyen (en %). Cela pondère également toutes les observables, indépendamment de la précision expérimentale. Sous un score pondéré par la précision (1/incertitude), les correspondances ultra-précises de K₇ (α⁻¹, Q_Koide, n_s) domineraient, et l'écart moyen approcherait zéro.
 
 ---
 
@@ -241,7 +241,7 @@ Comparaison WAIC : ΔWAIC = −10,5 (le modèle nul est marginalement préféré
 
 **Statut** : CLOS
 
-La connexion Riemann-GIFT a été rigoureusement testée et s'est avérée n'avoir qu'une preuve faible (4 PASS / 4 FAIL sur 8 tests statistiques indépendants). L'hypothèse de récurrence séquentielle a été falsifiée sur les zéros G₂ de Weng.
+La connexion Riemann-K₇ a été rigoureusement testée et s'est avérée n'avoir qu'une preuve faible (4 PASS / 4 FAIL sur 8 tests statistiques indépendants). L'hypothèse de récurrence séquentielle a été falsifiée sur les zéros G₂ de Weng.
 
 Les 33 prédictions sans dimension NE dépendent PAS de la connexion de Riemann.
 
@@ -249,7 +249,7 @@ Les 33 prédictions sans dimension NE dépendent PAS de la connexion de Riemann.
 
 ## Conclusion
 
-Avec les valeurs expérimentales NuFIT 6.1, le cadre GIFT atteint :
+Avec les valeurs expérimentales NuFIT 6.1, le cadre K₇ atteint :
 
 - **Écart moyen** : **0,99 %** sur les 33 relations Type I
 - **3 correspondances exactes** (0,00 % d'écart : N_gen, m_s/m_d, Ω_DM/Ω_b)
@@ -285,6 +285,6 @@ La prédiction de δ_CP (197°) sera testée de manière décisive par DUNE (pre
 
 ---
 
-*Validation statistique GIFT v3.4 (tête) / v3.3.24 (ventilation sectorielle)*
+*Validation statistique K₇ v3.4 (tête) / v3.3.24 (ventilation sectorielle)*
 *Sortie v3.4 : 2026-04-29 | tableaux sectoriels générés : 2026-02-28*
 *Données expérimentales : PDG 2024 / NuFIT 6.0 (arXiv:2410.05380) / Planck 2020*

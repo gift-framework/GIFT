@@ -4,12 +4,12 @@ title: Glossary
 
 # Glossary of Technical Terms
 
-Comprehensive definitions of technical terms, mathematical notation, and acronyms used in the GIFT framework.
+Comprehensive definitions of technical terms, mathematical notation, and acronyms used in the K₇ framework.
 
 ## Framework-Specific Terms
 
-### GIFT
-**Geometric Information Field Theory**. The framework proposing that fundamental physics parameters emerge as topological invariants from E₈×E₈ structure compactified on G₂ holonomy manifolds.
+### K₇
+**The K₇ framework** (formerly Geometric Information Field Theory). The framework proposing that fundamental physics parameters emerge as topological invariants from E₈×E₈ structure compactified on G₂ holonomy manifolds.
 
 ### K₇
 A compact 7-dimensional Riemannian manifold with G₂ holonomy. The subscript 7 indicates dimension. Specific topological properties: b₂(K₇) = 21, b₃(K₇) = 77.
@@ -80,7 +80,7 @@ Topological invariants counting independent homology classes.
 For K₇: b₂ = 21, b₃ = 77
 
 ### AdS₄
-**Anti-de Sitter space in 4 dimensions**. Maximally symmetric spacetime with negative cosmological constant. Used in holographic models and GIFT compactification.
+**Anti-de Sitter space in 4 dimensions**. Maximally symmetric spacetime with negative cosmological constant. Used in holographic models and K₇ compactification.
 
 ### Compact Manifold
 Topological space that is closed (contains all limit points) and bounded. K₇ is compact, allowing consistent dimensional reduction.
@@ -141,10 +141,10 @@ Process by which gauge bosons acquire mass through spontaneous symmetry breaking
 ## Specific Observables
 
 ### N_gen
-Number of fermion generations. Experimentally: 3. GIFT predicts: rank(E₈) - rank(Weyl) = 3.
+Number of fermion generations. Experimentally: 3. K₇ predicts: rank(E₈) - rank(Weyl) = 3.
 
 ### δ_CP
-CP-violating phase in neutrino mixing. GIFT predicts: 197° from formula dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°.
+CP-violating phase in neutrino mixing. K₇ predicts: 197° from formula dim(K₇)×dim(G₂) + H* = 7×14 + 99 = 197°.
 
 ### θ₁₂, θ₁₃, θ₂₃
 Three neutrino mixing angles in PMNS matrix.
@@ -157,10 +157,10 @@ Parameter in Koide formula relating charged lepton masses:
 ```
 Q = (mₑ + mμ + mτ)² / (mₑ² + mμ² + mτ²)
 ```
-Experimental: Q ≈ 2/3. GIFT: Q = 2/3 exactly.
+Experimental: Q ≈ 2/3. K₇: Q = 2/3 exactly.
 
 ### Ω_DE
-Dark energy density as fraction of critical density. Experimental: Ω_DE ≈ 0.689. GIFT: Ω_DE = ln(2) ≈ 0.693.
+Dark energy density as fraction of critical density. Experimental: Ω_DE ≈ 0.689. K₇: Ω_DE = ln(2) ≈ 0.693.
 
 ### H₀
 **Hubble constant**. Current expansion rate of universe. Local measurements: ~73 km/s/Mpc. CMB measurements: ~67 km/s/Mpc. "Hubble tension" refers to discrepancy.
@@ -262,7 +262,7 @@ Identically equal or defined as.
 ### ∼
 Of the same order of magnitude, or equivalent to.
 
-## Greek Letters in GIFT
+## Greek Letters in K₇
 
 ### α (alpha)
 Fine structure constant, α ≈ 1/137.
@@ -296,7 +296,7 @@ Golden ratio or angle.
 
 ## Acronyms
 
-### GIFT
+### K₇
 Geometric Information Field Theory
 
 ### SM
@@ -390,7 +390,7 @@ Framework introduced in v2.1 connecting non-zero torsion on K₇ to RG flow. Key
 Mathematical infrastructure linking dimensionless to dimensional observables: Λ_GIFT = 21×e⁸×248/(7×π⁴) ≈ 1.63×10⁶.
 
 ### Lean 4 (v3.3)
-Theorem prover used for formal verification of GIFT exact relations. The [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) repository contains 455+ certified relations including E₈ root system, G₂ cross product properties, spectral theory, TCS bounds, and Yukawa mass ratios. Key theorem: `GIFT_framework_certified`.
+Theorem prover used for formal verification of K₇ exact relations. The [Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) repository contains 455+ certified relations including E₈ root system, G₂ cross product properties, spectral theory, TCS bounds, and Yukawa mass ratios. Key theorem: `K₇_framework_certified`.
 
 ---
 

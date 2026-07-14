@@ -6,7 +6,7 @@ layout: default
 > Publié à l'origine sur [arithmon.substack.com](https://arithmon.substack.com/p/13-theorems-zero-trust-required)
 
 # 13 théorèmes, zéro confiance requise
-GIFT rencontre Lean 4
+K₇ rencontre Lean 4
 
 3 décembre 2025
 
@@ -14,7 +14,7 @@ GIFT rencontre Lean 4
 
 C'est de bonne guerre.
 
-GIFT est désormais vérifié en Lean 4. 13 relations exactes dérivées de la topologie, contrôlées par un assistant de preuve. Zéro sorry. Seulement les axiomes standards. L'arithmétique compile.
+K₇ est désormais vérifié en Lean 4. 13 relations exactes dérivées de la topologie, contrôlées par un assistant de preuve. Zéro sorry. Seulement les axiomes standards. L'arithmétique compile.
 
 Vous n'avez pas à faire confiance aux maths. Lean les a vérifiées.
 
@@ -32,11 +32,11 @@ Lean est un assistant de preuve : un logiciel qui vérifie les preuves mathémat
 
 La communauté Lean l'utilise pour formaliser des mathématiques sérieuses : la bibliothèque Mathlib couvre des milliers de théorèmes, des contributeurs travaillent à formaliser le dernier théorème de Fermat, et des médaillés Fields la prennent au sérieux.
 
-La question était simple : peut-on formaliser les relations centrales de GIFT ? Pas l'interprétation physique, juste l'arithmétique. Les chiffres tombent-ils vraiment juste ?
+La question était simple : peut-on formaliser les relations centrales de K₇ ? Pas l'interprétation physique, juste l'arithmétique. Les chiffres tombent-ils vraiment juste ?
 
 Ce que la formalisation prouve
 
-GIFT affirme que les constantes physiques émergent des invariants topologiques. La formalisation Lean vérifie un énoncé précis :
+K₇ affirme que les constantes physiques émergent des invariants topologiques. La formalisation Lean vérifie un énoncé précis :
 
 SI les entiers suivants sont fixés :
 
@@ -67,7 +67,7 @@ ALORS ces relations exactes tiennent :
 Chaque relation a son propre théorème autonome. Chaque théorème compile. Le théorème principal regroupe les 13 :
 
 ```lean
-theorem GIFT_framework_certified (G : GIFTStructure)
+theorem K₇_framework_certified (G : K₇Structure)
     (h : is_zero_parameter G) :
     (G.b2 : ℚ) / (G.b3 + G.dim_G2) = 3 / 13 ∧
     (G.dim_E8xE8 * G.b2 : ℚ) / (G.dim_J3O * G.H_star) = 3472 / 891 ∧
@@ -82,7 +82,7 @@ Audit des axiomes
 Question naturelle : sur quels axiomes la preuve repose-t-elle ? Des hypothèses cachées pourraient ruiner l'édifice.
 
 ```
-#print axioms GIFT_framework_certified
+#print axioms K₇_framework_certified
 -- [propext, Quot.sound]
 ```
 
@@ -121,7 +121,7 @@ La formalisation est modulaire :
 
 ```
 Lean/
-├── GIFT/
+├── K₇/
 │   ├── Algebra/           # système de racines de E₈, groupe de Weyl, représentations
 │   ├── Geometry/          # holonomie G₂, construction TCS
 │   ├── Topology/          # nombres de Betti, cohomologie
@@ -153,7 +153,7 @@ La formalisation Lean crée un précédent :
 - **Transparence** : pas d'hypothèses cachées. Les axiomes sont listés.
 - **Précision** : 3/13 signifie exactement 3/13, pas « environ 0,231 ».
 
-Cela ne convaincra personne que GIFT est de la physique correcte. C'est à cela que servent les expériences. Mais cela élimine une classe entière d'objections : l'arithmétique n'est pas fausse. Lean l'a vérifiée.
+Cela ne convaincra personne que K₇ est de la physique correcte. C'est à cela que servent les expériences. Mais cela élimine une classe entière d'objections : l'arithmétique n'est pas fausse. Lean l'a vérifiée.
 
 Conclusion
 

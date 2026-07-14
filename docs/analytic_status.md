@@ -81,27 +81,27 @@ anisotropic Joyce theorem `(J)`, and Appendix C compact-topology proof.
 
 ### Claims that must be read narrowly
 
-- `K7-Lean/GIFT/Foundations/AnalyticalMetric.lean`
+- `K7-Lean/K₇/Foundations/AnalyticalMetric.lean`
   Scope: `local`.
   Status: exact constant flat `G_2` form on `R^7`, not a compact `K_7` metric.
   Reason: the file proves constancy, scaled identity metric, and zero torsion by `d phi = d * phi = 0` for a constant form. It does not build an atlas, descent, compact quotient, or compact torsion-free structure.
 
-- `K7-Lean/GIFT/Foundations/K3ClosedFormWitness.lean`
+- `K7-Lean/K₇/Foundations/K3ClosedFormWitness.lean`
   Scope: `box-local`.
   Status: rigorous interval certificate on 4000 frozen Krawczyk boxes for one explicit 667-parameter witness.
   Reason: the header explicitly says the result does not promote to a whole-K3 bound and isolates the remaining positivity/SOS problem.
 
-- `K7-Lean/GIFT/Foundations/G2DonaldsonLinkCohomology.lean`
+- `K7-Lean/K₇/Foundations/G2DonaldsonLinkCohomology.lean`
   Scope: arithmetic and combinatorial only.
   Status: formal arithmetic consequences from definitions plus a hand-off to an external Leray/branched-cover derivation.
   Reason: the header explicitly states the sheaf-theoretic and analytic derivation is not formalized.
 
-- `K7-Lean/GIFT/Foundations/CollarResummationCertificate.lean`
+- `K7-Lean/K₇/Foundations/CollarResummationCertificate.lean`
   Scope: `collar`.
   Status: exact binomial and indicial-parity identities only.
   Reason: it proves `sum |binom(3/2,k)| = 3` and parity of `beta^2 - m^2`; it is not a convergence theorem for the collar PDE or a Fredholm theorem.
 
-- `K7-Lean/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean`
+- `K7-Lean/K₇/Foundations/DonaldsonGlobalBaseAudit.lean`
   Scope: exploratory / legacy.
   Status: inconsistent with the current rank-one 77-unlink branch if read literally.
   Reason: it records several obstructed/open fields, yet also sets `globalDonaldsonBaseGeometryStatusCertificate = .matches`. This should not be consumed as a discharge of the current global background problem.
@@ -163,22 +163,22 @@ anisotropic Joyce theorem `(J)`, and Appendix C compact-topology proof.
 - `private/canonical/results/axis2_*`
 - `private/canonical/results/phase_iii3_*`
 - `private/canonical/results/k3_closedform_witness_manifest.json`
-- `K7-Lean/GIFT/Foundations/K3ClosedFormWitness.lean`
-- `K7-Lean/GIFT/Foundations/K3ClosedFormBoxEnclosures.lean`
-- `K7-Lean/GIFT/Foundations/G2DonaldsonLinkCohomology.lean`
-- `K7-Lean/GIFT/Foundations/CollarResummationCertificate.lean`
+- `K7-Lean/K₇/Foundations/K3ClosedFormWitness.lean`
+- `K7-Lean/K₇/Foundations/K3ClosedFormBoxEnclosures.lean`
+- `K7-Lean/K₇/Foundations/G2DonaldsonLinkCohomology.lean`
+- `K7-Lean/K₇/Foundations/CollarResummationCertificate.lean`
 
 These are the current rank-one / 77-unlink / branched adiabatic materials.
 
 ### Legacy or comparison branches
 
-- `K7-Lean/GIFT/Foundations/AnalyticalMetric.lean`
+- `K7-Lean/K₇/Foundations/AnalyticalMetric.lean`
   Classification: comparison only. Useful as a local flat reference, not a dependency for compact `K_7`.
 
-- `K7-Lean/GIFT/Foundations/DonaldsonGlobalBaseAudit.lean`
+- `K7-Lean/K₇/Foundations/DonaldsonGlobalBaseAudit.lean`
   Classification: legacy exploratory branch tied to the older Fano-link and global-coframe audit.
 
-- `K7-Lean/GIFT/Foundations/MetricGapClosure.lean`
+- `K7-Lean/K₇/Foundations/MetricGapClosure.lean`
   Classification: meta-ledger. Useful for honest separation of levels, but not a proof artifact for the current rank-one branch.
 
 - `private/computation/metric_certification/run_g*.py`

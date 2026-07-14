@@ -121,7 +121,7 @@ Quand tu veux étudier une forme géométrique compliquée qui vit dans un espac
 
 C'est exactement la sphère Minecraft du début de cet épisode. À ceci près qu'au lieu de blocs cubiques alignés sur une grille, tu as des neurones qui interpolent. Et au lieu d'une sphère à trois dimensions, tu as une variété à sept dimensions. Mais le geste profond est le même : tenter de capturer une forme lisse avec des éléments discrets, en raffinant assez pour que les invariants importants survivent à la discrétisation.
 
-C'est un projet que j'appelle GIFT, et qui a sa propre série d'articles sur ce blog si la question t'intéresse vraiment. Je n'en parle pas plus ici parce que ce n'est pas le sujet. Le sujet, c'est que cette tension entre le lisse et le grossier, entre l'idéal continu et l'approximation discrète, est *partout* dès qu'on essaie de faire de la science numérique. Et tu y as joué dans Minecraft avant même d'avoir vu une équation.
+C'est un projet que j'appelle K₇, et qui a sa propre série d'articles sur ce blog si la question t'intéresse vraiment. Je n'en parle pas plus ici parce que ce n'est pas le sujet. Le sujet, c'est que cette tension entre le lisse et le grossier, entre l'idéal continu et l'approximation discrète, est *partout* dès qu'on essaie de faire de la science numérique. Et tu y as joué dans Minecraft avant même d'avoir vu une équation.
 
 ---
 

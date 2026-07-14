@@ -7,7 +7,7 @@ layout: default
 
 ## Abstract
 
-This document describes the Lean 4 formalization of the GIFT framework, which derives Standard Model parameters from topological invariants. The formalization verifies 290+ exact relations connecting geometric data (Betti numbers, Lie algebra dimensions, cohomological invariants) to physical observables (mixing angles, mass ratios, coupling constants). The verification uses only standard axioms with zero domain-specific assumptions, demonstrating that machine-checked proofs can provide audit trails for theoretical physics claims.
+This document describes the Lean 4 formalization of the K₇ framework, which derives Standard Model parameters from topological invariants. The formalization verifies 290+ exact relations connecting geometric data (Betti numbers, Lie algebra dimensions, cohomological invariants) to physical observables (mixing angles, mass ratios, coupling constants). The verification uses only standard axioms with zero domain-specific assumptions, demonstrating that machine-checked proofs can provide audit trails for theoretical physics claims.
 
 ## 1. The Verification Challenge
 
@@ -35,9 +35,9 @@ Different aspects of physics have different formalization prospects:
 | Full dynamical content | Low | Requires analysis formalization |
 | Quantum field theory | Low | Foundational issues remain |
 
-The GIFT formalization focuses on the first three categories: algebraic data (E₈ dimensions, G₂ structure), topological invariants (Betti numbers), and the arithmetic relations connecting them to physical observables.
+The K₇ formalization focuses on the first three categories: algebraic data (E₈ dimensions, G₂ structure), topological invariants (Betti numbers), and the arithmetic relations connecting them to physical observables.
 
-## 2. The GIFT Formalization
+## 2. The K₇ Formalization
 
 ### 2.1 Scope
 
@@ -165,7 +165,7 @@ The E₈ and G₂ structures are defined axiomatically (dimension, rank) rather 
 
 Formalization proves internal consistency, not external validity. A framework could be internally consistent yet physically wrong. The proofs establish: "If the topological data are as claimed, then the relations hold." Whether the universe actually instantiates this topology is an empirical question.
 
-Continuous mathematics (analysis, differential geometry) remains harder to formalize than discrete mathematics (algebra, combinatorics). The GIFT formalization deliberately focuses on exact arithmetic relations, deferring dynamical content.
+Continuous mathematics (analysis, differential geometry) remains harder to formalize than discrete mathematics (algebra, combinatorics). The K₇ formalization deliberately focuses on exact arithmetic relations, deferring dynamical content.
 
 ## 5. Access and Reproduction
 
@@ -179,7 +179,7 @@ All proofs are publicly available:
 ```
 core/
 ├── Lean/
-│   └── GIFT/
+│   └── K₇/
 │       ├── Core.lean            # Constants (dim_E8, b2, b3, H*, ...)
 │       ├── Certificate.lean     # Master theorem (290+ relations)
 │       ├── Foundations/         # E8 roots, G2 cross product
@@ -209,15 +209,15 @@ The repository maintains CI pipelines that rebuild all proofs on each commit. Gr
 
 ## 6. Summary
 
-The GIFT formalization demonstrates that machine-verified proofs can apply to theoretical physics. The 290+ relations connecting E₈×E₈ and K₇ topology to Standard Model observables have been proven in Lean 4, using zero domain-specific axioms.
+The K₇ formalization demonstrates that machine-verified proofs can apply to theoretical physics. The 290+ relations connecting E₈×E₈ and K₇ topology to Standard Model observables have been proven in Lean 4, using zero domain-specific axioms.
 
 This establishes internal consistency: given the stated topological inputs, the physical relations follow by pure computation. Whether the inputs describe physical reality remains an empirical question, to be addressed by experiments like DUNE's measurement of δ_CP.
 
-The methodological contribution is independent of GIFT's physical correctness. Formal verification provides transparent, reproducible, and auditable derivations - properties valuable for any mathematical framework in physics.
+The methodological contribution is independent of K₇'s physical correctness. Formal verification provides transparent, reproducible, and auditable derivations - properties valuable for any mathematical framework in physics.
 
 ## References
 
-- GIFT main paper: [Paper Main Framework](Paper-Main-Framework.html)
+- K₇ main paper: [Paper Main Framework](Paper-Main-Framework.html)
 - Mathematical foundations: [Paper S1 Foundations](Paper-S1-Foundations.html)
 - Complete derivations: [Paper S2 Derivations](Paper-S2-Derivations.html)
 - Spectral geometry: [Paper Spectral Geometry](Paper-Spectral-Geometry.html)
@@ -225,4 +225,4 @@ The methodological contribution is independent of GIFT's physical correctness. F
 
 ---
 
-*GIFT Framework v3.4 - Formal Verification Documentation*
+*K₇ Framework v3.4 - Formal Verification Documentation*

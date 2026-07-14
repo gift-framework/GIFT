@@ -95,11 +95,11 @@ Quarante-trois années d'attente.
 Partie IV : Une proposition
 La connexion octonionique
 
-Le cadre GIFT propose une connexion qui mérite peut-être qu'on s'y attarde.
+Le cadre K₇ propose une connexion qui mérite peut-être qu'on s'y attarde.
 
 Les octonions ont sept unités imaginaires. Leur groupe d'automorphismes (l'ensemble des transformations qui préservent la multiplication octonionique) est le groupe de Lie exceptionnel G₂. Ce groupe a une dimension de 14.
 
-Quand la physique est compactifiée sur une variété de dimension sept à holonomie G₂, des invariants topologiques émergent. L'un de ces invariants, le deuxième nombre de Betti b₂, compte certains cycles indépendants dans la géométrie. Pour la construction spécifique que GIFT considère, b₂ = 21.
+Quand la physique est compactifiée sur une variété de dimension sept à holonomie G₂, des invariants topologiques émergent. L'un de ces invariants, le deuxième nombre de Betti b₂, compte certains cycles indépendants dans la géométrie. Pour la construction spécifique que K₇ considère, b₂ = 21.
 
 Le rapport est :
 
@@ -109,7 +109,7 @@ Exactement.
 
 Ce que c'est et ce que ce n'est pas
 
-Ce n'est pas une preuve que GIFT explique la relation de Koide. C'est l'observation qu'un casse-tête numérique vieux de 43 ans coïncide avec un rapport exact d'invariants géométriques.
+Ce n'est pas une preuve que K₇ explique la relation de Koide. C'est l'observation qu'un casse-tête numérique vieux de 43 ans coïncide avec un rapport exact d'invariants géométriques.
 
 L'observation peut être :
 
@@ -122,25 +122,25 @@ Nous ne pouvons pas distinguer ces possibilités à l'heure actuelle. Ce que nou
 Partie V : Le motif des propositions
 D'autres casse-tête, structure similaire
 
-La relation de Koide n'est pas le seul fait numérique inexpliqué de la physique des particules. Le cadre GIFT propose des origines géométriques pour plusieurs :
+La relation de Koide n'est pas le seul fait numérique inexpliqué de la physique des particules. Le cadre K₇ propose des origines géométriques pour plusieurs :
 
 **Pourquoi trois générations ?**
 
 Le Modèle Standard contient trois copies de chaque type de fermion : trois leptons chargés, trois espèces de neutrinos, trois quarks de type up, trois quarks de type down. Aucune quatrième génération n'a été observée malgré des recherches étendues.
 
-GIFT propose : N_gen = b₂/dim(K₇) = 21/7 = 3.
+K₇ propose : N_gen = b₂/dim(K₇) = 21/7 = 3.
 
 **Pourquoi cet angle de mélange faible ?**
 
 L'angle de Weinberg détermine la relation entre les forces électromagnétique et faible. Sa valeur mesurée est sin²θ_W ≈ 0,231.
 
-GIFT propose : sin²θ_W = b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 ≈ 0,2308.
+K₇ propose : sin²θ_W = b₂/(b₃ + dim(G₂)) = 21/91 = 3/13 ≈ 0,2308.
 
 **Pourquoi ce couplage fort ?**
 
 Le couplage de la force forte à la masse Z est α_s ≈ 0,118.
 
-GIFT propose : α_s = √2/12 ≈ 0,1179.
+K₇ propose : α_s = √2/12 ≈ 0,1179.
 
 La question statistique
 
@@ -179,4 +179,4 @@ Peut-être que les octonions attendront encore un siècle avant que leur rôle n
 
 Ce que nous pouvons faire, c'est proposer, tester, et rester humbles devant les nombres. L'algèbre a attendu 182 ans. Elle peut bien attendre un peu plus le temps que nous la rattrapions.
 
-Le cadre GIFT est développé en source ouverte. Code, preuves et données sont disponibles sur github.com/Arithmon/K7. La connexion avec Koide proposée ici n'est pas de la physique établie : c'est une hypothèse en attente d'un test expérimental et d'un examen par les pairs.
+Le cadre K₇ est développé en source ouverte. Code, preuves et données sont disponibles sur github.com/Arithmon/K7. La connexion avec Koide proposée ici n'est pas de la physique établie : c'est une hypothèse en attente d'un test expérimental et d'un examen par les pairs.

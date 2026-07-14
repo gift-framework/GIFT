@@ -10,7 +10,7 @@ layout: default
 *Brieuc de La Fournière (2026)*
 [Full text (markdown, v3.5)](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md) | [v3.3 archive on Zenodo: 10.5281/zenodo.18837071](https://doi.org/10.5281/zenodo.18837071)
 
-> **v3.5 update.** Canonical content lives in [`GIFT_v3.5_S2_derivations.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md). The v3.5 LaTeX/PDF is being recompiled with the GIFT branding template.
+> **v3.5 update.** Canonical content lives in [`GIFT_v3.5_S2_derivations.md`](https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md). The v3.5 LaTeX/PDF is being recompiled with the K₇ branding template.
 
 ---
 

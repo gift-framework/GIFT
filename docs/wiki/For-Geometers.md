@@ -7,7 +7,7 @@ layout: default
 
 ## Abstract
 
-`gift_core` provides a validated computational pipeline for constructing and analyzing G₂ holonomy metrics on twisted connected sum (TCS) manifolds. The package implements numerical methods for approximating G₂ structures, computing topological invariants, and certifying existence via Joyce's perturbation theorem. Originally developed for a physics application (the GIFT framework), the geometric tools are general and may be of independent interest to researchers studying exceptional holonomy.
+`gift_core` provides a validated computational pipeline for constructing and analyzing G₂ holonomy metrics on twisted connected sum (TCS) manifolds. The package implements numerical methods for approximating G₂ structures, computing topological invariants, and certifying existence via Joyce's perturbation theorem. Originally developed for a physics application (the K₇ framework), the geometric tools are general and may be of independent interest to researchers studying exceptional holonomy.
 
 ## 1. The Computational Challenge
 
@@ -27,7 +27,7 @@ The package implements the twisted connected sum framework for G₂ manifolds. S
 2. Identify the S¹ × K3 boundaries via a hyper-Kähler rotation
 3. Smooth the gluing region to obtain a compact 7-manifold K₇ = M₁ᵀ ∪_φ M₂ᵀ
 
-For the specific construction in GIFT, the building blocks yield Betti numbers computed via Mayer-Vietoris:
+For the specific construction in K₇, the building blocks yield Betti numbers computed via Mayer-Vietoris:
 
 | Block | Origin | b₂ | b₃ |
 |-------|--------|----|----|
@@ -53,7 +53,7 @@ Training minimizes a composite loss:
 
 L = w_T ||dφ||² + w_T ||d*φ||² + w_det |det(g) - target|² + w_pos ReLU(-λ_min(g))
 
-The torsion terms drive toward the torsion-free condition. The determinant constraint fixes the volume form to a specified target (65/32 in the GIFT application). The positivity term ensures the induced metric g(φ) remains positive definite.
+The torsion terms drive toward the torsion-free condition. The determinant constraint fixes the volume form to a specified target (65/32 in the K₇ application). The positivity term ensures the induced metric g(φ) remains positive definite.
 
 Training runs in 5-10 minutes on consumer hardware and achieves:
 - det(g) = 2.0312490 ± 0.0001 (target: 65/32 = 2.03125, deviation: 0.00005%)
@@ -131,7 +131,7 @@ lean_proof = result.certificate.to_lean()
 
 **Specificity**: The current implementation is tuned for the K₇ construction with b₂ = 21, b₃ = 77. Generalizing to other TCS building blocks (different Fano 3-folds, different gluing diffeomorphisms) requires adapting the topological constraints.
 
-**Standard TCS bounds**: Note that typical TCS constructions yield b₂ ≤ 9. The GIFT K₇ with b₂ = 21 either employs non-standard building blocks or should be understood via the variational characterization rather than explicit TCS gluing.
+**Standard TCS bounds**: Note that typical TCS constructions yield b₂ ≤ 9. The K₇ manifold with b₂ = 21 either employs non-standard building blocks or should be understood via the variational characterization rather than explicit TCS gluing.
 
 **Explicit metric**: The PINN provides a numerical approximation, not a closed-form metric. For applications requiring analytic expressions, further work is needed.
 
@@ -152,4 +152,4 @@ lean_proof = result.certificate.to_lean()
 
 ---
 
-*`gift_core` is part of the GIFT Framework v3.4. For the physics application, see the [main paper](Paper-Main-Framework.html).*
+*`gift_core` is part of the K₇ Framework v3.4. For the physics application, see the [main paper](Paper-Main-Framework.html).*

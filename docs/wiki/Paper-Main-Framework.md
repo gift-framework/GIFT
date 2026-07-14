@@ -23,7 +23,7 @@ Framework proposing that Standard Model dimensionless parameters emerge as topol
 
 ## Key Results
 
-| Observable | GIFT Formula | Value | Exp. | Dev. |
+| Observable | K₇ Formula | Value | Exp. | Dev. |
 |------------|-------------|-------|------|------|
 | sin²θ_W | b₂/(b₃+dim(G₂)) | 3/13 | 0.2312 | 0.19% |
 | N_gen | rank(E₈)−Weyl | 3 | 3 | exact |

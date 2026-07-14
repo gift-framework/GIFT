@@ -171,4 +171,4 @@ R_threshold = 3664.0659853300026
 ```
 
 Les liens absolus `/home/brieuc/gift-framework/...` ont été retirés des
-fichiers Markdown du repo `GIFT`.
+fichiers Markdown du repo `K₇`.

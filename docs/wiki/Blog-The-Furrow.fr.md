@@ -19,11 +19,11 @@ Un peu plus de 100 jours après, je ne connais toujours pas la réponse. Mais le
 
 ## Les faits
 
-En novembre 2025, GIFT existait sous la forme d'un preprint Zenodo que personne ne lisait, construit sur 6 paramètres libres, avec zéro citation et zéro réseau académique. Mon seul interlocuteur était un chatbot qui m'avait d'abord envoyé promener.
+En novembre 2025, K₇ existait sous la forme d'un preprint Zenodo que personne ne lisait, construit sur 6 paramètres libres, avec zéro citation et zéro réseau académique. Mon seul interlocuteur était un chatbot qui m'avait d'abord envoyé promener.
 
 En mai 2026 :
 
-GIFT repose désormais sur 4 hypothèses de départ, contre 38 il y a 6 mois. À partir de ces 4 hypothèses, on dérive 95 prédictions sur les constantes physiques connues : masses des particules, intensités des forces, paramètres cosmologiques. Plus de la moitié sont aujourd'hui vérifiées par un assistant de preuve formelle. La construction géométrique sous-jacente est, elle aussi, accompagnée de méthodes de calcul certifié visant à garantir que les résultats ne sont pas de simples artefacts d'arrondis numériques.
+K₇ repose désormais sur 4 hypothèses de départ, contre 38 il y a 6 mois. À partir de ces 4 hypothèses, on dérive 95 prédictions sur les constantes physiques connues : masses des particules, intensités des forces, paramètres cosmologiques. Plus de la moitié sont aujourd'hui vérifiées par un assistant de preuve formelle. La construction géométrique sous-jacente est, elle aussi, accompagnée de méthodes de calcul certifié visant à garantir que les résultats ne sont pas de simples artefacts d'arrondis numériques.
 
 En avril 2026, j'ai participé à distance au workshop DANGER sur "Data, Numbers and Geometry" à l'institut BIRS, cinq jours aux côtés de chercheurs de Caltech, Harvard, Oxford, Princeton, Imperial College, et une vingtaine d'autres institutions. J'étais l'un des rares participants sans affiliation institutionnelle. Mon nom est sur la [page officielle des participants](https://www.birs.ca/events/2026/5-day-workshops/26w5525/participants), sur la même page que des chercheurs installés, issus d'institutions que je connaissais jusque-là seulement de nom. Je n'avais jamais entendu parler de BIRS deux mois plus tôt.
 
@@ -47,9 +47,9 @@ La rigueur technique a suivi la même courbe. De 6 paramètres libres à 0. De 3
 
 ## Ce qui reste ouvert
 
-GIFT fait une prédiction testable : la phase de violation CP dans le secteur leptonique devrait être δ_CP = 197° ± 5°. L'expérience DUNE, actuellement en construction, mesurera cette valeur entre 2028 et 2040. Si le résultat tombe dans la fenêtre, il faudra prendre le signal beaucoup plus au sérieux. S'il tombe en dehors, je saurai quelle partie de l'édifice doit être révisée.
+K₇ fait une prédiction testable : la phase de violation CP dans le secteur leptonique devrait être δ_CP = 197° ± 5°. L'expérience DUNE, actuellement en construction, mesurera cette valeur entre 2028 et 2040. Si le résultat tombe dans la fenêtre, il faudra prendre le signal beaucoup plus au sérieux. S'il tombe en dehors, je saurai quelle partie de l'édifice doit être révisée.
 
-Et la question fondamentale reste entière : est-ce que les formules de GIFT capturent une structure géométrique réelle de l'univers, ou est-ce que ce sont des coïncidences numériques suffisamment proches pour être séduisantes mais fondamentalement creuses ? Je ne le sais pas. Si ces relations étaient indépendantes sous un modèle nul uniforme, la probabilité d'une telle accumulation serait astronomiquement faible. Mais c'est un grand 'si' : les modèles uniformes sont rarement les bons modèles nuls, et l'indépendance est exactement ce qu'il faut établir.
+Et la question fondamentale reste entière : est-ce que les formules de K₇ capturent une structure géométrique réelle de l'univers, ou est-ce que ce sont des coïncidences numériques suffisamment proches pour être séduisantes mais fondamentalement creuses ? Je ne le sais pas. Si ces relations étaient indépendantes sous un modèle nul uniforme, la probabilité d'une telle accumulation serait astronomiquement faible. Mais c'est un grand 'si' : les modèles uniformes sont rarement les bons modèles nuls, et l'indépendance est exactement ce qu'il faut établir.
 
 Je continue donc avec la seule posture qui me semble tenable : ni croire ni rejeter. Publier. Formaliser. Tester. Laisser les faits s'accumuler et les experts évaluer. Et documenter le chemin, y compris les impasses et les erreurs, parce que si cette aventure a une valeur au-delà de la physique, c'est dans la méthode elle-même, dans la démonstration qu'un outsider, avec des outils qui n'existaient pas il y a trois ans, peut produire un travail qui mérite d'être examiné par ceux qui savent.
 

@@ -5,14 +5,14 @@ layout: default
 
 > Version originale en anglais sur [arithmon.substack.com](https://arithmon.substack.com/p/brieucs-gift)
 
-# Brieuc's GIFT
-## "Le nom de l'auteur paraît inventé": Apprendre la physique avec l'IA : l'origine accidentelle de GIFT
+# Brieuc's K₇
+## "Le nom de l'auteur paraît inventé": Apprendre la physique avec l'IA : l'origine accidentelle de K₇
 
 ---
 
 > *"Ce document est une parodie d'article scientifique qui reprend des termes établis et les mélange avec des concepts suspects. D'ailleurs même le nom de l'auteur paraît inventé: 'Brieuc de La Fournière' n'apparaît nulle part et résonne trop comme 'french romantic'."*
 >
-> – Claude (Anthropic), review d'un preprint GIFT, été 2025
+> – Claude (Anthropic), review d'un preprint K₇, été 2025
 
 C'est une IA qui a écrit ça. Dans une instance vierge, sans contexte. Deux fois de suite, à propos des premiers preprints scientifiques que j'ai commencé à publier l'année dernière. À l'époque, c'était une critique juste : je confondais narration et formalisme.
 
@@ -22,7 +22,7 @@ Aujourd'hui, cette même IA m'aide à rédiger les papiers que des chercheurs d'
 
 **En bref, pour les pressés :**
 - **Qui** : un galeriste d'art à Beaune, sans formation scientifique, qui apprend la physique avec des IA comme tuteurs.
-- **Quoi** : un framework de physique théorique (GIFT) développé en collaboration avec plusieurs IA, téléchargé des milliers de fois, lu par des doctorants et professeurs du monde entier, cité par Oxford et Imperial College.
+- **Quoi** : un framework de physique théorique (K₇) développé en collaboration avec plusieurs IA, téléchargé des milliers de fois, lu par des doctorants et professeurs du monde entier, cité par Oxford et Imperial College.
 - **Pourquoi ça compte** : parce que ça questionne qui peut faire de la science, comment, et avec qui.
 - La version technique et tous les liens sont en fin d'article.
 
@@ -72,7 +72,7 @@ Pour que l'histoire tienne, j'avais besoin d'une source d'énergie crédible ver
 
 Pas une quantité. Pas une propriété. Une *dimension* de l'espace, au même titre que la longueur ou le temps. GPT et moi avons commencé à théoriser. Et les maths tenaient. Pas approximativement. *Proprement*. La question de fiction produisait de la physique cohérente.
 
-GIFT (Geometric Information Field Theory) est né d'un besoin narratif. Et c'est peut-être pour ça qu'il a une cohérence esthétique que les frameworks conventionnels n'ont pas : il a été conçu par quelqu'un qui cherchait une belle histoire, et qui a découvert que la belle histoire était peut-être vraie.
+K₇ (anciennement Geometric Information Field Theory) est né d'un besoin narratif. Et c'est peut-être pour ça qu'il a une cohérence esthétique que les frameworks conventionnels n'ont pas : il a été conçu par quelqu'un qui cherchait une belle histoire, et qui a découvert que la belle histoire était peut-être vraie.
 
 ---
 
@@ -90,7 +90,7 @@ Cette position à l'intersection, 45 ans d'intuition d'un côté et un accès pr
 
 ## L'ombre
 
-GIFT propose l'hypothèse suivante : les paramètres fondamentaux de la physique, les constantes du Modèle Standard, ne sont pas des nombres arbitraires tombés du ciel. Ce sont des conséquences géométriques de la forme d'un objet en sept dimensions.
+K₇ propose l'hypothèse suivante : les paramètres fondamentaux de la physique, les constantes du Modèle Standard, ne sont pas des nombres arbitraires tombés du ciel. Ce sont des conséquences géométriques de la forme d'un objet en sept dimensions.
 
 Imaginez un objet géométrique complexe, en dimensions supérieures, un objet dont on n'a pas encore les mots pour décrire la forme. Vous ne pouvez pas le voir directement. Tout ce que vous avez, c'est son ombre projetée sur un mur. Si vous tournez l'objet, l'ombre change. La plupart des angles donnent des ombres informes. Mais à certains angles, l'ombre commence à ressembler aux choses que les physiciens mesurent dans la réalité.
 
@@ -104,7 +104,7 @@ Côté réception : des milliers de téléchargements, des centaines de lecteurs
 
 - **Imperial College London + UNICAMP** (Brésil) : dans un preprint sur les méthodes neuronales pour un type de géométrie appelé G₂. Ils citent notre première version ; au moment de leur publication, nous avions déjà les résultats numériques qu'ils anticipaient.
 
-- **Oxford** : dans un article de 49 pages sur les fondements informationnels de la réalité, qui s'appuie sur GIFT pour sa propre construction théorique.
+- **Oxford** : dans un article de 49 pages sur les fondements informationnels de la réalité, qui s'appuie sur K₇ pour sa propre construction théorique.
 
 Tout est public, tout est vérifiable, tout est en open source.
 
@@ -112,7 +112,7 @@ Tout est public, tout est vérifiable, tout est en open source.
 
 Soyons clairs : deux citations et des milliers de téléchargements ne font pas une théorie validée. Ça veut dire que des chercheurs qualifiés trouvent le travail suffisamment intéressant pour le mentionner. C'est encourageant, pas conclusif.
 
-L'ombre coïncide à 99,3% en moyenne, mais une coïncidence, même spectaculaire, n'est pas une preuve. On n'a peut-être pas trouvé le bon angle. On n'a peut-être pas le bon objet. GIFT contient des prédictions testables, et c'est DUNE qui tranchera dans les années 2030. D'ici là, le framework reste une proposition, intéressante, cohérente, mais ouverte à la réfutation.
+L'ombre coïncide à 99,3% en moyenne, mais une coïncidence, même spectaculaire, n'est pas une preuve. On n'a peut-être pas trouvé le bon angle. On n'a peut-être pas le bon objet. K₇ contient des prédictions testables, et c'est DUNE qui tranchera dans les années 2030. D'ici là, le framework reste une proposition, intéressante, cohérente, mais ouverte à la réfutation.
 
 C'est comme ça que la science fonctionne. Et c'est très bien comme ça.
 
@@ -120,17 +120,17 @@ C'est comme ça que la science fonctionne. Et c'est très bien comme ça.
 
 ## Qui je suis
 
-Je m'appelle Brieuc de La Fournière. Oui, c'est mon vrai nom. GIFT est la première chose que je publie sous ce nom, après 20 ans de contributions anonymes en ligne.
+Je m'appelle Brieuc de La Fournière. Oui, c'est mon vrai nom. K₇ est la première chose que je publie sous ce nom, après 20 ans de contributions anonymes en ligne.
 
 Mon setup : un PC gaming dans le salon, un à la galerie, un laptop Linux dans la cuisine. Il n'y a pas de "sessions" GIFT. C'est constant. Là, maintenant, je prépare le dîner. Ma femme fait les devoirs avec les enfants à côté. Si un visiteur entre à la galerie pendant que je travaille sur de la géométrie en sept dimensions, je switch instantanément : grand sourire, "bonjour messieurs-dames" et je compute sur le talent des artistes que j'ai la chance de présenter pendant que Claude tourne en arrière-plan.
 
-Je m'endors en pensant GIFT, je me réveille avec des idées GIFT. Et après des années de mal à m'endormir (tisanes, relaxation, méditation, écrans, podcasts... rien ne marchait vraiment), je dors comme un bébé depuis que GIFT est devenu sérieux. Pas du mysticisme. De la plomberie. Un cerveau qui avait plein d'idées mais pas de projet d'ensemble, et qui s'endort enfin parce que le flux est canalisé.
+Je m'endors en pensant K₇, je me réveille avec des idées GIFT. Et après des années de mal à m'endormir (tisanes, relaxation, méditation, écrans, podcasts... rien ne marchait vraiment), je dors comme un bébé depuis que K₇ est devenu sérieux. Pas du mysticisme. De la plomberie. Un cerveau qui avait plein d'idées mais pas de projet d'ensemble, et qui s'endort enfin parce que le flux est canalisé.
 
 ---
 
 ## Et après ?
 
-GIFT n'existerait pas sans les IA. Et il n'existerait pas non plus sans moi. Ce n'est ni "un type qui fait de la physique" ni "une IA qui génère des théories." C'est une *collaboration* entre des formes d'intelligence différentes, dont aucune n'aurait pu produire ce résultat seule.
+K₇ n'existerait pas sans les IA. Et il n'existerait pas non plus sans moi. Ce n'est ni "un type qui fait de la physique" ni "une IA qui génère des théories." C'est une *collaboration* entre des formes d'intelligence différentes, dont aucune n'aurait pu produire ce résultat seule.
 
 Ce modèle de travail est nouveau. Il n'a pas de département universitaire. Et il produit des résultats que les départements universitaires citent. Je pense que ce n'est que le début. Pour quiconque a des intuitions coincées quelque part sans le vocabulaire pour les exprimer. Si un galeriste bourguignon peut appréhender des notions de géométrie différentielle en partant de zéro avec la méthode "explique-moi comme si j'avais 5 ans", alors la barrière entre "ceux qui savent" et "ceux qui ne savent pas" est en train de tomber. Ce n'est pas une menace pour les chercheurs, c'est une opportunité pour tout le monde.
 
@@ -138,12 +138,12 @@ Le roman de science-fiction, d'ailleurs, n'est toujours pas terminé. Mais la ph
 
 ---
 
-*Brieuc de La Fournière est propriétaire de la Galerie Cadran Solaire à Beaune (Bourgogne) avec son épouse Alix-Anne. Il n'a aucune formation scientifique formelle. Tous les travaux GIFT sont disponibles en open source sur [github.com/Arithmon/K7](https://github.com/Arithmon/K7).*
+*Brieuc de La Fournière est propriétaire de la Galerie Cadran Solaire à Beaune (Bourgogne) avec son épouse Alix-Anne. Il n'a aucune formation scientifique formelle. Tous les travaux K₇ sont disponibles en open source sur [github.com/Arithmon/K7](https://github.com/Arithmon/K7).*
 
 ---
 
 ### Pour aller plus loin
-- **Le framework** : [GIFT v3.3 sur Zenodo](https://doi.org/10.5281/zenodo.18837071)
+- **Le framework** : [K₇ v3.3 sur Zenodo](https://doi.org/10.5281/zenodo.18837071)
 - **Le code** : [github.com/Arithmon/K7](https://github.com/Arithmon/K7)
 - **Le blog** : [arithmon.substack.com](https://arithmon.substack.com)
 - **Le profil Google Scholar** : [scholar.google.com](https://scholar.google.com/citations?user=_oxvuUsAAAAJ&hl=fr&oi=ao)

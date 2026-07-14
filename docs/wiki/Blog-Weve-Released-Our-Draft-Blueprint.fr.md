@@ -7,7 +7,7 @@ layout: default
 
 # On a publié notre brouillon de notice
 
-*Annonce de la version 3.4 du framework GIFT, en langage simple. Une dizaine de minutes de lecture.*
+*Annonce de la version 3.4 du framework K₇, en langage simple. Une dizaine de minutes de lecture.*
 
 ---
 
@@ -43,7 +43,7 @@ L'idée n'est pas que les nombres seraient choisis. L'idée est qu'ils seraient 
 
 Cette hypothèse a un nom dans la tradition mathématique : une *structure*. Une notice de montage. Une logique d'assemblage cachée derrière les mesures.
 
-GIFT (Geometric Information Field Theory) est ma tentative de reconstituer cette notice.
+K₇ (anciennement Geometric Information Field Theory) est ma tentative de reconstituer cette notice.
 
 ## Ce qu'on a fait
 
@@ -83,7 +83,7 @@ Comme une bonne théorie doit pouvoir se tromper, on a annoncé d'avance la piè
 
 Il y a un nombre, dans la matière neutre qu'on appelle les neutrinos, qui mesure l'asymétrie entre la matière et l'antimatière dans leur comportement. On l'appelle delta-CP. On prédit qu'il vaut exactement 197°. C'est un nombre très précis, déjà partiellement mesuré par les expériences actuelles, et qui sera mesuré beaucoup plus précisément par une expérience appelée DUNE entre 2028 et 2040.
 
-Voici la règle du jeu, annoncée publiquement : si DUNE mesure delta-CP entre 187° et 207°, GIFT a peut-être bien raconté l'histoire. Si DUNE mesure delta-CP en dehors de cet intervalle, on aura faux. Pas faux de manière vague, faux de manière documentée, datée, archivée à l'avance.
+Voici la règle du jeu, annoncée publiquement : si DUNE mesure delta-CP entre 187° et 207°, K₇ a peut-être bien raconté l'histoire. Si DUNE mesure delta-CP en dehors de cet intervalle, on aura faux. Pas faux de manière vague, faux de manière documentée, datée, archivée à l'avance.
 
 C'est exactement la posture que prend un joueur de Jenga qui annonce à toute la table quelle pièce il va retirer, avant de la retirer. Soit la tour reste debout, soit elle s'effondre. Et la victoire n'est pas d'avoir eu raison à tout prix : c'est d'avoir su, dans un cas comme dans l'autre.
 

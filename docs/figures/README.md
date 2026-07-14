@@ -1,4 +1,4 @@
-# GIFT Framework - Figures
+# K₇ Framework - Figures
 
 This directory contains interactive visualization assets.
 
@@ -7,7 +7,7 @@ This directory contains interactive visualization assets.
 | File | Description |
 |------|-------------|
 | `k7_blueprint.html` | K₇ manifold blueprint (interactive) |
-| `archive/gift_blueprint.html` | Former GIFT framework blueprint (interactive D3.js, superseded by `k7_blueprint.html`) |
+| `archive/gift_blueprint.html` | Former K₇ framework blueprint (interactive D3.js, superseded by `k7_blueprint.html`) |
 
 ## Live Versions
 
@@ -16,4 +16,4 @@ This directory contains interactive visualization assets.
 
 ---
 
-Part of GIFT Framework v3.3
+Part of K₇ Framework v3.3

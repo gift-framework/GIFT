@@ -7,7 +7,7 @@ layout: default
 
 ## Résumé
 
-Ce document décrit la formalisation Lean 4 du cadre GIFT, qui dérive les paramètres du Modèle Standard à partir d'invariants topologiques. La formalisation vérifie 290+ relations exactes connectant des données géométriques (nombres de Betti, dimensions d'algèbres de Lie, invariants cohomologiques) à des observables physiques (angles de mélange, rapports de masses, constantes de couplage). La vérification n'utilise que des axiomes standards sans aucune hypothèse spécifique au domaine, démontrant que les preuves vérifiées par machine peuvent fournir des pistes d'audit pour les affirmations en physique théorique.
+Ce document décrit la formalisation Lean 4 du cadre K₇, qui dérive les paramètres du Modèle Standard à partir d'invariants topologiques. La formalisation vérifie 290+ relations exactes connectant des données géométriques (nombres de Betti, dimensions d'algèbres de Lie, invariants cohomologiques) à des observables physiques (angles de mélange, rapports de masses, constantes de couplage). La vérification n'utilise que des axiomes standards sans aucune hypothèse spécifique au domaine, démontrant que les preuves vérifiées par machine peuvent fournir des pistes d'audit pour les affirmations en physique théorique.
 
 ## 1. Le défi de la vérification
 
@@ -35,9 +35,9 @@ Différents aspects de la physique ont des perspectives de formalisation différ
 | Contenu dynamique complet | Faible | Requiert la formalisation de l'analyse |
 | Théorie quantique des champs | Faible | Problèmes fondationnels persistants |
 
-La formalisation GIFT se concentre sur les trois premières catégories : données algébriques (dimensions de E₈, structure G₂), invariants topologiques (nombres de Betti) et relations arithmétiques les connectant aux observables physiques.
+La formalisation K₇ se concentre sur les trois premières catégories : données algébriques (dimensions de E₈, structure G₂), invariants topologiques (nombres de Betti) et relations arithmétiques les connectant aux observables physiques.
 
-## 2. La formalisation GIFT
+## 2. La formalisation K₇
 
 ### 2.1 Portée
 
@@ -165,7 +165,7 @@ Les structures E₈ et G₂ sont définies axiomatiquement (dimension, rang) plu
 
 La formalisation prouve la cohérence interne, pas la validité externe. Un cadre peut être cohérent en interne et physiquement faux. Les preuves établissent : « si les données topologiques sont telles que revendiquées, alors les relations sont valides ». La question de savoir si l'univers instantie réellement cette topologie est une question empirique.
 
-Les mathématiques continues (analyse, géométrie différentielle) restent plus difficiles à formaliser que les mathématiques discrètes (algèbre, combinatoire). La formalisation GIFT se concentre délibérément sur les relations arithmétiques exactes, en différant le contenu dynamique.
+Les mathématiques continues (analyse, géométrie différentielle) restent plus difficiles à formaliser que les mathématiques discrètes (algèbre, combinatoire). La formalisation K₇ se concentre délibérément sur les relations arithmétiques exactes, en différant le contenu dynamique.
 
 ## 5. Accès et reproduction
 
@@ -179,7 +179,7 @@ Toutes les preuves sont publiquement disponibles :
 ```
 core/
 ├── Lean/
-│   └── GIFT/
+│   └── K₇/
 │       ├── Core.lean            # constantes (dim_E8, b2, b3, H*, ...)
 │       ├── Certificate.lean     # théorème maître (290+ relations)
 │       ├── Foundations/         # racines E8, produit vectoriel G2
@@ -209,7 +209,7 @@ Le dépôt maintient des pipelines CI qui reconstruisent toutes les preuves à c
 
 ## 6. Synthèse
 
-La formalisation GIFT démontre que les preuves vérifiées par machine peuvent s'appliquer à la physique théorique. Les 290+ relations connectant la topologie de E₈×E₈ et K₇ aux observables du Modèle Standard ont été prouvées en Lean 4, en utilisant zéro axiome spécifique au domaine.
+La formalisation K₇ démontre que les preuves vérifiées par machine peuvent s'appliquer à la physique théorique. Les 290+ relations connectant la topologie de E₈×E₈ et K₇ aux observables du Modèle Standard ont été prouvées en Lean 4, en utilisant zéro axiome spécifique au domaine.
 
 Cela établit la cohérence interne : étant donné les entrées topologiques énoncées, les relations physiques suivent par pur calcul. La question de savoir si les entrées décrivent la réalité physique reste une question empirique, à traiter par des expériences comme la mesure de δ_CP par DUNE.
 
@@ -217,7 +217,7 @@ La contribution méthodologique est indépendante de la correction physique de G
 
 ## Références
 
-- Article principal GIFT : [Article principal](Paper-Main-Framework.html)
+- Article principal K₇ : [Article principal](Paper-Main-Framework.html)
 - Fondations mathématiques : [Article S1 fondations](Paper-S1-Foundations.html)
 - Dérivations complètes : [Article S2 dérivations](Paper-S2-Derivations.html)
 - Géométrie spectrale : [Article géométrie spectrale](Paper-Spectral-Geometry.html)
@@ -225,4 +225,4 @@ La contribution méthodologique est indépendante de la correction physique de G
 
 ---
 
-*Cadre GIFT v3.4, documentation de vérification formelle*
+*Cadre K₇ v3.4, documentation de vérification formelle*

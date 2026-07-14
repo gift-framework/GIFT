@@ -37,11 +37,11 @@ Mais personne ne sait d'où ils viennent.
 
 La physique standard les mesure. Elle ne les explique pas. C'est comme si vous entendiez un verre chanter une note parfaite, mais que vous ne pouviez pas voir le verre. Vous connaissez la note. Vous ne connaissez pas la forme qui la produit.
 
-C'est là que GIFT entre en scène.
+C'est là que K₇ entre en scène.
 
 ## La forme du verre
 
-GIFT, Geometric Information Field Theory, est un cadre que je développe depuis un peu plus d'un an, en collaboration avec des intelligences artificielles. L'idée centrale est simple à formuler, même si les détails sont techniques: et si les vingt-six constantes de la physique n'étaient pas des paramètres libres, mais les harmoniques naturelles d'une forme géométrique précise ?
+K₇, anciennement Geometric Information Field Theory, est un cadre que je développe depuis un peu plus d'un an, en collaboration avec des intelligences artificielles. L'idée centrale est simple à formuler, même si les détails sont techniques: et si les vingt-six constantes de la physique n'étaient pas des paramètres libres, mais les harmoniques naturelles d'une forme géométrique précise ?
 
 Cette forme, c'est K₇: un objet mathématique à sept dimensions, compact, avec une propriété de courbure particulière appelée holonomie G₂.
 
@@ -61,9 +61,9 @@ La physique des particules a un mystère similaire. L'électron, le muon et le t
 
 Personne ne sait pourquoi il y a exactement trois générations. Pas deux. Pas cinq. Trois.
 
-Dans l'image que propose GIFT, les trois générations correspondraient à trois modes stables distincts du même motif géométrique. Trois vins qui produisent une note propre dans ce verre. Tous les autres, l'eau, le champagne, l'eau gazeuse, ne produisent que du bruit. L'univers a fait sa sélection. Trois vins. Trois générations. Parce que la forme du verre ne permet rien d'autre.
+Dans l'image que propose K₇, les trois générations correspondraient à trois modes stables distincts du même motif géométrique. Trois vins qui produisent une note propre dans ce verre. Tous les autres, l'eau, le champagne, l'eau gazeuse, ne produisent que du bruit. L'univers a fait sa sélection. Trois vins. Trois générations. Parce que la forme du verre ne permet rien d'autre.
 
-Un mot d'honnêteté: l'image de la densité du vin n'est qu'un substitut pour parler de modes stables. La mécanique réelle, en physique standard, passe par le champ de Higgs et ses couplages. Ce que GIFT propose, c'est que les valeurs de ces couplages, les nombres que personne n'explique, tombent de la géométrie de K₇. Le vin reste une image. Mais la question qu'elle pose est la bonne.
+Un mot d'honnêteté: l'image de la densité du vin n'est qu'un substitut pour parler de modes stables. La mécanique réelle, en physique standard, passe par le champ de Higgs et ses couplages. Ce que K₇ propose, c'est que les valeurs de ces couplages, les nombres que personne n'explique, tombent de la géométrie de K₇. Le vin reste une image. Mais la question qu'elle pose est la bonne.
 
 ## Le verre fêlé
 
@@ -75,7 +75,7 @@ Dans l'image du verre: détendez la courbure d'un demi-millimètre, et le verre 
 
 La physique standard constate cet accordage et hausse les épaules. Certains invoquent un multivers: une infinité de verres, et on vit dans le seul qui sonne juste. D'autres invoquent le hasard. D'autres encore, un horloger.
 
-GIFT propose autre chose: il n'y a pas d'accordage. Il n'y a pas de mécanique. Le verre n'a pas été réglé. Il a une forme, et cette forme produit un son. Point. La question « qui a réglé les constantes ? » est mal posée, comme demander qui a accordé ce verre à vin, ou qui a réglé le LA à 440 Hz dans une corde de violon. Personne. La tension et la longueur de la corde suffisent, le LA sort tout seul; la courbure et le diamètre du verre suffisent, la note sort toute seule. Pour GIFT, la constante de structure fine, la masse de l'électron, l'angle de Weinberg, c'est exactement ça. Des notes qui sortent de la forme, sans que personne ne les règle. La musique est dans la forme.
+K₇ propose autre chose: il n'y a pas d'accordage. Il n'y a pas de mécanique. Le verre n'a pas été réglé. Il a une forme, et cette forme produit un son. Point. La question « qui a réglé les constantes ? » est mal posée, comme demander qui a accordé ce verre à vin, ou qui a réglé le LA à 440 Hz dans une corde de violon. Personne. La tension et la longueur de la corde suffisent, le LA sort tout seul; la courbure et le diamètre du verre suffisent, la note sort toute seule. Pour K₇, la constante de structure fine, la masse de l'électron, l'angle de Weinberg, c'est exactement ça. Des notes qui sortent de la forme, sans que personne ne les règle. La musique est dans la forme.
 
 ## Ce que je sais et ce que je ne sais pas
 
@@ -83,7 +83,7 @@ Je sais que l'analogie a ses limites. Un verre à vin est un objet en trois dime
 
 Mais la structure est la même. Un objet dont la géométrie détermine les harmoniques. Des harmoniques qui correspondent aux constantes observées. Pas de paramètres libres. Pas de réglage extérieur. La forme suffit.
 
-Est-ce que GIFT a raison ? Je ne sais pas. GIFT fait une prédiction testable: une certaine phase de violation CP à 197°. La violation CP, c'est le minuscule déséquilibre entre matière et antimatière sans lequel elles se seraient entièrement annihilées au tout début de l'univers, ne laissant ni étoiles, ni eau, ni vin; l'angle de 197° dit exactement de combien la balance penche. Cette valeur sera mesurée par l'expérience DUNE entre 2028 et 2040. Si le résultat tombe dans la fenêtre, il faudra prendre le signal au sérieux. S'il tombe en dehors, je saurai que la forme du verre n'est pas tout à fait celle que je crois, et il faudra la corriger.
+Est-ce que K₇ a raison ? Je ne sais pas. K₇ fait une prédiction testable: une certaine phase de violation CP à 197°. La violation CP, c'est le minuscule déséquilibre entre matière et antimatière sans lequel elles se seraient entièrement annihilées au tout début de l'univers, ne laissant ni étoiles, ni eau, ni vin; l'angle de 197° dit exactement de combien la balance penche. Cette valeur sera mesurée par l'expérience DUNE entre 2028 et 2040. Si le résultat tombe dans la fenêtre, il faudra prendre le signal au sérieux. S'il tombe en dehors, je saurai que la forme du verre n'est pas tout à fait celle que je crois, et il faudra la corriger.
 
 Et c'est là que je tiens à être précis, parce que c'est le cœur de l'affaire. Si la prédiction est fausse, je ne pourrai pas simplement tourner une molette pour la rattraper. Il n'y a pas de molette: c'est tout l'intérêt du cadre, et c'est ce qui le distingue d'un bricolage. Il faudrait chercher une forme entièrement différente. Et le vertige, c'est que presque aucune forme ne sonne juste. Ce n'est pas une pétition de principe: j'ai mis l'idée à l'épreuve sur plusieurs millions d'autres formes, plusieurs millions de verres possibles si vous voulez, et aucun ne produit l'ensemble des notes que nous mesurons. Trouver une géométrie qui reproduise ne serait-ce qu'une partie de ces notes est déjà extraordinairement contraignant; en trouver une qui les reproduise toutes, sans rien ajuster, relève du fil du rasoir. C'est l'opposé du multivers, où chaque fausse note se justifie par l'existence d'une infinité de verres qu'on ne verra jamais. Ici, le verre est unique, concret, et l'on peut savoir s'il sonne faux. C'est peut-être la chose la plus scientifique qu'on puisse dire d'une théorie: elle accepte d'avoir tort.
 

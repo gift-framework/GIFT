@@ -3,7 +3,7 @@ title: "Statistical Evidence"
 layout: default
 ---
 
-# GIFT Statistical Evidence
+# K₇ Statistical Evidence
 
 **Version**: 3.4.27
 **Validation Date**: April 2026
@@ -28,7 +28,7 @@ layout: default
 | **Best Bayes factor** | **4,738** (decisive) |
 | **Pre-registered test p** | 6.7×10⁻⁵ (σ = 4.0) |
 | **Configs tested (exhaustive)** | 3,070,396 |
-| **Better than GIFT** | **0** |
+| **Better than K₇** | **0** |
 
 ### Results by Precision Tier (Relative Deviation)
 
@@ -43,7 +43,7 @@ layout: default
 
 - **100% of predictions** agree with experiment within 5%
 - **88% of predictions** agree within 1%
-- GIFT is **uniquely optimal** among all 3,070,396 tested configurations
+- K₇ is **uniquely optimal** among all 3,070,396 tested configurations
 - All three null model families reject at p < 2×10⁻⁵
 - Westfall-Young maxT permutation FWER confirms 11/33 individually significant after correlation-aware correction
 - Bayes factors range from 304 to 4,738 across four prior specifications (all decisive)
@@ -54,7 +54,7 @@ layout: default
 
 ### 1.1 Primary Metric: Custom Deviation
 
-The GIFT validation uses a **custom deviation** metric that captures goodness-of-fit across heterogeneous observables (angles, ratios, coupling constants):
+The K₇ validation uses a **custom deviation** metric that captures goodness-of-fit across heterogeneous observables (angles, ratios, coupling constants):
 
 $$\text{Dev} = \frac{|\text{pred} - \text{exp}|}{|\text{exp}|} \times 100\%$$
 
@@ -89,9 +89,9 @@ Three independent null model families each reject at the resolution limit of 50,
 
 | Null Family | p-value | σ | Description |
 |-------------|---------|---|-------------|
-| **Permutation** | 2.0×10⁻⁵ | 4.27 | Random (b₂, b₃) assignment; null mean 82.6% vs GIFT 0.21% |
-| **Structure-preserved** | 2.0×10⁻⁵ | 4.27 | 0/50,000 configs match or beat GIFT |
-| **Adversarial** | 2.0×10⁻⁵ | 4.27 | Best adversary achieves 65.8% vs GIFT 0.21% |
+| **Permutation** | 2.0×10⁻⁵ | 4.27 | Random (b₂, b₃) assignment; null mean 82.6% vs K₇ 0.21% |
+| **Structure-preserved** | 2.0×10⁻⁵ | 4.27 | 0/50,000 configs match or beat K₇ |
+| **Adversarial** | 2.0×10⁻⁵ | 4.27 | Best adversary achieves 65.8% vs K₇ 0.21% |
 
 All three null families produce mean deviations ~300× worse than GIFT.
 
@@ -128,7 +128,7 @@ Explicit LEE trial count: 23,167,200 (all (b₂, b₃, gauge, holonomy) combinat
 
 ### 4.1 Leave-One-Sector-Out
 
-Each physics sector is held out in turn; GIFT's (b₂, b₃) is tested on the held-out sector without retuning:
+Each physics sector is held out in turn; K₇'s (b₂, b₃) is tested on the held-out sector without retuning:
 
 | Sector | Held-out obs. | Test dev. | p-value | σ |
 |--------|--------------|-----------|---------|---|
@@ -150,7 +150,7 @@ All non-trivial sectors achieve p < 0.05, confirming cross-sector prediction hol
 | Test (17 obs.) | 17 | 0.32% |
 | **Test p-value** |, | **6.7×10⁻⁵** (σ = 4.0) |
 
-The held-out test set achieves σ = 4.0, confirming that GIFT's accuracy is not an artifact of fitting to a particular subset.
+The held-out test set achieves σ = 4.0, confirming that K₇'s accuracy is not an artifact of fitting to a particular subset.
 
 ---
 
@@ -203,7 +203,7 @@ Over 1,000 trials with 1× published uncertainties:
 - Mean: 1.50% ± 0.35%
 - Only 5% of trials remain below 1%
 
-This confirms the noise sensitivity curve: the 0.21% GIFT result sits well below the noise floor.
+This confirms the noise sensitivity curve: the 0.21% K₇ result sits well below the noise floor.
 
 ---
 
@@ -233,7 +233,7 @@ Results are invariant to PRNG seed and hold under alternative metric (relative �
 | Jeffreys | 2,423 | Decisive for H₁ |
 | Enthusiastic (uniform ≤1%) | 4,738 | Decisive for H₁ |
 
-All four priors yield decisive evidence (BF > 100) for GIFT over the null. The skeptical prior, which grants the null maximum latitude, still yields BF = 304.
+All four priors yield decisive evidence (BF > 100) for K₇ over the null. The skeptical prior, which grants the null maximum latitude, still yields BF = 304.
 
 ### 7.2 Posterior Predictive Checks (4 Statistics)
 
@@ -244,17 +244,17 @@ All four priors yield decisive evidence (BF > 100) for GIFT over the null. The s
 | T₃: Count > 1% | 1 | 12.1 | 1.000 | ↑ Superior |
 | T₄: Worst sector | 0.59% | 4.28% | 1.000 | ↑ Superior |
 
-**Status**: `superior_to_noise`: The framework fits significantly better than measurement noise predicts across all four test statistics. Replicated datasets (adding noise at published uncertainty levels) consistently show 5–12× larger deviations than GIFT achieves. This is consistent with genuine physical content rather than numerical coincidence.
+**Status**: `superior_to_noise`: The framework fits significantly better than measurement noise predicts across all four test statistics. Replicated datasets (adding noise at published uncertainty levels) consistently show 5–12× larger deviations than K₇ achieves. This is consistent with genuine physical content rather than numerical coincidence.
 
-**Note**: PPC p ≈ 1.0 does not indicate model misfit. In the PPC framework, p near 0 indicates systematic underfitting, p near 0.5 indicates perfect calibration to the noise model, and p near 1 indicates the model surpasses noise expectations. The result confirms that GIFT's precision exceeds what measurement uncertainties alone would predict.
+**Note**: PPC p ≈ 1.0 does not indicate model misfit. In the PPC framework, p near 0 indicates systematic underfitting, p near 0.5 indicates perfect calibration to the noise model, and p near 1 indicates the model surpasses noise expectations. The result confirms that K₇'s precision exceeds what measurement uncertainties alone would predict.
 
 ### 7.3 WAIC Model Comparison
 
 | Model | WAIC | Interpretation |
 |-------|------|---------------|
-| GIFT | 29.9 | Preferred |
+| K₇ | 29.9 | Preferred |
 | Null | 580.2 |, |
-| **ΔWAIC** | **550.3** | **Strongly favors GIFT** |
+| **ΔWAIC** | **550.3** | **Strongly favors K₇** |
 
 ---
 
@@ -267,7 +267,7 @@ All four priors yield decisive evidence (BF > 100) for GIFT over the null. The s
 | b₂ range | [5, 100] |
 | b₃ range | [40, 200] |
 | Configs tested | 3,070,396 |
-| Better than GIFT | **0** |
+| Better than K₇ | **0** |
 | 95% CI (Clopper-Pearson) | [0, 3.7×10⁻⁵] |
 
 ### 8.2 Gauge Group Comparison
@@ -328,7 +328,7 @@ G₂ achieves **11× better** agreement than Calabi-Yau (SU(3)).
 ### 10.3 PPC Superior-to-Noise Status
 
 The posterior predictive checks show PPC p = 1.0 across all four test statistics. This means the framework's predictions are more precise than measurement noise alone would predict. Possible explanations:
-- The framework captures genuine physical structure (the GIFT claim)
+- The framework captures genuine physical structure (the K₇ claim)
 - Published experimental uncertainties are conservative
 - There are correlations between observables not captured by the noise model
 
@@ -346,7 +346,7 @@ Bonferroni and Holm corrections yield 0/33 significant observables because they 
 
 ## 11. Falsification Predictions
 
-| Prediction | GIFT Value | Current Exp. | Target | Experiment | Timeline |
+| Prediction | K₇ Value | Current Exp. | Target | Experiment | Timeline |
 |------------|------------|--------------|--------|------------|----------|
 | δ_CP | 197° | ~207-212° (NuFIT 6.1, ~1σ) | ±5° | DUNE | 2028-2040 |
 | sin²θ_W | 3/13 | 0.2312 ± 4×10⁻⁵ | ±10⁻⁵ | FCC-ee | 2040s |
@@ -383,7 +383,7 @@ python3 exhaustive_validation_v33.py
 
 ### Primary Finding
 
-GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. Among 3,070,396 tested configurations, **zero** perform better. This result survives:
+K₇ achieves **0.21% mean deviation** (0.41% relative) across 33 observables. Among 3,070,396 tested configurations, **zero** perform better. This result survives:
 
 - Three independent null model families (p < 2×10⁻⁵)
 - Westfall-Young maxT FWER correction (global p = 0.008, 11/33 individually significant)
@@ -404,7 +404,7 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 | Westfall-Young global p | **0.008** |
 | Best Bayes factor | **4,738** |
 | Configs tested | 3,070,396 |
-| Better than GIFT | **0** |
+| Better than K₇ | **0** |
 
 ---
 
@@ -419,6 +419,6 @@ GIFT achieves **0.21% mean deviation** (0.41% relative) across 33 observables. A
 
 ---
 
-*GIFT Framework v3.4.27: Bullet-Proof Statistical Evidence*
+*K₇ Framework v3.4.27: Bullet-Proof Statistical Evidence*
 *Top-level: mean deviation 0.99% across 33 Type I relations (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022); a set-level bound ~10⁻⁶ over 3,000,000 random formula sets (assumption-free)*
 *Detailed sector breakdown above: v3.3.24 NuFIT 6.0 analysis (0.24% on 32 well-measured / 0.57% all 33)*

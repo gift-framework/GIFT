@@ -4,13 +4,13 @@ title: FAQ
 
 # Frequently Asked Questions
 
-Common questions about the GIFT framework, organized by topic.
+Common questions about the K₇ framework, organized by topic.
 
 ## General Framework
 
-### What is GIFT?
+### What is K₇?
 
-The Geometric Information Field Theory (GIFT) is a theoretical framework that derives fundamental physics parameters from the geometric structure of E₈×E₈ exceptional Lie algebras compactified on manifolds with G₂ holonomy. Rather than treating Standard Model parameters as arbitrary inputs, GIFT proposes they emerge as topological invariants from dimensional reduction.
+The K₇ framework is a theoretical framework that derives fundamental physics parameters from the geometric structure of E₈×E₈ exceptional Lie algebras compactified on manifolds with G₂ holonomy. Rather than treating Standard Model parameters as arbitrary inputs, K₇ proposes they emerge as topological invariants from dimensional reduction.
 
 ### How is this different from string theory?
 
@@ -22,17 +22,17 @@ While both involve extra dimensions and E₈, the approaches differ:
 - Typically requires supersymmetry
 - Direct particle embedding in gauge groups
 
-**GIFT**:
+**K₇**:
 - Focuses on parameter derivation
 - Single geometric structure (K₇ manifold)
 - No supersymmetry required
 - Information-theoretic architecture, indirect particle emergence
 
-GIFT may ultimately connect to string theory, but operates as an independent framework for parameter prediction.
+K₇ may ultimately connect to string theory, but operates as an independent framework for parameter prediction.
 
 ### Is this mainstream physics?
 
-GIFT is a speculative theoretical framework presenting testable predictions. The mathematical foundations (E₈, G₂ holonomy, dimensional reduction) are well-established. The novel claim is that Standard Model parameters emerge as topological invariants from this specific structure.
+K₇ is a speculative theoretical framework presenting testable predictions. The mathematical foundations (E₈, G₂ holonomy, dimensional reduction) are well-established. The novel claim is that Standard Model parameters emerge as topological invariants from this specific structure.
 
 The framework is evaluated based on:
 - Mathematical rigor of derivations
@@ -43,15 +43,15 @@ The framework is evaluated based on:
 ### How many free parameters?
 
 **Standard Model**: 19 free parameters
-**GIFT v3.3**: Zero continuous adjustable parameters
+**K₇ v3.3**: Zero continuous adjustable parameters
 
 All quantities derive from fixed topological structure (E₈×E₈ gauge group, K₇ manifold with G₂ holonomy). The framework achieves "structural determination" where discrete mathematical choices uniquely determine all predictions.
 
-### Can GIFT be falsified?
+### Can K₇ be falsified?
 
 Yes. Clear falsification criteria include:
 
-1. **Fourth generation discovery**: N_gen = 3 is exact in GIFT
+1. **Fourth generation discovery**: N_gen = 3 is exact in K₇
 2. **δ_CP precision measurement**: Predicted exactly as 197°
 3. **sin²θ_W precision**: Predicted as 3/13 = 0.230769...
 4. **Exact relation violations**: Q_Koide ≠ 2/3, m_s/m_d ≠ 20, etc.
@@ -87,7 +87,7 @@ The cohomology numbers (21, 77) match gauge bosons and fermion content remarkabl
 
 ### What is K₇?
 
-K₇ denotes a compact 7-dimensional manifold with G₂ holonomy. While various such manifolds exist, their topological invariants are constrained. GIFT uses:
+K₇ denotes a compact 7-dimensional manifold with G₂ holonomy. While various such manifolds exist, their topological invariants are constrained. K₇ uses:
 
 - b₂(K₇) = 21: Gauge boson content
 - b₃(K₇) = 77: Chiral fermion content
@@ -117,7 +117,7 @@ See Supplement S1 for complete mathematical details.
 
 ## Predictions and Results
 
-### What observables does GIFT predict?
+### What observables does K₇ predict?
 
 **33 Type-I relations** (v3.3: 18 core + 15 extended):
 
@@ -195,7 +195,7 @@ Honest assessment requires reporting both successes and areas needing refinement
 
 ## Experimental Testing
 
-### What experiments can test GIFT?
+### What experiments can test K₇?
 
 **Near-term (2025-2027)**:
 - Belle II: Improved CKM measurements
@@ -214,7 +214,7 @@ Honest assessment requires reporting both successes and areas needing refinement
 
 See the [Main Paper](../publications/papers/markdown/GIFT_v3.3_main.md) for detailed falsification criteria.
 
-### What would definitively falsify GIFT?
+### What would definitively falsify K₇?
 
 Several clear falsification routes:
 
@@ -225,7 +225,7 @@ Several clear falsification routes:
 
 The framework is genuinely falsifiable, not arbitrarily adjustable.
 
-### What would strengthen confidence in GIFT?
+### What would strengthen confidence in K₇?
 
 Several potential confirmations:
 
@@ -299,7 +299,7 @@ This is one interpretation, though subtle:
 
 **Information-theoretic view**: Physics is about information processing; mathematics describes optimal structures.
 
-GIFT is consistent with all these perspectives. The framework demonstrates that specific numerical values can emerge from geometric structure without claiming to explain why those structures exist.
+K₇ is consistent with all these perspectives. The framework demonstrates that specific numerical values can emerge from geometric structure without claiming to explain why those structures exist.
 
 ### Why these specific numbers?
 
@@ -308,7 +308,7 @@ The framework derives numerical values from:
 - Geometric ratios (root system structures)
 - Discrete group properties (Weyl groups, holonomy)
 
-These are "derived" rather than "explained" at the deepest level. One could still ask: "Why E₈? Why G₂?" GIFT pushes the question back but doesn't eliminate it entirely. This is progress if the derived parameters have simpler mathematical origin than arbitrary Standard Model inputs.
+These are "derived" rather than "explained" at the deepest level. One could still ask: "Why E₈? Why G₂?" K₇ pushes the question back but doesn't eliminate it entirely. This is progress if the derived parameters have simpler mathematical origin than arbitrary Standard Model inputs.
 
 ### What about initial conditions and dynamics?
 
@@ -327,7 +327,7 @@ The information-theoretic aspects are suggestive but don't require simulation:
 
 **Similarities**: Optimal information encoding, discrete structures, binary architecture
 
-**Differences**: GIFT describes mathematical structure of physical law, not computation on external substrate
+**Differences**: K₇ describes mathematical structure of physical law, not computation on external substrate
 
 The framework is neutral on metaphysical questions about simulation, focusing on testable predictions from geometric structure.
 
@@ -347,7 +347,7 @@ See `CONTRIBUTING.md` for detailed guidelines. Contributions welcome in:
 
 Depends on background:
 
-**General science literacy**: Start with README.md, then [GIFT for Everyone](GIFT_FOR_EVERYONE.md)
+**General science literacy**: Start with README.md, then [K₇ for Everyone](GIFT_FOR_EVERYONE.md)
 **Undergraduate physics**: Main paper Section 1-4, then notebook
 **Graduate student**: Main paper fully, then S1 (foundations) & S2 (derivations)
 **Professional physicist**: Main paper, S2 (derivations + falsification in Section 10)

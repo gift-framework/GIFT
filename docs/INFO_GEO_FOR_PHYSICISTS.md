@@ -2,11 +2,11 @@
 title: Info Geo for Physicists
 ---
 
-# Information Geometry in Particle Physics: The GIFT Perspective
+# Information Geometry in Particle Physics: The K₇ Perspective
 
 ## Abstract
 
-The Geometric Information Field Theory (GIFT) framework proposes that Standard Model parameters are not free constants requiring experimental determination, but rather topological invariants of an underlying geometric structure. Specifically, the framework derives 33 Type-I relations from the cohomology of a 7-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge architecture. This document presents the conceptual structure for theoretical physicists, focusing on how topology might eliminate the need for adjustable parameters.
+The K₇ framework proposes that Standard Model parameters are not free constants requiring experimental determination, but rather topological invariants of an underlying geometric structure. Specifically, the framework derives 33 Type-I relations from the cohomology of a 7-dimensional G₂ holonomy manifold K₇ coupled to E₈×E₈ gauge architecture. This document presents the conceptual structure for theoretical physicists, focusing on how topology might eliminate the need for adjustable parameters.
 
 ## 1. The Parameter Problem
 
@@ -14,7 +14,7 @@ The Standard Model describes electromagnetic, weak, and strong interactions with
 
 Traditional unification approaches have not resolved this situation. Grand Unified Theories introduce additional parameters while attempting to explain the original 19. String theory's moduli space encompasses approximately 10⁵⁰⁰ vacua, transforming the parameter problem into a vacuum selection problem. The question persists: are these parameters truly free, or do they encode deeper structure?
 
-The GIFT framework explores an alternative: what if the 19 parameters are topological invariants of a compact internal manifold? In this picture, there is nothing to tune because discrete topological data admits no continuous variation.
+The K₇ framework explores an alternative: what if the 19 parameters are topological invariants of a compact internal manifold? In this picture, there is nothing to tune because discrete topological data admits no continuous variation.
 
 ## 2. The Geometric Setup
 
@@ -107,17 +107,17 @@ The framework makes specific predictions testable by near-term experiments:
 
 ## 5. Relation to Other Approaches
 
-**Differs from direct E₈ embedding**: Early attempts to embed Standard Model fields directly in E₈ representations encountered the Distler-Garibaldi obstruction. GIFT uses E₈×E₈ as architecture, not as a direct representation space for fermions.
+**Differs from direct E₈ embedding**: Early attempts to embed Standard Model fields directly in E₈ representations encountered the Distler-Garibaldi obstruction. K₇ uses E₈×E₈ as architecture, not as a direct representation space for fermions.
 
-**Differs from string landscape**: String theory's 10⁵⁰⁰ vacua create a selection problem. GIFT proposes that topological constraints uniquely determine observables, eliminating vacuum degeneracy (though this requires the specific K₇ construction).
+**Differs from string landscape**: String theory's 10⁵⁰⁰ vacua create a selection problem. K₇ proposes that topological constraints uniquely determine observables, eliminating vacuum degeneracy (though this requires the specific K₇ construction).
 
-**Connection to M-theory**: The 11-dimensional bulk and G₂ compactification are standard in M-theory. GIFT may be viewed as extracting specific predictions from a particular corner of the M-theory landscape.
+**Connection to M-theory**: The 11-dimensional bulk and G₂ compactification are standard in M-theory. K₇ may be viewed as extracting specific predictions from a particular corner of the M-theory landscape.
 
 **Information-geometric interpretation**: The binary duality factor p₂ = 2, the appearance of ln(2) in cosmological formulas, and the dimensional compression 496 → 99 → 4 suggest connections to information theory and quantum error correction.
 
 ## 6. Summary
 
-The GIFT framework explores whether Standard Model parameters might be topological invariants rather than free constants. The specific proposal involves E₈×E₈ gauge structure, G₂ holonomy on a 7-manifold K₇ with Betti numbers b₂ = 21 and b₃ = 77, and controlled torsion providing dynamics.
+The K₇ framework explores whether Standard Model parameters might be topological invariants rather than free constants. The specific proposal involves E₈×E₈ gauge structure, G₂ holonomy on a 7-manifold K₇ with Betti numbers b₂ = 21 and b₃ = 77, and controlled torsion providing dynamics.
 
 The resulting 33 Type-I relations match experiment to 0.99% mean precision (NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022). Whether this reflects fundamental physics or an elaborate coincidence will be determined by experiments, particularly DUNE's measurement of the CP violation phase δ_CP in the coming years.
 
@@ -133,4 +133,4 @@ The framework's value, independent of its physical correctness, lies in demonstr
 
 ---
 
-*GIFT Framework v3.4.27*
+*K₇ Framework v3.4.27*

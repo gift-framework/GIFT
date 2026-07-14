@@ -4,12 +4,12 @@ layout: default
 ---
 
 
-This repository contains the theoretical documentation for GIFT v3.4.
+This repository contains the theoretical documentation for K₇ v3.4.
 
 ## Directory Layout
 
 ```
-GIFT/
+K₇/
 ├── publications/                      # Published content & validation
 │   ├── papers/                        # Scientific articles
 │   │   ├── markdown/                  # Core documents (v3.4 — canonical sources)
@@ -33,11 +33,11 @@ GIFT/
 │   │       └── g2_spectral_companion.ipynb
 │   ├── outreach/                      # Vulgarization & blog posts
 │   ├── references/                    # Data & reference catalogs
-│   │   ├── GIFT_ATLAS.json            # Canonical structured atlas
+│   │   ├── K₇_ATLAS.json            # Canonical structured atlas
 │   │   ├── observables.csv            # Machine-readable observables
 │   │   ├── OBSERVABLE_REFERENCE.md    # Complete observable catalog
 │   │   ├── STATISTICAL_EVIDENCE.md    # Rigorous statistical analysis
-│   │   ├── INDEPENDENT_VALIDATIONS.md # External research converging with GIFT
+│   │   ├── INDEPENDENT_VALIDATIONS.md # External research converging with K₇
 │   │   └── Bibliography.md            # References
 │   └── validation/                    # Monte Carlo validation
 │       └── legacy/v3.3/               # v3.3 validation scripts (archived;

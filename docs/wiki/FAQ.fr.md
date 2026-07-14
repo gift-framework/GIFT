@@ -5,13 +5,13 @@ layout: default
 
 # Questions Fréquentes
 
-Questions courantes sur le cadre théorique GIFT, organisées par thème.
+Questions courantes sur le cadre théorique K₇, organisées par thème.
 
 ## Le cadre général
 
-### Qu'est-ce que GIFT ?
+### Qu'est-ce que K₇ ?
 
-La *Geometric Information Field Theory* (GIFT) est un cadre théorique qui dérive les paramètres fondamentaux de la physique à partir de la structure géométrique des algèbres de Lie exceptionnelles E₈×E₈ compactifiées sur des variétés à holonomie G₂. Au lieu de traiter les paramètres du Modèle Standard comme des entrées arbitraires, GIFT propose qu'ils émergent comme des invariants topologiques issus de la réduction dimensionnelle.
+K₇ est un cadre théorique qui dérive les paramètres fondamentaux de la physique à partir de la structure géométrique des algèbres de Lie exceptionnelles E₈×E₈ compactifiées sur des variétés à holonomie G₂. Au lieu de traiter les paramètres du Modèle Standard comme des entrées arbitraires, K₇ propose qu'ils émergent comme des invariants topologiques issus de la réduction dimensionnelle.
 
 ### En quoi est-ce différent de la théorie des cordes ?
 
@@ -23,17 +23,17 @@ Les deux approches impliquent des dimensions supplémentaires et E₈, mais diff
 - Requiert généralement la supersymétrie
 - Plongement direct des particules dans les groupes de jauge
 
-**GIFT** :
+**K₇** :
 - Se concentre sur la dérivation des paramètres
 - Une seule structure géométrique (la variété K₇)
 - Pas de supersymétrie requise
 - Architecture théorico-informationnelle, émergence indirecte des particules
 
-GIFT pourra peut-être se connecter à la théorie des cordes à terme, mais fonctionne comme un cadre indépendant pour la prédiction des paramètres.
+K₇ pourra peut-être se connecter à la théorie des cordes à terme, mais fonctionne comme un cadre indépendant pour la prédiction des paramètres.
 
 ### Est-ce de la physique grand public ?
 
-GIFT est un cadre théorique spéculatif qui présente des prédictions testables. Les fondations mathématiques (E₈, holonomie G₂, réduction dimensionnelle) sont bien établies. La revendication nouvelle, c'est que les paramètres du Modèle Standard émergent comme des invariants topologiques de cette structure spécifique.
+K₇ est un cadre théorique spéculatif qui présente des prédictions testables. Les fondations mathématiques (E₈, holonomie G₂, réduction dimensionnelle) sont bien établies. La revendication nouvelle, c'est que les paramètres du Modèle Standard émergent comme des invariants topologiques de cette structure spécifique.
 
 Le cadre est évalué selon :
 - La rigueur mathématique des dérivations
@@ -44,15 +44,15 @@ Le cadre est évalué selon :
 ### Combien y a-t-il de paramètres libres ?
 
 **Modèle Standard** : 19 paramètres libres
-**GIFT v3.4** : zéro paramètre continu ajustable (3 primitives entières : N=3, r₈=8, r₂=2)
+**K₇ v3.4** : zéro paramètre continu ajustable (3 primitives entières : N=3, r₈=8, r₂=2)
 
 Toutes les quantités découlent d'une structure topologique fixe (groupe de jauge E₈×E₈, variété K₇ à holonomie G₂). Le cadre atteint une « détermination structurelle » où des choix mathématiques discrets déterminent uniquement toutes les prédictions.
 
-### GIFT peut-il être falsifié ?
+### K₇ peut-il être falsifié ?
 
 Oui. Plusieurs critères clairs de falsification :
 
-1. **Découverte d'une quatrième génération** : N_gen = 3 est exact dans GIFT
+1. **Découverte d'une quatrième génération** : N_gen = 3 est exact dans K₇
 2. **Mesure précise de δ_CP** : prédit exactement à 197°
 3. **Précision de sin²θ_W** : prédit comme 3/13 = 0,230769...
 4. **Violation des relations exactes** : Q_Koide ≠ 2/3, m_s/m_d ≠ 20, etc.
@@ -88,7 +88,7 @@ Les nombres de cohomologie (21, 77) collent remarquablement bien au contenu en b
 
 ### Qu'est-ce que K₇ ?
 
-K₇ désigne une variété compacte de dimension 7 à holonomie G₂. Bien que diverses telles variétés existent, leurs invariants topologiques sont contraints. GIFT utilise :
+K₇ désigne une variété compacte de dimension 7 à holonomie G₂. Bien que diverses telles variétés existent, leurs invariants topologiques sont contraints. K₇ utilise :
 
 - b₂(K₇) = 21 : contenu en bosons de jauge
 - b₃(K₇) = 77 : contenu en fermions chiraux
@@ -118,7 +118,7 @@ Voir le Supplément S1 pour les détails mathématiques complets.
 
 ## Prédictions et résultats
 
-### Quelles observables GIFT prédit-il ?
+### Quelles observables K₇ prédit-il ?
 
 **95 observables** (v3.4 : 33 Type I cibles exactes + 19 Type II + 21 Type III + 22 Type IV) :
 
@@ -195,7 +195,7 @@ Une évaluation honnête requiert de rapporter à la fois les succès et les zon
 
 ## Tests expérimentaux
 
-### Quelles expériences peuvent tester GIFT ?
+### Quelles expériences peuvent tester K₇ ?
 
 **À court terme (2025-2027)** :
 - Belle II : mesures CKM améliorées
@@ -214,7 +214,7 @@ Une évaluation honnête requiert de rapporter à la fois les succès et les zon
 
 Voir l'[article principal](Paper-Main-Framework.html) pour les critères de falsification détaillés.
 
-### Qu'est-ce qui falsifierait définitivement GIFT ?
+### Qu'est-ce qui falsifierait définitivement K₇ ?
 
 Plusieurs voies claires de falsification :
 
@@ -225,7 +225,7 @@ Plusieurs voies claires de falsification :
 
 Le cadre est authentiquement falsifiable, pas ajustable de manière arbitraire.
 
-### Qu'est-ce qui renforcerait la confiance dans GIFT ?
+### Qu'est-ce qui renforcerait la confiance dans K₇ ?
 
 Plusieurs confirmations potentielles :
 
@@ -299,7 +299,7 @@ C'est une interprétation, mais elle est subtile :
 
 **Vue théorico-informationnelle** : la physique concerne le traitement d'information ; les mathématiques décrivent les structures optimales.
 
-GIFT est compatible avec toutes ces perspectives. Le cadre démontre que des valeurs numériques spécifiques peuvent émerger d'une structure géométrique sans prétendre expliquer pourquoi ces structures existent.
+K₇ est compatible avec toutes ces perspectives. Le cadre démontre que des valeurs numériques spécifiques peuvent émerger d'une structure géométrique sans prétendre expliquer pourquoi ces structures existent.
 
 ### Pourquoi ces nombres précis ?
 
@@ -308,7 +308,7 @@ Le cadre dérive les valeurs numériques à partir de :
 - Rapports géométriques (structures de systèmes de racines)
 - Propriétés de groupes discrets (groupes de Weyl, holonomie)
 
-Ce sont des paramètres « dérivés » plutôt qu'« expliqués » au niveau le plus profond. On peut toujours demander : « Pourquoi E₈ ? Pourquoi G₂ ? » GIFT recule la question sans l'éliminer entièrement. C'est un progrès si les paramètres dérivés ont une origine mathématique plus simple que les entrées arbitraires du Modèle Standard.
+Ce sont des paramètres « dérivés » plutôt qu'« expliqués » au niveau le plus profond. On peut toujours demander : « Pourquoi E₈ ? Pourquoi G₂ ? » K₇ recule la question sans l'éliminer entièrement. C'est un progrès si les paramètres dérivés ont une origine mathématique plus simple que les entrées arbitraires du Modèle Standard.
 
 ### Et les conditions initiales et la dynamique ?
 
@@ -327,7 +327,7 @@ Les aspects théorico-informationnels sont évocateurs mais ne requièrent pas l
 
 **Similitudes** : encodage optimal de l'information, structures discrètes, architecture binaire
 
-**Différences** : GIFT décrit la structure mathématique de la loi physique, pas le calcul sur un substrat externe
+**Différences** : K₇ décrit la structure mathématique de la loi physique, pas le calcul sur un substrat externe
 
 Le cadre est neutre sur les questions métaphysiques de simulation, et se concentre sur des prédictions testables issues de la structure géométrique.
 
@@ -347,7 +347,7 @@ Voir [CONTRIBUTING.md](https://github.com/Arithmon/K7/blob/main/CONTRIBUTING.md)
 
 Cela dépend de votre profil :
 
-**Culture scientifique générale** : commencez par [Accueil](Home.fr.html), puis [GIFT pour Tout le Monde](GIFT-for-Everyone.fr.html)
+**Culture scientifique générale** : commencez par [Accueil](Home.fr.html), puis [K₇ pour Tout le Monde](GIFT-for-Everyone.fr.html)
 **Étudiant en physique** : [Article principal](Paper-Main-Framework.html) Sections 1-4, puis le notebook
 **Étudiant en doctorat** : [Article principal](Paper-Main-Framework.html) en entier, puis [S1](Paper-S1-Foundations.html) et [S2](Paper-S2-Derivations.html)
 **Physicien professionnel** : [Article principal](Paper-Main-Framework.html), [S2](Paper-S2-Derivations.html) (dérivations + falsification)

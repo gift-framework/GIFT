@@ -4,7 +4,7 @@ layout: default
 ---
 
 
-Formats de citation pour le cadre GIFT v3.4.
+Formats de citation pour le cadre K₇ v3.4.
 
 ## Citation logicielle (recommandée)
 
@@ -61,7 +61,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
   title        = {Geometric Information Field Theory: Topological Determination of Standard Model Parameters},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  howpublished = {GIFT Framework v3.4},
+  howpublished = {K₇ Framework v3.4},
   url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_main.md}
 }
 ```
@@ -70,10 +70,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ```bibtex
 @misc{gift_s1_foundations_v34,
-  title        = {GIFT S1: Mathematical Foundations, E₈, G₂, K₇},
+  title        = {K₇ S1: Mathematical Foundations, E₈, G₂, K₇},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  howpublished = {GIFT Framework v3.4, Supplement S1},
+  howpublished = {K₇ Framework v3.4, Supplement S1},
   url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S1_foundations.md}
 }
 ```
@@ -82,10 +82,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ```bibtex
 @misc{gift_s2_derivations_v34,
-  title        = {GIFT S2: Complete Derivations, 33 Type I Relations},
+  title        = {K₇ S2: Complete Derivations, 33 Type I Relations},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  howpublished = {GIFT Framework v3.4, Supplement S2},
+  howpublished = {K₇ Framework v3.4, Supplement S2},
   url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S2_derivations.md}
 }
 ```
@@ -94,10 +94,10 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ```bibtex
 @misc{gift_s3_observables_v34,
-  title        = {GIFT S3: Observable Catalog, 95 Predictions},
+  title        = {K₇ S3: Observable Catalog, 95 Predictions},
   author       = {de La Fournière, Brieuc},
   year         = {2026},
-  howpublished = {GIFT Framework v3.4, Supplement S3},
+  howpublished = {K₇ Framework v3.4, Supplement S3},
   url          = {https://github.com/Arithmon/K7/blob/main/publications/papers/markdown/k7_framework_3_5_S3_observables.md}
 }
 ```
@@ -151,7 +151,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ```bibtex
 @software{gift_core_v3426,
-  title   = {GIFT Core: Formal Verification in Lean 4},
+  title   = {K₇ Core: Formal Verification in Lean 4},
   author  = {de La Fournière, Brieuc},
   year    = {2026},
   url     = {https://github.com/Arithmon/K7-Lean},
@@ -199,7 +199,7 @@ de La Fournière, Brieuc. "GIFT Framework v3.4: Geometric Information Field Theo
 
 ## Utilisation en publication
 
-Lorsque vous utilisez des prédictions GIFT :
+Lorsque vous utilisez des prédictions K₇ :
 
 1. **Citer le cadre** : utilisez la citation logicielle ci-dessus
 2. **Citer des résultats spécifiques** : utilisez l'entrée du document ou du triptyque correspondante
@@ -208,11 +208,11 @@ Lorsque vous utilisez des prédictions GIFT :
 
 ### Exemple
 
-> « Nous comparons nos mesures avec les prédictions du cadre Geometric Information Field Theory (GIFT) [1], qui dérive les paramètres du Modèle Standard de la topologie E₈×E₈. La prédiction GIFT pour la phase de violation CP est δ_CP = 197° [2]. »
+> « Nous comparons nos mesures avec les prédictions du cadre K₇ [1], qui dérive les paramètres du Modèle Standard de la topologie E₈×E₈. La prédiction K₇ pour la phase de violation CP est δ_CP = 197° [2]. »
 >
-> [1] de La Fournière, B. "GIFT Framework v3.4," 2026, https://github.com/Arithmon/K7
+> [1] de La Fournière, B. "K₇ Framework v3.4," 2026, https://github.com/Arithmon/K7
 >
-> [2] de La Fournière, B. "GIFT S2: Complete Derivations," 2026.
+> [2] de La Fournière, B. "K₇ S2: Complete Derivations," 2026.
 
 ---
 

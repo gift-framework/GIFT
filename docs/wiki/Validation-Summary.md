@@ -3,7 +3,7 @@ title: "Validation Summary"
 layout: default
 ---
 
-# GIFT v3.4 Complete Validation Summary
+# K₇ v3.4 Complete Validation Summary
 
 **Date**: 2026-06-05 (v3.4.27)
 **Experimental references**: NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022
@@ -30,9 +30,9 @@ constants. Angles in degrees and their trigonometric equivalents (sin^2 theta)
 represent the same physical content in different coordinates.
 
 **Note on delta_CP**: delta_CP is the only observable whose experimental
-uncertainty (+/-20 deg = +/-11%) exceeds the GIFT deviation. For all other
+uncertainty (+/-20 deg = +/-11%) exceeds the K₇ deviation. For all other
 32 observables, the experimental precision far exceeds the framework's accuracy.
-The GIFT prediction (197 deg) lies within ~1 sigma of the NuFIT 6.1 best fit
+The K₇ prediction (197 deg) lies within ~1 sigma of the NuFIT 6.1 best fit
 (~207-212 deg), inside the falsification window [182, 212] deg.
 We report 0.99% (33 Type I relations) as the primary metric.
 
@@ -44,13 +44,13 @@ All 33 predictions are topologically derived ratios or pure numbers.
 
 ### I.1 Structural (1 prediction)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | N_gen | 3 | 3 | **0.00%** | EXACT |
 
 ### I.2 Electroweak Sector (4 predictions)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | sin^2 theta_W | 3/13 = 0.2308 | 0.2312 | 0.19% | < 1% |
 | alpha_s(M_Z) | sqrt(2)/12 = 0.1179 | 0.1180 | 0.13% | < 1% |
@@ -59,7 +59,7 @@ All 33 predictions are topologically derived ratios or pure numbers.
 
 ### I.3 Lepton Sector (4 predictions)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | Q_Koide | 2/3 = 0.6667 | 0.6667 | **0.001%** | < 1% |
 | m_tau/m_e | 3477 | 3477.23 | **0.007%** | < 1% |
@@ -68,7 +68,7 @@ All 33 predictions are topologically derived ratios or pure numbers.
 
 ### I.4 Quark Sector (4 predictions)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | m_s/m_d | 20 | 20.0 | **0.00%** | EXACT |
 | m_c/m_s | 82/7 = 11.71 | 11.7 | 0.12% | < 1% |
@@ -77,7 +77,7 @@ All 33 predictions are topologically derived ratios or pure numbers.
 
 ### I.5 PMNS Sector (7 predictions)
 
-| Observable | GIFT | NuFIT 6.0 | Deviation | Status |
+| Observable | K₇ | NuFIT 6.0 | Deviation | Status |
 |------------|------|-----------|-----------|--------|
 | delta_CP | 197 deg | 177 deg +/- 20 deg | 11.30% | TENSION (1 sigma) |
 | theta_23 | 49.25 deg | 48.5 deg +/- 0.9 deg | 1.55% | 1-5% |
@@ -94,7 +94,7 @@ lower octant (sin^2 theta_23 = 0.470), which would increase the tension further.
 
 ### I.6 CKM Sector (3 predictions)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | sin^2 theta_12 | 0.226 | 0.225 | 0.36% | < 1% |
 | A_Wolf | 0.838 | 0.836 | 0.29% | < 1% |
@@ -102,7 +102,7 @@ lower octant (sin^2 theta_23 = 0.470), which would increase the tension further.
 
 ### I.7 Boson Mass Ratios (3 predictions)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | m_H/m_t | 0.727 | 0.725 | 0.31% | < 1% |
 | m_H/m_W | 1.558 | 1.558 | **0.02%** | < 1% |
@@ -110,7 +110,7 @@ lower octant (sin^2 theta_23 = 0.470), which would increase the tension further.
 
 ### I.8 Cosmological Sector (7 predictions)
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | Omega_DE | ln(2) x 98/99 = 0.686 | 0.685 | 0.21% | < 1% |
 | n_s | zeta(11)/zeta(5) = 0.9649 | 0.9649 | **0.004%** | < 1% |
@@ -146,7 +146,7 @@ Where: H* = 99 (cohomological sum), L_8 = 47, phi = golden ratio.
 
 ### II.2 Dimensional Results
 
-| Observable | GIFT | Experiment | Deviation | Status |
+| Observable | K₇ | Experiment | Deviation | Status |
 |------------|------|------------|-----------|--------|
 | m_e | 0.5114 MeV | 0.5110 MeV | **0.09%** | < 1% |
 | m_mu | 105.78 MeV | 105.66 MeV | 0.12% | < 1% |
@@ -162,7 +162,7 @@ Where: H* = 99 (cohomological sum), L_8 = 47, phi = golden ratio.
 
 ### III.1 Exhaustive Search (6 phases)
 
-| Phase | Configs | Better than GIFT |
+| Phase | Configs | Better than K₇ |
 |-------|---------|-----------------|
 | 1. Betti grid (b2 x b3) | 14,949 | 0 |
 | 2. Betti x holonomy (8 groups) | 119,592 | 0 |
@@ -184,7 +184,7 @@ Where: H* = 99 (cohomological sum), L_8 = 47, phi = golden ratio.
 | SU(3) (Calabi-Yau) | 6.71% | #4 |
 
 Among 30 known G2-manifolds from the mathematics literature (Joyce, Kovalev TCS,
-CHNP, Nordstrom, Halverson-Morrison), the GIFT manifold K7 = (b2=21, b3=77)
+CHNP, Nordstrom, Halverson-Morrison), the K₇ manifold K7 = (b2=21, b3=77)
 ranks **#1**. The next best is CHNP (b2=20, b3=76) at 2.44%.
 
 ### III.3 Bullet-Proof Validation (7 Components)
@@ -245,7 +245,7 @@ excluding delta_CP, the WAIC favors GIFT.
 
 1. **delta_CP tension**: The largest single-observable deviation (11.3%)
    corresponds to the least constrained PMNS parameter. NuFIT 6.0 reports
-   delta_CP = 177 +/- 20 deg (1 sigma), so the GIFT prediction of 197 deg
+   delta_CP = 177 +/- 20 deg (1 sigma), so the K₇ prediction of 197 deg
    lies at 1.0 sigma. Future data (DUNE, T2HK) will sharpen this test.
 
 2. **WAIC reversal**: The information-theoretic comparison (WAIC) marginally
@@ -254,14 +254,14 @@ excluding delta_CP, the WAIC favors GIFT.
    favor GIFT. This should be monitored as delta_CP constraints improve.
 
 3. **sin^2 theta_23 shift**: NuFIT 6.0 shifted from 0.546 to 0.561
-   (IC19 without SK-atm). The GIFT prediction (6/11 = 0.545) tracked the
+   (IC19 without SK-atm). The K₇ prediction (6/11 = 0.545) tracked the
    NuFIT 5.3 value closely; the shift increases the deviation from 0.1% to
    2.8%. The octant ambiguity (IC24 with SK-atm prefers 0.470) adds
    uncertainty to this observable.
 
 4. **Score function**: All results use mean relative deviation (%). This
    equally weights all observables regardless of experimental precision.
-   Under precision-weighted scoring (1/uncertainty), GIFT's ultra-precise
+   Under precision-weighted scoring (1/uncertainty), K₇'s ultra-precise
    matches (alpha^-1, Q_Koide, n_s) would dominate and the mean deviation
    would approach zero.
 
@@ -271,7 +271,7 @@ excluding delta_CP, the WAIC favors GIFT.
 
 **Status**: CLOSED
 
-The Riemann-GIFT connection was rigorously tested and found to have weak
+The Riemann-K₇ connection was rigorously tested and found to have weak
 evidence (4 PASS / 4 FAIL across 8 independent statistical tests).
 The sequence recurrence hypothesis was falsified on Weng G2 zeros.
 
@@ -281,7 +281,7 @@ The 33 dimensionless predictions do NOT depend on the Riemann connection.
 
 ## Conclusion
 
-With NuFIT 6.1 experimental values, the GIFT framework achieves:
+With NuFIT 6.1 experimental values, the K₇ framework achieves:
 
 - **Mean deviation**: **0.99%** across the 33 Type I relations
 - **3 exact matches** (0.00% deviation: N_gen, m_s/m_d, Omega_DM/Omega_b)
@@ -319,6 +319,6 @@ data expected ~2029) and T2HK, making it a clear falsification target.
 
 ---
 
-*GIFT Statistical Validation v3.4 (top-level) / v3.3.24 (sector breakdown)*
+*K₇ Statistical Validation v3.4 (top-level) / v3.3.24 (sector breakdown)*
 *v3.4 release: 2026-04-29 | sector tables generated: 2026-02-28*
 *Experimental data: NuFIT 6.1 / PDG 2024 / Planck 2018 / CODATA 2022*

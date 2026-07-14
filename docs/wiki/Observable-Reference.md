@@ -3,7 +3,7 @@ title: "Observable Reference"
 layout: default
 ---
 
-# GIFT Observable Reference
+# K₇ Observable Reference
 
 **Version**: 3.4 (top-level snapshot; see Supplement S3 for the full 95-observable dataset). The legacy v3.3.24 sector breakdown below is preserved for traceability of the NuFIT 6.0 analysis.
 **Status**: Reference documentation
@@ -46,7 +46,7 @@ layout: default
 
 ---
 
-## 1. GIFT Topological Constants
+## 1. K₇ Topological Constants
 
 ### 1.1 Primary Constants
 
@@ -106,7 +106,7 @@ Each observable receives a classification based on the number of independent alg
 | **DERIVED** | 2-4 expressions | At least dual derivation |
 | **SINGULAR** | 1 expression | Unique derivation (possible numerical coincidence) |
 
-**Cross-reference with GIFT_ATLAS.json status labels:**
+**Cross-reference with K₇_ATLAS.json status labels:**
 
 | This document | Atlas equivalent | Mapping rationale |
 |---------------|-----------------|-------------------|
@@ -122,13 +122,13 @@ Each observable receives a classification based on the number of independent alg
 
 ### 3.1 Structural
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 1 | **N_gen** | Atiyah-Singer index | **3** | 3 | 0.00% | 24+ | CANONICAL |
 
 ### 3.2 Electroweak Sector
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 2 | **sin^2 theta_W** | b_2/(b_3+dim_G_2) | 3/13 = 0.2308 | 0.23122 | 0.20% | 19 | ROBUST |
 | 3 | **alpha_s(M_Z)** | sqrt(2)/(dim_G2 - p_2) | sqrt(2)/12 = 0.1179 | 0.1179 | 0.042% | 9 | TOPOLOGICAL |
@@ -137,7 +137,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 3.3 Lepton Sector
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 6 | **Q_Koide** | dim_G_2/b_2 | 2/3 | 0.666661 | 0.001% | 27 | CANONICAL |
 | 7 | **m_tau/m_e** | 7+10x248+10x99 | 3477 | 3477.15 | 0.004% | 3 | DERIVED |
@@ -145,7 +145,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 3.4 Quark Sector
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 9 | **m_s/m_d** | p_2^2 x Weyl | 4 x 5 = 20 | 20.0 | 0.00% | 14 | VERIFIED |
 | 10 | **m_c/m_s** | (dim_E8-p_2)/b_2 | 246/21 = 11.71 | 11.7 | 0.12% | 5 | SUPPORTED |
@@ -154,7 +154,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 3.5 Neutrino/PMNS Sector
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 13 | **delta_CP** | dim_K7 x dim_G2 + H* | 197 deg | 197 deg +/- 24 deg | 0.00% | 3 | DERIVED |
 | 14 | **theta_13^PMNS** | pi/b_2 | 8.57 deg | 8.54 deg | 0.37% | 3 | DERIVED |
@@ -163,7 +163,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 3.6 Cosmological Sector
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 17 | **Omega_DE** | ln(2)x(b_2+b_3)/H* | 0.6861 | 0.6847 | 0.21% | 2 | DERIVED |
 | 18 | **n_s** | zeta(11)/zeta(5) | 0.9649 | 0.9649 | 0.004% | 2 | DERIVED |
@@ -174,7 +174,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 4.1 PMNS sin^2 Form
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 19 | **sin^2 theta_12^PMNS** | (1+N_gen)/alpha_sum | 4/13 = 0.308 | 0.307 | 0.23% | 21 | CANONICAL |
 | 20 | **sin^2 theta_23^PMNS** | (D_bulk-Weyl)/D_bulk | 6/11 = 0.545 | 0.546 | 0.10% | 13 | ROBUST |
@@ -182,7 +182,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 4.2 CKM Matrix
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 22 | **sin^2 theta_12^CKM** | fund_E7/dim_E8 | 56/248 = 0.2258 | 0.2250 | 0.36% | 16 | ROBUST |
 | 23 | **A_Wolfenstein** | (Weyl+dim_E6)/H* | 83/99 = 0.838 | 0.836 | 0.29% | 7 | SUPPORTED |
@@ -190,7 +190,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 4.3 Boson Mass Ratios
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 25 | **m_H/m_t** | fund_E7/b_3 | 56/77 = 0.7273 | 0.725 | 0.31% | 16 | ROBUST |
 | 26 | **m_H/m_W** | (N_gen+dim_E6)/dim_F4 | 81/52 = 1.5577 | 1.558 | 0.02% | 3 | DERIVED |
@@ -200,7 +200,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 4.4 Lepton Ratios Extended
 
-| # | Observable | GIFT Formula | Value | Exp. | Dev. | # Expr. | Status |
+| # | Observable | K₇ Formula | Value | Exp. | Dev. | # Expr. | Status |
 |---|------------|--------------|-------|------|------|---------|--------|
 | 28 | **m_mu/m_tau** | (b_2-D_bulk)/PSL_27 | 10/168 = 0.0595 | 0.0595 | 0.04% | 9 | SUPPORTED |
 
@@ -210,7 +210,7 @@ Each observable receives a classification based on the number of independent alg
 
 ### 5.1 Universe Composition
 
-| # | Observable | Planck 2018 | GIFT | Value | Dev | # Expr |
+| # | Observable | Planck 2018 | K₇ | Value | Dev | # Expr |
 |---|------------|-------------|------|-------|-----|--------|
 | 29 | **Omega_DM/Omega_b** | 5.375 +/- 0.1 | (b_0+chi)/rank | **43/8 = 5.375** | **0.00%** | 3 |
 | 30 | **Omega_c/Omega_Lambda** | 0.387 +/- 0.01 | det_g_num/PSL_27 | 65/168 = 0.3869 | 0.01% | 5 |
@@ -347,7 +347,7 @@ The structure is **real**, not coincidental.
 
 ## 9. Unique Expressions (Caution)
 
-Observables with only one GIFT expression (possible numerical coincidence):
+Observables with only one K₇ expression (possible numerical coincidence):
 
 | Observable | Expression | Value | Status |
 |------------|------------|-------|--------|
@@ -435,7 +435,7 @@ Results: [`publications/references/observables.csv`](https://github.com/Arithmon
 
 ## 12. The Balmer Analogy
 
-| Aspect | Balmer (1885) | GIFT |
+| Aspect | Balmer (1885) | K₇ |
 |--------|---------------|------|
 | Empirical formula | lambda = B x n^2/(n^2-4) | sin^2 theta_W = 3/13 |
 | Fits experiment | Yes | Yes |
@@ -451,8 +451,8 @@ Results: [`publications/references/observables.csv`](https://github.com/Arithmon
 - Koide, Y. "Fermion-boson two-body model." Lett. Nuovo Cim. 34 (1982)
 - Particle Data Group (2024), Review of Particle Physics
 - Planck Collaboration (2020), Cosmological parameters
-- GIFT Publications: [Paper Main Framework](Paper-Main-Framework.html), [Paper S2 Derivations](Paper-S2-Derivations.html)
+- K₇ Publications: [Paper Main Framework](Paper-Main-Framework.html), [Paper S2 Derivations](Paper-S2-Derivations.html)
 
 ---
 
-*GIFT Framework v3.4 - Observable Reference*
+*K₇ Framework v3.4 - Observable Reference*

@@ -12,7 +12,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 |------|-------------|
 | 🇫🇷 [Accueil](Home.fr.html) | Page d'accueil avec résultats clés et liens rapides |
 | 🇫🇷 [Pour commencer](Getting-Started.fr.html) | Choisissez votre voie de lecture selon votre profil |
-| 🇫🇷 [GIFT pour Tout le Monde](GIFT-for-Everyone.fr.html) | Guide complet avec des analogies du quotidien (sans maths) |
+| 🇫🇷 [K₇ pour Tout le Monde](GIFT-for-Everyone.fr.html) | Guide complet avec des analogies du quotidien (sans maths) |
 | 🇫🇷 [FAQ](FAQ.fr.html) | Questions fréquentes organisées par thème |
 | 🇫🇷 [Glossaire](Glossary.fr.html) | Termes techniques, notation et acronymes |
 
@@ -38,7 +38,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 | 🇫🇷 [Référence des observables](Observable-Reference.fr.html) | 95 observables : formules, valeurs, écarts (Type I/II/III/IV) |
 | 🇫🇷 [Preuves statistiques](Statistical-Evidence.fr.html) | Validation à 7 composantes, recherche exhaustive sur 3M+ configs |
 | 🇫🇷 [Résumé de validation](Validation-Summary.fr.html) | Résultats secteur par secteur avec NuFIT 6.1 |
-| 🇫🇷 [Validations indépendantes](Independent-Validations.fr.html) | Recherches externes qui convergent avec GIFT |
+| 🇫🇷 [Validations indépendantes](Independent-Validations.fr.html) | Recherches externes qui convergent avec K₇ |
 
 ## Articles de blog
 | Page | Description |
@@ -50,13 +50,13 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 | 🇫🇷 [Le sillon](Blog-The-Furrow.fr.html) | Un an de recherche non-orthodoxe : ce qui a changé, ce qui n'a pas changé, et ce que je ne sais toujours pas |
 | 🇫🇷 [Épisode 3 : Le jour où la carapace bleue a su où tu étais](Blog-Mario-Kart-Blue-Shell.fr.html) | Mario Kart, la non-localité et les corrélations à distance |
 | 🇫🇷 [Le mot qui manque](Blog-No-Word-For-This.fr.html) | Trois noms qui ne marchent pas, et une question ouverte sur le rôle dans la collaboration humain-IA |
-| 🇫🇷 [On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html) | Annonce GIFT v3.4 en langage simple |
+| 🇫🇷 [On a publié notre brouillon de notice](Blog-Weve-Released-Our-Draft-Blueprint.fr.html) | Annonce K₇ v3.4 en langage simple |
 | 🇫🇷 [Épisode 2 : Le jour où Tetris t'a appris que l'ordre fait tout](Blog-Tetris-Order-Is-Everything.fr.html) | Tetris et la non-commutativité productive |
 | 🇫🇷 [Épisode 1 : Le jour où Newton a perdu le contrôle](Blog-Fall-Guys-Newton-Lost-Control.fr.html) | Fall Guys et le mythe de la physique prévisible |
 | 🇫🇷 [Épisode 0 : Le jour où Pudge t'a appris la mécanique quantique](Blog-Pudge-Quantum-Mechanics.fr.html) | Le gaming comme école d'intuition quantique (ouverture de série) |
-| 🇫🇷 [Orientation, pas ontologie](Blog-Orientation-Not-Ontology.fr.html) | La posture philosophique derrière GIFT |
+| 🇫🇷 [Orientation, pas ontologie](Blog-Orientation-Not-Ontology.fr.html) | La posture philosophique derrière K₇ |
 | 🇫🇷 [Et si l'univers était un set Lego ?](Blog-Lego-Set-Universe.fr.html) | Compter les pièces, reconnaître le thème, lire la notice |
-| 🇫🇷 [« Le nom de l'auteur paraît inventé »](Blog-Brieucs-Gift.fr.html) | Apprendre la physique avec une IA : l'origine accidentelle de GIFT |
+| 🇫🇷 [« Le nom de l'auteur paraît inventé »](Blog-Brieucs-Gift.fr.html) | Apprendre la physique avec une IA : l'origine accidentelle de K₇ |
 | 🇫🇷 [La géométrie de l'impossible](Blog-Roberto-Carlos-Geometry.fr.html) | La géométrie des courbes impossibles |
 | 🇫🇷 [Les poux de l'univers](Blog-Lice-of-the-Universe.fr.html) | Pourquoi les constantes de l'univers ne sont pas arbitraires |
 | 🇫🇷 [L'algèbre qui attendait](Blog-The-Algebra-That-Waited.fr.html) | E₈ et l'algèbre derrière la physique |
@@ -71,7 +71,7 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 | 🇫🇷 [Formalisation Lean](Lean-Formalization.fr.html) | 143 fichiers, 15 axiomes, 140 conjonctions, blueprint |
 | 🇫🇷 [Structure du dépôt](Repository-Structure.fr.html) | Disposition des dossiers et navigation |
 | 🇫🇷 [Ressources externes](External-Resources.fr.html) | Liens vers toutes les ressources externes |
-| 🇫🇷 [Guide de citation](Citation-Guide.fr.html) | Comment citer GIFT (BibTeX, APA, DOIs) |
+| 🇫🇷 [Guide de citation](Citation-Guide.fr.html) | Comment citer K₇ (BibTeX, APA, DOIs) |
 | 🇫🇷 [Points clés du changelog](Changelog-Highlights.fr.html) | Historique récent des versions |
 
 ---

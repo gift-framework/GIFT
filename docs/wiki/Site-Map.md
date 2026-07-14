@@ -12,7 +12,7 @@ Complete index of all wiki pages.
 |------|-------------|
 | [Home](Home.html) | Landing page with key results and quick links |
 | [Getting Started](Getting-Started.html) | Choose your reading path by background |
-| [GIFT for Everyone](GIFT-for-Everyone.html) | Complete guide using everyday analogies (no math required) |
+| [K₇ for Everyone](GIFT-for-Everyone.html) | Complete guide using everyday analogies (no math required) |
 | [FAQ](FAQ.html) | Frequently asked questions organized by topic |
 | [Glossary](Glossary.html) | Technical terms, notation, and acronyms |
 
@@ -38,7 +38,7 @@ Complete index of all wiki pages.
 | [Observable Reference](Observable-Reference.html) | 95 observables: formulas, values, deviations (Type I/II/III/IV) |
 | [Statistical Evidence](Statistical-Evidence.html) | 7-component validation, 3M+ exhaustive search |
 | [Validation Summary](Validation-Summary.html) | Sector-by-sector results with NuFIT 6.1 |
-| [Independent Validations](Independent-Validations.html) | External research converging with GIFT |
+| [Independent Validations](Independent-Validations.html) | External research converging with K₇ |
 
 ## Blog Posts
 
@@ -53,13 +53,13 @@ English posts are hosted on Substack ([arithmon.substack.com](https://arithmon.s
 | [The Furrow](https://arithmon.substack.com/p/the-furrow) | One year of unorthodox research: what changed, what didn't, and what I still don't know |
 | [Episode 3: The day the blue shell knew where you were](https://arithmon.substack.com/p/episode-3-the-day-the-blue-shell) | Mario Kart, non-locality and correlations at a distance |
 | [No Word for This](https://arithmon.substack.com/p/no-word-for-this) | Three names that don't work, and an open question about the role in human-AI collaboration |
-| [We've Released Our Draft Blueprint](https://arithmon.substack.com/p/weve-released-our-draft-blueprint) | Announcing GIFT v3.4 in plain language |
+| [We've Released Our Draft Blueprint](https://arithmon.substack.com/p/weve-released-our-draft-blueprint) | Announcing K₇ v3.4 in plain language |
 | [Episode 2: The day Tetris taught you that order is everything](https://arithmon.substack.com/p/episode-2-the-day-tetris-taught-you) | Tetris and productive non-commutativity |
 | [Episode 1: The day Newton lost control](https://arithmon.substack.com/p/episode-1-the-day-newton-lost-control) | Fall Guys and the myth of predictable physics |
 | [Episode 0: The day Pudge taught you quantum mechanics](https://arithmon.substack.com/p/episode-0-the-day-pudge-taught-you) | Gaming as a school of quantum intuition (series opener) |
-| [Orientation, not ontology](https://arithmon.substack.com/p/orientation-not-ontology) | The philosophical posture behind GIFT |
+| [Orientation, not ontology](https://arithmon.substack.com/p/orientation-not-ontology) | The philosophical posture behind K₇ |
 | [What if the universe was a Lego set?](https://arithmon.substack.com/p/what-if-the-universe-was-a-lego-set) | Counting pieces, recognizing themes, reading the manual |
-| ["The author's name appears to be fabricated"](https://arithmon.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of GIFT |
+| ["The author's name appears to be fabricated"](https://arithmon.substack.com/p/brieucs-gift) | Learning physics with AI: the accidental origin of K₇ |
 | [The Geometry of the Impossible](https://arithmon.substack.com/p/the-geometry-of-the-impossible) | What Roberto Carlos knew (without knowing it) |
 | [The Lice of the Universe](https://arithmon.substack.com/p/the-lice-of-the-universe) | Why the universe's constants aren't arbitrary |
 | [The Algebra That Waited](https://arithmon.substack.com/p/the-algebra-that-waited) | E₈ and the algebra behind physics |
@@ -74,7 +74,7 @@ English posts are hosted on Substack ([arithmon.substack.com](https://arithmon.s
 | [Lean Formalization](Lean-Formalization.html) | 143 files, 15 axioms, 140 conjuncts, blueprint |
 | [Repository Structure](Repository-Structure.html) | Directory layout and navigation |
 | [External Resources](External-Resources.html) | Links to all external resources |
-| [Citation Guide](Citation-Guide.html) | How to cite GIFT (BibTeX, APA, DOIs) |
+| [Citation Guide](Citation-Guide.html) | How to cite K₇ (BibTeX, APA, DOIs) |
 | [Changelog Highlights](Changelog-Highlights.html) | Recent version history |
 
 ---

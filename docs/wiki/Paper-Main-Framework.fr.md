@@ -22,7 +22,7 @@ Cadre proposant que les paramètres sans dimension du Modèle Standard émergent
 
 ## Résultats clés
 
-| Observable | Formule GIFT | Valeur | Exp. | Écart |
+| Observable | Formule K₇ | Valeur | Exp. | Écart |
 |------------|--------------|--------|------|-------|
 | sin² θ_W | b₂/(b₃+dim(G₂)) | 3/13 | 0,2312 | 0,19 % |
 | N_gen | rang(E₈)−Weyl | 3 | 3 | exact |
