@@ -110,10 +110,10 @@ The branch already has the following conservative values:
 
 These come from:
 
-- [axis2_certificate_sigma_min_NK_2026_06_30.json](../../private/canonical/results/axis2_certificate_sigma_min_NK_2026_06_30.json),
-- [axis2_DtN_interface_2026_06_30.json](../../private/canonical/results/axis2_DtN_interface_2026_06_30.json),
-- [axis2_E_link_interval_2026_06_30.json](../../private/canonical/results/axis2_E_link_interval_2026_06_30.json),
-- [axis2_E_geom_interval_2026_06_30.json](../../private/canonical/results/axis2_E_geom_interval_2026_06_30.json).
+- [axis2_certificate_sigma_min_NK_2026_06_30.json](../certificates/axis2/results/axis2_certificate_sigma_min_NK_2026_06_30.json),
+- [axis2_DtN_interface_2026_06_30.json](../certificates/axis2/results/axis2_DtN_interface_2026_06_30.json),
+- [axis2_E_link_interval_2026_06_30.json](../certificates/axis2/results/axis2_E_link_interval_2026_06_30.json),
+- [axis2_E_geom_interval_2026_06_30.json](../certificates/axis2/results/axis2_E_geom_interval_2026_06_30.json).
 
 ## Theorem L3: DtN positivity and non-constant mode absorption
 

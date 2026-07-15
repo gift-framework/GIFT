@@ -1,0 +1,60 @@
+{
+  "M1_order_eps1_matching": {
+    "background_hypothesis": "m(h_0) = 0",
+    "xi_1_constructed": "-P10/J",
+    "M_eps(h_0 + eps xi_1)_eps^0_coeff": "0",
+    "M_eps(h_0 + eps xi_1)_eps^1_coeff": "0",
+    "eps^0_vanishes": true,
+    "eps^1_vanishes": true,
+    "PASS": true
+  },
+  "M2_order_eps2_matching": {
+    "forcing_eps^2_for_xi_2": "P20 - L1*P10/J + M2*P10**2/(2*J**2)",
+    "xi_2_constructed": "(-P20 + L1*P10/J - M2*P10**2/(2*J**2))/J",
+    "M_eps(h_0 + eps xi_1 + eps^2 xi_2)_eps^0_coeff": "0",
+    "M_eps(h_0 + eps xi_1 + eps^2 xi_2)_eps^1_coeff": "0",
+    "M_eps(h_0 + eps xi_1 + eps^2 xi_2)_eps^2_coeff": "0",
+    "eps^0_vanishes": true,
+    "eps^1_vanishes": true,
+    "eps^2_vanishes": true,
+    "PASS": true
+  },
+  "M3_residual_K2": {
+    "leading_residual_eps^3_coefficient": "-L1*P20/J + L1**2*P10/J**2 + M2*P10*P20/J**2 - 3*L1*M2*P10**2/(2*J**3) + M2**2*P10**3/(2*J**4)",
+    "expected_(cross-derivative_M2_xi_1_xi_2 + L1_xi_2)": "-L1*P20/J + L1**2*P10/J**2 + M2*P10*P20/J**2 - 3*L1*M2*P10**2/(2*J**3) + M2**2*P10**3/(2*J**4)",
+    "matches_expected": true,
+    "interpretation": "The eps^3 residual collects two contributions: the cross-derivative M_2 * xi_1 * xi_2 from the quadratic part of m, and the leading-order Linearisation L_1 * xi_2 from eps * P_1(h_0 + eps xi_1 + ...). Higher cubic / Donaldson contributions D^3 m, D^2 P_1, DP_2 add further eps^3 terms but with the same operator-norm scaling. R_2(eps) = O(eps^3) holds by construction of xi_1, xi_2 at orders eps^1 and eps^2.",
+    "PASS": true
+  },
+  "M4_bounds": {
+    "xi_1_constructed_norm_bound": "||xi_1|| <= ||G_aug|| * ||P_1(h_0)||",
+    "xi_2_constructed_norm_bound": "||xi_2|| <= ||G_aug|| * ( ||P_2(h_0)|| + ||DP_1(h_0)|| * ||xi_1|| + (1/2) * ||D^2 m_{h_0}|| * ||xi_1||^2 )",
+    "xi_1_explicit_in_placeholder": "-P10/J",
+    "xi_2_explicit_in_placeholder": "(-P20 + L1*P10/J - M2*P10**2/(2*J**2))/J",
+    "interpretation": "These bounds depend only on the augmented right-inverse norm ||G_aug|| (controlled by Theorem 5.10 cokernel-inversion certificate + Theorem 4.7 twisted Schauder) and on the Donaldson-system data P_k, DP_k, D^2 m. None involve the (incorrect) verbal scaling ||m(h_0)|| ~ R^{-1} of the 06-30 P1 draft.",
+    "PASS": true
+  },
+  "M5_IFT_tail_closure": {
+    "contraction_condition": "4 * ||G_aug||^2 * L_m * ||R_2(eps)|| < 1",
+    "R_2(eps)_leading_order": "O(eps^3)  (from m3 cross-derivative)",
+    "tail_bound": "||h_tail|| <= 2 * ||G_aug|| * ||R_2(eps)|| = O(eps^3) = O(R^{-3})",
+    "closure_holds_for_eps_below_threshold": "eps^3 < 1 / (8 * ||G_aug||^3 * L_m^2)",
+    "interpretation": "The K=2 ansatz reduces the IFT source from O(eps) (raw m(h_0+...) in the incorrect 06-30 framing) or from O(P_1(h_0) * eps) (in the proper M_eps framing) down to O(eps^3) via two explicit applications of G_aug. The leading-order obstruction structure (sigma_min, delta_coker, Corollary B) from P7 is UNCHANGED -- only the iteration source per order is reorganised.",
+    "PASS": true
+  },
+  "M6_verdict": {
+    "GO_NO_GO": "GO",
+    "supersedes": "axis2_finite_order_ansatz_2026_06_30 (FORMAL FAULT in source scaling)",
+    "key_correction": "The 06-30 P1 script wrote xi_1 = -G_aug[R * m(h_0)] presuming m(h_0) ~ R^{-1}, but the equation F(u,c,R) = m(h_0+u+iota(c)) used in that script is R-independent. The proper adiabatic operator is M_eps(h) = m(h) + eps * P_1(h) + eps^2 * P_2(h) + ..., where the eps-corrections P_k arise from the full Donaldson system (E1)-(E6) reduction [Donaldson 2017, sec. 2.2 and Prop 3], NOT from a reparametrisation of m. The corrected iteration is:\n  xi_1 = -G_aug * P_1(h_0),\n  xi_2 = -G_aug * [ P_2(h_0) + DP_1(h_0)*xi_1 + (1/2) D^2 m_{h_0}[xi_1, xi_1] ].\nThe structural results of P7 (sigma_min(A_loc), DtN positivity, Neumann closure) are independent of this correction and remain valid as is.",
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "GO_NO_GO": "GO",
+    "headline": "GO. The adiabatic operator M_eps(h) = m(h) + eps*P_1(h) + eps^2*P_2(h) + ... of [Donaldson 2017 sec. 2.2 / Prop 3] provides the genuine eps-dependence of the system. The K=2 finite-order ansatz h^R = h_0 + eps*xi_1 + eps^2*xi_2 + h_tail with xi_1 = -G_aug*P_1(h_0) and xi_2 = -G_aug*[P_2 + DP_1*xi_1 + (1/2)D^2 m[xi_1,xi_1]] matches orders eps^1 and eps^2 by construction (verified symbolically here), leaving a residual R_2(eps) = O(eps^3) and tail bound ||h_tail|| <= C(D)*R^{-3} via the IFT contraction. SUPERSEDES axis2_finite_order_ansatz_2026_06_30, which had a formal fault in the source scaling. The P7 cokernel-inversion certificate (sigma_min(A_loc), DtN positivity, Neumann closure) is independent of this correction and remains intact.",
+    "draft_update_pointers": [
+      "section 3.1: introduce M_eps(h) explicitly with reference to Donaldson 2017 sec 2.2; state that m(h_0) = 0 is the eps=0 limit of the full system, not a sourced equation.",
+      "section 7.2 Theorem 7.1: replace xi_1 = -G_aug[R * m(h_0)] with xi_1 = -G_aug * P_1(h_0) and similar for xi_2; clarify that R-dependence enters through P_1, P_2 in M_eps, not through m."
+    ]
+  }
+}

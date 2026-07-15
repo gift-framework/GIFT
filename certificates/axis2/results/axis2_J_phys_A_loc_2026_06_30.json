@@ -1,0 +1,78 @@
+{
+  "V1_wedge_form": {
+    "cover_metric": "g_B = ds^2 + 4 r^2 dr^2 + 4 r^4 dtheta^2  (w=z^2 pullback)",
+    "measure_weight_sqrt_det_g": "4*r**2*Abs(r)",
+    "transverse_Laplace_Beltrami": "(1/(4 r^4)) [ (r d_r)^2 + d_theta^2 ]",
+    "matches_wedge_form": true,
+    "note": "degenerate wedge operator; NOT the flat cover-Euclidean Delta_z",
+    "PASS": true
+  },
+  "V2_model_coefficient": {
+    "cover_euclidean_Delta_z_psiR": "8*r*cos(theta)",
+    "PHYSICAL_Delta_gB_psiR": "2*cos(theta)/r",
+    "downstairs_Delta_w_psiR": "2*cos(phi/2)/sqrt(rho)",
+    "ratio_cover_over_physical": "4*r**2",
+    "physical_coefficient_is_2": true,
+    "cover_coefficient_is_8": true,
+    "downstairs_coefficient_is_2": true,
+    "8_equals_2_times_conformal_4": true,
+    "verdict": "physical model coefficient is 2 (= A_bulk units); the draft's 8 is the cover-Euclidean artifact (8 = 2 * conformal 4).",
+    "PASS": true
+  },
+  "V3_indicial_roots": {
+    "indicial_polynomial_cover": "A**2 - m**2",
+    "is_A2_minus_m2": true,
+    "sigma_odd_m=1_roots_cover": "A = +-1  (downstairs mu = +-1/2)",
+    "cubic_data_cover_power": 3,
+    "operator_output": "2*cos(theta)/r",
+    "lands_at_lower_root_cover_A=-1": true,
+    "downstairs_mu": "-1/2  (= Pacard beta=-1 cokernel, axis2_pacard_beta_neg1_indicial_2026_06_23)",
+    "note": "the physical obstruction sits at the LOWER indicial root (cover A=-1, downstairs -1/2), consistent with the 06-23 Pacard beta=-1 analysis; the cover-Euclidean reference mis-placed it at +1.",
+    "PASS": true
+  },
+  "V4_A_loc_invertible": {
+    "A_loc": "2 * A_bulk(alpha_1, alpha_1) * I_2  (scalar multiple of identity)",
+    "A_bulk_positive_definite": true,
+    "sigma_min_normalised_(A5_a1=1)": [
+      2.0,
+      2.0
+    ],
+    "sigma_min_conservative_(a1=1/cond)": [
+      0.8658008658008657,
+      0.865800865800866
+    ],
+    "a_0_lower_bound": 0.8658008658008657,
+    "INVERTIBLE_sigma_min>0": true,
+    "PASS": true
+  },
+  "V5_inverse_loss": {
+    "local_edge_inverse_order_p": "p ~ 0 (Mazzeo edge-Schauder O(1), K_Sch <= 17)",
+    "finite_order_ansatz_K_gt_p_plus_1": "achievable with small K (p~0)",
+    "physical_block_diag": "2 A_bulk (was 8I)",
+    "||E_total||_upper": 0.06342630694000582,
+    "delta_normalised_(sigma_min=2)_upper": 0.03171315347000291,
+    "delta_conservative_(sigma_min=0.866)_upper": 0.07325738451570675,
+    "Neumann_closes_normalised": true,
+    "Neumann_closes_conservative": true,
+    "PASS": true
+  },
+  "V6_verdict": {
+    "GO_NO_GO": "GO",
+    "A_loc_invertible": true,
+    "physical_coefficient": "A_loc = 2 A_bulk(alpha_1,alpha_1) I_2 (derived, not asserted)",
+    "obstruction_indicial_root": "lower root (cover A=-1, downstairs -1/2) = Pacard beta=-1",
+    "inverse_loss": "p ~ 0 locally (edge Schauder O(1)); K > p+1 reachable",
+    "consequences_for_paper": [
+      "the §5.4 diagonal block '8I' is a cover-Euclidean artifact; the physical block is 2*A_bulk (8 = 2 * conformal degree 4).",
+      "the obstruction sits at the LOWER indicial root (downstairs -1/2), revalidating the 06-23 Pacard beta=-1 cokernel analysis and superseding the 06-25 R1 'cover-Euclidean Delta_z as reference' framing (which mis-placed it at +1/2 by dropping the principal-order conformal factor).",
+      "Neumann closure survives the rescale 8 -> 2 A_bulk: delta_total <= 0.0733 (conservative) / 0.0317 (normalised), still << 1.",
+      "the local model J_phys is the correct principal edge operator; §4-5 should be re-stated on it (coefficient 2 A_bulk, weight from the 4 r^3 measure) rather than on Delta_z."
+    ],
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "GO_NO_GO": "GO",
+    "headline": "GO. The physical edge operator J_phys = A_bulk * Delta_{g_B} (degenerate wedge form on the cover, smooth Delta_w downstairs) yields A_loc = 2 A_bulk(alpha_1,alpha_1) I_2 on the cubic data -- a positive scalar multiple of the identity, hence INVERTIBLE with sigma_min = 2 A_bulk(alpha_1,alpha_1) > 0. The draft's '8I' is the cover-Euclidean Delta_z artifact (8 = physical 2 x conformal degree 4). The obstruction sits at the lower indicial root (downstairs -1/2), revalidating the 06-23 Pacard beta=-1 cokernel. The local edge inverse is O(1) (p~0), so a finite-order ansatz K>p+1 is reachable: the project has a credible path to the strong claims. Neumann closure survives the 8 -> 2 A_bulk rescale."
+  }
+}

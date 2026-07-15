@@ -12,7 +12,7 @@ does not already constrain about the first `kappa_src` ansatz.
 
 The current script
 
-`private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py`
+`certificates/axis2/scripts/axis2_hypothesis_G_discharge_2026_07_01.py`
 
 uses the source estimate
 

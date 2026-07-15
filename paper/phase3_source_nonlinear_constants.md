@@ -35,8 +35,8 @@ At present the branch already has an excellent *numerical margin* at `D0`, but t
 
 The current source for `(G-quant)` is:
 
-- [axis2_hypothesis_G_discharge_2026_07_01.py](../../private/canonical/scripts/axis2_hypothesis_G_discharge_2026_07_01.py),
-- [axis2_hypothesis_G_discharge_2026_07_01.json](../../private/canonical/results/axis2_hypothesis_G_discharge_2026_07_01.json),
+- [axis2_hypothesis_G_discharge_2026_07_01.py](../certificates/axis2/scripts/axis2_hypothesis_G_discharge_2026_07_01.py),
+- [axis2_hypothesis_G_discharge_2026_07_01.json](../certificates/axis2/results/axis2_hypothesis_G_discharge_2026_07_01.json),
 - encoded locally in [phase3_G_closure_status.json](../certificates/phase3_G_closure_status.json).
 
 Using the original placeholders:

@@ -1,0 +1,74 @@
+{
+  "H1_monodromy": {
+    "T_matrix": "[[-1, 1], [0, 1]]",
+    "is_order_2": true,
+    "det_T": "-1",
+    "eigenvalues": [
+      "-1",
+      "1"
+    ],
+    "Gauss_Manin_residue_norm_enclosure": [
+      1.5707963267948966,
+      1.5707963267948968
+    ],
+    "type": "finite-order (order 2) Weyl reflection => bounded residue, no log blow-up",
+    "PASS": true
+  },
+  "H2_eh_ks_bolt": {
+    "|d_a g_EH|_{g_EH}": "4*sqrt(2)*a**3/Abs(a**4 - r**4)",
+    "sqrt_det_g_coframe": "r**3",
+    "L2_radial_density": "32*a**6*r**3/(a**4 - r**4)**2",
+    "near_bolt_(r-a)^2*density_limit": "2*a**3",
+    "raw_KS_diverges_at_bolt_like_1/(r-a)": true,
+    "raw_KS_L2_at_infinity": true,
+    "RESIDUAL": "the pointwise gauge-fixed harmonic representative (whose C^0 norm is the homogeneity constant C0/a) requires solving the EH Laplacian (Joyce QHK ch. 7); NOT computed here. C0 is a cited input.",
+    "PASS": true
+  },
+  "H3_neck_scaling": {
+    "a_eps_at_neck": "eps^2 (|w|=eps^2)",
+    "da_dw_at_neck": "1/2 (O(1))",
+    "|xi|_{g_eps}_order_in_eps": -1,
+    "|F_H|_{g_eps}_order_in_eps": -3,
+    "norm_convention": "all-covariant Lambda^2(base) (x) Lambda^1(vert) 3-tensor (vertical index lowered, the object feeding the torsion 3-form); 3 covariant indices => scales by lambda^-3 under g->lambda^2 g. A vector-valued reading would give lambda^-1, which is NOT relevant.",
+    "F_H_scaling_exponent_from_index_count": -3,
+    "homothety_conversion_factor_g_eps_to_ghat": "epsilon**6",
+    "|F_H|_{ghat}_order_in_eps": 3,
+    "joyce_threshold_order_in_ghat": 3,
+    "matches_joyce_at_same_power": true,
+    "PASS": true
+  },
+  "H4_torsion_order": {
+    "homothety_3form": "|tau|_{g_eps} = eps^-2 |tau|_{ghat}",
+    "|tau_{F_H}|_{ghat}_order": 3,
+    "|tau_{F_H}|_{g_eps}_order": 1,
+    "joyce_C0_threshold_order": 1,
+    "matches_at_same_power": true,
+    "verdict": "||tau_{F_H}||_{g_eps,C0} ~ C_geom * eps, same power as Joyce lambda_J * eps",
+    "PASS": true
+  },
+  "H5_residual": {
+    "order_level_closure": "CERTIFIED (H1, H3, H4): single-scale, ||tau_{F_H}||_{g_eps} ~ eps.",
+    "constants_level_closure_requires": {
+      "C0": "pointwise gauge-fixed EH harmonic Kodaira-Spencer constant; the RAW tensor is not L^2 (H2), the harmonic representative is standard (Joyce QHK ch. 7) but not computed here -- cited input.",
+      "lambda_J": "sharp Joyce perturbation constant for coassociative K3-fibred G2; the universal Joyce constant is over-conservative -- the sharp value (Foscolo-Haskins-Nordstrom lineage) is the cited input for C_geom < lambda_J."
+    },
+    "what_changed_vs_06_25": "removed the hand-tuned C_geom ~ 15 (which mixed an order-of-magnitude C0=4 with an ansatz Atiyah-Bott factor); the honest state is order-level closure + two named cited constants.",
+    "nature": "single-scale, localised, constants-level. NOT structural, NOT multi-scale FHN.",
+    "PASS": true
+  },
+  "H6_verdict": {
+    "all_rigorous_checks_pass": true,
+    "headline": "D16 hardened: the F_H neck analysis is rigorous at the ORDER level (finite-order monodromy residue pi/2; homothety |F_H|_{ghat} ~ eps^3; torsion ||tau_{F_H}||_{g_eps} ~ eps = Joyce threshold power). The residual is exactly two cited constants (gauge-fixed EH harmonic C0 + sharp coassociative Joyce lambda_J). The raw EH KS tensor's bolt divergence (1/(r-a), L^2 only at infinity) rigorously localises why the gauge-fixed harmonic representative is needed for the sharp C0. Constants-level, not structural.",
+    "paper_action": "draft.md §8 should carry an honest Remark: order-level closure certified; the C^0 Joyce closure depends on the two cited constants, with the closure being single-scale and localised.",
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "order_level": "CLOSED (rigorous)",
+    "constants_level_residual": [
+      "C0 (gauge-fixed EH harmonic, Joyce QHK ch.7)",
+      "lambda_J (sharp coassociative-fibred Joyce, FHN lineage)"
+    ],
+    "summary": "D16: order-level closure of the F_H neck torsion is rigorous (monodromy residue pi/2; |F_H|_{ghat} ~ eps^3; ||tau_{F_H}||_{g_eps} ~ eps). The hand-tuned C_geom ~ 15 of the 06-25 script is removed; the residual is precisely two cited constants. Single-scale, localised, constants-level."
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "N1_newton_sup": {
+    "geometry": "parallel coaxial circles radius R_unlink, axis separation d; min|x-y| = d exactly",
+    "sup_G_times_d": [
+      0.07957747154594766,
+      0.07957747154594767
+    ],
+    "formula": "sup_{x in Sigma_i, y in Sigma_j} G(x,y) = 1/(4 pi d) (exact)",
+    "PASS": true
+  },
+  "N2_circle_average": {
+    "d=0.5": {
+      "R_unlink": 1.0,
+      "<G>*d_enclosure": [
+        0.0347601229022661,
+        0.034790261452214546
+      ],
+      "sup_G*d_=_1/(4pi)": [
+        0.07957747154594766,
+        0.07957747154594767
+      ],
+      "averaged_<=_sup": true,
+      "PASS": true
+    },
+    "d=1.0": {
+      "R_unlink": 1.0,
+      "<G>*d_enclosure": [
+        0.051128484499505016,
+        0.05115047917180419
+      ],
+      "sup_G*d_=_1/(4pi)": [
+        0.07957747154594766,
+        0.07957747154594767
+      ],
+      "averaged_<=_sup": true,
+      "PASS": true
+    },
+    "d=2.0": {
+      "R_unlink": 1.0,
+      "<G>*d_enclosure": [
+        0.06641166681928388,
+        0.06642332067032174
+      ],
+      "sup_G*d_=_1/(4pi)": [
+        0.07957747154594766,
+        0.07957747154594767
+      ],
+      "averaged_<=_sup": true,
+      "PASS": true
+    },
+    "d=5.0": {
+      "R_unlink": 1.0,
+      "<G>*d_enclosure": [
+        0.07665105135117704,
+        0.07665389717339322
+      ],
+      "sup_G*d_=_1/(4pi)": [
+        0.07957747154594766,
+        0.07957747154594767
+      ],
+      "averaged_<=_sup": true,
+      "PASS": true
+    }
+  },
+  "N3_source_readout": {
+    "definition": "kappa_src = (L^1 of |psi_R|=rho^{3/2}|cos(theta/2)| over annulus 1/4<rho<1/2, measure rho drho dtheta) / (curve length 2 pi)",
+    "L1_integral_enclosure": [
+      0.09130202091795982,
+      0.09287124529774739
+    ],
+    "kappa_src_enclosure": [
+      0.01453116794337293,
+      0.014780917760236439
+    ],
+    "note": "MODEL constant (not first-principles sharp). Robustness checked in N4.",
+    "PASS": true
+  },
+  "N4_robustness": {
+    "D_0": {
+      "N": 77,
+      "R_0": "0.01",
+      "d_min": "1.0"
+    },
+    "sweep_over_kappa_src": [
+      {
+        "kappa_src_multiplier": 1,
+        "C_ell_upper": 0.001176228062488208,
+        "||E_link||_upper": 0.0008939333274910382,
+        "delta_link_upper": 0.00011174166593637977
+      },
+      {
+        "kappa_src_multiplier": 2,
+        "C_ell_upper": 0.002352456124976416,
+        "||E_link||_upper": 0.0017878666549820763,
+        "delta_link_upper": 0.00022348333187275954
+      },
+      {
+        "kappa_src_multiplier": 5,
+        "C_ell_upper": 0.00588114031244104,
+        "||E_link||_upper": 0.004469666637455192,
+        "delta_link_upper": 0.000558708329681899
+      },
+      {
+        "kappa_src_multiplier": 10,
+        "C_ell_upper": 0.01176228062488208,
+        "||E_link||_upper": 0.008939333274910383,
+        "delta_link_upper": 0.001117416659363798
+      },
+      {
+        "kappa_src_multiplier": 30,
+        "C_ell_upper": 0.03528684187464624,
+        "||E_link||_upper": 0.026817999824731143,
+        "delta_link_upper": 0.003352249978091393
+      }
+    ],
+    "conservative_kappa_src<=1_bound": {
+      "C_ell_<=_1/(4pi)": 0.07957747154594767,
+      "||E_link||_upper": 0.06047887837492024,
+      "delta_link_upper": 0.00755985979686503
+    },
+    "worst_delta_link_over_sweep_upper": 0.003352249978091393,
+    "all_delta_link_below_1": true,
+    "interpretation": "delta_link stays << 1 even at 30x the model source factor, and the conservative kappa_src<=1 bound gives delta_link <= 0.0076. Closure is insensitive to the soft source constant.",
+    "PASS": true
+  },
+  "N5_combined": {
+    "delta_geom_upper": 0.007852689769532076,
+    "delta_link_conservative_upper": 0.00755985979686503,
+    "delta_total_upper": 0.015412549566397107,
+    "||(8I+E_geom+E_link)^-1||_<=_1/(8(1-delta))_upper": 0.1269567268452906,
+    "Neumann_closes_(delta<1)": true,
+    "margin_1_over_delta": 64.88219198854868,
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "C_ell_geometric_factor": "1/(4 pi) (Newton kernel, exact)",
+    "kappa_src_model_enclosure": [
+      0.01453116794337293,
+      0.014780917760236439
+    ],
+    "C_ell_conservative_upper": 0.07957747154594767,
+    "delta_link_conservative_upper": 0.00755985979686503,
+    "delta_total_conservative_upper": 0.015412549566397107,
+    "summary": "Newton-kernel geometry certified rigorously (sup G = 1/(4 pi d) exact, <G> enclosed). C_ell = kappa_src/(4 pi) with kappa_src a model source-readout factor enclosed in [0.0145, 0.0148]. The Neumann closure delta < 1 is INSENSITIVE to kappa_src: it holds even at 30x the model value and under the fully conservative kappa_src<=1 bound (C_ell <= 1/(4pi), delta_link <= 0.0076). Combined with delta_geom <= 0.00785, delta_total <= 0.0154 << 1."
+  }
+}

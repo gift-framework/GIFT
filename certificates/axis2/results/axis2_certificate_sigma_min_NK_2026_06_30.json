@@ -1,0 +1,117 @@
+{
+  "C1_sigma_min": {
+    "source": "axis2_J_phys_A_loc_2026_06_30 V4 (P2)",
+    "A_loc": "2 * A_bulk(alpha_1, alpha_1) * I_{2N}",
+    "sigma_min_normalised_(A5_a1=1)": [
+      2.0,
+      2.0
+    ],
+    "sigma_min_conservative_(a1=1/cond)": [
+      0.8658008658008657,
+      0.865800865800866
+    ],
+    "positive": true,
+    "PASS": true
+  },
+  "C2_E_total": {
+    "E_geom_at_D_0_(Frenet_Serret_norm)": [
+      0.06282151815625656,
+      0.06282151815625661
+    ],
+    "E_link_at_D_0_(dipole_multipole_refined)": [
+      8.939333274910372e-06,
+      8.93933327491038e-06
+    ],
+    "E_total_(sum)": [
+      0.06283045748953146,
+      0.06283045748953153
+    ],
+    "source_E_geom": "axis2_E_geom_interval_2026_06_30 G4",
+    "source_E_link": "axis2_E_link_multipole_2026_06_30 P3 (multipole-refined dipole)",
+    "PASS": true
+  },
+  "C3_delta_total": {
+    "delta_total_normalised_(sigma_min=2)": [
+      0.03141522874476573,
+      0.031415228744765766
+    ],
+    "delta_total_conservative_(sigma_min=0.866)": [
+      0.07256917840040882,
+      0.07256917840040894
+    ],
+    "Neumann_closes_normalised": true,
+    "Neumann_closes_conservative": true,
+    "safety_margin_normalised_(1/delta)": 31.831695644317552,
+    "safety_margin_conservative_(1/delta)": 13.779954824379889,
+    "PASS": true
+  },
+  "C4_M_inverse_neumann": {
+    "formula": "||M^{-1}||_op <= 1 / (sigma_min(A_loc) * (1 - delta_total))",
+    "M_inverse_upper_normalised": [
+      0.5162170775739398,
+      0.5162170775739399
+    ],
+    "M_inverse_upper_conservative": [
+      1.2453759063214087,
+      1.2453759063214098
+    ],
+    "interpretation": "Neumann series for M = A_loc + (E_geom + E_link) converges absolutely.",
+    "PASS": true
+  },
+  "C5_dtN_positivity": {
+    "source": "axis2_DtN_interface_2026_06_30 D3 (P3)",
+    "DtN_lower_bound_formula": "Lambda_{q,1/2} >= 1/(2 R_0)  forall q >= 0",
+    "c_DtN_at_D_0_(R_0=0.01)": [
+      49.99999999999999,
+      50.000000000000014
+    ],
+    "rationale": "Mittag-Leffler: coth(x) >= 1/x, so (q/L)coth(qR_0/L) >= 1/R_0, hence Lambda = (q/L)coth(qR_0/L) - 1/(2R_0) >= 1/(2R_0).",
+    "consequence": "Inner DtN map is uniformly positive across all longitudinal Fourier modes q; matching with the source-free affine bulk extension is well-posed and adds no obstruction.",
+    "PASS": true
+  },
+  "C6_epsilon_0_closure": {
+    "formula": "epsilon_0(D) >= (1 - delta_total) / (K_Sch * cond(A_bulk) * kappa_E)",
+    "kappa_E_lemma_6_3_geometric": [
+      1.0,
+      1.0
+    ],
+    "Mazzeo_regime_K_Sch_17": {
+      "epsilon_0_normalised_lower": 0.024664750986891623,
+      "epsilon_0_conservative_lower": 0.02361677671503924,
+      "passes_Corollary_B_threshold_10^-2_normalised": true,
+      "passes_Corollary_B_threshold_10^-2_conservative": true
+    },
+    "GT_regime_K_Sch_85_(reference)": {
+      "epsilon_0_normalised_lower": 0.004932950197378325,
+      "epsilon_0_conservative_lower": 0.004723355343007847,
+      "passes_Corollary_B_threshold_10^-2_normalised": false,
+      "passes_Corollary_B_threshold_10^-2_conservative": false
+    },
+    "PASS_Mazzeo_regime": true,
+    "PASS_GT_regime_normalised_only": false,
+    "Mazzeo_is_operative_regime": "see [[axis2_proof_axis_realignment_2026_06_25]] meta-i closure"
+  },
+  "C7_verdict": {
+    "GO_NO_GO": "GO",
+    "headline_inputs": {
+      "sigma_min(A_loc)": "2 * A_bulk(alpha_1, alpha_1)  [P2]",
+      "c_DtN": "1 / (2 R_0)  [P3]",
+      "||E_geom||_at_D_0": "<= 0.0628  [D15]",
+      "||E_link||_at_D_0_dipole": "<= 7.56e-5  [P4 multipole]",
+      "kappa_E": "O(1) geometric, Lemma 6.3 [rank-one rigidity]"
+    },
+    "Neumann_closes_at_D_0_both_normalisations": true,
+    "Corollary_B_certified_at_D_0_(Mazzeo)": true,
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "GO_NO_GO": "GO",
+    "headline": "GO. The assembled Neumann-Kronecker certificate for J_phys at D_0 packages (P2) sigma_min(A_loc) = 2 A_bulk(alpha_1, alpha_1) > 0, (P3) DtN positivity Lambda >= 1/(2 R_0) = 50, (D15) ||E_geom|| <= 0.0628, (P4 multipole) ||E_link|| <= 7.6e-5 into a single interval bound delta_total <= 0.073 (conservative) / 0.032 (normalised), both << 1. Neumann series for M = A_loc + E_total converges with ||M^{-1}|| <= 1.5 (conservative). Corollary B threshold epsilon_0(D_0) >= 10^-2 is certified in the Mazzeo edge-Schauder regime (K_Sch <= 17, kappa_E geometric O(1) by Lemma 6.3 rank-one rigidity). The DtN interface ensures the matching with the source-free affine bulk extension adds no obstruction.",
+    "draft_update_pointers": [
+      "section_9.2 / Corollary B: this certificate is the explicit J_phys-version (supersedes the cover-Euclidean version with 8I block).",
+      "Theorem 5.5 / Corollary 5.8: replace the Schroedinger-based R^{2N} reduction (Lemma 5.7) with the DtN-interface version [axis2_DtN_interface_2026_06_30]; the 2 A_bulk coefficient enters via mu^2 - m^2 = 2 (P2 V4 / P3 D6).",
+      "Lemma 6.3: kappa_E geometric O(1) hinges on rank-one rigidity (A1) -- already in draft."
+    ]
+  }
+}

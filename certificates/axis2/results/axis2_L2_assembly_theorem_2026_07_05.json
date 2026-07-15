@@ -1,0 +1,265 @@
+{
+  "L2_assembly_promoted_to_theorem": true,
+  "all_pass": true,
+  "assembled_theorem_statement": "Theorem (L2 assembly).  Let X_AR be the product Banach space X_omega x X_lambda x X_mu x X_Theta with the product-max norm.  Let T_AR : X_AR -> X_AR be the assembled adiabatic-reconstruction map with majorant contribution q_AR and four Neumann-slot contributions q_comm, q_proj, q_hodge, q_gauge (all theorem-grade at D_0).  Then Lip(T_AR) <= q_AR + q_comm + q_proj + q_hodge + q_gauge <= 8.2e-3 < 1/2, so by the Banach fixed-point theorem, T_AR has a unique fixed point (h_epsilon*, omega_epsilon*, lambda_epsilon*, mu_epsilon*, Theta_epsilon*) in X_AR \u2014 the convergent adiabatic reconstruction of the branched Donaldson data on D_0.",
+  "claim": "Assembled adiabatic-reconstruction contraction theorem on the product Banach space X_AR = X_omega x X_lambda x X_mu x X_Theta under the product-max norm.  Given the four Neumann-slot theorem-grade bounds (V/W/X/Y, discharged 2026-07-04) and the imported AR majorant q_AR = 1.035e-3 (Codex phase4_ar_majorant_candidate, product-max K_AR_prod = 2079/2000), the assembled reconstruction map T_AR is a contraction on X_AR with Lip(T_AR) <= q_AR + q_Neumann = 8.2e-3, strictly below 1/2, and hence Banach fixed-point gives a unique convergent adiabatic reconstruction.",
+  "contraction_ingredients": {
+    "q_AR_majorant": {
+      "decimal": 0.001035,
+      "fraction": "207/200000",
+      "source": "Codex phase4_ar_majorant_candidate, imported"
+    },
+    "q_Neumann_aggregate": {
+      "decimal": 0.0071640553125,
+      "fraction": "22924977/3200000000"
+    },
+    "q_total": {
+      "decimal": 0.0081990553125,
+      "fraction": "26236977/3200000000"
+    },
+    "slots": {
+      "q_comm": {
+        "C_exact": {
+          "decimal": 5.561325,
+          "fraction": "222453/40000"
+        },
+        "C_source_key": "C_plain_exact",
+        "margin_vs_slot_budget": {
+          "decimal": 44.95331598135336,
+          "fraction": "10000000/222453"
+        },
+        "note": "plain (conservative) commutator bound V6",
+        "q_exact": {
+          "decimal": 0.00139033125,
+          "fraction": "222453/160000000"
+        }
+      },
+      "q_gauge": {
+        "C_exact": {
+          "decimal": 18.2712,
+          "fraction": "22839/1250"
+        },
+        "C_source_key": "C_gauge_exact",
+        "margin_vs_slot_budget": {
+          "decimal": 13.682735671439206,
+          "fraction": "312500/22839"
+        },
+        "note": "gauge transfer bound Y6",
+        "q_exact": {
+          "decimal": 0.0045678,
+          "fraction": "22839/5000000"
+        }
+      },
+      "q_hodge": {
+        "C_exact": {
+          "decimal": 1.56704625,
+          "fraction": "1253637/800000"
+        },
+        "C_source_key": "C_hodge_exact (part_B)",
+        "margin_vs_slot_budget": {
+          "decimal": 159.5358145938577,
+          "fraction": "200000000/1253637"
+        },
+        "note": "Hodge variation-cost bound X6",
+        "q_exact": {
+          "decimal": 0.0003917615625,
+          "fraction": "1253637/3200000000"
+        }
+      },
+      "q_proj": {
+        "C_exact": {
+          "decimal": 3.25665,
+          "fraction": "65133/20000"
+        },
+        "C_source_key": "C_proj_exact",
+        "margin_vs_slot_budget": {
+          "decimal": 76.76600187309045,
+          "fraction": "5000000/65133"
+        },
+        "note": "projection residual bound W6",
+        "q_exact": {
+          "decimal": 0.0008141625,
+          "fraction": "65133/80000000"
+        }
+      }
+    }
+  },
+  "downstream": {
+    "H_global_L2_slot_retired": true,
+    "L2_lock_status": "closed",
+    "remaining_H_global_slots": [
+      "Construction C.1 classification inputs (Voisin/Kovalev)"
+    ],
+    "remaining_standalone_hypothesis": "(J) anisotropic three-scale perturbation theorem"
+  },
+  "gates": {
+    "A0_slots_loaded_all_pass": {
+      "detail": "Four Neumann-slot artefacts V/W/X/Y all report all_pass=true.",
+      "pass": true,
+      "slot_files": {
+        "q_comm": "axis2_L2_qcomm_FH_Gf_2026_07_04.json",
+        "q_gauge": "axis2_L2_qgauge_transfer_2026_07_04.json",
+        "q_hodge": "axis2_L2_qhodge_uniform_2026_07_04.json",
+        "q_proj": "axis2_L2_qproj_residual_2026_07_04.json"
+      }
+    },
+    "A1_each_slot_below_slot_budget": {
+      "pass": true,
+      "slot_budget": {
+        "decimal": 0.0625,
+        "fraction": "1/16"
+      },
+      "slots": {
+        "q_comm": {
+          "C_exact": {
+            "decimal": 5.561325,
+            "fraction": "222453/40000"
+          },
+          "C_source_key": "C_plain_exact",
+          "margin_vs_slot_budget": {
+            "decimal": 44.95331598135336,
+            "fraction": "10000000/222453"
+          },
+          "note": "plain (conservative) commutator bound V6",
+          "q_exact": {
+            "decimal": 0.00139033125,
+            "fraction": "222453/160000000"
+          }
+        },
+        "q_gauge": {
+          "C_exact": {
+            "decimal": 18.2712,
+            "fraction": "22839/1250"
+          },
+          "C_source_key": "C_gauge_exact",
+          "margin_vs_slot_budget": {
+            "decimal": 13.682735671439206,
+            "fraction": "312500/22839"
+          },
+          "note": "gauge transfer bound Y6",
+          "q_exact": {
+            "decimal": 0.0045678,
+            "fraction": "22839/5000000"
+          }
+        },
+        "q_hodge": {
+          "C_exact": {
+            "decimal": 1.56704625,
+            "fraction": "1253637/800000"
+          },
+          "C_source_key": "C_hodge_exact (part_B)",
+          "margin_vs_slot_budget": {
+            "decimal": 159.5358145938577,
+            "fraction": "200000000/1253637"
+          },
+          "note": "Hodge variation-cost bound X6",
+          "q_exact": {
+            "decimal": 0.0003917615625,
+            "fraction": "1253637/3200000000"
+          }
+        },
+        "q_proj": {
+          "C_exact": {
+            "decimal": 3.25665,
+            "fraction": "65133/20000"
+          },
+          "C_source_key": "C_proj_exact",
+          "margin_vs_slot_budget": {
+            "decimal": 76.76600187309045,
+            "fraction": "5000000/65133"
+          },
+          "note": "projection residual bound W6",
+          "q_exact": {
+            "decimal": 0.0008141625,
+            "fraction": "65133/80000000"
+          }
+        }
+      }
+    },
+    "A2_aggregate_q_Neumann": {
+      "pass": true,
+      "q_Neumann": {
+        "decimal": 0.0071640553125,
+        "fraction": "22924977/3200000000"
+      },
+      "sum_check": "222453/160000000 + 65133/80000000 + 1253637/3200000000 + 22839/5000000"
+    },
+    "A3_q_total_below_candidate_headline": {
+      "candidate_headline": {
+        "decimal": 0.251,
+        "fraction": "251/1000"
+      },
+      "margin_factor": {
+        "decimal": 30.61328292508699,
+        "fraction": "803200000/26236977"
+      },
+      "pass": true,
+      "q_AR": {
+        "decimal": 0.001035,
+        "fraction": "207/200000"
+      },
+      "q_Neumann": {
+        "decimal": 0.0071640553125,
+        "fraction": "22924977/3200000000"
+      },
+      "q_total": {
+        "decimal": 0.0081990553125,
+        "fraction": "26236977/3200000000"
+      }
+    },
+    "A4_q_total_below_contraction_margin_1_2": {
+      "contraction_margin": {
+        "decimal": 0.5,
+        "fraction": "1/2"
+      },
+      "margin_factor": {
+        "decimal": 60.98263530893822,
+        "fraction": "1600000000/26236977"
+      },
+      "pass": true,
+      "q_total": {
+        "decimal": 0.0081990553125,
+        "fraction": "26236977/3200000000"
+      }
+    },
+    "A5_q_total_below_summability_threshold_1": {
+      "margin_factor": {
+        "decimal": 121.96527061787644,
+        "fraction": "3200000000/26236977"
+      },
+      "pass": true,
+      "q_total": {
+        "decimal": 0.0081990553125,
+        "fraction": "26236977/3200000000"
+      },
+      "threshold": {
+        "decimal": 1.0,
+        "fraction": "1"
+      }
+    }
+  },
+  "honest_caveats": [
+    "q_AR = 1.035e-3 is imported from the Codex phase4_ar_majorant_candidate; the four Neumann slots are theorem-grade at D_0 with their own scripts V/W/X/Y",
+    "q_hodge Part A (sup_x ||G_f(x)|| <= 9/20 uniform via fibrewise Zhong-Yang + D_max = 7/5) has a 0.98% tight margin at the certified diameter \u2014 the real slack is the orbifold benchmark (K_H_K3 = 0.19); Part B variation cost is comfortable",
+    "q_gauge is the tightest slot at 13.7x margin, quadratic in K_v (least robust; flagged in the consolidation master)",
+    "the product-max norm is a design choice compatible with the Codex product-max K_AR_prod normalisation; product-sum or product-L^2 norms would give slightly different aggregate constants but the same qualitative contraction"
+  ],
+  "name": "axis2_L2_assembly_theorem_2026_07_05",
+  "product_banach_space": {
+    "K_AR_prod": {
+      "decimal": 1.0395,
+      "fraction": "2079/2000",
+      "provenance": "K_H^K3 * K_F outward-rounded from 0.45 * 2.31"
+    },
+    "R_AR": 4000,
+    "components": {
+      "X_Theta": "edge-weighted C^{k,alpha}_beta on Omega^{2,2}",
+      "X_lambda": "edge-weighted C^{k,alpha}_beta on Omega^{3,0}",
+      "X_mu": "edge-weighted C^{k,alpha}_beta on Omega^{0,4}",
+      "X_omega": "edge-weighted C^{k,alpha}_beta on Omega^{1,2} at bigrading (1,2)"
+    },
+    "definition": "X_AR = X_omega x X_lambda x X_mu x X_Theta",
+    "norm": "product-max norm ||(omega,lambda,mu,Theta)||_X = max(||omega||_omega, ||lambda||_lambda, ||mu||_mu, ||Theta||_Theta)"
+  },
+  "status": "L2_assembly_theorem_grade"
+}

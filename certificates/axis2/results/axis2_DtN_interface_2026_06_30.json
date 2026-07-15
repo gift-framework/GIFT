@@ -1,0 +1,299 @@
+{
+  "D1_bessel_half_integer": {
+    "I_half_explicit": "sqrt(2/(pi x)) * sinh(x)",
+    "satisfies_modified_Bessel_ODE_index_1/2": true,
+    "log_derivative": "(x/tanh(x) - 1/2)/x",
+    "expected": "coth(x) - 1/(2x)",
+    "ratio_matches_closed_form": true,
+    "PASS": true
+  },
+  "D2_DtN_eigenvalue_formula": {
+    "Lambda_q_m_half_closed_form": "(q/L) coth(q R_0/L) - 1/(2 R_0)",
+    "verified_by_direct_derivative": true,
+    "limit_q_to_0_plus": "1/(2*R0)",
+    "q=0_equals_1/(2R_0)": true,
+    "asymptote_q_to_infinity": "q/L  (coth -> 1 exponentially; residual (q/L)(coth(qR_0/L) - 1) is O((q/L) e^{-2 q R_0/L}))",
+    "PASS": true
+  },
+  "D3_lower_bound_certified": {
+    "key_inequality": "coth(x) >= 1/x  forall x > 0  (equivalently x coth(x) >= 1)",
+    "proof": "Mittag-Leffler partial-fraction expansion (DLMF 4.36.3): coth(x) = 1/x + sum_{n>=1} 2x/(x^2 + n^2 pi^2). Multiplying by x: x coth(x) = 1 + sum_{n>=1} 2 x^2/(x^2 + n^2 pi^2). All summands are non-negative for real x, hence x coth(x) >= 1.",
+    "Mittag_Leffler_interval_checks": [
+      {
+        "x": "0.1",
+        "x_coth_x_exact": [
+          1.003331113225398,
+          1.0033311132254004
+        ],
+        "Mittag_Leffler_partial_N200": [
+          1.0033210063951774,
+          1.0033210063952218
+        ],
+        "tail_upper_bound": 1.0132118364233783e-05,
+        "agrees_within_tail_bound": true,
+        "x_coth_x_geq_1": true
+      },
+      {
+        "x": "1.0",
+        "x_coth_x_exact": [
+          1.3130352854993306,
+          1.3130352854993317
+        ],
+        "Mittag_Leffler_partial_N200": [
+          1.3120246033198848,
+          1.3120246033199294
+        ],
+        "tail_upper_bound": 0.001013211836423378,
+        "agrees_within_tail_bound": true,
+        "x_coth_x_geq_1": true
+      },
+      {
+        "x": "5.0",
+        "x_coth_x_exact": [
+          5.000454019910094,
+          5.000454019910099
+        ],
+        "Mittag_Leffler_partial_N200": [
+          4.97518747486656,
+          4.975187474866737
+        ],
+        "tail_upper_bound": 0.02533029591058445,
+        "agrees_within_tail_bound": true,
+        "x_coth_x_geq_1": true
+      }
+    ],
+    "Mittag_Leffler_all_pass": true,
+    "interval_sweep_q_log2_-10_to_10_R0=0.01_L=1": [
+      {
+        "q_log2": -10,
+        "Lambda_lower": 50.00000000201712,
+        "Lambda_upper": 50.000000003722484,
+        "minus_bound_lower": 2.0171029291304876e-09,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -9,
+        "Lambda_lower": 50.000000012058976,
+        "Lambda_upper": 50.00000001291169,
+        "minus_bound_lower": 1.2058961829097825e-08,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -8,
+        "Lambda_lower": 50.0000000506632,
+        "Lambda_upper": 50.00000005108959,
+        "minus_bound_lower": 5.066318919944024e-08,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -7,
+        "Lambda_lower": 50.00000020337487,
+        "Lambda_upper": 50.000000203588094,
+        "minus_bound_lower": 2.0337485295840452e-07,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -6,
+        "Lambda_lower": 50.00000081375964,
+        "Lambda_upper": 50.00000081386627,
+        "minus_bound_lower": 8.137596267943081e-07,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -5,
+        "Lambda_lower": 50.00000325517435,
+        "Lambda_upper": 50.00000325522769,
+        "minus_bound_lower": 3.2551743345266004e-06,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -4,
+        "Lambda_lower": 50.000013020815246,
+        "Lambda_upper": 50.00001302084197,
+        "minus_bound_lower": 1.3020815231357119e-05,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -3,
+        "Lambda_lower": 50.00005208332321,
+        "Lambda_upper": 50.00005208333662,
+        "minus_bound_lower": 5.208332319739384e-05,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -2,
+        "Lambda_lower": 50.00020833324369,
+        "Lambda_upper": 50.000208333250406,
+        "minus_bound_lower": 0.00020833324367686146,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": -1,
+        "Lambda_lower": 50.00083333194219,
+        "Lambda_upper": 50.00083333194558,
+        "minus_bound_lower": 0.0008333319421751639,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 0,
+        "Lambda_lower": 50.003333311110424,
+        "Lambda_upper": 50.00333331111215,
+        "minus_bound_lower": 0.003333311110409909,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 1,
+        "Lambda_lower": 50.01333297779068,
+        "Lambda_upper": 50.0133329777916,
+        "minus_bound_lower": 0.01333297779066811,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 2,
+        "Lambda_lower": 50.053327645310844,
+        "Lambda_upper": 50.05332764531135,
+        "minus_bound_lower": 0.05332764531083001,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 3,
+        "Lambda_lower": 50.21324236655573,
+        "Lambda_upper": 50.213242366555995,
+        "minus_bound_lower": 0.21324236655571838,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 4,
+        "Lambda_lower": 50.85188051944479,
+        "Lambda_upper": 50.85188051944501,
+        "minus_bound_lower": 0.8518805194447765,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 5,
+        "Lambda_lower": 53.39025658820481,
+        "Lambda_upper": 53.390256588204956,
+        "minus_bound_lower": 3.3902565882047924,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 6,
+        "Lambda_lower": 63.29447806700925,
+        "Lambda_upper": 63.29447806700937,
+        "minus_bound_lower": 13.294478067009237,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 7,
+        "Lambda_lower": 99.44804944916758,
+        "Lambda_upper": 99.44804944916778,
+        "minus_bound_lower": 49.44804944916757,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 8,
+        "Lambda_lower": 209.07811862964715,
+        "Lambda_upper": 209.0781186296476,
+        "minus_bound_lower": 159.07811862964712,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 9,
+        "Lambda_lower": 462.03657126409627,
+        "Lambda_upper": 462.036571264098,
+        "minus_bound_lower": 412.0365712640962,
+        "margin_OK_>=0": true
+      },
+      {
+        "q_log2": 10,
+        "Lambda_lower": 974.0000026120327,
+        "Lambda_upper": 974.0000026120371,
+        "minus_bound_lower": 924.0000026120326,
+        "margin_OK_>=0": true
+      }
+    ],
+    "all_sweep_margins_nonneg": true,
+    "min_margin_lower": 2.0171029291304876e-09,
+    "PASS": true
+  },
+  "D4_higher_modes_dominate": {
+    "higher_sigma_odd_modes": [
+      {
+        "m": "3/2",
+        "Lambda_q=0_closed_form": 150.00000000000003,
+        "Lambda_q=1_interval_lower": 150.00199999428574,
+        "bound_1_over_2R0": 49.99999999999999,
+        "margin_q0": 100.00000000000003,
+        "margin_q1": 100.00199999428573,
+        "dominates_at_q0_and_q1": true
+      },
+      {
+        "m": "5/2",
+        "Lambda_q=0_closed_form": 250.00000000000003,
+        "Lambda_q=1_interval_lower": 250.00142856916102,
+        "bound_1_over_2R0": 49.99999999999999,
+        "margin_q0": 200.00000000000003,
+        "margin_q1": 200.00142856916102,
+        "dominates_at_q0_and_q1": true
+      }
+    ],
+    "all_dominate_1/(2R_0)": true,
+    "note": "minimum DtN eigenvalue in sigma-odd sector is attained at m=1/2 lowest q; higher m strictly larger.",
+    "PASS": true
+  },
+  "D5_R2N_dimension_count": {
+    "q=0_m=+-1/2_per_component": "{cos(phi/2), sin(phi/2)} basis on lower indicial root rho^{1/2}",
+    "real_dimension_per_Sigma_i": 2,
+    "number_of_components_GIFT": 77,
+    "total_cokernel_dimension": 154,
+    "equals_R^{2N}": true,
+    "q_nonzero_contributes": 0,
+    "reason_q_nonzero_kills_cokernel": "I_m(q rho/L) decays at rho=0 faster than rho^{1/2} for q != 0, so no trace at the lower indicial root mu=-1/2; the cokernel is supported entirely on the q=0 longitudinal Fourier mode.",
+    "PASS": true
+  },
+  "D6_obstruction_coefficient": {
+    "indicial_polynomial_value_at_cubic_data": 2,
+    "mu_cubic": "3/2",
+    "m_half_integer": "1/2",
+    "mu^2_minus_m^2": "9/4 - 1/4 = 8/4 = 2",
+    "Delta_w(rho^{3/2} cos(phi/2))": "2*cos(phi/2)/sqrt(rho)",
+    "expected_2_rho^{-1/2} cos(phi/2)": "2*cos(phi/2)/sqrt(rho)",
+    "matches_P2_coefficient_2": true,
+    "A_loc": "2 * A_bulk(alpha_1, alpha_1) * I_{2N}  (DtN-canonical assembly)",
+    "agrees_with_axis2_J_phys_A_loc_2026_06_30_V2_V4": true,
+    "PASS": true
+  },
+  "D7_verdict": {
+    "GO_NO_GO": "GO",
+    "closed_form_inputs_to_P7": {
+      "c_DtN_worst_case_lower_bound": [
+        49.99999999999999,
+        50.000000000000014
+      ],
+      "c_DtN_formula": "1 / (2 R_0)",
+      "sigma_min_A_loc_normalised": [
+        2.0,
+        2.0
+      ],
+      "sigma_min_A_loc_conservative": [
+        0.8658008658008657,
+        0.865800865800866
+      ],
+      "sigma_min_A_loc_formula": "2 * A_bulk(alpha_1, alpha_1)"
+    },
+    "R^{2N}_emergence_mechanism": "DtN matching at rho = R_0 on J_phys, q=0 longitudinal Fourier mode + m = +-1/2 sigma-odd angular mode, gives 2 real DOF per Sigma_i; total 2N for N unlink components. q != 0 modes carry no cokernel (I_m decay at rho=0).",
+    "advantages_over_Lemma_5_7_Schroedinger_construction": [
+      "uses J_phys directly (P2-validated), not the cover-Euclidean reference Delta_z.",
+      "explicit closed-form DtN eigenvalue formula in elementary functions (sinh, cosh).",
+      "explicit lower bound 1/(2 R_0) via the elementary identity coth(x) >= 1/x.",
+      "obstruction coefficient 2 emerges canonically from mu^2 - m^2 = (3/2)^2 - (1/2)^2 = 2.",
+      "matches Pacard beta=-1 cokernel convention (lower indicial root mu = -1/2)."
+    ],
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "GO_NO_GO": "GO",
+    "headline": "GO. The R^{2N} cokernel reduction emerges canonically from the DtN interface at rho = R_0 on the physical edge operator J_phys: closed-form DtN eigenvalues Lambda_{q,1/2} = (q/L) coth(qR_0/L) - 1/(2 R_0), with rigorous lower bound Lambda >= 1/(2 R_0) for all q (via coth(x) >= 1/x). q=0 + m=+-1/2 sector gives 2 real DOF per Sigma_i = 2N total; q != 0 contributes 0 to the cokernel. Obstruction coefficient A_loc = 2 A_bulk(alpha_1, alpha_1) I_{2N} matches P2 via mu^2 - m^2 = (3/2)^2 - (1/2)^2 = 2. Inputs ready for P7: c_DtN = 1/(2R_0), sigma_min(A_loc) = 2 A_bulk(alpha_1, alpha_1)."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "script": "axis2_hypothesis_AR_discharge_2026_07_01",
+  "purpose": "Conditional discharge of Hypothesis (AR) --- adiabatic reconstruction --- via new admissibility condition (AR-quant): eps_0 * K_H^K3 * K_F <= 1/2. Under (AR-quant), the Donaldson 2017 formal power-series solution converges uniformly in eps, giving the reconstruction map A_eps of Hypothesis (AR).",
+  "AR1_K3_Hodge_constant": {
+    "K3_diameter_normalized_unit_volume": 1.4,
+    "lambda_1_lower_bound_Cheeger_Yau": 1.2588781123838468,
+    "K_H_K3_upper_bound_derived": 0.8912676813146139,
+    "K_H_K3_conservative_working_bound": 1.0,
+    "note": "Bochner-Weitzenboeck + Cheeger-Yau: for Ricci-flat compact 4-mfd of diameter D, lambda_1(2-forms exact) >= pi^2/(4 D^2). Standard K3 (Yau metric, unit vol): D ~ 1.4, hence K_H^K3 <= 1.",
+    "pass": true
+  },
+  "AR2_K_F_at_D0": {
+    "cond_A_bulk_D0": 2.31,
+    "K_A_D0": 1.0,
+    "K_F_D0": 2.31,
+    "weighted_norm_used": "Pacard C^{0,alpha}_{-1}",
+    "note": "K_F = cond(A_bulk) * K_A in the Pacard beta=-1 weighted norm; edge singularity absorbed by the weight.",
+    "pass": true
+  },
+  "AR3_iteration_convergence": {
+    "K_H_used": 1.0,
+    "K_F_used": 2.31,
+    "eps_sweep_results": [
+      {
+        "eps": 0.001,
+        "r": 0.00231,
+        "geometric_sum": 1.002315348454931,
+        "bounded_by_2": true
+      },
+      {
+        "eps": 0.005,
+        "r": 0.01155,
+        "geometric_sum": 1.0116849613030503,
+        "bounded_by_2": true
+      },
+      {
+        "eps": 0.01,
+        "r": 0.0231,
+        "geometric_sum": 1.0236462278636502,
+        "bounded_by_2": true
+      },
+      {
+        "eps": 0.05,
+        "r": 0.1155,
+        "geometric_sum": 1.1305822498586773,
+        "bounded_by_2": true
+      },
+      {
+        "eps": 0.1,
+        "r": 0.231,
+        "geometric_sum": 1.3003901170351104,
+        "bounded_by_2": true
+      },
+      {
+        "eps": 0.5,
+        "r": 1.155,
+        "geometric_sum": Infinity,
+        "bounded_by_2": false
+      }
+    ],
+    "at_eps_1e-2": {
+      "eps": 0.01,
+      "r": 0.0231,
+      "geometric_sum": 1.0236462278636502,
+      "bounded_by_2": true
+    },
+    "pass": true
+  },
+  "AR4_ARquant_at_D0": {
+    "D_0_params": {
+      "eps_0_D0": 0.01,
+      "K_H_K3_bound": 1.0,
+      "K_F_D0_bound": 2.31
+    },
+    "r_D0_ARquant_LHS": 0.023100000000000002,
+    "ARquant_threshold": 0.5,
+    "margin_factor_below_threshold": 21.645021645021643,
+    "c_AR_bound_from_series": 1.0236462278636502,
+    "pass": true
+  },
+  "all_pass": true
+}

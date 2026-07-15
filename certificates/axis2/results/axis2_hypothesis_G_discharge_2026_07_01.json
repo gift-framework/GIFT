@@ -1,0 +1,40 @@
+{
+  "script": "axis2_hypothesis_G_discharge_2026_07_01",
+  "purpose": "Conditional discharge of Hypothesis (G) --- global maximal background --- via new admissibility condition (G-quant). Uses (A1) rank-1 monodromy to construct a globally-consistent collar-affine background, plus Newton iteration on the extended domain (\u00a75.7 augmented right inverse under (E-quant)) with weighted-norm source bound O(r_0^{7/2}).",
+  "G1_augmented_inverse_norm": {
+    "K_Sch_Maz": 17.0,
+    "cond_A_bulk": 2.31,
+    "sigma_min_A_loc": 0.8658008658008658,
+    "augmented_inverse_norm_upper_bound": 36.635,
+    "pass": true
+  },
+  "G2_source_weighted_bound": {
+    "c_0_amplitude": 1.0,
+    "K_A": 1.0,
+    "r_0": 0.01,
+    "C_src_universal": 2.0,
+    "source_norm_Y_neg3": 2e-07,
+    "r_0_power": "r_0^{7/2}",
+    "pass": true
+  },
+  "G3_consistency_at_D0": {
+    "D_0_construction": "77 identical copies of a single local model (draft line 1056)",
+    "eta_aff_D0": 0.0,
+    "eta_aff_star_general_admissibility_threshold": 0.1,
+    "consistency_trivial_at_D0": true,
+    "pass": true
+  },
+  "G4_Gquant_at_D0": {
+    "aug_inv_norm_squared": 1342.1232249999998,
+    "K_nl": 1.0,
+    "source_norm_Y_neg3": 2e-07,
+    "r_G_local_contribution": 0.00026842464499999993,
+    "r_G_eta_aff_contribution": 0,
+    "r_G_total": 0.00026842464499999993,
+    "Gquant_threshold": 0.5,
+    "margin_factor_below_threshold": 1862.7201686342926,
+    "pass": true,
+    "note": "(G-quant) at D_0 = r_G_local (from quadratic remainder near Sigma_i, weighted C^{0,alpha}_{-3} norm, scale r_0^{7/2}) + eta_aff term (vanishes for identical-copies construction). Margin factor >> 1."
+  },
+  "all_pass": true
+}

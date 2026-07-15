@@ -1,0 +1,64 @@
+{
+  "title": "R_0^geom natif K3 GIFT ambient \u2014 meta-i \u00a77.3.a",
+  "date": "2026-06-22",
+  "scope": "Cas sp\u00e9cial GIFT : 77-unlink dans base S^3, monodromie rang-1, section affine totale-g\u00e9od\u00e9sique. \u00c9chelles en coord K3 ambient normalis\u00e9es (vol K3 = 1).",
+  "inputs": {
+    "d_min": [
+      0.5,
+      1.5
+    ],
+    "K_A": [
+      0.5,
+      2.0
+    ],
+    "eps_pert": [
+      0.001,
+      0.01
+    ],
+    "R_curv_K3_ambient": [
+      0.5,
+      2.0
+    ]
+  },
+  "scales_native": {
+    "R_inj_transverse (= d_min/2)": [
+      0.25,
+      0.75
+    ],
+    "R_curv (K3 ambient)": [
+      0.5,
+      2.0
+    ],
+    "R_modedom (= sqrt(eps_pert)/2)": [
+      0.015811388300841896,
+      0.05
+    ],
+    "R_A_var (= 1/K_A)": [
+      0.5,
+      2.0
+    ]
+  },
+  "R_0_geom": [
+    0.015811388300841896,
+    0.05
+  ],
+  "verdicts_analytic": {
+    "R_0_star_GT": [
+      9e-14,
+      1.5e-06
+    ],
+    "R_0_star_Mazzeo": [
+      7e-12,
+      0.0037
+    ]
+  },
+  "margins_geometric_min": {
+    "margin_GT (= R_0_geom.lo / R_0_star_GT.hi)": 10540.925533894597,
+    "margin_Mazzeo (= R_0_geom.lo / R_0_star_Mazzeo.hi)": 4.273348189416728
+  },
+  "verdict": {
+    "GT": "FERM\u00c9 g\u00e9om",
+    "Mazzeo": "TIGHT",
+    "global": "meta-i FERM\u00c9 \u00e0 l'ordre dominant"
+  }
+}

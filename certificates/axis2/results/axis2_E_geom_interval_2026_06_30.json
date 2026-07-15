@@ -1,0 +1,79 @@
+{
+  "G0_model_identity": {
+    "convention": "R1 cover-Euclidean: Delta_z = d_u^2 + d_v^2",
+    "Delta_z_psi_R": "8*u",
+    "Delta_z_psi_I": "8*v",
+    "expected": "8*u = 8 Re z ; 8*v = 8 Im z",
+    "matches_8_Re_z": true,
+    "PASS": true
+  },
+  "G1_holonomy_inequality": {
+    "claim": "2 sin(x/2) <= x  for x in [0, 2*pi]  (=> C_holonomy coefficient = 2*pi)",
+    "method": "monotonicity: g(0)=0 and g'(x)=1-cos(x/2)>=0 (cos<=1, no interval slack)",
+    "partition_n": 2000,
+    "min_lower_endpoint_of_g'(x)=1-cos(x/2)": 0.0,
+    "g(0)": 0.0,
+    "worst_subinterval_for_g'": [
+      0.0,
+      0.0031415926535897937
+    ],
+    "certified_nonneg": true,
+    "PASS": true
+  },
+  "G2_op_norm_at_D0": {
+    "kappa_g_C0": "1.0",
+    "R_0": "0.01",
+    "phi_max_enclosure": [
+      0.06283185307179584,
+      0.06283185307179588
+    ],
+    "||E_geom||_exact_enclosure_2sin(phi/2)": [
+      0.06282151815625656,
+      0.06282151815625661
+    ],
+    "linear_bound_C_g*kappa_g*R_0_enclosure": [
+      0.06283185307179584,
+      0.06283185307179588
+    ],
+    "linear_bound_is_valid_upper_bound": true,
+    "PASS": true
+  },
+  "G3_metric_correction_higher_order": {
+    "cover_euclidean_reference": "g_uu = g_vv = 1 (NO 4|z|^2 factor), R1 convention",
+    "leading_term_Delta_psi_R_at_kappa_0": "8*u",
+    "leading_is_8u": true,
+    "kappa_linear_correction": "-2*u*(3*u**2 - v**2)",
+    "min_total_degree_of_correction_in_(u,v)": 3,
+    "model_term_total_degree": 1,
+    "sup_(|corr|/(8|z|))/|z|^2_over_annulus_enclosure_upper": 1.2960000000000016,
+    "interpretation": "correction has total degree 3 in (u,v) vs degree 1 for the model 8u, i.e. correction/model = O(rho^2) (TWO extra powers of rho, a rho^2 suppression) => does NOT enter the leading C_g (absorbed in (1 + O(kappa_g R_0))).",
+    "PASS": true
+  },
+  "G4_assemble": {
+    "C_g_certified": "2*pi (exact, from Frenet-Serret holonomy isoperimetric bound)",
+    "C_g_enclosure": [
+      6.283185307179586,
+      6.283185307179587
+    ],
+    "||E_geom||_bound_at_D_0_enclosure": [
+      0.06282151815625656,
+      0.06282151815625661
+    ],
+    "||E_geom||_<=_2pi*kappa_g*R_0_enclosure": [
+      0.06283185307179584,
+      0.06283185307179588
+    ],
+    "delta_geom_=_||E_geom||/8_upper": 0.007853981633974485,
+    "PASS": true
+  },
+  "VERDICT": {
+    "all_checks_pass": true,
+    "C_g_certified": "2*pi",
+    "||E_geom||_bound_at_D_0": [
+      0.06283185307179584,
+      0.06283185307179588
+    ],
+    "delta_geom_at_D_0_upper": 0.007853981633974485,
+    "summary": "C_g = 2*pi certified by rigorous interval enclosure of the Frenet-Serret holonomy operator norm (2 sin(x/2) <= x on [0,2pi]). At D_0 (||kappa_g|| <= 1, R_0 = 10^-2): ||E_geom|| <= 2 sin(pi*10^-2) <= 0.0628, i.e. delta_geom <= 0.00785. The Frenet metric-Laplacian correction is strictly higher order in rho and does not enter C_g. R1 cover-Euclidean convention (model identity Delta_z psi_R = 8 Re z)."
+  }
+}

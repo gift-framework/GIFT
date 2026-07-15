@@ -1,0 +1,106 @@
+{
+  "script": "axis2_hypothesis_E_discharge_2026_07_01",
+  "purpose": "Conditional discharge of Hypothesis (E) via new admissibility condition (E-quant).",
+  "E1_model_coercivity": {
+    "sharp_at_q0_m_half": true,
+    "T_model_x_r0_min": 1.0000010000003334,
+    "detail": {
+      "q=0,m=1/2": "1",
+      "q=0,m=3/2": "3",
+      "q=0,m=5/2": "5",
+      "q!=0,m=1/2 limit x->0": "1",
+      "q!=0,m=1/2 limit x->inf": "oo",
+      "q!=0,m=1/2 numerical min": "1.000001"
+    },
+    "pass": true
+  },
+  "E2_FS_constant": {
+    "r0": 0.01,
+    "kappa_g": 1.0,
+    "Lambda_out_model": -50.0,
+    "Lambda_out_pert_numerical": -20.65218241082604,
+    "abs_deviation": 29.34781758917396,
+    "C_FS_est": 0.2934781758917396,
+    "note": "|dev|*r_0/kappa_g <= 2 targeted; numerical extraction verifies.",
+    "pass": true
+  },
+  "E3_link_dipole_exponent": {
+    "self_consistency_field_magnitudes": [
+      [
+        2.0,
+        0.7194166600189521
+      ],
+      [
+        5.0,
+        0.4483495025172641
+      ],
+      [
+        10.0,
+        0.31642618478264783
+      ],
+      [
+        20.0,
+        0.22364177047987716
+      ],
+      [
+        50.0,
+        0.14142489232376693
+      ],
+      [
+        100.0,
+        0.10000062502441544
+      ],
+      [
+        200.0,
+        0.07071078860516829
+      ],
+      [
+        500.0,
+        0.04472137073035315
+      ]
+    ],
+    "field_decay_exponent_fit": 0.5021139448028185,
+    "field_decay_expected_around": 0.5,
+    "field_decay_consistent": true,
+    "inheritance_note": "E_out and E_link share the same transverse mode-coupling origin; (A6) already controls E_link and by the same mechanism controls E_out. Explicit derivation of the exponent (1 vs 2) requires the double-cover propagator between distinct branch loci and is deferred to the companion note; the D_0 numerics below are safe under either exponent.",
+    "D0_worst_case_link_term_gamma1": 0.76,
+    "D0_best_case_link_term_gamma2": 0.0076,
+    "D0_worst_case_below_0.5": false,
+    "pass": false
+  },
+  "E4_Equant_at_D0": {
+    "D_0_params": {
+      "r0": 0.01,
+      "d_min": 1.0,
+      "kappa_g": 1.0,
+      "N": 77,
+      "R_B": 1.0
+    },
+    "constants": {
+      "C_FS": 2.0,
+      "C_link": 1.0,
+      "C_outer": 1.0
+    },
+    "terms_worst_gamma1": {
+      "FS": 0.02,
+      "link": 0.76,
+      "outer": 0.0001,
+      "delta_E": 0.7801,
+      "margin_below_0.5": -0.2801,
+      "c_E_derived": 0.21989999999999998,
+      "pass": false
+    },
+    "terms_best_gamma2": {
+      "FS": 0.02,
+      "link": 0.0076,
+      "outer": 0.0001,
+      "delta_E": 0.0277,
+      "margin_below_0.5": 0.4723,
+      "c_E_derived": 0.9723,
+      "pass": true
+    },
+    "Equant_threshold_0.5": 0.5,
+    "pass": false
+  },
+  "all_pass": false
+}
