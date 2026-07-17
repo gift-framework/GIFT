@@ -46,6 +46,10 @@ English posts are hosted on Substack ([arithmon.substack.com](https://arithmon.s
 
 | Post | Description |
 |------|-------------|
+| [Episode 10: The day Dota taught you that you were living in a cosmology](https://arithmon.substack.com/p/episode-10-the-day-dota-taught-you) | Artifact and Valve's lore, the cosmological close of the series |
+| [Episode 9: The day Portal taught you that space can have holes](https://arithmon.substack.com/p/episode-9-the-day-portal-taught-you) | Portal, topology and the shape of space |
+| [Episode 8: The day Counter-Strike taught you that to know is to reveal](https://arithmon.substack.com/p/episode-8-the-day-counter-strike) | Counter-Strike, uncertainty and the observer/observed symmetry |
+| [Episode 7: The day Factorio taught you why you're alive](https://arithmon.substack.com/p/episode-7-the-day-factorio-taught) | Factorio, dissipative structures and the thermodynamics of life |
 | [Episode 6: The day Stardew taught you why time moves in one direction](https://arithmon.substack.com/p/episode-6-the-day-stardew-taught) | Stardew, the arrow of time and entropy |
 | [Episode 5: The day Skyrim wasn't breathing without you](https://arithmon.substack.com/p/episode-5-the-day-skyrim-wasnt-breathing) | Skyrim, a world waiting for an observer |
 | [The Singing Glass](https://arithmon.substack.com/p/the-singing-glass) | When a Burgundy wine glass explains the hidden dimensions of the universe |

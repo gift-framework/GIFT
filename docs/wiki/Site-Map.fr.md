@@ -43,6 +43,10 @@ Index complet de toutes les pages du wiki. Les pages avec une version française
 ## Articles de blog
 | Page | Description |
 |------|-------------|
+| 🇫🇷 [Épisode 10 : Le jour où Dota t'a appris que tu vivais dans une cosmologie](Blog-Artifact-Cosmology.fr.html) | Artifact et le lore Valve, clôture cosmologique de la série |
+| 🇫🇷 [Épisode 9 : Le jour où Portal t'a appris que l'espace peut avoir des trous](Blog-Portal-Topology.fr.html) | Portal, la topologie et la forme de l'espace |
+| 🇫🇷 [Épisode 8 : Le jour où Counter-Strike t'a appris que tout savoir, c'est tout révéler](Blog-Counter-Strike-Observer-Symmetry.fr.html) | Counter-Strike, l'incertitude et la symétrie observateur/observé |
+| 🇫🇷 [Épisode 7 : Le jour où Factorio t'a appris pourquoi tu es en vie](Blog-Factorio-Dissipative-Structures.fr.html) | Factorio, les structures dissipatives et la thermodynamique du vivant |
 | 🇫🇷 [Épisode 6 : Le jour où Stardew t'a appris pourquoi le temps va dans un seul sens](Blog-Stardew-Arrow-Of-Time.fr.html) | Stardew, la flèche du temps et l'entropie |
 | 🇫🇷 [Épisode 5 : Le jour où Bordeciel ne respirait pas sans toi](Blog-Skyrim-Participatory-Observer.fr.html) | Skyrim, le monde en attente d'observateur |
 | 🇫🇷 [Le verre qui chante](Blog-The-Singing-Glass.fr.html) | Quand un verre de Bourgogne explique les dimensions cachées de l'univers |
