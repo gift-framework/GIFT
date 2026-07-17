@@ -289,4 +289,4 @@ MIT License, see [LICENSE](LICENSE)
 
 ---
 
-**K₇ is the founding framework of the [Arithmon program](https://github.com/arithmon).**
+**K₇ (formerly GIFT) is the founding framework of the [Arithmon program](https://github.com/arithmon).**
