@@ -1042,7 +1042,7 @@ The author declares no competing interests.
 
 ## Author's Related Works
 
-*Code and Lean proofs:* [github.com/gift-framework/core](https://github.com/gift-framework/core) (Lean module under `core/Lean/`).
+*Code and Lean proofs:* [github.com/Arithmon/K7-Lean](https://github.com/Arithmon/K7-Lean) (Lean module under `core/Lean/`).
 
 - **[A]** B. de La Fournière, "An Explicit Approximate G₂ Metric on a Compact 7-Manifold with Certified Torsion-Free Completion," Zenodo [10.5281/zenodo.19892350](https://doi.org/10.5281/zenodo.19892350) (2026).
 - **[B]** B. de La Fournière, "Spectral Geometry of the G₂-GIFT Manifold: Betti Numbers, KK Spectrum, and Spectral Invariants," Zenodo [10.5281/zenodo.19893371](https://doi.org/10.5281/zenodo.19893371) (2026).

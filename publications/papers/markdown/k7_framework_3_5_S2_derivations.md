@@ -1,6 +1,6 @@
 # Supplement S2: Complete Derivations (Dimensionless)
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/gift-framework/core)
+[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-Verified-blue)](https://github.com/Arithmon/K7-Lean)
 
 ## Complete Mathematical Derivations for All 33 Type I Predictions
 
