@@ -41,7 +41,7 @@ Petite précision pour ne pas surcharger l'analogie. Dans CS, le serveur connaî
 
 Heisenberg avait formulé cette incertitude au sens fort, en 1927, pour position et impulsion d'une particule. *Δx · Δp ≥ ℏ/2*. Plus tu mesures précisément où elle est, plus la mesure de comment elle bouge devient floue. Pas parce que tes instruments sont mauvais. Parce que les deux grandeurs ne sont pas simultanément définies dans l'état du système, point.
 
-Dans CS, ce ne sont pas position et impulsion. C'est **vitesse et signature** — la quantité d'information que tu donnes à l'adversaire par ton déplacement. Aller plus vite augmente ta signature sonore. Réduire ta signature te coûte du temps. Tu ne peux pas être simultanément rapide *et* indétectable, et c'est cette tension structurelle, pas l'incertitude quantique au sens littéral, qui structure ton expérience du jeu.
+Dans CS, ce ne sont pas position et impulsion. C'est **vitesse et signature**, la quantité d'information que tu donnes à l'adversaire par ton déplacement. Aller plus vite augmente ta signature sonore. Réduire ta signature te coûte du temps. Tu ne peux pas être simultanément rapide *et* indétectable, et c'est cette tension structurelle, pas l'incertitude quantique au sens littéral, qui structure ton expérience du jeu.
 
 ---
 
